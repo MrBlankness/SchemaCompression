@@ -19,7 +19,6 @@ CompressCore is the core module of the SchemaCompressor project, designed to com
 1. Clone the repository:
 ```bash
 git clone https://github.com/MrBlankness/SchemaCompression.git
-cd SchemaCompression/CompressCore
 ```
 
 2. Install dependencies:
@@ -129,19 +128,6 @@ We welcome contributions! Please see our contributing guidelines for details.
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Citation
-
-If you use SchemaCompressor in your research, please cite our work:
-
-```bibtex
-@software{schemacompression,
-  title = {SchemaCompressor: A Framework for Database Schema Compression and Linking},
-  author = {SchemaCompression Team},
-  year = {2024},
-  url = {https://github.com/MrBlankness/SchemaCompression}
-}
-```
 
 ## Support
 
