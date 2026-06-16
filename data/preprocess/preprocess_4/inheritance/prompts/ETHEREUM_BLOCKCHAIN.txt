@@ -1,0 +1,102 @@
+[STANDALONE]
+## ETHEREUM_BLOCKCHAIN.BLOCKS
+hash: TEXT | Hash of this block | eg=["0xcf5326c1ac7a9bc76f90ec9b7188903c49977e2dbcb749012592f1f9166aba62", "0x8a54e2cb5c29df25e56fcd3572e807b848d86d70df38bbe28025b753de96e670"]
+nonce: TEXT | Difficulty solution specified in block header | eg=["0x0ac4077c0b9326e4", "0x4cf643080595df19"]
+extra_data: TEXT | NULL | eg=["0x"]
+receipts_root: TEXT | NULL | eg=["0x89e806edc9d9332e8efe2b537da16aa71ee28192162c540c576eec488001e793", "0xdbc0aa3a3cbe84319b3c2663c2b3873d7b44b3f96324173b46b172bf65f86ac1"]
+state_root: TEXT | NULL | eg=["0x63e85963a40f0281405dd65d57e6f27bcf694f4b3260ec0f142a71b254528bb9", "0x0d7523fdd73d9608823fb634c6bf75435820c55dc38ff73f08dfe216b5d18a7a"]
+miner: TEXT | NULL | eg=["0xf3b9d2c81f2b24b0fa0acaaa865b7d9ced5fc2fb"]
+transaction_count: NUMBER | Number of transactions included in this block | eg=[103, 130]
+total_difficulty: NUMBER | NULL | eg=["5053204936794953558848.000000000", "5047936796321690252596.000000000"]
+parent_hash: TEXT | NULL | eg=["0x7d1daeed5bb2bc25bfa2adea08f12ac34ced255613b1f81e05901c365f4b1d32", "0x503476bdb0b566a78ddeb8bc2a5b570924a36f2fdc7167d0fa36dbeaeb4520f7"]
+sha3_uncles: TEXT | NULL | eg=["0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347"]
+size: NUMBER | The size of block data in bytes | eg=[27519, 21481]
+gas_limit: NUMBER | NULL | eg=[7980567, 7988374]
+number: NUMBER | The number of the block | eg=[5875076, 5873509]
+gas_used: NUMBER | NULL | eg=[7970437, 7971359]
+timestamp: NUMBER | Block creation timestamp specified in block header | eg=[1530279523000000, 1530255101000000]
+logs_bloom: TEXT | NULL | eg=["0xe1023fc1247c5120022420803014c60a40047141181001080308213a8603830ca58000048800412411bc0820a1080228e603441200288082002040085124b24041806319220004898189080e9018a105300000009bec690000017161938000000a00810a1221840090b3011810042c00003b038ba50910080001809c642ac18000e50c20002e2000100a0448840782d600e000b14a40000050142811840600093680181c60c3ac8108400b0511cdd03053512c203a10be004e2901830045448814000322818d602005e101004227a2e0108069a501412d6c22041022c40cec06321021402460141000404250a8008020022905010c0000401629422400d12380", "0x61508102651a02b804006503a729020842a4116c498000088ac185b210ac5220880285192004390c63916846534c04224aa61002f8027091529c001684642220854a3065b829250d4845500842113460514a1248082101080000484211b1a004705000250603162c08a7082050012da40a010a103fc4e00041450b19904806000828181700822034a0043ca08182a000005721d22282290544f02a8138c561080a1090014802b82892500841730a8400490029220a20000e08cd828102042129501a0082019624021b4042830294492a4202741700080804098e01054000ba2a0e56610181100e0070c24284d0d1801431484b30062b44468080a82910091336"]
+difficulty: NUMBER | NULL | eg=["3270516286141262.000000000", "3454068746553944.000000000"]
+transactions_root: TEXT | NULL | eg=["0xafdfaf62b3b4aad38015a63dfa560803f554b75c2da01cdc853df210fac80395", "0x91c784ebb01146ce44ce0b5292e6bb762169cce5ec483bcaddb678fca786f82e"]
+
+## ETHEREUM_BLOCKCHAIN.CONTRACTS
+function_sighashes: VARIANT | 4-byte function signature hashes | eg=[[]]
+is_erc20: BOOLEAN | Whether this contract is an ERC20 contract | eg=[false]
+bytecode: TEXT | Bytecode of the contract | eg=["0x6060604052341561000f57600080fd5b6000610019610141565b6000805473ffffffffffffffffffffffffffffffffffffffff16906313e7c9d8903290604051602001526040517c010000000000000000000000000000000000000000000000000000000063ffffffff841602815273ffffffffffffffffffffffffffffffffffffffff9091166004820152602401602060405180830381600087803b15156100a757600080fd5b6102c65a03f115156100b857600080fd5b5050506040518051905015156100cd57600080fd5b60015473ffffffffffffffffffffffffffffffffffffffff169150600036806020601f820181900481020160405190810160405281815292919060208401838380828437509495506040945050505050516000818351602085016000875af13d806000843e81801561013d578184f35b8184fd5b602060405190810160405260008152905600a165627a7a723058202808c79164fe8b48c88735a3375ed8cf247b67ba22a14506e658603a0d3a25db0029"]
+address: TEXT | Address of the contract | eg=["0xac9212b0e0023c275b6830c12e3ffe5f754b0d5a", "0xe24993a66e7755015b002269df12e50b5664afaa"]
+block_timestamp: NUMBER | Timestamp of the block where this contract was created | eg=[1573830635000000, 1573783430000000]
+is_erc721: BOOLEAN | Whether this contract is an ERC721 contract | eg=[false]
+block_number: NUMBER | Block number where this contract was created | eg=[8939101, 8935830]
+block_hash: TEXT | Hash of the block where this contract was created | eg=["0xd2a481bc6412e5a3f1fa1ce63c8f6ef77caad6e9c126eafa6cd0da4569f9fc75", "0x1ea1ec3636f7c43e28efa52dcd4808a9a0c649e045076cc8fd2555267692d8b9"]
+
+## ETHEREUM_BLOCKCHAIN.LOGS
+data: TEXT | Contains one or more 32 Bytes non-indexed arguments of the log | eg=["0x00000000000000000000000000000000000000000000011d92c28403f4cbf513", "0x000000000000000000000000ee66e718c1c6c59d0d5e05e79244705ea8f948af"]
+block_timestamp: NUMBER | Timestamp of the block where this log was in | eg=[1541983788000000]
+address: TEXT | Address from which this log originated | eg=["0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c", "0xa3c1e324ca1ce40db73ed6026c4a177f099b5770"]
+log_index: NUMBER | Integer of the log index position in the block | eg=[44, 78]
+block_hash: TEXT | Hash of the block where this log was in | eg=["0x7b4ce722f8bad6032797a603504850b8a145cc354ff1107753b1a6a226c873c0"]
+transaction_index: NUMBER | Integer of the transactions index position log was created from | eg=[24, 63]
+topics: VARIANT | Indexed log arguments (0 to 4 32-byte hex strings). (In solidity: The first topic is the hash of the signature of the event (e.g. Deposit(address,bytes32,uint256)), except you declared the event with the anonymous specifier.) | eg=[["0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef","0x000000000000000000000000f20b9e713a33f61fa38792d2afaf1cd30339126a","0x00000000000000000000000085c5c26dc2af5546341fc1988b9d178148b4838b"], ["0xef4c8685c12779a52dae7549eb7defa8523f67a054ad425b877a6b2da469a331"]]
+transaction_hash: TEXT | Hash of the transactions this log was created from | eg=["0xc8c5d852bd35bbce871c47dbb0d155d3e4f122fd6d93f5e22cde63da06a7372f", "0x33a43a36b2d0671921230f4316c32b3133eaf97bc8b521ae55581e9a7cdc11a3"]
+block_number: NUMBER | The block number where this log was in | eg=[6687744]
+
+## ETHEREUM_BLOCKCHAIN.TOKENS
+name: TEXT | The name of the ERC20 token | eg=["BGP15", "Volca Test NFT"]
+address: TEXT | The address of the ERC20 token | eg=["0xd6905b68f1f41821a501ef508f5af8ce5cfe2e10", "0x18adafe1e755da4824e4f977179e8b0f06981688"]
+decimals: TEXT | The number of decimals the token uses. Use safe_cast for casting to NUMERIC or FLOAT64
+block_hash: TEXT | Hash of the block where this token was created | eg=["0xa82213066e99a6ee94114b0019d1366464f56705a9a3991bb4cfec629d24e18c", "0xaf6519a1e8c940e8c13190f828d8c5c3b30a42009a8d5078a2a9fcffef39514e"]
+block_number: NUMBER | Block number where this token was created | eg=[5437409, 6703061]
+block_timestamp: NUMBER | Timestamp of the block where this token was created | eg=[1523684894000000, 1542200869000000]
+symbol: TEXT | The symbol of the ERC20 token | eg=["BGP15", "VTNFT"]
+total_supply: TEXT | The total token supply. Use safe_cast for casting to NUMERIC or FLOAT64
+
+## ETHEREUM_BLOCKCHAIN.TOKEN_TRANSFERS
+log_index: NUMBER | Log index in the transaction receipt | eg=[112, 106]
+transaction_hash: TEXT | Transaction hash | eg=["0xaeae15467bc1f2ebd0c319c5bb9aecccdda67255928daf368199d46786172784", "0x5047c71a00bd47d8b25779a3d21ee21d5589131f561ddb20ea336b5dde378dd4"]
+block_timestamp: NUMBER | Timestamp of the block where this transfer was in | eg=[1528073142000000]
+to_address: TEXT | Address of the receiver | eg=["0x267156058644ba2cb33ef074bba901bbfd66c833", "0xb944b70defe45f7a20725c93b5bb5e99d22f2a8d"]
+block_number: NUMBER | Block number where this transfer was in | eg=[5728000]
+value: TEXT | Amount of tokens transferred (ERC20) / id of the token transferred (ERC721). Use safe_cast for casting to NUMERIC or FLOAT64 | eg=["33903399999999995904", "1142583453384104931343"]
+block_hash: TEXT | Hash of the block where this transfer was in | eg=["0xa88d11e5c6278180cfd2846c8d8302a9f7150dbddfa8e52162a75e81f64328ea"]
+from_address: TEXT | Address of the sender | eg=["0x4b378475fb135fe4c0c1ce47fc407d5dfffa4e67", "0x4c789df2c1e21bb17c5ab24ed95d6abeb114726b"]
+token_address: TEXT | ERC20 token address | eg=["0xd204616e2ecf6d0b27ee79207c4ba54f91182a9d", "0x9b68bfae21df5a510931a262cecf63f41338f264"]
+
+## ETHEREUM_BLOCKCHAIN.TRACES
+value: NUMBER | Value transferred in Wei | eg=["0E-9"]
+to_address: TEXT | Address of the receiver if trace_type is call, address of new contract or null if trace_type is create, beneficiary address if trace_type is suicide, miner address if trace_type is reward, shareholder address if trace_type is genesis, WithdrawDAO address if trace_type is daofork | eg=["0x7f6e12cee775346d6ba776510e25d703279886f3"]
+trace_type: TEXT | One of call, create, suicide, reward, genesis, daofork | eg=["call"]
+subtraces: NUMBER | Number of subtraces | eg=[0]
+output: TEXT | The output of the message call, bytecode of contract when trace_type is create
+block_hash: TEXT | Hash of the block where this trace was in | eg=["0x99fbd59028ed558a6cfb1061788165736dbca4e3c70babbef68acace880caa34"]
+error: TEXT | Error if message call failed. This field doesn't contain top-level trace errors. | eg=["Out of gas"]
+transaction_hash: TEXT | Transaction hash where this trace was in | eg=["0x357e9067fc3a5a5dce38b968d01a4d8c67cc47ebb8001975c4998065748f4d83", "0xc3d4888217040e9b1ed5f1870f5189ec6d7567d882700d81a2758595575c4d07"]
+block_timestamp: NUMBER | Timestamp of the block where this trace was in | eg=[1475369605000000]
+call_type: TEXT | One of call, callcode, delegatecall, staticcall | eg=["delegatecall"]
+trace_address: TEXT | Comma separated list of trace address in call tree | eg=["3718", "1409"]
+gas: NUMBER | Gas provided with the message call | eg=[0]
+reward_type: TEXT | One of block, uncle
+input: TEXT | The data sent along with the message call | eg=["0x"]
+gas_used: NUMBER | Gas used by the message call
+from_address: TEXT | Address of the sender, null when trace_type is genesis or reward | eg=["0xb09f8a62c6681b0c739dfde7221bfe8f2da3f128"]
+transaction_index: NUMBER | Integer of the transactions index position in the block | eg=[10, 12]
+block_number: NUMBER | Block number where this trace was in | eg=[2363392]
+status: NUMBER | Either 1 (success) or 0 (failure, due to any operation that can cause the call itself or any top-level call to revert) | eg=[0]
+
+## ETHEREUM_BLOCKCHAIN.TRANSACTIONS
+receipt_contract_address: TEXT | NULL
+block_number: NUMBER | Number of the block which contains this transaction | eg=[7138313, 4276613]
+receipt_status: NUMBER | NULL | eg=[0.0, NaN]
+receipt_gas_used: NUMBER | NULL | eg=[7340032, 65792]
+gas: NUMBER | NULL | eg=[7340032, 193707]
+nonce: NUMBER | NULL | eg=[372, 50970]
+from_address: TEXT | NULL | eg=["0x74a6c4823d81cbd6393e5957ccec128799a3f0c2", "0x731e6cc591b055001ccb9758008f636819df6152"]
+to_address: TEXT | NULL | eg=["0xbff68676836ee64f26845a21a9dcbdd89512bf29", "0xf2a6b57c7f5a6835f1b84bffedd821e7f392fead"]
+receipt_root: TEXT | NULL | eg=["0x3aa1c84da6b14a7c690e8e672ee961f35257d91d29816c629385129d288484da", "0x06a9f96e1bbe0e70ebe80b3ae72f74cc3de9f0f2a4e68bd49b9205ed01fcc397"]
+block_hash: TEXT | Hash of the block which contains this transaction | eg=["0xbe6a5fe4c3ec8f4e8eb9bf4b0791115f4a10d904c769e41d6ec2af241a478319", "0xd697042c2ca95a8788a92170678ef9251ab3e10fec1478a86ca81e4ef648d239"]
+transaction_index: NUMBER | NULL | eg=[15, 130]
+block_timestamp: NUMBER | Timestamp of the block which contains this transaction | eg=[1548664911000000, 1505477107000000]
+gas_price: NUMBER | NULL | eg=[3000000000, 20000000000]
+input: TEXT | NULL | eg=["0x5ea84b33000000000000000000000000c7f7295d1bb957db59f4105eeb1320fca7ede75d00000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000e40000000000000000000000000000000000000000000000000000000000000006e0000000000000000000000003b58a35694aa15ddcaddbfd69aae213354e481920000000000000000000000000ef25426a04f7bfb249d9c4ffc95dd312831787d0000000000000000000000000015d694f582f10f77f8fa96966aa88818355e18000000000000000000000000002645db1397e8a8a04e0e97dfab317af6e9b135000000000000000000000000004f1b23cb02b61ac063922153c311bb6575433700000000000000000000000000633acf2dd6e43592579c7dc7ce10657a7b037f00000000000000000000000000eb7f63272b7693013a80d9bf04b9a440f1a017000000000000000000000000029d501cfc5a44b3d271f37c76dd427b3ac502ba00000000000000000000000003bafca12df7d1ba64b27dd53c60c1575651c05a000000000000000000000000045f0df00f25133bcc25e083296027905ee8b7220000000000000000000000000483997cad5ac588f2216f95638c194537f44061000000000000000000000000055...", "0xb61d27f600000000000000000000000042b974424f0066c2446810369f2eae0d49d3136e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000044a9059cbb000000000000000000000000e711d15f5520d50390db9a83b681f31c7673a0fd000000000000000000000000000000000000000000000000000000009502f90000000000000000000000000000000000000000000000000000000000"]
+value: NUMBER | NULL | eg=["0E-9"]
+receipt_cumulative_gas_used: NUMBER | NULL | eg=[7876681, 5622257]
+hash: TEXT | The hash of this transaction | eg=["0xc499d6ba82f798ceaf165cec2e8af8a58871f2e728105afdf27c3babdaf803e2", "0x6ce738ca184115b6ff34555d3ea2b4d8a84aca028d7802a7729e37e54b58b455"]

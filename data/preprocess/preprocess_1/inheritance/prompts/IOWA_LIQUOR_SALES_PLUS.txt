@@ -1,0 +1,7 @@
+[TEMPLATES]
+Format: Tn|col1,col2|schema1.table1;schema2.table2
+T2|gender,population,geo_id,minimum_age,maximum_age,zipcode|CENSUS_BUREAU_USA.POPULATION_BY_ZIP_2000;CENSUS_BUREAU_USA.POPULATION_BY_ZIP_2010
+
+[STANDALONE]
+Format: schema.table|col1,col2
+IOWA_LIQUOR_SALES.SALES|vendor_name,item_number,bottle_volume_ml,address,city,invoice_and_item_number,state_bottle_cost,state_bottle_retail,vendor_number,pack,category_name,store_name,item_description,store_location,zip_code,sale_dollars,county_number,county,volume_sold_liters,store_number,bottles_sold,category,volume_sold_gallons,date

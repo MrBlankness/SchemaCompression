@@ -1,0 +1,179 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: PATENTSVIEW.DRAW_DESC_TEXT
+Columns: sequence, patent_id, text, uuid
+
+Table: PATENTSVIEW.MAINCLASS
+Columns: id
+
+Table: PATENTSVIEW.WIPO
+Columns: patent_id, field_id, sequence
+
+Table: PATENTSVIEW.IPCR
+Columns: classification_level, ipc_version_indicator, section, classification_status, patent_id, classification_value, uuid, classification_data_source, symbol_position, subclass, ipc_class, subgroup, main_group, action_date, sequence
+
+Table: PATENTSVIEW.MATCH
+Columns: patent_id, publication_number
+
+Table: PATENTSVIEW.NBER
+Columns: patent_id, uuid, category_id, subcategory_id
+
+Table: PATENTSVIEW.SUBCLASS
+Columns: id
+
+Table: PATENTSVIEW.DRAW_DESC_TEXT_2021
+Columns: text, sequence, uuid, patent_id
+
+Table: PATENTSVIEW.NBER_SUBCATEGORY
+Columns: id, title
+
+Table: PATENTSVIEW.PERSISTENT_ASSIGNEE_DISAMBIG
+Columns: disamb_assignee_id_20200331, disamb_assignee_id_20181127, disamb_assignee_id_20200929, disamb_assignee_id_20200630, rawassignee_id, disamb_assignee_id_20190820, disamb_assignee_id_20190312, disamb_assignee_id_20191008, disamb_assignee_id_20191231
+
+Table: PATENTSVIEW.CLAIMS_2021
+Columns: sequence, exemplary, num, uuid, patent_id, dependent, text
+
+Table: PATENTSVIEW.PERSISTENT_INVENTOR_DISAMB
+Columns: rawinventor_id, disamb_inventor_id_20170808, disamb_inventor_id_20170307
+
+Table: PATENTSVIEW.USRELDOC
+Columns: date, reldocno, status, relkind, kind, uuid, patent_id, sequence, country, doctype
+
+Table: PATENTSVIEW.SUBCLASS_CURRENT
+Columns: title, id
+
+Table: PATENTSVIEW.PATENT_ASSIGNEE
+Columns: assignee_id, patent_id, location_id
+
+Table: PATENTSVIEW.PATENT_LAWYER
+Columns: patent_id, lawyer_id
+
+Table: PATENTSVIEW.RAWEXAMINER
+Columns: uuid, name_first, role, group, patent_id, name_last
+
+Table: PATENTSVIEW.PATENT_CONTRACTAWARDNUMBER
+Columns: contract_award_number, patent_id
+
+Table: PATENTSVIEW.PCT_DATA
+Columns: date, doc_type, country, kind, uuid, _371_date, _102_date, rel_id, patent_id
+
+Table: PATENTSVIEW.NON_INVENTOR_APPLICANT
+Columns: applicant_type, sequence, designation, rawlocation_id, uuid, organization, lname, patent_id, fname
+
+Table: PATENTSVIEW.NBER_CATEGORY
+Columns: title, id
+
+Table: PATENTSVIEW.FOREIGN_PRIORITY
+Columns: country_transformed, number, date, kind, sequence, uuid, patent_id, country
+
+Table: PATENTSVIEW.FIGURES
+Columns: uuid, num_figures, patent_id, num_sheets
+
+Table: PATENTSVIEW.BOTANIC
+Columns: variety, uuid, latin_name, patent_id
+
+Table: PATENTSVIEW.DETAIL_DESC_TEXT_2021
+Columns: text, patent_id, length
+
+Table: PATENTSVIEW.US_TERM_OF_GRANT
+Columns: uuid, term_grant, term_extension, patent_id, disclaimer_date, lapse_of_patent, term_disclaimer
+
+Table: PATENTSVIEW.LAWYER
+Columns: name_last, id, name_first, organization, country
+
+Table: PATENTSVIEW.LOCATION
+Columns: state_fips, city, state, latitude, county, longitude, county_fips, country, id
+
+Table: PATENTSVIEW.RAWASSIGNEE
+Columns: assignee_id, name_first, sequence, rawlocation_id, uuid, organization, type, patent_id, name_last
+
+Table: PATENTSVIEW.PATENT_GOVINTORG
+Columns: organization_id, patent_id
+
+Table: PATENTSVIEW.USAPPLICATIONCITATION
+Columns: name, kind, application_id, country, patent_id, sequence, uuid, category, date, number
+
+Table: PATENTSVIEW.BRF_SUM_TEXT
+Columns: uuid, patent_id, text
+
+Table: PATENTSVIEW.MAINCLASS_CURRENT
+Columns: title, id
+
+Table: PATENTSVIEW.WIPO_FIELD
+Columns: field_title, sector_title, id
+
+Table: PATENTSVIEW.PATENT
+Columns: filename, id, number, title, kind, type, date, withdrawn, abstract, num_claims, country
+
+Table: PATENTSVIEW.CPC_CURRENT
+Columns: category, group_id, section_id, subsection_id, subgroup_id, sequence, uuid, patent_id
+
+Table: PATENTSVIEW.USPATENTCITATION
+Columns: date, category, name, uuid, sequence, patent_id, citation_id, kind, country
+
+Table: PATENTSVIEW.USPC_CURRENT
+Columns: sequence, patent_id, subclass_id, mainclass_id, uuid
+
+Table: PATENTSVIEW.INVENTOR
+Columns: attribution_status, id, male_flag, name_last, name_first
+
+Table: PATENTSVIEW.RAWLOCATION
+Columns: country, location_id, city, id, state, latlong
+
+Table: PATENTSVIEW.CPC_SUBGROUP
+Columns: title, id
+
+Table: PATENTSVIEW.FOREIGNCITATION
+Columns: patent_id, category, uuid, sequence, date, country, number
+
+Table: PATENTSVIEW.RAWLAWYER
+Columns: organization, name_last, uuid, lawyer_id, patent_id, name_first, sequence, country
+
+Table: PATENTSVIEW.ASSIGNEE
+Columns: name_last, name_first, organization, type, id
+
+Table: PATENTSVIEW.LOCATION_ASSIGNEE
+Columns: assignee_id, location_id
+
+Table: PATENTSVIEW.CPC_SUBSECTION
+Columns: title, id
+
+Table: PATENTSVIEW.RAWINVENTOR
+Columns: inventor_id, patent_id, rawlocation_id, name_first, sequence, name_last, uuid, rule_47, deceased
+
+Table: PATENTSVIEW.REL_APP_TEXT
+Columns: text, patent_id, uuid
+
+Table: PATENTSVIEW.LOCATION_INVENTOR
+Columns: location_id, inventor_id
+
+Table: PATENTSVIEW.PATENT_INVENTOR
+Columns: location_id, inventor_id, patent_id
+
+Table: PATENTSVIEW.USPC
+Columns: patent_id, sequence, uuid, subclass_id, mainclass_id
+
+Table: PATENTSVIEW.GOVERNMENT_INTEREST
+Columns: patent_id, gi_statement
+
+Table: PATENTSVIEW.CPC_GROUP
+Columns: title, id
+
+Table: PATENTSVIEW.CLAIM
+Columns: uuid, text, sequence, dependent, patent_id, exemplary
+
+Table: PATENTSVIEW.OTHERREFERENCE
+Columns: patent_id, text, uuid, sequence
+
+Table: PATENTSVIEW.INVENTOR_GENDER
+Columns: disamb_inventor_id_20170808, disamb_inventor_id_20190312, male, disamb_inventor_id_20181127
+
+Table: PATENTSVIEW.GOVERNMENT_ORGANIZATION
+Columns: name, level_three, level_one, level_two, organization_id
+
+Table: PATENTSVIEW.PERSISTENT_INVENTOR_DISAMBIG
+Columns: disamb_inventor_id_20191231, disamb_inventor_id_20200929, disamb_inventor_id_20181127, rawinventor_id, disamb_inventor_id_20171226, disamb_inventor_id_20190312, disamb_inventor_id_20180528, disamb_inventor_id_20191008, disamb_inventor_id_20200630, disamb_inventor_id_20170808, disamb_inventor_id_20171003, disamb_inventor_id_20200331, disamb_inventor_id_20201229, disamb_inventor_id_20190820
+
+Table: PATENTSVIEW.APPLICATION
+Columns: series_code, number, date, id, country, patent_id

@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq040",
+  "question": "For NYC yellow taxi trips between January 1 and January 7, 2016, excluding any trips picked up in ‘EWR’ or ‘Staten Island,’ determine the proportion of rides that fall into each tip category in each pickup borough. Only include trips where the dropoff time is after the pickup time, the passenger count is greater than zero, and trip_distance, tip_amount, tolls_amount, mta_tax, fare_amount, and total_amount are all non-negative. Classify the tip percentage as follows: 0% (no tip), up to 5%, 5% to 10%, 10% to 15%, 15% to 20%, 20% to 25%, and more than 25%.",
+  "db_id": "NEW_YORK_PLUS",
+  "source_document": "taxi_tip_rate.md",
+  "evidence": "tip_rate calculation formula: tip_rate = (tip_amount / total_amount) * 100. Categorization: 'no tip' if tip_rate = 0; 'Less than 5%' if tip_rate <= 5; '5% to 10%' if tip_rate > 5 and tip_rate <= 10; '10% to 15%' if tip_rate > 10 and tip_rate <= 15; '15% to 20%' if tip_rate > 15 and tip_rate <= 20; '20% to 25%' if tip_rate > 20 and tip_rate <= 25; 'More than 25%' if tip_rate > 25."
+}

@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq064",
+  "question": "Using the 2017 U.S. Census Tract data from the BigQuery public datasets, you need to proportionally allocate each tract's population and income to the zip codes based on the overlapping area between their geographic boundaries. Then, filter the results to include only those zip codes located within a 5-mile radius of a specific point in Washington State, with coordinates at latitude 47.685833°N and longitude -122.191667°W. Finally, calculate the total population and the average individual income for each zip code (rounded to one decimal place) and sort the results by the average individual income in descending order.",
+  "db_id": "CENSUS_BUREAU_ACS_1",
+  "source_document": "functions_st_intersects_area.md",
+  "evidence": "ST_INTERSECTS returns TRUE if two GEOGRAPHY or GEOMETRY objects intersect (share any portion of space). ST_AREA returns the area of Polygon(s) in a GEOGRAPHY or GEOMETRY object; for GEOGRAPHY input, area is in square meters. Usage notes: For GEOMETRY objects, ST_INTERSECTS reports an error if the two input objects have different SRIDs. Examples: ST_INTERSECTS with GEOGRAPHY objects (e.g., polygons overlapping returns True). ST_AREA with GEOGRAPHY objects calculates area in square meters (e.g., polygon area returned as 12364036567.0764)."
+}

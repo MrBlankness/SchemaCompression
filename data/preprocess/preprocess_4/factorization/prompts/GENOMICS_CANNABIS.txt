@@ -1,0 +1,124 @@
+[COMPONENTS]
+@C1
+AB: VARIANT | NULL | eg=[[0.0]]
+ABP: VARIANT | NULL | eg=[[0.0]]
+AC: VARIANT | NULL | eg=[[2], [0]]
+AF: VARIANT | NULL | eg=[[1.0], [0.0]]
+AN: NUMBER | NULL | eg=[2]
+AO: VARIANT | NULL | eg=[[3], [4]]
+CIGAR: VARIANT | NULL | eg=[["1X"], ["1M2D1M"]]
+DP: NUMBER | NULL | eg=[3, 4]
+DPB: FLOAT | NULL | eg=[3.0, 2.0]
+DPRA: VARIANT | NULL | eg=[[0]]
+EPP: VARIANT | NULL | eg=[[9.52472], [11.6962]]
+EPPR: FLOAT | NULL | eg=[0.0, 3.0103]
+GTI: NUMBER | NULL | eg=[0]
+LEN: VARIANT | NULL | eg=[[1], [2]]
+MEANALT: VARIANT | NULL | eg=[[1]]
+MQM: VARIANT | NULL | eg=[[23.3333], [12.5]]
+MQMR: FLOAT | NULL | eg=[0.0, 17.0]
+NS: NUMBER | NULL | eg=[1]
+NUMALT: NUMBER | NULL | eg=[1]
+ODDS: FLOAT | NULL | eg=[6.85425, 2.31077]
+PAIRED: VARIANT | NULL | eg=[[0.0], [0.25]]
+PAIREDR: FLOAT | NULL | eg=[0.0]
+PAO: VARIANT | NULL | eg=[[0.0]]
+PQA: VARIANT | NULL | eg=[[0.0]]
+PQR: FLOAT | NULL | eg=[0.0]
+PRO: FLOAT | NULL | eg=[0.0]
+QA: VARIANT | NULL | eg=[[74], [155]]
+QR: NUMBER | NULL | eg=[0, 78]
+RO: NUMBER | NULL | eg=[0, 2]
+RPL: VARIANT | NULL | eg=[[2], [4]]
+RPP: VARIANT | NULL | eg=[[3.73412], [11.6962]]
+RPPR: FLOAT | NULL | eg=[0.0, 3.0103]
+RPR: VARIANT | NULL | eg=[[1], [0]]
+RUN: VARIANT | NULL | eg=[[1]]
+SAF: VARIANT | NULL | eg=[[2], [0]]
+SAP: VARIANT | NULL | eg=[[3.73412], [11.6962]]
+SAR: VARIANT | NULL | eg=[[1], [4]]
+SRF: NUMBER | NULL | eg=[0, 1]
+SRP: FLOAT | NULL | eg=[0.0, 7.35324]
+SRR: NUMBER | NULL | eg=[0, 2]
+TYPE: VARIANT | NULL | eg=[["snp"], ["del"]]
+variant_id: TEXT | NULL | eg=["CJfqxrb_2MW3uAESIGdpfDEwOTg0OTYyNDR8Z2J8TU5QUjAxMDAwNDE4LjF8GM33AiDogrKp74WmjGY", "CJfqxrb_2MW3uAESIGdpfDEwOTg0OTY3Mjh8Z2J8TU5QUjAxMDAwMTUxLjF8GK6yBCDu5q-f977V91g"]
+
+@C2
+alternate_bases: VARIANT | NULL | eg=[["T"], ["AG"]]
+call: VARIANT | NULL | eg=[[{"AD":[11,6],"AO":[6],"DP":17,"QA":[232],"QR":427,"QUAL":104.203,"RO":11,"call_set_id":"13289866073488864535-0","call_set_name":"SRS266713","genotype":[0,1],"genotype_likelihood":[-16.1314,0.0,-33.6675]},{"AD":[0,2],"AO":[2],"DP":2,"QA":[69],"QR":0,"QUAL":47.4666,"RO":0,"call_set_id":"13289866073488864535-2","call_set_name":"SRS266795","genotype":[1,1],"genotype_likelihood":[-6.55228,-0.60206,0.0]},{"AD":[5,4],"AO":[4],"DP":9,"QA":[148],"QR":186,"QUAL":59.5407,"RO":5,"call_set_id":"13289866073488864535-2","call_set_name":"SRS266795","genotype":[0,1],"genotype_likelihood":[-10.9712,0.0,-14.3895]},{"AD":[6,6],"AO":[6],"DP":12,"QA":[233],"QR":230,"QUAL":134.406,"RO":6,"call_set_id":"13289866073488864535-2","call_set_name":"SRS266795","genotype":[0,1],"genotype_likelihood":[-17.7277,0.0,-17.4543]},{"AD":[4,4],"AO":[4],"DP":8,"QA":[157],"QR":123,"QUAL":79.0751,"RO":4,"call_set_id":"13289866073488864535-2","call_set_name":"SRS266795","genotype":[0,1],"genotype_likelihood":[-12.1007,0.0,-...]
+filter: VARIANT | NULL | eg=[[]]
+names: VARIANT | NULL | eg=[[]]
+quality: FLOAT | NULL | eg=[29.7729, 10.4464]
+reference_bases: TEXT | NULL | eg=["G", "AACG"]
+reference_name: TEXT | NULL | eg=["gi|1098496244|gb|MNPR01000418.1|", "gi|1098496728|gb|MNPR01000151.1|"]
+
+@C3
+end: NUMBER | NULL | eg=[48078, 71986]
+start: NUMBER | NULL | eg=[48077, 71982]
+
+[TABLES]
+## GENOMICS_CANNABIS.MNPR01_TRANSCRIPTOME_201703
+@use: [C1, C2, C3]
+
+## GENOMICS_CANNABIS.CS10_GFF
+@use: [C3]
+derived_features: VARIANT | NULL
+strand: TEXT | NULL
+source: TEXT | NULL
+id: TEXT | NULL
+attributes: VARIANT | NULL
+phase: NUMBER | NULL
+child_features: VARIANT | NULL
+_part: NUMBER | NULL
+seq_id: TEXT | NULL
+score: TEXT | NULL
+type: TEXT | NULL
+geometry: BINARY | NULL
+
+## GENOMICS_CANNABIS.CS3K_VCF_CS10_DV090
+@use: [C2]
+start_position: NUMBER | NULL | eg=[14895495, 86123821]
+end_position: NUMBER | NULL | eg=[14895496, 86123823]
+geometry: BINARY | NULL | eg=["bytearray(b'\\x01\\x02\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\xd5^D\\xdb1\\xd5\\xf7?\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00oQ\\x1c\\xf61\\xd5\\xf7?\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00')", "bytearray(b'\\x01\\x02\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\xc5O\\x88%\\x8a9!@\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00mL>,\\x8a9!@\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00')"]
+_part: NUMBER | NULL | eg=[3]
+
+## GENOMICS_CANNABIS.SAMPLE_INFO_201703
+SRA_Sample_s: TEXT | NULL | eg=["SRS266829", "SRS266826"]
+cultivar_s: TEXT | NULL
+Sample_Name_s: TEXT | NULL | eg=["PK-RT", "PK-STM"]
+Library_Name_s: TEXT | NULL | eg=["PK-RT", "PK-STM"]
+
+## GENOMICS_CANNABIS.MNPR01_201703
+@use: [C1, C2, C3]
+
+## GENOMICS_CANNABIS.CS3K_PROJECT_INFO
+Library_Name: TEXT | NULL | eg=["RSP10601", "RSP10026"]
+Run: TEXT | NULL | eg=["RSP10601", "RSP10026"]
+Platform: TEXT | NULL
+Instrument: TEXT | NULL
+LibrarySource: TEXT | NULL | eg=["GENOMIC"]
+LibrarySelection: TEXT | NULL
+SRA_Study: TEXT | NULL | eg=["Kannapedia"]
+Sample_Name: TEXT | NULL | eg=["Boss Hog", "Northern Lights"]
+Consent: TEXT | NULL
+LibraryLayout: TEXT | NULL | eg=["PAIRED"]
+ReleaseDate: DATE | NULL
+LoadDate: DATE | NULL
+Assay_Type: TEXT | NULL
+Center_Name: TEXT | NULL
+BioProject: TEXT | NULL
+BioSample: TEXT | NULL | eg=["RSP10601", "RSP10026"]
+SRA_Sample: TEXT | NULL | eg=["RSP10601", "RSP10026"]
+Experiment: TEXT | NULL
+DATASTORE_filetype: TEXT | NULL
+AvgSpotLen: NUMBER | NULL
+Organism: TEXT | NULL | eg=["Cannabis sativa"]
+DATASTORE_provider: TEXT | NULL
+MBases: NUMBER | NULL
+MBytes: NUMBER | NULL
+DATASTORE_region: TEXT | NULL
+InsertSize: NUMBER | NULL | eg=[0]
+
+## GENOMICS_CANNABIS.MNPR01_REFERENCE_201703
+length: NUMBER | NULL | eg=[4096, 4864]
+name: TEXT | NULL | eg=["gi|1098477440|gb|MNPR01010102.1|", "gi|1098478110|gb|MNPR01009867.1|"]

@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq222",
+  "question": "Find the CPC technology areas in Germany that had the highest exponential moving average (smoothing factor 0.1) of patent filings per year, specifically for patents granted in December 2016. For each CPC group at level 4, show the full title, CPC group, and the year with the highest exponential moving average of patent filings.",
+  "db_id": "PATENTS",
+  "source_document": "sliding_windows_calculation_cpc.md",
+  "evidence": "Weighted Moving Average (WMA) method is applied to smooth annual patent filing counts for each CPC technology area. Formula: WMA_t = α * x_t + (1 - α) * WMA_{t-1}. Smoothing factor (α) is 0.1. Goal: identify the 'best year' for each CPC group. For each CPC group at level 4, show full title, CPC group, and year with highest exponential moving average of patent filings."
+}

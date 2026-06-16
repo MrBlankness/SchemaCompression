@@ -1,0 +1,14 @@
+[COMPONENTS]
+@C1:databaseName,db_downloadDate,db_downloadURL,db_version,PubMedID
+
+[TABLES]
+Format: schema.table|components|columns
+REACTOME_VERSIONED.PATHWAY_HIERARCHY_V77||child_id,parent_id
+REACTOME_VERSIONED.PHYSICAL_ENTITY_V77||name,stable_id,ensembl_id,uniprot_id,location
+REACTOME_VERSIONED.PE_TO_PATHWAY_V77||pathway_stable_id,evidence_code,pe_stable_id
+REACTOME_VERSIONED.PATHWAY_V77||species,url,name,lowest_level,stable_id
+TARGETOME_VERSIONED.TARGET_SYNONYMS_V1||targetID,synonym
+TARGETOME_VERSIONED.DRUG_SYNONYMS_V1||drugID,synonym
+TARGETOME_VERSIONED.EXPERIMENTS_V1|@C1|exp_assayValueHigh,exp_assayUnits,exp_assayValueLow,exp_assaySpecies,sourceID,exp_assayDescription,exp_parentSource,exp_assayType,exp_assayRelation,expID,exp_assayValueMedian
+TARGETOME_VERSIONED.SOURCES_V1|@C1|sourceID
+TARGETOME_VERSIONED.INTERACTIONS_V1||drug_atcClassName,drug_atcClassStatus,sourceID,targetName,target_uniprotID,targetSpecies,targetType,expID,drug_epcClassName,drug_epcClassID,drugName,interactionType,targetID,drugID,drug_approvalDate,drug_atcClassID,interactionID

@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq098",
+  "question": "For NYC yellow taxi trips where both the pickup and dropoff occurred between January 1 and 7, 2016, inclusive, calculate the percentage of trips with no tip in each pickup borough, ensuring that only trips where the dropoff occurs after the pickup are included, the passenger count is greater than zero, and the trip distance, tip amount, tolls amount, MTA tax, fare amount, and total amount are non-negative; define \"no tip\" trips as those where the tip rate is zero, with the tip rate calculated as (tip_amount × 100) divided by total_amount (and considered zero when total_amount is zero).",
+  "db_id": "NEW_YORK_PLUS",
+  "source_document": "taxi_tip_rate.md",
+  "evidence": "tip_rate calculated as (tip_amount × 100) / total_amount; 'no tip' defined as tip_rate = 0; categorization includes 'no tip' if tip_rate = 0"
+}

@@ -1,0 +1,135 @@
+[COMPONENTS]
+[TABLES]
+## EDUCATION_BUSINESS.HARDWARE_DIM_CUSTOMER
+region: TEXT | NULL | eg=["APAC"]
+channel: TEXT | NULL | eg=["Direct"]
+market: TEXT | NULL | eg=["India", "Indonesia"]
+customer_code: NUMBER | NULL | eg=[70002017, 70002018]
+sub_zone: TEXT | NULL | eg=["India", "ROA"]
+platform: TEXT | NULL | eg=["Brick & Mortar", "E-Commerce"]
+customer: TEXT | NULL | eg=["Atliq Exclusive", "Atliq e Store"]
+
+## EDUCATION_BUSINESS.HARDWARE_FACT_MANUFACTURING_COST
+product_code: TEXT | NULL | eg=["A0118150101", "A0118150102"]
+manufacturing_cost: FLOAT | NULL | eg=[5.5172, 5.718]
+cost_year: NUMBER | NULL | eg=[2021, 2020]
+
+## EDUCATION_BUSINESS.HARDWARE_FACT_SALES_MONTHLY
+date: TEXT | NULL | eg=["2019-09-01"]
+customer_code: NUMBER | NULL | eg=[70002017, 70003182]
+sold_quantity: NUMBER | NULL | eg=[137, 63]
+product_code: TEXT | NULL | eg=["A0118150101"]
+fiscal_year: NUMBER | NULL | eg=[2020]
+
+## EDUCATION_BUSINESS.SALARYDATASET
+Salary: TEXT | NULL | eg=["₹6,48,573/yr", "₹6,69,578/yr"]
+CompanyName: TEXT | NULL | eg=["Mu Sigma", "Impact Analytics"]
+SalariesReported: FLOAT | NULL | eg=[105.0, 40.0]
+Location: TEXT | NULL | eg=["Bangalore"]
+index: NUMBER | NULL | eg=[0, 3]
+JobTitle: TEXT | NULL | eg=["Data Scientist"]
+
+## EDUCATION_BUSINESS.WEB_ACCOUNTS
+sales_rep_id: NUMBER | NULL | eg=[321510, 321520]
+primary_poc: TEXT | NULL | eg=["Sung Shields", "Jodee Lupo"]
+website: TEXT | NULL | eg=["www.exxonmobil.com", "www.apple.com"]
+id: NUMBER | NULL | eg=[1011, 1021]
+lat: FLOAT | NULL | eg=[41.1691563, 42.29049481]
+name: TEXT | NULL | eg=["Exxon Mobil", "Apple"]
+long: FLOAT | NULL | eg=[-73.84937379, -76.08400942]
+
+## EDUCATION_BUSINESS.WEB_SALES_REPS
+id: NUMBER | NULL | eg=[321540, 321550]
+name: TEXT | NULL | eg=["Cara Clarke", "Lavera Oles"]
+region_id: NUMBER | NULL | eg=[1]
+
+## EDUCATION_BUSINESS.WEB_REGION
+id: NUMBER | NULL | eg=[2, 3]
+name: TEXT | NULL | eg=["Midwest", "Southeast"]
+
+## EDUCATION_BUSINESS.HARDWARE_FACT_PRE_INVOICE_DEDUCTIONS
+pre_invoice_discount_pct: FLOAT | NULL | eg=[0.0735, 0.0703]
+customer_code: NUMBER | NULL | eg=[70002017, 70003181]
+fiscal_year: NUMBER | NULL | eg=[2020, 2021]
+
+## EDUCATION_BUSINESS.UNIVERSITY_OFFERING
+OffYear: NUMBER | NULL | eg=[2009, 2010]
+OfferNo: NUMBER | NULL | eg=[2222, 5555]
+OffTerm: TEXT | NULL | eg=["SUMMER", "WINTER"]
+CourseNo: TEXT | NULL | eg=["IS460", "FIN300"]
+OffLocation: TEXT | NULL | eg=["BLM412", "BLM207"]
+FacNo: FLOAT | NULL | eg=[NaN, 765432109.0]
+OffTime: TEXT | NULL | eg=["1:30 PM", "8:30 AM"]
+OffDays: TEXT | NULL | eg=["TTH", "MW"]
+
+## EDUCATION_BUSINESS.UNIVERSITY_STUDENT
+StdClass: TEXT | NULL | eg=["JR", "SR"]
+StdMajor: TEXT | NULL | eg=["FIN", "ACCT"]
+StdCity: TEXT | NULL | eg=["BOTHELL", "TACOMA"]
+StdFirstName: TEXT | NULL | eg=["BOB", "CANDY"]
+StdGPA: FLOAT | NULL | eg=[2.7, 3.5]
+StdState: TEXT | NULL | eg=["WA"]
+StdNo: NUMBER | NULL | eg=[124567890, 234567890]
+StdLastName: TEXT | NULL | eg=["NORBERT", "KENDALL"]
+StdZip: TEXT | NULL | eg=["98011-2121", "99042-3321"]
+
+## EDUCATION_BUSINESS.STAFFHOURS
+EventDate: TEXT | NULL | eg=["2013-01-15", "2013-02-20"]
+EventType: TEXT | NULL | eg=["Exit", "Enter"]
+StaffMember: TEXT | NULL | eg=["A", "F"]
+EventTime: TEXT | NULL | eg=["08:00", "09:10"]
+
+## EDUCATION_BUSINESS.WEB_ORDERS
+poster_amt_usd: FLOAT | NULL | eg=[194.88, 0.0]
+standard_qty: NUMBER | NULL | eg=[123, 85]
+occurred_at: TEXT | NULL | eg=["2015-10-06T17:31:14.000Z", "2015-12-04T04:21:55.000Z"]
+gloss_qty: NUMBER | NULL | eg=[22, 47]
+poster_qty: NUMBER | NULL | eg=[24, 0]
+standard_amt_usd: FLOAT | NULL | eg=[613.77, 424.15]
+total: NUMBER | NULL | eg=[169, 132]
+id: NUMBER | NULL | eg=[1, 3]
+gloss_amt_usd: FLOAT | NULL | eg=[164.78, 352.03]
+account_id: NUMBER | NULL | eg=[1001]
+total_amt_usd: FLOAT | NULL | eg=[973.43, 776.18]
+
+## EDUCATION_BUSINESS.HARDWARE_FACT_GROSS_PRICE
+fiscal_year: NUMBER | NULL | eg=[2020, 2021]
+product_code: TEXT | NULL | eg=["A0118150102", "A0118150103"]
+gross_price: FLOAT | NULL | eg=[19.8577, 21.7795]
+
+## EDUCATION_BUSINESS.UNIVERSITY_COURSE
+CourseNo: TEXT | NULL | eg=["FIN450", "FIN480"]
+CrsDesc: TEXT | NULL | eg=["PRINCIPLES OF INVESTMENTS", "CORPORATE FINANCE"]
+CrsUnits: NUMBER | NULL | eg=[4]
+
+## EDUCATION_BUSINESS.WEB_EVENTS
+id: NUMBER | NULL | eg=[2, 3]
+channel: TEXT | NULL | eg=["direct"]
+account_id: NUMBER | NULL | eg=[1001, 1021]
+occurred_at: TEXT | NULL | eg=["2015-11-05T03:08:26.000Z", "2015-12-04T03:57:24.000Z"]
+
+## EDUCATION_BUSINESS.UNIVERSITY_ENROLLMENT
+EnrGrade: FLOAT | NULL | eg=[3.5, 3.8]
+StdNo: NUMBER | NULL | eg=[234567890, 567890123]
+OfferNo: NUMBER | NULL | eg=[1234, 4321]
+
+## EDUCATION_BUSINESS.UNIVERSITY_FACULTY
+FacFirstName: TEXT | NULL | eg=["LEONARD", "VICTORIA"]
+FacRank: TEXT | NULL | eg=["ASST", "PROF"]
+FacCity: TEXT | NULL | eg=["SEATTLE", "BOTHELL"]
+FacSalary: NUMBER | NULL | eg=[35000, 120000]
+FacState: TEXT | NULL | eg=["WA"]
+FacDept: TEXT | NULL | eg=["MS", "FIN"]
+FacHireDate: TEXT | NULL | eg=["1997-04-10", "1998-04-15"]
+FacLastName: TEXT | NULL | eg=["VINCE", "EMMANUEL"]
+FacSupervisor: FLOAT | NULL | eg=[654321098.0, NaN]
+FacNo: NUMBER | NULL | eg=[98765432, 543210987]
+FacZipCode: TEXT | NULL | eg=["98111-9921", "98011-2242"]
+
+## EDUCATION_BUSINESS.HARDWARE_DIM_PRODUCT
+product: TEXT | NULL | eg=["AQ Dracula HDD – 3.5 Inch SATA 6 Gb/s 5400 RPM 256 MB Cache", "AQ WereWolf NAS Internal Hard Drive HDD – 8.89 cm"]
+division: TEXT | NULL | eg=["P & A"]
+category: TEXT | NULL | eg=["Internal HDD", "Graphic Card"]
+product_code: TEXT | NULL | eg=["A0118150101", "A0219150201"]
+segment: TEXT | NULL | eg=["Peripherals"]
+variant: TEXT | NULL | eg=["Standard", "Standard 1"]

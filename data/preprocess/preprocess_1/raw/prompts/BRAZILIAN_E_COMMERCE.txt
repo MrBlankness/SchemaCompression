@@ -1,0 +1,32 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: BRAZILIAN_E_COMMERCE.PRODUCT_CATEGORY_NAME_TRANSLATION
+Columns: product_category_name, product_category_name_english
+
+Table: BRAZILIAN_E_COMMERCE.OLIST_CUSTOMERS
+Columns: customer_city, customer_zip_code_prefix, customer_unique_id, customer_state, customer_id
+
+Table: BRAZILIAN_E_COMMERCE.OLIST_ORDERS
+Columns: order_id, order_delivered_carrier_date, order_purchase_timestamp, order_approved_at, order_estimated_delivery_date, order_status, order_delivered_customer_date, customer_id
+
+Table: BRAZILIAN_E_COMMERCE.OLIST_GEOLOCATION
+Columns: geolocation_lng, geolocation_zip_code_prefix, geolocation_city, geolocation_lat, geolocation_state
+
+Table: BRAZILIAN_E_COMMERCE.OLIST_PRODUCTS
+Columns: product_name_lenght, product_width_cm, product_category_name, product_weight_g, product_length_cm, product_photos_qty, product_description_lenght, product_id, product_height_cm
+
+Table: BRAZILIAN_E_COMMERCE.OLIST_SELLERS
+Columns: seller_id, seller_state, seller_zip_code_prefix, seller_city
+
+Table: BRAZILIAN_E_COMMERCE.OLIST_ORDER_PAYMENTS
+Columns: payment_installments, order_id, payment_value, payment_sequential, payment_type
+
+Table: BRAZILIAN_E_COMMERCE.OLIST_PRODUCTS_DATASET
+Columns: product_name_lenght, product_category_name, product_length_cm, product_height_cm, product_photos_qty, product_description_lenght, product_width_cm, product_id, index, product_weight_g
+
+Table: BRAZILIAN_E_COMMERCE.OLIST_ORDER_REVIEWS
+Columns: review_answer_timestamp, order_id, review_comment_title, review_comment_message, review_creation_date, review_id, review_score
+
+Table: BRAZILIAN_E_COMMERCE.OLIST_ORDER_ITEMS
+Columns: seller_id, price, order_item_id, shipping_limit_date, order_id, product_id, freight_value

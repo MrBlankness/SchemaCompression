@@ -1,0 +1,25 @@
+[COMPONENTS]
+@C1:ancestry_initial,ancestry_replication,has_sumstats,n_initial,n_replication,num_assoc_loci,pmid,pub_author,pub_date,pub_journal,pub_title,source,trait_category,trait_efos,trait_reported
+@C2:AFR_1000G_prop,AMR_1000G_prop,beta_ci_lower,beta_ci_upper,direction,EAS_1000G_prop,EUR_1000G_prop,log10_ABF,odds_ratio,oddsr_ci_lower,oddsr_ci_upper,overall_r2,posterior_prob,pval_exponent,pval_mantissa,SAS_1000G_prop
+@C3:d,distance_score,distance_score_q,feature,fpred_labels,fpred_max_label,fpred_max_score,fpred_scores,interval_score,interval_score_q,qtl_beta,qtl_pval,qtl_score,qtl_score_q,qtl_se,source_id
+@C4:lead_alt,lead_chrom,lead_pos,lead_ref,tag_alt,tag_chrom,tag_pos,tag_ref
+@C5:alt,chrom,pos,ref
+@C6:eaf,info,is_cc,n_total,se
+@C7:beta,pval
+@C8:alt_allele,chr_id,position,ref_allele
+
+[TABLES]
+Format: schema.table|components|columns
+GENETICS.SA_MOLECULAR_TRAIT|@C5,@C6,@C7|mac,bio_feature,type_id,num_tests,phenotype_id,mac_cases,n_cases,gene_id,study_id
+GENETICS.VARIANTS|@C8|cadd,rs_id,gene_id_prot_coding_distance,af,chr_id_b37,position_b37,most_severe_consequence,gene_id_prot_coding,gene_id_any_distance,gene_id_any
+GENETICS.VARIANT_DISEASE|@C1,@C2,@C4,@C7|study_id,n_cases,pics_95perc_credset
+GENETICS.STUDIES|@C1|study_id,n_cases
+GENETICS.GENES||gene_name,description,tss,fwdstrand,start,biotype,chr,end,exons,gene_id
+GENETICS.STUDIES_OVERLAP||B_ref,A_study_id,A_chrom,B_study_id,B_chrom,B_pos,B_alt,AB_overlap,A_ref,B_distinct,A_alt,A_pos,A_distinct
+GENETICS.SA_GWAS|@C5,@C6,@C7|n_cases,mac,type_id,mac_cases,study_id
+GENETICS.OT_RELEASE||release
+GENETICS.VARIANT_DISEASE_COLOC||left_pos,right_pos,left_var_right_isCC,right_phenotype,left_alt,left_study,right_chrom,is_flipped,left_var_right_study_se,right_type,left_chrom,right_bio_feature,left_ref,left_var_right_study_beta,right_gene_id,coloc_h4_h3,right_ref,coloc_h1,right_study,left_var_right_study_pval,coloc_h2,coloc_h0,coloc_n_vars,left_type,right_alt,coloc_h4,coloc_log2_h4_h3,coloc_h3
+GENETICS.VARIANT_DISEASE_CREDSET|@C4|multisignal_method,study_id,is95_credset,tag_variant_id,type,tag_se,tag_beta_cond,gene_id,lead_variant_id,tag_se_cond,phenotype_id,postprob,is99_credset,logABF,tag_pval_cond,tag_beta,bio_feature,postprob_cumsum,tag_pval
+GENETICS.VARIANT_GENE|@C3,@C8|gene_id,type_id
+GENETICS.LOCUS2GENE|@C5|y_proba_logi_pathogenicity,training_gs,study_id,y_proba_logo_pathogenicity,gene_id,y_proba_dist_foot,y_proba_logo_interaction,y_proba_logi_interaction,y_proba_full_model,training_fold,y_proba_logi_molecularQTL,training_clf,y_proba_logi_distance,y_proba_logo_molecularQTL,y_proba_dist_tss,y_proba_logo_distance
+GENETICS.DISEASE_VARIANT_GENE|@C1,@C2,@C3,@C4,@C7|n_cases,type_id,gene_id,study_id

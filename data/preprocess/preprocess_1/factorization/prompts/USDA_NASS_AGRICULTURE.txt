@@ -1,0 +1,18 @@
+[COMPONENTS]
+@C1:agg_level_desc,asd_desc,class_desc,commodity_desc,country_name,county_name,domain_desc,domaincat_desc,freq_desc,group_desc,location_desc,prodn_practice_desc,reference_period_desc,region_desc,sector_desc,short_desc,source_desc,state_alpha,state_name,statisticcat_desc,unit_desc,util_practice_desc,watershed_desc
+@C2:asd_code,begin_code,congr_district_code,country_code,county_ansi,county_code,cv_percent,end_code,load_time,state_ansi,state_fips_code,value,watershed_code,week_ending,year,zip_5
+@C3:asd_code,begin_code,congr_district_code,country_code,county_ansi,county_code,cv_percent,cv_suppression_code,end_code,load_time,state_ansi,state_fips_code,value,value_suppression_code,watershed_code,week_ending,year,zip_5
+
+[TABLES]
+Format: schema.table|components|columns
+USDA_NASS_AGRICULTURE.ANIMALS_PRODUCTS|@C1,@C2|
+USDA_NASS_AGRICULTURE.CENSUS2002|@C1,@C2|
+USDA_NASS_AGRICULTURE.ECONOMICS|@C1,@C2|
+USDA_NASS_AGRICULTURE.CENSUS2007|@C1,@C2|
+USDA_NASS_AGRICULTURE.CENSUS_2007|@C1,@C3|
+USDA_NASS_AGRICULTURE.CENSUS_2002|@C1,@C3|
+USDA_NASS_AGRICULTURE.CROPS|@C1,@C3|
+USDA_NASS_AGRICULTURE.CENSUS2012|@C1,@C2|
+USDA_NASS_AGRICULTURE.CENSUS_2012|@C1,@C3|
+USDA_NASS_AGRICULTURE.ENVIRONMENTAL|@C1,@C3|
+USDA_NASS_AGRICULTURE.DEMOGRAPHICS|@C1,@C2|

@@ -1,0 +1,203 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: GEO_OPENSTREETMAP.HISTORY_CHANGESETS
+Columns: osm_timestamp_min, ways, id, osm_timestamp_max, relations, nodes
+
+Table: GEO_OPENSTREETMAP.PLANET_RELATIONS
+Columns: visible, osm_timestamp, id, username, all_tags, geometry, members, changeset, version
+
+Table: GEO_OPENSTREETMAP.HISTORY_RELATIONS
+Columns: username, members, osm_timestamp, id, visible, version, geometry, all_tags, changeset
+
+Table: GEO_OPENSTREETMAP.PLANET_LAYERS
+Columns: layer_code, osm_id, osm_timestamp, osm_way_id, layer_class, all_tags, layer_name, geometry, gdal_type, osm_version
+
+Table: GEO_OPENSTREETMAP.HISTORY_NODES
+Columns: LONGITUDE, ID, CHANGESET, GEOMETRY, USERNAME, ALL_TAGS, VERSION, OSM_TIMESTAMP, VISIBLE, LATITUDE
+
+Table: GEO_OPENSTREETMAP.PLANET_FEATURES
+Columns: geometry, osm_timestamp, all_tags, feature_type, osm_version, osm_id, osm_way_id
+
+Table: GEO_OPENSTREETMAP.PLANET_FEATURES_POINTS
+Columns: geometry, osm_timestamp, osm_way_id, osm_id, osm_version, all_tags
+
+Table: GEO_OPENSTREETMAP.HISTORY_LAYERS
+Columns: layer_name, osm_id, all_tags, osm_way_id, geometry, gdal_type, layer_code, osm_timestamp, osm_version, layer_class
+
+Table: GEO_OPENSTREETMAP.PLANET_NODES
+Columns: all_tags, osm_timestamp, changeset, visible, geometry, latitude, username, version, longitude, id
+
+Table: GEO_OPENSTREETMAP.PLANET_WAYS
+Columns: version, geometry, visible, username, all_tags, osm_timestamp, nodes, id, changeset
+
+Table: GEO_US_CENSUS_PLACES.PLACES_NORTH_CAROLINA
+Columns: state_fips_code, place_id, place_geom, principal_city_msa, area_land_meters, internal_point_lat, internal_point_geom, place_name, principal_city_ne, place_gnis_code, functional_status, lsad_code, area_water_meters, internal_point_lon, fips_class_code, name_lsad, place_fips_code
+
+Table: GEO_US_CENSUS_PLACES.PLACES_MASSACHUSETTS
+Columns: place_gnis_code, internal_point_lon, place_id, place_geom, principal_city_ne, functional_status, area_water_meters, name_lsad, place_name, fips_class_code, area_land_meters, place_fips_code, state_fips_code, principal_city_msa, lsad_code, internal_point_lat, internal_point_geom
+
+Table: GEO_US_CENSUS_PLACES.PLACES_DISTRICT_OF_COLUMBIA
+Columns: principal_city_msa, place_gnis_code, internal_point_geom, internal_point_lon, functional_status, lsad_code, area_water_meters, internal_point_lat, place_fips_code, area_land_meters, name_lsad, place_name, state_fips_code, place_geom, place_id, principal_city_ne, fips_class_code
+
+Table: GEO_US_CENSUS_PLACES.PLACES_WASHINGTON
+Columns: place_geom, place_gnis_code, internal_point_lon, functional_status, state_fips_code, name_lsad, internal_point_geom, principal_city_msa, lsad_code, place_id, principal_city_ne, place_fips_code, internal_point_lat, area_land_meters, area_water_meters, fips_class_code, place_name
+
+Table: GEO_US_CENSUS_PLACES.PLACES_CALIFORNIA
+Columns: place_fips_code, internal_point_lon, area_water_meters, internal_point_lat, place_geom, place_id, name_lsad, functional_status, fips_class_code, lsad_code, area_land_meters, internal_point_geom, state_fips_code, place_name, principal_city_ne, place_gnis_code, principal_city_msa
+
+Table: GEO_US_CENSUS_PLACES.PLACES_WYOMING
+Columns: lsad_code, principal_city_ne, place_geom, name_lsad, place_name, place_fips_code, internal_point_geom, principal_city_msa, place_gnis_code, state_fips_code, place_id, fips_class_code, area_water_meters, internal_point_lon, area_land_meters, internal_point_lat, functional_status
+
+Table: GEO_US_CENSUS_PLACES.PLACES_FLORIDA
+Columns: principal_city_ne, name_lsad, place_geom, place_name, internal_point_lat, internal_point_lon, principal_city_msa, internal_point_geom, fips_class_code, state_fips_code, place_fips_code, place_gnis_code, area_water_meters, lsad_code, functional_status, place_id, area_land_meters
+
+Table: GEO_US_CENSUS_PLACES.PLACES_NEW_JERSEY
+Columns: place_geom, place_gnis_code, area_water_meters, area_land_meters, internal_point_lon, name_lsad, internal_point_geom, principal_city_ne, place_name, place_id, principal_city_msa, lsad_code, place_fips_code, state_fips_code, fips_class_code, functional_status, internal_point_lat
+
+Table: GEO_US_CENSUS_PLACES.PLACES_KANSAS
+Columns: name_lsad, place_fips_code, internal_point_geom, state_fips_code, lsad_code, place_name, functional_status, place_id, area_land_meters, fips_class_code, internal_point_lon, area_water_meters, place_gnis_code, principal_city_msa, place_geom, internal_point_lat, principal_city_ne
+
+Table: GEO_US_CENSUS_PLACES.PLACES_CONNECTICUT
+Columns: place_gnis_code, area_water_meters, fips_class_code, place_fips_code, principal_city_msa, internal_point_lon, lsad_code, state_fips_code, internal_point_geom, place_id, place_name, place_geom, principal_city_ne, internal_point_lat, area_land_meters, name_lsad, functional_status
+
+Table: GEO_US_CENSUS_PLACES.PLACES_ARIZONA
+Columns: fips_class_code, internal_point_lat, area_water_meters, lsad_code, internal_point_geom, functional_status, principal_city_msa, name_lsad, place_fips_code, place_name, place_geom, internal_point_lon, area_land_meters, place_gnis_code, place_id, state_fips_code, principal_city_ne
+
+Table: GEO_US_CENSUS_PLACES.PLACES_GEORGIA
+Columns: principal_city_ne, internal_point_lon, area_water_meters, name_lsad, functional_status, internal_point_lat, place_fips_code, place_gnis_code, fips_class_code, place_name, place_id, internal_point_geom, principal_city_msa, area_land_meters, place_geom, state_fips_code, lsad_code
+
+Table: GEO_US_CENSUS_PLACES.PLACES_RHODE_ISLAND
+Columns: lsad_code, functional_status, name_lsad, internal_point_lat, principal_city_msa, fips_class_code, place_fips_code, place_gnis_code, place_geom, internal_point_lon, place_name, state_fips_code, principal_city_ne, area_land_meters, area_water_meters, internal_point_geom, place_id
+
+Table: GEO_US_CENSUS_PLACES.PLACES_IOWA
+Columns: internal_point_geom, place_gnis_code, place_fips_code, area_water_meters, place_name, functional_status, state_fips_code, lsad_code, place_geom, internal_point_lat, fips_class_code, name_lsad, area_land_meters, internal_point_lon, principal_city_msa, principal_city_ne, place_id
+
+Table: GEO_US_CENSUS_PLACES.PLACES_AMERICAN_SAMOA
+Columns: state_fips_code, place_geom, functional_status, internal_point_geom, internal_point_lon, principal_city_msa, lsad_code, place_fips_code, area_water_meters, place_gnis_code, place_id, area_land_meters, name_lsad, place_name, fips_class_code, principal_city_ne, internal_point_lat
+
+Table: GEO_US_CENSUS_PLACES.PLACES_OREGON
+Columns: fips_class_code, internal_point_lon, state_fips_code, place_id, internal_point_geom, place_geom, place_gnis_code, place_name, area_water_meters, principal_city_msa, area_land_meters, lsad_code, place_fips_code, principal_city_ne, functional_status, internal_point_lat, name_lsad
+
+Table: GEO_US_CENSUS_PLACES.PLACES_PENNSYLVANIA
+Columns: name_lsad, internal_point_lat, internal_point_geom, principal_city_msa, area_land_meters, lsad_code, place_gnis_code, state_fips_code, internal_point_lon, place_name, area_water_meters, place_fips_code, principal_city_ne, fips_class_code, place_id, functional_status, place_geom
+
+Table: GEO_US_CENSUS_PLACES.PLACES_OHIO
+Columns: area_land_meters, principal_city_msa, state_fips_code, place_id, internal_point_lat, internal_point_geom, name_lsad, place_name, area_water_meters, place_gnis_code, principal_city_ne, lsad_code, place_fips_code, internal_point_lon, place_geom, fips_class_code, functional_status
+
+Table: GEO_US_CENSUS_PLACES.PLACES_WISCONSIN
+Columns: area_land_meters, fips_class_code, internal_point_geom, lsad_code, internal_point_lat, principal_city_msa, place_id, place_fips_code, state_fips_code, internal_point_lon, name_lsad, principal_city_ne, place_gnis_code, functional_status, place_name, place_geom, area_water_meters
+
+Table: GEO_US_CENSUS_PLACES.PLACES_NORTHERN_MARIANA_ISLANDS
+Columns: principal_city_ne, name_lsad, functional_status, state_fips_code, area_water_meters, place_id, internal_point_geom, area_land_meters, place_geom, place_fips_code, place_name, principal_city_msa, internal_point_lon, fips_class_code, place_gnis_code, internal_point_lat, lsad_code
+
+Table: GEO_US_CENSUS_PLACES.PLACES_US_VIRGIN_ISLANDS
+Columns: internal_point_lon, place_id, internal_point_geom, principal_city_ne, place_gnis_code, internal_point_lat, place_geom, lsad_code, name_lsad, principal_city_msa, place_name, area_land_meters, area_water_meters, fips_class_code, state_fips_code, functional_status, place_fips_code
+
+Table: GEO_US_CENSUS_PLACES.PLACES_VERMONT
+Columns: internal_point_lon, lsad_code, state_fips_code, area_land_meters, internal_point_geom, place_id, fips_class_code, functional_status, place_gnis_code, name_lsad, principal_city_msa, place_geom, place_fips_code, area_water_meters, internal_point_lat, principal_city_ne, place_name
+
+Table: GEO_US_CENSUS_PLACES.PLACES_HAWAII
+Columns: fips_class_code, state_fips_code, name_lsad, place_fips_code, functional_status, place_name, internal_point_lat, area_water_meters, internal_point_geom, place_gnis_code, area_land_meters, internal_point_lon, lsad_code, principal_city_msa, place_geom, principal_city_ne, place_id
+
+Table: GEO_US_CENSUS_PLACES.PLACES_ALABAMA
+Columns: lsad_code, place_fips_code, place_gnis_code, area_land_meters, principal_city_ne, functional_status, state_fips_code, internal_point_lon, principal_city_msa, place_id, area_water_meters, place_geom, name_lsad, internal_point_geom, place_name, internal_point_lat, fips_class_code
+
+Table: GEO_US_CENSUS_PLACES.PLACES_KENTUCKY
+Columns: functional_status, internal_point_geom, place_fips_code, place_geom, place_id, lsad_code, name_lsad, internal_point_lat, place_name, internal_point_lon, state_fips_code, principal_city_ne, area_land_meters, area_water_meters, place_gnis_code, fips_class_code, principal_city_msa
+
+Table: GEO_US_CENSUS_PLACES.PLACES_ALASKA
+Columns: functional_status, internal_point_lon, state_fips_code, principal_city_msa, internal_point_lat, area_water_meters, lsad_code, principal_city_ne, place_geom, place_gnis_code, name_lsad, internal_point_geom, area_land_meters, place_name, place_fips_code, place_id, fips_class_code
+
+Table: GEO_US_CENSUS_PLACES.PLACES_OKLAHOMA
+Columns: place_id, principal_city_ne, lsad_code, functional_status, principal_city_msa, internal_point_geom, internal_point_lat, place_gnis_code, area_land_meters, place_geom, place_fips_code, name_lsad, area_water_meters, state_fips_code, place_name, internal_point_lon, fips_class_code
+
+Table: GEO_US_CENSUS_PLACES.PLACES_MISSOURI
+Columns: place_id, principal_city_msa, area_water_meters, principal_city_ne, internal_point_geom, functional_status, place_geom, place_fips_code, internal_point_lat, name_lsad, internal_point_lon, state_fips_code, lsad_code, place_gnis_code, area_land_meters, place_name, fips_class_code
+
+Table: GEO_US_CENSUS_PLACES.PLACES_GUAM
+Columns: functional_status, principal_city_msa, place_id, internal_point_lon, place_fips_code, place_geom, place_name, area_water_meters, internal_point_lat, name_lsad, lsad_code, place_gnis_code, fips_class_code, state_fips_code, internal_point_geom, area_land_meters, principal_city_ne
+
+Table: GEO_US_CENSUS_PLACES.US_NATIONAL_PLACES
+Columns: functional_status, place_name, place_geom, state_fips_code, place_gnis_code, lsad_code, place_id, internal_point_lat, internal_point_geom, principal_city_ne, state_name, place_fips_code, fips_class_code, area_land_meters, principal_city_msa, name_lsad, internal_point_lon, area_water_meters
+
+Table: GEO_US_CENSUS_PLACES.PLACES_NEBRASKA
+Columns: internal_point_lat, place_id, area_land_meters, place_gnis_code, functional_status, principal_city_ne, internal_point_lon, internal_point_geom, state_fips_code, place_fips_code, place_geom, fips_class_code, name_lsad, lsad_code, area_water_meters, place_name, principal_city_msa
+
+Table: GEO_US_CENSUS_PLACES.PLACES_VIRGINIA
+Columns: place_geom, internal_point_lon, area_water_meters, place_gnis_code, place_fips_code, area_land_meters, principal_city_ne, principal_city_msa, lsad_code, place_name, place_id, name_lsad, internal_point_lat, internal_point_geom, fips_class_code, state_fips_code, functional_status
+
+Table: GEO_US_CENSUS_PLACES.PLACES_NEW_YORK
+Columns: area_water_meters, internal_point_lon, place_id, lsad_code, place_geom, state_fips_code, name_lsad, principal_city_ne, functional_status, place_name, place_gnis_code, principal_city_msa, place_fips_code, fips_class_code, internal_point_geom, internal_point_lat, area_land_meters
+
+Table: GEO_US_CENSUS_PLACES.PLACES_MARYLAND
+Columns: internal_point_lon, place_geom, lsad_code, place_id, fips_class_code, area_water_meters, functional_status, principal_city_ne, place_fips_code, place_gnis_code, place_name, area_land_meters, name_lsad, internal_point_lat, internal_point_geom, state_fips_code, principal_city_msa
+
+Table: GEO_US_CENSUS_PLACES.PLACES_MAINE
+Columns: principal_city_msa, name_lsad, state_fips_code, internal_point_geom, area_water_meters, fips_class_code, internal_point_lat, place_fips_code, area_land_meters, lsad_code, place_geom, place_id, place_gnis_code, principal_city_ne, functional_status, place_name, internal_point_lon
+
+Table: GEO_US_CENSUS_PLACES.PLACES_PUERTO_RICO
+Columns: fips_class_code, state_fips_code, principal_city_ne, place_name, area_land_meters, area_water_meters, functional_status, place_geom, place_fips_code, place_id, internal_point_lon, place_gnis_code, lsad_code, principal_city_msa, internal_point_geom, name_lsad, internal_point_lat
+
+Table: GEO_US_CENSUS_PLACES.PLACES_UTAH
+Columns: place_id, place_name, area_land_meters, principal_city_ne, name_lsad, internal_point_lat, place_fips_code, state_fips_code, lsad_code, place_gnis_code, principal_city_msa, functional_status, area_water_meters, internal_point_lon, internal_point_geom, fips_class_code, place_geom
+
+Table: GEO_US_CENSUS_PLACES.PLACES_INDIANA
+Columns: internal_point_geom, principal_city_ne, place_geom, functional_status, area_water_meters, principal_city_msa, place_gnis_code, place_name, fips_class_code, place_id, place_fips_code, internal_point_lat, lsad_code, state_fips_code, name_lsad, internal_point_lon, area_land_meters
+
+Table: GEO_US_CENSUS_PLACES.PLACES_MICHIGAN
+Columns: state_fips_code, place_gnis_code, functional_status, place_geom, lsad_code, principal_city_msa, place_id, area_water_meters, place_fips_code, internal_point_lon, name_lsad, fips_class_code, place_name, principal_city_ne, internal_point_lat, area_land_meters, internal_point_geom
+
+Table: GEO_US_CENSUS_PLACES.PLACES_COLORADO
+Columns: internal_point_lon, area_water_meters, place_name, place_gnis_code, name_lsad, state_fips_code, place_id, internal_point_geom, area_land_meters, place_geom, lsad_code, functional_status, principal_city_ne, fips_class_code, principal_city_msa, place_fips_code, internal_point_lat
+
+Table: GEO_US_CENSUS_PLACES.PLACES_SOUTH_CAROLINA
+Columns: place_gnis_code, lsad_code, name_lsad, internal_point_lat, place_id, principal_city_msa, place_geom, area_land_meters, functional_status, principal_city_ne, internal_point_geom, place_name, fips_class_code, area_water_meters, internal_point_lon, place_fips_code, state_fips_code
+
+Table: GEO_US_CENSUS_PLACES.PLACES_IDAHO
+Columns: area_water_meters, name_lsad, area_land_meters, place_id, place_name, internal_point_lat, state_fips_code, fips_class_code, functional_status, place_gnis_code, internal_point_geom, principal_city_msa, place_geom, place_fips_code, internal_point_lon, principal_city_ne, lsad_code
+
+Table: GEO_US_CENSUS_PLACES.PLACES_TEXAS
+Columns: place_geom, fips_class_code, place_name, area_water_meters, internal_point_geom, area_land_meters, internal_point_lat, name_lsad, principal_city_msa, place_gnis_code, principal_city_ne, lsad_code, place_id, place_fips_code, functional_status, internal_point_lon, state_fips_code
+
+Table: GEO_US_CENSUS_PLACES.PLACES_NEW_MEXICO
+Columns: place_id, place_fips_code, lsad_code, internal_point_geom, state_fips_code, principal_city_msa, functional_status, area_water_meters, name_lsad, internal_point_lat, internal_point_lon, place_geom, place_gnis_code, fips_class_code, place_name, principal_city_ne, area_land_meters
+
+Table: GEO_US_CENSUS_PLACES.PLACES_NORTH_DAKOTA
+Columns: internal_point_lon, internal_point_lat, fips_class_code, place_geom, state_fips_code, functional_status, name_lsad, lsad_code, internal_point_geom, place_gnis_code, principal_city_msa, place_id, area_land_meters, area_water_meters, place_name, place_fips_code, principal_city_ne
+
+Table: GEO_US_CENSUS_PLACES.PLACES_MINNESOTA
+Columns: place_id, area_land_meters, internal_point_geom, internal_point_lat, state_fips_code, functional_status, area_water_meters, place_geom, place_name, fips_class_code, principal_city_msa, internal_point_lon, lsad_code, name_lsad, principal_city_ne, place_fips_code, place_gnis_code
+
+Table: GEO_US_CENSUS_PLACES.PLACES_MONTANA
+Columns: place_gnis_code, place_name, place_id, fips_class_code, internal_point_geom, principal_city_ne, functional_status, lsad_code, internal_point_lon, internal_point_lat, place_fips_code, area_land_meters, area_water_meters, principal_city_msa, state_fips_code, name_lsad, place_geom
+
+Table: GEO_US_CENSUS_PLACES.PLACES_ARKANSAS
+Columns: place_geom, fips_class_code, internal_point_geom, place_name, lsad_code, area_water_meters, state_fips_code, place_id, place_gnis_code, internal_point_lon, principal_city_msa, principal_city_ne, place_fips_code, internal_point_lat, name_lsad, area_land_meters, functional_status
+
+Table: GEO_US_CENSUS_PLACES.PLACES_SOUTH_DAKOTA
+Columns: internal_point_geom, area_water_meters, functional_status, place_geom, area_land_meters, principal_city_ne, place_gnis_code, lsad_code, place_name, place_id, state_fips_code, name_lsad, principal_city_msa, internal_point_lon, place_fips_code, internal_point_lat, fips_class_code
+
+Table: GEO_US_CENSUS_PLACES.PLACES_LOUISIANA
+Columns: principal_city_msa, principal_city_ne, internal_point_geom, internal_point_lat, area_water_meters, place_id, state_fips_code, lsad_code, place_gnis_code, place_fips_code, functional_status, fips_class_code, place_geom, name_lsad, place_name, area_land_meters, internal_point_lon
+
+Table: GEO_US_CENSUS_PLACES.PLACES_NEVADA
+Columns: state_fips_code, internal_point_geom, place_gnis_code, lsad_code, fips_class_code, principal_city_msa, principal_city_ne, place_name, place_geom, area_land_meters, internal_point_lon, functional_status, internal_point_lat, place_id, area_water_meters, name_lsad, place_fips_code
+
+Table: GEO_US_CENSUS_PLACES.PLACES_WEST_VIRGINIA
+Columns: internal_point_geom, state_fips_code, name_lsad, area_land_meters, place_name, fips_class_code, place_geom, internal_point_lon, principal_city_msa, place_fips_code, place_id, lsad_code, internal_point_lat, principal_city_ne, place_gnis_code, area_water_meters, functional_status
+
+Table: GEO_US_CENSUS_PLACES.PLACES_NEW_HAMPSHIRE
+Columns: place_name, principal_city_ne, place_id, area_water_meters, place_geom, functional_status, internal_point_lat, lsad_code, place_fips_code, internal_point_geom, area_land_meters, principal_city_msa, place_gnis_code, name_lsad, state_fips_code, internal_point_lon, fips_class_code
+
+Table: GEO_US_CENSUS_PLACES.PLACES_MISSISSIPPI
+Columns: place_name, place_fips_code, lsad_code, area_land_meters, place_geom, name_lsad, principal_city_ne, place_gnis_code, internal_point_lon, state_fips_code, area_water_meters, principal_city_msa, fips_class_code, place_id, internal_point_lat, internal_point_geom, functional_status
+
+Table: GEO_US_CENSUS_PLACES.PLACES_DELAWARE
+Columns: place_fips_code, place_geom, internal_point_lat, fips_class_code, internal_point_geom, place_gnis_code, principal_city_ne, name_lsad, lsad_code, functional_status, place_id, principal_city_msa, state_fips_code, area_water_meters, area_land_meters, place_name, internal_point_lon
+
+Table: GEO_US_CENSUS_PLACES.PLACES_TENNESSEE
+Columns: principal_city_msa, lsad_code, place_id, place_name, state_fips_code, name_lsad, principal_city_ne, functional_status, place_gnis_code, internal_point_lat, area_water_meters, internal_point_lon, internal_point_geom, place_geom, area_land_meters, place_fips_code, fips_class_code
+
+Table: GEO_US_CENSUS_PLACES.PLACES_ILLINOIS
+Columns: place_geom, place_name, area_land_meters, lsad_code, place_gnis_code, functional_status, place_fips_code, state_fips_code, principal_city_ne, name_lsad, area_water_meters, fips_class_code, internal_point_geom, internal_point_lat, place_id, principal_city_msa, internal_point_lon

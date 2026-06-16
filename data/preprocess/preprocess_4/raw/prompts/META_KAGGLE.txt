@@ -1,0 +1,295 @@
+[TABLES]
+## META_KAGGLE.SUBMISSIONS
+PublicScoreFullPrecision: FLOAT | NULL | eg=[0.4713052641725747, 0.4761521119797183]
+SourceKernelVersionId: TEXT | NULL | eg=["", "161290"]
+SubmissionDate: DATE | NULL | eg=["2016-02-16"]
+PublicScoreLeaderboardDisplay: FLOAT | NULL | eg=[0.4713, 0.47615]
+IsAfterDeadline: BOOLEAN | NULL | eg=[false]
+PrivateScoreFullPrecision: FLOAT | NULL | eg=[0.47029765275103375, 0.4754497853556987]
+ScoreDate: DATE | NULL | eg=["2016-02-16"]
+TeamId: NUMBER | NULL | eg=[270557, 266628]
+Id: NUMBER | NULL | eg=[2575661, 2574743]
+SubmittedUserId: NUMBER | NULL | eg=[441360, 22969]
+PrivateScoreLeaderboardDisplay: FLOAT | NULL | eg=[0.47029, 0.47544]
+
+## META_KAGGLE.KERNELS
+ForumTopicId: NUMBER | NULL | eg=[NaN, 464880.0]
+Id: NUMBER | NULL | eg=[46978346, 46979607]
+MedalAwardDate: DATE | NULL
+MadePublicDate: DATE | NULL | eg=["2023-11-28"]
+FirstKernelVersionId: NUMBER | NULL | eg=[152701563, 152705157]
+TotalComments: NUMBER | NULL | eg=[0, 1]
+EvaluationDate: DATE | NULL | eg=["2023-12-30", "2023-11-28"]
+ForkParentKernelVersionId: NUMBER | NULL | eg=[NaN, 152550707.0]
+IsProjectLanguageTemplate: BOOLEAN | NULL | eg=[false]
+Medal: NUMBER | NULL
+CreationDate: NUMBER | NULL | eg=[1701170742000000, 1701172382000000]
+TotalVotes: NUMBER | NULL | eg=[1]
+TotalViews: NUMBER | NULL | eg=[50, 148]
+CurrentKernelVersionId: NUMBER | NULL | eg=[NaN, 152712152.0]
+CurrentUrlSlug: TEXT | NULL | eg=["notebook209f8fec22", "countvectorizer-multinomialnb"]
+AuthorUserId: NUMBER | NULL | eg=[17582017, 17650091]
+
+## META_KAGGLE.USERACHIEVEMENTS
+TotalGold: NUMBER | NULL | eg=[0]
+TierAchievementDate: DATE | NULL
+HighestRanking: NUMBER | NULL
+CurrentRanking: NUMBER | NULL
+Id: NUMBER | NULL | eg=[6426519, 6512273]
+UserId: NUMBER | NULL | eg=[930969, 960263]
+TotalSilver: NUMBER | NULL | eg=[0]
+Tier: NUMBER | NULL | eg=[0]
+AchievementType: TEXT | NULL | eg=["Competitions"]
+Points: NUMBER | NULL | eg=[0]
+TotalBronze: NUMBER | NULL | eg=[0]
+
+## META_KAGGLE.KERNELLANGUAGES
+Id: NUMBER | NULL | eg=[1, 12]
+DisplayName: TEXT | NULL | eg=["R", "Python"]
+IsNotebook: BOOLEAN | NULL | eg=[false, true]
+Name: TEXT | NULL | eg=["R", "R Notebook HTML"]
+
+## META_KAGGLE.USERFOLLOWERS
+CreationDate: DATE | NULL | eg=["2020-03-08", "2021-08-18"]
+Id: NUMBER | NULL | eg=[412502, 851010]
+UserId: NUMBER | NULL | eg=[368, 421]
+FollowingUserId: NUMBER | NULL | eg=[1302389, 727004]
+
+## META_KAGGLE.DATASETVOTES
+VoteDate: DATE | NULL | eg=["2016-01-28", "2016-01-24"]
+Id: NUMBER | NULL | eg=[400, 359]
+UserId: NUMBER | NULL | eg=[484081, 188410]
+DatasetVersionId: NUMBER | NULL | eg=[6]
+
+## META_KAGGLE.KERNELVOTES
+Id: NUMBER | NULL | eg=[3147639, 3499202]
+KernelVersionId: NUMBER | NULL | eg=[83046050]
+UserId: NUMBER | NULL | eg=[6437951, 7611249]
+VoteDate: DATE | NULL | eg=["2021-12-23", "2022-04-06"]
+
+## META_KAGGLE.DATASETTAGS
+DatasetId: NUMBER | NULL | eg=[629, 655]
+TagId: NUMBER | NULL | eg=[2304]
+Id: NUMBER | NULL | eg=[445, 447]
+
+## META_KAGGLE.KERNELVERSIONKERNELSOURCES
+KernelVersionId: NUMBER | NULL | eg=[6490319, 6492453]
+SourceKernelVersionId: NUMBER | NULL | eg=[6488320]
+Id: NUMBER | NULL | eg=[1069706, 1071186]
+
+## META_KAGGLE.COMPETITIONS
+Title: TEXT | NULL | eg=["ITMO year2012 ML RecSys (track 1)", "Swimming Pool Visitor Forecasting"]
+LeaderboardPercentage: NUMBER | NULL | eg=[30, 50]
+TeamMergerDeadlineDate: NUMBER | NULL
+NumScoredSubmissions: NUMBER | NULL | eg=[2, 3]
+MaxTeamSize: NUMBER | NULL | eg=[1]
+Slug: TEXT | NULL | eg=["itmo-year2012-ml-recsys-track-1", "swimming-pool-visitor-forecasting"]
+HasLeaderboard: BOOLEAN | NULL | eg=[true]
+ScoreTruncationNumDecimals: NUMBER | NULL | eg=[5]
+EvaluationAlgorithmName: TEXT | NULL | eg=["Root Mean Squared Error", "Area Under Receiver Operating Characteristic Curve"]
+EnabledDate: NUMBER | NULL | eg=[1447716414000000, 1477586443000000]
+MaxDailySubmissions: NUMBER | NULL | eg=[1440, 250]
+ModelSubmissionDeadlineDate: NUMBER | NULL
+FinalLeaderboardHasBeenVerified: BOOLEAN | NULL | eg=[true]
+DeadlineDate: NUMBER | NULL | eg=[1451606340000000, 1499471940000000]
+HasKernels: BOOLEAN | NULL | eg=[false]
+EvaluationAlgorithmDescription: TEXT | NULL | eg=["Square root of the average of the squared errors.", "Measures discrimination. Calculates how well an algorithm separates true positives from false positives. Overall good metric for classification problems. Has range [0.5, 1.0]"]
+HostName: TEXT | NULL
+RewardQuantity: FLOAT | NULL | eg=[0.0, NaN]
+Id: NUMBER | NULL | eg=[4758, 5686]
+ValidationSetValue: TEXT | NULL
+EvaluationAlgorithmIsMax: BOOLEAN | NULL | eg=[false, true]
+CompetitionTypeId: NUMBER | NULL | eg=[1]
+ValidationSetName: TEXT | NULL
+UserRankMultiplier: FLOAT | NULL | eg=[0.0]
+ForumId: NUMBER | NULL | eg=[923, 1797]
+OnlyAllowKernelSubmissions: BOOLEAN | NULL | eg=[false]
+Subtitle: TEXT | NULL | eg=["Задача для студентов 4-го курса КТ по рекомендательным системам в рамках курса по машинному обучению. Track 1", "Predict the number of daily visitors of Nettebad Osnabrück"]
+RewardType: TEXT | NULL | eg=["Knowledge"]
+BanTeamMergers: BOOLEAN | NULL | eg=[true]
+EnableTeamModels: BOOLEAN | NULL | eg=[false]
+EnableSubmissionModelAttachments: BOOLEAN | NULL | eg=[false]
+EnableSubmissionModelHashes: BOOLEAN | NULL | eg=[false]
+NumPrizes: NUMBER | NULL | eg=[1, 0]
+OrganizationId: FLOAT | NULL
+EvaluationAlgorithmAbbreviation: TEXT | NULL | eg=["RMSE", "AUC"]
+TeamModelDeadlineDate: NUMBER | NULL
+ProhibitNewEntrantsDeadlineDate: NUMBER | NULL
+HostSegmentTitle: TEXT | NULL | eg=["Community"]
+TotalTeams: NUMBER | NULL | eg=[14, 28]
+TotalSubmissions: NUMBER | NULL | eg=[117, 2602]
+CanQualifyTiers: BOOLEAN | NULL | eg=[false]
+TotalCompetitors: NUMBER | NULL | eg=[19, 43]
+
+## META_KAGGLE.FORUMMESSAGEVOTES
+ToUserId: NUMBER | NULL | eg=[638, 368]
+FromUserId: NUMBER | NULL | eg=[307512, 6632177]
+Id: NUMBER | NULL | eg=[183321, 4402419]
+VoteDate: DATE | NULL | eg=["2017-04-06", "2024-07-16"]
+ForumMessageId: NUMBER | NULL | eg=[6, 28]
+
+## META_KAGGLE.DATASETTASKS
+Subtitle: TEXT | NULL | eg=["Prize Pool $6000; Submission deadline - July 25", "Kernel to find the recipe that use the items in my fridge"]
+DatasetId: NUMBER | NULL | eg=[511638, 688051]
+CreationDate: NUMBER | NULL | eg=[1582109315000000, 1591047416000000]
+TotalVotes: NUMBER | NULL | eg=[193, 14]
+Deadline: NUMBER | NULL | eg=[NaN, 1600646400000000.0]
+Description: TEXT | NULL | eg=["## Task Details\nCan we predict the possibility of a booking for a hotel based on the previous_cancellation as the target?\n\n## Expected Submission\nTwo columns --&gt; Hotel Name and Booking_Possibility (0 or 1)", "## Task Details\nWe are sharing the latest BCG Atlas data and various texts related to BCG vaccine policies around the world. The goal of the task is to try to **improve and to extend the existing BCG World Atlas data** and to get a fuller picture of the administration of the vaccine. All data that is collected during this task will support the work of the BCG Atlas team, and it will also help with the analysis of the second task of the hackathon. \nThe current BCG data is stored in  file.  The task is to try to find snippets that answer some of these questions. All the questions are listed as columns. Specifically, we would like to get as many accurate answers as possible to the following questions, for as many countries or regions as possible:\n- Which BCG strain over the years has been used in different countries since the creation of the vaccine and during what time periods?\n- Who are or were the target group of the vaccine, and when and at what age were they vaccinated?\n- Have rev..."]
+Title: TEXT | NULL | eg=["Can we predict the possibility of a booking?", "Extend the BCG World Atlas Database for BCG Vaccine Policies and Practices"]
+OwnerUserId: NUMBER | NULL | eg=[2889731, 5212675]
+ForumId: TEXT | NULL
+Id: NUMBER | NULL | eg=[462, 1026]
+
+## META_KAGGLE.FORUMMESSAGES
+PostUserId: NUMBER | NULL | eg=[8860864, 113660]
+PostDate: TEXT | NULL | eg=["03/12/2023 14:49:20", "03/10/2023 16:55:10"]
+MedalAwardDate: TEXT | NULL
+Id: NUMBER | NULL | eg=[2178559, 2176448]
+RawMarkdown: TEXT | NULL | eg=["You can contact me via LinkedIn. https://www.linkedin.com/in/luuisotorres/", "it seems that this paper figures out how to do 1dconv\nhttps://www.researchgate.net/publication/343599175_Real-Time_Sign_Language_Detection_using_Human_Pose_Estimation\n\n- keep the NaN values \n- perform 1dconv\n- if conv ouput contains NaN, set to zero"]
+ForumTopicId: NUMBER | NULL | eg=[390539, 393128]
+ReplyToForumMessageId: FLOAT | NULL | eg=[2178321.0, 2176034.0]
+Medal: FLOAT | NULL
+Message: TEXT | NULL | eg=["<p>You can contact me via LinkedIn. <a href=\"https://www.linkedin.com/in/luuisotorres/\" target=\"_blank\">https://www.linkedin.com/in/luuisotorres/</a></p>", "<p>it seems that this paper figures out how to do 1dconv<br>\n<a href=\"https://www.researchgate.net/publication/343599175_Real-Time_Sign_Language_Detection_using_Human_Pose_Estimation\" target=\"_blank\">https://www.researchgate.net/publication/343599175_Real-Time_Sign_Language_Detection_using_Human_Pose_Estimation</a></p>\n<ul>\n<li>keep the NaN values </li>\n<li>perform 1dconv</li>\n<li>if conv ouput contains NaN, set to zero</li>\n</ul>"]
+
+## META_KAGGLE.USERS
+Id: NUMBER | NULL | eg=[154581, 277324]
+Country: TEXT | NULL
+RegisterDate: TEXT | NULL | eg=["01/01/2014", "01/01/2015"]
+PerformanceTier: NUMBER | NULL | eg=[0]
+DisplayName: TEXT | NULL | eg=["Aashu", "Adam Wyeth"]
+UserName: TEXT | NULL | eg=["aashu154581", "adamwyeth"]
+
+## META_KAGGLE.TAGS
+CompetitionCount: NUMBER | NULL | eg=[20, 14]
+Description: TEXT | NULL | eg=["Basketball is one of the world's most popular and widely viewed sports. Analyze Kobe Bryant's shot selections and peruse our annual March Mania competitions.", "AI in healthcare is a growing interest. One of the major problems is simply converting research into an application. Should be easy, right?"]
+KernelCount: NUMBER | NULL | eg=[662, 1654]
+Name: TEXT | NULL | eg=["basketball", "healthcare"]
+DatasetCount: NUMBER | NULL | eg=[1870, 1648]
+FullPath: TEXT | NULL | eg=["subject > health and fitness > exercise > sports > basketball", "subject > health and fitness > health > healthcare"]
+ParentTagId: NUMBER | NULL | eg=[4141, 11111]
+Id: NUMBER | NULL | eg=[2606, 4202]
+Slug: TEXT | NULL | eg=["basketball", "healthcare"]
+
+## META_KAGGLE.USERORGANIZATIONS
+Id: NUMBER | NULL | eg=[33, 46]
+JoinDate: DATE | NULL | eg=["2016-10-04", "2016-10-17"]
+OrganizationId: NUMBER | NULL | eg=[5, 3]
+UserId: NUMBER | NULL | eg=[724814, 346825]
+
+## META_KAGGLE.EPISODES
+CompetitionId: NUMBER | NULL | eg=[60154]
+Id: NUMBER | NULL | eg=[54280896, 54215929]
+EndTime: NUMBER | NULL | eg=[1711149568000000, 1710568777000000]
+CreateTime: NUMBER | NULL | eg=[1711149530000000, 1710568729000000]
+Type: NUMBER | NULL | eg=[1]
+
+## META_KAGGLE.FORUMTOPICS
+TotalViews: NUMBER | NULL | eg=[0]
+LastForumMessageId: FLOAT | NULL
+IsSticky: BOOLEAN | NULL | eg=[false]
+LastCommentDate: NUMBER | NULL | eg=[1625377492000000, 1625218912000000]
+TotalReplies: NUMBER | NULL | eg=[1, 0]
+Score: NUMBER | NULL | eg=[28, 42]
+KernelId: FLOAT | NULL | eg=[NaN, 18233971.0]
+Title: TEXT | NULL
+TotalMessages: NUMBER | NULL | eg=[0]
+CreationDate: NUMBER | NULL | eg=[1625377492000000, 1625218912000000]
+FirstForumMessageId: FLOAT | NULL
+Id: NUMBER | NULL | eg=[250718, 250354]
+ForumId: NUMBER | NULL | eg=[16860]
+
+## META_KAGGLE.KERNELVERSIONCOMPETITIONSOURCES
+Id: NUMBER | NULL | eg=[6280, 601723]
+SourceCompetitionId: NUMBER | NULL | eg=[3948]
+KernelVersionId: NUMBER | NULL | eg=[4511, 555]
+
+## META_KAGGLE.DATASETTASKSUBMISSIONS
+DatasetTaskId: NUMBER | NULL | eg=[2304]
+DatasetId: NUMBER | NULL
+SubmittedUserId: NUMBER | NULL | eg=[4348228, 5986902]
+Id: NUMBER | NULL | eg=[4719, 4743]
+AcceptedDate: NUMBER | NULL
+KernelId: NUMBER | NULL | eg=[12336275, 12373911]
+CreationDate: NUMBER | NULL | eg=[1602941845000000, 1603110187000000]
+
+## META_KAGGLE.DATASETS
+LastActivityDate: DATE | NULL | eg=["2018-10-02"]
+Id: NUMBER | NULL | eg=[58151, 58161]
+OwnerUserId: NUMBER | NULL | eg=[2311653, 2312500]
+Type: TEXT | NULL | eg=["Dataset"]
+TotalDownloads: NUMBER | NULL | eg=[0]
+TotalVotes: NUMBER | NULL | eg=[0]
+CurrentDatasourceVersionId: NUMBER | NULL | eg=[123254, 123281]
+TotalKernels: NUMBER | NULL | eg=[0, 1]
+TotalViews: NUMBER | NULL | eg=[132, 10]
+ForumId: NUMBER | NULL | eg=[66990, 67000]
+OwnerOrganizationId: NUMBER | NULL
+CreatorUserId: NUMBER | NULL | eg=[2311653, 2312500]
+CurrentDatasetVersionId: NUMBER | NULL | eg=[112840, 112865]
+CreationDate: NUMBER | NULL | eg=[1538462902000000, 1538464192000000]
+
+## META_KAGGLE.KERNELVERSIONDATASETSOURCES
+KernelVersionId: NUMBER | NULL | eg=[81536237, 104735677]
+SourceDatasetVersionId: NUMBER | NULL | eg=[2883584, 4128768]
+Id: NUMBER | NULL | eg=[108078246, 145502949]
+
+## META_KAGGLE.TEAMMEMBERSHIPS
+Id: NUMBER | NULL | eg=[18940, 19443]
+TeamId: NUMBER | NULL | eg=[4541, 4978]
+UserId: NUMBER | NULL | eg=[10466, 8263]
+RequestDate: DATE | NULL
+
+## META_KAGGLE.EPISODEAGENTS
+Index: NUMBER | NULL | eg=[1]
+EpisodeId: NUMBER | NULL | eg=[33120822, 33094139]
+Reward: FLOAT | NULL | eg=[90009.0]
+InitialConfidence: FLOAT | NULL | eg=[35.0, 62.12528253738546]
+InitialScore: FLOAT | NULL | eg=[580.0042657891344, 1272.9005023034138]
+SubmissionId: NUMBER | NULL | eg=[22809035, 24127816]
+Id: NUMBER | NULL | eg=[81336101, 81282735]
+State: NUMBER | NULL | eg=[2]
+UpdatedConfidence: FLOAT | NULL | eg=[35.0, 60.78962034206572]
+UpdatedScore: FLOAT | NULL | eg=[584.479734260055, 1262.803283593908]
+
+## META_KAGGLE.KERNELTAGS
+Id: NUMBER | NULL | eg=[5867, 14387]
+TagId: NUMBER | NULL | eg=[2304]
+KernelId: NUMBER | NULL | eg=[90782, 160689]
+
+## META_KAGGLE.KERNELVERSIONS
+VersionNumber: FLOAT | NULL | eg=[86.0, 7.0]
+ScriptLanguageId: NUMBER | NULL | eg=[9]
+Title: TEXT | NULL | eg=["Titanic Problem", "notebookc1fc5ad94b"]
+LinesChangedFromFork: FLOAT | NULL | eg=[NaN, 0.0]
+ParentScriptVersionId: TEXT | NULL
+LinesChangedFromPrevious: FLOAT | NULL | eg=[0.0, 14.0]
+LinesUnchangedFromPrevious: FLOAT | NULL | eg=[427.0, 426.0]
+CreationDate: NUMBER | NULL | eg=[1665069639000000, 1706733414000000]
+AuthorUserId: NUMBER | NULL | eg=[11500118, 15669490]
+TotalVotes: NUMBER | NULL | eg=[0]
+TotalLines: FLOAT | NULL | eg=[431.0]
+EvaluationDate: DATE | NULL | eg=["2022-10-06", "2024-01-31"]
+LinesInsertedFromFork: FLOAT | NULL | eg=[NaN, 207.0]
+LinesUnchangedFromFork: FLOAT | NULL | eg=[NaN, 224.0]
+ScriptId: NUMBER | NULL | eg=[30636649, 50117187]
+LinesDeletedFromFork: FLOAT | NULL | eg=[NaN, 76.0]
+IsChange: BOOLEAN | NULL | eg=[true]
+LinesInsertedFromPrevious: FLOAT | NULL | eg=[4.0, 5.0]
+Id: NUMBER | NULL | eg=[107355719, 161218273]
+
+## META_KAGGLE.FORUMS
+Title: TEXT | NULL | eg=["Models", "Notebooks"]
+Id: NUMBER | NULL | eg=[2578766, 16860]
+ParentForumId: NUMBER | NULL
+
+## META_KAGGLE.COMPETITIONTAGS
+TagId: NUMBER | NULL | eg=[12038, 14101]
+CompetitionId: NUMBER | NULL | eg=[13242, 4032]
+Id: NUMBER | NULL | eg=[482, 315]
+
+## META_KAGGLE.DATASOURCES
+CreatorUserId: NUMBER | NULL | eg=[3867392, 4064256]
+CreationDate: NUMBER | NULL | eg=[1579359348000000, 1692280786000000]
+CurrentDatasourceVersionId: NUMBER | NULL | eg=[925571, 6399262]
+Id: NUMBER | NULL | eg=[498859, 3683191]
+Type: TEXT | NULL | eg=["Dataset"]

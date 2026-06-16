@@ -1,0 +1,393 @@
+[TABLES]
+## HACKERNEWS.FULL_201510
+title: TEXT | NULL
+dead: BOOLEAN | NULL
+text: TEXT | NULL | eg=["A quick scan of jigneshg&#x27;s past comments reveals that they are definitely not a native English speaker, and as was pointed out above, in Indian culture, this is a perfectly polite way to empathize with another&#x27;s suffering. The irony that this apparent cultural misunderstanding has caused jigneshg&#x27;s karma  to plummet gives me no end of mirth, but the clearly anglophile Western (and perhaps white male) reaction to jigneshg&#x27;s statement is no more accurate for it. There&#x27;s plenty of self-righteous indignation to go around this holiday season, so maybe a little forgiveness is in order, after examining the situation?", "Interesting.<p>I would like to meet this person.<p>I find it very helpful to surround myself with people that have a different way of seeing the world."]
+url: TEXT | NULL
+parent: NUMBER | NULL | eg=[6940662, 6941171]
+ranking: NUMBER | NULL
+descendants: NUMBER | NULL
+deleted: BOOLEAN | NULL
+time: NUMBER | NULL | eg=[1387538129, 1387546409]
+score: NUMBER | NULL
+type: TEXT | NULL | eg=["comment"]
+by: TEXT | NULL | eg=["seanccox", "Fuxy"]
+id: NUMBER | NULL | eg=[6940894, 6941271]
+
+## HACKERNEWS.STORIESV2
+ranking: NUMBER | NULL
+by: TEXT | NULL | eg=["draker", "mindcrime"]
+dead: BOOLEAN | NULL
+id: NUMBER | NULL | eg=[5310811, 5925001]
+parent: NUMBER | NULL
+fake_date: DATE | NULL | eg=["2000-01-01"]
+time: NUMBER | NULL | eg=[1362254725, 1371932178]
+url: TEXT | NULL | eg=["http://www.fastcompany.com/3006490/fast-feed/medical-students-better-surgery-after-hours-nintendo-each-week", "http://www.guardian.co.uk/technology/2011/mar/17/us-spy-operation-social-networks?resubmit"]
+text: TEXT | NULL | eg=["Hi,<p>This is my first django website, how do you like it? Please give me your feedback :)<p>Best,\nWiktor"]
+score: NUMBER | NULL | eg=[11]
+deleted: BOOLEAN | NULL
+timestamp: NUMBER | NULL | eg=[1362254725000000, 1371932178000000]
+type: TEXT | NULL | eg=["story"]
+title: TEXT | NULL | eg=["Medical Students Better At Surgery After Hours Of Nintendo Each Week", "Revealed: US Spy Operation That Targets Social Medial [2011]"]
+descendants: NUMBER | NULL | eg=[2]
+
+## HACKERNEWS.FULL_PARTITIONED
+title: TEXT | NULL | eg=["Announcing Amazon Aurora Global Database", "Factor the Joint Intoducing GPAR: A Multi-Output GP Model"]
+url: TEXT | NULL | eg=["https://aws.amazon.com/about-aws/whats-new/2018/11/announcing-amazon-aurora-global-database/", "https://invenia.github.io/blog/2018/12/18/GPAR/"]
+time: NUMBER | NULL | eg=[1543633624, 1545164100]
+id: NUMBER | NULL | eg=[18574840, 18710125]
+timestamp: NUMBER | NULL | eg=[1543633624000000, 1545164100000000]
+by: TEXT | NULL | eg=["sahin-boydas", "eperim"]
+text: TEXT | NULL
+dead: BOOLEAN | NULL
+type: TEXT | NULL | eg=["story"]
+ranking: NUMBER | NULL
+deleted: BOOLEAN | NULL
+month: DATE | NULL | eg=["2018-12-01"]
+score: NUMBER | NULL | eg=[6, 8]
+parent: NUMBER | NULL
+descendants: NUMBER | NULL | eg=[0, 1]
+
+## HACKERNEWS.STORIES
+author: TEXT | NULL | eg=["bendoernberg", "briantmaurer"]
+by: TEXT | NULL | eg=["bendoernberg", "briantmaurer"]
+time_ts: NUMBER | NULL | eg=[1389565876000000, 1439352647000000]
+deleted: BOOLEAN | NULL
+score: NUMBER | NULL | eg=[3]
+descendants: NUMBER | NULL | eg=[0]
+title: TEXT | NULL | eg=["Bitcoin Address Shortener", "Two women switch continents, draw and share weekly data"]
+dead: BOOLEAN | NULL
+text: TEXT | NULL | eg=[""]
+id: NUMBER | NULL | eg=[7047766, 10045965]
+time: NUMBER | NULL | eg=[1389565876, 1439352647]
+url: TEXT | NULL | eg=["http://btcaddr.es/", "http://www.dear-data.com/"]
+
+## HACKERNEWS.COMMENTSV2
+story_id: NUMBER | NULL | eg=[10734334, 10738430]
+timestamp: NUMBER | NULL | eg=[1450180819000000, 1450237464000000]
+ranking: NUMBER | NULL
+url: TEXT | NULL
+type: TEXT | NULL | eg=["comment"]
+level: NUMBER | NULL | eg=[0, 1]
+time: NUMBER | NULL | eg=[1450180819, 1450237464]
+descendants: NUMBER | NULL
+parent: NUMBER | NULL | eg=[10734334, 10741907]
+title: TEXT | NULL
+text: TEXT | NULL | eg=["In the video, Andrew creates music live on his laptop by writing a few lines of Scheme.<p>Besides the musical aspects, the video also provides an example of changing snippets code on the fly. The snippets can be started while the rest of the program continues to run. That&#x27;s based on Extempore and the Impromptu language that they created specifically for cyber-physical computing (<a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Impromptu_%28programming_environment%29\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Impromptu_%28programming_envir...</a>)", "We need a Mac to do it , make it cross platform and we&#x27;ll have a deal here."]
+id: NUMBER | NULL | eg=[10737280, 10742233]
+fake_date: DATE | NULL | eg=["2000-01-01"]
+score: NUMBER | NULL
+by: TEXT | NULL | eg=["feb", "bsdnoob"]
+dead: BOOLEAN | NULL
+deleted: BOOLEAN | NULL
+
+## HACKERNEWS.FULL_PARTITION_EXTRA
+level: NUMBER | NULL | eg=[6]
+timestamp: NUMBER | NULL | eg=[1503546477000000, 1503588429000000]
+post_id: NUMBER | NULL | eg=[15085159]
+score: NUMBER | NULL
+parent: NUMBER | NULL | eg=[15087321, 15087353]
+type: TEXT | NULL | eg=["comment"]
+by: TEXT | NULL | eg=["mulmen", "ucaetano"]
+month: DATE | NULL | eg=["2017-08-01"]
+title: TEXT | NULL | eg=[""]
+descendants: NUMBER | NULL
+deleted: BOOLEAN | NULL
+text: TEXT | NULL | eg=["Yeah good point. In general something like that could still work though.  Whatever characteristics of a page Google is trying to &quot;fix&quot; with AMP could just be added to the ranking algorithm.", "&gt; Where would you draw the line… what percentage of users would have to dislike amp for you to think it was reasonable to add an option?<p>One easy piece of math is (cost of adding and maintaining that feature) vs. [(users who dislike) x (% of users who would quit you) x (profit per user)]<p>For example, if 10% of all users disliked it (300M users), but only 1% of those would leave your services (3M users) and you made, on average, $10 per user in profit, you&#x27;d be putting $30M&#x2F;year of profit at risk, which is probably enough to hire a few people to build and maintain that feature."]
+dead: BOOLEAN | NULL
+id: NUMBER | NULL | eg=[15087446, 15090863]
+url: TEXT | NULL | eg=[""]
+tags: VARIANT | NULL | eg=[[]]
+ranking: NUMBER | NULL
+time: NUMBER | NULL | eg=[1503546477, 1503588429]
+
+## HACKERNEWS.COMMENTS
+ranking: NUMBER | NULL | eg=[1]
+text: TEXT | NULL | eg=["Unfortunately, the market is no better. The governments allow their central banks to print fake money while the market allows its financial institutions to print fake assets.<p>Whether it's currencies or CDOs, a bubble is a bubble. Valuation is an art that got lost somewhere in the science.", "I'm sure any investor, including PG, would prefer entrepreneurs to work smarter though, it's not just about hours, but it may take that to succeed.<p>But, after reading this, I remembered this PG essay from a few years ago.<p>\"Economically, you can think of a startup as a way to compress your whole working life into a few years. Instead of working at a low intensity for forty years, you work as hard as you possibly can for four.\" - <a href=\"http://paulgraham.com/wealth.html\" rel=\"nofollow\">http://paulgraham.com/wealth.html</a><p>Also:\n<a href=\"http://paulgraham.com/really.html\" rel=\"nofollow\">http://paulgraham.com/really.html</a>"]
+deleted: BOOLEAN | NULL
+time_ts: NUMBER | NULL | eg=[1263694664000000, 1322539234000000]
+by: TEXT | NULL | eg=["mortenjorck", "mountaineer"]
+dead: BOOLEAN | NULL
+author: TEXT | NULL | eg=["mortenjorck", "mountaineer"]
+time: NUMBER | NULL | eg=[1263694664, 1322539234]
+id: NUMBER | NULL | eg=[1057886, 3288980]
+parent: NUMBER | NULL | eg=[1057265, 3288867]
+
+## HACKERNEWS.COMMENTS_CONVOLUTION
+text: TEXT | NULL | eg=["right, I too can make assertions with no evidence to back them up.<p>If that&#x27;s really your bar, then we don&#x27;t have much more to discuss.", "We agree on that, my point is that C++ does it via libraries, Rust does it by hiding unsafe blocks behind interfaces (aka libraries).<p>Time will tell which approach is ultimately superior (if either one of them is actually better), but until the it isn&#x27;t clear that the Rust approach is statistically better than the C++ approach.<p>Ultimately the advantage Rust has is the ability to possibly provide better 3rd party tooling that will enable developers to make the right decisions more often than C++ does.  Consider a tool that runs on code checkin that spits out a report of all sites where code that manipulates state that could affect an unsafe block was changed&#x2F;written so that developers could then have a very focused peer review of the code to ensure the safe code doesn&#x27;t put the state in such a spot that it causes problems.<p>I think in this way Rust may eventually be shown to be better than C++, but then again, maybe not."]
+type: TEXT | NULL | eg=["comment"]
+post_id: NUMBER | NULL | eg=[12969014, 12908599]
+dead: BOOLEAN | NULL
+level: NUMBER | NULL | eg=[16]
+time: NUMBER | NULL | eg=[1479602987, 1479603245]
+title: TEXT | NULL
+timestamp: NUMBER | NULL | eg=[1479602987000000, 1479603245000000]
+score: NUMBER | NULL
+by: TEXT | NULL | eg=["braveo", "quotemstr"]
+parent: NUMBER | NULL | eg=[12986916, 12988881]
+ranking: NUMBER | NULL
+descendants: NUMBER | NULL
+deleted: BOOLEAN | NULL
+month: DATE | NULL | eg=["2016-11-01"]
+url: TEXT | NULL
+id: NUMBER | NULL | eg=[12996625, 12996645]
+
+## STACKOVERFLOW.POSTS_ORPHANED_TAG_WIKI
+view_count: TEXT | NULL
+owner_display_name: TEXT | NULL
+answer_count: TEXT | NULL
+creation_date: NUMBER | NULL | eg=[1289567414273000, 1280773367767000]
+accepted_answer_id: TEXT | NULL
+last_activity_date: NUMBER | NULL | eg=[1289576937207000, 1289576937237000]
+last_editor_display_name: TEXT | NULL | eg=["Roger Pate"]
+comment_count: NUMBER | NULL | eg=[0]
+score: NUMBER | NULL | eg=[0]
+body: TEXT | NULL | eg=["<p><a href=\"http://en.wikipedia.org/wiki/Argument-dependent_name_lookup\" rel=\"nofollow\">ADL</a> is mostly associated with <a href=\"/tags/c++/info\">C++</a>.</p>", "ADL is argument-dependent lookup, sometimes called Koenig lookup."]
+post_type_id: NUMBER | NULL | eg=[3]
+title: TEXT | NULL
+tags: TEXT | NULL
+parent_id: TEXT | NULL
+community_owned_date: NUMBER | NULL
+last_editor_user_id: NUMBER | NULL | eg=[NaN, 6148.0]
+owner_user_id: NUMBER | NULL | eg=[-1]
+last_edit_date: NUMBER | NULL | eg=[1289576937207000, 1289576937237000]
+id: NUMBER | NULL | eg=[4164933, 4164934]
+favorite_count: TEXT | NULL
+
+## STACKOVERFLOW.VOTES
+creation_date: NUMBER | NULL | eg=[1554768000000000, 1554940800000000]
+vote_type_id: NUMBER | NULL | eg=[1]
+post_id: NUMBER | NULL | eg=[55590362, 55530869]
+id: NUMBER | NULL | eg=[184603528, 184743161]
+
+## STACKOVERFLOW.POST_LINKS
+post_id: NUMBER | NULL | eg=[25444095, 25448589]
+related_post_id: NUMBER | NULL | eg=[1453043, 25377797]
+creation_date: NUMBER | NULL | eg=[1408700902383000, 1408719658267000]
+link_type_id: NUMBER | NULL | eg=[1]
+id: NUMBER | NULL | eg=[947101319, 947191035]
+
+## STACKOVERFLOW.POSTS_WIKI_PLACEHOLDER
+last_editor_user_id: NUMBER | NULL
+last_activity_date: NUMBER | NULL
+body: TEXT | NULL
+owner_display_name: TEXT | NULL
+last_edit_date: NUMBER | NULL
+community_owned_date: TEXT | NULL
+answer_count: TEXT | NULL
+tags: TEXT | NULL
+post_type_id: NUMBER | NULL
+id: NUMBER | NULL
+creation_date: NUMBER | NULL
+view_count: TEXT | NULL
+last_editor_display_name: TEXT | NULL
+title: TEXT | NULL
+owner_user_id: NUMBER | NULL
+comment_count: NUMBER | NULL
+accepted_answer_id: TEXT | NULL
+favorite_count: TEXT | NULL
+parent_id: TEXT | NULL
+score: NUMBER | NULL
+
+## STACKOVERFLOW.USERS
+display_name: TEXT | NULL | eg=["Stoic", "Rupal pal"]
+profile_image_url: TEXT | NULL | eg=["https://lh3.googleusercontent.com/a-/AOh14GjH5X3VEf_yueZ5XOF1XFCUuj8I2v9dTIuZswIfYQ=s96-c", "https://www.gravatar.com/avatar/66e63a36f1d012ef97fc7424e5147dd0?s=128&d=identicon&r=PG&f=1"]
+last_access_date: NUMBER | NULL | eg=[1607906778230000, 1604770905633000]
+views: NUMBER | NULL | eg=[1]
+about_me: TEXT | NULL
+id: NUMBER | NULL | eg=[14596831, 14596949]
+up_votes: NUMBER | NULL | eg=[0]
+reputation: NUMBER | NULL | eg=[1]
+age: TEXT | NULL
+website_url: TEXT | NULL
+down_votes: NUMBER | NULL | eg=[0]
+creation_date: NUMBER | NULL | eg=[1604768739183000, 1604770905633000]
+location: TEXT | NULL | eg=["Pune, Maharashtra, India", "India"]
+
+## STACKOVERFLOW.TAGS
+tag_name: TEXT | NULL | eg=["regsvr32", "fileserver"]
+excerpt_post_id: NUMBER | NULL | eg=[10051236, 9275976]
+id: NUMBER | NULL | eg=[2136, 15213]
+wiki_post_id: NUMBER | NULL | eg=[10051235, 9275975]
+count: NUMBER | NULL | eg=[256]
+
+## STACKOVERFLOW.POST_HISTORY
+creation_date: NUMBER | NULL | eg=[1426663800027000, 1426112450947000]
+post_history_type_id: NUMBER | NULL | eg=[2, 1]
+comment: TEXT | NULL
+user_id: NUMBER | NULL | eg=[2170106, 4660474]
+post_id: NUMBER | NULL | eg=[29116345, 28998490]
+revision_guid: TEXT | NULL | eg=["6509ef7b-52e9-4e14-bd54-274c531ef947", "8e1fce66-6346-4ea1-978d-9d871c55a4a6"]
+text: TEXT | NULL | eg=["Use [PHP Date function][1]\n\n    date('Y-m-d',strtotime($_GET['searchKeyword']))\n\n\n  [1]: http://php.net/manual/en/function.date.php", "How to change the width of a CSS flex-box column?"]
+id: NUMBER | NULL | eg=[86091483, 85632228]
+
+## STACKOVERFLOW.POSTS_QUESTIONS
+last_edit_date: NUMBER | NULL | eg=[1420429826980000, 1495539855347000]
+owner_display_name: TEXT | NULL
+accepted_answer_id: NUMBER | NULL | eg=[27693665.0, 25593068.0]
+owner_user_id: NUMBER | NULL | eg=[807325, 1492229]
+tags: TEXT | NULL | eg=["php|mysql|simplexml", "android|multithreading|show|progressdialog"]
+last_activity_date: NUMBER | NULL | eg=[1420806718797000, 1409496847270000]
+title: TEXT | NULL | eg=["How to edit my code to save to mySQL from the beginning of XML?", "Android : Progress Dialog not working"]
+body: TEXT | NULL | eg=["<p>I have this XML feed below I am trying to import into MySQL for all the products.\nFor example, inside the table <code>XML_FEED</code> I want something like</p>\n\n<pre><code>shop        -   product_id - product_name - product_link - .......\nmywebstore  -   322233     - MadBiker 600 - .........\nmywebstore  -   324633     - Samsung S4 - .........\n</code></pre>\n\n<p>The code until now it works only if the XML begins from <code>&lt;products&gt;</code> and not from <code>&lt;mywebstore&gt;</code></p>\n\n<p>How to change my code to do this ?</p>\n\n<pre><code>$xml = simplexml_load_file(\"test.xml\");\nforeach($xml-&gt;product as $product)\n{\n    $columns = array();\n    $data = array();\n    foreach($product-&gt;children() as $child)\n    {\n        echo $child-&gt;getName() . \": \" . $child . \"&lt;br /&gt;\";\n        $columns[] = $child-&gt;getName();\n        $data[] = mysql_real_escape_string((string)$child);\n    }\n    $col = '`'. implode('`,`',$columns) .'`';\n    $val = \"'\". implode(\"','\",$data).\"'\"...", "<p>I wanted to show a ProgressDialog when data need to be uploaded to the server.</p>\n\n<p>I have checked this question <a href=\"https://stackoverflow.com/questions/12841803/best-way-to-show-a-loading-spinner\">Best way to show a loading/progress indicator?</a>\nthe best answer was</p>\n\n<pre><code>ProgressDialog progress = new ProgressDialog(this);\nprogress.setTitle(\"Loading\");\nprogress.setMessage(\"Wait while loading...\");\nprogress.show();\n// To dismiss the dialog\nprogress.dismiss();\n</code></pre>\n\n<p>when i tried to implement this in my code, nothing showed at all !!\nwhat is that i am doing wrong here?!</p>\n\n<p>this is my code</p>\n\n<pre><code>private void UpdateData()\n{\n\n    ProgressDialog progress = new ProgressDialog(this);\n    progress.setTitle(\"Loading\");\n    progress.setMessage(\"Wait while loading...\");\n    progress.show();\n\n    try\n    {\n        UpdateWSTask updateWSTask = new UpdateWSTask();\n        String Resp = updateWSTask.execute().get();\n\n    } catch (InterruptedException ..."]
+view_count: NUMBER | NULL | eg=[632, 2680]
+community_owned_date: NUMBER | NULL
+creation_date: NUMBER | NULL | eg=[1410773929773000, 1409494978500000]
+post_type_id: NUMBER | NULL | eg=[1]
+answer_count: NUMBER | NULL | eg=[6, 2]
+last_editor_display_name: TEXT | NULL
+last_editor_user_id: NUMBER | NULL | eg=[1446005, -1]
+id: NUMBER | NULL | eg=[25844992, 25592867]
+comment_count: NUMBER | NULL | eg=[12]
+favorite_count: NUMBER | NULL | eg=[NaN, 1.0]
+parent_id: TEXT | NULL
+score: NUMBER | NULL | eg=[-7, 0]
+
+## STACKOVERFLOW.STACKOVERFLOW_POSTS
+tags: TEXT | NULL | eg=["c++|messagebox", "iphone|c++|objective-c|boost|frameworks"]
+last_editor_display_name: TEXT | NULL
+score: NUMBER | NULL | eg=[0, 1]
+comment_count: NUMBER | NULL | eg=[6]
+last_edit_date: NUMBER | NULL | eg=[NaN, 1340681729687000.0]
+parent_id: NUMBER | NULL
+favorite_count: NUMBER | NULL | eg=[NaN, 2.0]
+creation_date: NUMBER | NULL | eg=[1363401623070000, 1340634238713000]
+answer_count: NUMBER | NULL | eg=[1]
+body: TEXT | NULL | eg=["<p>I am not quite sure why this is happening. I am just trying to output the key pressed. Breakpoint shows the correct letter stored in the pressed variable. Project is set to Unicode.</p> <pre><code>case WM_CHAR: { const wchar_t pressed = LOWORD(wParam); ::MessageBox(hWnd &amp;pressed L Key Pressed  MB_OK); } </code></pre>", "<blockquote> <p>Semantic issue: 'mutable' cannot be applied to references</p> </blockquote> <p>The above is only the latest in a series of errors I've received attempting to get the <a href= https://github.com/horaceho/iphone-fuego rel= nofollow >fuego-iphone</a> project to compile. I'm not certain but it could be related to the way I compiled boost. The project's README recommends using <a href= http://semmel.wordpress.com/2011/01/18/boost-c-libraries-with-ios/ rel= nofollow >these instructions</a> for compiling boost into a framework but I had already done so with the <a href= http://www.danielsefton.com/2012/03/building-boost-1-49-with-clang-ios-5-1-and-xcode-4-3/ rel= nofollow >more recent instructions here</a>. Could this CLANG error be related to a boost version somehow?</p> <p>I admit relative ignorance when it comes to C++.</p> <p>If anyone has any brilliant suggestions for using the fuego library in general with xcode I have tried quite a few different things and am pretty ..."]
+owner_display_name: TEXT | NULL
+title: TEXT | NULL | eg=["C++ Win32 MessageBox weird output", "Need help getting Fuego to compile in Xcode - boost version compatibility?"]
+community_owned_date: NUMBER | NULL
+id: NUMBER | NULL | eg=[15444977, 11191179]
+last_activity_date: NUMBER | NULL | eg=[1363402613067000, 1340681729687000]
+last_editor_user_id: NUMBER | NULL | eg=[NaN, 18961.0]
+owner_user_id: NUMBER | NULL | eg=[1886489, 18961]
+post_type_id: NUMBER | NULL | eg=[1]
+view_count: NUMBER | NULL | eg=[252, 231]
+accepted_answer_id: NUMBER | NULL | eg=[NaN, 24878467.0]
+
+## STACKOVERFLOW.POSTS_MODERATOR_NOMINATION
+last_editor_display_name: TEXT | NULL
+post_type_id: NUMBER | NULL | eg=[6]
+owner_user_id: NUMBER | NULL | eg=[171206, 3312]
+id: NUMBER | NULL | eg=[4729565, 4729601]
+last_activity_date: NUMBER | NULL | eg=[1295388234897000, 1295388481350000]
+last_editor_user_id: NUMBER | NULL | eg=[171206, 3312]
+tags: TEXT | NULL
+favorite_count: TEXT | NULL
+parent_id: TEXT | NULL
+owner_display_name: TEXT | NULL
+comment_count: NUMBER | NULL | eg=[0]
+score: NUMBER | NULL | eg=[0]
+accepted_answer_id: TEXT | NULL
+last_edit_date: NUMBER | NULL | eg=[1295388234897000, 1295388481350000]
+community_owned_date: NUMBER | NULL | eg=[1295388234897000, 1295388481350000]
+answer_count: TEXT | NULL
+view_count: TEXT | NULL
+title: TEXT | NULL
+body: TEXT | NULL | eg=["<p>I am detail oriented and would like to moderate this site to keep it a clean and fun place to visit everyday.</p>", "<p>Back when he was in high school, my dad ran for senior class president on the slogan of </p>\n\n<blockquote>\n  <p>\"Slicer is Nicer\".</p>\n</blockquote>\n\n<p>Well, I may certainly be nice too, and that will be tempered with patience, respect and professionalism.  As a professional developer for over 15 years and a technology hobbyist since 1982, I believe you'll find I will do well to keep this community moving forward and bringing the best practices of development to aspiring technologists.</p>"]
+creation_date: NUMBER | NULL | eg=[1295388234897000, 1295388481350000]
+
+## STACKOVERFLOW.POSTS_PRIVILEGE_WIKI
+last_edit_date: NUMBER | NULL | eg=[1361967204423000]
+title: TEXT | NULL
+id: NUMBER | NULL | eg=[15111874]
+last_editor_user_id: NUMBER | NULL | eg=[1583]
+favorite_count: TEXT | NULL
+comment_count: NUMBER | NULL | eg=[0]
+tags: TEXT | NULL
+last_activity_date: NUMBER | NULL | eg=[1361967204423000]
+owner_display_name: TEXT | NULL
+post_type_id: NUMBER | NULL | eg=[8]
+parent_id: TEXT | NULL
+community_owned_date: TEXT | NULL
+creation_date: NUMBER | NULL | eg=[1361967204423000]
+answer_count: TEXT | NULL
+view_count: TEXT | NULL
+accepted_answer_id: TEXT | NULL
+last_editor_display_name: TEXT | NULL
+body: TEXT | NULL | eg=["<h3>What is edit questions and answers?</h3>\n\n<p>We believe in the power of community editing. That means once you've generated enough reputation, we trust you to edit <em>anything</em> in the system without it going through the peer review system. Not just your posts—<em>anyone's posts!</em></p>\n\n<h3>When should I edit posts?</h3>\n\n<p>Any time you feel you can make the post better, and are inclined to do so. Editing is encouraged!</p>\n\n<p>Some common reasons to edit are:</p>\n\n<ul>\n<li>to fix grammatical or spelling mistakes</li>\n<li>to clarify the meaning of a post without changing it</li>\n<li>to correct minor mistakes or add addendums / updates as the post ages</li>\n<li>to add related resources or hyperlinks</li>\n</ul>\n\n<p>Try to make the post substantively better when you edit, not just change a single character. Tiny, trivial edits are discouraged.</p>\n\n<h3>How do I edit posts?</h3>\n\n<p>The <code>edit</code> link is available under each post.</p>\n\n<h3>What happens when I edit a ..."]
+owner_user_id: NUMBER | NULL | eg=[-1]
+score: NUMBER | NULL | eg=[1]
+
+## STACKOVERFLOW.COMMENTS
+id: NUMBER | NULL | eg=[103439287, 103439288]
+creation_date: NUMBER | NULL | eg=[1572012506553000, 1572012507483000]
+user_id: NUMBER | NULL | eg=[8961920, 12123479]
+score: NUMBER | NULL | eg=[0]
+text: TEXT | NULL | eg=["@Yserbius That didn't solve my issue please can you look at into it", "It's changed total output of my script"]
+user_display_name: TEXT | NULL
+post_id: NUMBER | NULL | eg=[58559895, 58560057]
+
+## STACKOVERFLOW.BADGES
+tag_based: BOOLEAN | NULL | eg=[false]
+id: NUMBER | NULL | eg=[13770010, 13770846]
+date: NUMBER | NULL | eg=[1429145254570000, 1429152015853000]
+user_id: NUMBER | NULL | eg=[152963, 3198857]
+name: TEXT | NULL | eg=["Informed"]
+class: NUMBER | NULL | eg=[3]
+
+## STACKOVERFLOW.POSTS_ANSWERS
+view_count: TEXT | NULL
+owner_user_id: NUMBER | NULL | eg=[230513, 673730]
+tags: TEXT | NULL
+score: NUMBER | NULL | eg=[5]
+owner_display_name: TEXT | NULL
+answer_count: TEXT | NULL
+last_activity_date: NUMBER | NULL | eg=[1324742605003000, 1320402813217000]
+last_editor_user_id: NUMBER | NULL | eg=[-1.0, NaN]
+last_editor_display_name: TEXT | NULL
+favorite_count: TEXT | NULL
+post_type_id: NUMBER | NULL | eg=[2]
+community_owned_date: NUMBER | NULL
+accepted_answer_id: TEXT | NULL
+comment_count: NUMBER | NULL | eg=[5]
+body: TEXT | NULL | eg=["<p>Using this <a href=\"https://stackoverflow.com/questions/6644739/customizing-jtable-cellrenderer-with-tables-cell-header-color/6644956#6644956\"><code>HeaderRenderer</code></a> as the first <strike>row</strike>  column renderer may produce the effect you want:</p>\n\n<p>Addendum: I've updated the example to reflect your sscce with a manual layout. My platform's <code>getSystemLookAndFeelClassName()</code> is <code>com.apple.laf.AquaLookAndFeel</code>, so I'm not seeing the same result. Two observations: You've already <code>setAutoCreateRowSorter(false)</code> to prevent the sorting widget from proliferating, and Nimbus retains it alternating row highlight.</p>\n\n<p><img src=\"https://i.stack.imgur.com/XwVQe.png\" alt=\"enter image description here\"></p>\n\n<pre><code>import java.awt.Component;\nimport javax.swing.JFrame;\nimport javax.swing.JScrollPane;\nimport javax.swing.JTable;\nimport javax.swing.table.JTableHeader;\nimport javax.swing.table.TableCellRenderer;\n\npublic class MyTableExample3...", "<p>A seg fault occurs when the call stack gets too big - i.e. too many levels of recursion.</p>\n\n<p>In your case, this means the condition <code>(new - old) &lt; accurate</code> will always evaluate to false - well, maybe not always, but enough times to bloat the call stack.</p>\n\n<p>Testing your code I see that <code>new</code>(probably not a good variable name choice) keeps growing until it exceeds the limits of float. Your algorithm is probably wrong.</p>"]
+parent_id: NUMBER | NULL | eg=[8002445, 8007808]
+id: NUMBER | NULL | eg=[8005006, 8007951]
+title: TEXT | NULL
+creation_date: NUMBER | NULL | eg=[1320382370613000, 1320402813217000]
+last_edit_date: NUMBER | NULL | eg=[1495535386917000.0, NaN]
+
+## STACKOVERFLOW.POSTS_TAG_WIKI_EXCERPT
+accepted_answer_id: TEXT | NULL
+view_count: TEXT | NULL
+favorite_count: TEXT | NULL
+comment_count: NUMBER | NULL | eg=[0]
+last_edit_date: NUMBER | NULL | eg=[1295489672800000, 1300135451377000]
+score: NUMBER | NULL | eg=[0]
+owner_user_id: NUMBER | NULL
+creation_date: NUMBER | NULL | eg=[1295489672800000, 1300134045170000]
+post_type_id: NUMBER | NULL | eg=[4]
+title: TEXT | NULL
+community_owned_date: NUMBER | NULL
+last_activity_date: NUMBER | NULL | eg=[1295489672800000, 1300135451377000]
+parent_id: TEXT | NULL
+body: TEXT | NULL | eg=["SlimDX is an MIT-licensed, open-source framework that allows developers working with managed languages like C# and IronPython to leverage DirectX and many of Microsoft's other gaming-related multimedia APIs.", "WebMachine is an Erlang framework for creating RESTful Web Services using Erlang/OTP best practices."]
+owner_display_name: TEXT | NULL | eg=["user197015", "user177800"]
+id: NUMBER | NULL | eg=[4742863, 5304008]
+last_editor_user_id: NUMBER | NULL
+tags: TEXT | NULL
+last_editor_display_name: TEXT | NULL | eg=["user197015", "user177800"]
+answer_count: TEXT | NULL
+
+## STACKOVERFLOW.POSTS_TAG_WIKI
+tags: TEXT | NULL
+comment_count: NUMBER | NULL | eg=[0]
+last_editor_display_name: TEXT | NULL | eg=["user1228", "user806549"]
+answer_count: TEXT | NULL
+view_count: TEXT | NULL
+body: TEXT | NULL | eg=["<p>OpenWrap is a dependency manager for the .net platform.  It can be found at <a href=\"http://openwrap.org\" rel=\"nofollow\">http://openwrap.org</a>.</p>", "<p>Questions in this category contains all aspects of development relating to poker - ie. hand evaluation, game engine, statistics, etc.</p>"]
+score: NUMBER | NULL | eg=[0]
+last_editor_user_id: NUMBER | NULL
+post_type_id: NUMBER | NULL | eg=[5]
+parent_id: TEXT | NULL
+id: NUMBER | NULL | eg=[5166749, 5399041]
+creation_date: NUMBER | NULL | eg=[1299064856873000, 1300835798970000]
+last_edit_date: NUMBER | NULL | eg=[1315422474080000, 1311717572400000]
+owner_display_name: TEXT | NULL | eg=["user1228", "user806549"]
+favorite_count: TEXT | NULL
+last_activity_date: NUMBER | NULL | eg=[1315422474080000, 1311717572400000]
+owner_user_id: NUMBER | NULL
+community_owned_date: NUMBER | NULL
+accepted_answer_id: TEXT | NULL
+title: TEXT | NULL

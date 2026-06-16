@@ -1,0 +1,23 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: DELIVERY_CENTER.DRIVERS
+Columns: driver_modal, driver_type, driver_id
+
+Table: DELIVERY_CENTER.ORDERS
+Columns: order_metric_collected_time, order_metric_walking_time, order_moment_finished, order_moment_collected, order_created_minute, order_metric_production_time, order_status, order_metric_cycle_time, order_moment_delivering, store_id, order_id, order_created_year, order_delivery_fee, payment_order_id, order_moment_accepted, order_moment_ready, channel_id, order_moment_delivered, order_created_hour, order_delivery_cost, order_moment_created, order_created_month, order_metric_transit_time, order_created_day, delivery_order_id, order_moment_in_expedition, order_amount, order_metric_expediton_speed_time, order_metric_paused_time
+
+Table: DELIVERY_CENTER.STORES
+Columns: store_id, store_segment, store_name, store_latitude, store_longitude, store_plan_price, hub_id
+
+Table: DELIVERY_CENTER.DELIVERIES
+Columns: delivery_order_id, delivery_distance_meters, delivery_id, driver_id, delivery_status
+
+Table: DELIVERY_CENTER.CHANNELS
+Columns: channel_name, channel_id, channel_type
+
+Table: DELIVERY_CENTER.HUBS
+Columns: hub_latitude, hub_state, hub_id, hub_city, hub_longitude, hub_name
+
+Table: DELIVERY_CENTER.PAYMENTS
+Columns: payment_fee, payment_order_id, payment_amount, payment_status, payment_id, payment_method

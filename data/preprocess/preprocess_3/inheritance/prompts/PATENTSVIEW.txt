@@ -1,0 +1,368 @@
+[TEMPLATES]
+<T8>
+id: TEXT | NULL
+title: TEXT | NULL
+@Tables: [PATENTSVIEW.CPC_GROUP,PATENTSVIEW.CPC_SUBGROUP,PATENTSVIEW.CPC_SUBSECTION,PATENTSVIEW.MAINCLASS_CURRENT,PATENTSVIEW.NBER_CATEGORY,PATENTSVIEW.NBER_SUBCATEGORY,PATENTSVIEW.SUBCLASS_CURRENT]
+
+<T2>
+id: TEXT | NULL
+@Tables: [PATENTSVIEW.MAINCLASS,PATENTSVIEW.SUBCLASS]
+
+<T29>
+uuid: TEXT | NULL
+patent_id: TEXT | NULL
+text: TEXT | NULL
+@Tables: [PATENTSVIEW.BRF_SUM_TEXT,PATENTSVIEW.REL_APP_TEXT]
+
+<T34>
+sequence: NUMBER | NULL
+patent_id: TEXT | NULL
+subclass_id: TEXT | NULL
+mainclass_id: TEXT | NULL
+uuid: TEXT | NULL
+@Tables: [PATENTSVIEW.USPC,PATENTSVIEW.USPC_CURRENT]
+
+<T37>
+patent_id: TEXT | NULL
+category: TEXT | NULL
+uuid: TEXT | NULL
+sequence: NUMBER | NULL
+date: TEXT | NULL
+country: TEXT | NULL
+number: TEXT | NULL
+@Tables: [PATENTSVIEW.FOREIGNCITATION]
+
+[DERIVED]
+<T7> extends <T29>
+sequence: NUMBER | NULL
+@Tables: [PATENTSVIEW.DRAW_DESC_TEXT_2021,PATENTSVIEW.OTHERREFERENCE]
+
+<T1> extends <T29>
+sequence: TEXT | NULL
+@Tables: [PATENTSVIEW.DRAW_DESC_TEXT]
+
+<T10> extends <T7>
+exemplary: NUMBER | NULL
+num: TEXT | NULL
+dependent: TEXT | NULL
+@Tables: [PATENTSVIEW.CLAIMS_2021]
+
+<T28> extends <T37>
+name: TEXT | NULL
+kind: TEXT | NULL
+application_id: TEXT | NULL
+@Tables: [PATENTSVIEW.USAPPLICATIONCITATION]
+
+<T45> extends <T1>
+dependent: TEXT | NULL
+exemplary: TEXT | NULL
+@Tables: [PATENTSVIEW.CLAIM]
+
+[STANDALONE]
+## PATENTSVIEW.APPLICATION
+series_code: TEXT | NULL
+number: TEXT | NULL
+date: TEXT | NULL
+id: TEXT | NULL
+country: TEXT | NULL
+patent_id: TEXT | NULL
+
+## PATENTSVIEW.ASSIGNEE
+name_last: TEXT | NULL
+name_first: TEXT | NULL
+organization: TEXT | NULL
+type: FLOAT | NULL
+id: TEXT | NULL
+
+## PATENTSVIEW.BOTANIC
+variety: TEXT | NULL
+uuid: TEXT | NULL
+latin_name: TEXT | NULL
+patent_id: TEXT | NULL
+
+## PATENTSVIEW.CPC_CURRENT
+category: TEXT | NULL
+group_id: TEXT | NULL
+section_id: TEXT | NULL
+subsection_id: TEXT | NULL
+subgroup_id: TEXT | NULL
+sequence: NUMBER | NULL
+uuid: TEXT | NULL
+patent_id: TEXT | NULL
+
+## PATENTSVIEW.DETAIL_DESC_TEXT_2021
+text: TEXT | NULL
+patent_id: TEXT | NULL
+length: NUMBER | NULL
+
+## PATENTSVIEW.FIGURES
+uuid: TEXT | NULL
+num_figures: NUMBER | NULL
+patent_id: TEXT | NULL
+num_sheets: NUMBER | NULL
+
+## PATENTSVIEW.FOREIGN_PRIORITY
+country_transformed: TEXT | NULL
+number: TEXT | NULL
+date: TEXT | NULL
+kind: TEXT | NULL
+sequence: NUMBER | NULL
+uuid: TEXT | NULL
+patent_id: TEXT | NULL
+country: TEXT | NULL
+
+## PATENTSVIEW.GOVERNMENT_INTEREST
+patent_id: TEXT | NULL
+gi_statement: TEXT | NULL
+
+## PATENTSVIEW.GOVERNMENT_ORGANIZATION
+name: TEXT | NULL
+level_three: TEXT | NULL
+level_one: TEXT | NULL
+level_two: TEXT | NULL
+organization_id: NUMBER | NULL
+
+## PATENTSVIEW.INVENTOR
+attribution_status: NUMBER | NULL
+id: TEXT | NULL
+male_flag: FLOAT | NULL
+name_last: TEXT | NULL
+name_first: TEXT | NULL
+
+## PATENTSVIEW.INVENTOR_GENDER
+disamb_inventor_id_20170808: TEXT | NULL
+disamb_inventor_id_20190312: TEXT | NULL
+male: TEXT | NULL
+disamb_inventor_id_20181127: TEXT | NULL
+
+## PATENTSVIEW.IPCR
+classification_level: TEXT | NULL
+ipc_version_indicator: TEXT | NULL
+section: TEXT | NULL
+classification_status: TEXT | NULL
+patent_id: TEXT | NULL
+classification_value: TEXT | NULL
+uuid: TEXT | NULL
+classification_data_source: TEXT | NULL
+symbol_position: TEXT | NULL
+subclass: TEXT | NULL
+ipc_class: TEXT | NULL
+subgroup: TEXT | NULL
+main_group: TEXT | NULL
+action_date: TEXT | NULL
+sequence: NUMBER | NULL
+
+## PATENTSVIEW.LAWYER
+name_last: TEXT | NULL
+id: TEXT | NULL
+name_first: TEXT | NULL
+organization: TEXT | NULL
+country: TEXT | NULL
+
+## PATENTSVIEW.LOCATION
+state_fips: FLOAT | NULL
+city: TEXT | NULL
+state: TEXT | NULL
+latitude: FLOAT | NULL
+county: TEXT | NULL
+longitude: FLOAT | NULL
+county_fips: TEXT | NULL
+country: TEXT | NULL
+id: TEXT | NULL
+
+## PATENTSVIEW.LOCATION_ASSIGNEE
+assignee_id: TEXT | NULL
+location_id: TEXT | NULL
+
+## PATENTSVIEW.LOCATION_INVENTOR
+location_id: TEXT | NULL
+inventor_id: TEXT | NULL
+
+## PATENTSVIEW.MATCH
+patent_id: TEXT | NULL
+publication_number: TEXT | NULL
+
+## PATENTSVIEW.NBER
+patent_id: TEXT | NULL
+uuid: TEXT | NULL
+category_id: TEXT | NULL
+subcategory_id: TEXT | NULL
+
+## PATENTSVIEW.NON_INVENTOR_APPLICANT
+applicant_type: TEXT | NULL
+sequence: NUMBER | NULL
+designation: TEXT | NULL
+rawlocation_id: TEXT | NULL
+uuid: TEXT | NULL
+organization: TEXT | NULL
+lname: TEXT | NULL
+patent_id: TEXT | NULL
+fname: TEXT | NULL
+
+## PATENTSVIEW.PATENT
+filename: TEXT | NULL
+id: TEXT | NULL
+number: TEXT | NULL
+title: TEXT | NULL
+kind: TEXT | NULL
+type: TEXT | NULL
+date: TEXT | NULL
+withdrawn: NUMBER | NULL
+abstract: TEXT | NULL
+num_claims: NUMBER | NULL
+country: TEXT | NULL
+
+## PATENTSVIEW.PATENT_ASSIGNEE
+assignee_id: TEXT | NULL
+patent_id: TEXT | NULL
+location_id: TEXT | NULL
+
+## PATENTSVIEW.PATENT_CONTRACTAWARDNUMBER
+contract_award_number: TEXT | NULL
+patent_id: TEXT | NULL
+
+## PATENTSVIEW.PATENT_GOVINTORG
+organization_id: NUMBER | NULL
+patent_id: TEXT | NULL
+
+## PATENTSVIEW.PATENT_INVENTOR
+location_id: TEXT | NULL
+inventor_id: TEXT | NULL
+patent_id: TEXT | NULL
+
+## PATENTSVIEW.PATENT_LAWYER
+patent_id: TEXT | NULL
+lawyer_id: TEXT | NULL
+
+## PATENTSVIEW.PCT_DATA
+date: TEXT | NULL
+doc_type: TEXT | NULL
+country: TEXT | NULL
+kind: TEXT | NULL
+uuid: TEXT | NULL
+_371_date: TEXT | NULL
+_102_date: TEXT | NULL
+rel_id: TEXT | NULL
+patent_id: TEXT | NULL
+
+## PATENTSVIEW.PERSISTENT_ASSIGNEE_DISAMBIG
+disamb_assignee_id_20200331: TEXT | NULL
+disamb_assignee_id_20181127: TEXT | NULL
+disamb_assignee_id_20200929: TEXT | NULL
+disamb_assignee_id_20200630: TEXT | NULL
+rawassignee_id: TEXT | NULL
+disamb_assignee_id_20190820: TEXT | NULL
+disamb_assignee_id_20190312: TEXT | NULL
+disamb_assignee_id_20191008: TEXT | NULL
+disamb_assignee_id_20191231: TEXT | NULL
+
+## PATENTSVIEW.PERSISTENT_INVENTOR_DISAMB
+rawinventor_id: TEXT | NULL
+disamb_inventor_id_20170808: TEXT | NULL
+disamb_inventor_id_20170307: TEXT | NULL
+
+## PATENTSVIEW.PERSISTENT_INVENTOR_DISAMBIG
+disamb_inventor_id_20191231: TEXT | NULL
+disamb_inventor_id_20200929: TEXT | NULL
+disamb_inventor_id_20181127: TEXT | NULL
+rawinventor_id: TEXT | NULL
+disamb_inventor_id_20171226: TEXT | NULL
+disamb_inventor_id_20190312: TEXT | NULL
+disamb_inventor_id_20180528: TEXT | NULL
+disamb_inventor_id_20191008: TEXT | NULL
+disamb_inventor_id_20200630: TEXT | NULL
+disamb_inventor_id_20170808: TEXT | NULL
+disamb_inventor_id_20171003: TEXT | NULL
+disamb_inventor_id_20200331: TEXT | NULL
+disamb_inventor_id_20201229: TEXT | NULL
+disamb_inventor_id_20190820: TEXT | NULL
+
+## PATENTSVIEW.RAWASSIGNEE
+assignee_id: TEXT | NULL
+name_first: TEXT | NULL
+sequence: NUMBER | NULL
+rawlocation_id: TEXT | NULL
+uuid: TEXT | NULL
+organization: TEXT | NULL
+type: FLOAT | NULL
+patent_id: TEXT | NULL
+name_last: TEXT | NULL
+
+## PATENTSVIEW.RAWEXAMINER
+uuid: TEXT | NULL
+name_first: TEXT | NULL
+role: TEXT | NULL
+group: TEXT | NULL
+patent_id: TEXT | NULL
+name_last: TEXT | NULL
+
+## PATENTSVIEW.RAWINVENTOR
+inventor_id: TEXT | NULL
+patent_id: TEXT | NULL
+rawlocation_id: TEXT | NULL
+name_first: TEXT | NULL
+sequence: NUMBER | NULL
+name_last: TEXT | NULL
+uuid: TEXT | NULL
+rule_47: TEXT | NULL
+deceased: TEXT | NULL
+
+## PATENTSVIEW.RAWLAWYER
+organization: TEXT | NULL
+name_last: TEXT | NULL
+uuid: TEXT | NULL
+lawyer_id: TEXT | NULL
+patent_id: TEXT | NULL
+name_first: TEXT | NULL
+sequence: NUMBER | NULL
+country: TEXT | NULL
+
+## PATENTSVIEW.RAWLOCATION
+country: TEXT | NULL
+location_id: TEXT | NULL
+city: TEXT | NULL
+id: TEXT | NULL
+state: TEXT | NULL
+latlong: TEXT | NULL
+
+## PATENTSVIEW.USPATENTCITATION
+date: TEXT | NULL
+category: TEXT | NULL
+name: TEXT | NULL
+uuid: TEXT | NULL
+sequence: NUMBER | NULL
+patent_id: TEXT | NULL
+citation_id: TEXT | NULL
+kind: TEXT | NULL
+country: TEXT | NULL
+
+## PATENTSVIEW.USRELDOC
+date: TEXT | NULL
+reldocno: TEXT | NULL
+status: TEXT | NULL
+relkind: TEXT | NULL
+kind: TEXT | NULL
+uuid: TEXT | NULL
+patent_id: TEXT | NULL
+sequence: TEXT | NULL
+country: TEXT | NULL
+doctype: TEXT | NULL
+
+## PATENTSVIEW.US_TERM_OF_GRANT
+uuid: TEXT | NULL
+term_grant: TEXT | NULL
+term_extension: TEXT | NULL
+patent_id: TEXT | NULL
+disclaimer_date: TEXT | NULL
+lapse_of_patent: TEXT | NULL
+term_disclaimer: TEXT | NULL
+
+## PATENTSVIEW.WIPO
+patent_id: TEXT | NULL
+field_id: TEXT | NULL
+sequence: TEXT | NULL
+
+## PATENTSVIEW.WIPO_FIELD
+field_title: TEXT | NULL
+sector_title: TEXT | NULL
+id: TEXT | NULL

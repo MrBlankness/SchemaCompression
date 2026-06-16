@@ -1,0 +1,28 @@
+
+[COMPRESSED SCHEMA]
+{context}
+
+[USER QUESTION]
+{question}
+
+[INSTRUCTIONS]
+Provide explicit step-by-step reasoning for template decompression and schema linking.
+Keep THOUGHT concise; avoid enumerating expanded template/inheritance details.
+Prioritize recall first; improve precision only after required intent coverage is satisfied.
+
+[OUTPUT]
+Return exactly:
+THOUGHT:
+<your concise reasoning>
+
+FINAL_JSON:
+<JSON list of schema.table.column>
+
+[EXAMPLE OUTPUT]
+THOUGHT:
+1) Identify physical tables from STANDALONE/TEMPLATES/DERIVED.
+2) Expand only needed parent/derived fields for unresolved filter/join/select needs.
+3) Keep only columns required by filtering, grouping, and joins.
+
+FINAL_JSON:
+["sales.orders.order_id", "sales.orders.order_date", "sales.customers.customer_id"]

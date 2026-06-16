@@ -1,0 +1,9 @@
+[STANDALONE]
+Format: schema.table|col1,col2
+STACKING.EDA|feature,version,drop_correlation,name,target,range,type,drop_user
+STACKING.FEATURE_IMPORTANCE|feature,importance,step,version,name
+STACKING.MODEL_IMPORTANCE|version,model,step,name,importance
+STACKING.MODEL_SCORE|name,test_score,step,version,model,train_score
+STACKING.MODEL|name,L1_model,version,step
+STACKING.PROBLEM|target,path,name,type
+STACKING.SOLUTION|version,test_size,nb_model,resampling,correlation,score,nb_feature,name

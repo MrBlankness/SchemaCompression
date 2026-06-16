@@ -1,0 +1,10 @@
+[COMPONENTS]
+@C1:rank,refresh_date,score,term,week
+@C2:country_code,country_name,region_code,region_name
+
+[TABLES]
+Format: schema.table|components|columns
+GOOGLE_TRENDS.TOP_TERMS|@C1|dma_id,dma_name
+GOOGLE_TRENDS.TOP_RISING_TERMS|@C1|dma_name,percent_gain,dma_id
+GOOGLE_TRENDS.INTERNATIONAL_TOP_TERMS|@C1,@C2|
+GOOGLE_TRENDS.INTERNATIONAL_TOP_RISING_TERMS|@C1,@C2|percent_gain

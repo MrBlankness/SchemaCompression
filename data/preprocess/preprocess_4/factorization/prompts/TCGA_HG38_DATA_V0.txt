@@ -1,0 +1,804 @@
+[COMPONENTS]
+@C1
+AA_MAF: TEXT | Non-reference allele and frequency of existing variant in NHLBI-ESP African American population | eg=["0", "0.0027"]
+AFR_MAF: FLOAT | Non-reference allele and frequency of existing variant in 1000 Genomes combined African population | eg=[NaN, 0.003]
+aliquot_barcode_normal: TEXT | TCGA aliquot barcode for the normal control, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-02-0033-10A-01D-1490-08", "TCGA-02-0055-10A-01D-1490-08"]
+aliquot_barcode_tumor: TEXT | TCGA aliquot barcode for the tumor, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-02-0033-01A-01D-1490-08", "TCGA-02-0055-01A-01D-1490-08"]
+all_effects: TEXT | A semicolon delimited list of all possible variant effects, sorted by priority ([Symbol,Consequence,HGVSp_Short,Transcript_ID,RefSeq,HGVSc,Impact,Canonical,Sift,PolyPhen,Strand]) | eg=["ACSM5,synonymous_variant,p.P313P,ENST00000331849,NM_017888.2;ACSM5,non_coding_transcript_exon_variant,,ENST00000570305,;ACSM5,non_coding_transcript_exon_variant,,ENST00000574748,;ACSM5,intron_variant,,ENST00000573920,;ACSM5,upstream_gene_variant,,ENST00000577024,", "KCNG4,synonymous_variant,p.A128A,ENST00000308251,NM_172347.2;KCNG4,synonymous_variant,p.A128A,ENST00000568181,"]
+Allele: TEXT | The variant allele used to calculate the consequence | eg=["A", "T"]
+ALLELE_NUM: TEXT | Allele number from input; 0 is reference, 1 is first alternate etc. | eg=["1"]
+Amino_acids: TEXT | Amino acid substitution caused by the mutation. Only given if the variation affects the protein-coding sequence | eg=["P", "A"]
+AMR_MAF: FLOAT | Non-reference allele and frequency of existing variant in 1000 Genomes combined American population | eg=[NaN, 0.0]
+BIOTYPE: TEXT | Biotype of transcript | eg=["protein_coding"]
+callerName: TEXT | |-delimited list of mutation caller(s) that agreed on this particular call, always in alphabetical order: muse, mutect, somaticsniper, varscan | eg=["muse|mutect|varscan", "mutect"]
+CANONICAL: TEXT | A flag (YES) indicating that the VEP-based canonical transcript, the longest translation, was used for this gene. If not, the value is null | eg=["YES"]
+CCDS: TEXT | The  CCDS identifier for this transcript, where applicable | eg=["CCDS10585.1", "CCDS10945.1"]
+cDNA_position: TEXT | Relative position of base pair in the cDNA sequence as a fraction. A - symbol is displayed as the numerator if the variant does not appear in cDNA | eg=["1086/2796", "453/5179"]
+CDS_position: TEXT | Relative position of base pair in coding sequence. A - symbol is displayed as the numerator if the variant does not appear in coding sequence | eg=["939/1740", "384/1560"]
+Center: TEXT | One or more genome sequencing center reporting the variant | eg=["BI"]
+CLIN_SIG: TEXT | Clinical significance of variant from dbSNP
+Codons: TEXT | The alternative codons with the variant base in upper case | eg=["ccG/ccA", "gcG/gcA"]
+Consequence: TEXT | Consequence type of this variant;   sequence ontology terms | eg=["synonymous_variant", "missense_variant"]
+CONTEXT: TEXT | The reference allele per VCF specs, and its five flanking base pairs | eg=["TTCCCGATAAC", "CCGGCCGCCAG"]
+COSMIC: TEXT | Overlapping COSMIC variants | eg=["COSM3402136", "COSM3402525"]
+dbSNP_RS: TEXT | The rs-IDs from the   dbSNP database, novel if not found in any database used, or null if there is no dbSNP record, but it is found in other databases | eg=["rs12922063", "rs369629967"]
+dbSNP_Val_Status: TEXT | The dbSNP validation status is reported as a semicolon-separated list of statuses. The union of all rs-IDs is taken when there are multiple | eg=["byFrequency;suspect", "byCluster"]
+DISTANCE: NUMBER | Shortest distance from the variant to transcript
+DOMAINS: TEXT | The source and identifier of any overlapping protein domains | eg=["Pfam_domain:PF00501;Superfamily_domains:SSF56801", "Pfam_domain:PF02214;Prints_domain:PR00169;Prints_domain:PR01494;Superfamily_domains:SSF54695"]
+EA_MAF: TEXT | Non-reference allele and frequency of existing variant in NHLBI-ESP European American population | eg=["0.0001", "0.0002"]
+EAS_MAF: FLOAT | Non-reference allele and frequency of existing variant in 1000 Genomes combined East Asian population | eg=[NaN, 0.0]
+ENSP: TEXT | The Ensembl protein identifier of the affected transcript | eg=["ENSP00000327916", "ENSP00000312129"]
+Entrez_Gene_Id: NUMBER | Entrez gene ID (an integer). 0 is used for regions that do not correspond to a gene region or Ensembl ID | eg=[54988, 93107]
+EUR_MAF: FLOAT | Non-reference allele and frequency of existing variant in 1000 Genomes combined European population | eg=[NaN, 0.0]
+ExAC_AF: TEXT | Global Allele Frequency from ExAC | eg=["4.942e-05", "8.236e-06"]
+ExAC_AF_Adj: TEXT | Adjusted Global Allele Frequency from ExAC | eg=["4.943e-05", "8.264e-06"]
+ExAC_AF_AFR: TEXT | African/African American Allele Frequency from ExAC | eg=["0.0001922", "0"]
+ExAC_AF_AMR: TEXT | American Allele Frequency from ExAC | eg=["0"]
+ExAC_AF_EAS: TEXT | East Asian Allele Frequency from ExAC | eg=["0.0001156", "0"]
+ExAC_AF_FIN: TEXT | Finnish Allele Frequency from ExAC | eg=["0"]
+ExAC_AF_NFE: TEXT | Non-Finnish European Allele Frequency from ExAC | eg=["4.496e-05", "1.504e-05"]
+ExAC_AF_OTH: TEXT | Other Allele Frequency from ExAC | eg=["0"]
+ExAC_AF_SAS: TEXT | South Asian Allele Frequency from ExAC | eg=["0", "9.932e-05"]
+Existing_variation: TEXT | Known identifier of existing variation | eg=["rs12922063", "rs369629967"]
+EXON: TEXT | The exon number (out of total number) | eg=["7/14", "2/3"]
+Exon_Number: TEXT | The exon number (out of total number) | eg=["7/14", "2/3"]
+Feature: TEXT | Stable Ensembl ID of feature (transcript, regulatory, motif) | eg=["ENST00000331849", "ENST00000308251"]
+Feature_type: TEXT | Type of feature. Currently one of Transcript, RegulatoryFeature, MotifFeature (or blank) | eg=["Transcript"]
+FILTER: TEXT | Copied from input VCF. This includes filters implemented directly by the variant caller and other external software used in the DNA-Seq pipeline. See below for additional details. | eg=["PASS|panel_of_normals|PASS", "PASS"]
+GDC_FILTER: TEXT | GDC filters applied universally across all MAFs | eg=["gdc_pon", "common_in_exac;gdc_pon"]
+GDC_Validation_Status: TEXT | GDC implementation of validation checks. See notes section (#5) below for details | eg=["Unknown", "Valid"]
+GMAF: FLOAT | Non-reference allele and frequency of existing variant in   1000 Genomes | eg=[NaN, 0.0008]
+HGNC_ID: TEXT | Gene identifier from the HUGO Gene Nomenclature Committee if applicable | eg=["HGNC:26060", "HGNC:19697"]
+HGVS_OFFSET: NUMBER | Indicates by how many bases the HGVS notations for this variant have been shifted
+HGVSc: TEXT | The coding sequence of the variant in HGVS recommended format | eg=["c.939G>A", "c.384G>A"]
+HGVSp: TEXT | The protein sequence of the variant in HGVS recommended format. p.= signifies no change in the protein | eg=["p.=", "p.Val932Met"]
+HGVSp_Short: TEXT | Same as the HGVSp column, but using 1-letter amino-acid codes | eg=["p.P313P", "p.A128A"]
+Hugo_Symbol: TEXT | HUGO symbol for the gene (HUGO symbols are always in all caps). Unknown is used for regions that do not correspond to a gene | eg=["ACSM5", "KCNG4"]
+IMPACT: TEXT | The impact modifier for the consequence type | eg=["LOW", "MODERATE"]
+INTRON: TEXT | The intron number (out of total number)
+MC3_Overlap: TEXT | Indicates whether this region overlaps with an MC3 variant for the same sample pair | eg=["True", "False"]
+MINIMISED: TEXT | Alleles in this variant have been converted to minimal representation before consequence calculation (1 or null) | eg=["1"]
+Mutation_Status: TEXT | An assessment of the mutation as somatic, germline, LOH, post transcriptional modification, unknown, or none. The values allowed in this field are constrained by the value in the Validation_Status field | eg=["Somatic"]
+n_depth: TEXT | Read depth across this locus in normal BAM | eg=["805|786|691", "81"]
+NCBI_Build: TEXT | The reference genome used for the alignment (GRCh38) | eg=["GRCh38"]
+PHENO: TEXT | Indicates if existing variant is associated with a phenotype, disease or trait (0, 1, or null)
+PICK: TEXT | Indicates if this block of consequence data was picked by VEP's   pick feature (1 or null) | eg=["1"]
+PolyPhen: TEXT | The PolyPhen prediction and/or score | eg=["benign(0)"]
+Protein_position: TEXT | Relative position of affected amino acid in protein. A - symbol is displayed as the numerator if the variant does not appear in coding sequence | eg=["313/579", "128/519"]
+PUBMED: TEXT | Pubmed ID(s) of publications that cite existing variant
+Reference_Allele: TEXT | The plus strand reference allele at this position. Includes the deleted sequence for a deletion or - for an insertion | eg=["G", "C"]
+RefSeq: TEXT | RefSeq identifier for this transcript | eg=["NM_017888.2", "NM_172347.2"]
+sample_barcode_normal: TEXT | TCGA sample barcode for the normal control, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries | eg=["TCGA-02-0033-10A", "TCGA-02-0055-10A"]
+sample_barcode_tumor: TEXT | TCGA sample barcode for the tumor, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries | eg=["TCGA-02-0033-01A", "TCGA-02-0055-01A"]
+SAS_MAF: FLOAT | Non-reference allele and frequency of existing variant in 1000 Genomes combined South Asian population | eg=[NaN, 0.0]
+Sequencer: TEXT | Instrument used to produce primary sequence data | eg=["Illumina HiSeq 2000", "Illumina Genome Analyzer II"]
+SIFT: TEXT | The   SIFT prediction and/or score, with both given as prediction (score) | eg=["tolerated(0.6)"]
+SOMATIC: TEXT | Somatic status of each ID reported under Existing_variation (0, 1, or null)
+SWISSPROT: TEXT | UniProtKB/Swiss-Prot accession | eg=["Q6NUN0", "Q8TDN1"]
+SYMBOL_SOURCE: TEXT | The source of the gene symbol, usually HGNC, rarely blank, other sources include Uniprot_gn, EntrezGene, etc | eg=["HGNC"]
+t_alt_count: TEXT | Read depth supporting the variant allele in tumor BAM | eg=["94|89|76", "8"]
+t_depth: TEXT | Read depth across this locus in tumor BAM | eg=["825|794|681", "107"]
+t_ref_count: TEXT | Read depth supporting the reference allele in tumor BAM | eg=["731|705|604", "99"]
+Transcript_ID: TEXT | Ensembl ID of the transcript affected by the variant | eg=["ENST00000331849", "ENST00000308251"]
+TRANSCRIPT_STRAND: NUMBER | The DNA strand (1 or -1) on which the transcript/feature lies | eg=[1, -1]
+TREMBL: TEXT | UniProtKB/TrEMBL identifier of protein product | eg=["Q547S7", "Q53S48"]
+TSL: NUMBER | Transcript support level, which is based on independent RNA analyses | eg=[1]
+Tumor_Seq_Allele1: TEXT | Primary data genotype for tumor sequencing (discovery) allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases | eg=["G", "C"]
+Tumor_Seq_Allele2: TEXT | Primary data genotype for tumor sequencing (discovery) allele 2. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases | eg=["A", "T"]
+Tumor_Validation_Allele1: TEXT | Secondary data from orthogonal technology. Tumor genotyping (validation) for allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases | eg=["A"]
+Tumor_Validation_Allele2: TEXT | Secondary data from orthogonal technology. Tumor genotyping (validation) for allele 2 | eg=["A"]
+UNIPARC: TEXT | UniParc identifier of protein product | eg=["UPI00001FEFB3", "UPI00000557D8"]
+Validation_Method: TEXT | The assay platforms used for the validation call | eg=["Capture"]
+VARIANT_CLASS: TEXT | Sequence Ontology variant class | eg=["SNV"]
+Variant_Classification: TEXT | Translational effect of variant allele | eg=["Silent", "Missense_Mutation"]
+Variant_Type: TEXT | Type of mutation. TNP (tri-nucleotide polymorphism) is analogous to DNP (di-nucleotide polymorphism) but for three consecutive nucleotides. ONP (oligo-nucleotide polymorphism) is analogous to TNP but for consecutive runs of four or more (SNP, DNP, TNP, ONP, INS, DEL, or Consolidated) | eg=["SNP"]
+
+@C2
+age_at_diagnosis: NUMBER | NULL
+anatomic_neoplasm_subdivision: TEXT | NULL
+bmi: FLOAT | NULL
+clinical_M: TEXT | NULL
+clinical_N: TEXT | NULL
+clinical_stage: TEXT | NULL
+clinical_T: TEXT | NULL
+colorectal_cancer: TEXT | NULL
+country: TEXT | NULL
+days_to_birth: NUMBER | NULL
+days_to_death: NUMBER | NULL
+days_to_initial_pathologic_diagnosis: NUMBER | NULL
+days_to_last_followup: NUMBER | NULL
+days_to_last_known_alive: NUMBER | NULL
+ethnicity: TEXT | NULL
+gender: TEXT | NULL
+h_pylori_infection: TEXT | NULL
+histological_type: TEXT | NULL
+history_of_colon_polyps: TEXT | NULL
+history_of_neoadjuvant_treatment: TEXT | NULL
+hpv_calls: TEXT | NULL
+hpv_status: TEXT | NULL
+icd_10: TEXT | NULL
+icd_o_3_histology: TEXT | NULL
+icd_o_3_site: TEXT | NULL
+lymphatic_invasion: TEXT | NULL
+lymphnodes_examined: TEXT | NULL
+lymphovascular_invasion_present: TEXT | NULL
+menopause_status: TEXT | NULL
+mononucleotide_and_dinucleotide_marker_panel_analysis_status: TEXT | NULL
+neoplasm_histologic_grade: TEXT | NULL
+number_of_lymphnodes_examined: NUMBER | NULL
+other_dx: TEXT | NULL
+other_malignancy_anatomic_site: TEXT | NULL
+other_malignancy_histological_type: TEXT | NULL
+other_malignancy_type: TEXT | NULL
+pathologic_M: TEXT | NULL
+pathologic_N: TEXT | NULL
+pathologic_stage: TEXT | NULL
+pathologic_T: TEXT | NULL
+person_neoplasm_cancer_status: TEXT | NULL
+pregnancies: TEXT | NULL
+primary_neoplasm_melanoma_dx: TEXT | NULL
+primary_therapy_outcome_success: TEXT | NULL
+race: TEXT | NULL
+residual_tumor: TEXT | NULL
+stopped_smoking_year: NUMBER | NULL
+tobacco_smoking_history: NUMBER | NULL
+tss_code: TEXT | NULL
+tumor_tissue_site: TEXT | NULL
+tumor_type: TEXT | NULL
+venous_invasion: TEXT | NULL
+vital_status: TEXT | NULL
+year_of_tobacco_smoking_onset: NUMBER | NULL
+
+@C3
+beta_value: FLOAT | Normalized DNA methylation beta value (between 0 and 1, where 0 indicates completely un-methylated and 1 indicates fully methylated) | eg=[0.612371930828832, 0.419433730790018]
+probe_id: TEXT | Unique probe identifier (eg cg04676771) from the Illumina Human Methylation array -- please refer to the annotation table (isb-cgc:platform_reference.methylation_annotation) for more details about any particular probe | eg=["cg22415432", "cg03515901"]
+
+@C4
+case_id: TEXT | Unique GDC identifier for the case | eg=["24d56331-4bca-4ab8-9fb7-a95a30b4c8fe", "adbf5bda-e2dc-4b25-8fb9-96d89093f77d"]
+fileName: TEXT | |-delimited list of name of underlying MAF file | eg=["TCGA.BLCA.mutect.0e239d8f-47b0-4e47-9716-e9ecc87605b9.DR-10.0.somatic.maf|TCGA.BLCA.varscan.4a755399-e5b5-4d0e-b1e3-dae24b81590e.DR-10.0.somatic.maf", "TCGA.PRAD.somaticsniper.1e36e3a8-548e-4188-8915-d0e6172f01da.DR-10.0.somatic.maf|TCGA.PRAD.varscan.6c494917-a5fe-4735-8b2e-e7b560f1cd0f.DR-10.0.somatic.maf"]
+fileUUID: TEXT | |-delimited list of unique GDC identifier for underlying MAF file | eg=["0e239d8f-47b0-4e47-9716-e9ecc87605b9|4a755399-e5b5-4d0e-b1e3-dae24b81590e", "1e36e3a8-548e-4188-8915-d0e6172f01da|6c494917-a5fe-4735-8b2e-e7b560f1cd0f"]
+Matched_Norm_Sample_UUID: TEXT | Unique GDC identifier for normal aliquot (10189 unique) | eg=["9375b535-87d5-4b4e-81ab-8986e4e1dce3", "caacdc42-537a-470f-b215-c0727d083e42"]
+normal_bam_uuid: TEXT | Unique GDC identifier for the underlying normal bam file | eg=["bd7c1e3d-c094-4d04-b88f-ded9abc57146", "cc667944-ea5f-4e65-94d2-0d1fd4f0291a"]
+One_Consequence: TEXT | The single consequence of the canonical transcript in  sequence ontology terms, eg missense_variant | eg=["missense_variant"]
+src_vcf_id: TEXT | |-delimited list of GDC VCF file identifiers | eg=["b0799c5b-02aa-4611-ab26-fac0bfdc28df|0745585c-9eec-4fa9-9f9f-6fbd479c32cb", "eb3d2923-3f54-4776-9ccf-404046336fc3|8b0b9cb4-ef97-47f5-9b20-1a8e06a4ccd4"]
+tumor_bam_uuid: TEXT | Unique GDC identifier for the underlying tumor bam file | eg=["217a1524-ce9e-4cef-a27c-e80198ac5785", "b9100d5b-fc79-404f-ae0c-14ee64ba02df"]
+Tumor_Sample_UUID: TEXT | Unique GDC identifier for tumor aliquot (10189 unique) | eg=["d0fec8a1-76ee-40a1-80c5-4cf8ab5540c6", "4aeba7a2-387f-41b0-ba7d-24d6c0c96b22"]
+
+@C5
+ASN_MAF: TEXT | Non-reference allele and frequency of existing variant in 1000 Genomes combined Asian population
+BAM_File: TEXT | Name of the bam file. Not in use in this table.
+GENE_PHENO: TEXT | Indicates if gene that the variant maps to is associated with a phenotype, disease or trait (0, 1, or null)
+HIGH_INF_POS: TEXT | A flag indicating if the variant falls in a high information position of a transcription factor binding profile (TFBP) (Y, N, or null)
+Match_Norm_Seq_Allele1: TEXT | Primary data genotype. Matched normal sequencing allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases (cleared in somatic MAF)
+Match_Norm_Seq_Allele2: TEXT | Matched normal sequencing allele 2
+Match_Norm_Validation_Allele1: TEXT | Secondary data from orthogonal technology. Matched normal genotyping (validation) for allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases (cleared in somatic MAF)
+Match_Norm_Validation_Allele2: TEXT | Secondary data from orthogonal technology. Matched normal genotyping (validation) for allele 2 (cleared in somatic MAF)
+MOTIF_NAME: TEXT | The source and identifier of a transcription factor binding profile aligned at this position
+MOTIF_POS: TEXT | The relative position of the variation in the aligned TFBP
+MOTIF_SCORE_CHANGE: TEXT | The difference in motif score of the reference and variant sequences for the TFBP
+n_alt_count: TEXT | Read depth supporting the variant allele in normal BAM (cleared in somatic MAF)
+n_ref_count: TEXT | Read depth supporting the reference allele in normal BAM (cleared in somatic MAF)
+Score: TEXT | Not in use
+Sequence_Source: TEXT | Molecular assay type used to produce the analytes used for sequencing. Allowed values are a subset of the SRA 1.5 library_strategy field values. This subset matches those used at CGHub
+Sequencing_Phase: TEXT | TCGA sequencing phase (if applicable). Phase should change under any circumstance that the targets under consideration change
+Verification_Status: TEXT | Second pass results from independent attempt using same methods as primary data source. Generally reserved for 3730 Sanger Sequencing
+
+@C6
+age_began_smoking_in_years: TEXT | NULL
+days_to_submitted_specimen_dx: TEXT | NULL
+gleason_score_combined: TEXT | NULL
+height: NUMBER | NULL
+new_tumor_event_after_initial_treatment: BOOLEAN | NULL
+number_of_lymphnodes_positive_by_he: TEXT | NULL
+number_pack_years_smoked: NUMBER | NULL
+psa_value: TEXT | NULL
+weight: NUMBER | NULL
+year_of_diagnosis: NUMBER | NULL
+
+@C7
+End_Position: NUMBER | Highest numeric genomic position of the reported variant on the genomic reference sequence. Mutation end coordinate | eg=[20427805, 84237102]
+Start_Position: NUMBER | Lowest numeric position of the reported variant on the genomic reference sequence. Mutation start coordinate | eg=[20427805, 84237102]
+
+@C8
+EXPR: FLOAT | Fragments Per Kilobase of transcript per Million mapped reads (FPKM) is a simple expression level normalization method. The FPKM normalizes read count based on gene length and the total number of mapped reads. https://docs.gdc.cancer.gov/Encyclopedia/pages/HTSeq-FPKM/ | eg=[388.349514563, 0.0]
+ID: TEXT | Sample Barcode | eg=["TCGA-3A-A9IH-01A", "TCGA-5P-A9KE-01A"]
+PHENOTYPE: NUMBER | Whether the gene is from TCGA-PAAD or from TCGA-KIRP | eg=[0, 1]
+
+@C9
+batch_number: NUMBER | NULL
+bcr: TEXT | NULL
+
+@C10
+cross_mapped: TEXT | A short isomiR read may map exactly to mature strands whose sequences are similar but not identical, when the read sequence does not capture the bases that distinguish these miRNAs (e.g. hsa-mir-30a at 6q13 and hsa-mir-30e at 1p34.2, which differ at position 18). We report such a <line_feed> read as cross-mapped, and we increment the read count for each MIMAT that it mapped to. Either Y or N -- fewer than 2% are Y | eg=["N"]
+mirna_id: TEXT | One of 1788 unique miRNA ids (aka symbols) contained in this table, eg hsa-mir-21 | eg=["hsa-mir-133a-1", "hsa-mir-4423"]
+read_count: NUMBER | Number of reads that were mapped to this mirna_id | eg=[1, 2]
+reads_per_million_miRNA_mapped: FLOAT | Read count normalized by total reads mapped divided by 1 million | eg=[0.11303, 0.376753]
+
+@C11
+end_pos: NUMBER | 1-based end chromosome position of isoform | eg=[42366732, 147162833]
+start_pos: NUMBER | 1-based start chromosome position of isoform | eg=[42365129, 147162105]
+
+[TABLES]
+## TCGA_HG38_DATA_V0.TCGA_METADATA_DATA_HG38_R14
+type: TEXT | Description of the data, eg. clinical_supplement, aligned_reads | eg=["biospecimen_supplement"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-OV"]
+disease_code: TEXT | A code representing the type of cancer. Values can be found at https://gdc.cancer.gov/resources-TCGA-users/TCGA-code-tables/TCGA-study-abbreviations; eg. OV, GBM, LUAD | eg=["OV"]
+index_file_name_key: TEXT | GDC path to original vcf or bam index file
+access: TEXT | Data accessibility policy (open or controlled) | eg=["open"]
+experimental_strategy: TEXT | Experimental strategy used to generate data (where applicable) e.g. WXS, RNA-Seq
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["NA"]
+platform: TEXT | Platform used to generate data (null, Illumina)
+case_gdc_id: TEXT | Unique GDC identifier for this case (corresponds to the case_barcode).  Can be used to access more information from the GDC data portal like this:   https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba37 | eg=["80690bbb-05db-413c-b1bc-96b744dea49e", "ca210bb9-0176-4ab1-9fdf-ef0bf15e6562"]
+file_size: NUMBER | The size of the file measured in bytes | eg=[30616, 30614]
+index_file_id: TEXT | BAM  or VCF index file GDC file UUID
+data_category: TEXT | Category description of the underlying data, eg Clinical, Raw Sequencing Data, Simple Nucleotide Variation, Transcriptome Profiling  , etc | eg=["Biospecimen"]
+index_file_size: NUMBER | When available, the size of the file measured in bytes
+data_format: TEXT | File format of the underlying data, eg BCR XML, BAM | eg=["BCR XML"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+sample_barcode: TEXT | TCGA sample barcode, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries | eg=["NA"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-DX-A8BN | eg=["TCGA-72-4233", "TCGA-72-4234"]
+file_name_key: TEXT | GDC path to original bam or vcf file | eg=["gs://gdc-tcga-phs000178-open/d30800f0-fbfd-4237-8e4b-92abd18757bc/nationwidechildrens.org_biospecimen.TCGA-72-4233.xml", "gs://gdc-tcga-phs000178-open/eef6ef00-6846-48ec-b4ad-bf3e5ca1bfb5/nationwidechildrens.org_biospecimen.TCGA-72-4234.xml"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba44 | eg=["d30800f0-fbfd-4237-8e4b-92abd18757bc", "eef6ef00-6846-48ec-b4ad-bf3e5ca1bfb5"]
+data_type: TEXT | Experimental source of the data type, eg Tissue slide image, RNA-Seq
+
+## TCGA_HG38_DATA_V0.COPY_NUMBER_SEGMENT_MASKED_R14
+@use: [C11]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-DX-A8BN | eg=["TCGA-01-0628"]
+chromosome: TEXT | Chromosome, possible values: chr1-22, and chrX | eg=["12", "6"]
+segment_mean: FLOAT | Mean CN value for this segment -- the value is base2 log(CN/2), centered at 0. | eg=[-1.4563, -1.3258]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["2a91428d-7099-4635-b059-9e5bad09b68a"]
+num_probes: NUMBER | Number of probes in the SNP array used to infer this CN segment | eg=[2, 15678]
+aliquot_gdc_id: TEXT | Unique GDC identifier for this aliquot (corresponds to the aliquot_barcode), eg 7fbfdb3e-1fd2-4206-8d2e-7f68e4a15844  --  this can be used to access more information from the GDC data portal | eg=["1592cfef-f2b8-48f5-b61d-9c467b608671"]
+sample_barcode: TEXT | TCGA sample barcode, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries | eg=["TCGA-01-0628-11A"]
+case_gdc_id: TEXT | Unique GDC identifier for this case (corresponds to the case_barcode).  Can be used to access more information from the GDC data portal like this:   https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba10 | eg=["f88560c8-3475-47f2-9d48-4b8311bc1132"]
+aliquot_barcode: TEXT | TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-02 | eg=["TCGA-01-0628-11A-01D-0356-01"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; e.g. TCGA-OV, etc. | eg=["TCGA-OV"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba17 | eg=["d09a6e75-b4c8-4575-afe4-d08b8ce33c2d"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHRY
+@use: [C3]
+file_gdc_id: TEXT | NULL | eg=["cdd5e1a9-1ce8-4361-9fca-61ccb7098b25", "ef8d43d7-1393-4e56-b434-ccc10ffef2aa"]
+case_gdc_id: TEXT | NULL | eg=["65bb7520-f055-43a8-b735-1152fa2c9e04", "282e979d-4ad9-4d42-8ffa-7487a94fa1f3"]
+aliquot_gdc_id: TEXT | NULL | eg=["b8074b70-ad2b-49e5-b70a-c6e8a6681830", "938a46a0-f08b-470a-bc72-b24048de06ee"]
+platform: TEXT | Platform used to generate this data -- either HumanMethylation450 or HumanMethylation27
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-A6-2670", "TCGA-BR-4190"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A | eg=["TCGA-A6-2670-01A", "TCGA-BR-4190-11A"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-A6-2670-01A-02D-0820-05", "TCGA-BR-4190-11A-01D-1129-05"]
+sample_gdc_id: TEXT | NULL | eg=["724072ae-40b5-45cc-b339-e24f1cb6fbcf", "78ca8f7f-2466-4681-81eb-e3611ac9b442"]
+
+## TCGA_HG38_DATA_V0.COPY_NUMBER_SEGMENT_MASKED
+@use: [C11]
+file_gdc_id: TEXT | NULL | eg=["25f7e937-224c-4047-808d-4adf6249db83"]
+segment_mean: FLOAT | Mean CN value for this segment -- the value is base2 log(CN/2), centered at 0 | eg=[0.1237, -0.496]
+case_gdc_id: TEXT | NULL | eg=["6d10d4ee-6331-4bba-93bc-a7b64cc0b22a"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-04-1331-01A-01D-0428-01"]
+sample_gdc_id: TEXT | NULL | eg=["a1ec9279-c1a6-4e58-97ed-9ec1f36187c5"]
+chromosome: TEXT | Chromosome, possible values: chr1-22, and chrX | eg=["12", "17"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries | eg=["TCGA-04-1331-01A"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-OV"]
+aliquot_gdc_id: TEXT | NULL | eg=["eb2cd85e-61a9-4180-b953-a8ad5fd9bef0"]
+num_probes: NUMBER | Number of probes in the SNP array used to infer this CN segment | eg=[2472, 6685]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-04-1331"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR5
+@use: [C3]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A | eg=["TCGA-12-1601-01A", "TCGA-32-2498-01A"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a", "6e65d823-0d94-4d26-b60a-2f168cbe2ba8"]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3", "6db4187c-5e48-45ac-8ae3-6b55198ff65a"]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601", "TCGA-32-2498"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05", "TCGA-32-2498-01A-01D-1228-05"]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3", "58af038c-bd40-4123-a6d3-11061f0d38e1"]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45", "0d5e5a6b-5113-43f2-836c-776207b21b56"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR2
+@use: [C3]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a", "6e65d823-0d94-4d26-b60a-2f168cbe2ba8"]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45", "0d5e5a6b-5113-43f2-836c-776207b21b56"]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05", "TCGA-32-2498-01A-01D-1228-05"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A | eg=["TCGA-12-1601-01A", "TCGA-32-2498-01A"]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3", "58af038c-bd40-4123-a6d3-11061f0d38e1"]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3", "6db4187c-5e48-45ac-8ae3-6b55198ff65a"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601", "TCGA-32-2498"]
+
+## TCGA_HG38_DATA_V0.MIRNASEQ_ISOFORM_EXPRESSION
+@use: [C10, C11]
+mirna_accession: TEXT | One of 2459 unique mature miRNA accession id (eg MIMAT0000062) -- note that this can also be null, in the event that this read does not map to a mature portion of the miRNA | eg=["MIMAT0019232"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-HD-8224", "TCGA-CN-6017"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-HD-8224-01A-11R-2401-13", "TCGA-CN-6017-01A-11R-1685-13"]
+chromosome: TEXT | Chromosome, possible values: chr1-22, and chrX | eg=["chr18", "chr1"]
+strand: TEXT | Either + or - to denote whether read mapped to the sense (+) or anti-sense (-) strand | eg=["-", "+"]
+mirna_transcript: TEXT | Indicates the type of transcript -- either mature, precursor, unannotated, or stemloop  (if this value is not mature, then the mirna_accession field will be null) | eg=["precursor", "mature"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A | eg=["TCGA-HD-8224-01A", "TCGA-CN-6017-01A"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-HNSC", "TCGA-SKCM"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR14
+@use: [C3]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45", "0d5e5a6b-5113-43f2-836c-776207b21b56"]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3", "6db4187c-5e48-45ac-8ae3-6b55198ff65a"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05", "TCGA-32-2498-01A-01D-1228-05"]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3", "58af038c-bd40-4123-a6d3-11061f0d38e1"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a", "6e65d823-0d94-4d26-b60a-2f168cbe2ba8"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A | eg=["TCGA-12-1601-01A", "TCGA-32-2498-01A"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601", "TCGA-32-2498"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR4
+@use: [C3]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a", "6e65d823-0d94-4d26-b60a-2f168cbe2ba8"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries | eg=["TCGA-12-1601-01A", "TCGA-32-2498-01A"]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3", "6db4187c-5e48-45ac-8ae3-6b55198ff65a"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05", "TCGA-32-2498-01A-01D-1228-05"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601", "TCGA-32-2498"]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45", "0d5e5a6b-5113-43f2-836c-776207b21b56"]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3", "58af038c-bd40-4123-a6d3-11061f0d38e1"]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR19
+@use: [C3]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries | eg=["TCGA-12-1601-01A"]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05"]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR18
+@use: [C3]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3", "cdd5e1a9-1ce8-4361-9fca-61ccb7098b25"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a", "b8074b70-ad2b-49e5-b70a-c6e8a6681830"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05", "TCGA-A6-2670-01A-02D-0820-05"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A | eg=["TCGA-12-1601-01A", "TCGA-A6-2670-01A"]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45", "65bb7520-f055-43a8-b735-1152fa2c9e04"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601", "TCGA-A6-2670"]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3", "724072ae-40b5-45cc-b339-e24f1cb6fbcf"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR8
+@use: [C3]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3", "6db4187c-5e48-45ac-8ae3-6b55198ff65a"]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3", "58af038c-bd40-4123-a6d3-11061f0d38e1"]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45", "0d5e5a6b-5113-43f2-836c-776207b21b56"]
+platform: TEXT | Platform used to generate this data -- either HumanMethylation450 or HumanMethylation27
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601", "TCGA-32-2498"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a", "6e65d823-0d94-4d26-b60a-2f168cbe2ba8"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries | eg=["TCGA-12-1601-01A", "TCGA-32-2498-01A"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05", "TCGA-32-2498-01A-01D-1228-05"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR21
+@use: [C3]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3", "58af038c-bd40-4123-a6d3-11061f0d38e1"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05", "TCGA-32-2498-01A-01D-1228-05"]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3", "6db4187c-5e48-45ac-8ae3-6b55198ff65a"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601", "TCGA-32-2498"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a", "6e65d823-0d94-4d26-b60a-2f168cbe2ba8"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A | eg=["TCGA-12-1601-01A", "TCGA-32-2498-01A"]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45", "0d5e5a6b-5113-43f2-836c-776207b21b56"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR20
+@use: [C3]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3", "6db4187c-5e48-45ac-8ae3-6b55198ff65a"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601", "TCGA-32-2498"]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45", "0d5e5a6b-5113-43f2-836c-776207b21b56"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries | eg=["TCGA-12-1601-01A", "TCGA-32-2498-01A"]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3", "58af038c-bd40-4123-a6d3-11061f0d38e1"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a", "6e65d823-0d94-4d26-b60a-2f168cbe2ba8"]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05", "TCGA-32-2498-01A-01D-1228-05"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR3
+@use: [C3]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05", "TCGA-32-2498-01A-01D-1228-05"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A | eg=["TCGA-12-1601-01A", "TCGA-32-2498-01A"]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3", "6db4187c-5e48-45ac-8ae3-6b55198ff65a"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a", "6e65d823-0d94-4d26-b60a-2f168cbe2ba8"]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45", "0d5e5a6b-5113-43f2-836c-776207b21b56"]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601", "TCGA-32-2498"]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3", "58af038c-bd40-4123-a6d3-11061f0d38e1"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR16
+@use: [C3]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601", "TCGA-A6-2670"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A | eg=["TCGA-12-1601-01A", "TCGA-A6-2670-01A"]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3", "cdd5e1a9-1ce8-4361-9fca-61ccb7098b25"]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3", "724072ae-40b5-45cc-b339-e24f1cb6fbcf"]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45", "65bb7520-f055-43a8-b735-1152fa2c9e04"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05", "TCGA-A6-2670-01A-02D-0820-05"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a", "b8074b70-ad2b-49e5-b70a-c6e8a6681830"]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR11
+@use: [C3]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries | eg=["TCGA-12-1601-01A", "TCGA-32-2498-01A"]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45", "0d5e5a6b-5113-43f2-836c-776207b21b56"]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3", "58af038c-bd40-4123-a6d3-11061f0d38e1"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a", "6e65d823-0d94-4d26-b60a-2f168cbe2ba8"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05", "TCGA-32-2498-01A-01D-1228-05"]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3", "6db4187c-5e48-45ac-8ae3-6b55198ff65a"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601", "TCGA-32-2498"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHRX
+@use: [C3]
+platform: TEXT | Platform used to generate this data -- either HumanMethylation450 or HumanMethylation27
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries | eg=["TCGA-12-1601-01A"]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a"]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3"]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05"]
+
+## TCGA_HG38_DATA_V0.PROTEIN_EXPRESSION
+protein_name: TEXT | Protein symbol with phosphorylation status, eg ACC_pS79 | eg=["AR"]
+protein_expression: FLOAT | Expression level of protein as measured by reverse-phase protein arrays. https://bioinformatics.mdanderson.org/public-software/tcpa/ | eg=[0.42619968075, -0.0883969254999999]
+gene_name: TEXT | Gene name e.g. eg TTN, DDR1, etc | eg=["AR"]
+antibody_source: TEXT | Animal of origin for the antibody M (Mouse), R (Rabbit), G (Goat) | eg=["R"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-4G-AAZT", "TCGA-V4-A9EA"]
+protein_base_name: TEXT | Protein name e.g. AR, MAPK | eg=["AR"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries | eg=["TCGA-4G-AAZT-01A", "TCGA-V4-A9EA-01A"]
+validation_status: TEXT | Validation status of antibody by correlation of RPPA data with Western blot: V, E, C. For more information: https://bioinformatics.mdanderson.org/public-software/mclp/ | eg=["V"]
+phospho: TEXT | If the antibody targets a phosphorylated protein, this field will contain that information, eg pS473  --  otherwise this field will be null
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-CHOL", "TCGA-UVM"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-4G-AAZT-01A-21-A45N-20", "TCGA-V4-A9EA-01A-21-A41Z-20"]
+
+## TCGA_HG38_DATA_V0.SOMATIC_MUTATION_DR6
+@use: [C1, C5, C7]
+gdc_tumor_sample_uuid: TEXT | Unique GDC identifier for the underlying tumor sample | eg=["39d1f122-31d0-4e1c-95a7-0e65e75b1457", "9cd89af4-5118-4adb-aa1d-fbd03bf42a33"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-DX-A8BN | eg=["TCGA-02-0033", "TCGA-02-0055"]
+gdc_maf_uuid: TEXT | Unique GDC indentifier for the underlying MAF file | eg=["7e85de23-3855-4279-a3ac-a81827e4ccb6|195dab4b-31ae-4e1d-9e76-ff95bd1f9a23|cee264aa-62c7-4db1-a3fc-8e5df0086ef3", "195dab4b-31ae-4e1d-9e76-ff95bd1f9a23"]
+SYMBOL: TEXT | Eg TP53, LRP1B, etc (same as Hugo_Symbol field except blank instead of Unknown | eg=["ACSM5", "KCNG4"]
+gdc_tumor_bam_uuid: TEXT | Unique GDC identifier for the underlying tumor bam file | eg=["2f44ec1e-1bce-41f5-ab23-1500b55b029d", "a69a0fc9-aaa3-443c-b4b1-1031ede6f47b"]
+gdc_case_uuid: TEXT | Unique GDC identifier for the underlying case | eg=["fc5ad666-d67a-4a5c-8e4e-1c8d099e9f85", "da5f6940-e8ee-4fd1-a8da-4cd68e02e59c"]
+Strand: TEXT | Either + or - to denote whether read mapped to the sense (+) or anti-sense (-) strand | eg=["+"]
+gdc_normal_bam_uuid: TEXT | Unique GDC identifier for the underlying normal bam file | eg=["6b419be7-b54b-4e2b-b350-bf0533e96741", "88d4d542-fb77-4b4d-9b01-60f48d78160d"]
+Chromosome: TEXT | Chromosome, possible values: chr1-22, and chrX | eg=["chr16", "chrX"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-GBM", "TCGA-OV"]
+gdc_maf_file_name: TEXT | GDC name for the underlying MAF file | eg=["TCGA.GBM.muse.7e85de23-3855-4279-a3ac-a81827e4ccb6.DR-6.0.somatic.maf|TCGA.GBM.mutect.195dab4b-31ae-4e1d-9e76-ff95bd1f9a23.DR-6.0.somatic.maf|TCGA.GBM.varscan.cee264aa-62c7-4db1-a3fc-8e5df0086ef3.DR-6.0.somatic.maf", "TCGA.GBM.mutect.195dab4b-31ae-4e1d-9e76-ff95bd1f9a23.DR-6.0.somatic.maf"]
+Validation_Status: TEXT | Second pass results from orthogonal technology
+gdc_vcf_uuid: TEXT | Unique GDC identifier for the underlying vcf file | eg=["7789a651-14b3-4e57-8ce9-238d37517ed8|5512063b-b3de-4547-9e5a-f0c04c826e0b|2b9b4fd1-bdc9-4985-a79a-045fe066c87b", "db4dba9a-7a94-4f8a-93d6-a3d64bd14e89"]
+gdc_normal_sample_uuid: TEXT | Unique GDC identifier for the underlying normal sample | eg=["d456abad-4114-4c44-9d80-fe569abe7cda", "b1a5f80a-e21a-4d8c-9a2b-b7a3c47c28b7"]
+Gene: TEXT | The gene symbol. In this table, gene symbol is simulated data e.g. ENSG00000251562 | eg=["ENSG00000183549", "ENSG00000168418"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR9
+@use: [C3]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A | eg=["TCGA-12-1601-01A"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601"]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45"]
+platform: TEXT | Platform used to generate this data -- either HumanMethylation450 or HumanMethylation27
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05"]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3"]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3"]
+
+## TCGA_HG38_DATA_V0.SOMATIC_MUTATION_DR10
+@use: [C1, C4, C7]
+Strand: TEXT | Either + or - to denote whether read mapped to the sense (+) or anti-sense (-) strand | eg=["+"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-DX-A8BN | eg=["TCGA-ZF-AA5P", "TCGA-ZG-A9KY"]
+SYMBOL: TEXT | Eg TP53, LRP1B, etc (same as Hugo_Symbol field except blank instead of Unknown | eg=["LPPR5", "PRG4"]
+Chromosome: TEXT | Chromosome, possible values: chr1-22, and chrX | eg=["chr1", "chr11"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-BLCA", "TCGA-PRAD"]
+Gene: TEXT | The gene symbol. In this table, gene symbol is simulated data e.g. ENSG00000251562 | eg=["ENSG00000117598", "ENSG00000116690"]
+
+## TCGA_HG38_DATA_V0.SOMATIC_MUTATION_DR7
+@use: [C1, C4, C5, C7]
+SYMBOL: TEXT | Eg TP53, LRP1B, etc (same as Hugo_Symbol field except blank instead of Unknown | eg=["PDE3B", "NCAM2"]
+Gene: TEXT | The gene symbol. In this table, gene symbol is simulated data e.g. ENSG00000251562 | eg=["ENSG00000152270", "ENSG00000154654"]
+Chromosome: TEXT | Chromosome, possible values: chr1-22, and chrX | eg=["chr11", "chr21"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-DX-A8BN | eg=["TCGA-56-8308", "TCGA-56-8309"]
+Strand: TEXT | Either + or - to denote whether read mapped to the sense (+) or anti-sense (-) strand | eg=["+"]
+Validation_Status: TEXT | Second pass results from orthogonal technology
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-LUSC"]
+
+## TCGA_HG38_DATA_V0.SOMATIC_MUTATION
+@use: [C1, C4, C7]
+Chromosome: TEXT | Chromosome, possible values: chr1-22, and chrX | eg=["chr6", "chr19"]
+SYMBOL: TEXT | Eg TP53, LRP1B, etc (same as Hugo_Symbol field except blank instead of Unknown | eg=["FAM135A", "ZNF563"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-SKCM"]
+Gene: TEXT | The gene symbol. In this table, gene symbol is gene name e.g. ACADVL | eg=["ENSG00000082269", "ENSG00000188868"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-DX-A8BN | eg=["TCGA-Z2-A8RT"]
+Strand: TEXT | Either + or - to denote whether read mapped to the sense (+) or anti-sense (-) strand | eg=["+"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR22
+@use: [C3]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries | eg=["TCGA-12-1601-01A", "TCGA-32-2498-01A"]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601", "TCGA-32-2498"]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45", "0d5e5a6b-5113-43f2-836c-776207b21b56"]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3", "6db4187c-5e48-45ac-8ae3-6b55198ff65a"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a", "6e65d823-0d94-4d26-b60a-2f168cbe2ba8"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05", "TCGA-32-2498-01A-01D-1228-05"]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3", "58af038c-bd40-4123-a6d3-11061f0d38e1"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR10
+@use: [C3]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A | eg=["TCGA-12-1601-01A", "TCGA-32-2498-01A"]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3", "58af038c-bd40-4123-a6d3-11061f0d38e1"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a", "6e65d823-0d94-4d26-b60a-2f168cbe2ba8"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05", "TCGA-32-2498-01A-01D-1228-05"]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601", "TCGA-32-2498"]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3", "6db4187c-5e48-45ac-8ae3-6b55198ff65a"]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45", "0d5e5a6b-5113-43f2-836c-776207b21b56"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR1
+@use: [C3]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3", "724072ae-40b5-45cc-b339-e24f1cb6fbcf"]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3", "cdd5e1a9-1ce8-4361-9fca-61ccb7098b25"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601", "TCGA-A6-2670"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries | eg=["TCGA-12-1601-01A", "TCGA-A6-2670-01A"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a", "b8074b70-ad2b-49e5-b70a-c6e8a6681830"]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05", "TCGA-A6-2670-01A-02D-0820-05"]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45", "65bb7520-f055-43a8-b735-1152fa2c9e04"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR6
+@use: [C3]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45", "0d5e5a6b-5113-43f2-836c-776207b21b56"]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3", "6db4187c-5e48-45ac-8ae3-6b55198ff65a"]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries | eg=["TCGA-12-1601-01A", "TCGA-32-2498-01A"]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3", "58af038c-bd40-4123-a6d3-11061f0d38e1"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601", "TCGA-32-2498"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05", "TCGA-32-2498-01A-01D-1228-05"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a", "6e65d823-0d94-4d26-b60a-2f168cbe2ba8"]
+
+## TCGA_HG38_DATA_V0.MIRNASEQ_EXPRESSION
+@use: [C10]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-04-1331-01A-01R-1569-13"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-OV"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-04-1331"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries | eg=["TCGA-04-1331-01A"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR12
+@use: [C3]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05", "TCGA-32-2498-01A-01D-1228-05"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A | eg=["TCGA-12-1601-01A", "TCGA-32-2498-01A"]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3", "58af038c-bd40-4123-a6d3-11061f0d38e1"]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45", "0d5e5a6b-5113-43f2-836c-776207b21b56"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a", "6e65d823-0d94-4d26-b60a-2f168cbe2ba8"]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3", "6db4187c-5e48-45ac-8ae3-6b55198ff65a"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601", "TCGA-32-2498"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR17
+@use: [C3]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-A6-2670", "TCGA-BR-4190"]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries | eg=["TCGA-A6-2670-01A", "TCGA-BR-4190-01A"]
+case_gdc_id: TEXT | NULL | eg=["65bb7520-f055-43a8-b735-1152fa2c9e04", "282e979d-4ad9-4d42-8ffa-7487a94fa1f3"]
+aliquot_gdc_id: TEXT | NULL | eg=["b8074b70-ad2b-49e5-b70a-c6e8a6681830", "77f0ac56-827e-47da-bbfd-ca438b9fa222"]
+sample_gdc_id: TEXT | NULL | eg=["724072ae-40b5-45cc-b339-e24f1cb6fbcf", "0486af5d-6d7c-4409-81e9-2fc4a38225c4"]
+file_gdc_id: TEXT | NULL | eg=["cdd5e1a9-1ce8-4361-9fca-61ccb7098b25", "16a7391b-41d8-4b4a-9296-fcbec012a2e7"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-A6-2670-01A-02D-0820-05", "TCGA-BR-4190-01A-01D-1129-05"]
+
+## TCGA_HG38_DATA_V0.RNASEQ_GENE_EXPRESSION
+sample_barcode: TEXT | TCGA sample barcode, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries | eg=["TCGA-04-1331-01A", "TCGA-04-1332-01A"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba43 | eg=["776adc23-7d40-4c1a-94df-7a2ce6188db6", "e56da01f-19fd-4532-bb05-56389af50078"]
+aliquot_barcode: TEXT | TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-31 | eg=["TCGA-04-1331-01A-01R-1569-13", "TCGA-04-1332-01A-01R-1564-13"]
+HTSeq__FPKM_UQ: FLOAT | Fragments Per Kilobase of transcript per Million mapped reads (FPKM) is a simple expression level normalization method. The FPKM normalizes read count based on gene length and the total number of mapped reads. https://docs.gdc.cancer.gov/Encyclopedia/pages/HTSeq-FPKM/ | eg=[158472.732668, 372755.915943]
+aliquot_gdc_id: TEXT | Unique GDC identifier for this aliquot (corresponds to the aliquot_barcode), eg 7fbfdb3e-1fd2-4206-8d2e-7f68e4a15844  --  this can be used to access more information from the GDC data portal | eg=["7fbfdb3e-1fd2-4206-8d2e-7f68e4a15844", "08e7c700-7038-40b5-bec0-2dd402e1a225"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-DX-A8BN | eg=["TCGA-04-1331", "TCGA-04-1332"]
+gene_type: TEXT | The type of genetic element the reads mapped to, eg protein_coding, ribozyme | eg=["protein_coding", "processed_pseudogene"]
+HTSeq__FPKM: FLOAT | FPKM is implemented at the GDC on gene-level read counts that are produced by HTSeq1 and generated using custom. scripts https://docs.gdc.cancer.gov/Encyclopedia/pages/HTSeq-FPKM/ | eg=[7.19867390862, 16.9325551545]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["a1ec9279-c1a6-4e58-97ed-9ec1f36187c5", "b8243412-b7b4-4a7b-b823-4b33488ff429"]
+Ensembl_gene_id: TEXT | The Ensembl gene ID from the underlying file, but stripped of the version suffix -- eg ENSG00000185028 | eg=["ENSG00000165733", "ENSG00000143207"]
+Ensembl_gene_id_v: TEXT | The Ensembl gene ID from the underlying file, including the version suffix  --  eg ENSG00000235943.1 | eg=["ENSG00000165733.7", "ENSG00000143207.18"]
+platform: TEXT | Platform used to generate data; either IlluminaHiSeqor IlluminaGA
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-OV"]
+gene_name: TEXT | Gene name e.g. TTN, DDR1, etc. | eg=["BMS1", "RFWD2"]
+HTSeq__Counts: NUMBER | Number of mapped reads to each gene as calculated by the Python package HTSeq. https://docs.gdc.cancer.gov/Encyclopedia/pages/HTSeq-Counts/ | eg=[3372, 4398]
+case_gdc_id: TEXT | Unique GDC identifier for this case (corresponds to the case_barcode).  Can be used to access more information from the GDC data portal like this:   https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba36 | eg=["6d10d4ee-6331-4bba-93bc-a7b64cc0b22a", "b46263ab-c3ca-4fda-a895-74c7e6e6fe22"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR13
+@use: [C3]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3", "58af038c-bd40-4123-a6d3-11061f0d38e1"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a", "6e65d823-0d94-4d26-b60a-2f168cbe2ba8"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05", "TCGA-32-2498-01A-01D-1228-05"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries | eg=["TCGA-12-1601-01A", "TCGA-32-2498-01A"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601", "TCGA-32-2498"]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3", "6db4187c-5e48-45ac-8ae3-6b55198ff65a"]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45", "0d5e5a6b-5113-43f2-836c-776207b21b56"]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR15
+@use: [C3]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries | eg=["TCGA-12-1601-01A"]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05"]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION
+@use: [C3]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3", "58af038c-bd40-4123-a6d3-11061f0d38e1"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a", "6e65d823-0d94-4d26-b60a-2f168cbe2ba8"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05", "TCGA-32-2498-01A-01D-1228-05"]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3", "6db4187c-5e48-45ac-8ae3-6b55198ff65a"]
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601", "TCGA-32-2498"]
+platform: TEXT | Platform name used to generate this data -- either HumanMethylation450 or HumanMethylation27
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A | eg=["TCGA-12-1601-01A", "TCGA-32-2498-01A"]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45", "0d5e5a6b-5113-43f2-836c-776207b21b56"]
+
+## TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR7
+@use: [C3]
+platform: TEXT | Platform used to generate this data -- either HumanMethylation450 or HumanMethylation27
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details | eg=["TCGA-12-1601", "TCGA-32-2498"]
+aliquot_gdc_id: TEXT | NULL | eg=["aa761ca4-e8f0-4a43-8262-bd84eedb459a", "6e65d823-0d94-4d26-b60a-2f168cbe2ba8"]
+file_gdc_id: TEXT | NULL | eg=["5cd6f2f6-7278-4757-be8e-a8ae3a7a81d3", "6db4187c-5e48-45ac-8ae3-6b55198ff65a"]
+case_gdc_id: TEXT | NULL | eg=["cc1459be-de8f-482e-9efe-65937db9dc45", "0d5e5a6b-5113-43f2-836c-776207b21b56"]
+sample_gdc_id: TEXT | NULL | eg=["b02fd704-03a6-44c4-b224-f5f457e733f3", "58af038c-bd40-4123-a6d3-11061f0d38e1"]
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A | eg=["TCGA-12-1601-01A", "TCGA-32-2498-01A"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-12-1601-01A-01D-0595-05", "TCGA-32-2498-01A-01D-1228-05"]
+
+## QOTM.PAAD_KIRP_RESULT_CHECK
+@use: [C8]
+GENE: TEXT | The gene symbol. In this table, gene symbol is gene name e.g. ACADVL | eg=["SLC12A3", "NKX6-3"]
+PROJECT_SHORT_NAME: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg TCGA-OV, etc. | eg=["TCGA-PAAD", "TCGA-KIRP"]
+ERANK: NUMBER | Expression Rank | eg=[1, 2]
+
+## QOTM.REACTOME
+string_field_2: TEXT | Pathway Name | eg=["NUCLEOTIDE METABOLISM"]
+string_field_0: TEXT | Entrez ID from the NCBI | eg=["270", "5198"]
+string_field_1: TEXT | PathwayID | eg=["15869"]
+
+## QOTM.RESULTS_1002
+Pb: NUMBER | Numbers for group B | eg=[104, 96]
+gene_j: TEXT | Gene pair #2 | eg=["RIPPLY1", "PRSS57"]
+Na: NUMBER | Total number of pairs for PAAD | eg=[79]
+Nb: NUMBER | Total number of pairs for KIRP | eg=[117]
+gene_i: TEXT | Gene pair #1 | eg=["ALDH3B2", "NKX6-3"]
+Pa: NUMBER | Number of pairs where gene #1 < gene #2 in group A | eg=[8, 3]
+PDiff: FLOAT | Difference in conditional probabilities | eg=[0.7876230661040787, 0.7825381369685167]
+
+## QOTM.PAAD_KIRP_RANDOM_SAMPLE_1002
+@use: [C8]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg TCGA-OV, etc. | eg=["TCGA-PAAD"]
+ERank: NUMBER | Expression Rank | eg=[1, 7]
+Gene: TEXT | The gene symbol. In this table, gene symbol is gene name e.g. ACADVL | eg=["MPPED1", "RP11-557H15.3"]
+
+## QOTM.WIKIPATHWAYS_20170425_ANNOTATED
+Uniprot: TEXT | Uniprot Identifier from the UniProtKB | eg=["Q92934", "A0A024R562"]
+pathway: TEXT | Pathway Name | eg=["Apoptosis"]
+Symbol: TEXT | Eg TP53, LRP1B, etc (same as Hugo_Symbol field except blank instead of Unknown) | eg=["BAD", "BAX"]
+pathID: TEXT | Pathway ID | eg=["WP254"]
+wikiID: TEXT | WikiPathways ID | eg=["WikiPathways_20170410"]
+entrez: TEXT | Entrez ID from the NCBI | eg=["572", "581"]
+
+## QOTM.ORG_HS_EG_DB_V1
+Entrez: TEXT | Entrez ID from the NCBI | eg=["7105"]
+Ensembl: TEXT | Ensembl ID | eg=["ENSG00000000003"]
+Uniprot: TEXT | Uniprot IDentifier from the UniProtKB | eg=["O43657", "A0A024RCI0"]
+Symbol: TEXT | Eg TP53, LRP1B, etc (same as Hugo_Symbol field except blank instead of Unknown) | eg=["TSPAN6"]
+OMIM: TEXT | Phenotype MIM number from the OMIM | eg=["300191"]
+Alias: TEXT | HUGO Alias | eg=["TM4SF6", "TSPAN-6"]
+Unigene: TEXT | UniGene | eg=["Hs.587521", "Hs.43233"]
+Accession: TEXT | NCBI Reference Sequence | eg=["NM_003270", "NM_001278743"]
+ID: NUMBER | Reactome pathway ID (https://reactome.org/) | eg=[5785]
+UCSC: TEXT | UCSC ID | eg=["uc004ega.1", "uc010nna.1"]
+
+## QOTM.TSP_SIM_DATA
+@use: [C8]
+Gene: TEXT | The gene symbol. In this table, gene symbol is simulated data e.g. X6 | eg=["X6", "X8"]
+
+## QOTM.REACTOME_A1
+ENTREZ: TEXT | Uniprot Identifier from the UniProtKB | eg=["51733", "954"]
+PATHWAYID: TEXT | Pathway ID | eg=["15869"]
+PATHWAYNAME: TEXT | Pathway Name | eg=["NUCLEOTIDE METABOLISM"]
+
+## QOTM._1000GENOMES
+@use: [C7]
+names: VARIANT | Alternate base. | eg=[[]]
+CIPOS: VARIANT | List of failed filters (if any) or PASS indicating the variant has passed all filters. | eg=[[]]
+call: VARIANT | Variant names (e.g. RefSNP ID). | eg=[[{"genotype":[0,0],"name":"HG00096","phaseset":"*"},{"genotype":[0,0],"name":"HG00097","phaseset":"*"},{"genotype":[0,0],"name":"HG00099","phaseset":"*"},{"genotype":[0,0],"name":"HG00100","phaseset":"*"},{"genotype":[0,0],"name":"HG00101","phaseset":"*"},{"genotype":[0,0],"name":"HG00102","phaseset":"*"},{"genotype":[0,0],"name":"HG00103","phaseset":"*"},{"genotype":[0,0],"name":"HG00105","phaseset":"*"},{"genotype":[0,0],"name":"HG00106","phaseset":"*"},{"genotype":[0,0],"name":"HG00107","phaseset":"*"},{"genotype":[0,0],"name":"HG00108","phaseset":"*"},{"genotype":[0,0],"name":"HG00109","phaseset":"*"},{"genotype":[0,0],"name":"HG00110","phaseset":"*"},{"genotype":[0,0],"name":"HG00111","phaseset":"*"},{"genotype":[0,0],"name":"HG00112","phaseset":"*"},{"genotype":[0,0],"name":"HG00113","phaseset":"*"},{"genotype":[0,0],"name":"HG00114","phaseset":"*"},{"genotype":[0,0],"name":"HG00115","phaseset":"*"},{"genotype":[0,0],"name":"HG00116","phaseset":"*"},{"genotype":[0,0],"name":"H...]
+reference_name: TEXT | Reference name. | eg=["21"]
+CIEND: VARIANT | Phred-scaled quality score (-10log10 prob(call is wrong)). Higher values imply better quality. | eg=[[]]
+SVLEN: VARIANT | Name of the call. | eg=[[]]
+AN: NUMBER | Confidence interval around END for imprecise variants | eg=[5070]
+quality: FLOAT | Total number of alternate alleles in called genotypes | eg=[100.0]
+alternate_bases: VARIANT | One record for each alternate base (if any). | eg=[[{"AC":1,"AF":0.000197239,"alt":"A"}], [{"AC":71,"AF":0.0140039,"alt":"A"}]]
+filter: VARIANT | Estimated allele frequency in the range (0,1) | eg=[["PASS"]]
+IMPRECISE: BOOLEAN | One record for each call.
+SVTYPE: TEXT | Genotype of the call "-1" is used in cases where the genotype is not called.
+reference_bases: TEXT | Reference bases. | eg=["G", "A"]
+NS: NUMBER | Phaseset of the call (if any). "*" is used in cases where the genotype is phased, but no phase set ("PS" in FORMAT) was specified. | eg=[2535]
+
+## TCGA_BIOCLIN_V0.CLINICAL_V1_1
+@use: [C2, C6, C9]
+case_gdc_id: TEXT | NULL | eg=["1ec1e2c4-ba2c-40fc-b5e1-e8f6e38caec6", "a56d2b48-375d-4193-91a9-f589c39523fb"]
+disease_code: TEXT | NULL | eg=["DLBC", "STAD"]
+case_barcode: TEXT | NULL | eg=["TCGA-GS-6634", "TCGA-BR-4264"]
+project_name: TEXT | NULL | eg=["Lymphoid Neoplasm Diffuse Large B-cell Lymphoma", "Lung Adenocarcinoma"]
+project_short_name: TEXT | NULL | eg=["TCGA-DLBC", "TCGA-STAD"]
+program_name: TEXT | NULL | eg=["TCGA"]
+
+## TCGA_BIOCLIN_V0.CLINICAL
+@use: [C2, C9]
+psa_value: FLOAT | A male participant's Prostrate-Specific Antigen (PSA) value
+number_pack_years_smoked: FLOAT | The number of packs smoked per day times the number of years smoked by the participant
+program_name: TEXT | Program Name, always TCGA (The Cancer Genome Atlas) in this table. | eg=["TCGA"]
+case_barcode: TEXT | TCGA patient/case barcode; e.g. TCGA-06-0119 | eg=["TCGA-01-0630", "TCGA-01-0633"]
+gleason_score_combined: NUMBER | The Gleason Score (ranging from 1 -5) is the grade of the aggressiveness of prostate cancer. The combined Gleason Score is the primary Gleason score  (for the largest area of the tumor) added to the secondary Gleason Score (for the next largest section of the tumor).
+days_to_submitted_specimen_dx: NUMBER | Numeric value to represent the day of the diagnosis for the submitted sample.
+new_tumor_event_after_initial_treatment: TEXT | Indicates whether a patient has had a new tumor event after initial treatment; Yes, No
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+year_of_initial_pathologic_diagnosis: NUMBER | Four digit year of the initial pathologic diagnosis | eg=[NaN, 2003.0]
+age_began_smoking_in_years: NUMBER | Age, in years, that the participant began smoking
+disease_code: TEXT | A code representing the type of cancer. Values can be found at https://gdc.cancer.gov/resources-TCGA-users/TCGA-code-tables/TCGA-study-abbreviations; e.g. OV, GBM, LUAD | eg=["OV", "GBM"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Ovarian Serous Cystadenocarcinoma", "Glioblastoma Multiforme"]
+case_gdc_id: TEXT | GDC unique identifer for this case; e.g. 7b4ce492-ff40-4bf1-b3e8-75ff83e8746d. This identifier can be used to find more information at the GDC Data Portal ( https://portal.gdc.cancer.gov/cases/7b4ce492-ff40-4bf1-b3e8-75ff83e8746d ) | eg=["dc9b4616-e815-43c8-9ec4-720a32868541", "dde3c31f-51cb-4236-9aa9-0c9eda6105eb"]
+number_of_lymphnodes_positive_by_he: NUMBER | The number of lymph nodes involved with disease as determined by histological examination
+height: FLOAT | Height of participant in centimeters
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; e.g. TCGA-OV, etc. | eg=["TCGA-OV", "TCGA-GBM"]
+weight: FLOAT | Weight of participant in kilograms
+
+## TCGA_BIOCLIN_V0.ANNOTATIONS
+date_created: TEXT | Date on which this annotation was originally created; includes time-stamp and time-zone, eg 2011-03-14T18:00:42-04:00  --  dates range between March 2009 and June 2016 | eg=["2014-07-16T16:26:32-04:00", "2014-07-16T16:26:47-04:00"]
+case_barcode: TEXT | TCGA patient/case barcode; e.g. TCGA-06-0119 | eg=["TCGA-OR-A5KP", "TCGA-OR-A5L2"]
+entity_type: TEXT | Type of the entity that this annotation applies to; e.g. Shipped Portion, Aliquot, Patient (which has the same meaning as Case), Analyte, etc. | eg=["Patient", "Aliquot"]
+notes: TEXT | Longer descriptive text about this annotation | eg=["Extension set. Only DNA from tumor  and normal shipped.", "The aliquot failed Broad pipeline QC and not all files are suitable for use. Consult the SDRF file to determine which files are usable."]
+category: TEXT | Annotation category; one of a relatively short list of phrases from a controlled-vocabulary; e.g. Item is noncanonical, Item flagged DNU, Prior malignancy, etc. | eg=["Item is noncanonical", "Item flagged DNU"]
+entity_barcode: TEXT | Barcode of the entity that this annotation applies to; often the same as the case barcode | eg=["TCGA-OR-A5KP", "TCGA-OR-A5L2"]
+sample_barcode: TEXT | TCGA sample barcode; e.g. TCGA-06-0119-01A (note that this field will be null if the annotation applies at a higher level than sample) | eg=["TCGA-OR-A5LH-10A"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; e.g. TCGA-OV, etc. | eg=["TCGA-ACC"]
+aliquot_barcode: TEXT | TCGA aliquot barcode; e.g. TCGA-06-0119-01A-08D-0216-06 (note that this field will be null if the annotation applies at a higher level than aliquot) | eg=["TCGA-OR-A5LH-10A-01D-A29K-01"]
+case_gdc_id: TEXT | GDC case identifier for the patient/case associated with this specific annotation | eg=["653f1d34-73e9-4216-b40b-e25c1cfc7943", "a26b6f97-fd7e-4b96-bdf5-9df4f9233726"]
+classification: TEXT | Annotation classification; e.g. Notification, CenterNotification, Observation, or Redaction | eg=["Notification", "CenterNotification"]
+date_edited: TEXT | Annotations were rarely edited, but if thery were (fewer than 10 out of over 6000 total annotations), this field indicates the date on which it was edited
+
+## TCGA_BIOCLIN_V0.BIOSPECIMEN
+@use: [C9]
+days_to_sample_procurement: FLOAT | The number of days from the date the patient was diagnosed to the date of the procedure that produced the sample. | eg=[42.0, 0.0]
+sample_type_name: TEXT | The longer name of the sample type; e.g. Primary Tumor, Recurrent Tumor, etc. | eg=["Primary solid Tumor", "Blood Derived Normal"]
+max_percent_monocyte_infiltration: FLOAT | The maximum percentage of infiltration by monocytes in a sample or specimen | eg=[0.0, NaN]
+avg_percent_stromal_cells: FLOAT | The average percentage of stromal cells in a sample or specimen | eg=[0.0, NaN]
+min_percent_necrosis: FLOAT | The minimum percentage of necrosis in a sample or specimen | eg=[4.0, NaN]
+avg_percent_monocyte_infiltration: FLOAT | The average percentage of infiltration by monocyte in a sample or specimen | eg=[0.0, NaN]
+min_percent_neutrophil_infiltration: FLOAT | The minimum percentage of neutrophil infiltration in a sample or specimen | eg=[0.0, NaN]
+avg_percent_necrosis: FLOAT | The average percentage of necrosis in a sample or specimen | eg=[4.0, NaN]
+avg_percent_tumor_nuclei: FLOAT | The average percentage of tumor nuclei in a sample or specimen | eg=[75.0, NaN]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["fefa6b4c-243d-4544-accc-11515bbe516e", "35cc3db5-1c72-4d7a-8fa7-9ec1b40ef5f0"]
+days_to_collection: FLOAT | Time interval from the date of biospecimen collection to the date of initial pathologic diagnosis, represented as a calculated number of days. | eg=[254.0, NaN]
+max_percent_stromal_cells: FLOAT | The maximum percentage of stromal cells in a sample or specimen | eg=[0.0, NaN]
+min_percent_tumor_nuclei: FLOAT | The minimum percentage of tumor nuclei in a sample or specimen | eg=[75.0, NaN]
+avg_percent_tumor_cells: FLOAT | The average percentage of tumor cells in a sample or specimen | eg=[96.0, NaN]
+max_percent_tumor_cells: FLOAT | The maximum percentage of tumor cells in a sample or specimen | eg=[96.0, NaN]
+max_percent_tumor_nuclei: FLOAT | The maximum percentage of tumor nuclei in a sample or specimen | eg=[75.0, NaN]
+sample_barcode: TEXT | TCGA sample_barcode; e.g. TCGA-AB-2809-03A. | eg=["TCGA-C5-A7CM-01A", "TCGA-AU-3779-10A"]
+min_percent_stromal_cells: FLOAT | The minimum percentage of stromal cells in a sample or specimen | eg=[0.0, NaN]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; e.g. TCGA-OV, etc. | eg=["TCGA-CESC", "TCGA-COAD"]
+avg_percent_neutrophil_infiltration: FLOAT | The average percentage of neutrophil infiltration in a sample or specimen | eg=[0.0, NaN]
+program_name: TEXT | Program Name, always TCGA (The Cancer Genome Atlas) in this table. | eg=["TCGA"]
+min_percent_monocyte_infiltration: FLOAT | The minimum percentage of infiltration by lymphocytes in a sample or specimen | eg=[0.0, NaN]
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode e.g. 01,11,06, etc. | eg=["01", "10"]
+min_percent_normal_cells: FLOAT | The minimum percentage of normal cells in a sample or specimen | eg=[0.0, NaN]
+max_percent_neutrophil_infiltration: FLOAT | The maximum percentage of neutrophil infiltration in a sample or specimen | eg=[0.0, NaN]
+num_slides: NUMBER | In some cases, portions of a sample were placed onto multiple slides -- generally not more than 2, but occasionally more. | eg=[1, 0]
+min_percent_tumor_cells: FLOAT | The minimum percentage of tumor cells in a sample or specimen | eg=[96.0, NaN]
+num_portions: NUMBER | In some cases, a sample was divided into multiple portions -- up to 6 portions, but for most samples the number is 1 (or even 0). | eg=[1]
+is_ffpe: TEXT | Indicator to signify whether or not the tissue sample was fixed in formalin and embedded in paraffin (FFPE); almost always NO -- only a few (99) FFPE samples were included in the TCGA project | eg=["NO", "YES"]
+max_percent_normal_cells: FLOAT | The maximum percentage of normal cells in a sample or specimen | eg=[0.0, NaN]
+min_percent_lymphocyte_infiltration: FLOAT | The minimum percentage of infiltration by lymphocytes in a sample or specimen | eg=[2.0, NaN]
+case_gdc_id: TEXT | GDC unique identifer for this case; e.g. 7b4ce492-ff40-4bf1-b3e8-75ff83e8746d. This identifier can be used to find more information at the GDC Data Portal ( https://portal.gdc.cancer.gov/cases/7b4ce492-ff40-4bf1-b3e8-75ff83e8746d ) | eg=["d223ff09-b80b-4368-9d80-a59dfbe4d820", "fb4cc403-694c-421f-b360-3108b6d57ad5"]
+max_percent_lymphocyte_infiltration: FLOAT | The maximum percentage of infiltration by lymphocytes in a sample or specimen | eg=[2.0, NaN]
+max_percent_necrosis: FLOAT | The maximum percentage of necrosis in a sample or specimen | eg=[4.0, NaN]
+case_barcode: TEXT | TCGA patient/case barcode, eg TCGA-AB-2809 (the first 12 characters of the 16-character sample barcode) | eg=["TCGA-C5-A7CM", "TCGA-AU-3779"]
+avg_percent_normal_cells: FLOAT | The average percentage of normal cells in a sample or specimen | eg=[0.0, NaN]
+avg_percent_lymphocyte_infiltration: FLOAT | The average percentage of infiltration by lymphocytes in a sample or specimen | eg=[2.0, NaN]
+
+## TCGA_BIOCLIN_V0.CLINICAL_V1
+@use: [C2, C6, C9]
+case_barcode: TEXT | TCGA patient/case barcode; e.g. TCGA-06-0119 | eg=["TCGA-2G-AALX", "TCGA-2G-AALF"]
+program_name: TEXT | Program Name, always TCGA (The Cancer Genome Atlas) in this table. | eg=["TCGA"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; e.g. TCGA-OV, etc. | eg=["TCGA-TGCT"]
+disease_code: TEXT | A code representing the type of cancer. Values can be found at https://gdc.cancer.gov/resources-TCGA-users/TCGA-code-tables/TCGA-study-abbreviations; e.g. OV, GBM, LUAD | eg=["TGCT"]
+case_gdc_id: TEXT | GDC unique identifer for this case; e.g. 7b4ce492-ff40-4bf1-b3e8-75ff83e8746d. This identifier can be used to find more information at the GDC Data Portal ( https://portal.gdc.cancer.gov/cases/7b4ce492-ff40-4bf1-b3e8-75ff83e8746d ) | eg=["8fb406e7-49b1-4662-860c-5a4d32b9d19c", "be64d20a-bcda-4623-912a-826e86f3225e"]

@@ -1,0 +1,23 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: ECLIPSE_MEGAMOVIE.PHOTOS_V_0_3
+Columns: state, height, camera_datetime, exposure_time, aperture_value, uploaded_date, image_datetime, upload_session_id, lon, lat, vision_labels, datetime_repaired, image_type, equatorial_mount, totality, model, make, user, jpeg_storage_uri, width, storage_uri, is_mobile, id, image_bucket, detected_circle
+
+Table: ECLIPSE_MEGAMOVIE.PHOTOS_V_0_1
+Columns: width, vision_labels, height, detected_circle, lat, exposure_time, lon, state, equatorial_mount, image_bucket, upload_session_id, user, id, image_datetime, is_mobile, uploaded_date, storage_uri, camera_datetime, model, make, totality, aperture_value, datetime_repaired, image_type
+
+Table: ECLIPSE_MEGAMOVIE.ASTROMETRY_INDEX_V_0_4
+Columns: id, X, Y
+
+Table: ECLIPSE_MEGAMOVIE.ASTROMETRY_RDLS_V_0_4
+Columns: id, DEC, RA
+
+Table: ECLIPSE_MEGAMOVIE.ASTROMETRY_MATCH_V_0_4
+Columns: CRPIX, NINDEX, FIELDNAME, NVERIFIED, STARS, CD, FIELDOBJS, CODEERR, LOGODDS, NDISTRACT, NCONFLICT, QTRIED, WORSTLOGODDS, NAGREE, QUADXYZ, WCS_VALID, NFIELD, NMATCH, TIMEUSED, CENTERXYZ, CRVAL, RADIUS, QSCALEOK, QUAD, QUADPIX, PARITY, HEALPIX, HPNSIDE, DIMQUADS, id, QMATCHED, IDS, FIELDID, QPEERS, INDEXID, FIELDNUM
+
+Table: ECLIPSE_MEGAMOVIE.ASTROMETRY_CORR_V_0_4
+Columns: id, field_dec, field_x, BACKGROUND, index_y, index_ra, index_id, FLUX, field_id, field_y, index_x, match_weight, field_ra, index_dec
+
+Table: ECLIPSE_MEGAMOVIE.PHOTOS_V_0_2
+Columns: vision_labels, lat, width, lon, image_type, aperture_value, datetime_repaired, make, exposure_time, detected_circle, model, image_datetime, storage_uri, image_bucket, camera_datetime, state, id, equatorial_mount, is_mobile, upload_session_id, user, totality, uploaded_date, height

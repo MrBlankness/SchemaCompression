@@ -1,0 +1,155 @@
+[TABLES]
+## DEATH.INFANTAGERECODE22
+Code: NUMBER | NULL | eg=[4, 5]
+Description: TEXT | NULL | eg=["2 days", "3 days"]
+
+## DEATH.EDUCATION2003REVISION
+Description: TEXT | NULL | eg=["8th grade or less", "9 - 12th grade, no diploma"]
+Code: NUMBER | NULL | eg=[1, 2]
+
+## DEATH.ACTIVITYCODE
+Description: TEXT | NULL | eg=["While engaged in sports activity", "While engaged in leisure activity"]
+Code: NUMBER | NULL | eg=[0, 1]
+
+## DEATH.HISPANICORIGIN
+Description: TEXT | NULL | eg=["Non-Hispanic"]
+Code: NUMBER | NULL | eg=[102, 103]
+
+## DEATH.METHODOFDISPOSITION
+Description: TEXT | NULL | eg=["Cremation", "Other"]
+Code: TEXT | NULL | eg=["C", "O"]
+
+## DEATH.RACEIMPUTATIONFLAG
+Description: TEXT | NULL | eg=["Race is not imputed", "Unknown race is imputed"]
+Code: NUMBER | NULL | eg=[0, 1]
+
+## DEATH.EDUCATIONREPORTINGFLAG
+Description: TEXT | NULL | eg=["1989 revision of education item on certificate", "no education item on certificate"]
+Code: NUMBER | NULL | eg=[0, 2]
+
+## DEATH.PLACEOFINJURY
+Description: TEXT | NULL | eg=["Home", "Residential institution"]
+Code: NUMBER | NULL | eg=[0, 1]
+
+## DEATH.AGERECODE52
+Description: TEXT | NULL | eg=["3 days", "4 days"]
+Code: NUMBER | NULL | eg=[5, 6]
+
+## DEATH.TEMP_DEATHS
+Age: NUMBER | NULL
+death_count: NUMBER | NULL
+Icd10Code: TEXT | NULL
+Race: NUMBER | NULL
+
+## DEATH.AGETYPE
+Code: NUMBER | NULL | eg=[2, 4]
+Description: TEXT | NULL | eg=["Months", "Days"]
+
+## DEATH.MARITALSTATUS
+Description: TEXT | NULL | eg=["Divorced", "Married"]
+Code: TEXT | NULL | eg=["D", "M"]
+
+## DEATH.RESIDENTSTATUS
+Code: NUMBER | NULL | eg=[1, 4]
+Description: TEXT | NULL | eg=["RESIDENTS", "FOREIGN RESIDENTS"]
+
+## DEATH.RECORDAXISCONDITIONS
+DeathRecordId: NUMBER | NULL | eg=[1738256, 557544]
+Icd10Code: TEXT | NULL | eg=["A38", "A86"]
+Id: NUMBER | NULL | eg=[4987350, 1673817]
+
+## DEATH.MANNEROFDEATH
+Description: TEXT | NULL | eg=["Suicide", "Homicide"]
+Code: NUMBER | NULL | eg=[2, 3]
+
+## DEATH.EDUCATION1989REVISION
+Code: NUMBER | NULL | eg=[2, 4]
+Description: TEXT | NULL | eg=["Years of elementary school"]
+
+## DEATH.DAYOFWEEKOFDEATH
+Code: NUMBER | NULL | eg=[2, 3]
+Description: TEXT | NULL | eg=["Monday", "Tuesday"]
+
+## DEATH.DEATHRECORDS
+ResidentStatus: NUMBER | NULL | eg=[1, 3]
+AgeRecode27: NUMBER | NULL | eg=[3, 2]
+PlaceOfDeathAndDecedentsStatus: NUMBER | NULL | eg=[1, 2]
+CurrentDataYear: NUMBER | NULL | eg=[2014]
+Education2003Revision: NUMBER | NULL | eg=[1, 9]
+Icd10Code: TEXT | NULL | eg=["J22", "P77"]
+ActivityCode: NUMBER | NULL | eg=[99]
+Education1989Revision: NUMBER | NULL | eg=[0]
+EducationReportingFlag: NUMBER | NULL | eg=[1]
+PlaceOfInjury: NUMBER | NULL | eg=[99]
+NumberOfEntityAxisConditions: NUMBER | NULL | eg=[1, 2]
+CauseRecode358: NUMBER | NULL | eg=[260, 364]
+InjuryAtWork: TEXT | NULL | eg=["U"]
+CauseRecode39: NUMBER | NULL | eg=[37, 33]
+AgeRecode12: NUMBER | NULL | eg=[2, 1]
+AgeSubstitutionFlag: NUMBER | NULL | eg=[0]
+HispanicOriginRaceRecode: NUMBER | NULL | eg=[6, 7]
+Id: NUMBER | NULL | eg=[1281964, 1771786]
+DayOfWeekOfDeath: NUMBER | NULL | eg=[6, 1]
+MonthOfDeath: NUMBER | NULL | eg=[5, 3]
+RaceRecode5: NUMBER | NULL | eg=[1, 2]
+MaritalStatus: TEXT | NULL | eg=["S"]
+AgeType: NUMBER | NULL | eg=[1, 2]
+Autopsy: TEXT | NULL | eg=["Y", "N"]
+RaceRecode3: NUMBER | NULL | eg=[1, 3]
+CauseRecode113: NUMBER | NULL | eg=[81, 108]
+HispanicOrigin: NUMBER | NULL | eg=[100]
+Age: NUMBER | NULL | eg=[1]
+InfantAgeRecode22: NUMBER | NULL | eg=[0, 12]
+MannerOfDeath: NUMBER | NULL | eg=[7]
+InfantCauseRecode130: NUMBER | NULL | eg=[0, 115]
+Race: NUMBER | NULL | eg=[1, 2]
+NumberOfRecordAxisConditions: NUMBER | NULL | eg=[1, 2]
+AgeRecode52: NUMBER | NULL | eg=[23, 12]
+Sex: TEXT | NULL | eg=["F", "M"]
+RaceImputationFlag: NUMBER | NULL | eg=[0]
+MethodOfDisposition: TEXT | NULL | eg=["B", "C"]
+BridgedRaceFlag: NUMBER | NULL | eg=[0]
+
+## DEATH.RACERECODE5
+Description: TEXT | NULL | eg=["Black"]
+Code: NUMBER | NULL | eg=[2]
+
+## DEATH.HISPANICORIGINRACERECODE
+Code: NUMBER | NULL | eg=[1, 2]
+Description: TEXT | NULL | eg=["Mexican", "Puerto Rican"]
+
+## DEATH.AGERECODE12
+Code: NUMBER | NULL | eg=[4, 6]
+Description: TEXT | NULL | eg=["15 - 24 years", "35 - 44 years"]
+
+## DEATH.ICD10CODE
+Description: TEXT | NULL | eg=["Yaws", "Cough"]
+Code: TEXT | NULL | eg=["A66", "R05"]
+
+## DEATH.RACERECODE3
+Description: TEXT | NULL | eg=["White"]
+Code: NUMBER | NULL | eg=[1]
+
+## DEATH.AGERECODE27
+Description: TEXT | NULL | eg=["1 month - 11 months (includes not stated months)", "1 year"]
+Code: NUMBER | NULL | eg=[2, 3]
+
+## DEATH.PLACEOFDEATHANDDECEDENTSSTATUS
+Description: TEXT | NULL | eg=["Hospital, clinic or Medical Center - Inpatient", "Hospital, Clinic or Medical Center - Outpatient or admitted to Emergency Room"]
+Code: NUMBER | NULL | eg=[1, 2]
+
+## DEATH.ENTITYAXISCONDITIONS
+Line: FLOAT | NULL | eg=[2.0]
+DeathRecordId: NUMBER | NULL | eg=[717162, 717283]
+Sequence: NUMBER | NULL | eg=[1]
+Icd10Code: TEXT | NULL | eg=["R688"]
+Id: NUMBER | NULL | eg=[2201459, 2201817]
+Part: NUMBER | NULL | eg=[1]
+
+## DEATH.RACE
+Code: NUMBER | NULL | eg=[0, 6]
+Description: TEXT | NULL | eg=["Other races", "Hawaiian (includes Part-Hawaiian)"]
+
+## DEATH.BRIDGEDRACEFLAG
+Description: TEXT | NULL | eg=["Race is not bridged", "Race is bridged"]
+Code: NUMBER | NULL | eg=[0, 1]

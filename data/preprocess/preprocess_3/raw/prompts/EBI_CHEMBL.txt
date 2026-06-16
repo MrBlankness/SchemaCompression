@@ -1,0 +1,6907 @@
+[TABLES]
+## EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS_26
+biocomp_id: TEXT | NULL
+molregno: TEXT | NULL
+component_id: TEXT | NULL
+
+## EBI_CHEMBL.HRAC_CLASSIFICATION_24
+level2_description: TEXT | NULL
+hrac_class_id: TEXT | NULL
+level1_description: TEXT | NULL
+active_ingredient: TEXT | NULL
+level1: TEXT | NULL
+level3: TEXT | NULL
+level2: TEXT | NULL
+hrac_code: TEXT | NULL
+
+## EBI_CHEMBL.CHEMBL_ID_LOOKUP_29
+status: TEXT | NULL
+last_active: TEXT | NULL
+chembl_id: TEXT | NULL
+entity_type: TEXT | NULL
+entity_id: TEXT | NULL
+
+## EBI_CHEMBL.MECHANISM_REFS_29
+mec_id: TEXT | NULL
+ref_url: TEXT | NULL
+ref_id: TEXT | NULL
+ref_type: TEXT | NULL
+mecref_id: TEXT | NULL
+
+## EBI_CHEMBL.BINDING_SITES_28
+tid: TEXT | NULL
+site_id: TEXT | NULL
+site_name: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_CLASSIFICATION_24
+parent_id: TEXT | NULL
+pref_name: TEXT | NULL
+short_name: TEXT | NULL
+class_level: TEXT | NULL
+protein_class_id: TEXT | NULL
+protein_class_desc: TEXT | NULL
+definition: TEXT | NULL
+
+## EBI_CHEMBL.MECHANISM_REFS_30
+mec_id: NUMBER | Foreign key to drug_mechanism table - indicating the mechanism to which the references refer
+ref_type: TEXT | Type/source of reference (e.g., 'PubMed','DailyMed')
+mecref_id: NUMBER | Primary key
+ref_url: TEXT | Full URL linking to the reference
+ref_id: TEXT | Identifier for the reference in the source (e.g., PubMed ID or DailyMed setid)
+
+## EBI_CHEMBL.CHEMBL_ID_LOOKUP_30
+chembl_id: TEXT | ChEMBL identifier
+entity_id: NUMBER | Primary key for that entity in corresponding table (e.g., molregno for compounds, tid for targets)
+status: TEXT | Indicates whether the status of the entity within the database - ACTIVE, INACTIVE (downgraded), OBS (obsolete/removed).
+entity_type: TEXT | Type of entity (e.g., COMPOUND, ASSAY, TARGET)
+last_active: NUMBER | indicates the last ChEMBL version where the CHEMBL_ID was active
+
+## EBI_CHEMBL.LIGAND_EFF_30
+le: FLOAT | [from the Hopkins DDT paper 2004]
+activity_id: NUMBER | Link key to activities table
+lle: FLOAT | Lipophilic Ligand Efficiency = -logKi-ALogP. [from Leeson NRDD 2007]
+bei: FLOAT | Binding Efficiency Index = p(XC50) *1000/MW_freebase
+sei: FLOAT | Surface Efficiency Index = p(XC50)*100/PSA
+
+## EBI_CHEMBL.ACTION_TYPE_26
+action_type: TEXT | NULL
+parent_type: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.BIOASSAY_ONTOLOGY_27
+label: TEXT | NULL
+bao_id: TEXT | NULL
+
+## EBI_CHEMBL.ACTION_TYPE_30
+parent_type: TEXT | Higher-level grouping of action types e.g., positive vs negative action
+action_type: TEXT | Primary key. Type of action of the drug e.g., agonist, antagonist.
+description: TEXT | Description of how the action type is used
+
+## EBI_CHEMBL.COMPONENT_DOMAINS_33
+domain_id: TEXT | NULL
+start_position: TEXT | NULL
+end_position: TEXT | NULL
+component_id: TEXT | NULL
+compd_id: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_DICTIONARY_29
+organism: TEXT | NULL
+species_group_flag: TEXT | NULL
+target_type: TEXT | NULL
+pref_name: TEXT | NULL
+tax_id: TEXT | NULL
+chembl_id: TEXT | NULL
+tid: TEXT | NULL
+
+## EBI_CHEMBL.METABOLISM_REFS_30
+metref_id: NUMBER | Primary key
+ref_type: TEXT | Type/source of reference (e.g., 'PubMed','DailyMed')
+ref_id: TEXT | Identifier for the reference in the source (e.g., PubMed ID or DailyMed setid)
+met_id: NUMBER | Foreign key to record_metabolism table - indicating the metabolism information to which the references refer
+ref_url: TEXT | Full URL linking to the reference
+
+## EBI_CHEMBL.COMPONENT_SEQUENCES_28
+tax_id: TEXT | NULL
+description: TEXT | NULL
+accession: TEXT | NULL
+component_type: TEXT | NULL
+component_id: TEXT | NULL
+sequence: TEXT | NULL
+sequence_md5sum: TEXT | NULL
+db_source: TEXT | NULL
+organism: TEXT | NULL
+db_version: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_HIERARCHY_23
+active_molregno: TEXT | NULL
+molregno: TEXT | NULL
+parent_molregno: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_STRUCTURES_23
+molregno: TEXT | NULL
+standard_inchi: TEXT | NULL
+canonical_smiles: TEXT | NULL
+molfile: TEXT | NULL
+standard_inchi_key: TEXT | NULL
+
+## EBI_CHEMBL.SITE_COMPONENTS_24
+site_residues: TEXT | NULL
+component_id: TEXT | NULL
+site_id: TEXT | NULL
+sitecomp_id: TEXT | NULL
+domain_id: TEXT | NULL
+
+## EBI_CHEMBL.INDICATION_REFS_27
+ref_type: TEXT | NULL
+ref_id: TEXT | NULL
+ref_url: TEXT | NULL
+indref_id: TEXT | NULL
+drugind_id: TEXT | NULL
+
+## EBI_CHEMBL.VARIANT_SEQUENCES_25
+sequence: TEXT | NULL
+version: TEXT | NULL
+accession: TEXT | NULL
+variant_id: TEXT | NULL
+organism: TEXT | NULL
+isoform: TEXT | NULL
+mutation: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERTS_26
+alert_id: TEXT | NULL
+smarts: TEXT | NULL
+alert_set_id: TEXT | NULL
+alert_name: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS_23
+syn_type: TEXT | NULL
+protclasssyn_id: TEXT | NULL
+protein_class_id: TEXT | NULL
+protein_class_synonym: TEXT | NULL
+
+## EBI_CHEMBL.SOURCE
+src_short_name: TEXT | NULL
+src_description: TEXT | NULL
+src_id: TEXT | NULL
+
+## EBI_CHEMBL.PRODUCT_PATENTS_33
+patent_no: TEXT | NULL
+patent_expire_date: TEXT | NULL
+submission_date: TEXT | NULL
+product_id: TEXT | NULL
+delist_flag: TEXT | NULL
+prod_pat_id: TEXT | NULL
+drug_product_flag: TEXT | NULL
+drug_substance_flag: TEXT | NULL
+patent_use_code: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_CLASSIFICATION_30
+class_type: TEXT | The type of assay being classified e.g., in vivo efficacy
+l2: TEXT | Mid-level classification e.g., by phenotype/biological process
+l3: TEXT | Fine-grained classification e.g., by assay type
+assay_class_id: NUMBER | Primary key
+l1: TEXT | High level classification e.g., by anatomical/therapeutic area
+source: TEXT | Source from which the assay class was obtained
+
+## EBI_CHEMBL.METABOLISM_30
+metabolite_record_id: NUMBER | Foreign key to compound_records. Record representing the compound that is the result of metabolism
+organism: TEXT | Organism in which this metabolic reaction occurs
+drug_record_id: NUMBER | Foreign key to compound_records. Record representing the drug or other compound for which metabolism is being studied (may not be the same as the substrate being measured)
+met_comment: TEXT | Additional information regarding the metabolism (e.g., organ system, conditions under which observed, activity of metabolites)
+enzyme_tid: NUMBER | Foreign key to target_dictionary. TID for the enzyme responsible for the metabolic conversion
+enzyme_name: TEXT | Name of the enzyme responsible for the metabolic conversion
+tax_id: NUMBER | NCBI Tax ID for the organism in which this metabolic reaction occurs
+met_id: NUMBER | Primary key
+met_conversion: TEXT | Description of the metabolic conversion
+pathway_id: NUMBER | Identifier for the metabolic scheme/pathway (may be multiple pathways from one source document)
+substrate_record_id: NUMBER | Foreign key to compound_records. Record representing the compound that is the subject of metabolism
+pathway_key: TEXT | Link to original source indicating where the pathway information was found (e.g., Figure 1, page 23)
+
+## EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS_25
+biocomp_id: TEXT | NULL
+component_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_STRUCTURES
+molregno: TEXT | NULL
+canonical_smiles: TEXT | NULL
+standard_inchi_key: TEXT | NULL
+standard_inchi: TEXT | NULL
+molfile: TEXT | NULL
+
+## EBI_CHEMBL.CHEMBL_RELEASE
+chembl_release: TEXT | NULL
+creation_date: TEXT | NULL
+chembl_release_id: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_DICTIONARY_27
+chirality: TEXT | NULL
+oral: TEXT | NULL
+structure_type: TEXT | NULL
+therapeutic_flag: TEXT | NULL
+withdrawn_reason: TEXT | NULL
+withdrawn_country: TEXT | NULL
+molecule_type: TEXT | NULL
+first_in_class: TEXT | NULL
+usan_stem: TEXT | NULL
+usan_stem_definition: TEXT | NULL
+max_phase: TEXT | NULL
+availability_type: TEXT | NULL
+topical: TEXT | NULL
+inorganic_flag: TEXT | NULL
+usan_substem: TEXT | NULL
+indication_class: TEXT | NULL
+pref_name: TEXT | NULL
+molregno: TEXT | NULL
+withdrawn_year: TEXT | NULL
+chembl_id: TEXT | NULL
+parenteral: TEXT | NULL
+withdrawn_flag: TEXT | NULL
+withdrawn_class: TEXT | NULL
+dosed_ingredient: TEXT | NULL
+prodrug: TEXT | NULL
+black_box_warning: TEXT | NULL
+usan_year: TEXT | NULL
+first_approval: TEXT | NULL
+chebi_par_id: TEXT | NULL
+natural_product: TEXT | NULL
+polymer_flag: TEXT | NULL
+
+## EBI_CHEMBL.DATA_VALIDITY_LOOKUP_33
+description: TEXT | NULL
+data_validity_comment: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS_23
+alert_id: TEXT | NULL
+molregno: TEXT | NULL
+cpd_str_alert_id: TEXT | NULL
+
+## EBI_CHEMBL.CURATION_LOOKUP_33
+curated_by: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SUPP
+as_id: TEXT | NULL
+type: TEXT | NULL
+standard_relation: TEXT | NULL
+standard_text_value: TEXT | NULL
+units: TEXT | NULL
+standard_type: TEXT | NULL
+value: TEXT | NULL
+rgid: TEXT | NULL
+standard_value: TEXT | NULL
+relation: TEXT | NULL
+smid: TEXT | NULL
+standard_units: TEXT | NULL
+comments: TEXT | NULL
+text_value: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_MECHANISM_24
+site_id: TEXT | NULL
+tid: TEXT | NULL
+action_type: TEXT | NULL
+mechanism_comment: TEXT | NULL
+selectivity_comment: TEXT | NULL
+mechanism_of_action: TEXT | NULL
+disease_efficacy: TEXT | NULL
+molecular_mechanism: TEXT | NULL
+molregno: TEXT | NULL
+mec_id: TEXT | NULL
+binding_site_comment: TEXT | NULL
+direct_interaction: TEXT | NULL
+record_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_RECORDS
+molregno: TEXT | NULL
+src_compound_id: TEXT | NULL
+cidx: TEXT | NULL
+compound_key: TEXT | NULL
+doc_id: TEXT | NULL
+record_id: TEXT | NULL
+compound_name: TEXT | NULL
+src_id: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERTS_33
+alert_id: TEXT | NULL
+alert_name: TEXT | NULL
+alert_set_id: TEXT | NULL
+smarts: TEXT | NULL
+
+## EBI_CHEMBL.VERSION_24
+comments: TEXT | NULL
+name: TEXT | NULL
+creation_date: TEXT | NULL
+
+## EBI_CHEMBL.USAN_STEMS_29
+subgroup: TEXT | NULL
+stem_class: TEXT | NULL
+usan_stem_id: TEXT | NULL
+who_extra: TEXT | NULL
+major_class: TEXT | NULL
+annotation: TEXT | NULL
+stem: TEXT | NULL
+
+## EBI_CHEMBL.CURATION_LOOKUP_30
+curated_by: TEXT | Short description of the level of curation
+description: TEXT | Definition of terms in the curated_by field.
+
+## EBI_CHEMBL.INDICATION_REFS
+ref_id: TEXT | NULL
+ref_type: TEXT | NULL
+indref_id: TEXT | NULL
+ref_url: TEXT | NULL
+drugind_id: TEXT | NULL
+
+## EBI_CHEMBL.DOMAINS_30
+domain_description: TEXT | Longer name or description for the domain.
+domain_id: NUMBER | Primary key. Unique identifier for each domain.
+domain_name: TEXT | Name given to the domain in the source database (e.g., 7tm_1).
+source_domain_id: TEXT | Identifier for the domain in the source database (e.g., Pfam ID such as PF00001).
+domain_type: TEXT | Indicates the source of the domain (e.g., Pfam).
+
+## EBI_CHEMBL.ACTIVITY_SUPP_25
+smid: TEXT | NULL
+relation: TEXT | NULL
+standard_relation: TEXT | NULL
+comments: TEXT | NULL
+as_id: TEXT | NULL
+standard_text_value: TEXT | NULL
+type: TEXT | NULL
+standard_type: TEXT | NULL
+value: TEXT | NULL
+standard_value: TEXT | NULL
+units: TEXT | NULL
+standard_units: TEXT | NULL
+rgid: TEXT | NULL
+text_value: TEXT | NULL
+
+## EBI_CHEMBL.PRODUCT_PATENTS_28
+prod_pat_id: TEXT | NULL
+patent_use_code: TEXT | NULL
+delist_flag: TEXT | NULL
+product_id: TEXT | NULL
+drug_substance_flag: TEXT | NULL
+patent_expire_date: TEXT | NULL
+drug_product_flag: TEXT | NULL
+submission_date: TEXT | NULL
+patent_no: TEXT | NULL
+
+## EBI_CHEMBL.CHEMBL_ID_LOOKUP_24
+status: TEXT | NULL
+chembl_id: TEXT | NULL
+entity_id: TEXT | NULL
+entity_type: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_HIERARCHY_33
+active_molregno: TEXT | NULL
+molregno: TEXT | NULL
+parent_molregno: TEXT | NULL
+
+## EBI_CHEMBL.SQLITE_STAT1_26
+stat: TEXT | NULL
+idx: TEXT | NULL
+tbl: TEXT | NULL
+
+## EBI_CHEMBL.METABOLISM_REFS
+ref_url: TEXT | NULL
+ref_id: TEXT | NULL
+ref_type: TEXT | NULL
+metref_id: TEXT | NULL
+met_id: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_WARNING_33
+warning_country: TEXT | NULL
+record_id: TEXT | NULL
+efo_id: TEXT | NULL
+warning_type: TEXT | NULL
+warning_class: TEXT | NULL
+warning_year: TEXT | NULL
+warning_description: TEXT | NULL
+efo_term: TEXT | NULL
+molregno: TEXT | NULL
+warning_id: TEXT | NULL
+efo_id_for_warning_class: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS_30
+syn_type: TEXT | The type or origin of the synonym (e.g., ChEMBL, Concept Wiki, UMLS).
+protclasssyn_id: NUMBER | Primary key.
+protein_class_synonym: TEXT | The synonym for the protein class.
+protein_class_id: NUMBER | Foreign key to the PROTEIN_CLASSIFICATION table. The protein_class to which this synonym applies.
+
+## EBI_CHEMBL.FORMULATIONS_23
+record_id: TEXT | NULL
+formulation_id: TEXT | NULL
+molregno: TEXT | NULL
+product_id: TEXT | NULL
+ingredient: TEXT | NULL
+strength: TEXT | NULL
+
+## EBI_CHEMBL.DOCS_28
+pubmed_id: TEXT | NULL
+src_id: TEXT | NULL
+authors: TEXT | NULL
+doc_id: TEXT | NULL
+doi: TEXT | NULL
+title: TEXT | NULL
+year: TEXT | NULL
+doc_type: TEXT | NULL
+abstract: TEXT | NULL
+journal: TEXT | NULL
+patent_id: TEXT | NULL
+volume: TEXT | NULL
+chembl_id: TEXT | NULL
+first_page: TEXT | NULL
+issue: TEXT | NULL
+last_page: TEXT | NULL
+ridx: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_CLASS_30
+component_id: NUMBER | Foreign key to component_sequences table.
+protein_class_id: NUMBER | Foreign key to the protein_classification table.
+comp_class_id: NUMBER | Primary key.
+
+## EBI_CHEMBL.COMPONENT_DOMAINS_24
+start_position: TEXT | NULL
+compd_id: TEXT | NULL
+component_id: TEXT | NULL
+domain_id: TEXT | NULL
+end_position: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_PROPERTIES_24
+comments: TEXT | NULL
+standard_units: TEXT | NULL
+relation: TEXT | NULL
+standard_text_value: TEXT | NULL
+type: TEXT | NULL
+activity_id: TEXT | NULL
+units: TEXT | NULL
+standard_value: TEXT | NULL
+standard_relation: TEXT | NULL
+result_flag: TEXT | NULL
+text_value: TEXT | NULL
+ap_id: TEXT | NULL
+standard_type: TEXT | NULL
+value: TEXT | NULL
+
+## EBI_CHEMBL.ACTION_TYPE_24
+parent_type: TEXT | NULL
+action_type: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.MECHANISM_REFS_23
+mecref_id: TEXT | NULL
+mec_id: TEXT | NULL
+ref_url: TEXT | NULL
+ref_type: TEXT | NULL
+ref_id: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_DICTIONARY_33
+natural_product: TEXT | NULL
+first_approval: TEXT | NULL
+chemical_probe: TEXT | NULL
+pref_name: TEXT | NULL
+availability_type: TEXT | NULL
+prodrug: TEXT | NULL
+structure_type: TEXT | NULL
+therapeutic_flag: TEXT | NULL
+oral: TEXT | NULL
+chebi_par_id: TEXT | NULL
+black_box_warning: TEXT | NULL
+molecule_type: TEXT | NULL
+parenteral: TEXT | NULL
+usan_stem: TEXT | NULL
+usan_stem_definition: TEXT | NULL
+molregno: TEXT | NULL
+dosed_ingredient: TEXT | NULL
+polymer_flag: TEXT | NULL
+usan_year: TEXT | NULL
+chirality: TEXT | NULL
+usan_substem: TEXT | NULL
+topical: TEXT | NULL
+first_in_class: TEXT | NULL
+inorganic_flag: TEXT | NULL
+indication_class: TEXT | NULL
+max_phase: TEXT | NULL
+chembl_id: TEXT | NULL
+withdrawn_flag: TEXT | NULL
+
+## EBI_CHEMBL.RELATIONSHIP_TYPE_30
+relationship_type: TEXT | Relationship_type flag used in the assay2target table
+relationship_desc: TEXT | Description of relationship_type flags
+
+## EBI_CHEMBL.COMPOUND_STRUCTURES_26
+canonical_smiles: TEXT | NULL
+molregno: TEXT | NULL
+molfile: TEXT | NULL
+standard_inchi_key: TEXT | NULL
+standard_inchi: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_TYPE_25
+target_desc: TEXT | NULL
+parent_type: TEXT | NULL
+target_type: TEXT | NULL
+
+## EBI_CHEMBL.BIO_COMPONENT_SEQUENCES_26
+description: TEXT | NULL
+component_type: TEXT | NULL
+sequence: TEXT | NULL
+component_id: TEXT | NULL
+sequence_md5sum: TEXT | NULL
+organism: TEXT | NULL
+tax_id: TEXT | NULL
+
+## EBI_CHEMBL.DEFINED_DAILY_DOSE
+ddd_value: TEXT | NULL
+ddd_id: TEXT | NULL
+ddd_admr: TEXT | NULL
+ddd_units: TEXT | NULL
+ddd_comment: TEXT | NULL
+atc_code: TEXT | NULL
+
+## EBI_CHEMBL.PREDICTED_BINDING_DOMAINS_30
+predbind_id: NUMBER | Primary key.
+site_id: NUMBER | Foreign key to the binding_sites table, indicating the binding site (domain) that the compound is predicted to bind to.
+confidence: TEXT | The level of confidence assigned to the prediction (high where the protein has only 1 domain, medium where the compound has multiple domains, but only 1 known small molecule-binding domain).
+prediction_method: TEXT | The method used to assign the binding domain (e.g., 'Single domain' where the protein has only 1 domain, 'Multi domain' where the protein has multiple domains, but only 1 is known to bind small molecules in other proteins).
+activity_id: NUMBER | Foreign key to the activities table, indicating the compound/assay(+target) combination for which this prediction is made.
+
+## EBI_CHEMBL.VARIANT_SEQUENCES_28
+isoform: TEXT | NULL
+tax_id: TEXT | NULL
+variant_id: TEXT | NULL
+accession: TEXT | NULL
+sequence: TEXT | NULL
+version: TEXT | NULL
+organism: TEXT | NULL
+mutation: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION_30
+frac_class_id: NUMBER | Foreign key to frac_classification table showing the mechanism of action classification of the compound.
+molregno: NUMBER | Foreign key to molecule_dictionary, showing the compound to which the classification applies.
+mol_frac_id: NUMBER | Primary key.
+
+## EBI_CHEMBL.WARNING_REFS
+warning_id: TEXT | NULL
+warnref_id: TEXT | NULL
+ref_url: TEXT | NULL
+ref_type: TEXT | NULL
+ref_id: TEXT | NULL
+
+## EBI_CHEMBL.LIGAND_EFF_24
+lle: TEXT | NULL
+bei: TEXT | NULL
+sei: TEXT | NULL
+le: TEXT | NULL
+activity_id: TEXT | NULL
+
+## EBI_CHEMBL.FRAC_CLASSIFICATION_23
+level1: TEXT | NULL
+level2: TEXT | NULL
+level2_description: TEXT | NULL
+level5: TEXT | NULL
+level4_description: TEXT | NULL
+level1_description: TEXT | NULL
+level3: TEXT | NULL
+frac_code: TEXT | NULL
+level3_description: TEXT | NULL
+level4: TEXT | NULL
+frac_class_id: TEXT | NULL
+active_ingredient: TEXT | NULL
+
+## EBI_CHEMBL.IRAC_CLASSIFICATION_30
+level2_description: TEXT | Description of site/mechanism of action provided by IRAC
+irac_code: TEXT | The official IRAC classification code for the ingredient
+irac_class_id: NUMBER | Unique numeric primary key for each level4 code
+level2: TEXT | IRAC main group code denoting primary site/mechanism of action
+level4: TEXT | A unique code assigned to each ingredient (based on the level 1, 2 and 3 IRAC classification, but not assigned by IRAC)
+level1: TEXT | Class of action e.g., nerve action, energy metabolism (code not assigned by IRAC)
+level3: TEXT | IRAC sub-group code denoting chemical class of insecticide
+active_ingredient: TEXT | Name of active ingredient (insecticide) classified by IRAC
+level3_description: TEXT | Description of chemical class or exemplifying ingredient provided by IRAC
+level1_description: TEXT | Description of class of action, as provided by IRAC
+
+## EBI_CHEMBL.VERSION_27
+name: TEXT | NULL
+creation_date: TEXT | NULL
+comments: TEXT | NULL
+
+## EBI_CHEMBL.METABOLISM_REFS_23
+met_id: TEXT | NULL
+ref_url: TEXT | NULL
+ref_type: TEXT | NULL
+metref_id: TEXT | NULL
+ref_id: TEXT | NULL
+
+## EBI_CHEMBL.DOMAINS_33
+source_domain_id: TEXT | NULL
+domain_description: TEXT | NULL
+domain_type: TEXT | NULL
+domain_id: TEXT | NULL
+domain_name: TEXT | NULL
+
+## EBI_CHEMBL.SQLITE_STAT1_33
+idx: TEXT | NULL
+stat: TEXT | NULL
+tbl: TEXT | NULL
+
+## EBI_CHEMBL.ACTION_TYPE_27
+parent_type: TEXT | NULL
+description: TEXT | NULL
+action_type: TEXT | NULL
+
+## EBI_CHEMBL.METABOLISM_24
+pathway_id: TEXT | NULL
+met_conversion: TEXT | NULL
+metabolite_record_id: TEXT | NULL
+organism: TEXT | NULL
+met_id: TEXT | NULL
+substrate_record_id: TEXT | NULL
+enzyme_tid: TEXT | NULL
+met_comment: TEXT | NULL
+pathway_key: TEXT | NULL
+drug_record_id: TEXT | NULL
+enzyme_name: TEXT | NULL
+tax_id: TEXT | NULL
+
+## EBI_CHEMBL.SQLITE_STAT1_25
+idx: TEXT | NULL
+stat: TEXT | NULL
+tbl: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_STDS_LOOKUP_26
+definition: TEXT | NULL
+standard_type: TEXT | NULL
+normal_range_min: TEXT | NULL
+standard_units: TEXT | NULL
+normal_range_max: TEXT | NULL
+std_act_id: TEXT | NULL
+
+## EBI_CHEMBL.PRODUCT_PATENTS_27
+product_id: TEXT | NULL
+submission_date: TEXT | NULL
+prod_pat_id: TEXT | NULL
+delist_flag: TEXT | NULL
+drug_product_flag: TEXT | NULL
+drug_substance_flag: TEXT | NULL
+patent_use_code: TEXT | NULL
+patent_no: TEXT | NULL
+patent_expire_date: TEXT | NULL
+
+## EBI_CHEMBL.RELATIONSHIP_TYPE_27
+relationship_type: TEXT | NULL
+relationship_desc: TEXT | NULL
+
+## EBI_CHEMBL.DOMAINS_26
+source_domain_id: TEXT | NULL
+domain_type: TEXT | NULL
+domain_description: TEXT | NULL
+domain_name: TEXT | NULL
+domain_id: TEXT | NULL
+
+## EBI_CHEMBL.DATA_VALIDITY_LOOKUP_23
+description: TEXT | NULL
+data_validity_comment: TEXT | NULL
+
+## EBI_CHEMBL.METABOLISM_33
+pathway_key: TEXT | NULL
+met_comment: TEXT | NULL
+substrate_record_id: TEXT | NULL
+met_id: TEXT | NULL
+metabolite_record_id: TEXT | NULL
+drug_record_id: TEXT | NULL
+pathway_id: TEXT | NULL
+met_conversion: TEXT | NULL
+enzyme_tid: TEXT | NULL
+organism: TEXT | NULL
+tax_id: TEXT | NULL
+enzyme_name: TEXT | NULL
+
+## EBI_CHEMBL.ORGANISM_CLASS_30
+l1: TEXT | Highest level classification (e.g., Eukaryotes, Bacteria, Fungi etc)
+oc_id: NUMBER | Internal primary key
+l2: TEXT | Second level classification
+l3: TEXT | Third level classification
+tax_id: NUMBER | NCBI taxonomy ID for the organism (corresponding to tax_ids in assay2target and target_dictionary tables)
+
+## EBI_CHEMBL.TARGET_COMPONENTS_29
+tid: TEXT | NULL
+component_id: TEXT | NULL
+targcomp_id: TEXT | NULL
+homologue: TEXT | NULL
+
+## EBI_CHEMBL.RESEARCH_STEM_26
+research_stem: TEXT | NULL
+res_stem_id: TEXT | NULL
+
+## EBI_CHEMBL.FRAC_CLASSIFICATION_27
+level2: TEXT | NULL
+frac_class_id: TEXT | NULL
+active_ingredient: TEXT | NULL
+level4_description: TEXT | NULL
+level3_description: TEXT | NULL
+level5: TEXT | NULL
+level4: TEXT | NULL
+frac_code: TEXT | NULL
+level1_description: TEXT | NULL
+level1: TEXT | NULL
+level3: TEXT | NULL
+level2_description: TEXT | NULL
+
+## EBI_CHEMBL.ORGANISM_CLASS_29
+oc_id: TEXT | NULL
+l3: TEXT | NULL
+l1: TEXT | NULL
+tax_id: TEXT | NULL
+l2: TEXT | NULL
+
+## EBI_CHEMBL.CURATION_LOOKUP_25
+description: TEXT | NULL
+curated_by: TEXT | NULL
+
+## EBI_CHEMBL.BIO_COMPONENT_SEQUENCES_27
+component_id: TEXT | NULL
+sequence_md5sum: TEXT | NULL
+sequence: TEXT | NULL
+component_type: TEXT | NULL
+organism: TEXT | NULL
+tax_id: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_PROPERTIES_28
+mw_monoisotopic: TEXT | NULL
+cx_most_bpka: TEXT | NULL
+ro3_pass: TEXT | NULL
+alogp: TEXT | NULL
+hbd: TEXT | NULL
+full_molformula: TEXT | NULL
+heavy_atoms: TEXT | NULL
+rtb: TEXT | NULL
+hba_lipinski: TEXT | NULL
+psa: TEXT | NULL
+cx_most_apka: TEXT | NULL
+full_mwt: TEXT | NULL
+num_lipinski_ro5_violations: TEXT | NULL
+cx_logp: TEXT | NULL
+hba: TEXT | NULL
+molecular_species: TEXT | NULL
+aromatic_rings: TEXT | NULL
+molregno: TEXT | NULL
+num_ro5_violations: TEXT | NULL
+cx_logd: TEXT | NULL
+hbd_lipinski: TEXT | NULL
+mw_freebase: TEXT | NULL
+qed_weighted: TEXT | NULL
+
+## EBI_CHEMBL.CURATION_LOOKUP_24
+description: TEXT | NULL
+curated_by: TEXT | NULL
+
+## EBI_CHEMBL.VARIANT_SEQUENCES_33
+tax_id: TEXT | NULL
+mutation: TEXT | NULL
+organism: TEXT | NULL
+isoform: TEXT | NULL
+variant_id: TEXT | NULL
+version: TEXT | NULL
+accession: TEXT | NULL
+sequence: TEXT | NULL
+
+## EBI_CHEMBL.PRODUCTS_29
+route: TEXT | NULL
+applicant_full_name: TEXT | NULL
+innovator_company: TEXT | NULL
+black_box_warning: TEXT | NULL
+nda_type: TEXT | NULL
+product_id: TEXT | NULL
+parenteral: TEXT | NULL
+trade_name: TEXT | NULL
+oral: TEXT | NULL
+approval_date: TEXT | NULL
+ad_type: TEXT | NULL
+topical: TEXT | NULL
+dosage_form: TEXT | NULL
+
+## EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS_30
+molregno: NUMBER | Foreign key to the biotherapeutics table, indicating which biotherapeutic the component is part of.
+component_id: NUMBER | Foreign key to the bio_component_sequences table, indicating which component is part of the biotherapeutic.
+biocomp_id: NUMBER | Primary key.
+
+## EBI_CHEMBL.BIO_COMPONENT_SEQUENCES_24
+sequence: TEXT | NULL
+organism: TEXT | NULL
+component_type: TEXT | NULL
+sequence_md5sum: TEXT | NULL
+description: TEXT | NULL
+component_id: TEXT | NULL
+tax_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_RECORDS_26
+record_id: TEXT | NULL
+doc_id: TEXT | NULL
+compound_key: TEXT | NULL
+molregno: TEXT | NULL
+src_id: TEXT | NULL
+cidx: TEXT | NULL
+src_compound_id: TEXT | NULL
+compound_name: TEXT | NULL
+
+## EBI_CHEMBL.DOCS_26
+year: TEXT | NULL
+chembl_id: TEXT | NULL
+src_id: TEXT | NULL
+journal: TEXT | NULL
+patent_id: TEXT | NULL
+doc_type: TEXT | NULL
+abstract: TEXT | NULL
+last_page: TEXT | NULL
+doi: TEXT | NULL
+volume: TEXT | NULL
+pubmed_id: TEXT | NULL
+authors: TEXT | NULL
+title: TEXT | NULL
+ridx: TEXT | NULL
+doc_id: TEXT | NULL
+issue: TEXT | NULL
+first_page: TEXT | NULL
+
+## EBI_CHEMBL.PARAMETER_TYPE_23
+description: TEXT | NULL
+parameter_type: TEXT | NULL
+
+## EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS_33
+biocomp_id: TEXT | NULL
+molregno: TEXT | NULL
+component_id: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_DICTIONARY
+species_group_flag: TEXT | NULL
+tid: TEXT | NULL
+organism: TEXT | NULL
+tax_id: TEXT | NULL
+pref_name: TEXT | NULL
+chembl_id: TEXT | NULL
+target_type: TEXT | NULL
+
+## EBI_CHEMBL.BIOTHERAPEUTICS_33
+molregno: TEXT | NULL
+description: TEXT | NULL
+helm_notation: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_RELATIONS_26
+targrel_id: TEXT | NULL
+tid: TEXT | NULL
+related_tid: TEXT | NULL
+relationship: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERTS
+alert_set_id: TEXT | NULL
+alert_id: TEXT | NULL
+alert_name: TEXT | NULL
+smarts: TEXT | NULL
+
+## EBI_CHEMBL.FORMULATIONS_29
+formulation_id: TEXT | NULL
+record_id: TEXT | NULL
+product_id: TEXT | NULL
+molregno: TEXT | NULL
+strength: TEXT | NULL
+ingredient: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_CLASS_MAP_27
+assay_id: TEXT | NULL
+assay_class_id: TEXT | NULL
+ass_cls_map_id: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_MECHANISM_26
+action_type: TEXT | NULL
+mechanism_of_action: TEXT | NULL
+selectivity_comment: TEXT | NULL
+record_id: TEXT | NULL
+disease_efficacy: TEXT | NULL
+site_id: TEXT | NULL
+mechanism_comment: TEXT | NULL
+binding_site_comment: TEXT | NULL
+molregno: TEXT | NULL
+direct_interaction: TEXT | NULL
+mec_id: TEXT | NULL
+tid: TEXT | NULL
+molecular_mechanism: TEXT | NULL
+
+## EBI_CHEMBL.INDICATION_REFS_30
+drugind_id: NUMBER | Foreign key to the DRUG_INDICATION table, indicating the drug-indication link that this reference applies to
+ref_type: TEXT | Type/source of reference
+ref_id: TEXT | Identifier for the reference in the source
+indref_id: NUMBER | Primary key
+ref_url: TEXT | Full URL linking to the reference
+
+## EBI_CHEMBL.TARGET_RELATIONS_30
+tid: NUMBER | Identifier for target of interest (foreign key to target_dictionary table)
+related_tid: NUMBER | Identifier for the target that is related to the target of interest (foreign key to target_dicitionary table)
+relationship: TEXT | Relationship between two targets (e.g., SUBSET OF, SUPERSET OF, OVERLAPS WITH)
+targrel_id: NUMBER | Primary key
+
+## EBI_CHEMBL.ACTIVITY_SMID_24
+smid: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION_27
+frac_class_id: TEXT | NULL
+mol_frac_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_FAMILY_CLASSIFICATION_29
+protein_class_desc: TEXT | NULL
+l3: TEXT | NULL
+l1: TEXT | NULL
+protein_class_id: TEXT | NULL
+l6: TEXT | NULL
+l5: TEXT | NULL
+l8: TEXT | NULL
+l7: TEXT | NULL
+l4: TEXT | NULL
+l2: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_CLASSIFICATION_26
+short_name: TEXT | NULL
+definition: TEXT | NULL
+protein_class_id: TEXT | NULL
+class_level: TEXT | NULL
+parent_id: TEXT | NULL
+pref_name: TEXT | NULL
+protein_class_desc: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_COMPONENTS
+component_id: TEXT | NULL
+targcomp_id: TEXT | NULL
+tid: TEXT | NULL
+homologue: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITIES_25
+type: TEXT | NULL
+bao_endpoint: TEXT | NULL
+activity_id: TEXT | NULL
+qudt_units: TEXT | NULL
+pchembl_value: TEXT | NULL
+standard_type: TEXT | NULL
+standard_text_value: TEXT | NULL
+standard_relation: TEXT | NULL
+uo_units: TEXT | NULL
+src_id: TEXT | NULL
+activity_comment: TEXT | NULL
+standard_flag: TEXT | NULL
+molregno: TEXT | NULL
+units: TEXT | NULL
+potential_duplicate: TEXT | NULL
+text_value: TEXT | NULL
+record_id: TEXT | NULL
+relation: TEXT | NULL
+doc_id: TEXT | NULL
+toid: TEXT | NULL
+standard_units: TEXT | NULL
+value: TEXT | NULL
+data_validity_comment: TEXT | NULL
+assay_id: TEXT | NULL
+standard_upper_value: TEXT | NULL
+standard_value: TEXT | NULL
+upper_value: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_SYNONYMS_25
+component_synonym: TEXT | NULL
+syn_type: TEXT | NULL
+compsyn_id: TEXT | NULL
+component_id: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_CLASSIFICATION_26
+bao_id: TEXT | NULL
+class_type: TEXT | NULL
+l1: TEXT | NULL
+l3: TEXT | NULL
+source: TEXT | NULL
+l2: TEXT | NULL
+assay_class_id: TEXT | NULL
+
+## EBI_CHEMBL.RESEARCH_COMPANIES_33
+co_stem_id: TEXT | NULL
+previous_company: TEXT | NULL
+country: TEXT | NULL
+res_stem_id: TEXT | NULL
+company: TEXT | NULL
+
+## EBI_CHEMBL.RELATIONSHIP_TYPE_28
+relationship_type: TEXT | NULL
+relationship_desc: TEXT | NULL
+
+## EBI_CHEMBL.BINDING_SITES_27
+site_name: TEXT | NULL
+site_id: TEXT | NULL
+tid: TEXT | NULL
+
+## EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP_29
+target_mapping: TEXT | NULL
+confidence_score: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_HIERARCHY_27
+active_molregno: TEXT | NULL
+molregno: TEXT | NULL
+parent_molregno: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_STDS_LOOKUP_30
+standard_units: TEXT | The units that are applied to this standard_type and to which other published_units are converted. Note a standard_type may have more than one allowable standard_unit and therefore multiple rows in this table.
+definition: TEXT | A description/definition of the standard_type.
+normal_range_min: FLOAT | The lowest value for this activity type that is likely to be genuine. This is only an approximation, so lower genuine values may exist, but it may be desirable to validate these before using them. For a given standard_type/units, values in the activities table below this threshold are flagged with a data_validity_comment of 'Outside typical range'.
+standard_type: TEXT | The standard_type that other published_types in the activities table have been converted to.
+normal_range_max: FLOAT | The highest value for this activity type that is likely to be genuine. This is only an approximation, so higher genuine values may exist, but it may be desirable to validate these before using them. For a given standard_type/units, values in the activities table above this threshold are flagged with a data_validity_comment of 'Outside typical range'.
+std_act_id: NUMBER | Primary key.
+
+## EBI_CHEMBL.HRAC_CLASSIFICATION_25
+active_ingredient: TEXT | NULL
+level2_description: TEXT | NULL
+hrac_code: TEXT | NULL
+hrac_class_id: TEXT | NULL
+level2: TEXT | NULL
+level1_description: TEXT | NULL
+level1: TEXT | NULL
+level3: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_TYPE
+assay_type: TEXT | NULL
+assay_desc: TEXT | NULL
+
+## EBI_CHEMBL.LIGAND_EFF_33
+activity_id: TEXT | NULL
+le: TEXT | NULL
+lle: TEXT | NULL
+bei: TEXT | NULL
+sei: TEXT | NULL
+
+## EBI_CHEMBL.GO_CLASSIFICATION_28
+class_level: TEXT | NULL
+parent_go_id: TEXT | NULL
+aspect: TEXT | NULL
+go_id: TEXT | NULL
+path: TEXT | NULL
+pref_name: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS_29
+cpd_str_alert_id: TEXT | NULL
+alert_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.INDICATION_REFS_26
+ref_type: TEXT | NULL
+ref_url: TEXT | NULL
+drugind_id: TEXT | NULL
+ref_id: TEXT | NULL
+indref_id: TEXT | NULL
+
+## EBI_CHEMBL.SITE_COMPONENTS_33
+site_residues: TEXT | NULL
+domain_id: TEXT | NULL
+sitecomp_id: TEXT | NULL
+component_id: TEXT | NULL
+site_id: TEXT | NULL
+
+## EBI_CHEMBL.METABOLISM_27
+enzyme_name: TEXT | NULL
+met_conversion: TEXT | NULL
+substrate_record_id: TEXT | NULL
+drug_record_id: TEXT | NULL
+enzyme_tid: TEXT | NULL
+organism: TEXT | NULL
+pathway_id: TEXT | NULL
+met_id: TEXT | NULL
+metabolite_record_id: TEXT | NULL
+pathway_key: TEXT | NULL
+tax_id: TEXT | NULL
+met_comment: TEXT | NULL
+
+## EBI_CHEMBL.SITE_COMPONENTS_28
+site_residues: TEXT | NULL
+component_id: TEXT | NULL
+domain_id: TEXT | NULL
+sitecomp_id: TEXT | NULL
+site_id: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_DICTIONARY_24
+molregno: TEXT | NULL
+usan_substem: TEXT | NULL
+max_phase: TEXT | NULL
+withdrawn_year: TEXT | NULL
+structure_type: TEXT | NULL
+natural_product: TEXT | NULL
+withdrawn_country: TEXT | NULL
+inorganic_flag: TEXT | NULL
+topical: TEXT | NULL
+black_box_warning: TEXT | NULL
+usan_year: TEXT | NULL
+pref_name: TEXT | NULL
+usan_stem_definition: TEXT | NULL
+first_approval: TEXT | NULL
+withdrawn_class: TEXT | NULL
+chembl_id: TEXT | NULL
+indication_class: TEXT | NULL
+oral: TEXT | NULL
+dosed_ingredient: TEXT | NULL
+first_in_class: TEXT | NULL
+usan_stem: TEXT | NULL
+chebi_par_id: TEXT | NULL
+polymer_flag: TEXT | NULL
+molecule_type: TEXT | NULL
+chirality: TEXT | NULL
+prodrug: TEXT | NULL
+availability_type: TEXT | NULL
+withdrawn_reason: TEXT | NULL
+parenteral: TEXT | NULL
+therapeutic_flag: TEXT | NULL
+withdrawn_flag: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_CLASSIFICATION_33
+l3: TEXT | NULL
+class_type: TEXT | NULL
+assay_class_id: TEXT | NULL
+l2: TEXT | NULL
+source: TEXT | NULL
+l1: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_DICTIONARY_25
+species_group_flag: TEXT | NULL
+tid: TEXT | NULL
+target_type: TEXT | NULL
+pref_name: TEXT | NULL
+chembl_id: TEXT | NULL
+organism: TEXT | NULL
+tax_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_GO
+go_id: TEXT | NULL
+comp_go_id: TEXT | NULL
+component_id: TEXT | NULL
+
+## EBI_CHEMBL.VARIANT_SEQUENCES_27
+version: TEXT | NULL
+organism: TEXT | NULL
+accession: TEXT | NULL
+variant_id: TEXT | NULL
+tax_id: TEXT | NULL
+mutation: TEXT | NULL
+sequence: TEXT | NULL
+isoform: TEXT | NULL
+
+## EBI_CHEMBL.VERSION_23
+comments: TEXT | NULL
+creation_date: TEXT | NULL
+name: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITIES_26
+value: TEXT | NULL
+standard_units: TEXT | NULL
+data_validity_comment: TEXT | NULL
+potential_duplicate: TEXT | NULL
+pchembl_value: TEXT | NULL
+bao_endpoint: TEXT | NULL
+doc_id: TEXT | NULL
+record_id: TEXT | NULL
+standard_value: TEXT | NULL
+standard_relation: TEXT | NULL
+activity_comment: TEXT | NULL
+text_value: TEXT | NULL
+molregno: TEXT | NULL
+relation: TEXT | NULL
+upper_value: TEXT | NULL
+units: TEXT | NULL
+standard_text_value: TEXT | NULL
+src_id: TEXT | NULL
+toid: TEXT | NULL
+assay_id: TEXT | NULL
+standard_type: TEXT | NULL
+standard_flag: TEXT | NULL
+standard_upper_value: TEXT | NULL
+uo_units: TEXT | NULL
+type: TEXT | NULL
+qudt_units: TEXT | NULL
+activity_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_PROPERTIES_24
+full_mwt: TEXT | NULL
+hbd: TEXT | NULL
+acd_most_bpka: TEXT | NULL
+acd_most_apka: TEXT | NULL
+hba: TEXT | NULL
+hba_lipinski: TEXT | NULL
+molregno: TEXT | NULL
+molecular_species: TEXT | NULL
+acd_logp: TEXT | NULL
+mw_freebase: TEXT | NULL
+qed_weighted: TEXT | NULL
+hbd_lipinski: TEXT | NULL
+num_ro5_violations: TEXT | NULL
+aromatic_rings: TEXT | NULL
+mw_monoisotopic: TEXT | NULL
+acd_logd: TEXT | NULL
+num_lipinski_ro5_violations: TEXT | NULL
+ro3_pass: TEXT | NULL
+full_molformula: TEXT | NULL
+alogp: TEXT | NULL
+rtb: TEXT | NULL
+psa: TEXT | NULL
+heavy_atoms: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_RELATIONS_28
+related_tid: TEXT | NULL
+relationship: TEXT | NULL
+tid: TEXT | NULL
+targrel_id: TEXT | NULL
+
+## EBI_CHEMBL.BIO_COMPONENT_SEQUENCES_33
+component_id: TEXT | NULL
+sequence: TEXT | NULL
+organism: TEXT | NULL
+sequence_md5sum: TEXT | NULL
+description: TEXT | NULL
+tax_id: TEXT | NULL
+component_type: TEXT | NULL
+
+## EBI_CHEMBL.FORMULATIONS
+ingredient: TEXT | NULL
+formulation_id: TEXT | NULL
+strength: TEXT | NULL
+record_id: TEXT | NULL
+molregno: TEXT | NULL
+product_id: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_PROPERTIES_26
+units: TEXT | NULL
+text_value: TEXT | NULL
+standard_type: TEXT | NULL
+standard_value: TEXT | NULL
+standard_text_value: TEXT | NULL
+standard_units: TEXT | NULL
+ap_id: TEXT | NULL
+value: TEXT | NULL
+standard_relation: TEXT | NULL
+activity_id: TEXT | NULL
+comments: TEXT | NULL
+result_flag: TEXT | NULL
+type: TEXT | NULL
+relation: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION_25
+mol_hrac_id: TEXT | NULL
+molregno: TEXT | NULL
+hrac_class_id: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION_25
+frac_class_id: TEXT | NULL
+molregno: TEXT | NULL
+mol_frac_id: TEXT | NULL
+
+## EBI_CHEMBL.FORMULATIONS_25
+record_id: TEXT | NULL
+formulation_id: TEXT | NULL
+product_id: TEXT | NULL
+strength: TEXT | NULL
+ingredient: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_PARAMETERS_33
+text_value: TEXT | NULL
+value: TEXT | NULL
+standard_text_value: TEXT | NULL
+comments: TEXT | NULL
+standard_type: TEXT | NULL
+assay_param_id: TEXT | NULL
+relation: TEXT | NULL
+type: TEXT | NULL
+standard_units: TEXT | NULL
+units: TEXT | NULL
+assay_id: TEXT | NULL
+standard_value: TEXT | NULL
+standard_relation: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_STRUCTURES_33
+standard_inchi_key: TEXT | NULL
+canonical_smiles: TEXT | NULL
+standard_inchi: TEXT | NULL
+molfile: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_CLASS_24
+comp_class_id: TEXT | NULL
+protein_class_id: TEXT | NULL
+component_id: TEXT | NULL
+
+## EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS_24
+biocomp_id: TEXT | NULL
+component_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.DEFINED_DAILY_DOSE_29
+ddd_comment: TEXT | NULL
+ddd_admr: TEXT | NULL
+ddd_value: TEXT | NULL
+ddd_id: TEXT | NULL
+atc_code: TEXT | NULL
+ddd_units: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_PARAMETERS_27
+relation: TEXT | NULL
+comments: TEXT | NULL
+units: TEXT | NULL
+standard_text_value: TEXT | NULL
+assay_param_id: TEXT | NULL
+assay_id: TEXT | NULL
+standard_units: TEXT | NULL
+standard_relation: TEXT | NULL
+standard_type: TEXT | NULL
+value: TEXT | NULL
+standard_value: TEXT | NULL
+type: TEXT | NULL
+text_value: TEXT | NULL
+
+## EBI_CHEMBL.PREDICTED_BINDING_DOMAINS_23
+prediction_method: TEXT | NULL
+activity_id: TEXT | NULL
+confidence: TEXT | NULL
+predbind_id: TEXT | NULL
+site_id: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_RELATIONS_25
+relationship: TEXT | NULL
+tid: TEXT | NULL
+targrel_id: TEXT | NULL
+related_tid: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION_24
+mol_hrac_id: TEXT | NULL
+hrac_class_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_COMPONENTS_30
+tid: NUMBER | Foreign key to the target_dictionary, indicating the target to which the components belong.
+homologue: NUMBER | Indicates that the given component is a homologue of the correct component (e.g., from a different species) when set to 1. This may be the case if the sequence for the correct protein/nucleic acid cannot be found in sequence databases. A value of 2 indicates that the sequence given is a representative of a species group, e.g., an E. coli protein to represent the target of a broad-spectrum antibiotic.
+component_id: NUMBER | Foreign key to the component_sequences table, indicating which components belong to the target.
+targcomp_id: NUMBER | Primary key.
+
+## EBI_CHEMBL.SITE_COMPONENTS_27
+domain_id: TEXT | NULL
+site_residues: TEXT | NULL
+site_id: TEXT | NULL
+component_id: TEXT | NULL
+sitecomp_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_GO_33
+comp_go_id: TEXT | NULL
+go_id: TEXT | NULL
+component_id: TEXT | NULL
+
+## EBI_CHEMBL.DOMAINS_25
+domain_description: TEXT | NULL
+domain_id: TEXT | NULL
+domain_type: TEXT | NULL
+source_domain_id: TEXT | NULL
+domain_name: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS_26
+protein_class_id: TEXT | NULL
+syn_type: TEXT | NULL
+protclasssyn_id: TEXT | NULL
+protein_class_synonym: TEXT | NULL
+
+## EBI_CHEMBL.FORMULATIONS_30
+record_id: NUMBER | Foreign key to the compound_records table.
+molregno: NUMBER | Unique identifier of the ingredient FK to MOLECULE_DICTIONARY
+formulation_id: NUMBER | Primary key.
+strength: TEXT | Dose strength
+product_id: TEXT | Unique identifier of the product. FK to PRODUCTS
+ingredient: TEXT | Name of the approved ingredient within the product
+
+## EBI_CHEMBL.PRODUCTS
+approval_date: TEXT | NULL
+topical: TEXT | NULL
+applicant_full_name: TEXT | NULL
+dosage_form: TEXT | NULL
+parenteral: TEXT | NULL
+route: TEXT | NULL
+ad_type: TEXT | NULL
+trade_name: TEXT | NULL
+nda_type: TEXT | NULL
+product_id: TEXT | NULL
+innovator_company: TEXT | NULL
+black_box_warning: TEXT | NULL
+oral: TEXT | NULL
+
+## EBI_CHEMBL.DEFINED_DAILY_DOSE_23
+ddd_comment: TEXT | NULL
+atc_code: TEXT | NULL
+ddd_units: TEXT | NULL
+ddd_id: TEXT | NULL
+ddd_admr: TEXT | NULL
+ddd_value: TEXT | NULL
+
+## EBI_CHEMBL.RESEARCH_COMPANIES_25
+previous_company: TEXT | NULL
+res_stem_id: TEXT | NULL
+co_stem_id: TEXT | NULL
+country: TEXT | NULL
+company: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SMID_26
+smid: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS_24
+protclasssyn_id: TEXT | NULL
+syn_type: TEXT | NULL
+protein_class_synonym: TEXT | NULL
+protein_class_id: TEXT | NULL
+
+## EBI_CHEMBL.MATCH_24
+patent_no: TEXT | NULL
+publication_number: TEXT | NULL
+
+## EBI_CHEMBL.RESEARCH_STEM_24
+research_stem: TEXT | NULL
+res_stem_id: TEXT | NULL
+
+## EBI_CHEMBL.PRODUCTS_30
+parenteral: NUMBER | Flag to show whether product is parenterally delivered
+oral: NUMBER | Flag to show whether product is orally delivered
+black_box_warning: NUMBER | Flag to show whether the product label has a black box warning
+trade_name: TEXT | The trade name for the product
+dosage_form: TEXT | The dosage form of the product (e.g., tablet, capsule etc)
+topical: NUMBER | Flag to show whether product is topically delivered
+nda_type: TEXT | Abbreviated New Drug Applications (ANDA or generic) are “A”.
+route: TEXT | The administration route of the product (e.g., oral, injection etc)
+product_id: TEXT | FDA application number for the product
+ad_type: TEXT | RX = prescription, OTC = over the counter, DISCN = discontinued
+applicant_full_name: TEXT | Name of the company applying for FDA approval
+approval_date: NUMBER | The FDA approval date for the product (not necessarily first approval of the active ingredient)
+innovator_company: NUMBER | Flag to show whether the applicant is the innovator of the product
+
+## EBI_CHEMBL.ACTIVITY_STDS_LOOKUP_25
+normal_range_min: TEXT | NULL
+standard_type: TEXT | NULL
+std_act_id: TEXT | NULL
+normal_range_max: TEXT | NULL
+standard_units: TEXT | NULL
+definition: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_CLASS_25
+comp_class_id: TEXT | NULL
+protein_class_id: TEXT | NULL
+component_id: TEXT | NULL
+
+## EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP_25
+confidence_score: TEXT | NULL
+target_mapping: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.BIOTHERAPEUTICS_26
+helm_notation: TEXT | NULL
+molregno: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SUPP_MAP_28
+activity_id: TEXT | NULL
+smid: TEXT | NULL
+actsm_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_CLASS_27
+comp_class_id: TEXT | NULL
+protein_class_id: TEXT | NULL
+component_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_SYNONYMS_27
+component_id: TEXT | NULL
+syn_type: TEXT | NULL
+compsyn_id: TEXT | NULL
+component_synonym: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_HIERARCHY_26
+parent_molregno: TEXT | NULL
+molregno: TEXT | NULL
+active_molregno: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_WARNING_29
+warning_country: TEXT | NULL
+warning_description: TEXT | NULL
+warning_type: TEXT | NULL
+molregno: TEXT | NULL
+record_id: TEXT | NULL
+warning_class: TEXT | NULL
+warning_id: TEXT | NULL
+warning_year: TEXT | NULL
+
+## EBI_CHEMBL.WARNING_REFS_28
+ref_type: TEXT | NULL
+ref_url: TEXT | NULL
+warning_id: TEXT | NULL
+warnref_id: TEXT | NULL
+ref_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_DOMAINS_30
+start_position: NUMBER | Start position of the domain within the sequence given in the component_sequences table.
+domain_id: NUMBER | Foreign key to the domains table, indicating the domain that is contained in the associated molecular component.
+component_id: NUMBER | Foreign key to the component_sequences table, indicating the molecular_component that has the given domain.
+compd_id: NUMBER | Primary key.
+end_position: NUMBER | End position of the domain within the sequence given in the component_sequences table.
+
+## EBI_CHEMBL.DOMAINS
+domain_name: TEXT | NULL
+domain_type: TEXT | NULL
+source_domain_id: TEXT | NULL
+domain_description: TEXT | NULL
+domain_id: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SUPP_26
+text_value: TEXT | NULL
+value: TEXT | NULL
+rgid: TEXT | NULL
+smid: TEXT | NULL
+standard_units: TEXT | NULL
+units: TEXT | NULL
+comments: TEXT | NULL
+standard_value: TEXT | NULL
+standard_type: TEXT | NULL
+type: TEXT | NULL
+as_id: TEXT | NULL
+standard_relation: TEXT | NULL
+relation: TEXT | NULL
+standard_text_value: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_SYNONYMS_26
+syn_type: TEXT | NULL
+compsyn_id: TEXT | NULL
+component_synonym: TEXT | NULL
+component_id: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_STDS_LOOKUP_29
+standard_type: TEXT | NULL
+normal_range_max: TEXT | NULL
+normal_range_min: TEXT | NULL
+definition: TEXT | NULL
+std_act_id: TEXT | NULL
+standard_units: TEXT | NULL
+
+## EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP_33
+confidence_score: TEXT | NULL
+target_mapping: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_MECHANISM_25
+record_id: TEXT | NULL
+site_id: TEXT | NULL
+tid: TEXT | NULL
+disease_efficacy: TEXT | NULL
+molecular_mechanism: TEXT | NULL
+mechanism_comment: TEXT | NULL
+binding_site_comment: TEXT | NULL
+mechanism_of_action: TEXT | NULL
+selectivity_comment: TEXT | NULL
+action_type: TEXT | NULL
+direct_interaction: TEXT | NULL
+mec_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.BIOTHERAPEUTICS_30
+description: TEXT | Description of the biotherapeutic.
+helm_notation: TEXT | Sequence notation generated according to the HELM standard (http://www.openhelm.org/home). Currently for peptides only
+molregno: NUMBER | Foreign key to molecule_dictionary
+
+## EBI_CHEMBL.COMPONENT_SEQUENCES_26
+sequence_md5sum: TEXT | NULL
+tax_id: TEXT | NULL
+component_id: TEXT | NULL
+db_version: TEXT | NULL
+accession: TEXT | NULL
+description: TEXT | NULL
+sequence: TEXT | NULL
+organism: TEXT | NULL
+db_source: TEXT | NULL
+component_type: TEXT | NULL
+
+## EBI_CHEMBL.LIGAND_EFF_29
+lle: TEXT | NULL
+activity_id: TEXT | NULL
+bei: TEXT | NULL
+le: TEXT | NULL
+sei: TEXT | NULL
+
+## EBI_CHEMBL.RESEARCH_STEM_28
+research_stem: TEXT | NULL
+res_stem_id: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_INDICATION_25
+efo_term: TEXT | NULL
+efo_id: TEXT | NULL
+max_phase_for_ind: TEXT | NULL
+mesh_heading: TEXT | NULL
+mesh_id: TEXT | NULL
+drugind_id: TEXT | NULL
+molregno: TEXT | NULL
+record_id: TEXT | NULL
+
+## EBI_CHEMBL.ASSAYS_25
+src_id: TEXT | NULL
+bao_format: TEXT | NULL
+relationship_type: TEXT | NULL
+assay_tax_id: TEXT | NULL
+confidence_score: TEXT | NULL
+doc_id: TEXT | NULL
+assay_strain: TEXT | NULL
+assay_cell_type: TEXT | NULL
+assay_subcellular_fraction: TEXT | NULL
+variant_id: TEXT | NULL
+description: TEXT | NULL
+tissue_id: TEXT | NULL
+assay_tissue: TEXT | NULL
+assay_test_type: TEXT | NULL
+assay_organism: TEXT | NULL
+assay_category: TEXT | NULL
+curated_by: TEXT | NULL
+assay_id: TEXT | NULL
+aidx: TEXT | NULL
+assay_type: TEXT | NULL
+tid: TEXT | NULL
+src_assay_id: TEXT | NULL
+cell_id: TEXT | NULL
+chembl_id: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITIES_27
+units: TEXT | NULL
+data_validity_comment: TEXT | NULL
+upper_value: TEXT | NULL
+standard_type: TEXT | NULL
+bao_endpoint: TEXT | NULL
+relation: TEXT | NULL
+toid: TEXT | NULL
+activity_comment: TEXT | NULL
+uo_units: TEXT | NULL
+standard_upper_value: TEXT | NULL
+potential_duplicate: TEXT | NULL
+standard_flag: TEXT | NULL
+standard_text_value: TEXT | NULL
+activity_id: TEXT | NULL
+qudt_units: TEXT | NULL
+src_id: TEXT | NULL
+molregno: TEXT | NULL
+standard_value: TEXT | NULL
+doc_id: TEXT | NULL
+value: TEXT | NULL
+type: TEXT | NULL
+text_value: TEXT | NULL
+record_id: TEXT | NULL
+pchembl_value: TEXT | NULL
+assay_id: TEXT | NULL
+standard_units: TEXT | NULL
+standard_relation: TEXT | NULL
+
+## EBI_CHEMBL.PRODUCT_PATENTS_26
+drug_substance_flag: TEXT | NULL
+submission_date: TEXT | NULL
+delist_flag: TEXT | NULL
+prod_pat_id: TEXT | NULL
+patent_no: TEXT | NULL
+product_id: TEXT | NULL
+drug_product_flag: TEXT | NULL
+patent_use_code: TEXT | NULL
+patent_expire_date: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_TYPE_33
+assay_type: TEXT | NULL
+assay_desc: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SMID_33
+smid: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_CLASS_MAP_26
+ass_cls_map_id: TEXT | NULL
+assay_id: TEXT | NULL
+assay_class_id: TEXT | NULL
+
+## EBI_CHEMBL.PRODUCT_PATENTS_30
+submission_date: NUMBER | The date on which the FDA receives patent information from the new drug application (NDA) holder. Format is Mmm d, yyyy
+prod_pat_id: NUMBER | Primary key
+product_id: TEXT | Foreign key to products table - FDA application number for the product
+drug_product_flag: NUMBER | Patents submitted on FDA Form 3542 and listed after August 18, 2003 may have a drug product flag set to 1, indicating the sponsor submitted the patent as claiming the drug product
+drug_substance_flag: NUMBER | Patents submitted on FDA Form 3542 and listed after August 18, 2003 may have a drug substance flag set to 1, indicating the sponsor submitted the patent as claiming the drug substance
+delist_flag: NUMBER | Applicants under Section 505(b)(2) are not required to certify to patents where this flag is set to 1
+patent_no: TEXT | Patent numbers as submitted by the applicant holder for patents covered by the statutory provisions
+patent_use_code: TEXT | Code to designate a use patent that covers the approved indication or use of a drug product
+patent_expire_date: NUMBER | Date the patent expires as submitted by the applicant holder including applicable extensions
+
+## EBI_CHEMBL.DEFINED_DAILY_DOSE_27
+ddd_id: TEXT | NULL
+ddd_value: TEXT | NULL
+ddd_units: TEXT | NULL
+ddd_admr: TEXT | NULL
+atc_code: TEXT | NULL
+ddd_comment: TEXT | NULL
+
+## EBI_CHEMBL.HRAC_CLASSIFICATION_27
+level3: TEXT | NULL
+hrac_class_id: TEXT | NULL
+level2: TEXT | NULL
+hrac_code: TEXT | NULL
+active_ingredient: TEXT | NULL
+level2_description: TEXT | NULL
+level1_description: TEXT | NULL
+level1: TEXT | NULL
+
+## EBI_CHEMBL.BINDING_SITES_24
+tid: TEXT | NULL
+site_name: TEXT | NULL
+site_id: TEXT | NULL
+
+## EBI_CHEMBL.ATC_CLASSIFICATION_24
+level1: TEXT | NULL
+level4: TEXT | NULL
+level1_description: TEXT | NULL
+who_name: TEXT | NULL
+level3_description: TEXT | NULL
+level2_description: TEXT | NULL
+level5: TEXT | NULL
+level2: TEXT | NULL
+level3: TEXT | NULL
+level4_description: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION_24
+mol_irac_id: TEXT | NULL
+molregno: TEXT | NULL
+irac_class_id: TEXT | NULL
+
+## EBI_CHEMBL.PRODUCTS_26
+route: TEXT | NULL
+black_box_warning: TEXT | NULL
+ad_type: TEXT | NULL
+nda_type: TEXT | NULL
+innovator_company: TEXT | NULL
+product_id: TEXT | NULL
+oral: TEXT | NULL
+applicant_full_name: TEXT | NULL
+topical: TEXT | NULL
+approval_date: TEXT | NULL
+dosage_form: TEXT | NULL
+trade_name: TEXT | NULL
+parenteral: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION_33
+mol_atc_id: TEXT | NULL
+molregno: TEXT | NULL
+level5: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_COMPONENTS_23
+homologue: TEXT | NULL
+tid: TEXT | NULL
+targcomp_id: TEXT | NULL
+component_id: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_PROPERTIES_28
+standard_relation: TEXT | NULL
+value: TEXT | NULL
+relation: TEXT | NULL
+units: TEXT | NULL
+standard_text_value: TEXT | NULL
+activity_id: TEXT | NULL
+ap_id: TEXT | NULL
+standard_type: TEXT | NULL
+type: TEXT | NULL
+text_value: TEXT | NULL
+comments: TEXT | NULL
+result_flag: TEXT | NULL
+standard_units: TEXT | NULL
+standard_value: TEXT | NULL
+
+## EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP_24
+target_mapping: TEXT | NULL
+confidence_score: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.PRODUCT_PATENTS_23
+delist_flag: TEXT | NULL
+patent_expire_date: TEXT | NULL
+patent_no: TEXT | NULL
+drug_substance_flag: TEXT | NULL
+patent_use_code: TEXT | NULL
+prod_pat_id: TEXT | NULL
+product_id: TEXT | NULL
+drug_product_flag: TEXT | NULL
+
+## EBI_CHEMBL.ACTION_TYPE_29
+action_type: TEXT | NULL
+parent_type: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_FAMILY_CLASSIFICATION_24
+l3: TEXT | NULL
+protein_class_desc: TEXT | NULL
+l1: TEXT | NULL
+protein_class_id: TEXT | NULL
+l5: TEXT | NULL
+l2: TEXT | NULL
+l6: TEXT | NULL
+l8: TEXT | NULL
+l7: TEXT | NULL
+l4: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_COMPONENTS_28
+tid: TEXT | NULL
+homologue: TEXT | NULL
+component_id: TEXT | NULL
+targcomp_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_GO_25
+comp_go_id: TEXT | NULL
+component_id: TEXT | NULL
+go_id: TEXT | NULL
+
+## EBI_CHEMBL.WARNING_REFS_29
+ref_url: TEXT | NULL
+ref_id: TEXT | NULL
+warnref_id: TEXT | NULL
+warning_id: TEXT | NULL
+ref_type: TEXT | NULL
+
+## EBI_CHEMBL.CHEMBL_ID_LOOKUP_23
+chembl_id: TEXT | NULL
+entity_id: TEXT | NULL
+entity_type: TEXT | NULL
+status: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_GO_26
+go_id: TEXT | NULL
+comp_go_id: TEXT | NULL
+component_id: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_DICTIONARY_26
+species_group_flag: TEXT | NULL
+tax_id: TEXT | NULL
+target_type: TEXT | NULL
+pref_name: TEXT | NULL
+organism: TEXT | NULL
+tid: TEXT | NULL
+chembl_id: TEXT | NULL
+
+## EBI_CHEMBL.BIOASSAY_ONTOLOGY_30
+label: TEXT | Bioassay Ontology label for the term (BAO version 2.0)
+bao_id: TEXT | Bioassay Ontology identifier (BAO version 2.0)
+
+## EBI_CHEMBL.RELATIONSHIP_TYPE_23
+relationship_desc: TEXT | NULL
+relationship_type: TEXT | NULL
+
+## EBI_CHEMBL.IRAC_CLASSIFICATION_25
+irac_class_id: TEXT | NULL
+level1_description: TEXT | NULL
+level2_description: TEXT | NULL
+level3_description: TEXT | NULL
+level4: TEXT | NULL
+active_ingredient: TEXT | NULL
+level3: TEXT | NULL
+irac_code: TEXT | NULL
+level1: TEXT | NULL
+level2: TEXT | NULL
+
+## EBI_CHEMBL.FORMULATIONS_26
+molregno: TEXT | NULL
+product_id: TEXT | NULL
+record_id: TEXT | NULL
+strength: TEXT | NULL
+formulation_id: TEXT | NULL
+ingredient: TEXT | NULL
+
+## EBI_CHEMBL.WARNING_REFS_30
+ref_id: TEXT | Identifier for the reference in the source
+ref_type: TEXT | Type/source of reference
+warnref_id: NUMBER | Primary key for the warning reference
+ref_url: TEXT | Full URL linking to the reference
+warning_id: NUMBER | Foreign key to the drug_warning table
+
+## EBI_CHEMBL.TARGET_RELATIONS_27
+relationship: TEXT | NULL
+tid: TEXT | NULL
+related_tid: TEXT | NULL
+targrel_id: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_SYNONYMS_28
+res_stem_id: TEXT | NULL
+synonyms: TEXT | NULL
+molsyn_id: TEXT | NULL
+syn_type: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.DATA_VALIDITY_LOOKUP_26
+description: TEXT | NULL
+data_validity_comment: TEXT | NULL
+
+## EBI_CHEMBL.FRAC_CLASSIFICATION_26
+level2: TEXT | NULL
+frac_class_id: TEXT | NULL
+level3_description: TEXT | NULL
+level5: TEXT | NULL
+level2_description: TEXT | NULL
+level1: TEXT | NULL
+level4: TEXT | NULL
+level4_description: TEXT | NULL
+frac_code: TEXT | NULL
+active_ingredient: TEXT | NULL
+level3: TEXT | NULL
+level1_description: TEXT | NULL
+
+## EBI_CHEMBL.ORGANISM_CLASS_23
+l1: TEXT | NULL
+l3: TEXT | NULL
+tax_id: TEXT | NULL
+l2: TEXT | NULL
+oc_id: TEXT | NULL
+
+## EBI_CHEMBL.BIO_COMPONENT_SEQUENCES_25
+component_id: TEXT | NULL
+tax_id: TEXT | NULL
+organism: TEXT | NULL
+component_type: TEXT | NULL
+sequence_md5sum: TEXT | NULL
+sequence: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_DICTIONARY_26
+availability_type: TEXT | NULL
+molregno: TEXT | NULL
+topical: TEXT | NULL
+usan_stem: TEXT | NULL
+usan_year: TEXT | NULL
+withdrawn_flag: TEXT | NULL
+parenteral: TEXT | NULL
+dosed_ingredient: TEXT | NULL
+first_in_class: TEXT | NULL
+natural_product: TEXT | NULL
+pref_name: TEXT | NULL
+oral: TEXT | NULL
+first_approval: TEXT | NULL
+max_phase: TEXT | NULL
+withdrawn_country: TEXT | NULL
+usan_stem_definition: TEXT | NULL
+chembl_id: TEXT | NULL
+indication_class: TEXT | NULL
+withdrawn_year: TEXT | NULL
+withdrawn_class: TEXT | NULL
+polymer_flag: TEXT | NULL
+chirality: TEXT | NULL
+prodrug: TEXT | NULL
+molecule_type: TEXT | NULL
+structure_type: TEXT | NULL
+chebi_par_id: TEXT | NULL
+inorganic_flag: TEXT | NULL
+therapeutic_flag: TEXT | NULL
+withdrawn_reason: TEXT | NULL
+usan_substem: TEXT | NULL
+black_box_warning: TEXT | NULL
+
+## EBI_CHEMBL.MECHANISM_REFS
+mecref_id: TEXT | NULL
+mec_id: TEXT | NULL
+ref_type: TEXT | NULL
+ref_url: TEXT | NULL
+ref_id: TEXT | NULL
+
+## EBI_CHEMBL.DOMAINS_24
+domain_name: TEXT | NULL
+domain_type: TEXT | NULL
+source_domain_id: TEXT | NULL
+domain_id: TEXT | NULL
+domain_description: TEXT | NULL
+
+## EBI_CHEMBL.SQLITE_STAT1_28
+tbl: TEXT | NULL
+stat: TEXT | NULL
+idx: TEXT | NULL
+
+## EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP_27
+target_mapping: TEXT | NULL
+description: TEXT | NULL
+confidence_score: TEXT | NULL
+
+## EBI_CHEMBL.USAN_STEMS
+stem: TEXT | NULL
+major_class: TEXT | NULL
+stem_class: TEXT | NULL
+usan_stem_id: TEXT | NULL
+annotation: TEXT | NULL
+subgroup: TEXT | NULL
+
+## EBI_CHEMBL.BINDING_SITES_29
+site_name: TEXT | NULL
+site_id: TEXT | NULL
+tid: TEXT | NULL
+
+## EBI_CHEMBL.PATENT_USE_CODES_29
+definition: TEXT | NULL
+patent_use_code: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_CLASSIFICATION_33
+parent_id: TEXT | NULL
+protein_class_desc: TEXT | NULL
+pref_name: TEXT | NULL
+definition: TEXT | NULL
+short_name: TEXT | NULL
+class_level: TEXT | NULL
+protein_class_id: TEXT | NULL
+
+## EBI_CHEMBL.FRAC_CLASSIFICATION_33
+frac_class_id: TEXT | NULL
+level4: TEXT | NULL
+level1: TEXT | NULL
+active_ingredient: TEXT | NULL
+level3_description: TEXT | NULL
+frac_code: TEXT | NULL
+level2_description: TEXT | NULL
+level2: TEXT | NULL
+level4_description: TEXT | NULL
+level3: TEXT | NULL
+level1_description: TEXT | NULL
+level5: TEXT | NULL
+
+## EBI_CHEMBL.CHEMBL_ID_LOOKUP_27
+entity_type: TEXT | NULL
+entity_id: TEXT | NULL
+status: TEXT | NULL
+chembl_id: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_PARAMETERS_30
+text_value: TEXT | The text value of the parameter being described, according to the original data source. Used for non-numeric/qualitative data
+value: FLOAT | The value of the parameter being described, according to the original data source. Used for numeric data
+standard_text_value: TEXT | Standardized form of the TEXT_VALUE
+assay_id: NUMBER | Foreign key to assays table. The assay to which this parameter belongs
+standard_units: TEXT | Standardized form of the UNITS
+standard_relation: TEXT | Standardized form of the RELATION
+relation: TEXT | The relation symbol for the parameter being described, according to the original data source
+standard_type: TEXT | Standardized form of the TYPE
+comments: TEXT | Additional comments describing the parameter
+units: TEXT | The units for the parameter being described, according to the original data source
+type: TEXT | The type of parameter being described, according to the original data source
+assay_param_id: NUMBER | Numeric primary key
+standard_value: FLOAT | Standardized form of the VALUE
+
+## EBI_CHEMBL.WARNING_REFS_33
+ref_id: TEXT | NULL
+warning_id: TEXT | NULL
+warnref_id: TEXT | NULL
+ref_url: TEXT | NULL
+ref_type: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_TYPE_24
+target_desc: TEXT | NULL
+target_type: TEXT | NULL
+parent_type: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_STRUCTURES_24
+molfile: TEXT | NULL
+molregno: TEXT | NULL
+standard_inchi_key: TEXT | NULL
+standard_inchi: TEXT | NULL
+canonical_smiles: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_HIERARCHY_28
+active_molregno: TEXT | NULL
+molregno: TEXT | NULL
+parent_molregno: TEXT | NULL
+
+## EBI_CHEMBL.SQLITE_STAT1_29
+idx: TEXT | NULL
+tbl: TEXT | NULL
+stat: TEXT | NULL
+
+## EBI_CHEMBL.FORMULATIONS_33
+record_id: TEXT | NULL
+molregno: TEXT | NULL
+ingredient: TEXT | NULL
+formulation_id: TEXT | NULL
+product_id: TEXT | NULL
+strength: TEXT | NULL
+
+## EBI_CHEMBL.IRAC_CLASSIFICATION_23
+level1: TEXT | NULL
+level2_description: TEXT | NULL
+level4: TEXT | NULL
+irac_class_id: TEXT | NULL
+level1_description: TEXT | NULL
+irac_code: TEXT | NULL
+level3_description: TEXT | NULL
+level2: TEXT | NULL
+level3: TEXT | NULL
+active_ingredient: TEXT | NULL
+
+## EBI_CHEMBL.RELATIONSHIP_TYPE_24
+relationship_type: TEXT | NULL
+relationship_desc: TEXT | NULL
+
+## EBI_CHEMBL.PATENT_USE_CODES_24
+definition: TEXT | NULL
+patent_use_code: TEXT | NULL
+
+## EBI_CHEMBL.BIOTHERAPEUTICS_23
+helm_notation: TEXT | NULL
+molregno: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.IRAC_CLASSIFICATION_27
+level3_description: TEXT | NULL
+level2_description: TEXT | NULL
+irac_class_id: TEXT | NULL
+level3: TEXT | NULL
+level1_description: TEXT | NULL
+active_ingredient: TEXT | NULL
+level1: TEXT | NULL
+level2: TEXT | NULL
+irac_code: TEXT | NULL
+level4: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS
+protein_class_synonym: TEXT | NULL
+protclasssyn_id: TEXT | NULL
+protein_class_id: TEXT | NULL
+syn_type: TEXT | NULL
+
+## EBI_CHEMBL.DATA_VALIDITY_LOOKUP_30
+data_validity_comment: TEXT | Primary key. Short description of various types of errors/warnings applied to values in the activities table.
+description: TEXT | Definition of the terms in the data_validity_comment field.
+
+## EBI_CHEMBL.RESEARCH_COMPANIES_24
+co_stem_id: TEXT | NULL
+company: TEXT | NULL
+country: TEXT | NULL
+previous_company: TEXT | NULL
+res_stem_id: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERTS_29
+smarts: TEXT | NULL
+alert_id: TEXT | NULL
+alert_name: TEXT | NULL
+alert_set_id: TEXT | NULL
+
+## EBI_CHEMBL.TISSUE_DICTIONARY_29
+efo_id: TEXT | NULL
+pref_name: TEXT | NULL
+tissue_id: TEXT | NULL
+bto_id: TEXT | NULL
+chembl_id: TEXT | NULL
+caloha_id: TEXT | NULL
+uberon_id: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_WARNING_28
+warning_year: TEXT | NULL
+warning_id: TEXT | NULL
+molregno: TEXT | NULL
+warning_type: TEXT | NULL
+record_id: TEXT | NULL
+warning_description: TEXT | NULL
+warning_country: TEXT | NULL
+warning_class: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION_25
+molregno: TEXT | NULL
+mol_atc_id: TEXT | NULL
+level5: TEXT | NULL
+
+## EBI_CHEMBL.CHEMBL_ID_LOOKUP_28
+entity_type: TEXT | NULL
+chembl_id: TEXT | NULL
+status: TEXT | NULL
+entity_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_RECORDS_33
+compound_key: TEXT | NULL
+record_id: TEXT | NULL
+src_compound_id: TEXT | NULL
+src_id: TEXT | NULL
+cidx: TEXT | NULL
+molregno: TEXT | NULL
+doc_id: TEXT | NULL
+compound_name: TEXT | NULL
+
+## EBI_CHEMBL.BIO_COMPONENT_SEQUENCES_23
+description: TEXT | NULL
+component_id: TEXT | NULL
+sequence: TEXT | NULL
+tax_id: TEXT | NULL
+organism: TEXT | NULL
+component_type: TEXT | NULL
+sequence_md5sum: TEXT | NULL
+
+## EBI_CHEMBL.BIOTHERAPEUTICS_28
+description: TEXT | NULL
+helm_notation: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_COMPONENTS_33
+component_id: TEXT | NULL
+tid: TEXT | NULL
+targcomp_id: TEXT | NULL
+homologue: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_DOMAINS_27
+start_position: TEXT | NULL
+component_id: TEXT | NULL
+end_position: TEXT | NULL
+compd_id: TEXT | NULL
+domain_id: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_TYPE_24
+assay_type: TEXT | NULL
+assay_desc: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_PROPERTIES
+alogp: TEXT | NULL
+aromatic_rings: TEXT | NULL
+mw_freebase: TEXT | NULL
+hbd: TEXT | NULL
+psa: TEXT | NULL
+cx_logd: TEXT | NULL
+hba: TEXT | NULL
+hbd_lipinski: TEXT | NULL
+molecular_species: TEXT | NULL
+full_molformula: TEXT | NULL
+hba_lipinski: TEXT | NULL
+np_likeness_score: TEXT | NULL
+heavy_atoms: TEXT | NULL
+cx_most_apka: TEXT | NULL
+num_ro5_violations: TEXT | NULL
+molregno: TEXT | NULL
+mw_monoisotopic: TEXT | NULL
+cx_most_bpka: TEXT | NULL
+full_mwt: TEXT | NULL
+rtb: TEXT | NULL
+qed_weighted: TEXT | NULL
+num_lipinski_ro5_violations: TEXT | NULL
+cx_logp: TEXT | NULL
+ro3_pass: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SMID_27
+smid: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SUPP_MAP_25
+smid: TEXT | NULL
+activity_id: TEXT | NULL
+actsm_id: TEXT | NULL
+
+## EBI_CHEMBL.BINDING_SITES_26
+site_id: TEXT | NULL
+tid: TEXT | NULL
+site_name: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_MECHANISM_33
+disease_efficacy: TEXT | NULL
+selectivity_comment: TEXT | NULL
+molregno: TEXT | NULL
+action_type: TEXT | NULL
+record_id: TEXT | NULL
+variant_id: TEXT | NULL
+site_id: TEXT | NULL
+binding_site_comment: TEXT | NULL
+molecular_mechanism: TEXT | NULL
+tid: TEXT | NULL
+mec_id: TEXT | NULL
+mechanism_comment: TEXT | NULL
+direct_interaction: TEXT | NULL
+mechanism_of_action: TEXT | NULL
+
+## EBI_CHEMBL.USAN_STEMS_27
+stem: TEXT | NULL
+stem_class: TEXT | NULL
+major_class: TEXT | NULL
+subgroup: TEXT | NULL
+usan_stem_id: TEXT | NULL
+who_extra: TEXT | NULL
+annotation: TEXT | NULL
+
+## EBI_CHEMBL.INDICATION_REFS_24
+ref_id: TEXT | NULL
+ref_type: TEXT | NULL
+ref_url: TEXT | NULL
+drugind_id: TEXT | NULL
+indref_id: TEXT | NULL
+
+## EBI_CHEMBL.CURATION_LOOKUP_27
+description: TEXT | NULL
+curated_by: TEXT | NULL
+
+## EBI_CHEMBL.BIO_COMPONENT_SEQUENCES_29
+tax_id: TEXT | NULL
+component_id: TEXT | NULL
+organism: TEXT | NULL
+component_type: TEXT | NULL
+sequence_md5sum: TEXT | NULL
+sequence: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.USAN_STEMS_26
+annotation: TEXT | NULL
+subgroup: TEXT | NULL
+usan_stem_id: TEXT | NULL
+who_extra: TEXT | NULL
+stem: TEXT | NULL
+major_class: TEXT | NULL
+stem_class: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION_24
+molregno: TEXT | NULL
+mol_atc_id: TEXT | NULL
+level5: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_CLASS_MAP_29
+ass_cls_map_id: TEXT | NULL
+assay_class_id: TEXT | NULL
+assay_id: TEXT | NULL
+
+## EBI_CHEMBL.BIOASSAY_ONTOLOGY_26
+label: TEXT | NULL
+bao_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_PROPERTIES_23
+num_ro5_violations: TEXT | NULL
+ro3_pass: TEXT | NULL
+full_mwt: TEXT | NULL
+psa: TEXT | NULL
+acd_most_apka: TEXT | NULL
+full_molformula: TEXT | NULL
+aromatic_rings: TEXT | NULL
+mw_monoisotopic: TEXT | NULL
+molecular_species: TEXT | NULL
+num_lipinski_ro5_violations: TEXT | NULL
+rtb: TEXT | NULL
+alogp: TEXT | NULL
+hba: TEXT | NULL
+num_alerts: TEXT | NULL
+acd_logp: TEXT | NULL
+molregno: TEXT | NULL
+acd_logd: TEXT | NULL
+mw_freebase: TEXT | NULL
+hbd_lipinski: TEXT | NULL
+hbd: TEXT | NULL
+hba_lipinski: TEXT | NULL
+acd_most_bpka: TEXT | NULL
+qed_weighted: TEXT | NULL
+heavy_atoms: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION
+mol_irac_id: TEXT | NULL
+irac_class_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.FRAC_CLASSIFICATION_24
+level4_description: TEXT | NULL
+level3_description: TEXT | NULL
+level2_description: TEXT | NULL
+level4: TEXT | NULL
+frac_class_id: TEXT | NULL
+level1: TEXT | NULL
+level3: TEXT | NULL
+level5: TEXT | NULL
+frac_code: TEXT | NULL
+level1_description: TEXT | NULL
+active_ingredient: TEXT | NULL
+level2: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_TYPE_26
+target_desc: TEXT | NULL
+parent_type: TEXT | NULL
+target_type: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_SYNONYMS_26
+syn_type: TEXT | NULL
+molregno: TEXT | NULL
+synonyms: TEXT | NULL
+molsyn_id: TEXT | NULL
+res_stem_id: TEXT | NULL
+
+## EBI_CHEMBL.USAN_STEMS_30
+major_class: TEXT | Protein family targeted by compounds of this class (e.g., GPCR/Ion channel/Protease) where known/applicable.
+usan_stem_id: NUMBER | Numeric primary key.
+stem: TEXT | Stem defined for use in United States Adopted Names.
+subgroup: TEXT | More specific subgroup of the stem defined for use in United States Adopted Names.
+annotation: TEXT | Meaning of the stem (e.g., the class of compound it applies to).
+stem_class: TEXT | Indicates whether stem is used as a Prefix/Infix/Suffix.
+who_extra: NUMBER | Stem not represented in USAN list, but added from WHO INN stem list (where set to 1).
+
+## EBI_CHEMBL.RESEARCH_STEM_27
+research_stem: TEXT | NULL
+res_stem_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_SEQUENCES_25
+sequence_md5sum: TEXT | NULL
+sequence: TEXT | NULL
+description: TEXT | NULL
+component_type: TEXT | NULL
+accession: TEXT | NULL
+component_id: TEXT | NULL
+tax_id: TEXT | NULL
+organism: TEXT | NULL
+db_version: TEXT | NULL
+db_source: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITIES
+standard_type: TEXT | NULL
+standard_units: TEXT | NULL
+units: TEXT | NULL
+toid: TEXT | NULL
+standard_flag: TEXT | NULL
+value: TEXT | NULL
+standard_value: TEXT | NULL
+standard_relation: TEXT | NULL
+bao_endpoint: TEXT | NULL
+src_id: TEXT | NULL
+qudt_units: TEXT | NULL
+standard_text_value: TEXT | NULL
+data_validity_comment: TEXT | NULL
+pchembl_value: TEXT | NULL
+record_id: TEXT | NULL
+doc_id: TEXT | NULL
+standard_upper_value: TEXT | NULL
+action_type: TEXT | NULL
+assay_id: TEXT | NULL
+uo_units: TEXT | NULL
+activity_id: TEXT | NULL
+potential_duplicate: TEXT | NULL
+molregno: TEXT | NULL
+type: TEXT | NULL
+text_value: TEXT | NULL
+activity_comment: TEXT | NULL
+upper_value: TEXT | NULL
+relation: TEXT | NULL
+
+## EBI_CHEMBL.GO_CLASSIFICATION_30
+pref_name: TEXT | Gene Ontology name
+path: TEXT | Indicates the full path to this term in the GO slim
+class_level: NUMBER | Indicates the level of the term in the slim (L1 = highest)
+parent_go_id: TEXT | Gene Ontology identifier for the parent of this GO term in the ChEMBL Drug Target GO slim
+go_id: TEXT | Primary key. Gene Ontology identifier for the GO slim term
+aspect: TEXT | Indicates which aspect of the Gene Ontology the term belongs to (F = molecular function, P = biological process, C = cellular component)
+
+## EBI_CHEMBL.ASSAYS_26
+assay_type: TEXT | NULL
+job_id: TEXT | NULL
+mc_organism: TEXT | NULL
+tid: TEXT | NULL
+assay_cell_type: TEXT | NULL
+assay_subcellular_fraction: TEXT | NULL
+aidx: TEXT | NULL
+updated_on: TEXT | NULL
+confidence_score: TEXT | NULL
+updated_by: TEXT | NULL
+mc_target_accession: TEXT | NULL
+src_assay_id: TEXT | NULL
+ridx: TEXT | NULL
+assay_organism: TEXT | NULL
+curation_comment: TEXT | NULL
+src_id: TEXT | NULL
+bao_format: TEXT | NULL
+tid_fixed: TEXT | NULL
+variant_id: TEXT | NULL
+mc_target_name: TEXT | NULL
+curated_by: TEXT | NULL
+assay_tax_id: TEXT | NULL
+cell_id: TEXT | NULL
+assay_test_type: TEXT | NULL
+tissue_id: TEXT | NULL
+log_id: TEXT | NULL
+mc_target_type: TEXT | NULL
+assay_tissue: TEXT | NULL
+assay_category: TEXT | NULL
+assay_source: TEXT | NULL
+doc_id: TEXT | NULL
+assay_strain: TEXT | NULL
+relationship_type: TEXT | NULL
+activity_count: TEXT | NULL
+chembl_id: TEXT | NULL
+orig_description: TEXT | NULL
+mc_tax_id: TEXT | NULL
+assay_id: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.SQLITE_STAT1_23
+tbl: TEXT | NULL
+idx: TEXT | NULL
+stat: TEXT | NULL
+
+## EBI_CHEMBL.VERSION_29
+name: TEXT | NULL
+comments: TEXT | NULL
+creation_date: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_CLASS_28
+comp_class_id: TEXT | NULL
+protein_class_id: TEXT | NULL
+component_id: TEXT | NULL
+
+## EBI_CHEMBL.METABOLISM
+met_id: TEXT | NULL
+enzyme_name: TEXT | NULL
+pathway_key: TEXT | NULL
+enzyme_tid: TEXT | NULL
+drug_record_id: TEXT | NULL
+tax_id: TEXT | NULL
+met_comment: TEXT | NULL
+pathway_id: TEXT | NULL
+metabolite_record_id: TEXT | NULL
+substrate_record_id: TEXT | NULL
+organism: TEXT | NULL
+met_conversion: TEXT | NULL
+
+## EBI_CHEMBL.TISSUE_DICTIONARY_28
+pref_name: TEXT | NULL
+downgraded: TEXT | NULL
+uberon_id: TEXT | NULL
+chembl_id: TEXT | NULL
+bto_id: TEXT | NULL
+efo_id: TEXT | NULL
+caloha_id: TEXT | NULL
+tissue_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_RECORDS_30
+src_compound_id: TEXT | Identifier for the compound in the source database (e.g., pubchem SID)
+molregno: NUMBER | Foreign key to compounds table (compound structure)
+compound_key: TEXT | Key text identifying this compound in the scientific document
+cidx: TEXT | The Depositor Defined Compound Identifier.
+record_id: NUMBER | Unique ID for a compound/record
+compound_name: TEXT | Name of this compound recorded in the scientific document
+doc_id: NUMBER | Foreign key to documents table
+src_id: NUMBER | Foreign key to source table
+
+## EBI_CHEMBL.ASSAY_PARAMETERS
+standard_relation: TEXT | NULL
+standard_units: TEXT | NULL
+comments: TEXT | NULL
+text_value: TEXT | NULL
+value: TEXT | NULL
+assay_id: TEXT | NULL
+units: TEXT | NULL
+relation: TEXT | NULL
+standard_type: TEXT | NULL
+type: TEXT | NULL
+standard_text_value: TEXT | NULL
+assay_param_id: TEXT | NULL
+standard_value: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION_30
+hrac_class_id: NUMBER | Foreign key to hrac_classification table showing the classification for the compound.
+molregno: NUMBER | Foreign key to molecule_dictionary, showing the compound to which this classification applies.
+mol_hrac_id: NUMBER | Primary key
+
+## EBI_CHEMBL.RESEARCH_COMPANIES_23
+res_stem_id: TEXT | NULL
+company: TEXT | NULL
+co_stem_id: TEXT | NULL
+country: TEXT | NULL
+previous_company: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_CLASSIFICATION_28
+l3: TEXT | NULL
+l2: TEXT | NULL
+l1: TEXT | NULL
+class_type: TEXT | NULL
+assay_class_id: TEXT | NULL
+source: TEXT | NULL
+
+## EBI_CHEMBL.VARIANT_SEQUENCES_29
+organism: TEXT | NULL
+variant_id: TEXT | NULL
+version: TEXT | NULL
+mutation: TEXT | NULL
+tax_id: TEXT | NULL
+isoform: TEXT | NULL
+accession: TEXT | NULL
+sequence: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION_23
+molregno: TEXT | NULL
+mol_hrac_id: TEXT | NULL
+hrac_class_id: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_CLASSIFICATION_30
+pref_name: TEXT | Preferred/full name for this protein family.
+short_name: TEXT | Short/abbreviated name for this protein family (not necessarily unique).
+protein_class_id: NUMBER | Primary key. Unique identifier for each protein family classification.
+parent_id: NUMBER | Protein_class_id for the parent of this protein family.
+protein_class_desc: TEXT | Concatenated description of each classification for searching purposes etc.
+definition: TEXT | Definition of the protein family.
+class_level: NUMBER | Level of the class within the hierarchy (level 1 = top level classification)
+
+## EBI_CHEMBL.BIOTHERAPEUTICS_25
+description: TEXT | NULL
+helm_notation: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_RELATIONS
+tid: TEXT | NULL
+related_tid: TEXT | NULL
+relationship: TEXT | NULL
+targrel_id: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SUPP_29
+standard_value: TEXT | NULL
+units: TEXT | NULL
+relation: TEXT | NULL
+standard_relation: TEXT | NULL
+standard_units: TEXT | NULL
+as_id: TEXT | NULL
+rgid: TEXT | NULL
+standard_text_value: TEXT | NULL
+value: TEXT | NULL
+type: TEXT | NULL
+standard_type: TEXT | NULL
+smid: TEXT | NULL
+text_value: TEXT | NULL
+comments: TEXT | NULL
+
+## EBI_CHEMBL.VERSION_33
+creation_date: TEXT | NULL
+name: TEXT | NULL
+comments: TEXT | NULL
+
+## EBI_CHEMBL.CHEMBL_ID_LOOKUP_33
+entity_type: TEXT | NULL
+entity_id: TEXT | NULL
+status: TEXT | NULL
+chembl_id: TEXT | NULL
+last_active: TEXT | NULL
+
+## EBI_CHEMBL.BIOTHERAPEUTICS_29
+description: TEXT | NULL
+helm_notation: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.CELL_DICTIONARY_24
+cell_source_organism: TEXT | NULL
+cellosaurus_id: TEXT | NULL
+cl_lincs_id: TEXT | NULL
+cell_id: TEXT | NULL
+efo_id: TEXT | NULL
+cell_source_tax_id: TEXT | NULL
+cell_source_tissue: TEXT | NULL
+cell_description: TEXT | NULL
+chembl_id: TEXT | NULL
+clo_id: TEXT | NULL
+cell_name: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_RECORDS_25
+compound_name: TEXT | NULL
+cidx: TEXT | NULL
+compound_key: TEXT | NULL
+molregno: TEXT | NULL
+record_id: TEXT | NULL
+src_id: TEXT | NULL
+src_compound_id: TEXT | NULL
+doc_id: TEXT | NULL
+
+## EBI_CHEMBL.ASSAYS_33
+assay_strain: TEXT | NULL
+assay_cell_type: TEXT | NULL
+assay_tissue: TEXT | NULL
+assay_id: TEXT | NULL
+assay_subcellular_fraction: TEXT | NULL
+chembl_id: TEXT | NULL
+confidence_score: TEXT | NULL
+assay_test_type: TEXT | NULL
+src_assay_id: TEXT | NULL
+assay_category: TEXT | NULL
+assay_organism: TEXT | NULL
+assay_type: TEXT | NULL
+aidx: TEXT | NULL
+tid: TEXT | NULL
+variant_id: TEXT | NULL
+description: TEXT | NULL
+src_id: TEXT | NULL
+cell_id: TEXT | NULL
+curated_by: TEXT | NULL
+tissue_id: TEXT | NULL
+doc_id: TEXT | NULL
+bao_format: TEXT | NULL
+assay_tax_id: TEXT | NULL
+relationship_type: TEXT | NULL
+
+## EBI_CHEMBL.ACTION_TYPE
+parent_type: TEXT | NULL
+description: TEXT | NULL
+action_type: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION
+mol_frac_id: TEXT | NULL
+molregno: TEXT | NULL
+frac_class_id: TEXT | NULL
+
+## EBI_CHEMBL.TISSUE_DICTIONARY_33
+caloha_id: TEXT | NULL
+chembl_id: TEXT | NULL
+pref_name: TEXT | NULL
+bto_id: TEXT | NULL
+efo_id: TEXT | NULL
+uberon_id: TEXT | NULL
+tissue_id: TEXT | NULL
+
+## EBI_CHEMBL.BINDING_SITES
+site_id: TEXT | NULL
+tid: TEXT | NULL
+site_name: TEXT | NULL
+
+## EBI_CHEMBL.LIGAND_EFF
+sei: TEXT | NULL
+le: TEXT | NULL
+bei: TEXT | NULL
+activity_id: TEXT | NULL
+lle: TEXT | NULL
+
+## EBI_CHEMBL.IRAC_CLASSIFICATION
+level1: TEXT | NULL
+level3_description: TEXT | NULL
+irac_code: TEXT | NULL
+irac_class_id: TEXT | NULL
+level2: TEXT | NULL
+active_ingredient: TEXT | NULL
+level1_description: TEXT | NULL
+level4: TEXT | NULL
+level3: TEXT | NULL
+level2_description: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_SEQUENCES_23
+sequence_md5sum: TEXT | NULL
+tax_id: TEXT | NULL
+component_type: TEXT | NULL
+db_source: TEXT | NULL
+db_version: TEXT | NULL
+description: TEXT | NULL
+accession: TEXT | NULL
+organism: TEXT | NULL
+component_id: TEXT | NULL
+sequence: TEXT | NULL
+
+## EBI_CHEMBL.ASSAYS
+bao_format: TEXT | NULL
+relationship_type: TEXT | NULL
+curated_by: TEXT | NULL
+assay_type: TEXT | NULL
+assay_strain: TEXT | NULL
+variant_id: TEXT | NULL
+src_assay_id: TEXT | NULL
+assay_tissue: TEXT | NULL
+tid: TEXT | NULL
+confidence_score: TEXT | NULL
+assay_category: TEXT | NULL
+assay_subcellular_fraction: TEXT | NULL
+tissue_id: TEXT | NULL
+chembl_id: TEXT | NULL
+assay_test_type: TEXT | NULL
+assay_cell_type: TEXT | NULL
+doc_id: TEXT | NULL
+assay_id: TEXT | NULL
+assay_organism: TEXT | NULL
+assay_tax_id: TEXT | NULL
+description: TEXT | NULL
+aidx: TEXT | NULL
+cell_id: TEXT | NULL
+src_id: TEXT | NULL
+
+## EBI_CHEMBL.CURATION_LOOKUP
+description: TEXT | NULL
+curated_by: TEXT | NULL
+
+## EBI_CHEMBL.BINDING_SITES_33
+site_name: TEXT | NULL
+site_id: TEXT | NULL
+tid: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_RECORDS_27
+cidx: TEXT | NULL
+molregno: TEXT | NULL
+src_id: TEXT | NULL
+compound_name: TEXT | NULL
+compound_key: TEXT | NULL
+src_compound_id: TEXT | NULL
+doc_id: TEXT | NULL
+record_id: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SUPP_30
+smid: NUMBER | FK to SMID in ACTIVITY_SMID.
+value: FLOAT | Datapoint value as it appears in the original dataset.
+as_id: NUMBER | Unique ID for each record.
+standard_text_value: TEXT | Standardised form of the TEXT_VALUE
+standard_relation: TEXT | Standardised form of the RELATION
+standard_value: FLOAT | Standardised form of the VALUE
+comments: TEXT | A Comment.
+standard_units: TEXT | Standardised form of the UNITS
+text_value: TEXT | Non-numeric value for measurement as in original dataset
+type: TEXT | Type of end-point measurement: e.g. IC50, LD50, %inhibition etc, as it appears in the original dataset
+units: TEXT | Units of measurement as they appear in the original dataset
+rgid: NUMBER | Record Grouping ID, used to group together related data points in this table
+relation: TEXT | Symbol constraining the activity value (e.g. >, <, =), as it appears in the original dataset
+standard_type: TEXT | Standardised form of the TYPE
+
+## EBI_CHEMBL.COMPONENT_GO_23
+go_id: TEXT | NULL
+component_id: TEXT | NULL
+comp_go_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_DOMAINS_29
+compd_id: TEXT | NULL
+component_id: TEXT | NULL
+start_position: TEXT | NULL
+domain_id: TEXT | NULL
+end_position: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_PARAMETERS_28
+units: TEXT | NULL
+standard_value: TEXT | NULL
+assay_id: TEXT | NULL
+text_value: TEXT | NULL
+standard_units: TEXT | NULL
+relation: TEXT | NULL
+assay_param_id: TEXT | NULL
+comments: TEXT | NULL
+standard_type: TEXT | NULL
+standard_text_value: TEXT | NULL
+value: TEXT | NULL
+type: TEXT | NULL
+standard_relation: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_PROPERTIES_29
+comments: TEXT | NULL
+standard_text_value: TEXT | NULL
+ap_id: TEXT | NULL
+relation: TEXT | NULL
+activity_id: TEXT | NULL
+value: TEXT | NULL
+units: TEXT | NULL
+standard_type: TEXT | NULL
+standard_relation: TEXT | NULL
+standard_value: TEXT | NULL
+result_flag: TEXT | NULL
+standard_units: TEXT | NULL
+type: TEXT | NULL
+text_value: TEXT | NULL
+
+## EBI_CHEMBL.DEFINED_DAILY_DOSE_24
+ddd_comment: TEXT | NULL
+ddd_id: TEXT | NULL
+ddd_admr: TEXT | NULL
+ddd_value: TEXT | NULL
+ddd_units: TEXT | NULL
+atc_code: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_COMPONENTS_26
+tid: TEXT | NULL
+homologue: TEXT | NULL
+component_id: TEXT | NULL
+targcomp_id: TEXT | NULL
+
+## EBI_CHEMBL.DOCS_27
+issue: TEXT | NULL
+doc_type: TEXT | NULL
+abstract: TEXT | NULL
+first_page: TEXT | NULL
+pubmed_id: TEXT | NULL
+patent_id: TEXT | NULL
+journal: TEXT | NULL
+title: TEXT | NULL
+doc_id: TEXT | NULL
+volume: TEXT | NULL
+src_id: TEXT | NULL
+authors: TEXT | NULL
+doi: TEXT | NULL
+year: TEXT | NULL
+chembl_id: TEXT | NULL
+last_page: TEXT | NULL
+ridx: TEXT | NULL
+
+## EBI_CHEMBL.SQLITE_STAT1
+tbl: TEXT | NULL
+idx: TEXT | NULL
+stat: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_INDICATION_33
+record_id: TEXT | NULL
+drugind_id: TEXT | NULL
+max_phase_for_ind: TEXT | NULL
+molregno: TEXT | NULL
+mesh_heading: TEXT | NULL
+efo_id: TEXT | NULL
+efo_term: TEXT | NULL
+mesh_id: TEXT | NULL
+
+## EBI_CHEMBL.BIOASSAY_ONTOLOGY_33
+label: TEXT | NULL
+bao_id: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION_27
+mol_hrac_id: TEXT | NULL
+hrac_class_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION
+molregno: TEXT | NULL
+mol_hrac_id: TEXT | NULL
+hrac_class_id: TEXT | NULL
+
+## EBI_CHEMBL.DOCS_33
+volume: TEXT | NULL
+title: TEXT | NULL
+first_page: TEXT | NULL
+journal: TEXT | NULL
+abstract: TEXT | NULL
+issue: TEXT | NULL
+chembl_id: TEXT | NULL
+doc_type: TEXT | NULL
+ridx: TEXT | NULL
+chembl_release_id: TEXT | NULL
+doc_id: TEXT | NULL
+last_page: TEXT | NULL
+src_id: TEXT | NULL
+doi: TEXT | NULL
+pubmed_id: TEXT | NULL
+patent_id: TEXT | NULL
+year: TEXT | NULL
+authors: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION_27
+mol_irac_id: TEXT | NULL
+molregno: TEXT | NULL
+irac_class_id: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITIES_28
+uo_units: TEXT | NULL
+data_validity_comment: TEXT | NULL
+standard_flag: TEXT | NULL
+molregno: TEXT | NULL
+standard_value: TEXT | NULL
+standard_units: TEXT | NULL
+qudt_units: TEXT | NULL
+activity_comment: TEXT | NULL
+doc_id: TEXT | NULL
+text_value: TEXT | NULL
+bao_endpoint: TEXT | NULL
+standard_type: TEXT | NULL
+assay_id: TEXT | NULL
+standard_upper_value: TEXT | NULL
+standard_text_value: TEXT | NULL
+relation: TEXT | NULL
+value: TEXT | NULL
+type: TEXT | NULL
+potential_duplicate: TEXT | NULL
+activity_id: TEXT | NULL
+standard_relation: TEXT | NULL
+record_id: TEXT | NULL
+toid: TEXT | NULL
+pchembl_value: TEXT | NULL
+src_id: TEXT | NULL
+upper_value: TEXT | NULL
+units: TEXT | NULL
+
+## EBI_CHEMBL.METABOLISM_28
+drug_record_id: TEXT | NULL
+organism: TEXT | NULL
+pathway_key: TEXT | NULL
+met_conversion: TEXT | NULL
+substrate_record_id: TEXT | NULL
+met_id: TEXT | NULL
+met_comment: TEXT | NULL
+pathway_id: TEXT | NULL
+tax_id: TEXT | NULL
+enzyme_tid: TEXT | NULL
+metabolite_record_id: TEXT | NULL
+enzyme_name: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_RELATIONS_24
+related_tid: TEXT | NULL
+tid: TEXT | NULL
+relationship: TEXT | NULL
+targrel_id: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_SYNONYMS
+molregno: TEXT | NULL
+res_stem_id: TEXT | NULL
+syn_type: TEXT | NULL
+molsyn_id: TEXT | NULL
+synonyms: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_STRUCTURES_27
+standard_inchi: TEXT | NULL
+molfile: TEXT | NULL
+molregno: TEXT | NULL
+standard_inchi_key: TEXT | NULL
+canonical_smiles: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_PARAMETERS_23
+assay_param_id: TEXT | NULL
+parameter_type: TEXT | NULL
+parameter_value: TEXT | NULL
+assay_id: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_INDICATION_29
+efo_term: TEXT | NULL
+mesh_id: TEXT | NULL
+drugind_id: TEXT | NULL
+efo_id: TEXT | NULL
+molregno: TEXT | NULL
+max_phase_for_ind: TEXT | NULL
+mesh_heading: TEXT | NULL
+record_id: TEXT | NULL
+
+## EBI_CHEMBL.TISSUE_DICTIONARY_25
+efo_id: TEXT | NULL
+pref_name: TEXT | NULL
+caloha_id: TEXT | NULL
+bto_id: TEXT | NULL
+tissue_id: TEXT | NULL
+chembl_id: TEXT | NULL
+uberon_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_SEQUENCES_30
+organism: TEXT | Name of the organism the sequence comes from.
+sequence_md5sum: TEXT | MD5 checksum of the sequence.
+description: TEXT | Description/name for the molecular component, usually taken from the source sequence database.
+tax_id: NUMBER | NCBI tax ID for the sequence in the source database (i.e., species that the protein/nucleic acid sequence comes from).
+sequence: TEXT | A representative sequence for the molecular component, as given in the source sequence database (not necessarily the exact sequence used in the assay).
+accession: TEXT | Accession for the sequence in the source database from which it was taken (e.g., UniProt accession for proteins).
+component_type: TEXT | Type of molecular component represented (e.g., 'PROTEIN','DNA','RNA').
+component_id: NUMBER | Primary key. Unique identifier for the component.
+db_version: TEXT | The version of the source sequence database from which sequences/accession were last updated.
+db_source: TEXT | The name of the source sequence database from which sequences/accessions are taken. For UniProt proteins, this field indicates whether the sequence is from SWISS-PROT or TREMBL.
+
+## EBI_CHEMBL.ORGANISM_CLASS_33
+l3: TEXT | NULL
+oc_id: TEXT | NULL
+l2: TEXT | NULL
+tax_id: TEXT | NULL
+l1: TEXT | NULL
+
+## EBI_CHEMBL.CELL_DICTIONARY_25
+chembl_id: TEXT | NULL
+cell_id: TEXT | NULL
+cell_name: TEXT | NULL
+cell_source_tissue: TEXT | NULL
+cellosaurus_id: TEXT | NULL
+cell_source_organism: TEXT | NULL
+clo_id: TEXT | NULL
+cell_description: TEXT | NULL
+cl_lincs_id: TEXT | NULL
+efo_id: TEXT | NULL
+cell_source_tax_id: TEXT | NULL
+
+## EBI_CHEMBL.RESEARCH_COMPANIES_27
+co_stem_id: TEXT | NULL
+company: TEXT | NULL
+previous_company: TEXT | NULL
+res_stem_id: TEXT | NULL
+country: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_PROPERTIES_27
+mw_freebase: TEXT | NULL
+num_ro5_violations: TEXT | NULL
+hba_lipinski: TEXT | NULL
+hba: TEXT | NULL
+ro3_pass: TEXT | NULL
+heavy_atoms: TEXT | NULL
+hbd: TEXT | NULL
+aromatic_rings: TEXT | NULL
+mw_monoisotopic: TEXT | NULL
+hbd_lipinski: TEXT | NULL
+cx_logd: TEXT | NULL
+cx_logp: TEXT | NULL
+rtb: TEXT | NULL
+molregno: TEXT | NULL
+psa: TEXT | NULL
+full_molformula: TEXT | NULL
+qed_weighted: TEXT | NULL
+alogp: TEXT | NULL
+full_mwt: TEXT | NULL
+cx_most_apka: TEXT | NULL
+molecular_species: TEXT | NULL
+num_lipinski_ro5_violations: TEXT | NULL
+cx_most_bpka: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_PARAMETERS_25
+units: TEXT | NULL
+text_value: TEXT | NULL
+assay_id: TEXT | NULL
+standard_value: TEXT | NULL
+standard_text_value: TEXT | NULL
+standard_relation: TEXT | NULL
+assay_param_id: TEXT | NULL
+type: TEXT | NULL
+value: TEXT | NULL
+relation: TEXT | NULL
+standard_units: TEXT | NULL
+comments: TEXT | NULL
+standard_type: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_PROPERTIES_33
+units: TEXT | NULL
+standard_relation: TEXT | NULL
+standard_type: TEXT | NULL
+type: TEXT | NULL
+comments: TEXT | NULL
+standard_value: TEXT | NULL
+value: TEXT | NULL
+relation: TEXT | NULL
+result_flag: TEXT | NULL
+activity_id: TEXT | NULL
+text_value: TEXT | NULL
+standard_units: TEXT | NULL
+ap_id: TEXT | NULL
+standard_text_value: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITIES_23
+standard_type: TEXT | NULL
+standard_value: TEXT | NULL
+molregno: TEXT | NULL
+published_relation: TEXT | NULL
+published_value: TEXT | NULL
+published_type: TEXT | NULL
+assay_id: TEXT | NULL
+published_units: TEXT | NULL
+standard_flag: TEXT | NULL
+uo_units: TEXT | NULL
+activity_id: TEXT | NULL
+pchembl_value: TEXT | NULL
+activity_comment: TEXT | NULL
+standard_units: TEXT | NULL
+bao_endpoint: TEXT | NULL
+standard_relation: TEXT | NULL
+doc_id: TEXT | NULL
+data_validity_comment: TEXT | NULL
+potential_duplicate: TEXT | NULL
+qudt_units: TEXT | NULL
+record_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_GO_29
+component_id: TEXT | NULL
+go_id: TEXT | NULL
+comp_go_id: TEXT | NULL
+
+## EBI_CHEMBL.BIO_COMPONENT_SEQUENCES
+component_type: TEXT | NULL
+sequence: TEXT | NULL
+description: TEXT | NULL
+tax_id: TEXT | NULL
+sequence_md5sum: TEXT | NULL
+organism: TEXT | NULL
+component_id: TEXT | NULL
+
+## EBI_CHEMBL.DOCS_25
+first_page: TEXT | NULL
+volume: TEXT | NULL
+patent_id: TEXT | NULL
+issue: TEXT | NULL
+pubmed_id: TEXT | NULL
+doc_id: TEXT | NULL
+chembl_id: TEXT | NULL
+abstract: TEXT | NULL
+doc_type: TEXT | NULL
+authors: TEXT | NULL
+doi: TEXT | NULL
+last_page: TEXT | NULL
+ridx: TEXT | NULL
+title: TEXT | NULL
+src_id: TEXT | NULL
+year: TEXT | NULL
+journal: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_PROPERTIES_25
+text_value: TEXT | NULL
+standard_value: TEXT | NULL
+ap_id: TEXT | NULL
+relation: TEXT | NULL
+comments: TEXT | NULL
+standard_units: TEXT | NULL
+standard_text_value: TEXT | NULL
+result_flag: TEXT | NULL
+activity_id: TEXT | NULL
+units: TEXT | NULL
+value: TEXT | NULL
+standard_type: TEXT | NULL
+standard_relation: TEXT | NULL
+type: TEXT | NULL
+
+## EBI_CHEMBL.BIOASSAY_ONTOLOGY
+bao_id: TEXT | NULL
+label: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_DICTIONARY_25
+prodrug: TEXT | NULL
+max_phase: TEXT | NULL
+therapeutic_flag: TEXT | NULL
+chirality: TEXT | NULL
+polymer_flag: TEXT | NULL
+indication_class: TEXT | NULL
+withdrawn_flag: TEXT | NULL
+dosed_ingredient: TEXT | NULL
+usan_substem: TEXT | NULL
+withdrawn_country: TEXT | NULL
+structure_type: TEXT | NULL
+oral: TEXT | NULL
+molregno: TEXT | NULL
+pref_name: TEXT | NULL
+withdrawn_class: TEXT | NULL
+first_in_class: TEXT | NULL
+inorganic_flag: TEXT | NULL
+withdrawn_year: TEXT | NULL
+usan_stem: TEXT | NULL
+availability_type: TEXT | NULL
+usan_year: TEXT | NULL
+withdrawn_reason: TEXT | NULL
+first_approval: TEXT | NULL
+chembl_id: TEXT | NULL
+parenteral: TEXT | NULL
+molecule_type: TEXT | NULL
+topical: TEXT | NULL
+natural_product: TEXT | NULL
+black_box_warning: TEXT | NULL
+chebi_par_id: TEXT | NULL
+usan_stem_definition: TEXT | NULL
+
+## EBI_CHEMBL.VARIANT_SEQUENCES_23
+sequence: TEXT | NULL
+mutation: TEXT | NULL
+organism: TEXT | NULL
+version: TEXT | NULL
+isoform: TEXT | NULL
+variant_id: TEXT | NULL
+accession: TEXT | NULL
+
+## EBI_CHEMBL.BIOTHERAPEUTICS_24
+molregno: TEXT | NULL
+helm_notation: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.FORMULATIONS_28
+product_id: TEXT | NULL
+formulation_id: TEXT | NULL
+ingredient: TEXT | NULL
+strength: TEXT | NULL
+record_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_TYPE_27
+target_desc: TEXT | NULL
+target_type: TEXT | NULL
+parent_type: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_MECHANISM_29
+action_type: TEXT | NULL
+record_id: TEXT | NULL
+mechanism_comment: TEXT | NULL
+molregno: TEXT | NULL
+molecular_mechanism: TEXT | NULL
+variant_id: TEXT | NULL
+binding_site_comment: TEXT | NULL
+tid: TEXT | NULL
+mechanism_of_action: TEXT | NULL
+site_id: TEXT | NULL
+disease_efficacy: TEXT | NULL
+mec_id: TEXT | NULL
+selectivity_comment: TEXT | NULL
+direct_interaction: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_DICTIONARY
+indication_class: TEXT | NULL
+max_phase: TEXT | NULL
+usan_stem: TEXT | NULL
+parenteral: TEXT | NULL
+structure_type: TEXT | NULL
+chebi_par_id: TEXT | NULL
+black_box_warning: TEXT | NULL
+oral: TEXT | NULL
+pref_name: TEXT | NULL
+molecule_type: TEXT | NULL
+chirality: TEXT | NULL
+therapeutic_flag: TEXT | NULL
+usan_substem: TEXT | NULL
+prodrug: TEXT | NULL
+availability_type: TEXT | NULL
+usan_year: TEXT | NULL
+withdrawn_flag: TEXT | NULL
+first_approval: TEXT | NULL
+dosed_ingredient: TEXT | NULL
+inorganic_flag: TEXT | NULL
+natural_product: TEXT | NULL
+usan_stem_definition: TEXT | NULL
+topical: TEXT | NULL
+first_in_class: TEXT | NULL
+chemical_probe: TEXT | NULL
+chembl_id: TEXT | NULL
+polymer_flag: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.CHEMBL_ID_LOOKUP_26
+status: TEXT | NULL
+chembl_id: TEXT | NULL
+entity_type: TEXT | NULL
+entity_id: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_MECHANISM
+selectivity_comment: TEXT | NULL
+mechanism_of_action: TEXT | NULL
+binding_site_comment: TEXT | NULL
+molregno: TEXT | NULL
+disease_efficacy: TEXT | NULL
+site_id: TEXT | NULL
+record_id: TEXT | NULL
+direct_interaction: TEXT | NULL
+mec_id: TEXT | NULL
+mechanism_comment: TEXT | NULL
+variant_id: TEXT | NULL
+action_type: TEXT | NULL
+tid: TEXT | NULL
+molecular_mechanism: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_PARAMETERS_29
+text_value: TEXT | NULL
+standard_units: TEXT | NULL
+assay_param_id: TEXT | NULL
+relation: TEXT | NULL
+standard_value: TEXT | NULL
+comments: TEXT | NULL
+units: TEXT | NULL
+standard_relation: TEXT | NULL
+standard_type: TEXT | NULL
+value: TEXT | NULL
+type: TEXT | NULL
+assay_id: TEXT | NULL
+standard_text_value: TEXT | NULL
+
+## EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP_26
+confidence_score: TEXT | NULL
+description: TEXT | NULL
+target_mapping: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_SYNONYMS_23
+compsyn_id: TEXT | NULL
+component_synonym: TEXT | NULL
+component_id: TEXT | NULL
+syn_type: TEXT | NULL
+
+## EBI_CHEMBL.DATA_VALIDITY_LOOKUP_29
+data_validity_comment: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_PARAMETERS_26
+assay_param_id: TEXT | NULL
+type: TEXT | NULL
+relation: TEXT | NULL
+assay_id: TEXT | NULL
+comments: TEXT | NULL
+text_value: TEXT | NULL
+standard_value: TEXT | NULL
+value: TEXT | NULL
+standard_units: TEXT | NULL
+standard_text_value: TEXT | NULL
+units: TEXT | NULL
+standard_relation: TEXT | NULL
+standard_type: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_CLASSIFICATION_29
+l1: TEXT | NULL
+assay_class_id: TEXT | NULL
+class_type: TEXT | NULL
+source: TEXT | NULL
+l2: TEXT | NULL
+l3: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERT_SETS
+priority: TEXT | NULL
+alert_set_id: TEXT | NULL
+set_name: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION_23
+mol_irac_id: TEXT | NULL
+molregno: TEXT | NULL
+irac_class_id: TEXT | NULL
+
+## EBI_CHEMBL.PRODUCTS_28
+applicant_full_name: TEXT | NULL
+topical: TEXT | NULL
+black_box_warning: TEXT | NULL
+parenteral: TEXT | NULL
+nda_type: TEXT | NULL
+innovator_company: TEXT | NULL
+oral: TEXT | NULL
+trade_name: TEXT | NULL
+ad_type: TEXT | NULL
+dosage_form: TEXT | NULL
+route: TEXT | NULL
+product_id: TEXT | NULL
+approval_date: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERT_SETS_24
+set_name: TEXT | NULL
+alert_set_id: TEXT | NULL
+priority: TEXT | NULL
+
+## EBI_CHEMBL.DATA_VALIDITY_LOOKUP_25
+data_validity_comment: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION
+level5: TEXT | NULL
+mol_atc_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_SYNONYMS_30
+synonyms: TEXT | Synonym for the compound
+molregno: NUMBER | Foreign key to molecule_dictionary
+syn_type: TEXT | Type of name/synonym (e.g., TRADE_NAME, RESEARCH_CODE, USAN)
+res_stem_id: NUMBER | Foreign key to the research_stem table. Where a synonym is a research code, this links to further information about the company associated with that code.
+molsyn_id: NUMBER | Primary key.
+
+## EBI_CHEMBL.ACTIVITIES_29
+value: TEXT | NULL
+type: TEXT | NULL
+toid: TEXT | NULL
+data_validity_comment: TEXT | NULL
+relation: TEXT | NULL
+activity_id: TEXT | NULL
+assay_id: TEXT | NULL
+standard_units: TEXT | NULL
+upper_value: TEXT | NULL
+standard_flag: TEXT | NULL
+qudt_units: TEXT | NULL
+pchembl_value: TEXT | NULL
+doc_id: TEXT | NULL
+potential_duplicate: TEXT | NULL
+activity_comment: TEXT | NULL
+standard_upper_value: TEXT | NULL
+bao_endpoint: TEXT | NULL
+units: TEXT | NULL
+standard_value: TEXT | NULL
+uo_units: TEXT | NULL
+standard_text_value: TEXT | NULL
+text_value: TEXT | NULL
+src_id: TEXT | NULL
+molregno: TEXT | NULL
+standard_relation: TEXT | NULL
+standard_type: TEXT | NULL
+record_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_STRUCTURES_25
+standard_inchi_key: TEXT | NULL
+canonical_smiles: TEXT | NULL
+standard_inchi: TEXT | NULL
+molregno: TEXT | NULL
+molfile: TEXT | NULL
+
+## EBI_CHEMBL.HRAC_CLASSIFICATION_33
+active_ingredient: TEXT | NULL
+level1_description: TEXT | NULL
+level3: TEXT | NULL
+level2_description: TEXT | NULL
+hrac_class_id: TEXT | NULL
+level1: TEXT | NULL
+level2: TEXT | NULL
+hrac_code: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_DICTIONARY_28
+chirality: TEXT | NULL
+molregno: TEXT | NULL
+first_approval: TEXT | NULL
+polymer_flag: TEXT | NULL
+withdrawn_class: TEXT | NULL
+inorganic_flag: TEXT | NULL
+indication_class: TEXT | NULL
+withdrawn_flag: TEXT | NULL
+first_in_class: TEXT | NULL
+max_phase: TEXT | NULL
+dosed_ingredient: TEXT | NULL
+usan_year: TEXT | NULL
+usan_stem_definition: TEXT | NULL
+withdrawn_country: TEXT | NULL
+chebi_par_id: TEXT | NULL
+chembl_id: TEXT | NULL
+withdrawn_reason: TEXT | NULL
+availability_type: TEXT | NULL
+parenteral: TEXT | NULL
+black_box_warning: TEXT | NULL
+topical: TEXT | NULL
+pref_name: TEXT | NULL
+oral: TEXT | NULL
+usan_substem: TEXT | NULL
+therapeutic_flag: TEXT | NULL
+withdrawn_year: TEXT | NULL
+natural_product: TEXT | NULL
+molecule_type: TEXT | NULL
+usan_stem: TEXT | NULL
+prodrug: TEXT | NULL
+structure_type: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_TYPE_29
+assay_type: TEXT | NULL
+assay_desc: TEXT | NULL
+
+## EBI_CHEMBL.METABOLISM_REFS_24
+ref_type: TEXT | NULL
+ref_id: TEXT | NULL
+ref_url: TEXT | NULL
+metref_id: TEXT | NULL
+met_id: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_FAMILY_CLASSIFICATION_23
+protein_class_desc: TEXT | NULL
+l1: TEXT | NULL
+l5: TEXT | NULL
+l2: TEXT | NULL
+l8: TEXT | NULL
+l6: TEXT | NULL
+l3: TEXT | NULL
+protein_class_id: TEXT | NULL
+l7: TEXT | NULL
+l4: TEXT | NULL
+
+## EBI_CHEMBL.METABOLISM_25
+met_conversion: TEXT | NULL
+substrate_record_id: TEXT | NULL
+met_id: TEXT | NULL
+metabolite_record_id: TEXT | NULL
+organism: TEXT | NULL
+enzyme_name: TEXT | NULL
+enzyme_tid: TEXT | NULL
+drug_record_id: TEXT | NULL
+met_comment: TEXT | NULL
+pathway_key: TEXT | NULL
+tax_id: TEXT | NULL
+pathway_id: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION_33
+molregno: TEXT | NULL
+frac_class_id: TEXT | NULL
+mol_frac_id: TEXT | NULL
+
+## EBI_CHEMBL.PATENT_USE_CODES
+patent_use_code: TEXT | NULL
+definition: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_MECHANISM_28
+variant_id: TEXT | NULL
+selectivity_comment: TEXT | NULL
+molregno: TEXT | NULL
+mechanism_comment: TEXT | NULL
+disease_efficacy: TEXT | NULL
+binding_site_comment: TEXT | NULL
+action_type: TEXT | NULL
+site_id: TEXT | NULL
+mec_id: TEXT | NULL
+molecular_mechanism: TEXT | NULL
+mechanism_of_action: TEXT | NULL
+direct_interaction: TEXT | NULL
+tid: TEXT | NULL
+record_id: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_TYPE_28
+target_desc: TEXT | NULL
+target_type: TEXT | NULL
+parent_type: TEXT | NULL
+
+## EBI_CHEMBL.CHEMBL_ID_LOOKUP
+last_active: TEXT | NULL
+entity_type: TEXT | NULL
+status: TEXT | NULL
+entity_id: TEXT | NULL
+chembl_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_CLASS_33
+component_id: TEXT | NULL
+protein_class_id: TEXT | NULL
+comp_class_id: TEXT | NULL
+
+## EBI_CHEMBL.USAN_STEMS_23
+annotation: TEXT | NULL
+stem_class: TEXT | NULL
+subgroup: TEXT | NULL
+usan_stem_id: TEXT | NULL
+who_extra: TEXT | NULL
+stem: TEXT | NULL
+major_class: TEXT | NULL
+
+## EBI_CHEMBL.RESEARCH_COMPANIES_28
+res_stem_id: TEXT | NULL
+company: TEXT | NULL
+co_stem_id: TEXT | NULL
+country: TEXT | NULL
+previous_company: TEXT | NULL
+
+## EBI_CHEMBL.BIOTHERAPEUTICS
+helm_notation: TEXT | NULL
+molregno: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.PREDICTED_BINDING_DOMAINS_33
+prediction_method: TEXT | NULL
+activity_id: TEXT | NULL
+site_id: TEXT | NULL
+predbind_id: TEXT | NULL
+confidence: TEXT | NULL
+
+## EBI_CHEMBL.SITE_COMPONENTS_23
+sitecomp_id: TEXT | NULL
+component_id: TEXT | NULL
+site_residues: TEXT | NULL
+domain_id: TEXT | NULL
+site_id: TEXT | NULL
+
+## EBI_CHEMBL.BIOASSAY_ONTOLOGY_29
+bao_id: TEXT | NULL
+label: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_COMPONENTS_25
+tid: TEXT | NULL
+component_id: TEXT | NULL
+homologue: TEXT | NULL
+targcomp_id: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_INDICATION_23
+record_id: TEXT | NULL
+mesh_heading: TEXT | NULL
+mesh_id: TEXT | NULL
+efo_id: TEXT | NULL
+molregno: TEXT | NULL
+drugind_id: TEXT | NULL
+efo_term: TEXT | NULL
+max_phase_for_ind: TEXT | NULL
+
+## EBI_CHEMBL.DATA_VALIDITY_LOOKUP_28
+description: TEXT | NULL
+data_validity_comment: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION_26
+mol_hrac_id: TEXT | NULL
+hrac_class_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_TYPE
+target_desc: TEXT | NULL
+parent_type: TEXT | NULL
+target_type: TEXT | NULL
+
+## EBI_CHEMBL.PREDICTED_BINDING_DOMAINS_27
+predbind_id: TEXT | NULL
+prediction_method: TEXT | NULL
+confidence: TEXT | NULL
+activity_id: TEXT | NULL
+site_id: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_INDICATION_28
+mesh_id: TEXT | NULL
+record_id: TEXT | NULL
+molregno: TEXT | NULL
+max_phase_for_ind: TEXT | NULL
+drugind_id: TEXT | NULL
+mesh_heading: TEXT | NULL
+efo_term: TEXT | NULL
+efo_id: TEXT | NULL
+
+## EBI_CHEMBL.ORGANISM_CLASS_26
+l3: TEXT | NULL
+tax_id: TEXT | NULL
+oc_id: TEXT | NULL
+l1: TEXT | NULL
+l2: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION_24
+mol_frac_id: TEXT | NULL
+molregno: TEXT | NULL
+frac_class_id: TEXT | NULL
+
+## EBI_CHEMBL.CELL_DICTIONARY_30
+cell_description: TEXT | Longer description (where available) of the cell line.
+cell_id: NUMBER | Primary key. Unique identifier for each cell line in the target_dictionary.
+cell_source_tax_id: NUMBER | NCBI tax ID of the organism from which the cell line is derived.
+cellosaurus_id: TEXT | ID for the corresponding cell line in Cellosaurus Ontology
+cell_source_tissue: TEXT | Tissue from which the cell line is derived, where known.
+chembl_id: TEXT | ChEMBL identifier for the cell (used in web interface etc)
+cell_ontology_id: TEXT | ID for the corresponding cell type in the Cell Ontology
+cell_name: TEXT | Name of each cell line (as used in the target_dicitonary pref_name).
+efo_id: TEXT | ID for the corresponding cell line in Experimental Factory Ontology
+cl_lincs_id: TEXT | Cell ID used in LINCS (Library of Integrated Network-based Cellular Signatures)
+clo_id: TEXT | ID for the corresponding cell line in Cell Line Ontology
+cell_source_organism: TEXT | Name of organism from which the cell line is derived.
+
+## EBI_CHEMBL.RESEARCH_STEM_23
+res_stem_id: TEXT | NULL
+research_stem: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_PROPERTIES_27
+units: TEXT | NULL
+ap_id: TEXT | NULL
+standard_type: TEXT | NULL
+standard_value: TEXT | NULL
+value: TEXT | NULL
+relation: TEXT | NULL
+result_flag: TEXT | NULL
+standard_relation: TEXT | NULL
+standard_text_value: TEXT | NULL
+type: TEXT | NULL
+comments: TEXT | NULL
+standard_units: TEXT | NULL
+activity_id: TEXT | NULL
+text_value: TEXT | NULL
+
+## EBI_CHEMBL.PRODUCTS_25
+parenteral: TEXT | NULL
+nda_type: TEXT | NULL
+product_id: TEXT | NULL
+applicant_full_name: TEXT | NULL
+route: TEXT | NULL
+black_box_warning: TEXT | NULL
+innovator_company: TEXT | NULL
+dosage_form: TEXT | NULL
+ad_type: TEXT | NULL
+oral: TEXT | NULL
+trade_name: TEXT | NULL
+approval_date: TEXT | NULL
+topical: TEXT | NULL
+
+## EBI_CHEMBL.DOMAINS_28
+domain_description: TEXT | NULL
+domain_name: TEXT | NULL
+domain_type: TEXT | NULL
+source_domain_id: TEXT | NULL
+domain_id: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_DICTIONARY_29
+chirality: TEXT | NULL
+withdrawn_year: TEXT | NULL
+pref_name: TEXT | NULL
+usan_stem: TEXT | NULL
+withdrawn_country: TEXT | NULL
+polymer_flag: TEXT | NULL
+prodrug: TEXT | NULL
+usan_substem: TEXT | NULL
+first_in_class: TEXT | NULL
+usan_stem_definition: TEXT | NULL
+inorganic_flag: TEXT | NULL
+dosed_ingredient: TEXT | NULL
+usan_year: TEXT | NULL
+withdrawn_reason: TEXT | NULL
+topical: TEXT | NULL
+black_box_warning: TEXT | NULL
+availability_type: TEXT | NULL
+parenteral: TEXT | NULL
+withdrawn_class: TEXT | NULL
+structure_type: TEXT | NULL
+oral: TEXT | NULL
+chebi_par_id: TEXT | NULL
+molecule_type: TEXT | NULL
+molregno: TEXT | NULL
+indication_class: TEXT | NULL
+first_approval: TEXT | NULL
+therapeutic_flag: TEXT | NULL
+withdrawn_flag: TEXT | NULL
+natural_product: TEXT | NULL
+chembl_id: TEXT | NULL
+max_phase: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_CLASSIFICATION_27
+protein_class_desc: TEXT | NULL
+class_level: TEXT | NULL
+definition: TEXT | NULL
+short_name: TEXT | NULL
+pref_name: TEXT | NULL
+parent_id: TEXT | NULL
+protein_class_id: TEXT | NULL
+
+## EBI_CHEMBL.ASSAYS_28
+assay_category: TEXT | NULL
+description: TEXT | NULL
+assay_type: TEXT | NULL
+relationship_type: TEXT | NULL
+tid: TEXT | NULL
+variant_id: TEXT | NULL
+doc_id: TEXT | NULL
+assay_organism: TEXT | NULL
+src_assay_id: TEXT | NULL
+curated_by: TEXT | NULL
+confidence_score: TEXT | NULL
+assay_tissue: TEXT | NULL
+assay_id: TEXT | NULL
+tissue_id: TEXT | NULL
+assay_strain: TEXT | NULL
+src_id: TEXT | NULL
+assay_cell_type: TEXT | NULL
+assay_tax_id: TEXT | NULL
+assay_test_type: TEXT | NULL
+aidx: TEXT | NULL
+cell_id: TEXT | NULL
+chembl_id: TEXT | NULL
+bao_format: TEXT | NULL
+assay_subcellular_fraction: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_STDS_LOOKUP
+std_act_id: TEXT | NULL
+standard_units: TEXT | NULL
+definition: TEXT | NULL
+normal_range_max: TEXT | NULL
+standard_type: TEXT | NULL
+normal_range_min: TEXT | NULL
+
+## EBI_CHEMBL.RELATIONSHIP_TYPE_33
+relationship_desc: TEXT | NULL
+relationship_type: TEXT | NULL
+
+## EBI_CHEMBL.IRAC_CLASSIFICATION_33
+level1: TEXT | NULL
+irac_code: TEXT | NULL
+level4: TEXT | NULL
+level1_description: TEXT | NULL
+active_ingredient: TEXT | NULL
+level3_description: TEXT | NULL
+level2: TEXT | NULL
+irac_class_id: TEXT | NULL
+level2_description: TEXT | NULL
+level3: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_RECORDS_28
+doc_id: TEXT | NULL
+compound_name: TEXT | NULL
+compound_key: TEXT | NULL
+record_id: TEXT | NULL
+src_compound_id: TEXT | NULL
+molregno: TEXT | NULL
+src_id: TEXT | NULL
+cidx: TEXT | NULL
+
+## EBI_CHEMBL.CHEMBL_ID_LOOKUP_25
+chembl_id: TEXT | NULL
+status: TEXT | NULL
+entity_type: TEXT | NULL
+entity_id: TEXT | NULL
+
+## EBI_CHEMBL.RELATIONSHIP_TYPE_29
+relationship_desc: TEXT | NULL
+relationship_type: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_FAMILY_CLASSIFICATION_28
+protein_class_desc: TEXT | NULL
+l4: TEXT | NULL
+l5: TEXT | NULL
+l7: TEXT | NULL
+l2: TEXT | NULL
+l8: TEXT | NULL
+l3: TEXT | NULL
+l6: TEXT | NULL
+protein_class_id: TEXT | NULL
+l1: TEXT | NULL
+
+## EBI_CHEMBL.ASSAYS_27
+updated_by: TEXT | NULL
+curation_comment: TEXT | NULL
+bao_format: TEXT | NULL
+confidence_score: TEXT | NULL
+updated_on: TEXT | NULL
+mc_organism: TEXT | NULL
+mc_tax_id: TEXT | NULL
+orig_description: TEXT | NULL
+log_id: TEXT | NULL
+tissue_id: TEXT | NULL
+activity_count: TEXT | NULL
+assay_tissue: TEXT | NULL
+chembl_id: TEXT | NULL
+src_assay_id: TEXT | NULL
+mc_target_name: TEXT | NULL
+assay_organism: TEXT | NULL
+assay_test_type: TEXT | NULL
+assay_strain: TEXT | NULL
+relationship_type: TEXT | NULL
+variant_id: TEXT | NULL
+cell_id: TEXT | NULL
+tid: TEXT | NULL
+curated_by: TEXT | NULL
+src_id: TEXT | NULL
+tid_fixed: TEXT | NULL
+assay_type: TEXT | NULL
+mc_target_accession: TEXT | NULL
+assay_source: TEXT | NULL
+aidx: TEXT | NULL
+assay_id: TEXT | NULL
+description: TEXT | NULL
+mc_target_type: TEXT | NULL
+assay_tax_id: TEXT | NULL
+assay_category: TEXT | NULL
+doc_id: TEXT | NULL
+job_id: TEXT | NULL
+assay_cell_type: TEXT | NULL
+assay_subcellular_fraction: TEXT | NULL
+ridx: TEXT | NULL
+
+## EBI_CHEMBL.ACTION_TYPE_28
+action_type: TEXT | NULL
+description: TEXT | NULL
+parent_type: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_TYPE_27
+assay_desc: TEXT | NULL
+assay_type: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION_30
+level5: TEXT | ATC code (foreign key to atc_classification table)
+molregno: NUMBER | Drug to which the ATC code applies (foreign key to molecule_dictionary table)
+mol_atc_id: NUMBER | Primary key
+
+## EBI_CHEMBL.TARGET_RELATIONS_33
+targrel_id: TEXT | NULL
+relationship: TEXT | NULL
+tid: TEXT | NULL
+related_tid: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERTS_30
+alert_name: TEXT | A name for the structural alert
+alert_set_id: NUMBER | Foreign key to structural_alert_sets table indicating which set this particular alert comes from
+smarts: TEXT | SMARTS defining the structural feature that is considered to be an alert
+alert_id: NUMBER | Primary key. Unique identifier for the structural alert
+
+## EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS
+component_id: TEXT | NULL
+molregno: TEXT | NULL
+biocomp_id: TEXT | NULL
+
+## EBI_CHEMBL.SOURCE_26
+src_description: TEXT | NULL
+src_short_name: TEXT | NULL
+src_id: TEXT | NULL
+
+## EBI_CHEMBL.FRAC_CLASSIFICATION_29
+active_ingredient: TEXT | NULL
+frac_class_id: TEXT | NULL
+frac_code: TEXT | NULL
+level1_description: TEXT | NULL
+level2_description: TEXT | NULL
+level4_description: TEXT | NULL
+level5: TEXT | NULL
+level4: TEXT | NULL
+level3: TEXT | NULL
+level3_description: TEXT | NULL
+level1: TEXT | NULL
+level2: TEXT | NULL
+
+## EBI_CHEMBL.GO_CLASSIFICATION_26
+path: TEXT | NULL
+aspect: TEXT | NULL
+class_level: TEXT | NULL
+parent_go_id: TEXT | NULL
+go_id: TEXT | NULL
+pref_name: TEXT | NULL
+
+## EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS_27
+molregno: TEXT | NULL
+biocomp_id: TEXT | NULL
+component_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS_25
+molregno: TEXT | NULL
+alert_id: TEXT | NULL
+cpd_str_alert_id: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_SYNONYMS_23
+syn_type: TEXT | NULL
+molsyn_id: TEXT | NULL
+synonyms: TEXT | NULL
+molregno: TEXT | NULL
+res_stem_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_STRUCTURES_28
+canonical_smiles: TEXT | NULL
+standard_inchi: TEXT | NULL
+standard_inchi_key: TEXT | NULL
+molfile: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.PREDICTED_BINDING_DOMAINS_28
+confidence: TEXT | NULL
+site_id: TEXT | NULL
+predbind_id: TEXT | NULL
+activity_id: TEXT | NULL
+prediction_method: TEXT | NULL
+
+## EBI_CHEMBL.PRODUCT_PATENTS_29
+patent_no: TEXT | NULL
+product_id: TEXT | NULL
+delist_flag: TEXT | NULL
+submission_date: TEXT | NULL
+drug_substance_flag: TEXT | NULL
+patent_expire_date: TEXT | NULL
+patent_use_code: TEXT | NULL
+drug_product_flag: TEXT | NULL
+prod_pat_id: TEXT | NULL
+
+## EBI_CHEMBL.PATENT_USE_CODES_30
+patent_use_code: TEXT | Primary key. Patent use code from FDA Orange Book
+definition: TEXT | Definition for the patent use code, from FDA Orange Book.
+
+## EBI_CHEMBL.RESEARCH_STEM_29
+res_stem_id: TEXT | NULL
+research_stem: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS_33
+cpd_str_alert_id: TEXT | NULL
+alert_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.SOURCE_25
+src_id: TEXT | NULL
+src_short_name: TEXT | NULL
+src_description: TEXT | NULL
+
+## EBI_CHEMBL.CELL_DICTIONARY_27
+cell_source_organism: TEXT | NULL
+cell_ontology_id: TEXT | NULL
+cl_lincs_id: TEXT | NULL
+cell_id: TEXT | NULL
+chembl_id: TEXT | NULL
+cell_description: TEXT | NULL
+cell_name: TEXT | NULL
+clo_id: TEXT | NULL
+efo_id: TEXT | NULL
+cell_source_tax_id: TEXT | NULL
+cellosaurus_id: TEXT | NULL
+cell_source_tissue: TEXT | NULL
+
+## EBI_CHEMBL.IRAC_CLASSIFICATION_28
+level3: TEXT | NULL
+level2: TEXT | NULL
+level2_description: TEXT | NULL
+irac_code: TEXT | NULL
+level1_description: TEXT | NULL
+irac_class_id: TEXT | NULL
+level4: TEXT | NULL
+active_ingredient: TEXT | NULL
+level3_description: TEXT | NULL
+level1: TEXT | NULL
+
+## EBI_CHEMBL.PREDICTED_BINDING_DOMAINS
+confidence: TEXT | NULL
+site_id: TEXT | NULL
+activity_id: TEXT | NULL
+predbind_id: TEXT | NULL
+prediction_method: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_TYPE_25
+assay_type: TEXT | NULL
+assay_desc: TEXT | NULL
+
+## EBI_CHEMBL.CURATION_LOOKUP_29
+curated_by: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP_28
+description: TEXT | NULL
+target_mapping: TEXT | NULL
+confidence_score: TEXT | NULL
+
+## EBI_CHEMBL.DEFINED_DAILY_DOSE_30
+atc_code: TEXT | ATC code for the compound (foreign key to ATC_CLASSIFICATION table)
+ddd_admr: TEXT | Administration route for dose
+ddd_value: FLOAT | Value of defined daily dose
+ddd_id: NUMBER | Internal primary key
+ddd_comment: TEXT | Comment
+ddd_units: TEXT | Units of defined daily dose
+
+## EBI_CHEMBL.ACTIVITY_SUPP_27
+text_value: TEXT | NULL
+units: TEXT | NULL
+smid: TEXT | NULL
+relation: TEXT | NULL
+type: TEXT | NULL
+as_id: TEXT | NULL
+value: TEXT | NULL
+standard_relation: TEXT | NULL
+rgid: TEXT | NULL
+standard_type: TEXT | NULL
+standard_text_value: TEXT | NULL
+standard_value: TEXT | NULL
+comments: TEXT | NULL
+standard_units: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_DICTIONARY_30
+tax_id: NUMBER | NCBI taxonomy id of target
+chembl_id: TEXT | ChEMBL identifier for this target (for use on web interface etc)
+tid: NUMBER | Unique ID for the target
+species_group_flag: NUMBER | Flag to indicate whether the target represents a group of species, rather than an individual species (e.g., 'Bacterial DHFR'). Where set to 1, indicates that any associated target components will be a representative, rather than a comprehensive set.
+pref_name: TEXT | Preferred target name: manually curated
+organism: TEXT | Source organism of molecuar target or tissue, or the target organism if compound activity is reported in an organism rather than a protein or tissue
+target_type: TEXT | Describes whether target is a protein, an organism, a tissue etc. Foreign key to TARGET_TYPE table.
+
+## EBI_CHEMBL.VERSION
+creation_date: TEXT | NULL
+name: TEXT | NULL
+comments: TEXT | NULL
+
+## EBI_CHEMBL.PATENT_USE_CODES_28
+patent_use_code: TEXT | NULL
+definition: TEXT | NULL
+
+## EBI_CHEMBL.BIOASSAY_ONTOLOGY_23
+label: TEXT | NULL
+bao_id: TEXT | NULL
+
+## EBI_CHEMBL.BINDING_SITES_23
+site_id: TEXT | NULL
+tid: TEXT | NULL
+site_name: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_SYNONYMS_29
+molregno: TEXT | NULL
+res_stem_id: TEXT | NULL
+syn_type: TEXT | NULL
+synonyms: TEXT | NULL
+molsyn_id: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_INDICATION_30
+efo_term: TEXT | Experimental Factor Ontology term for the EFO ID
+max_phase_for_ind: NUMBER | The maximum phase of development that the drug is known to have reached for this particular indication
+record_id: NUMBER | Foreign key to compound_records table. Links to the drug record to which this indication applies
+molregno: NUMBER | Molregno corresponding to the record_id in the compound_records table
+mesh_id: TEXT | Medical Subject Headings (MeSH) disease identifier corresponding to the indication
+drugind_id: NUMBER | Primary key
+mesh_heading: TEXT | Medical Subject Heading term for the MeSH disease ID
+efo_id: TEXT | Experimental Factor Ontology (EFO) disease identifier corresponding to the indication
+
+## EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION_33
+mol_irac_id: TEXT | NULL
+irac_class_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SUPP_24
+units: TEXT | NULL
+value: TEXT | NULL
+as_id: TEXT | NULL
+standard_value: TEXT | NULL
+type: TEXT | NULL
+relation: TEXT | NULL
+standard_text_value: TEXT | NULL
+text_value: TEXT | NULL
+standard_units: TEXT | NULL
+rgid: TEXT | NULL
+standard_type: TEXT | NULL
+smid: TEXT | NULL
+comments: TEXT | NULL
+standard_relation: TEXT | NULL
+
+## EBI_CHEMBL.VARIANT_SEQUENCES_26
+variant_id: TEXT | NULL
+accession: TEXT | NULL
+tax_id: TEXT | NULL
+version: TEXT | NULL
+organism: TEXT | NULL
+isoform: TEXT | NULL
+mutation: TEXT | NULL
+sequence: TEXT | NULL
+
+## EBI_CHEMBL.BIO_COMPONENT_SEQUENCES_28
+sequence: TEXT | NULL
+organism: TEXT | NULL
+component_type: TEXT | NULL
+description: TEXT | NULL
+component_id: TEXT | NULL
+sequence_md5sum: TEXT | NULL
+tax_id: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERT_SETS_30
+alert_set_id: NUMBER | Unique ID for the structural alert set
+set_name: TEXT | Name (or origin) of the structural alert set
+priority: NUMBER | Priority assigned to the structural alert set for display on the ChEMBL interface (priorities >=4 are shown by default).
+
+## EBI_CHEMBL.PROTEIN_CLASSIFICATION
+protein_class_desc: TEXT | NULL
+protein_class_id: TEXT | NULL
+parent_id: TEXT | NULL
+definition: TEXT | NULL
+pref_name: TEXT | NULL
+short_name: TEXT | NULL
+class_level: TEXT | NULL
+
+## EBI_CHEMBL.VERSION_28
+comments: TEXT | NULL
+creation_date: TEXT | NULL
+name: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS_25
+protclasssyn_id: TEXT | NULL
+protein_class_id: TEXT | NULL
+protein_class_synonym: TEXT | NULL
+syn_type: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_SYNONYMS_33
+compsyn_id: TEXT | NULL
+component_synonym: TEXT | NULL
+component_id: TEXT | NULL
+syn_type: TEXT | NULL
+
+## EBI_CHEMBL.MECHANISM_REFS_28
+mec_id: TEXT | NULL
+ref_id: TEXT | NULL
+mecref_id: TEXT | NULL
+ref_url: TEXT | NULL
+ref_type: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERTS_24
+smarts: TEXT | NULL
+alert_set_id: TEXT | NULL
+alert_name: TEXT | NULL
+alert_id: TEXT | NULL
+
+## EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP_23
+target_mapping: TEXT | NULL
+description: TEXT | NULL
+confidence_score: TEXT | NULL
+
+## EBI_CHEMBL.PREDICTED_BINDING_DOMAINS_29
+site_id: TEXT | NULL
+predbind_id: TEXT | NULL
+confidence: TEXT | NULL
+prediction_method: TEXT | NULL
+activity_id: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_STDS_LOOKUP_23
+normal_range_min: TEXT | NULL
+standard_type: TEXT | NULL
+normal_range_max: TEXT | NULL
+definition: TEXT | NULL
+standard_units: TEXT | NULL
+std_act_id: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS_28
+syn_type: TEXT | NULL
+protclasssyn_id: TEXT | NULL
+protein_class_synonym: TEXT | NULL
+protein_class_id: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_CLASSIFICATION_27
+l2: TEXT | NULL
+assay_class_id: TEXT | NULL
+source: TEXT | NULL
+bao_id: TEXT | NULL
+l1: TEXT | NULL
+l3: TEXT | NULL
+class_type: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERT_SETS_26
+set_name: TEXT | NULL
+priority: TEXT | NULL
+alert_set_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_GO_30
+component_id: NUMBER | Foreign key to COMPONENT_SEQUENCES table. The protein component this GO term applies to
+go_id: TEXT | Foreign key to the GO_CLASSIFICATION table. The GO term that this protein is mapped to
+comp_go_id: NUMBER | Primary key
+
+## EBI_CHEMBL.ACTION_TYPE_33
+parent_type: TEXT | NULL
+description: TEXT | NULL
+action_type: TEXT | NULL
+
+## EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP_30
+target_mapping: TEXT | Short description of the target types assigned with each score
+description: TEXT | Description of the target types assigned with each score
+confidence_score: NUMBER | 0-9 score showing level of confidence in assignment of the precise molecular target of the assay
+
+## EBI_CHEMBL.PRODUCT_PATENTS
+delist_flag: TEXT | NULL
+drug_substance_flag: TEXT | NULL
+product_id: TEXT | NULL
+patent_use_code: TEXT | NULL
+drug_product_flag: TEXT | NULL
+patent_no: TEXT | NULL
+prod_pat_id: TEXT | NULL
+patent_expire_date: TEXT | NULL
+submission_date: TEXT | NULL
+
+## EBI_CHEMBL.CELL_DICTIONARY_26
+cellosaurus_id: TEXT | NULL
+efo_id: TEXT | NULL
+cell_ontology_id: TEXT | NULL
+cell_description: TEXT | NULL
+cell_source_organism: TEXT | NULL
+cell_name: TEXT | NULL
+cell_source_tissue: TEXT | NULL
+chembl_id: TEXT | NULL
+cell_source_tax_id: TEXT | NULL
+cl_lincs_id: TEXT | NULL
+clo_id: TEXT | NULL
+cell_id: TEXT | NULL
+
+## EBI_CHEMBL.DEFINED_DAILY_DOSE_26
+atc_code: TEXT | NULL
+ddd_id: TEXT | NULL
+ddd_comment: TEXT | NULL
+ddd_admr: TEXT | NULL
+ddd_units: TEXT | NULL
+ddd_value: TEXT | NULL
+
+## EBI_CHEMBL.LIGAND_EFF_23
+bei: TEXT | NULL
+lle: TEXT | NULL
+le: TEXT | NULL
+sei: TEXT | NULL
+activity_id: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_SYNONYMS_27
+synonyms: TEXT | NULL
+res_stem_id: TEXT | NULL
+molregno: TEXT | NULL
+molsyn_id: TEXT | NULL
+syn_type: TEXT | NULL
+
+## EBI_CHEMBL.PREDICTED_BINDING_DOMAINS_24
+activity_id: TEXT | NULL
+predbind_id: TEXT | NULL
+prediction_method: TEXT | NULL
+confidence: TEXT | NULL
+site_id: TEXT | NULL
+
+## EBI_CHEMBL.USAN_STEMS_28
+major_class: TEXT | NULL
+subgroup: TEXT | NULL
+who_extra: TEXT | NULL
+stem: TEXT | NULL
+stem_class: TEXT | NULL
+usan_stem_id: TEXT | NULL
+annotation: TEXT | NULL
+
+## EBI_CHEMBL.TISSUE_DICTIONARY_30
+uberon_id: TEXT | Uberon ontology identifier for this tissue.
+bto_id: TEXT | BRENDA Tissue Ontology identifier for the tissue.
+chembl_id: TEXT | ChEMBL identifier for this tissue (for use on web interface etc)
+efo_id: TEXT | Experimental Factor Ontology identifier for the tissue.
+pref_name: TEXT | Name for the tissue (in most cases Uberon name).
+caloha_id: TEXT | Swiss Institute for Bioinformatics CALOHA Ontology identifier for the tissue.
+tissue_id: NUMBER | Primary key, numeric ID for each tissue.
+
+## EBI_CHEMBL.MECHANISM_REFS_24
+ref_id: TEXT | NULL
+mecref_id: TEXT | NULL
+mec_id: TEXT | NULL
+ref_type: TEXT | NULL
+ref_url: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_DICTIONARY_27
+target_type: TEXT | NULL
+organism: TEXT | NULL
+tid: TEXT | NULL
+species_group_flag: TEXT | NULL
+pref_name: TEXT | NULL
+tax_id: TEXT | NULL
+chembl_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS_28
+alert_id: TEXT | NULL
+molregno: TEXT | NULL
+cpd_str_alert_id: TEXT | NULL
+
+## EBI_CHEMBL.IRAC_CLASSIFICATION_29
+level2_description: TEXT | NULL
+active_ingredient: TEXT | NULL
+irac_code: TEXT | NULL
+level2: TEXT | NULL
+level3_description: TEXT | NULL
+level3: TEXT | NULL
+level1_description: TEXT | NULL
+irac_class_id: TEXT | NULL
+level4: TEXT | NULL
+level1: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SMID
+smid: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_PROPERTIES_26
+mw_monoisotopic: TEXT | NULL
+cx_most_apka: TEXT | NULL
+molregno: TEXT | NULL
+num_lipinski_ro5_violations: TEXT | NULL
+full_mwt: TEXT | NULL
+hba_lipinski: TEXT | NULL
+molecular_species: TEXT | NULL
+heavy_atoms: TEXT | NULL
+hba: TEXT | NULL
+cx_logd: TEXT | NULL
+alogp: TEXT | NULL
+cx_logp: TEXT | NULL
+mw_freebase: TEXT | NULL
+psa: TEXT | NULL
+num_ro5_violations: TEXT | NULL
+full_molformula: TEXT | NULL
+rtb: TEXT | NULL
+hbd: TEXT | NULL
+hbd_lipinski: TEXT | NULL
+ro3_pass: TEXT | NULL
+qed_weighted: TEXT | NULL
+aromatic_rings: TEXT | NULL
+cx_most_bpka: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SUPP_MAP_30
+smid: NUMBER | FK to SMID in ACTIVITY_SMID.
+activity_id: NUMBER | FK to ACTIVITY_ID in ACTIVITIES table.
+actsm_id: NUMBER | Primary key
+
+## EBI_CHEMBL.HRAC_CLASSIFICATION_30
+level2: TEXT | Indicates a chemical family within a particular HRAC group (number not assigned by HRAC)
+level3: TEXT | A unique code assigned to each ingredient (based on the level 1 and 2 HRAC classification, but not assigned by HRAC)
+level1_description: TEXT | Description of mechanism of action provided by HRAC
+active_ingredient: TEXT | Name of active ingredient (herbicide) classified by HRAC
+level1: TEXT | HRAC group code - denoting mechanism of action of herbicide
+hrac_class_id: NUMBER | Unique numeric primary key for each level3 code
+hrac_code: TEXT | The official HRAC classification code for the ingredient
+level2_description: TEXT | Description of chemical family provided by HRAC
+
+## EBI_CHEMBL.DOCS_23
+patent_id: TEXT | NULL
+chembl_id: TEXT | NULL
+year: TEXT | NULL
+volume: TEXT | NULL
+doc_id: TEXT | NULL
+title: TEXT | NULL
+authors: TEXT | NULL
+pubmed_id: TEXT | NULL
+issue: TEXT | NULL
+abstract: TEXT | NULL
+journal: TEXT | NULL
+first_page: TEXT | NULL
+doc_type: TEXT | NULL
+doi: TEXT | NULL
+last_page: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_PROPERTIES_30
+molecular_species: TEXT | Indicates whether the compound is an acid/base/neutral
+ro3_pass: TEXT | Indicates whether the compound passes the rule-of-three (mw < 300, logP < 3 etc)
+psa: FLOAT | Polar surface area
+hba_lipinski: NUMBER | Number of hydrogen bond acceptors calculated according to Lipinski's original rules (i.e., N + O count))
+heavy_atoms: NUMBER | Number of heavy (non-hydrogen) atoms
+num_lipinski_ro5_violations: NUMBER | Number of violations of Lipinski's rule of five using HBA_LIPINSKI and HBD_LIPINSKI counts
+full_mwt: FLOAT | Molecular weight of the full compound including any salts
+hbd: NUMBER | Number hydrogen bond donors
+cx_most_apka: FLOAT | The most acidic pKa calculated using ChemAxon v17.29.0
+cx_logp: FLOAT | The calculated octanol/water partition coefficient using ChemAxon v17.29.0
+alogp: FLOAT | Calculated ALogP
+num_ro5_violations: NUMBER | Number of violations of Lipinski's rule-of-five, using HBA and HBD definitions
+full_molformula: TEXT | Molecular formula for the full compound (including any salt)
+rtb: NUMBER | Number rotatable bonds
+hbd_lipinski: NUMBER | Number of hydrogen bond donors calculated according to Lipinski's original rules (i.e., NH + OH count)
+cx_most_bpka: FLOAT | The most basic pKa calculated using ChemAxon v17.29.0
+aromatic_rings: NUMBER | Number of aromatic rings
+mw_freebase: FLOAT | Molecular weight of parent compound
+qed_weighted: FLOAT | Weighted quantitative estimate of drug likeness (as defined by Bickerton et al., Nature Chem 2012)
+hba: NUMBER | Number hydrogen bond acceptors
+mw_monoisotopic: FLOAT | Monoisotopic parent molecular weight
+cx_logd: FLOAT | The calculated octanol/water distribution coefficient at pH7.4 using ChemAxon v17.29.0
+molregno: NUMBER | Foreign key to compounds table (compound structure)
+
+## EBI_CHEMBL.ATC_CLASSIFICATION_29
+level1: TEXT | NULL
+level4_description: TEXT | NULL
+level1_description: TEXT | NULL
+level5: TEXT | NULL
+level3: TEXT | NULL
+level3_description: TEXT | NULL
+level2: TEXT | NULL
+who_name: TEXT | NULL
+level4: TEXT | NULL
+level2_description: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION_29
+mol_irac_id: TEXT | NULL
+molregno: TEXT | NULL
+irac_class_id: TEXT | NULL
+
+## EBI_CHEMBL.SOURCE_30
+src_id: NUMBER | Identifier for each source (used in compound_records and assays tables)
+src_short_name: TEXT | A short name for each data source, for display purposes
+src_description: TEXT | Description of the data source
+
+## EBI_CHEMBL.BIOASSAY_ONTOLOGY_28
+bao_id: TEXT | NULL
+label: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SUPP_MAP_24
+activity_id: TEXT | NULL
+smid: TEXT | NULL
+
+## EBI_CHEMBL.SOURCE_27
+src_description: TEXT | NULL
+src_id: TEXT | NULL
+src_short_name: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_DOMAINS
+component_id: TEXT | NULL
+end_position: TEXT | NULL
+compd_id: TEXT | NULL
+domain_id: TEXT | NULL
+start_position: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_DOMAINS_26
+start_position: TEXT | NULL
+end_position: TEXT | NULL
+domain_id: TEXT | NULL
+component_id: TEXT | NULL
+compd_id: TEXT | NULL
+
+## EBI_CHEMBL.FRAC_CLASSIFICATION_25
+level5: TEXT | NULL
+frac_class_id: TEXT | NULL
+active_ingredient: TEXT | NULL
+level3_description: TEXT | NULL
+level2: TEXT | NULL
+level2_description: TEXT | NULL
+level4: TEXT | NULL
+level1: TEXT | NULL
+level3: TEXT | NULL
+level1_description: TEXT | NULL
+level4_description: TEXT | NULL
+frac_code: TEXT | NULL
+
+## EBI_CHEMBL.USAN_STEMS_33
+major_class: TEXT | NULL
+stem_class: TEXT | NULL
+usan_stem_id: TEXT | NULL
+annotation: TEXT | NULL
+subgroup: TEXT | NULL
+stem: TEXT | NULL
+
+## EBI_CHEMBL.GO_CLASSIFICATION_29
+aspect: TEXT | NULL
+go_id: TEXT | NULL
+pref_name: TEXT | NULL
+class_level: TEXT | NULL
+parent_go_id: TEXT | NULL
+path: TEXT | NULL
+
+## EBI_CHEMBL.DOCS_24
+chembl_id: TEXT | NULL
+title: TEXT | NULL
+doc_id: TEXT | NULL
+year: TEXT | NULL
+src_id: TEXT | NULL
+last_page: TEXT | NULL
+doi: TEXT | NULL
+issue: TEXT | NULL
+doc_type: TEXT | NULL
+patent_id: TEXT | NULL
+authors: TEXT | NULL
+volume: TEXT | NULL
+abstract: TEXT | NULL
+pubmed_id: TEXT | NULL
+journal: TEXT | NULL
+ridx: TEXT | NULL
+first_page: TEXT | NULL
+
+## EBI_CHEMBL.DATA_VALIDITY_LOOKUP_27
+data_validity_comment: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_DOMAINS_28
+compd_id: TEXT | NULL
+end_position: TEXT | NULL
+start_position: TEXT | NULL
+domain_id: TEXT | NULL
+component_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_SEQUENCES_33
+accession: TEXT | NULL
+organism: TEXT | NULL
+component_type: TEXT | NULL
+db_source: TEXT | NULL
+sequence_md5sum: TEXT | NULL
+description: TEXT | NULL
+component_id: TEXT | NULL
+tax_id: TEXT | NULL
+db_version: TEXT | NULL
+sequence: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_SYNONYMS_25
+res_stem_id: TEXT | NULL
+molregno: TEXT | NULL
+syn_type: TEXT | NULL
+molsyn_id: TEXT | NULL
+synonyms: TEXT | NULL
+
+## EBI_CHEMBL.PATENT_USE_CODES_27
+definition: TEXT | NULL
+patent_use_code: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_CLASS
+component_id: TEXT | NULL
+protein_class_id: TEXT | NULL
+comp_class_id: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_FAMILY_CLASSIFICATION_30
+l6: TEXT | Sixth level classification.
+protein_class_id: NUMBER | Primary key. Unique identifier for each classification.
+protein_class_desc: TEXT | Concatenated description of each classification for searching purposes etc.
+l5: TEXT | Fifth level classification.
+l1: TEXT | First level classification (e.g., Enzyme, Transporter, Ion Channel).
+l8: TEXT | Eighth level classification.
+l2: TEXT | Second level classification.
+l3: TEXT | Third level classification.
+l7: TEXT | Seventh level classification.
+l4: TEXT | Fourth level classification.
+
+## EBI_CHEMBL.INDICATION_REFS_33
+ref_url: TEXT | NULL
+ref_id: TEXT | NULL
+indref_id: TEXT | NULL
+ref_type: TEXT | NULL
+drugind_id: TEXT | NULL
+
+## EBI_CHEMBL.ASSAYS_30
+assay_organism: TEXT | Name of the organism for the assay system (e.g., the organism, tissue or cell line in which an assay was performed). May differ from the target organism (e.g., for a human protein expressed in non-human cells, or pathogen-infected human cells).
+bao_format: TEXT | ID for the corresponding format type in BioAssay Ontology (e.g., cell-based, biochemical, organism-based etc)
+assay_strain: TEXT | Name of specific strain of the assay organism used (where known)
+assay_cell_type: TEXT | Name of cell type or cell line used in the assay system (e.g., for cell-based assays).
+src_assay_id: TEXT | Identifier for the assay in the source database/deposition (e.g., pubchem AID)
+curated_by: TEXT | Indicates the level of curation of the target assignment. Foreign key to curation_lookup table.
+cell_id: NUMBER | Foreign key to cell dictionary. The cell type or cell line used in the assay
+aidx: TEXT | The Depositor Defined Assay Identifier
+variant_id: NUMBER | Foreign key to variant_sequences table. Indicates the mutant/variant version of the target used in the assay (where known/applicable)
+assay_type: TEXT | Assay classification, e.g. B=Binding assay, A=ADME assay, F=Functional assay
+assay_category: TEXT | screening, confirmatory (ie: dose-response), summary, panel or other.
+doc_id: NUMBER | Foreign key to documents table
+description: TEXT | Description of the reported assay
+confidence_score: NUMBER | Confidence score, indicating how accurately the assigned target(s) represents the actually assay target. Foreign key to CONFIDENCE_SCORE table. 0 means uncurated/unassigned, 1 = low confidence to 9 = high confidence.
+assay_tax_id: NUMBER | NCBI tax ID for the assay organism.
+assay_id: NUMBER | Unique ID for the assay
+assay_test_type: TEXT | Type of assay system (i.e., in vivo or in vitro)
+tid: NUMBER | Target identifier to which this assay has been mapped. Foreign key to target_dictionary. From ChEMBL_15 onwards, an assay will have only a single target assigned.
+assay_tissue: TEXT | Name of tissue used in the assay system (e.g., for tissue-based assays) or from which the assay system was derived (e.g., for cell/subcellular fraction-based assays).
+tissue_id: NUMBER | ID for the corresponding tissue/anatomy in Uberon. Foreign key to tissue_dictionary
+relationship_type: TEXT | Flag indicating of the relationship between the reported target in the source document and the assigned target from TARGET_DICTIONARY. Foreign key to RELATIONSHIP_TYPE table.
+chembl_id: TEXT | ChEMBL identifier for this assay (for use on web interface etc)
+assay_subcellular_fraction: TEXT | Name of subcellular fraction used in the assay system (e.g., microsomes, mitochondria).
+src_id: NUMBER | Foreign key to source table
+
+## EBI_CHEMBL.CHEMBL_RELEASE_33
+chembl_release_id: TEXT | NULL
+chembl_release: TEXT | NULL
+creation_date: TEXT | NULL
+
+## EBI_CHEMBL.ACTION_TYPE_25
+parent_type: TEXT | NULL
+description: TEXT | NULL
+action_type: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_CLASSIFICATION_28
+protein_class_id: TEXT | NULL
+parent_id: TEXT | NULL
+protein_class_desc: TEXT | NULL
+class_level: TEXT | NULL
+short_name: TEXT | NULL
+pref_name: TEXT | NULL
+definition: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERTS_28
+alert_set_id: TEXT | NULL
+alert_id: TEXT | NULL
+smarts: TEXT | NULL
+alert_name: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION_28
+mol_irac_id: TEXT | NULL
+molregno: TEXT | NULL
+irac_class_id: TEXT | NULL
+
+## EBI_CHEMBL.USAN_STEMS_24
+subgroup: TEXT | NULL
+stem: TEXT | NULL
+annotation: TEXT | NULL
+usan_stem_id: TEXT | NULL
+who_extra: TEXT | NULL
+stem_class: TEXT | NULL
+major_class: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITIES_30
+potential_duplicate: NUMBER | When set to 1, indicates that the value is likely to be a repeat citation of a value reported in a previous ChEMBL paper, rather than a new, independent measurement. Note: value of zero does not guarantee that the measurement is novel/independent though
+type: TEXT | Type of end-point measurement: e.g. IC50, LD50, %inhibition etc, as it appears in the original dataset
+bao_endpoint: TEXT | ID for the corresponding result type in BioAssay Ontology (based on standard_type)
+toid: NUMBER | The Test Occasion Identifier, used to group together related activity measurements
+relation: TEXT | Symbol constraining the activity value (e.g. >, <, =), as it appears in the original dataset
+standard_relation: TEXT | Symbol constraining the activity value (e.g. >, <, =)
+activity_comment: TEXT | Previously used to report non-numeric activities i.e. 'Slighty active', 'Not determined'. STANDARD_TEXT_VALUE will be used for this in future, and this will be just for additional comments.
+value: FLOAT | Datapoint value as it appears in the original dataset.
+doc_id: NUMBER | Foreign key to documents table (for quick lookup of publication details - can also link to documents through compound_records or assays table)
+standard_value: FLOAT | Same as PUBLISHED_VALUE but transformed to common units: e.g. mM concentrations converted to nM.
+data_validity_comment: TEXT | Comment reflecting whether the values for this activity measurement are likely to be correct - one of 'Manually validated' (checked original paper and value is correct), 'Potential author error' (value looks incorrect but is as reported in the original paper), 'Outside typical range' (value seems too high/low to be correct e.g., negative IC50 value), 'Non standard unit type' (units look incorrect for this activity type).
+standard_flag: NUMBER | Shows whether the standardised columns have been curated/set (1) or just default to the published data (0).
+standard_units: TEXT | Selected 'Standard' units for data type: e.g. concentrations are in nM.
+standard_text_value: TEXT | Standardized version of non-numeric measurement
+record_id: NUMBER | Foreign key to the compound_records table (containing information on the compound tested)
+text_value: TEXT | Non-numeric value for measurement as in original dataset
+src_id: NUMBER | Foreign key to source table, indicating the source of the activity value
+molregno: NUMBER | Foreign key to compounds table (for quick lookup of compound structure - can also link to compounds through compound_records table)
+pchembl_value: FLOAT | Negative log of selected concentration-response activity values (IC50/EC50/XC50/AC50/Ki/Kd/Potency)
+uo_units: TEXT | ID for the corresponding unit in Unit Ontology (based on standard_units)
+activity_id: NUMBER | Unique ID for the activity row
+assay_id: NUMBER | Foreign key to the assays table (containing the assay description)
+standard_upper_value: NUMBER | Where the activity is a range, this represents the standardised version of the highest value of the range (with the lower value represented by STANDARD_VALUE)
+units: TEXT | Units of measurement as they appear in the original dataset
+standard_type: TEXT | Standardised version of the published_activity_type (e.g. IC50 rather than Ic-50/Ic50/ic50/ic-50)
+upper_value: FLOAT | Where the activity is a range, this represents the highest value of the range (numerically), while the PUBLISHED_VALUE column represents the lower value
+qudt_units: TEXT | ID for the corresponding unit in QUDT Ontology (based on standard_units)
+
+## EBI_CHEMBL.ACTIVITY_SUPP_MAP_26
+activity_id: TEXT | NULL
+actsm_id: TEXT | NULL
+smid: TEXT | NULL
+
+## EBI_CHEMBL.RELATIONSHIP_TYPE_26
+relationship_type: TEXT | NULL
+relationship_desc: TEXT | NULL
+
+## EBI_CHEMBL.PRODUCT_PATENTS_25
+drug_substance_flag: TEXT | NULL
+patent_use_code: TEXT | NULL
+delist_flag: TEXT | NULL
+drug_product_flag: TEXT | NULL
+prod_pat_id: TEXT | NULL
+patent_no: TEXT | NULL
+product_id: TEXT | NULL
+submission_date: TEXT | NULL
+patent_expire_date: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SMID_29
+smid: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITIES_24
+standard_relation: TEXT | NULL
+standard_upper_value: TEXT | NULL
+standard_units: TEXT | NULL
+activity_comment: TEXT | NULL
+relation: TEXT | NULL
+standard_value: TEXT | NULL
+toid: TEXT | NULL
+standard_text_value: TEXT | NULL
+value: TEXT | NULL
+record_id: TEXT | NULL
+doc_id: TEXT | NULL
+type: TEXT | NULL
+src_id: TEXT | NULL
+assay_id: TEXT | NULL
+published_relation: TEXT | NULL
+data_validity_comment: TEXT | NULL
+published_units: TEXT | NULL
+activity_id: TEXT | NULL
+units: TEXT | NULL
+bao_endpoint: TEXT | NULL
+text_value: TEXT | NULL
+uo_units: TEXT | NULL
+standard_flag: TEXT | NULL
+qudt_units: TEXT | NULL
+potential_duplicate: TEXT | NULL
+molregno: TEXT | NULL
+published_value: TEXT | NULL
+upper_value: TEXT | NULL
+pchembl_value: TEXT | NULL
+standard_type: TEXT | NULL
+published_type: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_DOMAINS_23
+domain_id: TEXT | NULL
+component_id: TEXT | NULL
+compd_id: TEXT | NULL
+start_position: TEXT | NULL
+end_position: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_PROPERTIES_33
+hba: TEXT | NULL
+qed_weighted: TEXT | NULL
+full_molformula: TEXT | NULL
+aromatic_rings: TEXT | NULL
+mw_freebase: TEXT | NULL
+cx_most_apka: TEXT | NULL
+cx_most_bpka: TEXT | NULL
+num_lipinski_ro5_violations: TEXT | NULL
+ro3_pass: TEXT | NULL
+molregno: TEXT | NULL
+mw_monoisotopic: TEXT | NULL
+hbd_lipinski: TEXT | NULL
+cx_logp: TEXT | NULL
+full_mwt: TEXT | NULL
+hbd: TEXT | NULL
+hba_lipinski: TEXT | NULL
+alogp: TEXT | NULL
+psa: TEXT | NULL
+np_likeness_score: TEXT | NULL
+cx_logd: TEXT | NULL
+heavy_atoms: TEXT | NULL
+molecular_species: TEXT | NULL
+num_ro5_violations: TEXT | NULL
+rtb: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_CLASSIFICATION_25
+source: TEXT | NULL
+assay_class_id: TEXT | NULL
+l1: TEXT | NULL
+l2: TEXT | NULL
+l3: TEXT | NULL
+class_type: TEXT | NULL
+
+## EBI_CHEMBL.LIGAND_EFF_28
+lle: TEXT | NULL
+bei: TEXT | NULL
+le: TEXT | NULL
+sei: TEXT | NULL
+activity_id: TEXT | NULL
+
+## EBI_CHEMBL.SOURCE_33
+src_id: TEXT | NULL
+src_description: TEXT | NULL
+src_short_name: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_TYPE_26
+assay_type: TEXT | NULL
+assay_desc: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_INDICATION_24
+efo_id: TEXT | NULL
+molregno: TEXT | NULL
+efo_term: TEXT | NULL
+mesh_id: TEXT | NULL
+drugind_id: TEXT | NULL
+max_phase_for_ind: TEXT | NULL
+record_id: TEXT | NULL
+mesh_heading: TEXT | NULL
+
+## EBI_CHEMBL.ASSAYS_29
+assay_test_type: TEXT | NULL
+src_id: TEXT | NULL
+assay_id: TEXT | NULL
+description: TEXT | NULL
+variant_id: TEXT | NULL
+confidence_score: TEXT | NULL
+src_assay_id: TEXT | NULL
+bao_format: TEXT | NULL
+assay_tax_id: TEXT | NULL
+cell_id: TEXT | NULL
+assay_subcellular_fraction: TEXT | NULL
+relationship_type: TEXT | NULL
+tid: TEXT | NULL
+assay_category: TEXT | NULL
+aidx: TEXT | NULL
+assay_organism: TEXT | NULL
+curated_by: TEXT | NULL
+tissue_id: TEXT | NULL
+assay_strain: TEXT | NULL
+assay_cell_type: TEXT | NULL
+assay_type: TEXT | NULL
+doc_id: TEXT | NULL
+assay_tissue: TEXT | NULL
+chembl_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS_24
+cpd_str_alert_id: TEXT | NULL
+alert_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.SOURCE_23
+src_description: TEXT | NULL
+src_short_name: TEXT | NULL
+src_id: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_CLASS_MAP
+ass_cls_map_id: TEXT | NULL
+assay_id: TEXT | NULL
+assay_class_id: TEXT | NULL
+
+## EBI_CHEMBL.RESEARCH_COMPANIES_30
+company: TEXT | Name of current company associated with this research code stem.
+co_stem_id: NUMBER | Primary key.
+country: TEXT | Country in which the company uses this research code stem.
+res_stem_id: NUMBER | Foreign key to research_stem table.
+previous_company: TEXT | Previous name of the company associated with this research code stem (e.g., if the company has undergone acquisitions/mergers).
+
+## EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION_30
+irac_class_id: NUMBER | Foreign key to the irac_classification table showing the mechanism of action classification for the compound.
+molregno: NUMBER | Foreign key to the molecule_dictionary table, showing the compound to which the classification applies.
+mol_irac_id: NUMBER | Primary key.
+
+## EBI_CHEMBL.PREDICTED_BINDING_DOMAINS_25
+site_id: TEXT | NULL
+activity_id: TEXT | NULL
+prediction_method: TEXT | NULL
+predbind_id: TEXT | NULL
+confidence: TEXT | NULL
+
+## EBI_CHEMBL.BINDING_SITES_25
+site_name: TEXT | NULL
+site_id: TEXT | NULL
+tid: TEXT | NULL
+
+## EBI_CHEMBL.DOCS_30
+year: NUMBER | Year of journal article publication
+chembl_id: TEXT | ChEMBL identifier for this document (for use on web interface etc)
+first_page: TEXT | First page number of journal article
+volume: TEXT | Volume of journal article
+authors: TEXT | For a deposited dataset, the authors carrying out the screening and/or submitting the dataset.
+pubmed_id: NUMBER | NIH pubmed record ID, where available
+abstract: TEXT | For a deposited dataset, a brief description of the dataset.
+last_page: TEXT | Last page number of journal article
+title: TEXT | Document title (e.g., Publication title or description of dataset)
+ridx: TEXT | The Depositor Defined Reference Identifier
+patent_id: TEXT | Patent ID for this document
+doc_id: NUMBER | Unique ID for the document
+doi: TEXT | Digital object identifier for this reference
+doc_type: TEXT | Type of the document (e.g., Publication, Deposited dataset)
+issue: TEXT | Issue of journal article
+src_id: NUMBER | Foreign key to Source table, indicating the source of this document
+journal: TEXT | Abbreviated journal name for an article
+
+## EBI_CHEMBL.ATC_CLASSIFICATION_25
+level4: TEXT | NULL
+level1: TEXT | NULL
+level2_description: TEXT | NULL
+who_name: TEXT | NULL
+level2: TEXT | NULL
+level1_description: TEXT | NULL
+level4_description: TEXT | NULL
+level3: TEXT | NULL
+level3_description: TEXT | NULL
+level5: TEXT | NULL
+
+## EBI_CHEMBL.BIOASSAY_ONTOLOGY_24
+bao_id: TEXT | NULL
+label: TEXT | NULL
+
+## EBI_CHEMBL.RESEARCH_STEM_30
+res_stem_id: NUMBER | Primary key. Unique ID for each research code stem.
+research_stem: TEXT | The actual stem/prefix used in the research code.
+
+## EBI_CHEMBL.COMPONENT_SYNONYMS_24
+compsyn_id: TEXT | NULL
+component_synonym: TEXT | NULL
+component_id: TEXT | NULL
+syn_type: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_SEQUENCES_24
+component_id: TEXT | NULL
+description: TEXT | NULL
+db_version: TEXT | NULL
+organism: TEXT | NULL
+component_type: TEXT | NULL
+accession: TEXT | NULL
+db_source: TEXT | NULL
+sequence: TEXT | NULL
+tax_id: TEXT | NULL
+sequence_md5sum: TEXT | NULL
+
+## EBI_CHEMBL.SQLITE_STAT1_27
+idx: TEXT | NULL
+tbl: TEXT | NULL
+stat: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION_23
+frac_class_id: TEXT | NULL
+molregno: TEXT | NULL
+mol_frac_id: TEXT | NULL
+
+## EBI_CHEMBL.ORGANISM_CLASS_27
+l1: TEXT | NULL
+tax_id: TEXT | NULL
+l3: TEXT | NULL
+oc_id: TEXT | NULL
+l2: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_FAMILY_CLASSIFICATION_25
+l6: TEXT | NULL
+protein_class_desc: TEXT | NULL
+l3: TEXT | NULL
+l5: TEXT | NULL
+protein_class_id: TEXT | NULL
+l7: TEXT | NULL
+l1: TEXT | NULL
+l8: TEXT | NULL
+l2: TEXT | NULL
+l4: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SUPP_33
+type: TEXT | NULL
+standard_text_value: TEXT | NULL
+relation: TEXT | NULL
+as_id: TEXT | NULL
+standard_units: TEXT | NULL
+text_value: TEXT | NULL
+smid: TEXT | NULL
+standard_relation: TEXT | NULL
+rgid: TEXT | NULL
+units: TEXT | NULL
+standard_type: TEXT | NULL
+value: TEXT | NULL
+comments: TEXT | NULL
+standard_value: TEXT | NULL
+
+## EBI_CHEMBL.SITE_COMPONENTS
+sitecomp_id: TEXT | NULL
+domain_id: TEXT | NULL
+site_residues: TEXT | NULL
+site_id: TEXT | NULL
+component_id: TEXT | NULL
+
+## EBI_CHEMBL.SITE_COMPONENTS_29
+component_id: TEXT | NULL
+site_residues: TEXT | NULL
+site_id: TEXT | NULL
+sitecomp_id: TEXT | NULL
+domain_id: TEXT | NULL
+
+## EBI_CHEMBL.USAN_STEMS_25
+subgroup: TEXT | NULL
+stem_class: TEXT | NULL
+major_class: TEXT | NULL
+who_extra: TEXT | NULL
+usan_stem_id: TEXT | NULL
+annotation: TEXT | NULL
+stem: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERTS_27
+alert_set_id: TEXT | NULL
+smarts: TEXT | NULL
+alert_name: TEXT | NULL
+alert_id: TEXT | NULL
+
+## EBI_CHEMBL.RELATIONSHIP_TYPE
+relationship_desc: TEXT | NULL
+relationship_type: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_PROPERTIES_29
+alogp: TEXT | NULL
+hbd: TEXT | NULL
+ro3_pass: TEXT | NULL
+full_molformula: TEXT | NULL
+hba: TEXT | NULL
+mw_freebase: TEXT | NULL
+aromatic_rings: TEXT | NULL
+molregno: TEXT | NULL
+hba_lipinski: TEXT | NULL
+molecular_species: TEXT | NULL
+cx_logp: TEXT | NULL
+cx_logd: TEXT | NULL
+psa: TEXT | NULL
+hbd_lipinski: TEXT | NULL
+full_mwt: TEXT | NULL
+cx_most_bpka: TEXT | NULL
+num_lipinski_ro5_violations: TEXT | NULL
+heavy_atoms: TEXT | NULL
+mw_monoisotopic: TEXT | NULL
+num_ro5_violations: TEXT | NULL
+cx_most_apka: TEXT | NULL
+qed_weighted: TEXT | NULL
+rtb: TEXT | NULL
+
+## EBI_CHEMBL.INDICATION_REFS_28
+ref_type: TEXT | NULL
+ref_url: TEXT | NULL
+drugind_id: TEXT | NULL
+indref_id: TEXT | NULL
+ref_id: TEXT | NULL
+
+## EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS_28
+biocomp_id: TEXT | NULL
+component_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.METABOLISM_REFS_25
+ref_url: TEXT | NULL
+met_id: TEXT | NULL
+ref_type: TEXT | NULL
+metref_id: TEXT | NULL
+ref_id: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION_28
+frac_class_id: TEXT | NULL
+mol_frac_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SUPP_MAP_29
+smid: TEXT | NULL
+activity_id: TEXT | NULL
+actsm_id: TEXT | NULL
+
+## EBI_CHEMBL.PATENT_USE_CODES_26
+definition: TEXT | NULL
+patent_use_code: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_RECORDS_29
+compound_key: TEXT | NULL
+src_id: TEXT | NULL
+cidx: TEXT | NULL
+compound_name: TEXT | NULL
+record_id: TEXT | NULL
+molregno: TEXT | NULL
+doc_id: TEXT | NULL
+src_compound_id: TEXT | NULL
+
+## EBI_CHEMBL.VARIANT_SEQUENCES_30
+mutation: TEXT | Details of variant(s) used, with residue positions adjusted to match provided sequence.
+organism: TEXT | Organism from which the sequence was obtained.
+version: NUMBER | Version of the UniProt sequence used as the base sequence.
+isoform: NUMBER | Details of the UniProt isoform used as the base sequence where relevant.
+tax_id: NUMBER | NCBI Tax ID for the organism from which the sequence was obtained
+variant_id: NUMBER | Primary key, numeric ID for each sequence variant.
+sequence: TEXT | Variant sequence formed by adjusting the UniProt base sequence with the specified mutations/variations.
+accession: TEXT | UniProt accesion for the representative sequence used as the base sequence (without variation).
+
+## EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION_29
+hrac_class_id: TEXT | NULL
+mol_hrac_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.DOCS
+volume: TEXT | NULL
+pubmed_id: TEXT | NULL
+ridx: TEXT | NULL
+chembl_id: TEXT | NULL
+issue: TEXT | NULL
+chembl_release_id: TEXT | NULL
+title: TEXT | NULL
+doc_id: TEXT | NULL
+abstract: TEXT | NULL
+doi: TEXT | NULL
+last_page: TEXT | NULL
+authors: TEXT | NULL
+src_id: TEXT | NULL
+year: TEXT | NULL
+journal: TEXT | NULL
+patent_id: TEXT | NULL
+doc_type: TEXT | NULL
+first_page: TEXT | NULL
+
+## EBI_CHEMBL.ACTION_TYPE_23
+description: TEXT | NULL
+parent_type: TEXT | NULL
+action_type: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS_33
+protein_class_synonym: TEXT | NULL
+protclasssyn_id: TEXT | NULL
+syn_type: TEXT | NULL
+protein_class_id: TEXT | NULL
+
+## EBI_CHEMBL.PATENT_USE_CODES_23
+patent_use_code: TEXT | NULL
+definition: TEXT | NULL
+
+## EBI_CHEMBL.RESEARCH_STEM_25
+res_stem_id: TEXT | NULL
+research_stem: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_SYNONYMS
+syn_type: TEXT | NULL
+component_id: TEXT | NULL
+component_synonym: TEXT | NULL
+compsyn_id: TEXT | NULL
+
+## EBI_CHEMBL.SITE_COMPONENTS_25
+site_residues: TEXT | NULL
+component_id: TEXT | NULL
+sitecomp_id: TEXT | NULL
+site_id: TEXT | NULL
+domain_id: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_HIERARCHY
+molregno: TEXT | NULL
+parent_molregno: TEXT | NULL
+active_molregno: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_STDS_LOOKUP_28
+normal_range_min: TEXT | NULL
+standard_type: TEXT | NULL
+standard_units: TEXT | NULL
+definition: TEXT | NULL
+normal_range_max: TEXT | NULL
+std_act_id: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_INDICATION_27
+efo_term: TEXT | NULL
+record_id: TEXT | NULL
+max_phase_for_ind: TEXT | NULL
+molregno: TEXT | NULL
+mesh_id: TEXT | NULL
+drugind_id: TEXT | NULL
+efo_id: TEXT | NULL
+mesh_heading: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_HIERARCHY_24
+active_molregno: TEXT | NULL
+parent_molregno: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_SEQUENCES
+sequence: TEXT | NULL
+db_version: TEXT | NULL
+db_source: TEXT | NULL
+component_type: TEXT | NULL
+accession: TEXT | NULL
+organism: TEXT | NULL
+component_id: TEXT | NULL
+sequence_md5sum: TEXT | NULL
+tax_id: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_CLASS_26
+component_id: TEXT | NULL
+protein_class_id: TEXT | NULL
+comp_class_id: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_FAMILY_CLASSIFICATION
+l2: TEXT | NULL
+protein_class_desc: TEXT | NULL
+l8: TEXT | NULL
+l7: TEXT | NULL
+l3: TEXT | NULL
+l5: TEXT | NULL
+l1: TEXT | NULL
+l4: TEXT | NULL
+protein_class_id: TEXT | NULL
+l6: TEXT | NULL
+
+## EBI_CHEMBL.GO_CLASSIFICATION
+go_id: TEXT | NULL
+parent_go_id: TEXT | NULL
+aspect: TEXT | NULL
+path: TEXT | NULL
+pref_name: TEXT | NULL
+class_level: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_SYNONYMS_30
+component_id: NUMBER | Foreign key to the component_sequences table. The component to which this synonym applies.
+compsyn_id: NUMBER | Primary key.
+component_synonym: TEXT | The synonym for the component.
+syn_type: TEXT | The type or origin of the synonym (e.g., GENE_SYMBOL).
+
+## EBI_CHEMBL.CURATION_LOOKUP_28
+description: TEXT | NULL
+curated_by: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_HIERARCHY_25
+parent_molregno: TEXT | NULL
+molregno: TEXT | NULL
+active_molregno: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_WARNING
+warning_type: TEXT | NULL
+efo_id_for_warning_class: TEXT | NULL
+efo_term: TEXT | NULL
+record_id: TEXT | NULL
+warning_year: TEXT | NULL
+warning_class: TEXT | NULL
+warning_id: TEXT | NULL
+efo_id: TEXT | NULL
+warning_description: TEXT | NULL
+warning_country: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.ATC_CLASSIFICATION_30
+level4: TEXT | Fourth level of classification
+level2_description: TEXT | Description of second level of classification
+who_name: TEXT | WHO/INN name for the compound
+level4_description: TEXT | Description of fourth level of classification
+level3_description: TEXT | Description of third level of classification
+level1: TEXT | First level of classification
+level5: TEXT | Complete ATC code for compound
+level2: TEXT | Second level of classification
+level3: TEXT | Third level of classification
+level1_description: TEXT | Description of first level of classification
+
+## EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION_26
+mol_irac_id: TEXT | NULL
+molregno: TEXT | NULL
+irac_class_id: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION_26
+mol_atc_id: TEXT | NULL
+molregno: TEXT | NULL
+level5: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SMID_25
+smid: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_DICTIONARY_30
+structure_type: TEXT | Indications whether the molecule has a small molecule structure or a protein sequence (MOL indicates an entry in the compound_structures table, SEQ indications an entry in the protein_therapeutics table, NONE indicates an entry in neither table, e.g., structure unknown)
+usan_substem: TEXT | Where the compound has been assigned a USAN name, this indicates the substem
+indication_class: TEXT | Indication class(es) assigned to a drug in the USP dictionary
+pref_name: TEXT | Preferred name for the molecule
+availability_type: NUMBER | The availability type for the drug (0 = discontinued, 1 = prescription only, 2 = over the counter)
+chembl_id: TEXT | ChEMBL identifier for this compound (for use on web interface etc)
+prodrug: NUMBER | Indicates that the molecule is a pro-drug (see molecule hierarchy for active component, where known)
+withdrawn_reason: TEXT | Reasons for withdrawl (e.g., safety)
+chirality: NUMBER | Shows whether a drug is dosed as a racemic mixture (0), single stereoisomer (1) or is an achiral molecule (2)
+withdrawn_year: NUMBER | Year the drug was first withdrawn in any country
+black_box_warning: NUMBER | Indicates that the drug has a black box warning
+withdrawn_flag: NUMBER | Flag indicating whether the drug has been withdrawn in at least one country (not necessarily in the US)
+molregno: NUMBER | Internal Primary Key for the molecule
+withdrawn_country: TEXT | List of countries/regions where the drug has been withdrawn
+first_approval: NUMBER | Earliest known approval year for the molecule
+parenteral: NUMBER | Indicates whether the drug is known to be administered parenterally
+first_in_class: NUMBER | Indicates whether this is known to be the first compound of its class (e.g., acting on a particular target).
+oral: NUMBER | Indicates whether the drug is known to be administered orally.
+usan_stem: TEXT | Where the compound has been assigned a USAN name, this indicates the stem, as described in the USAN_STEM table.
+dosed_ingredient: NUMBER | Indicates that the drug is dosed in this form (e.g., a particular salt)
+topical: NUMBER | Indicates whether the drug is known to be administered topically.
+natural_product: NUMBER | Indicates whether the compound is natural product-derived (currently curated only for drugs)
+usan_stem_definition: TEXT | Definition of the USAN stem
+therapeutic_flag: NUMBER | Indicates that a drug has a therapeutic application (as opposed to e.g., an imaging agent, additive etc).
+chebi_par_id: NUMBER | Preferred ChEBI ID for the compound (where different from assigned)
+inorganic_flag: NUMBER | Indicates whether the molecule is inorganic (i.e., containing only metal atoms and <2 carbon atoms)
+withdrawn_class: TEXT | High level categories for the withdrawn reason (e.g., Cardiotoxicity, Hepatotoxicity)
+molecule_type: TEXT | Type of molecule (Small molecule, Protein, Antibody, Oligosaccharide, Oligonucleotide, Cell, Unknown)
+polymer_flag: NUMBER | Indicates whether a molecule is a small molecule polymer (e.g., polistyrex)
+usan_year: NUMBER | The year in which the application for a USAN/INN name was made
+max_phase: NUMBER | Maximum phase of development reached for the compound (4 = approved). Null where max phase has not yet been assigned.
+
+## EBI_CHEMBL.ACTIVITY_SUPP_MAP_33
+activity_id: TEXT | NULL
+actsm_id: TEXT | NULL
+smid: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_WARNING_30
+warning_country: TEXT | List of countries/regions associated with the drug warning
+record_id: NUMBER | Foreign key to the compound_records table
+warning_description: TEXT | Description of the drug warning
+warning_class: TEXT | High-level class of the drug warning
+molregno: NUMBER | Foreign key to molecule_dictionary table
+warning_year: NUMBER | Year the drug was first shown the warning
+warning_id: NUMBER | Primary key for the drug warning
+warning_type: TEXT | Description of the drug warning type (e.g., withdrawn vs black box warning)
+
+## EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP
+target_mapping: TEXT | NULL
+confidence_score: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.CURATION_LOOKUP_23
+description: TEXT | NULL
+curated_by: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_CLASSIFICATION_23
+class_level: TEXT | NULL
+protein_class_id: TEXT | NULL
+parent_id: TEXT | NULL
+protein_class_desc: TEXT | NULL
+pref_name: TEXT | NULL
+short_name: TEXT | NULL
+definition: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_DICTIONARY_24
+tax_id: TEXT | NULL
+organism: TEXT | NULL
+tid: TEXT | NULL
+chembl_id: TEXT | NULL
+species_group_flag: TEXT | NULL
+target_type: TEXT | NULL
+pref_name: TEXT | NULL
+
+## EBI_CHEMBL.CELL_DICTIONARY_29
+clo_id: TEXT | NULL
+cell_ontology_id: TEXT | NULL
+cell_name: TEXT | NULL
+cellosaurus_id: TEXT | NULL
+efo_id: TEXT | NULL
+cell_id: TEXT | NULL
+cl_lincs_id: TEXT | NULL
+cell_source_organism: TEXT | NULL
+chembl_id: TEXT | NULL
+cell_description: TEXT | NULL
+cell_source_tissue: TEXT | NULL
+cell_source_tax_id: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERTS_25
+alert_id: TEXT | NULL
+alert_set_id: TEXT | NULL
+alert_name: TEXT | NULL
+smarts: TEXT | NULL
+
+## EBI_CHEMBL.FORMULATIONS_24
+ingredient: TEXT | NULL
+molregno: TEXT | NULL
+strength: TEXT | NULL
+product_id: TEXT | NULL
+record_id: TEXT | NULL
+formulation_id: TEXT | NULL
+
+## EBI_CHEMBL.TISSUE_DICTIONARY_23
+uberon_id: TEXT | NULL
+bto_id: TEXT | NULL
+chembl_id: TEXT | NULL
+tissue_id: TEXT | NULL
+caloha_id: TEXT | NULL
+pref_name: TEXT | NULL
+efo_id: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_STDS_LOOKUP_24
+normal_range_max: TEXT | NULL
+standard_units: TEXT | NULL
+normal_range_min: TEXT | NULL
+std_act_id: TEXT | NULL
+definition: TEXT | NULL
+standard_type: TEXT | NULL
+
+## EBI_CHEMBL.MECHANISM_REFS_26
+mecref_id: TEXT | NULL
+ref_url: TEXT | NULL
+mec_id: TEXT | NULL
+ref_type: TEXT | NULL
+ref_id: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_DICTIONARY_33
+tax_id: TEXT | NULL
+species_group_flag: TEXT | NULL
+chembl_id: TEXT | NULL
+target_type: TEXT | NULL
+tid: TEXT | NULL
+pref_name: TEXT | NULL
+organism: TEXT | NULL
+
+## EBI_CHEMBL.METABOLISM_REFS_29
+met_id: TEXT | NULL
+ref_id: TEXT | NULL
+metref_id: TEXT | NULL
+ref_url: TEXT | NULL
+ref_type: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_RECORDS_24
+compound_name: TEXT | NULL
+cidx: TEXT | NULL
+src_compound_id: TEXT | NULL
+record_id: TEXT | NULL
+compound_key: TEXT | NULL
+doc_id: TEXT | NULL
+src_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_DICTIONARY_28
+target_type: TEXT | NULL
+chembl_id: TEXT | NULL
+tid: TEXT | NULL
+species_group_flag: TEXT | NULL
+organism: TEXT | NULL
+tax_id: TEXT | NULL
+pref_name: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION_28
+mol_hrac_id: TEXT | NULL
+hrac_class_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.PATENT_USE_CODES_33
+patent_use_code: TEXT | NULL
+definition: TEXT | NULL
+
+## EBI_CHEMBL.HRAC_CLASSIFICATION_26
+level2: TEXT | NULL
+hrac_class_id: TEXT | NULL
+level1: TEXT | NULL
+level1_description: TEXT | NULL
+active_ingredient: TEXT | NULL
+level3: TEXT | NULL
+level2_description: TEXT | NULL
+hrac_code: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION_28
+mol_atc_id: TEXT | NULL
+level5: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_DOMAINS_25
+end_position: TEXT | NULL
+domain_id: TEXT | NULL
+start_position: TEXT | NULL
+compd_id: TEXT | NULL
+component_id: TEXT | NULL
+
+## EBI_CHEMBL.FRAC_CLASSIFICATION
+level4_description: TEXT | NULL
+level3: TEXT | NULL
+level5: TEXT | NULL
+frac_class_id: TEXT | NULL
+active_ingredient: TEXT | NULL
+level1: TEXT | NULL
+level2_description: TEXT | NULL
+frac_code: TEXT | NULL
+level4: TEXT | NULL
+level3_description: TEXT | NULL
+level2: TEXT | NULL
+level1_description: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_DICTIONARY_23
+pref_name: TEXT | NULL
+prodrug: TEXT | NULL
+withdrawn_year: TEXT | NULL
+therapeutic_flag: TEXT | NULL
+indication_class: TEXT | NULL
+withdrawn_flag: TEXT | NULL
+parenteral: TEXT | NULL
+max_phase: TEXT | NULL
+inorganic_flag: TEXT | NULL
+natural_product: TEXT | NULL
+usan_year: TEXT | NULL
+availability_type: TEXT | NULL
+first_approval: TEXT | NULL
+chebi_par_id: TEXT | NULL
+chirality: TEXT | NULL
+withdrawn_reason: TEXT | NULL
+dosed_ingredient: TEXT | NULL
+molecule_type: TEXT | NULL
+withdrawn_country: TEXT | NULL
+usan_stem_definition: TEXT | NULL
+structure_type: TEXT | NULL
+oral: TEXT | NULL
+chembl_id: TEXT | NULL
+polymer_flag: TEXT | NULL
+usan_stem: TEXT | NULL
+topical: TEXT | NULL
+black_box_warning: TEXT | NULL
+first_in_class: TEXT | NULL
+usan_substem: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.METABOLISM_23
+met_id: TEXT | NULL
+metabolite_record_id: TEXT | NULL
+met_comment: TEXT | NULL
+organism: TEXT | NULL
+substrate_record_id: TEXT | NULL
+drug_record_id: TEXT | NULL
+enzyme_name: TEXT | NULL
+pathway_key: TEXT | NULL
+tax_id: TEXT | NULL
+met_conversion: TEXT | NULL
+pathway_id: TEXT | NULL
+enzyme_tid: TEXT | NULL
+
+## EBI_CHEMBL.RESEARCH_COMPANIES_29
+country: TEXT | NULL
+company: TEXT | NULL
+res_stem_id: TEXT | NULL
+previous_company: TEXT | NULL
+co_stem_id: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION_27
+mol_atc_id: TEXT | NULL
+level5: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_PROPERTIES_30
+standard_value: FLOAT | Standardised form of the VALUE
+standard_units: TEXT | Standardised form of the UNITS
+ap_id: NUMBER | Unique ID for each record.
+relation: TEXT | Symbol constraining the value (e.g. >, <, =)
+standard_text_value: TEXT | Standardised form of the TEXT_VALUE
+activity_id: NUMBER | FK to ACTIVITY_ID in ACTIVITIES table.
+value: FLOAT | Numberical value for the parameter or property
+standard_relation: TEXT | Standardised form of the RELATION
+result_flag: NUMBER | A flag to indicate, if set to 1, that this type is a dependent variable/result (e.g., slope) rather than an independent variable/parameter (0, the default).
+text_value: TEXT | Non-numerical value of the parameter or property
+standard_type: TEXT | Standardised form of the TYPE
+type: TEXT | The parameter or property type
+units: TEXT | Units of measurement
+comments: TEXT | A Comment.
+
+## EBI_CHEMBL.CELL_DICTIONARY_28
+cell_name: TEXT | NULL
+cell_id: TEXT | NULL
+cell_source_tax_id: TEXT | NULL
+cellosaurus_id: TEXT | NULL
+efo_id: TEXT | NULL
+cell_description: TEXT | NULL
+cell_source_organism: TEXT | NULL
+chembl_id: TEXT | NULL
+cell_ontology_id: TEXT | NULL
+cl_lincs_id: TEXT | NULL
+clo_id: TEXT | NULL
+cell_source_tissue: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_MECHANISM_30
+molregno: NUMBER | Molregno for the drug (foreign key to molecule_dictionary table)
+mechanism_of_action: TEXT | Description of the mechanism of action e.g., 'Phosphodiesterase 5 inhibitor'
+direct_interaction: NUMBER | Flag to show whether the molecule is believed to interact directly with the target (1 = yes, 0 = no)
+site_id: NUMBER | Binding site for the drug within the target (where known) - foreign key to binding_sites table
+mechanism_comment: TEXT | Additional comments regarding the mechanism of action
+disease_efficacy: NUMBER | Flag to show whether the target assigned is believed to play a role in the efficacy of the drug in the indication(s) for which it is approved (1 = yes, 0 = no)
+variant_id: NUMBER | None
+action_type: TEXT | Type of action of the drug on the target e.g., agonist/antagonist etc (foreign key to action_type table)
+tid: NUMBER | Target associated with this mechanism of action (foreign key to target_dictionary table)
+record_id: NUMBER | Record_id for the drug (foreign key to compound_records table)
+selectivity_comment: TEXT | Additional comments regarding the selectivity of the drug
+binding_site_comment: TEXT | Additional comments regarding the binding site of the drug
+molecular_mechanism: NUMBER | Flag to show whether the mechanism of action describes the molecular target of the drug, rather than a higher-level physiological mechanism e.g., vasodilator (1 = yes, 0 = no)
+mec_id: NUMBER | Primary key for each drug mechanism of action
+
+## EBI_CHEMBL.ASSAY_CLASS_MAP_33
+assay_id: TEXT | NULL
+assay_class_id: TEXT | NULL
+ass_cls_map_id: TEXT | NULL
+
+## EBI_CHEMBL.PATENT_USE_CODES_25
+patent_use_code: TEXT | NULL
+definition: TEXT | NULL
+
+## EBI_CHEMBL.DOMAINS_29
+domain_id: TEXT | NULL
+domain_description: TEXT | NULL
+domain_type: TEXT | NULL
+source_domain_id: TEXT | NULL
+domain_name: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_CLASSIFICATION
+l1: TEXT | NULL
+l2: TEXT | NULL
+source: TEXT | NULL
+assay_class_id: TEXT | NULL
+class_type: TEXT | NULL
+l3: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS_27
+protclasssyn_id: TEXT | NULL
+protein_class_synonym: TEXT | NULL
+protein_class_id: TEXT | NULL
+syn_type: TEXT | NULL
+
+## EBI_CHEMBL.MATCH_23
+patent_no: TEXT | NULL
+publication_number: TEXT | NULL
+
+## EBI_CHEMBL.SOURCE_29
+src_short_name: TEXT | NULL
+src_id: TEXT | NULL
+src_description: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_GO_24
+comp_go_id: TEXT | NULL
+go_id: TEXT | NULL
+component_id: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERTS_23
+smarts: TEXT | NULL
+alert_set_id: TEXT | NULL
+alert_name: TEXT | NULL
+alert_id: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERT_SETS_25
+priority: TEXT | NULL
+alert_set_id: TEXT | NULL
+set_name: TEXT | NULL
+
+## EBI_CHEMBL.DEFINED_DAILY_DOSE_25
+ddd_comment: TEXT | NULL
+ddd_id: TEXT | NULL
+ddd_admr: TEXT | NULL
+atc_code: TEXT | NULL
+ddd_value: TEXT | NULL
+ddd_units: TEXT | NULL
+
+## EBI_CHEMBL.RESEARCH_COMPANIES
+res_stem_id: TEXT | NULL
+previous_company: TEXT | NULL
+company: TEXT | NULL
+co_stem_id: TEXT | NULL
+country: TEXT | NULL
+
+## EBI_CHEMBL.FORMULATIONS_27
+formulation_id: TEXT | NULL
+ingredient: TEXT | NULL
+record_id: TEXT | NULL
+strength: TEXT | NULL
+molregno: TEXT | NULL
+product_id: TEXT | NULL
+
+## EBI_CHEMBL.VERSION_26
+creation_date: TEXT | NULL
+comments: TEXT | NULL
+name: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_SEQUENCES_27
+description: TEXT | NULL
+organism: TEXT | NULL
+db_source: TEXT | NULL
+accession: TEXT | NULL
+component_id: TEXT | NULL
+db_version: TEXT | NULL
+component_type: TEXT | NULL
+sequence: TEXT | NULL
+tax_id: TEXT | NULL
+sequence_md5sum: TEXT | NULL
+
+## EBI_CHEMBL.METABOLISM_REFS_28
+ref_url: TEXT | NULL
+ref_id: TEXT | NULL
+met_id: TEXT | NULL
+metref_id: TEXT | NULL
+ref_type: TEXT | NULL
+
+## EBI_CHEMBL.GO_CLASSIFICATION_24
+path: TEXT | NULL
+class_level: TEXT | NULL
+parent_go_id: TEXT | NULL
+aspect: TEXT | NULL
+pref_name: TEXT | NULL
+go_id: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_CLASSIFICATION_25
+definition: TEXT | NULL
+protein_class_id: TEXT | NULL
+parent_id: TEXT | NULL
+pref_name: TEXT | NULL
+short_name: TEXT | NULL
+protein_class_desc: TEXT | NULL
+class_level: TEXT | NULL
+
+## EBI_CHEMBL.TISSUE_DICTIONARY_26
+bto_id: TEXT | NULL
+efo_id: TEXT | NULL
+caloha_id: TEXT | NULL
+uberon_id: TEXT | NULL
+chembl_id: TEXT | NULL
+tissue_id: TEXT | NULL
+pref_name: TEXT | NULL
+
+## EBI_CHEMBL.METABOLISM_26
+metabolite_record_id: TEXT | NULL
+met_comment: TEXT | NULL
+enzyme_name: TEXT | NULL
+tax_id: TEXT | NULL
+substrate_record_id: TEXT | NULL
+enzyme_tid: TEXT | NULL
+organism: TEXT | NULL
+pathway_key: TEXT | NULL
+met_id: TEXT | NULL
+met_conversion: TEXT | NULL
+pathway_id: TEXT | NULL
+drug_record_id: TEXT | NULL
+
+## EBI_CHEMBL.METABOLISM_REFS_26
+ref_type: TEXT | NULL
+ref_url: TEXT | NULL
+metref_id: TEXT | NULL
+ref_id: TEXT | NULL
+met_id: TEXT | NULL
+
+## EBI_CHEMBL.BINDING_SITES_30
+tid: NUMBER | Foreign key to target_dictionary. Target on which the binding site is found.
+site_id: NUMBER | Primary key. Unique identifier for a binding site in a given target.
+site_name: TEXT | Name/label for the binding site.
+
+## EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS
+cpd_str_alert_id: TEXT | NULL
+alert_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.VERSION_25
+name: TEXT | NULL
+creation_date: TEXT | NULL
+comments: TEXT | NULL
+
+## EBI_CHEMBL.PRODUCTS_24
+parenteral: TEXT | NULL
+dosage_form: TEXT | NULL
+topical: TEXT | NULL
+trade_name: TEXT | NULL
+approval_date: TEXT | NULL
+ad_type: TEXT | NULL
+black_box_warning: TEXT | NULL
+applicant_full_name: TEXT | NULL
+route: TEXT | NULL
+oral: TEXT | NULL
+nda_type: TEXT | NULL
+product_id: TEXT | NULL
+innovator_company: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION_29
+molregno: TEXT | NULL
+mol_atc_id: TEXT | NULL
+level5: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_SEQUENCES_29
+component_id: TEXT | NULL
+accession: TEXT | NULL
+db_version: TEXT | NULL
+description: TEXT | NULL
+component_type: TEXT | NULL
+db_source: TEXT | NULL
+sequence: TEXT | NULL
+sequence_md5sum: TEXT | NULL
+organism: TEXT | NULL
+tax_id: TEXT | NULL
+
+## EBI_CHEMBL.DEFINED_DAILY_DOSE_28
+ddd_admr: TEXT | NULL
+ddd_comment: TEXT | NULL
+ddd_value: TEXT | NULL
+ddd_id: TEXT | NULL
+ddd_units: TEXT | NULL
+atc_code: TEXT | NULL
+
+## EBI_CHEMBL.METABOLISM_29
+organism: TEXT | NULL
+pathway_key: TEXT | NULL
+substrate_record_id: TEXT | NULL
+drug_record_id: TEXT | NULL
+enzyme_tid: TEXT | NULL
+met_comment: TEXT | NULL
+met_id: TEXT | NULL
+enzyme_name: TEXT | NULL
+pathway_id: TEXT | NULL
+met_conversion: TEXT | NULL
+tax_id: TEXT | NULL
+metabolite_record_id: TEXT | NULL
+
+## EBI_CHEMBL.VERSION_30
+comments: TEXT | Description of release version
+name: TEXT | Name of release version
+creation_date: NUMBER | Date database created
+
+## EBI_CHEMBL.CELL_DICTIONARY_33
+cell_id: TEXT | NULL
+cell_source_organism: TEXT | NULL
+cell_source_tax_id: TEXT | NULL
+clo_id: TEXT | NULL
+cell_source_tissue: TEXT | NULL
+efo_id: TEXT | NULL
+cell_name: TEXT | NULL
+cell_description: TEXT | NULL
+chembl_id: TEXT | NULL
+cell_ontology_id: TEXT | NULL
+cellosaurus_id: TEXT | NULL
+cl_lincs_id: TEXT | NULL
+
+## EBI_CHEMBL.PRODUCT_PATENTS_24
+drug_product_flag: TEXT | NULL
+patent_no: TEXT | NULL
+submission_date: TEXT | NULL
+drug_substance_flag: TEXT | NULL
+prod_pat_id: TEXT | NULL
+patent_use_code: TEXT | NULL
+patent_expire_date: TEXT | NULL
+delist_flag: TEXT | NULL
+product_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_STRUCTURES_30
+canonical_smiles: TEXT | Canonical smiles, generated using RDKit
+standard_inchi_key: TEXT | IUPAC standard InChI key for the compound
+standard_inchi: TEXT | IUPAC standard InChI for the compound
+molfile: TEXT | MDL Connection table representation of compound
+molregno: NUMBER | Internal Primary Key for the compound structure and foreign key to molecule_dictionary table
+
+## EBI_CHEMBL.HRAC_CLASSIFICATION_23
+active_ingredient: TEXT | NULL
+hrac_code: TEXT | NULL
+level1: TEXT | NULL
+hrac_class_id: TEXT | NULL
+level2: TEXT | NULL
+level3: TEXT | NULL
+level1_description: TEXT | NULL
+level2_description: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_SYNONYMS_33
+synonyms: TEXT | NULL
+molregno: TEXT | NULL
+syn_type: TEXT | NULL
+res_stem_id: TEXT | NULL
+molsyn_id: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_CLASS_MAP_25
+assay_id: TEXT | NULL
+ass_cls_map_id: TEXT | NULL
+assay_class_id: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERT_SETS_23
+set_name: TEXT | NULL
+alert_set_id: TEXT | NULL
+priority: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_SYNONYMS_24
+res_stem_id: TEXT | NULL
+syn_type: TEXT | NULL
+synonyms: TEXT | NULL
+molsyn_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.GO_CLASSIFICATION_23
+go_id: TEXT | NULL
+aspect: TEXT | NULL
+path: TEXT | NULL
+pref_name: TEXT | NULL
+class_level: TEXT | NULL
+parent_go_id: TEXT | NULL
+
+## EBI_CHEMBL.ATC_CLASSIFICATION
+level2_description: TEXT | NULL
+level4_description: TEXT | NULL
+level3: TEXT | NULL
+level2: TEXT | NULL
+level3_description: TEXT | NULL
+level5: TEXT | NULL
+level1_description: TEXT | NULL
+who_name: TEXT | NULL
+level4: TEXT | NULL
+level1: TEXT | NULL
+
+## EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS_29
+biocomp_id: TEXT | NULL
+component_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_STDS_LOOKUP_33
+standard_type: TEXT | NULL
+definition: TEXT | NULL
+standard_units: TEXT | NULL
+normal_range_max: TEXT | NULL
+std_act_id: TEXT | NULL
+normal_range_min: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_TYPE_33
+target_desc: TEXT | NULL
+parent_type: TEXT | NULL
+target_type: TEXT | NULL
+
+## EBI_CHEMBL.LIGAND_EFF_26
+activity_id: TEXT | NULL
+bei: TEXT | NULL
+lle: TEXT | NULL
+le: TEXT | NULL
+sei: TEXT | NULL
+
+## EBI_CHEMBL.RESEARCH_COMPANIES_26
+res_stem_id: TEXT | NULL
+co_stem_id: TEXT | NULL
+previous_company: TEXT | NULL
+company: TEXT | NULL
+country: TEXT | NULL
+
+## EBI_CHEMBL.ORGANISM_CLASS
+tax_id: TEXT | NULL
+l3: TEXT | NULL
+l1: TEXT | NULL
+oc_id: TEXT | NULL
+l2: TEXT | NULL
+
+## EBI_CHEMBL.GO_CLASSIFICATION_27
+aspect: TEXT | NULL
+path: TEXT | NULL
+class_level: TEXT | NULL
+pref_name: TEXT | NULL
+go_id: TEXT | NULL
+parent_go_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_GO_28
+component_id: TEXT | NULL
+comp_go_id: TEXT | NULL
+go_id: TEXT | NULL
+
+## EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS_23
+biocomp_id: TEXT | NULL
+component_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.ATC_CLASSIFICATION_28
+level3: TEXT | NULL
+level1_description: TEXT | NULL
+level2: TEXT | NULL
+level5: TEXT | NULL
+level4_description: TEXT | NULL
+level3_description: TEXT | NULL
+level2_description: TEXT | NULL
+level4: TEXT | NULL
+who_name: TEXT | NULL
+level1: TEXT | NULL
+
+## EBI_CHEMBL.IRAC_CLASSIFICATION_24
+irac_class_id: TEXT | NULL
+active_ingredient: TEXT | NULL
+level1: TEXT | NULL
+irac_code: TEXT | NULL
+level1_description: TEXT | NULL
+level4: TEXT | NULL
+level2: TEXT | NULL
+level3: TEXT | NULL
+level2_description: TEXT | NULL
+level3_description: TEXT | NULL
+
+## EBI_CHEMBL.ATC_CLASSIFICATION_33
+who_name: TEXT | NULL
+level5: TEXT | NULL
+level4: TEXT | NULL
+level3: TEXT | NULL
+level4_description: TEXT | NULL
+level1_description: TEXT | NULL
+level1: TEXT | NULL
+level2_description: TEXT | NULL
+level3_description: TEXT | NULL
+level2: TEXT | NULL
+
+## EBI_CHEMBL.HRAC_CLASSIFICATION_28
+level2_description: TEXT | NULL
+hrac_code: TEXT | NULL
+level1_description: TEXT | NULL
+level3: TEXT | NULL
+active_ingredient: TEXT | NULL
+level2: TEXT | NULL
+hrac_class_id: TEXT | NULL
+level1: TEXT | NULL
+
+## EBI_CHEMBL.DATA_VALIDITY_LOOKUP_24
+description: TEXT | NULL
+data_validity_comment: TEXT | NULL
+
+## EBI_CHEMBL.HRAC_CLASSIFICATION
+level1_description: TEXT | NULL
+level2_description: TEXT | NULL
+active_ingredient: TEXT | NULL
+level1: TEXT | NULL
+level2: TEXT | NULL
+hrac_code: TEXT | NULL
+hrac_class_id: TEXT | NULL
+level3: TEXT | NULL
+
+## EBI_CHEMBL.SITE_COMPONENTS_26
+component_id: TEXT | NULL
+sitecomp_id: TEXT | NULL
+domain_id: TEXT | NULL
+site_residues: TEXT | NULL
+site_id: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_PARAMETERS_24
+standard_value: TEXT | NULL
+standard_relation: TEXT | NULL
+units: TEXT | NULL
+value: TEXT | NULL
+assay_id: TEXT | NULL
+type: TEXT | NULL
+relation: TEXT | NULL
+standard_text_value: TEXT | NULL
+text_value: TEXT | NULL
+standard_units: TEXT | NULL
+standard_type: TEXT | NULL
+assay_param_id: TEXT | NULL
+comments: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_CLASS_MAP_28
+assay_class_id: TEXT | NULL
+assay_id: TEXT | NULL
+ass_cls_map_id: TEXT | NULL
+
+## EBI_CHEMBL.INDICATION_REFS_25
+drugind_id: TEXT | NULL
+ref_url: TEXT | NULL
+ref_type: TEXT | NULL
+indref_id: TEXT | NULL
+ref_id: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_DICTIONARY_23
+tax_id: TEXT | NULL
+organism: TEXT | NULL
+pref_name: TEXT | NULL
+target_type: TEXT | NULL
+tid: TEXT | NULL
+species_group_flag: TEXT | NULL
+chembl_id: TEXT | NULL
+
+## EBI_CHEMBL.SOURCE_24
+src_id: TEXT | NULL
+src_short_name: TEXT | NULL
+src_description: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_TYPE_28
+assay_desc: TEXT | NULL
+assay_type: TEXT | NULL
+
+## EBI_CHEMBL.FRAC_CLASSIFICATION_28
+level1_description: TEXT | NULL
+level2_description: TEXT | NULL
+level4: TEXT | NULL
+level2: TEXT | NULL
+level3_description: TEXT | NULL
+active_ingredient: TEXT | NULL
+level4_description: TEXT | NULL
+frac_class_id: TEXT | NULL
+level3: TEXT | NULL
+level5: TEXT | NULL
+level1: TEXT | NULL
+frac_code: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_TYPE_29
+target_desc: TEXT | NULL
+parent_type: TEXT | NULL
+target_type: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION_33
+mol_hrac_id: TEXT | NULL
+hrac_class_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.ORGANISM_CLASS_28
+tax_id: TEXT | NULL
+oc_id: TEXT | NULL
+l2: TEXT | NULL
+l3: TEXT | NULL
+l1: TEXT | NULL
+
+## EBI_CHEMBL.DATA_VALIDITY_LOOKUP
+description: TEXT | NULL
+data_validity_comment: TEXT | NULL
+
+## EBI_CHEMBL.SITE_COMPONENTS_30
+component_id: NUMBER | Foreign key to the component_sequences table, indicating which molecular component of the target is involved in the binding site.
+site_id: NUMBER | Foreign key to binding_sites table.
+site_residues: TEXT | List of residues from the given molecular component that make up the binding site (where not know, will be null).
+sitecomp_id: NUMBER | Primary key.
+domain_id: NUMBER | Foreign key to the domains table, indicating which domain of the given molecular component is involved in the binding site (where not known, the domain_id may be null).
+
+## EBI_CHEMBL.METABOLISM_REFS_33
+met_id: TEXT | NULL
+ref_type: TEXT | NULL
+ref_url: TEXT | NULL
+ref_id: TEXT | NULL
+metref_id: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SUPP_MAP
+activity_id: TEXT | NULL
+actsm_id: TEXT | NULL
+smid: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_HIERARCHY_29
+active_molregno: TEXT | NULL
+molregno: TEXT | NULL
+parent_molregno: TEXT | NULL
+
+## EBI_CHEMBL.DOMAINS_27
+source_domain_id: TEXT | NULL
+domain_description: TEXT | NULL
+domain_type: TEXT | NULL
+domain_name: TEXT | NULL
+domain_id: TEXT | NULL
+
+## EBI_CHEMBL.ATC_CLASSIFICATION_27
+level3: TEXT | NULL
+level1_description: TEXT | NULL
+level5: TEXT | NULL
+level2: TEXT | NULL
+level1: TEXT | NULL
+level3_description: TEXT | NULL
+level4_description: TEXT | NULL
+level2_description: TEXT | NULL
+level4: TEXT | NULL
+who_name: TEXT | NULL
+
+## EBI_CHEMBL.CURATION_LOOKUP_26
+curated_by: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SUPP_28
+units: TEXT | NULL
+text_value: TEXT | NULL
+relation: TEXT | NULL
+standard_relation: TEXT | NULL
+value: TEXT | NULL
+standard_value: TEXT | NULL
+as_id: TEXT | NULL
+smid: TEXT | NULL
+standard_units: TEXT | NULL
+standard_type: TEXT | NULL
+comments: TEXT | NULL
+type: TEXT | NULL
+rgid: TEXT | NULL
+standard_text_value: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_FAMILY_CLASSIFICATION_26
+l2: TEXT | NULL
+l6: TEXT | NULL
+protein_class_desc: TEXT | NULL
+l1: TEXT | NULL
+l3: TEXT | NULL
+protein_class_id: TEXT | NULL
+l7: TEXT | NULL
+l4: TEXT | NULL
+l8: TEXT | NULL
+l5: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SMID_30
+smid: NUMBER | FK to SMID in ACTIVITY_SUPP_MAP, and a FK to SMID in ACTIVITY_SUPP
+
+## EBI_CHEMBL.CELL_DICTIONARY_23
+cell_source_tissue: TEXT | NULL
+cell_source_tax_id: TEXT | NULL
+efo_id: TEXT | NULL
+cell_name: TEXT | NULL
+cell_id: TEXT | NULL
+cell_description: TEXT | NULL
+cellosaurus_id: TEXT | NULL
+cl_lincs_id: TEXT | NULL
+chembl_id: TEXT | NULL
+cell_source_organism: TEXT | NULL
+clo_id: TEXT | NULL
+
+## EBI_CHEMBL.BIOTHERAPEUTICS_27
+helm_notation: TEXT | NULL
+molregno: TEXT | NULL
+description: TEXT | NULL
+
+## EBI_CHEMBL.LIGAND_EFF_27
+activity_id: TEXT | NULL
+sei: TEXT | NULL
+lle: TEXT | NULL
+le: TEXT | NULL
+bei: TEXT | NULL
+
+## EBI_CHEMBL.VARIANT_SEQUENCES_24
+mutation: TEXT | NULL
+accession: TEXT | NULL
+organism: TEXT | NULL
+variant_id: TEXT | NULL
+isoform: TEXT | NULL
+sequence: TEXT | NULL
+version: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_MECHANISM_23
+mechanism_comment: TEXT | NULL
+selectivity_comment: TEXT | NULL
+molecular_mechanism: TEXT | NULL
+binding_site_comment: TEXT | NULL
+mechanism_of_action: TEXT | NULL
+tid: TEXT | NULL
+action_type: TEXT | NULL
+mec_id: TEXT | NULL
+direct_interaction: TEXT | NULL
+molregno: TEXT | NULL
+disease_efficacy: TEXT | NULL
+record_id: TEXT | NULL
+site_id: TEXT | NULL
+
+## EBI_CHEMBL.ATC_CLASSIFICATION_23
+level1: TEXT | NULL
+level2: TEXT | NULL
+level4_description: TEXT | NULL
+level5: TEXT | NULL
+level2_description: TEXT | NULL
+level3: TEXT | NULL
+level3_description: TEXT | NULL
+who_name: TEXT | NULL
+level4: TEXT | NULL
+level1_description: TEXT | NULL
+
+## EBI_CHEMBL.MECHANISM_REFS_25
+mecref_id: TEXT | NULL
+ref_type: TEXT | NULL
+ref_id: TEXT | NULL
+ref_url: TEXT | NULL
+mec_id: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS_29
+protein_class_synonym: TEXT | NULL
+protclasssyn_id: TEXT | NULL
+syn_type: TEXT | NULL
+protein_class_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS_27
+molregno: TEXT | NULL
+alert_id: TEXT | NULL
+cpd_str_alert_id: TEXT | NULL
+
+## EBI_CHEMBL.GO_CLASSIFICATION_33
+aspect: TEXT | NULL
+class_level: TEXT | NULL
+parent_go_id: TEXT | NULL
+path: TEXT | NULL
+go_id: TEXT | NULL
+pref_name: TEXT | NULL
+
+## EBI_CHEMBL.PRODUCTS_33
+ad_type: TEXT | NULL
+trade_name: TEXT | NULL
+topical: TEXT | NULL
+dosage_form: TEXT | NULL
+black_box_warning: TEXT | NULL
+nda_type: TEXT | NULL
+innovator_company: TEXT | NULL
+product_id: TEXT | NULL
+route: TEXT | NULL
+applicant_full_name: TEXT | NULL
+parenteral: TEXT | NULL
+approval_date: TEXT | NULL
+oral: TEXT | NULL
+
+## EBI_CHEMBL.CELL_DICTIONARY
+cell_ontology_id: TEXT | NULL
+cell_name: TEXT | NULL
+cell_source_tax_id: TEXT | NULL
+cell_source_organism: TEXT | NULL
+clo_id: TEXT | NULL
+cellosaurus_id: TEXT | NULL
+cl_lincs_id: TEXT | NULL
+cell_source_tissue: TEXT | NULL
+cell_id: TEXT | NULL
+efo_id: TEXT | NULL
+cell_description: TEXT | NULL
+chembl_id: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_RELATIONS_29
+relationship: TEXT | NULL
+related_tid: TEXT | NULL
+tid: TEXT | NULL
+targrel_id: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_INDICATION
+drugind_id: TEXT | NULL
+molregno: TEXT | NULL
+efo_term: TEXT | NULL
+max_phase_for_ind: TEXT | NULL
+record_id: TEXT | NULL
+mesh_heading: TEXT | NULL
+mesh_id: TEXT | NULL
+efo_id: TEXT | NULL
+
+## EBI_CHEMBL.TISSUE_DICTIONARY_24
+efo_id: TEXT | NULL
+caloha_id: TEXT | NULL
+chembl_id: TEXT | NULL
+uberon_id: TEXT | NULL
+pref_name: TEXT | NULL
+bto_id: TEXT | NULL
+tissue_id: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION_25
+irac_class_id: TEXT | NULL
+mol_irac_id: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.GO_CLASSIFICATION_25
+go_id: TEXT | NULL
+path: TEXT | NULL
+aspect: TEXT | NULL
+pref_name: TEXT | NULL
+class_level: TEXT | NULL
+parent_go_id: TEXT | NULL
+
+## EBI_CHEMBL.INDICATION_REFS_29
+indref_id: TEXT | NULL
+ref_url: TEXT | NULL
+ref_id: TEXT | NULL
+ref_type: TEXT | NULL
+drugind_id: TEXT | NULL
+
+## EBI_CHEMBL.TISSUE_DICTIONARY
+caloha_id: TEXT | NULL
+bto_id: TEXT | NULL
+pref_name: TEXT | NULL
+uberon_id: TEXT | NULL
+tissue_id: TEXT | NULL
+efo_id: TEXT | NULL
+chembl_id: TEXT | NULL
+
+## EBI_CHEMBL.BIO_COMPONENT_SEQUENCES_30
+tax_id: NUMBER | NCBI tax ID for the species from which the sequence is derived. May be null for humanized monoclonal antibodies, synthetic peptides etc.
+component_type: TEXT | Type of molecular component (e.g., 'PROTEIN','DNA','RNA').
+organism: TEXT | Name of the species from which the sequence is derived.
+sequence_md5sum: TEXT | MD5 checksum of the sequence.
+description: TEXT | Description/name of molecular component.
+component_id: NUMBER | Primary key. Unique identifier for each of the molecular components of biotherapeutics in ChEMBL (e.g., antibody chains, recombinant proteins, synthetic peptides).
+sequence: TEXT | Sequence of the biotherapeutic component.
+
+## EBI_CHEMBL.COMPOUND_PROPERTIES_25
+mw_freebase: TEXT | NULL
+hba: TEXT | NULL
+aromatic_rings: TEXT | NULL
+num_ro5_violations: TEXT | NULL
+qed_weighted: TEXT | NULL
+hbd_lipinski: TEXT | NULL
+acd_most_bpka: TEXT | NULL
+hbd: TEXT | NULL
+heavy_atoms: TEXT | NULL
+molecular_species: TEXT | NULL
+psa: TEXT | NULL
+full_mwt: TEXT | NULL
+acd_logp: TEXT | NULL
+molregno: TEXT | NULL
+mw_monoisotopic: TEXT | NULL
+ro3_pass: TEXT | NULL
+rtb: TEXT | NULL
+num_lipinski_ro5_violations: TEXT | NULL
+hba_lipinski: TEXT | NULL
+alogp: TEXT | NULL
+acd_most_apka: TEXT | NULL
+full_molformula: TEXT | NULL
+acd_logd: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITIES_33
+toid: TEXT | NULL
+molregno: TEXT | NULL
+bao_endpoint: TEXT | NULL
+units: TEXT | NULL
+standard_text_value: TEXT | NULL
+standard_upper_value: TEXT | NULL
+standard_units: TEXT | NULL
+upper_value: TEXT | NULL
+standard_value: TEXT | NULL
+uo_units: TEXT | NULL
+activity_comment: TEXT | NULL
+pchembl_value: TEXT | NULL
+standard_type: TEXT | NULL
+src_id: TEXT | NULL
+action_type: TEXT | NULL
+activity_id: TEXT | NULL
+qudt_units: TEXT | NULL
+relation: TEXT | NULL
+standard_flag: TEXT | NULL
+value: TEXT | NULL
+standard_relation: TEXT | NULL
+record_id: TEXT | NULL
+doc_id: TEXT | NULL
+text_value: TEXT | NULL
+type: TEXT | NULL
+data_validity_comment: TEXT | NULL
+assay_id: TEXT | NULL
+potential_duplicate: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERT_SETS_27
+set_name: TEXT | NULL
+alert_set_id: TEXT | NULL
+priority: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERT_SETS_28
+set_name: TEXT | NULL
+priority: TEXT | NULL
+alert_set_id: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERT_SETS_29
+alert_set_id: TEXT | NULL
+set_name: TEXT | NULL
+priority: TEXT | NULL
+
+## EBI_CHEMBL.INDICATION_REFS_23
+ref_id: TEXT | NULL
+drugind_id: TEXT | NULL
+indref_id: TEXT | NULL
+ref_url: TEXT | NULL
+ref_type: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_STDS_LOOKUP_27
+normal_range_max: TEXT | NULL
+standard_type: TEXT | NULL
+std_act_id: TEXT | NULL
+normal_range_min: TEXT | NULL
+standard_units: TEXT | NULL
+definition: TEXT | NULL
+
+## EBI_CHEMBL.FRAC_CLASSIFICATION_30
+level2_description: TEXT | Description of target provided by FRAC
+level4_description: TEXT | Chemical group name provided by FRAC
+level1: TEXT | Mechanism of action code assigned by FRAC
+level3: TEXT | Group number assigned by FRAC
+level1_description: TEXT | Description of mechanism of action
+active_ingredient: TEXT | Name of active ingredient (fungicide) classified by FRAC
+level5: TEXT | A unique code assigned to each ingredient (based on the level 1-4 FRAC classification, but not assigned by IRAC)
+frac_code: TEXT | The official FRAC classification code for the ingredient
+frac_class_id: NUMBER | Unique numeric primary key for each level5 code
+level3_description: TEXT | Description of group provided by FRAC
+level4: TEXT | Number denoting the chemical group (number not assigned by FRAC)
+level2: TEXT | Target site code assigned by FRAC
+
+## EBI_CHEMBL.TARGET_RELATIONS_23
+tid: TEXT | NULL
+relationship: TEXT | NULL
+related_tid: TEXT | NULL
+targrel_id: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_TYPE_30
+target_type: TEXT | Target type (as used in target dictionary)
+parent_type: TEXT | Higher level classification of target_type, allowing grouping of e.g., all 'PROTEIN' targets, all 'NON-MOLECULAR' targets etc.
+target_desc: TEXT | Description of target type
+
+## EBI_CHEMBL.DRUG_INDICATION_26
+efo_id: TEXT | NULL
+drugind_id: TEXT | NULL
+efo_term: TEXT | NULL
+mesh_id: TEXT | NULL
+molregno: TEXT | NULL
+max_phase_for_ind: TEXT | NULL
+mesh_heading: TEXT | NULL
+record_id: TEXT | NULL
+
+## EBI_CHEMBL.LIGAND_EFF_25
+sei: TEXT | NULL
+bei: TEXT | NULL
+le: TEXT | NULL
+lle: TEXT | NULL
+activity_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_SYNONYMS_29
+component_synonym: TEXT | NULL
+compsyn_id: TEXT | NULL
+component_id: TEXT | NULL
+syn_type: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_CLASS_MAP_30
+assay_id: NUMBER | Foreign key that maps to the ASSAYS table
+ass_cls_map_id: NUMBER | Primary key.
+assay_class_id: NUMBER | Foreign key that maps to the ASSAY_CLASSIFICATION table
+
+## EBI_CHEMBL.RESEARCH_STEM
+res_stem_id: TEXT | NULL
+research_stem: TEXT | NULL
+
+## EBI_CHEMBL.ATC_CLASSIFICATION_26
+level2: TEXT | NULL
+level1: TEXT | NULL
+level1_description: TEXT | NULL
+who_name: TEXT | NULL
+level3_description: TEXT | NULL
+level3: TEXT | NULL
+level2_description: TEXT | NULL
+level4_description: TEXT | NULL
+level4: TEXT | NULL
+level5: TEXT | NULL
+
+## EBI_CHEMBL.DOMAINS_23
+domain_description: TEXT | NULL
+domain_id: TEXT | NULL
+domain_name: TEXT | NULL
+domain_type: TEXT | NULL
+source_domain_id: TEXT | NULL
+
+## EBI_CHEMBL.PREDICTED_BINDING_DOMAINS_26
+predbind_id: TEXT | NULL
+site_id: TEXT | NULL
+prediction_method: TEXT | NULL
+confidence: TEXT | NULL
+activity_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_STRUCTURES_29
+standard_inchi: TEXT | NULL
+molfile: TEXT | NULL
+standard_inchi_key: TEXT | NULL
+canonical_smiles: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION_26
+frac_class_id: TEXT | NULL
+molregno: TEXT | NULL
+mol_frac_id: TEXT | NULL
+
+## EBI_CHEMBL.SQLITE_STAT1_24
+idx: TEXT | NULL
+tbl: TEXT | NULL
+stat: TEXT | NULL
+
+## EBI_CHEMBL.METABOLISM_REFS_27
+ref_type: TEXT | NULL
+ref_id: TEXT | NULL
+metref_id: TEXT | NULL
+met_id: TEXT | NULL
+ref_url: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS_26
+molregno: TEXT | NULL
+alert_id: TEXT | NULL
+cpd_str_alert_id: TEXT | NULL
+
+## EBI_CHEMBL.ASSAYS_24
+variant_id: TEXT | NULL
+src_assay_id: TEXT | NULL
+tissue_id: TEXT | NULL
+curated_by: TEXT | NULL
+assay_tax_id: TEXT | NULL
+assay_test_type: TEXT | NULL
+bao_format: TEXT | NULL
+doc_id: TEXT | NULL
+relationship_type: TEXT | NULL
+confidence_score: TEXT | NULL
+cell_id: TEXT | NULL
+assay_id: TEXT | NULL
+assay_category: TEXT | NULL
+assay_tissue: TEXT | NULL
+assay_cell_type: TEXT | NULL
+assay_subcellular_fraction: TEXT | NULL
+assay_strain: TEXT | NULL
+assay_type: TEXT | NULL
+tid: TEXT | NULL
+description: TEXT | NULL
+aidx: TEXT | NULL
+assay_organism: TEXT | NULL
+chembl_id: TEXT | NULL
+src_id: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_TYPE_23
+target_desc: TEXT | NULL
+target_type: TEXT | NULL
+parent_type: TEXT | NULL
+
+## EBI_CHEMBL.SOURCE_28
+src_short_name: TEXT | NULL
+src_id: TEXT | NULL
+src_description: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION_23
+mol_atc_id: TEXT | NULL
+level5: TEXT | NULL
+molregno: TEXT | NULL
+
+## EBI_CHEMBL.TISSUE_DICTIONARY_27
+chembl_id: TEXT | NULL
+efo_id: TEXT | NULL
+pref_name: TEXT | NULL
+tissue_id: TEXT | NULL
+uberon_id: TEXT | NULL
+caloha_id: TEXT | NULL
+bto_id: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SUPP_MAP_27
+actsm_id: TEXT | NULL
+smid: TEXT | NULL
+activity_id: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_COMPONENTS_27
+component_id: TEXT | NULL
+targcomp_id: TEXT | NULL
+homologue: TEXT | NULL
+tid: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_TYPE_30
+assay_desc: TEXT | Description of assay type
+assay_type: TEXT | Single character representing assay type
+
+## EBI_CHEMBL.PRODUCTS_23
+route: TEXT | NULL
+ad_type: TEXT | NULL
+nda_type: TEXT | NULL
+trade_name: TEXT | NULL
+topical: TEXT | NULL
+innovator_company: TEXT | NULL
+oral: TEXT | NULL
+dosage_form: TEXT | NULL
+product_id: TEXT | NULL
+parenteral: TEXT | NULL
+applicant_full_name: TEXT | NULL
+approval_date: TEXT | NULL
+black_box_warning: TEXT | NULL
+
+## EBI_CHEMBL.HRAC_CLASSIFICATION_29
+level2: TEXT | NULL
+level2_description: TEXT | NULL
+hrac_class_id: TEXT | NULL
+level1_description: TEXT | NULL
+level1: TEXT | NULL
+active_ingredient: TEXT | NULL
+level3: TEXT | NULL
+hrac_code: TEXT | NULL
+
+## EBI_CHEMBL.DOCS_29
+doc_type: TEXT | NULL
+title: TEXT | NULL
+first_page: TEXT | NULL
+src_id: TEXT | NULL
+last_page: TEXT | NULL
+journal: TEXT | NULL
+volume: TEXT | NULL
+chembl_id: TEXT | NULL
+patent_id: TEXT | NULL
+doc_id: TEXT | NULL
+ridx: TEXT | NULL
+abstract: TEXT | NULL
+issue: TEXT | NULL
+authors: TEXT | NULL
+year: TEXT | NULL
+doi: TEXT | NULL
+pubmed_id: TEXT | NULL
+
+## EBI_CHEMBL.STRUCTURAL_ALERT_SETS_33
+priority: TEXT | NULL
+set_name: TEXT | NULL
+alert_set_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_SYNONYMS_28
+component_id: TEXT | NULL
+syn_type: TEXT | NULL
+component_synonym: TEXT | NULL
+compsyn_id: TEXT | NULL
+
+## EBI_CHEMBL.ORGANISM_CLASS_25
+l2: TEXT | NULL
+l1: TEXT | NULL
+oc_id: TEXT | NULL
+tax_id: TEXT | NULL
+l3: TEXT | NULL
+
+## EBI_CHEMBL.DEFINED_DAILY_DOSE_33
+ddd_id: TEXT | NULL
+atc_code: TEXT | NULL
+ddd_value: TEXT | NULL
+ddd_comment: TEXT | NULL
+ddd_admr: TEXT | NULL
+ddd_units: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_CLASS_23
+comp_class_id: TEXT | NULL
+component_id: TEXT | NULL
+protein_class_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_CLASS_29
+protein_class_id: TEXT | NULL
+component_id: TEXT | NULL
+comp_class_id: TEXT | NULL
+
+## EBI_CHEMBL.ASSAY_TYPE_23
+assay_type: TEXT | NULL
+assay_desc: TEXT | NULL
+
+## EBI_CHEMBL.RESEARCH_STEM_33
+research_stem: TEXT | NULL
+res_stem_id: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_HIERARCHY_30
+active_molregno: NUMBER | Where a compound is a pro-drug, this represents the active metabolite of the 'dosed' compound given by parent_molregno. Where parent_molregno and active_molregno are the same, the compound is not currently known to be a pro-drug.
+parent_molregno: NUMBER | Represents parent compound of molregno in first field (i.e., generated by removing salts). Where molregno and parent_molregno are same, the initial ChEMBL compound did not contain a salt component, or else could not be further processed for various reasons (e.g., inorganic mixture). Compounds which are only generated by removing salts will appear in this field only. Those which, themselves, have any associated data (e.g., activity data) or are launched drugs will also appear in the molregno field.
+molregno: NUMBER | Foreign key to compounds table. This field holds a list of all of the ChEMBL compounds with associated data (e.g., activity information, approved drugs). Parent compounds that are generated only by removing salts, and which do not themselves have any associated data will not appear here.
+
+## EBI_CHEMBL.IRAC_CLASSIFICATION_26
+level1: TEXT | NULL
+level1_description: TEXT | NULL
+level3: TEXT | NULL
+level2_description: TEXT | NULL
+level3_description: TEXT | NULL
+level2: TEXT | NULL
+irac_code: TEXT | NULL
+active_ingredient: TEXT | NULL
+level4: TEXT | NULL
+irac_class_id: TEXT | NULL
+
+## EBI_CHEMBL.VARIANT_SEQUENCES
+accession: TEXT | NULL
+version: TEXT | NULL
+variant_id: TEXT | NULL
+mutation: TEXT | NULL
+sequence: TEXT | NULL
+tax_id: TEXT | NULL
+organism: TEXT | NULL
+isoform: TEXT | NULL
+
+## EBI_CHEMBL.RELATIONSHIP_TYPE_25
+relationship_type: TEXT | NULL
+relationship_desc: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_PROPERTIES
+units: TEXT | NULL
+text_value: TEXT | NULL
+activity_id: TEXT | NULL
+value: TEXT | NULL
+comments: TEXT | NULL
+standard_relation: TEXT | NULL
+type: TEXT | NULL
+result_flag: TEXT | NULL
+relation: TEXT | NULL
+standard_value: TEXT | NULL
+ap_id: TEXT | NULL
+standard_text_value: TEXT | NULL
+standard_units: TEXT | NULL
+standard_type: TEXT | NULL
+
+## EBI_CHEMBL.MECHANISM_REFS_27
+ref_type: TEXT | NULL
+mecref_id: TEXT | NULL
+mec_id: TEXT | NULL
+ref_id: TEXT | NULL
+ref_url: TEXT | NULL
+
+## EBI_CHEMBL.ASSAYS_23
+assay_test_type: TEXT | NULL
+assay_strain: TEXT | NULL
+confidence_score: TEXT | NULL
+relationship_type: TEXT | NULL
+assay_cell_type: TEXT | NULL
+assay_tax_id: TEXT | NULL
+assay_tissue: TEXT | NULL
+assay_type: TEXT | NULL
+curated_by: TEXT | NULL
+assay_subcellular_fraction: TEXT | NULL
+chembl_id: TEXT | NULL
+assay_category: TEXT | NULL
+tissue_id: TEXT | NULL
+doc_id: TEXT | NULL
+bao_format: TEXT | NULL
+variant_id: TEXT | NULL
+src_assay_id: TEXT | NULL
+assay_organism: TEXT | NULL
+description: TEXT | NULL
+src_id: TEXT | NULL
+cell_id: TEXT | NULL
+assay_id: TEXT | NULL
+tid: TEXT | NULL
+
+## EBI_CHEMBL.BIOASSAY_ONTOLOGY_25
+bao_id: TEXT | NULL
+label: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_CLASSIFICATION_29
+protein_class_desc: TEXT | NULL
+class_level: TEXT | NULL
+parent_id: TEXT | NULL
+protein_class_id: TEXT | NULL
+short_name: TEXT | NULL
+definition: TEXT | NULL
+pref_name: TEXT | NULL
+
+## EBI_CHEMBL.PRODUCTS_27
+topical: TEXT | NULL
+applicant_full_name: TEXT | NULL
+trade_name: TEXT | NULL
+product_id: TEXT | NULL
+approval_date: TEXT | NULL
+parenteral: TEXT | NULL
+route: TEXT | NULL
+ad_type: TEXT | NULL
+oral: TEXT | NULL
+nda_type: TEXT | NULL
+dosage_form: TEXT | NULL
+black_box_warning: TEXT | NULL
+innovator_company: TEXT | NULL
+
+## EBI_CHEMBL.ACTIVITY_SMID_28
+smid: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_RECORDS_23
+molregno: TEXT | NULL
+src_id: TEXT | NULL
+doc_id: TEXT | NULL
+compound_key: TEXT | NULL
+record_id: TEXT | NULL
+compound_name: TEXT | NULL
+src_compound_id: TEXT | NULL
+
+## EBI_CHEMBL.TARGET_COMPONENTS_24
+homologue: TEXT | NULL
+targcomp_id: TEXT | NULL
+tid: TEXT | NULL
+component_id: TEXT | NULL
+
+## EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION_29
+molregno: TEXT | NULL
+mol_frac_id: TEXT | NULL
+frac_class_id: TEXT | NULL
+
+## EBI_CHEMBL.PROTEIN_FAMILY_CLASSIFICATION_27
+l3: TEXT | NULL
+l4: TEXT | NULL
+protein_class_id: TEXT | NULL
+l5: TEXT | NULL
+protein_class_desc: TEXT | NULL
+l2: TEXT | NULL
+l7: TEXT | NULL
+l1: TEXT | NULL
+l8: TEXT | NULL
+l6: TEXT | NULL
+
+## EBI_CHEMBL.COMPONENT_GO_27
+component_id: TEXT | NULL
+go_id: TEXT | NULL
+comp_go_id: TEXT | NULL
+
+## EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS_30
+alert_id: NUMBER | Foreign key to the structural_alerts table. The particular alert that has been identified in this compound.
+molregno: NUMBER | Foreign key to the molecule_dictionary. The compound for which the structural alert has been found.
+cpd_str_alert_id: NUMBER | Primary key.
+
+## EBI_CHEMBL.ORGANISM_CLASS_24
+l1: TEXT | NULL
+tax_id: TEXT | NULL
+oc_id: TEXT | NULL
+l2: TEXT | NULL
+l3: TEXT | NULL
+
+## EBI_CHEMBL.DRUG_MECHANISM_27
+mechanism_comment: TEXT | NULL
+mec_id: TEXT | NULL
+mechanism_of_action: TEXT | NULL
+site_id: TEXT | NULL
+record_id: TEXT | NULL
+selectivity_comment: TEXT | NULL
+action_type: TEXT | NULL
+tid: TEXT | NULL
+disease_efficacy: TEXT | NULL
+binding_site_comment: TEXT | NULL
+molecular_mechanism: TEXT | NULL
+molregno: TEXT | NULL
+direct_interaction: TEXT | NULL
+
+## EBI_CHEMBL.MECHANISM_REFS_33
+ref_id: TEXT | NULL
+ref_url: TEXT | NULL
+ref_type: TEXT | NULL
+mecref_id: TEXT | NULL
+mec_id: TEXT | NULL

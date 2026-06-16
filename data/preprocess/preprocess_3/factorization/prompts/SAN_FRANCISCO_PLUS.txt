@@ -1,0 +1,315 @@
+[COMPONENTS]
+@C1
+time_recorded: NUMBER | The timestamp of the last real-time update from the particular vehicle.
+trip_date: DATE | The service date for the trip the vehicle is serving.
+vehicle_id: TEXT | The unique identifier of the vehicle to be monitored.
+vehicle_location: BINARY | The geographic representation of the vehicle's location at the time indicated in the time_recorded column
+vehicle_location_lat: FLOAT | The latitude of the vehicle's location at the time when time_recorded indicates
+vehicle_location_lon: FLOAT | The longitude of the vehicle's location at the time when time_recorded indicates
+
+@C2
+latitude: FLOAT | Service request location latitude coordinate.
+longitude: FLOAT | Service request location longitude coordinate.
+
+[TABLES]
+## SAN_FRANCISCO_NEIGHBORHOODS.BOUNDARIES
+internal_point_geom: BINARY | NULL
+internal_point_longitude: FLOAT | NULL
+internal_point_latitude: FLOAT | NULL
+neighborhood_geom: BINARY | NULL
+neighborhood: TEXT | NULL
+
+## SAN_FRANCISCO_BIKESHARE.BIKESHARE_STATION_INFO
+has_kiosk: BOOLEAN | NULL
+region_id: NUMBER | ID of the region where station is located
+name: TEXT | Public name of the station
+short_name: TEXT | Short name or other type of identifier, as used by the data publisher
+rental_methods: TEXT | Array of enumerables containing the payment methods accepted at this station.  Current valid values (in CAPS) are: KEY (i.e. operator issued bike key / fob / card) CREDITCARD PAYPASS APPLEPAY ANDROIDPAY TRANSITCARD ACCOUNTNUMBER PHONE This list is intended to be as comprehensive at the time of publication as possible but is subject to change, as defined in File Requirements above
+external_id: TEXT | NULL
+lon: FLOAT | The longitude of station. The field value must be a valid WGS 84 longitude in decimal degrees format. See: http://en.wikipedia.org/wiki/World_Geodetic_System, https://en.wikipedia.org/wiki/Decimal_degrees
+eightd_has_key_dispenser: BOOLEAN | NULL
+station_geom: BINARY | NULL
+station_id: TEXT | Unique identifier of a station.
+capacity: NUMBER | Number of total docking points installed at this station, both available and unavailable
+lat: FLOAT | The latitude of station. The field value must be a valid WGS 84 latitude in decimal degrees format. See: http://en.wikipedia.org/wiki/World_Geodetic_System, https://en.wikipedia.org/wiki/Decimal_degrees
+
+## SAN_FRANCISCO_BIKESHARE.BIKESHARE_TRIPS
+end_date: NUMBER | NULL
+trip_id: TEXT | Numeric ID of bike trip
+end_station_id: NUMBER | Numeric reference for end station
+start_station_geom: BINARY | NULL
+start_date: NUMBER | NULL
+end_station_geom: BINARY | NULL
+start_station_longitude: FLOAT | NULL
+member_gender: TEXT | NULL
+end_station_latitude: FLOAT | NULL
+bike_number: NUMBER | NULL
+start_station_name: TEXT | Station name for start station
+zip_code: TEXT | NULL
+end_station_longitude: FLOAT | NULL
+end_station_name: TEXT | Station name for end station
+c_subscription_type: TEXT | NULL
+duration_sec: NUMBER | NULL
+start_station_id: NUMBER | Numeric reference for start station
+start_station_latitude: FLOAT | NULL
+subscriber_type: TEXT | Type of the Subscriber
+member_birth_year: NUMBER | NULL
+bike_share_for_all_trip: TEXT | NULL
+
+## SAN_FRANCISCO_BIKESHARE.BIKESHARE_REGIONS
+region_id: NUMBER | Unique identifier for the region
+name: TEXT | Public name for this region
+
+## SAN_FRANCISCO_BIKESHARE.BIKESHARE_STATION_STATUS
+is_renting: BOOLEAN | 1/0 boolean - is the station currently renting bikes (even if the station is empty, if it is set to allow rentals this value should be 1)
+is_installed: BOOLEAN | 1/0 boolean - is the station currently on the street
+station_id: TEXT | Unique identifier of a station
+num_bikes_available: NUMBER | Number of bikes available for rental
+eightd_has_available_keys: BOOLEAN | NULL
+num_docks_disabled: NUMBER | Number of empty but disabled dock points at the station. This value remains as part of the spec as it is possibly useful during development
+last_reported: NUMBER | Integer POSIX timestamp indicating the last time this station reported its status to the backend
+is_returning: BOOLEAN | 1/0 boolean - is the station accepting bike returns (if a station is full but would allow a return if it was not full then this value should be 1)
+num_ebikes_available: NUMBER | NULL
+num_bikes_disabled: NUMBER | Number of disabled bikes at the station. Vendors who do not want to publicize the number of disabled bikes or docks in their system can opt to omit station capacity (in station_information), num_bikes_disabled and num_docks_disabled. If station capacity is published then broken docks/bikes can be inferred (though not specifically whether the decreased capacity is a broken bike or dock)
+num_docks_available: NUMBER | Number of docks accepting bike returns
+
+## SAN_FRANCISCO_311._311_SERVICE_REQUESTS
+@use: [C2]
+neighborhood: TEXT | NULL
+status: TEXT | Service request status. Duplicate statuses indicate that issue had previously been reported recently.
+police_district: TEXT | NULL
+agency_name: TEXT | NULL
+status_notes: TEXT | NULL
+supervisor_district: NUMBER | NULL
+unique_key: NUMBER | The service request tracking number.
+closed_date: NUMBER | NULL
+source: TEXT | Contact method Service request was received from. Mass entry requests are submitted by dept. in groups after work is completed.
+descriptor: TEXT | NULL
+incident_address: TEXT | Service location of Service request.
+resolution_action_updated_date: NUMBER | NULL
+category: TEXT | NULL
+complaint_type: TEXT | NULL
+created_date: NUMBER | Date Service request was created.
+location: TEXT | Service request location latitude and longitude coordinates.
+media_url: TEXT | NULL
+
+## SAN_FRANCISCO_FILM_LOCATIONS.FILM_LOCATIONS
+writer: TEXT | NULL
+locations: TEXT | NULL
+actor_3: TEXT | NULL
+production_company: TEXT | NULL
+actor_1: TEXT | NULL
+fun_facts: TEXT | NULL
+title: TEXT | NULL
+release_year: NUMBER | NULL
+director: TEXT | NULL
+distributor: TEXT | NULL
+actor_2: TEXT | NULL
+
+## SAN_FRANCISCO_TREES.STREET_TREES
+@use: [C2]
+tree_id: NUMBER | Unique ID for Tree
+species: TEXT | Species of tree
+site_info: TEXT | Description of location of tree
+care_assistant: TEXT | Agency or person that is secondary caregiver to tree
+y_coordinate: FLOAT | CA State Plane III
+plant_date: NUMBER | Date tree was planted
+location: TEXT | Location formatted for mapping
+permit_notes: TEXT | Tree permit number reference
+dbh: TEXT | depth height
+address: TEXT | Address of Tree
+care_taker: TEXT | Agency or person that is primary caregiver to tree. Owner of Tree
+site_order: NUMBER | Order of tree at address where multiple trees are at same address. Trees are ordered in ascending address order
+legal_status: TEXT | Legal staus: Permitted or DPW maintained
+plant_type: TEXT | Landscaping or Tree
+x_coordinate: FLOAT | CA State Plane III
+plot_size: TEXT | dimension of tree plot
+
+## SAN_FRANCISCO_SFPD_INCIDENTS.SFPD_INCIDENTS
+@use: [C2]
+address: TEXT | NULL
+resolution: TEXT | Whether there was an arrest, citation, booking, etc.
+location: TEXT | Latitude/Longitude
+pddistrict: TEXT | Police Department district
+category: TEXT | NULL
+dayofweek: TEXT | NULL
+pdid: NUMBER | Unique Identifier for use in update and insert operations
+timestamp: NUMBER | NULL
+descript: TEXT | NULL
+unique_key: NUMBER | The unique incident number for this accident
+
+## SAN_FRANCISCO_SFFD_SERVICE_CALLS.SFFD_SERVICE_CALLS
+@use: [C2]
+location_geom: BINARY | NULL
+als_unit: BOOLEAN | Does this unit includes ALS (Advance Life Support) resources? Is there a paramedic in this unit?
+watch_date: DATE | Watch date when the call is received. Watch date starts at 0800 each morning and ends at 0800 the next day.
+priority: TEXT | Call priority (Code 2: Non-Emergency or Code 3:Emergency).
+on_scene_timestamp: NUMBER | Date and time the unit records arriving to the location of the incident
+hospital_timestamp: NUMBER | If this unit is an ambulance, date and time the unit arrives to the hospital.
+entry_timestamp: NUMBER | Date and time the 911 operator submits the entry of the initical call information into the CAD system
+transport_timestamp: NUMBER | If this unit is an ambulance, date and time the unit begins the transport unit arrives to hospital
+call_type: TEXT | Type of call the incident falls into. See the list below.
+final_priority: NUMBER | Final call priority (Code 2: Non-Emergency or Code 3:Emergency).
+call_number: NUMBER | A unique 9-digit number assigned by the 911 Dispatch Center (DEM) to this call. These number are used for both Police and Fire calls.
+incident_number: NUMBER | A unique 8-digit number assigned by DEM to this Fire incident.
+call_type_group: TEXT | Call types are divided into four main groups: Fire, Alarm, Potential Life Threatening and Non Life Threatening.
+response_timestamp: NUMBER | Date and time this unit acknowledges the dispatch and records that the unit is en route to the location of the call.
+call_final_disposition: TEXT | Disposition of the call (Code). For example TH2: Transport to Hospital - Code 2, FIR: Resolved by Fire Department
+dispatch_timestamp: NUMBER | Date and time the 911 operator dispatches this unit to the call.
+station_area: TEXT | Fire Station First Response Area associated with the address of the incident
+fire_prevention_district: TEXT | Bureau of Fire Prevention District associated with this address
+unit_type: TEXT | Unit type
+address: TEXT | Address of midblock point associated with incident (obfuscated address to protect caller privacy)
+original_priority: TEXT | Initial call priority (Code 2: Non-Emergency or Code 3:Emergency).
+neighborhood_name: TEXT | NULL
+supervisor_district: TEXT | Supervisor District associated with this address
+available_timestamp: NUMBER | Date and time this unit is not longer assigned to this call and it is available for another dispatch.
+received_timestamp: NUMBER | Date and time of call is received at the 911 Dispatch Center.
+city: TEXT | City of incident
+zipcode_of_incident: TEXT | Zipcode of incident
+battalion: TEXT | Emergency Response District (There are 9 Fire Emergency Response Districts)
+unit_sequence_in_call_dispatch: NUMBER | A number that indicates the order this unit was assigned to this call
+call_date: DATE | Date the call is received at the 911 Dispatch Center. Used for reporting purposes.
+unit_id: TEXT | Unit Identifier. For example E01 for Engine 1 or T01 for Truck 1.
+number_of_alarms: NUMBER | Number of alarms associated with the incident. This is a number between 1 and 5.
+box: TEXT | Fire box associated with the address of the incident. A box is the smallest area used to divide the City. Each box is associated with a unique unit dispatch order. The City is divided into more than 2,400 boxes.
+row_id: TEXT | Unique identifier used for managing data updates. It is the concatenation of Call Number and Unit ID separated by a dash
+
+## SAN_FRANCISCO_TRANSIT_MUNI.CALENDAR
+friday: BOOLEAN | Indicates whether the service is valid for all Sundays operating on the agency is using normal schedules and fare categories
+exception_type: BOOLEAN | Indicates whether service is available on the date specified in the exceptions field. The following are valid values for this field:  - TRUE: Service will be operating during the date listed in the column exceptions -  FALSE: Service will not be operating during the date listed in the column exceptions
+thursday: BOOLEAN | Indicates whether the service is valid for all Sundays operating on the agency is using normal schedules and fare categories
+wednesday: BOOLEAN | Indicates whether the service is valid for all Sundays operating on the agency is using normal schedules and fare categories
+monday: BOOLEAN | Indicates whether the service is valid for all Sundays operating on the agency is using normal schedules and fare categories
+service_desc: TEXT | Text description of service category
+sunday: BOOLEAN | Indicates whether the service is valid for all Sundays operating on the agency is using normal schedules and fare categories
+service_id: TEXT | Unique identifier for a set of dates when service is available for one or more routes
+saturday: BOOLEAN | Indicates whether the service is valid for all Sundays operating on the agency is using normal schedules and fare categories
+tuesday: BOOLEAN | Indicates whether the service is valid for all Sundays operating on the agency is using normal schedules and fare categories
+exceptions: DATE | Specifies a particular date when this service is not available. This is typically during holidays, special events, etc. If applicable, the operating service for the day is indicated in replacement_service. Format for the date is YYYY-MM-DD
+
+## SAN_FRANCISCO_TRANSIT_MUNI.STOP_TIMES
+arrival_time: TIME | Specifies the scheduled arrival time at a specific stop for a specific trip on a route.
+exact_timepoint: BOOLEAN | Indicates if the specified arrival and departure times for a stop are strictly adhered to by the transit vehicle, or if they're instead approximate or interpolated times.
+stop_sequence: NUMBER | Identifies the order of the stops for a particular trip. The values for stop_sequence must increase throughout the trip but do not need to be consecutive.
+stop_id: NUMBER | Identifies the serviced stop. Multiple routes can use the same stop.
+arrives_next_day: BOOLEAN | Several routes begin before midnight, with service continuing throughout the night. This variable specifies whether arrival_time occurs after midnight the day after the scheduled day.  This is useful for identifying routes that begin one day and end the next day
+trip_id: NUMBER | Identifies a trip. Multiple trips can have the same stop
+departure_time: TIME | Specifies the scheduled departure time at a specific stop for a specific trip on a route.
+dropoff_type: TEXT | "Indicates whether riders are dropped off at a stop as part of the normal schedule or whether a drop off at the stop isn't available. Available options:  -  regular -  none -  phone (indicates must phone agency to arrange drop off) -  driver (indicates must coordinate with driver to arrange drop off)"
+departs_next_day: BOOLEAN | Several routes begin before midnight, with service continuing throughout the night. This variable specifies whether departure_time occurs after midnight the day after the scheduled day.  This is useful for identifying routes that begin one day and end the next day
+
+## SAN_FRANCISCO_TRANSIT_MUNI.ROUTES
+route_type: TEXT | "Describes the type of transportation used on a route. The following are valid values for this field:  -  light_rail: Streetcar or light rail. Used for any light rail or street-level system within a metropolitan area. -  subway: Subway or metro. Used for any underground rail system within a metropolitan area. -  rail: Used for intercity or long-distance travel. -  bus: Used for short- and long-distance bus routes. -  ferry: Used for short- and long-distance boat service. -  cable_car: Used for street-level cable cars where the cable runs beneath the car. -  tram: Gondola or suspended cable car. Typically used for aerial cable cars where the car is suspended from the cable. -  funicular: Used for any rail system that moves on steep inclines with a cable traction system."
+route_long_name: TEXT | Contains the full name of a route. This name is generally more descriptive than the name from route_short_name and often includes the route's destination or stop.
+route_short_name: TEXT | Contains the short name of a route. This is a short, abstract identifier like 32, 100X, or Green that riders use to identify a route, but which doesn't give any indication of what places the route serves.
+route_id: TEXT | Unique identifier for each route. A single route will have multiple trips
+
+## SAN_FRANCISCO_TRANSIT_MUNI.TRIPS
+trip_headsign: TEXT | Contains the text that appears on signage that identifies the trip's destination to riders. Use this field to distinguish between different patterns of service on the same route.
+trip_id: TEXT | Unique identifier for each trip
+block_id: TEXT | Identifies the block to which the trip belongs. A block consists of a single trip or many sequential trips made with the same vehicle. The trips are grouped into a block by the use of a shared service day andblock_id. A block_id can include trips with different service days, which then makes distinct blocks. For more details, see: https://developers.google.com/transit/gtfs/reference/#example-showing-blocks-and-service-day
+route_id: TEXT | Unique identifier for each route. A single route will have multiple trips
+shape_id: TEXT | Unique identifier for the geospatial shape that describes the vehicle travel for a trip along individual points. Use to JOIN with the shapes available in the shapes table
+trip_shape: BINARY | Geographical representation of the trip's entire route.
+service_category: TEXT | Indicates the type of service for this trip
+direction: TEXT | "Indicates the direction of travel for a trip. The following values are valid:   -  O: Outbound travel -  I: Inbound travel  This field is not used in routing, but instead provides a way to separate trips by direction"
+
+## SAN_FRANCISCO_TRANSIT_MUNI.SHAPES
+shape_point_sequence: NUMBER | Associates the latitude and longitude of a shape point with its sequence order along the shape. The values for shape_pt_sequence must increase throughout the trip but don't need to be consecutive.
+shape_point_geom: BINARY | Geographic representation of the points latitude and longitude
+shape_id: TEXT | Uniquely identifies each shape
+shape_point_lat: FLOAT | Associates a shape point's latitude with a shape ID.
+shape_point_lon: FLOAT | Associates a shape point's longitude with a shape ID.
+shape_distance_traveled: FLOAT | Provides the actual distance traveled along the shape from the first shape point to the point specified in this record. This information allows the trip planner to determine how much of the shape to draw when they show part of a trip on the map. The values used for shape_dist_traveled must increase along with shape_pt_sequence: they can't be used to show reverse travel along a route.
+
+## SAN_FRANCISCO_TRANSIT_MUNI.VEHICLE_MONITORING
+@use: [C1]
+onward_stop_aimed_arrival_time_5: NUMBER | Estimated arrival time at onward stop 5
+onward_stop_id_7: TEXT | Unique reference for onward stop 7. Maps to stop_id in the stops table
+onward_stop_aimed_arrival_time_1: NUMBER | Estimated arrival time at onward stop 1
+onward_stop_id_10: TEXT | Unique reference for onward stop 10. Maps to stop_id in the stops table
+onward_stop_aimed_departure_time_8: NUMBER | Aimed departure time from onward stop 8
+onward_stop_expected_arrival_time_7: NUMBER | Estimated arrival time at onward stop 7
+onward_stop_aimed_departure_time_7: NUMBER | Aimed departure time from onward stop 7
+onward_stop_name_9: TEXT | Full text name of onward stop 9. Maps to stop_name in the stops table
+onward_stop_aimed_arrival_time_6: NUMBER | Estimated arrival time at onward stop 6
+onward_stop_id_1: TEXT | Unique reference for onward stop 1. Maps to stop_id in the stops table
+onward_stop_id_9: TEXT | Unique reference for onward stop 9. Maps to stop_id in the stops table
+next_stop_aimed_arrival_time: NUMBER | Aimed arrival time at the next stop
+onward_stop_name_2: TEXT | Full text name of onward stop 2. Maps to stop_name in the stops table
+onward_stop_aimed_arrival_time_10: NUMBER | Estimated arrival time at onward stop 10
+onward_stop_id_5: TEXT | Unique reference for onward stop 5. Maps to stop_id in the stops table
+onward_stop_aimed_departure_time_2: NUMBER | Aimed departure time from onward stop 2
+onward_stop_expected_arrival_time_1: NUMBER | Estimated arrival time at onward stop 1
+onward_stop_id_8: TEXT | Unique reference for onward stop 8. Maps to stop_id in the stops table
+onward_stop_aimed_departure_time_4: NUMBER | Aimed departure time from onward stop 4
+next_stop_expected_departure_time: NUMBER | Estimated departure time from the next stop
+trip_id: TEXT | Unique reference for the trip that the vehicle is traveling. Maps to trip_id in the trips table
+onward_stop_expected_arrival_time_3: NUMBER | Estimated arrival time at onward stop 3
+onward_stop_name_10: TEXT | Full text name of onward stop 10. Maps to stop_name in the stops table
+onward_stop_id_6: TEXT | Unique reference for onward stop 6. Maps to stop_id in the stops table
+onward_stop_name_1: TEXT | Full text name of onward stop 1. Maps to stop_name in the stops table
+route_long_name: TEXT | Contains the full name of a route. This name is generally more descriptive than the name from route_short_name and often includes the route's destination or stop. Maps to route_long_name in routes table
+next_stop_expected_arrival_time: NUMBER | Estimated arrival time at the next stop
+onward_stop_aimed_arrival_time_7: NUMBER | Estimated arrival time at onward stop 7
+onward_stop_name_3: TEXT | Full text name of onward stop 3. Maps to stop_name in the stops table
+onward_stop_aimed_arrival_time_8: NUMBER | Estimated arrival time at onward stop 8
+onward_stop_name_4: TEXT | Full text name of onward stop 4. Maps to stop_name in the stops table
+onward_stop_name_5: TEXT | Full text name of onward stop 5. Maps to stop_name in the stops table
+onward_stop_aimed_departure_time_1: NUMBER | Aimed departure time from onward stop 1
+route_id: TEXT | Unique reference for the route on which the vehicle is traveling. Maps to route_id in the routes table
+onward_stop_aimed_arrival_time_3: NUMBER | Estimated arrival time at onward stop 3
+onward_stop_expected_arrival_time_2: NUMBER | Estimated arrival time at onward stop 2
+onward_stop_id_2: TEXT | Unique reference for onward stop 2. Maps to stop_id in the stops table
+onward_stop_aimed_arrival_time_9: NUMBER | Estimated arrival time at onward stop 9
+onward_stop_expected_arrival_time_4: NUMBER | Estimated arrival time at onward stop 4
+onward_stop_aimed_departure_time_6: NUMBER | Aimed departure time from onward stop 6
+onward_stop_expected_arrival_time_9: NUMBER | Estimated arrival time at onward stop 9
+next_stop_aimed_departure_time: NUMBER | Aimed departure time from the next stop
+next_stop_id: TEXT | Unique reference for the stop being monitored. Maps to stop_id in the stops table
+onward_stop_aimed_arrival_time_2: NUMBER | Estimated arrival time at onward stop 2
+onward_stop_expected_arrival_time_8: NUMBER | Estimated arrival time at onward stop 8
+onward_stop_name_6: TEXT | Full text name of onward stop 6. Maps to stop_name in the stops table
+onward_stop_id_3: TEXT | Unique reference for onward stop 3. Maps to stop_id in the stops table
+onward_stop_aimed_departure_time_3: NUMBER | Aimed departure time from onward stop 3
+onward_stop_expected_arrival_time_6: NUMBER | Estimated arrival time at onward stop 6
+onward_stop_expected_arrival_time_5: NUMBER | Estimated arrival time at onward stop 5
+onward_stop_name_7: TEXT | Full text name of onward stop 7. Maps to stop_name in the stops table
+onward_stop_aimed_departure_time_9: NUMBER | Aimed departure time from onward stop 9
+direction: TEXT | Indicates the direction of travel for a trip. The following values are valid:   -  O: Outbound travel -  I: Inbound travel  This field is not used in routing, but instead provides a way to separate trips by direction
+onward_stop_aimed_departure_time_5: NUMBER | Aimed departure time from onward stop 5
+onward_stop_aimed_departure_time_10: NUMBER | Aimed departure time from onward stop 10
+onward_stop_aimed_arrival_time_4: NUMBER | Estimated arrival time at onward stop 4
+onward_stop_expected_arrival_time_10: NUMBER | Estimated arrival time at onward stop 10
+onward_stop_id_4: TEXT | Unique reference for onward stop 4. Maps to stop_id in the stops table
+onward_stop_name_8: TEXT | Full text name of onward stop 8. Maps to stop_name in the stops table
+next_stop_name: TEXT | Full text name of the stop being monitored. Maps to stop_name in the stops table
+
+## SAN_FRANCISCO_TRANSIT_MUNI.STOPS
+stop_lon: FLOAT | Longitude of the stop
+stop_name: TEXT | Full text name of the  transit stop
+stop_lat: FLOAT | Latitude of the stop
+stop_id: TEXT | Unique identifier for each stop
+stop_geom: BINARY | Geographic representation of the stop's position
+
+## SAN_FRANCISCO_TRANSIT_MUNI.STOP_MONITORING
+@use: [C1]
+route_id: TEXT | Unique reference for the route on which the vehicle is traveling. Maps to route_id in the routes table
+aimed_arrival_time: NUMBER | Vehicle's expected arrival time
+direction: TEXT | Indicates the direction of travel for a trip. The following values are valid: - O: Outbound travel - I: Inbound travel  This field is not used in routing, but instead provides a way to separate trips by direction
+trip_id: TEXT | Unique reference for the trip that the vehicle is traveling. Maps to trip_id in the trips table
+stop_name: TEXT | Full text name of the stop being monitored. Maps to stop_name in the stops table
+route_long_name: TEXT | Contains the full name of a route. This name is generally more descriptive than the name from route_short_name and often includes the route's destination or stop. Maps to route_long_name in routes table
+vehicle_at_stop: BOOLEAN | Determines if the vehicle is at the monitored stop during the time_recorded. TRUE if vehicle is at the stop
+aimed_departure_time: NUMBER | Vehicle's expected departure time
+stop_id: TEXT | Unique reference for the stop being monitored. Maps to stop_id in the stops table
+
+## SAN_FRANCISCO_TRANSIT_MUNI.FARES
+transfer_duration: NUMBER | Specifies the length of time, in seconds, before a transfer expires. When used with a transfers_permitted value of 0, the transfer_duration field indicates how long a ticket is valid for a fare where no transfers are allowed.
+rider_id: TEXT | Unique identifier a rider category. Rider categories are used to assign different pricing to different groups of individuals
+transfers_permitted: TEXT | Specifies the number of transfers permitted on this fare.  -  0: No transfers are permitted on this fare. -  1: One transfer is permitted on this fare. -  2: Two transfers are permitted on this fare. -  NULL: Unlimited transfers are permitted on this fare.
+payment_method: TEXT | Indicates when the fare must be paid. The following are valid values for this field: -  during: Indicates the fare is paid when riders board -  before: Indicates fare must be paid before riders board
+rider_desc: TEXT | Text description of the rider category
+fare_id: TEXT | Unique identifier a fare class.
+price: NUMBER | Contains the fare price, in USD

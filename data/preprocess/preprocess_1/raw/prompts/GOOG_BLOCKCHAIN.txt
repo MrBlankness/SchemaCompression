@@ -1,0 +1,23 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: GOOG_BLOCKCHAIN_CRONOS_MAINNET_US.BLOCKS
+Columns: receipts_root, mix_hash, gas_used, total_difficulty, uncles, uncles_sha3, nonce, difficulty, size, extra_data, gas_limit, state_root, base_fee_per_gas, block_timestamp, parent_hash, block_number, transactions_root, miner, block_hash, logs_bloom
+
+Table: GOOG_BLOCKCHAIN_CRONOS_MAINNET_US.TRANSACTIONS
+Columns: transaction_index, r, input, max_priority_fee_per_gas, access_list, transaction_hash, v, to_address, block_hash, gas_price, nonce, from_address, gas, max_fee_per_gas, block_timestamp, value, transaction_type, s
+
+Table: GOOG_BLOCKCHAIN_ARBITRUM_ONE_US.DECODED_EVENTS
+Columns: EVENT_HASH, TRANSACTION_HASH, TRANSACTION_INDEX, ARGS, ADDRESS, TOPICS, BLOCK_NUMBER, LOG_INDEX, REMOVED, BLOCK_HASH, BLOCK_TIMESTAMP, EVENT_SIGNATURE
+
+Table: GOOG_BLOCKCHAIN_ARBITRUM_ONE_US.LOGS
+Columns: topics, log_index, data, address, removed, transaction_hash, block_number, block_timestamp, block_hash, transaction_index
+
+Table: GOOG_BLOCKCHAIN_POLYGON_MAINNET_US.TRANSACTIONS
+Columns: from_address, value, transaction_hash, v, nonce, block_timestamp, max_priority_fee_per_gas, input, s, transaction_index, max_fee_per_gas, r, to_address, transaction_type, access_list, block_hash, gas, gas_price
+
+Table: GOOG_BLOCKCHAIN_TRON_MAINNET_US.BLOCKS
+Columns: parent_hash, total_difficulty, uncles, extra_data, block_number, uncles_sha3, receipts_root, logs_bloom, block_hash, mix_hash, block_timestamp, state_root, gas_used, base_fee_per_gas, nonce, size, miner, gas_limit, transactions_root, difficulty
+
+Table: GOOG_BLOCKCHAIN_TRON_MAINNET_US.LOGS
+Columns: removed, data, block_number, transaction_index, block_hash, address, log_index, block_timestamp, transaction_hash, topics

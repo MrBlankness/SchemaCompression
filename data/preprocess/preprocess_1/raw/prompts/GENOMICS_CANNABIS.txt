@@ -1,0 +1,23 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: GENOMICS_CANNABIS.MNPR01_TRANSCRIPTOME_201703
+Columns: filter, PQA, ABP, call, quality, reference_bases, start, end, NUMALT, PRO, PAO, RPR, NS, RPL, SAR, SAP, TYPE, DPRA, DPB, CIGAR, RPPR, MQMR, PAIREDR, AC, EPPR, LEN, ODDS, PAIRED, GTI, SRP, QR, QA, DP, SRR, RO, names, reference_name, alternate_bases, variant_id, RUN, SAF, EPP, MEANALT, PQR, AB, RPP, AF, AN, SRF, AO, MQM
+
+Table: GENOMICS_CANNABIS.CS10_GFF
+Columns: derived_features, strand, source, start, id, attributes, phase, end, child_features, _part, seq_id, score, type, geometry
+
+Table: GENOMICS_CANNABIS.CS3K_VCF_CS10_DV090
+Columns: start_position, reference_bases, names, end_position, alternate_bases, filter, call, reference_name, quality, geometry, _part
+
+Table: GENOMICS_CANNABIS.SAMPLE_INFO_201703
+Columns: SRA_Sample_s, cultivar_s, Sample_Name_s, Library_Name_s
+
+Table: GENOMICS_CANNABIS.MNPR01_201703
+Columns: PQA, LEN, DPB, quality, alternate_bases, RPPR, NUMALT, CIGAR, EPPR, reference_bases, GTI, start, PAO, AO, PRO, SRF, RPR, AF, SAP, TYPE, reference_name, AB, names, MQMR, SRP, SRR, PQR, QA, NS, ABP, PAIRED, filter, end, RPL, ODDS, SAF, MEANALT, variant_id, AC, PAIREDR, AN, QR, RUN, RO, MQM, EPP, DPRA, DP, RPP, SAR, call
+
+Table: GENOMICS_CANNABIS.CS3K_PROJECT_INFO
+Columns: Library_Name, Run, Platform, Instrument, LibrarySource, LibrarySelection, SRA_Study, Sample_Name, Consent, LibraryLayout, ReleaseDate, LoadDate, Assay_Type, Center_Name, BioProject, BioSample, SRA_Sample, Experiment, DATASTORE_filetype, AvgSpotLen, Organism, DATASTORE_provider, MBases, MBytes, DATASTORE_region, InsertSize
+
+Table: GENOMICS_CANNABIS.MNPR01_REFERENCE_201703
+Columns: length, name

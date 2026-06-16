@@ -1,0 +1,185 @@
+[COMPONENTS]
+@C1
+actor: VARIANT | NULL | eg=[{"avatar_url":"https://avatars.githubusercontent.com/u/598?","gravatar_id":"","id":598,"login":"jmhodges","url":"https://api.github.com/users/jmhodges"}, {"avatar_url":"https://avatars.githubusercontent.com/u/1945?","gravatar_id":"","id":1945,"login":"casey","url":"https://api.github.com/users/casey"}]
+created_at: NUMBER | NULL | eg=[1674078512000000, 1674077591000000]
+org: VARIANT | NULL
+other: TEXT | NULL | eg=[{"actor":{"display_login":"jmhodges"}}, {"actor":{"display_login":"casey"}}]
+payload: TEXT | NULL | eg=[{"action":"closed","number":309,"pull_request":{"url":"https://api.github.com/repos/jmhodges/lekube/pulls/309","id":1199583014,"node_id":"PR_kwDOA8eQ5s5HgC8m","html_url":"https://github.com/jmhodges/lekube/pull/309","diff_url":"https://github.com/jmhodges/lekube/pull/309.diff","patch_url":"https://github.com/jmhodges/lekube/pull/309.patch","issue_url":"https://api.github.com/repos/jmhodges/lekube/issues/309","number":309,"state":"closed","locked":false,"title":"Bump golang from 1.19.4-buster to 1.19.5-buster","user":{"login":"dependabot[bot]","id":49699333,"node_id":"MDM6Qm90NDk2OTkzMzM=","avatar_url":"https://avatars.githubusercontent.com/in/29110?v=4","gravatar_id":"","url":"https://api.github.com/users/dependabot%5Bbot%5D","html_url":"https://github.com/apps/dependabot","followers_url":"https://api.github.com/users/dependabot%5Bbot%5D/followers","following_url":"https://api.github.com/users/dependabot%5Bbot%5D/following{/other_user}","gists_url":"https://api.github.com/users/depe..., {"ref":"dependabot/docker/golang-1.19.5-buster","ref_type":"branch","pusher_type":"user"}]
+public: BOOLEAN | NULL | eg=[true]
+repo: VARIANT | NULL | eg=[{"id":63410406,"name":"jmhodges/lekube","url":"https://api.github.com/repos/jmhodges/lekube"}, {"id":61349723,"name":"casey/just","url":"https://api.github.com/repos/casey/just"}]
+type: TEXT | NULL | eg=["PullRequestEvent", "DeleteEvent"]
+
+[TABLES]
+## GITHUB_REPOS.LANGUAGES
+repo_name: TEXT | NULL | eg=["wzrdtales/docker-pixz", "MarQuisKnox/jNotice"]
+language: VARIANT | NULL | eg=[[]]
+
+## GITHUB_REPOS.LICENSES
+repo_name: TEXT | NULL | eg=["hesenp/dag-runner", "stania1/4clojure-answers"]
+license: TEXT | NULL | eg=["epl-1.0"]
+
+## GITHUB_REPOS.SAMPLE_REPOS
+watch_count: NUMBER | NULL | eg=[256]
+repo_name: TEXT | NULL | eg=["leichunfeng/WXTabBarController", "krisk/Fuse"]
+
+## GITHUB_REPOS.SAMPLE_CONTENTS
+size: NUMBER | NULL | eg=[2743, 636]
+binary: BOOLEAN | NULL | eg=[false]
+sample_symlink_target: TEXT | NULL
+copies: NUMBER | NULL | eg=[8]
+sample_mode: NUMBER | NULL | eg=[33188]
+sample_path: TEXT | NULL | eg=["net/tools/quic/synchronous_host_resolver.cc", "json4s/src/main/ls/0.6.5.json"]
+content: TEXT | NULL | eg=["// Copyright (c) 2015 The Chromium Authors. All rights reserved.\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n\n#include \"net/tools/quic/synchronous_host_resolver.h\"\n\n#include \"base/at_exit.h\"\n#include \"base/location.h\"\n#include \"base/macros.h\"\n#include \"base/memory/weak_ptr.h\"\n#include \"base/single_thread_task_runner.h\"\n#include \"base/thread_task_runner_handle.h\"\n#include \"base/threading/simple_thread.h\"\n#include \"net/base/host_port_pair.h\"\n#include \"net/base/net_errors.h\"\n#include \"net/dns/host_resolver_impl.h\"\n#include \"net/dns/single_request_host_resolver.h\"\n\nnamespace net {\n\n\nnamespace {\n\nclass ResolverThread : public base::SimpleThread {\n public:\n  ResolverThread();\n\n  ~ResolverThread() override;\n\n  // Called on the main thread.\n  int Resolve(const std::string& host, AddressList* addresses);\n\n  // SimpleThread methods:\n  void Run() override;\n\n private:\n  void OnResolutionComplete(int rv);\n\n  AddressList* addresses_;\n  s...", {"organization":"net.databinder","name":"unfiltered-json","version":"0.6.5","description":"Json requset matchers and response functions","site":"http://unfiltered.databinder.net/","tags":[],"docs":"","resolvers":["https://oss.sonatype.org/content/repositories/releases"],"dependencies":[{"organization":"net.liftweb","name":"lift-json_2.9.1","version":"2.4"}],"scalas":["2.8.1","2.8.2","2.9.0-1","2.9.1","2.9.1-1","2.9.2","2.10.0"],"licenses":[{"name":"MIT","url":"http://www.opensource.org/licenses/MIT"}],"sbt":false}]
+sample_ref: TEXT | NULL | eg=["refs/heads/nw15", "refs/heads/0.9.0"]
+sample_repo_name: TEXT | NULL | eg=["nwjs/chromium.src", "unfiltered/unfiltered"]
+id: TEXT | NULL | eg=["2808cc7dad1e963456a33387816a60edcd14e3c2", "b5d98c4d7b90b473fdf470a29b2562c7c6b70c67"]
+
+## GITHUB_REPOS.SAMPLE_FILES
+symlink_target: TEXT | NULL
+id: TEXT | NULL | eg=["64ba26a4afe649818a23565fc4ae6631eaf9d9b1", "b802f285fe00e6dd3b39af77e3b351d3a4343316"]
+mode: NUMBER | NULL | eg=[33188]
+path: TEXT | NULL | eg=["drivers/isdn/hisax/elsa.c", "arch/arm/mach-pxa/include/mach/smemc.h"]
+ref: TEXT | NULL | eg=["refs/heads/master"]
+repo_name: TEXT | NULL | eg=["dorimanx/DORIMANX_LG_STOCK_LP_KERNEL"]
+
+## GITHUB_REPOS.SAMPLE_COMMITS
+parent: VARIANT | NULL | eg=[["01c6222f876062355599e5a63560c514b6de25d2"], ["7d8bc2be51706152828164b305e969b4a8471041"]]
+committer: VARIANT | NULL | eg=[{"date":1401926034000000,"email":"69652caca27c8b940640ad396ab71f93cacec34f@linux-foundation.org","name":"Linus Torvalds","time_sec":1401926034,"tz_offset":-420}, {"date":1231286362000000,"email":"69652caca27c8b940640ad396ab71f93cacec34f@linux-foundation.org","name":"Linus Torvalds","time_sec":1231286362,"tz_offset":-480}]
+difference: VARIANT | NULL | eg=[[{"new_mode":33188,"new_path":"fs/ocfs2/resize.c","new_sha1":"168739c2ad2bc7cb0d1049bb5027aea912695bd4","old_mode":33188,"old_path":"fs/ocfs2/resize.c","old_sha1":"822ebc10f281057d9c6f5adc01c246042ef01cfd"}], [{"new_mode":33188,"new_path":"fs/ecryptfs/crypto.c","new_sha1":"c01e043670e21300808dcd5d58e77f19bfccd076","old_mode":33188,"old_path":"fs/ecryptfs/crypto.c","old_sha1":"e935a2224982c267117cd9cafe3d62b024f284a1"}]]
+message: TEXT | NULL | eg=["ocfs2: cleanup unused paramters in ocfs2_calc_new_backup_super\n\nParameters new_clusters and first_new_cluster are not used in\nocfs2_update_last_group_and_inode, so remove them.\n\nSigned-off-by: Joseph Qi <88260f35dd98758635dbbf2145383e817a86f01c@huawei.com>\nReviewed-by: joyce.xue <e513a8cfffdd1761b5c8047b6b6cbe23f11326f2@huawei.com>\nCc: Mark Fasheh <8f0bc92cac940f3e83deb53ced7a1f201bce5732@suse.com>\nCc: Joel Becker <9d3d88cacb47f143c6cf36b9a61c09b528b2c49a@evilplan.org>\nSigned-off-by: Andrew Morton <5c1e68b099950c134891f0b6e179498a8ebe9cf9@linux-foundation.org>\nSigned-off-by: Linus Torvalds <69652caca27c8b940640ad396ab71f93cacec34f@linux-foundation.org>\n", "eCryptfs: Clean up ecryptfs_decode_from_filename()\n\nFlesh out the comments for ecryptfs_decode_from_filename(). Remove the\nreturn condition, since it is always 0.\n\nSigned-off-by: Michael Halcrow <8c1011c9d06fc72acd93645d683782ab9543044d@us.ibm.com>\nCc: Dustin Kirkland <81003606aeb58a7381e4bb211f38072b7ea4a537@gmail.com>\nCc: Eric Sandeen <d55521028c14e0f378be5444e4ea388161c0d7e7@redhat.com>\nCc: Tyler Hicks <f69c264f60e3b997c7d27eb236d1230c0fc7e0a2@us.ibm.com>\nCc: David Kleikamp <9bc4ae2e83dabb4524fc335d7c1dac408a99dbe5@us.ibm.com>\nSigned-off-by: Andrew Morton <5c1e68b099950c134891f0b6e179498a8ebe9cf9@linux-foundation.org>\nSigned-off-by: Linus Torvalds <69652caca27c8b940640ad396ab71f93cacec34f@linux-foundation.org>\n"]
+author: VARIANT | NULL | eg=[{"date":1401923175000000,"email":"88260f35dd98758635dbbf2145383e817a86f01c@huawei.com","name":"Joseph Qi","time_sec":1401923175,"tz_offset":-420}, {"date":1231281725000000,"email":"8c1011c9d06fc72acd93645d683782ab9543044d@us.ibm.com","name":"Michael Halcrow","time_sec":1231281725,"tz_offset":-480}]
+difference_truncated: BOOLEAN | NULL
+subject: TEXT | NULL | eg=["ocfs2: cleanup unused paramters in ocfs2_calc_new_backup_super", "eCryptfs: Clean up ecryptfs_decode_from_filename()"]
+trailer: VARIANT | NULL | eg=[[{"email":"88260f35dd98758635dbbf2145383e817a86f01c@huawei.com","key":"Signed-off-by","value":"Joseph Qi <88260f35dd98758635dbbf2145383e817a86f01c@huawei.com>"},{"email":"e513a8cfffdd1761b5c8047b6b6cbe23f11326f2@huawei.com","key":"Reviewed-by","value":"joyce.xue <e513a8cfffdd1761b5c8047b6b6cbe23f11326f2@huawei.com>"},{"email":"8f0bc92cac940f3e83deb53ced7a1f201bce5732@suse.com","key":"Cc","value":"Mark Fasheh <8f0bc92cac940f3e83deb53ced7a1f201bce5732@suse.com>"},{"email":"9d3d88cacb47f143c6cf36b9a61c09b528b2c49a@evilplan.org","key":"Cc","value":"Joel Becker <9d3d88cacb47f143c6cf36b9a61c09b528b2c49a@evilplan.org>"},{"email":"5c1e68b099950c134891f0b6e179498a8ebe9cf9@linux-foundation.org","key":"Signed-off-by","value":"Andrew Morton <5c1e68b099950c134891f0b6e179498a8ebe9cf9@linux-foundation.org>"},{"email":"69652caca27c8b940640ad396ab71f93cacec34f@linux-foundation.org","key":"Signed-off-by","value":"Linus Torvalds <69652caca27c8b940640ad396ab71f93cacec34f@linux-foundation.org>"}]]
+encoding: TEXT | NULL
+commit: TEXT | NULL | eg=["b7ac233515c6263d6cb471d9e0f57bdd7ea36894", "71c11c378f46e42ca67c1e227646ce23bf43a8c6"]
+repo_name: TEXT | NULL | eg=["torvalds/linux"]
+tree: TEXT | NULL | eg=["d2bd3ac03c272a90e9e679fc727513beb61a99b8", "5762c267801a47bc5efd54242661820472827960"]
+
+## DAY._20230118
+@use: [C1]
+id: TEXT | NULL | eg=["26517083182", "26517083343"]
+
+## DAY._20140302
+@use: [C1]
+id: TEXT | NULL
+
+## DAY._20121228
+@use: [C1]
+id: TEXT | NULL
+
+## DAY._20110731
+@use: [C1]
+id: TEXT | NULL | eg=["1479835841", "1479815124"]
+
+## DAY._20170416
+@use: [C1]
+id: TEXT | NULL | eg=["5695905378", "5696239422"]
+
+## DAY._20181201
+@use: [C1]
+id: TEXT | NULL | eg=["8679813875", "8679571615"]
+
+## DAY._20171026
+@use: [C1]
+id: TEXT | NULL | eg=["6768831967", "6768895371"]
+
+## DAY._20210612
+@use: [C1]
+id: TEXT | NULL | eg=["16751494478", "16751494967"]
+
+## DAY._20170508
+@use: [C1]
+id: TEXT | NULL | eg=["5830453532", "5830337283"]
+
+## DAY._20180116
+@use: [C1]
+id: TEXT | NULL | eg=["7103314840", "7103496744"]
+
+## DAY._20191129
+@use: [C1]
+id: TEXT | NULL | eg=["10978648041", "10973007127"]
+
+## YEAR._2020
+@use: [C1]
+id: TEXT | NULL | eg=["12456276866", "13858899091"]
+
+## YEAR._2013
+@use: [C1]
+id: TEXT | NULL
+
+## YEAR._2019
+@use: [C1]
+id: TEXT | NULL | eg=["9803504865", "9820817951"]
+
+## YEAR._2011
+@use: [C1]
+id: TEXT | NULL | eg=["1498362423", "1241175457"]
+
+## YEAR._2012
+@use: [C1]
+id: TEXT | NULL
+
+## YEAR._2023
+@use: [C1]
+id: TEXT | NULL | eg=["30134109921", "26218327341"]
+
+## YEAR._2017
+@use: [C1]
+id: TEXT | NULL | eg=["6643153159", "6440207446"]
+
+## YEAR._2015
+@use: [C1]
+id: TEXT | NULL | eg=["2725259221", "2492529572"]
+
+## YEAR._2016
+@use: [C1]
+id: TEXT | NULL | eg=["3510151772", "4475594736"]
+
+## YEAR._2018
+@use: [C1]
+id: TEXT | NULL | eg=["8282788658", "8468763617"]
+
+## MONTH._202406
+@use: [C1]
+id: TEXT | NULL | eg=["39638891131", "39187487707"]
+
+## MONTH._201706
+@use: [C1]
+id: TEXT | NULL | eg=["5983827370", "6062585932"]
+
+## MONTH._201601
+@use: [C1]
+id: TEXT | NULL | eg=["3539602662", "3592150893"]
+
+## MONTH._201904
+@use: [C1]
+id: TEXT | NULL | eg=["9410286789", "9521383809"]
+
+## MONTH._202008
+@use: [C1]
+id: TEXT | NULL | eg=["13334202473", "13245098773"]
+
+## MONTH._201211
+@use: [C1]
+id: TEXT | NULL
+
+## MONTH._201307
+@use: [C1]
+id: TEXT | NULL
+
+## MONTH._202204
+@use: [C1]
+id: TEXT | NULL | eg=["21346465309", "21281548306"]
+
+## MONTH._201409
+@use: [C1]
+id: TEXT | NULL
+
+## MONTH._201110
+@use: [C1]
+id: TEXT | NULL | eg=["1490738600", "1491047346"]
+
+## MONTH._202312
+@use: [C1]
+id: TEXT | NULL | eg=["33941001328", "33923389969"]

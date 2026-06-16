@@ -1,0 +1,32 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: WWE.WRESTLERS
+Columns: id, name
+
+Table: WWE.TABLES
+Columns: html, url, id
+
+Table: WWE.EVENTS
+Columns: name, id
+
+Table: WWE.MATCHES
+Columns: card_id, match_type_id, id, win_type, title_id, loser_id, winner_id, duration, title_change
+
+Table: WWE.PROMOTIONS
+Columns: name, id
+
+Table: WWE.CARDS
+Columns: event_id, info_html, location_id, match_html, id, promotion_id, url, table_id, event_date
+
+Table: WWE.BELTS
+Columns: name, id
+
+Table: WWE.SQLITE_SEQUENCE
+Columns: name, seq
+
+Table: WWE.MATCH_TYPES
+Columns: name, id
+
+Table: WWE.LOCATIONS
+Columns: id, name

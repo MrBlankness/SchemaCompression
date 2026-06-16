@@ -1,0 +1,600 @@
+[STANDALONE]
+## NCAA.ADJUSTED_METRICS
+tm: TEXT | NULL
+adj_rk: FLOAT | NULL
+raw_rtg: FLOAT | NULL
+raw_rk: FLOAT | NULL
+adj_rtg: FLOAT | NULL
+raw_stat: FLOAT | NULL
+through_games_of: TEXT | NULL
+season: NUMBER | NULL
+stat_name: TEXT | NULL
+tm_code: NUMBER | NULL
+adj_stat: FLOAT | NULL
+
+## NCAA.FEATURE_ENGINEERING
+efficiency_rating: FLOAT | NULL
+team: TEXT | NULL
+pace_rating: FLOAT | NULL
+pts_100poss: FLOAT | NULL
+poss_40min: FLOAT | NULL
+efficiency_rank: FLOAT | NULL
+pace_rank: FLOAT | NULL
+season: NUMBER | NULL
+
+## NCAA.LATEST_DATE
+season: NUMBER | NULL
+last_game: TEXT | NULL
+
+## NCAA.MASCOTS
+MASCOT: TEXT | The name of the university's mascot
+TAX_FAMILY: TEXT | The family to which the mascot belongs
+MASCOT_COMMON_NAME: TEXT | The type of being or creature that the mascot embodies
+NAME: TEXT | The name of the university’s team
+TAX_GENUS: TEXT | The genus to which the mascot belongs
+NON_TAX_TYPE: TEXT | The non-Linnean type of being or creature to which the mascot belongs, if applicable
+TAX_ORDER: TEXT | The order to which the mascot belongs
+TAX_KINGDOM: TEXT | The kingdom to which the mascot belongs
+TAX_CLASS: TEXT | The class to which the mascot belongs
+TAX_DOMAIN: TEXT | The domain to which the mascot belongs
+TAX_SUBSPECIES: TEXT | The subspecies to which the mascot belongs
+TAX_PHYLUM: TEXT | The phylum to which the mascot belongs
+ID: TEXT | University unique ID from Sportradar
+TAX_SPECIES: TEXT | The species to which the mascot belongs
+MARKET: TEXT | The university to which the mascot belongs
+MASCOT_NAME: TEXT | The proper name of the university's mascot, if available (e.g. a character)
+
+## NCAA.MBB_GAMES_SR
+venue_address: TEXT | [Game data] Address of the venue where the game was played
+a_steals: NUMBER | [Away Team stats] Away steals
+conference_game: BOOLEAN | [Game data] Indicator of whether the two teams were in the same conference at the time the game was played
+a_second_chance_pts: NUMBER | [Away Team stats] Away second-chance points scored
+h_points_off_turnovers: NUMBER | [Home Team stats] Home points off turnovers
+a_free_throws_pct: FLOAT | [Away Team stats] Away free throw percentage
+venue_capacity: NUMBER | [Game data] Current capacity of the venue where the game was played
+scheduled_date: DATE | [Game data] Date the game was played
+a_alias: TEXT | [Away Team data] Away team school alias (unique)
+gametime: NUMBER | [Game data] Date and time the game was played
+possession_arrow: TEXT | [Game stats] The unique identifier of the team that would receive the ball the next time a jump ball is called, see https://en.wikipedia.org/wiki/Jump_ball for more information
+h_steals: NUMBER | [Home Team stats] Home steals
+h_turnovers: NUMBER | [Home Team stats] Home turnovers
+a_three_points_att: NUMBER | [Away Team stats] Away three-pointers attempted
+h_conf_alias: TEXT | [Home Team data] Home team current conference alias (not unique)
+h_two_points_att: NUMBER | [Home Team stats] Home two-pointers attempted
+h_blocked_att: NUMBER | [Home Team stats] Number of the home team's shots blocked by the away team
+a_team_tech_fouls: NUMBER | [Away Team stats] Away technical fouls committed by team
+a_two_points_made: NUMBER | [Away Team stats] Away two-pointers made
+a_blocks: NUMBER | [Away Team stats] Away blocks
+a_free_throws_made: NUMBER | [Away Team stats] Away free throws made
+h_logo_small: TEXT | [Home Team data] Home team logo 24x24
+a_logo_small: TEXT | [Away Team data] Away team logo 24x24
+a_division_id: TEXT | [Away Team data] Away team current division ID (not unique)
+venue_state: TEXT | [Game data] State where the game was played
+h_three_points_pct: FLOAT | [Home Team stats] Home three-point shot percentage
+h_three_points_att: NUMBER | [Home Team stats] Home three-pointers attempted
+h_league_id: TEXT | [Home Team data] Home team school league ID (not unique)
+h_minutes: TEXT | [Home Team stats] Home total minutes played
+tournament: TEXT | [Game data] Whether the game was played in a post-season tournament
+h_division_name: TEXT | [Home Team data] Home team current division name (not unique)
+a_field_goals_made: NUMBER | [Away Team stats] Away field goals made
+a_three_points_pct: FLOAT | [Away Team stats] Away three-point shot percentage
+a_rebounds: NUMBER | [Away Team stats] Away total rebounds
+h_two_points_made: NUMBER | [Home Team stats] Home two-pointers made
+a_points_game: NUMBER | [Away Team stats] Away points scored
+h_ejections: NUMBER | [Home Team stats] Home player ejections
+a_league_id: TEXT | [Away Team data] Away team school league ID (not unique)
+h_field_goals_att: NUMBER | [Home Team stats] Home field goals attempted
+created: NUMBER | [Table data] Box score data entry time
+a_assists_turnover_ratio: FLOAT | [Away Team stats] Away assist-to-turnover ratio
+h_three_points_made: NUMBER | [Home Team stats] Home three-pointers made
+h_free_throws_made: NUMBER | [Home Team stats] Home free throws made
+h_foulouts: NUMBER | [Home Team stats] Home player foul-outs
+h_conf_name: TEXT | [Home Team data] Home team current conference name (not unique)
+h_personal_fouls: NUMBER | [Home Team stats] Home personal fouls committed
+a_team_rebounds: NUMBER | [Away Team stats] Away team rebounds
+h_league_name: TEXT | [Home Team data] Home team school league name (not unique)
+venue_id: TEXT | [Game data] Unique identifier for the venue where the game was played
+neutral_site: BOOLEAN | [Game data] Indicator of whether the game was played on a neutral court
+a_assists: NUMBER | [Away Team stats] Away assists
+a_field_goals_att: NUMBER | [Away Team stats] Away field goals attempted
+h_points_game: NUMBER | [Home Team stats] Home points scored
+a_field_goals_pct: FLOAT | [Away Team stats] Away field goal percentage
+a_conf_id: TEXT | [Away Team data] Away team current conference ID (not unique)
+h_market: TEXT | [Home Team data] Home team school name
+a_league_alias: TEXT | [Away Team data] Away team school league alias (not unique)
+h_alias: TEXT | [Home Team data] Home team school alias (unique)
+h_team_tech_fouls: NUMBER | [Home Team stats] Home technical fouls committed by team
+a_id: TEXT | [Away Team data] Away team school ID from SportRadar (unique)
+a_ejections: NUMBER | [Away Team stats] Away player ejections
+h_rank: NUMBER | [Home Team stats] Home rank
+a_free_throws_att: NUMBER | [Away Team stats] Away free throws attempted
+h_offensive_rebounds: NUMBER | [Home Team stats] Home offensive rebounds
+a_flagrant_fouls: NUMBER | [Away Team stats] Away flagrant fouls committed
+a_blocked_att: NUMBER | [Away Team stats] Number of the away team's shots blocked by the away team
+a_points_off_turnovers: NUMBER | [Away Team stats] Away points off turnovers
+h_field_goals_made: NUMBER | [Home Team stats] Home field goals made
+a_logo_large: TEXT | [Away Team data] Away team logo 200x200
+game_id: TEXT | [Game data] Unique identifier for the game
+a_player_tech_fouls: NUMBER | [Away Team stats] Away technical fouls committed
+h_points: NUMBER | [Home Team stats] Home total points scored
+times_tied: NUMBER | [Game stats] Number of ties in the game
+tournament_game_no: TEXT | [Game data] Tournament game number
+h_division_alias: TEXT | [Home Team data] Home team current division alias (not unique)
+coverage: TEXT | [Game data] Type of coverage provided by Sportradar
+a_fast_break_pts: NUMBER | [Away Team stats] Away fast-break points scored
+venue_name: TEXT | [Game data] Name of the venue where the game was played
+season: NUMBER | [Game data] Season the game was played in
+a_points: NUMBER | [Away Team stats] Away total points scored
+tournament_type: TEXT | [Game data] Type of post-season tournament a game was in played
+venue_country: TEXT | [Game data] Country where the game was played
+h_second_chance_pts: NUMBER | [Home Team stats] Home second-chance points scored
+a_defensive_rebounds: NUMBER | [Away Team stats] Away defensive rebounds
+lead_changes: NUMBER | [Game stats] Number of lead changes in the game
+h_assists: NUMBER | [Home Team stats] Home assists
+a_name: TEXT | [Away Team data] Away team name
+h_free_throws_att: NUMBER | [Home Team stats] Home free throws attempted
+a_minutes: TEXT | [Away Team stats] Away total minutes played
+h_rebounds: NUMBER | [Home Team stats] Home total rebounds
+a_offensive_rebounds: NUMBER | [Away Team stats] Away offensive rebounds
+a_league_name: TEXT | [Away Team data] Away team school league name (not unique)
+h_league_alias: TEXT | [Home Team data] Home team school league alias (not unique)
+h_id: TEXT | [Home Team data] Home team school ID from SportRadar (unique)
+a_personal_fouls: NUMBER | [Away Team stats] Away personal fouls committed
+venue_zip: TEXT | [Game data] Address of the venue where the game was played
+h_team_turnovers: NUMBER | [Home Team stats] Home team turnovers
+a_turnovers: NUMBER | [Away Team stats] Away turnovers
+h_conf_id: TEXT | [Home Team data] Home team current conference ID (not unique)
+h_two_points_pct: FLOAT | [Home Team stats] Home two-point shot percentage
+h_free_throws_pct: FLOAT | [Home Team stats] Home free throw percentage
+h_flagrant_fouls: NUMBER | [Home Team stats] Home flagrant fouls committed
+h_team_rebounds: NUMBER | [Home Team stats] Home team rebounds
+h_name: TEXT | [Home Team data] Home team name
+h_fast_break_pts: NUMBER | [Home Team stats] Home fast-break points scored
+attendance: NUMBER | [Game data] Attendance of the game
+h_division_id: TEXT | [Home Team data] Home team current division ID (not unique)
+h_logo_large: TEXT | [Home Team data] Home team logo 200x200
+h_field_goals_pct: FLOAT | [Home Team stats] Home field goal percentage
+a_division_alias: TEXT | [Away Team data] Away team current division alias (not unique)
+a_market: TEXT | [Away Team data] Away team school name
+a_foulouts: NUMBER | [Away Team stats] Away player foul-outs
+a_logo_medium: TEXT | [Away Team data] Away team logo 70x70
+a_coach_tech_fouls: NUMBER | [Away Team stats] Away technical fouls committed by coach
+a_three_points_made: NUMBER | [Away Team stats] Away three-pointers made
+h_assists_turnover_ratio: FLOAT | [Home Team stats] Home assist-to-turnover ratio
+h_defensive_rebounds: NUMBER | [Home Team stats] Home defensive rebounds
+a_conf_alias: TEXT | [Away Team data] Away team current conference alias (not unique)
+periods: NUMBER | [Game stats] Number of periods the game
+a_division_name: TEXT | [Away Team data] Away team current division name (not unique)
+h_player_tech_fouls: NUMBER | [Home Team stats] Home technical fouls committed
+h_logo_medium: TEXT | [Home Team data] Home team logo 70x70
+h_blocks: NUMBER | [Home Team stats] Home blocks
+a_two_points_pct: FLOAT | [Away Team stats] Away two-point shot percentage
+a_conf_name: TEXT | [Away Team data] Away team current conference name (not unique)
+a_team_turnovers: NUMBER | [Away Team stats] Away team turnovers
+a_rank: NUMBER | [Away Team stats] Away rank
+venue_city: TEXT | [Game data] City where the game was played
+h_coach_tech_fouls: NUMBER | [Home Team stats] Home technical fouls committed by coach
+a_two_points_att: NUMBER | [Away Team stats] Away two-pointers attempted
+tournament_round: TEXT | [Game data] Tournament round
+status: TEXT | [Game data] Indicates the last state of Sportradar's game file
+
+## NCAA.MBB_HISTORICAL_TEAMS_GAMES
+opp_points_game: NUMBER | [Opponent data] Points scored by opponent
+market: TEXT | [Team data] Team school name (using Sportradar names)
+opp_id: TEXT | [Opponent data] Opponent school ID (using Sportradar IDs)
+name: TEXT | [Team data] Team name
+opp_current_division: TEXT | [Opponent data] The division the opponent currently plays in
+team_code: TEXT | [Team data] School code (see http://stats.ncaa.org/game_upload/team_codes)
+season: NUMBER | [Game data] Season the game was played in
+attendance: FLOAT | [Game data] Attendance of the game
+opp_code: NUMBER | [Opponent data] Opponent school code (see http://stats.ncaa.org/game_upload/team_codes)
+points_game: NUMBER | [Game data] Points scored by team
+opp_name: TEXT | [Opponent data] Opponent name
+win: BOOLEAN | [Game data] Whether the team won the game
+alias: TEXT | [Team data] Team alias
+opp_market: TEXT | [Opponent data] Opponent school name (using Sportradar names)
+opp_alias: TEXT | [Opponent data] Opponent alias
+current_division: TEXT | [Team data] The division the team currently plays in
+team_id: TEXT | [Team data] Sportradar team ID
+scheduled_date: TEXT | [Game data] Date the game was played
+
+## NCAA.MBB_HISTORICAL_TEAMS_SEASONS
+market: TEXT | Team school name (using Sportradar names)
+losses: NUMBER | Number of losses in this season
+team_code: NUMBER | School code (see http://stats.ncaa.org/game_upload/team_codes)
+name: TEXT | Team name
+team_id: TEXT | Sportradar team ID
+ties: NUMBER | Number of ties in this season
+alias: TEXT | Team alias
+season: NUMBER | Season the game was played in
+current_division: TEXT | The division the team currently plays in
+division: NUMBER | The division the team played in at this time of this season
+wins: NUMBER | Number of wins in this season
+
+## NCAA.MBB_HISTORICAL_TOURNAMENT_GAMES
+lose_market: TEXT | School name (using Sportradar names) of the losing team
+lose_alias: TEXT | Team alias of the losing team
+round: NUMBER | Tournament round, indicated by the number of teams playing in that round
+days_from_epoch: NUMBER | Days from epoch, as defined in the Kaggle competition (https://www.kaggle.com/c/mens-machine-learning-competition-2018/data)
+lose_code_ncaa: NUMBER | School code of the losing team (see http://stats.ncaa.org/game_upload/team_codes)
+win_seed: TEXT | Seed of the winning team
+win_kaggle_team_id: NUMBER | Kaggle team ID of the winning team
+lose_region: TEXT | Region of the losing team, as defined in the Kaggle competition (https://www.kaggle.com/c/mens-machine-learning-competition-2018/data)
+lose_team_id: TEXT | Sportradar team ID of the losing team
+win_name: TEXT | Team name of the winning team
+game_date: DATE | Date the game was played
+lose_name: TEXT | Team name of the losing team
+win_school_ncaa: TEXT | School name of the winning team (see http://stats.ncaa.org/game_upload/team_codes)
+win_pts: NUMBER | Points scored by the winning team
+win_code_ncaa: NUMBER | School code of the winning team (see http://stats.ncaa.org/game_upload/team_codes)
+academic_year: NUMBER | The academic year the game was played in
+lose_pts: NUMBER | Points scored by the losing team
+day: TEXT | Day of the week the game was played
+num_ot: NUMBER | Number of overtime periods played in the game
+win_alias: TEXT | Team alias of the winning team
+lose_school_ncaa: TEXT | School name of the losing team (see http://stats.ncaa.org/game_upload/team_codes)
+lose_seed: TEXT | Seed of the losing team
+lose_kaggle_team_id: NUMBER | Kaggle team ID of the losing team
+win_team_id: TEXT | Sportradar team ID of the winning team
+win_market: TEXT | School name (using Sportradar names) of the winning team
+win_region: TEXT | Region of the winning team, as defined in the Kaggle competition (https://www.kaggle.com/c/mens-machine-learning-competition-2018/data)
+season: NUMBER | Year the game was played in. Note that this is different from the "season" values in other tables here, which use academic year.
+
+## NCAA.MBB_PBP_SR
+venue_country: TEXT | Country where the game was played
+venue_name: TEXT | Name of the venue where the game was played
+shot_made: BOOLEAN | Boolean value indicating whether the event was a shot made
+team_division_name: TEXT | Indicator of the team current division name (not unique) to which the event was attributed
+event_type: TEXT | Category of event
+game_no: TEXT | Indicator of which tournament game number a game was, if any
+three_point_shot: BOOLEAN | Boolean value indicating whether the event was a three-point shot attempt
+team_league_name: TEXT | Indicator of the team school league name (not unique) to which the event was attributed
+team_alias: TEXT | Indicator of the team school alias (unique) to which the event was attributed
+venue_zip: TEXT | Zip code of the venue where the game was played
+elapsed_time_sec: NUMBER | Total time elapsed in the game in seconds
+home_conf_name: TEXT | Home team current conference name (not unique)
+player_id: TEXT | Unique identifier for the player to whom the event is attributed
+round: TEXT | Indicator of which tournament round a game was played in, if any
+event_id: TEXT | Unique identifier for the event ("play")
+home_conf_alias: TEXT | Home team current conference alias (not unique)
+home_division_alias: TEXT | Home team current division alias (not unique)
+home_id: TEXT | Home team school ID from SportRadar (unique)
+venue_capacity: NUMBER | Current capacity of the venue where the game was played
+team_conf_alias: TEXT | Indicator of the team current conference alias (not unique) to which the event was attributed
+away_division_alias: TEXT | Visiting team division alias (not unique)
+away_id: TEXT | Visiting team school ID from SportRadar (unique)
+To enable screen reader support, press Ctrl+Alt+Z To learn about keyboard shortcuts, press Ctrl+slash
+type: TEXT | Event subtype giving additional information about the event
+status: TEXT | NULL
+team_division_alias: TEXT | Indicator of the team current division alias (not unique) to which the event was attributed
+team_basket: TEXT | The basket (left or right) that the team to which the event is attributed is attacking
+team_name: TEXT | Indicator of the school name to which the event was attributed
+scheduled_date: NUMBER | Date the game was played
+away_name: TEXT | Visiting team name
+game_id: TEXT | Unique identifier for the game
+event_coord_x: FLOAT | The location of the play in number of inches from the "left" baseline, max 1128
+away_league_name: TEXT | Visiting team school league name (not unique)
+points_scored: FLOAT | Number of points scored on the play
+event_description: TEXT | A description of the event
+turnover_type: TEXT | Type of turnover
+away_conf_name: TEXT | Visiting team current conference name (not unique)
+event_coord_y: FLOAT | The location of the play in inches from the "top" sideline, max 600
+timestamp: NUMBER | The time when the event details were last updated
+home_division_name: TEXT | Home team current division name (not unique)
+conference_game: BOOLEAN | Boolean value indicating whether the two teams were in the same conference at the time the game was played
+possession_arrow: TEXT | The unique identifier of the team that will receive the ball the next time a jump ball is called, see https://en.wikipedia.org/wiki/Jump_ball for more information
+neutral_site: BOOLEAN | Boolean value indicating whether the game was played at a neutral site
+rebound_type: TEXT | Indicator of whether a rebound was offensive or defensive
+attendance: NUMBER | Attendance of the game
+tournament: TEXT | Indicator of what type of tournament (conference or NCAA) a game was played in, if any
+possession_team_id: TEXT | The id of the team that possessed the ball at the end of the play.
+team_conf_name: TEXT | Indicator of the team current conference name (not unique) to which the event was attributed
+home_alias: TEXT | Home team school alias (unique)
+away_conf_alias: TEXT | Visiting team current conference alias (not unique)
+shot_type: TEXT | There are 5 categories of shot types: jump shot, layup, hook shot, dunk, tip shot
+timeout_duration: FLOAT | Duration of timeout
+venue_city: TEXT | City where the game was played
+home_market: TEXT | Home team school name
+player_full_name: TEXT | Name for the player to whom the event is attributed
+away_division_name: TEXT | Visiting team division name (not unique)
+away_market: TEXT | Visiting team school name
+team_id: TEXT | Indicator of the team school ID from SportRadar (unique) to which the event was attributed
+load_timestamp: NUMBER | Time at which the data was loaded into the table
+venue_id: TEXT | Unique identifier for the venue where the game was played
+period: NUMBER | This field indicates which period the event occured in. "1" is the first 20-minute half, "2" is the second 20-minute half, "3" is the first OT, "4" is the second OT, etc.
+venue_address: TEXT | Address of the venue where the game was played
+tournament_type: TEXT | Indicator of which conference tournament a game was played in, if any
+venue_state: TEXT | State where the game was played
+home_league_name: TEXT | Home team school league name (not unique)
+team_market: TEXT | Indicator of the team name to which the event was attributed
+shot_subtype: TEXT | Additional information about shot type (e.g. fadeaway, floating, pullup, step back, turnaround, alley-oop, driving, finger roll, putback, reverse)
+away_alias: TEXT | Visiting team school alias (unique)
+season: NUMBER | Season the game was played in
+jersey_num: NUMBER | Jersey number for the player to whom the event is attributed
+game_clock: TEXT | Time left in the period in minutes
+home_name: TEXT | Home team name
+
+## NCAA.MBB_PLAYERS_GAMES_SR
+field_goals_att: NUMBER | [Player stats] Field goals attempted
+conf_alias: TEXT | [Team info] Team current conference alias
+team_market: TEXT | [Team info] Team school name (using Sportradar names)
+game_id: TEXT | [Game data] Unique identifier for the game
+two_points_pct: FLOAT | [Player stats] Two-point shot percentage
+active: BOOLEAN | [Player stats] Indicator of whether the player was active for the game
+full_name: TEXT | [Player info] Player full name
+birthplace_country: TEXT | [Player info] Player's home country (Note: this information comes from the school's website, via Sportradar. While many of these entries indicate the player's birthplace, some of them may instead indicate the town that the players most identifies with.)
+personal_fouls: NUMBER | [Player stats] Personal fouls committed
+abbr_name: TEXT | [Player info] Player abbreviated name ("F.Last")
+three_points_att: NUMBER | [Player stats] Three-pointers attempted
+home_team: BOOLEAN | [Team info] Indicator of whether the team was the home team
+tournament_round: TEXT | [Game data] Tournament round
+defensive_rebounds: NUMBER | [Player stats] Defensive rebounds
+scheduled_date: DATE | [Game data] Date the game was played
+position: TEXT | [Player stats] Position
+steals: NUMBER | [Player stats] Steals
+league_name: TEXT | [Team info] Team current league name
+two_points_made: NUMBER | [Player stats] Two-pointers made
+birthplace_state: TEXT | [Player info] Player's home state (Note: this information comes from the school's website, via Sportradar. While many of these entries indicate the player's birthplace, some of them may instead indicate the town that the players most identifies with.)
+tournament: TEXT | [Game data] Whether the game was played in a post-season tournament
+starter: BOOLEAN | [Player stats] Indicator of whether the player started the game
+two_points_att: NUMBER | [Player stats] Two-pointers attempted
+gametime: NUMBER | [Game data] Date and time the game was played
+first_name: TEXT | [Player info] Player first name
+status: TEXT | [Player info] Player status as of 2017-18 season
+player_id: TEXT | [Player info] Player Sportradar player ID
+free_throws_pct: FLOAT | [Player stats] Free throw percentage
+turnovers: NUMBER | [Player stats] Turnovers
+birth_place: TEXT | [Player info] Player birth place or home (Note: this information comes from the school's website, via Sportradar. While many of these entries indicate the player's birthplace, some of them may instead indicate the town that the players most identifies with.)
+offensive_rebounds: NUMBER | [Player stats] Offensive rebounds
+field_goals_made: NUMBER | [Player stats] Field goals made
+three_points_pct: FLOAT | [Player stats] Three-point shot percentage
+sp_created: NUMBER | [Table data] Box score data entry time
+weight: NUMBER | [Player info] Player weight
+division_name: TEXT | [Team info] Team current division name
+assists: NUMBER | [Player stats] Assists
+birthplace_city: TEXT | [Player info] Player's home city (Note: this information comes from the school's website, via Sportradar. While many of these entries indicate the player's birthplace, some of them may instead indicate the town that the players most identifies with.)
+assists_turnover_ratio: FLOAT | [Player stats] Assist-to-turnover ratio
+primary_position: TEXT | [Player stats] Primary position
+season: NUMBER | [Game data] Season the game was played in
+last_name: TEXT | [Player info] Player last name
+tournament_game_no: TEXT | [Game data] Tournament game number
+minutes_int64: NUMBER | [Player stats] Minutes played (as integer)
+played: BOOLEAN | [Player stats] Indicator of whether the player played in the game
+tech_fouls: NUMBER | [Player stats] Technical fouls committed
+conf_name: TEXT | [Team info] Team current conference name
+three_points_made: NUMBER | [Player stats] Three-pointers made
+division_alias: TEXT | [Team info] Team current division alias
+height: NUMBER | [Player info] Player height
+blocked_att: NUMBER | [Player stats] Number of shots blocked by the other team
+points: NUMBER | [Player stats] Points scored
+rebounds: NUMBER | [Player stats] Total rebounds
+team_alias: TEXT | [Team info] Team alias
+team_id: TEXT | [Team info] Sportradar team ID
+free_throws_att: NUMBER | [Player stats] Free throws attempted
+minutes: TEXT | [Player stats] Minutes played
+neutral_site: BOOLEAN | [Game data] Indicator of whether the game was played on a neutral court
+jersey_number: NUMBER | [Player info] Player jersey number
+blocks: NUMBER | [Player stats] Blocks
+team_name: TEXT | [Team info] Team name
+field_goals_pct: FLOAT | [Player stats] Field goal percentage
+free_throws_made: NUMBER | [Player stats] Free throws made
+flagrant_fouls: NUMBER | [Player stats] Flagrant fouls committed
+class: TEXT | [Player info] Player's class at game time (Note: this information comes from the school's website, via Sportradar.)
+tournament_type: TEXT | [Game data] Type of post-season tournament a game was in played
+
+## NCAA.MBB_TEAMS
+logo_medium: TEXT | NULL
+conf_name: TEXT | NULL
+market: TEXT | NULL
+venue_country: TEXT | NULL
+turner_name: TEXT | NULL
+name: TEXT | NULL
+division_name: TEXT | NULL
+school_ncaa: TEXT | NULL
+venue_address: TEXT | NULL
+venue_zip: TEXT | NULL
+league_alias: TEXT | NULL
+venue_capacity: NUMBER | NULL
+logo_small: TEXT | NULL
+venue_city: TEXT | NULL
+alias: TEXT | NULL
+division_alias: TEXT | NULL
+conf_id: TEXT | NULL
+conf_alias: TEXT | NULL
+league_name: TEXT | NULL
+kaggle_team_id: NUMBER | NULL
+id: TEXT | NULL
+league_id: TEXT | NULL
+logo_large: TEXT | NULL
+venue_state: TEXT | NULL
+venue_name: TEXT | NULL
+division_id: TEXT | NULL
+venue_id: TEXT | NULL
+code_ncaa: NUMBER | NULL
+
+## NCAA.MBB_TEAMS_GAMES_SR
+ejections: NUMBER | [Team stats] Player ejections
+opp_field_goals_made: NUMBER | [Opponent stats] Field goals made
+turnovers: NUMBER | [Team stats] Turnovers
+venue_address: TEXT | [Game data] Address of the venue where the game was played
+foulouts: NUMBER | [Team stats] Player foul-outs
+opp_free_throws_made: NUMBER | [Opponent stats] Free throws made
+opp_division_alias: TEXT | [Opponent data] Opponent current division alias (not unique)
+opp_field_goals_att: NUMBER | [Opponent stats] Field goals attempted
+team_id: TEXT | [Team data] Team school ID from SportRadar (unique)
+opp_division_id: TEXT | [Opponent data] Opponent current division ID (not unique)
+opp_id: TEXT | [Opponent data] Opponent school ID from SportRadar (unique)
+opp_assists: NUMBER | [Opponent stats] Assists
+season: NUMBER | [Game data] Season the game was played in
+opp_two_points_made: NUMBER | [Opponent stats] Two-pointers made
+opp_offensive_rebounds: NUMBER | [Opponent stats] Offensive rebounds
+opp_league_id: TEXT | [Opponent data] Opponent school league ID (not unique)
+opp_blocks: NUMBER | [Opponent stats] Blocks
+field_goals_made: NUMBER | [Team stats] Field goals made
+tournament_game_no: TEXT | [Game data] Tournament game number
+opp_field_goals_pct: FLOAT | [Opponent stats] Field goal percentage
+opp_points: NUMBER | [Opponent stats] Total points scored
+gametime: NUMBER | [Game data] Date and time the game was played
+lead_changes: NUMBER | [Game stats] Number of lead changes in the game
+opp_points_game: NUMBER | [Opponent stats] Points scored
+flagrant_fouls: NUMBER | [Team stats] Flagrant fouls committed
+win: BOOLEAN | [Team stats] Win
+opp_blocked_att: NUMBER | [Opponent stats] Number of the opponent's shots blocked by the team
+opp_team_turnovers: NUMBER | [Opponent stats] Opponent turnovers
+personal_fouls: NUMBER | [Team stats] Personal fouls committed
+venue_zip: TEXT | [Game data] Address of the venue where the game was played
+division_name: TEXT | [Team data] Team current division name (not unique)
+alias: TEXT | [Team data] Team school alias (unique)
+points_off_turnovers: NUMBER | [Team stats] Points off turnovers
+opp_logo_medium: TEXT | [Opponent data] Opponent logo 70x70
+three_points_pct: FLOAT | [Team stats] Three-point shot percentage
+points_game: NUMBER | [Team stats] Points scored
+field_goals_att: NUMBER | [Team stats] Field goals attempted
+free_throws_att: NUMBER | [Team stats] Free throws attempted
+opp_conf_name: TEXT | [Opponent data] Opponent current conference name (not unique)
+points: NUMBER | [Team stats] Total points scored
+opp_second_chance_pts: NUMBER | [Opponent stats] Second-chance points scored
+opp_two_points_pct: FLOAT | [Opponent stats] Two-point shot percentage
+opp_market: TEXT | [Opponent data] Opponent school name
+assists_turnover_ratio: FLOAT | [Team stats] Assist-to-turnover ratio
+rebounds: NUMBER | [Team stats] Total rebounds
+league_id: TEXT | [Team data] Team school league ID (not unique)
+coverage: TEXT | [Game data] Type of coverage provided by Sportradar
+opp_flagrant_fouls: NUMBER | [Opponent stats] Flagrant fouls committed
+home_team: BOOLEAN | [Team data] Team was the home team (Note: this doesn't mean the game was played at home because the game could have been played at a neutral site)
+venue_country: TEXT | [Game data] Country where the game was played
+venue_city: TEXT | [Game data] City where the game was played
+opp_alias: TEXT | [Opponent data] Opponent school alias (unique)
+venue_name: TEXT | [Game data] Name of the venue where the game was played
+logo_large: TEXT | [Team data] Team logo 200x200
+opp_division_name: TEXT | [Opponent data] Opponent current division name (not unique)
+two_points_made: NUMBER | [Team stats] Two-pointers made
+opp_three_points_made: NUMBER | [Opponent stats] Three-pointers made
+player_tech_fouls: NUMBER | [Team stats] Technical fouls committed
+offensive_rebounds: NUMBER | [Team stats] Offensive rebounds
+game_id: TEXT | [Game data] Unique identifier for the game
+opp_assists_turnover_ratio: FLOAT | [Opponent stats] Assist-to-turnover ratio
+team_turnovers: NUMBER | [Team stats] Team turnovers
+free_throws_pct: FLOAT | [Team stats] Free throw percentage
+market: TEXT | [Team data] Team school name
+three_points_made: NUMBER | [Team stats] Three-pointers made
+opp_conf_alias: TEXT | [Opponent data] Opponent current conference alias (not unique)
+opp_defensive_rebounds: NUMBER | [Opponent stats] Defensive rebounds
+opp_three_points_pct: FLOAT | [Opponent stats] Three-point shot percentage
+name: TEXT | [Team data] Team name
+conf_name: TEXT | [Team data] Team current conference name (not unique)
+opp_three_points_att: NUMBER | [Opponent stats] Three-pointers attempted
+periods: NUMBER | [Game stats] Number of periods the game
+fast_break_pts: NUMBER | [Team stats] Fast-break points scored
+venue_state: TEXT | [Game data] State where the game was played
+defensive_rebounds: NUMBER | [Team stats] Defensive rebounds
+conference_game: BOOLEAN | [Game data] Indicator of whether the two teams were in the same conference at the time the game was played
+venue_id: TEXT | [Game data] Unique identifier for the venue where the game was played
+division_alias: TEXT | [Team data] Team current division alias (not unique)
+opp_conf_id: TEXT | [Opponent data] Opponent current conference ID (not unique)
+opp_foulouts: NUMBER | [Opponent stats] Player foul-outs
+three_points_att: NUMBER | [Team stats] Three-pointers attempted
+neutral_site: BOOLEAN | [Game data] Type of coverage provided by Sportradar
+free_throws_made: NUMBER | [Team stats] Free throws made
+conf_alias: TEXT | [Team data] Team current conference alias (not unique)
+opp_coach_tech_fouls: NUMBER | [Opponent stats] Technical fouls committed by coach
+opp_logo_small: TEXT | [Opponent data] Opponent logo 24x24
+coach_tech_fouls: NUMBER | [Team stats] Technical fouls committed by coach
+opp_rebounds: NUMBER | [Opponent stats] Total rebounds
+scheduled_date: DATE | [Game data] Date the game was played
+logo_medium: TEXT | [Team data] Team logo 70x70
+minutes: TEXT | [Team stats] Total minutes played
+opp_name: TEXT | [Opponent data] Opponent name
+tournament_round: TEXT | [Game data] Tournament round
+conf_id: TEXT | [Team data] Team current conference ID (not unique)
+league_alias: TEXT | [Team data] Team school league alias (not unique)
+opp_ejections: NUMBER | [Opponent stats] Player ejections
+logo_small: TEXT | [Team data] Team logo 24x24
+blocked_att: NUMBER | [Team stats] Number of the team's shots blocked by the opponent
+league_name: TEXT | [Team data] Team school league name (not unique)
+attendance: NUMBER | [Game data] Attendance of the game
+opp_free_throws_pct: FLOAT | [Opponent stats] Free throw percentage
+opp_minutes: TEXT | [Opponent stats] Total minutes played
+two_points_att: NUMBER | [Team stats] Two-pointers attempted
+field_goals_pct: FLOAT | [Team stats] Field goal percentage
+blocks: NUMBER | [Team stats] Blocks
+status: TEXT | [Game data] Indicates the last state of Sportradar's game file
+times_tied: NUMBER | [Game stats] Number of ties in the game
+opp_free_throws_att: NUMBER | [Opponent stats] Free throws attempted
+created: NUMBER | [Table data] Box score data entry time
+opp_league_alias: TEXT | [Opponent data] Opponent school league alias (not unique)
+team_tech_fouls: NUMBER | [Team stats] Technical fouls committed by team
+possession_arrow: TEXT | [Game stats] The unique identifier of the team that would receive the ball the next time a jump ball is called, see https://en.wikipedia.org/wiki/Jump_ball for more information
+assists: NUMBER | [Team stats] Assists
+team_rebounds: NUMBER | [Team stats] Team rebounds
+two_points_pct: FLOAT | [Team stats] Two-point shot percentage
+opp_logo_large: TEXT | [Opponent data] Opponent logo 200x200
+opp_steals: NUMBER | [Opponent stats] Steals
+steals: NUMBER | [Team stats] Steals
+division_id: TEXT | [Team data] Team current division ID (not unique)
+opp_league_name: TEXT | [Opponent data] Opponent school league name (not unique)
+opp_fast_break_pts: NUMBER | [Opponent stats] Fast-break points scored
+second_chance_pts: NUMBER | [Team stats] Second-chance points scored
+tournament: TEXT | [Game data] Whether the game was played in a post-season tournament
+opp_team_tech_fouls: NUMBER | [Opponent stats] Technical fouls committed by opponent
+opp_points_off_turnovers: NUMBER | [Opponent stats] Points off turnovers
+opp_personal_fouls: NUMBER | [Opponent stats] Personal fouls committed
+tournament_type: TEXT | [Game data] Type of post-season tournament a game was in played
+opp_team_rebounds: NUMBER | [Opponent stats] Opponent rebounds
+opp_player_tech_fouls: NUMBER | [Opponent stats] Technical fouls committed
+venue_capacity: NUMBER | [Game data] Current capacity of the venue where the game was played
+opp_turnovers: NUMBER | [Opponent stats] Turnovers
+opp_two_points_att: NUMBER | [Opponent stats] Two-pointers attempted
+
+## NCAA.METRIC_NAMES
+label: TEXT | NULL
+concept_name: TEXT | NULL
+rd_dec: NUMBER | NULL
+off_def_stat_name: TEXT | NULL
+off_or_def: TEXT | NULL
+stat_name: TEXT | NULL
+rank_asc: BOOLEAN | NULL
+
+## NCAA.NEW_METRICS
+team: TEXT | NULL
+tm_def_eff_rtg: FLOAT | NULL
+tm_net_eff_rk: FLOAT | NULL
+tm_net_eff_rtg: FLOAT | NULL
+tm_off_eff_stat: FLOAT | NULL
+tm_def_eff_stat: FLOAT | NULL
+season: NUMBER | NULL
+tm_off_eff_rtg: FLOAT | NULL
+tm_def_eff_rk: FLOAT | NULL
+tm_net_eff_stat: FLOAT | NULL
+tm_off_eff_rk: FLOAT | NULL
+
+## NCAA.TEAM_COLORS
+id: TEXT | NULL
+market: TEXT | NULL
+code_ncaa: NUMBER | NULL
+color: TEXT | NULL
+
+## NCAA._2018_TOURNAMENT_RESULTS
+label: TEXT | NULL
+market: TEXT | NULL
+season: NUMBER | NULL
+seed: TEXT | NULL
+points: NUMBER | NULL
+game_date: DATE | NULL
+alias: TEXT | NULL
+opponent_market: TEXT | NULL
+days_from_epoch: NUMBER | NULL
+opponent_name: TEXT | NULL
+opponent_points: NUMBER | NULL
+opponent_seed: TEXT | NULL
+name: TEXT | NULL
+opponent_alias: TEXT | NULL
+day: TEXT | NULL
+school_ncaa: TEXT | NULL
+round: NUMBER | NULL
+opponent_school_ncaa: TEXT | NULL
+
+## NCAA._2019_TOURNAMENT_SEEDS
+season: NUMBER | NULL
+school_ncaa: TEXT | NULL
+seed: NUMBER | NULL

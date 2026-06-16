@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq220",
+  "question": "Based on the condition, plot_tree, and population tables in bigquery-public-data.usfs_fia, for the evaluation_type set to 'EXPCURR' and condition_status_code equal to 1, which states had the largest average subplot size and the largest average macroplot size, respectively, for each of the years 2015, 2016, and 2017? Please include the type of plot (subplot or macroplot), the specific year, the state, and the corresponding average size in your results.",
+  "db_id": "USFS_FIA",
+  "source_document": "subplot_macroplot_size.md",
+  "evidence": "Subplot Area = E × P × A_s if proportion basis = 'SUBP' and A_s > 0, otherwise 0. Macroplot Area = E × P × A_m if proportion basis = 'MACR' and A_m > 0, otherwise 0. Key terms: E (Expansion Factor), P (Condition Proportion Unadjusted), A_s (Adjustment Factor for Subplot), A_m (Adjustment Factor for Macroplot). Proportion basis values: 'SUBP' for subplot, 'MACR' for macroplot."
+}

@@ -1,0 +1,441 @@
+[COMPONENTS]
+@C1
+assists: NUMBER | [Team stats] Assists | eg=[26, 12]
+assists_turnover_ratio: FLOAT | [Team stats] Assist-to-turnover ratio | eg=[1.53, 0.52]
+blocked_att: NUMBER | [Team stats] Number of the team's shots blocked by the opponent | eg=[4, 5]
+blocks: NUMBER | [Team stats] Blocks | eg=[5, 4]
+defensive_rebounds: NUMBER | [Team stats] Defensive rebounds | eg=[34, 29]
+field_goals_att: NUMBER | [Team stats] Field goals attempted | eg=[61, 51]
+field_goals_made: NUMBER | [Team stats] Field goals made | eg=[35, 23]
+field_goals_pct: FLOAT | [Team stats] Field goal percentage | eg=[57.4, 45.1]
+flagrant_fouls: NUMBER | [Team stats] Flagrant fouls committed | eg=[0]
+free_throws_att: NUMBER | [Team stats] Free throws attempted | eg=[8, 9]
+free_throws_made: NUMBER | [Team stats] Free throws made | eg=[6, 4]
+free_throws_pct: FLOAT | [Team stats] Free throw percentage | eg=[75.0, 44.4]
+home_team: BOOLEAN | [Team data] Team was the home team (Note: this doesn't mean the game was played at home because the game could have been played at a neutral site) | eg=[true, false]
+minutes: TEXT | [Team stats] Total minutes played | eg=["3:20:00"]
+offensive_rebounds: NUMBER | [Team stats] Offensive rebounds | eg=[8, 5]
+personal_fouls: NUMBER | [Team stats] Personal fouls committed | eg=[16, 27]
+points: NUMBER | [Team stats] Total points scored | eg=[88, 56]
+rebounds: NUMBER | [Team stats] Total rebounds | eg=[42, 34]
+steals: NUMBER | [Team stats] Steals | eg=[11, 6]
+three_points_att: NUMBER | [Team stats] Three-pointers attempted | eg=[22, 18]
+three_points_made: NUMBER | [Team stats] Three-pointers made | eg=[12, 6]
+three_points_pct: FLOAT | [Team stats] Three-point shot percentage | eg=[54.5, 33.3]
+turnovers: NUMBER | [Team stats] Turnovers | eg=[17, 23]
+two_points_att: NUMBER | [Team stats] Two-pointers attempted | eg=[39, 33]
+two_points_made: NUMBER | [Team stats] Two-pointers made | eg=[23, 17]
+two_points_pct: FLOAT | [Team stats] Two-point shot percentage | eg=[0.59, 0.515]
+
+@C2
+venue_address: TEXT | [Game data] Address of the venue where the game was played | eg=["1178 Larry Heller Dr", "5998 Alcala Park"]
+venue_capacity: NUMBER | [Game data] Current capacity of the venue where the game was played | eg=[6150, 5100]
+venue_city: TEXT | [Game data] City where the game was played | eg=["Stockton", "San Diego"]
+venue_country: TEXT | [Game data] Country where the game was played | eg=["USA"]
+venue_id: TEXT | [Game data] Unique identifier for the venue where the game was played | eg=["ee6551cc-e4b5-4e08-906e-6184b5f6ab71", "68e1c556-3a3d-4806-ba8f-c9407831cb71"]
+venue_name: TEXT | [Game data] Name of the venue where the game was played | eg=["Alex G. Spanos Center", "Jenny Craig Pavilion"]
+venue_state: TEXT | [Game data] State where the game was played | eg=["CA", "MS"]
+venue_zip: TEXT | [Game data] Address of the venue where the game was played | eg=["95211", "92110"]
+
+@C3
+game_id: TEXT | [Game data] Unique identifier for the game | eg=["7160a0e0-bbc3-46ad-afc6-e4e6b5b90a51", "4069f80e-04f0-4f69-a563-86014bbe95a0"]
+neutral_site: BOOLEAN | [Game data] Type of coverage provided by Sportradar
+status: TEXT | [Game data] Indicates the last state of Sportradar's game file | eg=["closed"]
+tournament: TEXT | [Game data] Whether the game was played in a post-season tournament
+tournament_type: TEXT | [Game data] Type of post-season tournament a game was in played
+
+@C4
+conf_alias: TEXT | [Team data] Team current conference alias (not unique) | eg=["WCC", "D1-WEST"]
+conf_name: TEXT | [Team data] Team current conference name (not unique) | eg=["West Coast", "Division I West Region"]
+division_alias: TEXT | [Team data] Team current division alias (not unique) | eg=["D1", "NCCAA"]
+division_name: TEXT | [Team data] Team current division name (not unique) | eg=["NCAA Division I", "NCCAA"]
+league_name: TEXT | [Team data] Team school league name (not unique) | eg=["NCAA MEN"]
+
+@C5
+gametime: NUMBER | [Game data] Date and time the game was played | eg=[1452996000000000, 1449111600000000]
+scheduled_date: DATE | [Game data] Date the game was played | eg=["2016-01-17", "2015-12-03"]
+tournament_game_no: TEXT | [Game data] Tournament game number
+tournament_round: TEXT | [Game data] Tournament round
+
+@C6
+opp_alias: TEXT | [Opponent data] Opponent school alias (unique) | eg=["BETH", "USD"]
+opp_id: TEXT | [Opponent data] Opponent school ID from SportRadar (unique) | eg=["78434f3d-9b05-480c-b79f-4f228a0a155b", "620d5944-7156-47d3-aad5-5b3824557d03"]
+opp_market: TEXT | [Opponent data] Opponent school name | eg=["Bethesda", "San Diego"]
+opp_name: TEXT | [Opponent data] Opponent name | eg=["Flames", "Toreros"]
+opp_points_game: NUMBER | [Opponent stats] Points scored | eg=[30, 71]
+points_game: NUMBER | [Team stats] Points scored | eg=[88, 56]
+win: BOOLEAN | [Team stats] Win | eg=[true, false]
+
+@C7
+conf_id: TEXT | [Team data] Team current conference ID (not unique) | eg=["c664ceee-1dc0-4743-a6d8-11fbdfb87f61", "53630324-fd56-42e6-ba4c-dc040a31dfff"]
+division_id: TEXT | [Team data] Team current division ID (not unique) | eg=["c5a8d640-5093-4044-851d-2c562e929994", "efdde904-b901-44af-a234-17712072b213"]
+league_alias: TEXT | [Team data] Team school league alias (not unique) | eg=["NCAAM"]
+league_id: TEXT | [Team data] Team school league ID (not unique) | eg=["cd4268ee-07aa-4c4d-a435-ec44ad2c76cb"]
+logo_large: TEXT | [Team data] Team logo 200x200 | eg=["https://www.ncaa.com/sites/default/files/images/logos/schools/p/pacific.200.png", "https://www.ncaa.com/sites/default/files/images/logos/schools/v/vanderbilt.200.png"]
+logo_medium: TEXT | [Team data] Team logo 70x70 | eg=["https://www.ncaa.com/sites/default/files/images/logos/schools/p/pacific.70.png", "https://www.ncaa.com/sites/default/files/images/logos/schools/v/vanderbilt.70.png"]
+logo_small: TEXT | [Team data] Team logo 24x24 | eg=["https://www.ncaa.com/sites/default/files/images/logos/schools/p/pacific.24.png", "https://www.ncaa.com/sites/default/files/images/logos/schools/v/vanderbilt.24.png"]
+
+@C8
+attendance: NUMBER | [Game data] Attendance of the game | eg=[2205, 1281]
+conference_game: BOOLEAN | [Game data] Indicator of whether the two teams were in the same conference at the time the game was played
+possession_arrow: TEXT | [Game stats] The unique identifier of the team that would receive the ball the next time a jump ball is called, see https://en.wikipedia.org/wiki/Jump_ball for more information | eg=["78434f3d-9b05-480c-b79f-4f228a0a155b", "620d5944-7156-47d3-aad5-5b3824557d03"]
+
+@C9
+coverage: TEXT | [Game data] Type of coverage provided by Sportradar | eg=["full"]
+created: NUMBER | [Table data] Box score data entry time | eg=[1519141734000000, 1519142016000000]
+lead_changes: NUMBER | [Game stats] Number of lead changes in the game | eg=[0, 6]
+periods: NUMBER | [Game stats] Number of periods the game | eg=[2]
+times_tied: NUMBER | [Game stats] Number of ties in the game | eg=[0, 6]
+
+@C10
+player_id: TEXT | Unique identifier for the player to whom the event is attributed
+team_alias: TEXT | Indicator of the team school alias (unique) to which the event was attributed
+team_market: TEXT | Indicator of the team name to which the event was attributed
+team_name: TEXT | Indicator of the school name to which the event was attributed
+
+[TABLES]
+## NCAA_BASKETBALL.MBB_TEAMS_GAMES_SR
+@use: [C1, C2, C3, C4, C5, C6, C7, C8, C9]
+opp_blocks: NUMBER | [Opponent stats] Blocks | eg=[4, 5]
+opp_logo_small: TEXT | [Opponent data] Opponent logo 24x24 | eg=["https://www.ncaa.com/sites/default/files/images/logos/schools/s/san-diego.24.png", "https://www.ncaa.com/sites/default/files/images/logos/schools/p/pacific.24.png"]
+opp_division_name: TEXT | [Opponent data] Opponent current division name (not unique) | eg=["NCCAA", "NCAA Division I"]
+opp_flagrant_fouls: NUMBER | [Opponent stats] Flagrant fouls committed | eg=[0]
+opp_fast_break_pts: NUMBER | [Opponent stats] Fast-break points scored | eg=[0, 21]
+opp_league_alias: TEXT | [Opponent data] Opponent school league alias (not unique) | eg=["NCAAM"]
+opp_conf_name: TEXT | [Opponent data] Opponent current conference name (not unique) | eg=["Division I West Region", "West Coast"]
+opp_three_points_made: NUMBER | [Opponent stats] Three-pointers made | eg=[1, 4]
+team_turnovers: NUMBER | [Team stats] Team turnovers | eg=[1, 0]
+opp_field_goals_pct: FLOAT | [Opponent stats] Field goal percentage | eg=[22.6, 36.9]
+opp_foulouts: NUMBER | [Opponent stats] Player foul-outs
+team_id: TEXT | [Team data] Team school ID from SportRadar (unique) | eg=["c9570e17-c4fd-41e6-908a-1a083941319d", "78434f3d-9b05-480c-b79f-4f228a0a155b"]
+team_rebounds: NUMBER | [Team stats] Team rebounds | eg=[3, 4]
+opp_three_points_att: NUMBER | [Opponent stats] Three-pointers attempted | eg=[14, 30]
+opp_offensive_rebounds: NUMBER | [Opponent stats] Offensive rebounds | eg=[5, 15]
+points_off_turnovers: NUMBER | [Team stats] Points off turnovers | eg=[30, 10]
+team_tech_fouls: NUMBER | [Team stats] Technical fouls committed by team | eg=[0, 1]
+opp_rebounds: NUMBER | [Opponent stats] Total rebounds | eg=[20, 37]
+opp_team_tech_fouls: NUMBER | [Opponent stats] Technical fouls committed by opponent | eg=[1, 0]
+opp_team_turnovers: NUMBER | [Opponent stats] Opponent turnovers | eg=[1, 0]
+opp_ejections: NUMBER | [Opponent stats] Player ejections | eg=[0.0, NaN]
+opp_two_points_att: NUMBER | [Opponent stats] Two-pointers attempted | eg=[39, 35]
+opp_division_alias: TEXT | [Opponent data] Opponent current division alias (not unique) | eg=["NCCAA", "D1"]
+opp_conf_id: TEXT | [Opponent data] Opponent current conference ID (not unique) | eg=["53630324-fd56-42e6-ba4c-dc040a31dfff", "c664ceee-1dc0-4743-a6d8-11fbdfb87f61"]
+opp_assists: NUMBER | [Opponent stats] Assists | eg=[9, 6]
+opp_league_id: TEXT | [Opponent data] Opponent school league ID (not unique) | eg=["cd4268ee-07aa-4c4d-a435-ec44ad2c76cb"]
+opp_steals: NUMBER | [Opponent stats] Steals | eg=[10, 11]
+opp_league_name: TEXT | [Opponent data] Opponent school league name (not unique) | eg=["NCAA MEN"]
+opp_personal_fouls: NUMBER | [Opponent stats] Personal fouls committed | eg=[13, 15]
+opp_turnovers: NUMBER | [Opponent stats] Turnovers | eg=[21, 13]
+coach_tech_fouls: NUMBER | [Team stats] Technical fouls committed by coach | eg=[0]
+opp_free_throws_pct: FLOAT | [Opponent stats] Free throw percentage | eg=[55.6, 55.9]
+fast_break_pts: NUMBER | [Team stats] Fast-break points scored | eg=[21, 0]
+opp_field_goals_made: NUMBER | [Opponent stats] Field goals made | eg=[12, 24]
+name: TEXT | [Team data] Team name | eg=["Tigers", "Flames"]
+opp_logo_medium: TEXT | [Opponent data] Opponent logo 70x70 | eg=["https://www.ncaa.com/sites/default/files/images/logos/schools/s/san-diego.70.png", "https://www.ncaa.com/sites/default/files/images/logos/schools/p/pacific.70.png"]
+second_chance_pts: NUMBER | [Team stats] Second-chance points scored | eg=[16, 3]
+opp_defensive_rebounds: NUMBER | [Opponent stats] Defensive rebounds | eg=[15, 22]
+foulouts: NUMBER | [Team stats] Player foul-outs
+opp_player_tech_fouls: NUMBER | [Opponent stats] Technical fouls committed | eg=[0, 2]
+market: TEXT | [Team data] Team school name | eg=["Pacific", "Bethesda"]
+opp_blocked_att: NUMBER | [Opponent stats] Number of the opponent's shots blocked by the team | eg=[5, 4]
+opp_logo_large: TEXT | [Opponent data] Opponent logo 200x200 | eg=["https://www.ncaa.com/sites/default/files/images/logos/schools/s/san-diego.200.png", "https://www.ncaa.com/sites/default/files/images/logos/schools/p/pacific.200.png"]
+opp_free_throws_made: NUMBER | [Opponent stats] Free throws made | eg=[5, 19]
+ejections: NUMBER | [Team stats] Player ejections | eg=[0.0, NaN]
+season: NUMBER | [Game data] Season the game was played in | eg=[2015, 2014]
+opp_minutes: TEXT | [Opponent stats] Total minutes played | eg=["3:20:00"]
+alias: TEXT | [Team data] Team school alias (unique) | eg=["PAC", "BETH"]
+opp_two_points_made: NUMBER | [Opponent stats] Two-pointers made | eg=[11, 20]
+opp_conf_alias: TEXT | [Opponent data] Opponent current conference alias (not unique) | eg=["D1-WEST", "WCC"]
+opp_division_id: TEXT | [Opponent data] Opponent current division ID (not unique) | eg=["efdde904-b901-44af-a234-17712072b213", "c5a8d640-5093-4044-851d-2c562e929994"]
+opp_team_rebounds: NUMBER | [Opponent stats] Opponent rebounds | eg=[4, 7]
+player_tech_fouls: NUMBER | [Team stats] Technical fouls committed | eg=[0, 2]
+opp_free_throws_att: NUMBER | [Opponent stats] Free throws attempted | eg=[9, 34]
+opp_field_goals_att: NUMBER | [Opponent stats] Field goals attempted | eg=[53, 65]
+opp_assists_turnover_ratio: FLOAT | [Opponent stats] Assist-to-turnover ratio | eg=[0.43, 0.46]
+opp_coach_tech_fouls: NUMBER | [Opponent stats] Technical fouls committed by coach | eg=[0]
+opp_points: NUMBER | [Opponent stats] Total points scored | eg=[30, 71]
+opp_two_points_pct: FLOAT | [Opponent stats] Two-point shot percentage | eg=[0.282, 0.571]
+opp_second_chance_pts: NUMBER | [Opponent stats] Second-chance points scored | eg=[0, 17]
+opp_points_off_turnovers: NUMBER | [Opponent stats] Points off turnovers | eg=[5, 31]
+opp_three_points_pct: FLOAT | [Opponent stats] Three-point shot percentage | eg=[7.1, 13.3]
+
+## NCAA_BASKETBALL.MBB_HISTORICAL_TEAMS_GAMES
+@use: [C6]
+name: TEXT | [Team data] Team name
+attendance: FLOAT | [Game data] Attendance of the game
+market: TEXT | [Team data] Team school name (using Sportradar names)
+current_division: TEXT | [Team data] The division the team currently plays in
+opp_code: NUMBER | [Opponent data] Opponent school code (see http://stats.ncaa.org/game_upload/team_codes) | eg=[506107, 717]
+alias: TEXT | [Team data] Team alias
+opp_current_division: TEXT | [Opponent data] The division the opponent currently plays in
+season: NUMBER | [Game data] Season the game was played in | eg=[1996, 1997]
+scheduled_date: TEXT | [Game data] Date the game was played
+team_code: TEXT | [Team data] School code (see http://stats.ncaa.org/game_upload/team_codes) | eg=["121", "267"]
+team_id: TEXT | [Team data] Sportradar team ID
+
+## NCAA_BASKETBALL.MBB_HISTORICAL_TEAMS_SEASONS
+alias: TEXT | Team alias
+name: TEXT | Team name
+losses: NUMBER | Number of losses in this season | eg=[0, 2]
+division: NUMBER | The division the team played in at this time of this season | eg=[1]
+wins: NUMBER | Number of wins in this season | eg=[16, 24]
+team_code: NUMBER | School code (see http://stats.ncaa.org/game_upload/team_codes) | eg=[479, 137]
+season: NUMBER | Season the game was played in | eg=[1933, 1907]
+ties: NUMBER | Number of ties in this season | eg=[0]
+current_division: TEXT | The division the team currently plays in
+team_id: TEXT | Sportradar team ID
+market: TEXT | Team school name (using Sportradar names)
+
+## NCAA_BASKETBALL.MBB_HISTORICAL_TOURNAMENT_GAMES
+lose_code_ncaa: NUMBER | School code of the losing team (see http://stats.ncaa.org/game_upload/team_codes) | eg=[528, 257]
+win_seed: TEXT | Seed of the winning team | eg=["11", "14"]
+lose_pts: NUMBER | Points scored by the losing team | eg=[90, 70]
+lose_seed: TEXT | Seed of the losing team | eg=["06", "03"]
+days_from_epoch: NUMBER | Days from epoch, as defined in the Kaggle competition (https://www.kaggle.com/c/mens-machine-learning-competition-2018/data) | eg=[7015, 9934]
+win_school_ncaa: TEXT | School name of the winning team (see http://stats.ncaa.org/game_upload/team_codes) | eg=["Evansville", "Chattanooga"]
+season: NUMBER | Year the game was played in. Note that this is different from the "season" values in other tables here, which use academic year. | eg=[1989, 1997]
+lose_team_id: TEXT | Sportradar team ID of the losing team | eg=["532d3874-b4b3-4c5c-acc6-749a6db26c8f", "4f4b0771-994c-4126-822d-7525aaa00f65"]
+win_market: TEXT | School name (using Sportradar names) of the winning team | eg=["Evansville", "Chattanooga"]
+day: TEXT | Day of the week the game was played | eg=["Friday", "Thursday"]
+lose_alias: TEXT | Team alias of the losing team | eg=["ORST", "UGA"]
+win_name: TEXT | Team name of the winning team | eg=["Aces", "Mocs"]
+win_code_ncaa: NUMBER | School code of the winning team (see http://stats.ncaa.org/game_upload/team_codes) | eg=[219, 693]
+lose_market: TEXT | School name (using Sportradar names) of the losing team | eg=["Oregon State", "Georgia"]
+win_pts: NUMBER | Points scored by the winning team | eg=[94, 73]
+lose_name: TEXT | Team name of the losing team | eg=["Beavers", "Bulldogs"]
+game_date: DATE | Date the game was played | eg=["1989-03-17", "1997-03-14"]
+win_alias: TEXT | Team alias of the winning team | eg=["EVAN", "CHAT"]
+lose_school_ncaa: TEXT | School name of the losing team (see http://stats.ncaa.org/game_upload/team_codes) | eg=["Oregon St.", "Georgia"]
+win_team_id: TEXT | Sportradar team ID of the winning team | eg=["d8217105-e9c2-4267-9538-3aaeea1ae167", "4c9fb59b-6cec-4b0d-bb0f-628b391d138c"]
+num_ot: NUMBER | Number of overtime periods played in the game | eg=[1, 0]
+round: NUMBER | Tournament round, indicated by the number of teams playing in that round | eg=[64, 16]
+win_region: TEXT | Region of the winning team, as defined in the Kaggle competition (https://www.kaggle.com/c/mens-machine-learning-competition-2018/data) | eg=["X", "W"]
+lose_region: TEXT | Region of the losing team, as defined in the Kaggle competition (https://www.kaggle.com/c/mens-machine-learning-competition-2018/data) | eg=["X", "W"]
+academic_year: NUMBER | The academic year the game was played in | eg=[1988, 1996]
+win_kaggle_team_id: NUMBER | Kaggle team ID of the winning team | eg=[1191, 1151]
+lose_kaggle_team_id: NUMBER | Kaggle team ID of the losing team | eg=[1333, 1208]
+
+## NCAA_BASKETBALL.MASCOTS
+tax_genus: TEXT | The genus to which the mascot belongs
+tax_family: TEXT | The family to which the mascot belongs
+tax_phylum: TEXT | The phylum to which the mascot belongs
+mascot_common_name: TEXT | The type of being or creature that the mascot embodies
+tax_species: TEXT | The species to which the mascot belongs
+tax_domain: TEXT | The domain to which the mascot belongs
+tax_subspecies: TEXT | The subspecies to which the mascot belongs
+mascot_name: TEXT | The proper name of the university's mascot, if available (e.g. a character) | eg=["Captain Cane", "Sparky"]
+tax_order: TEXT | The order to which the mascot belongs
+tax_class: TEXT | The class to which the mascot belongs
+tax_kingdom: TEXT | The kingdom to which the mascot belongs
+name: TEXT | The name of the university’s team | eg=["Golden Hurricane", "Sun Devils"]
+id: TEXT | University unique ID from Sportradar | eg=["2959bd24-7007-41ae-a3a3-abdf26888cfc", "ad4bc983-8d2e-4e6f-a8f9-80840a786c64"]
+non_tax_type: TEXT | The non-Linnean type of being or creature to which the mascot belongs, if applicable | eg=["Weather", "Devils"]
+market: TEXT | The university to which the mascot belongs | eg=["Tulsa", "Arizona State"]
+mascot: TEXT | The name of the university's mascot | eg=["Hurricane", "Devil"]
+
+## NCAA_BASKETBALL.MBB_PBP_SR
+@use: [C10, C2, C3, C8]
+away_league_name: TEXT | Visiting team school league name (not unique) | eg=["NCAA MEN"]
+season: NUMBER | Season the game was played in | eg=[2017]
+home_conf_name: TEXT | Home team current conference name (not unique) | eg=["Big East"]
+home_division_alias: TEXT | Home team current division alias (not unique) | eg=["D1"]
+event_coord_x: FLOAT | The location of the play in number of inches from the "left" baseline, max 1128
+scheduled_date: NUMBER | Date the game was played | eg=[1522543740000000]
+home_name: TEXT | Home team name | eg=["Wildcats"]
+round: TEXT | Indicator of which tournament round a game was played in, if any | eg=["Semifinals"]
+turnover_type: TEXT | Type of turnover
+period: NUMBER | This field indicates which period the event occured in. "1" is the first 20-minute half, "2" is the second 20-minute half, "3" is the first OT, "4" is the second OT, etc. | eg=[1, 2]
+game_clock: TEXT | Time left in the period in minutes | eg=["2:57", "6:52"]
+home_alias: TEXT | Home team school alias (unique) | eg=["VILL"]
+event_description: TEXT | A description of the event | eg=["TV timeout", "End of 1st Half."]
+home_conf_alias: TEXT | Home team current conference alias (not unique) | eg=["BIGEAST"]
+event_id: TEXT | Unique identifier for the event ("play") | eg=["891d78d7-5b59-4318-b41a-694a181413d8", "d6c1ea43-e12f-4444-8219-77de3399d3ef"]
+game_no: TEXT | Indicator of which tournament game number a game was, if any | eg=["Game 2"]
+player_full_name: TEXT | Name for the player to whom the event is attributed
+away_name: TEXT | Visiting team name | eg=["Jayhawks"]
+away_division_alias: TEXT | Visiting team division alias (not unique) | eg=["D1"]
+three_point_shot: BOOLEAN | Boolean value indicating whether the event was a three-point shot attempt | eg=[false]
+event_type: TEXT | Category of event | eg=["tvtimeout", "endperiod"]
+type: TEXT | Event subtype giving additional information about the event
+shot_subtype: TEXT | Additional information about shot type (e.g. fadeaway, floating, pullup, step back, turnaround, alley-oop, driving, finger roll, putback, reverse)
+load_timestamp: NUMBER | Time at which the data was loaded into the table | eg=[1522553100000000]
+away_division_name: TEXT | Visiting team division name (not unique) | eg=["NCAA Division I"]
+team_division_alias: TEXT | Indicator of the team current division alias (not unique) to which the event was attributed
+team_division_name: TEXT | Indicator of the team current division name (not unique) to which the event was attributed
+shot_made: BOOLEAN | Boolean value indicating whether the event was a shot made | eg=[false]
+home_league_name: TEXT | Home team school league name (not unique) | eg=["NCAA MEN"]
+shot_type: TEXT | There are 5 categories of shot types: jump shot, layup, hook shot, dunk, tip shot
+team_basket: TEXT | The basket (left or right) that the team to which the event is attributed is attacking
+timestamp: NUMBER | The time when the event details were last updated | eg=[1522546560000000, 1522546020000000]
+team_conf_alias: TEXT | Indicator of the team current conference alias (not unique) to which the event was attributed
+home_market: TEXT | Home team school name | eg=["Villanova"]
+timeout_duration: FLOAT | Duration of timeout
+away_id: TEXT | Visiting team school ID from SportRadar (unique)
+To enable screen reader support, press Ctrl+Alt+Z To learn about keyboard shortcuts, press Ctrl+slash | eg=["fae4855b-1b64-4b40-a632-9ed345e1e952"]
+rebound_type: TEXT | Indicator of whether a rebound was offensive or defensive
+possession_team_id: TEXT | The id of the team that possessed the ball at the end of the play. | eg=["4383eb6a-7fd8-4ff2-94c5-43c933121e88", "fae4855b-1b64-4b40-a632-9ed345e1e952"]
+team_conf_name: TEXT | Indicator of the team current conference name (not unique) to which the event was attributed
+away_alias: TEXT | Visiting team school alias (unique) | eg=["KU"]
+home_id: TEXT | Home team school ID from SportRadar (unique) | eg=["4383eb6a-7fd8-4ff2-94c5-43c933121e88"]
+away_conf_alias: TEXT | Visiting team current conference alias (not unique) | eg=["BIG12"]
+away_conf_name: TEXT | Visiting team current conference name (not unique) | eg=["Big 12"]
+home_division_name: TEXT | Home team current division name (not unique) | eg=["NCAA Division I"]
+away_market: TEXT | Visiting team school name | eg=["Kansas"]
+event_coord_y: FLOAT | The location of the play in inches from the "top" sideline, max 600
+points_scored: FLOAT | Number of points scored on the play
+elapsed_time_sec: NUMBER | Total time elapsed in the game in seconds | eg=[1023, 788]
+jersey_num: NUMBER | Jersey number for the player to whom the event is attributed | eg=[0]
+team_league_name: TEXT | Indicator of the team school league name (not unique) to which the event was attributed
+team_id: TEXT | Indicator of the team school ID from SportRadar (unique) to which the event was attributed
+
+## NCAA_BASKETBALL.MBB_TEAMS
+@use: [C2, C4, C7]
+code_ncaa: NUMBER | NULL | eg=[158, 540]
+school_ncaa: TEXT | NULL | eg=["Columbia", "Penn"]
+id: TEXT | NULL | eg=["ca74bd67-034c-4468-8487-6f983f5eb4f6", "e6c94452-1adf-4fb9-90e5-10f165c57c5a"]
+market: TEXT | NULL | eg=["Columbia", "Pennsylvania"]
+turner_name: TEXT | NULL | eg=["Columbia University-Barnard College", "University of Pennsylvania"]
+kaggle_team_id: NUMBER | NULL | eg=[1162, 1335]
+name: TEXT | NULL | eg=["Lions", "Quakers"]
+alias: TEXT | NULL | eg=["CLMB", "PENN"]
+
+## NCAA_BASKETBALL.MBB_PLAYERS_GAMES_SR
+@use: [C1, C10, C3, C4, C5]
+class: TEXT | [Player info] Player's class at game time (Note: this information comes from the school's website, via Sportradar.) | eg=["SO", "JR"]
+birth_place: TEXT | [Player info] Player birth place or home (Note: this information comes from the school's website, via Sportradar. While many of these entries indicate the player's birthplace, some of them may instead indicate the town that the players most identifies with.) | eg=["Wyandanch, NY, USA", "Stoughton, MA, USA"]
+season: NUMBER | [Game data] Season the game was played in | eg=[2014, 2017]
+sp_created: NUMBER | [Table data] Box score data entry time | eg=[1519142015000000, 1519142017000000]
+height: NUMBER | [Player info] Player height | eg=[72, 71]
+full_name: TEXT | [Player info] Player full name | eg=["Kevin Little", "Aaron Calixte"]
+birthplace_state: TEXT | [Player info] Player's home state (Note: this information comes from the school's website, via Sportradar. While many of these entries indicate the player's birthplace, some of them may instead indicate the town that the players most identifies with.) | eg=["NY", "MA"]
+team_id: TEXT | [Team info] Sportradar team ID | eg=["0095032d-6143-44f2-8974-f6815fc56c5b"]
+abbr_name: TEXT | [Player info] Player abbreviated name ("F.Last") | eg=["K.Little", "A.Calixte"]
+first_name: TEXT | [Player info] Player first name | eg=["Kevin", "Aaron"]
+tech_fouls: NUMBER | [Player stats] Technical fouls committed | eg=[0]
+jersey_number: NUMBER | [Player info] Player jersey number | eg=[2, 1]
+starter: BOOLEAN | [Player stats] Indicator of whether the player started the game | eg=[false, true]
+played: BOOLEAN | [Player stats] Indicator of whether the player played in the game | eg=[true]
+position: TEXT | [Player stats] Position | eg=["G", "F"]
+active: BOOLEAN | [Player stats] Indicator of whether the player was active for the game | eg=[true]
+weight: NUMBER | [Player info] Player weight | eg=[170, 187]
+last_name: TEXT | [Player info] Player last name | eg=["Little", "Calixte"]
+primary_position: TEXT | [Player stats] Primary position | eg=["NA"]
+birthplace_country: TEXT | [Player info] Player's home country (Note: this information comes from the school's website, via Sportradar. While many of these entries indicate the player's birthplace, some of them may instead indicate the town that the players most identifies with.) | eg=[" USA"]
+birthplace_city: TEXT | [Player info] Player's home city (Note: this information comes from the school's website, via Sportradar. While many of these entries indicate the player's birthplace, some of them may instead indicate the town that the players most identifies with.) | eg=["Wyandanch", "Stoughton"]
+minutes_int64: NUMBER | [Player stats] Minutes played (as integer) | eg=[25, 33]
+
+## NCAA_BASKETBALL.TEAM_COLORS
+color: TEXT | NULL | eg=["#000000", "#000066"]
+market: TEXT | NULL | eg=["Colorado", "Northeastern"]
+id: TEXT | NULL | eg=["9fccbf28-2858-4263-821c-fdefb3c7efa3", "93df9b18-e9fc-42a7-bb45-a736c203b4dc"]
+code_ncaa: NUMBER | NULL | eg=[157, 500]
+
+## NCAA_BASKETBALL.MBB_GAMES_SR
+@use: [C2, C3, C5, C8, C9]
+a_team_tech_fouls: NUMBER | [Away Team stats] Away technical fouls committed by team | eg=[0]
+h_blocked_att: NUMBER | [Home Team stats] Number of the home team's shots blocked by the away team | eg=[5, 8]
+a_free_throws_made: NUMBER | [Away Team stats] Away free throws made | eg=[20, 22]
+h_two_points_pct: FLOAT | [Home Team stats] Home two-point shot percentage | eg=[0.553, 0.512]
+a_rank: NUMBER | [Away Team stats] Away rank | eg=[0, 11]
+h_league_alias: TEXT | [Home Team data] Home team school league alias (not unique) | eg=["NCAAM"]
+a_conf_alias: TEXT | [Away Team data] Away team current conference alias (not unique) | eg=["BIGEAST", "AAC"]
+a_conf_name: TEXT | [Away Team data] Away team current conference name (not unique) | eg=["Big East", "American Athletic"]
+a_logo_large: TEXT | [Away Team data] Away team logo 200x200 | eg=["https://www.ncaa.com/sites/default/files/images/logos/schools/s/st-johns-ny.200.png", "https://www.ncaa.com/sites/default/files/images/logos/schools/u/uconn.200.png"]
+a_logo_small: TEXT | [Away Team data] Away team logo 24x24 | eg=["https://www.ncaa.com/sites/default/files/images/logos/schools/s/st-johns-ny.24.png", "https://www.ncaa.com/sites/default/files/images/logos/schools/u/uconn.24.png"]
+a_defensive_rebounds: NUMBER | [Away Team stats] Away defensive rebounds | eg=[25, 21]
+h_turnovers: NUMBER | [Home Team stats] Home turnovers | eg=[12, 11]
+h_second_chance_pts: NUMBER | [Home Team stats] Home second-chance points scored | eg=[11, 12]
+h_three_points_pct: FLOAT | [Home Team stats] Home three-point shot percentage | eg=[44.8, 20.0]
+h_team_tech_fouls: NUMBER | [Home Team stats] Home technical fouls committed by team | eg=[0]
+h_league_name: TEXT | [Home Team data] Home team school league name (not unique) | eg=["NCAA MEN"]
+h_division_id: TEXT | [Home Team data] Home team current division ID (not unique) | eg=["9c6f6fe5-c9a1-4260-8d87-f9866ca271ba", "c5a8d640-5093-4044-851d-2c562e929994"]
+a_personal_fouls: NUMBER | [Away Team stats] Away personal fouls committed | eg=[19, 26]
+a_assists: NUMBER | [Away Team stats] Away assists | eg=[21, 8]
+a_second_chance_pts: NUMBER | [Away Team stats] Away second-chance points scored | eg=[6, 11]
+h_ejections: NUMBER | [Home Team stats] Home player ejections | eg=[0]
+h_two_points_made: NUMBER | [Home Team stats] Home two-pointers made | eg=[21, 14]
+a_team_turnovers: NUMBER | [Away Team stats] Away team turnovers | eg=[0, 1]
+a_assists_turnover_ratio: FLOAT | [Away Team stats] Away assist-to-turnover ratio | eg=[1.24, 0.8]
+a_points_game: NUMBER | [Away Team stats] Away points scored | eg=[100, 74]
+a_market: TEXT | [Away Team data] Away team school name | eg=["St. John's", "Connecticut"]
+a_field_goals_pct: FLOAT | [Away Team stats] Away field goal percentage | eg=[59.3, 39.7]
+h_points_game: NUMBER | [Home Team stats] Home points scored | eg=[93, 67]
+h_free_throws_made: NUMBER | [Home Team stats] Home free throws made | eg=[12, 19]
+a_two_points_pct: FLOAT | [Away Team stats] Away two-point shot percentage | eg=[0.625, 0.415]
+a_points_off_turnovers: NUMBER | [Away Team stats] Away points off turnovers | eg=[12, 18]
+a_fast_break_pts: NUMBER | [Away Team stats] Away fast-break points scored | eg=[6, 8]
+a_alias: TEXT | [Away Team data] Away team school alias (unique) | eg=["SJU", "CONN"]
+h_steals: NUMBER | [Home Team stats] Home steals | eg=[8, 5]
+h_personal_fouls: NUMBER | [Home Team stats] Home personal fouls committed | eg=[17, 22]
+season: NUMBER | [Game data] Season the game was played in | eg=[2015]
+a_three_points_made: NUMBER | [Away Team stats] Away three-pointers made | eg=[10, 6]
+h_coach_tech_fouls: NUMBER | [Home Team stats] Home technical fouls committed by coach | eg=[0, 1]
+a_three_points_pct: FLOAT | [Away Team stats] Away three-point shot percentage | eg=[52.6, 35.3]
+h_league_id: TEXT | [Home Team data] Home team school league ID (not unique) | eg=["cd4268ee-07aa-4c4d-a435-ec44ad2c76cb"]
+a_league_id: TEXT | [Away Team data] Away team school league ID (not unique) | eg=["cd4268ee-07aa-4c4d-a435-ec44ad2c76cb"]
+h_field_goals_att: NUMBER | [Home Team stats] Home field goals attempted | eg=[67, 51]
+h_fast_break_pts: NUMBER | [Home Team stats] Home fast-break points scored | eg=[6, 2]
+a_league_name: TEXT | [Away Team data] Away team school league name (not unique) | eg=["NCAA MEN"]
+h_assists: NUMBER | [Home Team stats] Home assists | eg=[19, 8]
+a_field_goals_made: NUMBER | [Away Team stats] Away field goals made | eg=[35, 23]
+h_conf_alias: TEXT | [Home Team data] Home team current conference alias (not unique) | eg=["PACWEST-D2", "PAC12"]
+h_field_goals_pct: FLOAT | [Home Team stats] Home field goal percentage | eg=[50.7, 45.1]
+h_three_points_made: NUMBER | [Home Team stats] Home three-pointers made | eg=[13, 2]
+h_name: TEXT | [Home Team data] Home team name | eg=["Silverswords", "Buffaloes"]
+h_market: TEXT | [Home Team data] Home team school name | eg=["Chaminade University", "Colorado"]
+h_logo_large: TEXT | [Home Team data] Home team logo 200x200 | eg=["https://www.ncaa.com/sites/default/files/images/logos/schools/c/colorado.200.png", "https://www.ncaa.com/sites/default/files/images/logos/schools/a/arizona.200.png"]
+a_offensive_rebounds: NUMBER | [Away Team stats] Away offensive rebounds | eg=[8, 9]
+h_minutes: TEXT | [Home Team stats] Home total minutes played | eg=["3:20:00"]
+h_team_turnovers: NUMBER | [Home Team stats] Home team turnovers | eg=[0, 1]
+h_flagrant_fouls: NUMBER | [Home Team stats] Home flagrant fouls committed | eg=[0]
+a_two_points_made: NUMBER | [Away Team stats] Away two-pointers made | eg=[25, 17]
+h_three_points_att: NUMBER | [Home Team stats] Home three-pointers attempted | eg=[29, 10]
+h_logo_medium: TEXT | [Home Team data] Home team logo 70x70 | eg=["https://www.ncaa.com/sites/default/files/images/logos/schools/c/colorado.70.png", "https://www.ncaa.com/sites/default/files/images/logos/schools/a/arizona.70.png"]
+h_two_points_att: NUMBER | [Home Team stats] Home two-pointers attempted | eg=[38, 41]
+a_division_name: TEXT | [Away Team data] Away team current division name (not unique) | eg=["NCAA Division I"]
+h_rank: NUMBER | [Home Team stats] Home rank | eg=[0, 17]
+a_division_id: TEXT | [Away Team data] Away team current division ID (not unique) | eg=["c5a8d640-5093-4044-851d-2c562e929994"]
+h_rebounds: NUMBER | [Home Team stats] Home total rebounds | eg=[24, 32]
+h_division_alias: TEXT | [Home Team data] Home team current division alias (not unique) | eg=["D2", "D1"]
+a_id: TEXT | [Away Team data] Away team school ID from SportRadar (unique) | eg=["c1f4aae1-aa16-4095-aeab-10e5c2a1236a", "efba5350-79bc-47aa-a189-db177b95b491"]
+h_defensive_rebounds: NUMBER | [Home Team stats] Home defensive rebounds | eg=[17, 24]
+h_offensive_rebounds: NUMBER | [Home Team stats] Home offensive rebounds | eg=[7, 8]
+h_foulouts: NUMBER | [Home Team stats] Home player foul-outs
+a_turnovers: NUMBER | [Away Team stats] Away turnovers | eg=[17, 10]
+a_team_rebounds: NUMBER | [Away Team stats] Away team rebounds | eg=[0, 2]
+h_player_tech_fouls: NUMBER | [Home Team stats] Home technical fouls committed | eg=[0, 1]
+a_points: NUMBER | [Away Team stats] Away total points scored | eg=[100, 74]
+h_team_rebounds: NUMBER | [Home Team stats] Home team rebounds | eg=[4, 1]
+a_foulouts: NUMBER | [Away Team stats] Away player foul-outs
+h_logo_small: TEXT | [Home Team data] Home team logo 24x24 | eg=["https://www.ncaa.com/sites/default/files/images/logos/schools/c/colorado.24.png", "https://www.ncaa.com/sites/default/files/images/logos/schools/a/arizona.24.png"]
+a_division_alias: TEXT | [Away Team data] Away team current division alias (not unique) | eg=["D1"]
+a_league_alias: TEXT | [Away Team data] Away team school league alias (not unique) | eg=["NCAAM"]
+h_division_name: TEXT | [Home Team data] Home team current division name (not unique) | eg=["NCAA Division II", "NCAA Division I"]
+h_field_goals_made: NUMBER | [Home Team stats] Home field goals made | eg=[34, 23]
+h_points_off_turnovers: NUMBER | [Home Team stats] Home points off turnovers | eg=[32, 13]
+a_steals: NUMBER | [Away Team stats] Away steals | eg=[7, 8]
+a_coach_tech_fouls: NUMBER | [Away Team stats] Away technical fouls committed by coach | eg=[0]
+a_ejections: NUMBER | [Away Team stats] Away player ejections | eg=[0]
+h_free_throws_att: NUMBER | [Home Team stats] Home free throws attempted | eg=[20, 30]
+a_flagrant_fouls: NUMBER | [Away Team stats] Away flagrant fouls committed | eg=[0]
+a_blocked_att: NUMBER | [Away Team stats] Number of the away team's shots blocked by the away team | eg=[0, 3]
+a_blocks: NUMBER | [Away Team stats] Away blocks | eg=[5, 8]
+a_logo_medium: TEXT | [Away Team data] Away team logo 70x70 | eg=["https://www.ncaa.com/sites/default/files/images/logos/schools/s/st-johns-ny.70.png", "https://www.ncaa.com/sites/default/files/images/logos/schools/u/uconn.70.png"]
+h_free_throws_pct: FLOAT | [Home Team stats] Home free throw percentage | eg=[60.0, 63.3]
+a_rebounds: NUMBER | [Away Team stats] Away total rebounds | eg=[33, 34]
+a_free_throws_att: NUMBER | [Away Team stats] Away free throws attempted | eg=[27, 23]
+h_blocks: NUMBER | [Home Team stats] Home blocks | eg=[0, 3]
+h_id: TEXT | [Home Team data] Home team school ID from SportRadar (unique) | eg=["ef13a371-76ed-409c-9aa6-35135183e170", "9fccbf28-2858-4263-821c-fdefb3c7efa3"]
+h_alias: TEXT | [Home Team data] Home team school alias (unique) | eg=["CHA", "COLO"]
+h_conf_id: TEXT | [Home Team data] Home team current conference ID (not unique) | eg=["ff8025b4-2752-413b-a6fe-4a5c36c47bab", "04d5255d-b2dc-43df-9fa8-d296b0f8ccd7"]
+h_points: NUMBER | [Home Team stats] Home total points scored | eg=[93, 67]
+a_free_throws_pct: FLOAT | [Away Team stats] Away free throw percentage | eg=[74.1, 95.7]
+a_two_points_att: NUMBER | [Away Team stats] Away two-pointers attempted | eg=[40, 41]
+h_conf_name: TEXT | [Home Team data] Home team current conference name (not unique) | eg=["Pacific West Conference", "Pacific 12"]
+a_minutes: TEXT | [Away Team stats] Away total minutes played | eg=["3:20:00"]
+a_name: TEXT | [Away Team data] Away team name | eg=["Red Storm", "Huskies"]
+h_assists_turnover_ratio: FLOAT | [Home Team stats] Home assist-to-turnover ratio | eg=[1.58, 0.73]
+a_field_goals_att: NUMBER | [Away Team stats] Away field goals attempted | eg=[59, 58]
+a_three_points_att: NUMBER | [Away Team stats] Away three-pointers attempted | eg=[19, 17]
+a_conf_id: TEXT | [Away Team data] Away team current conference ID (not unique) | eg=["d07bc93e-c84c-44a9-a99d-c213bd0014d6", "3b6a48d8-1f9c-484f-8ed0-ef0a540a0efe"]
+a_player_tech_fouls: NUMBER | [Away Team stats] Away technical fouls committed | eg=[0, 1]

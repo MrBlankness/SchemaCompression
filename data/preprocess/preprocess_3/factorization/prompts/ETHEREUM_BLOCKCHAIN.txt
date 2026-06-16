@@ -1,0 +1,93 @@
+[COMPONENTS]
+@C1
+block_hash: TEXT | Hash of the block where this contract was created
+block_number: NUMBER | Block number where this contract was created
+block_timestamp: NUMBER | Timestamp of the block where this contract was created
+
+@C2
+from_address: TEXT | Address of the sender, null when trace_type is genesis or reward
+to_address: TEXT | Address of the receiver if trace_type is call, address of new contract or null if trace_type is create, beneficiary address if trace_type is suicide, miner address if trace_type is reward, shareholder address if trace_type is genesis, WithdrawDAO address if trace_type is daofork
+
+@C3
+gas: NUMBER | Gas provided with the message call
+input: TEXT | The data sent along with the message call
+value: NUMBER | Value transferred in Wei
+
+[TABLES]
+## ETHEREUM_BLOCKCHAIN.BLOCKS
+hash: TEXT | Hash of this block
+nonce: TEXT | Difficulty solution specified in block header
+extra_data: TEXT | NULL
+receipts_root: TEXT | NULL
+state_root: TEXT | NULL
+miner: TEXT | NULL
+transaction_count: NUMBER | Number of transactions included in this block
+total_difficulty: NUMBER | NULL
+parent_hash: TEXT | NULL
+sha3_uncles: TEXT | NULL
+size: NUMBER | The size of block data in bytes
+gas_limit: NUMBER | NULL
+number: NUMBER | The number of the block
+gas_used: NUMBER | NULL
+timestamp: NUMBER | Block creation timestamp specified in block header
+logs_bloom: TEXT | NULL
+difficulty: NUMBER | NULL
+transactions_root: TEXT | NULL
+
+## ETHEREUM_BLOCKCHAIN.CONTRACTS
+@use: [C1]
+function_sighashes: VARIANT | 4-byte function signature hashes
+is_erc20: BOOLEAN | Whether this contract is an ERC20 contract
+bytecode: TEXT | Bytecode of the contract
+address: TEXT | Address of the contract
+is_erc721: BOOLEAN | Whether this contract is an ERC721 contract
+
+## ETHEREUM_BLOCKCHAIN.TRACES
+@use: [C1, C2, C3]
+trace_type: TEXT | One of call, create, suicide, reward, genesis, daofork
+subtraces: NUMBER | Number of subtraces
+output: TEXT | The output of the message call, bytecode of contract when trace_type is create
+error: TEXT | Error if message call failed. This field doesn't contain top-level trace errors.
+transaction_hash: TEXT | Transaction hash where this trace was in
+call_type: TEXT | One of call, callcode, delegatecall, staticcall
+trace_address: TEXT | Comma separated list of trace address in call tree
+reward_type: TEXT | One of block, uncle
+gas_used: NUMBER | Gas used by the message call
+transaction_index: NUMBER | Integer of the transactions index position in the block
+status: NUMBER | Either 1 (success) or 0 (failure, due to any operation that can cause the call itself or any top-level call to revert)
+
+## ETHEREUM_BLOCKCHAIN.TRANSACTIONS
+@use: [C1, C2, C3]
+receipt_contract_address: TEXT | NULL
+receipt_status: NUMBER | NULL
+receipt_gas_used: NUMBER | NULL
+nonce: NUMBER | NULL
+receipt_root: TEXT | NULL
+transaction_index: NUMBER | NULL
+gas_price: NUMBER | NULL
+receipt_cumulative_gas_used: NUMBER | NULL
+hash: TEXT | The hash of this transaction
+
+## ETHEREUM_BLOCKCHAIN.TOKENS
+@use: [C1]
+name: TEXT | The name of the ERC20 token
+address: TEXT | The address of the ERC20 token
+decimals: TEXT | The number of decimals the token uses. Use safe_cast for casting to NUMERIC or FLOAT64
+symbol: TEXT | The symbol of the ERC20 token
+total_supply: TEXT | The total token supply. Use safe_cast for casting to NUMERIC or FLOAT64
+
+## ETHEREUM_BLOCKCHAIN.LOGS
+@use: [C1]
+data: TEXT | Contains one or more 32 Bytes non-indexed arguments of the log
+address: TEXT | Address from which this log originated
+log_index: NUMBER | Integer of the log index position in the block
+transaction_index: NUMBER | Integer of the transactions index position log was created from
+topics: VARIANT | Indexed log arguments (0 to 4 32-byte hex strings). (In solidity: The first topic is the hash of the signature of the event (e.g. Deposit(address,bytes32,uint256)), except you declared the event with the anonymous specifier.)
+transaction_hash: TEXT | Hash of the transactions this log was created from
+
+## ETHEREUM_BLOCKCHAIN.TOKEN_TRANSFERS
+@use: [C1, C2]
+log_index: NUMBER | Log index in the transaction receipt
+transaction_hash: TEXT | Transaction hash
+value: TEXT | Amount of tokens transferred (ERC20) / id of the token transferred (ERC721). Use safe_cast for casting to NUMERIC or FLOAT64
+token_address: TEXT | ERC20 token address

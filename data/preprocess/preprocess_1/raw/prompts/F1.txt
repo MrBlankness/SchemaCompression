@@ -1,0 +1,89 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: F1.SEASONS
+Columns: url, year
+
+Table: F1.DRIVER_STANDINGS
+Columns: race_id, driver_id, points, position_text, wins, position, driver_standings_id
+
+Table: F1.RESULTS
+Columns: result_id, laps, milliseconds, fastest_lap, position, race_id, driver_id, rank, status_id, points, constructor_id, position_order, fastest_lap_time, time, grid, position_text, fastest_lap_speed, number
+
+Table: F1.QUALIFYING
+Columns: qualify_id, driver_id, position, q1, q3, race_id, q2, number, constructor_id
+
+Table: F1.CIRCUITS_EXT
+Columns: alt, circuit_id, name, lat, country, last_race_year, circuit_ref, location, url, number_of_races, lng
+
+Table: F1.DRIVERS
+Columns: number, forename, url, code, full_name, driver_ref, driver_id, dob, surname, nationality
+
+Table: F1.TDR_OVERRIDES
+Columns: team_driver_rank, constructor_ref, driver_ref, year
+
+Table: F1.CIRCUITS
+Columns: circuit_ref, lng, url, circuit_id, lat, name, alt, country, location
+
+Table: F1.LAP_TIME_STATS
+Columns: race_id, stdev_seconds, avg_milliseconds, stdev_milliseconds, avg_seconds, driver_id
+
+Table: F1.CONSTRUCTOR_RESULTS
+Columns: constructor_results_id, race_id, status, points, constructor_id
+
+Table: F1.SHORT_GRAND_PRIX_NAMES
+Columns: short_name, full_name
+
+Table: F1.SPRINT_RESULTS
+Columns: race_id, number, constructor_id, result_id, fastest_lap_speed, laps, fastest_lap, position, position_order, fastest_lap_time, grid, milliseconds, points, position_text, time, driver_id, status_id
+
+Table: F1.RACES
+Columns: fp1_date, fp2_date, quali_date, sprint_time, url, fp3_date, race_id, time, sprint_date, date, circuit_id, quali_time, fp3_time, fp1_time, year, name, round, fp2_time
+
+Table: F1.DRIVER_STANDINGS_EXT
+Columns: position, wins, driver_standings_id, points, driver_id, race_id, position_text
+
+Table: F1.LIVERIES
+Columns: start_year, constructor_ref, end_year, primary_hex_code
+
+Table: F1.LAP_TIMES_EXT
+Columns: lap, running_milliseconds, milliseconds, race_id, seconds, driver_id, position, time
+
+Table: F1.RACES_EXT
+Columns: quali_date, max_points, fp1_time, year, circuit_id, sprint_date, fp1_date, date, fp3_date, race_id, fp2_time, round, name, time, short_name, sprint_time, has_sprint, fp3_time, is_pit_data_available, url, fp2_date, quali_time
+
+Table: F1.PIT_STOPS
+Columns: seconds, time, duration, race_id, milliseconds, driver_id, lap, stop
+
+Table: F1.DRIVERS_EXT
+Columns: dob, url, nationality, forename, full_name, surname, code, number, driver_ref, driver_id
+
+Table: F1.TEAM_DRIVER_RANKS
+Columns: driver_id, year, driver_ref, constructor_id, constructor_ref, team_driver_rank
+
+Table: F1.DRIVES
+Columns: last_round, is_first_drive_of_season, drive_id, year, constructor_id, is_final_drive_of_season, first_round, driver_id
+
+Table: F1.CONSTRUCTORS_EXT
+Columns: constructor_id, nationality, url, name, short_name, constructor_ref
+
+Table: F1.STATUS
+Columns: status_id, status
+
+Table: F1.CONSTRUCTORS
+Columns: constructor_id, name, url, nationality, constructor_ref
+
+Table: F1.CONSTRUCTOR_STANDINGS
+Columns: wins, constructor_standings_id, position, race_id, points, position_text, constructor_id
+
+Table: F1.LAP_TIMES
+Columns: position, time, race_id, driver_id, lap, milliseconds, seconds
+
+Table: F1.SHORT_CONSTRUCTOR_NAMES
+Columns: short_name, constructor_ref
+
+Table: F1.RETIREMENTS
+Columns: retirement_type, lap, driver_id, status_id, position_order, race_id
+
+Table: F1.LAP_POSITIONS
+Columns: race_id, lap, lap_type, position, driver_id

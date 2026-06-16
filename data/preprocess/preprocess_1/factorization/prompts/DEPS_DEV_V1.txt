@@ -1,0 +1,14 @@
+[COMPONENTS]
+
+[TABLES]
+Format: schema.table|components|columns
+DEPS_DEV_V1.DEPENDENCYGRAPHEDGES||System,Requirement,SnapshotAt,Name,Version,From,To
+DEPS_DEV_V1.ADVISORIES||ReferenceURLs,CVSS3Score,Packages,Aliases,SnapshotAt,Severity,GitHubSeverity,SourceID,Description,SourceURL,Disclosed,Source,Title
+DEPS_DEV_V1.PACKAGEVERSIONTOPROJECT||SnapshotAt,System,RelationType,ProjectType,ProjectName,Name,RelationProvenance,Version
+DEPS_DEV_V1.DEPENDENTS||Name,SnapshotAt,MinimumDepth,System,DependentIsHighestReleaseWithResolution,Dependent,Version
+DEPS_DEV_V1.PROJECTS||StarsCount,ForksCount,Type,Homepage,OpenIssuesCount,SnapshotAt,Licenses,Description,OSSFuzz,Name
+DEPS_DEV_V1.NUGETREQUIREMENTS||DependencyGroups,Version,Name,SnapshotAt
+DEPS_DEV_V1.SNAPSHOTS||Time
+DEPS_DEV_V1.PACKAGEVERSIONS||DependenciesProcessed,Hashes,Links,Purl,SLSAProvenance,Registries,Name,DependencyError,Version,UpstreamIdentifiers,Advisories,Licenses,VersionInfo,UpstreamPublishedAt,System,SnapshotAt
+DEPS_DEV_V1.PACKAGEVERSIONHASHES||System,HashType,SnapshotAt,Name,Version,Hash
+DEPS_DEV_V1.DEPENDENCIES||Version,System,Name,SnapshotAt,Dependency,MinimumDepth

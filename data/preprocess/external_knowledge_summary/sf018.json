@@ -1,0 +1,7 @@
+{
+  "question_id": "sf018",
+  "question": "Examine user engagement with push notifications within a specified one-hour window on June 1, 2023.",
+  "db_id": "BRAZE_USER_EVENT_DEMO_DATASET",
+  "source_document": "PushNotificationAnalysis.md",
+  "evidence": "Timeframe: 8:00 AM to 9:00 AM on June 1, 2023. Tables: USERS_MESSAGES_PUSHNOTIFICATION_SEND_VIEW, USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_VIEW, USERS_MESSAGES_PUSHNOTIFICATION_OPEN_VIEW, USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_VIEW. Key columns: event timestamp, app group ID, user ID, campaign ID, message variation ID, platform, ad tracking enabled. Metrics: push_notification_sends, unique_push_notification_sends, push_notification_bounced, unique_push_notification_bounced, push_notification_open, unique_push_notification_opened, push_notification_influenced_open, unique_push_notification_influenced_open."
+}

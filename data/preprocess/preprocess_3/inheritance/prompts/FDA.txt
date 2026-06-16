@@ -1,0 +1,450 @@
+[TEMPLATES]
+<T3>
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030)
+internal_point_lat: FLOAT | Latitude of the block group's internal point, which is the point at or closest to the block group's geographic center
+internal_point_lon: FLOAT | Longitude of the block group's internal point, which is the point at or closest to the block group's geographic center
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states`
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number.
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number
+area_water_meters: NUMBER | Current water area
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all`
+functional_status: TEXT | Current functional status
+blockgroup_geom: BINARY | Geographical representation of the polygon that defines the perimeter of the block group. This column should be used as the GEO column for visualization in BigQuery Geo Viz
+area_land_meters: NUMBER | Current land area
+blockgroup_ce: TEXT | Current block group number
+tract_ce: TEXT | Current Census tract code
+@Tables: [GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_01,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_02,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_04,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_05,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_06,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_08,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_09,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_10,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_11,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_12,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_13,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_15,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_16,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_17,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_18,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_19,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_20,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_21,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_22,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_23,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_24,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_25,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_26,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_27,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_28,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_29,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_30,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_31,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_32,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_33,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_34,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_35,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_36,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_37,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_38,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_39,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_40,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_41,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_42,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_44,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_45,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_46,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_47,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_48,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_49,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_50,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_51,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_53,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_54,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_55,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_56,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_60,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_66,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_69,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_72,GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_78]
+
+<T8>
+lsad_name: TEXT | NULL
+congress_session: TEXT | NULL
+lsad_code: TEXT | NULL
+int_point_lon: FLOAT | NULL
+district_geom: BINARY | NULL
+state_fips_code: TEXT | NULL
+geo_id: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+area_water_meters: NUMBER | NULL
+int_point_lat: FLOAT | NULL
+district_fips_code: TEXT | NULL
+int_point_geom: BINARY | NULL
+area_land_meters: NUMBER | NULL
+functional_status: BOOLEAN | NULL
+@Tables: [GEO_US_BOUNDARIES.CONGRESS_DISTRICT_115,GEO_US_BOUNDARIES.CONGRESS_DISTRICT_116]
+
+[DERIVED]
+<T4> extends <T3>
+county_name: TEXT | Full text name of the country that contains the block group
+state_name: TEXT | Full text name of the state that contains the block group
+@Tables: [GEO_CENSUS_BLOCKGROUPS.US_BLOCKGROUPS_NATIONAL]
+
+[STANDALONE]
+## CENSUS_UTILITY.FIPS_CLASS_CODE
+fips_class_code: TEXT | NULL
+code_description: TEXT | NULL
+
+## CENSUS_UTILITY.FIPS_CODES_ALL
+county_subdivision_fips_code: TEXT | NULL
+place_fips_code: TEXT | NULL
+summary_level_name: TEXT | NULL
+state_fips_code: TEXT | NULL
+area_name: TEXT | NULL
+county_fips_code: TEXT | NULL
+consolidated_city_fips_code: TEXT | NULL
+summary_level: TEXT | NULL
+
+## CENSUS_UTILITY.FIPS_CODES_STATES
+state_name: TEXT | NULL
+state_gnisid: TEXT | NULL
+state_fips_code: TEXT | NULL
+state_postal_abbreviation: TEXT | NULL
+
+## CENSUS_UTILITY.FUNCTIONAL_STATUS_CODES
+code_description: TEXT | NULL
+associated_geographic_entity: TEXT | NULL
+functional_status_code: TEXT | NULL
+
+## CENSUS_UTILITY.LSAD_CODES
+associated_geographic_entities: TEXT | NULL
+lsad_code: TEXT | NULL
+lsad_description: TEXT | NULL
+
+## CENSUS_UTILITY.MTFCC_FEATURE_CLASS_CODES
+superclass: TEXT | NULL
+description: TEXT | NULL
+point: BOOLEAN | NULL
+feature_class_code: TEXT | NULL
+feature_class: TEXT | NULL
+areal: BOOLEAN | NULL
+linear: BOOLEAN | NULL
+
+## FDA_FOOD.FOOD_ENFORCEMENT
+initial_firm_notification: TEXT | NULL
+code_info: TEXT | NULL
+product_description: TEXT | NULL
+product_type: TEXT | NULL
+reason_for_recall: TEXT | NULL
+event_id: NUMBER | NULL
+recall_initiation_date: DATE | NULL
+center_classification_date: DATE | NULL
+status: TEXT | NULL
+more_code_info: TEXT | NULL
+recalling_firm: TEXT | NULL
+address_2: TEXT | NULL
+distribution_pattern: TEXT | NULL
+city: TEXT | NULL
+termination_date: DATE | NULL
+postal_code: TEXT | NULL
+address_1: TEXT | NULL
+country: TEXT | NULL
+state: TEXT | NULL
+product_quantity: TEXT | NULL
+report_date: DATE | NULL
+voluntary_mandated: TEXT | NULL
+recall_number: TEXT | NULL
+classification: TEXT | NULL
+
+## FDA_FOOD.FOOD_EVENTS
+products_role: TEXT | NULL
+products_industry_name: TEXT | NULL
+date_created: DATE | NULL
+outcomes: TEXT | NULL
+consumer_age_unit: TEXT | NULL
+reactions: TEXT | NULL
+products_industry_code: TEXT | NULL
+consumer_gender: TEXT | NULL
+products_brand_name: TEXT | NULL
+consumer_age: FLOAT | NULL
+report_number: TEXT | NULL
+date_started: DATE | NULL
+
+## FDIC_BANKS.INSTITUTIONS
+fdic_supervisory_region: TEXT | The supervisory FDIC office assigned to the institution.  The eight FDIC Supervisory Regions and their respective states are:    Boston - Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, Vermont  New York - Delaware, District of Columbia, Maryland, New Jersey, New York, Pennsylvania, Puerto Rico, U.S. Virgin Islands  Atlanta - Alabama, Florida, Georgia, North Carolina, South Carolina, Virginia, West Virginia  Memphis - Arkansas, Kentucky, Louisiana, Mississippi, Tennessee  Chicago - Illinois, Indiana, Michigan, Ohio, Wisconsin   Kansas City - Iowa, Kansas, Minnesota, Missouri, Nebraska, North Dakota, South Dakota  Dallas - Colorado, New Mexico, Oklahoma, Texas  San Francisco - Alaska, American Samoa, Arizona, California, Guam, Hawaii, Idaho, Montana, Nevada, Oregon, States of Micronesia, Utah, Washington, Wyoming
+trade_name_2: TEXT | Trade name other than the institution's legal name used to identify one of the institution's physical offices at which deposits are accepted or solicited from the public
+change_code_12: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+change_code_10: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+fdic_insured: BOOLEAN | Includes institutions insured by the FDIC.
+ag_lending_flag: BOOLEAN | A flag used to indicate whether an institution is an agricultural lending institution
+total_assets: NUMBER | The sum of all assets owned by the institution including cash, loans, securities, bank premises and other assets. This total does not include off-balance-sheet accounts.
+csa_indicator: BOOLEAN | A flag used to indicate whether an institution is in a Combined Statistical Area.
+change_code_13: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+total_deposits: NUMBER | The sum of all deposits including demand deposits, money market deposits, other savings deposits, time deposits and deposits in foreign offices.
+fed_reserve_unique_id: TEXT | A unique number assigned by the Federal Reserve board as the entity's unique identifier
+cbsa_micro_flag: BOOLEAN | A flag used to indicate whether an institution is in a micropolitan statistical area. The US Census bureau office of Management and Budget defines the micropolitan statistical area. A core based statistical area associated with at least one urbanized area that has a population of at least 50,000. The micropolitan statistical area comprises the central county or counties containing the core, plus adjacent outlying counties having a high degree of social and economic integration with the central county as measured through commuting.
+denovo_institute: BOOLEAN | A flag used to indicate whether an institution is a new institution (not a recharter). This flag is set quarterly. For instance, if REPDTE is 3/31/98 and DENOVO equals 1, the institution was a denovo during the first quarter of 1998.
+cbsa_fips_code: TEXT | The numeric code that the U.S. Census Bureaus Office of Management and Budget assigns for the CBSA. The 2000 standards provide that each CBSA must contain at least one urban area of 10,000 or more population. Metropolitan and micropolitan statistical areas are two categories of core based statistical areas. If an institution is not defined as a CBSA, the value of the field will be zero. For more information see: http://www.census.gov/population/www/estimates/metroarea.html .
+parent_fdic_cert: TEXT | FDIC certificate number of the parent bank or savings institution with which the reported institution;s financial data has been consolidated. Beginning in March 1997, both the Thrift Financial Reports and Call Reports are completed on a fully consolidated basis. Previously, the consolidation of subsidiary depository institutions was prohibited. Now, parent institutions are required to file consolidated reports, while their subsidiary financial institutions are still required to file separate reports. Click on the certificate number to identify the parent bank or thrift.
+total_domestic_deposits: NUMBER | The sum of all domestic office deposits, including demand deposits, money market deposits, other savings deposits and time deposits.
+fed_reserve_district_id: TEXT | A number used to identify the Federal Reserve district in which the institution is located. 01 = Boston,  02 - New York, 03 = Philadelphia,  04 = Cleveland, 05 = Richmond, 06 = Atlanta, 07 = Chicago, 08 - St. Louis, 09 = Minneapolis, 10 - Kansas city, 11 = Dallas, 12 - San Francisco
+docket: TEXT | An identification number assigned to institutions chartered by the office of thrift supervision or members of the federal housing finance board (FHFB) and formerly by the federal home loan bank board.  The value is "00000" for institutions not members of the FHFB.
+office_count_foreign: NUMBER | The number of foreign offices (outside the U.S.) operated by the institution.
+chartering_agency: TEXT | All Chartering Agencies - State and Federal  Comptroller of the Currency - Chartering authority for nationally chartered commercial banks and for federally chartered savings associations (The Office of Thrift Supervision (OTS) before 7/21/11)  State (includes U.S. Territories) - Chartering authority for institutions that are not chartered by the OCC or OTS
+roe_quarterly: FLOAT | Quarterly net income (including gains or losses on securities and extraordinary items) as a percentage of average total equity capital.
+quarterly_net_income: NUMBER | Quarterly net interest income plus total noninterest income plus realized gains (losses) on securities and extraordinary items, less total noninterest expense, loan loss provisions and income taxes.
+trade_name_5: TEXT | Trade name other than the institution's legal name used to identify one of the institution's physical offices at which deposits are accepted or solicited from the public
+city: TEXT | City in which an institution's headquarters or one of its branches is physically located.
+fdic_geo_region: TEXT | The FDIC Office assigned to the geographic area.  The eight FDIC Regions and their respective states are:    Boston - Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, Vermont  New York - Delaware, District of Columbia, Maryland, New Jersey, New York, Pennsylvania, Puerto Rico, U.S. Virgin Islands  Atlanta - Alabama, Florida, Georgia, North Carolina, South Carolina, Virginia, West Virginia  Memphis - Arkansas, Kentucky, Louisiana, Mississippi, Tennessee  Chicago - Illinois, Indiana, Michigan, Ohio, Wisconsin   Kansas City - Iowa, Kansas, Minnesota, Missouri, Nebraska, North Dakota, South Dakota  Dallas - Colorado, New Mexico, Oklahoma, Texas  San Francisco - Alaska, American Samoa, Arizona, California, Guam, Hawaii, Idaho, Montana, Nevada, Oregon, States of Micronesia, Utah, Washington, Wyoming
+end_effective_date: DATE | The date that ends or closes out the last structural event relating to an institution. For closed institutions, this date represents the day that the institution became inactive.
+state_name: TEXT | State in which the the institution is physically located. The FDIC Act defines state as any State of the United States, the District of Columbia, and any territory of the United States, Puerto Rico, Guam, American Samoa, the Trust Territory of the Pacific Islands, the Virgin Island, and the Northern Mariana Islands.
+rssd_id: TEXT | The unique number assigned by the Federal Reserve Board to the regulatory high holding company of the institution.
+report_date: DATE | The last day of the financial reporting period selected.
+office_count_domestic: NUMBER | The number of domestic offices (including headquarters) operated by active institutions in the 50 states of the U.S.A.
+trade_name_4: TEXT | Trade name other than the institution's legal name used to identify one of the institution's physical offices at which deposits are accepted or solicited from the public
+cfpb_supervisory_flag: BOOLEAN | Indicates secondary supervision by CFPB
+office_count_us_territories: NUMBER | The number of offices operated by an FDIC-insured institution in all commonwealths and terrirtories of the US, along with those in freely associated states under the Compact of Free Association
+state_chartered: BOOLEAN | A flag that indicates if an institution is state chartered.
+institution_name: TEXT | The legal name of the institution.
+holding_company_flag: BOOLEAN | A flag used to indicate whether an institution is a member of a multibank holding company
+primary_specialization: TEXT | " Name associated with the numeric indicator (SPECGRP) of an institution's primary specialization in terms of asset concentration: 1 - International Specialization 2 - Agricultural Specialization 3 - Credit-card Specialization  4 - Commercial Lending Specialization  5 - Mortgage Lending Specialization 6 - Consumer Lending SpecializationI 7 - Other Specialized < $1 Billion  8 - All Other < $1 Billion  9 - All Other > $1 Billion"
+regulator: TEXT | NULL
+return_on_assets: FLOAT | Net income after taxes and extraordinary items (annualized) as a percent of average total assets.
+fdic_certificate_number: TEXT | A unique number assigned by the FDIC used to identify institutions and for the issuance of insurance certificates.
+change_code_1: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+change_code_5: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+run_date: DATE | The day the institution information was updated.
+county_fips_code: TEXT | A five digit number representing the state and county in which the institution is physically located.  The first two digits represent the FIPS state numeric code and the last three digits represent the FIPS county numeric code.
+ownership_type: TEXT | Banking institutions fall into one of two ownership types, stock or non-stock. An institution which sells stock to raise capital is called a stock institution. It is owned by the shareholders who benefit from profits earned by the institution. A non-stock institution, or mutual institution, is owned and controlled solely by its depositors. A mutual does not issue capital stock.
+net_income: NUMBER | Net interest income plus total noninterest income plus realized gains (losses) on securities and extraordinary items, less total noninterest expense, loan loss provisions and income taxes.
+deposit_insurance_fund_member: BOOLEAN | "A flag used to indicate whether an institution is insured under the Deposit Insurance Fund (DIF).  As of April 1, 2006 the Bank Insurance Fund (BIF) was merged together with the Savings Institution Insurance Fund (SAIF) to create a single Deposit Insurance Fund (DIF).  All FDIC insured BIF and SAIF member institutions that are still active or open are now insured members of DIF.    False = No, not DIF insured and True = Yes, DIF insured.  Note that institutions that became inactive prior to April 2006 will also have false value.   "
+category_code: TEXT | Numeric code which identifies the major and minor categories of an institution.  Definitions of these are available in`bigquery-public-data.fdic_banks.category_code`
+trade_name_3: TEXT | Trade name other than the institution's legal name used to identify one of the institution's physical offices at which deposits are accepted or solicited from the public
+active: BOOLEAN | Institutions that are currently open and insured by the FDIC
+credit_card_institution: BOOLEAN | Institutions with total loans greater than 50% of total assets and credit card loans greater than 50% of total loans, including loans that have been securitized and sold.
+cbsa_division_name: TEXT | "The name associated with the numeric code given by the US Census Bureau office of Management and Budget (2000 standards) that represents the core based statistical division (CBSADIV). A    metropolitan division is a county or group of counties    within a core based statistical area that contains a core    with a population of at least 2.5 million. A CBSA metropolitan    division consists of one or more main/secondary counties    that represent an employment center or centers, plus    adjacent counties associated with the main county or    counties through commuting ties. If an institution is not defined as a CBSA division the value of the field will be zero."
+trade_name_1: TEXT | Trade name other than the institution's legal name used to identify one of the institution's physical offices at which deposits are accepted or solicited from the public
+zip_code: TEXT | The first three, four, or five digits of the full postal zip code representing physical location of the institution or its branch office.
+offices_count: NUMBER | NULL
+cbsa_division_fips_code: TEXT | The numeric code given by the US Census Bureau office of Management and Budget that represents the core based statistical division (CBSADIV) under the year 2000 standards. A metropolitan division is a county or group of counties within a core based statistical area that contains a core with a population of at least 2.5 million. A CBSA metropolitan division consists of one or more main/secondary counties that represent an employment center or centers, plus adjacent counties associated with the main county or counties through commuting ties. If an institution is not defined as a CBSA division the value of the field will be zero.
+trust_powers_status: TEXT | "A flag used to indicate an institution's Trust Powers Granted status. 0 = No Trust Power Granted 1 = Trust Power Granted Where Trust Power has been granted specific codes are: 00 - Trust powers not know 10 - Full trust powers granted 11 - Full trust powers granted, exercised 12 - Full trust powers granted, not exercised 20 - Limited trust powers granted 21 - Limited trust powers granted, exercised 22 - Limited trust powers granted, not exercised 30 - Trust powers not granted 31 - Trust powers not granted, but exercised "
+law_sasser: BOOLEAN | A flag associated with OTS supervised savings associations that converted their charter to that of a commercial or savings bank.  Converted associations remain members of the SAIF, but they become subject to supervision by one of the three federal banking agencies. Not Applicable as of March 31, 2006.
+roa_pretax: FLOAT | Annualized pre-tax net income as a percent of average assets. Note: Includes extraordinary items and other adjustments, net of taxes.
+high_holder_city: TEXT | City in which the headquarters of the institution's regulatory high holder are physically located.
+cbsa_division_flag: BOOLEAN | A flag used to indicate whether an institution is in a CBSA division
+deposit_insurance_date: DATE | The date that an institution obtained federal deposit insurance.
+change_code_9: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+fdic_supervisory_region_code: TEXT | "A numeric value associated with the name of an FDIC supervisory region  2 - New York - states: Connecticut, Delaware, Maine, Maryland, Massachusetts, New Hampshire, New Jersey, New York, Pennsylvania, Puerto Rico, Rhode Island, Vermont, Virgin Islands  5 - Atlanta - states: Alabama, Florida, Georgia, North Carolina, South Carolina, Virginia  9 - Chicago - states: Illinois, Indiana, Kentucky, Michigan, Ohio  11 - Kansas City - states: Iowa, Kansas, Minnesota, Missouri, Nebraska, North Dakota, South Dakota  13 - Dallas - states: Arkansas, Colorado, Louisiana, Mississippi, New Mexico, Oklahoma, Tennessee, Texas  14 - San Francisco - states: Alaska, American Samoa, Arizona, California, Federated States of Micronesia, Guam, Hawaii, Idaho, Montana, Nevada, Oregon, Utah, Washington, Wyoming  15 - Washington Office - Division of Risk Management Supervision (RMS)  16 - Washington Office - The Office of Complex Financial Institutions (CFI) "
+last_updated: DATE | Date the data was last updated
+effective_date: DATE | Effective Start Date of the data contained in this row.
+fed_reserve_district: TEXT | NULL
+fdic_id: TEXT | FDIC's unique identifier number for holding companies, banks, branches and nondeposit subsidiaries.
+top_holder: TEXT | Regulatory top holder is assigned by the Federal Reserve Board based on ownership and control percentages. "Note: Information on bank holding companies is only as of quarter-end. Regulatory top holder is any company that directly or indirectly owns, controls or has power to vote 25 percent or more of a bank's or direct holding company's shares or controls in any manner the election of a majority of the directors or trustees of a bank or direct holding company or exercises a controlling influence over the management or policies of a bank or direct holding company. Information on Thrift Holding Companies that own Savings Associations but do not own banks is not currently available in the ID System. Source: Federal Reserve Board National Information Center data base."
+csa_fips_code: TEXT | The numeric code that the U.S. Census Bureau Office of Management and Budget assigns for the combined statistical area (CSA) per the 2000 standards. If an institution is not defined as a CSA, the value of the field will be zero. For more information see: http://www.census.gov/population/www/estimates/metroarea.html .
+federal_charter: BOOLEAN | A flag used to indicate whether the institution is chartered by an agent of the federal government.
+cfpb_supervisory_start_date: DATE | Date the institution began secondary supervision by CFPB
+trade_name_6: TEXT | Trade name other than the institution's legal name used to identify one of the institution's physical offices at which deposits are accepted or solicited from the public
+conservatorship: BOOLEAN | A flag that indicates if an institution is being operated in government conservatorship.
+csa_name: TEXT | "The name associated with the numeric code that the U.S. Census Bureau Office of Management and Budget assigns for the combined statistical area (CSA) per the 2000 standards. If an institution is not defined as a CSA, the value of the field will be blank. For more information see: http://www.census.gov/population/www/estimates/metroarea.html . "
+insured_commercial_bank: BOOLEAN | Includes commercial banks insured by the FDIC.  These institutions are regulated by one of the three Federal commercial bank regulators (FDIC, Federal Reserve Board, or Office of the Comptroller of the Currency).  They submit financial reports to the Federal Reserve (state member banks) or the FDIC (state non-member banks and national banks).
+change_code_4: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+occ_district: TEXT | The Office of the Comptroller of the Currency (OCC) District in which the institution is physically located. The six OCC Districts and their respective states are: Northeast - Connecticut, Delaware, District of Columbia, Maine, Maryland, Massachusetts, New Hampshire, New Jersey, New York, Pennsylvania, Puerto Rico, Rhode Island, Vermont, U.S. Virgin Islands  Southeast - Alabama, Florida, Georgia, Mississippi, North Carolina, South Carolina, Tennessee, Virginia, West Virginia  Central - Illinois, Indiana, Kentucky, Michigan, Ohio, Wisconsin  Midwest - Iowa, Kansas, Minnesota, Missouri, Nebraska, North Dakota, South Dakota  Southwest - Arkansas, Louisiana, New Mexico, Oklahoma, Texas  West - Alaska, American Samoa, Arizona, California, Colorado, Guam, Hawaii, Idaho, Montana, Nevada, Oregon, States of Micronesia, Utah, Washington, Wyoming
+return_on_equity: FLOAT | Annualized net income as a percent of average equity on a consolidated basis.     Note: If retained earnings are  negative, the ratio is shown as NA.
+saif_insured: BOOLEAN | Institutions who are members of the Savings Association Insurance Fund. As of April 1, 2006 SAIF was merged together with the Bank Insurance Fund (BIF) to create a single Deposit Insurance Fund (DIF).  All FDIC insured SAIF member institutions, that are still active or open, are now insured members of DIF.
+change_code_14: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+secondary_insurance_fund: TEXT | As a result of the establishment of a single Deposit Insurance Fund (DIF) effective April 1, 2006, the Secondary Insurance fund is no longer applicable. previously both bif and saif bank insurance fund - institutions that are members of the bank insurance fund savings association insurance fund - Institutions that are members of the Savings Association Insurance Fund
+roa_quarterly: FLOAT | Quarterly net income after taxes and extraordinary items as a percent of average total assets.
+county_name: TEXT | County where the institution is physically located (abbreviated if the county name exceeds 16 characters).
+ffiec_call_report_filer: BOOLEAN | A flag that indicates whether and institution filed an FFIEC 031 Call Report. Commercial banks with domestic and foreign offices are required to file such a report.
+change_code_3: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+equity_capital: NUMBER | Total equity capital (includes preferred and common stock, surplus and undivided profits).
+subchap_s_indicator: BOOLEAN | NULL
+holding_company_state: TEXT | State location of the regulatory high holding company (either direct or indirect owner).
+occ_charter: TEXT | A unique number assigned by the Office of the Comptroller of the Currency (OCC) used to identify institutions that it has chartered and regulates (i.e. national  banks).
+iba: BOOLEAN | Includes Bank Insurance Fund insured branches in the U.S. established by banks chartered and headquartered in foreign countries.  These institutions are regulated by one of the three Federal commercial bank regulators and submit financial data to the Federal Reserve.
+change_code_11: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+oakar_institute: BOOLEAN | A member of one insurance fund that acquired deposits insured by the other fund, where that portion of the buyer's deposits remained insured by, and assessable by, the other fund.
+change_code_2: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+address: TEXT | Street address at which the institution or one of its branches is physically located.
+fdic_field_office: TEXT | The FDIC Field Office where an institution is physically located.
+reporting_period_end_date: DATE | The financial reporting period selected in CCYYMM format.
+inactive_flag: BOOLEAN | Institutions that are currently closed but were once insured by the FDIC.
+sasser_institute: BOOLEAN | OTS supervised savings associations that converted their charter to that of a commercial or savings bank.  Converted associations remain members of the SAIF, but they become subject to supervision by one of the three federal banking agencies. Not Applicable as of March 31, 2006.
+change_code_8: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+cbsa_metro_flag: BOOLEAN | A flag used to indicate whether an institution is in a metropolitan statistical area. The US Census bureau office of Management and Budget defines the metropolitan statistical area. A core based statistical area associated with at least one urbanized area that has a population of at least 50,000. The metropolitan statistical area comprises the central county or counties containing the core, plus adjacent outlying counties having a high degree of social and economic integration with the central county as measured through commuting.
+cbsa_name: TEXT | The name associated with the numeric code that the U.S. Census Bureau Office of Management and Budget assigns for the CBSA. The 2000 standards provide that each CBSA must contain at least one urban area of 10,000 or more population. Metropolitan and micropolitan statistical areas are two categories of core based statistical areas. If an institution is not defined as a CBSA, the value of the field will be zero. For more information see: http://www.census.gov/population/www/estimates/metroarea.html .
+established_date: DATE | The date on which the institution began operations.
+change_code_15: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+new_cert_number: TEXT | A new certificate number of an already existing FDIC-insured institution resulting from either a merger or an acquisition.
+insurance_fund_membership: TEXT | Deposit Insurance Fund (DIF), Bank Insurance Fund (BIF), Savings Association Insurance Fund (SAIF)
+state_fips_code: TEXT | 2 digit FIPS code to uniquely identify the state
+ots_region: TEXT | Prior to 7/21/11, the Office of Thrift Supervision (OTS) Region in which the institution is physically located. The five OTS Regions and their respective states are: Northeast - Connecticut, Delaware, Maine, Massachusetts, New Hampshire, New Jersey, New York, Pennsylvania, Rhode Island, Vermont, West Virginia Southeast - Alabama, District of Columbia, Florida, Georgia, Maryland, North Carolina, Puerto Rico, South Carolina, U.S. Virgin Islands, Virginia Central - Illinois, Indiana, Kentucky, Michigan, Ohio, Tennessee, Wisconsin Midwest - Arkansas, Colorado, Iowa, Kansas, Louisiana, Minnesota, Mississippi, Missouri, Nebraska, New Mexico, North Dakota, Oklahoma, South Dakota, Texas West - Alaska, American Samoa, Arizona, California, Guam, Hawaii, Idaho, Montana, Nevada, States of Micronesia, Oregon, Utah, Washington, Wyoming "
+last_structural_change: DATE | A date field indicating the date that a change to this record was processed. Standard format = "CCYYMMDD" (Length = 8) which has been converted to Month, Day, Year format for display purposes.
+asset_concentration_hierarchy: TEXT | "Asset Concentration Hierarchy - An indicator of an institution's primary specialization in terms of asset concentration 1 - International Specialization 2 - Agricultural Specialization 3 - Credit-card Specialization  4 - Commercial Lending Specialization  5 - Mortgage Lending Specialization 6 - Consumer Lending SpecializationI 7 - Other Specialized < $1 Billion  8 - All Other < $1 Billion  9 - All Other > $1 Billion"
+row_pretax_quarterly: FLOAT | Quarterly pre-tax net income as a percent of average assets. Note: Includes extraordinary items and other adjustments, net of taxes.
+parent_parcert: TEXT | The PARCERT number identifies the subsidiary institutions parent certificate number. Beginning in March 1997, both the Thrift Financial Reports and Call Reports are completed on a fully consolidated basis. Previously, the consolidation of subsidiary depository institutions was prohibited. Now, parent institutions are required to file consolidated reports, while their subsidiary financial institutions are still required to file separate reports.
+cfpb_supervisory_end_date: DATE | Date the institution ended supervision by CFPB
+qbp_region: TEXT | The Quarterly Banking Profile (QBP) Commercial Bank Region in which the institution is physically located.
+change_code_6: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+state: TEXT | 2 letter postal abbreviation for the state in which the the headquarters are physically located. The FDIC Act defines state as any State of the United States, the District of Columbia, and any territory of the United States, Puerto Rico, Guam, American Samoa, the Trust Territory of the Pacific Islands, the Virgin Island, and the Northern Mariana Islands.
+bank_charter_class: TEXT | A classification code assigned by the FDIC based on the institution's charter type (commercial bank or savings institution), charter agent (state or federal), Federal Reserve membership status (Fed member, Fed nonmember)and its primary federal regulator (state chartered institutions are subject to both federal and state supervision).   N = commercial bank, national (federal) charter and Fed member, supervised by the Office of the Comptroller of the Currency (OCC)  SM = commercial bank, state charter and Fed member, supervised by the Federal Reserve (FRB)  NM = commercial bank, state charter and Fed nonmember, supervised by the FDIC  SB = savings banks, state charter, supervised by the FDIC  SA = savings associations, state or federal charter, supervised by the Office of Thrift Supervision (OTS)  OI = insured U.S. branch of a foreign chartered institution (IBA)
+ultimate_cert_number: TEXT | The cert number of the last successor or acquirer of the institution
+insured_savings_institute: BOOLEAN | Includes savings institutions insured by the FDIC that operate under state or federal banking codes applicable to thrift institutions.  These institutions are regulated by and submit financial reports to one of two Federal regulators (FDIC or Office of Thrift Supervision).
+change_code_7: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+bank_insurance_fund_member: BOOLEAN | Institutions who are members of the Bank Insurance Fund. As of April 1, 2006 BIF was merged together with the Savings Institution Insurance Fund (SAIF) to create a single Deposit Insurance Fund (DIF).  All FDIC insured BIF member institutions, that are still active or open, are now insured members of DIF.
+
+## FDIC_BANKS.LOCATIONS
+date_established: DATE | The date on which the branch began operations.
+cbsa_metro_name: TEXT | Name of the Metropolitan Statistical Area as defined by the US Census Bureau Office of Management and Budget
+cbsa_division_name: TEXT | Name of the Core Based Statistical Division as defined by the US Census Bureau Office of Management and Budget.
+cbsa_division_flag: BOOLEAN | A flag indicating member of a Core Based Statistical Division as defined by the US Census Bureau Office of Management and Budget.
+cbsa_metro_flag: BOOLEAN | A flag used to indicate whether an branch is in a Metropolitan Statistical Area as defined by the US Census Bureau Office of Management and Budget
+branch_county: TEXT | County where the branch is physically located.
+cbsa_fips_code: TEXT | Numeric code of the Core Based Statistical Area (CBSA) as defined by the US Census Bureau Office of Management and Budget.
+fdic_certificate_number: TEXT | A unique number assigned by the FDIC used to identify institutions and for the issuance of insurance certificates.
+cbsa_micro_flag: BOOLEAN | A flag (1=Yes) used to indicate whether an branch is in a Micropolitan Statistical Area as defined by the US Census Bureau Office of Management and Budget
+institution_class: TEXT | "A classification code assigned by the FDIC based on the institution's charter type (commercial bank or savings institution), charter agent (state or federal), Federal Reserve membership status (Fed member, Fed nonmember) and its primary federal regulator (state chartered institutions are subject to both federal and state supervision). N -Commercial bank, national (federal) charter and Fed member, supervised by the Office of the Comptroller of the Currency (OCC) NM -Commercial bank, state charter and Fed nonmember, supervised by the FDIC OI - Insured U.S. branch of a foreign chartered institution (IBA) SA - Savings associations, state or federal charter, supervised by the Office of Thrift Supervision (OTS) SB - Savings banks, state charter, supervised by the FDIC SM - Commercial bank, state charter and Fed member, supervised by the Federal Reserve (FRB)"
+zip_code: TEXT | The first five digits of the full postal zip code representing physical location of the branch.
+service_type: TEXT | "Define the various types of offices of FDIC-insured institutions. 11 -  Full Service Brick and Mortar Office 12 -  Full Service Retail Office 13 -  Full Service Cyber Office 14 -  Full Service Mobile Office 15 -  Full Service Home/Phone Banking 16 -  Full Service Seasonal Office 21 -  Limited Service Administrative Office 22 -  Limited Service Military Facility 23 -  Limited Service Facility Office 24 -  Limited Service Loan Production Office 25 -  Limited Service Consumer Credit Office 26 -  Limited Service Contractual Office 27 -  Limited Service Messenger Office 28 -  Limited Service Retail Office 29 -  Limited Service Mobile Office 30 -  Limited Service Trust Office"
+institution_name: TEXT | The legal name of the institution.
+county_fips_code: TEXT | A five digit number representing the state and county in which the institution is physically located.  The first two digits represent the FIPS state numeric code and the last three digits represent the FIPS county numeric code.
+csa_fips_code: TEXT | Numeric code of the Combined Statistical Area (CSA) as defined by the US Census Bureau Office of Management and Budget
+state: TEXT | State abbreviation in which the branch is physically located. The FDIC Act defines state as any State of the United States, the District of Columbia, and any territory of the United States, Puerto Rico, Guam, American Samoa, the Trust Territory of the Pacific Islands, the Virgin Island, and the Northern Mariana Islands.
+cbsa_division_fips_code: NUMBER | Numeric code of the Core Based Statistical Division as defined by the US Census Bureau Office of Management and Budget.
+cbsa_name: TEXT | Name of the Core Based Statistical Area (CBSA) as defined by the US Census Bureau Office of Management and Budget.
+csa_name: TEXT | Name of the Combined Statistical Area (CSA) as defined by the US Census Bureau Office of Management and Budget
+branch_fdic_uninum: TEXT | Unique Identification Number for a Branch Office as assigned by the FDIC
+main_office: BOOLEAN | The main office for the institution.
+branch_name: TEXT | Name of the branch.
+branch_address: TEXT | Street address at which the branch is physically located.
+csa_flag: BOOLEAN | Flag (1=Yes) indicating member of a Combined Statistical Area (CSA) as defined by the US Census Bureau Office of Management and Budget
+cbsa_metro_fips_code: TEXT | Numeric code of the Metropolitan Statistical Area as defined by the US Census Bureau Office of Management and Budget
+fdic_uninum: TEXT | This is the FDIC UNINUM of the institution that owns the branch. A UNINUM is a unique sequentially number added to the FDIC database for both banks and branches. There is no pattern imbedded within the number. The FI_UNINUM is updated with every merger or purchase of branches to reflect the most current owner.
+state_name: TEXT | State in which the  branch is physically located. The FDIC Act defines state as any State of the United States, the District of Columbia, and any territory of the United States, Puerto Rico, Guam, American Samoa, the Trust Territory of the Pacific Islands, the Virgin Island, and the Northern Mariana Islands.
+branch_city: TEXT | City in which branch is physically located.
+branch_number: TEXT | The branch's corresponding office number.
+last_updated: DATE | The day the institution information was updated.
+
+## GEO_US_BOUNDARIES.ADJACENT_COUNTIES
+neighbors_fips_code: VARIANT | NULL
+county_fips_code: TEXT | NULL
+neighbors: VARIANT | NULL
+neighbors_state: VARIANT | NULL
+state: TEXT | NULL
+county: TEXT | NULL
+
+## GEO_US_BOUNDARIES.ADJACENT_STATES
+state: TEXT | NULL
+neighbors_fips_code: VARIANT | NULL
+state_fips_code: TEXT | NULL
+state_name: TEXT | NULL
+neighbors_state: VARIANT | NULL
+
+## GEO_US_BOUNDARIES.CBSA
+area_water_meters: FLOAT | NULL
+cbsa_fips_code: TEXT | NULL
+name: TEXT | NULL
+cbsa_geom: BINARY | NULL
+csa_geo_id: TEXT | NULL
+lsad_code: TEXT | NULL
+msa_indicator: TEXT | NULL
+area_land_meters: FLOAT | NULL
+internal_point_geom: BINARY | NULL
+lsad_name: TEXT | NULL
+internal_point_longitude: FLOAT | NULL
+internal_point_latitude: FLOAT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+geo_id: TEXT | NULL
+
+## GEO_US_BOUNDARIES.CNECTA
+lsad: TEXT | NULL
+geo_id: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+cnecta_geom: BINARY | NULL
+int_point_lat: FLOAT | NULL
+int_point_lon: FLOAT | NULL
+area_water_meters: NUMBER | NULL
+name_lsad: TEXT | NULL
+name: TEXT | NULL
+cnecta_fips_code: TEXT | NULL
+area_land_meters: NUMBER | NULL
+
+## GEO_US_BOUNDARIES.COASTLINE
+coastline_geom: BINARY | NULL
+name: TEXT | NULL
+
+## GEO_US_BOUNDARIES.COUNTIES
+cbsa_fips_code: TEXT | NULL
+county_gnis_code: TEXT | NULL
+lsad_code: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+fips_class_code: TEXT | NULL
+int_point_lon: FLOAT | NULL
+county_geom: BINARY | NULL
+geo_id: TEXT | NULL
+lsad_name: TEXT | NULL
+int_point_geom: BINARY | NULL
+area_water_meters: NUMBER | NULL
+county_fips_code: TEXT | NULL
+functional_status: TEXT | NULL
+area_land_meters: NUMBER | NULL
+state_fips_code: TEXT | NULL
+csa_fips_code: TEXT | NULL
+met_div_fips_code: TEXT | NULL
+county_name: TEXT | NULL
+int_point_lat: FLOAT | NULL
+
+## GEO_US_BOUNDARIES.CSA
+internal_point_lon: FLOAT | NULL
+internal_point_geom: BINARY | NULL
+geo_id: TEXT | NULL
+internal_point_lat: FLOAT | NULL
+area_water_meters: FLOAT | NULL
+lsad_name: TEXT | NULL
+area_land_meters: FLOAT | NULL
+msa_lsad_code: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+name: TEXT | NULL
+csa_geom: BINARY | NULL
+csa_code: TEXT | NULL
+
+## GEO_US_BOUNDARIES.METROPOLITAN_DIVISIONS
+area_land_meters: FLOAT | NULL
+name: TEXT | NULL
+csa_code: TEXT | NULL
+internal_point_geom: BINARY | NULL
+mtfcc_feature_class_code: TEXT | NULL
+internal_point_latitude: FLOAT | NULL
+geo_id: TEXT | NULL
+area_water_meters: FLOAT | NULL
+metdiv_geom: BINARY | NULL
+lsad_code: TEXT | NULL
+internal_point_longitude: FLOAT | NULL
+cbsa_code: TEXT | NULL
+metdiv_code: TEXT | NULL
+lsad_name: TEXT | NULL
+
+## GEO_US_BOUNDARIES.NATIONAL_OUTLINE
+aff_geo_id: TEXT | NULL
+us_outline_geom: BINARY | NULL
+name: TEXT | NULL
+geo_id: TEXT | NULL
+
+## GEO_US_BOUNDARIES.NWS_FORECAST_REGIONS
+fe_area: TEXT | NULL
+name: TEXT | NULL
+cwa: TEXT | NULL
+shape_geometry: BINARY | NULL
+shortname: TEXT | NULL
+lon: FLOAT | NULL
+state_zone: TEXT | NULL
+state: TEXT | NULL
+zone: TEXT | NULL
+time_zone: TEXT | NULL
+lat: FLOAT | NULL
+
+## GEO_US_BOUNDARIES.RAILWAYS
+railway_geom: TEXT | NULL
+geo_id: NUMBER | NULL
+mtfcc_feature_class_code: TEXT | NULL
+full_name: TEXT | NULL
+
+## GEO_US_BOUNDARIES.STATES
+state_fips_code: TEXT | NULL
+division_code: TEXT | NULL
+area_water_meters: NUMBER | NULL
+int_point_lon: FLOAT | NULL
+functional_status: TEXT | NULL
+int_point_geom: BINARY | NULL
+geo_id: TEXT | NULL
+state_gnis_code: TEXT | NULL
+state: TEXT | NULL
+region_code: TEXT | NULL
+area_land_meters: NUMBER | NULL
+state_name: TEXT | NULL
+int_point_lat: FLOAT | NULL
+state_geom: BINARY | NULL
+mtfcc_feature_class_code: TEXT | NULL
+lsad_code: TEXT | NULL
+
+## GEO_US_BOUNDARIES.URBAN_AREAS
+internal_point_geom: BINARY | NULL
+internal_point_lat: FLOAT | NULL
+internal_point_lon: FLOAT | NULL
+urban_area_geom: BINARY | NULL
+geo_id: TEXT | NULL
+name: TEXT | NULL
+functional_status: TEXT | NULL
+urban_area_code: TEXT | NULL
+area_lsad_code: TEXT | NULL
+lsad_name: TEXT | NULL
+type: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+area_land_meters: FLOAT | NULL
+area_water_meters: FLOAT | NULL
+
+## GEO_US_BOUNDARIES.ZIP_CODES
+area_land_meters: FLOAT | NULL
+internal_point_lat: FLOAT | NULL
+zip_code: TEXT | NULL
+zip_code_geom: BINARY | NULL
+fips_class_code: TEXT | NULL
+area_water_meters: FLOAT | NULL
+state_code: TEXT | NULL
+state_fips_code: TEXT | NULL
+county: TEXT | NULL
+functional_status: TEXT | NULL
+state_name: TEXT | NULL
+internal_point_geom: BINARY | NULL
+mtfcc_feature_class_code: TEXT | NULL
+city: TEXT | NULL
+internal_point_lon: FLOAT | NULL

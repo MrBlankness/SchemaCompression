@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq277",
+  "question": "Which single port, listed under region number '6585', is located within a U.S. state boundary and appears most frequently inside the geographic areas of named tropical storms with wind speeds of at least 35 knots in the North Atlantic basin, excluding those labeled 'NOT_NAMED'?",
+  "db_id": "NOAA_PORTS",
+  "source_document": "persistent_udfs_routines.md",
+  "evidence": "Key functions: ST_WITHIN(g1, g2) returns BOOLEAN if g1 is fully contained by g2. ST_MAKEPOLYGON constructs Polygon from LineString loop. ST_MAKELINE constructs LineString connecting points. nautical_miles_conversion(input_nautical_miles FLOAT64) AS (input_nautical_miles * 1.15078). azimuth_to_geog_point uses trigonometric calculations with: azimuth in degrees, distance in nautical miles, input_lat/input_lon in degrees, converts to radians (3.14159/180), distance conversion (1.61 km per nautical mile), Earth radius 6378.1 km, final point via ST_MAKEPOINT."
+}

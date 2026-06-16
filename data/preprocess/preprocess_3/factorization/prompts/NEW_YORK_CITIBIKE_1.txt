@@ -1,0 +1,687 @@
+[COMPONENTS]
+@C1
+count_dewp: NUMBER | Number of observations used in calculating mean dew point
+count_slp: NUMBER | Number of observations used in calculating mean sea level pressure
+count_stp: NUMBER | Number of observations used in calculating mean station pressure
+count_temp: NUMBER | Number of observations used in calculating mean temperature
+count_visib: NUMBER | Number of observations used in calculating mean visibility
+count_wdsp: TEXT | Number of observations used in calculating mean wind speed
+da: TEXT | The day
+dewp: FLOAT | Mean dew point for the day in degreesm Fahrenheit to tenths.  Missing = 9999.9
+flag_max: TEXT | Blank indicates max temp was taken from the explicit max temp report and not from the 'hourly' data.
+* indicates max temp was  derived from the hourly data (i.e., highest hourly or synoptic-reported temperature)
+flag_min: TEXT | Blank indicates min temp was taken from the explicit min temp report and not from the 'hourly' data.
+* indicates min temp was derived from the hourly data (i.e., lowest hourly or synoptic-reported temperature)
+flag_prcp: TEXT | A = 1 report of 6-hour precipitation amount
+B = Summation of 2 reports of 6-hour precipitation amount
+C = Summation of 3 reports of 6-hour precipitation amount
+D = Summation of 4 reports of 6-hour precipitation amount
+E = 1 report of 12-hour precipitation amount
+F = Summation of 2 reports of 12-hour precipitation amount
+G = 1 report of 24-hour precipitation amount
+H = Station reported '0' as the amount for the day (eg, from 6-hour reports), but also reported at least one occurrence of precipitation in hourly observations--this could indicate a trace occurred, but should be considered as incomplete data for the day.
+I = Station did not report any precip data for the day and did not report any occurrences of precipitation in its hourly observations--it's still possible that precip occurred but was not reported
+fog: TEXT | Indicators (1 = yes, 0 = no/not reported) for the occurrence during the day
+gust: FLOAT | Maximum wind gust reported for the day in knots to tenths. Missing = 999.9
+hail: TEXT | Indicators (1 = yes, 0 = no/not reported) for the occurrence during the day
+max: FLOAT | Maximum temperature reported during the day in Fahrenheit to tenths--time of max temp report varies by country and region, so this will sometimes not be the max for the calendar day. Missing = 9999.9
+min: FLOAT | Minimum temperature reported during the day in Fahrenheit to tenths--time of min temp report varies by country and region, so this will sometimes not be the min for the calendar day. Missing = 9999.9
+mo: TEXT | The month
+mxpsd: TEXT | Maximum sustained wind speed reported for the day in knots to tenths. Missing = 999.9
+prcp: FLOAT | Total precipitation (rain and/or melted snow) reported during the day in inches and hundredths; will usually not end with the midnight observation--i.e., may include latter part of previous day. 
+.00 indicates no measurable precipitation (includes a trace).
+Missing = 99.99
+Note: Many stations do not report '0' on days with no precipitation--therefore, '99.99' will often appear on these days. Also, for example, a station may only report a 6-hour amount for the period during which rain fell. See Flag field for source of data
+rain_drizzle: TEXT | Indicators (1 = yes, 0 = no/not reported) for the occurrence during the day
+slp: FLOAT | Mean sea level pressure for the day in millibars to tenths. Missing = 9999.9
+sndp: FLOAT | Snow depth in inches to tenths--last report for the day if reported more thanonce. Missing = 999.9
+Note: Most stations do not report '0' ondays with no snow on the ground--therefore, '999.9' will often appear on these days
+snow_ice_pellets: TEXT | Indicators (1 = yes, 0 = no/not reported) for the occurrence during the day
+stn: TEXT | Station number (WMO/DATSAV3 number) for the location
+stp: FLOAT | Mean station pressure for the day in millibars to tenths. Missing = 9999.9
+temp: FLOAT | Mean temperature for the day in degrees Fahrenheit to tenths. Missing = 9999.9
+thunder: TEXT | Indicators (1 = yes, 0 = no/not reported) for the occurrence during the day
+tornado_funnel_cloud: TEXT | Indicators (1 = yes, 0 = no/not reported) for the occurrence during the day
+visib: FLOAT | Mean visibility for the day in miles to tenths.  Missing = 999.9
+wdsp: TEXT | Mean wind speed for the day in knots to tenths. Missing = 999.9
+year: TEXT | The year
+
+@C2
+area_land_meters: NUMBER | NULL
+area_water_meters: NUMBER | NULL
+int_point_lat: FLOAT | NULL
+int_point_lon: FLOAT | NULL
+
+@C3
+area_land_meters: FLOAT | NULL
+area_water_meters: FLOAT | NULL
+internal_point_geom: BINARY | NULL
+
+@C4
+congress_session: TEXT | NULL
+district_fips_code: TEXT | NULL
+district_geom: BINARY | NULL
+functional_status: BOOLEAN | NULL
+
+@C5
+internal_point_lat: FLOAT | NULL
+internal_point_lon: FLOAT | NULL
+
+[TABLES]
+## NEW_YORK_CITIBIKE.CITIBIKE_TRIPS
+start_station_longitude: FLOAT | Start Station Longitude
+customer_plan: TEXT | The name of the plan that determines the rate charged for the trip
+birth_year: NUMBER | Year of Birth
+end_station_name: TEXT | End Station Name
+usertype: TEXT | User Type (Customer = 24-hour pass or 7-day pass user, Subscriber = Annual Member)
+gender: TEXT | Gender (unknown, male, female)
+starttime: NUMBER | Start Time, in NYC local time.
+bikeid: NUMBER | Bike ID
+stoptime: NUMBER | Stop Time, in NYC local time.
+start_station_id: NUMBER | Start Station ID
+end_station_latitude: FLOAT | End Station Latitude
+end_station_longitude: FLOAT | End Station Longitude
+start_station_name: TEXT | Start Station Name
+start_station_latitude: FLOAT | Start Station Latitude
+tripduration: NUMBER | Trip Duration (in seconds)
+end_station_id: NUMBER | End Station ID
+
+## NEW_YORK_CITIBIKE.CITIBIKE_STATIONS
+latitude: FLOAT | The latitude of station. The field value must be a valid WGS 84 latitude in decimal degrees format.
+capacity: NUMBER | ANumber of total docking points installed at this station, both available and unavailable.
+rental_methods: TEXT | Array of enumerables containing the payment methods accepted at this station.
+is_renting: BOOLEAN | Is the station currently renting bikes?
+num_bikes_disabled: NUMBER | Number of disabled bikes at the station.
+station_id: TEXT | Unique identifier of a station.
+num_docks_available: NUMBER | Number of docks accepting bike returns.
+eightd_has_available_keys: BOOLEAN | NULL
+region_id: NUMBER | ID of the region where station is located.
+num_bikes_available: NUMBER | Number of bikes available for rental.
+is_installed: BOOLEAN | Is the station currently on the street?
+longitude: FLOAT | The longitude of station. The field value must be a valid WGS 84 latitude in decimal degrees format.
+eightd_has_key_dispenser: BOOLEAN | NULL
+name: TEXT | Public name of the station.
+short_name: TEXT | Short name or other type of identifier, as used by the data publisher.
+last_reported: NUMBER | Timestamp indicating the last time this station reported its status to the backend, in NYC local time.
+is_returning: BOOLEAN | Is the station accepting bike returns?
+num_docks_disabled: NUMBER | Number of empty but disabled dock points at the station.
+
+## GEO_US_BOUNDARIES.ADJACENT_STATES
+state: TEXT | NULL
+neighbors_fips_code: VARIANT | NULL
+state_fips_code: TEXT | NULL
+state_name: TEXT | NULL
+neighbors_state: VARIANT | NULL
+
+## GEO_US_BOUNDARIES.METROPOLITAN_DIVISIONS
+@use: [C3]
+csa_code: TEXT | NULL
+name: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+internal_point_latitude: FLOAT | NULL
+geo_id: TEXT | NULL
+lsad_code: TEXT | NULL
+internal_point_longitude: FLOAT | NULL
+metdiv_geom: BINARY | NULL
+cbsa_code: TEXT | NULL
+metdiv_code: TEXT | NULL
+lsad_name: TEXT | NULL
+
+## GEO_US_BOUNDARIES.CBSA
+@use: [C3]
+cbsa_fips_code: TEXT | NULL
+name: TEXT | NULL
+cbsa_geom: BINARY | NULL
+csa_geo_id: TEXT | NULL
+lsad_code: TEXT | NULL
+msa_indicator: TEXT | NULL
+lsad_name: TEXT | NULL
+internal_point_longitude: FLOAT | NULL
+internal_point_latitude: FLOAT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+geo_id: TEXT | NULL
+
+## GEO_US_BOUNDARIES.CONGRESS_DISTRICT_116
+@use: [C2, C4]
+lsad_name: TEXT | NULL
+lsad_code: TEXT | NULL
+state_fips_code: TEXT | NULL
+geo_id: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+int_point_geom: BINARY | NULL
+
+## GEO_US_BOUNDARIES.CSA
+@use: [C3, C5]
+geo_id: TEXT | NULL
+lsad_name: TEXT | NULL
+msa_lsad_code: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+name: TEXT | NULL
+csa_geom: BINARY | NULL
+csa_code: TEXT | NULL
+
+## GEO_US_BOUNDARIES.NATIONAL_OUTLINE
+aff_geo_id: TEXT | NULL
+us_outline_geom: BINARY | NULL
+name: TEXT | NULL
+geo_id: TEXT | NULL
+
+## GEO_US_BOUNDARIES.RAILWAYS
+railway_geom: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+geo_id: NUMBER | NULL
+full_name: TEXT | NULL
+
+## GEO_US_BOUNDARIES.COUNTIES
+@use: [C2]
+county_gnis_code: TEXT | NULL
+cbsa_fips_code: TEXT | NULL
+lsad_code: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+fips_class_code: TEXT | NULL
+county_geom: BINARY | NULL
+geo_id: TEXT | NULL
+lsad_name: TEXT | NULL
+int_point_geom: BINARY | NULL
+county_fips_code: TEXT | NULL
+functional_status: TEXT | NULL
+state_fips_code: TEXT | NULL
+csa_fips_code: TEXT | NULL
+met_div_fips_code: TEXT | NULL
+county_name: TEXT | NULL
+
+## GEO_US_BOUNDARIES.NWS_FORECAST_REGIONS
+fe_area: TEXT | NULL
+name: TEXT | NULL
+cwa: TEXT | NULL
+shape_geometry: BINARY | NULL
+shortname: TEXT | NULL
+lon: FLOAT | NULL
+state_zone: TEXT | NULL
+state: TEXT | NULL
+zone: TEXT | NULL
+time_zone: TEXT | NULL
+lat: FLOAT | NULL
+
+## GEO_US_BOUNDARIES.ZIP_CODES
+@use: [C3, C5]
+zip_code: TEXT | NULL
+state_code: TEXT | NULL
+fips_class_code: TEXT | NULL
+zip_code_geom: BINARY | NULL
+state_fips_code: TEXT | NULL
+county: TEXT | NULL
+functional_status: TEXT | NULL
+state_name: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+city: TEXT | NULL
+
+## GEO_US_BOUNDARIES.COASTLINE
+coastline_geom: BINARY | NULL
+name: TEXT | NULL
+
+## GEO_US_BOUNDARIES.CONGRESS_DISTRICT_115
+@use: [C2, C4]
+mtfcc_feature_class_code: TEXT | NULL
+geo_id: TEXT | NULL
+lsad_code: TEXT | NULL
+int_point_geom: BINARY | NULL
+state_fips_code: TEXT | NULL
+lsad_name: TEXT | NULL
+
+## GEO_US_BOUNDARIES.STATES
+@use: [C2]
+state_fips_code: TEXT | NULL
+division_code: TEXT | NULL
+functional_status: TEXT | NULL
+int_point_geom: BINARY | NULL
+geo_id: TEXT | NULL
+state_gnis_code: TEXT | NULL
+state: TEXT | NULL
+region_code: TEXT | NULL
+state_name: TEXT | NULL
+state_geom: BINARY | NULL
+mtfcc_feature_class_code: TEXT | NULL
+lsad_code: TEXT | NULL
+
+## GEO_US_BOUNDARIES.ADJACENT_COUNTIES
+neighbors_fips_code: VARIANT | NULL
+county_fips_code: TEXT | NULL
+neighbors: VARIANT | NULL
+neighbors_state: VARIANT | NULL
+state: TEXT | NULL
+county: TEXT | NULL
+
+## GEO_US_BOUNDARIES.URBAN_AREAS
+@use: [C3, C5]
+urban_area_geom: BINARY | NULL
+geo_id: TEXT | NULL
+name: TEXT | NULL
+functional_status: TEXT | NULL
+urban_area_code: TEXT | NULL
+area_lsad_code: TEXT | NULL
+lsad_name: TEXT | NULL
+type: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+
+## GEO_US_BOUNDARIES.CNECTA
+@use: [C2]
+lsad: TEXT | NULL
+geo_id: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+cnecta_geom: BINARY | NULL
+name_lsad: TEXT | NULL
+name: TEXT | NULL
+cnecta_fips_code: TEXT | NULL
+
+## NOAA_GSOD.GSOD1955
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1957
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2020
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+date: DATE | Date of the weather observations
+
+## NOAA_GSOD.GSOD1981
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.STATIONS
+elev: TEXT | NULL
+country: TEXT | NULL
+usaf: TEXT | NULL
+lon: FLOAT | NULL
+call: TEXT | NULL
+wban: TEXT | NULL
+name: TEXT | NULL
+begin: TEXT | NULL
+state: TEXT | NULL
+lat: FLOAT | NULL
+end: TEXT | NULL
+
+## NOAA_GSOD.GSOD1978
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1931
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1961
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2007
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1998
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1943
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1963
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1977
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1979
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2013
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1990
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1965
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1997
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1995
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1982
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1973
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1947
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1964
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1994
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1941
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2016
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1936
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1987
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1953
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1939
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1937
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1945
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1954
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1968
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2001
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1967
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1966
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2008
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2005
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1958
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1952
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2000
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1950
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1984
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1946
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1999
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1971
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2022
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+date: DATE | Date of the weather observations
+
+## NOAA_GSOD.GSOD1988
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1993
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2018
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1996
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1944
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1975
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1972
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2014
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1989
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1986
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1929
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1948
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1932
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1956
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1974
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2006
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1980
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2010
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1992
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2002
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2003
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2009
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1960
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2024
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+date: DATE | Date of the weather observations
+
+## NOAA_GSOD.GSOD1942
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1934
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1940
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2012
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1962
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1976
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2017
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1970
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1985
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1959
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1983
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2019
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1938
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1991
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1935
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2004
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2021
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+date: DATE | Date of the weather observations
+
+## NOAA_GSOD.GSOD2015
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2011
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1933
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1951
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1969
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD1930
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## NOAA_GSOD.GSOD2023
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+date: DATE | Date of the weather observations
+
+## NOAA_GSOD.GSOD1949
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym
+
+## CYCLISTIC.ZIP_CODES
+zip: NUMBER | NULL
+borough: TEXT | NULL
+neighborhood: TEXT | NULL
+
+## CYCLISTIC.STATE_FIPS
+state: TEXT | NULL
+postal_code: TEXT | NULL
+fips: NUMBER | NULL

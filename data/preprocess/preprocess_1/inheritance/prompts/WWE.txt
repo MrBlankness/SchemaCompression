@@ -1,0 +1,10 @@
+[TEMPLATES]
+Format: Tn|col1,col2|schema1.table1;schema2.table2
+T1|id,name|WWE.BELTS;WWE.EVENTS;WWE.LOCATIONS;WWE.MATCH_TYPES;WWE.PROMOTIONS;WWE.WRESTLERS
+
+[STANDALONE]
+Format: schema.table|col1,col2
+WWE.CARDS|event_id,info_html,location_id,match_html,id,promotion_id,url,table_id,event_date
+WWE.MATCHES|card_id,match_type_id,id,win_type,title_id,loser_id,winner_id,duration,title_change
+WWE.SQLITE_SEQUENCE|name,seq
+WWE.TABLES|html,url,id

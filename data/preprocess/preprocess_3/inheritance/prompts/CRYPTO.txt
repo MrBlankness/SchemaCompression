@@ -1,0 +1,363 @@
+[TEMPLATES]
+<T1>
+merkle_root: TEXT | The root node of a Merkle tree, where leaves are transaction hashes
+timestamp_month: DATE | Month of the block creation timestamp specified in block header
+version: NUMBER | Protocol version specified in block header
+hash: TEXT | Hash of this block
+timestamp: NUMBER | Block creation timestamp specified in block header
+size: NUMBER | The size of block data in bytes
+weight: NUMBER | Three times the base size plus the total size. https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki
+transaction_count: NUMBER | Number of transactions included in this block
+number: NUMBER | The number of the block
+bits: TEXT | Difficulty threshold specified in block header
+nonce: TEXT | Difficulty solution specified in block header
+stripped_size: NUMBER | The size of block data in bytes excluding witness data
+coinbase_param: TEXT | Data specified in the coinbase transaction of this block
+@Tables: [CRYPTO_BITCOIN.BLOCKS,CRYPTO_BITCOIN_CASH.BLOCKS,CRYPTO_DASH.BLOCKS]
+
+<T2>
+value: NUMBER | NULL
+block_timestamp: NUMBER | NULL
+type: TEXT | NULL
+script_asm: TEXT | NULL
+block_hash: TEXT | NULL
+addresses: VARIANT | NULL
+index: NUMBER | NULL
+required_signatures: NUMBER | NULL
+transaction_hash: TEXT | NULL
+block_number: NUMBER | NULL
+script_hex: TEXT | NULL
+@Tables: [CRYPTO_BITCOIN.OUTPUTS,CRYPTO_BITCOIN_CASH.OUTPUTS,CRYPTO_DASH.OUTPUTS]
+
+<T3>
+input_count: NUMBER | The number of inputs in the transaction
+inputs: VARIANT | Transaction inputs
+block_timestamp_month: DATE | Month of the block which contains this transaction
+block_number: NUMBER | Number of the block which contains this transaction
+output_count: NUMBER | The number of outputs in the transaction
+fee: NUMBER | The fee paid by this transaction
+hash: TEXT | The hash of this transaction
+version: NUMBER | Protocol version specified in block which contained this transaction
+size: NUMBER | The size of this transaction in bytes
+input_value: NUMBER | Total value of inputs in the transaction
+is_coinbase: BOOLEAN | true if this transaction is a coinbase transaction
+lock_time: NUMBER | Earliest time that miners can include the transaction in their hashing of the Merkle root to attach it in the latest block of the blockchain
+outputs: VARIANT | 0-indexed number of an input within a transaction
+output_value: NUMBER | Total value of outputs in the transaction
+block_timestamp: NUMBER | Timestamp of the block which contains this transaction
+block_hash: TEXT | Hash of the block which contains this transaction
+virtual_size: NUMBER | The virtual transaction size (differs from size for witness transactions)
+@Tables: [CRYPTO_BITCOIN.TRANSACTIONS,CRYPTO_BITCOIN_CASH.TRANSACTIONS,CRYPTO_DASH.TRANSACTIONS]
+
+<T13>
+block_number: NUMBER | Block number where this contract was created
+block_timestamp: NUMBER | Timestamp of the block where this contract was created
+block_hash: TEXT | Hash of the block where this contract was created
+address: TEXT | Address of the contract
+is_erc20: BOOLEAN | Whether this contract is an ERC20 contract
+bytecode: TEXT | Bytecode of the contract
+is_erc721: BOOLEAN | Whether this contract is an ERC721 contract
+function_sighashes: VARIANT | 4-byte function signature hashes
+@Tables: [CRYPTO_ETHEREUM.CONTRACTS,CRYPTO_ETHEREUM_CLASSIC.CONTRACTS]
+
+<T14>
+error: TEXT | Error if message call failed. This field doesn't contain top-level trace errors.
+block_hash: TEXT | Hash of the block where this trace was in
+subtraces: NUMBER | Number of subtraces
+transaction_index: NUMBER | Integer of the transactions index position in the block
+block_number: NUMBER | Block number where this trace was in
+trace_address: TEXT | Comma separated list of trace address in call tree
+transaction_hash: TEXT | Transaction hash where this trace was in
+status: NUMBER | Either 1 (success) or 0 (failure, due to any operation that can cause the call itself or any top-level call to revert)
+value: NUMBER | Value transferred in Wei
+block_timestamp: NUMBER | Timestamp of the block where this trace was in
+reward_type: TEXT | One of block, uncle
+to_address: TEXT | Address of the receiver if trace_type is call, address of new contract or null if trace_type is create, beneficiary address if trace_type is suicide, miner address if trace_type is reward, shareholder address if trace_type is genesis, WithdrawDAO address if trace_type is daofork
+gas: NUMBER | Gas provided with the message call
+trace_type: TEXT | One of call, create, suicide, reward, genesis, daofork
+gas_used: NUMBER | Gas used by the message call
+output: TEXT | The output of the message call, bytecode of contract when trace_type is create
+input: TEXT | The data sent along with the message call
+call_type: TEXT | One of call, callcode, delegatecall, staticcall
+trace_id: TEXT | NULL
+from_address: TEXT | Address of the sender, null when trace_type is genesis or reward
+@Tables: [CRYPTO_ETHEREUM.TRACES,CRYPTO_ETHEREUM_CLASSIC.TRACES]
+
+<T16>
+transaction_index: NUMBER | Integer of the transactions index position log was created from
+address: TEXT | Address from which this log originated
+block_number: NUMBER | The block number where this log was in
+data: TEXT | Contains one or more 32 Bytes non-indexed arguments of the log
+topics: VARIANT | Indexed log arguments (0 to 4 32-byte hex strings). (In solidity: The first topic is the hash of the signature of the event (e.g. Deposit(address,bytes32,uint256)), except you declared the event with the anonymous specifier.)
+transaction_hash: TEXT | Hash of the transactions this log was created from
+log_index: NUMBER | Integer of the log index position in the block
+block_timestamp: NUMBER | Timestamp of the block where this log was in
+block_hash: TEXT | Hash of the block where this log was in
+@Tables: [CRYPTO_ETHEREUM.LOGS,CRYPTO_ETHEREUM_CLASSIC.LOGS]
+
+<T17>
+value: TEXT | Amount of tokens transferred (ERC20) / id of the token transferred (ERC721). Use safe_cast for casting to NUMERIC or FLOAT64
+transaction_hash: TEXT | Transaction hash
+to_address: TEXT | Address of the receiver
+from_address: TEXT | Address of the sender
+block_hash: TEXT | Hash of the block where this transfer was in
+log_index: NUMBER | Log index in the transaction receipt
+block_number: NUMBER | Block number where this transfer was in
+token_address: TEXT | ERC20 token address
+block_timestamp: NUMBER | Timestamp of the block where this transfer was in
+@Tables: [CRYPTO_ETHEREUM.TOKEN_TRANSFERS,CRYPTO_ETHEREUM_CLASSIC.TOKEN_TRANSFERS]
+
+<T25>
+state_root: TEXT | NULL
+extra_data: TEXT | NULL
+sha3_uncles: TEXT | NULL
+difficulty: NUMBER | NULL
+receipts_root: TEXT | NULL
+gas_limit: NUMBER | NULL
+total_difficulty: NUMBER | NULL
+parent_hash: TEXT | NULL
+transaction_count: NUMBER | Number of transactions included in this block
+nonce: TEXT | Difficulty solution specified in block header
+miner: TEXT | NULL
+logs_bloom: TEXT | NULL
+number: NUMBER | The number of the block
+hash: TEXT | Hash of this block
+gas_used: NUMBER | NULL
+timestamp: NUMBER | Block creation timestamp specified in block header
+size: NUMBER | The size of block data in bytes
+transactions_root: TEXT | NULL
+@Tables: [CRYPTO_ETHEREUM_CLASSIC.BLOCKS]
+
+<T26>
+hash: TEXT | The hash of this transaction
+value: NUMBER | NULL
+receipt_gas_used: NUMBER | NULL
+to_address: TEXT | NULL
+transaction_index: NUMBER | NULL
+input: TEXT | NULL
+block_number: NUMBER | Number of the block which contains this transaction
+block_hash: TEXT | Hash of the block which contains this transaction
+block_timestamp: NUMBER | Timestamp of the block which contains this transaction
+gas_price: NUMBER | NULL
+receipt_cumulative_gas_used: NUMBER | NULL
+gas: NUMBER | NULL
+from_address: TEXT | NULL
+receipt_status: NUMBER | NULL
+nonce: NUMBER | NULL
+receipt_root: TEXT | NULL
+receipt_contract_address: TEXT | NULL
+@Tables: [CRYPTO_ETHEREUM_CLASSIC.TRANSACTIONS]
+
+[DERIVED]
+<T4> extends <T2>
+spent_output_index: NUMBER | NULL
+sequence: NUMBER | NULL
+spent_transaction_hash: TEXT | NULL
+@Tables: [CRYPTO_BITCOIN.INPUTS,CRYPTO_BITCOIN_CASH.INPUTS,CRYPTO_DASH.INPUTS]
+
+<T12> extends <T25>
+excess_blob_gas: NUMBER | NULL
+blob_gas_used: NUMBER | NULL
+base_fee_per_gas: NUMBER | NULL
+withdrawals: VARIANT | NULL
+withdrawals_root: TEXT | NULL
+@Tables: [CRYPTO_ETHEREUM.BLOCKS]
+
+<T15> extends <T26>
+receipt_blob_gas_price: NUMBER | NULL
+transaction_type: NUMBER | NULL
+max_fee_per_gas: NUMBER | NULL
+receipt_effective_gas_price: NUMBER | NULL
+max_fee_per_blob_gas: NUMBER | NULL
+blob_versioned_hashes: VARIANT | NULL
+receipt_blob_gas_used: NUMBER | NULL
+max_priority_fee_per_gas: NUMBER | NULL
+@Tables: [CRYPTO_ETHEREUM.TRANSACTIONS]
+
+[STANDALONE]
+## CRYPTO_BAND.BLOCKS
+signatures: VARIANT | NULL
+block_hash: TEXT | NULL
+proposer_address: TEXT | NULL
+block_timestamp: TEXT | NULL
+block_height: NUMBER | NULL
+consensus_hash: TEXT | NULL
+last_results_hash: TEXT | NULL
+data_hash: TEXT | NULL
+last_commit_hash: TEXT | NULL
+block_timestamp_truncated: NUMBER | NULL
+evidence_hash: TEXT | NULL
+app_hash: TEXT | NULL
+validators_hash: TEXT | NULL
+next_validators_hash: TEXT | NULL
+
+## CRYPTO_BAND.BLOCK_EVENTS
+block_height: NUMBER | NULL
+block_timestamp: TEXT | NULL
+event_type: TEXT | NULL
+block_timestamp_truncated: NUMBER | NULL
+attributes: VARIANT | NULL
+block_event_type: TEXT | NULL
+
+## CRYPTO_BAND.ERRORS
+tableRow: TEXT | Failed TableRow serialized to json string
+errors: TEXT | Insert errors serialized to json string
+
+## CRYPTO_BAND.LOGS
+msg_index: NUMBER | NULL
+events: VARIANT | NULL
+log_index: NUMBER | Integer of the log index position in the block
+txhash: TEXT | NULL
+block_timestamp: NUMBER | Timestamp of the block where this log was in
+block_height: NUMBER | NULL
+log: TEXT | NULL
+block_timestamp_truncated: NUMBER | NULL
+
+## CRYPTO_BAND.MESSAGES
+oracle_CreateOracleScript: VARIANT | NULL
+cosmos_sdk_MsgVerifyInvariant: VARIANT | NULL
+cosmos_sdk_MsgMultiSend: VARIANT | NULL
+oracle_Report: VARIANT | NULL
+cosmos_sdk_MsgUndelegate: VARIANT | NULL
+cosmos_sdk_MsgSubmitProposal: VARIANT | NULL
+cosmos_sdk_MsgVote: VARIANT | NULL
+cosmos_sdk_MsgUnjail: VARIANT | NULL
+block_timestamp: TEXT | NULL
+cosmos_sdk_MsgSend: VARIANT | NULL
+cosmos_sdk_MsgModifyWithdrawAddress: VARIANT | NULL
+cosmos_sdk_MsgDelegate: VARIANT | NULL
+oracle_Request: VARIANT | NULL
+cosmos_sdk_MsgWithdrawValidatorCommission: VARIANT | NULL
+message_type: TEXT | NULL
+block_height: NUMBER | NULL
+cosmos_sdk_MsgEditValidator: VARIANT | NULL
+cosmos_sdk_MsgCreateValidator: VARIANT | NULL
+cosmos_sdk_MsgFundCommunityPool: VARIANT | NULL
+oracle_RemoveReporter: VARIANT | NULL
+cosmos_sdk_MsgDeposit: VARIANT | NULL
+cosmos_sdk_MsgWithdrawDelegationReward: VARIANT | NULL
+cosmos_sdk_MsgBeginRedelegate: VARIANT | NULL
+oracle_EditDataSource: VARIANT | NULL
+oracle_CreateDataSource: VARIANT | NULL
+cosmos_sdk_MsgSubmitEvidence: VARIANT | NULL
+oracle_Activate: VARIANT | NULL
+block_timestamp_truncated: NUMBER | NULL
+txhash: TEXT | NULL
+oracle_EditOracleScript: VARIANT | NULL
+oracle_AddReporter: VARIANT | NULL
+
+## CRYPTO_BAND.ORACLE_REQUESTS
+reports: VARIANT | NULL
+block_timestamp_truncated: NUMBER | NULL
+oracle_request_id: NUMBER | NULL
+request: VARIANT | NULL
+block_height: NUMBER | NULL
+oracle_script: VARIANT | NULL
+decoded_result: VARIANT | NULL
+block_timestamp: TEXT | NULL
+result: VARIANT | NULL
+
+## CRYPTO_BAND.TRANSACTIONS
+gas_used: NUMBER | NULL
+sender: TEXT | NULL
+block_timestamp_truncated: NUMBER | NULL
+gas_wanted: NUMBER | NULL
+memo: TEXT | NULL
+txhash: TEXT | NULL
+block_height: NUMBER | NULL
+fee: VARIANT | The fee paid by this transaction
+transaction_type: TEXT | NULL
+block_timestamp: TEXT | Timestamp of the block which contains this transaction
+
+## CRYPTO_ETHEREUM_CLASSIC.BALANCES
+eth_balance: NUMBER | Ether balance
+address: TEXT | Address
+
+## CRYPTO_ETHEREUM_CLASSIC.TOKENS
+name: TEXT | The name of the ERC20 token
+address: TEXT | The address of the ERC20 token
+symbol: TEXT | The symbol of the ERC20 token
+decimals: TEXT | The number of decimals the token uses. Use safe_cast for casting to NUMERIC or FLOAT64
+block_number: NUMBER | Block number where this token was created
+block_timestamp: NUMBER | Timestamp of the block where this token was created
+total_supply: TEXT | The total token supply. Use safe_cast for casting to NUMERIC or FLOAT64
+block_hash: TEXT | Hash of the block where this token was created
+
+## CRYPTO_ZILLIQA.DS_BLOCKS
+prev_hash: TEXT | NULL
+signature: BINARY | NULL
+number: NUMBER | NULL
+difficulty_ds: NUMBER | NULL
+ds_leader_pub_key: TEXT | NULL
+gas_price: NUMBER | NULL
+timestamp: NUMBER | NULL
+difficulty: NUMBER | NULL
+ds_leader_address: TEXT | NULL
+
+## CRYPTO_ZILLIQA.EVENT_LOGS
+block_number: NUMBER | NULL
+index: NUMBER | NULL
+transaction_id: TEXT | NULL
+block_timestamp: NUMBER | NULL
+event_name: TEXT | NULL
+address: TEXT | NULL
+params: VARIANT | NULL
+
+## CRYPTO_ZILLIQA.EXCEPTIONS
+transaction_id: TEXT | NULL
+block_timestamp: NUMBER | NULL
+block_number: NUMBER | NULL
+line: NUMBER | NULL
+index: NUMBER | NULL
+message: TEXT | NULL
+
+## CRYPTO_ZILLIQA.TRANSACTIONS
+data: TEXT | NULL
+version: NUMBER | Protocol version specified in block which contained this transaction
+sender: TEXT | NULL
+gas_limit: NUMBER | NULL
+id: TEXT | NULL
+signature: BINARY | NULL
+amount: NUMBER | NULL
+accepted: BOOLEAN | NULL
+block_timestamp: NUMBER | Timestamp of the block which contains this transaction
+epoch_num: NUMBER | NULL
+success: BOOLEAN | NULL
+sender_pub_key: TEXT | NULL
+gas_price: NUMBER | NULL
+code: TEXT | NULL
+block_number: NUMBER | Number of the block which contains this transaction
+cumulative_gas: NUMBER | NULL
+to_addr: TEXT | NULL
+
+## CRYPTO_ZILLIQA.TRANSITIONS
+addr: TEXT | NULL
+recipient: TEXT | NULL
+transaction_id: TEXT | NULL
+accepted: BOOLEAN | NULL
+tag: TEXT | NULL
+block_number: NUMBER | NULL
+block_timestamp: NUMBER | NULL
+depth: NUMBER | NULL
+params: VARIANT | NULL
+amount: NUMBER | NULL
+index: NUMBER | NULL
+
+## CRYPTO_ZILLIQA.TX_BLOCKS
+ds_block_number: NUMBER | NULL
+timestamp: NUMBER | NULL
+rewards: NUMBER | NULL
+prev_block_hash: TEXT | NULL
+num_present_transactions: NUMBER | NULL
+version: NUMBER | NULL
+header_signature: BINARY | NULL
+state_delta_hash: TEXT | NULL
+num_micro_blocks: NUMBER | NULL
+tx_leader_address: TEXT | NULL
+state_root_hash: TEXT | NULL
+gas_limit: NUMBER | NULL
+tx_leader_pub_key: TEXT | NULL
+num_transactions: NUMBER | NULL
+number: NUMBER | NULL
+gas_used: NUMBER | NULL
+mb_info_hash: TEXT | NULL

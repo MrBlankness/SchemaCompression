@@ -1,0 +1,217 @@
+[TABLES]
+## EU_SOCCER.MATCH
+LBD: FLOAT | NULL
+home_player_Y11: FLOAT | NULL
+date: TEXT | NULL | eg=["2011-05-29 00:00:00", "2010-08-27 00:00:00"]
+home_player_Y2: FLOAT | NULL
+PSA: FLOAT | NULL
+home_player_1: FLOAT | NULL | eg=[NaN, 47249.0]
+away_player_X9: FLOAT | NULL
+B365H: FLOAT | NULL
+away_player_Y5: FLOAT | NULL
+possession: TEXT | NULL | eg=[""]
+GBD: FLOAT | NULL
+GBH: FLOAT | NULL
+SJA: FLOAT | NULL
+home_player_X10: FLOAT | NULL
+VCD: FLOAT | NULL
+home_player_4: FLOAT | NULL | eg=[NaN, 68962.0]
+goal: TEXT | NULL | eg=[""]
+WHH: FLOAT | NULL
+league_id: NUMBER | NULL | eg=[15722]
+home_player_Y3: FLOAT | NULL
+away_player_4: FLOAT | NULL | eg=[11061.0, 13350.0]
+IWA: FLOAT | NULL
+away_player_Y10: FLOAT | NULL
+season: TEXT | NULL | eg=["2010/2011"]
+home_team_goal: NUMBER | NULL | eg=[1, 4]
+away_player_X11: FLOAT | NULL
+away_player_Y2: FLOAT | NULL
+away_player_Y11: FLOAT | NULL
+home_player_X11: FLOAT | NULL
+home_player_Y1: FLOAT | NULL
+PSH: FLOAT | NULL
+home_player_Y4: FLOAT | NULL
+away_player_Y8: FLOAT | NULL
+IWD: FLOAT | NULL
+SJH: FLOAT | NULL
+home_player_10: FLOAT | NULL | eg=[NaN, 27371.0]
+away_player_6: FLOAT | NULL | eg=[239253.0, 66753.0]
+home_player_2: FLOAT | NULL | eg=[210978.0, NaN]
+home_player_Y6: FLOAT | NULL
+home_player_X2: FLOAT | NULL
+match_api_id: NUMBER | NULL | eg=[838858, 838860]
+country_id: NUMBER | NULL | eg=[15722]
+B365D: FLOAT | NULL
+BWA: FLOAT | NULL
+away_player_5: FLOAT | NULL | eg=[182075.0, 77778.0]
+away_player_10: FLOAT | NULL | eg=[69479.0, 69637.0]
+away_player_Y4: FLOAT | NULL
+home_player_8: FLOAT | NULL | eg=[NaN, 69242.0]
+GBA: FLOAT | NULL
+away_player_Y6: FLOAT | NULL
+home_player_3: FLOAT | NULL | eg=[NaN, 68840.0]
+home_player_X1: FLOAT | NULL
+home_player_7: FLOAT | NULL | eg=[30275.0, 10933.0]
+SJD: FLOAT | NULL
+away_player_X8: FLOAT | NULL
+home_player_X3: FLOAT | NULL
+home_player_X7: FLOAT | NULL
+home_player_5: FLOAT | NULL | eg=[148487.0, 69533.0]
+away_team_goal: NUMBER | NULL | eg=[2, 0]
+BWD: FLOAT | NULL
+BWH: FLOAT | NULL
+away_player_7: FLOAT | NULL | eg=[118530.0, 68937.0]
+away_player_Y7: FLOAT | NULL
+LBA: FLOAT | NULL
+home_player_Y9: FLOAT | NULL
+home_player_Y8: FLOAT | NULL
+away_player_X7: FLOAT | NULL
+corner: TEXT | NULL | eg=[""]
+home_player_Y7: FLOAT | NULL
+away_player_8: FLOAT | NULL | eg=[105535.0, NaN]
+away_player_X3: FLOAT | NULL
+VCH: FLOAT | NULL
+BSD: FLOAT | NULL
+WHA: FLOAT | NULL
+VCA: FLOAT | NULL
+home_player_X6: FLOAT | NULL
+home_team_api_id: NUMBER | NULL | eg=[8030, 8020]
+away_player_3: FLOAT | NULL | eg=[NaN, 13474.0]
+foulcommit: TEXT | NULL | eg=[""]
+away_player_X2: FLOAT | NULL
+id: NUMBER | NULL | eg=[16387, 16388]
+shoton: TEXT | NULL | eg=[""]
+away_player_1: FLOAT | NULL | eg=[NaN, 115006.0]
+away_player_X6: FLOAT | NULL
+away_team_api_id: NUMBER | NULL | eg=[8021, 8024]
+BSH: FLOAT | NULL
+B365A: FLOAT | NULL
+home_player_Y10: FLOAT | NULL
+home_player_9: FLOAT | NULL | eg=[69043.0, 69518.0]
+cross: TEXT | NULL | eg=[""]
+away_player_Y1: FLOAT | NULL
+card: TEXT | NULL | eg=[""]
+home_player_X8: FLOAT | NULL
+away_player_X10: FLOAT | NULL
+away_player_X1: FLOAT | NULL
+home_player_Y5: FLOAT | NULL
+stage: NUMBER | NULL | eg=[30, 4]
+WHD: FLOAT | NULL
+LBH: FLOAT | NULL
+away_player_2: FLOAT | NULL | eg=[NaN, 68782.0]
+home_player_6: FLOAT | NULL | eg=[NaN, 69238.0]
+away_player_X4: FLOAT | NULL
+away_player_11: FLOAT | NULL | eg=[197560.0, 249550.0]
+home_player_X9: FLOAT | NULL
+away_player_9: FLOAT | NULL | eg=[13538.0, 69428.0]
+shotoff: TEXT | NULL | eg=[""]
+away_player_Y3: FLOAT | NULL
+home_player_X4: FLOAT | NULL
+home_player_11: FLOAT | NULL | eg=[91473.0, NaN]
+home_player_X5: FLOAT | NULL
+away_player_Y9: FLOAT | NULL
+away_player_X5: FLOAT | NULL
+BSA: FLOAT | NULL
+IWH: FLOAT | NULL
+PSD: FLOAT | NULL
+
+## EU_SOCCER.LEAGUE
+country_id: NUMBER | NULL | eg=[1, 1729]
+name: TEXT | NULL | eg=["Belgium Jupiler League", "England Premier League"]
+id: NUMBER | NULL | eg=[1, 1729]
+
+## EU_SOCCER.TEAM
+team_api_id: NUMBER | NULL | eg=[9987, 9994]
+team_long_name: TEXT | NULL | eg=["KRC Genk", "Sporting Lokeren"]
+team_fifa_api_id: FLOAT | NULL | eg=[673.0, 2007.0]
+id: NUMBER | NULL | eg=[1, 4]
+team_short_name: TEXT | NULL | eg=["GEN", "LOK"]
+
+## EU_SOCCER.PLAYER_ATTRIBUTES
+curve: FLOAT | NULL | eg=[45.0, 44.0]
+player_fifa_api_id: NUMBER | NULL | eg=[218353, 189615]
+vision: FLOAT | NULL | eg=[54.0, 53.0]
+gk_handling: FLOAT | NULL | eg=[11.0, 10.0]
+marking: FLOAT | NULL | eg=[65.0, 62.0]
+interceptions: FLOAT | NULL | eg=[70.0, 40.0]
+shot_power: FLOAT | NULL | eg=[55.0, 54.0]
+attacking_work_rate: TEXT | NULL | eg=["medium", "high"]
+player_api_id: NUMBER | NULL | eg=[505942, 155782]
+finishing: FLOAT | NULL | eg=[44.0, 43.0]
+short_passing: FLOAT | NULL | eg=[61.0, 60.0]
+stamina: FLOAT | NULL | eg=[54.0, 79.0]
+volleys: FLOAT | NULL | eg=[44.0, 43.0]
+free_kick_accuracy: FLOAT | NULL | eg=[39.0, 38.0]
+gk_positioning: FLOAT | NULL | eg=[8.0, 7.0]
+positioning: FLOAT | NULL | eg=[45.0, 44.0]
+ball_control: FLOAT | NULL | eg=[49.0, 48.0]
+gk_diving: FLOAT | NULL | eg=[6.0, 5.0]
+dribbling: FLOAT | NULL | eg=[51.0, 50.0]
+potential: FLOAT | NULL | eg=[71.0, 65.0]
+crossing: FLOAT | NULL | eg=[49.0, 48.0]
+date: TEXT | NULL | eg=["2016-02-18 00:00:00", "2015-11-19 00:00:00"]
+gk_reflexes: FLOAT | NULL | eg=[8.0, 7.0]
+penalties: FLOAT | NULL | eg=[48.0, 47.0]
+jumping: FLOAT | NULL | eg=[58.0, 85.0]
+defensive_work_rate: TEXT | NULL | eg=["medium"]
+sprint_speed: FLOAT | NULL | eg=[64.0, 78.0]
+standing_tackle: FLOAT | NULL | eg=[69.0, 63.0]
+balance: FLOAT | NULL | eg=[65.0, 90.0]
+long_passing: FLOAT | NULL | eg=[64.0, 63.0]
+sliding_tackle: FLOAT | NULL | eg=[69.0, 66.0]
+gk_kicking: FLOAT | NULL | eg=[10.0, 9.0]
+aggression: FLOAT | NULL | eg=[71.0, 62.0]
+overall_rating: FLOAT | NULL | eg=[67.0, 61.0]
+agility: FLOAT | NULL | eg=[59.0, 78.0]
+id: NUMBER | NULL | eg=[1, 2]
+preferred_foot: TEXT | NULL | eg=["right", "left"]
+reactions: FLOAT | NULL | eg=[47.0, 46.0]
+heading_accuracy: FLOAT | NULL | eg=[71.0, 70.0]
+strength: FLOAT | NULL | eg=[76.0, 56.0]
+long_shots: FLOAT | NULL | eg=[35.0, 34.0]
+acceleration: FLOAT | NULL | eg=[60.0, 79.0]
+
+## EU_SOCCER.SQLITE_SEQUENCE
+seq: NUMBER | NULL | eg=[51958, 11075]
+name: TEXT | NULL | eg=["Match", "Player"]
+
+## EU_SOCCER.TEAM_ATTRIBUTES
+buildUpPlayDribbling: FLOAT | NULL | eg=[48.0, NaN]
+buildUpPlayPassing: NUMBER | NULL | eg=[56, 70]
+defenceAggressionClass: TEXT | NULL | eg=["Press", "Double"]
+chanceCreationShooting: NUMBER | NULL | eg=[64, 70]
+id: NUMBER | NULL | eg=[2, 4]
+defenceTeamWidth: NUMBER | NULL | eg=[54, 70]
+defencePressure: NUMBER | NULL | eg=[47, 60]
+defencePressureClass: TEXT | NULL | eg=["Medium", "Deep"]
+chanceCreationPositioningClass: TEXT | NULL | eg=["Organised", "Free Form"]
+chanceCreationPassingClass: TEXT | NULL | eg=["Normal", "Risky"]
+defenceDefenderLineClass: TEXT | NULL | eg=["Cover", "Offside Trap"]
+chanceCreationCrossing: NUMBER | NULL | eg=[63, 70]
+buildUpPlayDribblingClass: TEXT | NULL | eg=["Normal", "Little"]
+chanceCreationCrossingClass: TEXT | NULL | eg=["Normal", "Lots"]
+buildUpPlaySpeed: NUMBER | NULL | eg=[52, 70]
+team_api_id: NUMBER | NULL | eg=[9930, 8485]
+defenceTeamWidthClass: TEXT | NULL | eg=["Normal", "Wide"]
+team_fifa_api_id: NUMBER | NULL | eg=[434, 77]
+chanceCreationPassing: NUMBER | NULL | eg=[54, 70]
+date: TEXT | NULL | eg=["2014-09-19 00:00:00", "2010-02-22 00:00:00"]
+chanceCreationShootingClass: TEXT | NULL | eg=["Normal", "Lots"]
+buildUpPlayPositioningClass: TEXT | NULL | eg=["Organised"]
+buildUpPlaySpeedClass: TEXT | NULL | eg=["Balanced", "Fast"]
+buildUpPlayPassingClass: TEXT | NULL | eg=["Mixed", "Long"]
+defenceAggression: NUMBER | NULL | eg=[44, 70]
+
+## EU_SOCCER.PLAYER
+weight: NUMBER | NULL | eg=[187, 198]
+id: NUMBER | NULL | eg=[1, 4]
+birthday: TEXT | NULL | eg=["1992-02-29 00:00:00", "1982-05-08 00:00:00"]
+player_api_id: NUMBER | NULL | eg=[505942, 30572]
+height: FLOAT | NULL | eg=[182.88, 172.72]
+player_name: TEXT | NULL | eg=["Aaron Appindangoye", "Aaron Galindo"]
+player_fifa_api_id: NUMBER | NULL | eg=[218353, 140161]
+
+## EU_SOCCER.COUNTRY
+name: TEXT | NULL | eg=["Belgium", "France"]
+id: NUMBER | NULL | eg=[1, 4769]

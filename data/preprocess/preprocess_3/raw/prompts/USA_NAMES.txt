@@ -1,0 +1,14 @@
+[TABLES]
+## USA_NAMES.USA_1910_CURRENT
+number: NUMBER | Number of occurrences of the name
+name: TEXT | Given name of a person at birth
+gender: TEXT | Sex (M=male or F=female)
+state: TEXT | 2-digit state code
+year: NUMBER | 4-digit year of birth
+
+## USA_NAMES.USA_1910_2013
+gender: TEXT | Sex (M=male or F=female)
+state: TEXT | 2-digit state code
+number: NUMBER | Number of occurrences of the name
+year: NUMBER | 4-digit year of birth
+name: TEXT | Given name of a person at birth

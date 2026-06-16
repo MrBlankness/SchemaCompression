@@ -1,0 +1,17 @@
+[COMPONENTS]
+
+[TABLES]
+Format: schema.table|components|columns
+ENTERTAINMENTAGENCY.ZTBLWEEKS||WeekStart,WeekEnd
+ENTERTAINMENTAGENCY.ZTBLSKIPLABELS||LabelCount
+ENTERTAINMENTAGENCY.MUSICAL_PREFERENCES||CustomerID,StyleID,PreferenceSeq
+ENTERTAINMENTAGENCY.ENTERTAINER_STYLES||EntertainerID,StyleStrength,StyleID
+ENTERTAINMENTAGENCY.CUSTOMERS||CustStreetAddress,CustState,CustZipCode,CustPhoneNumber,CustLastName,CustomerID,CustFirstName,CustCity
+ENTERTAINMENTAGENCY.ENTERTAINERS||EntStreetAddress,EntZipCode,EntEMailAddress,EntState,EntWebPage,EntStageName,EntertainerID,DateEntered,EntSSN,EntCity,EntPhoneNumber
+ENTERTAINMENTAGENCY.ENTERTAINER_MEMBERS||MemberID,Status,EntertainerID
+ENTERTAINMENTAGENCY.ZTBLMONTHS||YearNumber,July,December,April,October,February,September,November,January,August,May,March,June,MonthYear,MonthEnd,MonthStart,MonthNumber
+ENTERTAINMENTAGENCY.MEMBERS||MbrLastName,Gender,MbrPhoneNumber,MbrFirstName,MemberID
+ENTERTAINMENTAGENCY.MUSICAL_STYLES||StyleID,StyleName
+ENTERTAINMENTAGENCY.ENGAGEMENTS||CustomerID,StartTime,EndDate,ContractPrice,EntertainerID,StartDate,StopTime,EngagementNumber,AgentID
+ENTERTAINMENTAGENCY.AGENTS||AgentID,Salary,AgtPhoneNumber,DateHired,AgtLastName,AgtCity,AgtState,CommissionRate,AgtFirstName,AgtStreetAddress,AgtZipCode
+ENTERTAINMENTAGENCY.ZTBLDAYS||DateField

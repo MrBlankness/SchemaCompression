@@ -1,0 +1,258 @@
+[TEMPLATES]
+<T17>
+visible: BOOLEAN | NULL
+osm_timestamp: NUMBER | NULL
+id: NUMBER | NULL
+username: TEXT | NULL
+all_tags: VARIANT | NULL
+geometry: BINARY | NULL
+members: VARIANT | NULL
+version: NUMBER | NULL
+changeset: NUMBER | NULL
+@Tables: [GEO_OPENSTREETMAP.HISTORY_RELATIONS,GEO_OPENSTREETMAP.PLANET_RELATIONS]
+
+<T19>
+all_tags: VARIANT | NULL
+changeset: NUMBER | NULL
+longitude: NUMBER | NULL
+username: TEXT | NULL
+latitude: NUMBER | NULL
+id: NUMBER | NULL
+osm_timestamp: NUMBER | NULL
+geometry: BINARY | NULL
+visible: BOOLEAN | NULL
+version: NUMBER | NULL
+@Tables: [GEO_OPENSTREETMAP.HISTORY_NODES,GEO_OPENSTREETMAP.PLANET_NODES]
+
+<T4>
+lsad_name: TEXT | NULL
+lsad_code: TEXT | NULL
+congress_session: TEXT | NULL
+int_point_lon: FLOAT | NULL
+district_geom: BINARY | NULL
+state_fips_code: TEXT | NULL
+geo_id: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+area_water_meters: NUMBER | NULL
+int_point_lat: FLOAT | NULL
+int_point_geom: BINARY | NULL
+district_fips_code: TEXT | NULL
+area_land_meters: NUMBER | NULL
+functional_status: BOOLEAN | NULL
+@Tables: [GEO_US_BOUNDARIES.CONGRESS_DISTRICT_115,GEO_US_BOUNDARIES.CONGRESS_DISTRICT_116]
+
+<T21>
+geometry: BINARY | NULL
+osm_timestamp: NUMBER | NULL
+osm_way_id: NUMBER | NULL
+osm_id: NUMBER | NULL
+osm_version: NUMBER | NULL
+all_tags: VARIANT | NULL
+@Tables: [GEO_OPENSTREETMAP.PLANET_FEATURES_POINTS]
+
+[DERIVED]
+<T18> extends <T21>
+layer_code: NUMBER | NULL
+layer_class: TEXT | NULL
+layer_name: TEXT | NULL
+gdal_type: TEXT | NULL
+@Tables: [GEO_OPENSTREETMAP.HISTORY_LAYERS,GEO_OPENSTREETMAP.PLANET_LAYERS]
+
+<T20> extends <T21>
+feature_type: TEXT | NULL
+@Tables: [GEO_OPENSTREETMAP.PLANET_FEATURES]
+
+[STANDALONE]
+## GEO_OPENSTREETMAP.HISTORY_CHANGESETS
+osm_timestamp_min: NUMBER | Minimum timestamp of objects contained in this changeset.
+ways: VARIANT | Ways that are part of this way
+id: NUMBER | Changeset ID.
+osm_timestamp_max: NUMBER | Maximum timestamp of objects contained in this changeset.
+relations: VARIANT | Relations that are part of this way
+nodes: VARIANT | Nodes that are part of this way
+
+## GEO_OPENSTREETMAP.PLANET_WAYS
+version: NUMBER | NULL
+geometry: BINARY | NULL
+username: TEXT | NULL
+visible: BOOLEAN | NULL
+all_tags: VARIANT | NULL
+osm_timestamp: NUMBER | NULL
+nodes: VARIANT | NULL
+id: NUMBER | NULL
+changeset: NUMBER | NULL
+
+## GEO_US_BOUNDARIES.ADJACENT_COUNTIES
+neighbors_fips_code: VARIANT | NULL
+county_fips_code: TEXT | NULL
+neighbors: VARIANT | NULL
+neighbors_state: VARIANT | NULL
+state: TEXT | NULL
+county: TEXT | NULL
+
+## GEO_US_BOUNDARIES.ADJACENT_STATES
+state: TEXT | NULL
+neighbors_fips_code: VARIANT | NULL
+state_fips_code: TEXT | NULL
+state_name: TEXT | NULL
+neighbors_state: VARIANT | NULL
+
+## GEO_US_BOUNDARIES.CBSA
+cbsa_fips_code: TEXT | NULL
+name: TEXT | NULL
+area_water_meters: FLOAT | NULL
+cbsa_geom: BINARY | NULL
+csa_geo_id: TEXT | NULL
+lsad_code: TEXT | NULL
+msa_indicator: TEXT | NULL
+area_land_meters: FLOAT | NULL
+internal_point_geom: BINARY | NULL
+lsad_name: TEXT | NULL
+internal_point_longitude: FLOAT | NULL
+internal_point_latitude: FLOAT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+geo_id: TEXT | NULL
+
+## GEO_US_BOUNDARIES.CNECTA
+lsad: TEXT | NULL
+geo_id: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+cnecta_geom: BINARY | NULL
+int_point_lat: FLOAT | NULL
+int_point_lon: FLOAT | NULL
+area_water_meters: NUMBER | NULL
+name_lsad: TEXT | NULL
+name: TEXT | NULL
+cnecta_fips_code: TEXT | NULL
+area_land_meters: NUMBER | NULL
+
+## GEO_US_BOUNDARIES.COASTLINE
+coastline_geom: BINARY | NULL
+name: TEXT | NULL
+
+## GEO_US_BOUNDARIES.COUNTIES
+cbsa_fips_code: TEXT | NULL
+county_gnis_code: TEXT | NULL
+lsad_code: TEXT | NULL
+fips_class_code: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+int_point_lon: FLOAT | NULL
+county_geom: BINARY | NULL
+geo_id: TEXT | NULL
+lsad_name: TEXT | NULL
+int_point_geom: BINARY | NULL
+county_fips_code: TEXT | NULL
+area_water_meters: NUMBER | NULL
+functional_status: TEXT | NULL
+area_land_meters: NUMBER | NULL
+csa_fips_code: TEXT | NULL
+state_fips_code: TEXT | NULL
+county_name: TEXT | NULL
+met_div_fips_code: TEXT | NULL
+int_point_lat: FLOAT | NULL
+
+## GEO_US_BOUNDARIES.CSA
+internal_point_lon: FLOAT | NULL
+internal_point_geom: BINARY | NULL
+geo_id: TEXT | NULL
+internal_point_lat: FLOAT | NULL
+lsad_name: TEXT | NULL
+area_water_meters: FLOAT | NULL
+area_land_meters: FLOAT | NULL
+msa_lsad_code: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+name: TEXT | NULL
+csa_geom: BINARY | NULL
+csa_code: TEXT | NULL
+
+## GEO_US_BOUNDARIES.METROPOLITAN_DIVISIONS
+area_land_meters: FLOAT | NULL
+name: TEXT | NULL
+csa_code: TEXT | NULL
+internal_point_geom: BINARY | NULL
+mtfcc_feature_class_code: TEXT | NULL
+internal_point_latitude: FLOAT | NULL
+geo_id: TEXT | NULL
+area_water_meters: FLOAT | NULL
+internal_point_longitude: FLOAT | NULL
+lsad_code: TEXT | NULL
+metdiv_geom: BINARY | NULL
+cbsa_code: TEXT | NULL
+metdiv_code: TEXT | NULL
+lsad_name: TEXT | NULL
+
+## GEO_US_BOUNDARIES.NATIONAL_OUTLINE
+aff_geo_id: TEXT | NULL
+us_outline_geom: BINARY | NULL
+name: TEXT | NULL
+geo_id: TEXT | NULL
+
+## GEO_US_BOUNDARIES.NWS_FORECAST_REGIONS
+fe_area: TEXT | NULL
+name: TEXT | NULL
+cwa: TEXT | NULL
+shape_geometry: BINARY | NULL
+shortname: TEXT | NULL
+lon: FLOAT | NULL
+state_zone: TEXT | NULL
+state: TEXT | NULL
+zone: TEXT | NULL
+time_zone: TEXT | NULL
+lat: FLOAT | NULL
+
+## GEO_US_BOUNDARIES.RAILWAYS
+railway_geom: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+geo_id: NUMBER | NULL
+full_name: TEXT | NULL
+
+## GEO_US_BOUNDARIES.STATES
+state_fips_code: TEXT | NULL
+division_code: TEXT | NULL
+area_water_meters: NUMBER | NULL
+int_point_lon: FLOAT | NULL
+functional_status: TEXT | NULL
+int_point_geom: BINARY | NULL
+state_gnis_code: TEXT | NULL
+geo_id: TEXT | NULL
+state: TEXT | NULL
+region_code: TEXT | NULL
+area_land_meters: NUMBER | NULL
+state_name: TEXT | NULL
+int_point_lat: FLOAT | NULL
+state_geom: BINARY | NULL
+mtfcc_feature_class_code: TEXT | NULL
+lsad_code: TEXT | NULL
+
+## GEO_US_BOUNDARIES.URBAN_AREAS
+internal_point_geom: BINARY | NULL
+internal_point_lat: FLOAT | NULL
+internal_point_lon: FLOAT | NULL
+urban_area_geom: BINARY | NULL
+geo_id: TEXT | NULL
+name: TEXT | NULL
+functional_status: TEXT | NULL
+urban_area_code: TEXT | NULL
+area_lsad_code: TEXT | NULL
+lsad_name: TEXT | NULL
+type: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+area_land_meters: FLOAT | NULL
+area_water_meters: FLOAT | NULL
+
+## GEO_US_BOUNDARIES.ZIP_CODES
+area_land_meters: FLOAT | NULL
+internal_point_lat: FLOAT | NULL
+zip_code: TEXT | NULL
+area_water_meters: FLOAT | NULL
+fips_class_code: TEXT | NULL
+state_code: TEXT | NULL
+zip_code_geom: BINARY | NULL
+state_fips_code: TEXT | NULL
+county: TEXT | NULL
+functional_status: TEXT | NULL
+state_name: TEXT | NULL
+internal_point_geom: BINARY | NULL
+mtfcc_feature_class_code: TEXT | NULL
+internal_point_lon: FLOAT | NULL
+city: TEXT | NULL

@@ -1,0 +1,14 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: GOOGLE_TRENDS.TOP_TERMS
+Columns: week, term, rank, score, refresh_date, dma_id, dma_name
+
+Table: GOOGLE_TRENDS.TOP_RISING_TERMS
+Columns: refresh_date, rank, dma_name, score, week, percent_gain, term, dma_id
+
+Table: GOOGLE_TRENDS.INTERNATIONAL_TOP_TERMS
+Columns: week, term, rank, score, refresh_date, region_code, region_name, country_code, country_name
+
+Table: GOOGLE_TRENDS.INTERNATIONAL_TOP_RISING_TERMS
+Columns: rank, region_name, refresh_date, region_code, term, week, country_name, percent_gain, country_code, score

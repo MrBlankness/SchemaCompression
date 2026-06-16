@@ -1,0 +1,18 @@
+[STANDALONE]
+Format: schema.table|col1,col2
+SQLITE_SAKILA.ACTOR|last_name,first_name,actor_id,last_update
+SQLITE_SAKILA.ADDRESS|address_id,phone,city_id,address2,district,last_update,postal_code,address
+SQLITE_SAKILA.CATEGORY|last_update,name,category_id
+SQLITE_SAKILA.CITY|city,last_update,city_id,country_id
+SQLITE_SAKILA.COUNTRY|country_id,country,last_update
+SQLITE_SAKILA.CUSTOMER|address_id,customer_id,last_update,store_id,first_name,active,last_name,create_date,email
+SQLITE_SAKILA.FILM_ACTOR|actor_id,last_update,film_id
+SQLITE_SAKILA.FILM_CATEGORY|last_update,film_id,category_id
+SQLITE_SAKILA.FILM_TEXT|description,title,film_id
+SQLITE_SAKILA.FILM|replacement_cost,special_features,length,description,original_language_id,language_id,rental_rate,rental_duration,rating,title,last_update,film_id,release_year
+SQLITE_SAKILA.INVENTORY|last_update,inventory_id,film_id,store_id
+SQLITE_SAKILA.LANGUAGE|last_update,language_id,name
+SQLITE_SAKILA.PAYMENT|last_update,staff_id,payment_date,rental_id,payment_id,customer_id,amount
+SQLITE_SAKILA.RENTAL|last_update,customer_id,inventory_id,rental_date,staff_id,rental_id,return_date
+SQLITE_SAKILA.STAFF|picture,username,email,last_name,address_id,staff_id,last_update,store_id,password,first_name,active
+SQLITE_SAKILA.STORE|store_id,address_id,last_update,manager_staff_id

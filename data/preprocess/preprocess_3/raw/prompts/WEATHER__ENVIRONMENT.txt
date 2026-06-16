@@ -1,0 +1,357 @@
+[TABLES]
+## CYBERSYN.FOOD_AGRICULTURE_ORGANIZATION_ATTRIBUTES
+UNIT: TEXT | Unit of measurement for the reported value.
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable.
+MEASURE: TEXT | Quantifiable attribute or subject; description of what is being recorded.
+ITEM: TEXT | Refers to a crop, land type, animal, energy/waste source, or other related agricultural emissions object or system.
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table.
+MEASUREMENT_TYPE: TEXT | How reliable the data is (official, unofficial, estimated, etc.).
+SOURCE: TEXT | Source of the statistical data.
+FREQUENCY: TEXT | Frequency of aggregations.
+EMISSION_TYPE: TEXT | Type of chemical component generated from agricultural activity.
+
+## CYBERSYN.EUROPEAN_COMMISSION_EDGAR_TIMESERIES
+VALUE: FLOAT | Value reported for the variable.
+DATE: DATE | Date associated with the value.
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable.
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table.
+GEO_ID: TEXT | A unique identifier for a place. Joinable to other geography tables including GEOGRAPHY_INDEX, GEOGRAPHY_RELATIONSHIPS, and GEOGRAPHY_CHARACTERISTICS.
+UNIT: TEXT | Unit of measurement for the reported value.
+
+## CYBERSYN.NOAA_WEATHER_METRICS_TIMESERIES
+VARIABLE: TEXT | A unique identifier for a variable joinable to the timeseries table.
+VALUE: NUMBER | Value reported for the variable
+NOAA_WEATHER_STATION_ID: TEXT | Unique identifier for land surface weather stations in the Global Historical Climatology Network daily (GHCNd), comprised of the FIPS country code (first 2 characters), a network code (third character), and the actual station ID (the remaining 8 characters).
+DATE: DATE | Date associated with the value
+DATETIME: TIMESTAMP_NTZ | Datetime associated with the value
+UNIT: TEXT | Unit of measurement for the reported value.
+VARIABLE_NAME: TEXT | Human-readable name for the variable.
+
+## CYBERSYN.CLIMATE_WATCH_ATTRIBUTES
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable.
+EMISSION_TYPE: TEXT | Categorization of emissions based on their nature (e.g. CO2 - carbon dioxide).
+SCENARIO: TEXT | A projected pathway of future emissions based on certain assumptions about economic, technological, demographic, policy, and behavioral factors.
+SECTOR: TEXT | Relate to the division of emission sources into broad segments of human activity.
+FREQUENCY: TEXT | Frequency of aggregations.
+UNIT: TEXT | Unit of measurement for the reported value.
+SOURCE: TEXT | Climate Watch aggregates climate data from multiple sources. Source of the data as reported by Climate Watch.
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table.
+MEASURE: TEXT | Quantifiable attribute or subject; description of what is being recorded.
+
+## CYBERSYN.FEMA_MISSION_ASSIGNMENT_INDEX
+REQUESTED_ASSISTANCE_DESCRIPTION: TEXT | Additional information about the assistance request.
+CITY: TEXT | Place of performance if available.
+STATE_COST_SHARE_PERCENT: FLOAT | Percentage of the cost for which the state or tribal government is responsible.
+STATE_GEO_ID: TEXT | Cybersyn's unique identifier for a state, joinable to GEOGRAPHY_INDEX.
+OBLIGATION_AMOUNT: FLOAT | Total dollars amount obligated.
+FEMA_RECORD_ID: TEXT | Unique record identifier from FEMA for the mission assignment.
+STATE_COST_SHARE_AMOUNT: FLOAT | Dollar amount of the cost for which the state or tribal government is responsible.
+ZIP_GEO_ID: TEXT | Cybersyn's unique identifier for a zip code, joinable to GEOGRAPHY_INDEX.
+PROJECTED_COMPLETION_DATE: DATE | Estimated end of the mission. Subject to revision.
+REQUESTED_DATE: DATE | Date a State or Tribe requested assistance.
+REQUESTED_AMOUNT: FLOAT | Total cost in dollars, as requested by state or tribal government.
+FEDERAL_COST_SHARE_PERCENT: FLOAT | Percentage of the cost for which FEMA is responsible.
+OBLIGATION_DATE: DATE | Date the Mission Assignment was obligated.
+STATEMENT_OF_WORK: TEXT | Description of the requested assistance.
+MISSION_ASSIGNMENT_ID: TEXT | Identifier for request, used to aggregate funding across multiple days.
+FEDERAL_COST_SHARE_AMOUNT: FLOAT | Dollar amount of the cost for which FEMA is responsible.
+DISASTER_ID: TEXT | Sequentially FEMA-assigned number used to designate an event or incident declared as a disaster.
+AMENDMENT_ID: NUMBER | Obligation requests may be modified to adjust or add funds. This number identifies those amendments. The value is 0 if there are no amendments.
+REQUESTING_AGENCY: TEXT | Name of the entity requesting assistance.
+
+## CYBERSYN.GEOGRAPHY_RELATIONSHIPS
+RELATED_GEO_NAME: TEXT | Name of the place related to GEO_NAME. This is a place that overlaps or is contained within the primary geo (e.g., city within a state)
+RELATED_GEO_ID: TEXT | A unique identifier for the related place joinable to the GEOGRAPHY_INDEX table
+RELATED_LEVEL: TEXT | Geographic level or hierarchy of the related place (e.g., Country, State, County, City, Continent, CountrySubRegion, etc.)
+RELATIONSHIP_TYPE: TEXT | Relationship between the two places. Contains means the RELATED_GEO_ID is fully contained within the GEO_ID (e.g., relationship of state to a city) while Overlaps indicates the GEO_ID is a subpart of the RELATED_GEO_ID (e.g., relationship of city to a state)
+GEO_ID: TEXT | A unique identifier for a place joinable to the GEOGRAPHY_INDEX table
+LEVEL: TEXT | Geographic level or hierarchy (e.g., Country, State, County, City, Continent, CountrySubRegion, etc.)
+GEO_NAME: TEXT | Full name of the place
+
+## CYBERSYN.EUROPEAN_COMMISSION_EDGAR_ATTRIBUTES
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table.
+FREQUENCY: TEXT | Frequency of aggregations.
+IPCC_INDUSTRY: TEXT | Intergovernmental Panel on Climate Change (IPCC) for categorizing sources and sinks of greenhouse gases (GHGs).
+UNIT: TEXT | Unit of measurement for the reported value.
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable.
+MEASURE: TEXT | Quantifiable attribute or subject; description of what is being recorded.
+
+## CYBERSYN.FEMA_REGION_INDEX
+FEMA_REGION_ID: TEXT | The FEMA Region number.
+LATITUDE: FLOAT | Latitude of the FEMA Region Headquarters.
+LONGITUDE: FLOAT | Longitude of the FEMA Region Headquarters.
+COVERED_STATES: TEXT | A list of states that encompass the region.
+ADDRESS: TEXT | Address location of the FEMA Region Headquarters office.
+REGION_GEOMETRY: GEOMETRY | Polygon coordinates of the states that the region encompasses.
+FEMA_REGION_NAME: TEXT | The name of the FEMA Region Headquarters.
+CITY: TEXT | City location of the FEMA Region Headquarters office.
+STATE_GEO_ID: TEXT | State where the FEMA Region Headquarters office is located, joinable to GEOGRAPHY_INDEX.
+
+## CYBERSYN.EIA_ENERGY_TIMESERIES
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable.
+UNIT: TEXT | Unit of measurement for the reported value.
+IMPORTER_GEO_ID: TEXT | A unique identifier for the importer of natural resources. Joinable to other geography tables including GEOGRAPHY_INDEX, GEOGRAPHY_RELATIONSHIPS, and GEOGRAPHY_CHARACTERISTICS.
+EXPORTER_GEO_ID: TEXT | A unique identifier for the exporter of natural resources. Joinable to other geography tables including GEOGRAPHY_INDEX, GEOGRAPHY_RELATIONSHIPS, and GEOGRAPHY_CHARACTERISTICS.
+VALUE: FLOAT | Value reported for the variable.
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table.
+DATE: DATE | Date associated with the value.
+GEO_ID: TEXT | A unique identifier for a place. Joinable to other geography tables including GEOGRAPHY_INDEX, GEOGRAPHY_RELATIONSHIPS, and GEOGRAPHY_CHARACTERISTICS.
+
+## CYBERSYN.FOOD_AGRICULTURE_ORGANIZATION_TIMESERIES
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable.
+UNIT: TEXT | Unit of measurement for the reported value.
+GEO_ID: TEXT | A unique identifier for a place. Joinable to other geography tables including GEOGRAPHY_INDEX, GEOGRAPHY_RELATIONSHIPS, and GEOGRAPHY_CHARACTERISTICS.
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table.
+DATE: TEXT | Date associated with the value.
+VALUE: FLOAT | Value reported for the variable.
+
+## CYBERSYN.NOAA_WEATHER_METRICS_ATTRIBUTES
+VARIABLE: TEXT | A unique identifier for a variable joinable to the timeseries table.
+VARIABLE_NAME: TEXT | Human-readable name for the variable.
+UNIT: TEXT | Unit of measurement for the reported value.
+FREQUENCY: TEXT | Frequency of aggregations.
+MEASURE: TEXT | Broad category of the weather-related variable.
+MEASUREMENT_TYPE: TEXT | Description of measurement sourcing.
+
+## CYBERSYN.CYBERSYN_DATA_CATALOG
+DATA_SOURCE: ARRAY | Source of the data.
+LICENSE_URL: ARRAY | Array of URLs that provide the licensing for the data sources in this table.
+TABLE_NAME_PROPER: TEXT | Human-readable table name.
+LISTING_NAME: ARRAY | Human-readable name of listing(s) associated with table.
+CREATED_DATE: DATE | Date for the table's addition to the Snowflake Marketplace.
+LAST_UPDATED_TIMESTAMP: TIMESTAMP_TZ | Timestamp for the table's last update or modification.
+TABLE_TYPE: TEXT | Cybersyn table type as part of the unified schema.
+DESCRIPTION: TEXT | Details on the source of the data, the table, and what is included in the table.
+SELECT_RELATED_TABLES: ARRAY | Array of tables that you can join based on the entity and variable relationships; not an exhaustive list.
+DOCUMENTATION_URL: TEXT | URL of the documentation associated with the table.
+SHORT_DESCRIPTION: TEXT | Summarized details on the source of the data, the table, and what is included in the table.
+DATA_SOURCE_URL: ARRAY | Array of URLs that provide the overview of each of the data sources in this table.
+ENTITIES: ARRAY | Array of entities that are included in the table.
+LISTING_URL: ARRAY | URLs of listing(s) associated with table.
+TABLE_NAME: TEXT | Machine-readable table name.
+
+## CYBERSYN.FEMA_NATIONAL_FLOOD_INSURANCE_PROGRAM_POLICY_INDEX
+LATITUDE: FLOAT | Latitude of the insured property.
+LONGITUDE: FLOAT | Longitude of the insured property.
+ORIGINAL_FLOOD_POLICY_DATE: DATE | Original date of the flood policy.
+POLICY_RATED_FLOOD_ZONE: TEXT | Formerly called floodZone. NFIP Flood Zone derived from the Flood Insurance Rate Map (FIRM) used to rate the insured property.
+ELEVATION_DIFFERENCE: NUMBER | Difference between the elevation of the lowest floor used for rating, or the flood-proofed elevation, and the base flood elevation (BFE), or base flood depth, as appropriate.
+SUBSIDIZATION_TYPE: TEXT | Type of rate subsidization received on the policy.
+PROBATION_SURCHARGE: NUMBER | The probation surcharge amount, in whole dollars, is calculated by the company to rate the policy. A probation surcharge is a flat surcharge that the policyholder must pay on each new or renewed policy issued covering property in a community that the NFIP has placed on probation under the provisions of 44 CFR 59.24
+PROPERTY_PURCHASE_DATE: DATE | Date that the insured property was purchased.
+TOTAL_INSURANCE_PREMIUM_OF_THE_POLICY: NUMBER | Total Insurance Premium of the Policy in whole dollars. Negative values indicate a refund.
+STATE_GEO_ID: TEXT | Cybersyn's unique identifier for a state, joinable to GEOGRAPHY_INDEX.
+BASEMENT_ENCLOSURE_CRAWLSPACE: TEXT | Basement is defined for purposes of the NFIP as any level or story which has its floor sub-grade on all sides.
+ICC_PREMIUM: NUMBER | The whole dollar amount of the Increased Cost of Compliance (ICC) premium selected before any discounts are applied by the company to rate the policy.
+NFIP_RATED_COMMUNITY_NUMBER: TEXT | 6-digit designation identifying the rated NFIP community. The first two numbers are the state code. The next four are the FEMA-assigned community number.
+CONTENTS_DEDUCTIBLE: NUMBER | The total deductible amount in dollars for contents in both main and apartment structures that can be applied against the loss.
+ADDITIONAL_CONTENTS_RATE: FLOAT | Additional contents rate selected by the company. This data element must be reported for all policies except the Preferred Risk Policy (PRP).
+LOWEST_ADJACENT_GRADE: FLOAT | Lowest natural grade adjacent to the insured structure prior to excavating or filling. The difference in feet of the lowest natural grade adjacent to the building from the reference level of the building.
+GRANDFATHERING: TEXT | Type of grandfathering, if applicable, in place for rating.
+HFIAA_SURCHARGE: NUMBER | Required for all new and renewal policies on or after April 1, 2015. Congressionally mandated annual surcharge in dollars required by the Homeowner Flood Insurance Affordability Act of 2014 (HFIAA).
+CITY: TEXT | City of the insured property.
+ROLLOVER_TRANSFER: TEXT | Type of new business being reported by the company.
+POLICY_EFFECTIVE_DATE: DATE | The effective date of the flood policy.
+BUILDING_DEDUCTIBLE: NUMBER | The total deductible amount in dollars for buildings, both main and appurtenant, that can be applied against a loss.
+TOTAL_BUILDING_INSURANCE_COVERAGE: NUMBER | Total Insurance Amount in whole dollars on the Building.
+POLICY_TERMINATION_DATE: DATE | Date upon which the cancellation of a flood insurance policy becomes effective - either because it was cancelled or lapsed.
+POLICY_CANCELLATION_REASON: TEXT | Reason for the cancellation of the policy.
+MAP_PANEL_NUMBER: TEXT | Either the current map panel number for the property or the map panel number being used for rating, depending on MapInfo Type.
+WAITING_PERIOD_TYPE: TEXT | Type of waiting period used to issue the policy.
+TOTAL_CONTENTS_INSURANCE_COVERAGE: NUMBER | Total Insurance Amount in whole dollars on the Contents.
+BASIC_CONTENTS_RATE: FLOAT | Basic contents rate selected by the company. This data element must be reported for all policies with exception of Preferred Risk Policy (PRP).
+RESERVE_FUND_ASSESSMENT: NUMBER | The dollar sum of the reserve fund as reported by the company.
+FEMA_REGION_ID: NUMBER | The FEMA Region number.
+POLICY_CANCELLATION_DATE: DATE | The cancellation date of the flood policy (if any); date the flood policy goes out of force.
+POLICY_RATING_METHOD: TEXT | Policy rating method.
+BASE_FLOOD_ELEVATION: FLOAT | Base Flood Elevation (BFE) is the elevation in feet from the Elevation Certificate at which there is a 1% chance per year of flooding.
+FEDERAL_POLICY_FEE: NUMBER | Dollar amount of the Federal Policy Fee of the policy.
+OCCUPANCY_TYPE: TEXT | Description of the use and occupancy type of the insured structure.
+POLICY_COUNT: NUMBER | Insured units in an active status. A policy contract ceases to be in an active status as of the cancellation date or the expiration date. Residential Condominium Building Association Policy (RCBAP) contracts are stored as a single policy contract but insure multiple units and therefore represent multiple policies.
+NATIONAL_FLOOD_INSURANCE_PROGRAM_POLICY_ID: TEXT | Unique record identifier from FEMA for the policy.
+ENDORSEMENT_EFFECTIVE_DATE: DATE | Date that a policy endorsement goes into effect.
+CENSUS_TRACT_ID: TEXT | Cybersyn's unique identifier for a census tract, joinable to GEOGRAPHY_INDEX.
+NFIP_COMMUNITY_NUMBER_CURRENT: TEXT | 6-digit designation identifying the current NFIP community. The first two numbers are the state code. The next four are the FEMA-assigned community number.
+COUNTY_GEO_ID: TEXT | Cybersyn's unique identifier for a county, joinable to GEOGRAPHY_INDEX.
+CENSUS_BLOCK_GROUP_ID: TEXT | Cybersyn's unique identifier for a census block group, joinable to GEOGRAPHY_INDEX.
+POLICY_COST: FLOAT | Calculated in dollars by adding together calculated premium, reserve fund assessment, federal policy fee, and HFIAA surcharge.
+NUMBER_OF_FLOORS: TEXT | Number of floors in the insured building.
+PROPERTY_INDICATORS: ARRAY | Array of characteristics of the insured property.
+BUILDING_REPLACEMENT_COST: NUMBER | Estimated cost in whole dollars to replace the building as reported by the insurer. Replacement cost is not market value, and it does not include the cost of the land or contents. It is strictly the estimated cost to reconstruct the building.
+BASIC_BUILDING_RATE: FLOAT | Basic building rate selected by the company. This data element must be reported for all policies with exception of Preferred Risk Policy (PRP).
+ENCLOSURE: TEXT | Type of enclosure below the lowest elevated floor of an elevated building, and if there is whether it is a full or partial enclosure.
+DISASTER_ASSISTANCE_COVERAGE_REQUIRED: TEXT | Federal agency that has required the purchase of flood insurance as a requirement for disaster assistance.
+INSURANCE_TO_VALUE_RATIO: TEXT | Ratio of building insurance coverage purchased to the replacement cost value of the building.
+COMMUNITY_RATING_SYSTEM_CLASS: TEXT | Community Rating System (CRS) Classification Credit Percentage used to rate the policy. The insurance premium credit is based on whether a property is in or out of the Special Flood Hazard Area (SFHA) as shown on the community's Flood Insurance Rate Map.
+BUILDING_TYPE: TEXT | Description of the use of the insured building.
+NFIP_COMMUNITY_NAME: TEXT | Local political entity that has the authority to adopt and enforce floodplain ordinances for the area under its jurisdiction.
+CURRENT_FLOOD_ZONE: TEXT | Flood zone derived from the Flood Insurance Rate Map (FIRM) where the insured property is currently located.
+ZIP_GEO_ID: TEXT | Cybersyn's unique identifier for a zip code, joinable to GEOGRAPHY_INDEX.
+OBSTRUCTION: TEXT | Type of obstruction in the enclosure of the insured property.
+LOWEST_FLOOR_ELEVATION: FLOAT | A building's lowest floor is the floor or level (including basement/enclosure/crawlspace/sub-grade crawlspace) that is used as the point of reference when rating a building. This includes the level to which a building is flood-proofed. The elevation in feet of the reference level of the building from the Elevation Certificate.
+CONDOMINIUM_COVERAGE_TYPE: TEXT | Type of coverage the building has if it is a condominium.
+ADDITIONAL_BUILDING_RATE: FLOAT | Additional building rate selected by the company. This data element must be reported for all policies except the Preferred Risk Policy (PRP).
+CONTENT_LOCATION: TEXT | The location of the contents of the property.
+MAP_PANEL_SUFFIX: TEXT | Either the current map panel suffix for the property or the map panel suffix used for rating, depending on MapInfo Type.
+ORIGINAL_CONSTRUCTION_DATE: DATE | Original date of the construction of the building.
+
+## CYBERSYN.FEMA_DISASTER_DECLARATION_INDEX
+DISASTER_END_DATE: DATE | Date the disaster itself ended.
+STATE_OBLIGATED_PUBLIC_ASSISTANCE_CATEGORY_C_TO_G_AMOUNT: FLOAT | The Public Assistance grant funding available in dollars to the grantee (State), for sub-grantee approved Project Worksheets in categories C through G, or Permanent Work. Category C is Roads and bridges; Category D is Water control facilities; Category E is Public buildings and contents; Category F is Public utilities; Category G is Parks, recreational, and other facilities.
+DISASTER_DECLARATION_TYPE: TEXT | Identifies the disaster declaration as major disaster, fire management, or emergency declaration.
+DECLARED_PROGRAMS: ARRAY | Major programs declared for all geographies impacted by the disaster.
+APPROVED_INDIVIDUAL_AND_HOUSEHOLDS_PROGRAM_AMOUNT: FLOAT | The total amount approved for the Individual and Households Program (IHP) in dollars.
+INDIVIDUAL_ASSISTANCE_UPDATE_DATE: DATE | The date the Individual Assistance (IA) data was updated by NEMIS.
+STATE_OBLIGATED_PUBLIC_ASSISTANCE_CATEGORY_A_B_AMOUNT: FLOAT | The Public Assistance grant funding available in dollars to the grantee (State), for sub-grantee approved Project Worksheets in categories A and B, or Emergency Work. Category A is Debris removal; Category B is Emergency protective measures.
+DISASTER_DECLARATION_REQUEST_ID: TEXT | Number assigned to the declaration request.
+DISASTER_ID: TEXT | Sequentially FEMA-assigned number used to designate an event or incident declared as a disaster.
+DISASTER_BEGIN_DATE: DATE | Date the disaster itself began.
+APPROVED_INDIVIDUAL_ASSISTANCE_APPLICATIONS: NUMBER | The number of disaster assistance applications that were approved for Individual Assistance (IA).
+DISASTER_TYPE: TEXT | Type of disaster such as fire or flood.
+STATE_OBLIGATED_HAZARD_MITIGATION_GRANT_PROGRAM_AMOUNT: FLOAT | Total amount obligated under the Hazard Mitigation Grant Program in dollars. The total amount obligated represents the amount obligated for Regular Project Costs, Planning Costs, Initiative Project Costs, Recipient Management Costs, Recipient Admin Costs and Subrecipient Admin Costs.
+STATE_OBLIGATED_PUBLIC_ASSISTANCE_AMOUNT: FLOAT | The Public Assistance grant funding available in dollars to the grantee (State), for sub-grantee approved Project Worksheets.
+DISASTER_DECLARATION_DATE: DATE | Date the disaster was declared.
+PUBLIC_ASSISTANCE_UPDATE_DATE: DATE | The date the Public Assistance (PA) data was updated by NEMIS.
+DISASTER_DECLARATION_NAME: TEXT | Title for the disaster.
+FEMA_DISASTER_DECLARATION_ID: TEXT | Agency standard method for uniquely identifying Stafford Act declarations, which is a concatenation of declaration type, disaster number and state code
+APPROVED_HOUSING_ASSISTANCE_AMOUNT: FLOAT | The total amount approved for Housing Assistance (HA) from the Individual and Households Program (IHP) in dollars.
+APPROVED_OTHER_NEEDS_ASSISTANCE_AMOUNT: FLOAT | The total amount approved for Other Needs Assistance (ONA) from the Individual and Households Program (IHP) in dollars.
+
+## CYBERSYN.FEMA_DISASTER_DECLARATION_AREAS_INDEX
+STATE_GEO_ID: TEXT | Cybersyn's unique identifier for a state, joinable to GEOGRAPHY_INDEX.
+DECLARED_PROGRAMS_DETAILED: ARRAY | Array of programs that were declared for the disaster to provide assistance.
+FEMA_REGION_ID: NUMBER | The FEMA Region number.
+DESIGNATED_DATE: DATE | The date a disaster was officially designated.
+DISASTER_DECLARATION_RECORD_ID: TEXT | Unique record identifier from FEMA for a disaster and an associated impacted geography.
+FEMA_PLACE_CODE: TEXT | A unique code system FEMA uses internally to recognize locations that takes the numbers '99' + the 3-digit county FIPS code. There are some declared locations that dont have recognized FIPS county codes in which case a unique identifier is assigned.
+ENTRY_DATE: DATE | The date the disaster areas were first entered into the NEMIS system.
+DISASTER_ID: TEXT | Sequentially FEMA-assigned number used to designate an event or incident declared as a disaster.
+FEMA_DESIGNATED_AREA: TEXT | The name or phrase describing the geographic area that was included in the declaration
+TRIBAL_REQUEST: BOOLEAN | Denotes that a declaration request was submitted directly to the President, independently of a state, by a Tribal Nation.
+CLOSEOUT_DATE: DATE | The official closeout date of a disaster, after which, one can no longer apply for assistance.
+COUNTY_GEO_ID: TEXT | Cybersyn's unique identifier for a county, joinable to GEOGRAPHY_INDEX.
+UPDATE_DATE: DATE | The date the disaster areas were last updated by NEMIS.
+
+## CYBERSYN.FEMA_NATIONAL_FLOOD_INSURANCE_PROGRAM_CLAIM_INDEX
+LATITUDE: FLOAT | Latitude of the insured property.
+ICC_COVERAGE: NUMBER | Amount of Increased Cost of Compliance (ICC) coverage for building in whole dollars. ICC coverage is the coverage for expenses that a property owner must incur, above and beyond the cost to repair the physical damage the building actually sustained from a flooding event, to comply with mitigation requirements of state or local floodplain management ordinances or laws.
+REPLACEMENT_COST_BASIS: TEXT | This indicates whether the building claim was settled on a replacement cost basis.
+ORIGINAL_FLOOD_POLICY_DATE: DATE | Original date of the flood policy.
+DISASTER_ASSISTANCE_COVERAGE_REQUIRED: TEXT | Federal agency that has required the purchase of flood insurance as a requirement for disaster assistance.
+ELEVATION_DIFFERENCE: NUMBER | Difference between the elevation of the lowest floor used for rating, or the flood-proofed elevation, and the base flood elevation (BFE), or base flood depth, as appropriate.
+EVENT_DESIGNATION_NUMBER: TEXT | The Event Designation Number (EDN) is a unique identifier established for a catastrophe flood event. EDN has replaced FICO as the new event tracking designation. Prior to June 2020 flood events were assigned FICO number designations; after June 2020, flood events are assigned EDN number designations.
+FLOOD_TYPE: TEXT | Description of the characteristics of the flood.
+COMMUNITY_RATING_SYSTEM_CLASS: TEXT | Community Rating System (CRS) Classification Credit Percentage used to rate the policy. The insurance premium credit is based on whether a property is in or out of the Special Flood Hazard Area (SFHA) as shown on the community's Flood Insurance Rate Map.
+PROPERTY_INDICATORS: ARRAY | Array of characteristics of the insured property.
+NFIP_COMMUNITY_NUMBER_CURRENT: TEXT | 6-digit designation identifying the current NFIP community. The first two numbers are the state code. The next four are the FEMA-assigned community number.
+AMOUNT_PAID_ON_BUILDING_CLAIM: FLOAT | Dollar amount paid on the building claim. In some instances, a negative amount may appear which occurs when a check issued to a policy holder is not cashed and has to be re-issued.
+CENSUS_TRACT_ID: TEXT | Cybersyn's unique identifier for a census tract, joinable to GEOGRAPHY_INDEX.
+LONGITUDE: FLOAT | Longitude of the insured property.
+FLOOD_EVENT: TEXT | Name given to a flooding catastrophe.
+BUILDING_DAMAGE_AMOUNT: FLOAT | Actual cash value amount of damage to a main property in whole dollars.
+CENSUS_BLOCK_GROUP_ID: TEXT | Cybersyn's unique identifier for a census block group, joinable to GEOGRAPHY_INDEX.
+FLOOD_WATER_DEPTH: NUMBER | Depth of flood water in inches. There are instances where measurements were provided in feet.
+AMOUNT_PAID_ON_CONTENTS_CLAIM: FLOAT | Dollar amount paid on the contents claim. In some instances, a negative amount may appear, which occurs when a check issued to a policy holder is not cashed and has to be re-issued.
+FICO_NUMBER: NUMBER | Number assigned by the Flood Insurance Claims Office (FICO) at the time of a significant flooding event to uniquely identify each affected state.
+BUILDING_REPLACEMENT_COST: NUMBER | Estimated cost in whole dollars to replace the building as reported by the insurer. Replacement cost is not market value, and it does not include the cost of the land or contents. It is strictly the estimated cost to reconstruct the building.
+NUMBER_OF_FLOORS: TEXT | Number of floors in the insured building.
+CURRENT_FLOOD_ZONE: TEXT | Flood zone derived from the Flood Insurance Rate Map (FIRM) where the insured property is currently located.
+ORIGINAL_CONSTRUCTION_DATE: DATE | Original date of the construction of the building.
+TOTAL_BUILDING_INSURANCE_COVERAGE: NUMBER | Total Insurance Amount in whole dollars on the Building.
+NET_BUILDING_PAYMENT_AMOUNT: FLOAT | Net building payment amount made to insured in dollars.
+NFIP_RATED_COMMUNITY_NUMBER: TEXT | 6-digit designation identifying the rated NFIP community. The first two numbers are the state code. The next four are the FEMA-assigned community number.
+BUILDING_PROPERTY_VALUE: NUMBER | Actual cash value of the main building in whole dollars as estimated by an adjuster.
+TOTAL_CONTENTS_INSURANCE_COVERAGE: NUMBER | Total Insurance Amount in whole dollars on the Contents.
+CONDOMINIUM_COVERAGE_TYPE: TEXT | Type of coverage the building has if it is a condominium.
+BASE_FLOOD_ELEVATION: FLOAT | Base Flood Elevation (BFE) is the elevation in feet from the Elevation Certificate at which there is a 1% chance per year of flooding.
+NFIP_COMMUNITY_NAME: TEXT | Local political entity that has the authority to adopt and enforce floodplain ordinances for the area under its jurisdiction.
+CAUSE_OF_DAMAGE: TEXT | The method by which the insured's property and contents were damaged.
+NON_PAYMENT_REASON_CONTENTS: TEXT | Reason why a claim was not paid for the contents of a property.
+POLICY_COUNT: NUMBER | Insured units in an active status. A policy contract ceases to be in an active status as of the cancellation date or the expiration date. Residential Condominium Building Association Policy (RCBAP) contracts are stored as a single policy contract but insure multiple units and therefore represent multiple policies.
+POLICY_RATING_METHOD: TEXT | Policy rating method.
+OBSTRUCTION: TEXT | Type of obstruction in the enclosure of the insured property.
+ZIP_GEO_ID: TEXT | Cybersyn's unique identifier for a zip code, joinable to GEOGRAPHY_INDEX.
+POLICY_RATED_FLOOD_ZONE: TEXT | Formerly called floodZone. NFIP Flood Zone derived from the Flood Insurance Rate Map (FIRM) used to rate the insured property.
+CITY: TEXT | City of the insured property.
+NATIONAL_FLOOD_INSURANCE_PROGRAM_CLAIM_ID: TEXT | Unique record identifier from FEMA for the claim.
+BASEMENT_ENCLOSURE_CRAWLSPACE: TEXT | Basement is defined for purposes of the NFIP as any level or story which has its floor sub-grade on all sides.
+NET_CONTENTS_PAYMENT_AMOUNT: FLOAT | Net contents payment amount made to insured in dollars.
+LOWEST_FLOOR_ELEVATION: FLOAT | A building's lowest floor is the floor or level (including basement/enclosure/crawlspace/sub-grade crawlspace) that is used as the point of reference when rating a building. This includes the level to which a building is flood-proofed. The elevation in feet of the reference level of the building from the Elevation Certificate.
+OCCUPANCY_TYPE: TEXT | Description of the use and occupancy type of the insured structure.
+UNITS: NUMBER | The number of residential and nonresidential units covered by the Condominium Master Policy.
+NON_PAYMENT_REASON_BUILDING: TEXT | Reason why a claim was not paid for a property structure.
+CONTENTS_DEDUCTIBLE: NUMBER | Total deductible amount in dollars for contents in both main and apartment structures that can be applied against the loss.
+CONTENT_LOCATION: TEXT | The location of the contents of the property.
+FLOOD_WATER_DURATION_HOURS: NUMBER | Number of hours flood water remained in the insured building.
+DATE_OF_LOSS: DATE | Date on which water first entered the insured building.
+BUILDING_TYPE: TEXT | Description of the use of the insured building.
+CONTENTS_DAMAGE_AMOUNT: FLOAT | Actual cash value amount of damage to contents in whole dollars.
+COUNTY_GEO_ID: TEXT | Cybersyn's unique identifier for a county, joinable to GEOGRAPHY_INDEX.
+NET_ICC_PAYMENT_AMOUNT: FLOAT | Net Increased Cost of Compliance (ICC) payment amount made to insured in dollars.
+CONTENTS_PROPERTY_VALUE: NUMBER | Actual cash value of the contents in whole dollars as estimated by an adjuster.
+CONTENTS_REPLACEMENT_COST: NUMBER | Estimated cost in whole dollars to replace the contents as reported by the insurer. Replacement cost is not market value, and it does not include the cost of the land or building. It is strictly the estimated cost to replace the contents.
+AMOUNT_PAID_ON_INCREASED_COST_OF_COMPLIANCE_CLAIM: FLOAT | ICC coverage is one of several flood insurance resources for policyholders who need additional help rebuilding after a flood. It provides up to $30,000 to help cover the cost of mitigation measures that will reduce the flood risk.
+LOWEST_ADJACENT_GRADE: FLOAT | Lowest natural grade adjacent to the insured structure prior to excavating or filling. The difference in feet of the lowest natural grade adjacent to the building from the reference level of the building.
+BUILDING_DEDUCTIBLE: NUMBER | Total deductible amount in dollars for buildings, both main and appurtenant, that can be applied against a loss.
+STATE_GEO_ID: TEXT | Cybersyn's unique identifier for a state, joinable to GEOGRAPHY_INDEX.
+
+## CYBERSYN.OUR_WORLD_IN_DATA_TIMESERIES
+GEO_ID: TEXT | A unique identifier for a place. Joinable to other geography tables including GEOGRAPHY_INDEX, GEOGRAPHY_RELATIONSHIPS, and GEOGRAPHY_CHARACTERISTICS.
+DATE: DATE | Date associated with the value.
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table.
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable.
+UNIT: TEXT | Unit of measurement for the reported value.
+VALUE: FLOAT | Value reported for the variable.
+
+## CYBERSYN.NOAA_WEATHER_STATION_INDEX
+NOAA_WEATHER_STATION_NAME: TEXT | Full name of the weather station.
+LATITUDE: FLOAT | Latitude of the land surface weather station (in decimal degrees).
+ZIP_NAME: TEXT | Full name of the zip code.
+COUNTRY_GEO_ID: TEXT | Cybersyn's unique identifier for a country, joinable to other datasets.
+WORLD_METEOROLOGICAL_ORGANIZATION_ID: TEXT | World Meteorological Organization (WMO) number for the land surface weather station, if available.
+ZIP_GEO_ID: TEXT | Cybersyn's unique identifier for a zip code, joinable to other datasets.
+SOURCE_DATA: ARRAY | Array of sources for data points associated with the land surface weather station.
+STATE_GEO_ID: TEXT | Cybersyn's unique identifier for a state, joinable to other datasets.
+ELEVATION: FLOAT | Elevation of the land surface weather station (in meters).
+NOAA_WEATHER_STATION_ID: TEXT | Unique identifier for land surface weather stations in the Global Historical Climatology Network daily (GHCNd), comprised of the FIPS country code (first 2 characters), a network code (third character), and the actual station ID (the remaining 8 characters).
+WEATHER_STATION_NETWORK: TEXT | Source of the station ID, represented by the network code in that ID.
+COUNTRY_NAME: TEXT | Full name of the country.
+ASSOCIATED_NETWORKS: ARRAY | Array of networks the land surface weather station is part of.
+LONGITUDE: FLOAT | Longitude of the land surface weather station (in decimal degrees).
+STATE_NAME: TEXT | Full name of the state.
+
+## CYBERSYN.CLIMATE_WATCH_TIMESERIES
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table.
+VALUE: FLOAT | Value reported for the variable.
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable.
+GEO_ID: TEXT | A unique identifier for a place. Joinable to other geography tables including GEOGRAPHY_INDEX, GEOGRAPHY_RELATIONSHIPS, and GEOGRAPHY_CHARACTERISTICS.
+UNIT: TEXT | Unit of measurement for the reported value.
+DATE: DATE | Date associated with the value.
+
+## CYBERSYN.OUR_WORLD_IN_DATA_ATTRIBUTES
+UNIT: TEXT | Unit of measurement for the reported value.
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table.
+MEASURE: TEXT | Quantifiable attribute or subject; description of what is being recorded.
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable.
+FREQUENCY: TEXT | Frequency of aggregations.
+OUR_WORLD_IN_DATA_CHARTS: ARRAY | An array of charts from Our World in Data (OWID) showcasing this variable. Accessible in the following URL, ourworldindata.org/grapher/{chart-id}.
+
+## CYBERSYN.EIA_ENERGY_ATTRIBUTES
+REPORT: TEXT | Source where the variable is originally collected or published.
+SECTOR: TEXT | The sector in which the variable is contained (eg. Industrial vs. Commercial).
+MEASURE: TEXT | Quantifiable attribute or subject; description of what is being recorded.
+FREQUENCY: TEXT | Frequency of aggregations.
+UNIT: TEXT | Unit of measurement for the reported value.
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable.
+ENERGY_TYPE: TEXT | The type of energy associated with the variable (eg. Electricity, Natural Gas, Petroleum, etc.).
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table.
+
+## CYBERSYN.GEOGRAPHY_INDEX
+LEVEL: TEXT | Geographic level or hierarchy (e.g., Country, State, County, City, Continent, CountrySubRegion, etc.)
+ISO_ALPHA2: TEXT | 2 letter country code from International Organization for Standardization
+GEO_ID: TEXT | A unique identifier for a place (a nation, state, zip-code, etc.)
+ISO_3166_2_CODE: TEXT | Full ISO-3166 code
+ISO_NUMERIC_CODE: TEXT | Numeric code from International Organization for Standardization
+ISO_ALPHA3: TEXT | 3 letter country code from International Organization for Standardization
+GEO_NAME: TEXT | Full name of the place
+ISO_NAME: TEXT | Country name from International Organization for Standardization

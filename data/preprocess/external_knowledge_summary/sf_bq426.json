@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq426",
+  "question": "What user type recorded the highest average temperature for trips starting and ending in New York City's zip code 10019 during 2018? Include average precipitation, wind speed, and temperature for that user type based on weather data from the New York Central Park station.",
+  "db_id": "NEW_YORK_CITIBIKE_1",
+  "source_document": "functions_st_within.md",
+  "evidence": "ST_WITHIN function: Returns true if first geospatial object is fully contained by second. Syntax: ST_WITHIN(<geography_expression_1>, <geography_expression_2>). Returns BOOLEAN. Example: SELECT ST_WITHIN(g1, g2) FROM geospatial_table_01;"
+}

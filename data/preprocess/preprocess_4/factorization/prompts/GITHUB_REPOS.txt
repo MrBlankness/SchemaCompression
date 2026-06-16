@@ -1,0 +1,47 @@
+[COMPONENTS]
+[TABLES]
+## GITHUB_REPOS.LANGUAGES
+repo_name: TEXT | NULL | eg=["debjyoti385/awesome-data-mining-datasets", "graidl/test"]
+language: VARIANT | NULL | eg=[[]]
+
+## GITHUB_REPOS.LICENSES
+repo_name: TEXT | NULL | eg=["npm/npmconf", "live627/shiny-bear"]
+license: TEXT | NULL | eg=["isc"]
+
+## GITHUB_REPOS.SAMPLE_REPOS
+watch_count: NUMBER | NULL | eg=[256]
+repo_name: TEXT | NULL | eg=["kbandla/APTnotes", "bigcompany/hook.io"]
+
+## GITHUB_REPOS.SAMPLE_CONTENTS
+size: NUMBER | NULL | eg=[21447, 3974]
+binary: BOOLEAN | NULL | eg=[false]
+sample_symlink_target: TEXT | NULL
+copies: NUMBER | NULL | eg=[256, 1]
+sample_mode: NUMBER | NULL | eg=[33188]
+sample_path: TEXT | NULL | eg=["drivers/rtc/rtc-ds1305.c", "drivers/devfreq/governor_simpleondemand.c"]
+content: TEXT | NULL | eg=["/*\n * rtc-ds1305.c -- driver for DS1305 and DS1306 SPI RTC chips\n *\n * Copyright (C) 2008 David Brownell\n *\n * This program is free software; you can redistribute it and/or modify\n * it under the terms of the GNU General Public License version 2 as\n * published by the Free Software Foundation.\n *\n */\n#include <linux/kernel.h>\n#include <linux/init.h>\n#include <linux/bcd.h>\n#include <linux/slab.h>\n#include <linux/rtc.h>\n#include <linux/workqueue.h>\n\n#include <linux/spi/spi.h>\n#include <linux/spi/ds1305.h>\n#include <linux/module.h>\n\n\n/*\n * Registers ... mask DS1305_WRITE into register address to write,\n * otherwise you're reading it.  All non-bitmask values are BCD.\n */\n#define DS1305_WRITE\t\t0x80\n\n\n/* RTC date/time ... the main special cases are that we:\n *  - Need fancy \"hours\" encoding in 12hour mode\n *  - Don't rely on the \"day-of-week\" field (or tm_wday)\n *  - Are a 21st-century clock (2000 <= year < 2100)\n */\n#define DS1305_RTC_LEN\t\t7\t\t/* bytes for RTC regs */\n\n#define DS1305_SEC\t...", "/*\n *  linux/drivers/devfreq/governor_simpleondemand.c\n *\n *  Copyright (C) 2011 Samsung Electronics\n *\tMyungJoo Ham <myungjoo.ham@samsung.com>\n *\n * This program is free software; you can redistribute it and/or modify\n * it under the terms of the GNU General Public License version 2 as\n * published by the Free Software Foundation.\n */\n\n#include <linux/errno.h>\n#include <linux/module.h>\n#include <linux/devfreq.h>\n#include <linux/math64.h>\n#include \"governor.h\"\n\n/* Default constants for DevFreq-Simple-Ondemand (DFSO) */\n#define DFSO_UPTHRESHOLD\t(90)\n#define DFSO_DOWNDIFFERENCTIAL\t(10)\nstatic int devfreq_simple_ondemand_func(struct devfreq *df,\n\t\t\t\t\tunsigned long *freq,\n\t\t\t\t\tu32 *flag)\n{\n\tstruct devfreq_dev_status stat;\n\tint err;\n\tunsigned long long a, b;\n\tunsigned int dfso_upthreshold = DFSO_UPTHRESHOLD;\n\tunsigned int dfso_downdifferential = DFSO_DOWNDIFFERENCTIAL;\n\tstruct devfreq_simple_ondemand_data *data = df->data;\n\tunsigned long max = (df->max_freq) ? df->max_freq : UINT_MAX;\n\tu..."]
+sample_ref: TEXT | NULL | eg=["refs/heads/master", "refs/heads/M"]
+id: TEXT | NULL | eg=["2dd586a19b594a73e9c6f7485d1e5da9203a4467", "816b2d7412b432d86a4a36147255ec664f760193"]
+sample_repo_name: TEXT | NULL | eg=["wandboard-org/linux", "garwedgess/android_kernel_lge_g4"]
+
+## GITHUB_REPOS.SAMPLE_FILES
+symlink_target: TEXT | NULL
+id: TEXT | NULL | eg=["64ba26a4afe649818a23565fc4ae6631eaf9d9b1", "b802f285fe00e6dd3b39af77e3b351d3a4343316"]
+mode: NUMBER | NULL | eg=[33188]
+path: TEXT | NULL | eg=["drivers/isdn/hisax/elsa.c", "arch/arm/mach-pxa/include/mach/smemc.h"]
+repo_name: TEXT | NULL | eg=["dorimanx/DORIMANX_LG_STOCK_LP_KERNEL"]
+ref: TEXT | NULL | eg=["refs/heads/master"]
+
+## GITHUB_REPOS.SAMPLE_COMMITS
+parent: VARIANT | NULL | eg=[["1c12c4cf9411eb130b245fa8d0fbbaf989477c7b"], ["4156153c4daddf12dd386016f96a947a01e93bf4"]]
+committer: VARIANT | NULL | eg=[{"date":1210817475000000,"email":"69652caca27c8b940640ad396ab71f93cacec34f@linux-foundation.org","name":"Linus Torvalds","time_sec":1210817475,"tz_offset":-420}, {"date":1326427983000000,"email":"69652caca27c8b940640ad396ab71f93cacec34f@linux-foundation.org","name":"Linus Torvalds","time_sec":1326427983,"tz_offset":-480}]
+difference: VARIANT | NULL | eg=[[{"new_mode":33188,"new_path":"mm/memory_hotplug.c","new_sha1":"833f854eabe50ad226696667db7e49d332840bb6","old_mode":33188,"old_path":"mm/memory_hotplug.c","old_sha1":"656ad1c65422f0440a56b422b8431891e5304827"},{"new_mode":33188,"new_path":"mm/page_alloc.c","new_sha1":"63835579323a7ca70722154f5b3e6560872da409","old_mode":33188,"old_path":"mm/page_alloc.c","old_sha1":"bdd5c432c426fdf6714ff90e1eebdfccfdccee8c"}]]
+message: TEXT | NULL | eg=["memory_hotplug: always initialize pageblock bitmap\n\nTrying to online a new memory section that was added via memory hotplug\nsometimes results in crashes when the new pages are added via __free_page.\n Reason for that is that the pageblock bitmap isn't initialized and hence\ncontains random stuff.  That means that get_pageblock_migratetype()\nreturns also random stuff and therefore\n\n\tlist_add(&page->lru,\n\t\t&zone->free_area[order].free_list[migratetype]);\n\nin __free_one_page() tries to do a list_add to something that isn't even\nnecessarily a list.\n\nThis happens since 86051ca5eaf5e560113ec7673462804c54284456 (\"mm: fix\nusemap initialization\") which makes sure that the pageblock bitmap gets\nonly initialized for pages present in a zone.  Unfortunately for hot-added\nmemory the zones \"grow\" after the memmap and the pageblock memmap have\nbeen initialized.  Which means that the new pages have an unitialized\nbitmap.  To solve this the calls to grow_zone_span() and grow_pgdat_span()\nare moved to _...", "mm,x86,um: move CMPXCHG_DOUBLE config option\n\nMove CMPXCHG_DOUBLE and rename it to HAVE_CMPXCHG_DOUBLE so architectures\ncan simply select the option if it is supported.\n\nSigned-off-by: Heiko Carstens <8dcf0f69152f32f23184f83357a3731522e56b9c@de.ibm.com>\nAcked-by: Christoph Lameter <ef3ecccf258fa062c5c6521a4887d40541963af7@linux.com>\nCc: Pekka Enberg <add4fcd06328a394f0ad91feda7ee057316dc5ed@kernel.org>\nCc: Ingo Molnar <9dbbbf0688fedc85ad4da37637f1a64b8c718ee2@elte.hu>\nCc: Thomas Gleixner <00e4cf8f46a57000a44449bf9dd8cbbcc209fd2a@linutronix.de>\nCc: \"H. Peter Anvin\" <8a453bad9912ffe59bc0f0b8abe03df9be19379e@zytor.com>\nSigned-off-by: Andrew Morton <5c1e68b099950c134891f0b6e179498a8ebe9cf9@linux-foundation.org>\nSigned-off-by: Linus Torvalds <69652caca27c8b940640ad396ab71f93cacec34f@linux-foundation.org>\n"]
+author: VARIANT | NULL | eg=[{"date":1210806352000000,"email":"8dcf0f69152f32f23184f83357a3731522e56b9c@de.ibm.com","name":"Heiko Carstens","time_sec":1210806352,"tz_offset":-420}, {"date":1326417453000000,"email":"8dcf0f69152f32f23184f83357a3731522e56b9c@de.ibm.com","name":"Heiko Carstens","time_sec":1326417453,"tz_offset":-480}]
+difference_truncated: BOOLEAN | NULL
+subject: TEXT | NULL | eg=["memory_hotplug: always initialize pageblock bitmap", "mm,x86,um: move CMPXCHG_DOUBLE config option"]
+trailer: VARIANT | NULL | eg=[[{"email":"8dcf0f69152f32f23184f83357a3731522e56b9c@de.ibm.com","key":"Signed-off-by","value":"Heiko Carstens <8dcf0f69152f32f23184f83357a3731522e56b9c@de.ibm.com>"},{"email":"b4658fdd7fbd645c2859b0e39d71018f32058d12@shadowen.org","key":"Cc","value":"Andy Whitcroft <b4658fdd7fbd645c2859b0e39d71018f32058d12@shadowen.org>"},{"email":"e169c2064f54e292652f83bb35eed10e1aa33f38@us.ibm.com","key":"Cc","value":"Dave Hansen <e169c2064f54e292652f83bb35eed10e1aa33f38@us.ibm.com>"},{"email":"7a67bf9a8691f9f1ca8ce9577e14c37413ea5f58@de.ibm.com","key":"Cc","value":"Gerald Schaefer <7a67bf9a8691f9f1ca8ce9577e14c37413ea5f58@de.ibm.com>"},{"email":"634f508bd7c47cf0ee4126243675c3e598920fbc@jp.fujitsu.com","key":"Cc","value":"KAMEZAWA Hiroyuki <634f508bd7c47cf0ee4126243675c3e598920fbc@jp.fujitsu.com>"},{"email":"5e8c143c1cccd8ccee45b5a7b90115158373a5d7@jp.fujitsu.com","key":"Cc","value":"Yasunori Goto <5e8c143c1cccd8ccee45b5a7b90115158373a5d7@jp.fujitsu.com>"},{"email":"4fbacc2fa0ffdbb11bf1ad6925b886e...]
+encoding: TEXT | NULL
+commit: TEXT | NULL | eg=["76cdd58e558669366adfaded436fda01b30cce3e", "2565409fc0303f3ab8d66b8326702a687962a29b"]
+repo_name: TEXT | NULL | eg=["torvalds/linux"]
+tree: TEXT | NULL | eg=["deaccb499752c928919693edea65f9ea4c1fe756", "b57f238d77ee87a991371a7021462b8c71351659"]

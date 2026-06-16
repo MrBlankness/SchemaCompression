@@ -1,0 +1,14 @@
+[COMPONENTS]
+
+[TABLES]
+Format: schema.table|components|columns
+WWE.WRESTLERS||id,name
+WWE.TABLES||html,url,id
+WWE.EVENTS||name,id
+WWE.MATCHES||card_id,match_type_id,id,win_type,title_id,loser_id,winner_id,duration,title_change
+WWE.PROMOTIONS||name,id
+WWE.CARDS||event_id,info_html,location_id,match_html,id,promotion_id,url,table_id,event_date
+WWE.BELTS||name,id
+WWE.SQLITE_SEQUENCE||name,seq
+WWE.MATCH_TYPES||name,id
+WWE.LOCATIONS||id,name

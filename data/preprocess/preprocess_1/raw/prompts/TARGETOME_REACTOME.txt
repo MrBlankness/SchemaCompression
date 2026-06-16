@@ -1,0 +1,29 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: REACTOME_VERSIONED.PATHWAY_HIERARCHY_V77
+Columns: child_id, parent_id
+
+Table: REACTOME_VERSIONED.PHYSICAL_ENTITY_V77
+Columns: name, stable_id, ensembl_id, uniprot_id, location
+
+Table: REACTOME_VERSIONED.PE_TO_PATHWAY_V77
+Columns: pathway_stable_id, evidence_code, pe_stable_id
+
+Table: REACTOME_VERSIONED.PATHWAY_V77
+Columns: species, url, name, lowest_level, stable_id
+
+Table: TARGETOME_VERSIONED.TARGET_SYNONYMS_V1
+Columns: targetID, synonym
+
+Table: TARGETOME_VERSIONED.DRUG_SYNONYMS_V1
+Columns: drugID, synonym
+
+Table: TARGETOME_VERSIONED.EXPERIMENTS_V1
+Columns: exp_assayValueHigh, exp_assayUnits, db_downloadDate, exp_assayValueLow, exp_assaySpecies, sourceID, db_version, exp_assayDescription, databaseName, exp_parentSource, db_downloadURL, exp_assayType, PubMedID, exp_assayRelation, expID, exp_assayValueMedian
+
+Table: TARGETOME_VERSIONED.SOURCES_V1
+Columns: sourceID, databaseName, PubMedID, db_downloadDate, db_version, db_downloadURL
+
+Table: TARGETOME_VERSIONED.INTERACTIONS_V1
+Columns: drug_atcClassName, drug_atcClassStatus, sourceID, targetName, target_uniprotID, targetSpecies, targetType, expID, drug_epcClassName, drug_epcClassID, drugName, interactionType, targetID, drugID, drug_approvalDate, drug_atcClassID, interactionID

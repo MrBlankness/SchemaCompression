@@ -1,0 +1,423 @@
+[TEMPLATES]
+<T5>
+lsad_name: TEXT | NULL | eg=["Congressional District 24", "Congressional District 25"]
+lsad_code: TEXT | NULL | eg=["C2"]
+congress_session: TEXT | NULL | eg=["116"]
+int_point_lon: FLOAT | NULL | eg=[-120.112845, -97.8159131]
+district_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x03\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00M\\x00\\x00\\x00C|`\\xc7\\x7f\\xc7]\\xc0\\xc6m4\\x80\\xb7\\xc0@@\\x169D\\xdc\\x9c\\xc7]\\xc0\\xe8\\xa3\\x8c\\xb8\\x00\\xc0@@\\xf9\\xa8M\\x9c\\xdc\\xc6]\\xc0\\xb7\\x1f\\xf0\\xc0\\x00\\xc0@@*s\\xf3\\x8d\\xe8\\xc6]\\xc0R\\xc0v0b\\xbf@@G\\xd3\\xd9\\xc9\\xe0\\xc6]\\xc0Sy;\\xc2i\\xbf@@k|&\\xfb\\xe7\\xc6]\\xc03\\x9c27\\xdf\\xbe@@\\xf7\\xc1\\xc0s\\xef\\xc6]\\xc0\\xc3u\\x8c+.\\xbe@@\\x12\\xaab*\\xfd\\xc6]\\xc0\\x05an\\xf7r\\xbd@@\\xeb\\xe9\\xb1-\\x03\\xc7]\\xc0\\x8a\\xa3r\\x13\\xb5\\xbc@@\\xf5\\xde\\xa6?\\xfb\\xc6]\\xc0C\\xdc\\x9cJ\\x06\\xbc@@\\n\\xf85\\x92\\x04\\xc7]\\xc0\\xd6.m8,\\xbb@@J\\xef\\xa9\\x9c\\xf6\\xc6]\\xc0\\xcf\\xb4\\xc4\\xcah\\xba@@)\\x0e\\xa0\\xdf\\xf7\\xc6]\\xc0aG\\xe3P\\xbf\\xb9@@\\xbc\\x95%:\\xcb\\xc6]\\xc0\\xec)9\\'\\xf6\\xb8@@\\x88<\\x10Y\\xa4\\xc6]\\xc0\\x15\\xdc\\x0fx`\\xb8@@\\x96\\xedC\\xder\\xc6]\\xc0<\\xec\\x85\\x02\\xb6\\xb7@@\\xcdhr1\\x06\\xc6]\\xc0\\xfe\\xc9\\xdf\\xbd\\xa3\\xb6@@kk\\xd2m\\x89\\xc5]\\xc0r\\xf2\"\\x13\\xf0\\xb5@@\\x0eX\\x00S\\x06\\xc5]\\xc0\\x07\\x8f6\\x8eX\\xb5@@\\xed\\xf3\\x18\\xe5\\x99\\xc4]\\xc0\\t\\x0f\\x9a]\\xf7\\xb4@@\\n=)\\x93\\x1a\\xc4]\\xc0<\\x0c\\x...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x845\\x00\\x00\\x1dUM\\x10u\\xa4X\\xc0dJ\\xebo\\t4?@\\xac\\x15m\\x8es\\xa4X\\xc0>\\xdb\\xa37\\xdc3?@fi\\xa7\\xe6r\\xa4X\\xc0\\xabx#\\xf3\\xc83?@\\x08{\\x13Cr\\xa4X\\xc0\\x947\\x87k\\xb53?@h\\x1f+\\xf8m\\xa4X\\xc0\\xd1\\xd8^\\x0bz3?@\\xa4k&\\xdfl\\xa4X\\xc0\\xb7f\\xf2\\xcd63?@-!\\x1f\\xf4l\\xa4X\\xc0S#\\xf43\\xf52?@\\xc3\\xd2\\xc0\\x8fj\\xa4X\\xc0:\\xbb|\\xeb\\xc32?@\\xfa\\x95\\xce\\x87g\\xa4X\\xc0\\xe5\\xa78\\x0e\\xbc2?@\\xa5\\x82\\x8a\\xaa_\\xa4X\\xc0\\xa8\\xd3\\x81\\xac\\xa72?@\\xb0\\xc5n\\x9fU\\xa4X\\xc0DY\\xbf\\x99\\x982?@5t\\xb3?P\\xa4X\\xc0\\x0e\\xda\\xab\\x8f\\x872?@\\x92\\x01\\xa0\\x8a\\x1b\\xa4X\\xc0\\x86\\xa1\\xd5\\xc9\\x192?@\\xac\\xc5\\xa7\\x00\\x18\\xa4X\\xc08K\\xc9r\\x122?@\\xad\\xf9\\xf1\\x97\\x16\\xa4X\\xc0\\xcf\\x00\\xde\\x02\\t2?@\\x84\\xcek\\xec\\x12\\xa4X\\xc0\\x85]\\x14=\\xf01?@V\\x98\\xbe\\xd7\\x10\\xa4X\\xc0\\xcbT\\x88G\\xe21?@\\x10 C\\xc7\\x0e\\xa4X\\xc0\\x13L\\xfcQ\\xd41?@;5\\x97\\x1b\\x0c\\xa4X\\xc0sJ@L\\xc21?@\\r34\\x9e\\x08\\xa4X\\xc0\\xa2j\\xbb\\t\\xbe1?@\\xda\\x8d>\\xe6\\x03\\xa4X\\xc0bKVE\\xb81?@\\xa6\\xe8H.\\xff\\xa3X\\xc0$,\\xf1\\x80\\xb21?@{\\xb6\\x0e\\x0e\\xf6\\xa3X\\xc0l\\xbb\\xd0\\\\\\xa71?..."]
+state_fips_code: TEXT | NULL | eg=["06", "48"]
+geo_id: TEXT | NULL | eg=["0624", "4825"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G5200"]
+area_water_meters: NUMBER | NULL | eg=[3684335356, 315330782]
+int_point_lat: FLOAT | NULL | eg=[34.9196335, 31.5007907]
+int_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x18!<\\xda8\\x07^\\xc0,g\\xef\\x8c\\xb6uA@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x0018\\x94\\xeb7tX\\xc0\\x15\\xa4\\xbe\\xd13\\x80?@')"]
+district_fips_code: TEXT | NULL | eg=["24", "25"]
+area_land_meters: NUMBER | NULL | eg=[17832224852, 19743117957]
+functional_status: BOOLEAN | NULL | eg=[false]
+@Tables: [GEO_US_BOUNDARIES.CONGRESS_DISTRICT_115,GEO_US_BOUNDARIES.CONGRESS_DISTRICT_116]
+
+[STANDALONE]
+## GEO_INTERNATIONAL_PORTS.WORLD_PORT_INDEX
+degauss: BOOLEAN | NULL
+crane_float: BOOLEAN | NULL
+eng_supplies: BOOLEAN | NULL
+publication_number: TEXT | NULL | eg=["CP05", "172"]
+max_vessel_size: TEXT | NULL | eg=["M", "L"]
+dry_dock_types: TEXT | NULL
+cargo_beach_moor: BOOLEAN | NULL
+quarantine_sscc_cert_required: BOOLEAN | NULL
+cargo_pier_depth: TEXT | NULL | eg=["E", "K"]
+deck_supplies: BOOLEAN | NULL
+entry_ice: BOOLEAN | NULL | eg=[false, true]
+provisions: BOOLEAN | NULL
+comms_rail: BOOLEAN | NULL | eg=[true]
+comms_phone: BOOLEAN | NULL | eg=[true]
+entry_other: BOOLEAN | NULL | eg=[true, false]
+crane_mobile: BOOLEAN | NULL
+port_longitude: FLOAT | NULL | eg=[-90.7, 43.083333]
+comms_vhf: BOOLEAN | NULL | eg=[true]
+channel_depth: TEXT | NULL | eg=["K", "P"]
+harbor_type: TEXT | NULL | eg=["RN", "CN"]
+pilot_available: BOOLEAN | NULL | eg=[true]
+services_steam: BOOLEAN | NULL
+tug_salvage: BOOLEAN | NULL
+quarantine_procedures_required: BOOLEAN | NULL
+entry_tide: BOOLEAN | NULL | eg=[false]
+port_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xcd\\xcc\\xcc\\xcc\\xcc\\xacV\\xc003333s<@')", "bytearray(b\"\\x01\\x01\\x00\\x00\\x00\\xaa\\xaa\\xaa\\xaa\\xaa\\x8aE@333333\\'@\")"]
+railway_types: TEXT | NULL
+services_nav_equip: BOOLEAN | NULL
+cargo_oil_depth: TEXT | NULL | eg=["J", "D"]
+cargo_med_moor: BOOLEAN | NULL
+eta_message_required: BOOLEAN | NULL | eg=[true]
+cargo_wharf: BOOLEAN | NULL | eg=[true]
+anchorage_depth: TEXT | NULL | eg=["K", "E"]
+country: TEXT | NULL | eg=["US", "DJ"]
+turning_area: BOOLEAN | NULL
+med_facility: BOOLEAN | NULL
+comms_fax: BOOLEAN | NULL
+pilot_required: BOOLEAN | NULL | eg=[true]
+region_number: TEXT | NULL | eg=["8650", "47840"]
+shelter_afforded: TEXT | NULL | eg=["N", "E"]
+comms_radio: BOOLEAN | NULL
+cargo_anchor: BOOLEAN | NULL
+services_longshore: BOOLEAN | NULL | eg=[true]
+good_holding_ground: BOOLEAN | NULL | eg=[true]
+tug_assist: BOOLEAN | NULL | eg=[true]
+chart_number: TEXT | NULL | eg=["1510"]
+port_of_entry: BOOLEAN | NULL
+pilot_advised: BOOLEAN | NULL
+entry_swell: BOOLEAN | NULL | eg=[false]
+harbor_size: TEXT | NULL | eg=["S", "V"]
+lift_25_49_tons: BOOLEAN | NULL
+repair_types: TEXT | NULL
+lift_100_tons: BOOLEAN | NULL
+quarantine_other: BOOLEAN | NULL
+port_name: TEXT | NULL | eg=["SOUTHWEST PASS", "DORALEH"]
+services_electrical_repair: BOOLEAN | NULL
+us_representative: BOOLEAN | NULL
+dirty_ballast: BOOLEAN | NULL
+water: BOOLEAN | NULL
+pilot_local_assist: BOOLEAN | NULL | eg=[true]
+index_number: TEXT | NULL | eg=["8822", "47855"]
+crane_fixed: BOOLEAN | NULL
+services_electrical: BOOLEAN | NULL
+tide_range: NUMBER | NULL | eg=[0, 1]
+lift_50_100_tons: BOOLEAN | NULL
+diesel: BOOLEAN | NULL
+fuel_oil: BOOLEAN | NULL
+cargo_ice_moor: BOOLEAN | NULL
+port_latitude: FLOAT | NULL | eg=[28.45, 11.6]
+overhead_limit: BOOLEAN | NULL | eg=[false]
+lift_0_24_tons: BOOLEAN | NULL
+garbage_dispose: BOOLEAN | NULL
+comms_air: BOOLEAN | NULL
+
+## GEO_US_BOUNDARIES.ADJACENT_COUNTIES
+neighbors_fips_code: VARIANT | NULL | eg=[["19153","19049","19187","19073","19169","19079"], ["19161","19027","19021","19187","19073","19151"]]
+county_fips_code: TEXT | NULL | eg=["19015", "19025"]
+neighbors: VARIANT | NULL | eg=[["Polk","Dallas","Webster","Greene","Story","Hamilton"], ["Sac","Carroll","Buena Vista","Webster","Greene","Pocahontas"]]
+neighbors_state: VARIANT | NULL | eg=[["Iowa","Iowa","Iowa","Iowa","Iowa","Iowa"]]
+state: TEXT | NULL | eg=["Iowa"]
+county: TEXT | NULL | eg=["Boone County", "Calhoun County"]
+
+## GEO_US_BOUNDARIES.ADJACENT_STATES
+state: TEXT | NULL | eg=["AL", "CO"]
+neighbors_fips_code: VARIANT | NULL | eg=[["12","13","28","47"], ["20","35","31","49","56","04","40"]]
+state_fips_code: TEXT | NULL | eg=["01", "08"]
+state_name: TEXT | NULL | eg=["Alabama", "Colorado"]
+neighbors_state: VARIANT | NULL | eg=[["Florida","Georgia","Mississippi","Tennessee"], ["Kansas","New Mexico","Nebraska","Utah","Wyoming","Arizona","Oklahoma"]]
+
+## GEO_US_BOUNDARIES.CBSA
+name: TEXT | NULL | eg=["Auburn, IN", "Angola, IN"]
+cbsa_fips_code: TEXT | NULL | eg=["12140", "11420"]
+area_water_meters: FLOAT | NULL | eg=[2657419.0, 35454787.0]
+cbsa_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00]\\x05\\x00\\x00\\tu\\x91BYLU\\xc0\\x04\\x87\\x17D\\xa4\\xb0D@O;\\xfc5YLU\\xc0xE\\xf0\\xbf\\x95\\xb0D@&\\x8e<\\x10YLU\\xc0\\xce\\x80z3j\\xb0D@U\\x12\\xd9\\x07YLU\\xc0\\x11\\xbb\\xb6\\xb7[\\xb0D@\\x8bmR\\xd1XLU\\xc0\\x0c\\xe8\\x85;\\x17\\xb0D@\\xeau\\x8b\\xc0XLU\\xc0\\xe0\\xb2\\n\\x9b\\x01\\xb0D@0\\x08\\xac\\x1cZLU\\xc0h\\xe2\\x1d\\xe0I\\xafD@7\\xc5\\xe3\\xa2ZLU\\xc0\\x02\\x07\\xb4t\\x05\\xafD@\\xbfz\\xdc\\xb7ZLU\\xc03nj\\xa0\\xf9\\xaeD@Z\\x9b\\xc6\\xf6ZLU\\xc0\\x01\\x93\\x1bE\\xd6\\xaeD@\\xcb\\x0e\\xf1\\x0f[LU\\xc0\\x02v5y\\xca\\xaeD@\\xe9\\r\\xf7\\x91[LU\\xc0\\x82:\\xe5\\xd1\\x8d\\xaeD@)\\xc9:\\x1c]LU\\xc0n\\xfb\\x1e\\xf5\\xd7\\xadD@/\\x86r\\xa2]LU\\xc0\\xbb;2V\\x9b\\xadD@\\x18D\\xa4\\xa6]LU\\xc0\\x9eV\\xd1\\x1f\\x9a\\xadD@\\xb1d\\x8e\\xe5]LU\\xc0\\x07\\x1a3\\x89z\\xadD@\\n|E\\xb7^LU\\xc0\\xed\\xb45\"\\x18\\xadD@u\\x18\\x93\\xfe^LU\\xc0:\\x936U\\xf7\\xacD@5C\\xaa(^LU\\xc0\\x8e!\\x008\\xf6\\xacD@r\\xc3\\xef\\xa6[LU\\xc0)\\xc4#\\xf1\\xf2\\xacD@\\x19\\xac8\\xd5ZLU\\xc0M\\xceP\\xdc\\xf1\\xacD@T\\xaaD\\xd9[LU\\xc0*9\\'\\xf6\\xd0\\xacD@$&\\xa8\\xe1[LU\\xc0)mq\\x8d\\xcf\\xacD@M\\x85x$^LU\\xc0\\xeb\\x1a-\\x07z\\xacD@\\x9a\\x08\\x...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00F\\x04\\x00\\x00\\x8a\\xfb\\x8fL\\x87LU\\xc0p\\x8b\\xf9\\xb9\\xa1\\xd9D@\\xcd\\x04\\xc3\\xb9\\x86LU\\xc0Y)\\x04r\\x89\\xd9D@KZ\\xf1\\r\\x85LU\\xc0\\x13\\x03$\\x9a@\\xd9D@]\\xdf\\x87\\x83\\x84LU\\xc0\\xcb\\x1c\\x92Z(\\xd9D@E\\xb7^\\xd3\\x83LU\\xc0\\x15\\x8f\\x8bj\\x11\\xd9D@\\xfe>\\xe3\\xc2\\x81LU\\xc0\\xe9\\xe5w\\x9a\\xcc\\xd8D@\\xe7\\x16\\xba\\x12\\x81LU\\xc0\\x01\\xd4\\xd4\\xb2\\xb5\\xd8D@4\\xb4\\x01\\xd8\\x80LU\\xc0\\\\\\x87jJ\\xb2\\xd8D@#I\\x10\\xae\\x80LU\\xc0g\\xb0\\xa9\\xf3\\xa8\\xd8D@X\\xa4\\x89w\\x80LU\\xc0V\\xee\\x05f\\x85\\xd8D@\\x89(&o\\x80LU\\xc0\\xc4\\xa8k\\xed}\\xd8D@j) \\xed\\x7fLU\\xc02SZ\\x7fK\\xd8D@A|`\\xc7\\x7fLU\\xc0)\\x07\\xb3\\t0\\xd8D@0\\x11o\\x9d\\x7fLU\\xc0\\x8c\\xf6x!\\x1d\\xd8D@0\\x11o\\x9d\\x7fLU\\xc0:O<g\\x0b\\xd8D@\\x06d\\xafw\\x7fLU\\xc0S=\\x99\\x7f\\xf4\\xd7D@el\\xe8f\\x7fLU\\xc0\\xe0x>\\x03\\xea\\xd7D@\\xc5t!V\\x7fLU\\xc0G\\x89]\\xdb\\xdb\\xd7D@\\xcbK\\xfe\\'\\x7fLU\\xc0^\\xc8\\xeaV\\xcf\\xd7D@*T7\\x17\\x7fLU\\xc0\\xa6W\\xca2\\xc4\\xd7D@\\x12\\x12i\\x1b\\x7fLU\\xc0Z]N\\t\\x88\\xd7D@\\xfa\\xcf\\x9a\\x1f\\x7fLU\\xc0\\x8bI\\x7f/\\x85\\xd7D@Im\\xe2\\xe4~LU\\xc0\\x12&\\x8cfe\\xd7D@\\xc4\\x8e\\xc6\\x..."]
+csa_geo_id: TEXT | NULL | eg=["258", "266"]
+lsad_code: TEXT | NULL | eg=["M2", "M1"]
+msa_indicator: TEXT | NULL | eg=["2", "1"]
+area_land_meters: FLOAT | NULL | eg=[939731962.0, 799729298.0]
+internal_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xf3\\xbb\\x9f\\t\\x03@U\\xc0<@\\x9c,Z\\xb3D@')", "bytearray(b\"\\x01\\x01\\x00\\x00\\x00\\xfeu\\xb8g\\'@U\\xc0\\x12\\x87l ]\\xd2D@\")"]
+lsad_name: TEXT | NULL | eg=["Auburn, IN Micro Area", "Angola, IN Micro Area"]
+internal_point_longitude: FLOAT | NULL | eg=[-85.0001854, -85.0024051]
+internal_point_latitude: FLOAT | NULL | eg=[41.4011894, 41.643467]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G3110"]
+geo_id: TEXT | NULL | eg=["12140", "11420"]
+
+## GEO_US_BOUNDARIES.CNECTA
+lsad: TEXT | NULL | eg=["M4"]
+geo_id: TEXT | NULL | eg=["775", "770"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G3200"]
+cnecta_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xe9\\x1c\\x00\\x00\\xdca\\x13\\x99\\xb9\\x9eQ\\xc0\\xe5u\\xc4!\\x1b\\x04F@\\x99\\x81\\xca\\xf8\\xf7\\x9eQ\\xc0\\xe6\\x06C\\x1dV\\x04F@\\xbdp\\xe7\\xc2H\\x9fQ\\xc0\\xd7j\\x0f{\\xa1\\x04F@\\rND\\xbf\\xb6\\x9fQ\\xc0\\x18\\xc7H\\xf6\\x08\\x05F@_@/\\xdc\\xb9\\x9fQ\\xc0l\\xb93\\x13\\x0c\\x05F@\\x81\\xe8I\\x99\\xd4\\x9fQ\\xc0\\xe1\\xef\\x17\\xb3%\\x05F@D\\xb94~\\xe1\\x9fQ\\xc0\\xb5E\\x99\\r2\\x05F@W\\x92<\\xd7\\xf7\\x9fQ\\xc0\\xa0\\x8b\\x86\\x8cG\\x05F@\\x92y\\xe4\\x0f\\x06\\xa0Q\\xc0.\\x01\\xf8\\xa7T\\x05F@\\x90+\\xf5,\\x08\\xa0Q\\xc0\\x02\\x06I\\x9fV\\x05F@]\\xdd\\xb1\\xd8&\\xa0Q\\xc0\\x94\\xedC\\xder\\x05F@\\x84\\xd7.m8\\xa0Q\\xc0\\xe7$[]N\\x05F@\\x110\\xba\\xbc9\\xa0Q\\xc0\\xfd\\xf7\\xe0\\xb5K\\x05F@{j\\xf5\\xd5U\\xa0Q\\xc0\\xa4\\x1baQ\\x11\\x05F@\\x16\\xf9\\xf5Cl\\xa0Q\\xc0s\\x05\\xdb\\x88\\'\\x05F@{\\x15\\x19\\x1d\\x90\\xa0Q\\xc0\\x85\\xc7~\\x16K\\x05F@\\xc60\\'h\\x93\\xa0Q\\xc0\\xe8$[]N\\x05F@Z}uU\\xa0\\xa0Q\\xc0\\xba\\xce\\x86\\xfc3\\x05F@\\xd1\\xca\\xbd\\xc0\\xac\\xa0Q\\xc08\\xea\\xe8\\xb8\\x1a\\x05F@\\x97:\\xc8\\xeb\\xc1\\xa0Q\\xc0\\xf1-\\xac\\x1b\\xef\\x04F@`\\xc8\\xeaV\\xcf\\xa0Q\\xc0VU/\\xbf\\xd3\\x04F@!\\xe0\\x10\\xaa\\xd4\\xa...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xdb\\x04\\x00\\x00L\\x198\\xa0\\xa5SR\\xc0\\xfc\\xf8K\\x8b\\xfaPE@\\xc3\\xd1U\\xba\\xbbSR\\xc0\\xa3\\x8bM+\\x85PE@\\xa5\\xd8\\xd18\\xd4SR\\xc0\\xed,z\\xa7\\x02PE@\\xd8}\\xc7\\xf0\\xd8SR\\xc0\\x83\\xa4O\\xab\\xe8OE@\\xfa(#.\\x00TR\\xc0\\xd2\\x9f\\xfdH\\x11OE@\\xd0 \\x05O!TR\\xc0p\\x8f\\xa5\\x0f]NE@\\x8e\\xfd,\\x96\"TR\\xc0\\xe6\\x06C\\x1dVNE@\\x8e\\xc9\\xe2\\xfe#TR\\xc0DV\\xb7zNNE@\\x8e\\xaf=\\xb3$TR\\xc0\\x08\\xc0?\\xa5JNE@\\x88\\xd8`\\xe1$TR\\xc0\\x9f=\\x97\\xa9INE@\\xe6\\xacO9&TR\\xc0\\x7fk\\'JBNE@\\x0e\\xf2z0)TR\\xc0\\x10w\\xf5*2NE@\\xec\\xf1B:<TR\\xc0]\\xa7\\x91\\x96\\xcaME@j\\xf9\\x81\\xab<TR\\xc0\\x93P\\xfaB\\xc8ME@\\xbcS\\x01\\xf7<TR\\xc0\\xf2\\x8c}\\xc9\\xc6ME@\\x98\\x80_#ITR\\xc0\\xc5\\x13A\\x9c\\x87ME@ \\x1f\\xf4lVTR\\xc0\\xc0\\xa8\\xa4N@ME@\\xe8ME*\\x8cTR\\xc0\\x8a\\xc2.\\x8a\\x1eLE@\\x1baQ\\x11\\xa7TR\\xc0\\xec\\n}\\xb0\\x8cKE@u\\x92\\xad.\\xa7TR\\xc0\\x07g\\xf0\\xf7\\x8bKE@\\xa3\\x05h[\\xcdTR\\xc0z\\x89\\xb1L\\xbfJE@\\xc4?l\\xe9\\xd1TR\\xc0P\\xbc\\xca\\xda\\xa6JE@\\x9ax\\x07x\\xd2TR\\xc0o=\\n\\xd7\\xa3JE@\\xb0\\xa9\\xf3\\xa8\\xf8TR\\xc0\\xdfnI\\x0e\\xd8IE@_\"\\xde:\\xffTR\\xc0\\x02\\xeey\\xfe\\xb4IE@\\x..."]
+int_point_lat: FLOAT | NULL | eg=[43.8562034, 42.5337519]
+int_point_lon: FLOAT | NULL | eg=[-70.3192682, -73.1678825]
+area_water_meters: NUMBER | NULL | eg=[1537827560, 24514153]
+name_lsad: TEXT | NULL | eg=["Portland-Lewiston-South Portland, ME Combined NECTA", "Pittsfield-North Adams, MA-VT Combined NECTA"]
+name: TEXT | NULL | eg=["Portland-Lewiston-South Portland, ME", "Pittsfield-North Adams, MA-VT"]
+cnecta_fips_code: TEXT | NULL | eg=["775", "770"]
+area_land_meters: NUMBER | NULL | eg=[6254813062, 1524389768]
+
+## GEO_US_BOUNDARIES.COASTLINE
+coastline_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x02\\x00\\x00\\x00\\x0e\\x00\\x00\\x00\\xea\\xe1\\xcbD\\x11\\xf9R\\xc0\\xc7\\x83-v\\xfb\\xeeB@\\xea\\xe1\\xcbD\\x11\\xf9R\\xc0\\x0c\\xdf\\xc2\\xba\\xf1\\xeeB@ \\xefU+\\x13\\xf9R\\xc0\\x02\\x012t\\xec\\xeeB@\\xd5$xC\\x1a\\xf9R\\xc0\\x10\\x7f\\x14u\\xe6\\xeeB@\\xa6v\\x86\\xa9-\\xf9R\\xc0*\\xdb\\x87\\xbc\\xe5\\xeeB@t\"\\xc1T3\\xf9R\\xc0\\xc1y8\\x81\\xe9\\xeeB@\\x90\\x85\\xe8\\x108\\xf9R\\xc0\\xdcZ&\\xc3\\xf1\\xeeB@\\xa8\\xc7\\xb6\\x0c8\\xf9R\\xc0\\xbd^a\\xc1\\xfd\\xeeB@\\x8e\\x1dT\\xe2:\\xf9R\\xc0\\x92\\x8c\\x9c\\x85=\\xefB@\\xf1\\xe2\\xc4W;\\xf9R\\xc0\\xf2M\\x9a\\x06E\\xefB@\\xd9\\xb3\\xe725\\xf9R\\xc0\\x84\\x934\\x7fL\\xefB@\"J{\\x83/\\xf9R\\xc0\\x05Q\\xf7\\x01H\\xefB@\\xbb\\xcbE|\\'\\xf9R\\xc0\\xb1\\r\\xdc\\x81:\\xefB@\\xea\\xe1\\xcbD\\x11\\xf9R\\xc0\\xc7\\x83-v\\xfb\\xeeB@')", "bytearray(b\"\\x01\\x02\\x00\\x00\\x00\\x0e\\x00\\x00\\x00\\x9d\\xecfF?\\xb2Q\\xc0\\xdb\\xac\\xc1\\xfb\\xaa E@\\xaf=\\xb3$@\\xb2Q\\xc0~\\xd8\\xd2\\xa3\\xa9 E@,+MJA\\xb2Q\\xc0t\\xc6\\xf7\\xc5\\xa5 E@\\x7fk\\'JB\\xb2Q\\xc0\\xa5\\xb2(\\xec\\xa2 E@\\xbfZ\\xb5kB\\xb2Q\\xc0\\xca\\xf0\\x9fn\\xa0 E@\\xea;\\xbf(A\\xb2Q\\xc0\\xe4L\\x13\\xb6\\x9f E@U\\x0cW\\x07@\\xb2Q\\xc0\\xbeB\\xe6\\xca\\xa0 E@\\x8b\\xcfd\\xff<\\xb2Q\\xc0\\x89\\x01\\x12M\\xa0 E@u\\xc1\\xe0\\x9a;\\xb2Q\\xc0\\x0b\\xac\\xe3\\xf8\\xa1 E@ep\\x94\\xbc:\\xb2Q\\xc0\\xc1c?\\x8b\\xa5 E@\\xe1\\x91xy:\\xb2Q\\xc0\\xf6\\x085C\\xaa E@\\xb8\\xb0n\\xbc;\\xb2Q\\xc0\\xc6PN\\xb4\\xab E@K\\xe0\\xd6\\xdd<\\xb2Q\\xc0\\xf4\\xd4\\xea\\xab\\xab E@\\x9d\\xecfF?\\xb2Q\\xc0\\xdb\\xac\\xc1\\xfb\\xaa E@\")"]
+name: TEXT | NULL | eg=["Atlantic"]
+
+## GEO_US_BOUNDARIES.COUNTIES
+county_gnis_code: TEXT | NULL | eg=["01581110", "01581080"]
+cbsa_fips_code: TEXT | NULL
+lsad_code: TEXT | NULL | eg=["06"]
+fips_class_code: TEXT | NULL | eg=["H1"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G4020"]
+int_point_lon: FLOAT | NULL | eg=[-90.3596497, -88.7733265]
+county_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xaa\\x05\\x00\\x00\\x04q\\x1eN`\\xabV\\xc0\\r |(\\xd1\\xdcF@\\x04q\\x1eN`\\xabV\\xc0\\xe3\\x8caN\\xd0\\xdcF@\\x04q\\x1eN`\\xabV\\xc0\\x083m\\xff\\xca\\xdcF@\\x04q\\x1eN`\\xabV\\xc0\\x16\\x15q:\\xc9\\xdcF@\\x04q\\x1eN`\\xabV\\xc0\\x16}\\x05i\\xc6\\xdcF@\\x04q\\x1eN`\\xabV\\xc0\\xcf\\xd0?\\xc1\\xc5\\xdcF@\\x04q\\x1eN`\\xabV\\xc0\\x1c\\xb5\\xc2\\xf4\\xbd\\xdcF@\\x04q\\x1eN`\\xabV\\xc0\\x1c\\x1dW#\\xbb\\xdcF@\\x1b\\xb3\\xecI`\\xabV\\xc0\\xe3#)\\xe9a\\xdcF@\\x1b\\xb3\\xecI`\\xabV\\xc0\\xba\\xe4\\x7f\\xf2w\\xdbF@\\x1b\\xb3\\xecI`\\xabV\\xc0?8\\x9f:V\\xdbF@\\x1b\\xb3\\xecI`\\xabV\\xc0\\xd8\\xba\\xd4\\x08\\xfd\\xdaF@\\x1b\\xb3\\xecI`\\xabV\\xc0*I\\x9e\\xeb\\xfb\\xdaF@5\\xf5\\xbaE`\\xabV\\xc0\\x01\\xb2\\xd7\\xbb?\\xdaF@5\\xf5\\xbaE`\\xabV\\xc0\\x9b\\xdb\\x84{e\\xd8F@5\\xf5\\xbaE`\\xabV\\xc0\\x85\\x97\\xe0\\xd4\\x07\\xd8F@5\\xf5\\xbaE`\\xabV\\xc0\\xff\\xc53h\\xe8\\xd7F@5\\xf5\\xbaE`\\xabV\\xc0\\x7f\\nG\\x90J\\xd7F@W\\xcb\\x9d\\x99`\\xabV\\xc0\\x96\\xc4Y\\x115\\xd7F@\\xc1MF\\x95a\\xabV\\xc0\\xee]\\x83\\xbe\\xf4\\xd6F@u\\xb0\\xfe\\xcfa\\xabV\\xc05U\\xf7\\xc8\\xe6\\xd6F@\\xe5#)\\xe9a\\xabV\\xc0\\xa4\\x0f]P\\xdf\\xd6F@\\x0f\\xd1\\xe8\\x0eb\\...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x008\\x06\\x00\\x00\\xb1H\\x13\\xef\\x00CV\\xc0\\x0fE\\x81>\\x91\\xd1F@\\xb1H\\x13\\xef\\x00CV\\xc0\\xb4-\\xcal\\x90\\xd1F@\\x9a\\x06E\\xf3\\x00CV\\xc0\\x8d\\x9a\\xaf\\x92\\x8f\\xd1F@\\x9a\\x06E\\xf3\\x00CV\\xc0\\xca4\\x9a\\\\\\x8c\\xd1F@\\xca\\x8a\\xe1\\xea\\x00CV\\xc0fM,\\xf0\\x15\\xd1F@\\xca\\x8a\\xe1\\xea\\x00CV\\xc0\\xe5\\xed\\x08\\xa7\\x05\\xd1F@\\x94\\x15\\xc3\\xd5\\x01CV\\xc0\\xc4\\xc4\\xe6\\xe3\\xda\\xd0F@\\x16\\x0e\\x84d\\x01CV\\xc0\\xbd\\xfd\\xb9h\\xc8\\xd0F@\\xb2b\\xb8:\\x00CV\\xc0kc\\xec\\x84\\x97\\xd0F@/\\x84\\x9c\\xf7\\xffBV\\xc0\\xb1d\\x8e\\xe5]\\xcfF@/\\x84\\x9c\\xf7\\xffBV\\xc0\\xbfF\\x92 \\\\\\xcfF@G\\xc6j\\xf3\\xffBV\\xc0T\"\\x89^F\\xcfF@\\x00\\x00\\x00\\x00\\x00CV\\xc0@\\x9a\\xb1h:\\xcfF@G\\xc6j\\xf3\\xffBV\\xc0Y\\xa5\\xf4L/\\xcfF@;2V\\x9b\\xffBV\\xc0=]\\xdd\\xb1\\xd8\\xceF@\\x9b:\\x8f\\x8a\\xffBV\\xc0\\x19\\xe5\\x99\\x97\\xc3\\xceF@k\\xb6\\xf2\\x92\\xffBV\\xc0\\x96\\xaf\\xcb\\xf0\\x9f\\xceF@$\\xf0\\x87\\x9f\\xffBV\\xc0\\xcc\\xc7\\xb5\\xa1b\\xceF@\\xf4k\\xeb\\xa7\\xffBV\\xc0f`\\xe4eM\\xceF@\\xc4\\xe7N\\xb0\\xffBV\\xc0\\x00#h\\xcc$\\xceF@e\\xdf\\x15\\xc1\\xffBV\\xc0\\x15\\xe4g#\\xd7\\xcdF@\\xa5\\xce\\xa3\\xe2\\xffBV\\xc..."]
+geo_id: TEXT | NULL | eg=["55099", "55041"]
+lsad_name: TEXT | NULL | eg=["Price County", "Forest County"]
+int_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\n\\xe1,\\x80\\x04\\x97V\\xc0v\\x8e\\x01\\xd9\\xeb\\xd6F@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00T\\xa8n.~1V\\xc0\\x1e\\xab\\xefW\\\\\\xd5F@')"]
+county_fips_code: TEXT | NULL | eg=["55099", "55041"]
+area_water_meters: NUMBER | NULL | eg=[62098964, 83594186]
+functional_status: TEXT | NULL | eg=["A"]
+state_fips_code: TEXT | NULL | eg=["55"]
+csa_fips_code: TEXT | NULL
+area_land_meters: NUMBER | NULL | eg=[3247987842, 2626878506]
+met_div_fips_code: TEXT | NULL
+county_name: TEXT | NULL | eg=["Price", "Forest"]
+int_point_lat: FLOAT | NULL | eg=[45.6790725, 45.6668806]
+
+## GEO_US_BOUNDARIES.CSA
+internal_point_lon: FLOAT | NULL | eg=[-86.7482873, -92.2122365]
+internal_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xc7`j\\xf0\\xe3\\xafU\\xc05Lm\\xa9\\x83\\xc3@@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x1f\\xa1fH\\x95\\rW\\xc0D\\x0f!S\\xe3Z@@')"]
+geo_id: TEXT | NULL | eg=["142", "384"]
+internal_point_lat: FLOAT | NULL | eg=[33.5274555, 32.7100624]
+lsad_name: TEXT | NULL | eg=["Birmingham-Hoover-Talladega, AL CSA", "Monroe-Ruston, LA CSA"]
+area_water_meters: FLOAT | NULL | eg=[347190038.0, 159703707.0]
+area_land_meters: FLOAT | NULL | eg=[17485172162.0, 7132860794.0]
+msa_lsad_code: TEXT | NULL | eg=["M0"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G3100"]
+name: TEXT | NULL | eg=["Birmingham-Hoover-Talladega, AL", "Monroe-Ruston, LA"]
+csa_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xc4\\x18\\x00\\x006\\xe34D\\x15\\xd1U\\xc0\\xc2\\x15P\\xa8\\xa7\\xc1@@\\xb2\\x7f\\x9e\\x06\\x0c\\xd1U\\xc0\\xf4\\x18\\xe5\\x99\\x97\\xc1@@\\xf5\\x9f5?\\xfe\\xd0U\\xc0a\\xfd\\x9f\\xc3|\\xc1@@\\x94\\xaa\\xed&\\xf8\\xd0U\\xc0\\x99\\x89\"\\xa4n\\xc1@@\\xf4h\\xaa\\'\\xf3\\xd0U\\xc0zS\\x91\\nc\\xc1@@\\x95C\\x8bl\\xe7\\xd0U\\xc0\\x93\\xa9\\x82QI\\xc1@@f\\xd9\\x93\\xc0\\xe6\\xd0U\\xc0\\xce\\x0f#\\x84G\\xc1@@3NCT\\xe1\\xd0U\\xc0\\xff\\xdem\\xde8\\xc1@@\\xf82Q\\x84\\xd4\\xd0U\\xc0\\xb2\\x82\\xdf\\x86\\x18\\xc1@@ A\\xf1c\\xcc\\xd0U\\xc0\\xb4il\\xaf\\x05\\xc1@@\\xcfh\\xab\\x92\\xc8\\xd0U\\xc0s\\xf5c\\x93\\xfc\\xc0@@2uWv\\xc1\\xd0U\\xc0M\\xe1A\\xb3\\xeb\\xc0@@Y\\x83\\xf7U\\xb9\\xd0U\\xc0\\xda\\xff\\x00k\\xd5\\xc0@@h\\xe74\\x0b\\xb4\\xd0U\\xc0\\xbdx?n\\xbf\\xc0@@\\x10\\x1em\\x1c\\xb1\\xd0U\\xc07\\xc4x\\xcd\\xab\\xc0@@|\\xd4_\\xaf\\xb0\\xd0U\\xc0\\x7f\\x0c\\x1d;\\xa8\\xc0@@X\\xfe|[\\xb0\\xd0U\\xc0R\\xf0\\x14r\\xa5\\xc0@@\\xb3I~\\xc4\\xaf\\xd0U\\xc0\\xc9\\xf0\\x9fn\\xa0\\xc0@@k\\x9d\\xb8\\x1c\\xaf\\xd0U\\xc0n\\xb8\\x8f\\xdc\\x9a\\xc0@@\\xe8\\xbe\\x9c\\xd9\\xae\\xd0U\\xc0\\x16\\xd5\"\\xa2\\x98\\xc0@@\\xc5\\x1c\\x04\\x1d\\xad\\xd0U\\xc0\\xa6\\xac\\xa6\\xe...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00t\\x11\\x00\\x00/\\x99*\\x18\\x95\\x1aW\\xc0\\x1c\\xd0\\xd2\\x15l?@@I\\xf5\\x9d_\\x94\\x1aW\\xc0\\xb5o\\xee\\xaf\\x1e?@@\\x01/3l\\x94\\x1aW\\xc0\\x8dx\\xb2\\x9b\\x19?@@*\\xc2MF\\x95\\x1aW\\xc0\\xa2(\\xd0\\'\\xf2>@@\\xe9\\xd2\\xbf$\\x95\\x1aW\\xc0\\x83-v\\xfb\\xac>@@\\xa7\\xc9\\x8c\\xb7\\x95\\x1aW\\xc0\\x9f\\x1fF\\x08\\x8f>@@\\xa1\\xf2\\xaf\\xe5\\x95\\x1aW\\xc0;Z\\xd5\\x92\\x8e>@@`\\x03\"\\xc4\\x95\\x1aW\\xc0\\xbf\\xd4\\xcf\\x9b\\x8a>@@e\\xda\\xfe\\x95\\x95\\x1aW\\xc0\\xd7\\x99B\\xe75>@@C\\x04\\x1cB\\x95\\x1aW\\xc0\\x906\\x8eX\\x8b=@@\\x90\\xa1c\\x07\\x95\\x1aW\\xc0\\xe6Z\\xb4\\x00m=@@\\xa3\\x0cU1\\x95\\x1aW\\xc0$*T7\\x17=@@H\\xdb\\xf8\\x13\\x95\\x1aW\\xc0bC7\\xfb\\x03=@@\\x8a\\xca\\x865\\x95\\x1aW\\xc0\\xbe\\xf0J\\x92\\xe7<@@ZF\\xea=\\x95\\x1aW\\xc0\\x90}\\x90e\\xc1<@@\\x00\\x15\\x8e \\x95\\x1aW\\xc09\\xc8\\xeb\\xc1\\xa4<@@\\x13\\x80\\x7fJ\\x95\\x1aW\\xc0\\xf7Ma\\xa5\\x82<@@\\xfa=\\xb1N\\x95\\x1aW\\xc0\\xdc\\xd0\\x94\\x9d~<@@\\x8a\\xca\\x865\\x95\\x1aW\\xc0\\xf4\\x8a\\xa7\\x1ei<@@\\xbf%\\x00\\xff\\x94\\x1aW\\xc0n\\'\\x11\\xe1_<@@\\xc5\\xfc\\xdc\\xd0\\x94\\x1aW\\xc0\\x1f\\xd1\\x04\\x8aX<@@*\\xc2MF\\x95\\x1aW\\xc0zPP\\x8aV<@@xE\\xf0..."]
+csa_code: TEXT | NULL | eg=["142", "384"]
+
+## GEO_US_BOUNDARIES.METROPOLITAN_DIVISIONS
+area_land_meters: FLOAT | NULL | eg=[2882492193.0, 3393834889.0]
+csa_code: TEXT | NULL | eg=["148", "176"]
+name: TEXT | NULL | eg=["Boston, MA", "Cambridge-Newton-Framingham, MA"]
+internal_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00&d1\\xfb\\x06\\xb8Q\\xc0\\x89\\xaf\\xc0\\xa1\\x01\\x08E@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xc4\\xa6\\xdf\\xcf:\\xc8Q\\xc0\\x92\\x04\\xe1\\n(HE@')"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G3120"]
+internal_point_latitude: FLOAT | NULL | eg=[42.0625498, 42.563722]
+geo_id: TEXT | NULL | eg=["1446014454", "1446015764"]
+area_water_meters: FLOAT | NULL | eg=[1411373083.0, 945500871.0]
+internal_point_longitude: FLOAT | NULL | eg=[-70.8754261, -71.1285896]
+metdiv_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x04\\x10\\x00\\x00}\\xe5Az\\x8a\\xcaQ\\xc0\\x96\\xc5\\xc4\\xe6\\xe3&E@hv\\xdd[\\x91\\xcaQ\\xc0SQ\\xbc\\xca\\xda&E@\\x8c\\xa01\\x93\\xa8\\xcaQ\\xc0E\\xb0q\\xfd\\xbb&E@\\x98\\xb9\\xc0\\xe5\\xb1\\xcaQ\\xc0\\x9f\\xde\\x8c\\x9a\\xaf&E@\\xaa\\xd6\\xc2,\\xb4\\xcaQ\\xc0\\x90\\xdb/\\x9f\\xac&E@\\xea\\x91\\x06\\xb7\\xb5\\xcaQ\\xc0\\x83\\x95\\n*\\xaa&E@h\\x1e\\xc0\"\\xbf\\xcaQ\\xc0=\\xcc^\\xb6\\x9d&E@\\x19\\x19\\xe4.\\xc2\\xcaQ\\xc0\\xe1_\\x04\\x8d\\x99&E@\\xd7\\xc1\\xc1\\xde\\xc4\\xcaQ\\xc0\\x0c\\x8f\\xfd,\\x96&E@\\xb3\\xd19?\\xc5\\xcaQ\\xc0\\xb84~\\xe1\\x95&E@#\\xf7tu\\xc7\\xcaQ\\xc0\\xea \\xaf\\x07\\x93&E@Y\\xa6_\"\\xde\\xcaQ\\xc0\\xf4\\xa7\\x8d\\xeat&E@\\xa1\\xbd\\xfax\\xe8\\xcaQ\\xc0\\x7f\\x8e\\x8f\\x16g&E@t\\x90\\xd7\\x83I\\xcbQ\\xc0\\xdb#\\x9b\\xab\\xe6%E@-\\xed\\xd4\\\\n\\xcbQ\\xc0\\x8a\\x89\\xcd\\xc7\\xb5%E@\\xd8x\\xb0\\xc5n\\xcbQ\\xc0WH\\xf9I\\xb5%E@\\x03\\xe7\\x8c(\\xed\\xcbQ\\xc0=tA}\\xcb$E@Z\\x7fK\\x00\\xfe\\xcbQ\\xc0\\x1fh\\x05\\x86\\xac$E@\\x1c\\xce\\xfcj\\x0e\\xccQ\\xc0\\xf3\\xad\\x0f\\xeb\\x8d$E@\\xef\\xa4\\x85\\xcb*\\xccQ\\xc0\\xb9\\xd7I}Y$E@9\\xd6\\xc5m4\\xccQ\\xc0&A\\x7f\\xa1G$E@=+i\\xc57\\xccQ\\xc0&TpxA$E@\\xe1].\\xe2;\\...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x97\\x14\\x00\\x00\\n+\\x15TT\\xd0Q\\xc0u\\xde\\xc6fG^E@\\xb1\\xdf\\x13\\xebT\\xd0Q\\xc0\\n\\\\\\x1ekF^E@\\xfb\\xe0|\\xeaX\\xd0Q\\xc0s%\\x02\\xd5?^E@i6\\x8f\\xc3`\\xd0Q\\xc0\\xf8\\x1a\\x82\\xe32^E@\\xec\\x9f\\xa7\\x01\\x83\\xd0Q\\xc0\\xa2\\xc7\\xefm\\xfa]E@B\\xb3\\xeb\\xde\\x8a\\xd0Q\\xc0WA\\x0ct\\xed]E@\\xdd\\na5\\x96\\xd0Q\\xc0*\\xa4\\xfc\\xa4\\xda]E@\\xaaa\\xbf\\'\\xd6\\xd0Q\\xc0>\\n\\xd7\\xa3p]E@j\\x9f\\x8e\\xc7\\x0c\\xd1Q\\xc0gM,\\xf0\\x15]E@\\xcf\\x9e\\xcb\\xd4$\\xd1Q\\xc0\\xd8\\x05\\x83k\\xee\\\\E@\\xd4D\\x9f\\x8f2\\xd1Q\\xc0\\x16\\x15q:\\xc9\\\\E@\\xfe\\x93\\xbf{G\\xd1Q\\xc0\\x80\\xd2P\\xa3\\x90\\\\E@\\xbb\\xd4\\x08\\xfdL\\xd1Q\\xc0\\xfe>\\xe3\\xc2\\x81\\\\E@\\x08\\x92w\\x0ee\\xd1Q\\xc0\\xfb\\xc0U\\x9e@\\\\E@\\xb2\\xf2\\xcb`\\x8c\\xd1Q\\xc0\\x19\\xd5\\xe9@\\xd6[E@UUh \\x96\\xd1Q\\xc0\\x1d\\x03\\xb2\\xd7\\xbb[E@\\x0e\\x14x\\'\\x9f\\xd1Q\\xc0\\xf45\\xcbe\\xa3[E@\\x90\\xbeI\\xd3\\xa0\\xd1Q\\xc0r\\xf3\\x8d\\xe8\\x9e[E@8c\\x98\\x13\\xb4\\xd1Q\\xc03\\xc4\\xb1.n[E@p\\x97\\xfd\\xba\\xd3\\xd1Q\\xc0\\x1f&\\xe1B\\x1e[E@\\x1e\\x10\\xe8L\\xda\\xd1Q\\xc09\\x01M\\x84\\r[E@\\xc5\\x90\\x9cL\\xdc\\xd1Q\\xc0\\x94\\xb4\\xe2\\x1b\\n[E@\\x87\\x13\\x98N\\x..."]
+lsad_code: TEXT | NULL | eg=["M3"]
+cbsa_code: TEXT | NULL | eg=["14460", "16980"]
+metdiv_code: TEXT | NULL | eg=["14454", "15764"]
+lsad_name: TEXT | NULL | eg=["Boston, MA Metro Division", "Cambridge-Newton-Framingham, MA Metro Division"]
+
+## GEO_US_BOUNDARIES.NATIONAL_OUTLINE
+aff_geo_id: TEXT | NULL
+us_outline_geom: BINARY | NULL
+name: TEXT | NULL
+geo_id: TEXT | NULL
+
+## GEO_US_BOUNDARIES.NWS_FORECAST_REGIONS
+fe_area: TEXT | NULL | eg=["nw"]
+name: TEXT | NULL | eg=["Perkins", "Butte"]
+cwa: TEXT | NULL | eg=["UNR", "LUB"]
+shape_geometry: BINARY | NULL | eg=["bytearray(b\"\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00X\\x00\\x00\\x00\\xa9\\x86\\xff\\x9f\\x03\\xafY\\xc0/.\\x00 \\xf6\\xf8F@\\xa8\\x86\\xff\\x9f#\\xb9Y\\xc0\\xc0\\x8d\\x00\\x80\\xf9\\xf8F@\\x1cY\\x00 U\\xbcY\\xc01.\\x00 \\xf6\\xf8F@\\xd8\\x97\\xff\\x9fI\\xbcY\\xc0\\xb0\\t\\x00`\\xc5\\xf7F@D\\xbb\\xff\\xffG\\xbcY\\xc0\\xa0h\\xff\\x1fA\\xf2F@D\\xbb\\xff\\xffG\\xbcY\\xc0\\x90\\xcd\\xff_\\x00\\xf0F@\\xd8\\xe6\\x00\\xa0N\\xbcY\\xc0\\x91\\xd3\\x00\\xe0\\x83\\xefF@\\x1cY\\x00 U\\xbcY\\xc0\\xa1\\xd4\\x00@\\xb6\\xecF@l\\x8f\\x01\\x80S\\xbcY\\xc0\\xc0\\x8d\\x00\\x80\\xb9\\xe4F@\\xac5\\x00\\xc0V\\xbcY\\xc0\\xa0\\xf1\\x00`\\x86\\xe1F@l\\x8f\\x01\\x80S\\xbcY\\xc0\\x08`\\xff\\x1f\\xae\\xe0F@l\\x8f\\x01\\x80S\\xbcY\\xc0\\xd0\\xab\\x00\\x00\\xbc\\xdeF@8i\\x00\\xc0h\\xbcY\\xc0\\x08\\x1d\\x00 \\xd0\\xddF@9i\\x00\\xc0\\xa8\\xbcY\\xc0\\x98v\\xff\\xff\\xcf\\xddF@\\x00f\\x00\\xa0\\xd1\\xbcY\\xc0\\x18\\x07\\x01\\xe0\\xb5\\xddF@d\\x14\\x00 \\xdd\\xbcY\\xc0\\x88\\xf2\\xfe\\xdf\\x1b\\xcdF@\\xd47\\x00\\x80\\xdb\\xbcY\\xc0\\xd8\\xd7\\x00`M\\xccF@\\xf4\\xf0\\xff\\xbf\\xde\\xbcY\\xc01\\xfc\\xfe?\\xe1\\xcbF@\\xf4\\xf0\\xff\\xbf\\xde\\xbcY\\xc0\\xd0\\x02\\x01`\\xec\\xc8F@D[\\x00\\xe0\\xd9\\xbcY\\xc0@\\x86\\x00\\xe0X\\xc8F@...", "bytearray(b\"\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x9e\\x00\\x00\\x00\\\\\\x05\\x00\\xe0\\xfb\\xf9Y\\xc0\\xf0\\x04\\x01 Q\\x9bF@\\xec\\xfe\\xff\\x9f\\xcd\\xfeY\\xc0\\x18\\x9b\\xff\\xbf@\\x9bF@|\\xdb\\xff?\\x8f\\x02Z\\xc0\\x18\\x9b\\xff\\xbf@\\x9bF@|\\xdb\\xff?\\x8f\\x02Z\\xc0\\xc0\\xaa\\x00\\xa0\\x89\\x91F@8i\\x00\\xc0\\x88\\x02Z\\xc0xl\\x00\\xe0_\\x8fF@8i\\x00\\xc0\\x88\\x02Z\\xc0\\x80\\x0f\\xff\\xff\\xab\\x8dF@|\\xdb\\xff?\\x8f\\x02Z\\xc0O>\\x00\\xc0)\\x8bF@|^\\x00\\x00\\x91\\x02Z\\xc0\\xc0>\\xff\\x7f\\x14\\x87F@\\x0c\\xb8\\xff\\xdf\\x90\\x02Z\\xc0\\x00\\x08\\xff_K\\x81F@\\xec\\xfe\\xff\\x9f\\x8d\\x02Z\\xc0\\xa0\\x1f\\xff\\x9f\\xdf\\x7fF@,`\\x01\\x00+\\x03Z\\xc0o\\x0c\\x01\\xc0\\xb1\\x7fF@X?\\x00 \\\\\\x03Z\\xc0\\x90-\\xff\\x7f\\xae\\x7fF@\\x94\\x85\\xff?\\xb1\\x03Z\\xc0x\\xe9\\xff\\x1f\\x9e\\x7fF@,\\x8e\\xff?\\xa4\\x03Z\\xc0 \\xcd\\x00\\xa0UxF@\\xecd\\x00@\\x9f\\x03Z\\xc0\\xb8i\\xff\\x7fswF@Y\\xbc\\xff_\\x9a\\x03Z\\xc0p\\xfd\\x00\\x80\\xb0rF@\\xa8\\xa3\\xff\\xbf\\x93\\x03Z\\xc0\\x90\\xcd\\xff_\\x00pF@\\\\\\x88\\x00\\xa0\\x9d\\x03Z\\xc0\\xd8(\\x00@\\xfanF@\\xc8\\xdf\\xff\\xbf\\x98\\x03Z\\xc0A\\x1a\\xff\\xbf\\xe3eF@\\x14J\\x00\\xe0\\x93\\x03Z\\xc0\\x00n\\xff\\xff<dF@\\x849\\x01\\x80\\x95\\x..."]
+shortname: TEXT | NULL | eg=["Perkins", "Butte"]
+lon: FLOAT | NULL | eg=[-102.4759, -103.5081]
+state: TEXT | NULL | eg=["SD", "TX"]
+state_zone: TEXT | NULL | eg=["SD002", "SD012"]
+zone: TEXT | NULL | eg=["002", "012"]
+time_zone: TEXT | NULL | eg=["M", "C"]
+lat: FLOAT | NULL | eg=[45.4904, 44.9058]
+
+## GEO_US_BOUNDARIES.RAILWAYS
+railway_geom: TEXT | NULL | eg=[{"type":"LineString","coordinates":[[-85.756163,30.789894],[-85.749904,30.79131299999999],[-85.74871499999999,30.79155899999999],[-85.74010599999998,30.79322499999998],[-85.73695699999999,30.793934],[-85.736812,30.79396699999999],[-85.735137,30.79429],[-85.73469899999999,30.79452799999998],[-85.730451,30.79541499999998],[-85.72664999999999,30.79618299999999],[-85.72593499999999,30.79632699999999],[-85.72435899999999,30.79647599999999],[-85.72298599999999,30.79634799999999],[-85.72159299999998,30.79626999999998],[-85.71938999999999,30.79606399999999],[-85.71445399999998,30.79571999999998],[-85.712805,30.79557799999998],[-85.70494399999998,30.79490399999998],[-85.702379,30.794684],[-85.69897499999999,30.79436199999998],[-85.69579699999998,30.79413699999998],[-85.69317199999999,30.79394299999998],[-85.69315299999998,30.79394199999999],[-85.69268699999999,30.79390899999998],[-85.687477,30.79337899999999],[-85.687269,30.793357],[-85.686022,30.79321999999999],[-85.685447,30.79305399999999..., {"type":"LineString","coordinates":[[-86.88663299999997,41.08432899999999],[-86.886527,41.08253899999999],[-86.886476,41.08166599999999],[-86.88644599999999,41.08072599999999],[-86.886437,41.07983],[-86.88639599999999,41.07893699999999],[-86.88622399999998,41.07485499999998],[-86.88606099999998,41.07129199999998],[-86.88602699999998,41.06489099999999],[-86.88579099999998,41.056159],[-86.88535499999999,41.04620599999999],[-86.885333,41.04552899999999],[-86.88475499999998,41.02705999999999],[-86.884726,41.026021],[-86.884312,41.01562399999999],[-86.884151,41.01248199999999],[-86.88374499999999,41.00551399999999],[-86.883698,41.00463699999999],[-86.883664,41.00250899999999],[-86.88362899999998,41.000039],[-86.883253,40.99828799999999],[-86.88332599999998,40.99808499999999],[-86.88297,40.988005],[-86.882913,40.98750499999999]]}]
+geo_id: NUMBER | NULL | eg=[11094844118, 110168314233]
+mtfcc_feature_class_code: TEXT | NULL | eg=["R1011"]
+full_name: TEXT | NULL | eg=["Louisville and Nashville RR"]
+
+## GEO_US_BOUNDARIES.STATES
+state_fips_code: TEXT | NULL | eg=["78", "60"]
+division_code: TEXT | NULL | eg=["0", "1"]
+area_water_meters: NUMBER | NULL | eg=[1550236199, 1307243751]
+int_point_lon: FLOAT | NULL | eg=[-64.9712508, -170.6682674]
+functional_status: TEXT | NULL | eg=["A"]
+int_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xb0\\x8d\\x1d\\xf9(>P\\xc0\\x8d\\x08\\xc6\\xc1\\xa5S2@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00t\\x7fPrbUe\\xc0\\x05\\xaa\\x7f\\x10\\xc9\\x88,\\xc0')"]
+geo_id: TEXT | NULL | eg=["78", "60"]
+state_gnis_code: TEXT | NULL | eg=["01802710", "01802701"]
+state: TEXT | NULL | eg=["VI", "AS"]
+region_code: TEXT | NULL | eg=["9", "1"]
+area_land_meters: NUMBER | NULL | eg=[348021896, 197759069]
+state_name: TEXT | NULL | eg=["United States Virgin Islands", "American Samoa"]
+int_point_lat: FLOAT | NULL | eg=[18.326748, -14.267159]
+state_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xd6\\x00\\x00\\x00\\x05h[\\xcd:=P\\xc0w\\xbc\\xc9o\\xd1\\xad1@\\xf5~\\xa3\\x1d7=P\\xc0\\x00\\'\\xdb\\xc0\\x1d\\xac1@\\\\\\xa9gA(=P\\xc0\\x03{L\\xa44\\xab1@\\x8b\\xa8\\x89>\\x1f=P\\xc0c\\'\\xbc\\x04\\xa7\\xaa1@\\xca\\x8a\\xe1\\xea\\x00=P\\xc0\\xbd\\xef\\xdf\\xbc8\\xa91@j\\xa3:\\x1d\\xc8<P\\xc0\\xbcS\\x01\\xf7<\\xa71@\\xf1\\x83\\xf3\\xa9c<P\\xc0b\\x84\\xf0h\\xe3\\xa41@\\xbaJw\\xd7\\xd9;P\\xc0\\x87\\xe0\\xb8\\x8c\\x9b\\xa21@7\\xd9\\x06\\xee@;P\\xc0\\x16\\xc7H\\xf6\\x08\\xa11@\\xb5\\xfc\\xc0U\\x9e:P\\xc0\\x01r\\x89#\\x0f\\xa01@\\x03A\\x80\\x0c\\x1d:P\\xc0\\xd9\\x13$\\xb6\\xbb\\x9f1@\\x02f\\xbe\\x83\\x9f9P\\xc0<\\x1aN\\x99\\x9b\\x9f1@1w-!\\x1f9P\\xc0\\x9d.\\x8b\\x89\\xcd\\x9f1@1!\\xe6\\x92\\xaa8P\\xc0\\xa2\\xdd\\xe8c>\\xa01@\\xdeP\\xf8l\\x1d8P\\xc0\\xa6\\xc14\\x0c\\x1f\\xa11@\\x0f\\x98\\x87L\\xf97P\\xc0ae4\\xf2y\\xa11@l<\\xd8b\\xb77P\\xc0\\xab\\x0f$\\xef\\x1c\\xa21@\\x9a\\x04oH\\xa37P\\xc0h\\xb1\\x14\\xc9W\\xa21@+hZbe7P\\xc0J3\\xdd\\xeb\\xa4\\xa21@\\xc1\\x8b\\xbe\\x8247P\\xc0GY\\xbf\\x99\\x98\\xa21@\\x1c\\x9a\\xb2\\xd3\\x0f7P\\xc0\\xf4\\xec\\xb9LM\\xa21@U\\xf9\\x9e\\x91\\x087P\\xc0uYLl>\\x...", "bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xf0\\x00\\x00\\x00\\xed\\xb9LM\\x82Ye\\xc0\\x94\\xf7q4G~,\\xc0\\xf9\\xa1\\xd2\\x88\\x99Ye\\xc0\\xf0\\x01\\xba/g~,\\xc0{0)>\\xbeYe\\xc0\\n\\x18]\\xde\\x1c~,\\xc0\\xf1\\xc2\\x9d\\x0b#Ze\\xc0trM\\x81\\xcc~,\\xc0tE)!XZe\\xc0\\x01\\x00\\x00\\x00\\x00\\x80,\\xc0T`\\xc8\\xeaVZe\\xc0L9&\\x8b\\xfb\\x7f,\\xc0\\xda\\xcb\\xb6\\xd3VZe\\xc0Q\\xf6]\\x11\\xfc\\x7f,\\xc0\\xa7\\xee\\x91\\xcdUZe\\xc0\\x01\\x00\\x00\\x00\\x00\\x80,\\xc0\\x8b\\x8e\\xab\\x91]Ze\\xc0Dd\\x1fdY\\x80,\\xc0\\x91\\x12\\x82UuZe\\xc0\\xd5\\\\n0\\xd4\\x81,\\xc0\\xbf\\xeet\\xe7\\x89Ze\\xc0\\x7f\\x15\\xe0\\xbb\\xcd\\x83,\\xc0\\xeb>\\xc7G\\x8bZe\\xc0i5\\xeb\\x8c\\xef\\x83,\\xc0iu9%\\xa0Ze\\xc0\\x02\\x9dI\\x9b\\xaa\\x83,\\xc0\\xdf\\x18\\x02\\x80\\xe3Ze\\xc0\\x03\\x8fo\\xef\\x1a\\x84,\\xc0\\x14\\x98N\\xeb6[e\\xc0\\xa9\\xb7\\xcdT\\x88\\x87,\\xc0\\x9d\\xf9\\x9c\\xbb][e\\xc0\\'\\xaf\\\\o\\x9b\\x89,\\xc0\\rW\\xce\\xde\\x99[e\\xc0\\x07\\xec1\\x91\\xd2\\x8c,\\xc0\\x8dDh\\x04\\x9b[e\\xc0\\\\\\x1c\\\\:\\xe6\\x8c,\\xc0\\x9d\\x85\\x04\\x8c\\xae[e\\xc0P\\xbb&\\xa45\\x8e,\\xc0\\x04YO\\xad\\xbe[e\\xc0Q\\x86\\xaa\\x98J\\x8f,\\xc0\\xddD\\xf4k\\xeb[e\\xc0r0b\\x9f..."]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G4000"]
+lsad_code: TEXT | NULL | eg=["00"]
+
+## GEO_US_BOUNDARIES.URBAN_AREAS
+internal_point_lat: FLOAT | NULL | eg=[34.2523074, 29.3882969]
+internal_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00gy\\xc3\"\\xab\\xcc]\\xc0\\xf7\\xc4\\xdf\\x9bK A@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xfa\\x80@g\\xd2\\xc1W\\xc0b\\xa3\\xf6lgc=@')"]
+internal_point_lon: FLOAT | NULL | eg=[-119.1979453, -95.028467]
+urban_area_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x03\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x000\\x00\\x00\\x00\\xeb\\xea\\x1c\\x03\\xb2\\xd3]\\xc0\\x99b\\x0e\\x82\\x8e.A@<\\xdd\\x07 \\xb5\\xd3]\\xc0\\xbf<d\\xca\\x87.A@r\\xd0\\xec\\xba\\xb7\\xd3]\\xc0\\xeb\\x9f\\xa7\\x01\\x83.A@\\xff\\xc0\\xe3\\xdb\\xbb\\xd3]\\xc0\\x85\\xed\\'c|.A@\\x94>;\\xe0\\xba\\xd3]\\xc0=u\\xacRz.A@\\xbd\\x05\\xa0Q\\xba\\xd3]\\xc0{\\xdbL\\x85x.A@\\xb3q\\x8b\\xf9\\xb9\\xd3]\\xc0\\x98(B\\xeav.A@q\\x82\\xfd\\xd7\\xb9\\xd3]\\xc04\\x97\\x1b\\x0cu.A@\\xcf\\x8a6\\xc7\\xb9\\xd3]\\xc0\\xc8\\'d\\xe7m.A@\\x82\\x16\\x120\\xba\\xd3]\\xc0e\\xfe\\xd17i.A@\\xa0\\xd2O8\\xbb\\xd3]\\xc0\\xc6\\xd63\\x84c.A@\\xf9\\x12*8\\xbc\\xd3]\\xc04\\xf5\\xbaE`.A@\\x8e\\\\7\\xa5\\xbc\\xd3]\\xc0.l\\xcdV^.A@u\\x00\\xc4]\\xbd\\xd3]\\xc0\\xc5\\x1do\\xf2[.A@-\\xeci\\x87\\xbf\\xd3]\\xc0\\xd4\\x9bQ\\xf3U.A@\\xd4\\xba\\rj\\xbf\\xd3]\\xc0\\x9e\\x8e\\xc7\\x0cT.A@g\\xf5\\x9c\\xf4\\xbe\\xd3]\\xc0Ew\\x10;S.A@MS\\x048\\xbd\\xd3]\\xc0Ew\\x10;S.A@\\xb2\\xb4Ss\\xb9\\xd3]\\xc0b\\\\qqT.A@\\xd2\\x01I\\xd8\\xb7\\xd3]\\xc0\\xeb\\xf7\\xc4:U.A@C\\x80\\x9aZ\\xb6\\xd3]\\xc09a\\xc2hV.A@\\x1cJ\\xedE\\xb4\\xd3]\\xc0\\xa3\\xaf \\xcdX.A@\\xe0K\\xe1A\\xb3\\xd3]\\xc0\\xea...", "bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x05\\x00\\x00\\x00\\x1f\\xb8\\xca\\x13\\x08\\xc5W\\xc0\\x11\\xb3^\\x0c\\xe5l=@\\xdd\\xc8<\\xf2\\x07\\xc5W\\xc0j?\\x19\\xe3\\xc3l=@D\\xbf\\xb6~\\xfa\\xc4W\\xc0\\xef\\x1d5&\\xc4l=@y\\xcc@e\\xfc\\xc4W\\xc0\\x11\\xb3^\\x0c\\xe5l=@\\x1f\\xb8\\xca\\x13\\x08\\xc5W\\xc0\\x11\\xb3^\\x0c\\xe5l=@\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x19\\x00\\x00\\x00\\x89\\x1e\\xf8\\x18\\xac\\xcbW\\xc09\\xa0l\\xca\\x15j=@\\x89\\x1e\\xf8\\x18\\xac\\xcbW\\xc0\\tR)v4j=@\\xe9&1\\x08\\xac\\xcbW\\xc0\\x0bk*\\x8b\\xc2j=@\\x01i\\xff\\x03\\xac\\xcbW\\xc0C$\\n-\\xebj=@,\\x0c\\x91\\xd3\\xd7\\xcbW\\xc0\\x16<L\\xfb\\xe6j=@\\xcf\\x88\\xd2\\xde\\xe0\\xcbW\\xc0\\xf2\\xfd\\xd4x\\xe9j=@?\\xfc\\xfc\\xf7\\xe0\\xcbW\\xc0\\xc9M\\xd4\\xd2\\xdcj=@2h\\xe8\\x9f\\xe0\\xcbW\\xc0\\xb1l\\xe6\\x90\\xd4j=@:?\\xc5q\\xe0\\xcbW\\xc0\\x02\\x0e\\xa1J\\xcdj=@\\x8d\\xb3\\xe9\\x08\\xe0\\xcbW\\xc0\\x99[!\\xac\\xc6j=@F\\xed~\\x15\\xe0\\xcbW\\xc0jscz\\xc2j=@\\x8e\\x99D\\xbd\\xe0\\xcbW\\xc0\\xcf\\xa0h\\x1e\\xc0j=@\\xe6\\xb0\\xfb\\x8e\\xe1\\xcbW\\xc0\\x847k\\xf0\\xbej=@\\xd9\\xe8\\x9c\\x9f\\xe2\\xcbW\\xc0\\x847k\\xf0\\xbej=@\\xdd\\x8b/\\xda\\xe3\\xcbW\\..."]
+geo_id: TEXT | NULL | eg=["66673", "87220"]
+name: TEXT | NULL | eg=["Oxnard, CA", "Texas City, TX"]
+functional_status: TEXT | NULL | eg=["S"]
+urban_area_code: TEXT | NULL | eg=["66673", "87220"]
+area_lsad_code: TEXT | NULL | eg=["75"]
+lsad_name: TEXT | NULL | eg=["Oxnard, CA Urbanized Area", "Texas City, TX Urbanized Area"]
+type: TEXT | NULL | eg=["U"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G3500"]
+area_land_meters: FLOAT | NULL | eg=[218825133.0, 196745523.0]
+area_water_meters: FLOAT | NULL | eg=[4464116.0, 3410156.0]
+
+## GEO_US_BOUNDARIES.ZIP_CODES
+area_land_meters: FLOAT | NULL | eg=[163966032.0, 201386989.0]
+internal_point_lat: FLOAT | NULL | eg=[38.7283373, 46.1459167]
+zip_code: TEXT | NULL | eg=["19933", "54517"]
+area_water_meters: FLOAT | NULL | eg=[472583.0, 11557340.0]
+zip_code_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\xb6\\x08\\x00\\x00U\\r\\xc2\\xdc\\xee\\xedR\\xc0\\x05\\xf1\\x81\\x1d\\xffaC@\\'\\xbdo|\\xed\\xedR\\xc0<\\xdb\\xa37\\xdcaC@\\xbf\\n\\xf0\\xdd\\xe6\\xedR\\xc0Cj\\xda\\xc54aC@!\\xaf\\x07\\x93\\xe2\\xedR\\xc0\\xe6\\xc4\\x1e\\xda\\xc7`C@\\xc3\\\\R\\xb5\\xdd\\xedR\\xc0\\rI-\\x94L`C@\\x07\\xb4t\\x05\\xdb\\xedR\\xc0\\xd1\\x00\\xde\\x02\\t`C@\\xe3\\xc0\\xab\\xe5\\xce\\xedR\\xc0\\xf6\\xe4a\\xa1\\xd6^C@O\\x91C\\xc4\\xcd\\xedR\\xc0\\x95\\x81\\x03Z\\xba^C@\\xcf\\x82P\\xde\\xc7\\xedR\\xc0\\x82\\x01\\x84\\x0f%^C@\\xde\\xe6\\x8d\\x93\\xc2\\xedR\\xc0\\x96\\xc9p<\\x9f]C@\\'I\\xd7L\\xbe\\xedR\\xc0\\x1a\\x0b\\n\\x832]C@\\x0b~\\x1bb\\xbc\\xedR\\xc0\\x92\\xfb\\x1d\\x8a\\x02]C@\\xc7\\xefm\\xfa\\xb3\\xedR\\xc0q\\x1b\\r\\xe0-\\\\C@\\xbc\\x8f\\xa39\\xb2\\xedR\\xc0o?\\xe0\\x81\\x01\\\\C@\\xd5\\xeb\\x16\\x81\\xb1\\xedR\\xc0\\x08\\xa4\\xc4\\xae\\xed[C@\\x17@\\xf8P\\xa2\\xedR\\xc0\\x0f\\xd4)\\x8fnZC@<J%<\\xa1\\xedR\\xc0\\x81\\xa9f\\xd6RZC@k\\xce\\xc13\\xa1\\xedR\\xc0\\x17\\'\\xbe\\xdaQZC@\\xe2\\x18\\xc9\\x1e\\xa1\\xedR\\xc0\\xbeCQ\\xa0OZC@\\x15m\\x8es\\x9b\\xedR\\xc0\\xf6\\x90\\xf0\\xbd\\xbfYC@\\x122\\x90g\\x97\\xedR\\xc0f\\x97o}XYC@\\xfe\\r\\xda\\xab\\x8f\\xedR\\xc0N\\x...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00>\\x0c\\x00\\x00\\xc1\\xc3\\xb4o\\xee\\xc2V\\xc0\\xf5H\\x83\\xdb\\xda\\x08G@\\xa3\\xaa\\t\\xa2\\xee\\xc2V\\xc0\\xb9Jw\\xd7\\xd9\\x08G@\\xc7\\x9a\\x91A\\xee\\xc2V\\xc0U\\x85\\x06b\\xd9\\x08G@\\xc9\\xb46\\x8d\\xed\\xc2V\\xc0\\x95t\\x94\\x83\\xd9\\x08G@\\x92sb\\x0f\\xed\\xc2V\\xc0\\x0c\\xa5\\xf6\"\\xda\\x08G@\\x0f\\xaf\\xeb\\x17\\xec\\xc2V\\xc0\\x8eO\\xc8\\xce\\xdb\\x08G@\\x1c]\\xa5\\xbb\\xeb\\xc2V\\xc0iE\\x9b\\xe3\\xdc\\x08G@X\\x8f\\xfbV\\xeb\\xc2V\\xc0~\\xb0\\x8c\\r\\xdd\\x08G@c=\\xb5\\xfa\\xea\\xc2V\\xc0~\\xb0\\x8c\\r\\xdd\\x08G@\\x1d\\x91\\xefR\\xea\\xc2V\\xc0u\\xf3T\\x87\\xdc\\x08G@|\\xb3\\xcd\\x8d\\xe9\\xc2V\\xc05\\x04\\xc7e\\xdc\\x08G@\\x94)\\xe6 \\xe8\\xc2V\\xc0\\xbd\\x9f\\x1a/\\xdd\\x08G@\\x9c\\x1ah>\\xe7\\xc2V\\xc0W\\xa6_\"\\xde\\x08G@\\x96]0\\xb8\\xe6\\xc2V\\xc0\\xca\\x19\\x8a;\\xde\\x08G@\\xfa<Fy\\xe6\\xc2V\\xc0G;n\\xf8\\xdd\\x08G@\\x9c4\\r\\x8a\\xe6\\xc2V\\xc0\\xb8\\xe2\\xe2\\xa8\\xdc\\x08G@\\x01\\xfa}\\xff\\xe6\\xc2V\\xc0=)\\x93\\x1a\\xda\\x08G@\\xb3B\\x91\\xee\\xe7\\xc2V\\xc0\\xef\\xbf\\x95\\xec\\xd8\\x08G@4\\xedb\\x9a\\xe9\\xc2V\\xc0\\x7f\\x80\\xb5j\\xd7\\x08G@v\\xa8\\xa6$\\xeb\\xc2V\\xc0U\\xed\\x9a\\x90\\xd6\\x08G@\\x04\\x1b\\xd7..."]
+fips_class_code: TEXT | NULL | eg=["B5"]
+state_code: TEXT | NULL | eg=["DE", "WI"]
+state_fips_code: TEXT | NULL | eg=["10", "55"]
+county: TEXT | NULL | eg=["Sussex County", "Ashland County"]
+functional_status: TEXT | NULL | eg=["S"]
+state_name: TEXT | NULL | eg=["Delaware", "Wisconsin"]
+internal_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x96m\\xf1:\\xac\\xe7R\\xc0~\\xfa\\x19(:]C@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x10\\xec\\xf8/\\x90\\xbbV\\xc0Z8\\xffe\\xad\\x12G@')"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G6350"]
+internal_point_lon: FLOAT | NULL | eg=[-75.6198871, -90.9306755]
+city: TEXT | NULL | eg=["Seaford city, Bridgeville town", "Clam Lake CDP"]
+
+## NOAA_HURRICANES.HURRICANES
+bom_tnum: FLOAT | NULL
+ds824_pressure: NUMBER | NULL
+reunion_latitude: FLOAT | NULL | eg=[NaN, -12.7867]
+bom_r50_ne: NUMBER | These are the mean radius (from the system centre) of the extent of winds; storm-force (25m/s) or above. Northeast quadrant.
+iflag: TEXT | Interpolation Flag A 14 character flag string which denotes the source of each agency's report: Interpolation Flags include: _ == missing reports. No information provided. O == original report as provided by the agency. P == position was interpolated (all variables were interpolated/filled/nincluding intensity) I == Position was provided/nbut Intensity variables (and likely other variables) were interpolated/filled V = Position and intensity variables are original but some variables were interpolated/filled. The order of the 14 characters refers to the following 14 datasets: 1 - USA Agency (see column 18) 2 - Tokyo 3 - CMA 4 - HKO 5 - NewDelhi 6 - Reunion 7 - BoM 8 - Nadi 9 - Wellington 10 - ds824 11 - TD9636 12 - TD9635 13 - Neumann Southern Hemisphere data set 14 - M.L. Chenoweth N Atlantic Historic dataset | eg=["_________O____", "_____P____P___"]
+season: TEXT | NULL | eg=["1903"]
+bom_eye: NUMBER | Mean radius of the cyclone eye.
+usa_r50_sw: NUMBER | – 50 kt wind radii maximum extent in southwestern quadrant
+nature: TEXT | Combined storm type. This is assigned based on all available storm types. They include: DS - Disturbance TS - Tropical ET - Extratropical SS - Subtropical NR - Not reported MX - Mixture (contradicting nature reports from different agencies) | eg=["TS", "NR"]
+hko_pressure: NUMBER | NULL
+reunion_longitude: FLOAT | NULL | eg=[NaN, 56.2618]
+bom_r64_nw: NUMBER | These are the mean radius (from the system centre) of the extent of winds; hurricane-force (33m/s) or above. Northwest quadrant
+usa_r50_ne: NUMBER | 50 kt wind radii maximum extent in northeastern quadrant
+nadi_pressure: NUMBER | NULL
+newdelhi_ci: FLOAT | NULL
+bom_r50_sw: NUMBER | These are the mean radius (from the system centre) of the extent of winds; storm-force (25m/s) or above. Southwest quadrant.
+reunion_wind: NUMBER | Maximum average wind speed
+mlc_class: TEXT | Storm classification EX - Extratropical HU - Hurricane LO - Low MH SD - Subtropical depression SS - Subtropical storm TD - Tropical Depression TS - Tropical Storm TW WV - Open Wave | eg=[" "]
+bom_type: NUMBER | This indicates the type of system that this cyclone was at the time of the observation. Note that cyclones can evolve during their lifetimes and hence change type mid-stream (e.g. Extratropical transition (ETT))
+reunion_r34_nw: NUMBER | 34 kt wind radii maximum extent in northwestern quadrant
+newdelhi_dp: NUMBER | NULL
+td9635_latitude: FLOAT | Latitude from Dataset of a collection of western Pacific Storms (~1945-1976)
+reunion_r50_sw: NUMBER | 50 kt wind radii maximum extent in southwestern quadrant
+usa_r34_se: NUMBER | 34 kt wind radii maximum extent in southeastern quadrant
+bom_poci: NUMBER | Environmental pressure in which the cyclone is embedded
+reunion_r34_ne: NUMBER | 34 kt wind radii maximum extent in northeastern quadrant
+usa_r34_nw: NUMBER | – 34 kt wind radii maximum extent in northwestern quadrant
+mlc_wind: NUMBER | NULL
+bom_r64_se: NUMBER | These are the mean radius (from the system centre) of the extent of winds; hurricane-force (33m/s) or above. Southeast quadrant
+reunion_r50_ne: NUMBER | 50 kt wind radii maximum extent in northeastern quadrant
+neumann_pressure: NUMBER | NULL
+usa_r64_ne: NUMBER | – 64 kt wind radii maximum extent in northeastern quadrant
+ds824_wind: NUMBER | NULL
+hko_wind: NUMBER | NULL
+hko_cat: TEXT | After 2009/nwe further classified two more storm types above typhoon/nso there are in total 7 storm types LW (Low) <22 kt TD (Tropical Depression) 22 – 33 kt TS (Tropical Storm) 34 – 47 kt STS (Severe Tropical Storm) 48 – 63 kt T (Typhoon) 64 – 80 kt ST (Severe Typhoon) 81 – 99 kt SuperT (Super Typhoon) >= 100 kt | eg=[" "]
+bom_pos_method: NUMBER | This indicates the tools that were used to derive the centre location of the system. ADAM Code Method to derive position NULL Default - unknown 1 no sat/nno rad/nno obs 2 no sat/nno rad/nobs only 3 Sat IR/Vis; no clear eye 4 Sat IR/Vis; clearly defined eye 5 aircraft radar report 6 land-based radar report 7 Sat IR/Vis & rad & obs 8 report inside eye 10 Sat- Scatterometer 11 Sat- Microwave 12 Manned Aircraft Reconnaissance 13 UAV Aircraft Reconnaissance
+cma_cat: NUMBER | Intensity category according to the Chinese National Standard for Grade of Tropical Cyclones (which has been used since 15 June 2006): 0 –– Weaker than Tropical Depression or unknown intensity; 1 –– Tropical Depression (TD: 10.8–17.1 m/s); 2 –– Tropical Storm (TS:17.2–24.4 m/s); 3 –– Severe Tropical Storm (STS: 24.5–32.6 m/s); 4 –– Typhoon (TY: 32.7–41.4 m/s); 5 –– Severe Typhoon (STY: 41.5–50.9 m/s); 6 –– Super Typhoon (SuperTY: ≥51.0 m/s); 9 –– Extratropical Cyclone (ET) stage.
+basin: TEXT | Basins include: NA - North Atlantic EP - Eastern North Pacific WP - Western North Pacific NI - North Indian SI - South Indian SP - Southern Pacific SA - South Atlantic MM - Missing - should not appear in final IBTrACS product | eg=["SI", "WP"]
+bom_latitude: FLOAT | Latitude from Australian Bureau of Meterology
+ds824_longitude: FLOAT | Longitude from DataSet 824 - A historic dataset with data from the 1800s through 1980(ish) | eg=[49.7, NaN]
+usa_r64_se: NUMBER | 64 kt wind radii maximum extent in southeastern quadrant
+usa_eye: TEXT | eye diameter/n0 - 120 n mi. NOT BEST TRACKED (not reanalyzed) | eg=[" "]
+newdelhi_pressure: NUMBER | NULL
+iso_time: NUMBER | ISO Time provided in Universal Time Coordinates (UTC). Format is YYYY-MM-DD HH:mm:ss Most points are provided at 6 hour intervals. Some agencies provided 3 hour points (e.g./nNew Delhi) or times at important observations (e.g./nlandfall times in the North Atlantic/netc.). | eg=[-2107512000000000, -2107371600000000]
+tokyo_longitude: FLOAT | NULL
+reunion_tnum: FLOAT | Dvorak T-number | eg=[NaN, 9.9]
+bom_r34_sw: NUMBER | This is the mean radius (from the system centre) of the extent of winds; gale-force (17m/s) or above. The four sectors show the mean extent in the respective quadrant centred on the cardinal point. Southwest quadrant
+usa_r64_nw: NUMBER | 64 kt wind radii maximum extent in northwestern quadrant
+tokyo_r30_long: NUMBER | The longest radius of 30kt winds or greater
+wmo_agency: TEXT | This is the reporting agency responsible for the basin as currently listed. It should be noted that many of the agencies did not accept official WMO responsibility until relatively recently/ne.g./nLa Reunion in 1993 or IMD in 1990. Therefore the WMO agency is used loosely todescribe the currently reponsible agency. | eg=[" ", "reunion"]
+subbasin: TEXT | Subbasins include: MM - missing - no sub basin for this basin (no subbasins provided for WP/nSI) CS - Caribbean Sea GM - Gulf of Mexico CP - Central Pacific BB - Bay of Bengal AS - Arabian Sea WA - Western Australia EA - Eastern Australia | eg=["MM"]
+longitude: FLOAT | NULL | eg=[49.7, 56.1095]
+bom_r34_nw: NUMBER | This is the mean radius (from the system centre) of the extent of winds; gale-force (17m/s) or above. The four sectors show the mean extent in the respective quadrant centred on the cardinal point. Northwest quadrant
+cma_pressure: NUMBER | Minimum pressure (hPa) near the TC center.
+cma_latitude: FLOAT | Latitude from Chinese Meteorological Administration data from Shanghai Typhoon Institute
+bom_r64_ne: NUMBER | These are the mean radius (from the system centre) of the extent of winds; hurricane-force (33m/s) or above. Northeast quadrant
+bom_r34_se: NUMBER | This is the mean radius (from the system centre) of the extent of winds; gale-force (17m/s) or above. The four sectors show the mean extent in the respective quadrant centred on the cardinal point. Southeast quadrant
+usa_r50_nw: NUMBER | 50 kt wind radii maximum extent in northwestern quadrant
+tokyo_latitude: FLOAT | NULL
+usa_r50_se: NUMBER | – 50 kt wind radii maximum extent in southeastern quadrant
+wellington_latitude: FLOAT | NULL
+usa_roci: NUMBER | radius of the last closed isobar/n0 - 999 n mi. NOT BEST TRACKED (not reanalyzed)
+td9635_wind: FLOAT | NULL
+usa_agency: TEXT | The agency file providing the information: The representative US agency data is derived from a hierarchical selection: the first dataset in the following list to provide information at the given time is used as the USA_agency: - HURDAT_ATL - HURSAT_EPA - ATCF (for NA and EP basins only) - JTWC_WP - JTWC_IO - JTWC_EP - JTWC_CP - JTWC_SH - CPHC [separate file provided by CPHC for years TBD] - tcvitals - THIS INDICATES THAT THE DATA ARE PRELIMINARY While these agencies are generally orthogonal/nthere are cases where a system is provided in more than one source. In this case/nthe report from the highest source is used. ATCF format info from: https://www.nrlmry.navy.mil/atcf_web/docs/database/new/abdeck.txt HURDAT2 info from: http://www.nhc.noaa.gov/data/hurdat/hurdat2-format-atlantic.pdf | eg=[" "]
+landfall: NUMBER | Nearest location to land within next 6 hours. This can be thought of a landfall flag: =0 -- Landfall within 6 hours. >0 -- No landfall within next 6 hours. Calculations are based on storm center (columns 9,10). Values less than 60 nmile likely are impacted by the system even though the center of the system is not over land. The uses the same land mask as DIST2LAND. | eg=[539.0, 656.0]
+usa_longitude: FLOAT | NULL
+wmo_pressure: NUMBER | NULL
+td9635_longitude: FLOAT | Longitude from Dataset of a collection of western Pacific Storms (~1945-1976)
+latitude: FLOAT | NULL | eg=[-29.3, -12.8829]
+usa_status: TEXT | Status of system. Options are:  DB - disturbance/n TD - tropical depression/n TS - tropical storm/n TY - typhoon/n ST - super typhoon/n TC - tropical cyclone/n HU,HR - hurricane/n SD - subtropical depression/n SS - subtropical storm/n EX - extratropical systems/n PT - post tropical/n IN - inland/n DS - dissipating/n LO - low/n WV - tropical wave/n ET - extrapolated/n MD - monsoon depression/n XX - unknown. | eg=[" "]
+nadi_wind: NUMBER | NULL
+sid: TEXT | Storm Identifier. | eg=["1903070S13057", "1903080S12057"]
+usa_r34_sw: NUMBER | – 34 kt wind radii maximum extent in southwestern quadrant
+wmo_wind: NUMBER | Maximum sustained wind speed from the WMO agency for the current location. NO adjustment is made for differences in wind speed averaging periods. hurdat/atcf = North Atlantic - U.S. Miami (NOAA NHC) - 1-minute winds tokyo = RSMC Tokyo (JMA) - 10-minute newdelhi = RSMC New Delhi (IMD) - 3-minute reunion = RSMC La Reunion (MFLR) - 10 minute bom = Australian TCWCs (TCWC Perth/nDarwin/nBrisbane) - 10-minute nadi = RSMC Nadi (FMS) - 10 minute wellington = TCWC Wellington (NZMS) - 10-minute
+usa_pressure: NUMBER | Minimum central pressure (mb)
+tokyo_r30_short: NUMBER | The shortest radius of 30kt winds or greater
+reunion_r34_sw: NUMBER | 34 kt wind radii maximum extent in southwestern quadrant
+nadi_longitude: FLOAT | Longitude from Fiji Meteorological Service data from RSMC Hadi
+tokyo_r50_short: NUMBER | The shortest radius of 50kt winds or greater
+usa_r34_ne: NUMBER | – 34 kt wind radii maximum extent in northeastern quadrant
+bom_pressure_method: NUMBER | This code may need to be expanded to handle new systems in the future/nand also to differentiate between pressure-wind relationships used to derive the central pressure. ADAM code Method WMO Code NULL Unknown or N/A 1 Aircraft or Dropsonde  observation 1 2 Over water observation (e.g.  buoy) 2 3 Over land observation 3 4 Instrument – unknown type 5 5 Derived Directly from DVORAK 4 6 Derived from wind via a P-W  equation 5 7 Estimate from surrounding obs 5 8 Extrapolation from radar 5 9 Other 5
+usa_rmw: NUMBER | radius of max winds/n0 - 999 n mi. NOT BEST TRACKED (not reanalyzed)
+mlc_pressure: NUMBER | NULL
+track_type: TEXT | Track type Tropical storms can interact. This identifies : PROVISIONAL - Real time data used to populate the position and other parameters of this system. This is a provisional track that will be replaced when reanalysis of the storm is performed. (Usually within 2 years of the storm's occurence) main - primary track associated with a storm system. spur - usually short lived tracks associated with a main track and either represent alternate positions at the beginning of a system. Can also represent actual system interactions (e.g./nFujiwhara interactions). | eg=["main"]
+ds824_latitude: FLOAT | Latitude from DataSet 824 - A historic dataset with data from the 1800s through 1980(ish) | eg=[-29.3, NaN]
+usa_record: TEXT | Record identifier (see notes below) C – Closest approach to a coast/nnot followed by a landfall G – Genesis I – An intensity peak in terms of both pressure and wind L – Landfall (center of system crossing a coastline) P – Minimum in central pressure R – Provides additional detail on the intensity of the cyclone when rapid changes are underway S – Change of status of the system T – Provides additional detail on the track (position) of the cyclone W – Maximum sustained wind speed | eg=[" "]
+reunion_r64_nw: NUMBER | 64 kt wind radii maximum extent in northwestern quadrant
+usa_r64_sw: NUMBER | – 64 kt wind radii maximum extent in southwestern quadrant
+tokyo_grade: NUMBER | <Grade> 1 : Not used  2 : Tropical Depression (TD)  3 : Tropical Storm (TS)  4 : Severe Tropical Storm (STS)  5 : Typhoon (TY)  6 : Extratropical Cyclone (L)  7 : Just entering into the responsible area of  Japan Meteorological Agency (JMA)  8 : Not used  9 : Tropical Cyclone of TS intensity or higher
+newdelhi_latitude: FLOAT | NULL
+cma_longitude: FLOAT | Longitude from Chinese Meteorological Administration data from Shanghai Typhoon Institute
+tokyo_r50_longitude: NUMBER | The longest radius of 50kt winds or greater
+hko_latitude: TEXT | Latitude from Hong Kong Observatory | eg=[" "]
+etl_timestamp: NUMBER | Load time for this data row | eg=[1729218710034723]
+cma_wind: NUMBER | Two-minute mean maximum sustained wind (MSW; m/s) near the TC center. WND = 9 indicates MSW < 10 m/s/nWND = 0 indicates unknown intensity
+usa_atcf_id: TEXT | The ATCF ID is assigned by US agencies and can be used to comparethe storm with other US cyclone-related datasets. If two (or more) ATCF tracks make up one storm/nthen the IDs are separated by a colon. The format of the ATCF ID is B<bb><nn><yyyy> where bb is the basin ID/nnn is the number of the storm in that basin and yyyy is the year. Possible basin values are: AL: North Atlantic/nSL: South Atlantic/nEP: East Pacific/nWP: West Pacific/nSH: Southern Hemisphere/nIO: North Indian For the provisional data/nother basin identifiers were provided that include: CP: Central Pacific/nSP: South Pacific/nSI: South Indian/nAS: Arabian Sea (North Indian) and BB: Bay of Bengal (North Indian) | eg=[" "]
+reunion_r64_sw: NUMBER | 64 kt wind radii maximum extent in southwestern quadrant
+tokyo_wind: NUMBER | Maximum sustained wind speed [10-min averaging period]
+wellington_longitude: FLOAT | NULL
+ds824_stage: TEXT | TC - Tropical cyclone | eg=["TC", " "]
+reunion_r50_se: NUMBER | 50 kt wind radii maximum extent in southeastern quadrant
+reunion_r34_se: NUMBER | 34 kt wind radii maximum extent in southeastern quadrant
+newdelhi_poci: NUMBER | NULL
+reunion_r64_ne: NUMBER | 64 kt wind radii maximum extent in northeastern quadrant
+nadi_latitude: FLOAT | Latitude from Fiji Meteorological Service data from RSMC Hadi
+neumann_latitude: FLOAT | NULL
+source_url: TEXT | Source | eg=["https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/csv/ibtracs.ALL.list.v04r00.csv"]
+newdelhi_longitude: FLOAT | NULL
+usa_latitude: FLOAT | NULL
+bom_r50_se: NUMBER | These are the mean radius (from the system centre) of the extent of winds; storm-force (25m/s) or above. Southeast quadrant.
+reunion_pressure: NUMBER | Central pressure
+td9636_pressure: NUMBER | NULL
+td9636_wind: NUMBER | Estimated highest wind speed at the time indicated. These estimates are subjective and must be interpreted with caution.
+td9636_longitude: FLOAT | Longitude from Dataset of a collection of global storms (1842-1980) | eg=[NaN, 55.9572]
+bom_roci: NUMBER | The estimated mean radius of the outermost closed isobar (1-hPa spacing).
+wellington_wind: NUMBER | NULL
+bom_r34_ne: NUMBER | This is the mean radius (from the system centre) of the extent of winds; gale-force (17m/s) or above. The four sectors show the mean extent in the respective quadrant centred on the cardinal point. Northeast quadrant
+mlc_longitude: FLOAT | Longitude from Mike Chenoweth data with updated data for the North Atlantic for the 1800s.
+bom_ci: FLOAT | NULL
+neumann_class: TEXT | EX - Extratropical TC - Tropical MM - Missing | eg=[" "]
+reunion_rmw: NUMBER | Radius of maximum winds
+hko_longitude: FLOAT | Longitude from Hong Kong Observatory
+reunion_r64_se: NUMBER | 64 kt wind radii maximum extent in southeastern quadrant
+name: TEXT | Name provided by the agency. IBTrACS ignores most names that include digits or abbreviations. | eg=["NOT_NAMED"]
+tokyo_r50_dir: NUMBER | 1 : Northeast (NE)  2 : East (E)  3 : Southeast (SE)  4 : South (S)  5 : Southwest (SW)  6 : West (W)  7 : Northwest (NW)  8 : North (N)  9 : (symmetric circle)
+usa_wind: NUMBER | Maximum sustained wind speed in knots: 0 - 300 kts.
+newdelhi_grade: TEXT | Types of disturbances: Low pressure area W<17 knots D - Depression 17<=W<28 DD - Deep Depression 28<=W<34 CS - Cyclonic Storm 34<=W<48 SCS - Severe Cyclonic Storm 48<=W<64 VSCS - Very Severe Cyclonic Storm 64<=W<120 SCS - Super Cyclonic Storm W>=120 knots | eg=[" "]
+td9635_roci: NUMBER | Size. (Radius of system)
+bom_wind: NUMBER | This is the estimated maximum mean wind around the cyclone – that is in the vicinity of the centre.
+reunion_ci: FLOAT | Dvorak CI-number
+reunion_type: NUMBER | 01= tropics; disturbance ( no closed isobars)  02= <34 knot winds/n<17m/s winds and at least one closed isobar  03= 34-63 knots/n17-32m/s  04= >63 knots/n>32m/s  05= extratropical  06= dissipating  07= subtropical cyclone (nonfrontal/nlow pressure system that comprises  initially baroclinic circulation developing over subtropical water)  08= overland  09= unknown | eg=[NaN, 99.0]
+mlc_latitude: FLOAT | Latitude from Mike Chenoweth data with updated data for the North Atlantic for the 1800s.
+tokyo_land: NUMBER | <Indicator of landfall or passage>  Landfall or passage over the Japanese islands occurred within  one hour after the time of the analysis with this indicator.
+bom_rmw: NUMBER | This is the mean radius (from the system centre) of the maximum mean wind.
+usa_sshs: NUMBER | Saffir-Simpson Hurricane Scale information based on the wind speed provided by the US agency wind speed (US agencies provide 1-minute wind speeds) -5 = Unknown [XX] -4 = Post-tropical [EX/nET/nPT] -3 = Miscellaneous disturbances [WV/nLO/nDB/nDS/nIN/nMD] -2 = Subtropical [SS/nSD] Tropical systems classified based on wind speeds [TD/nTS/nHU/nTY,/nTC/nST/nHR]  -1 = Tropical depression (W<34)  0 = Tropical storm [34<W<64]  1 = Category 1 [64<=W<83]  2 = Category 2 [83<=W<96]  3 = Category 3 [96<=W<113]  4 = Category 4 [113<=W<137]  5 = Category 5 [W >= 137] | eg=[-5]
+reunion_r50_nw: NUMBER | 50 kt wind radii maximum extent in northwestern quadrant
+wellington_pressure: NUMBER | NULL
+bom_pressure: NUMBER | Central pressure of the cyclone
+td9635_pressure: NUMBER | NULL
+tokyo_pressure: NUMBER | Central pressure
+nadi_cat: NUMBER | Nadi assigned category
+td9636_stage: NUMBER | This field gives an estimate of the highest winds occurring in the storm at the time and location indicated. The entire storm was coded as to the highest stage reached for some of the earlier years. 0 - Tropical disturbance (1969 onward) 1 - depression < 34 [some variation in definition for S Indian] 2 - Storm 34-63 [with some variation in definition for S Indian] 3 - point where wind reached 64 knots [except N Indian where it is wind 43-47 knots] 4 - Hurricane > 64 [except in N Indian/nWind > 48] 5 - Extratropical 6 - Dissipating 7 - Unknown Intensity or doubtful track | eg=[NaN, 7.0]
+tokyo_r30_dir: NUMBER | 1 : Northeast (NE)  2 : East (E)  3 : Southeast (SE)  4 : South (S)  5 : Southwest (SW)  6 : West (W)  7 : Northwest (NW)  8 : North (N)  9 : (symmetric circle)
+number: NUMBER | The cardinal number of the system for that season. The count includes all basins/nso this will not be continuous for basin files. | eg=[22, 23]
+newdelhi_wind: NUMBER | NULL
+bom_r50_nw: NUMBER | These are the mean radius (from the system centre) of the extent of winds; storm-force (25m/s) or above. Northwest quadrant.
+usa_poci: NUMBER | pressure in millibars of the last closed isobar/n900 - 1050 mb NOT BEST-TRACKED (not reanalyzed)
+bom_longitude: FLOAT | Longitude from Australian Bureau of Meterology
+bom_r64_sw: NUMBER | These are the mean radius (from the system centre) of the extent of winds; hurricane-force (33m/s) or above. Southwest quadrant
+dist2land: NUMBER | Distance to land from the current position. The land dataset includes all continents and any islands larger than XX. The distance is the nearest at the present time in any direction. | eg=[539, 656]
+td9636_latitude: FLOAT | Latitude from Dataset of a collection of global storms (1842-1980) | eg=[NaN, -12.9791]
+neumann_wind: NUMBER | NULL
+neumann_longitude: FLOAT | NULL

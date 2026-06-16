@@ -1,0 +1,47 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: CITY_LEGISLATION.CITIES_CURRENCIES
+Columns: currency_code, country_code_2, currency_id, currency_name
+
+Table: CITY_LEGISLATION.ALIEN_DATA
+Columns: occupation, age, type, gender, country, email, current_location, first_name, feeding_frequency, state, favorite_food, last_name, id, us_region, birth_year, aggressive
+
+Table: CITY_LEGISLATION.ALIENS_LOCATION
+Columns: country, occupation, current_location, loc_id, state
+
+Table: CITY_LEGISLATION.CITIES
+Columns: capital, insert_date, city_id, country_code_2, city_name, longitude, latitude, population
+
+Table: CITY_LEGISLATION.CITIES_LANGUAGES
+Columns: language_id, language, country_code_2
+
+Table: CITY_LEGISLATION.SKILLS_JOB_DIM
+Columns: skill_id, job_id
+
+Table: CITY_LEGISLATION.LEGISLATORS_TERMS
+Columns: rss_url, term_start, term_end, phone, term_number, party, id_bioguide, contact_form, term_id, district, fax, state_rank, state, class, address, caucus, office, url, how, term_type
+
+Table: CITY_LEGISLATION.CITIES_COUNTRIES
+Columns: country_name, intermediate_region, country_id, sub_region, country_code_2, created_on, region, country_code_3
+
+Table: CITY_LEGISLATION.JOB_POSTINGS_FACT
+Columns: job_schedule_type, job_location, job_posted_date, job_title_short, job_work_from_home, job_id, salary_hour_avg, salary_year_avg, company_id, job_title, job_health_insurance, search_location, salary_rate, job_no_degree_mention, job_country, job_via
+
+Table: CITY_LEGISLATION.ALIENS_DETAILS
+Columns: detail_id, favorite_food, feeding_frequency, aggressive
+
+Table: CITY_LEGISLATION.ALIENS
+Columns: email, first_name, gender, birth_year, id, type, last_name
+
+Table: CITY_LEGISLATION.LEGISLATORS
+Columns: id_google_entity_id, birthday, id_fec_0, id_opensecrets, other_names_end, id_house_history, other_names_middle, nickname, id_thomas, id_cspan, gender, id_wikipedia, first_name, id_bioguide_previous_0, id_fec_2, other_names_last, id_bioguide, last_name, id_govtrack, id_icpsr, id_lis, full_name, id_fec_1, id_wikidata, middle_name, id_house_history_alternate, id_ballotpedia, suffix, id_votesmart
+
+Table: CITY_LEGISLATION.LEGISLATION_DATE_DIM
+Columns: month_name, day_of_month, date
+
+Table: CITY_LEGISLATION.JOB_COMPANY
+Columns: name, thumbnail, link_google, company_id, link
+
+Table: CITY_LEGISLATION.SKILLS_DIM
+Columns: type, skills, skill_id

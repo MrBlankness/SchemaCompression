@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq415",
+  "question": "List the top 10 samples in the genome data that have the highest number of positions where there is exactly one alternate allele and the sample's genotype is homozygous for the reference allele (both alleles are 0). Order the results in descending order of these counts.",
+  "db_id": "HUMAN_GENOME_VARIANTS",
+  "source_document": "Homozygous_Reference_Genotype.md",
+  "evidence": "Homozygous reference genotype (hom_RR): both alleles identical to reference allele. Genotype representation: `0/0` or `0|0` where `0` denotes reference allele. Opposite of homozygous alternate (hom_AA) or heterozygous (het_RA). Example: sample genotype `0/0` = homozygous reference genotype at that locus. Use: count number of hom_RR genotypes across loci for individual."
+}

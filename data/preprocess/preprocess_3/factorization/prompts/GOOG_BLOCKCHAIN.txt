@@ -1,0 +1,95 @@
+[COMPONENTS]
+@C1
+base_fee_per_gas: NUMBER | NULL
+difficulty: TEXT | NULL
+extra_data: TEXT | NULL
+gas_limit: NUMBER | NULL
+gas_used: NUMBER | NULL
+logs_bloom: TEXT | NULL
+miner: TEXT | NULL
+mix_hash: TEXT | NULL
+parent_hash: TEXT | NULL
+receipts_root: TEXT | NULL
+size: NUMBER | NULL
+state_root: TEXT | NULL
+total_difficulty: TEXT | NULL
+transactions_root: TEXT | NULL
+uncles: TEXT | NULL
+uncles_sha3: TEXT | NULL
+
+@C2
+access_list: TEXT | NULL
+from_address: TEXT | NULL
+gas: NUMBER | NULL
+gas_price: TEXT | NULL
+input: TEXT | NULL
+max_fee_per_gas: NUMBER | NULL
+max_priority_fee_per_gas: NUMBER | NULL
+r: TEXT | NULL
+s: TEXT | NULL
+to_address: TEXT | NULL
+transaction_type: NUMBER | NULL
+v: TEXT | NULL
+value: TEXT | NULL
+
+@C3
+transaction_hash: TEXT | NULL
+transaction_index: NUMBER | NULL
+
+@C4
+ADDRESS: TEXT | NULL
+LOG_INDEX: NUMBER | NULL
+REMOVED: BOOLEAN | NULL
+
+[TABLES]
+## GOOG_BLOCKCHAIN_CRONOS_MAINNET_US.BLOCKS
+@use: [C1]
+nonce: NUMBER | NULL
+block_timestamp: TIMESTAMP_NTZ | NULL
+block_number: NUMBER | NULL
+block_hash: TEXT | NULL
+
+## GOOG_BLOCKCHAIN_CRONOS_MAINNET_US.TRANSACTIONS
+@use: [C2, C3]
+block_hash: TEXT | NULL
+nonce: NUMBER | NULL
+block_timestamp: TIMESTAMP_NTZ | NULL
+
+## GOOG_BLOCKCHAIN_ARBITRUM_ONE_US.DECODED_EVENTS
+@use: [C3, C4]
+EVENT_HASH: TEXT | NULL
+ARGS: TEXT | NULL
+TOPICS: VARIANT | NULL
+BLOCK_NUMBER: NUMBER | NULL
+BLOCK_HASH: TEXT | NULL
+BLOCK_TIMESTAMP: NUMBER | NULL
+EVENT_SIGNATURE: TEXT | NULL
+
+## GOOG_BLOCKCHAIN_ARBITRUM_ONE_US.LOGS
+@use: [C3, C4]
+topics: VARIANT | NULL
+data: TEXT | NULL
+block_number: NUMBER | NULL
+block_timestamp: NUMBER | NULL
+block_hash: TEXT | NULL
+
+## GOOG_BLOCKCHAIN_POLYGON_MAINNET_US.TRANSACTIONS
+@use: [C2, C3]
+nonce: NUMBER | NULL
+block_timestamp: TIMESTAMP_NTZ | NULL
+block_hash: TEXT | NULL
+
+## GOOG_BLOCKCHAIN_TRON_MAINNET_US.BLOCKS
+@use: [C1]
+block_number: NUMBER | NULL
+block_hash: TEXT | NULL
+block_timestamp: TIMESTAMP_NTZ | NULL
+nonce: NUMBER | NULL
+
+## GOOG_BLOCKCHAIN_TRON_MAINNET_US.LOGS
+@use: [C3, C4]
+data: TEXT | NULL
+block_number: NUMBER | NULL
+block_hash: TEXT | NULL
+block_timestamp: TIMESTAMP_NTZ | NULL
+topics: TEXT | NULL

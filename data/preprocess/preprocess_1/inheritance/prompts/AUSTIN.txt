@@ -1,0 +1,11 @@
+[TEMPLATES]
+Format: Tn|col1,col2|schema1.table1;schema2.table2
+T2|unique_key,address,descript,location,longitude,time,latitude,timestamp,date|AUSTIN_INCIDENTS.INCIDENTS_2008;AUSTIN_INCIDENTS.INCIDENTS_2009;AUSTIN_INCIDENTS.INCIDENTS_2010;AUSTIN_INCIDENTS.INCIDENTS_2011;AUSTIN_INCIDENTS.INCIDENTS_2016
+
+[STANDALONE]
+Format: schema.table|col1,col2
+AUSTIN_311._311_SERVICE_REQUESTS|status,latitude,close_date,status_change_date,unique_key,city,location,map_tile,county,incident_address,state_plane_y_coordinate,state_plane_x_coordinate,street_name,map_page,last_update_date,created_date,source,incident_zip,longitude,street_number,council_district_code,complaint_description
+AUSTIN_BIKESHARE.BIKESHARE_STATIONS|power_type,modified_date,status,city_asset_number,location,number_of_docks,footprint_length,image,alternate_name,station_id,address,name,council_district,notes,property_type,footprint_width
+AUSTIN_BIKESHARE.BIKESHARE_TRIPS|subscriber_type,start_time,end_station_id,bike_type,start_station_id,end_station_name,trip_id,start_station_name,bike_id,duration_minutes
+AUSTIN_CRIME.CRIME|zipcode,address,timestamp,longitude,location,council_district_code,location_description,year,clearance_status,latitude,description,district,unique_key,x_coordinate,primary_type,clearance_date,y_coordinate,census_tract
+AUSTIN_WASTE.WASTE_AND_DIVERSION|dropoff_site,load_weight,report_date,route_number,load_id,load_time,load_type,route_type

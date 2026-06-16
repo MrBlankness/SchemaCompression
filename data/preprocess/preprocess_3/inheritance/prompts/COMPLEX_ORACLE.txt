@@ -1,0 +1,160 @@
+[STANDALONE]
+## COMPLEX_ORACLE.CHANNELS
+channel_desc: TEXT | NULL
+channel_class_id: NUMBER | NULL
+channel_id: NUMBER | NULL
+channel_total_id: NUMBER | NULL
+channel_total: TEXT | NULL
+channel_class: TEXT | NULL
+
+## COMPLEX_ORACLE.COSTS
+prod_id: NUMBER | NULL
+time_id: TEXT | NULL
+channel_id: NUMBER | NULL
+unit_price: FLOAT | NULL
+promo_id: NUMBER | NULL
+unit_cost: FLOAT | NULL
+
+## COMPLEX_ORACLE.COUNTRIES
+country_name: TEXT | NULL
+country_total: TEXT | NULL
+country_subregion: TEXT | NULL
+country_total_id: NUMBER | NULL
+country_subregion_id: NUMBER | NULL
+country_id: NUMBER | NULL
+country_iso_code: TEXT | NULL
+country_region: TEXT | NULL
+country_region_id: NUMBER | NULL
+
+## COMPLEX_ORACLE.CURRENCY
+year: NUMBER | NULL
+country: TEXT | NULL
+to_us: FLOAT | NULL
+month: NUMBER | NULL
+
+## COMPLEX_ORACLE.CUSTOMERS
+cust_last_name: TEXT | NULL
+cust_valid: TEXT | NULL
+cust_gender: TEXT | NULL
+cust_credit_limit: FLOAT | NULL
+cust_state_province_id: NUMBER | NULL
+cust_id: NUMBER | NULL
+cust_year_of_birth: NUMBER | NULL
+cust_city: TEXT | NULL
+cust_postal_code: TEXT | NULL
+cust_street_address: TEXT | NULL
+cust_marital_status: TEXT | NULL
+cust_eff_to: TEXT | NULL
+cust_email: TEXT | NULL
+cust_eff_from: TEXT | NULL
+country_id: NUMBER | NULL
+cust_main_phone_number: TEXT | NULL
+cust_total_id: NUMBER | NULL
+cust_city_id: NUMBER | NULL
+cust_income_level: TEXT | NULL
+cust_first_name: TEXT | NULL
+cust_state_province: TEXT | NULL
+cust_src_id: TEXT | NULL
+cust_total: TEXT | NULL
+
+## COMPLEX_ORACLE.PRODUCTS
+prod_subcategory_id: NUMBER | NULL
+prod_name: TEXT | NULL
+prod_category_desc: TEXT | NULL
+prod_category: TEXT | NULL
+prod_valid: TEXT | NULL
+prod_eff_from: TEXT | NULL
+supplier_id: NUMBER | NULL
+prod_subcategory_desc: TEXT | NULL
+prod_category_id: NUMBER | NULL
+prod_total_id: NUMBER | NULL
+prod_id: NUMBER | NULL
+prod_weight_class: NUMBER | NULL
+prod_total: TEXT | NULL
+prod_status: TEXT | NULL
+prod_list_price: FLOAT | NULL
+prod_pack_size: TEXT | NULL
+prod_subcategory: TEXT | NULL
+prod_src_id: TEXT | NULL
+prod_eff_to: TEXT | NULL
+prod_unit_of_measure: TEXT | NULL
+prod_min_price: FLOAT | NULL
+prod_desc: TEXT | NULL
+
+## COMPLEX_ORACLE.PROMOTIONS
+promo_total_id: NUMBER | NULL
+promo_subcategory: TEXT | NULL
+promo_category_id: NUMBER | NULL
+promo_id: NUMBER | NULL
+promo_cost: FLOAT | NULL
+promo_name: TEXT | NULL
+promo_subcategory_id: NUMBER | NULL
+promo_total: TEXT | NULL
+promo_category: TEXT | NULL
+promo_begin_date: TEXT | NULL
+promo_end_date: TEXT | NULL
+
+## COMPLEX_ORACLE.SALES
+prod_id: NUMBER | NULL
+channel_id: NUMBER | NULL
+promo_id: NUMBER | NULL
+amount_sold: FLOAT | NULL
+time_id: TEXT | NULL
+cust_id: NUMBER | NULL
+quantity_sold: NUMBER | NULL
+
+## COMPLEX_ORACLE.SUPPLEMENTARY_DEMOGRAPHICS
+unknown: NUMBER | NULL
+golf: NUMBER | NULL
+misc: NUMBER | NULL
+household_size: TEXT | NULL
+soccer: NUMBER | NULL
+occupation: TEXT | NULL
+education: TEXT | NULL
+tennis: NUMBER | NULL
+affinity_card: NUMBER | NULL
+yrs_residence: NUMBER | NULL
+baseball: NUMBER | NULL
+comments: TEXT | NULL
+cust_id: NUMBER | NULL
+cricket: NUMBER | NULL
+
+## COMPLEX_ORACLE.TIMES
+fiscal_month_desc: TEXT | NULL
+calendar_year_id: NUMBER | NULL
+fiscal_month_number: NUMBER | NULL
+calendar_month_name: TEXT | NULL
+end_of_fis_month: TEXT | NULL
+fiscal_quarter_desc: TEXT | NULL
+day_number_in_week: NUMBER | NULL
+calendar_quarter_id: NUMBER | NULL
+fiscal_year: NUMBER | NULL
+calendar_month_id: NUMBER | NULL
+end_of_cal_year: TEXT | NULL
+end_of_cal_quarter: TEXT | NULL
+end_of_cal_month: TEXT | NULL
+calendar_quarter_desc: TEXT | NULL
+week_ending_day_id: NUMBER | NULL
+days_in_fis_quarter: NUMBER | NULL
+fiscal_month_id: NUMBER | NULL
+day_name: TEXT | NULL
+fiscal_quarter_id: NUMBER | NULL
+end_of_fis_year: TEXT | NULL
+calendar_month_desc: TEXT | NULL
+days_in_fis_month: NUMBER | NULL
+day_number_in_month: NUMBER | NULL
+end_of_fis_quarter: TEXT | NULL
+week_ending_day: TEXT | NULL
+calendar_year: NUMBER | NULL
+time_id: TEXT | NULL
+days_in_fis_year: NUMBER | NULL
+days_in_cal_year: NUMBER | NULL
+calendar_week_number: NUMBER | NULL
+fiscal_year_id: NUMBER | NULL
+calendar_quarter_number: NUMBER | NULL
+days_in_cal_month: NUMBER | NULL
+days_in_cal_quarter: NUMBER | NULL
+fiscal_month_name: TEXT | NULL
+fiscal_quarter_number: NUMBER | NULL
+calendar_month_number: NUMBER | NULL
+fiscal_week_number: NUMBER | NULL

@@ -1,0 +1,445 @@
+[TEMPLATES]
+<T18>
+FREQUENCY: TEXT | Frequency of aggregations. | eg=["Quarterly", "Monthly"]
+MEASUREMENT_TYPE: TEXT | Description of the unit field that provides additional context on how the unit is measured (e.g., Percent Change over Previous Period).
+MEASURE: TEXT | Quantifiable attribute or subject; description of what is being recorded. | eg=["International Financial Statistics"]
+UNIT: TEXT | Unit of measurement for the reported value. | eg=["Domestic Currency", "Percent"]
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable. | eg=["International Financial Statistics: Fiscal, Budgetary Central Government, Revenue, Other Revenue, 2001 Manual, Cash | Domestic Currency | Quarterly", "International Financial Statistics: Fiscal, Central Government, Revenue, Tax, 2001 Manual, Cash | Domestic Currency | Quarterly"]
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table. | eg=["international_financial_statistics_fiscal_budgetary_central_government_revenue_other_revenue_2001_manual_cash_|_domestic_currency_|_quarterly", "international_financial_statistics_fiscal_central_government_revenue_tax_2001_manual_cash_|_domestic_currency_|_quarterly"]
+@Tables: [CYBERSYN.FDIC_SUMMARY_OF_DEPOSITS_ATTRIBUTES,CYBERSYN.INTERNATIONAL_MONETARY_FUND_ATTRIBUTES]
+
+<T37>
+GEO_ID: TEXT | A unique identifier for a place, joinable to the geography_index/relationships tables | eg=["censusRegion/03", "censusRegion/01"]
+VALUE: FLOAT | Value of the metric | eg=[2.093, 4.556]
+VARIABLE: TEXT | A unique identifier for a variable joinable to the attributes table | eg=["Average_Price:_All_Ham_(Excluding_Canned_Ham_and_Luncheon_Slices),_per_lb._(453.6_gm)", "Average_Price:_American_processed_cheese,_per_lb._(453.6_gm)"]
+VARIABLE_NAME: TEXT | Human-readable name for a variable | eg=["Average Price: All Ham (Excluding Canned Ham and Luncheon Slices), per lb. (453.6 gm)", "Average Price: American processed cheese, per lb. (453.6 gm)"]
+DATE: DATE | Date associated with the value, which is set to the last day of the reporting period | eg=["2001-06-30", "2007-08-31"]
+@Tables: [CYBERSYN.BUREAU_OF_LABOR_STATISTICS_EMPLOYMENT_TIMESERIES,CYBERSYN.BUREAU_OF_LABOR_STATISTICS_PRICE_TIMESERIES]
+
+<T2>
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable. | eg=["Current and Future Financial situation; Year ago; Somewhat worse off", "Debt delinquency expectations; Mean probability of not being able to make minimum debt payment over the next three months, by Demographics; Region Northeast"]
+FREQUENCY: TEXT | Frequency of aggregations. | eg=["Monthly"]
+REPORT: TEXT | Name of the New York Fed report that the data pertains to. | eg=["Survey of Consumer Expectations"]
+UNIT: TEXT | Unit of measurement for the reported value. | eg=["Percent", "Mean Score"]
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table. | eg=["current_and_future_financial_situation_year_ago_somewhat_worse_off", "debt_delinquency_expectations_mean_probability_of_not_being_able_to_make_minimum_debt_payment_over_the_next_three_months_by_demographics_region_northeast"]
+MEASURE: TEXT | Quantifiable attribute or subject; description of what is being recorded. | eg=["Current and Future Financial situation", "Debt delinquency expectations"]
+@Tables: [CYBERSYN.NEWYORKFED_CONSUMER_ATTRIBUTES]
+
+[DERIVED]
+<T1> extends <T37>
+UNIT: TEXT | Unit of measure for the value, such as dollars, percent, or ratio | eg=["USD", "Percent"]
+@Tables: [CYBERSYN.CYBERSYN_FINANCIAL_ECONOMIC_INDICATORS_TIMESERIES,CYBERSYN.FHFA_MORTGAGE_PERFORMANCE_TIMESERIES,CYBERSYN.FINANCIAL_FRED_TIMESERIES,CYBERSYN.INTERNATIONAL_MONETARY_FUND_TIMESERIES,CYBERSYN.NEWYORKFED_CONSUMER_TIMESERIES,CYBERSYN.OECD_TIMESERIES]
+
+<T15> extends <T1>
+VALUE_COMMENT: TEXT | Comment on the source, measurement, or definition of the value. | eg=[""]
+@Tables: [CYBERSYN.EUROPEAN_CENTRAL_BANK_TIMESERIES]
+
+<T25> extends <T18>
+SEASONALLY_ADJUSTED: TEXT | Indicates whether the value is seasonally adjusted. | eg=["Neither seasonally adjusted nor calendar adjusted", "Calendar and seasonally adjusted"]
+@Tables: [CYBERSYN.OECD_ATTRIBUTES]
+
+<T29> extends <T25>
+RELEASE_SOURCE: TEXT | Source where the variable is originally collected or published. | eg=["Bureau of Labor Statistics"]
+FRED_SERIES_ID: TEXT | Unique identifier for the variable from the FRED database. Visualize the timeseries by inputing this into https://fred.stlouisfed.org/series/{fred_series_id}.
+RELEASE_NAME: TEXT | The individual report or collection of data in which the data was released. | eg=["Current Population Survey (CPS)"]
+INDUSTRY: TEXT | Industry or sub-industry of the time series. | eg=["Management, Administrative, And Waste Services", "Durable Goods Manufacturing"]
+@Tables: [CYBERSYN.CYBERSYN_FINANCIAL_ECONOMIC_INDICATORS_ATTRIBUTES]
+
+<T36> extends <T2>
+INDUSTRY: TEXT | Industry or sub-industry of the time series | eg=["Total private", "Arts, entertainment, and recreation"]
+SEASONALLY_ADJUSTED: BOOLEAN | Boolean variable denoting if value is seasonally adjusted | eg=[false, true]
+ESTABLISHMENT_SIZE: TEXT | Size of the establishment for the provided variable | eg=["1 to 9 employees", "All size classes"]
+@Tables: [CYBERSYN.BUREAU_OF_LABOR_STATISTICS_EMPLOYMENT_ATTRIBUTES]
+
+<T41> extends <T1>
+COUNTERPARTY_GEO_ID: TEXT | A unique identifier for a country or country group, joinable to the GEOGRAPHY_INDEX table, representing the counterparty geography for the variable. | eg=["country/TUR", "country/MWI"]
+@Tables: [CYBERSYN.BANK_FOR_INTERNATIONAL_SETTLEMENTS_TIMESERIES]
+
+<T42> extends <T18>
+COUNTERPARTY_GEO_NAME: TEXT | Country or country group, representing the counterparty geography for the variable. | eg=["All countries (total)", "Bermuda"]
+GEO_NAME: TEXT | Country or country group, representing the primary geography for the variable. | eg=["United Kingdom", "Taiwan"]
+SOURCE: TEXT | Source where the variable is published.
+SERIES_ID: TEXT | Unique identifier for a variable series (i.e., data flow) from the Bank for International Settlements (BIS). | eg=["BIS,WS_LBS_D_PUB,1.0", "BIS,WS_CBS_PUB,1.0"]
+@Tables: [CYBERSYN.BANK_FOR_INTERNATIONAL_SETTLEMENTS_ATTRIBUTES]
+
+<T5> extends <T25>
+ITEM_DESCRIPTION: TEXT | The item category referenced as part of the harmonized index of consumer prices. | eg=["Services Of Plumbers", "Garments"]
+GEO_COVERAGE: TEXT | Determines whether the variable relates to part or all of a country (e.g., Whole country, Large cities, National excluding capital city).
+SOURCE: TEXT | Source where the variable is originally collected or published. | eg=["Eurostat"]
+@Tables: [CYBERSYN.EUROPEAN_CENTRAL_BANK_ATTRIBUTES]
+
+<T8> extends <T1>
+SUPPRESSED: BOOLEAN | Boolean indicating whether the value has been suppressed in the underlying data for privacy purposes. Suppressed values appear as NULL | eg=[false]
+@Tables: [CYBERSYN.FHFA_UNIFORM_APPRAISAL_TIMESERIES]
+
+[STANDALONE]
+## CYBERSYN.BUREAU_OF_LABOR_STATISTICS_PRICE_ATTRIBUTES
+SEASONALLY_ADJUSTED: BOOLEAN | Boolean variable denoting if value is seasonally adjusted | eg=[false]
+PRODUCT: TEXT | Consumer product being measured | eg=["Household furnishings and operations", "Men's underwear, nightwear, swimwear and accessories"]
+UNIT: TEXT | Unit of measure for the value | eg=["2001-12 Index Date", "1982-84 Index Date"]
+FREQUENCY: TEXT | Frequency of the variable measurement | eg=["Monthly", "Semi-annual"]
+BASE_TYPE: TEXT | Base type utilized for CPI measurement, standard or alternative | eg=["Standard Reference Base"]
+VARIABLE_NAME: TEXT | Human-readable name for a variable | eg=["CPI: Household furnishings and operations, Not seasonally adjusted, Monthly, 2001-12 Index Date", "CPI: Men's underwear, nightwear, swimwear and accessories, Not seasonally adjusted, Semi-annual"]
+REPORT: TEXT | BLS dataset the time series originates from | eg=["Consumer Price Index"]
+VARIABLE: TEXT | A unique identifier for a variable joinable to the timeseries table | eg=["CPI:_Household_furnishings_and_operations,_Not_seasonally_adjusted,_Monthly,_2001-12_Index_Date", "CPI:_Men's_underwear,_nightwear,_swimwear_and_accessories,_Not_seasonally_adjusted,_Semi-annual"]
+
+## CYBERSYN.COMPANY_INDEX
+PRIMARY_EXCHANGE_NAME: TEXT | The exchange name for the primary trading venue of a security.
+PRIMARY_TICKER: TEXT | The ticker for the primary trading venue of a security. If a security trades on multiple exchanges or has numerous tickers, an attempt is made to select the ticker from the home market.
+ENTITY_LEVEL: TEXT | Describes the type or level of the entity for additional convenience. Currently, all entities are corporate entities and are denoted as 'Corporate'. | eg=["Corporate"]
+PERMID_COMPANY_ID: TEXT | Permanent Identifier, which is a identifier provided by Refinitiv (via PermID) to provide a way to uniquely identify a company. | eg=["5087020389", "5087193531"]
+LEI: ARRAY | Legal Entity Identifier, a unique identifier from GLEIF that identifies legal entities that engage in financial transactions.
+COMPANY_ID: TEXT | Unique identifier assigned by Cybersyn to each company. | eg=["9cee45c58a4fdb6bb265552a0db62a00", "7766ef904f8648e8b8ac520b7267d5b5"]
+EIN: TEXT | Employer Identification Number, a unique identification number that is assigned to a business by the IRS.
+PRIMARY_EXCHANGE_CODE: TEXT | The exchange code for the primary trading venue of a security.
+GLOBAL_TICKERS: ARRAY | An array of ticker symbols under which the security may be traded globally on all exchanges.
+COMPANY_NAME: TEXT | The name of the company. | eg=["VENDERA RESOURCES VI-A LP", "RT-AI I LLC"]
+CIK: TEXT | Central Index Key, a unique identifier for corporations registered with the United States Securities and Exchange Commission (SEC). | eg=["0002011467", "0002018929"]
+
+## CYBERSYN.COMPANY_RELATIONSHIPS
+COMPANY_NAME: TEXT | The name of the company. | eg=["WYNN RESORTS LTD", "RITZ-CARLTON HOTEL COMPANY LLC"]
+RELATIONSHIP_TYPE: TEXT | Specifies the kind of relationship between the company and the related company. The value is 'Parent' when the company is the parent of the related company and 'Subsidiary' when the company is a subsidiary of the related company. | eg=["Parent", "Subsidiary"]
+RELATIONSHIP_START_DATE: DATE | The beginning of a company being associated with the related company. In cases where the start date is unknown, NULL is assigned.
+RELATIONSHIP_END_DATE: DATE | The ending of the relationship being valid for the company and the related company. In cases where a relationship is currently valid, an end date of NULL is assigned.
+COMPANY_ID: TEXT | Unique identifier assigned by Cybersyn to each company. Joinable to the COMPANY_INDEX table. | eg=["ca52d8c892a8ffe6e8368f2bd7a5fca7", "61042fb57d4bc5965ff4f0dfa55f3aa2"]
+ENTITY_LEVEL: TEXT | Describes the type or level of the entity for additional convenience. Currently, all entities are corporate entities and are denoted as 'Corporate'. | eg=["Corporate"]
+RELATED_COMPANY_ID: TEXT | Unique identifier assigned by Cybersyn to the related company. Joinable to the COMPANY_INDEX table. | eg=["5a2aaa890644211a8e69ad206ee9d4de", "d0d371457687b60bbb116b9fc9ae65ea"]
+RELATED_ENTITY_LEVEL: TEXT | Describes the type or level of the related entity for additional convenience. Currently, all entities are corporate entities and are denoted as 'Corporate'. | eg=["Corporate"]
+RELATED_COMPANY_NAME: TEXT | The name of the related company. | eg=["WYNN LAS VEGAS LLC", "MARRIOTT INTERNATIONAL INC /MD/"]
+
+## CYBERSYN.COMPANY_SECURITY_RELATIONSHIPS
+SECURITY_ID: TEXT | Unique identifier for a particular security. | eg=["BBG00Q6SF3X5", "BBG000KX4134"]
+SECURITY_NAME: TEXT | Name of the security. | eg=["UNITED NATURAL FOODS INC", "POWER REIT"]
+SECURITY_ID_TYPE: TEXT | The type of ID that is provided in the SECURITY_ID column. Examples of different ID types include OpenFIGI FIGI ID, OpenFIGI Share Class ID, PermID Security ID, and others. | eg=["openfigi_figi_id"]
+COMPANY_ID: TEXT | Unique identifier assigned by Cybersyn to each company. | eg=["db61b5dc8b1d123383774189e8b57f47", "748f82a466853b495ff37302758e0618"]
+COMPANY_NAME: TEXT | The name of the company. | eg=["UNITED NATURAL FOODS INC", "POWER REIT"]
+
+## CYBERSYN.CYBERSYN_DATA_CATALOG
+DATA_SOURCE: ARRAY | Source of the data. | eg=[["Bureau of Labor Statistics (BLS)"], ["PermID","US Securities & Exchange Commission (SEC)","OpenFIGI"]]
+LICENSE_URL: ARRAY | Array of URLs that provide the licensing for the data sources in this table. | eg=[["https://www.bls.gov/bls/linksite.htm"], ["https://permid.org/terms","https://creativecommons.org/licenses/by/4.0/","https://www.sec.gov/privacy#security","https://www.openfigi.com/docs/terms-of-service"]]
+LISTING_NAME: ARRAY | Human-readable name of listing(s) associated with table. | eg=[["Financials & Economics: Enterprise "], ["Finance & Economics","SEC Filings","Financials & Economics: Enterprise "]]
+CREATED_DATE: DATE | Date for the table's addition to the Snowflake Marketplace. | eg=["2023-10-31", "2023-11-06"]
+TABLE_NAME_PROPER: TEXT | Human-readable table name. | eg=["BLS Employment Timeseries Point in Time History", "Company Characteristics Point in Time History"]
+LAST_UPDATED_TIMESTAMP: TIMESTAMP_TZ | Timestamp for the table's last update or modification. | eg=["2024-08-28 15:28:48.680000+00:00", "2024-08-24 10:08:59.763000+00:00"]
+TABLE_TYPE: TEXT | Cybersyn table type as part of the unified schema. | eg=["point-in-time history", "relationships"]
+DESCRIPTION: TEXT | Details on the source of the data, the table, and what is included in the table. | eg=["Tracks history of the bureau_of_labor_statistics_employment_timeseries table with start and end timestamps to indicate row validity periods. \n\nCurrent rows have a NULL end timestamp. Updated and deleted rows are time-stamped, including deletion time, in Eastern Time with UTC offset.", "Tracks history of the company_characteristics table with start and end timestamps to indicate row validity periods. \n\nCurrent rows have a NULL end timestamp. Updated and deleted rows are time-stamped, including deletion time, in Eastern Time with UTC offset."]
+SELECT_RELATED_TABLES: ARRAY | Array of tables that you can join based on the entity and variable relationships; not an exhaustive list. | eg=[["bureau_of_labor_statistics_employment_timeseries"], ["company_characteristics"]]
+DOCUMENTATION_URL: TEXT | URL of the documentation associated with the table. | eg=["https://docs.cybersyn.com/public-domain-sources/sec-filings-1", "https://docs.cybersyn.com/public-domain-sources/financial-and-economic-indicators"]
+SHORT_DESCRIPTION: TEXT | Summarized details on the source of the data, the table, and what is included in the table. | eg=["Map between companies and the securities (stocks, bonds, etc.) they issue, including security identifiers from common open sources, including OpenFIGI and PermID. Maps to Cybersyn's company index.", "Economic metrics including retail sales, consumer credit, mortgage rates, unemployment claims, GDP estimates, employment, and CPI data for various geographic entities, aggregated from various government sources."]
+DATA_SOURCE_URL: ARRAY | Array of URLs that provide the overview of each of the data sources in this table. | eg=[["https://www.bls.gov/"], ["https://permid.org/","https://www.sec.gov/edgar/search-and-access","https://www.openfigi.com/about"]]
+ENTITIES: ARRAY | Array of entities that are included in the table. | eg=[["geo_id"], ["company_id"]]
+LISTING_URL: ARRAY | URLs of listing(s) associated with table. | eg=[["https://app.snowflake.com/marketplace/listing/GZTSZ290BUX66"], ["https://app.snowflake.com/marketplace/listing/GZTSZAS2KF7","https://app.snowflake.com/marketplace/listing/GZTSZAS2KH9","https://app.snowflake.com/marketplace/listing/GZTSZ290BUX66"]]
+TABLE_NAME: TEXT | Machine-readable table name. | eg=["bureau_of_labor_statistics_employment_timeseries_history", "company_characteristics_history"]
+
+## CYBERSYN.FDIC_BRANCH_LOCATIONS_INDEX
+FDIC_REGIONAL_OFFICE: TEXT | Name of the FDIC Regional Office that services the institution. | eg=["New York", "Dallas"]
+FDIC_INSTITUTION_CERTIFICATE_NUMBER: TEXT | Unique number assigned by the FDIC used to identify institutions and for for the issuance of insurance certificates. | eg=["59324", "6384"]
+HOLDING_COMPANY_TYPE: TEXT | Identifies the type of holding company associated with the branch. | eg=["One bank holding company", "Multi-bank holding company"]
+LONGITUDE: FLOAT | Longitude of the branch's physical location. | eg=[-66.066281025329, -74.6604640291354]
+LATITUDE: FLOAT | Latitude of the branch's physical location. | eg=[18.444306984751, 40.349737992673056]
+INSTITUTION_PRIMARY_REGULATORY_AGENCY: TEXT | Primary regulatory agency of the institution. | eg=["OCC"]
+GEO_ID_CBSA: TEXT | Geographic ID representing the core-based statistical area where the branch is physically located. Can be joined to the GEOGRAPHY_INDEX table. | eg=["geoId/C41980", "geoId/C45940"]
+CHARTER_TYPE: TEXT | Identifies whether an institution is federally or state chartered. | eg=["Fed"]
+GEO_ID_STATE: TEXT | Geographic ID representing the state where the branch is physically located. Can be joined to the GEOGRAPHY_INDEX table. | eg=["geoId/72", "geoId/34"]
+BRANCH_NAME: TEXT | Name of the branch (e.g., Magnolia Branch). | eg=["Nave Bank", "Nassau Street Branch"]
+CITY: TEXT | City at which the branch is physically located. | eg=["San Juan", "Princeton"]
+RSSDHCR: TEXT | Unique number assigned by the Federal Reserve Board (FRB) to the regulatory bank holding company of the institution. | eg=["1069778", "1108097"]
+GEO_ID_COUNTY: TEXT | Geographic ID representing the county where the branch is physically located. Can be joined to the GEOGRAPHY_INDEX table. | eg=["geoId/72127", "geoId/34021"]
+GEO_ID_METRO_DIV: TEXT | Geographic ID representing the metropolitan division where the branch is physically located. Can be joined to the GEOGRAPHY_INDEX table. | eg=["geoId/M37964", "geoId/M35614"]
+BRANCH_TYPE: TEXT | Description of the branch's main function (e.g., Full Service Brick and Mortar Office). | eg=["Full Service - Brick And Mortar", "Full Service - Retail"]
+RSSDID: TEXT | Unique number assigned by the Federal Reserve Board (FRB) to the institution. | eg=["817824", "613950"]
+ACQUIRED_DATE: DATE | Date that a branch was last acquired by another institution. | eg=["1996-06-09"]
+GEO_ID_ZIP: TEXT | Geographic ID representing the zip code where the branch is physically located. Can be joined to the GEOGRAPHY_INDEX table. | eg=["zip/00909", "zip/08542"]
+ADDRESS: TEXT | Street address at which the branch is physically located. | eg=["1608 Ave Ponce De Leon, Suite 2", "76 Nassau St"]
+ESTABLISHED_DATE: DATE | Date on which the branch began operations. | eg=["2023-09-18", "1934-01-01"]
+COMPTROLLER_DISTRICT: TEXT | Name of the Comptroller of the Currency district in which the institution is located. | eg=["Large Bank", "Southern"]
+FEDERAL_RESERVE_DISTRICT: TEXT | Name of the Federal Reserve District where the institution is located. | eg=["Philadelphia", "Dallas"]
+INSTITUTION_PRIMARY_INSURER: TEXT | Primary insurer, insurance agent, or insurance status of an institution. | eg=["Deposit Insurance Fund"]
+HOLDING_COMPANY_NAME: TEXT | Name of the holding company for the institution (e.g., JPMorgan Chase & Co.). | eg=["Pnc Financial Services Group, Inc., The", "First Community Bancshares, Inc."]
+INSTITUTION_CHARTER_AGENCY: TEXT | The chartering agency of the institution that granted the license or charter for the institution to operate and regulates and supervises the financial and operational activities of that institution. | eg=["Comptroller of the Currency"]
+MAIN_OFFICE_FLAG: NUMBER | Flag identifying the main office for the institution. | eg=[1, 0]
+OTS_ID: TEXT | Unique identification number assigned to institutions chartered by the Office of the Thrift Supervision (OTS) or that become members of the Federal Home Loan System.
+BRANCH_NUMBER: TEXT | The branch's corresponding office number. | eg=["0", "873"]
+FDIC_INSTITUTION_ID: TEXT | Unique FDIC ID of the institution that owns the branch. It is a unique number, sequentially added to the FDIC database for both banks and branches. This ID is updated with every merger or purchase of branches to reflect the most current owner. | eg=["649963", "4287"]
+INSTITUTION_CATEGORY: TEXT | Type of financial institution defined by its charter type, ownership structure, regulatory oversight, and other characteristics. | eg=["National Member Bank"]
+INSTITUTION_NAME: TEXT | Legal name of the FDIC Insured Institution (e.g., JPMorgan Chase Bank, National Association). | eg=["Nave Bank", "Pnc Bank, National Association"]
+FDIC_BRANCH_ID: TEXT | Unique FDIC ID for each bank branch. The branch ID for the Headquarters branch is the same as the branch ID for the entire bank or savings institution. | eg=["649963", "444"]
+INSTITUTION_PRIMARY_ASSET_SPECIALIZATION: TEXT | Description of a mutually exclusive industry classification grouping which indicates the institution's primary asset specialization. | eg=["Commercial Lending", "All Other > $1 Billion"]
+INSTITUTION_MINORITY_DEPOSITORY_STATUS: TEXT | Description of the regulatory status of the financial institution associated with the location. | eg=["Minority Board And Serving Hispanic Community"]
+FDIC_CLASSIFICATION_CODE: TEXT | A classification code assigned by the FDIC based on the institution's charter type (commercial bank or savings institution), charter agent (state or federal), Federal Reserve membership status (Fed member, Fed nonmember) and its primary federal regulator (state chartered institutions are subject to both federal and state supervision). | eg=["Commercial bank, state charter and Fed member, supervised by the Federal Reserve (FRB)", "Commercial bank, national (federal) charter and Fed member, supervised by the Office of the Comptroller of the Currency (OCC)"]
+
+## CYBERSYN.FDIC_SUMMARY_OF_DEPOSITS_TIMESERIES
+VALUE: NUMBER | Value reported for the variable. | eg=[119632, 59230]
+DATE: DATE | Date associated with the value. | eg=["2023-06-30", "2017-06-30"]
+FDIC_INSTITUTION_ID: TEXT | Unique FDIC ID of the institution that owns the branch. It is a unique number, sequentially added to the FDIC database for both banks and branches. This ID is updated with every merger or purchase of branches to reflect the most current owner. | eg=["2239", "6499"]
+UNIT: TEXT | Unit in which the measure is recorded (e.g., USD YTD). | eg=["USD"]
+VARIABLE: TEXT | Unique FDIC identifier for tracked financial data. | eg=["DEPSUMBR", "ASSET"]
+FDIC_BRANCH_ID: TEXT | FDIC's unique number for the bank or savings institution assigned by the FDIC in order to identify and track. The branch ID for the Headquarters branch is the same as the branch ID for the entire bank or savings institution. | eg=["286466", "6499"]
+VARIABLE_NAME: TEXT | Human-readable description of the financial data variables tracked by the FDIC. | eg=["Branch Deposits", "Institutional Assets"]
+
+## CYBERSYN.FHFA_HOUSE_PRICE_ATTRIBUTES
+PROPERTY_CLASSIFICATION: TEXT | House Price Index classification (traditional, distress-free, non-metro) | eg=["traditional", "non-metro"]
+SEASONALLY_ADJUSTED: BOOLEAN | Boolean field indicating if a series is seasonally adjusted | eg=[true, false]
+VARIABLE_NAME: TEXT | Human-readable description for the variable | eg=["FHFA_HPI traditional purchase-only monthly Seasonally Adjusted", "FHFA_HPI non-metro all-transactions quarterly Not Seasonally Adjusted"]
+INDEX_TYPE: TEXT | Type of House Price Index measured in the index (all-transactions, purchase-only, expanded-data) | eg=["purchase-only", "all-transactions"]
+VARIABLE: TEXT | A unique identifier for a variable joinable to the timeseries table for filtering | eg=["FHFA_HPI_traditional_purchase-only_monthly_SA", "FHFA_HPI_non-metro_all-transactions_quarterly_NSA"]
+FREQUENCY: TEXT | Frequency of the variable measurement (e.g., Daily, Monthly, Quarterly) | eg=["MONTHLY", "QUARTERLY"]
+UNIT: TEXT | Unit of measure for the variable:  (e.g., Index) | eg=["Index"]
+
+## CYBERSYN.FHFA_HOUSE_PRICE_TIMESERIES
+VALUE: NUMBER | The reported numeric value for the variable and date | eg=["236.84", "65.97"]
+UNIT: TEXT | Unit of measure for the variable (e.g., Index) | eg=["Index"]
+DATE: DATE | Date associated with the value | eg=["2009-09-30", "1987-06-30"]
+VARIABLE: TEXT | A unique identifier for a variable joinable to the attributes table for filtering | eg=["FHFA_HPI_traditional_purchase-only_quarterly_NSA", "FHFA_HPI_traditional_all-transactions_quarterly_NSA"]
+GEO_ID: TEXT | A unique geographic identifier joinable to the geography_index/relationships tables | eg=["geoId/53", "geoId/C22660"]
+VARIABLE_NAME: TEXT | Human-readable description for the variable | eg=["FHFA_HPI traditional purchase-only quarterly Not Seasonally Adjusted", "FHFA_HPI traditional all-transactions quarterly Not Seasonally Adjusted"]
+
+## CYBERSYN.FHFA_MORTGAGE_PERFORMANCE_ATTRIBUTES
+UNIT: TEXT | Unit of measure for the variable:  (e.g., Percent) | eg=["Percent"]
+VARIABLE_GROUP: TEXT | Overall variable grouping for the timeseries (e.g., Percent in Forbearance, Percent 30 or 60 Days Past Due Date, etc.) | eg=["Percent 90 to 180 Days Past Due Date", "Percent 30 or 60 Days Past Due Date"]
+FREQUENCY: TEXT | Frequency of aggregations (e.g. Annual). | eg=["Quarterly"]
+VARIABLE: TEXT | A unique identifier for a variable joinable to the timeseries table for filtering | eg=["Percent_90_to_180_Days_Past_Due_Date_Other Conventional Market", "Percent_30_or_60_Days_Past_Due_Date_Government / Non-Conventional"]
+MARKET: TEXT | Market segment (e.g., Overall Market, Enterprise, Government, etc.) | eg=["Other Conventional Market", "Government / Non-Conventional"]
+VARIABLE_NAME: TEXT | Human-readable description for the variable | eg=["Percent 90 to 180 Days Past Due Date - Other Conventional Market", "Percent 30 or 60 Days Past Due Date - Government / Non-Conventional"]
+
+## CYBERSYN.FHFA_UNIFORM_APPRAISAL_ATTRIBUTES
+VARIABLE_GROUP: TEXT | Overall variable grouping for the timeseries (e.g., Median Appraised Value, Count of Appraisals, etc.) | eg=["25% Quartile of Appraised Value", "Median Appraised Value"]
+VARIABLE_NAME: TEXT | Human-readable description for the variable | eg=["Quarterly 25% Quartile of Appraised Value Property Condition (4 categories) Purchase & Refinance C1 and C2", "Quarterly 25% Quartile of Appraised Value Public Water Refinance Public"]
+CATEGORY: TEXT | Actual category corresponding to the characteristic type. Notes important features of home (e.g. No Central Air, built between 1970 to 1979, etc.) | eg=["C1 and C2", "Public"]
+CHARACTERISTIC: TEXT | Characteristic for category grouping based on home features (e.g., Central Air, Type of Foundation, etc) | eg=["Property Condition (4 categories)", "Public Water"]
+UNIT: TEXT | Unit of measure for the variable: (e.g., Count, Percent, Ratio, USD) | eg=["USD"]
+APPRAISAL_PURPOSE: TEXT | Reason for appraisal request (e.g., Purchase, Refinance, Purchase & Refinance) | eg=["Purchase & Refinance", "Refinance"]
+FREQUENCY: TEXT | Frequency of aggregations (e.g. Annual). | eg=["Quarterly"]
+VARIABLE: TEXT | A unique identifier for a variable joinable to the timeseries table for filtering | eg=["Quarterly_25%_Quartile_of_Appraised_Value_Property_Condition_(4_categories)_Purchase_&_Refinance_C1_and_C2", "Quarterly_25%_Quartile_of_Appraised_Value_Public_Water_Refinance_Public"]
+
+## CYBERSYN.FINANCIAL_BRANCH_ENTITIES
+CATEGORY: TEXT | Category of the entity for a given RSSD. Branch or bank | eg=["Branch"]
+ID_COUNTRY: TEXT | Unique identifier of the country where the entity is located | eg=["country/USA"]
+IS_ACTIVE: BOOLEAN | Status of the branch to determine active or closed | eg=[true, false]
+ZIP_CODE: TEXT | Zip code the entity is physically located in | eg=["02653", "92626"]
+END_DATE: DATE | Last date for which the branch was open. NULL if still active | eg=["2024-08-27", "2024-07-31"]
+STATE_ABBREVIATION: TEXT | Abbreviation of the state the entity is physically located in | eg=["MA", "CA"]
+ID_COUNTY: TEXT | Unique identifier of the county where the entity is located | eg=["geoId/25001", "geoId/06059"]
+CITY: TEXT | City the entity is physically located in | eg=["ORLEANS", "COSTA MESA"]
+ADDRESS_LINE2: TEXT | Second line of the physical address at the street level
+NAME_PARENT: TEXT | Name of the parent bank | eg=["JPMORGAN CHASE BANK, NATIONAL ASSOCIATION", "WILMINGTON TRUST, NATIONAL ASSOCIATION"]
+ID_ZIP: TEXT | Unique identifier of the zip code where the entity is located | eg=["zip/02653", "zip/92626"]
+ADDRESS: TEXT | First line of the physical address at the street level | eg=["9 WEST RD", "650 TOWN CENTER DRIVE"]
+BRANCH_NAME: TEXT | Name of the banking branch | eg=["ORLEANS", "COSTA MESA OFFICE"]
+START_DATE: DATE | First date for which the branch was open | eg=["2024-08-13", "2008-12-31"]
+ID_RSSD: NUMBER | A unique identifier assigned by the Federal Reserve for the financial institution | eg=[5973668, 4270061]
+ID_RSSD_PARENT: NUMBER | Unique identifier for the head office of the entity if the entity is a branch | eg=[852218, 2265456]
+ID_STATE: TEXT | Unique identifier of the state where the entity is located | eg=["geoId/25", "geoId/06"]
+
+## CYBERSYN.FINANCIAL_CFPB_COMPLAINT
+DATE_SENT_TO_COMPANY: DATE | Date the CFPB sent the complaint to the company | eg=["2017-04-05", "2019-01-09"]
+TIMELY_RESPONSE: BOOLEAN | Indicates whether the company gave a timely response | eg=[true]
+SUBMITTED_VIA: TEXT | How the complaint was submitted | eg=["Web"]
+ZIP_CODE: TEXT | mailing zip code provided by the consumer | eg=["92805", "10705"]
+SUB_ISSUE: TEXT | type of sub-issue identified by the consumer in the complaint.  The categorical sub-issues available for selection have evolved over time | eg=["No notice of investigation status/result", "Difficulty submitting a dispute or getting information about a dispute over the phone"]
+ID_STATE: TEXT | a unique identifier of the mailing state provided by the consumer | eg=["geoId/06", "geoId/36"]
+DATE_RECEIVED: DATE | Date the CFPB received the complaint | eg=["2017-04-05", "2019-01-09"]
+COMPANY_PUBLIC_RESPONSE: TEXT | The optional, public-facing response to a consumer complaint chosen by the company from a list | eg=["Company has responded to the consumer and the CFPB and chooses not to provide a public response"]
+CONSUMER_COMPLAINT_NARRATIVE: TEXT | The consumer-submitted description of the complaint, with PII scrubbed by the CFPB.  Consumers must opt-in and can opt out at any time | eg=["On or about XX/XX/2016, I received notification on my credit report through XXXX  XXXX  that Receivables Management from what appears to be XXXX XXXX as the original creditor. However, XXXX XXXX is a urgent care facility and this debt has been PAID IN FULL -- as they will not treat a patient ( my minor daughter ), if there are ANY OUTSTANDING DEBTS on the account. This account was paid when I visited XXXX XXXX again with my daughter. \n\nReceivables Management Systems did not provide enough information on my credit report for me to VERIFY the debt. For example, there is NO ACCOUNT NUMBER referenced, no \" TYPE '' of accou8nt, and I've repeatedly tried to DISPUTE this account with both XXXX and XXXX on numerous occasions. \n\nSo let me ask, if there is NO WAY for a consumer to reference an account number to any payments made, how are ANY accounts being appropriately debited for payments received by consumers? \n\nShould the CFPB allow Receivables Management Systems to continue to collect de..."]
+STATE: TEXT | mailing state provided by the consumer | eg=["CA", "NY"]
+ID_ZIP: TEXT | a unique identifier of the mailing zip code provided by the consumer | eg=["zip/92805", "zip/10705"]
+COMPANY: TEXT | Company identified by the consumer in the complaint. | eg=["EQUIFAX, INC.", "EXPERIAN INFORMATION SOLUTIONS INC."]
+SUB_PRODUCT: TEXT | type of sub-product identified by the consumer in the complaint.  Sub-product categories were consolidated by the CFPB in 2017 | eg=["Credit reporting", "Medical debt"]
+ISSUE: TEXT | type of issue identified by the consumer in the complaint.  The categorical issues available for selection have evolved over time | eg=["Credit reporting company's investigation", "Problem with a credit reporting company's investigation into an existing problem"]
+COMPANY_RESPONSE_TO_CONSUMER: TEXT | Company explanation of how the issue was closed, selected from a list | eg=["Closed with explanation", "Closed with non-monetary relief"]
+CONSUMER_DISPUTED: TEXT | Whether the consumer disputed the company response.  After April 24, 2017 the Bureau discontinued this option and this field is marked N/A | eg=["No", "N/A"]
+CONSUMER_CONSENT_PROVIDED: TEXT | Identifies consumer consent in publishing their complaint narrative | eg=["Consent not provided", "Consent provided"]
+PRODUCT: TEXT | type of product identified by the consumer in the complaint.  Product categories were consolidated by the CFPB in 2017 | eg=["Credit reporting", "Credit reporting, credit repair services, or other personal consumer reports"]
+TAGS: TEXT | Categorical data supporting easier searching of complaints submitted by or on behalf of consumers, includes "Older American" and "Servicemember"
+
+## CYBERSYN.FINANCIAL_FRED_ATTRIBUTES
+MEASUREMENT_METHOD: TEXT | Type of percent change measurement
+UNIT: TEXT | Unit of measure for the value (e.g., USD, Percent, or ratio) | eg=["Index 2017=100", "USD"]
+SEASONALLY_ADJUSTED: BOOLEAN | Boolean variable denoting if value is seasonally adjusted | eg=[true, false]
+VARIABLE_GROUP: TEXT | Description of what is being measured | eg=["Industrial Production: Nondurable Consumer Goods", "Assets: Liquidity and Credit Facilities: Net Portfolio Holdings of MS Facilities 2020 LLC (Main Street Lending Program): Wednesday Level in Federal Reserve District 1: Boston"]
+FREQUENCY: TEXT | Frequency of the variable measurement (e.g., Daily, Monthly, or Quarterly) | eg=["Monthly", "Weekly"]
+RELEASE_NAME: TEXT | The individual report or collection of data in which the data was released. Sample reports include the Consumer Price Index release from the Bureau of Labor Statistics and the G.5 Foreign Exchange Rates release from the Federal Reserve. | eg=["G.17 Industrial Production and Capacity Utilization", "H.4.1 Factors Affecting Reserve Balances"]
+VARIABLE: TEXT | a unique identifier for a variable joinable to the time series table | eg=["Industrial_Production:_Nondurable_Consumer_Goods,_Seasonally_adjusted,_Monthly,_Index_2017=100", "Assets:_Liquidity_and_Credit_Facilities:_Net_Portfolio_Holdings_of_MS_Facilities_2020_LLC_(Main_Street_Lending_Program):_Wednesday_Level_in_Federal_Reserve_District_1:_Boston,_Not_seasonally_adjusted,_Weekly,_USD"]
+VARIABLE_NAME: TEXT | English name for the variable | eg=["Industrial Production: Nondurable Consumer Goods, Seasonally adjusted, Monthly, Index 2017=100", "Assets: Liquidity and Credit Facilities: Net Portfolio Holdings of MS Facilities 2020 LLC (Main Street Lending Program): Wednesday Level in Federal Reserve District 1: Boston, Not seasonally adjusted, Weekly, USD"]
+RELEASE_SOURCE: TEXT | The original attribution of the data from which Fred aggregates. | eg=["FEDERALRESERVE", "BLS"]
+
+## CYBERSYN.FINANCIAL_FRED_VARIABLE_SERIES_ID_CROSSWALK
+SERIES_ID: TEXT | Series identifier from the FRED database. The combination of the geo_id and variable are needed together to identify a unique series_id | eg=["IPNMAT", "IPFUELS"]
+GEO_ID: TEXT | Unique identifier for a place joinable to the timeseries table. | eg=["country/USA"]
+VARIABLE: TEXT | Unique identifier joinable to the attributes and timeseries tables. | eg=["Industrial_Production:_Nondurable_Goods_Materials,_Seasonally_adjusted,_Monthly,_Index_2017=100", "Industrial_Production:_Nondurable_Energy_Consumer_Goods:_Fuels,_Seasonally_adjusted,_Monthly,_Index_2017=100"]
+
+## CYBERSYN.FINANCIAL_INSTITUTION_ATTRIBUTES
+UNIT: TEXT | Unit of measure for the value, examples (e.g., percentage, USD) | eg=["Percent", "USD"]
+DEFINITION: TEXT | Detailed description of the variable including calculation where applicable | eg=["Retained earnings from bank operations, net unrealized holding gains (losses) on available-for-sale securities, and cumulative foreign currency translation adjustments.", "Loan and lease financing receivables, net of unearned income, allowances, and reserves, as a percent of total assets."]
+VARIABLE: TEXT | Unique identifier for a variable joinable to the timeseries table | eg=["EQUP", "LNLSNTV"]
+VARIABLE_NAME: TEXT | Human-readable name for the variable | eg=["Undivided Profits", "Net Loans and Leases to Assets"]
+FREQUENCY: TEXT | Measurement period (e.g., Annual, Quarterly) | eg=["Quarterly", "YTD"]
+
+## CYBERSYN.FINANCIAL_INSTITUTION_ENTITIES
+ADDRESS: TEXT | Stree-level address of the bank | eg=["304 Meeting St", "183 Bayard Ln"]
+STATE_ABBREVIATION: TEXT | State of the bank | eg=["SC", "NJ"]
+NAME: TEXT | Name of the bank | eg=["First Capital Bank", "The Bank of Princeton"]
+ID_COUNTRY: TEXT | A unique geographic identifier for the country where the bank is located | eg=["country/USA"]
+NAICS_CODE: TEXT | NAICS code of the primary activity conducted by an entity. | eg=["52211"]
+ID_STATE: TEXT | A unique geographic identifier for the state where the bank is located | eg=["geoId/45", "geoId/34"]
+ID_ZIP: TEXT | A unique geographic identifier for the zip code where the bank is located | eg=["zip/29401", "zip/08540"]
+FEDERAL_REGULATOR: TEXT | The abbreviation for the banking regulator (OCC, FED, FDIC) | eg=["FDIC", "OCC"]
+LEGAL_ENTITY_IDENTIFIER: TEXT | Code to identify a legally distinct entity that engages in a financial transaction. Issued by approved local operating units around the world in conjunction with the Global LEI Foundation. | eg=["254900LDLCTUL5TXVH85", "549300EMC7T53UNNNA58"]
+FDIC_CERT: NUMBER | A unique identifier for the financial institution assigned by the FDIC | eg=[34966, 58513]
+SPECIALIZATION_GROUP: TEXT | Specialization Group from FDIC, defined as Asset Concentration Hierarchy (e.g., Agricultural Specialization) | eg=["Commercial Lending Specialization", "All Other Under 1 Billion"]
+ZIP_CODE: TEXT | Zip code of the bank | eg=["29401", "08540"]
+REASON_FOR_ENTITY_TERMINATION: NUMBER | The circumstances under which an entity ceased to exist or an indicator that an entity failed but remained open.
+ID_COUNTY: TEXT | A unique geographic identifier for the county where the bank is located | eg=["geoId/45019", "geoId/34021"]
+START_DATE: TIMESTAMP_NTZ | First date for which the bank was open | eg=["1999-09-27 00:00:00", "2007-04-23 00:00:00"]
+EMPLOYER_IDENTIFICATION_NUMBER: TEXT | Employer identification number (EIN), a number assigned to a business by the Internal Revenue Service, effective 2008-12-31. | eg=["571084848", "680645074"]
+INSURER: TEXT | Indicates whether an institution is insured under the Deposit Insurance Fund (DIF). | eg=["DIF"]
+CHARTERING_AUTHORITY: TEXT | The level of the chartering agency of the institution (State, Federal) | eg=["State", "Federal"]
+MAJORITY_OWNED_BY_MINORITY_OR_WOMEN: TEXT | Indicates whether the entity is more than 50% owned by one or more minorities or women with identification of the minority. If the ownership is by a woman who is also a member of a minority, the item is coded as minority. Not all codes provided by the FFIEC data were mapped in the reference data | eg=["Hispanic"]
+END_DATE: TIMESTAMP_NTZ | Last date for which the bank was open. NULL if still active
+ENTITY_TYPE: TEXT | The institution grouping for the bank (National Bank, Non-member Bank, etc.) | eg=["State Member Bank", "Non-member Bank"]
+IS_ACTIVE: BOOLEAN | Status of the bank to determine active or closed | eg=[true]
+THRIFT_ID: TEXT | A unique identifier for the financial institution assigned by the Office of Thrift Supervision, last 5 characters only | eg=["13156"]
+ID_RSSD: NUMBER | A unique identifier assigned by the Federal Reserve for the financial institution | eg=[2849463, 3595271]
+CITY: TEXT | City of the bank | eg=["Charleston", "Princeton"]
+CATEGORY: TEXT | Category for the entity | eg=["Bank"]
+CHARTER_TYPE: TEXT | The particular charter assigned to the bank (Industrial Bank, Commercial Bank, etc.) | eg=["Commercial Bank"]
+INTERNATIONAL_BANKING_FACILITY: BOOLEAN | Indicates whether an entity has an International Banking Facility. | eg=[false]
+URL: TEXT | Link to the bank website | eg=["www.fcbcarolinas.com", "WWW.THEBANKOFPRINCETON.COM"]
+OCC_ID: NUMBER | A unique identifier for the financial institution assigned by the Office of the Comptroller of the Currency | eg=[NaN, 17611.0]
+
+## CYBERSYN.FINANCIAL_INSTITUTION_EVENTS
+NAME_SUCCESSOR: TEXT | Name of successor entity | eg=["California Bank of Commerce, National Association", "Equity Bank"]
+TRANSFORMATION_TYPE: TEXT | Description of transformation | eg=["Charter Discontinued", "Failure"]
+CATEGORY_SUCCESSOR: TEXT | High-level category of successor entity legal structure | eg=["Bank", "Branch"]
+CATEGORY_PREDECESSOR: TEXT | High-level category of predecessor entity legal structure | eg=["Branch", "Bank"]
+NAME_PREDECESSOR: TEXT | Name of predecessor entity | eg=["Bank of Santa Clarita", "KansasLand Bank"]
+MERGER_ACCOUNTING_METHOD_UTILIZED: TEXT | Accounting method used in resolving a non-failure merger | eg=["Purchase/Acquisition", "Pooling of interests or entities under common control."]
+ACTIVE_SUCCESSOR: BOOLEAN | Flag to indicate if successor is active | eg=[true, false]
+ID_RSSD_PREDECESSOR: NUMBER | Unique identifier for predecessor entity joinable to entities table | eg=[3302312, 422059]
+TRANSACTION_DATE: DATE | Date of transaction | eg=["2021-10-02", "2024-07-02"]
+ID_RSSD_SUCCESSOR: NUMBER | Unique identifier for successor entity joinable to entities table | eg=[3076453, 139656]
+ACTIVE_PREDECESSOR: BOOLEAN | Flag to indicate if predecessor is active | eg=[true, false]
+
+## CYBERSYN.FINANCIAL_INSTITUTION_HIERARCHY
+CATEGORY_PARENT: TEXT | High-level category of successor entity legal structure (e.g., Bank Holding Company) | eg=["Bank", "Branch"]
+CATEGORY_OFFSPRING: TEXT | High-level category of successor entity legal structure (e.g., Branch, Bank) | eg=["Other Financial Institution"]
+NAME_OFFSPRING: TEXT | Name of offspring entity | eg=["BCI FINANCIAL", "1135 WEST 7TH STREET LLC, A CALIFORNIA LIMITED LIABILITY COMPANY"]
+ID_RSSD_PARENT: NUMBER | Unique identifier for parent entity. Joinable to entities table | eg=[407506, 3835454]
+RELATIONSHIP_TERMINATED: BOOLEAN | Indication if the relationship is still current | eg=[false, true]
+PERCENT_CONTROL_OF_OFFSPRING: NUMBER | Parent percentage of controlling interest in the offspring | eg=[NaN, 100.0]
+ACTIVE_OFFSPRING: BOOLEAN | Flag to indicate if offspring is active | eg=[true, false]
+PARENT_CONTROLS_OFFSPRING: BOOLEAN | Indication if the parent has direct control over the offspring | eg=[true]
+ID_RSSD_OFFSPRING: NUMBER | Unique identifier for offspring entity. Joinable to entities table | eg=[5858822, 5972876]
+ACTIVE_PARENT: BOOLEAN | Flag to indicate if parent is active | eg=[true, false]
+NAME_PARENT: TEXT | Name of parent entity | eg=["Ion Bank", "Royal Business Bank"]
+RELATIONSHIP_LEVEL: TEXT | Description of the type of relationship between the two entities | eg=["Direct relationship"]
+
+## CYBERSYN.FINANCIAL_INSTITUTION_TIMESERIES
+VARIABLE: TEXT | Unique identifier for a variable joinable to the timeseries table | eg=["P3OTHLNR", "DRLNLSQR"]
+ID_RSSD: TEXT | A unique identifier assigned by the Federal Reserve for the financial institution | eg=["582971", "1005655"]
+VALUE: NUMBER | Numeric value for the given data point | eg=["0E-11", "0.00020890000"]
+DATE: DATE | Date associated with the value | eg=["1991-09-30", "2008-06-30"]
+VARIABLE_NAME: TEXT | Human-readable name for the variable | eg=["Other Loans, Past Due 30 - 89 Days", "Total Charge-Offs"]
+UNIT: TEXT | Unit of measure for the value, examples (e.g., percentage, USD) | eg=["Percent", "USD"]
+
+## CYBERSYN.FX_RATES_TIMESERIES
+BASE_CURRENCY_NAME: TEXT | Long name of base currency | eg=["Swiss Franc", "United States Dollar"]
+VARIABLE: TEXT | A unique identifier for the currency pair | eg=["chf_sek", "usd_try"]
+QUOTE_CURRENCY_NAME: TEXT | Long name of quote currency | eg=["Swedish Krona", "Turkish Lira"]
+VALUE: FLOAT | Price for the base currency in terms of the quote currency | eg=[6.8232, 1.8111]
+VARIABLE_NAME: TEXT | A human-readable unique identifier for the currency pair | eg=["CHF/SEK Exchange Rate", "USD/TRY Exchange Rate"]
+BASE_CURRENCY_ID: TEXT | ISO 4217 currency code for the base currency | eg=["CHF", "USD"]
+DATE: DATE | Date for the foreign exchange spot rate | eg=["2011-03-10", "2013-03-13"]
+QUOTE_CURRENCY_ID: TEXT | ISO 4217 currency code for the quote currency | eg=["SEK", "TRY"]
+
+## CYBERSYN.GEOGRAPHY_HIERARCHY
+GEO_ID: TEXT | GEO_ID from GEOGRAPHY_INDEX table for the child geography | eg=["geoId/1990033", "geoId/25009206000"]
+PARENT_GEO_ID: TEXT | GEO_ID from GEOGRAPHY_INDEX table for the parent geography | eg=["geoId/19089", "geoId/25"]
+
+## CYBERSYN.GEOGRAPHY_INDEX
+LEVEL: TEXT | Geographic level or hierarchy (e.g., Country, State, County, City, Continent, CountrySubRegion, etc.) | eg=["CensusBlockGroup", "CensusTract"]
+ISO_ALPHA2: TEXT | 2 letter country code from International Organization for Standardization
+GEO_ID: TEXT | A unique identifier for a place (a nation, state, zip-code, etc.) | eg=["censusBlockGroup/450450043003", "censusBlockGroup/391559307002"]
+ISO_3166_2_CODE: TEXT | Full ISO-3166 code
+ISO_NUMERIC_CODE: TEXT | Numeric code from International Organization for Standardization
+ISO_ALPHA3: TEXT | 3 letter country code from International Organization for Standardization
+GEO_NAME: TEXT | Full name of the place | eg=["Block Group 3; Census Tract 43; Greenville County; South Carolina", "Block Group 2; Census Tract 9307; Trumbull County; Ohio"]
+ISO_NAME: TEXT | Country name from International Organization for Standardization
+
+## CYBERSYN.GEOGRAPHY_OVERLAPS
+GEO_ID: TEXT | GEO_ID from GEOGRAPHY_INDEX table | eg=["geoId/01001020900", "geoId/01003010100"]
+OVERLAPS_WITH: TEXT | GEO_ID from GEOGRAPHY_INDEX table | eg=["zip/36022", "zip/36480"]
+
+## CYBERSYN.GEOGRAPHY_RELATIONSHIPS
+RELATED_GEO_NAME: TEXT | Name of the place related to GEO_NAME. This is a place that overlaps or is contained within the primary geo (e.g., city within a state) | eg=["Block Group 3, Census Tract 4, Sumter County, South Carolina", "Block Group 2; Census Tract 5035.10; Santa Clara County; California"]
+RELATED_LEVEL: TEXT | Geographic level or hierarchy of the related place (e.g., Country, State, County, City, Continent, CountrySubRegion, etc.) | eg=["CensusBlockGroup", "CensusTract"]
+RELATIONSHIP_TYPE: TEXT | Relationship between the two places. Contains means the RELATED_GEO_ID is fully contained within the GEO_ID (e.g., relationship of state to a city) while Overlaps indicates the GEO_ID is a subpart of the RELATED_GEO_ID (e.g., relationship of city to a state) | eg=["Contains", "Overlaps"]
+RELATED_GEO_ID: TEXT | A unique identifier for the related place joinable to the GEOGRAPHY_INDEX table | eg=["censusBlockGroup/450850004003", "censusBlockGroup/060855035102"]
+GEO_ID: TEXT | A unique identifier for a place joinable to the GEOGRAPHY_INDEX table | eg=["geoId/45085", "geoId/06085503510"]
+GEO_NAME: TEXT | Full name of the place | eg=["Sumter County", "Census Tract 5035.10, Santa Clara County, California"]
+LEVEL: TEXT | Geographic level or hierarchy (e.g., Country, State, County, City, Continent, CountrySubRegion, etc.) | eg=["County", "CensusTract"]
+
+## CYBERSYN.OPENFIGI_SECURITY_INDEX
+PRIMARY_TICKER: TEXT | The ticker for the primary trading venue of a security. If a security trades on multiple exchanges or has numerous tickers, an attempt is made to select the ticker from the home market. | eg=["FEBO", "MJ"]
+EXCHANGE_CODES: ARRAY | Codes representing the exchanges where the security is traded. An empty array means that exchange information is not available. | eg=[["PQ","UA","UB","UC","UD","UF","UM","UN","UP","UR","US","UX","VF","VG","VJ","VK","VL","VP","VY"], ["B1","B2","B3","B4","E1","EP","EU","EZ","GB","GC","GD","GE","GF","GH","GI","GM","GQ","GR","GS","GT","GW","GY","GZ","L1","L3","LA","LC","LN","LT","LU","PO","PQ","S2","T2","TH","UA","UB","UC","UD","UF","UI","UJ","UM","UN","UP","UQ","UR","US","UT","UU","UV","UW","UX","VF","VG","VJ","VK","VL","VP","VY","X2","XA","XB","XC","XD","XE","XF","XG","XH","XI","XJ","XL","XM","XN","XO","XP","XQ","XR","XS","XT","XU","XV","XW","XX","XZ"]]
+ASSET_CLASS: TEXT | Broad-based class of the asset, such as 'Equity', 'Muni', etc. | eg=["Equity"]
+SECURITY_TYPE: ARRAY | The type of security, such as "Common Stock" for equities. Securities can fall into multiple categories such as when a company has both tradable shares of Common Stock and an ADR. | eg=[["Common Stock"], ["ETP"]]
+TOP_LEVEL_OPENFIGI_ID_TYPE: TEXT | The highest level of the OpenFIGI ID in the hierarchy for the security held. The hierarchy follows the order "share class FIGI" (global) > "composite FIGI" (country-level) > "FIGI" (exchange-level). For example, if the highest level of ID (recorded in TOP_LEVEL_OPENFIGI_ID) is the composite FIGI, then this will be equal to 'openfigi_composite_id'. | eg=["openfigi_share_class_id"]
+SECURITY_SUBTYPE: ARRAY | Sub-type of the security, providing further classification. Like SECURITY_TYPE, securities can also have multiple subtypes. | eg=[["Common Stock"], ["Mutual Fund"]]
+SECURITY_NAME: TEXT | Name of the security. | eg=["FENBO HOLDINGS LTD", "ETFMG ALTERNATIVE HARVEST"]
+OPENFIGI_FIGI_ID: ARRAY | Array of the FIGI (Financial Instrument Global Identifier) ID(s) for the security. In cases where there is a share class FIGI (global ID) or composite FIGI (country-level ID) because a security trades across multiple countries or exchanges, there may be multiple FIGI IDs associated with a single security. | eg=[["BBG01J992S31","BBG01J992S40","BBG01J992S59","BBG01J992S77","BBG01J992S86","BBG01J992SB2","BBG01J992SD0","BBG01J992SF8","BBG01J992SG7","BBG01J992SJ4","BBG01J992SL1","BBG01J992SP7","BBG01J992SQ6","BBG01J992SR5","BBG01J992SS4","BBG01J992ST3","BBG01J992SV0","BBG01J992SW9","BBG01J992SX8"], ["BBG00B9M3P99","BBG00B9M3PC5","BBG00B9M3PD4","BBG00B9M3PF2","BBG00B9M3PG1","BBG00B9M3PJ8","BBG00B9M3PK6","BBG00B9M3PL5","BBG00B9M3PM4","BBG00B9M3PN3","BBG00B9M3PP1","BBG00B9M3PQ0","BBG00B9M3PR9","BBG00B9M3PS8","BBG00B9M3PT7","BBG00B9M3PV4","BBG00B9M3PW3","BBG00B9M3PX2","BBG00B9M3PY1","BBG00B9M3PZ0","BBG00B9M3Q06","BBG00B9M3Q15","BBG00DJH1W74","BBG00JQ3WF31","BBG00JR2C4C9","BBG00JR2C4D8","BBG00JR2C4F6","BBG00JR2C4G5","BBG00JR2C4H4","BBG00JR2C4J2","BBG00JR2C4K0","BBG00JR2C4L9","BBG00JR2C4M8","BBG00JR2C4N7","BBG00JR2C4P5","BBG00JR2C4Q4","BBG00JR2C4R3","BBG00JR2C4S2","BBG00JRQK632","BBG00JRQK641","BBG00JRQK650","BBG00JRQK669","BBG00JRQK678","BBG00JRQK687","BBG00JRQK696","BBG00JRQK6B3","BBG00JRQK6C2","BBG00JRQK6D1","BBG00JRQK6F9","BBG00JRQK6H7","BBG00JRQK6J5","BBG00JRQK6K3","BBG00JRQK6L2","BBG00JRQK6M1","BBG00JRQK6N0","BBG00JRQK6P8","BBG00JRQK6Q7","BBG00JRQK6R6","BBG00JRQK6S5","BBG00JRQK6T4","BBG00JRQK6V1","BBG00JRQK6W0","BBG00JRQK6X9","BBG00JRQK6Y8","BBG00JRQK6Z7","BBG00JRQK712","BBG00...]
+OPENFIGI_COMPOSITE_ID: ARRAY | Array of the country-level composite FIGI ID(s) for the security. In cases where there is a share class FIGI (global ID) and the security is tradable in more than one country there may be multiple composite IDs associated with a single security. | eg=[["BBG01J992S31"], ["BBG00B9M3P99","BBG00JQ3WF22","BBG00JR2C4C9","BBG00JRQK632","BBG00JRQK703","BBG00JVQN9M7","BBG00JVQNBH8","BBG00KL6RHH3","BBG00KL6S7D8","BBG00KL6SMD5","BBG00KL6T0M2","BBG00LJZ6DX4","BBG00N334PB7","BBG00N5HZ631","BBG00N5HZ702","BBG00P4PVMC8","BBG00PPZPTY1","BBG00PPZPV03","BBG00Y924FZ5","BBG00Z1TJYL9","BBG0169510Y5"]]
+OPENFIGI_SHARE_CLASS_ID: ARRAY | The global share class FIGI ID(s) for the security. This is meant to be the most broad classification in the FIGI classification hierarchy. | eg=[["BBG01J992SY7"], ["BBG00B9M3PB6"]]
+TOP_LEVEL_OPENFIGI_ID: TEXT | OpenFIGI ID of the highest, most widely encompassing level for a particular security. The hierarchy follows the order "share class FIGI" (global) > "composite FIGI" (country-level) > "FIGI" (exchange-level). | eg=["BBG01J992SY7", "BBG00B9M3PB6"]
+GLOBAL_TICKERS: ARRAY | An array of ticker symbols under which the security may be traded globally on all exchanges. | eg=[["FEBO"], ["034B","0MXC","2368787D","MJ","MJ1EUR","MJN","MJXGBP","MJXUSD"]]
+
+## CYBERSYN.PERMID_SECURITY_INDEX
+ASSET_CLASS: TEXT | Broad-based class of the asset, such as 'Ordinary Shares', 'Depositary Receipts', etc. | eg=["Other", "Ordinary Shares"]
+EXCHANGE_CODE: ARRAY | An array of codes representing the exchanges where the security is traded. An empty array means that exchange information is not available. | eg=[["NAS","NYQ"], ["FRA","ISS","MEX"]]
+PRIMARY_TICKER: TEXT | The ticker for the primary trading venue of a security. If a security trades on multiple exchanges or has numerous tickers, an attempt is made to select the ticker from the home market. | eg=["EVN", "LENb"]
+SECURITY_NAME: TEXT | Name of the security. | eg=["EATON VANCE MUNICIPAL INCOME CLOSED FUND", "LENNAR ORD SHS CLASS B"]
+PRIMARY_EXCHANGE_CODE: TEXT | The exchange code for the primary trading venue of a security. | eg=["NYQ", "ISS"]
+SECURITY_STATUS: TEXT | Status of the security, i.e. 'Active' or 'Inactive'. An active security is a security that has active quotes and an inactive security has no active quotes. This status changes over time. | eg=["Active", "Inactive"]
+GLOBAL_TICKERS: ARRAY | An array of ticker symbols under which the security may be traded globally on all exchanges. | eg=[["EVN","XEVNX"], ["LENB*","LENb","LNN0"]]
+PERMID_SECURITY_ID: TEXT | PermID for the security. | eg=["8589975674", "8589959375"]
+PRIMARY_EXCHANGE_NAME: TEXT | The exchange name for the primary trading venue of a security. | eg=["NYSE CONSOLIDATED", "ISE when trading NYSE and AMEX Stocks"]
+PERMID_QUOTE_ID: ARRAY | An array of PermIDs for the quotes for each exchange where the security is traded. An empty array means that quote information is not available. | eg=[["55835369644","55839104515"], ["21627275840","21736829361","55836192793"]]
+
+## CYBERSYN.PUBLIC_HOLIDAY_CALENDAR
+SUBDIVISION: TEXT | State, province, or other underlying geography that is specific to the holiday
+HOLIDAY_NAME: TEXT | Name of the Holiday | eg=["Immaculate Conception's Day", "Corpus Christi"]
+ISO_ALPHA2: TEXT | 2 letter country code from International Organization for Standardization | eg=["MC"]
+IS_FINANCIAL: BOOLEAN | Boolean denoting a stock market closure for the given region | eg=[false]
+DATE: DATE | Date associated with the event | eg=["1999-12-08", "2000-06-22"]
+GEO_ID: TEXT | GEO_ID from GEOGRAPHY_INDEX table | eg=["country/MCO"]
+
+## CYBERSYN.STOCK_PRICE_TIMESERIES
+PRIMARY_EXCHANGE_NAME: TEXT | The exchange name for the primary trading venue of a security. | eg=["NASDAQ CAPITAL MARKET", "NEW YORK STOCK EXCHANGE"]
+ASSET_CLASS: TEXT | Type of security. | eg=["Common Shares", "Equity"]
+VALUE: FLOAT | Value reported for the variable. | eg=[1.19, 17249.0]
+PRIMARY_EXCHANGE_CODE: TEXT | The exchange code for the primary trading venue of a security. | eg=["NAS", "NYS"]
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table. | eg=["all-day_high", "nasdaq_volume"]
+DATE: DATE | Date associated with the value. | eg=["2022-08-08", "2023-02-16"]
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable. | eg=["All-Day High", "Nasdaq Volume"]
+TICKER: TEXT | Alphanumeric code that represents a specific publicly traded security on the NASDAQ exchange. | eg=["FAMI", "TIPT"]
+
+## CYBERSYN.US_ECONOMIC_CENSUS_ATTRIBUTES
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable. | eg=["Production workers for pay period including sept 12 | Iron ore mining (NAICS 2012 code: 212210)", "Other employees for pay period including march 12 | Land subdivision (NAICS 2017 code: 237210)"]
+CREDIT_CARD_SERVICES_INCOME: TEXT | Specific source of credit card products or services income category (e.g., from cardholder fees, interest, merchant fees).
+MEASURE: TEXT | Quantifiable attribute or subject; description of what is being recorded. | eg=["Employment", "Sales and revenue"]
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table. | eg=["EMPQ3PW_212210_2012", "EMPQ1OC_237210_2017"]
+NAICS_CODE: TEXT | Industry classification according to North American Industry Classification System. | eg=["212210", "237210"]
+FREQUENCY: TEXT | Frequency of aggregations. | eg=["Annual"]
+PRODUCT_SERVICES_LINE: TEXT | Related product or service.
+TAX_STATUS: TEXT | Establishment's tax status (e.g., exempt from or subject to federal income tax). | eg=["All establishments"]
+NAICS_DESCRIPTION: TEXT | Description of Industry classification according to North American Industry Classification System. | eg=["Iron ore mining", "Land subdivision"]
+UNIT: TEXT | Unit of measurement for the reported value. | eg=["Count"]
+OPERATION_TYPE: TEXT | Type of operation run by the establishment (e.g., Merchant wholesalers; Manufacturer's sales branches and offices). | eg=["All establishments"]
+
+## CYBERSYN.US_ECONOMIC_CENSUS_TIMESERIES
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table. | eg=["BENLGL_5629_2017", "EMPAVPW_484220_2012"]
+UNIT: TEXT | Unit of measurement for the reported value. | eg=["USD", "Count"]
+DATE: TEXT | Date associated with the value. | eg=["2017-12-31", "2012-12-31"]
+VALUE: FLOAT | Value reported for the variable. | eg=[0.0]
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable. | eg=["Employers cost for legally required fringe benefits | Remediation and other waste management services (NAICS 2017 code: 5629)", "Production workers average for year | Specialized freight (except used goods) trucking, local (NAICS 2012 code: 484220)"]
+GEO_ID: TEXT | A unique identifier for a place. Joinable to other geography tables including GEOGRAPHY_INDEX, GEOGRAPHY_RELATIONSHIPS, and GEOGRAPHY_CHARACTERISTICS. | eg=["geoId/34039", "geoId/1734670"]

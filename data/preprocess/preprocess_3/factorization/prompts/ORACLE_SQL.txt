@@ -1,0 +1,202 @@
+[COMPONENTS]
+@C1
+app_id: NUMBER | NULL
+page_no: NUMBER | NULL
+
+[TABLES]
+## ORACLE_SQL.WEB_PAGES
+@use: [C1]
+friendly_url: TEXT | NULL
+
+## ORACLE_SQL.GENDER_DIM
+name: TEXT | NULL
+letter: TEXT | NULL
+
+## ORACLE_SQL.WEB_DEVICES
+phone: NUMBER | NULL
+day: TEXT | NULL
+tablet: NUMBER | NULL
+pc: NUMBER | NULL
+
+## ORACLE_SQL.CUSTOMER_REVIEWS
+customer_id: NUMBER | NULL
+review_list: TEXT | NULL
+
+## ORACLE_SQL.PACKAGING_RELATIONS
+qty: NUMBER | NULL
+packaging_id: NUMBER | NULL
+contains_id: NUMBER | NULL
+
+## ORACLE_SQL.PRODUCT_MINIMUMS
+qty_purchase: FLOAT | NULL
+qty_minimum: FLOAT | NULL
+product_id: NUMBER | NULL
+
+## ORACLE_SQL.EMPLOYEES
+id: NUMBER | NULL
+title: TEXT | NULL
+name: TEXT | NULL
+supervisor_id: FLOAT | NULL
+
+## ORACLE_SQL.PRODUCT_ALCOHOL
+abv: FLOAT | NULL
+product_id: NUMBER | NULL
+sales_volume: FLOAT | NULL
+
+## ORACLE_SQL.WEB_APPS
+id: NUMBER | NULL
+name: TEXT | NULL
+
+## ORACLE_SQL.PRODUCTS
+id: NUMBER | NULL
+group_id: NUMBER | NULL
+name: TEXT | NULL
+
+## ORACLE_SQL.PRODUCT_GROUPS
+id: NUMBER | NULL
+name: TEXT | NULL
+
+## ORACLE_SQL.CUSTOMER_FAVORITES
+customer_id: NUMBER | NULL
+favorite_list: TEXT | NULL
+
+## ORACLE_SQL.ORDERS
+delivery: TEXT | NULL
+id: NUMBER | NULL
+ordered: TEXT | NULL
+customer_id: NUMBER | NULL
+
+## ORACLE_SQL.BREWERIES
+id: NUMBER | NULL
+name: TEXT | NULL
+
+## ORACLE_SQL.EMP_HIRE_PERIODS
+end_: TEXT | NULL
+start_: TEXT | NULL
+title: TEXT | NULL
+emp_id: NUMBER | NULL
+
+## ORACLE_SQL.ID_NAME_TYPE
+name: TEXT | NULL
+id: TEXT | NULL
+
+## ORACLE_SQL.MONTHLY_BUDGET
+mth: TEXT | NULL
+product_id: NUMBER | NULL
+qty: FLOAT | NULL
+
+## ORACLE_SQL.ORDERLINES
+order_id: NUMBER | NULL
+qty: FLOAT | NULL
+product_id: NUMBER | NULL
+amount: FLOAT | NULL
+id: NUMBER | NULL
+
+## ORACLE_SQL.PICKING_LINE
+picklist_id: NUMBER | NULL
+qty: FLOAT | NULL
+product_id: NUMBER | NULL
+line_no: NUMBER | NULL
+order_id: NUMBER | NULL
+location_id: NUMBER | NULL
+
+## ORACLE_SQL.CUSTOMERS
+name: TEXT | NULL
+id: NUMBER | NULL
+
+## ORACLE_SQL.ID_NAME_COLL_TYPE
+collection_id: TEXT | NULL
+
+## ORACLE_SQL.INVENTORY
+location_id: NUMBER | NULL
+product_id: NUMBER | NULL
+purchase_id: NUMBER | NULL
+id: NUMBER | NULL
+qty: FLOAT | NULL
+
+## ORACLE_SQL.PICKING_LOG
+log_time: TEXT | NULL
+pickline_no: FLOAT | NULL
+picklist_id: NUMBER | NULL
+activity: TEXT | NULL
+location_id: FLOAT | NULL
+
+## ORACLE_SQL.MONTHLY_SALES
+mth: TEXT | NULL
+product_id: NUMBER | NULL
+qty: NUMBER | NULL
+
+## ORACLE_SQL.STOCK
+company: TEXT | NULL
+symbol: TEXT | NULL
+
+## ORACLE_SQL.PURCHASES
+product_id: NUMBER | NULL
+purchased: TEXT | NULL
+cost: FLOAT | NULL
+id: NUMBER | NULL
+qty: NUMBER | NULL
+brewery_id: NUMBER | NULL
+
+## ORACLE_SQL.WEB_PAGE_VISITS
+@use: [C1]
+client_ip: TEXT | NULL
+visit_time: TEXT | NULL
+
+## ORACLE_SQL.FAVORITE_COLL_TYPE
+id: TEXT | NULL
+
+## ORACLE_SQL.TICKER
+price: FLOAT | NULL
+symbol: TEXT | NULL
+day: TEXT | NULL
+
+## ORACLE_SQL.SERVER_HEARTBEAT
+beat_time: TEXT | NULL
+server: TEXT | NULL
+
+## ORACLE_SQL.PACKAGING
+name: TEXT | NULL
+id: NUMBER | NULL
+
+## ORACLE_SQL.WEB_DEMOGRAPHICS
+f_tw_qty: NUMBER | NULL
+f_fb_qty: NUMBER | NULL
+m_tw_cnt: NUMBER | NULL
+m_tw_qty: NUMBER | NULL
+f_fb_cnt: NUMBER | NULL
+f_tw_cnt: NUMBER | NULL
+m_fb_qty: NUMBER | NULL
+day: TEXT | NULL
+m_fb_cnt: NUMBER | NULL
+
+## ORACLE_SQL.WEB_COUNTER_HIST
+@use: [C1]
+day: TEXT | NULL
+counter: NUMBER | NULL
+
+## ORACLE_SQL.ID_NAME_COLL_ENTRIES
+collection_id: TEXT | NULL
+name: TEXT | NULL
+id: TEXT | NULL
+
+## ORACLE_SQL.LOCATIONS
+position: NUMBER | NULL
+warehouse: NUMBER | NULL
+aisle: TEXT | NULL
+id: NUMBER | NULL
+
+## ORACLE_SQL.CONWAY_GEN_ZERO
+x: TEXT | NULL
+alive: TEXT | NULL
+y: TEXT | NULL
+
+## ORACLE_SQL.PICKING_LIST
+created: TEXT | NULL
+id: NUMBER | NULL
+picker_emp_id: NUMBER | NULL
+
+## ORACLE_SQL.CHANNELS_DIM
+name: TEXT | NULL
+id: NUMBER | NULL
+shortcut: TEXT | NULL

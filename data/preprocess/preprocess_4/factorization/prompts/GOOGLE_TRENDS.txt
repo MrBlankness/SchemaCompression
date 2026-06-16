@@ -1,0 +1,32 @@
+[COMPONENTS]
+@C1
+rank: NUMBER | NULL | eg=[23]
+refresh_date: DATE | NULL | eg=["2024-09-28"]
+score: NUMBER | NULL
+term: TEXT | NULL | eg=["AC Milan"]
+week: DATE | NULL | eg=["2019-11-17", "2019-12-15"]
+
+@C2
+country_code: TEXT | NULL | eg=["TR"]
+country_name: TEXT | NULL | eg=["Turkey"]
+region_code: TEXT | NULL | eg=["TR-39"]
+region_name: TEXT | NULL | eg=["Kırklareli"]
+
+[TABLES]
+## GOOGLE_TRENDS.TOP_TERMS
+@use: [C1]
+dma_id: NUMBER | NULL | eg=[500]
+dma_name: TEXT | NULL | eg=["Portland-Auburn ME"]
+
+## GOOGLE_TRENDS.TOP_RISING_TERMS
+@use: [C1]
+dma_name: TEXT | NULL | eg=["Portland-Auburn ME"]
+percent_gain: NUMBER | NULL | eg=[1650]
+dma_id: NUMBER | NULL | eg=[500]
+
+## GOOGLE_TRENDS.INTERNATIONAL_TOP_TERMS
+@use: [C1, C2]
+
+## GOOGLE_TRENDS.INTERNATIONAL_TOP_RISING_TERMS
+@use: [C1, C2]
+percent_gain: NUMBER | NULL | eg=[3500]

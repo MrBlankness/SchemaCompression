@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq166",
+  "question": "Using segment-level copy number data from the copy_number_segment_allelic_hg38_gdc_r23 dataset restricted to 'TCGA-KIRC' samples, merge these segments with the cytogenetic band definitions in 'CytoBands_hg38' to identify each sample’s maximum copy number per cytoband. Classify these maximum copy numbers into amplifications (>3), gains (=3), homozygous deletions (=0), heterozygous deletions (=1), or normal (=2), then calculate the frequency of each subtype out of the total number of distinct cases, and finally present these frequencies as percentages sorted by chromosome and cytoband.",
+  "db_id": "TCGA_MITELMAN",
+  "source_document": "Comprehensive_Guide_to_Copy_Number_Variations_in_Cancer_Genomics.md",
+  "evidence": "TCGA-KIRC project offers crucial CNV data. CytoBands are chromosomal regions for mapping CNVs. CNV categories: Amplifications (>3 copies), Gains (=3 copies), Homozygous Deletions (0 copies), Heterozygous Deletions (1 copy), Normal Diploid (2 copies). Overlap formula: Overlap = max(0, min(end_pos, hg38_stop) - max(start_pos, hg38_start)). Data sources: TCGA CNV Data (copy_number_segment_allelic_hg38_gdc_r23), Mitelman Database (CytoBands_hg38)."
+}

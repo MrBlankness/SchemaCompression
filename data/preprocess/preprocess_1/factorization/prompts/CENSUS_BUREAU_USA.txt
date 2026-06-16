@@ -1,0 +1,22 @@
+[COMPONENTS]
+@C1:area_land_meters,area_water_meters
+@C2:gender,maximum_age,minimum_age,population
+@C3:geo_code,lsad_code
+@C4:int_point_lat,int_point_lon,lsad_name
+
+[TABLES]
+Format: schema.table|components|columns
+UTILITY_US.US_COUNTY_AREA|@C1|legal_area_code,county_geom,county_name,aff_geo_code,county_fips_code,county_gnis_code,geo_id,state_fips_code
+UTILITY_US.TIME||time,second,hour,is_pm,hour_ampm,second_in_day,minute
+UTILITY_US.US_BORDER_AREA||aff_geo_id,geo_id,us_border_geom,name
+UTILITY_US.ZIPCODE_AREA|@C1|area_land_miles,latitude,zipcode_geom,city,zipcode,longitude,state_fips,area_water_miles,state_code,county,state_name
+UTILITY_US.DATE_GREG||quarter,date_slash,week_iso,year_first_day,dow_mon06,half,quarter_first_day,month_first_day,dow_sun06,day_abbr,date_str,week_sun,month_abbr,year_iso,day,dow_mon17,dow_sun17,date_dash,week_mon,date_int,half_first_day,month,date,year
+UTILITY_US.US_CSA_AREA|@C1,@C3|aff_geo_code,name,csa_code,csa_geom
+UTILITY_US.US_STATES_AREA|@C1|functional_status_code,feature_class_code,state_fips_code,region_code,internal_point_lon,state_gnis_code,legal_area_code,internal_point_lat,division_code,state_abbreviation,state_geo_id,state_geom,state_name
+UTILITY_US.US_COASTLINE_AREA||name,coastline_geom
+UTILITY_US.COUNTRY_CODE_ISO||alpha_3_code,alpha_2_code,sub_continent_name,continent_code,cctlds,fips_code,numeric_code,country_name,continent_name,stanag_code
+UTILITY_US.NUM_999999||num
+UTILITY_US.US_CITIES_AREA|@C1,@C3,@C4|area_type,urban_area_code,functional_status,feature_class_code,name,city_geom
+UTILITY_US.US_MSA_AREA|@C1,@C3,@C4|msa_geom,csa_code,name,msa_code,status_indicator,feature_class_code
+CENSUS_BUREAU_USA.POPULATION_BY_ZIP_2010|@C2|geo_id,zipcode
+CENSUS_BUREAU_USA.POPULATION_BY_ZIP_2000|@C2|geo_id,zipcode

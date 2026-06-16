@@ -1,0 +1,83 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: PLATFORM.ASSOCIATIONBYDATASOURCEINDIRECT
+Columns: datatypeId, diseaseId, evidenceCount, targetId, score, datasourceId
+
+Table: PLATFORM.ASSOCIATIONBYOVERALLINDIRECT
+Columns: diseaseId, targetId, evidenceCount, score
+
+Table: PLATFORM.INTERACTION
+Columns: intBBiologicalRole, intABiologicalRole, count, speciesA, targetA, targetB, intB, speciesB, scoring, sourceDatabase, intA
+
+Table: PLATFORM.REACTOME
+Columns: id, descendants, children, label, ancestors, parents, path
+
+Table: PLATFORM.ASSOCIATIONBYDATATYPEINDIRECT
+Columns: targetId, score, evidenceCount, datatypeId, diseaseId
+
+Table: PLATFORM.INDICATION
+Columns: indicationCount, id, approvedIndications, indications
+
+Table: PLATFORM.DISEASETOPHENOTYPE
+Columns: disease, phenotype, evidence
+
+Table: PLATFORM.TARGETESSENTIALITY
+Columns: id, geneEssentiality
+
+Table: PLATFORM.INTERACTIONEVIDENCE
+Columns: targetA, interactionIdentifier, hostOrganismTaxId, pubmedId, interactionDetectionMethodShortName, interactionDetectionMethodMiIdentifier, expansionMethodMiIdentifier, targetB, intABiologicalRole, speciesA, participantDetectionMethodA, speciesB, hostOrganismScientificName, intB, intASource, interactionScore, intBSource, interactionTypeMiIdentifier, evidenceScore, interactionTypeShortName, expansionMethodShortName, interactionResources, intA, hostOrganismTissue, participantDetectionMethodB, intBBiologicalRole
+
+Table: PLATFORM.DRUGWARNINGS
+Columns: references, efo_term, efo_id, toxicityClass, description, chemblIds, efo_id_for_warning_class, year, id, country, warningType
+
+Table: PLATFORM.EVIDENCE
+Columns: reactionId, statisticalTestTail, mutatedSamples, id, contrast, geneticBackground, clinicalStatus, publicationYear, projectId, textMiningSentences, sourceId, allelicRequirements, variantAminoacidDescriptions, targetFromSource, significantDriverMethods, variantHgvsId, studyCases, diseaseModelAssociatedModelPhenotypes, studyOverview, cohortPhenotypes, oddsRatio, diseaseFromSource, pathways, releaseVersion, ancestryId, literature, targetId, biosamplesFromSource, variantFunctionalConsequenceFromQtlId, biologicalModelId, oddsRatioConfidenceIntervalUpper, diseaseFromSourceId, pmcIds, reactionName, variantRsId, pValueExponent, targetFromSourceId, sex, ancestry, betaConfidenceIntervalUpper, oddsRatioConfidenceIntervalLower, biomarkers, studyStopReason, crisprScreenLibrary, log2FoldChangePercentileRank, cohortDescription, targetInModel, datasourceId, studyId, confidence, clinicalSignificances, resourceScore, alleleOrigins, diseaseId, diseaseCellLines, diseaseModelAssociatedHumanPhenotypes, drugId, directionOnTrait, cohortId, studyStopReasonCategories, statisticalMethod, biomarkerName, targetInModelMgiId, statisticalMethodOverview, score, cohortShortName, _corrupt_record, studyCasesWithQualifyingVariants, studySampleSize, log2FoldChangeValue, datatypeId, diseaseFromSourceMappedId, biologicalModelAllelicComposition, variantFunctionalConsequenceId, beta, studyStartDate, clinicalPhase, variantId, targetInModelEnsemblId, cellType, biologicalModelGeneticBackground, betaConfidenceIntervalLower, variantEffect, releaseDate, urls, targetModulation, pValueMantissa, publicationFirstAuthor, drugFromSource, drugResponse
+
+Table: PLATFORM.MOLECULE
+Columns: name, yearOfFirstApproval, linkedTargets, parentId, linkedDiseases, blackBoxWarning, canonicalSmiles, hasBeenWithdrawn, description, maximumClinicalTrialPhase, isApproved, crossReferences, inchiKey, id, childChemblIds, tradeNames, synonyms, drugType
+
+Table: PLATFORM.PHARMACOGENOMICS
+Columns: studyId, haplotypeId, isDirectTarget, genotypeId, evidenceLevel, datasourceId, targetFromSourceId, drugs, phenotypeFromSourceId, literature, directionality, genotype, datasourceVersion, genotypeAnnotationText, haplotypeFromSourceId, variantFunctionalConsequenceId, variantRsId, phenotypeText, datatypeId, pgxCategory
+
+Table: PLATFORM.GO
+Columns: name, id
+
+Table: PLATFORM.TARGETS
+Columns: pathways, genomicLocation, safetyLiabilities, alternativeGenes, subcellularLocations, symbolSynonyms, homologues, nameSynonyms, hallmarks, canonicalTranscript, obsoleteSymbols, chemicalProbes, proteinIds, dbXrefs, approvedSymbol, synonyms, constraint, tractability, targetClass, transcriptIds, functionDescriptions, biotype, canonicalExons, id, approvedName, go, obsoleteNames, tep
+
+Table: PLATFORM.MECHANISMOFACTION
+Columns: targetType, chemblIds, actionType, references, mechanismOfAction, targetName, targets
+
+Table: PLATFORM.MOUSEPHENOTYPES
+Columns: targetFromSourceId, biologicalModels, modelPhenotypeLabel, modelPhenotypeClasses, targetInModelMgiId, targetInModelEnsemblId, modelPhenotypeId, targetInModel
+
+Table: PLATFORM.TARGETPRIORITISATION
+Columns: hasLigand, maxClinicalTrialPhase, hasHighQualityChemicalProbes, mouseKOScore, geneticConstraint, hasSafetyEvent, isInMembrane, isSecreted, mouseOrthologMaxIdentityPercentage, isCancerDriverGene, hasSmallMoleculeBinder, paralogMaxIdentityPercentage, hasTEP, hasPocket, tissueDistribution, targetId, tissueSpecificity
+
+Table: PLATFORM.SIGNIFICANTADVERSEDRUGREACTIONS
+Columns: count, llr, event, meddraCode, critval, chembl_id
+
+Table: PLATFORM.ASSOCIATIONBYDATASOURCEDIRECT
+Columns: evidenceCount, score, targetId, datasourceId, diseaseId, datatypeId
+
+Table: PLATFORM.ASSOCIATIONBYOVERALLDIRECT
+Columns: score, diseaseId, targetId, evidenceCount
+
+Table: PLATFORM.KNOWNDRUGSAGGREGATED
+Columns: prefName, status, mechanismOfAction, urls, targetId, ancestors, tradeNames, diseaseId, synonyms, label, drugId, phase, targetName, approvedSymbol, approvedName, drugType, targetClass
+
+Table: PLATFORM.HPO
+Columns: parents, description, name, dbXRefs, obsolete_terms, namespace, id
+
+Table: PLATFORM.BASELINEEXPRESSION
+Columns: id, tissues
+
+Table: PLATFORM.OT_RELEASE
+Columns: release
+
+Table: PLATFORM.DISEASES
+Columns: directLocationIds, obsoleteTerms, name, description, children, id, ancestors, code, indirectLocationIds, ontology, parents, therapeuticAreas, descendants, synonyms, dbXRefs
+
+Table: PLATFORM.ASSOCIATIONBYDATATYPEDIRECT
+Columns: diseaseId, evidenceCount, targetId, datatypeId, score

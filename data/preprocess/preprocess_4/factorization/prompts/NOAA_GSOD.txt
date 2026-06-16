@@ -1,0 +1,450 @@
+[COMPONENTS]
+@C1
+count_dewp: NUMBER | Number of observations used in calculating mean dew point | eg=[0, 4]
+count_slp: NUMBER | Number of observations used in calculating mean sea level pressure | eg=[4, 0]
+count_stp: NUMBER | Number of observations used in calculating mean station pressure | eg=[4, 0]
+count_temp: NUMBER | Number of observations used in calculating mean temperature | eg=[4]
+count_visib: NUMBER | Number of observations used in calculating mean visibility | eg=[0]
+count_wdsp: TEXT | Number of observations used in calculating mean wind speed | eg=["4", "0"]
+da: TEXT | The day | eg=["27", "13"]
+dewp: FLOAT | Mean dew point for the day in degreesm Fahrenheit to tenths.  Missing = 9999.9 | eg=[9999.9, 36.0]
+flag_max: TEXT | Blank indicates max temp was taken from the explicit max temp report and not from the 'hourly' data.
+* indicates max temp was  derived from the hourly data (i.e., highest hourly or synoptic-reported temperature)
+flag_min: TEXT | Blank indicates min temp was taken from the explicit min temp report and not from the 'hourly' data.
+* indicates min temp was derived from the hourly data (i.e., lowest hourly or synoptic-reported temperature) | eg=["*"]
+flag_prcp: TEXT | A = 1 report of 6-hour precipitation amount
+B = Summation of 2 reports of 6-hour precipitation amount
+C = Summation of 3 reports of 6-hour precipitation amount
+D = Summation of 4 reports of 6-hour precipitation amount
+E = 1 report of 12-hour precipitation amount
+F = Summation of 2 reports of 12-hour precipitation amount
+G = 1 report of 24-hour precipitation amount
+H = Station reported '0' as the amount for the day (eg, from 6-hour reports), but also reported at least one occurrence of precipitation in hourly observations--this could indicate a trace occurred, but should be considered as incomplete data for the day.
+I = Station did not report any precip data for the day and did not report any occurrences of precipitation in its hourly observations--it's still possible that precip occurred but was not reported | eg=["A"]
+fog: TEXT | Indicators (1 = yes, 0 = no/not reported) for the occurrence during the day | eg=["0", "1"]
+gust: FLOAT | Maximum wind gust reported for the day in knots to tenths. Missing = 999.9 | eg=[999.9]
+hail: TEXT | Indicators (1 = yes, 0 = no/not reported) for the occurrence during the day | eg=["0"]
+max: FLOAT | Maximum temperature reported during the day in Fahrenheit to tenths--time of max temp report varies by country and region, so this will sometimes not be the max for the calendar day. Missing = 9999.9 | eg=[46.9, 60.1]
+min: FLOAT | Minimum temperature reported during the day in Fahrenheit to tenths--time of min temp report varies by country and region, so this will sometimes not be the min for the calendar day. Missing = 9999.9 | eg=[33.1, 37.0]
+mo: TEXT | The month | eg=["01", "12"]
+mxpsd: TEXT | Maximum sustained wind speed reported for the day in knots to tenths. Missing = 999.9 | eg=["6.0", "8.9"]
+prcp: FLOAT | Total precipitation (rain and/or melted snow) reported during the day in inches and hundredths; will usually not end with the midnight observation--i.e., may include latter part of previous day. 
+.00 indicates no measurable precipitation (includes a trace).
+Missing = 99.99
+Note: Many stations do not report '0' on days with no precipitation--therefore, '99.99' will often appear on these days. Also, for example, a station may only report a 6-hour amount for the period during which rain fell. See Flag field for source of data | eg=[0.02, 99.99]
+rain_drizzle: TEXT | Indicators (1 = yes, 0 = no/not reported) for the occurrence during the day | eg=["1", "0"]
+slp: FLOAT | Mean sea level pressure for the day in millibars to tenths. Missing = 9999.9 | eg=[1025.2, 1018.5]
+sndp: FLOAT | Snow depth in inches to tenths--last report for the day if reported more thanonce. Missing = 999.9
+Note: Most stations do not report '0' ondays with no snow on the ground--therefore, '999.9' will often appear on these days | eg=[999.9]
+snow_ice_pellets: TEXT | Indicators (1 = yes, 0 = no/not reported) for the occurrence during the day | eg=["0"]
+stn: TEXT | Station number (WMO/DATSAV3 number) for the location | eg=["478120", "476490"]
+stp: FLOAT | Mean station pressure for the day in millibars to tenths. Missing = 9999.9 | eg=[1023.3, 998.9]
+temp: FLOAT | Mean temperature for the day in degrees Fahrenheit to tenths. Missing = 9999.9 | eg=[38.3, 46.0]
+thunder: TEXT | Indicators (1 = yes, 0 = no/not reported) for the occurrence during the day | eg=["0"]
+tornado_funnel_cloud: TEXT | Indicators (1 = yes, 0 = no/not reported) for the occurrence during the day | eg=["0"]
+visib: FLOAT | Mean visibility for the day in miles to tenths.  Missing = 999.9 | eg=[999.9]
+wdsp: TEXT | Mean wind speed for the day in knots to tenths. Missing = 999.9 | eg=["3.5", "3.4"]
+year: TEXT | The year | eg=["1955"]
+
+[TABLES]
+## NOAA_GSOD.GSOD1955
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1957
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["93727", "03840"]
+
+## NOAA_GSOD.GSOD2020
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["54822"]
+date: DATE | Date of the weather observations | eg=["2020-05-08", "2020-03-09"]
+
+## NOAA_GSOD.GSOD1981
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.STATIONS
+elev: TEXT | NULL | eg=["+7018.0", "+7026.0"]
+country: TEXT | NULL | eg=["AF", "NO"]
+usaf: TEXT | NULL | eg=["007018", "007026"]
+lon: FLOAT | NULL | eg=[0.0, 65.567]
+call: TEXT | NULL
+wban: TEXT | NULL | eg=["99999"]
+name: TEXT | NULL | eg=["WXPOD 7018                   ", "WXPOD 7026                   "]
+begin: TEXT | NULL | eg=["20110309", "20120713"]
+state: TEXT | NULL
+end: TEXT | NULL | eg=["20130730", "20170822"]
+lat: FLOAT | NULL | eg=[0.0, 32.95]
+
+## NOAA_GSOD.GSOD1978
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1931
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1961
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2007
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1998
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "11630"]
+
+## NOAA_GSOD.GSOD1943
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["93034", "23047"]
+
+## NOAA_GSOD.GSOD1963
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1977
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1979
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2013
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1990
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "93738"]
+
+## NOAA_GSOD.GSOD1965
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1997
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1995
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["94728", "11641"]
+
+## NOAA_GSOD.GSOD1982
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1973
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1947
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "14743"]
+
+## NOAA_GSOD.GSOD1964
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1994
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1941
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["00029", "24155"]
+
+## NOAA_GSOD.GSOD2016
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "90001"]
+
+## NOAA_GSOD.GSOD1936
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["13702"]
+
+## NOAA_GSOD.GSOD1987
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1953
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1939
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["13858", "93035"]
+
+## NOAA_GSOD.GSOD1937
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["13921"]
+
+## NOAA_GSOD.GSOD1945
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "12912"]
+
+## NOAA_GSOD.GSOD1954
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1968
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2001
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1967
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1966
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2008
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["14742", "14840"]
+
+## NOAA_GSOD.GSOD2005
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "13806"]
+
+## NOAA_GSOD.GSOD1958
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1952
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "53917"]
+
+## NOAA_GSOD.GSOD2000
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1950
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1984
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1946
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1999
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["24162", "99999"]
+
+## NOAA_GSOD.GSOD1971
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2022
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+date: DATE | Date of the weather observations | eg=["2022-02-15", "2022-03-06"]
+
+## NOAA_GSOD.GSOD1988
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "12854"]
+
+## NOAA_GSOD.GSOD1993
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["93737", "13944"]
+
+## NOAA_GSOD.GSOD2018
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1996
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1944
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["00142"]
+
+## NOAA_GSOD.GSOD1975
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "27508"]
+
+## NOAA_GSOD.GSOD1972
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2014
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["90001", "99999"]
+
+## NOAA_GSOD.GSOD1989
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1986
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1929
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1948
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["14799", "99999"]
+
+## NOAA_GSOD.GSOD1932
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["24106"]
+
+## NOAA_GSOD.GSOD1956
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "00091"]
+
+## NOAA_GSOD.GSOD1974
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2006
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["54746", "99999"]
+
+## NOAA_GSOD.GSOD1980
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2010
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1992
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["13702", "13829"]
+
+## NOAA_GSOD.GSOD2002
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2003
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2009
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "54923"]
+
+## NOAA_GSOD.GSOD1960
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2024
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+date: DATE | Date of the weather observations | eg=["2024-01-01", "2024-02-24"]
+
+## NOAA_GSOD.GSOD1942
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1934
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1940
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["14936"]
+
+## NOAA_GSOD.GSOD2012
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["14835", "99999"]
+
+## NOAA_GSOD.GSOD1962
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1976
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2017
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1970
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1985
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1959
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1983
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2019
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1938
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1991
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "13865"]
+
+## NOAA_GSOD.GSOD1935
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["13821"]
+
+## NOAA_GSOD.GSOD2004
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2021
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["63817", "53950"]
+date: DATE | Date of the weather observations | eg=["2021-10-01", "2021-02-28"]
+
+## NOAA_GSOD.GSOD2015
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2011
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1933
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1951
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1969
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1930
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2023
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+date: DATE | Date of the weather observations | eg=["2023-10-01", "2023-12-18"]
+
+## NOAA_GSOD.GSOD1949
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]

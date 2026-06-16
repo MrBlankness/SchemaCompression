@@ -1,0 +1,23 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: THELOOK_ECOMMERCE.EVENTS
+Columns: sequence_number, state, city, uri, user_id, traffic_source, browser, created_at, id, ip_address, session_id, event_type, postal_code
+
+Table: THELOOK_ECOMMERCE.PRODUCTS
+Columns: sku, distribution_center_id, name, category, cost, id, brand, retail_price, department
+
+Table: THELOOK_ECOMMERCE.DISTRIBUTION_CENTERS
+Columns: name, longitude, latitude, id
+
+Table: THELOOK_ECOMMERCE.ORDERS
+Columns: gender, created_at, user_id, shipped_at, returned_at, num_of_item, delivered_at, order_id, status
+
+Table: THELOOK_ECOMMERCE.USERS
+Columns: longitude, age, email, country, city, street_address, last_name, created_at, id, first_name, traffic_source, latitude, postal_code, gender, state
+
+Table: THELOOK_ECOMMERCE.INVENTORY_ITEMS
+Columns: product_sku, sold_at, id, product_department, product_distribution_center_id, cost, product_name, product_category, product_retail_price, product_id, product_brand, created_at
+
+Table: THELOOK_ECOMMERCE.ORDER_ITEMS
+Columns: id, status, product_id, shipped_at, order_id, sale_price, inventory_item_id, user_id, delivered_at, created_at, returned_at

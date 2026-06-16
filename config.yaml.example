@@ -1,0 +1,58 @@
+# SchemaCompressor Configuration Template
+# Copy this file to config.yaml and update with your settings
+
+# Mode Configuration
+mode: eval  # eval or inference
+
+# Input/Output Paths
+input_file: data/input/dev.json
+db_root_path: data/raw/resource/databases
+external_knowledge_root: data/raw/resource/documents
+external_knowledge_summary_root: data/preprocess/external_knowledge_summary
+preprocess_root: data/preprocess/preprocess_1
+output_dir: data/output
+
+# Processing Options
+limit: 0  # 0 means process all items
+resume: false
+preprocess_only: false
+force_preprocess: false
+
+# External Knowledge Configuration
+external_knowledge_summary_mode: use  # off, use_existing, prepare, use, refresh
+external_knowledge_summary_only: false
+
+# Schema Context Options
+enable_column_type: false
+enable_column_description: false
+enable_sample_values: false
+sample_values_max_items: 2
+sample_value_max_chars: 1000
+enable_external_knowledge: true
+external_knowledge_max_chars: 4000
+external_knowledge_summary_max_chars: 4000
+
+# Model Configuration
+model_name: gpt-4o  # or 'local' for local models
+# local_model_path: /path/to/your/local/model  # required if model_name=local
+max_retries: 3
+# seed: 42  # uncomment for reproducible results
+enable_thinking: false
+max_new_tokens: 4096
+device: cuda  # cuda, cpu, or auto
+
+# API Configuration (use environment variables for security)
+api_base: ${OPENAI_BASE_URL:-http://localhost:8000/v1}
+api_key: ${OPENAI_API_KEY:-your-api-key-here}
+
+# Logging
+log_level: INFO
+
+# Prompt Template Version
+version: v9
+save_thought: true
+
+# Compression Strategy
+# strategy: inheritance  # inheritance, factorization, or raw
+# strategy: factorization
+strategy: raw

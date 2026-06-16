@@ -1,0 +1,126 @@
+[TABLES]
+## LOG.MST_PRODUCTS_20170101
+updated_at: TEXT | NULL
+price: NUMBER | NULL
+name: TEXT | NULL
+product_id: TEXT | NULL
+
+## LOG.PURCHASE_LOG
+stamp: TEXT | NULL
+amount: NUMBER | NULL
+purchase_id: NUMBER | NULL
+user_id: TEXT | NULL
+
+## LOG.ACCESS_LOG
+user_id: TEXT | NULL
+session: TEXT | NULL
+action: TEXT | NULL
+stamp: TEXT | NULL
+
+## LOG.ACTIVITY_LOG
+action: TEXT | NULL
+session: TEXT | NULL
+option: TEXT | NULL
+search_type: TEXT | NULL
+path: TEXT | NULL
+stamp: TEXT | NULL
+
+## LOG.MST_PRODUCTS_20161201
+name: TEXT | NULL
+price: NUMBER | NULL
+updated_at: TEXT | NULL
+product_id: TEXT | NULL
+
+## LOG.APP2_MST_USERS
+user_id: TEXT | NULL
+phone: TEXT | NULL
+name: TEXT | NULL
+
+## LOG.MST_USERS_WITH_CARD_NUMBER
+card_number: TEXT | NULL
+user_id: TEXT | NULL
+
+## LOG.FORM_ERROR_LOG
+session: TEXT | NULL
+form: TEXT | NULL
+stamp: TEXT | NULL
+field: TEXT | NULL
+value: TEXT | NULL
+error_type: TEXT | NULL
+
+## LOG.FORM_LOG
+status: TEXT | NULL
+action: TEXT | NULL
+session: TEXT | NULL
+path: TEXT | NULL
+stamp: TEXT | NULL
+
+## LOG.ACTION_LOG_WITH_NOISE
+user_agent: TEXT | NULL
+session: TEXT | NULL
+ip: TEXT | NULL
+url: TEXT | NULL
+products: TEXT | NULL
+stamp: TEXT | NULL
+action: TEXT | NULL
+
+## LOG.APP1_MST_USERS
+email: TEXT | NULL
+name: TEXT | NULL
+user_id: TEXT | NULL
+
+## LOG.ACTION_LOG_WITH_IP
+ip: TEXT | NULL
+user_id: TEXT | NULL
+stamp: TEXT | NULL
+action: TEXT | NULL
+session: TEXT | NULL
+
+## LOG.MST_CATEGORIES
+id: NUMBER | NULL
+stamp: TEXT | NULL
+name: TEXT | NULL
+
+## LOG.READ_LOG
+url: TEXT | NULL
+session: TEXT | NULL
+stamp: TEXT | NULL
+action: TEXT | NULL
+
+## LOG.INVALID_ACTION_LOG
+stamp: TEXT | NULL
+session: TEXT | NULL
+action: TEXT | NULL
+user_id: TEXT | NULL
+category: TEXT | NULL
+products: TEXT | NULL
+amount: FLOAT | NULL
+
+## LOG.MST_USERS
+register_date: TEXT | NULL
+withdraw_date: TEXT | NULL
+register_device: TEXT | NULL
+birth_date: TEXT | NULL
+user_id: TEXT | NULL
+sex: TEXT | NULL
+
+## LOG.ACTION_LOG
+stamp: TEXT | NULL
+action: TEXT | NULL
+amount: FLOAT | NULL
+user_id: TEXT | NULL
+category: TEXT | NULL
+session: TEXT | NULL
+products: TEXT | NULL
+
+## LOG.PRODUCT_SALES
+category_name: TEXT | NULL
+product_id: TEXT | NULL
+sales: NUMBER | NULL
+
+## LOG.DUP_ACTION_LOG
+products: TEXT | NULL
+session: TEXT | NULL
+stamp: TEXT | NULL
+action: TEXT | NULL
+user_id: TEXT | NULL

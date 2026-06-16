@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_local061",
+  "question": "What is the average projected monthly sales in USD for France in 2021, considering only product sales with promotions where promo_total_id = 1 and channels where channel_total_id = 1, by taking each product’s monthly sales from 2019 and 2020, calculating the growth rate from 2019 to 2020 for that same product and month, applying this growth rate to project 2021 monthly sales, converting all projected 2021 amounts to USD with the 2021 exchange rates, and finally averaging and listing them by month?",
+  "db_id": "COMPLEX_ORACLE",
+  "source_document": "projection_calculation.md",
+  "evidence": "Projection Formula for 2021: (((Sales in 2020 - Sales in 2019) / Sales in 2019) * Sales in 2020) + Sales in 2020. Steps: 1) Aggregate historical sales data for France (2019,2020,2021) by product, month, year. 2) Calculate percentage change from 2019 to 2020 for each product and month. 3) Apply this percentage change to 2020 sales to estimate 2021 sales. 4) Convert projected 2021 figures to USD using 2021 monthly conversion rates (default rate 1 if unavailable). 5) Calculate average projected sales for each month in 2021 in USD, rounded to two decimals."
+}

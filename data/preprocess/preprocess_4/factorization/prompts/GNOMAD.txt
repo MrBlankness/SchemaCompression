@@ -1,0 +1,459 @@
+[COMPONENTS]
+@C1
+AN_nfe_est: NUMBER | Alternate allele frequency in samples in the controls subset, before removing low-confidence genotypes | eg=[2, 0]
+AN_nfe_nwe: NUMBER | Alternate allele count for samples of Other Non-Finnish European ancestry | eg=[226, 228]
+AN_nfe_onf: NUMBER | Count of homozygous individuals in female samples of African-American/African ancestry in the non_neuro subset | eg=[126, 136]
+AN_nfe_seu: NUMBER | Alternate allele frequency in female samples of Finnish ancestry | eg=[8, 10]
+BaseQRankSum: FLOAT | Count of homozygous individuals in samples of Southern European ancestry | eg=[-0.731, 2.4]
+ClippingRankSum: FLOAT | Alternate allele count for male samples of African-American/African ancestry in the controls subset | eg=[0.0, -0.135]
+controls_AN: NUMBER | Count of homozygous individuals in samples of Southern European ancestry in the controls subset | eg=[2, 4]
+controls_AN_afr: NUMBER | Alternate allele count for female samples of African-American/African ancestry in the non_neuro subset | eg=[0, 6430]
+controls_AN_afr_female: NUMBER | Alternate allele frequency in female samples of East Asian ancestry in the non_neuro subset | eg=[0, 3788]
+controls_AN_afr_male: NUMBER | Count of homozygous individuals in female samples of Finnish ancestry | eg=[0, 2642]
+controls_AN_amr: NUMBER | Count of homozygous individuals in female samples of East Asian ancestry in the non_neuro subset | eg=[0, 15734]
+controls_AN_amr_female: NUMBER | Alternate allele frequency in samples of North-Western European ancestry in the non_neuro subset | eg=[0, 9384]
+controls_AN_amr_male: NUMBER | Alternate allele frequency in samples of Latino ancestry in the non_neuro subset | eg=[0, 6350]
+controls_AN_asj: NUMBER | Alternate allele count for samples of Japanese ancestry in the non_neuro subset | eg=[0, 2044]
+controls_AN_asj_female: NUMBER | Count of homozygous individuals in samples of Ashkenazi Jewish ancestry in the controls subset | eg=[0, 1056]
+controls_AN_asj_male: NUMBER | Alternate allele count for samples of Non-Finnish European ancestry in the controls subset | eg=[0, 988]
+controls_AN_eas: NUMBER | Count of homozygous individuals in samples of East Asian ancestry in the non_cancer subset | eg=[0, 7880]
+controls_AN_eas_female: NUMBER | Alternate allele count for samples of East Asian ancestry | eg=[0, 4136]
+controls_AN_eas_male: NUMBER | Count of homozygous individuals in male samples of Non-Finnish European ancestry in the non_topmed subset | eg=[0, 3744]
+controls_AN_female: NUMBER | Alternate allele count for samples of Ashkenazi Jewish ancestry in the non_cancer subset | eg=[2, 47240]
+controls_AN_fin: NUMBER | Count of homozygous individuals in samples of South Asian ancestry in the non_neuro subset | eg=[0, 12532]
+controls_AN_fin_female: NUMBER | Alternate allele count for samples of Ashkenazi Jewish ancestry in the controls subset | eg=[0, 6208]
+controls_AN_fin_male: NUMBER | Alternate allele frequency in female samples of Latino ancestry in the non_topmed subset | eg=[0, 6324]
+controls_AN_male: NUMBER | Count of homozygous individuals in female samples of East Asian ancestry | eg=[0, 2]
+controls_AN_nfe: NUMBER | Alternate allele frequency in samples of African-American/African ancestry in the controls subset | eg=[2, 4]
+controls_AN_nfe_est: NUMBER | Alternate allele count for samples of South Asian ancestry in the non_topmed subset | eg=[0, 64]
+controls_AN_nfe_female: NUMBER | Count of homozygous individuals in female samples of South Asian ancestry in the non_cancer subset | eg=[2, 17820]
+controls_AN_nfe_male: NUMBER | Alternate allele count for samples of South Asian ancestry | eg=[0, 2]
+controls_AN_nfe_nwe: NUMBER | Count of homozygous individuals in samples of Japanese ancestry in the non_neuro subset | eg=[0, 13702]
+controls_AN_nfe_onf: NUMBER | Count of homozygous individuals in samples of East Asian ancestry | eg=[2, 0]
+controls_AN_nfe_seu: NUMBER | Alternate allele frequency in samples of Other Non-Finnish European ancestry | eg=[0, 2]
+controls_AN_oth: NUMBER | Alternate allele count for male samples in the controls subset | eg=[0, 1790]
+controls_AN_oth_female: NUMBER | Count of homozygous individuals in samples of African-American/African ancestry in the controls subset | eg=[0, 932]
+controls_AN_oth_male: NUMBER | Alternate allele count for samples of South Asian ancestry in the non_neuro subset | eg=[0, 858]
+controls_AN_raw: NUMBER | Alternate allele frequency in female samples of Other ancestry in the non_topmed subset | eg=[13968, 12218]
+decoy: BOOLEAN | Alternate allele count for samples of Latino ancestry in the non_topmed subset
+has_star: BOOLEAN | Alternate allele count for female samples of Finnish ancestry
+non_neuro_AN: NUMBER | Count of homozygous individuals in samples | eg=[28, 38]
+non_neuro_AN_afr: NUMBER | Alternate allele count for female samples of Other ancestry in the non_topmed subset | eg=[2, 0]
+non_neuro_AN_afr_female: NUMBER | Alternate allele frequency in male samples of African-American/African ancestry in the non_neuro subset | eg=[2, 0]
+non_neuro_AN_afr_male: NUMBER | Alternate allele count for male samples of South Asian ancestry | eg=[0, 5518]
+non_neuro_AN_amr: NUMBER | Alternate allele count for female samples of African-American/African ancestry | eg=[0, 27754]
+non_neuro_AN_amr_female: NUMBER | Alternate allele count for male samples of Latino ancestry in the non_cancer subset | eg=[0, 16564]
+non_neuro_AN_amr_male: NUMBER | Alternate allele frequency in samples of Japanese ancestry in the non_neuro subset | eg=[0, 11190]
+non_neuro_AN_asj: NUMBER | Alternate allele frequency in male samples in the non_topmed subset | eg=[4, 2]
+non_neuro_AN_asj_female: NUMBER | Alternate allele frequency in female samples of Ashkenazi Jewish ancestry in the non_neuro subset | eg=[2, 2764]
+non_neuro_AN_asj_male: NUMBER | Alternate allele frequency in samples of Swedish ancestry in the non_neuro subset | eg=[2, 0]
+non_neuro_AN_eas: NUMBER | Alternate allele frequency in male samples of Non-Finnish European ancestry in the controls subset | eg=[6, 4]
+non_neuro_AN_eas_female: NUMBER | Alternate allele frequency in female samples of African-American/African ancestry | eg=[6, 4]
+non_neuro_AN_eas_male: NUMBER | Alternate allele count for female samples of Latino ancestry in the non_cancer subset | eg=[0, 2]
+non_neuro_AN_female: NUMBER | Count of homozygous individuals in samples of Swedish ancestry in the controls subset | eg=[26, 32]
+non_neuro_AN_fin: NUMBER | Alternate allele frequency in samples of South Asian ancestry | eg=[0, 2]
+non_neuro_AN_fin_female: NUMBER | Count of homozygous individuals in male samples of Finnish ancestry in the non_cancer subset | eg=[0, 2]
+non_neuro_AN_fin_male: NUMBER | Count of homozygous individuals in samples of North-Western European ancestry in the non_neuro subset | eg=[0, 8182]
+non_neuro_AN_male: NUMBER | Alternate allele count for samples of Finnish ancestry in the non_neuro subset | eg=[2, 6]
+non_neuro_AN_nfe: NUMBER | Alternate allele frequency in male samples of Finnish ancestry in the non_cancer subset | eg=[16, 28]
+non_neuro_AN_nfe_est: NUMBER | Alternate allele frequency in samples of African-American/African ancestry in the non_neuro subset | eg=[2, 0]
+non_neuro_AN_nfe_female: NUMBER | Count of homozygous individuals in male samples in the non_cancer subset | eg=[16, 22]
+non_neuro_AN_nfe_male: NUMBER | Count of homozygous individuals in female samples of Other ancestry | eg=[0, 6]
+non_neuro_AN_nfe_nwe: NUMBER | Count of homozygous individuals in female samples of Latino ancestry in the non_topmed subset | eg=[6, 8]
+non_neuro_AN_nfe_onf: NUMBER | Count of homozygous individuals in male samples of Latino ancestry in the non_cancer subset | eg=[4, 18]
+non_neuro_AN_nfe_seu: NUMBER | Count of homozygous individuals in samples of North-Western European ancestry in the controls subset | eg=[4, 2]
+non_neuro_AN_oth: NUMBER | Alternate allele frequency in female samples of Other ancestry in the controls subset | eg=[0, 4374]
+non_neuro_AN_oth_female: NUMBER | Alternate allele count for female samples of South Asian ancestry in the controls subset | eg=[0, 2192]
+non_neuro_AN_oth_male: NUMBER | Count of homozygous individuals in male samples of Finnish ancestry | eg=[0, 2182]
+non_neuro_AN_raw: NUMBER | Alternate allele count for samples of Japanese ancestry in the controls subset | eg=[29470, 26124]
+non_topmed_AN: NUMBER | Alternate allele frequency in samples of South Asian ancestry in the non_neuro subset | eg=[378, 390]
+non_topmed_AN_afr: NUMBER | Alternate allele frequency in samples of Southern European ancestry in the controls subset | eg=[2, 0]
+non_topmed_AN_afr_female: NUMBER | Alternate allele frequency in samples of North-Western European ancestry | eg=[2, 0]
+non_topmed_AN_afr_male: NUMBER | Alternate allele count for samples of East Asian ancestry in the non_cancer subset | eg=[0, 4224]
+non_topmed_AN_amr: NUMBER | Alternate allele frequency in female samples of Other ancestry in the non_cancer subset | eg=[0, 31618]
+non_topmed_AN_amr_female: NUMBER | Count of homozygous individuals in male samples of African-American/African ancestry in the non_neuro subset | eg=[0, 18456]
+non_topmed_AN_amr_male: NUMBER | Count of homozygous individuals in female samples of Non-Finnish European ancestry | eg=[0, 13162]
+non_topmed_AN_asj: NUMBER | Alternate allele frequency in samples of East Asian ancestry | eg=[4, 2]
+non_topmed_AN_asj_female: NUMBER | Alternate allele frequency in samples of South Asian ancestry in the non_topmed subset | eg=[2, 4446]
+non_topmed_AN_asj_male: NUMBER | Alternate allele count for female samples of Other ancestry in the controls subset | eg=[2, 0]
+non_topmed_AN_eas: NUMBER | Alternate allele frequency in samples of Japanese ancestry in the controls subset | eg=[6, 4]
+non_topmed_AN_eas_female: NUMBER | Count of homozygous individuals in male samples in the non_topmed subset | eg=[6, 4]
+non_topmed_AN_eas_male: NUMBER | Alternate allele count for male samples of Finnish ancestry in the controls subset | eg=[0, 2]
+non_topmed_AN_female: NUMBER | Alternate allele count for male samples in the non_topmed subset | eg=[178, 184]
+non_topmed_AN_fin: NUMBER | Count of homozygous individuals in samples of Ashkenazi Jewish ancestry in the non_cancer subset | eg=[0, 2]
+non_topmed_AN_fin_female: NUMBER | Count of homozygous individuals in female samples of Non-Finnish European ancestry in the non_cancer subset | eg=[0, 2]
+non_topmed_AN_fin_male: NUMBER | Count of homozygous individuals in samples of Japanese ancestry in the controls subset | eg=[0, 10140]
+non_topmed_AN_male: NUMBER | Alternate allele count for female samples of South Asian ancestry in the non_cancer subset | eg=[200, 206]
+non_topmed_AN_nfe: NUMBER | Alternate allele frequency in female samples of Non-Finnish European ancestry in the non_neuro subset | eg=[356, 370]
+non_topmed_AN_nfe_est: NUMBER | Alternate allele count for female samples of Non-Finnish European ancestry | eg=[2, 0]
+non_topmed_AN_nfe_female: NUMBER | Alternate allele frequency in samples of Swedish ancestry | eg=[160, 166]
+non_topmed_AN_nfe_male: NUMBER | Alternate allele count for samples of Other Non-Finnish European ancestry in the non_cancer subset | eg=[196, 204]
+non_topmed_AN_nfe_nwe: NUMBER | Alternate allele frequency in female samples of Non-Finnish European ancestry | eg=[222, 224]
+non_topmed_AN_nfe_onf: NUMBER | Count of homozygous individuals in samples of Latino ancestry | eg=[126, 136]
+non_topmed_AN_nfe_seu: NUMBER | Count of homozygous individuals in samples of Southern European ancestry in the non_cancer subset | eg=[6, 10]
+non_topmed_AN_oth: NUMBER | Alternate allele frequency in female samples of Non-Finnish European ancestry in the non_cancer subset | eg=[10, 5516]
+non_topmed_AN_oth_female: NUMBER | Alternate allele count for samples of African-American/African ancestry | eg=[8, 2644]
+non_topmed_AN_oth_male: NUMBER | Count of homozygous individuals in samples of African-American/African ancestry in the non_neuro subset | eg=[2, 2872]
+non_topmed_AN_raw: NUMBER | Alternate allele count for samples of African-American/African ancestry in the non_neuro subset | eg=[34956, 31128]
+nonpar: BOOLEAN | Alternate allele frequency in samples of Latino ancestry in the non_topmed subset
+rf_label: TEXT | Alternate allele frequency in female samples of Ashkenazi Jewish ancestry in the non_cancer subset | eg=["TP", "FP"]
+rf_negative_label: BOOLEAN | Alternate allele count for female samples of Ashkenazi Jewish ancestry in the non_cancer subset | eg=[true]
+rf_positive_label: BOOLEAN | Count of homozygous individuals in samples of Latino ancestry in the non_topmed subset | eg=[true]
+rf_tp_probability: FLOAT | Maximum p-value over callset for binomial test of observed allele balance for a heterozygous genotype, given expectation of AB=0.5 | eg=[0.543504, 0.430347]
+rf_train: BOOLEAN | Count of homozygous individuals in female samples of Ashkenazi Jewish ancestry in the non_cancer subset | eg=[true]
+segdup: BOOLEAN | Alternate allele frequency in samples of Korean ancestry in the non_neuro subset
+transmitted_singleton: BOOLEAN | Alternate allele count for samples, before removing low-confidence genotypes
+VQSLOD: FLOAT | Count of homozygous individuals in male samples of African-American/African ancestry in the controls subset | eg=[2.96, -0.7938]
+VQSR_culprit: TEXT | Alternate allele count for samples of Korean ancestry in the non_neuro subset | eg=["MQ", "QD"]
+VQSR_NEGATIVE_TRAIN_SITE: BOOLEAN | Alternate allele frequency in samples of Southern European ancestry | eg=[true]
+VQSR_POSITIVE_TRAIN_SITE: BOOLEAN | Alternate allele count for samples of Southern European ancestry | eg=[true]
+was_mixed: BOOLEAN | Count of homozygous individuals in samples, before removing low-confidence genotypes
+
+@C2
+alternate_bases: VARIANT | One record for each alternate base (if any). | eg=[[{"AC":2,"AC_afr":0,"AC_afr_female":0,"AC_afr_male":0,"AC_amr":0,"AC_amr_female":0,"AC_amr_male":0,"AC_asj":0,"AC_asj_female":0,"AC_asj_male":0,"AC_eas":0,"AC_eas_female":0,"AC_eas_jpn":0,"AC_eas_kor":0,"AC_eas_male":0,"AC_eas_oea":0,"AC_female":1,"AC_fin":0,"AC_fin_female":0,"AC_fin_male":0,"AC_male":1,"AC_nfe":2,"AC_nfe_bgr":0,"AC_nfe_est":0,"AC_nfe_female":1,"AC_nfe_male":1,"AC_nfe_nwe":2,"AC_nfe_onf":0,"AC_nfe_seu":0,"AC_nfe_swe":0,"AC_oth":0,"AC_oth_female":0,"AC_oth_male":0,"AC_popmax":2,"AC_raw":14,"AC_sas":0,"AC_sas_female":0,"AC_sas_male":0,"AF":0.00520833,"AF_afr":0.0,"AF_afr_female":0.0,"AF_asj":0.0,"AF_asj_female":0.0,"AF_asj_male":0.0,"AF_eas":0.0,"AF_eas_female":0.0,"AF_eas_oea":0.0,"AF_female":0.00549451,"AF_male":0.0049505,"AF_nfe":0.00552486,"AF_nfe_est":0.0,"AF_nfe_female":0.00609756,"AF_nfe_male":0.00505051,"AF_nfe_nwe":0.00884956,"AF_nfe_onf":0.0,"AF_nfe_seu":0.0,"AF_oth":0.0,"AF_oth_female":0.0,"AF_oth_male":0.0,"AF_popmax":0.00552486,"AF_raw":0.000389192,"AN_po...]
+AN: NUMBER | Total number of alternate alleles observed at variant locus | eg=[384, 394]
+AN_afr: NUMBER | Count of homozygous individuals in male samples of South Asian ancestry | eg=[2, 0]
+AN_afr_female: NUMBER | Alternate allele count for samples of Swedish ancestry in the controls subset | eg=[2, 0]
+AN_afr_male: NUMBER | Alternate allele frequency in male samples of South Asian ancestry | eg=[0, 5538]
+AN_amr: NUMBER | Count of homozygous individuals in female samples in the non_cancer subset | eg=[0, 31728]
+AN_amr_female: NUMBER | Alternate allele frequency in male samples of Latino ancestry in the non_neuro subset | eg=[0, 18522]
+AN_amr_male: NUMBER | Alternate allele count for male samples of Latino ancestry in the non_neuro subset | eg=[0, 13206]
+AN_asj: NUMBER | Count of homozygous individuals in samples of Finnish ancestry in the non_neuro subset | eg=[4, 2]
+AN_asj_female: NUMBER | Alternate allele frequency in male samples of Ashkenazi Jewish ancestry | eg=[2, 4484]
+AN_asj_male: NUMBER | Count of homozygous individuals in female samples of African-American/African ancestry | eg=[2, 0]
+AN_eas: NUMBER | Alternate allele frequency in male samples in the non_cancer subset | eg=[6, 4]
+AN_eas_female: NUMBER | Alternate allele frequency in samples of African-American/African ancestry | eg=[6, 4]
+AN_eas_male: NUMBER | Alternate allele frequency in samples of East Asian ancestry in the non_cancer subset | eg=[0, 2]
+AN_female: NUMBER | Alternate allele count for male samples of Finnish ancestry | eg=[182, 186]
+AN_fin: NUMBER | Alternate allele frequency in female samples of Non-Finnish European ancestry in the controls subset | eg=[0, 2]
+AN_fin_female: NUMBER | Alternate allele frequency in samples of Bulgarian (Eastern European) ancestry | eg=[0, 2]
+AN_fin_male: NUMBER | Alternate allele count for female samples in the non_cancer subset | eg=[0, 10140]
+AN_male: NUMBER | Count of homozygous individuals in female samples of Other ancestry in the controls subset | eg=[202, 208]
+AN_nfe: NUMBER | Count of homozygous individuals in male samples in the controls subset | eg=[362, 374]
+AN_nfe_female: NUMBER | Alternate allele frequency in female samples in the non_cancer subset | eg=[164, 168]
+AN_nfe_male: NUMBER | Count of homozygous individuals in female samples of Non-Finnish European ancestry in the controls subset | eg=[198, 206]
+AN_oth: NUMBER | Alternate allele frequency in female samples of Other ancestry | eg=[10, 5584]
+AN_oth_female: NUMBER | Alternate allele frequency in female samples in the non_neuro subset | eg=[8, 2690]
+AN_oth_male: NUMBER | Alternate allele count for samples of North-Western European ancestry in the controls subset | eg=[2, 2894]
+AN_raw: NUMBER | Alternate allele count for samples of Bulgarian (Eastern European) ancestry | eg=[35972, 32242]
+call: VARIANT | Allele type (snv, ins, del, or mixed) | eg=[[]]
+DP: NUMBER | Alternate allele frequency in male samples of African-American/African ancestry in the controls subset | eg=[140436, 104404]
+end_position: NUMBER | End position (0-based). Corresponds to the first base after the last base in the reference allele. | eg=[49176192, 49176065]
+filter: VARIANT | Alternate allele frequency in samples | eg=[["PASS"], ["AC0"]]
+FS: FLOAT | Histogram for GQ in heterozygous individuals; bin edges are: 0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100 | eg=[0.534, 3.533]
+InbreedingCoeff: FLOAT | Histogram for GQ; bin edges are: 0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100 | eg=[-0.1449, -0.1445]
+lcr: BOOLEAN | Count of homozygous individuals in samples of Korean ancestry in the non_neuro subset
+MQ: FLOAT | Histogram for DP in heterozygous individuals; bin edges are: 0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100 | eg=[59.22, 60.0]
+MQRankSum: FLOAT | Count of DP values falling above highest histogram bin edge | eg=[0.39, 0.496]
+names: VARIANT | Alternate base. | eg=[["rs114435800"], ["rs558741980"]]
+QD: FLOAT | Histogram for DP; bin edges are: 0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100 | eg=[10.95, 22.67]
+quality: FLOAT | Alternate allele count for samples | eg=[6698.4, 9817.04]
+ReadPosRankSum: FLOAT | Count of DP values falling above highest histogram bin edge | eg=[0.736, 0.727]
+reference_bases: TEXT | Reference bases. | eg=["G", "C"]
+reference_name: TEXT | Reference name. | eg=["22"]
+SOR: FLOAT | Histogram for AB in heterozygous individuals; bin edges are: 0.00|0.05|0.10|0.15|0.20|0.25|0.30|0.35|0.40|0.45|0.50|0.55|0.60|0.65|0.70|0.75|0.80|0.85|0.90|0.95|1.00 | eg=[0.617, 0.301]
+start_position: NUMBER | Start position (0-based). Corresponds to the first base of the string of reference bases. | eg=[49176191, 49176064]
+variant_type: TEXT | Alternate allele frequency in samples, before removing low-confidence genotypes | eg=["snv"]
+
+@C3
+AN_eas_jpn: NUMBER | Alternate allele frequency in male samples of Finnish ancestry in the controls subset | eg=[0, 118]
+AN_eas_kor: NUMBER | Alternate allele count for male samples of Finnish ancestry in the non_cancer subset | eg=[0, 3718]
+AN_eas_oea: NUMBER | Alternate allele count for female samples of Non-Finnish European ancestry in the non_neuro subset | eg=[6, 4]
+AN_nfe_bgr: NUMBER | Alternate allele count for female samples of Ashkenazi Jewish ancestry in the non_neuro subset | eg=[0, 2536]
+AN_nfe_swe: NUMBER | Alternate allele count for samples of African-American/African ancestry in the controls subset | eg=[0, 4]
+controls_AN_eas_jpn: NUMBER | Alternate allele frequency in female samples of South Asian ancestry in the non_cancer subset | eg=[0, 90]
+controls_AN_eas_kor: NUMBER | Alternate allele count for male samples of Non-Finnish European ancestry in the non_topmed subset | eg=[0, 1844]
+controls_AN_eas_oea: NUMBER | Alternate allele frequency in samples of Southern European ancestry in the non_cancer subset | eg=[0, 5946]
+controls_AN_nfe_bgr: NUMBER | Alternate allele frequency in samples of Ashkenazi Jewish ancestry in the controls subset | eg=[0, 652]
+controls_AN_nfe_swe: NUMBER | Alternate allele count for male samples of African-American/African ancestry in the non_neuro subset | eg=[0, 2]
+controls_AN_sas: NUMBER | Count of homozygous individuals in female samples of Latino ancestry in the non_cancer subset | eg=[0, 14330]
+controls_AN_sas_female: NUMBER | Count of homozygous individuals in samples of Other Non-Finnish European ancestry | eg=[0, 3916]
+controls_AN_sas_male: NUMBER | Count of homozygous individuals in samples of North-Western European ancestry | eg=[0, 10414]
+non_cancer_AN: NUMBER | Alternate allele count for female samples of Non-Finnish European ancestry in the non_cancer subset | eg=[366, 362]
+non_cancer_AN_afr: NUMBER | Alternate allele count for samples of North-Western European ancestry in the non_neuro subset | eg=[0, 13732]
+non_cancer_AN_afr_female: NUMBER | Count of homozygous individuals in samples in the controls subset, before removing low-confidence genotypes | eg=[0, 8522]
+non_cancer_AN_afr_male: NUMBER | Count of homozygous individuals in male samples of Finnish ancestry in the controls subset | eg=[0, 5210]
+non_cancer_AN_amr: NUMBER | Alternate allele count for samples of Latino ancestry | eg=[0, 31488]
+non_cancer_AN_amr_female: NUMBER | Alternate allele count for female samples of East Asian ancestry | eg=[0, 18378]
+non_cancer_AN_amr_male: NUMBER | Alternate allele count for female samples of Latino ancestry in the non_topmed subset | eg=[0, 13110]
+non_cancer_AN_asj: NUMBER | Count of homozygous individuals in female samples in the non_neuro subset | eg=[2, 0]
+non_cancer_AN_asj_female: NUMBER | Count of homozygous individuals in female samples of Other ancestry in the non_cancer subset | eg=[0, 4262]
+non_cancer_AN_asj_male: NUMBER | Alternate allele count for female samples of Non-Finnish European ancestry in the controls subset | eg=[2, 0]
+non_cancer_AN_eas: NUMBER | Count of homozygous individuals in female samples of Other ancestry in the non_topmed subset | eg=[0, 16014]
+non_cancer_AN_eas_female: NUMBER | Alternate allele frequency in male samples in the controls subset | eg=[0, 8020]
+non_cancer_AN_eas_jpn: NUMBER | Alternate allele frequency in male samples of Latino ancestry in the non_cancer subset | eg=[0, 100]
+non_cancer_AN_eas_kor: NUMBER | Alternate allele count for samples of North-Western European ancestry | eg=[0, 3680]
+non_cancer_AN_eas_male: NUMBER | Count of homozygous individuals in samples of Non-Finnish European ancestry in the controls subset | eg=[0, 7994]
+non_cancer_AN_eas_oea: NUMBER | Alternate allele count for samples of Swedish ancestry | eg=[0, 12234]
+non_cancer_AN_female: NUMBER | Alternate allele count for male samples of African-American/African ancestry | eg=[164, 160]
+non_cancer_AN_fin: NUMBER | Alternate allele frequency in samples of Ashkenazi Jewish ancestry in the non_cancer subset | eg=[0, 2]
+non_cancer_AN_fin_female: NUMBER | Alternate allele count for female samples of Other ancestry | eg=[0, 2]
+non_cancer_AN_fin_male: NUMBER | Count of homozygous individuals in samples of Other Non-Finnish European ancestry in the non_cancer subset | eg=[0, 10136]
+non_cancer_AN_male: NUMBER | Count of homozygous individuals in male samples of African-American/African ancestry | eg=[202, 206]
+non_cancer_AN_nfe: NUMBER | Count of homozygous individuals in male samples of Non-Finnish European ancestry in the controls subset | eg=[354, 350]
+non_cancer_AN_nfe_bgr: NUMBER | Count of homozygous individuals in samples of Swedish ancestry in the non_neuro subset | eg=[0, 2434]
+non_cancer_AN_nfe_est: NUMBER | Alternate allele count for male samples of Non-Finnish European ancestry in the controls subset | eg=[0, 146]
+non_cancer_AN_nfe_female: NUMBER | Alternate allele count for female samples in the non_neuro subset | eg=[156, 150]
+non_cancer_AN_nfe_male: NUMBER | Alternate allele count for samples of Southern European ancestry in the non_cancer subset | eg=[198, 200]
+non_cancer_AN_nfe_nwe: NUMBER | Alternate allele frequency in female samples of Latino ancestry in the non_cancer subset | eg=[222, 224]
+non_cancer_AN_nfe_onf: NUMBER | Alternate allele frequency in male samples of African-American/African ancestry | eg=[124, 118]
+non_cancer_AN_nfe_seu: NUMBER | Alternate allele count for male samples in the non_cancer subset | eg=[8, 10]
+non_cancer_AN_nfe_swe: NUMBER | Count of homozygous individuals in samples of South Asian ancestry in the non_topmed subset | eg=[0, 4]
+non_cancer_AN_oth: NUMBER | Count of homozygous individuals in female samples of Non-Finnish European ancestry in the non_neuro subset | eg=[10, 5306]
+non_cancer_AN_oth_female: NUMBER | Count of homozygous individuals in samples of Bulgarian (Eastern European) ancestry | eg=[8, 2530]
+non_cancer_AN_oth_male: NUMBER | Alternate allele count for samples in the controls subset, before removing low-confidence genotypes | eg=[2, 2776]
+non_cancer_AN_raw: NUMBER | Alternate allele frequency in samples of Non-Finnish European ancestry in the controls subset | eg=[32598, 28780]
+non_cancer_AN_sas: NUMBER | Alternate allele frequency in samples of North-Western European ancestry in the controls subset | eg=[0, 28168]
+non_cancer_AN_sas_female: NUMBER | Count of homozygous individuals in samples of African-American/African ancestry | eg=[0, 6990]
+non_cancer_AN_sas_male: NUMBER | Count of homozygous individuals in samples of Swedish ancestry | eg=[0, 21178]
+non_neuro_AN_eas_jpn: NUMBER | Alternate allele frequency in female samples of African-American/African ancestry in the non_neuro subset | eg=[0, 116]
+non_neuro_AN_eas_kor: NUMBER | Alternate allele count for female samples of Other ancestry in the non_cancer subset | eg=[0, 3716]
+non_neuro_AN_eas_oea: NUMBER | Count of homozygous individuals in samples of Latino ancestry in the non_neuro subset | eg=[6, 4]
+non_neuro_AN_nfe_bgr: NUMBER | Alternate allele frequency in male samples of Finnish ancestry | eg=[0, 386]
+non_neuro_AN_nfe_swe: NUMBER | Alternate allele frequency in female samples of East Asian ancestry | eg=[0, 4]
+non_neuro_AN_sas: NUMBER | Alternate allele frequency in samples of Other Non-Finnish European ancestry in the non_cancer subset | eg=[0, 28224]
+non_neuro_AN_sas_female: NUMBER | Alternate allele frequency in samples of Finnish ancestry in the non_neuro subset | eg=[0, 7026]
+non_neuro_AN_sas_male: NUMBER | Alternate allele count for samples of Swedish ancestry in the non_neuro subset | eg=[0, 21198]
+non_topmed_AN_eas_jpn: NUMBER | Alternate allele count for male samples of Ashkenazi Jewish ancestry | eg=[0, 118]
+non_topmed_AN_eas_kor: NUMBER | Alternate allele count for samples of Latino ancestry in the non_neuro subset | eg=[0, 3718]
+non_topmed_AN_eas_oea: NUMBER | Alternate allele frequency in male samples of Non-Finnish European ancestry in the non_topmed subset | eg=[6, 4]
+non_topmed_AN_nfe_bgr: NUMBER | Count of homozygous individuals in male samples of Ashkenazi Jewish ancestry | eg=[0, 2528]
+non_topmed_AN_nfe_swe: NUMBER | Alternate allele frequency in samples of Latino ancestry | eg=[0, 4]
+non_topmed_AN_sas: NUMBER | Count of homozygous individuals in samples of South Asian ancestry | eg=[0, 28228]
+non_topmed_AN_sas_female: NUMBER | Alternate allele count for samples of Southern European ancestry in the controls subset | eg=[0, 7026]
+non_topmed_AN_sas_male: NUMBER | Count of homozygous individuals in male samples of Latino ancestry in the non_neuro subset | eg=[0, 21202]
+
+@C4
+AN_ami: NUMBER | Count of homozygous individuals in male samples | eg=[900, 166]
+AN_ami_female: NUMBER | Count of homozygous individuals in female samples of Amish ancestry | eg=[470, 88]
+AN_ami_male: NUMBER | Alternate allele count for male samples of Other ancestry | eg=[430, 78]
+AS_VQSLOD: FLOAT | Alternate allele count for female samples of Other ancestry | eg=[1.8956, -2.154]
+culprit: TEXT | Alternate allele count for samples of Amish ancestry | eg=["AS_MQ", "AS_FS"]
+faf95_adj: FLOAT | Count of homozygous individuals in male samples of Other ancestry | eg=[2.32e-06, 0.0]
+faf99_adj: FLOAT | Alternate allele count for male samples of Non-Finnish European ancestry | eg=[1.87e-06, 0.0]
+MQ_DP: NUMBER | Count of homozygous individuals in male samples of African-American/African ancestry | eg=[125, 34]
+NEGATIVE_TRAIN_SITE: BOOLEAN | Alternate allele frequency in female samples of Other ancestry | eg=[true]
+non_par: BOOLEAN | Alternate allele frequency in female samples of Ashkenazi Jewish ancestry
+POSITIVE_TRAIN_SITE: BOOLEAN | Count of homozygous individuals in female samples of Other ancestry | eg=[true]
+RAW_MQ: FLOAT | Alternate allele count for male samples of African-American/African ancestry | eg=[450000.0, 122400.0]
+SB: VARIANT | Alternate allele frequency in male samples of Finnish ancestry | eg=[[28,23,44,30], [8,6,9,10]]
+VarDP: NUMBER | Alternate allele count for female samples | eg=[125, 33]
+
+@C5
+AN_sas: NUMBER | Alternate allele frequency in samples of Swedish ancestry in the controls subset | eg=[0, 28228]
+AN_sas_female: NUMBER | Alternate allele count for female samples of East Asian ancestry in the non_neuro subset | eg=[0, 7026]
+AN_sas_male: NUMBER | Count of homozygous individuals in female samples of Ashkenazi Jewish ancestry in the non_neuro subset | eg=[0, 21202]
+
+[TABLES]
+## GNOMAD.V2_1_1_EXOMES__CHR22
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V2_1_1_EXOMES__CHR11
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V3_GENOMES__CHR5
+@use: [C2, C4, C5]
+
+## GNOMAD.V3_GENOMES__CHRX
+@use: [C2, C4, C5]
+
+## GNOMAD.V2_1_1_GENOMES__CHR18
+@use: [C1, C2]
+
+## GNOMAD.V3_GENOMES__CHR9
+@use: [C2, C4, C5]
+
+## GNOMAD.V2_1_1_GENOMES__CHR16
+@use: [C1, C2]
+
+## GNOMAD.V2_1_1_GENOMES__CHR7
+@use: [C1, C2]
+
+## GNOMAD.V2_1_1_GENOMES__CHR4
+@use: [C1, C2]
+
+## GNOMAD.V2_1_1_GENOMES__CHR13
+@use: [C1, C2]
+
+## GNOMAD.V2_1_1_GENOMES__CHR3
+@use: [C1, C2]
+
+## GNOMAD.V3_GENOMES__CHR1
+@use: [C2, C4, C5]
+
+## GNOMAD.V2_1_1_GENOMES__CHR11
+@use: [C1, C2]
+
+## GNOMAD.V2_1_1_EXOMES__CHR15
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V3_GENOMES__CHR13
+@use: [C2, C4, C5]
+
+## GNOMAD.V2_1_1_EXOMES__CHR8
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V2_1_1_EXOMES__CHRY
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V3_GENOMES__CHR16
+@use: [C2, C4, C5]
+
+## GNOMAD.V3_GENOMES__CHR18
+@use: [C2, C4, C5]
+
+## GNOMAD.V2_1_1_EXOMES__CHR17
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V2_1_1_EXOMES__CHR18
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V2_1_1_EXOMES__CHR3
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V3_GENOMES__CHR2
+@use: [C2, C4, C5]
+
+## GNOMAD.V2_1_1_EXOMES__CHR4
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V2_1_1_EXOMES__CHR21
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V2_1_1_EXOMES__CHRX
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V2_1_1_GENOMES__CHR2
+@use: [C1, C2]
+
+## GNOMAD.V2_1_1_EXOMES__CHR5
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V3_GENOMES__CHR14
+@use: [C2, C4, C5]
+
+## GNOMAD.V3_GENOMES__CHR3
+@use: [C2, C4, C5]
+
+## GNOMAD.V3_GENOMES__CHR6
+@use: [C2, C4, C5]
+
+## GNOMAD.V2_1_1_GENOMES__CHR20
+@use: [C1, C2]
+
+## GNOMAD.V2_1_1_GENOMES__CHR15
+@use: [C1, C2]
+
+## GNOMAD.V2_1_1_GENOMES__CHR5
+@use: [C1, C2]
+
+## GNOMAD.V2_1_1_GENOMES__CHR21
+@use: [C1, C2]
+
+## GNOMAD.V2_1_1_EXOMES__CHR2
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V3_GENOMES__CHR12
+@use: [C2, C4, C5]
+
+## GNOMAD.V3_GENOMES__CHR17
+@use: [C2, C4, C5]
+
+## GNOMAD.V2_1_1_EXOMES__CHR16
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V2_1_1_EXOMES__CHR6
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V3_GENOMES__CHR20
+@use: [C2, C4, C5]
+
+## GNOMAD.V2_1_1_GENOMES__CHR8
+@use: [C1, C2]
+
+## GNOMAD.V3_GENOMES__CHR8
+@use: [C2, C4, C5]
+
+## GNOMAD.V3_GENOMES__CHR21
+@use: [C2, C4, C5]
+
+## GNOMAD.V2_1_1_EXOMES__CHR10
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V3_GENOMES__CHR15
+@use: [C2, C4, C5]
+
+## GNOMAD.V3_GENOMES__CHRY
+@use: [C2, C4, C5]
+
+## GNOMAD.V2_1_1_EXOMES__CHR12
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V3_GENOMES__CHR19
+@use: [C2, C4, C5]
+
+## GNOMAD.V2_1_1_GENOMES__CHR6
+@use: [C1, C2]
+
+## GNOMAD.V3_GENOMES__CHR10
+@use: [C2, C4, C5]
+
+## GNOMAD.V3_GENOMES__CHR22
+@use: [C2, C4, C5]
+
+## GNOMAD.V2_1_1_GENOMES__CHR10
+@use: [C1, C2]
+
+## GNOMAD.V2_1_1_GENOMES__CHR19
+@use: [C1, C2]
+
+## GNOMAD.V3_GENOMES__CHR11
+@use: [C2, C4, C5]
+
+## GNOMAD.V2_1_1_EXOMES__CHR13
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V2_1_1_GENOMES__CHRX
+@use: [C1, C2]
+
+## GNOMAD.V2_1_1_EXOMES__CHR9
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V2_1_1_GENOMES__CHR12
+@use: [C1, C2]
+
+## GNOMAD.V3_GENOMES__CHR4
+@use: [C2, C4, C5]
+
+## GNOMAD.V2_1_1_GENOMES__CHR1
+@use: [C1, C2]
+
+## GNOMAD.V2_1_1_EXOMES__CHR7
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V2_1_1_GENOMES__CHR14
+@use: [C1, C2]
+
+## GNOMAD.V2_1_1_EXOMES__CHR14
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V2_1_1_GENOMES__CHR9
+@use: [C1, C2]
+
+## GNOMAD.V2_1_1_EXOMES__CHR1
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V2_1_1_GENOMES__CHR17
+@use: [C1, C2]
+
+## GNOMAD.V2_1_1_EXOMES__CHR20
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V3_GENOMES__CHR7
+@use: [C2, C4, C5]
+
+## GNOMAD.V2_1_1_EXOMES__CHR19
+@use: [C1, C2, C3, C5]
+
+## GNOMAD.V2_1_1_GENOMES__CHR22
+@use: [C1, C2]

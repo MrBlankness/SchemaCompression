@@ -1,0 +1,7 @@
+[COMPONENTS]
+@C1:audience_selection_approach_info,creative_page_url,region_stats
+
+[TABLES]
+Format: schema.table|components|columns
+GOOGLE_ADS_TRANSPARENCY_CENTER.CREATIVE_STATS|@C1|creative_id,is_funded_by_google_ad_grants,advertiser_disclosed_name,ad_format_type,topic,advertiser_id,advertiser_verification_status,advertiser_legal_name,advertiser_location
+GOOGLE_ADS_TRANSPARENCY_CENTER.REMOVED_CREATIVE_STATS|@C1|disapproval

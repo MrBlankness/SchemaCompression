@@ -1,0 +1,242 @@
+[TEMPLATES]
+<T9>
+view_count: TEXT | NULL
+owner_display_name: TEXT | NULL
+answer_count: TEXT | NULL
+creation_date: NUMBER | NULL
+accepted_answer_id: TEXT | NULL
+last_activity_date: NUMBER | NULL
+last_editor_display_name: TEXT | NULL
+comment_count: NUMBER | NULL
+score: NUMBER | NULL
+body: TEXT | NULL
+post_type_id: NUMBER | NULL
+title: TEXT | NULL
+tags: TEXT | NULL
+parent_id: TEXT | NULL
+community_owned_date: NUMBER | NULL
+last_editor_user_id: NUMBER | NULL
+owner_user_id: NUMBER | NULL
+last_edit_date: NUMBER | NULL
+id: NUMBER | NULL
+favorite_count: TEXT | NULL
+@Tables: [STACKOVERFLOW.POSTS_MODERATOR_NOMINATION,STACKOVERFLOW.POSTS_ORPHANED_TAG_WIKI,STACKOVERFLOW.POSTS_TAG_WIKI,STACKOVERFLOW.POSTS_TAG_WIKI_EXCERPT]
+
+<T12>
+last_editor_user_id: NUMBER | NULL
+last_activity_date: NUMBER | NULL
+body: TEXT | NULL
+owner_display_name: TEXT | NULL
+last_edit_date: NUMBER | NULL
+community_owned_date: TEXT | NULL
+answer_count: TEXT | NULL
+tags: TEXT | NULL
+post_type_id: NUMBER | NULL
+id: NUMBER | NULL
+creation_date: NUMBER | NULL
+view_count: TEXT | NULL
+last_editor_display_name: TEXT | NULL
+title: TEXT | NULL
+owner_user_id: NUMBER | NULL
+comment_count: NUMBER | NULL
+accepted_answer_id: TEXT | NULL
+favorite_count: TEXT | NULL
+parent_id: TEXT | NULL
+score: NUMBER | NULL
+@Tables: [STACKOVERFLOW.POSTS_PRIVILEGE_WIKI,STACKOVERFLOW.POSTS_WIKI_PLACEHOLDER]
+
+<T1>
+title: TEXT | NULL
+dead: BOOLEAN | NULL
+text: TEXT | NULL
+url: TEXT | NULL
+parent: NUMBER | NULL
+ranking: NUMBER | NULL
+descendants: NUMBER | NULL
+deleted: BOOLEAN | NULL
+time: NUMBER | NULL
+score: NUMBER | NULL
+type: TEXT | NULL
+by: TEXT | NULL
+id: NUMBER | NULL
+@Tables: [HACKERNEWS.FULL_201510]
+
+[DERIVED]
+<T2> extends <T1>
+fake_date: DATE | NULL
+timestamp: NUMBER | NULL
+@Tables: [HACKERNEWS.STORIESV2]
+
+<T3> extends <T1>
+timestamp: NUMBER | NULL
+month: DATE | NULL
+@Tables: [HACKERNEWS.FULL_PARTITIONED]
+
+<T5> extends <T2>
+story_id: NUMBER | NULL
+level: NUMBER | NULL
+@Tables: [HACKERNEWS.COMMENTSV2]
+
+<T6> extends <T8>
+tags: VARIANT | NULL
+@Tables: [HACKERNEWS.FULL_PARTITION_EXTRA]
+
+<T8> extends <T3>
+post_id: NUMBER | NULL
+level: NUMBER | NULL
+@Tables: [HACKERNEWS.COMMENTS_CONVOLUTION]
+
+[STANDALONE]
+## HACKERNEWS.COMMENTS
+ranking: NUMBER | NULL
+text: TEXT | NULL
+deleted: BOOLEAN | NULL
+time_ts: NUMBER | NULL
+by: TEXT | NULL
+dead: BOOLEAN | NULL
+author: TEXT | NULL
+time: NUMBER | NULL
+id: NUMBER | NULL
+parent: NUMBER | NULL
+
+## HACKERNEWS.STORIES
+author: TEXT | NULL
+by: TEXT | NULL
+time_ts: NUMBER | NULL
+deleted: BOOLEAN | NULL
+score: NUMBER | NULL
+descendants: NUMBER | NULL
+title: TEXT | NULL
+dead: BOOLEAN | NULL
+text: TEXT | NULL
+id: NUMBER | NULL
+time: NUMBER | NULL
+url: TEXT | NULL
+
+## STACKOVERFLOW.BADGES
+tag_based: BOOLEAN | NULL
+id: NUMBER | NULL
+date: NUMBER | NULL
+user_id: NUMBER | NULL
+name: TEXT | NULL
+class: NUMBER | NULL
+
+## STACKOVERFLOW.COMMENTS
+id: NUMBER | NULL
+creation_date: NUMBER | NULL
+user_id: NUMBER | NULL
+score: NUMBER | NULL
+text: TEXT | NULL
+user_display_name: TEXT | NULL
+post_id: NUMBER | NULL
+
+## STACKOVERFLOW.POSTS_ANSWERS
+view_count: TEXT | NULL
+owner_user_id: NUMBER | NULL
+tags: TEXT | NULL
+score: NUMBER | NULL
+owner_display_name: TEXT | NULL
+answer_count: TEXT | NULL
+last_activity_date: NUMBER | NULL
+last_editor_user_id: NUMBER | NULL
+last_editor_display_name: TEXT | NULL
+favorite_count: TEXT | NULL
+post_type_id: NUMBER | NULL
+community_owned_date: NUMBER | NULL
+accepted_answer_id: TEXT | NULL
+comment_count: NUMBER | NULL
+body: TEXT | NULL
+parent_id: NUMBER | NULL
+id: NUMBER | NULL
+title: TEXT | NULL
+creation_date: NUMBER | NULL
+last_edit_date: NUMBER | NULL
+
+## STACKOVERFLOW.POSTS_QUESTIONS
+last_edit_date: NUMBER | NULL
+owner_display_name: TEXT | NULL
+accepted_answer_id: NUMBER | NULL
+owner_user_id: NUMBER | NULL
+tags: TEXT | NULL
+last_activity_date: NUMBER | NULL
+title: TEXT | NULL
+body: TEXT | NULL
+view_count: NUMBER | NULL
+community_owned_date: NUMBER | NULL
+creation_date: NUMBER | NULL
+post_type_id: NUMBER | NULL
+answer_count: NUMBER | NULL
+last_editor_display_name: TEXT | NULL
+last_editor_user_id: NUMBER | NULL
+id: NUMBER | NULL
+comment_count: NUMBER | NULL
+favorite_count: NUMBER | NULL
+parent_id: TEXT | NULL
+score: NUMBER | NULL
+
+## STACKOVERFLOW.POST_HISTORY
+creation_date: NUMBER | NULL
+post_history_type_id: NUMBER | NULL
+comment: TEXT | NULL
+user_id: NUMBER | NULL
+post_id: NUMBER | NULL
+revision_guid: TEXT | NULL
+text: TEXT | NULL
+id: NUMBER | NULL
+
+## STACKOVERFLOW.POST_LINKS
+post_id: NUMBER | NULL
+related_post_id: NUMBER | NULL
+creation_date: NUMBER | NULL
+link_type_id: NUMBER | NULL
+id: NUMBER | NULL
+
+## STACKOVERFLOW.STACKOVERFLOW_POSTS
+tags: TEXT | NULL
+last_editor_display_name: TEXT | NULL
+score: NUMBER | NULL
+comment_count: NUMBER | NULL
+last_edit_date: NUMBER | NULL
+parent_id: NUMBER | NULL
+favorite_count: NUMBER | NULL
+creation_date: NUMBER | NULL
+answer_count: NUMBER | NULL
+body: TEXT | NULL
+owner_display_name: TEXT | NULL
+title: TEXT | NULL
+community_owned_date: NUMBER | NULL
+id: NUMBER | NULL
+last_activity_date: NUMBER | NULL
+last_editor_user_id: NUMBER | NULL
+owner_user_id: NUMBER | NULL
+post_type_id: NUMBER | NULL
+view_count: NUMBER | NULL
+accepted_answer_id: NUMBER | NULL
+
+## STACKOVERFLOW.TAGS
+tag_name: TEXT | NULL
+excerpt_post_id: NUMBER | NULL
+id: NUMBER | NULL
+wiki_post_id: NUMBER | NULL
+count: NUMBER | NULL
+
+## STACKOVERFLOW.USERS
+display_name: TEXT | NULL
+profile_image_url: TEXT | NULL
+last_access_date: NUMBER | NULL
+views: NUMBER | NULL
+about_me: TEXT | NULL
+id: NUMBER | NULL
+up_votes: NUMBER | NULL
+reputation: NUMBER | NULL
+age: TEXT | NULL
+website_url: TEXT | NULL
+down_votes: NUMBER | NULL
+creation_date: NUMBER | NULL
+location: TEXT | NULL
+
+## STACKOVERFLOW.VOTES
+creation_date: NUMBER | NULL
+vote_type_id: NUMBER | NULL
+post_id: NUMBER | NULL
+id: NUMBER | NULL

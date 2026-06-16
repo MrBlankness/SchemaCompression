@@ -1,0 +1,80 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: GEO_US_BOUNDARIES.ADJACENT_STATES
+Columns: state, neighbors_fips_code, state_fips_code, state_name, neighbors_state
+
+Table: GEO_US_BOUNDARIES.METROPOLITAN_DIVISIONS
+Columns: area_land_meters, name, csa_code, internal_point_geom, mtfcc_feature_class_code, internal_point_latitude, geo_id, area_water_meters, internal_point_longitude, lsad_code, metdiv_geom, cbsa_code, metdiv_code, lsad_name
+
+Table: GEO_US_BOUNDARIES.CBSA
+Columns: cbsa_fips_code, name, area_water_meters, cbsa_geom, csa_geo_id, lsad_code, msa_indicator, area_land_meters, internal_point_geom, lsad_name, internal_point_longitude, internal_point_latitude, mtfcc_feature_class_code, geo_id
+
+Table: GEO_US_BOUNDARIES.CONGRESS_DISTRICT_116
+Columns: lsad_name, lsad_code, congress_session, int_point_lon, district_geom, state_fips_code, geo_id, mtfcc_feature_class_code, area_water_meters, int_point_lat, int_point_geom, district_fips_code, area_land_meters, functional_status
+
+Table: GEO_US_BOUNDARIES.CSA
+Columns: internal_point_lon, internal_point_geom, geo_id, internal_point_lat, lsad_name, area_water_meters, area_land_meters, msa_lsad_code, mtfcc_feature_class_code, name, csa_geom, csa_code
+
+Table: GEO_US_BOUNDARIES.NATIONAL_OUTLINE
+Columns: aff_geo_id, us_outline_geom, name, geo_id
+
+Table: GEO_US_BOUNDARIES.RAILWAYS
+Columns: railway_geom, mtfcc_feature_class_code, geo_id, full_name
+
+Table: GEO_US_BOUNDARIES.COUNTIES
+Columns: cbsa_fips_code, county_gnis_code, lsad_code, fips_class_code, mtfcc_feature_class_code, int_point_lon, county_geom, geo_id, lsad_name, int_point_geom, county_fips_code, area_water_meters, functional_status, area_land_meters, csa_fips_code, state_fips_code, county_name, met_div_fips_code, int_point_lat
+
+Table: GEO_US_BOUNDARIES.NWS_FORECAST_REGIONS
+Columns: fe_area, name, cwa, shape_geometry, shortname, lon, state_zone, state, zone, time_zone, lat
+
+Table: GEO_US_BOUNDARIES.ZIP_CODES
+Columns: area_land_meters, internal_point_lat, zip_code, area_water_meters, fips_class_code, state_code, zip_code_geom, state_fips_code, county, functional_status, state_name, internal_point_geom, mtfcc_feature_class_code, internal_point_lon, city
+
+Table: GEO_US_BOUNDARIES.COASTLINE
+Columns: coastline_geom, name
+
+Table: GEO_US_BOUNDARIES.CONGRESS_DISTRICT_115
+Columns: congress_session, district_geom, functional_status, mtfcc_feature_class_code, geo_id, lsad_code, area_water_meters, int_point_geom, state_fips_code, lsad_name, district_fips_code, area_land_meters, int_point_lon, int_point_lat
+
+Table: GEO_US_BOUNDARIES.STATES
+Columns: state_fips_code, division_code, area_water_meters, int_point_lon, functional_status, int_point_geom, state_gnis_code, geo_id, state, region_code, area_land_meters, state_name, int_point_lat, state_geom, mtfcc_feature_class_code, lsad_code
+
+Table: GEO_US_BOUNDARIES.ADJACENT_COUNTIES
+Columns: neighbors_fips_code, county_fips_code, neighbors, neighbors_state, state, county
+
+Table: GEO_US_BOUNDARIES.URBAN_AREAS
+Columns: internal_point_geom, internal_point_lat, internal_point_lon, urban_area_geom, geo_id, name, functional_status, urban_area_code, area_lsad_code, lsad_name, type, mtfcc_feature_class_code, area_land_meters, area_water_meters
+
+Table: GEO_US_BOUNDARIES.CNECTA
+Columns: lsad, geo_id, mtfcc_feature_class_code, cnecta_geom, int_point_lat, int_point_lon, area_water_meters, name_lsad, name, cnecta_fips_code, area_land_meters
+
+Table: GEO_OPENSTREETMAP.HISTORY_CHANGESETS
+Columns: osm_timestamp_min, ways, id, osm_timestamp_max, relations, nodes
+
+Table: GEO_OPENSTREETMAP.PLANET_RELATIONS
+Columns: visible, osm_timestamp, id, username, all_tags, geometry, members, version, changeset
+
+Table: GEO_OPENSTREETMAP.HISTORY_RELATIONS
+Columns: username, members, osm_timestamp, id, visible, version, geometry, all_tags, changeset
+
+Table: GEO_OPENSTREETMAP.PLANET_LAYERS
+Columns: layer_code, osm_id, osm_timestamp, osm_way_id, layer_class, all_tags, layer_name, geometry, gdal_type, osm_version
+
+Table: GEO_OPENSTREETMAP.HISTORY_NODES
+Columns: all_tags, changeset, longitude, username, latitude, id, osm_timestamp, geometry, visible, version
+
+Table: GEO_OPENSTREETMAP.PLANET_FEATURES
+Columns: geometry, osm_timestamp, all_tags, feature_type, osm_version, osm_id, osm_way_id
+
+Table: GEO_OPENSTREETMAP.PLANET_FEATURES_POINTS
+Columns: geometry, osm_timestamp, osm_way_id, osm_id, osm_version, all_tags
+
+Table: GEO_OPENSTREETMAP.HISTORY_LAYERS
+Columns: layer_name, osm_id, all_tags, osm_way_id, geometry, gdal_type, layer_code, osm_timestamp, osm_version, layer_class
+
+Table: GEO_OPENSTREETMAP.PLANET_NODES
+Columns: all_tags, osm_timestamp, changeset, visible, geometry, latitude, version, username, longitude, id
+
+Table: GEO_OPENSTREETMAP.PLANET_WAYS
+Columns: version, geometry, username, visible, all_tags, osm_timestamp, nodes, id, changeset

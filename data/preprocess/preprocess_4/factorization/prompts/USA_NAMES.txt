@@ -1,0 +1,14 @@
+[COMPONENTS]
+@C1
+gender: TEXT | Sex (M=male or F=female) | eg=["M"]
+name: TEXT | Given name of a person at birth | eg=["Kevin", "Nelson"]
+number: NUMBER | Number of occurrences of the name | eg=[16, 15]
+state: TEXT | 2-digit state code | eg=["MA"]
+year: NUMBER | 4-digit year of birth | eg=[1934]
+
+[TABLES]
+## USA_NAMES.USA_1910_CURRENT
+@use: [C1]
+
+## USA_NAMES.USA_1910_2013
+@use: [C1]

@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq156",
+  "question": "Compute the t-score (rounded to 2 decimals) to compare the difference in mean expression levels of the gene DRG2 between two groups (TP53 mutated vs. non-mutated) in the Lower Grade Glioma (LGG) study, where the expression levels are calculated as the average of log10(normalized_count + 1) for each participant, only considering samples with TP53 mutations that have a 'FILTER' status of 'PASS' in the mutation data, and ignoring any groups with fewer than 10 samples or with zero variance; refer to `t_score.md` for the method of computing the t-score.",
+  "db_id": "PANCANCER_ATLAS_1",
+  "source_document": "t_score.md",
+  "evidence": "Welch's t-test formula for unequal variances: t = (X̄₁ - X̄₂) / √(s²₁/N₁ + s²₂/N₂). Where X̄ᵢ is the sample mean, s²ᵢ is the sample variance, and Nᵢ is the sample size. Degrees of freedom ν approximated by Welch–Satterthwaite equation. Compute mean and variance from sums: mean g = S/N, variance s² = (1/(N-1))[Q - (S²/N)], where S = Σgᵢ and Q = Σgᵢ². t-score only computed if variances > 0 and if number of participants in each group > user-defined threshold (e.g., 10). Example uses groups with and without mutation, calculating sums for mutated group (S_y, Q_y) and deriving sums for non-mutated group by subtraction from totals."
+}

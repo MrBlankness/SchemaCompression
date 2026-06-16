@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq208",
+  "question": "Can you provide weather stations within a 20-mile radius of Chappaqua, New York (Latitude: 41.197, Longitude: -73.764), and tell me the number of valid temperature observations they have recorded from 2011 to 2020, excluding any invalid or missing temperature data?",
+  "db_id": "NEW_YORK_NOAA",
+  "source_document": "functions_st_dwithin.md",
+  "evidence": "Function: ST_DWITHIN(<geography_expression_1>, <geography_expression_2>, <distance_in_meters>). Returns TRUE if the minimum geodesic distance between two GEOGRAPHY objects is within the specified distance (in meters). Example: SELECT ST_DWITHIN(ST_MAKEPOINT(0, 0), ST_MAKEPOINT(1, 0), 150000); returns True. Usage: For non-point geographies, it uses the distance between the two closest points. Returns NULL if any input is NULL."
+}

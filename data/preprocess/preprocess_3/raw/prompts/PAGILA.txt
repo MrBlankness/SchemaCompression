@@ -1,0 +1,121 @@
+[TABLES]
+## PAGILA.FILM_TEXT
+film_id: TEXT | NULL
+title: TEXT | NULL
+description: TEXT | NULL
+
+## PAGILA.PAYMENT
+staff_id: NUMBER | NULL
+last_update: TEXT | NULL
+rental_id: FLOAT | NULL
+amount: FLOAT | NULL
+payment_id: NUMBER | NULL
+customer_id: NUMBER | NULL
+payment_date: TEXT | NULL
+
+## PAGILA.ACTOR
+actor_id: NUMBER | NULL
+last_update: TEXT | NULL
+first_name: TEXT | NULL
+last_name: TEXT | NULL
+
+## PAGILA.FILM_CATEGORY
+last_update: TEXT | NULL
+category_id: NUMBER | NULL
+film_id: NUMBER | NULL
+
+## PAGILA.RENTAL
+last_update: TEXT | NULL
+rental_date: TEXT | NULL
+return_date: TEXT | NULL
+rental_id: NUMBER | NULL
+staff_id: NUMBER | NULL
+customer_id: NUMBER | NULL
+inventory_id: NUMBER | NULL
+
+## PAGILA.LANGUAGE
+language_id: NUMBER | NULL
+name: TEXT | NULL
+last_update: TEXT | NULL
+
+## PAGILA.STORE
+manager_staff_id: NUMBER | NULL
+last_update: TEXT | NULL
+store_id: NUMBER | NULL
+address_id: NUMBER | NULL
+
+## PAGILA.STAFF
+last_name: TEXT | NULL
+store_id: NUMBER | NULL
+username: TEXT | NULL
+first_name: TEXT | NULL
+last_update: TEXT | NULL
+password: TEXT | NULL
+email: TEXT | NULL
+staff_id: NUMBER | NULL
+picture: TEXT | NULL
+address_id: NUMBER | NULL
+active: NUMBER | NULL
+
+## PAGILA.FILM
+language_id: NUMBER | NULL
+title: TEXT | NULL
+rental_duration: NUMBER | NULL
+rating: TEXT | NULL
+original_language_id: TEXT | NULL
+film_id: NUMBER | NULL
+length: NUMBER | NULL
+last_update: TEXT | NULL
+rental_rate: FLOAT | NULL
+release_year: TEXT | NULL
+replacement_cost: FLOAT | NULL
+description: TEXT | NULL
+special_features: TEXT | NULL
+
+## PAGILA.INVENTORY
+inventory_id: NUMBER | NULL
+film_id: NUMBER | NULL
+last_update: TEXT | NULL
+store_id: NUMBER | NULL
+
+## PAGILA.CUSTOMER
+email: TEXT | NULL
+create_date: TEXT | NULL
+first_name: TEXT | NULL
+active: TEXT | NULL
+address_id: NUMBER | NULL
+last_name: TEXT | NULL
+last_update: TEXT | NULL
+customer_id: NUMBER | NULL
+store_id: NUMBER | NULL
+
+## PAGILA.FILM_ACTOR
+last_update: TEXT | NULL
+actor_id: NUMBER | NULL
+film_id: NUMBER | NULL
+
+## PAGILA.CATEGORY
+last_update: TEXT | NULL
+name: TEXT | NULL
+category_id: NUMBER | NULL
+
+## PAGILA.CITY
+city: TEXT | NULL
+city_id: NUMBER | NULL
+country_id: NUMBER | NULL
+last_update: TEXT | NULL
+
+## PAGILA.ADDRESS
+city_id: NUMBER | NULL
+district: TEXT | NULL
+address_id: NUMBER | NULL
+last_update: TEXT | NULL
+postal_code: TEXT | NULL
+address2: TEXT | NULL
+phone: TEXT | NULL
+address: TEXT | NULL
+
+## PAGILA.COUNTRY
+country_id: NUMBER | NULL
+last_update: TEXT | NULL
+country: TEXT | NULL

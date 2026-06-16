@@ -1,0 +1,103 @@
+[TEMPLATES]
+<T1>
+updated_at: TEXT | NULL
+price: NUMBER | NULL
+name: TEXT | NULL
+product_id: TEXT | NULL
+@Tables: [LOG.MST_PRODUCTS_20161201,LOG.MST_PRODUCTS_20170101]
+
+<T13>
+url: TEXT | NULL
+session: TEXT | NULL
+stamp: TEXT | NULL
+action: TEXT | NULL
+@Tables: [LOG.READ_LOG]
+
+<T3>
+user_id: TEXT | NULL
+session: TEXT | NULL
+action: TEXT | NULL
+stamp: TEXT | NULL
+@Tables: [LOG.ACCESS_LOG]
+
+[DERIVED]
+<T14> extends <T17>
+category: TEXT | NULL
+amount: FLOAT | NULL
+@Tables: [LOG.ACTION_LOG,LOG.INVALID_ACTION_LOG]
+
+<T11> extends <T3>
+ip: TEXT | NULL
+@Tables: [LOG.ACTION_LOG_WITH_IP]
+
+<T17> extends <T3>
+products: TEXT | NULL
+@Tables: [LOG.DUP_ACTION_LOG]
+
+<T9> extends <T13>
+user_agent: TEXT | NULL
+ip: TEXT | NULL
+products: TEXT | NULL
+@Tables: [LOG.ACTION_LOG_WITH_NOISE]
+
+[STANDALONE]
+## LOG.ACTIVITY_LOG
+action: TEXT | NULL
+session: TEXT | NULL
+option: TEXT | NULL
+search_type: TEXT | NULL
+path: TEXT | NULL
+stamp: TEXT | NULL
+
+## LOG.APP1_MST_USERS
+email: TEXT | NULL
+name: TEXT | NULL
+user_id: TEXT | NULL
+
+## LOG.APP2_MST_USERS
+user_id: TEXT | NULL
+phone: TEXT | NULL
+name: TEXT | NULL
+
+## LOG.FORM_ERROR_LOG
+session: TEXT | NULL
+form: TEXT | NULL
+stamp: TEXT | NULL
+field: TEXT | NULL
+value: TEXT | NULL
+error_type: TEXT | NULL
+
+## LOG.FORM_LOG
+status: TEXT | NULL
+action: TEXT | NULL
+session: TEXT | NULL
+path: TEXT | NULL
+stamp: TEXT | NULL
+
+## LOG.MST_CATEGORIES
+id: NUMBER | NULL
+stamp: TEXT | NULL
+name: TEXT | NULL
+
+## LOG.MST_USERS
+register_date: TEXT | NULL
+withdraw_date: TEXT | NULL
+register_device: TEXT | NULL
+birth_date: TEXT | NULL
+user_id: TEXT | NULL
+sex: TEXT | NULL
+
+## LOG.MST_USERS_WITH_CARD_NUMBER
+card_number: TEXT | NULL
+user_id: TEXT | NULL
+
+## LOG.PRODUCT_SALES
+category_name: TEXT | NULL
+product_id: TEXT | NULL
+sales: NUMBER | NULL
+
+## LOG.PURCHASE_LOG
+stamp: TEXT | NULL
+amount: NUMBER | NULL
+purchase_id: NUMBER | NULL
+user_id: TEXT | NULL

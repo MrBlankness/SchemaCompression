@@ -1,0 +1,31 @@
+[TEMPLATES]
+<T1>
+week: DATE | NULL
+term: TEXT | NULL
+rank: NUMBER | NULL
+score: NUMBER | NULL
+refresh_date: DATE | NULL
+dma_id: NUMBER | NULL
+dma_name: TEXT | NULL
+@Tables: [GOOGLE_TRENDS.TOP_TERMS]
+
+<T3>
+week: DATE | NULL
+term: TEXT | NULL
+rank: NUMBER | NULL
+score: NUMBER | NULL
+refresh_date: DATE | NULL
+region_code: TEXT | NULL
+region_name: TEXT | NULL
+country_code: TEXT | NULL
+country_name: TEXT | NULL
+@Tables: [GOOGLE_TRENDS.INTERNATIONAL_TOP_TERMS]
+
+[DERIVED]
+<T2> extends <T1>
+percent_gain: NUMBER | NULL
+@Tables: [GOOGLE_TRENDS.TOP_RISING_TERMS]
+
+<T4> extends <T3>
+percent_gain: NUMBER | NULL
+@Tables: [GOOGLE_TRENDS.INTERNATIONAL_TOP_RISING_TERMS]

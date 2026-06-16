@@ -1,0 +1,1100 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170330
+Columns: totals, visitorId, socialEngagementType, userId, hits, visitNumber, customDimensions, visitId, fullVisitorId, date, trafficSource, geoNetwork, channelGrouping, visitStartTime, device
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161217
+Columns: channelGrouping, fullVisitorId, userId, date, visitNumber, geoNetwork, visitId, trafficSource, socialEngagementType, visitStartTime, device, customDimensions, totals, hits, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160925
+Columns: customDimensions, channelGrouping, fullVisitorId, visitStartTime, totals, visitorId, userId, visitId, hits, geoNetwork, visitNumber, device, date, trafficSource, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161227
+Columns: customDimensions, visitId, socialEngagementType, hits, trafficSource, date, device, visitorId, fullVisitorId, geoNetwork, totals, visitStartTime, visitNumber, channelGrouping, userId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161213
+Columns: visitId, visitorId, customDimensions, date, fullVisitorId, channelGrouping, device, totals, visitNumber, geoNetwork, userId, hits, socialEngagementType, trafficSource, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170516
+Columns: totals, fullVisitorId, customDimensions, visitNumber, channelGrouping, date, userId, visitStartTime, geoNetwork, device, trafficSource, socialEngagementType, visitId, visitorId, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170604
+Columns: socialEngagementType, visitStartTime, date, hits, visitorId, channelGrouping, trafficSource, visitId, customDimensions, geoNetwork, visitNumber, userId, device, fullVisitorId, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170206
+Columns: device, date, socialEngagementType, visitNumber, channelGrouping, hits, trafficSource, visitStartTime, visitorId, geoNetwork, userId, totals, customDimensions, fullVisitorId, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170109
+Columns: fullVisitorId, date, channelGrouping, hits, trafficSource, totals, userId, visitNumber, visitId, visitorId, customDimensions, visitStartTime, socialEngagementType, device, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170722
+Columns: geoNetwork, clientId, totals, channelGrouping, fullVisitorId, customDimensions, hits, device, trafficSource, visitStartTime, visitorId, socialEngagementType, date, visitNumber, userId, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160808
+Columns: visitId, device, customDimensions, socialEngagementType, visitorId, geoNetwork, fullVisitorId, visitNumber, userId, visitStartTime, trafficSource, channelGrouping, hits, date, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161010
+Columns: visitStartTime, hits, device, userId, socialEngagementType, fullVisitorId, visitId, visitorId, geoNetwork, visitNumber, trafficSource, customDimensions, channelGrouping, date, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161221
+Columns: hits, customDimensions, channelGrouping, trafficSource, date, visitStartTime, visitNumber, geoNetwork, fullVisitorId, totals, userId, device, visitorId, socialEngagementType, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170112
+Columns: date, customDimensions, geoNetwork, userId, totals, channelGrouping, device, socialEngagementType, visitStartTime, hits, visitId, fullVisitorId, visitNumber, visitorId, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170117
+Columns: device, visitStartTime, visitId, socialEngagementType, visitNumber, customDimensions, date, hits, totals, fullVisitorId, visitorId, userId, channelGrouping, geoNetwork, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170526
+Columns: totals, socialEngagementType, visitorId, visitNumber, date, trafficSource, channelGrouping, geoNetwork, visitId, userId, fullVisitorId, visitStartTime, device, hits, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160805
+Columns: fullVisitorId, geoNetwork, device, userId, visitorId, trafficSource, date, channelGrouping, socialEngagementType, visitId, visitNumber, totals, visitStartTime, hits, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170114
+Columns: fullVisitorId, visitStartTime, visitorId, trafficSource, totals, channelGrouping, hits, customDimensions, geoNetwork, date, device, socialEngagementType, visitId, userId, visitNumber
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170704
+Columns: visitId, clientId, socialEngagementType, date, device, hits, geoNetwork, totals, visitorId, visitNumber, channelGrouping, userId, visitStartTime, customDimensions, fullVisitorId, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170602
+Columns: trafficSource, socialEngagementType, visitStartTime, totals, date, customDimensions, visitNumber, geoNetwork, hits, channelGrouping, device, visitorId, fullVisitorId, userId, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170708
+Columns: geoNetwork, visitNumber, date, totals, fullVisitorId, visitStartTime, clientId, device, customDimensions, channelGrouping, hits, socialEngagementType, userId, visitId, visitorId, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170725
+Columns: date, visitorId, fullVisitorId, socialEngagementType, visitNumber, customDimensions, hits, totals, visitId, channelGrouping, clientId, visitStartTime, device, trafficSource, userId, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160822
+Columns: userId, socialEngagementType, geoNetwork, fullVisitorId, visitNumber, hits, channelGrouping, totals, trafficSource, visitStartTime, visitId, device, customDimensions, visitorId, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160823
+Columns: userId, totals, visitStartTime, customDimensions, visitorId, trafficSource, channelGrouping, date, hits, visitNumber, visitId, geoNetwork, socialEngagementType, fullVisitorId, device
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170321
+Columns: hits, visitNumber, geoNetwork, channelGrouping, date, socialEngagementType, fullVisitorId, visitStartTime, customDimensions, trafficSource, device, visitorId, totals, userId, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160901
+Columns: device, visitorId, geoNetwork, totals, date, customDimensions, hits, visitNumber, visitStartTime, visitId, fullVisitorId, channelGrouping, userId, trafficSource, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170620
+Columns: customDimensions, visitId, date, visitStartTime, device, visitorId, hits, channelGrouping, fullVisitorId, totals, socialEngagementType, visitNumber, userId, trafficSource, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161224
+Columns: customDimensions, channelGrouping, trafficSource, fullVisitorId, hits, visitNumber, geoNetwork, device, visitorId, visitId, userId, totals, socialEngagementType, visitStartTime, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170522
+Columns: channelGrouping, trafficSource, hits, visitorId, visitId, geoNetwork, userId, visitNumber, date, visitStartTime, totals, device, socialEngagementType, fullVisitorId, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161109
+Columns: date, customDimensions, fullVisitorId, userId, channelGrouping, hits, visitorId, device, visitStartTime, socialEngagementType, totals, trafficSource, geoNetwork, visitNumber, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170425
+Columns: customDimensions, visitId, channelGrouping, visitNumber, hits, totals, visitStartTime, date, userId, trafficSource, socialEngagementType, device, geoNetwork, fullVisitorId, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161016
+Columns: totals, date, visitStartTime, socialEngagementType, visitId, trafficSource, customDimensions, device, visitNumber, channelGrouping, visitorId, geoNetwork, fullVisitorId, hits, userId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170224
+Columns: socialEngagementType, visitorId, fullVisitorId, device, hits, userId, visitStartTime, geoNetwork, customDimensions, visitId, channelGrouping, visitNumber, trafficSource, date, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161130
+Columns: trafficSource, geoNetwork, customDimensions, userId, visitStartTime, channelGrouping, date, hits, socialEngagementType, device, visitId, visitNumber, fullVisitorId, totals, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170622
+Columns: date, trafficSource, visitStartTime, geoNetwork, hits, visitorId, customDimensions, userId, visitId, visitNumber, channelGrouping, fullVisitorId, device, socialEngagementType, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170402
+Columns: visitorId, channelGrouping, device, visitNumber, hits, customDimensions, visitId, visitStartTime, userId, geoNetwork, totals, fullVisitorId, socialEngagementType, date, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160908
+Columns: date, visitorId, hits, userId, socialEngagementType, geoNetwork, visitNumber, totals, fullVisitorId, trafficSource, visitStartTime, device, customDimensions, channelGrouping, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160829
+Columns: visitStartTime, visitNumber, visitId, customDimensions, trafficSource, device, hits, channelGrouping, visitorId, userId, date, fullVisitorId, geoNetwork, totals, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170705
+Columns: trafficSource, visitId, socialEngagementType, customDimensions, visitNumber, geoNetwork, hits, date, visitStartTime, device, visitorId, clientId, channelGrouping, userId, fullVisitorId, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170427
+Columns: userId, channelGrouping, totals, visitorId, trafficSource, hits, date, visitNumber, fullVisitorId, device, visitStartTime, customDimensions, visitId, geoNetwork, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160831
+Columns: fullVisitorId, visitNumber, socialEngagementType, visitorId, totals, geoNetwork, visitId, channelGrouping, visitStartTime, customDimensions, device, trafficSource, date, hits, userId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170525
+Columns: device, channelGrouping, hits, userId, visitId, date, trafficSource, socialEngagementType, totals, visitStartTime, fullVisitorId, visitorId, customDimensions, visitNumber, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170212
+Columns: visitId, date, geoNetwork, visitStartTime, customDimensions, socialEngagementType, hits, userId, fullVisitorId, trafficSource, device, visitorId, channelGrouping, totals, visitNumber
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160820
+Columns: visitId, device, trafficSource, date, totals, socialEngagementType, customDimensions, fullVisitorId, channelGrouping, visitStartTime, userId, visitNumber, hits, geoNetwork, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161021
+Columns: visitStartTime, geoNetwork, channelGrouping, fullVisitorId, visitId, trafficSource, totals, date, visitNumber, hits, device, userId, customDimensions, socialEngagementType, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170126
+Columns: userId, fullVisitorId, channelGrouping, trafficSource, totals, geoNetwork, socialEngagementType, date, visitStartTime, visitId, visitorId, customDimensions, visitNumber, device, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170311
+Columns: trafficSource, fullVisitorId, channelGrouping, userId, device, visitNumber, totals, hits, socialEngagementType, geoNetwork, date, visitorId, visitStartTime, customDimensions, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160801
+Columns: userId, trafficSource, visitId, socialEngagementType, visitNumber, totals, visitStartTime, fullVisitorId, device, visitorId, channelGrouping, date, geoNetwork, hits, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160814
+Columns: totals, channelGrouping, visitId, customDimensions, userId, date, hits, trafficSource, socialEngagementType, fullVisitorId, geoNetwork, visitorId, visitStartTime, device, visitNumber
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170426
+Columns: customDimensions, channelGrouping, socialEngagementType, userId, visitId, geoNetwork, visitorId, device, hits, totals, fullVisitorId, trafficSource, date, visitStartTime, visitNumber
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161122
+Columns: geoNetwork, visitorId, fullVisitorId, device, hits, date, visitStartTime, visitNumber, channelGrouping, trafficSource, totals, visitId, userId, socialEngagementType, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161031
+Columns: visitorId, hits, customDimensions, channelGrouping, visitId, fullVisitorId, visitNumber, totals, visitStartTime, geoNetwork, socialEngagementType, userId, date, trafficSource, device
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170407
+Columns: trafficSource, visitId, totals, visitorId, date, geoNetwork, hits, fullVisitorId, userId, customDimensions, visitStartTime, visitNumber, socialEngagementType, device, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170713
+Columns: device, clientId, visitNumber, channelGrouping, socialEngagementType, visitStartTime, fullVisitorId, totals, hits, geoNetwork, userId, visitorId, customDimensions, date, trafficSource, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170303
+Columns: visitStartTime, customDimensions, visitId, date, totals, channelGrouping, visitNumber, geoNetwork, fullVisitorId, visitorId, device, hits, userId, socialEngagementType, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170508
+Columns: device, geoNetwork, visitStartTime, totals, customDimensions, channelGrouping, userId, trafficSource, visitNumber, hits, fullVisitorId, visitorId, visitId, date, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170423
+Columns: fullVisitorId, visitId, visitNumber, visitStartTime, channelGrouping, date, userId, device, geoNetwork, visitorId, socialEngagementType, totals, hits, customDimensions, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161007
+Columns: socialEngagementType, channelGrouping, hits, device, geoNetwork, visitorId, totals, userId, visitId, date, fullVisitorId, visitNumber, customDimensions, trafficSource, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170601
+Columns: geoNetwork, customDimensions, totals, visitNumber, device, date, socialEngagementType, visitorId, userId, visitId, visitStartTime, channelGrouping, hits, fullVisitorId, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170515
+Columns: visitorId, geoNetwork, socialEngagementType, hits, customDimensions, trafficSource, visitStartTime, totals, date, fullVisitorId, visitId, device, userId, visitNumber, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161115
+Columns: device, visitId, geoNetwork, channelGrouping, hits, customDimensions, socialEngagementType, visitStartTime, trafficSource, visitNumber, fullVisitorId, userId, totals, date, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170727
+Columns: visitorId, date, visitNumber, customDimensions, totals, channelGrouping, clientId, visitStartTime, geoNetwork, visitId, hits, socialEngagementType, userId, device, trafficSource, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160928
+Columns: socialEngagementType, fullVisitorId, trafficSource, customDimensions, visitId, geoNetwork, visitStartTime, userId, device, channelGrouping, date, visitNumber, hits, totals, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170609
+Columns: userId, geoNetwork, device, customDimensions, date, socialEngagementType, hits, visitId, visitStartTime, visitorId, fullVisitorId, totals, trafficSource, channelGrouping, visitNumber
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170729
+Columns: clientId, device, hits, visitorId, geoNetwork, customDimensions, channelGrouping, fullVisitorId, date, trafficSource, socialEngagementType, visitStartTime, totals, visitId, visitNumber, userId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170205
+Columns: visitorId, visitNumber, date, geoNetwork, channelGrouping, hits, device, trafficSource, customDimensions, socialEngagementType, totals, userId, fullVisitorId, visitStartTime, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170715
+Columns: fullVisitorId, visitStartTime, channelGrouping, visitId, geoNetwork, userId, device, visitorId, date, hits, clientId, totals, customDimensions, visitNumber, socialEngagementType, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160912
+Columns: device, fullVisitorId, geoNetwork, totals, visitNumber, visitStartTime, channelGrouping, socialEngagementType, userId, hits, customDimensions, date, visitorId, trafficSource, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161218
+Columns: hits, totals, visitStartTime, userId, socialEngagementType, customDimensions, date, trafficSource, visitId, geoNetwork, device, fullVisitorId, channelGrouping, visitorId, visitNumber
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170517
+Columns: visitNumber, channelGrouping, visitStartTime, date, visitId, customDimensions, fullVisitorId, trafficSource, visitorId, device, totals, hits, userId, socialEngagementType, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161118
+Columns: geoNetwork, visitId, visitorId, device, fullVisitorId, userId, hits, trafficSource, date, socialEngagementType, customDimensions, visitStartTime, totals, visitNumber, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160910
+Columns: fullVisitorId, visitNumber, socialEngagementType, device, date, userId, totals, customDimensions, visitId, trafficSource, hits, visitStartTime, geoNetwork, visitorId, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161207
+Columns: visitStartTime, date, channelGrouping, userId, geoNetwork, visitId, socialEngagementType, visitorId, hits, visitNumber, device, trafficSource, fullVisitorId, totals, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161202
+Columns: device, visitStartTime, channelGrouping, visitorId, fullVisitorId, customDimensions, visitNumber, visitId, socialEngagementType, totals, date, userId, geoNetwork, trafficSource, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170606
+Columns: visitorId, socialEngagementType, customDimensions, hits, fullVisitorId, date, channelGrouping, visitNumber, visitStartTime, totals, geoNetwork, visitId, userId, device, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160816
+Columns: hits, visitStartTime, visitId, fullVisitorId, visitorId, device, totals, geoNetwork, socialEngagementType, userId, channelGrouping, customDimensions, date, visitNumber, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161230
+Columns: userId, customDimensions, device, visitNumber, visitStartTime, geoNetwork, hits, socialEngagementType, visitId, channelGrouping, date, trafficSource, fullVisitorId, visitorId, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170208
+Columns: fullVisitorId, device, visitId, userId, socialEngagementType, geoNetwork, trafficSource, hits, visitorId, visitStartTime, channelGrouping, customDimensions, visitNumber, date, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170621
+Columns: trafficSource, date, visitId, customDimensions, userId, totals, visitStartTime, fullVisitorId, visitorId, visitNumber, channelGrouping, device, hits, geoNetwork, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170719
+Columns: trafficSource, channelGrouping, visitorId, date, clientId, visitId, userId, visitNumber, fullVisitorId, device, customDimensions, visitStartTime, hits, socialEngagementType, totals, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170129
+Columns: date, channelGrouping, customDimensions, hits, device, visitStartTime, trafficSource, userId, fullVisitorId, visitId, visitNumber, totals, socialEngagementType, geoNetwork, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170110
+Columns: customDimensions, visitorId, trafficSource, userId, geoNetwork, date, fullVisitorId, device, totals, visitId, visitNumber, channelGrouping, hits, socialEngagementType, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161212
+Columns: visitorId, socialEngagementType, visitId, visitStartTime, customDimensions, visitNumber, device, channelGrouping, trafficSource, geoNetwork, fullVisitorId, date, hits, userId, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170702
+Columns: device, userId, totals, visitId, trafficSource, channelGrouping, customDimensions, visitNumber, hits, visitorId, visitStartTime, clientId, geoNetwork, socialEngagementType, fullVisitorId, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170304
+Columns: visitId, visitStartTime, visitNumber, fullVisitorId, date, geoNetwork, totals, trafficSource, socialEngagementType, device, visitorId, hits, channelGrouping, customDimensions, userId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170520
+Columns: visitorId, customDimensions, geoNetwork, totals, hits, trafficSource, channelGrouping, visitNumber, visitStartTime, userId, socialEngagementType, visitId, device, fullVisitorId, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170612
+Columns: visitorId, fullVisitorId, socialEngagementType, visitNumber, geoNetwork, visitId, userId, trafficSource, date, visitStartTime, channelGrouping, device, totals, hits, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161011
+Columns: customDimensions, visitorId, trafficSource, device, hits, geoNetwork, visitStartTime, userId, totals, visitId, date, visitNumber, fullVisitorId, channelGrouping, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170613
+Columns: socialEngagementType, date, hits, channelGrouping, device, visitNumber, visitId, visitorId, customDimensions, totals, visitStartTime, geoNetwork, userId, fullVisitorId, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170401
+Columns: visitStartTime, fullVisitorId, hits, geoNetwork, date, visitNumber, userId, customDimensions, visitorId, totals, channelGrouping, visitId, trafficSource, device, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170421
+Columns: geoNetwork, fullVisitorId, hits, totals, visitorId, socialEngagementType, channelGrouping, device, trafficSource, date, visitId, visitStartTime, userId, customDimensions, visitNumber
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170228
+Columns: channelGrouping, visitStartTime, device, geoNetwork, userId, hits, totals, visitId, fullVisitorId, customDimensions, visitNumber, socialEngagementType, visitorId, trafficSource, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161022
+Columns: device, userId, date, trafficSource, channelGrouping, geoNetwork, customDimensions, visitorId, visitNumber, visitId, fullVisitorId, visitStartTime, totals, hits, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170323
+Columns: hits, trafficSource, visitNumber, device, date, fullVisitorId, socialEngagementType, totals, channelGrouping, customDimensions, userId, geoNetwork, visitorId, visitStartTime, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170211
+Columns: userId, hits, visitorId, socialEngagementType, channelGrouping, visitId, fullVisitorId, device, visitNumber, visitStartTime, geoNetwork, trafficSource, customDimensions, totals, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160821
+Columns: totals, hits, socialEngagementType, customDimensions, visitId, date, channelGrouping, device, trafficSource, visitorId, geoNetwork, userId, fullVisitorId, visitNumber, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170203
+Columns: date, geoNetwork, fullVisitorId, userId, visitStartTime, visitorId, customDimensions, totals, visitNumber, trafficSource, visitId, channelGrouping, socialEngagementType, device, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170712
+Columns: visitId, hits, device, visitorId, totals, socialEngagementType, userId, visitStartTime, trafficSource, date, clientId, customDimensions, channelGrouping, geoNetwork, fullVisitorId, visitNumber
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160929
+Columns: trafficSource, device, socialEngagementType, geoNetwork, hits, userId, date, totals, visitorId, channelGrouping, fullVisitorId, visitId, visitNumber, customDimensions, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170315
+Columns: visitNumber, trafficSource, device, visitorId, visitId, fullVisitorId, date, totals, geoNetwork, userId, hits, customDimensions, visitStartTime, channelGrouping, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170102
+Columns: device, socialEngagementType, fullVisitorId, visitorId, visitId, visitStartTime, channelGrouping, userId, visitNumber, trafficSource, customDimensions, date, hits, geoNetwork, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170416
+Columns: visitNumber, hits, totals, date, fullVisitorId, customDimensions, visitorId, userId, channelGrouping, geoNetwork, trafficSource, socialEngagementType, visitStartTime, device, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170801
+Columns: socialEngagementType, trafficSource, date, totals, channelGrouping, hits, fullVisitorId, visitId, userId, visitorId, geoNetwork, device, clientId, visitNumber, customDimensions, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161111
+Columns: trafficSource, channelGrouping, visitId, hits, userId, totals, customDimensions, geoNetwork, visitorId, visitNumber, device, visitStartTime, fullVisitorId, socialEngagementType, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170716
+Columns: userId, socialEngagementType, geoNetwork, totals, channelGrouping, visitId, clientId, hits, trafficSource, date, fullVisitorId, visitNumber, device, visitStartTime, customDimensions, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170218
+Columns: userId, totals, device, visitId, geoNetwork, date, trafficSource, visitStartTime, channelGrouping, hits, socialEngagementType, customDimensions, visitNumber, visitorId, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170512
+Columns: customDimensions, date, geoNetwork, device, visitNumber, totals, visitStartTime, channelGrouping, visitId, hits, socialEngagementType, fullVisitorId, trafficSource, visitorId, userId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160802
+Columns: date, customDimensions, hits, trafficSource, socialEngagementType, channelGrouping, fullVisitorId, visitorId, visitId, geoNetwork, totals, userId, device, visitNumber, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160812
+Columns: totals, visitId, visitStartTime, customDimensions, channelGrouping, visitNumber, socialEngagementType, userId, trafficSource, hits, geoNetwork, date, visitorId, device, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170204
+Columns: visitorId, device, totals, customDimensions, visitStartTime, fullVisitorId, trafficSource, geoNetwork, visitNumber, visitId, channelGrouping, hits, socialEngagementType, userId, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170501
+Columns: hits, fullVisitorId, visitNumber, visitorId, socialEngagementType, date, customDimensions, visitStartTime, channelGrouping, totals, visitId, device, userId, trafficSource, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160804
+Columns: visitId, totals, visitNumber, visitStartTime, visitorId, geoNetwork, channelGrouping, trafficSource, date, socialEngagementType, fullVisitorId, userId, device, hits, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160911
+Columns: customDimensions, visitStartTime, fullVisitorId, channelGrouping, totals, date, hits, visitId, visitNumber, socialEngagementType, visitorId, geoNetwork, device, userId, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161106
+Columns: customDimensions, device, channelGrouping, visitStartTime, visitorId, hits, visitNumber, trafficSource, visitId, totals, socialEngagementType, userId, date, geoNetwork, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160813
+Columns: date, fullVisitorId, geoNetwork, customDimensions, visitId, totals, visitStartTime, socialEngagementType, device, hits, trafficSource, channelGrouping, userId, visitNumber, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160905
+Columns: visitId, totals, fullVisitorId, socialEngagementType, customDimensions, visitorId, hits, userId, date, visitNumber, trafficSource, geoNetwork, device, visitStartTime, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170201
+Columns: visitNumber, geoNetwork, hits, channelGrouping, socialEngagementType, device, visitorId, date, totals, trafficSource, userId, visitId, fullVisitorId, customDimensions, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170124
+Columns: visitStartTime, device, visitId, trafficSource, date, hits, userId, visitNumber, channelGrouping, customDimensions, geoNetwork, fullVisitorId, totals, visitorId, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170317
+Columns: customDimensions, device, trafficSource, channelGrouping, date, totals, geoNetwork, fullVisitorId, userId, visitId, socialEngagementType, visitNumber, visitorId, hits, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170721
+Columns: customDimensions, visitNumber, fullVisitorId, clientId, hits, device, trafficSource, geoNetwork, socialEngagementType, visitStartTime, date, channelGrouping, userId, totals, visitorId, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161225
+Columns: visitNumber, hits, channelGrouping, visitorId, userId, customDimensions, trafficSource, geoNetwork, visitId, date, device, visitStartTime, fullVisitorId, totals, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170724
+Columns: geoNetwork, trafficSource, visitorId, totals, socialEngagementType, userId, fullVisitorId, customDimensions, channelGrouping, hits, device, visitNumber, clientId, date, visitId, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170316
+Columns: visitId, device, geoNetwork, fullVisitorId, totals, date, hits, socialEngagementType, visitorId, userId, visitStartTime, channelGrouping, trafficSource, visitNumber, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170226
+Columns: fullVisitorId, channelGrouping, visitId, visitStartTime, geoNetwork, visitNumber, userId, totals, device, visitorId, trafficSource, socialEngagementType, customDimensions, hits, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170325
+Columns: fullVisitorId, date, visitorId, visitId, hits, channelGrouping, device, visitNumber, socialEngagementType, trafficSource, userId, visitStartTime, geoNetwork, customDimensions, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170302
+Columns: hits, trafficSource, fullVisitorId, visitStartTime, date, device, socialEngagementType, customDimensions, userId, visitNumber, geoNetwork, totals, visitId, channelGrouping, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161126
+Columns: visitNumber, trafficSource, visitorId, visitId, channelGrouping, date, customDimensions, totals, device, socialEngagementType, userId, visitStartTime, hits, geoNetwork, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170209
+Columns: visitNumber, trafficSource, date, userId, visitorId, customDimensions, fullVisitorId, channelGrouping, geoNetwork, visitId, totals, hits, device, socialEngagementType, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161024
+Columns: visitStartTime, channelGrouping, trafficSource, device, geoNetwork, customDimensions, date, visitorId, visitNumber, visitId, userId, totals, fullVisitorId, socialEngagementType, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160918
+Columns: date, fullVisitorId, trafficSource, customDimensions, hits, visitorId, channelGrouping, geoNetwork, socialEngagementType, visitNumber, visitId, totals, userId, visitStartTime, device
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160806
+Columns: visitNumber, hits, visitStartTime, geoNetwork, socialEngagementType, device, channelGrouping, visitId, trafficSource, fullVisitorId, visitorId, customDimensions, userId, date, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161019
+Columns: visitNumber, totals, socialEngagementType, visitorId, hits, channelGrouping, trafficSource, fullVisitorId, geoNetwork, device, date, userId, visitStartTime, customDimensions, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160825
+Columns: date, totals, socialEngagementType, customDimensions, trafficSource, geoNetwork, device, visitorId, visitNumber, hits, visitId, channelGrouping, userId, fullVisitorId, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170221
+Columns: hits, geoNetwork, fullVisitorId, device, date, visitId, userId, visitStartTime, visitorId, trafficSource, visitNumber, channelGrouping, socialEngagementType, customDimensions, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170527
+Columns: visitorId, date, visitNumber, channelGrouping, visitId, userId, fullVisitorId, trafficSource, hits, visitStartTime, device, socialEngagementType, totals, customDimensions, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170706
+Columns: fullVisitorId, visitorId, channelGrouping, clientId, socialEngagementType, visitId, hits, geoNetwork, visitNumber, visitStartTime, customDimensions, device, userId, totals, trafficSource, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170127
+Columns: socialEngagementType, userId, hits, channelGrouping, customDimensions, visitNumber, trafficSource, totals, date, visitId, visitorId, visitStartTime, fullVisitorId, device, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170308
+Columns: date, totals, trafficSource, userId, geoNetwork, channelGrouping, socialEngagementType, visitorId, device, fullVisitorId, customDimensions, visitId, visitStartTime, visitNumber, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160927
+Columns: customDimensions, socialEngagementType, device, totals, date, userId, trafficSource, visitStartTime, hits, visitNumber, visitId, visitorId, geoNetwork, fullVisitorId, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170306
+Columns: visitStartTime, trafficSource, visitNumber, visitId, device, channelGrouping, visitorId, customDimensions, totals, geoNetwork, socialEngagementType, date, hits, userId, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161107
+Columns: fullVisitorId, visitNumber, visitStartTime, trafficSource, geoNetwork, customDimensions, date, visitId, hits, userId, socialEngagementType, totals, visitorId, device, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170510
+Columns: trafficSource, customDimensions, visitStartTime, channelGrouping, totals, hits, userId, visitNumber, socialEngagementType, visitId, device, geoNetwork, visitorId, date, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170701
+Columns: socialEngagementType, userId, trafficSource, visitId, clientId, channelGrouping, date, totals, hits, geoNetwork, visitNumber, fullVisitorId, visitorId, device, customDimensions, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170116
+Columns: visitNumber, trafficSource, device, totals, channelGrouping, fullVisitorId, userId, visitorId, visitId, date, hits, geoNetwork, socialEngagementType, customDimensions, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170123
+Columns: customDimensions, device, socialEngagementType, userId, date, visitNumber, visitorId, fullVisitorId, visitStartTime, hits, channelGrouping, geoNetwork, totals, trafficSource, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170415
+Columns: socialEngagementType, visitId, device, visitStartTime, channelGrouping, hits, fullVisitorId, totals, userId, geoNetwork, trafficSource, visitorId, visitNumber, date, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161004
+Columns: device, channelGrouping, visitId, visitStartTime, socialEngagementType, trafficSource, visitorId, visitNumber, hits, userId, date, geoNetwork, customDimensions, fullVisitorId, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170531
+Columns: customDimensions, visitorId, device, geoNetwork, socialEngagementType, trafficSource, channelGrouping, date, visitNumber, visitId, fullVisitorId, userId, visitStartTime, hits, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170514
+Columns: date, visitorId, fullVisitorId, channelGrouping, trafficSource, customDimensions, visitNumber, hits, totals, userId, geoNetwork, socialEngagementType, visitStartTime, device, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170409
+Columns: customDimensions, trafficSource, device, date, userId, socialEngagementType, totals, geoNetwork, visitorId, visitStartTime, channelGrouping, hits, visitNumber, visitId, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170223
+Columns: trafficSource, customDimensions, visitNumber, geoNetwork, visitorId, userId, visitStartTime, totals, socialEngagementType, date, device, channelGrouping, visitId, fullVisitorId, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170225
+Columns: visitId, geoNetwork, socialEngagementType, customDimensions, visitStartTime, visitNumber, visitorId, userId, fullVisitorId, device, hits, channelGrouping, totals, date, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170106
+Columns: trafficSource, userId, fullVisitorId, visitStartTime, visitId, channelGrouping, device, totals, visitorId, date, hits, customDimensions, socialEngagementType, visitNumber, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161119
+Columns: geoNetwork, channelGrouping, userId, visitNumber, visitStartTime, hits, totals, trafficSource, visitorId, device, socialEngagementType, date, fullVisitorId, customDimensions, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170202
+Columns: visitNumber, userId, visitStartTime, totals, customDimensions, geoNetwork, fullVisitorId, visitId, visitorId, channelGrouping, date, socialEngagementType, hits, device, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161226
+Columns: date, geoNetwork, device, customDimensions, totals, visitorId, visitNumber, visitStartTime, trafficSource, userId, channelGrouping, visitId, socialEngagementType, fullVisitorId, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170615
+Columns: geoNetwork, socialEngagementType, visitStartTime, userId, trafficSource, channelGrouping, visitId, visitNumber, fullVisitorId, customDimensions, hits, date, visitorId, totals, device
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161015
+Columns: date, userId, visitId, visitNumber, geoNetwork, device, visitStartTime, fullVisitorId, totals, socialEngagementType, channelGrouping, hits, visitorId, customDimensions, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170718
+Columns: trafficSource, fullVisitorId, clientId, visitStartTime, userId, hits, channelGrouping, totals, visitId, visitorId, socialEngagementType, device, geoNetwork, customDimensions, visitNumber, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161023
+Columns: visitId, geoNetwork, device, totals, userId, visitStartTime, channelGrouping, socialEngagementType, visitorId, fullVisitorId, visitNumber, date, trafficSource, customDimensions, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170607
+Columns: socialEngagementType, trafficSource, device, visitId, channelGrouping, customDimensions, geoNetwork, date, visitNumber, userId, visitorId, visitStartTime, fullVisitorId, hits, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170326
+Columns: trafficSource, userId, device, geoNetwork, visitNumber, channelGrouping, date, visitStartTime, fullVisitorId, visitorId, totals, customDimensions, hits, visitId, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170714
+Columns: visitStartTime, customDimensions, date, hits, geoNetwork, device, visitNumber, userId, clientId, visitId, visitorId, totals, socialEngagementType, fullVisitorId, trafficSource, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160826
+Columns: hits, visitId, device, trafficSource, visitorId, userId, customDimensions, geoNetwork, totals, date, visitStartTime, visitNumber, channelGrouping, socialEngagementType, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170616
+Columns: userId, trafficSource, visitId, geoNetwork, visitorId, customDimensions, visitStartTime, fullVisitorId, totals, visitNumber, device, socialEngagementType, channelGrouping, date, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160923
+Columns: trafficSource, visitorId, userId, geoNetwork, visitStartTime, socialEngagementType, visitId, hits, totals, device, channelGrouping, customDimensions, visitNumber, fullVisitorId, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170521
+Columns: visitStartTime, channelGrouping, geoNetwork, fullVisitorId, device, customDimensions, userId, visitNumber, totals, hits, date, socialEngagementType, visitId, trafficSource, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161205
+Columns: visitorId, trafficSource, visitStartTime, hits, totals, geoNetwork, visitNumber, customDimensions, visitId, date, fullVisitorId, userId, channelGrouping, device, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170111
+Columns: channelGrouping, customDimensions, visitNumber, date, visitorId, socialEngagementType, fullVisitorId, userId, device, visitId, trafficSource, totals, visitStartTime, hits, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170418
+Columns: visitNumber, visitId, hits, customDimensions, visitStartTime, trafficSource, visitorId, date, userId, fullVisitorId, geoNetwork, socialEngagementType, device, totals, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160904
+Columns: customDimensions, channelGrouping, userId, totals, device, visitStartTime, visitNumber, visitorId, geoNetwork, trafficSource, date, hits, fullVisitorId, socialEngagementType, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170131
+Columns: visitorId, visitId, fullVisitorId, customDimensions, socialEngagementType, totals, visitStartTime, channelGrouping, hits, device, userId, geoNetwork, date, visitNumber, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160926
+Columns: channelGrouping, userId, fullVisitorId, hits, visitNumber, totals, trafficSource, visitStartTime, visitorId, date, geoNetwork, visitId, customDimensions, device, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161026
+Columns: customDimensions, trafficSource, geoNetwork, visitNumber, visitStartTime, date, visitorId, visitId, device, totals, hits, socialEngagementType, channelGrouping, fullVisitorId, userId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161027
+Columns: trafficSource, visitNumber, totals, visitStartTime, device, socialEngagementType, geoNetwork, visitId, channelGrouping, customDimensions, date, userId, hits, visitorId, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170726
+Columns: fullVisitorId, date, clientId, visitNumber, hits, visitStartTime, trafficSource, customDimensions, device, socialEngagementType, userId, channelGrouping, visitorId, visitId, geoNetwork, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160810
+Columns: geoNetwork, visitNumber, channelGrouping, hits, totals, customDimensions, userId, visitStartTime, socialEngagementType, visitorId, date, device, fullVisitorId, trafficSource, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170502
+Columns: customDimensions, visitNumber, fullVisitorId, device, trafficSource, geoNetwork, socialEngagementType, visitId, hits, visitStartTime, channelGrouping, userId, totals, date, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170227
+Columns: fullVisitorId, trafficSource, device, visitNumber, visitStartTime, socialEngagementType, geoNetwork, userId, visitId, customDimensions, visitorId, date, channelGrouping, totals, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161121
+Columns: visitorId, userId, date, visitId, fullVisitorId, hits, visitNumber, totals, geoNetwork, channelGrouping, device, customDimensions, visitStartTime, trafficSource, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170628
+Columns: userId, customDimensions, trafficSource, geoNetwork, socialEngagementType, visitorId, visitId, date, visitStartTime, channelGrouping, hits, device, visitNumber, fullVisitorId, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160819
+Columns: geoNetwork, totals, visitStartTime, date, userId, visitorId, visitId, trafficSource, customDimensions, socialEngagementType, channelGrouping, visitNumber, device, fullVisitorId, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170410
+Columns: socialEngagementType, channelGrouping, totals, visitorId, userId, trafficSource, device, customDimensions, visitId, hits, fullVisitorId, visitNumber, date, visitStartTime, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160919
+Columns: date, socialEngagementType, hits, geoNetwork, userId, customDimensions, visitorId, visitNumber, device, totals, visitId, fullVisitorId, channelGrouping, visitStartTime, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170319
+Columns: device, date, hits, trafficSource, geoNetwork, fullVisitorId, visitorId, visitId, visitStartTime, channelGrouping, visitNumber, socialEngagementType, userId, totals, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161001
+Columns: userId, customDimensions, visitorId, socialEngagementType, channelGrouping, visitStartTime, date, device, visitId, totals, hits, geoNetwork, visitNumber, trafficSource, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161222
+Columns: socialEngagementType, channelGrouping, visitId, geoNetwork, customDimensions, trafficSource, userId, device, visitorId, visitNumber, fullVisitorId, visitStartTime, totals, date, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170509
+Columns: date, visitStartTime, totals, visitId, trafficSource, visitNumber, visitorId, geoNetwork, socialEngagementType, channelGrouping, customDimensions, fullVisitorId, device, userId, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160902
+Columns: fullVisitorId, customDimensions, trafficSource, device, visitId, visitNumber, geoNetwork, totals, visitStartTime, date, visitorId, hits, socialEngagementType, userId, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170301
+Columns: channelGrouping, visitStartTime, hits, totals, visitorId, socialEngagementType, visitNumber, fullVisitorId, geoNetwork, trafficSource, visitId, userId, device, customDimensions, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161210
+Columns: channelGrouping, customDimensions, totals, visitStartTime, fullVisitorId, visitorId, device, visitNumber, visitId, socialEngagementType, hits, trafficSource, date, userId, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170118
+Columns: customDimensions, visitNumber, visitorId, userId, device, totals, hits, fullVisitorId, channelGrouping, date, visitId, visitStartTime, geoNetwork, socialEngagementType, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160818
+Columns: visitStartTime, visitorId, device, socialEngagementType, totals, trafficSource, visitId, channelGrouping, geoNetwork, hits, customDimensions, fullVisitorId, date, userId, visitNumber
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160817
+Columns: visitNumber, geoNetwork, trafficSource, visitStartTime, userId, customDimensions, hits, visitId, visitorId, device, channelGrouping, totals, fullVisitorId, socialEngagementType, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170103
+Columns: channelGrouping, date, visitorId, hits, visitId, visitStartTime, trafficSource, userId, geoNetwork, device, visitNumber, totals, fullVisitorId, customDimensions, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161220
+Columns: userId, device, visitNumber, hits, visitorId, visitId, fullVisitorId, channelGrouping, visitStartTime, socialEngagementType, geoNetwork, date, totals, trafficSource, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170608
+Columns: trafficSource, socialEngagementType, device, visitNumber, channelGrouping, visitStartTime, userId, visitorId, hits, customDimensions, date, fullVisitorId, visitId, totals, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170128
+Columns: customDimensions, visitStartTime, hits, fullVisitorId, visitId, visitorId, trafficSource, date, socialEngagementType, visitNumber, device, channelGrouping, geoNetwork, totals, userId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160920
+Columns: visitNumber, date, device, trafficSource, userId, totals, visitStartTime, channelGrouping, visitorId, geoNetwork, hits, fullVisitorId, socialEngagementType, customDimensions, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160924
+Columns: visitorId, fullVisitorId, totals, date, visitNumber, userId, trafficSource, geoNetwork, visitId, device, hits, channelGrouping, customDimensions, socialEngagementType, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170618
+Columns: date, device, trafficSource, totals, visitId, visitorId, visitNumber, userId, customDimensions, channelGrouping, geoNetwork, visitStartTime, fullVisitorId, hits, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161125
+Columns: visitId, channelGrouping, hits, trafficSource, customDimensions, visitStartTime, date, geoNetwork, fullVisitorId, visitNumber, userId, device, socialEngagementType, visitorId, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160909
+Columns: totals, trafficSource, device, channelGrouping, userId, hits, socialEngagementType, fullVisitorId, visitId, visitNumber, customDimensions, visitorId, visitStartTime, geoNetwork, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170420
+Columns: visitorId, visitId, date, fullVisitorId, visitNumber, totals, hits, channelGrouping, customDimensions, socialEngagementType, trafficSource, device, userId, visitStartTime, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170313
+Columns: fullVisitorId, trafficSource, customDimensions, device, visitNumber, visitorId, visitStartTime, socialEngagementType, totals, geoNetwork, date, userId, channelGrouping, visitId, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160930
+Columns: hits, userId, device, channelGrouping, visitNumber, trafficSource, date, visitStartTime, geoNetwork, socialEngagementType, fullVisitorId, visitId, customDimensions, visitorId, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170707
+Columns: channelGrouping, totals, device, socialEngagementType, visitStartTime, visitorId, userId, trafficSource, fullVisitorId, date, visitId, geoNetwork, customDimensions, clientId, hits, visitNumber
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161129
+Columns: visitId, customDimensions, visitNumber, device, totals, channelGrouping, hits, visitStartTime, socialEngagementType, date, visitorId, userId, fullVisitorId, geoNetwork, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160913
+Columns: visitStartTime, totals, hits, channelGrouping, fullVisitorId, visitId, visitNumber, trafficSource, customDimensions, userId, socialEngagementType, geoNetwork, date, visitorId, device
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170130
+Columns: totals, visitNumber, channelGrouping, visitId, hits, customDimensions, userId, visitStartTime, fullVisitorId, visitorId, socialEngagementType, device, geoNetwork, trafficSource, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161009
+Columns: visitStartTime, userId, channelGrouping, hits, date, visitorId, totals, device, fullVisitorId, visitId, socialEngagementType, customDimensions, visitNumber, geoNetwork, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160824
+Columns: channelGrouping, geoNetwork, device, fullVisitorId, totals, userId, visitNumber, customDimensions, visitId, visitorId, date, socialEngagementType, trafficSource, hits, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170309
+Columns: date, geoNetwork, fullVisitorId, socialEngagementType, visitNumber, visitorId, customDimensions, totals, userId, device, visitId, channelGrouping, visitStartTime, trafficSource, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170519
+Columns: customDimensions, fullVisitorId, device, visitStartTime, visitorId, visitNumber, visitId, hits, totals, socialEngagementType, date, channelGrouping, geoNetwork, trafficSource, userId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170108
+Columns: userId, fullVisitorId, device, customDimensions, visitorId, hits, visitStartTime, socialEngagementType, geoNetwork, visitNumber, channelGrouping, trafficSource, visitId, totals, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170210
+Columns: customDimensions, geoNetwork, userId, date, totals, fullVisitorId, visitNumber, device, socialEngagementType, trafficSource, visitId, channelGrouping, visitStartTime, visitorId, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170408
+Columns: visitId, visitorId, trafficSource, visitNumber, device, channelGrouping, fullVisitorId, socialEngagementType, hits, userId, customDimensions, geoNetwork, totals, visitStartTime, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161203
+Columns: socialEngagementType, visitorId, visitId, hits, userId, fullVisitorId, geoNetwork, device, channelGrouping, customDimensions, visitNumber, visitStartTime, date, trafficSource, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170307
+Columns: hits, socialEngagementType, customDimensions, totals, device, date, userId, fullVisitorId, visitorId, visitNumber, trafficSource, channelGrouping, geoNetwork, visitId, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161228
+Columns: device, userId, hits, visitId, socialEngagementType, visitorId, channelGrouping, customDimensions, geoNetwork, visitStartTime, visitNumber, trafficSource, totals, fullVisitorId, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170318
+Columns: device, socialEngagementType, visitId, geoNetwork, channelGrouping, trafficSource, userId, visitStartTime, date, customDimensions, visitNumber, totals, hits, visitorId, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170627
+Columns: channelGrouping, fullVisitorId, visitStartTime, userId, customDimensions, date, visitId, trafficSource, socialEngagementType, totals, device, visitorId, visitNumber, geoNetwork, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161229
+Columns: totals, visitStartTime, visitorId, date, fullVisitorId, userId, customDimensions, device, channelGrouping, socialEngagementType, visitNumber, geoNetwork, visitId, hits, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161216
+Columns: totals, visitorId, date, hits, customDimensions, geoNetwork, channelGrouping, socialEngagementType, fullVisitorId, visitNumber, device, trafficSource, visitId, visitStartTime, userId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161101
+Columns: totals, visitStartTime, socialEngagementType, hits, visitId, customDimensions, trafficSource, date, visitorId, fullVisitorId, visitNumber, geoNetwork, device, userId, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160915
+Columns: channelGrouping, trafficSource, visitNumber, userId, date, visitorId, socialEngagementType, totals, hits, visitStartTime, fullVisitorId, visitId, customDimensions, geoNetwork, device
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170507
+Columns: totals, customDimensions, channelGrouping, date, geoNetwork, hits, socialEngagementType, visitNumber, device, fullVisitorId, visitStartTime, userId, visitorId, visitId, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160922
+Columns: hits, fullVisitorId, visitNumber, geoNetwork, device, customDimensions, trafficSource, visitStartTime, visitorId, date, visitId, userId, totals, socialEngagementType, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170530
+Columns: geoNetwork, visitorId, channelGrouping, userId, device, hits, date, visitId, trafficSource, fullVisitorId, socialEngagementType, totals, customDimensions, visitStartTime, visitNumber
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170414
+Columns: device, visitId, userId, channelGrouping, hits, socialEngagementType, visitNumber, totals, visitorId, fullVisitorId, date, customDimensions, geoNetwork, trafficSource, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170731
+Columns: visitStartTime, userId, totals, channelGrouping, visitId, hits, customDimensions, clientId, device, fullVisitorId, geoNetwork, visitorId, trafficSource, socialEngagementType, date, visitNumber
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170222
+Columns: geoNetwork, date, socialEngagementType, trafficSource, userId, device, totals, visitorId, customDimensions, hits, visitId, visitNumber, visitStartTime, channelGrouping, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161114
+Columns: socialEngagementType, date, visitId, device, hits, trafficSource, channelGrouping, visitStartTime, geoNetwork, customDimensions, fullVisitorId, totals, userId, visitNumber, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161117
+Columns: trafficSource, visitStartTime, visitNumber, totals, visitorId, geoNetwork, socialEngagementType, userId, channelGrouping, date, visitId, device, customDimensions, fullVisitorId, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170506
+Columns: visitorId, totals, trafficSource, fullVisitorId, visitStartTime, date, visitId, hits, channelGrouping, socialEngagementType, geoNetwork, customDimensions, device, userId, visitNumber
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160916
+Columns: visitId, hits, customDimensions, totals, geoNetwork, visitStartTime, fullVisitorId, userId, socialEngagementType, trafficSource, visitNumber, device, visitorId, date, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161006
+Columns: totals, visitorId, hits, userId, visitNumber, device, date, channelGrouping, socialEngagementType, geoNetwork, customDimensions, visitStartTime, visitId, fullVisitorId, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170605
+Columns: visitStartTime, customDimensions, totals, trafficSource, visitorId, fullVisitorId, device, geoNetwork, channelGrouping, date, visitId, socialEngagementType, userId, hits, visitNumber
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161116
+Columns: trafficSource, fullVisitorId, socialEngagementType, userId, visitStartTime, device, hits, visitId, visitorId, channelGrouping, visitNumber, geoNetwork, date, totals, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161211
+Columns: socialEngagementType, visitId, visitNumber, fullVisitorId, geoNetwork, date, visitStartTime, userId, channelGrouping, trafficSource, device, customDimensions, visitorId, totals, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161030
+Columns: visitorId, visitNumber, trafficSource, visitId, channelGrouping, device, fullVisitorId, geoNetwork, date, visitStartTime, customDimensions, totals, socialEngagementType, userId, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170623
+Columns: totals, geoNetwork, userId, channelGrouping, hits, visitNumber, trafficSource, fullVisitorId, visitId, device, visitStartTime, date, socialEngagementType, customDimensions, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160903
+Columns: visitId, customDimensions, socialEngagementType, device, fullVisitorId, date, channelGrouping, trafficSource, totals, visitNumber, visitorId, userId, hits, geoNetwork, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170424
+Columns: visitNumber, fullVisitorId, trafficSource, visitStartTime, visitId, date, totals, channelGrouping, customDimensions, geoNetwork, hits, device, userId, visitorId, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170320
+Columns: userId, fullVisitorId, device, visitId, hits, customDimensions, visitNumber, visitorId, geoNetwork, visitStartTime, totals, date, trafficSource, channelGrouping, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170630
+Columns: geoNetwork, visitNumber, hits, visitStartTime, visitId, trafficSource, totals, fullVisitorId, date, visitorId, customDimensions, userId, device, socialEngagementType, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161008
+Columns: hits, visitNumber, geoNetwork, totals, customDimensions, date, fullVisitorId, socialEngagementType, visitorId, device, userId, visitStartTime, channelGrouping, visitId, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170104
+Columns: userId, device, visitorId, socialEngagementType, customDimensions, trafficSource, hits, totals, visitId, date, channelGrouping, fullVisitorId, visitNumber, geoNetwork, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170511
+Columns: geoNetwork, device, socialEngagementType, customDimensions, visitStartTime, trafficSource, visitId, fullVisitorId, userId, hits, date, totals, visitorId, channelGrouping, visitNumber
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160917
+Columns: socialEngagementType, visitorId, trafficSource, hits, device, visitId, userId, geoNetwork, customDimensions, channelGrouping, totals, visitNumber, visitStartTime, date, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170430
+Columns: trafficSource, socialEngagementType, totals, visitId, userId, hits, visitStartTime, visitorId, fullVisitorId, date, visitNumber, channelGrouping, customDimensions, device, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161123
+Columns: geoNetwork, userId, visitNumber, socialEngagementType, visitId, channelGrouping, date, visitStartTime, customDimensions, fullVisitorId, totals, visitorId, hits, trafficSource, device
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161124
+Columns: totals, channelGrouping, visitNumber, visitId, trafficSource, customDimensions, device, visitorId, fullVisitorId, date, socialEngagementType, hits, userId, visitStartTime, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170413
+Columns: customDimensions, date, totals, userId, visitId, trafficSource, fullVisitorId, visitStartTime, device, visitNumber, hits, channelGrouping, geoNetwork, visitorId, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161112
+Columns: trafficSource, totals, visitStartTime, channelGrouping, visitNumber, geoNetwork, socialEngagementType, visitorId, customDimensions, userId, hits, visitId, fullVisitorId, device, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170406
+Columns: visitNumber, userId, visitorId, trafficSource, device, visitStartTime, totals, visitId, hits, customDimensions, channelGrouping, fullVisitorId, date, socialEngagementType, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170717
+Columns: trafficSource, fullVisitorId, customDimensions, visitNumber, channelGrouping, geoNetwork, visitorId, device, visitStartTime, totals, date, visitId, hits, socialEngagementType, clientId, userId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161002
+Columns: device, fullVisitorId, totals, date, userId, channelGrouping, hits, visitorId, visitStartTime, trafficSource, visitId, geoNetwork, visitNumber, customDimensions, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161223
+Columns: device, visitNumber, geoNetwork, totals, date, visitId, channelGrouping, visitorId, fullVisitorId, customDimensions, visitStartTime, userId, trafficSource, hits, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170113
+Columns: totals, socialEngagementType, fullVisitorId, geoNetwork, channelGrouping, trafficSource, visitStartTime, device, customDimensions, visitId, visitorId, date, visitNumber, hits, userId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170219
+Columns: geoNetwork, channelGrouping, date, visitorId, fullVisitorId, trafficSource, userId, visitStartTime, device, customDimensions, visitId, totals, socialEngagementType, visitNumber, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170524
+Columns: fullVisitorId, geoNetwork, device, trafficSource, channelGrouping, hits, visitStartTime, socialEngagementType, visitId, visitNumber, date, customDimensions, visitorId, totals, userId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161003
+Columns: customDimensions, userId, fullVisitorId, socialEngagementType, hits, totals, visitNumber, visitorId, trafficSource, date, visitStartTime, device, geoNetwork, channelGrouping, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161005
+Columns: visitorId, userId, visitId, device, fullVisitorId, geoNetwork, totals, date, visitStartTime, hits, visitNumber, socialEngagementType, channelGrouping, trafficSource, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170528
+Columns: visitStartTime, visitNumber, visitorId, trafficSource, channelGrouping, userId, hits, geoNetwork, device, socialEngagementType, customDimensions, visitId, totals, date, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161102
+Columns: visitNumber, userId, channelGrouping, visitId, visitorId, geoNetwork, customDimensions, trafficSource, fullVisitorId, socialEngagementType, totals, visitStartTime, hits, date, device
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170703
+Columns: hits, visitId, geoNetwork, visitNumber, userId, device, fullVisitorId, clientId, date, trafficSource, visitStartTime, visitorId, totals, socialEngagementType, channelGrouping, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170105
+Columns: fullVisitorId, socialEngagementType, customDimensions, channelGrouping, geoNetwork, date, totals, device, visitId, hits, userId, visitNumber, trafficSource, visitorId, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170720
+Columns: userId, customDimensions, channelGrouping, device, clientId, visitorId, fullVisitorId, visitId, geoNetwork, trafficSource, totals, hits, visitNumber, visitStartTime, date, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160921
+Columns: userId, visitStartTime, socialEngagementType, visitorId, fullVisitorId, customDimensions, visitId, totals, geoNetwork, hits, channelGrouping, device, visitNumber, date, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161104
+Columns: geoNetwork, visitorId, visitNumber, channelGrouping, socialEngagementType, visitId, userId, date, hits, customDimensions, device, fullVisitorId, visitStartTime, trafficSource, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160803
+Columns: totals, visitStartTime, fullVisitorId, userId, date, hits, visitNumber, geoNetwork, visitId, visitorId, customDimensions, trafficSource, channelGrouping, device, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170429
+Columns: visitId, channelGrouping, date, visitNumber, hits, trafficSource, customDimensions, visitorId, geoNetwork, device, totals, visitStartTime, fullVisitorId, userId, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170619
+Columns: trafficSource, geoNetwork, hits, visitStartTime, userId, socialEngagementType, totals, visitNumber, customDimensions, date, visitId, visitorId, device, fullVisitorId, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170207
+Columns: hits, visitStartTime, fullVisitorId, channelGrouping, date, userId, totals, customDimensions, visitId, visitNumber, trafficSource, visitorId, device, socialEngagementType, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161029
+Columns: totals, fullVisitorId, date, visitStartTime, hits, socialEngagementType, userId, device, trafficSource, customDimensions, visitNumber, visitId, channelGrouping, visitorId, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161018
+Columns: visitorId, device, visitId, date, totals, geoNetwork, fullVisitorId, hits, channelGrouping, visitNumber, socialEngagementType, visitStartTime, trafficSource, userId, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170125
+Columns: userId, geoNetwork, date, visitStartTime, visitNumber, visitId, visitorId, fullVisitorId, customDimensions, channelGrouping, hits, totals, socialEngagementType, device, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170312
+Columns: visitorId, date, customDimensions, userId, hits, totals, trafficSource, socialEngagementType, fullVisitorId, geoNetwork, visitId, visitStartTime, device, visitNumber, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170422
+Columns: date, socialEngagementType, fullVisitorId, totals, geoNetwork, visitStartTime, visitorId, visitId, customDimensions, channelGrouping, trafficSource, hits, userId, visitNumber, device
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170412
+Columns: visitStartTime, hits, visitId, date, visitNumber, userId, visitorId, totals, channelGrouping, fullVisitorId, trafficSource, customDimensions, geoNetwork, socialEngagementType, device
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160907
+Columns: channelGrouping, customDimensions, fullVisitorId, socialEngagementType, userId, date, visitStartTime, device, visitorId, geoNetwork, visitNumber, hits, totals, trafficSource, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170328
+Columns: visitStartTime, totals, visitorId, trafficSource, fullVisitorId, hits, customDimensions, socialEngagementType, date, userId, visitId, channelGrouping, visitNumber, device, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170216
+Columns: userId, socialEngagementType, visitNumber, channelGrouping, totals, customDimensions, visitStartTime, hits, trafficSource, visitId, fullVisitorId, date, visitorId, geoNetwork, device
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170529
+Columns: visitorId, channelGrouping, visitId, fullVisitorId, date, userId, totals, visitStartTime, trafficSource, geoNetwork, socialEngagementType, visitNumber, customDimensions, hits, device
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170504
+Columns: date, trafficSource, visitorId, hits, visitNumber, geoNetwork, fullVisitorId, userId, totals, device, socialEngagementType, customDimensions, visitStartTime, visitId, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161113
+Columns: visitStartTime, socialEngagementType, totals, visitNumber, hits, visitorId, channelGrouping, userId, device, fullVisitorId, customDimensions, date, geoNetwork, trafficSource, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170305
+Columns: socialEngagementType, visitId, visitStartTime, date, trafficSource, fullVisitorId, totals, userId, geoNetwork, visitNumber, device, hits, customDimensions, channelGrouping, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161108
+Columns: socialEngagementType, device, userId, customDimensions, visitStartTime, hits, fullVisitorId, totals, visitNumber, channelGrouping, visitId, visitorId, trafficSource, geoNetwork, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170324
+Columns: totals, geoNetwork, customDimensions, visitId, hits, date, userId, trafficSource, socialEngagementType, channelGrouping, visitorId, fullVisitorId, visitStartTime, device, visitNumber
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161128
+Columns: hits, visitorId, channelGrouping, visitStartTime, date, userId, trafficSource, visitNumber, device, fullVisitorId, geoNetwork, customDimensions, totals, socialEngagementType, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160906
+Columns: visitorId, visitStartTime, trafficSource, userId, hits, geoNetwork, device, visitId, channelGrouping, totals, customDimensions, fullVisitorId, date, visitNumber, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170404
+Columns: visitStartTime, totals, geoNetwork, customDimensions, channelGrouping, hits, socialEngagementType, userId, visitId, device, visitorId, fullVisitorId, visitNumber, date, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170310
+Columns: visitorId, channelGrouping, hits, fullVisitorId, device, visitStartTime, totals, date, visitId, geoNetwork, trafficSource, customDimensions, userId, socialEngagementType, visitNumber
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170711
+Columns: geoNetwork, clientId, customDimensions, hits, trafficSource, visitId, totals, date, fullVisitorId, visitNumber, socialEngagementType, channelGrouping, visitStartTime, device, visitorId, userId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170626
+Columns: visitStartTime, geoNetwork, visitId, customDimensions, visitorId, trafficSource, visitNumber, date, fullVisitorId, device, userId, hits, totals, socialEngagementType, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170101
+Columns: userId, trafficSource, visitStartTime, visitNumber, totals, hits, customDimensions, channelGrouping, date, visitId, device, geoNetwork, visitorId, socialEngagementType, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170603
+Columns: trafficSource, visitId, customDimensions, fullVisitorId, totals, userId, device, visitStartTime, hits, channelGrouping, visitorId, date, socialEngagementType, visitNumber, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161110
+Columns: trafficSource, visitId, geoNetwork, device, customDimensions, visitNumber, visitStartTime, socialEngagementType, userId, visitorId, fullVisitorId, hits, date, totals, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170710
+Columns: clientId, trafficSource, visitStartTime, customDimensions, channelGrouping, visitNumber, fullVisitorId, date, device, totals, hits, visitorId, socialEngagementType, visitId, geoNetwork, userId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170115
+Columns: visitorId, date, visitNumber, socialEngagementType, trafficSource, userId, fullVisitorId, totals, channelGrouping, customDimensions, geoNetwork, hits, device, visitId, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161025
+Columns: socialEngagementType, trafficSource, channelGrouping, device, visitorId, visitNumber, fullVisitorId, visitId, userId, geoNetwork, hits, customDimensions, date, visitStartTime, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161020
+Columns: visitId, date, socialEngagementType, device, geoNetwork, visitorId, visitNumber, visitStartTime, channelGrouping, customDimensions, totals, hits, trafficSource, fullVisitorId, userId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170428
+Columns: visitorId, trafficSource, channelGrouping, visitStartTime, fullVisitorId, userId, hits, date, device, socialEngagementType, visitNumber, geoNetwork, customDimensions, totals, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170617
+Columns: socialEngagementType, visitNumber, visitStartTime, customDimensions, userId, totals, date, geoNetwork, channelGrouping, trafficSource, hits, fullVisitorId, visitId, visitorId, device
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170217
+Columns: totals, socialEngagementType, geoNetwork, visitStartTime, visitorId, hits, userId, customDimensions, visitNumber, date, fullVisitorId, visitId, device, channelGrouping, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161215
+Columns: fullVisitorId, visitNumber, date, geoNetwork, device, customDimensions, hits, visitStartTime, channelGrouping, visitorId, visitId, trafficSource, socialEngagementType, userId, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170322
+Columns: userId, fullVisitorId, trafficSource, hits, date, visitId, device, visitorId, channelGrouping, visitStartTime, socialEngagementType, customDimensions, visitNumber, totals, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170119
+Columns: visitId, visitStartTime, socialEngagementType, userId, hits, date, trafficSource, device, fullVisitorId, geoNetwork, visitNumber, visitorId, channelGrouping, totals, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170730
+Columns: fullVisitorId, totals, visitorId, geoNetwork, customDimensions, clientId, visitId, date, trafficSource, socialEngagementType, userId, visitNumber, hits, visitStartTime, channelGrouping, device
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170327
+Columns: geoNetwork, fullVisitorId, visitNumber, trafficSource, hits, visitorId, date, customDimensions, device, visitStartTime, totals, userId, socialEngagementType, channelGrouping, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161012
+Columns: visitorId, customDimensions, visitNumber, fullVisitorId, visitId, channelGrouping, hits, socialEngagementType, userId, device, totals, geoNetwork, visitStartTime, trafficSource, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170403
+Columns: device, date, fullVisitorId, hits, totals, userId, visitId, customDimensions, socialEngagementType, visitStartTime, trafficSource, geoNetwork, visitNumber, visitorId, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161120
+Columns: trafficSource, visitId, date, customDimensions, hits, visitorId, device, visitNumber, channelGrouping, userId, socialEngagementType, fullVisitorId, geoNetwork, visitStartTime, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160830
+Columns: fullVisitorId, visitStartTime, channelGrouping, trafficSource, date, visitorId, totals, geoNetwork, socialEngagementType, device, visitId, visitNumber, hits, userId, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170417
+Columns: totals, date, userId, fullVisitorId, hits, visitorId, visitId, socialEngagementType, channelGrouping, device, visitNumber, geoNetwork, customDimensions, visitStartTime, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161127
+Columns: userId, visitNumber, socialEngagementType, visitorId, visitStartTime, visitId, customDimensions, totals, trafficSource, channelGrouping, device, fullVisitorId, hits, geoNetwork, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170614
+Columns: userId, fullVisitorId, date, device, visitorId, geoNetwork, customDimensions, visitId, visitNumber, channelGrouping, totals, trafficSource, hits, visitStartTime, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161231
+Columns: socialEngagementType, hits, visitId, visitNumber, customDimensions, date, visitorId, trafficSource, device, visitStartTime, geoNetwork, userId, fullVisitorId, channelGrouping, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161206
+Columns: trafficSource, hits, channelGrouping, geoNetwork, visitId, totals, visitorId, socialEngagementType, fullVisitorId, customDimensions, device, date, userId, visitStartTime, visitNumber
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170513
+Columns: trafficSource, hits, visitorId, socialEngagementType, visitId, totals, geoNetwork, date, fullVisitorId, device, userId, visitStartTime, visitNumber, customDimensions, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170610
+Columns: socialEngagementType, visitStartTime, date, visitNumber, customDimensions, channelGrouping, fullVisitorId, device, userId, trafficSource, visitId, hits, visitorId, totals, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160914
+Columns: visitorId, visitNumber, totals, trafficSource, visitStartTime, device, socialEngagementType, customDimensions, userId, channelGrouping, date, visitId, fullVisitorId, hits, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160827
+Columns: trafficSource, visitNumber, fullVisitorId, geoNetwork, channelGrouping, visitStartTime, visitorId, visitId, hits, device, socialEngagementType, userId, totals, date, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160809
+Columns: socialEngagementType, visitorId, totals, date, channelGrouping, visitNumber, userId, hits, visitId, trafficSource, device, visitStartTime, geoNetwork, customDimensions, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170329
+Columns: fullVisitorId, trafficSource, channelGrouping, date, device, totals, visitorId, visitStartTime, geoNetwork, customDimensions, visitNumber, userId, hits, visitId, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160828
+Columns: geoNetwork, device, userId, fullVisitorId, visitorId, visitNumber, channelGrouping, trafficSource, socialEngagementType, hits, customDimensions, totals, visitStartTime, date, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170122
+Columns: visitStartTime, device, date, totals, socialEngagementType, channelGrouping, geoNetwork, trafficSource, visitNumber, visitorId, customDimensions, visitId, hits, fullVisitorId, userId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170624
+Columns: visitStartTime, customDimensions, geoNetwork, fullVisitorId, device, socialEngagementType, visitorId, date, visitNumber, channelGrouping, trafficSource, visitId, hits, userId, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161214
+Columns: visitStartTime, hits, visitNumber, socialEngagementType, device, visitorId, totals, customDimensions, geoNetwork, date, userId, visitId, trafficSource, fullVisitorId, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170331
+Columns: userId, trafficSource, totals, visitorId, visitId, geoNetwork, hits, date, channelGrouping, customDimensions, socialEngagementType, visitStartTime, device, visitNumber, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170213
+Columns: userId, device, date, visitNumber, hits, socialEngagementType, totals, channelGrouping, visitorId, fullVisitorId, visitStartTime, customDimensions, visitId, trafficSource, geoNetwork
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161014
+Columns: device, totals, visitId, channelGrouping, hits, trafficSource, geoNetwork, fullVisitorId, date, customDimensions, visitStartTime, socialEngagementType, userId, visitNumber, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170411
+Columns: visitorId, trafficSource, fullVisitorId, date, userId, socialEngagementType, visitId, hits, channelGrouping, totals, customDimensions, device, geoNetwork, visitStartTime, visitNumber
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170723
+Columns: socialEngagementType, channelGrouping, totals, visitId, visitStartTime, device, date, userId, trafficSource, geoNetwork, customDimensions, hits, visitorId, clientId, visitNumber, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161209
+Columns: visitStartTime, trafficSource, customDimensions, socialEngagementType, visitNumber, visitId, device, totals, channelGrouping, visitorId, hits, geoNetwork, userId, fullVisitorId, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161013
+Columns: customDimensions, visitId, date, hits, fullVisitorId, visitNumber, totals, trafficSource, visitStartTime, userId, socialEngagementType, visitorId, geoNetwork, device, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170405
+Columns: date, visitStartTime, geoNetwork, socialEngagementType, customDimensions, visitorId, fullVisitorId, device, channelGrouping, trafficSource, totals, userId, hits, visitNumber, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161103
+Columns: visitId, visitStartTime, visitNumber, trafficSource, socialEngagementType, totals, fullVisitorId, customDimensions, visitorId, geoNetwork, date, channelGrouping, hits, device, userId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161201
+Columns: geoNetwork, visitId, visitNumber, socialEngagementType, userId, totals, visitorId, date, device, trafficSource, channelGrouping, visitStartTime, fullVisitorId, hits, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170419
+Columns: visitorId, hits, device, geoNetwork, customDimensions, visitId, trafficSource, userId, socialEngagementType, date, totals, visitStartTime, visitNumber, fullVisitorId, channelGrouping
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170629
+Columns: visitNumber, channelGrouping, hits, visitStartTime, totals, fullVisitorId, customDimensions, userId, device, geoNetwork, visitorId, trafficSource, socialEngagementType, visitId, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160815
+Columns: trafficSource, visitNumber, device, channelGrouping, customDimensions, visitStartTime, visitId, fullVisitorId, totals, visitorId, geoNetwork, userId, socialEngagementType, date, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170625
+Columns: geoNetwork, hits, visitorId, channelGrouping, visitNumber, userId, device, customDimensions, date, totals, fullVisitorId, trafficSource, visitId, visitStartTime, socialEngagementType
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170611
+Columns: userId, visitId, geoNetwork, visitorId, visitStartTime, date, channelGrouping, fullVisitorId, totals, hits, device, trafficSource, visitNumber, socialEngagementType, customDimensions
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170709
+Columns: channelGrouping, totals, visitStartTime, customDimensions, userId, visitNumber, date, visitId, visitorId, geoNetwork, fullVisitorId, clientId, socialEngagementType, hits, device, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170314
+Columns: visitId, visitorId, userId, fullVisitorId, trafficSource, channelGrouping, hits, customDimensions, date, visitStartTime, geoNetwork, socialEngagementType, device, visitNumber, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161208
+Columns: hits, geoNetwork, socialEngagementType, visitStartTime, totals, visitorId, visitNumber, customDimensions, visitId, fullVisitorId, device, channelGrouping, date, userId, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170215
+Columns: totals, userId, visitId, visitorId, channelGrouping, customDimensions, date, visitNumber, device, trafficSource, socialEngagementType, visitStartTime, hits, geoNetwork, fullVisitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161105
+Columns: trafficSource, socialEngagementType, hits, userId, geoNetwork, visitStartTime, visitId, visitNumber, fullVisitorId, customDimensions, device, visitorId, channelGrouping, date, totals
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161204
+Columns: visitId, visitStartTime, visitNumber, visitorId, fullVisitorId, totals, socialEngagementType, date, channelGrouping, device, customDimensions, geoNetwork, hits, userId, trafficSource
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161028
+Columns: channelGrouping, hits, visitNumber, geoNetwork, trafficSource, visitStartTime, date, customDimensions, visitId, fullVisitorId, socialEngagementType, totals, visitorId, userId, device
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170120
+Columns: trafficSource, customDimensions, visitorId, socialEngagementType, geoNetwork, hits, fullVisitorId, visitId, userId, channelGrouping, visitNumber, date, totals, device, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161017
+Columns: hits, socialEngagementType, visitId, visitNumber, date, trafficSource, geoNetwork, visitStartTime, device, userId, customDimensions, channelGrouping, totals, fullVisitorId, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170728
+Columns: visitId, visitorId, hits, customDimensions, socialEngagementType, clientId, channelGrouping, userId, device, fullVisitorId, trafficSource, geoNetwork, visitNumber, date, totals, visitStartTime
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160807
+Columns: visitId, visitNumber, socialEngagementType, totals, trafficSource, geoNetwork, visitorId, channelGrouping, hits, device, fullVisitorId, visitStartTime, customDimensions, date, userId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170523
+Columns: totals, userId, customDimensions, socialEngagementType, visitStartTime, fullVisitorId, geoNetwork, channelGrouping, visitId, visitorId, trafficSource, device, hits, visitNumber, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170107
+Columns: visitNumber, channelGrouping, visitId, device, userId, fullVisitorId, visitorId, totals, trafficSource, socialEngagementType, customDimensions, date, geoNetwork, visitStartTime, hits
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170505
+Columns: device, socialEngagementType, fullVisitorId, totals, channelGrouping, trafficSource, hits, visitorId, geoNetwork, customDimensions, date, userId, visitNumber, visitStartTime, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170214
+Columns: visitNumber, date, userId, visitStartTime, geoNetwork, channelGrouping, visitorId, trafficSource, fullVisitorId, hits, totals, socialEngagementType, customDimensions, visitId, device
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20160811
+Columns: device, trafficSource, visitId, geoNetwork, totals, visitStartTime, userId, visitorId, socialEngagementType, customDimensions, hits, channelGrouping, fullVisitorId, visitNumber, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170503
+Columns: userId, socialEngagementType, visitStartTime, device, date, trafficSource, channelGrouping, geoNetwork, visitorId, hits, fullVisitorId, customDimensions, totals, visitNumber, visitId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170121
+Columns: socialEngagementType, geoNetwork, visitNumber, hits, visitId, trafficSource, userId, fullVisitorId, channelGrouping, device, visitStartTime, customDimensions, totals, date, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170220
+Columns: device, hits, customDimensions, channelGrouping, totals, socialEngagementType, date, visitStartTime, visitId, trafficSource, geoNetwork, fullVisitorId, visitNumber, userId, visitorId
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20170518
+Columns: visitStartTime, socialEngagementType, visitId, geoNetwork, userId, trafficSource, visitNumber, device, visitorId, channelGrouping, customDimensions, hits, fullVisitorId, totals, date
+
+Table: GOOGLE_ANALYTICS_SAMPLE.GA_SESSIONS_20161219
+Columns: customDimensions, userId, visitId, fullVisitorId, visitStartTime, geoNetwork, date, hits, visitorId, socialEngagementType, totals, trafficSource, visitNumber, channelGrouping, device

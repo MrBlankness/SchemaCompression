@@ -1,0 +1,643 @@
+[TEMPLATES]
+<T3>
+file_gdc_id: TEXT | NULL
+case_gdc_id: TEXT | NULL
+aliquot_gdc_id: TEXT | NULL
+platform: TEXT | Platform used to generate this data -- either HumanMethylation450 or HumanMethylation27
+beta_value: FLOAT | Normalized DNA methylation beta value (between 0 and 1, where 0 indicates completely un-methylated and 1 indicates fully methylated)
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01
+sample_gdc_id: TEXT | NULL
+probe_id: TEXT | Unique probe identifier (eg cg04676771) from the Illumina Human Methylation array -- please refer to the annotation table (isb-cgc:platform_reference.methylation_annotation) for more details about any particular probe
+@Tables: [TCGA_HG38_DATA_V0.DNA_METHYLATION,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR1,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR10,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR11,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR12,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR13,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR14,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR15,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR16,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR17,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR18,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR19,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR2,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR20,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR21,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR22,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR3,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR4,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR5,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR6,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR7,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR8,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR9,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHRX,TCGA_HG38_DATA_V0.DNA_METHYLATION_CHRY]
+
+<T2>
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-DX-A8BN
+chromosome: TEXT | Chromosome, possible values: chr1-22, and chrX
+segment_mean: FLOAT | Mean CN value for this segment -- the value is base2 log(CN/2), centered at 0.
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal
+num_probes: NUMBER | Number of probes in the SNP array used to infer this CN segment
+aliquot_gdc_id: TEXT | Unique GDC identifier for this aliquot (corresponds to the aliquot_barcode), eg 7fbfdb3e-1fd2-4206-8d2e-7f68e4a15844  --  this can be used to access more information from the GDC data portal
+end_pos: NUMBER | 1-based end chromosome position of isoform
+sample_barcode: TEXT | TCGA sample barcode, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries
+start_pos: NUMBER | 1-based start chromosome position of isoform
+case_gdc_id: TEXT | Unique GDC identifier for this case (corresponds to the case_barcode).  Can be used to access more information from the GDC data portal like this:   https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba10
+aliquot_barcode: TEXT | TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-02
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; e.g. TCGA-OV, etc.
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba17
+@Tables: [TCGA_HG38_DATA_V0.COPY_NUMBER_SEGMENT_MASKED,TCGA_HG38_DATA_V0.COPY_NUMBER_SEGMENT_MASKED_R14]
+
+<T7>
+ExAC_AF: TEXT | Global Allele Frequency from  ExAC
+Amino_acids: TEXT | Amino acid substitution caused by the mutation. Only given if the variation affects the protein-coding sequence
+Variant_Classification: TEXT | Translational effect of variant allele
+ExAC_AF_AMR: TEXT | American Allele Frequency from ExAC
+PUBMED: TEXT | Pubmed ID(s) of publications that cite existing variant
+dbSNP_RS: TEXT | The rs-IDs from the   dbSNP database, novel if not found in any database used, or null if there is no dbSNP record, but it is found in other databases
+src_vcf_id: TEXT | |-delimited list of GDC VCF file identifiers
+ExAC_AF_AFR: TEXT | African/African American Allele Frequency from ExAC
+INTRON: TEXT | The intron number (out of total number)
+Strand: TEXT | Either + or - to denote whether read mapped to the sense (+) or anti-sense (-) strand
+EUR_MAF: FLOAT | Non-reference allele and frequency of existing variant in 1000 Genomes combined European population
+SWISSPROT: TEXT | UniProtKB/Swiss-Prot accession
+all_effects: TEXT | A semicolon delimited list of all possible variant effects, sorted by priority ([Symbol,Consequence,HGVSp_Short,Transcript_ID,RefSeq,HGVSc,Impact,Canonical,Sift,PolyPhen,Strand])
+ALLELE_NUM: TEXT | Allele number from input; 0 is reference, 1 is first alternate etc.
+End_Position: NUMBER | Highest numeric genomic position of the reported variant on the genomic reference sequence. Mutation end coordinate
+UNIPARC: TEXT | UniParc identifier of protein product
+AMR_MAF: FLOAT | Non-reference allele and frequency of existing variant in 1000 Genomes combined American population
+ExAC_AF_FIN: TEXT | Finnish Allele Frequency from ExAC
+HGVSp_Short: TEXT | Same as the HGVSp column, but using 1-letter amino-acid codes
+aliquot_barcode_normal: TEXT | TCGA aliquot barcode for the normal control, eg TCGA-12-1089-01A-01D-0517-01
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-DX-A8BN
+AFR_MAF: FLOAT | Non-reference allele and frequency of existing variant in 1000 Genomes combined African population
+ExAC_AF_OTH: TEXT | Other Allele Frequency from ExAC
+SYMBOL: TEXT | Eg TP53, LRP1B, etc (same as Hugo_Symbol field except blank instead of Unknown
+Protein_position: TEXT | Relative position of affected amino acid in protein. A - symbol is displayed as the numerator if the variant does not appear in coding sequence
+normal_bam_uuid: TEXT | Unique GDC identifier for the underlying normal bam file
+EA_MAF: TEXT | Non-reference allele and frequency of existing variant in NHLBI-ESP European American population
+cDNA_position: TEXT | Relative position of base pair in the cDNA sequence as a fraction. A - symbol is displayed as the numerator if the variant does not appear in cDNA
+PICK: TEXT | Indicates if this block of consequence data was picked by VEP's   pick feature (1 or null)
+Chromosome: TEXT | Chromosome, possible values: chr1-22, and chrX
+IMPACT: TEXT | The impact modifier for the consequence type
+Hugo_Symbol: TEXT | HUGO symbol for the gene (HUGO symbols are always in all caps). Unknown is used for regions that do not correspond to a gene
+NCBI_Build: TEXT | The reference genome used for the alignment (GRCh38)
+TRANSCRIPT_STRAND: NUMBER | The DNA strand (1 or -1) on which the transcript/feature lies
+tumor_bam_uuid: TEXT | Unique GDC identifier for the underlying tumor bam file
+Entrez_Gene_Id: NUMBER | Entrez gene ID (an integer). 0 is used for regions that do not correspond to a gene region or Ensembl ID
+DISTANCE: NUMBER | Shortest distance from the variant to transcript
+Validation_Method: TEXT | The assay platforms used for the validation call
+Feature: TEXT | Stable Ensembl ID of feature (transcript, regulatory, motif)
+Center: TEXT | One or more genome sequencing center reporting the variant
+VARIANT_CLASS: TEXT | Sequence Ontology variant class
+Consequence: TEXT | Consequence type of this variant;   sequence ontology terms
+HGVSp: TEXT | The protein sequence of the variant in HGVS recommended format. p.= signifies no change in the protein
+CDS_position: TEXT | Relative position of base pair in coding sequence. A - symbol is displayed as the numerator if the variant does not appear in coding sequence
+Tumor_Sample_UUID: TEXT | Unique GDC identifier for tumor aliquot (10189 unique)
+fileName: TEXT | |-delimited list of name of underlying MAF file
+t_ref_count: TEXT | Read depth supporting the reference allele in tumor BAM
+sample_barcode_normal: TEXT | TCGA sample barcode for the normal control, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries
+AA_MAF: TEXT | Non-reference allele and frequency of existing variant in NHLBI-ESP African American population
+HGVS_OFFSET: NUMBER | Indicates by how many bases the HGVS notations for this variant have been shifted
+FILTER: TEXT | Copied from input VCF. This includes filters implemented directly by the variant caller and other external software used in the DNA-Seq pipeline. See below for additional details.
+One_Consequence: TEXT | The single consequence of the canonical transcript in  sequence ontology terms, eg missense_variant
+Allele: TEXT | The variant allele used to calculate the consequence
+ENSP: TEXT | The Ensembl protein identifier of the affected transcript
+n_depth: TEXT | Read depth across this locus in normal BAM
+ExAC_AF_Adj: TEXT | Adjusted Global Allele Frequency from ExAC
+TREMBL: TEXT | UniProtKB/TrEMBL identifier of protein product
+callerName: TEXT | |-delimited list of mutation caller(s) that agreed on this particular call, always in alphabetical order: muse, mutect, somaticsniper, varscan
+CONTEXT: TEXT | The reference allele per VCF specs, and its five flanking base pairs
+MINIMISED: TEXT | Alleles in this variant have been converted to minimal representation before consequence calculation (1 or null)
+MC3_Overlap: TEXT | Indicates whether this region overlaps with an MC3 variant for the same sample pair
+Reference_Allele: TEXT | The plus strand reference allele at this position. Includes the deleted sequence for a deletion or - for an insertion
+TSL: NUMBER | Transcript support level, which is based on independent RNA analyses
+DOMAINS: TEXT | The source and identifier of any overlapping protein domains
+aliquot_barcode_tumor: TEXT | TCGA aliquot barcode for the tumor, eg TCGA-12-1089-01A-01D-0517-01
+SYMBOL_SOURCE: TEXT | The source of the gene symbol, usually HGNC, rarely blank, other sources include Uniprot_gn, EntrezGene, etc
+dbSNP_Val_Status: TEXT | The dbSNP validation status is reported as a semicolon-separated list of statuses. The union of all rs-IDs is taken when there are multiple
+CLIN_SIG: TEXT | Clinical significance of variant from dbSNP
+CANONICAL: TEXT | A flag (YES) indicating that the VEP-based canonical transcript, the longest translation, was used for this gene. If not, the value is null
+HGVSc: TEXT | The coding sequence of the variant in HGVS recommended format
+sample_barcode_tumor: TEXT | TCGA sample barcode for the tumor, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries
+PolyPhen: TEXT | The PolyPhen prediction and/or score
+PHENO: TEXT | Indicates if existing variant is associated with a phenotype, disease or trait (0, 1, or null)
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc.
+Transcript_ID: TEXT | Ensembl ID of the transcript affected by the variant
+Matched_Norm_Sample_UUID: TEXT | Unique GDC identifier for normal aliquot (10189 unique)
+t_alt_count: TEXT | Read depth supporting the variant allele in tumor BAM
+ExAC_AF_EAS: TEXT | East Asian Allele Frequency from ExAC
+Gene: TEXT | The gene symbol. In this table, gene symbol is simulated data e.g. ENSG00000251562
+BIOTYPE: TEXT | Biotype of transcript
+fileUUID: TEXT | |-delimited list of unique GDC identifier for underlying MAF file
+Mutation_Status: TEXT | An assessment of the mutation as somatic, germline, LOH, post transcriptional modification, unknown, or none. The values allowed in this field are constrained by the value in the Validation_Status field
+Codons: TEXT | The alternative codons with the variant base in upper case
+GDC_Validation_Status: TEXT | GDC implementation of validation checks. See notes section (#5) below for details
+t_depth: TEXT | Read depth across this locus in tumor BAM
+GMAF: FLOAT | Non-reference allele and frequency of existing variant in   1000 Genomes
+ExAC_AF_NFE: TEXT | Non-Finnish European Allele Frequency from ExAC
+GDC_FILTER: TEXT | GDC filters applied universally across all MAFs
+SAS_MAF: FLOAT | Non-reference allele and frequency of existing variant in 1000 Genomes combined South Asian population
+Tumor_Seq_Allele1: TEXT | Primary data genotype for tumor sequencing (discovery) allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases
+CCDS: TEXT | The CCDS identifier for this transcript, where applicable
+Variant_Type: TEXT | Type of mutation. TNP (tri-nucleotide polymorphism) is analogous to DNP (di-nucleotide polymorphism) but for three consecutive nucleotides. ONP (oligo-nucleotide polymorphism) is analogous to TNP but for consecutive runs of four or more (SNP, DNP, TNP, ONP, INS, DEL, or Consolidated)
+case_id: TEXT | Unique GDC identifier for the case
+ExAC_AF_SAS: TEXT | South Asian Allele Frequency from ExAC
+Feature_type: TEXT | Type of feature. Currently one of Transcript, RegulatoryFeature, MotifFeature (or blank)
+Exon_Number: TEXT | The exon number (out of total number)
+RefSeq: TEXT | RefSeq identifier for this transcript
+SOMATIC: TEXT | Somatic status of each ID reported under Existing_variation (0, 1, or null)
+SIFT: TEXT | The  SIFT prediction and/or score, with both given as prediction (score)
+Existing_variation: TEXT | Known identifier of existing variation
+Sequencer: TEXT | Instrument used to produce primary sequence data
+Tumor_Validation_Allele1: TEXT | Secondary data from orthogonal technology. Tumor genotyping (validation) for allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases
+HGNC_ID: TEXT | Gene identifier from the HUGO Gene Nomenclature Committee if applicable
+Tumor_Validation_Allele2: TEXT | Secondary data from orthogonal technology. Tumor genotyping (validation) for allele 2
+EAS_MAF: FLOAT | Non-reference allele and frequency of existing variant in 1000 Genomes combined East Asian population
+EXON: TEXT | The exon number (out of total number)
+COSMIC: TEXT | Overlapping COSMIC variants
+Tumor_Seq_Allele2: TEXT | Primary data genotype for tumor sequencing (discovery) allele 2. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases
+Start_Position: NUMBER | Lowest numeric position of the reported variant on the genomic reference sequence. Mutation start coordinate
+@Tables: [TCGA_HG38_DATA_V0.SOMATIC_MUTATION,TCGA_HG38_DATA_V0.SOMATIC_MUTATION_DR10]
+
+<T16>
+Gene: TEXT | The gene symbol. In this table, gene symbol is simulated data e.g. X6
+Phenotype: NUMBER | Simulated program type
+Expr: FLOAT | Simulated expression value
+ID: TEXT | Simulated ID number
+@Tables: [QOTM.TSP_SIM_DATA]
+
+<T23>
+tumor_type: TEXT | Tumor Type; e.g. Primary, Type 1, Type 2
+tumor_tissue_site: TEXT | The location on the body where the tumor exists; e.g. Brain, Ovary, Lung, etc.
+days_to_last_followup: NUMBER | If vital_status indicates 'alive', then this is the number of days from the date of diagnosis to the last followup (communication contact).
+race: TEXT | The race of a participant, independent from ethnicity; e.g. White, Black or African American, Asian, Native Hawaiian or other Pacific Islander, American Indian or Alaska Native
+number_of_lymphnodes_examined: NUMBER | The number of lymph nodes examined
+venous_invasion: TEXT | Indicator if large vessel or venous invasion was detected by surgery or presence in a tumor specimen; e.g. Yes, No
+hpv_calls: TEXT | HPV strains; e.g. HPV18, HPV45, etc.
+weight: NUMBER | Weight of participant in kilograms
+mononucleotide_and_dinucleotide_marker_panel_analysis_status: TEXT | Status of the mononucleotide and dinucleotide marker panel analysis; microsatellite-stable (MSS), low level MSI (MSI-L) if less than 40% of markers were altered and high level MSI (MSI-H) if greater than 40% of markers were altered
+primary_therapy_outcome_success: TEXT | Kind of outcome achieved after the completion of the initial course of treatment; e.g. Complete Remission/Response, Progressive Disease, etc.
+days_to_birth: NUMBER | Days since birth (a negative value, relative to the date of diagnosis which is considered to be t=0)
+lymphatic_invasion: TEXT | Indicator if small or thin-walled vessel invasion is present, indicating lymphatic involvement; e.g. Yes, No
+year_of_diagnosis: NUMBER | Four digit year of the diagnosis
+days_to_submitted_specimen_dx: TEXT | Numeric value to represent the day of the diagnosis for the submitted sample.
+other_malignancy_histological_type: TEXT | The histological type of cancer of the other malignancy; e.g. Adenosquamous, Astrocytoma, etc.
+pregnancies: TEXT | The number of times (including currently if it applies) that a female participant has been pregnant, regardless of outcome.
+pathologic_stage: TEXT | The stage of the cancer, based on surgery or biopsy; e.g. Stage I, Stage II, Stage III, Stage IV
+h_pylori_infection: TEXT | Indicator of previous or current diagnosis of Helicobactor pylori infection; e.g. Yes, No, Never, Current
+clinical_N: TEXT | The clinical N score is a rating of the extent of cancer within nearby lymph nodes, based on results of tests done before surgery, such as physical exams and imaging scans; e.g. N1, N2, N3
+other_malignancy_type: TEXT | Indicates whether another malignancy occurred before or at the same time; e.g. Prior Malignancy, Synchronous Malignancy
+tobacco_smoking_history: NUMBER | Category describing current smoking status and smoking history as self-reported by a participant.; e.g. 1, 2, etc.
+days_to_initial_pathologic_diagnosis: NUMBER | The number of days to initial pathologic diagnosis
+bmi: FLOAT | Body Mass Index of participant
+days_to_death: NUMBER | If vital_status indicates 'dead', then this is the number of days to death (a positive value) relative to the date of diagnosis.
+residual_tumor: TEXT | Status of the tissue margin following surgical resection; e.g. R0, R1, R2, RX
+height: NUMBER | Height of participant in centimeters
+history_of_neoadjuvant_treatment: TEXT | Describes the patient's history of neoadjuvant treatment and the kind of treament given prior to resection of the tumor; e.g. Yes, Pharmaceutical Treatment Prior to Resection, etc.
+icd_o_3_site: TEXT | Code that represents the site of the disease using the third edition of the International Classification of Diseases for Oncology, published in 2000, used principally in tumor and cancer registries for coding the site (topography) and the histology (morphology) of neoplasms
+country: TEXT | Country of the participant; e.g. Germany, United States, Canada, etc.
+ethnicity: TEXT | The ethnic origination of a participant, independent from race; eg. Not Hispanic or Latino, Hispanic or Latino
+case_barcode: TEXT | TCGA patient/case barcode; e.g. TCGA-06-0119
+hpv_status: TEXT | Indicates whether the participant has a record of a positive finding for human papillomavirus; e.g. Positive, Negative, Indeterminate
+primary_neoplasm_melanoma_dx: TEXT | Indicates whether a person had a primary diagnosis of melanoma; e.g. Yes, No
+gender: TEXT | Participant gender; e.g. Male, Female
+other_malignancy_anatomic_site: TEXT | The site on the body where the other malignancy occurred; e.g. Bladder, Uterus, etc.
+year_of_tobacco_smoking_onset: NUMBER | Four-digit year that the participant started smoking; e.g. 2010
+pathologic_M: TEXT | The pathologic M score is a rating of metastasis, that is, how much cancer has spread to distant sites. It is based on surgery or biopsy; e.g. MX, M0, M1
+neoplasm_histologic_grade: TEXT | Rating which expresses the degree of abnormality of cancer cells, a measure of differentiation and aggressiveness; e.g. G1, G2, G3, G4
+other_dx: TEXT | Indicator and type of other diagnosis; e.g. No; Yes, History of Prior Malignancy; Yes, History of Synchronous/Bilateral Malignancy; Both History of Synchronous/Bilateral and Prior Malignancy
+bcr: TEXT | Biospecimen Core Resource; e.g. Nationwide Children's Hospital, Washington University
+colorectal_cancer: TEXT | Indicates whether the participant has colorectal cancer; e.g. Yes, No
+days_to_last_known_alive: NUMBER | Number of days from the date of diagnosis to the last day on which a person was known to be alive. This field is a combination of the days_to_last_followup and days_to death fields. Therefore, this field can be used whether the vital_status is 'alive' or 'dead'.
+psa_value: TEXT | A male participant's Prostrate-Specific Antigen (PSA) value
+number_of_lymphnodes_positive_by_he: TEXT | The number of lymph nodes involved with disease as determined by histological examination
+clinical_stage: TEXT | The stage of the cancer, based on results of tests done before surgery, such as physical exams and imaging scans; e.g. Stage I, Stage II, Stage III, Stage IV
+person_neoplasm_cancer_status: TEXT | The participant's cancer status; e.g. With Tumor, Tumor Free
+age_began_smoking_in_years: TEXT | Age, in years, that the participant began smoking
+history_of_colon_polyps: TEXT | Indicator if the participant had a previous history of colon polyps as noted in the history/physical or previous endoscopic report(s); e.g. Yes, No
+clinical_M: TEXT | The clinical M score is a rating of metastasis, that is, how much cancer has spread to distant sites. It is based on results of tests done before surgery, such as physical exams and imaging scans; e.g. MX, M0, M1
+gleason_score_combined: TEXT | The Gleason Score (ranging from 1 -5) is the grade of the aggressiveness of prostate cancer. The combined Gleason Score is the primary Gleason score  (for the largest area of the tumor) added to the secondary Gleason Score (for the next largest section of the tumor).
+program_name: TEXT | Program Name, always TCGA (The Cancer Genome Atlas) in this table.
+vital_status: TEXT | Survival state of the participant; e.g. dead, alive
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; e.g. TCGA-OV, etc.
+clinical_T: TEXT | The clinical T score is a rating of the extent of the primary tumor, based on results of tests done before surgery, such as physical exams and imaging scans; e.g. T1, T2, T3, T4
+disease_code: TEXT | A code representing the type of cancer. Values can be found at https://gdc.cancer.gov/resources-TCGA-users/TCGA-code-tables/TCGA-study-abbreviations; e.g. OV, GBM, LUAD
+number_pack_years_smoked: NUMBER | The number of packs smoked per day times the number of years smoked by the participant
+new_tumor_event_after_initial_treatment: BOOLEAN | Indicates whether a patient has had a new tumor event after initial treatment; Yes, No
+age_at_diagnosis: NUMBER | Age, in years, at which a condition or disease was first diagnosed
+icd_o_3_histology: TEXT | Code that represents the histology of the disease using the third edition of the International Classification of Diseases for Oncology, published in 2000, used principally in tumor and cancer registries for coding the site (topography) and the histology (morphology) of neoplasms
+histological_type: TEXT | The histological type of cancer; e.g. Adenosquamous, Astrocytoma, etc.
+pathologic_T: TEXT | The pathologic T score is a rating of the extent of the primary tumor, based on surgery or biopsy; e.g. T1, T2, T3, T4
+batch_number: NUMBER | The BCR Batch Code; see https://gdc.cancer.gov/resources-TCGA-users/TCGA-code-tables/bcr-batch-codes for explanation of the codes
+menopause_status: TEXT | A female participant's menopausal status; e.g. Post, Pre, Indeterminate, Peri
+pathologic_N: TEXT | The pathologic N score is a rating of the extent of cancer within nearby lymph nodes, based on surgery or biopsy; e.g. N1, N2, N3
+tss_code: TEXT | Tissue Source Site Code; see https://gdc.cancer.gov/resources-TCGA-users/TCGA-code-tables/tissue-source-site-codes for explanation of codes
+icd_10: TEXT | Alphanumeric value used to describe the disease code from the tenth version of the International Classification of Disease (ICD-10)
+case_gdc_id: TEXT | GDC unique identifer for this case; e.g. 7b4ce492-ff40-4bf1-b3e8-75ff83e8746d. This identifier can be used to find more information at the GDC Data Portal ( https://portal.gdc.cancer.gov/cases/7b4ce492-ff40-4bf1-b3e8-75ff83e8746d )
+lymphnodes_examined: TEXT | Indicator whether the lymph nodes were examined; e.g. Yes, No
+stopped_smoking_year: NUMBER | Four-digit year that the participant stopped smoking; e.g. 2010
+anatomic_neoplasm_subdivision: TEXT | The spatial location, subdivisions and/or atomic site name of a tumor; e.g. Rectum, Larynx, Tonsil, etc.
+lymphovascular_invasion_present: TEXT | Indicator if  invasion of a cancer to the blood vessels and/or lymphatics invasion is present; e.g. Yes, No
+@Tables: [TCGA_BIOCLIN_V0.CLINICAL_V1]
+
+<T9>
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01
+cross_mapped: TEXT | A short isomiR read may map exactly to mature strands whose sequences are similar but not identical, when the read sequence does not capture the bases that distinguish these miRNAs (e.g. hsa-mir-30a at 6q13 and hsa-mir-30e at 1p34.2, which differ at position 18). We report such a <line_feed> read as cross-mapped, and we increment the read count for each MIMAT that it mapped to. Either Y or N -- fewer than 2% are Y
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc.
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details
+reads_per_million_miRNA_mapped: FLOAT | Read count normalized by total reads mapped divided by 1 million
+read_count: NUMBER | Number of reads that were mapped to this mirna_id
+mirna_id: TEXT | One of 1870 unique miRNA ids (aka symbols) contained in this table, eg hsa-mir-21  --  relevant reference information can be found in the isb-cgc:genome_reference dataset in the tables miRBase_v20 and miRBase_v20_hsa_gff3
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries
+@Tables: [TCGA_HG38_DATA_V0.MIRNASEQ_EXPRESSION]
+
+[DERIVED]
+<T11> extends <T16>
+PROJECT_SHORT_NAME: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg TCGA-OV, etc.
+ERANK: NUMBER | Expression Rank
+@Tables: [QOTM.PAAD_KIRP_RANDOM_SAMPLE_1002,QOTM.PAAD_KIRP_RESULT_CHECK]
+
+<T19> extends <T23>
+project_name: TEXT | NULL
+@Tables: [TCGA_BIOCLIN_V0.CLINICAL_V1_1]
+
+<T4> extends <T9>
+mirna_accession: TEXT | One of 2459 unique mature miRNA accession id (eg MIMAT0000062) -- note that this can also be null, in the event that this read does not map to a mature portion of the miRNA
+chromosome: TEXT | Chromosome, possible values: chr1-22, and chrX
+strand: TEXT | Either + or - to denote whether read mapped to the sense (+) or anti-sense (-) strand
+start_pos: NUMBER | 1-based start chromosome position of isoform
+mirna_transcript: TEXT | Indicates the type of transcript -- either mature, precursor, unannotated, or stemloop  (if this value is not mature, then the mirna_accession field will be null)
+end_pos: NUMBER | 1-based end chromosome position of isoform
+@Tables: [TCGA_HG38_DATA_V0.MIRNASEQ_ISOFORM_EXPRESSION]
+
+<T8> extends <T7>
+ASN_MAF: TEXT | Non-reference allele and frequency of existing variant in 1000 Genomes combined Asian population
+Match_Norm_Seq_Allele2: TEXT | Matched normal sequencing allele 2
+Sequencing_Phase: TEXT | TCGA sequencing phase (if applicable). Phase should change under any circumstance that the targets under consideration change
+MOTIF_POS: TEXT | The relative position of the variation in the aligned TFBP
+Match_Norm_Seq_Allele1: TEXT | Primary data genotype. Matched normal sequencing allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases (cleared in somatic MAF)
+Score: TEXT | Not in use
+GENE_PHENO: TEXT | Indicates if gene that the variant maps to is associated with a phenotype, disease or trait (0, 1, or null)
+Match_Norm_Validation_Allele1: TEXT | Secondary data from orthogonal technology. Matched normal genotyping (validation) for allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases (cleared in somatic MAF)
+MOTIF_SCORE_CHANGE: TEXT | The difference in motif score of the reference and variant sequences for the TFBP
+n_ref_count: TEXT | Read depth supporting the reference allele in normal BAM (cleared in somatic MAF)
+BAM_File: TEXT | Name of the bam file. Not in use in this table.
+HIGH_INF_POS: TEXT | A flag indicating if the variant falls in a high information position of a transcription factor binding profile (TFBP) (Y, N, or null)
+Sequence_Source: TEXT | Molecular assay type used to produce the analytes used for sequencing. Allowed values are a subset of the SRA 1.5 library_strategy field values. This subset matches those used at CGHub
+Match_Norm_Validation_Allele2: TEXT | Secondary data from orthogonal technology. Matched normal genotyping (validation) for allele 2 (cleared in somatic MAF)
+MOTIF_NAME: TEXT | The source and identifier of a transcription factor binding profile aligned at this position
+n_alt_count: TEXT | Read depth supporting the variant allele in normal BAM (cleared in somatic MAF)
+Verification_Status: TEXT | Second pass results from independent attempt using same methods as primary data source. Generally reserved for 3730 Sanger Sequencing
+Validation_Status: TEXT | Second pass results from orthogonal technology
+@Tables: [TCGA_HG38_DATA_V0.SOMATIC_MUTATION_DR7]
+
+[STANDALONE]
+## QOTM.ORG_HS_EG_DB_V1
+Entrez: TEXT | Entrez ID from the NCBI
+Ensembl: TEXT | Ensembl ID
+Uniprot: TEXT | Uniprot IDentifier from the UniProtKB
+Symbol: TEXT | Eg TP53, LRP1B, etc (same as Hugo_Symbol field except blank instead of Unknown)
+OMIM: TEXT | Phenotype MIM number from the OMIM
+Alias: TEXT | HUGO Alias
+Unigene: TEXT | UniGene
+Accession: TEXT | NCBI Reference Sequence
+ID: NUMBER | Reactome pathway ID (https://reactome.org/)
+UCSC: TEXT | UCSC ID
+
+## QOTM.REACTOME
+string_field_2: TEXT | Pathway Name
+string_field_0: TEXT | Entrez ID from the NCBI
+string_field_1: TEXT | PathwayID
+
+## QOTM.REACTOME_A1
+ENTREZ: TEXT | Uniprot Identifier from the UniProtKB
+PATHWAYID: TEXT | Pathway ID
+PATHWAYNAME: TEXT | Pathway Name
+
+## QOTM.RESULTS_1002
+Pb: NUMBER | Numbers for group B
+gene_j: TEXT | Gene pair #2
+Na: NUMBER | Total number of pairs for PAAD
+Nb: NUMBER | Total number of pairs for KIRP
+gene_i: TEXT | Gene pair #1
+Pa: NUMBER | Number of pairs where gene #1 < gene #2 in group A
+PDiff: FLOAT | Difference in conditional probabilities
+
+## QOTM.WIKIPATHWAYS_20170425_ANNOTATED
+Uniprot: TEXT | Uniprot Identifier from the UniProtKB
+pathway: TEXT | Pathway Name
+Symbol: TEXT | Eg TP53, LRP1B, etc (same as Hugo_Symbol field except blank instead of Unknown)
+pathID: TEXT | Pathway ID
+wikiID: TEXT | WikiPathways ID
+entrez: TEXT | Entrez ID from the NCBI
+
+## QOTM._1000GENOMES
+names: VARIANT | Alternate base.
+CIPOS: VARIANT | List of failed filters (if any) or PASS indicating the variant has passed all filters.
+start_position: NUMBER | Start position (0-based). Corresponds to the first base of the string of reference bases.
+call: VARIANT | Variant names (e.g. RefSNP ID).
+reference_name: TEXT | Reference name.
+CIEND: VARIANT | Phred-scaled quality score (-10log10 prob(call is wrong)). Higher values imply better quality.
+SVLEN: VARIANT | Name of the call.
+AN: NUMBER | Confidence interval around END for imprecise variants
+quality: FLOAT | Total number of alternate alleles in called genotypes
+alternate_bases: VARIANT | One record for each alternate base (if any).
+end_position: NUMBER | End position, in 1-based integer coordinates
+filter: VARIANT | Estimated allele frequency in the range (0,1)
+IMPRECISE: BOOLEAN | One record for each call.
+SVTYPE: TEXT | Genotype of the call "-1" is used in cases where the genotype is not called.
+reference_bases: TEXT | Reference bases.
+NS: NUMBER | Phaseset of the call (if any). "*" is used in cases where the genotype is phased, but no phase set ("PS" in FORMAT) was specified.
+
+## TCGA_BIOCLIN_V0.ANNOTATIONS
+date_created: TEXT | Date on which this annotation was originally created; includes time-stamp and time-zone, eg 2011-03-14T18:00:42-04:00  --  dates range between March 2009 and June 2016
+case_barcode: TEXT | TCGA patient/case barcode; e.g. TCGA-06-0119
+entity_type: TEXT | Type of the entity that this annotation applies to; e.g. Shipped Portion, Aliquot, Patient (which has the same meaning as Case), Analyte, etc.
+notes: TEXT | Longer descriptive text about this annotation
+category: TEXT | Annotation category; one of a relatively short list of phrases from a controlled-vocabulary; e.g. Item is noncanonical, Item flagged DNU, Prior malignancy, etc.
+entity_barcode: TEXT | Barcode of the entity that this annotation applies to; often the same as the case barcode
+sample_barcode: TEXT | TCGA sample barcode; e.g. TCGA-06-0119-01A (note that this field will be null if the annotation applies at a higher level than sample)
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; e.g. TCGA-OV, etc.
+aliquot_barcode: TEXT | TCGA aliquot barcode; e.g. TCGA-06-0119-01A-08D-0216-06 (note that this field will be null if the annotation applies at a higher level than aliquot)
+case_gdc_id: TEXT | GDC case identifier for the patient/case associated with this specific annotation
+classification: TEXT | Annotation classification; e.g. Notification, CenterNotification, Observation, or Redaction
+date_edited: TEXT | Annotations were rarely edited, but if thery were (fewer than 10 out of over 6000 total annotations), this field indicates the date on which it was edited
+
+## TCGA_BIOCLIN_V0.BIOSPECIMEN
+days_to_sample_procurement: FLOAT | The number of days from the date the patient was diagnosed to the date of the procedure that produced the sample.
+sample_type_name: TEXT | The longer name of the sample type; e.g. Primary Tumor, Recurrent Tumor, etc.
+max_percent_monocyte_infiltration: FLOAT | The maximum percentage of infiltration by monocytes in a sample or specimen
+avg_percent_stromal_cells: FLOAT | The average percentage of stromal cells in a sample or specimen
+min_percent_necrosis: FLOAT | The minimum percentage of necrosis in a sample or specimen
+avg_percent_monocyte_infiltration: FLOAT | The average percentage of infiltration by monocyte in a sample or specimen
+min_percent_neutrophil_infiltration: FLOAT | The minimum percentage of neutrophil infiltration in a sample or specimen
+bcr: TEXT | Biospecimen Core Resource; e.g. Nationwide Children's Hospital, Washington University
+avg_percent_necrosis: FLOAT | The average percentage of necrosis in a sample or specimen
+avg_percent_tumor_nuclei: FLOAT | The average percentage of tumor nuclei in a sample or specimen
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal
+days_to_collection: FLOAT | Time interval from the date of biospecimen collection to the date of initial pathologic diagnosis, represented as a calculated number of days.
+max_percent_stromal_cells: FLOAT | The maximum percentage of stromal cells in a sample or specimen
+min_percent_tumor_nuclei: FLOAT | The minimum percentage of tumor nuclei in a sample or specimen
+avg_percent_tumor_cells: FLOAT | The average percentage of tumor cells in a sample or specimen
+max_percent_tumor_cells: FLOAT | The maximum percentage of tumor cells in a sample or specimen
+max_percent_tumor_nuclei: FLOAT | The maximum percentage of tumor nuclei in a sample or specimen
+sample_barcode: TEXT | TCGA sample_barcode; e.g. TCGA-AB-2809-03A.
+min_percent_stromal_cells: FLOAT | The minimum percentage of stromal cells in a sample or specimen
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; e.g. TCGA-OV, etc.
+avg_percent_neutrophil_infiltration: FLOAT | The average percentage of neutrophil infiltration in a sample or specimen
+program_name: TEXT | Program Name, always TCGA (The Cancer Genome Atlas) in this table.
+min_percent_monocyte_infiltration: FLOAT | The minimum percentage of infiltration by lymphocytes in a sample or specimen
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode e.g. 01,11,06, etc.
+min_percent_normal_cells: FLOAT | The minimum percentage of normal cells in a sample or specimen
+max_percent_neutrophil_infiltration: FLOAT | The maximum percentage of neutrophil infiltration in a sample or specimen
+num_slides: NUMBER | In some cases, portions of a sample were placed onto multiple slides -- generally not more than 2, but occasionally more.
+min_percent_tumor_cells: FLOAT | The minimum percentage of tumor cells in a sample or specimen
+num_portions: NUMBER | In some cases, a sample was divided into multiple portions -- up to 6 portions, but for most samples the number is 1 (or even 0).
+is_ffpe: TEXT | Indicator to signify whether or not the tissue sample was fixed in formalin and embedded in paraffin (FFPE); almost always NO -- only a few (99) FFPE samples were included in the TCGA project
+max_percent_normal_cells: FLOAT | The maximum percentage of normal cells in a sample or specimen
+batch_number: NUMBER | The BCR Batch Code; see https://gdc.cancer.gov/resources-TCGA-users/TCGA-code-tables/bcr-batch-codes for explanation of the codes
+min_percent_lymphocyte_infiltration: FLOAT | The minimum percentage of infiltration by lymphocytes in a sample or specimen
+case_gdc_id: TEXT | GDC unique identifer for this case; e.g. 7b4ce492-ff40-4bf1-b3e8-75ff83e8746d. This identifier can be used to find more information at the GDC Data Portal ( https://portal.gdc.cancer.gov/cases/7b4ce492-ff40-4bf1-b3e8-75ff83e8746d )
+max_percent_lymphocyte_infiltration: FLOAT | The maximum percentage of infiltration by lymphocytes in a sample or specimen
+max_percent_necrosis: FLOAT | The maximum percentage of necrosis in a sample or specimen
+case_barcode: TEXT | TCGA patient/case barcode, eg TCGA-AB-2809 (the first 12 characters of the 16-character sample barcode)
+avg_percent_normal_cells: FLOAT | The average percentage of normal cells in a sample or specimen
+avg_percent_lymphocyte_infiltration: FLOAT | The average percentage of infiltration by lymphocytes in a sample or specimen
+
+## TCGA_BIOCLIN_V0.CLINICAL
+tumor_type: TEXT | Tumor Type; e.g. Primary, Type 1, Type 2
+vital_status: TEXT | Survival state of the participant; e.g. dead, alive
+other_malignancy_type: TEXT | Indicates whether another malignancy occurred before or at the same time; e.g. Prior Malignancy, Synchronous Malignancy
+person_neoplasm_cancer_status: TEXT | The participant's cancer status; e.g. With Tumor, Tumor Free
+pathologic_N: TEXT | The pathologic N score is a rating of the extent of cancer within nearby lymph nodes, based on surgery or biopsy; e.g. N1, N2, N3
+clinical_T: TEXT | The clinical T score is a rating of the extent of the primary tumor, based on results of tests done before surgery, such as physical exams and imaging scans; e.g. T1, T2, T3, T4
+tss_code: TEXT | Tissue Source Site Code; see https://gdc.cancer.gov/resources-TCGA-users/TCGA-code-tables/tissue-source-site-codes for explanation of codes
+pathologic_stage: TEXT | The stage of the cancer, based on surgery or biopsy; e.g. Stage I, Stage II, Stage III, Stage IV
+psa_value: FLOAT | A male participant's Prostrate-Specific Antigen (PSA) value
+other_malignancy_anatomic_site: TEXT | The site on the body where the other malignancy occurred; e.g. Bladder, Uterus, etc.
+history_of_neoadjuvant_treatment: TEXT | Describes the patient's history of neoadjuvant treatment and the kind of treament given prior to resection of the tumor; e.g. Yes, Pharmaceutical Treatment Prior to Resection, etc.
+age_at_diagnosis: NUMBER | Age, in years, at which a condition or disease was first diagnosed
+icd_10: TEXT | Alphanumeric value used to describe the disease code from the tenth version of the International Classification of Disease (ICD-10)
+ethnicity: TEXT | The ethnic origination of a participant, independent from race; e.g. Not Hispanic or Latino, Hispanic or Latino
+days_to_birth: NUMBER | Days since birth (a negative value, relative to the date of diagnosis which is considered to be t=0)
+hpv_calls: TEXT | HPV strains; e.g. HPV18, HPV45, etc.
+number_pack_years_smoked: FLOAT | The number of packs smoked per day times the number of years smoked by the participant
+residual_tumor: TEXT | Status of the tissue margin following surgical resection; e.g. R0, R1, R2, RX
+batch_number: NUMBER | The BCR Batch Code; see https://gdc.cancer.gov/resources-TCGA-users/TCGA-code-tables/bcr-batch-codes for explanation of the codes
+program_name: TEXT | Program Name, always TCGA (The Cancer Genome Atlas) in this table.
+case_barcode: TEXT | TCGA patient/case barcode; e.g. TCGA-06-0119
+gleason_score_combined: NUMBER | The Gleason Score (ranging from 1 -5) is the grade of the aggressiveness of prostate cancer. The combined Gleason Score is the primary Gleason score  (for the largest area of the tumor) added to the secondary Gleason Score (for the next largest section of the tumor).
+menopause_status: TEXT | A female participant's menopausal status; e.g. Post, Pre, Indeterminate, Peri
+pregnancies: TEXT | The number of times (including currently if it applies) that a female participant has been pregnant, regardless of outcome.
+clinical_N: TEXT | The clinical N score is a rating of the extent of cancer within nearby lymph nodes, based on results of tests done before surgery, such as physical exams and imaging scans; e.g. N1, N2, N3
+clinical_M: TEXT | The clinical M score is a rating of metastasis, that is, how much cancer has spread to distant sites. It is based on results of tests done before surgery, such as physical exams and imaging scans; e.g. MX, M0, M1
+primary_therapy_outcome_success: TEXT | Kind of outcome achieved after the completion of the initial course of treatment; e.g. Complete Remission/Response, Progressive Disease, etc.
+other_dx: TEXT | Indicator and type of other diagnosis; e.g. No; Yes, History of Prior Malignancy; Yes, History of Synchronous/Bilateral Malignancy; Both History of Synchronous/Bilateral and Prior Malignancy
+country: TEXT | Country of the participant; e.g. Germany, United States, Canada, etc.
+days_to_submitted_specimen_dx: NUMBER | Numeric value to represent the day of the diagnosis for the submitted sample.
+histological_type: TEXT | The histological type of cancer; e.g. Adenosquamous, Astrocytoma, etc.
+race: TEXT | The race of a participant, independent from ethnicity; e.g. White, Black or African American, Asian, Native Hawaiian or other Pacific Islander, American Indian or Alaska Native
+h_pylori_infection: TEXT | Indicator of previous or current diagnosis of Helicobactor pylori infection; e.g. Yes, No, Never, Current
+new_tumor_event_after_initial_treatment: TEXT | Indicates whether a patient has had a new tumor event after initial treatment; Yes, No
+days_to_last_known_alive: NUMBER | Number of days from the date of diagnosis to the last day on which a person was known to be alive. This field is a combination of the days_to_last_followup and days_to death fields. Therefore, this field can be used whether the vital_status is 'alive' or 'dead'.
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178
+year_of_initial_pathologic_diagnosis: NUMBER | Four digit year of the initial pathologic diagnosis
+icd_o_3_histology: TEXT | Code that represents the histology of the disease using the third edition of the International Classification of Diseases for Oncology, published in 2000, used principally in tumor and cancer registries for coding the site (topography) and the histology (morphology) of neoplasms
+gender: TEXT | Participant gender; e.g. Male, Female
+tumor_tissue_site: TEXT | The location on the body where the tumor exists; e.g. Brain, Ovary, Lung, etc.
+tobacco_smoking_history: NUMBER | Category describing current smoking status and smoking history as self-reported by a participant.; e.g. 1, 2, etc.
+number_of_lymphnodes_examined: NUMBER | The number of lymph nodes examined
+age_began_smoking_in_years: NUMBER | Age, in years, that the participant began smoking
+bcr: TEXT | Biospecimen Core Resource; e.g. Nationwide Children's Hospital, Washington University
+history_of_colon_polyps: TEXT | Indicator if the participant had a previous history of colon polyps as noted in the history/physical or previous endoscopic report(s); e.g. Yes, No
+stopped_smoking_year: NUMBER | Four-digit year that the participant stopped smoking; e.g. 2010
+other_malignancy_histological_type: TEXT | The histological type of cancer of the other malignancy; e.g. Adenosquamous, Astrocytoma, etc.
+lymphatic_invasion: TEXT | Indicator if small or thin-walled vessel invasion is present, indicating lymphatic involvement; e.g. Yes, No
+year_of_tobacco_smoking_onset: NUMBER | Four-digit year that the participant started smoking; e.g. 2010
+bmi: FLOAT | Body Mass Index of participant
+disease_code: TEXT | A code representing the type of cancer. Values can be found at https://gdc.cancer.gov/resources-TCGA-users/TCGA-code-tables/TCGA-study-abbreviations; e.g. OV, GBM, LUAD
+anatomic_neoplasm_subdivision: TEXT | The spatial location, subdivisions and/or atomic site name of a tumor; e.g. Rectum, Larynx, Tonsil, etc.
+mononucleotide_and_dinucleotide_marker_panel_analysis_status: TEXT | Status of the mononucleotide and dinucleotide marker panel analysis; microsatellite-stable (MSS), low level MSI (MSI-L) if less than 40% of markers were altered and high level MSI (MSI-H) if greater than 40% of markers were altered
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc
+days_to_last_followup: NUMBER | If vital_status indicates 'alive', then this is the number of days from the date of diagnosis to the last followup (communication contact).
+neoplasm_histologic_grade: TEXT | Rating which expresses the degree of abnormality of cancer cells, a measure of differentiation and aggressiveness; e.g. G1, G2, G3, G4
+days_to_death: NUMBER | If vital_status indicates 'dead', then this is the number of days to death (a positive value) relative to the date of diagnosis.
+case_gdc_id: TEXT | GDC unique identifer for this case; e.g. 7b4ce492-ff40-4bf1-b3e8-75ff83e8746d. This identifier can be used to find more information at the GDC Data Portal ( https://portal.gdc.cancer.gov/cases/7b4ce492-ff40-4bf1-b3e8-75ff83e8746d )
+primary_neoplasm_melanoma_dx: TEXT | Indicates whether a person had a primary diagnosis of melanoma; e.g. Yes, No
+number_of_lymphnodes_positive_by_he: NUMBER | The number of lymph nodes involved with disease as determined by histological examination
+height: FLOAT | Height of participant in centimeters
+venous_invasion: TEXT | Indicator if large vessel or venous invasion was detected by surgery or presence in a tumor specimen; e.g. Yes, No
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; e.g. TCGA-OV, etc.
+days_to_initial_pathologic_diagnosis: NUMBER | The number of days to initial pathologic diagnosis
+icd_o_3_site: TEXT | Code that represents the site of the disease using the third edition of the International Classification of Diseases for Oncology, published in 2000, used principally in tumor and cancer registries for coding the site (topography) and the histology (morphology) of neoplasms
+pathologic_T: TEXT | The pathologic T score is a rating of the extent of the primary tumor, based on surgery or biopsy; e.g. T1, T2, T3, T4
+colorectal_cancer: TEXT | Indicates whether the participant has colorectal cancer; e.g. Yes, No
+weight: FLOAT | Weight of participant in kilograms
+hpv_status: TEXT | Indicates whether the participant has a record of a positive finding for human papillomavirus; e.g. Positive, Negative, Indeterminate
+pathologic_M: TEXT | The pathologic M score is a rating of metastasis, that is, how much cancer has spread to distant sites. It is based on surgery or biopsy; e.g. MX, M0, M1
+lymphnodes_examined: TEXT | Indicator whether the lymph nodes were examined; e.g. Yes, No
+lymphovascular_invasion_present: TEXT | Indicator if  invasion of a cancer to the blood vessels and/or lymphatics invasion is present; e.g. Yes, No
+clinical_stage: TEXT | The stage of the cancer, based on results of tests done before surgery, such as physical exams and imaging scans; e.g. Stage I, Stage II, Stage III, Stage IV
+
+## TCGA_HG38_DATA_V0.PROTEIN_EXPRESSION
+protein_name: TEXT | Protein symbol with phosphorylation status, eg ACC_pS79
+protein_expression: FLOAT | Expression level of protein as measured by reverse-phase protein arrays. https://bioinformatics.mdanderson.org/public-software/tcpa/
+gene_name: TEXT | Gene name e.g. eg TTN, DDR1, etc
+antibody_source: TEXT | Animal of origin for the antibody M (Mouse), R (Rabbit), G (Goat)
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details
+protein_base_name: TEXT | Protein name e.g. AR, MAPK
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries
+validation_status: TEXT | Validation status of antibody by correlation of RPPA data with Western blot: V, E, C. For more information: https://bioinformatics.mdanderson.org/public-software/mclp/
+phospho: TEXT | If the antibody targets a phosphorylated protein, this field will contain that information, eg pS473  --  otherwise this field will be null
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc.
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01
+
+## TCGA_HG38_DATA_V0.RNASEQ_GENE_EXPRESSION
+sample_barcode: TEXT | TCGA sample barcode, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba43
+aliquot_barcode: TEXT | TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-31
+HTSeq__FPKM_UQ: FLOAT | Fragments Per Kilobase of transcript per Million mapped reads (FPKM) is a simple expression level normalization method. The FPKM normalizes read count based on gene length and the total number of mapped reads. https://docs.gdc.cancer.gov/Encyclopedia/pages/HTSeq-FPKM/
+aliquot_gdc_id: TEXT | Unique GDC identifier for this aliquot (corresponds to the aliquot_barcode), eg 7fbfdb3e-1fd2-4206-8d2e-7f68e4a15844  --  this can be used to access more information from the GDC data portal
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-DX-A8BN
+gene_type: TEXT | The type of genetic element the reads mapped to, eg protein_coding, ribozyme
+HTSeq__FPKM: FLOAT | FPKM is implemented at the GDC on gene-level read counts that are produced by HTSeq1 and generated using custom. scripts https://docs.gdc.cancer.gov/Encyclopedia/pages/HTSeq-FPKM/
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal
+Ensembl_gene_id: TEXT | The Ensembl gene ID from the underlying file, but stripped of the version suffix -- eg ENSG00000185028
+Ensembl_gene_id_v: TEXT | The Ensembl gene ID from the underlying file, including the version suffix  --  eg ENSG00000235943.1
+platform: TEXT | Platform used to generate data; either IlluminaHiSeqor IlluminaGA
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc.
+gene_name: TEXT | Gene name e.g. TTN, DDR1, etc.
+HTSeq__Counts: NUMBER | Number of mapped reads to each gene as calculated by the Python package HTSeq. https://docs.gdc.cancer.gov/Encyclopedia/pages/HTSeq-Counts/
+case_gdc_id: TEXT | Unique GDC identifier for this case (corresponds to the case_barcode).  Can be used to access more information from the GDC data portal like this:   https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba36
+
+## TCGA_HG38_DATA_V0.SOMATIC_MUTATION_DR6
+ExAC_AF_FIN: TEXT | Finnish Allele Frequency from ExAC
+gdc_tumor_sample_uuid: TEXT | Unique GDC identifier for the underlying tumor sample
+Tumor_Validation_Allele2: TEXT | Secondary data from orthogonal technology. Tumor genotyping (validation) for allele 2
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-DX-A8BN
+MOTIF_POS: TEXT | The relative position of the variation in the aligned TFBP
+Feature: TEXT | Stable Ensembl ID of feature (transcript, regulatory, motif)
+AMR_MAF: FLOAT | Non-reference allele and frequency of existing variant in 1000 Genomes combined American population
+SWISSPROT: TEXT | UniProtKB/Swiss-Prot accession
+gdc_maf_uuid: TEXT | Unique GDC indentifier for the underlying MAF file
+Protein_position: TEXT | Relative position of affected amino acid in protein. A - symbol is displayed as the numerator if the variant does not appear in coding sequence
+Tumor_Validation_Allele1: TEXT | Secondary data from orthogonal technology. Tumor genotyping (validation) for allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases
+ExAC_AF: TEXT | Global Allele Frequency from ExAC
+HGVSc: TEXT | The coding sequence of the variant in HGVS recommended format
+HGVSp_Short: TEXT | Same as the HGVSp column, but using 1-letter amino-acid codes
+Codons: TEXT | The alternative codons with the variant base in upper case
+GDC_Validation_Status: TEXT | GDC implementation of validation checks. See notes section (#5) below for details
+n_depth: TEXT | Read depth across this locus in normal BAM
+SYMBOL: TEXT | Eg TP53, LRP1B, etc (same as Hugo_Symbol field except blank instead of Unknown
+Consequence: TEXT | Consequence type of this variant;   sequence ontology terms
+sample_barcode_normal: TEXT | TCGA sample barcode for the normal control, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries
+Variant_Classification: TEXT | Translational effect of variant allele
+EAS_MAF: FLOAT | Non-reference allele and frequency of existing variant in 1000 Genomes combined East Asian population
+TREMBL: TEXT | UniProtKB/TrEMBL identifier of protein product
+VARIANT_CLASS: TEXT | Sequence Ontology variant class
+Variant_Type: TEXT | Type of mutation. TNP (tri-nucleotide polymorphism) is analogous to DNP (di-nucleotide polymorphism) but for three consecutive nucleotides. ONP (oligo-nucleotide polymorphism) is analogous to TNP but for consecutive runs of four or more (SNP, DNP, TNP, ONP, INS, DEL, or Consolidated)
+t_alt_count: TEXT | Read depth supporting the variant allele in tumor BAM
+t_depth: TEXT | Read depth across this locus in tumor BAM
+ExAC_AF_AFR: TEXT | African/African American Allele Frequency from ExAC
+aliquot_barcode_normal: TEXT | TCGA aliquot barcode for the normal control, eg TCGA-12-1089-01A-01D-0517-01
+End_Position: NUMBER | Highest numeric genomic position of the reported variant on the genomic reference sequence. Mutation end coordinate
+COSMIC: TEXT | Overlapping COSMIC variants
+ExAC_AF_Adj: TEXT | Adjusted Global Allele Frequency from ExAC
+EXON: TEXT | The exon number (out of total number)
+n_alt_count: TEXT | Read depth supporting the variant allele in normal BAM (cleared in somatic MAF)
+gdc_tumor_bam_uuid: TEXT | Unique GDC identifier for the underlying tumor bam file
+Entrez_Gene_Id: NUMBER | Entrez gene ID (an integer). 0 is used for regions that do not correspond to a gene region or Ensembl ID
+ENSP: TEXT | The Ensembl protein identifier of the affected transcript
+Reference_Allele: TEXT | The plus strand reference allele at this position. Includes the deleted sequence for a deletion or - for an insertion
+Sequencer: TEXT | Instrument used to produce primary sequence data
+gdc_case_uuid: TEXT | Unique GDC identifier for the underlying case
+dbSNP_Val_Status: TEXT | The dbSNP validation status is reported as a semicolon-separated list of statuses. The union of all rs-IDs is taken when there are multiple
+Strand: TEXT | Either + or - to denote whether read mapped to the sense (+) or anti-sense (-) strand
+AFR_MAF: FLOAT | Non-reference allele and frequency of existing variant in 1000 Genomes combined African population
+gdc_normal_bam_uuid: TEXT | Unique GDC identifier for the underlying normal bam file
+RefSeq: TEXT | RefSeq identifier for this transcript
+Chromosome: TEXT | Chromosome, possible values: chr1-22, and chrX
+Match_Norm_Validation_Allele1: TEXT | Secondary data from orthogonal technology. Matched normal genotyping (validation) for allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases (cleared in somatic MAF)
+Amino_acids: TEXT | Amino acid substitution caused by the mutation. Only given if the variation affects the protein-coding sequence
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc.
+Score: TEXT | Not in use
+Feature_type: TEXT | Type of feature. Currently one of Transcript, RegulatoryFeature, MotifFeature (or blank)
+cDNA_position: TEXT | Relative position of base pair in the cDNA sequence as a fraction. A - symbol is displayed as the numerator if the variant does not appear in cDNA
+Existing_variation: TEXT | Known identifier of existing variation
+INTRON: TEXT | The intron number (out of total number)
+gdc_maf_file_name: TEXT | GDC name for the underlying MAF file
+Validation_Method: TEXT | The assay platforms used for the validation call
+CCDS: TEXT | The  CCDS identifier for this transcript, where applicable
+Hugo_Symbol: TEXT | HUGO symbol for the gene (HUGO symbols are always in all caps). Unknown is used for regions that do not correspond to a gene
+PHENO: TEXT | Indicates if existing variant is associated with a phenotype, disease or trait (0, 1, or null)
+ExAC_AF_OTH: TEXT | Other Allele Frequency from ExAC
+Sequencing_Phase: TEXT | TCGA sequencing phase (if applicable). Phase should change under any circumstance that the targets under consideration change
+ALLELE_NUM: TEXT | Allele number from input; 0 is reference, 1 is first alternate etc.
+MOTIF_SCORE_CHANGE: TEXT | The difference in motif score of the reference and variant sequences for the TFBP
+n_ref_count: TEXT | Read depth supporting the reference allele in normal BAM (cleared in somatic MAF)
+UNIPARC: TEXT | UniParc identifier of protein product
+PICK: TEXT | Indicates if this block of consequence data was picked by VEP's   pick feature (1 or null)
+EUR_MAF: FLOAT | Non-reference allele and frequency of existing variant in 1000 Genomes combined European population
+HGVS_OFFSET: NUMBER | Indicates by how many bases the HGVS notations for this variant have been shifted
+Validation_Status: TEXT | Second pass results from orthogonal technology
+Start_Position: NUMBER | Lowest numeric position of the reported variant on the genomic reference sequence. Mutation start coordinate
+GMAF: FLOAT | Non-reference allele and frequency of existing variant in   1000 Genomes
+BAM_File: TEXT | Name of the bam file. Not in use in this table.
+DISTANCE: NUMBER | Shortest distance from the variant to transcript
+sample_barcode_tumor: TEXT | TCGA sample barcode for the tumor, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries
+SAS_MAF: FLOAT | Non-reference allele and frequency of existing variant in 1000 Genomes combined South Asian population
+callerName: TEXT | |-delimited list of mutation caller(s) that agreed on this particular call, always in alphabetical order: muse, mutect, somaticsniper, varscan
+Tumor_Seq_Allele2: TEXT | Primary data genotype for tumor sequencing (discovery) allele 2. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases
+Tumor_Seq_Allele1: TEXT | Primary data genotype for tumor sequencing (discovery) allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases
+t_ref_count: TEXT | Read depth supporting the reference allele in tumor BAM
+gdc_vcf_uuid: TEXT | Unique GDC identifier for the underlying vcf file
+DOMAINS: TEXT | The source and identifier of any overlapping protein domains
+Verification_Status: TEXT | Second pass results from independent attempt using same methods as primary data source. Generally reserved for 3730 Sanger Sequencing
+FILTER: TEXT | Copied from input VCF. This includes filters implemented directly by the variant caller and other external software used in the DNA-Seq pipeline. See below for additional details.
+TRANSCRIPT_STRAND: NUMBER | The DNA strand (1 or -1) on which the transcript/feature lies
+MINIMISED: TEXT | Alleles in this variant have been converted to minimal representation before consequence calculation (1 or null)
+CLIN_SIG: TEXT | Clinical significance of variant from dbSNP
+Mutation_Status: TEXT | An assessment of the mutation as somatic, germline, LOH, post transcriptional modification, unknown, or none. The values allowed in this field are constrained by the value in the Validation_Status field
+Sequence_Source: TEXT | Molecular assay type used to produce the analytes used for sequencing. Allowed values are a subset of the SRA 1.5 library_strategy field values. This subset matches those used at CGHub
+ASN_MAF: TEXT | Non-reference allele and frequency of existing variant in 1000 Genomes combined Asian population
+ExAC_AF_AMR: TEXT | American Allele Frequency from ExAC
+all_effects: TEXT | A semicolon delimited list of all possible variant effects, sorted by priority ([Symbol,Consequence,HGVSp_Short,Transcript_ID,RefSeq,HGVSc,Impact,Canonical,Sift,PolyPhen,Strand])
+Match_Norm_Seq_Allele1: TEXT | Primary data genotype. Matched normal sequencing allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases (cleared in somatic MAF)
+ExAC_AF_SAS: TEXT | South Asian Allele Frequency from ExAC
+AA_MAF: TEXT | Non-reference allele and frequency of existing variant in NHLBI-ESP African American population
+MOTIF_NAME: TEXT | The source and identifier of a transcription factor binding profile aligned at this position
+dbSNP_RS: TEXT | The rs-IDs from the   dbSNP database, novel if not found in any database used, or null if there is no dbSNP record, but it is found in other databases
+MC3_Overlap: TEXT | Indicates whether this region overlaps with an MC3 variant for the same sample pair
+CONTEXT: TEXT | The reference allele per VCF specs, and its five flanking base pairs
+Match_Norm_Validation_Allele2: TEXT | Secondary data from orthogonal technology. Matched normal genotyping (validation) for allele 2 (cleared in somatic MAF)
+aliquot_barcode_tumor: TEXT | TCGA aliquot barcode for the tumor, eg TCGA-12-1089-01A-01D-0517-01
+PUBMED: TEXT | Pubmed ID(s) of publications that cite existing variant
+HGNC_ID: TEXT | Gene identifier from the HUGO Gene Nomenclature Committee if applicable
+Center: TEXT | One or more genome sequencing center reporting the variant
+HIGH_INF_POS: TEXT | A flag indicating if the variant falls in a high information position of a transcription factor binding profile (TFBP) (Y, N, or null)
+CDS_position: TEXT | Relative position of base pair in coding sequence. A - symbol is displayed as the numerator if the variant does not appear in coding sequence
+gdc_normal_sample_uuid: TEXT | Unique GDC identifier for the underlying normal sample
+GDC_FILTER: TEXT | GDC filters applied universally across all MAFs
+EA_MAF: TEXT | Non-reference allele and frequency of existing variant in NHLBI-ESP European American population
+Allele: TEXT | The variant allele used to calculate the consequence
+Exon_Number: TEXT | The exon number (out of total number)
+Transcript_ID: TEXT | Ensembl ID of the transcript affected by the variant
+IMPACT: TEXT | The impact modifier for the consequence type
+Match_Norm_Seq_Allele2: TEXT | Matched normal sequencing allele 2
+NCBI_Build: TEXT | The reference genome used for the alignment (GRCh38)
+GENE_PHENO: TEXT | Indicates if gene that the variant maps to is associated with a phenotype, disease or trait (0, 1, or null)
+SOMATIC: TEXT | Somatic status of each ID reported under Existing_variation (0, 1, or null)
+ExAC_AF_NFE: TEXT | Non-Finnish European Allele Frequency from ExAC
+SYMBOL_SOURCE: TEXT | The source of the gene symbol, usually HGNC, rarely blank, other sources include Uniprot_gn, EntrezGene, etc
+PolyPhen: TEXT | The PolyPhen prediction and/or score
+CANONICAL: TEXT | A flag (YES) indicating that the VEP-based canonical transcript, the longest translation, was used for this gene. If not, the value is null
+BIOTYPE: TEXT | Biotype of transcript
+ExAC_AF_EAS: TEXT | East Asian Allele Frequency from ExAC
+TSL: NUMBER | Transcript support level, which is based on independent RNA analyses
+SIFT: TEXT | The   SIFT prediction and/or score, with both given as prediction (score)
+HGVSp: TEXT | The protein sequence of the variant in HGVS recommended format. p.= signifies no change in the protein
+Gene: TEXT | The gene symbol. In this table, gene symbol is simulated data e.g. ENSG00000251562
+
+## TCGA_HG38_DATA_V0.TCGA_METADATA_DATA_HG38_R14
+type: TEXT | Description of the data, eg. clinical_supplement, aligned_reads
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc.
+disease_code: TEXT | A code representing the type of cancer. Values can be found at https://gdc.cancer.gov/resources-TCGA-users/TCGA-code-tables/TCGA-study-abbreviations; eg. OV, GBM, LUAD
+index_file_name_key: TEXT | GDC path to original vcf or bam index file
+access: TEXT | Data accessibility policy (open or controlled)
+experimental_strategy: TEXT | Experimental strategy used to generate data (where applicable) e.g. WXS, RNA-Seq
+program_name: TEXT | Program name, eg TCGA or TARGET
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal
+platform: TEXT | Platform used to generate data (null, Illumina)
+case_gdc_id: TEXT | Unique GDC identifier for this case (corresponds to the case_barcode).  Can be used to access more information from the GDC data portal like this:   https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba37
+file_size: NUMBER | The size of the file measured in bytes
+index_file_id: TEXT | BAM  or VCF index file GDC file UUID
+data_category: TEXT | Category description of the underlying data, eg Clinical, Raw Sequencing Data, Simple Nucleotide Variation, Transcriptome Profiling  , etc
+index_file_size: NUMBER | When available, the size of the file measured in bytes
+data_format: TEXT | File format of the underlying data, eg BCR XML, BAM
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179
+sample_barcode: TEXT | TCGA sample barcode, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-DX-A8BN
+file_name_key: TEXT | GDC path to original bam or vcf file
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba44
+data_type: TEXT | Experimental source of the data type, eg Tissue slide image, RNA-Seq

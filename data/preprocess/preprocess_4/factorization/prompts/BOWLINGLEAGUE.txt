@@ -1,0 +1,81 @@
+[COMPONENTS]
+[TABLES]
+## BOWLINGLEAGUE.MATCH_GAMES
+MatchID: NUMBER | NULL | eg=[1, 2]
+WinningTeamID: NUMBER | NULL | eg=[2, 4]
+GameNumber: NUMBER | NULL | eg=[2, 1]
+
+## BOWLINGLEAGUE.MATCH_GAMES_ARCHIVE
+GameNumber: TEXT | NULL
+WinningTeamID: TEXT | NULL
+MatchID: TEXT | NULL
+
+## BOWLINGLEAGUE.BOWLER_SCORES
+HandiCapScore: NUMBER | NULL | eg=[205, 171]
+BowlerID: NUMBER | NULL | eg=[2, 3]
+MatchID: NUMBER | NULL | eg=[1]
+RawScore: NUMBER | NULL | eg=[166, 140]
+GameNumber: NUMBER | NULL | eg=[1, 2]
+WonGame: NUMBER | NULL | eg=[1, 0]
+
+## BOWLINGLEAGUE.BOWLERS
+BowlerState: TEXT | NULL | eg=["WA"]
+BowlerPhoneNumber: TEXT | NULL | eg=["(206) 555-9893", "(206) 555-3487"]
+BowlerGamesBowled: NUMBER | NULL | eg=[39]
+BowlerCity: TEXT | NULL | eg=["Seattle", "Auburn"]
+BowlerID: NUMBER | NULL | eg=[4, 5]
+BowlerFirstName: TEXT | NULL | eg=["Sara", "Ann"]
+BowlerCurrentHcp: NUMBER | NULL | eg=[52, 46]
+BowlerAddress: TEXT | NULL | eg=["17950 N 59th", "16 Maple Lane"]
+TeamID: NUMBER | NULL | eg=[1, 2]
+BowlerLastName: TEXT | NULL | eg=["Sheskey", "Patterson"]
+BowlerMiddleInit: TEXT | NULL | eg=["J", "K"]
+BowlerZip: TEXT | NULL | eg=["98011", "98002"]
+BowlerTotalPins: NUMBER | NULL | eg=[5534, 5819]
+BowlerCurrentAverage: NUMBER | NULL | eg=[142, 149]
+
+## BOWLINGLEAGUE.BOWLER_SCORES_ARCHIVE
+BowlerID: TEXT | NULL
+WonGame: TEXT | NULL
+GameNumber: TEXT | NULL
+HandiCapScore: TEXT | NULL
+RawScore: TEXT | NULL
+MatchID: TEXT | NULL
+
+## BOWLINGLEAGUE.SQLITE_SEQUENCE
+seq: NUMBER | NULL | eg=[34, 10]
+name: TEXT | NULL | eg=["Bowlers", "Teams"]
+
+## BOWLINGLEAGUE.TOURNEY_MATCHES_ARCHIVE
+EvenLaneTeamID: TEXT | NULL
+MatchID: TEXT | NULL
+TourneyID: TEXT | NULL
+OddLaneTeamID: TEXT | NULL
+Lanes: TEXT | NULL
+
+## BOWLINGLEAGUE.TOURNAMENTS
+TourneyDate: TEXT | NULL | eg=["2017-09-11", "2017-09-18"]
+TourneyLocation: TEXT | NULL | eg=["Thunderbird Lanes", "Bolero Lanes"]
+TourneyID: NUMBER | NULL | eg=[2, 3]
+
+## BOWLINGLEAGUE.TEAMS
+TeamName: TEXT | NULL | eg=["Sharks", "Terrapins"]
+TeamID: NUMBER | NULL | eg=[2, 3]
+CaptainID: NUMBER | NULL | eg=[5, 12]
+
+## BOWLINGLEAGUE.TOURNEY_MATCHES
+OddLaneTeamID: NUMBER | NULL | eg=[1, 3]
+Lanes: TEXT | NULL | eg=["01-02", "03-04"]
+TourneyID: NUMBER | NULL | eg=[1, 2]
+EvenLaneTeamID: NUMBER | NULL | eg=[2, 4]
+MatchID: NUMBER | NULL | eg=[1, 2]
+
+## BOWLINGLEAGUE.WAZIPS
+State: TEXT | NULL | eg=["WA"]
+ZIP: TEXT | NULL | eg=["98001", "98003"]
+City: TEXT | NULL | eg=["Auburn", "Federal Way"]
+
+## BOWLINGLEAGUE.TOURNAMENTS_ARCHIVE
+TourneyLocation: TEXT | NULL
+TourneyDate: TEXT | NULL
+TourneyID: TEXT | NULL

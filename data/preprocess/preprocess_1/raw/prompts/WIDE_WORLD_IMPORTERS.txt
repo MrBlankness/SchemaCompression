@@ -1,0 +1,95 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: WIDE_WORLD_IMPORTERS.WAREHOUSE_STOCKITEMHOLDINGS
+Columns: BinLocation, LastEditedBy, LastStocktakeQuantity, TargetStockLevel, LastEditedWhen, StockItemID, ReorderLevel, QuantityOnHand, LastCostPrice
+
+Table: WIDE_WORLD_IMPORTERS.PURCHASING_SUPPLIERTRANSACTIONS
+Columns: FinalizationDate, PaymentMethodID, SupplierInvoiceNumber, IsFinalized, TaxAmount, OutstandingBalance, LastEditedBy, SupplierID, TransactionAmount, LastEditedWhen, AmountExcludingTax, PurchaseOrderID, TransactionTypeID, TransactionDate, SupplierTransactionID
+
+Table: WIDE_WORLD_IMPORTERS.APPLICATION_TRANSACTIONTYPES
+Columns: TransactionTypeName, TransactionTypeID, ValidFrom, LastEditedBy, ValidTo
+
+Table: WIDE_WORLD_IMPORTERS.SALES_CUSTOMERCATEGORIES
+Columns: ValidFrom, CustomerCategoryID, CustomerCategoryName, LastEditedBy, ValidTo
+
+Table: WIDE_WORLD_IMPORTERS.SALES_CUSTOMERS
+Columns: PhoneNumber, DeliveryAddressLine1, LastEditedBy, BillToCustomerID, DeliveryLocation, ValidTo, PostalPostalCode, PrimaryContactPersonID, PostalAddressLine1, DeliveryRun, IsOnCreditHold, WebsiteURL, FaxNumber, CustomerCategoryID, AlternateContactPersonID, DeliveryCityID, PostalAddressLine2, AccountOpenedDate, StandardDiscountPercentage, RunPosition, CreditLimit, IsStatementSent, CustomerID, CustomerName, PaymentDays, DeliveryMethodID, DeliveryAddressLine2, PostalCityID, BuyingGroupID, DeliveryPostalCode, ValidFrom
+
+Table: WIDE_WORLD_IMPORTERS.PURCHASING_SUPPLIERCATEGORIES
+Columns: SupplierCategoryName, ValidTo, SupplierCategoryID, ValidFrom, LastEditedBy
+
+Table: WIDE_WORLD_IMPORTERS.SALES_INVOICELINES
+Columns: TaxRate, LineProfit, InvoiceLineID, UnitPrice, StockItemID, Quantity, Description, TaxAmount, ExtendedPrice, LastEditedWhen, InvoiceID, LastEditedBy, PackageTypeID
+
+Table: WIDE_WORLD_IMPORTERS.WAREHOUSE_COLORS
+Columns: ColorName, ColorID, LastEditedBy, ValidTo, ValidFrom
+
+Table: WIDE_WORLD_IMPORTERS.WAREHOUSE_STOCKITEMS
+Columns: CustomFields, Brand, LastEditedBy, StockItemName, Photo, OuterPackageID, ValidFrom, UnitPackageID, RecommendedRetailPrice, InternalComments, Tags, Barcode, LeadTimeDays, MarketingComments, TaxRate, QuantityPerOuter, StockItemID, UnitPrice, Size, TypicalWeightPerUnit, ValidTo, ColorID, IsChillerStock, SearchDetails, SupplierID
+
+Table: WIDE_WORLD_IMPORTERS.WAREHOUSE_STOCKGROUPS
+Columns: StockGroupName, StockGroupID, ValidFrom, ValidTo, LastEditedBy
+
+Table: WIDE_WORLD_IMPORTERS.PURCHASING_PURCHASEORDER
+Columns: SupplierReference, DeliveryMethodID, PurchaseOrderID, ContactPersonID, ExpectedDeliveryDate, OrderDate, LastEditedBy, SupplierID, IsOrderFinalized, Comments, InternalComments, LastEditedWhen
+
+Table: WIDE_WORLD_IMPORTERS.PURCHASING_SUPPLIERS
+Columns: PostalAddressLine1, BankInternationalCode, PrimaryContactPersonID, InternalComments, BankAccountCode, ValidTo, DeliveryLocation, FaxNumber, ValidFrom, PostalAddressLine2, SupplierID, LastEditedBy, DeliveryAddressLine2, SupplierReference, SupplierCategoryID, DeliveryMethodID, DeliveryCityID, DeliveryAddressLine1, BankAccountName, PostalPostalCode, BankAccountNumber, PaymentDays, PhoneNumber, SupplierName, PostalCityID, WebsiteURL, DeliveryPostalCode, AlternateContactPersonID, BankAccountBranch
+
+Table: WIDE_WORLD_IMPORTERS.SALES_BUYINGGROUPS
+Columns: BuyingGroupName, ValidTo, LastEditedBy, BuyingGroupID, ValidFrom
+
+Table: WIDE_WORLD_IMPORTERS.SALES_SPECIALDEALS
+Columns: DealDescription, DiscountAmount, DiscountPercentage, CustomerID, LastEditedBy, CustomerCategoryID, BuyingGroupID, UnitPrice, StockItemID, StockGroupID, StartDate, EndDate, SpecialDealID, LastEditedWhen
+
+Table: WIDE_WORLD_IMPORTERS.APPLICATION_STATEPROVINCES
+Columns: CountryID, StateProvinceName, SalesTerritory, ValidTo, StateProvinceID, LatestRecordedPopulation, LastEditedBy, ValidFrom, Border, StateProvinceCode
+
+Table: WIDE_WORLD_IMPORTERS.APPLICATION_SYSTEMPARAMETERS
+Columns: DeliveryPostalCode, DeliveryCityID, PostalAddressLine2, PostalAddressLine1, PostalCityID, DeliveryAddressLine2, PostalPostalCode, DeliveryLocation, SystemParameterID, ApplicationSettings, DeliveryAddressLine1, LastEditedBy, LastEditedWhen
+
+Table: WIDE_WORLD_IMPORTERS.SALES_ORDERS
+Columns: OrderID, ExpectedDeliveryDate, SalespersonPersonID, CustomerPurchaseOrderNumber, CustomerID, Comments, LastEditedWhen, PickingCompletedWhen, PickedByPersonID, LastEditedBy, DeliveryInstructions, InternalComments, IsUndersupplyBackordered, ContactPersonID, BackorderOrderID, OrderDate
+
+Table: WIDE_WORLD_IMPORTERS.APPLICATION_COUNTRIES
+Columns: FormalName, ValidTo, CountryName, Region, LatestRecordedPopulation, CountryID, CountryType, Continent, Border, LastEditedBy, Subregion, ValidFrom, IsoAlpha3Code, IsoNumericCode
+
+Table: WIDE_WORLD_IMPORTERS.WAREHOUSE_STOCKITEMTRANSACTIONS
+Columns: InvoiceID, CustomerID, TransactionTypeID, StockItemTransactionID, StockItemID, LastEditedBy, TransactionOccurredWhen, PurchaseOrderID, SupplierID, LastEditedWhen, Quantity
+
+Table: WIDE_WORLD_IMPORTERS.WAREHOUSE_VEHICLETEMPERATURES
+Columns: VehicleRegistration, CompressedSensorData, RecordedWhen, IsCompressed, ChillerSensorNumber, VehicleTemperatureID, Temperature, FullSensorData
+
+Table: WIDE_WORLD_IMPORTERS.APPLICATION_CITIES
+Columns: LastEditedBy, CityName, LatestRecordedPopulation, Location, CityID, ValidTo, StateProvinceID, ValidFrom
+
+Table: WIDE_WORLD_IMPORTERS.SALES_CUSTOMERTRANSACTIONS
+Columns: OutstandingBalance, LastEditedBy, FinalizationDate, TransactionAmount, PaymentMethodID, TransactionTypeID, CustomerID, TaxAmount, IsFinalized, AmountExcludingTax, TransactionDate, InvoiceID, LastEditedWhen, CustomerTransactionID
+
+Table: WIDE_WORLD_IMPORTERS.WAREHOUSE_PACKAGETYPES
+Columns: ValidTo, PackageTypeID, PackageTypeName, LastEditedBy, ValidFrom
+
+Table: WIDE_WORLD_IMPORTERS.APPLICATION_DELIVERYMETHODS
+Columns: ValidTo, ValidFrom, DeliveryMethodName, DeliveryMethodID, LastEditedBy
+
+Table: WIDE_WORLD_IMPORTERS.SALES_ORDERLINES
+Columns: StockItemID, PickedQuantity, PackageTypeID, PickingCompletedWhen, LastEditedWhen, OrderLineID, UnitPrice, OrderID, Description, Quantity, TaxRate, LastEditedBy
+
+Table: WIDE_WORLD_IMPORTERS.SALES_INVOICES
+Columns: RunPosition, DeliveryInstructions, LastEditedWhen, ConfirmedReceivedBy, ContactPersonID, IsCreditNote, TotalChillerItems, SalespersonPersonID, DeliveryRun, DeliveryMethodID, InternalComments, BillToCustomerID, CustomerID, Comments, PackedByPersonID, TotalDryItems, AccountsPersonID, InvoiceDate, CreditNoteReason, ReturnedDeliveryData, InvoiceID, OrderID, LastEditedBy, ConfirmedDeliveryTime, CustomerPurchaseOrderNumber
+
+Table: WIDE_WORLD_IMPORTERS.PURCHASING_PURCHASEORDERLINES
+Columns: StockItemID, ExpectedUnitPricePerOuter, LastEditedWhen, Description, IsOrderLineFinalized, LastReceiptDate, OrderedOuters, ReceivedOuters, PackageTypeID, PurchaseOrderID, LastEditedBy, PurchaseOrderLineID
+
+Table: WIDE_WORLD_IMPORTERS.WAREHOUSE_STOCKITEMSTOCKGROUPS
+Columns: StockItemID, StockItemStockGroupID, StockGroupID, LastEditedWhen, LastEditedBy
+
+Table: WIDE_WORLD_IMPORTERS.WAREHOUSE_COLDROOMTEMPERATURES
+Columns: ValidTo, ColdRoomTemperatureID, Temperature, RecordedWhen, ValidFrom, ColdRoomSensorNumber
+
+Table: WIDE_WORLD_IMPORTERS.APPLICATION_PEOPLE
+Columns: LogonName, IsSystemUser, HashedPassword, FullName, EmailAddress, FaxNumber, Photo, UserPreferences, PhoneNumber, PersonID, LastEditedBy, PreferredName, IsExternalLogonProvider, SearchName, OtherLanguages, ValidFrom, IsSalesperson, IsEmployee, CustomFields, ValidTo, IsPermittedToLogon
+
+Table: WIDE_WORLD_IMPORTERS.APPLICATION_PAYMENTMETHODS
+Columns: PaymentMethodName, ValidFrom, ValidTo, PaymentMethodID, LastEditedBy

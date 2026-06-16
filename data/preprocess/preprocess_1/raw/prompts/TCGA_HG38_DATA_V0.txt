@@ -1,0 +1,152 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: TCGA_HG38_DATA_V0.TCGA_METADATA_DATA_HG38_R14
+Columns: type, project_short_name, disease_code, index_file_name_key, access, experimental_strategy, program_name, sample_gdc_id, platform, case_gdc_id, file_size, index_file_id, data_category, index_file_size, data_format, acl, sample_barcode, case_barcode, file_name_key, file_gdc_id, data_type
+
+Table: TCGA_HG38_DATA_V0.COPY_NUMBER_SEGMENT_MASKED_R14
+Columns: case_barcode, chromosome, segment_mean, sample_gdc_id, num_probes, aliquot_gdc_id, end_pos, sample_barcode, start_pos, case_gdc_id, aliquot_barcode, project_short_name, file_gdc_id
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHRY
+Columns: file_gdc_id, case_gdc_id, aliquot_gdc_id, platform, beta_value, case_barcode, sample_barcode, aliquot_barcode, sample_gdc_id, probe_id
+
+Table: TCGA_HG38_DATA_V0.COPY_NUMBER_SEGMENT_MASKED
+Columns: file_gdc_id, segment_mean, case_gdc_id, aliquot_barcode, sample_gdc_id, chromosome, sample_barcode, project_short_name, aliquot_gdc_id, end_pos, start_pos, num_probes, case_barcode
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR5
+Columns: sample_barcode, aliquot_gdc_id, probe_id, file_gdc_id, platform, beta_value, case_barcode, aliquot_barcode, sample_gdc_id, case_gdc_id
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR2
+Columns: beta_value, aliquot_gdc_id, case_gdc_id, platform, aliquot_barcode, sample_barcode, sample_gdc_id, file_gdc_id, case_barcode, probe_id
+
+Table: TCGA_HG38_DATA_V0.MIRNASEQ_ISOFORM_EXPRESSION
+Columns: cross_mapped, mirna_accession, case_barcode, reads_per_million_miRNA_mapped, aliquot_barcode, read_count, chromosome, strand, start_pos, mirna_id, mirna_transcript, sample_barcode, end_pos, project_short_name
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR14
+Columns: platform, probe_id, case_gdc_id, file_gdc_id, aliquot_barcode, sample_gdc_id, aliquot_gdc_id, sample_barcode, beta_value, case_barcode
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR4
+Columns: aliquot_gdc_id, sample_barcode, file_gdc_id, aliquot_barcode, probe_id, case_barcode, beta_value, case_gdc_id, sample_gdc_id, platform
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR19
+Columns: file_gdc_id, case_barcode, sample_barcode, sample_gdc_id, aliquot_barcode, platform, beta_value, case_gdc_id, aliquot_gdc_id, probe_id
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR18
+Columns: platform, beta_value, file_gdc_id, aliquot_gdc_id, aliquot_barcode, sample_barcode, case_gdc_id, case_barcode, sample_gdc_id, probe_id
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR8
+Columns: beta_value, file_gdc_id, sample_gdc_id, case_gdc_id, platform, case_barcode, probe_id, aliquot_gdc_id, sample_barcode, aliquot_barcode
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR21
+Columns: sample_gdc_id, aliquot_barcode, file_gdc_id, case_barcode, aliquot_gdc_id, probe_id, beta_value, sample_barcode, platform, case_gdc_id
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR20
+Columns: file_gdc_id, case_barcode, case_gdc_id, sample_barcode, sample_gdc_id, aliquot_gdc_id, probe_id, platform, aliquot_barcode, beta_value
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR3
+Columns: aliquot_barcode, sample_barcode, file_gdc_id, aliquot_gdc_id, beta_value, probe_id, case_gdc_id, platform, case_barcode, sample_gdc_id
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR16
+Columns: case_barcode, sample_barcode, file_gdc_id, sample_gdc_id, probe_id, case_gdc_id, aliquot_barcode, aliquot_gdc_id, beta_value, platform
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR11
+Columns: platform, beta_value, sample_barcode, case_gdc_id, sample_gdc_id, aliquot_gdc_id, probe_id, aliquot_barcode, file_gdc_id, case_barcode
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHRX
+Columns: platform, case_barcode, sample_barcode, sample_gdc_id, aliquot_gdc_id, file_gdc_id, case_gdc_id, beta_value, probe_id, aliquot_barcode
+
+Table: TCGA_HG38_DATA_V0.PROTEIN_EXPRESSION
+Columns: protein_name, protein_expression, gene_name, antibody_source, case_barcode, protein_base_name, sample_barcode, validation_status, phospho, project_short_name, aliquot_barcode
+
+Table: TCGA_HG38_DATA_V0.SOMATIC_MUTATION_DR6
+Columns: ExAC_AF_FIN, gdc_tumor_sample_uuid, Tumor_Validation_Allele2, case_barcode, MOTIF_POS, Feature, AMR_MAF, SWISSPROT, gdc_maf_uuid, Protein_position, Tumor_Validation_Allele1, ExAC_AF, HGVSc, HGVSp_Short, Codons, GDC_Validation_Status, n_depth, SYMBOL, Consequence, sample_barcode_normal, Variant_Classification, EAS_MAF, TREMBL, VARIANT_CLASS, Variant_Type, t_alt_count, t_depth, ExAC_AF_AFR, aliquot_barcode_normal, End_Position, COSMIC, ExAC_AF_Adj, EXON, n_alt_count, gdc_tumor_bam_uuid, Entrez_Gene_Id, ENSP, Reference_Allele, Sequencer, gdc_case_uuid, dbSNP_Val_Status, Strand, AFR_MAF, gdc_normal_bam_uuid, RefSeq, Chromosome, Match_Norm_Validation_Allele1, Amino_acids, project_short_name, Score, Feature_type, cDNA_position, Existing_variation, INTRON, gdc_maf_file_name, Validation_Method, CCDS, Hugo_Symbol, PHENO, ExAC_AF_OTH, Sequencing_Phase, ALLELE_NUM, MOTIF_SCORE_CHANGE, n_ref_count, UNIPARC, PICK, EUR_MAF, HGVS_OFFSET, Validation_Status, Start_Position, GMAF, BAM_File, DISTANCE, sample_barcode_tumor, SAS_MAF, callerName, Tumor_Seq_Allele2, Tumor_Seq_Allele1, t_ref_count, gdc_vcf_uuid, DOMAINS, Verification_Status, FILTER, TRANSCRIPT_STRAND, MINIMISED, CLIN_SIG, Mutation_Status, Sequence_Source, ASN_MAF, ExAC_AF_AMR, all_effects, Match_Norm_Seq_Allele1, ExAC_AF_SAS, AA_MAF, MOTIF_NAME, dbSNP_RS, MC3_Overlap, CONTEXT, Match_Norm_Validation_Allele2, aliquot_barcode_tumor, PUBMED, HGNC_ID, Center, HIGH_INF_POS, CDS_position, gdc_normal_sample_uuid, GDC_FILTER, EA_MAF, Allele, Exon_Number, Transcript_ID, IMPACT, Match_Norm_Seq_Allele2, NCBI_Build, GENE_PHENO, SOMATIC, ExAC_AF_NFE, SYMBOL_SOURCE, PolyPhen, CANONICAL, BIOTYPE, ExAC_AF_EAS, TSL, SIFT, HGVSp, Gene
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR9
+Columns: sample_barcode, case_barcode, probe_id, case_gdc_id, platform, aliquot_gdc_id, aliquot_barcode, beta_value, file_gdc_id, sample_gdc_id
+
+Table: TCGA_HG38_DATA_V0.SOMATIC_MUTATION_DR10
+Columns: ExAC_AF, Amino_acids, Variant_Classification, ExAC_AF_AMR, PUBMED, dbSNP_RS, src_vcf_id, ExAC_AF_AFR, INTRON, Strand, EUR_MAF, SWISSPROT, all_effects, ALLELE_NUM, End_Position, UNIPARC, AMR_MAF, ExAC_AF_FIN, HGVSp_Short, aliquot_barcode_normal, case_barcode, AFR_MAF, ExAC_AF_OTH, SYMBOL, Protein_position, normal_bam_uuid, EA_MAF, cDNA_position, PICK, Chromosome, IMPACT, Hugo_Symbol, NCBI_Build, TRANSCRIPT_STRAND, tumor_bam_uuid, Entrez_Gene_Id, DISTANCE, Validation_Method, Feature, Center, VARIANT_CLASS, Consequence, HGVSp, CDS_position, Tumor_Sample_UUID, fileName, t_ref_count, sample_barcode_normal, AA_MAF, HGVS_OFFSET, FILTER, One_Consequence, Allele, ENSP, n_depth, ExAC_AF_Adj, TREMBL, callerName, CONTEXT, MINIMISED, MC3_Overlap, Reference_Allele, TSL, DOMAINS, aliquot_barcode_tumor, SYMBOL_SOURCE, dbSNP_Val_Status, CLIN_SIG, CANONICAL, HGVSc, sample_barcode_tumor, PolyPhen, PHENO, project_short_name, Transcript_ID, Matched_Norm_Sample_UUID, t_alt_count, ExAC_AF_EAS, Gene, BIOTYPE, fileUUID, Mutation_Status, Codons, GDC_Validation_Status, t_depth, GMAF, ExAC_AF_NFE, GDC_FILTER, SAS_MAF, Tumor_Seq_Allele1, CCDS, Variant_Type, case_id, ExAC_AF_SAS, Feature_type, Exon_Number, RefSeq, SOMATIC, SIFT, Existing_variation, Sequencer, Tumor_Validation_Allele1, HGNC_ID, Tumor_Validation_Allele2, EAS_MAF, EXON, COSMIC, Tumor_Seq_Allele2, Start_Position
+
+Table: TCGA_HG38_DATA_V0.SOMATIC_MUTATION_DR7
+Columns: VARIANT_CLASS, TREMBL, PICK, case_id, Feature, PHENO, IMPACT, CDS_position, ExAC_AF_SAS, ASN_MAF, Match_Norm_Seq_Allele2, cDNA_position, Sequencing_Phase, MOTIF_POS, Variant_Type, Matched_Norm_Sample_UUID, SYMBOL_SOURCE, Match_Norm_Seq_Allele1, SYMBOL, Score, ExAC_AF_AMR, Transcript_ID, ExAC_AF_NFE, Variant_Classification, CONTEXT, GDC_FILTER, NCBI_Build, GENE_PHENO, INTRON, Tumor_Validation_Allele1, Amino_acids, sample_barcode_normal, Existing_variation, Reference_Allele, Match_Norm_Validation_Allele1, sample_barcode_tumor, MOTIF_SCORE_CHANGE, HGVSc, Tumor_Sample_UUID, MINIMISED, Sequencer, CCDS, n_ref_count, t_depth, Codons, t_alt_count, normal_bam_uuid, MC3_Overlap, BIOTYPE, BAM_File, Tumor_Seq_Allele2, Gene, DOMAINS, RefSeq, fileName, HIGH_INF_POS, aliquot_barcode_tumor, tumor_bam_uuid, Feature_type, aliquot_barcode_normal, HGNC_ID, EXON, COSMIC, src_vcf_id, EUR_MAF, Start_Position, ExAC_AF_OTH, UNIPARC, fileUUID, ExAC_AF_FIN, TRANSCRIPT_STRAND, dbSNP_RS, One_Consequence, SWISSPROT, Sequence_Source, Match_Norm_Validation_Allele2, FILTER, n_depth, HGVS_OFFSET, CLIN_SIG, Chromosome, Allele, SAS_MAF, all_effects, CANONICAL, Tumor_Validation_Allele2, HGVSp_Short, SIFT, ExAC_AF_Adj, MOTIF_NAME, ExAC_AF, Consequence, DISTANCE, dbSNP_Val_Status, Hugo_Symbol, Mutation_Status, GMAF, n_alt_count, ExAC_AF_EAS, PUBMED, SOMATIC, Tumor_Seq_Allele1, Entrez_Gene_Id, Validation_Method, case_barcode, t_ref_count, Strand, ENSP, AA_MAF, Protein_position, GDC_Validation_Status, Exon_Number, Verification_Status, AMR_MAF, callerName, EAS_MAF, TSL, Center, End_Position, Validation_Status, EA_MAF, ExAC_AF_AFR, AFR_MAF, HGVSp, PolyPhen, ALLELE_NUM, project_short_name
+
+Table: TCGA_HG38_DATA_V0.SOMATIC_MUTATION
+Columns: normal_bam_uuid, HGVSp_Short, ExAC_AF_NFE, Amino_acids, aliquot_barcode_tumor, fileName, Tumor_Sample_UUID, EUR_MAF, Sequencer, HGVSc, CONTEXT, src_vcf_id, tumor_bam_uuid, ExAC_AF, ExAC_AF_AFR, Start_Position, UNIPARC, TRANSCRIPT_STRAND, t_depth, SOMATIC, ExAC_AF_AMR, sample_barcode_tumor, INTRON, t_ref_count, Chromosome, PolyPhen, Tumor_Validation_Allele2, sample_barcode_normal, case_id, Matched_Norm_Sample_UUID, RefSeq, Existing_variation, AMR_MAF, CDS_position, Variant_Classification, TREMBL, CANONICAL, Transcript_ID, Tumor_Seq_Allele1, Allele, dbSNP_RS, NCBI_Build, AFR_MAF, HGVSp, TSL, Consequence, VARIANT_CLASS, Mutation_Status, CCDS, SYMBOL, End_Position, AA_MAF, fileUUID, ExAC_AF_SAS, HGNC_ID, callerName, FILTER, GDC_Validation_Status, Protein_position, project_short_name, Codons, HGVS_OFFSET, One_Consequence, BIOTYPE, Exon_Number, EXON, MC3_Overlap, Feature, SYMBOL_SOURCE, SWISSPROT, Feature_type, ExAC_AF_EAS, t_alt_count, ExAC_AF_FIN, all_effects, ExAC_AF_OTH, SIFT, Center, dbSNP_Val_Status, ALLELE_NUM, PHENO, Tumor_Seq_Allele2, PUBMED, Validation_Method, SAS_MAF, COSMIC, PICK, Entrez_Gene_Id, Tumor_Validation_Allele1, Gene, case_barcode, n_depth, ENSP, MINIMISED, EAS_MAF, Variant_Type, CLIN_SIG, Strand, Hugo_Symbol, Reference_Allele, DISTANCE, GMAF, cDNA_position, ExAC_AF_Adj, aliquot_barcode_normal, DOMAINS, EA_MAF, IMPACT, GDC_FILTER
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR22
+Columns: sample_barcode, beta_value, platform, case_barcode, probe_id, case_gdc_id, file_gdc_id, aliquot_gdc_id, aliquot_barcode, sample_gdc_id
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR10
+Columns: sample_barcode, sample_gdc_id, aliquot_gdc_id, aliquot_barcode, platform, case_barcode, file_gdc_id, probe_id, case_gdc_id, beta_value
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR1
+Columns: sample_gdc_id, file_gdc_id, case_barcode, sample_barcode, aliquot_gdc_id, platform, probe_id, aliquot_barcode, beta_value, case_gdc_id
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR6
+Columns: case_gdc_id, beta_value, file_gdc_id, platform, sample_barcode, sample_gdc_id, probe_id, case_barcode, aliquot_barcode, aliquot_gdc_id
+
+Table: TCGA_HG38_DATA_V0.MIRNASEQ_EXPRESSION
+Columns: aliquot_barcode, cross_mapped, project_short_name, case_barcode, reads_per_million_miRNA_mapped, read_count, mirna_id, sample_barcode
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR12
+Columns: aliquot_barcode, probe_id, sample_barcode, platform, sample_gdc_id, case_gdc_id, aliquot_gdc_id, file_gdc_id, case_barcode, beta_value
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR17
+Columns: probe_id, case_barcode, platform, sample_barcode, case_gdc_id, beta_value, aliquot_gdc_id, sample_gdc_id, file_gdc_id, aliquot_barcode
+
+Table: TCGA_HG38_DATA_V0.RNASEQ_GENE_EXPRESSION
+Columns: sample_barcode, file_gdc_id, aliquot_barcode, HTSeq__FPKM_UQ, aliquot_gdc_id, case_barcode, gene_type, HTSeq__FPKM, sample_gdc_id, Ensembl_gene_id, Ensembl_gene_id_v, platform, project_short_name, gene_name, HTSeq__Counts, case_gdc_id
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR13
+Columns: sample_gdc_id, aliquot_gdc_id, aliquot_barcode, sample_barcode, case_barcode, beta_value, probe_id, file_gdc_id, case_gdc_id, platform
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR15
+Columns: platform, sample_gdc_id, probe_id, sample_barcode, file_gdc_id, aliquot_gdc_id, aliquot_barcode, case_gdc_id, beta_value, case_barcode
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION
+Columns: sample_gdc_id, beta_value, aliquot_gdc_id, aliquot_barcode, file_gdc_id, probe_id, case_barcode, platform, sample_barcode, case_gdc_id
+
+Table: TCGA_HG38_DATA_V0.DNA_METHYLATION_CHR7
+Columns: platform, probe_id, case_barcode, aliquot_gdc_id, file_gdc_id, beta_value, case_gdc_id, sample_gdc_id, sample_barcode, aliquot_barcode
+
+Table: QOTM.PAAD_KIRP_RESULT_CHECK
+Columns: PHENOTYPE, ID, GENE, EXPR, PROJECT_SHORT_NAME, ERANK
+
+Table: QOTM.REACTOME
+Columns: string_field_2, string_field_0, string_field_1
+
+Table: QOTM.RESULTS_1002
+Columns: Pb, gene_j, Na, Nb, gene_i, Pa, PDiff
+
+Table: QOTM.PAAD_KIRP_RANDOM_SAMPLE_1002
+Columns: project_short_name, Phenotype, ERank, Expr, ID, Gene
+
+Table: QOTM.WIKIPATHWAYS_20170425_ANNOTATED
+Columns: Uniprot, pathway, Symbol, pathID, wikiID, entrez
+
+Table: QOTM.ORG_HS_EG_DB_V1
+Columns: Entrez, Ensembl, Uniprot, Symbol, OMIM, Alias, Unigene, Accession, ID, UCSC
+
+Table: QOTM.TSP_SIM_DATA
+Columns: Gene, Phenotype, Expr, ID
+
+Table: QOTM.REACTOME_A1
+Columns: ENTREZ, PATHWAYID, PATHWAYNAME
+
+Table: QOTM._1000GENOMES
+Columns: names, CIPOS, start_position, call, reference_name, CIEND, SVLEN, AN, quality, alternate_bases, end_position, filter, IMPRECISE, SVTYPE, reference_bases, NS
+
+Table: TCGA_BIOCLIN_V0.CLINICAL_V1_1
+Columns: case_gdc_id, weight, age_began_smoking_in_years, residual_tumor, lymphovascular_invasion_present, year_of_tobacco_smoking_onset, days_to_submitted_specimen_dx, clinical_M, other_malignancy_type, clinical_stage, stopped_smoking_year, disease_code, histological_type, primary_therapy_outcome_success, history_of_colon_polyps, history_of_neoadjuvant_treatment, menopause_status, gender, other_dx, case_barcode, primary_neoplasm_melanoma_dx, tobacco_smoking_history, venous_invasion, tss_code, icd_o_3_histology, mononucleotide_and_dinucleotide_marker_panel_analysis_status, project_name, number_pack_years_smoked, year_of_diagnosis, age_at_diagnosis, days_to_birth, anatomic_neoplasm_subdivision, hpv_status, tumor_tissue_site, days_to_death, pathologic_stage, neoplasm_histologic_grade, days_to_initial_pathologic_diagnosis, bmi, clinical_N, icd_10, lymphnodes_examined, vital_status, project_short_name, icd_o_3_site, colorectal_cancer, country, psa_value, gleason_score_combined, other_malignancy_anatomic_site, race, number_of_lymphnodes_positive_by_he, height, other_malignancy_histological_type, h_pylori_infection, tumor_type, pregnancies, person_neoplasm_cancer_status, days_to_last_followup, lymphatic_invasion, clinical_T, pathologic_T, hpv_calls, pathologic_N, days_to_last_known_alive, new_tumor_event_after_initial_treatment, batch_number, program_name, ethnicity, bcr, number_of_lymphnodes_examined, pathologic_M
+
+Table: TCGA_BIOCLIN_V0.CLINICAL
+Columns: tumor_type, vital_status, other_malignancy_type, person_neoplasm_cancer_status, pathologic_N, clinical_T, tss_code, pathologic_stage, psa_value, other_malignancy_anatomic_site, history_of_neoadjuvant_treatment, age_at_diagnosis, icd_10, ethnicity, days_to_birth, hpv_calls, number_pack_years_smoked, residual_tumor, batch_number, program_name, case_barcode, gleason_score_combined, menopause_status, pregnancies, clinical_N, clinical_M, primary_therapy_outcome_success, other_dx, country, days_to_submitted_specimen_dx, histological_type, race, h_pylori_infection, new_tumor_event_after_initial_treatment, days_to_last_known_alive, program_dbgap_accession_number, year_of_initial_pathologic_diagnosis, icd_o_3_histology, gender, tumor_tissue_site, tobacco_smoking_history, number_of_lymphnodes_examined, age_began_smoking_in_years, bcr, history_of_colon_polyps, stopped_smoking_year, other_malignancy_histological_type, lymphatic_invasion, year_of_tobacco_smoking_onset, bmi, disease_code, anatomic_neoplasm_subdivision, mononucleotide_and_dinucleotide_marker_panel_analysis_status, project_name, days_to_last_followup, neoplasm_histologic_grade, days_to_death, case_gdc_id, primary_neoplasm_melanoma_dx, number_of_lymphnodes_positive_by_he, height, venous_invasion, project_short_name, days_to_initial_pathologic_diagnosis, icd_o_3_site, pathologic_T, colorectal_cancer, weight, hpv_status, pathologic_M, lymphnodes_examined, lymphovascular_invasion_present, clinical_stage
+
+Table: TCGA_BIOCLIN_V0.ANNOTATIONS
+Columns: date_created, case_barcode, entity_type, notes, category, entity_barcode, sample_barcode, project_short_name, aliquot_barcode, case_gdc_id, classification, date_edited
+
+Table: TCGA_BIOCLIN_V0.BIOSPECIMEN
+Columns: days_to_sample_procurement, sample_type_name, max_percent_monocyte_infiltration, avg_percent_stromal_cells, min_percent_necrosis, avg_percent_monocyte_infiltration, min_percent_neutrophil_infiltration, bcr, avg_percent_necrosis, avg_percent_tumor_nuclei, sample_gdc_id, days_to_collection, max_percent_stromal_cells, min_percent_tumor_nuclei, avg_percent_tumor_cells, max_percent_tumor_cells, max_percent_tumor_nuclei, sample_barcode, min_percent_stromal_cells, project_short_name, avg_percent_neutrophil_infiltration, program_name, min_percent_monocyte_infiltration, sample_type, min_percent_normal_cells, max_percent_neutrophil_infiltration, num_slides, min_percent_tumor_cells, num_portions, is_ffpe, max_percent_normal_cells, batch_number, min_percent_lymphocyte_infiltration, case_gdc_id, max_percent_lymphocyte_infiltration, max_percent_necrosis, case_barcode, avg_percent_normal_cells, avg_percent_lymphocyte_infiltration
+
+Table: TCGA_BIOCLIN_V0.CLINICAL_V1
+Columns: tumor_type, tumor_tissue_site, days_to_last_followup, race, number_of_lymphnodes_examined, venous_invasion, hpv_calls, weight, mononucleotide_and_dinucleotide_marker_panel_analysis_status, primary_therapy_outcome_success, days_to_birth, lymphatic_invasion, year_of_diagnosis, days_to_submitted_specimen_dx, other_malignancy_histological_type, pregnancies, pathologic_stage, h_pylori_infection, clinical_N, other_malignancy_type, tobacco_smoking_history, days_to_initial_pathologic_diagnosis, bmi, days_to_death, residual_tumor, height, history_of_neoadjuvant_treatment, icd_o_3_site, country, ethnicity, case_barcode, hpv_status, primary_neoplasm_melanoma_dx, gender, other_malignancy_anatomic_site, year_of_tobacco_smoking_onset, pathologic_M, neoplasm_histologic_grade, other_dx, bcr, colorectal_cancer, days_to_last_known_alive, psa_value, number_of_lymphnodes_positive_by_he, clinical_stage, person_neoplasm_cancer_status, age_began_smoking_in_years, history_of_colon_polyps, clinical_M, gleason_score_combined, program_name, vital_status, project_short_name, clinical_T, disease_code, number_pack_years_smoked, new_tumor_event_after_initial_treatment, age_at_diagnosis, icd_o_3_histology, histological_type, pathologic_T, batch_number, menopause_status, pathologic_N, tss_code, icd_10, case_gdc_id, lymphnodes_examined, stopped_smoking_year, anatomic_neoplasm_subdivision, lymphovascular_invasion_present

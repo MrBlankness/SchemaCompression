@@ -1,0 +1,32 @@
+[COMPRESSED SCHEMA]
+{context}
+
+[USER QUESTION]
+{question}
+
+[EXTERNAL_KNOWLEDGE]
+```
+{external_knowledge}
+```
+
+[INSTRUCTIONS]
+Provide explicit step-by-step reasoning for schema decompression and linking.
+Prioritize recall first; improve precision only after required intent coverage is satisfied.
+
+[OUTPUT]
+Return exactly:
+THOUGHT:
+<your concise reasoning>
+
+FINAL_JSON:
+<JSON list of schema.table.column>
+
+[EXAMPLE OUTPUT]
+THOUGHT:
+1) Candidate tables: analytics.orders, analytics.customers.
+2) Expand component references and collect available columns.
+3) Analyze TYPE/description/eg/external knowledge; for composite columns, use sample field names to identify the correct parent column.
+4) Keep only columns needed for filters, joins, and selected attributes.
+
+FINAL_JSON:
+["analytics.orders.customer_id", "analytics.orders.order_date", "analytics.customers.customer_name"]

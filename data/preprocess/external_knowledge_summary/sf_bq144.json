@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq144",
+  "question": "Create a dataset by combining NCAA men's basketball tournament game outcomes from the 2014 season onwards, including both the historical tournament games and the 2018 tournament results, with the corresponding pace and efficiency performance metrics for each team and their opponents from the feature_engineering data. The dataset should include the season, game outcome labels (win or loss), team and opponent seeds, school names, pace and efficiency rankings, statistical values, and the differences between the team's and the opponent's metrics to enable a comprehensive analysis of team and opponent dynamics.",
+  "db_id": "NCAA_INSIGHTS",
+  "source_document": "NCAA_Basketball_Tournament_SQL_Query_Variable_Guide.md",
+  "evidence": "Variables: season, label (win/loss), seed, school_ncaa, opponent_seed, opponent_school_ncaa, pace_rank, poss_40min, pace_rating, efficiency_rank, pts_100poss, efficiency_rating, opp_pace_rank, opp_poss_40min, opp_pace_rating, opp_efficiency_rank, opp_pts_100poss, opp_efficiency_rating, pace_rank_diff, pace_stat_diff, pace_rating_diff, eff_rank_diff, eff_stat_diff, eff_rating_diff. Sources: Directly from datasets or feature_engineering joins. Differences calculated by subtracting team metric from opponent metric."
+}

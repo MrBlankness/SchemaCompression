@@ -1,0 +1,7 @@
+{
+  "question_id": "sf041",
+  "question": "Produce a report for ERCOT on October 1, 2022, that combines hourly data on day-ahead and real-time prices from node ID 10000697078, load forecasts (datatypeid 19060) and actual loads, plus wind (forecast datatypeid 9285, actual datatypeid 16) and solar (forecast datatypeid 662, actual datatypeid 650) generation forecasts and actuals from object ID 10000712973. This report should include time zone alignments, peak classifications, and net load calculations, providing insights into daily operational dynamics and efficiency.",
+  "db_id": "YES_ENERGY__SAMPLE_DATA",
+  "source_document": "ERCOT_Daily_Market_Dynamics_Report.md",
+  "evidence": "Columns: datetime, timezone, datetime_utc, onpeak, offpeak, wepeak, wdpeak, price_node_id, dalmp, rtlmp, load_forecast, rtload, wind_gen_forecast, wind_gen, solar_gen_forecast, solar_gen, net_load_forecast, net_load_real_time. Formulas: net_load_forecast = total forecasted load minus combined forecasted wind and solar generation; net_load_real_time = real-time load minus sum of actual wind and solar generation. Date: October 1, 2022. Identifiers: price_node_id 10000697078, object ID 10000712973 (implied for load/wind/solar data). Datatypeids: load forecasts (19060), wind forecast (9285), wind actual (16), solar forecast (662), solar actual (650)."
+}

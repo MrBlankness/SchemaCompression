@@ -1,0 +1,42 @@
+[TABLES]
+## GOOGLE_TRENDS.TOP_TERMS
+week: DATE | NULL
+term: TEXT | NULL
+rank: NUMBER | NULL
+score: NUMBER | NULL
+refresh_date: DATE | NULL
+dma_id: NUMBER | NULL
+dma_name: TEXT | NULL
+
+## GOOGLE_TRENDS.TOP_RISING_TERMS
+refresh_date: DATE | NULL
+rank: NUMBER | NULL
+dma_name: TEXT | NULL
+score: NUMBER | NULL
+week: DATE | NULL
+percent_gain: NUMBER | NULL
+term: TEXT | NULL
+dma_id: NUMBER | NULL
+
+## GOOGLE_TRENDS.INTERNATIONAL_TOP_TERMS
+week: DATE | NULL
+term: TEXT | NULL
+rank: NUMBER | NULL
+score: NUMBER | NULL
+refresh_date: DATE | NULL
+region_code: TEXT | NULL
+region_name: TEXT | NULL
+country_code: TEXT | NULL
+country_name: TEXT | NULL
+
+## GOOGLE_TRENDS.INTERNATIONAL_TOP_RISING_TERMS
+rank: NUMBER | NULL
+region_name: TEXT | NULL
+refresh_date: DATE | NULL
+region_code: TEXT | NULL
+term: TEXT | NULL
+week: DATE | NULL
+country_name: TEXT | NULL
+percent_gain: NUMBER | NULL
+country_code: TEXT | NULL
+score: NUMBER | NULL

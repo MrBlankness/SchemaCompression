@@ -1,0 +1,23 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: ETHEREUM_BLOCKCHAIN.BLOCKS
+Columns: hash, nonce, extra_data, receipts_root, state_root, miner, transaction_count, total_difficulty, parent_hash, sha3_uncles, size, gas_limit, number, gas_used, timestamp, logs_bloom, difficulty, transactions_root
+
+Table: ETHEREUM_BLOCKCHAIN.CONTRACTS
+Columns: function_sighashes, is_erc20, bytecode, address, block_timestamp, is_erc721, block_number, block_hash
+
+Table: ETHEREUM_BLOCKCHAIN.TRACES
+Columns: value, to_address, trace_type, subtraces, output, block_hash, error, transaction_hash, block_timestamp, call_type, trace_address, gas, reward_type, input, gas_used, from_address, transaction_index, block_number, status
+
+Table: ETHEREUM_BLOCKCHAIN.TRANSACTIONS
+Columns: receipt_contract_address, block_number, receipt_status, receipt_gas_used, gas, nonce, from_address, to_address, receipt_root, block_hash, transaction_index, block_timestamp, gas_price, input, value, receipt_cumulative_gas_used, hash
+
+Table: ETHEREUM_BLOCKCHAIN.TOKENS
+Columns: name, address, decimals, block_hash, block_number, block_timestamp, symbol, total_supply
+
+Table: ETHEREUM_BLOCKCHAIN.LOGS
+Columns: data, block_timestamp, address, log_index, block_hash, transaction_index, topics, transaction_hash, block_number
+
+Table: ETHEREUM_BLOCKCHAIN.TOKEN_TRANSFERS
+Columns: log_index, transaction_hash, block_timestamp, to_address, block_number, value, block_hash, from_address, token_address

@@ -1,0 +1,397 @@
+[COMPONENTS]
+@C1
+geneticConstraint: FLOAT | NULL
+hasHighQualityChemicalProbes: NUMBER | NULL
+hasLigand: NUMBER | NULL
+hasPocket: NUMBER | NULL
+hasSafetyEvent: NUMBER | NULL
+hasTEP: NUMBER | NULL
+isCancerDriverGene: NUMBER | NULL
+isInMembrane: NUMBER | NULL
+isSecreted: NUMBER | NULL
+maxClinicalTrialPhase: FLOAT | NULL
+mouseOrthologMaxIdentityPercentage: FLOAT | NULL
+paralogMaxIdentityPercentage: FLOAT | NULL | eg=[NaN, -0.3359375]
+tissueDistribution: FLOAT | NULL
+tissueSpecificity: FLOAT | NULL
+
+@C2
+intA: TEXT | NULL | eg=["Q92764", "O95084"]
+intABiologicalRole: TEXT | NULL | eg=["unspecified role"]
+intB: TEXT | NULL | eg=["A0AUL9", "A4D1S0"]
+intBBiologicalRole: TEXT | NULL | eg=["unspecified role"]
+speciesA: VARIANT | NULL | eg=[{"mnemonic":"human","scientific_name":"Homo sapiens","taxon_id":9606}]
+speciesB: VARIANT | NULL | eg=[{"mnemonic":"human","scientific_name":"Homo sapiens","taxon_id":9606}]
+targetA: TEXT | NULL | eg=["ENSG00000197079", "ENSG00000150687"]
+targetB: TEXT | NULL | eg=["ENSG00000110046", "ENSG00000188883"]
+
+@C3
+literature: VARIANT | NULL
+studyId: TEXT | NULL | eg=["RCV001224160", "RCV000463624"]
+variantFunctionalConsequenceId: TEXT | NULL | eg=["SO_0001583", "SO_0001819"]
+variantRsId: TEXT | NULL | eg=["rs2082986773", "rs779946576"]
+
+@C4
+targetInModel: TEXT | NULL
+targetInModelEnsemblId: TEXT | NULL
+targetInModelMgiId: TEXT | NULL
+
+@C5
+approvedName: TEXT | NULL | eg=["novel transcript", "Y RNA "]
+approvedSymbol: TEXT | NULL | eg=["ENSG00000277128", "ENSG00000258520"]
+targetClass: VARIANT | NULL
+
+[TABLES]
+## OPEN_TARGETS_PLATFORM.ASSOCIATIONBYDATASOURCEINDIRECT
+targetId: TEXT | NULL | eg=["ENSG00000151835", "ENSG00000043355"]
+diseaseId: TEXT | NULL | eg=["EFO_0004280", "OTAR_0000018"]
+datatypeId: TEXT | NULL | eg=["genetic_association"]
+datasourceId: TEXT | NULL | eg=["eva"]
+evidenceCount: NUMBER | NULL | eg=[1125, 306]
+score: FLOAT | NULL | eg=[0.9480686371830984, 0.9317011342874366]
+
+## OPEN_TARGETS_PLATFORM.ASSOCIATIONBYOVERALLINDIRECT
+score: FLOAT | NULL | eg=[0.06228596585786231, 0.004844130748332951]
+diseaseId: TEXT | NULL | eg=["EFO_0004149", "EFO_0004190"]
+evidenceCount: NUMBER | NULL | eg=[12]
+targetId: TEXT | NULL | eg=["ENSG00000205221", "ENSG00000132305"]
+
+## OPEN_TARGETS_PLATFORM.INTERACTION
+@use: [C2]
+count: NUMBER | NULL | eg=[1]
+scoring: FLOAT | NULL | eg=[0.35, 0.37]
+sourceDatabase: TEXT | NULL | eg=["intact"]
+
+## OPEN_TARGETS_PLATFORM.REACTOME
+parents: VARIANT | NULL | eg=[{"list":[]}]
+path: VARIANT | NULL | eg=[{"list":[{"element":{"list":[{"element":"R-HSA-8953897"}]}}]}, {"list":[{"element":{"list":[{"element":"R-HSA-9709957"}]}}]}]
+label: TEXT | NULL | eg=["Cellular responses to stimuli", "Sensory Perception"]
+ancestors: VARIANT | NULL | eg=[{"list":[]}]
+children: VARIANT | NULL | eg=[{"list":[{"element":"R-HSA-2262752"},{"element":"R-HSA-5660526"}]}, {"list":[{"element":"R-HSA-2187338"},{"element":"R-HSA-381753"},{"element":"R-HSA-9659379"},{"element":"R-HSA-9717189"}]}]
+id: TEXT | NULL | eg=["R-HSA-8953897", "R-HSA-9709957"]
+descendants: VARIANT | NULL | eg=[{"list":[{"element":"R-HSA-2559583"},{"element":"R-HSA-2559582"},{"element":"R-HSA-2559580"},{"element":"R-HSA-9648895"},{"element":"R-HSA-1234174"},{"element":"R-HSA-2559586"},{"element":"R-HSA-2559585"},{"element":"R-HSA-9755511"},{"element":"R-HSA-2559584"},{"element":"R-HSA-1234176"},{"element":"R-HSA-9818025"},{"element":"R-HSA-9818026"},{"element":"R-HSA-9818027"},{"element":"R-HSA-9818028"},{"element":"R-HSA-9707564"},{"element":"R-HSA-9708530"},{"element":"R-HSA-5660489"},{"element":"R-HSA-5660526"},{"element":"R-HSA-3371511"},{"element":"R-HSA-3371556"},{"element":"R-HSA-9711097"},{"element":"R-HSA-9711123"},{"element":"R-HSA-9759194"},{"element":"R-HSA-381183"},{"element":"R-HSA-9762114"},{"element":"R-HSA-9707616"},{"element":"R-HSA-2262752"},{"element":"R-HSA-381070"},{"element":"R-HSA-9639288"},{"element":"R-HSA-3371568"},{"element":"R-HSA-381038"},{"element":"R-HSA-3299685"},{"element":"R-HSA-381119"},{"element":"R-HSA-9707587"},{"element":"R-HSA-9633012"},{"element":"...]
+
+## OPEN_TARGETS_PLATFORM.ASSOCIATIONBYDATATYPEINDIRECT
+datatypeId: TEXT | NULL | eg=["literature", "known_drug"]
+score: FLOAT | NULL | eg=[0.3846470249484239, 0.8329354491971125]
+diseaseId: TEXT | NULL | eg=["EFO_0000677", "EFO_0000512"]
+evidenceCount: NUMBER | NULL | eg=[256]
+targetId: TEXT | NULL | eg=["ENSG00000187094", "ENSG00000204632"]
+
+## OPEN_TARGETS_PLATFORM.INDICATION
+id: TEXT | NULL | eg=["CHEMBL4297800", "CHEMBL2103773"]
+indications: VARIANT | NULL | eg=[{"list":[{"element":{"disease":"EFO_0000616","efoName":"neoplasm","maxPhaseForIndication":2.0,"references":{"list":[{"element":{"ids":{"list":[{"element":"L03AA17"}]},"source":"ATC"}}]}}}]}, {"list":[{"element":{"disease":"EFO_0010282","efoName":"gastrointestinal disease","maxPhaseForIndication":3.0,"references":{"list":[{"element":{"ids":{"list":[{"element":"A03AB06"}]},"source":"ATC"}}]}}}]}]
+approvedIndications: VARIANT | NULL | eg=[{"list":[]}]
+indicationCount: NUMBER | NULL | eg=[1]
+
+## OPEN_TARGETS_PLATFORM.DISEASETOPHENOTYPE
+evidence: VARIANT | NULL | eg=[{"list":[{"element":{"aspect":"P","bioCuration":"ORPHA:orphadata[2024-04-24]","diseaseFromSource":"MODY","diseaseFromSourceId":"ORPHA:552","diseaseName":"MODY","evidenceType":"TAS","frequency":"HP_0040282","qualifierNot":false,"references":{"list":[{"element":"ORPHA:552"}]},"resource":"HPO"}}]}, {"list":[{"element":{"aspect":"P","bioCuration":"ORPHA:orphadata[2024-04-24]","diseaseFromSource":"MODY","diseaseFromSourceId":"ORPHA:552","diseaseName":"MODY","evidenceType":"TAS","frequency":"HP_0040283","qualifierNot":false,"references":{"list":[{"element":"ORPHA:552"}]},"resource":"HPO"}}]}]
+disease: TEXT | NULL | eg=["Orphanet_552"]
+phenotype: TEXT | NULL | eg=["HP_0004924", "HP_0000831"]
+
+## OPEN_TARGETS_PLATFORM.TARGETESSENTIALITY
+id: TEXT | NULL | eg=["ENSG00000159479", "ENSG00000286053"]
+geneEssentiality: VARIANT | NULL | eg=[{"list":[{"element":{"depMapEssentiality":{"list":[{"element":{"screens":{"list":[{"element":{"cellLineName":"PCI-15A","depmapId":"ACH-002294","diseaseCellLineId":"SIDM00270","diseaseFromSource":"Head and Neck Squamous Cell Carcinoma","geneEffect":-0.78071237}},{"element":{"cellLineName":"FaDu","depmapId":"ACH-000846","diseaseCellLineId":"SIDM00860","diseaseFromSource":"Head and Neck Squamous Cell Carcinoma","expression":5.495375,"geneEffect":-0.9907709}},{"element":{"cellLineName":"JHU-029","depmapId":"ACH-002251","diseaseCellLineId":"SIDM00690","diseaseFromSource":"Head and Neck Squamous Cell Carcinoma","geneEffect":-0.6127293}},{"element":{"cellLineName":"YD-15","depmapId":"ACH-000836","diseaseFromSource":"Head and Neck Squamous Cell Carcinoma","expression":5.143638,"geneEffect":-0.620575}},{"element":{"cellLineName":"UPCI-SCC-200","depmapId":"ACH-001701","diseaseFromSource":"Head and Neck Squamous Cell Carcinoma","expression":4.96763,"geneEffect":-1.2961578}},{"element":{"cellLi...]
+
+## OPEN_TARGETS_PLATFORM.INTERACTIONEVIDENCE
+@use: [C2]
+interactionTypeShortName: TEXT | NULL | eg=["direct interaction", "physical association"]
+interactionDetectionMethodMiIdentifier: TEXT | NULL | eg=["MI:0016", "MI:0038"]
+participantDetectionMethodA: VARIANT | NULL | eg=[{"list":[{"element":{"miIdentifier":"MI:0396","shortName":"predetermined"}}]}, {"list":[{"element":{"miIdentifier":"MI:1220","shortName":"tag luciferase"}}]}]
+hostOrganismTaxId: NUMBER | NULL | eg=[-1, 9606]
+interactionIdentifier: TEXT | NULL | eg=["EBI-8177985", "EBI-26965168"]
+pubmedId: TEXT | NULL | eg=["20738396", "22460785"]
+hostOrganismScientificName: TEXT | NULL | eg=["In vitro", "Homo sapiens HEK293T embryonic kidney cell"]
+interactionResources: VARIANT | NULL | eg=[{"databaseVersion":"246","sourceDatabase":"intact"}]
+expansionMethodMiIdentifier: TEXT | NULL
+interactionScore: FLOAT | NULL | eg=[0.97, 0.89]
+intBSource: TEXT | NULL | eg=["uniprotkb"]
+participantDetectionMethodB: VARIANT | NULL | eg=[{"list":[{"element":{"miIdentifier":"MI:0396","shortName":"predetermined"}}]}, {"list":[{"element":{"miIdentifier":"MI:1220","shortName":"tag luciferase"}}]}]
+interactionTypeMiIdentifier: TEXT | NULL | eg=["MI:0407", "MI:0915"]
+evidenceScore: FLOAT | NULL
+interactionDetectionMethodShortName: TEXT | NULL | eg=["cd", "dls"]
+intASource: TEXT | NULL | eg=["uniprotkb"]
+expansionMethodShortName: TEXT | NULL
+hostOrganismTissue: VARIANT | NULL | eg=["null"]
+
+## OPEN_TARGETS_PLATFORM.DRUGWARNINGS
+toxicityClass: TEXT | NULL
+country: TEXT | NULL | eg=["United States"]
+efo_id_for_warning_class: TEXT | NULL
+efo_id: TEXT | NULL
+efo_term: TEXT | NULL
+warningType: TEXT | NULL | eg=["Black Box Warning"]
+year: NUMBER | NULL
+references: VARIANT | NULL | eg=[{"list":[]}]
+id: NUMBER | NULL | eg=[2817, 2820]
+chemblIds: VARIANT | NULL | eg=[{"list":[{"element":"CHEMBL3039594"},{"element":"CHEMBL3039597"}]}, {"list":[{"element":"CHEMBL2359966"},{"element":"CHEMBL170"}]}]
+description: TEXT | NULL
+
+## OPEN_TARGETS_PLATFORM.EVIDENCE
+@use: [C3, C4]
+biomarkerName: TEXT | NULL
+crisprScreenLibrary: TEXT | NULL
+mutatedSamples: VARIANT | NULL
+resourceScore: FLOAT | NULL
+statisticalMethodOverview: TEXT | NULL
+ancestry: TEXT | NULL
+clinicalPhase: FLOAT | NULL
+studyStartDate: TEXT | NULL
+studyStopReason: TEXT | NULL
+datatypeId: TEXT | NULL | eg=["genetic_association"]
+allelicRequirements: VARIANT | NULL
+diseaseModelAssociatedModelPhenotypes: VARIANT | NULL
+drugId: TEXT | NULL
+score: FLOAT | NULL | eg=[0.32]
+betaConfidenceIntervalLower: FLOAT | NULL
+statisticalMethod: TEXT | NULL
+biologicalModelGeneticBackground: TEXT | NULL
+pValueMantissa: FLOAT | NULL
+pmcIds: VARIANT | NULL
+diseaseFromSourceId: TEXT | NULL | eg=["C0009405", "C3493776"]
+biosamplesFromSource: VARIANT | NULL
+contrast: TEXT | NULL
+significantDriverMethods: VARIANT | NULL
+log2FoldChangePercentileRank: NUMBER | NULL
+drugResponse: TEXT | NULL
+log2FoldChangeValue: FLOAT | NULL
+reactionId: TEXT | NULL
+diseaseFromSourceMappedId: TEXT | NULL | eg=["EFO_0009911", "MONDO_0010142"]
+oddsRatioConfidenceIntervalLower: FLOAT | NULL
+targetFromSource: TEXT | NULL
+diseaseId: TEXT | NULL | eg=["EFO_0009911", "MONDO_0010142"]
+sourceId: TEXT | NULL | eg=["eva"]
+biomarkers: VARIANT | NULL
+clinicalSignificances: VARIANT | NULL | eg=[{"list":[{"element":"uncertain significance"}]}, {"list":[{"element":"conflicting interpretations of pathogenicity"}]}]
+pathways: VARIANT | NULL
+statisticalTestTail: TEXT | NULL
+betaConfidenceIntervalUpper: FLOAT | NULL
+beta: FLOAT | NULL
+cellType: TEXT | NULL
+publicationYear: NUMBER | NULL
+biologicalModelId: TEXT | NULL
+confidence: TEXT | NULL | eg=["criteria provided, single submitter", "criteria provided, conflicting interpretations"]
+diseaseFromSource: TEXT | NULL | eg=["Hereditary nonpolyposis colorectal neoplasms", "Hypothyroidism due to TSH receptor mutations"]
+cohortDescription: TEXT | NULL
+variantHgvsId: TEXT | NULL | eg=["NC_000003.12:g.37020408A>C", "NC_000007.14:g.5999205G>C"]
+oddsRatio: FLOAT | NULL
+projectId: TEXT | NULL
+studyCasesWithQualifyingVariants: NUMBER | NULL
+reactionName: TEXT | NULL
+urls: VARIANT | NULL
+oddsRatioConfidenceIntervalUpper: FLOAT | NULL
+pValueExponent: NUMBER | NULL
+releaseVersion: TEXT | NULL
+geneticBackground: TEXT | NULL
+publicationFirstAuthor: TEXT | NULL
+biologicalModelAllelicComposition: TEXT | NULL
+diseaseCellLines: VARIANT | NULL
+variantEffect: TEXT | NULL
+variantId: TEXT | NULL | eg=["3_37020408_A_C", "7_5999205_G_C"]
+cohortPhenotypes: VARIANT | NULL | eg=[{"list":[{"element":"Hereditary nonpolyposis colorectal neoplasms"}]}, {"list":[{"element":"HYPOTHYROIDISM DUE TO UNRESPONSIVENESS TO THYROTROPIN"},{"element":"HYPOTHYROIDISM, CONGENITAL, DUE TO TSH RESISTANCE"},{"element":"HYPOTHYROIDISM, NONAUTOIMMUNE"},{"element":"Hypothyroidism due to TSH receptor mutations"},{"element":"Hypothyroidism, congenital, nongoitrous, 1"},{"element":"THYROID-STIMULATING HORMONE, RESISTANCE TO"},{"element":"TSH RESISTANCE"}]}]
+studySampleSize: NUMBER | NULL
+releaseDate: TEXT | NULL | eg=["2020-07-16", "2017-04-17"]
+studyOverview: TEXT | NULL
+targetFromSourceId: TEXT | NULL | eg=["ENSG00000076242", "ENSG00000122512"]
+alleleOrigins: VARIANT | NULL | eg=[{"list":[{"element":"germline"}]}]
+studyCases: NUMBER | NULL
+clinicalStatus: TEXT | NULL
+variantFunctionalConsequenceFromQtlId: TEXT | NULL
+cohortShortName: TEXT | NULL
+targetModulation: TEXT | NULL
+diseaseModelAssociatedHumanPhenotypes: VARIANT | NULL
+cohortId: TEXT | NULL
+drugFromSource: TEXT | NULL
+variantAminoacidDescriptions: VARIANT | NULL
+textMiningSentences: VARIANT | NULL
+datasourceId: TEXT | NULL | eg=["eva"]
+sex: VARIANT | NULL
+studyStopReasonCategories: VARIANT | NULL
+_corrupt_record: TEXT | NULL
+ancestryId: TEXT | NULL
+targetId: TEXT | NULL | eg=["ENSG00000076242", "ENSG00000122512"]
+directionOnTrait: TEXT | NULL
+id: TEXT | NULL | eg=["50b2c6bc93614589c937ac57f2eb87ca24b0b0a2", "7ffe9d541638f3e79d5ef709585c4bfe40bef304"]
+
+## OPEN_TARGETS_PLATFORM.MOLECULE
+parentId: TEXT | NULL
+childChemblIds: VARIANT | NULL
+tradeNames: VARIANT | NULL | eg=[{"list":[]}]
+id: TEXT | NULL | eg=["CHEMBL2371928", "CHEMBL3581264"]
+linkedTargets: VARIANT | NULL
+synonyms: VARIANT | NULL | eg=[{"list":[]}]
+blackBoxWarning: BOOLEAN | NULL | eg=[false]
+hasBeenWithdrawn: BOOLEAN | NULL | eg=[false]
+drugType: TEXT | NULL | eg=["Protein"]
+maximumClinicalTrialPhase: FLOAT | NULL
+inchiKey: TEXT | NULL | eg=["HXKFHHNEFCZKPG-VEKZNEBUSA-N", "AVNDVFCGYOONJV-LUKCZKMGSA-N"]
+isApproved: BOOLEAN | NULL
+crossReferences: VARIANT | NULL
+linkedDiseases: VARIANT | NULL
+canonicalSmiles: TEXT | NULL | eg=["CC(C)CC[C@H](NC(=O)[C@@H]1CCCN1C(=O)[C@H](CCCN)NC(=O)[C@H](Cc1ccccc1)NC(=O)[C@@H]1CC(=O)NC(=O)N1)C(=O)N[C@@H](Cc1ccc(F)cc1)C(=O)N[C@H](Cc1ccccc1)C(N)=O", "N=C(N)NCCC[C@@H]1NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@@H](Cc2ccc(O)cc2)NC(=O)[C@@H]2CCCN2C(=O)[C@H](Cc2ccc3ccccc3c2)NC1=O"]
+yearOfFirstApproval: NUMBER | NULL
+name: TEXT | NULL | eg=["CHEMBL2371928", "CHEMBL3581264"]
+description: TEXT | NULL | eg=["Protein drug."]
+
+## OPEN_TARGETS_PLATFORM.PHARMACOGENOMICS
+@use: [C3]
+phenotypeFromSourceId: TEXT | NULL
+directionality: TEXT | NULL
+targetFromSourceId: TEXT | NULL | eg=["ENSG00000143819", "ENSG00000204463"]
+genotypeAnnotationText: TEXT | NULL | eg=["Patients with the GG genotype may require an increased dose of carbamazepine as compared to patients with the AA genotype, although this is contradicted in one study. Other genetic and clinical factors may also influence dose of carbamazepine.", "Patients with the AG genotype may require an increased dose of carbamazepine as compared to patients with the AA genotype, although this is contradicted in one study. Other genetic and clinical factors may also influence dose of carbamazepine."]
+haplotypeFromSourceId: TEXT | NULL
+genotypeId: TEXT | NULL | eg=["1_225838705_A_G,G", "1_225838705_A_A,G"]
+isDirectTarget: BOOLEAN | NULL | eg=[false, true]
+datasourceId: TEXT | NULL | eg=["pharmgkb"]
+datatypeId: TEXT | NULL | eg=["clinical_annotation"]
+haplotypeId: TEXT | NULL
+genotype: TEXT | NULL | eg=["GG", "AG"]
+datasourceVersion: TEXT | NULL | eg=["2024-05-05"]
+pgxCategory: TEXT | NULL | eg=["dosage", "toxicity"]
+phenotypeText: TEXT | NULL | eg=["increased dose of carbamazepine", "increased risk of Stevens-Johnson syndrome"]
+evidenceLevel: TEXT | NULL | eg=["3"]
+drugs: VARIANT | NULL | eg=[{"list":[{"element":{"drugFromSource":"carbamazepine","drugId":"CHEMBL108"}}]}, {"list":[{"element":{"drugFromSource":"nicotine","drugId":"CHEMBL3"}}]}]
+
+## OPEN_TARGETS_PLATFORM.GO
+name: TEXT | NULL | eg=["bleb", "CHRAC"]
+id: TEXT | NULL | eg=["GO:0032059", "GO:0008623"]
+
+## OPEN_TARGETS_PLATFORM.TARGETS
+@use: [C5]
+genomicLocation: VARIANT | NULL | eg=[{"chromosome":"14","end":19175530,"start":19124807,"strand":-1}, {"chromosome":"14","end":69260567,"start":69239166,"strand":-1}]
+proteinIds: VARIANT | NULL
+synonyms: VARIANT | NULL | eg=[{"list":[]}]
+safetyLiabilities: VARIANT | NULL
+symbolSynonyms: VARIANT | NULL | eg=[{"list":[]}]
+go: VARIANT | NULL
+constraint: VARIANT | NULL
+canonicalExons: VARIANT | NULL | eg=[{"list":[{"element":"19127736"},{"element":"19128249"},{"element":"19175459"},{"element":"19175530"}]}, {"list":[{"element":"69257054"},{"element":"69257301"},{"element":"69239166"},{"element":"69239217"},{"element":"69260290"},{"element":"69260567"}]}]
+obsoleteSymbols: VARIANT | NULL | eg=[{"list":[]}]
+subcellularLocations: VARIANT | NULL
+id: TEXT | NULL | eg=["ENSG00000277128", "ENSG00000258520"]
+homologues: VARIANT | NULL | eg=[{"list":[{"element":{"homologyType":"other_paralog","isHighConfidence":"NULL","priority":0,"queryPercentageIdentity":57.4074,"speciesId":"9606","speciesName":"Human","targetGeneId":"ENSG00000207193","targetGeneSymbol":"Y_RNA","targetPercentageIdentity":62.0}},{"element":{"homologyType":"other_paralog","isHighConfidence":"NULL","priority":0,"queryPercentageIdentity":62.963,"speciesId":"9606","speciesName":"Human","targetGeneId":"ENSG00000252064","targetGeneSymbol":"Y_RNA","targetPercentageIdentity":64.7619}},{"element":{"homologyType":"other_paralog","isHighConfidence":"NULL","priority":0,"queryPercentageIdentity":55.5556,"speciesId":"9606","speciesName":"Human","targetGeneId":"ENSG00000223060","targetGeneSymbol":"Y_RNA","targetPercentageIdentity":63.1579}},{"element":{"homologyType":"other_paralog","isHighConfidence":"NULL","priority":0,"queryPercentageIdentity":64.8148,"speciesId":"9606","speciesName":"Human","targetGeneId":"ENSG00000199797","targetGeneSymbol":"Y_RNA","targetPercen...]
+canonicalTranscript: VARIANT | NULL | eg=[{"chromosome":"14","end":19175530,"id":"ENST00000610763","start":19127736,"strand":"-"}, {"chromosome":"14","end":69260567,"id":"ENST00000556316","start":69239166,"strand":"-"}]
+transcriptIds: VARIANT | NULL | eg=[{"list":[{"element":"ENST00000645684"},{"element":"ENST00000646225"},{"element":"ENST00000610763"}]}, {"list":[{"element":"ENST00000556316"}]}]
+dbXrefs: VARIANT | NULL | eg=[{"list":[]}]
+tractability: VARIANT | NULL
+alternativeGenes: VARIANT | NULL
+chemicalProbes: VARIANT | NULL
+tep: VARIANT | NULL
+pathways: VARIANT | NULL
+obsoleteNames: VARIANT | NULL | eg=[{"list":[]}]
+hallmarks: VARIANT | NULL
+nameSynonyms: VARIANT | NULL | eg=[{"list":[]}]
+functionDescriptions: VARIANT | NULL
+biotype: TEXT | NULL | eg=["lncRNA", "misc_RNA"]
+
+## OPEN_TARGETS_PLATFORM.MECHANISMOFACTION
+targetName: TEXT | NULL | eg=["CD22", "Basigin"]
+chemblIds: VARIANT | NULL | eg=[{"list":[{"element":"CHEMBL2108228"}]}, {"list":[{"element":"CHEMBL2109193"}]}]
+references: VARIANT | NULL | eg=[{"list":[{"element":{"ids":{"list":[{"element":"12537673"}]},"source":"PubMed","urls":{"list":[{"element":"http://europepmc.org/abstract/MED/12537673"}]}}}]}, {"list":[{"element":{"ids":{"list":[{"element":"17110457"}]},"source":"PubMed","urls":{"list":[{"element":"http://europepmc.org/abstract/MED/17110457"}]}}}]}]
+targets: VARIANT | NULL | eg=[{"list":[{"element":"ENSG00000012124"}]}, {"list":[{"element":"ENSG00000172270"}]}]
+mechanismOfAction: TEXT | NULL | eg=["CD22 other", "Basigin other"]
+targetType: TEXT | NULL | eg=["single protein"]
+actionType: TEXT | NULL | eg=["OTHER"]
+
+## OPEN_TARGETS_PLATFORM.EXPRESSIONSPECIFICITY
+ensemblGeneId: TEXT | NULL | eg=["ENSG00000198258", "ENSG00000198815"]
+expression: VARIANT | NULL | eg=[{"list":[{"element":{"bodyPartId":"Adipose - Subcutaneous","bodyPartLevel":"tissue","bodyPartName":"UBERON:0002190","tpm":261.892}},{"element":{"bodyPartId":"Adipose - Visceral (Omentum)","bodyPartLevel":"tissue","bodyPartName":"UBERON:0010414","tpm":270.713}},{"element":{"bodyPartId":"Adrenal Gland","bodyPartLevel":"tissue","bodyPartName":"UBERON:0002369","tpm":353.347}},{"element":{"bodyPartId":"Artery - Aorta","bodyPartLevel":"tissue","bodyPartName":"UBERON:0001496","tpm":399.343}},{"element":{"bodyPartId":"Artery - Coronary","bodyPartLevel":"tissue","bodyPartName":"UBERON:0001621","tpm":371.695}},{"element":{"bodyPartId":"Artery - Tibial","bodyPartLevel":"tissue","bodyPartName":"UBERON:0007610","tpm":376.331}},{"element":{"bodyPartId":"Bladder","bodyPartLevel":"tissue","bodyPartName":"UBERON:0001255","tpm":293.906}},{"element":{"bodyPartId":"Brain - Amygdala","bodyPartLevel":"tissue","bodyPartName":"UBERON:0001876","tpm":280.933}},{"element":{"bodyPartId":"Brain - Anterior cingu...]
+expressionSpecificity: VARIANT | NULL | eg=[{"adatissScores":{"list":[{"element":{"adatissScore":-0.759,"bodyPartId":"UBERON:0002190","bodyPartLevel":"tissue","bodyPartName":"Adipose - Subcutaneous"}},{"element":{"adatissScore":-0.582,"bodyPartId":"UBERON:0010414","bodyPartLevel":"tissue","bodyPartName":"Adipose - Visceral (Omentum)"}},{"element":{"adatissScore":0.837,"bodyPartId":"UBERON:0002369","bodyPartLevel":"tissue","bodyPartName":"Adrenal Gland"}},{"element":{"adatissScore":1.489,"bodyPartId":"UBERON:0001496","bodyPartLevel":"tissue","bodyPartName":"Artery - Aorta"}},{"element":{"adatissScore":1.107,"bodyPartId":"UBERON:0001621","bodyPartLevel":"tissue","bodyPartName":"Artery - Coronary"}},{"element":{"adatissScore":1.173,"bodyPartId":"UBERON:0007610","bodyPartLevel":"tissue","bodyPartName":"Artery - Tibial"}},{"element":{"adatissScore":-0.144,"bodyPartId":"UBERON:0001255","bodyPartLevel":"tissue","bodyPartName":"Bladder"}},{"element":{"adatissScore":-0.385,"bodyPartId":"UBERON:0001876","bodyPartLevel":"tissue","bodyPa...]
+
+## OPEN_TARGETS_PLATFORM.MOUSEPHENOTYPES
+@use: [C4]
+modelPhenotypeId: TEXT | NULL | eg=["MP:0008854", "MP:0012501"]
+targetFromSourceId: TEXT | NULL | eg=["ENSG00000164458"]
+modelPhenotypeLabel: TEXT | NULL | eg=["bleb", "abnormal pericardial cavity morphology"]
+modelPhenotypeClasses: VARIANT | NULL | eg=[{"list":[{"element":{"id":"MP:0010771","label":"integument phenotype"}}]}, {"list":[{"element":{"id":"MP:0005385","label":"cardiovascular system phenotype"}}]}]
+biologicalModels: VARIANT | NULL | eg=[{"list":[{"element":{"allelicComposition":"T/T","geneticBackground":"Not Specified","id":"MGI:2169509","literature":{"list":[{"element":"10617567"},{"element":"12533796"},{"element":"1218735"},{"element":"23359409"},{"element":"9383288"},{"element":"2658196"},{"element":"5906493"},{"element":"12140191"},{"element":"15384171"},{"element":"8436292"},{"element":"20809182"},{"element":"11071760"},{"element":"10723731"},{"element":"10835400"},{"element":"13575656"},{"element":"8293872"}]}}}]}]
+
+## OPEN_TARGETS_PLATFORM.TARGETPRIORITISATION
+@use: [C1]
+targetId: TEXT | NULL | eg=["ENSG00000235408", "ENSG00000222496"]
+hasSmallMoleculeBinder: NUMBER | NULL
+mouseKOScore: FLOAT | NULL
+
+## OPEN_TARGETS_PLATFORM.SIGNIFICANTADVERSEDRUGREACTIONS
+meddraCode: TEXT | NULL | eg=["10012335", "10080751"]
+count: NUMBER | NULL | eg=[58, 39]
+critval: FLOAT | NULL | eg=[38.961201902675384]
+llr: FLOAT | NULL | eg=[194.9394994438262, 125.80146108261397]
+chembl_id: TEXT | NULL | eg=["CHEMBL3"]
+event: TEXT | NULL | eg=["dependence", "exposure via breast milk"]
+
+## OPEN_TARGETS_PLATFORM.ASSOCIATIONBYDATASOURCEDIRECT
+score: FLOAT | NULL | eg=[0.5592963338026914, 0.18237923928348632]
+targetId: TEXT | NULL | eg=["ENSG00000121075", "ENSG00000131778"]
+diseaseId: TEXT | NULL | eg=["HP_0000072", "HP_0000079"]
+datatypeId: TEXT | NULL | eg=["genetic_association"]
+datasourceId: TEXT | NULL | eg=["eva"]
+evidenceCount: NUMBER | NULL | eg=[1]
+
+## OPEN_TARGETS_PLATFORM.ASSOCIATIONBYOVERALLDIRECT
+score: FLOAT | NULL | eg=[0.03125583666870911, 0.10263100589238479]
+evidenceCount: NUMBER | NULL | eg=[256]
+diseaseId: TEXT | NULL | eg=["HP_0011123", "EFO_0000616"]
+targetId: TEXT | NULL | eg=["ENSG00000112115", "ENSG00000104067"]
+
+## OPEN_TARGETS_PLATFORM.KNOWNDRUGSAGGREGATED
+@use: [C5]
+urls: VARIANT | NULL | eg=[{"list":[{"element":{"niceName":"ClinicalTrials","url":"https://clinicaltrials.gov/study/NCT06365788"}}]}, {"list":[{"element":{"niceName":"ClinicalTrials","url":"https://clinicaltrials.gov/study/NCT01642732"}},{"element":{"niceName":"ClinicalTrials","url":"https://clinicaltrials.gov/study/NCT00702923"}},{"element":{"niceName":"ClinicalTrials","url":"https://clinicaltrials.gov/study/NCT00924807"}}]}]
+drugId: TEXT | NULL | eg=["CHEMBL409"]
+status: TEXT | NULL | eg=["Recruiting", "Terminated"]
+tradeNames: VARIANT | NULL | eg=[{"list":[{"element":"Bicalutamide"},{"element":"Calutide"},{"element":"Casodex"},{"element":"Cosudex"},{"element":"Kalumid"}]}]
+label: TEXT | NULL | eg=["breast neoplasm", "prostate cancer"]
+targetId: TEXT | NULL | eg=["ENSG00000169083"]
+ancestors: VARIANT | NULL | eg=[{"list":[{"element":"OTAR_0000017"},{"element":"MONDO_0021350"},{"element":"MONDO_0023370"},{"element":"MONDO_0045024"},{"element":"EFO_0010285"},{"element":"EFO_0009483"},{"element":"EFO_0000616"}]}, {"list":[{"element":"OTAR_0000017"},{"element":"EFO_0009555"},{"element":"EFO_0007355"},{"element":"MONDO_0024582"},{"element":"MONDO_0002149"},{"element":"MONDO_0023370"},{"element":"EFO_1000051"},{"element":"EFO_0009602"},{"element":"MONDO_0045024"},{"element":"MONDO_0021259"},{"element":"MONDO_0004992"},{"element":"EFO_0000512"},{"element":"EFO_0000616"}]}]
+targetName: TEXT | NULL | eg=["Androgen Receptor"]
+phase: FLOAT | NULL | eg=[2.0, 1.0]
+prefName: TEXT | NULL | eg=["BICALUTAMIDE"]
+synonyms: VARIANT | NULL | eg=[{"list":[{"element":"Bicalutamide"},{"element":"Casodex"},{"element":"ICI 176,334"},{"element":"ICI-176334"},{"element":"ICI176,334-1"},{"element":"NSC-759816"}]}]
+drugType: TEXT | NULL | eg=["Small molecule"]
+diseaseId: TEXT | NULL | eg=["EFO_0003869", "MONDO_0008315"]
+mechanismOfAction: TEXT | NULL | eg=["Androgen Receptor antagonist"]
+
+## OPEN_TARGETS_PLATFORM.HPO
+name: TEXT | NULL | eg=["lung endothelial cell", "intestinal enteroendocrine cell"]
+namespace: VARIANT | NULL | eg=[{"list":[{"element":"cl"}]}, {"list":[{"element":"bfo"}]}]
+id: TEXT | NULL | eg=["CL_1001567", "CL_1001516"]
+parents: VARIANT | NULL | eg=[{"list":[{"element":"b43134"},{"element":"CL_0000082"},{"element":"CL_0002139"}]}, {"list":[{"element":"CL_0002563"},{"element":"CL_0000164"}]}]
+description: TEXT | NULL | eg=["The various hormone- or neurotransmitter-secreting cells present throughout the mucosa of the intestinal tract.", "An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time."]
+obsolete_terms: VARIANT | NULL
+dbXRefs: VARIANT | NULL
+
+## OPEN_TARGETS_PLATFORM.BASELINEEXPRESSION
+id: TEXT | NULL | eg=["ENSG00000288864", "ENSG00000285547"]
+tissues: VARIANT | NULL | eg=[{"list":[{"element":{"anatomical_systems":{"list":[{"element":"nervous system"}]},"efo_code":"UBERON_0000956","label":"cerebral cortex","organs":{"list":[{"element":"brain"}]},"protein":{"cell_type":{"list":[{"element":{"level":0,"name":"endothelial cells","reliability":false}},{"element":{"level":0,"name":"neuronal cells","reliability":false}},{"element":{"level":0,"name":"glial cells","reliability":false}},{"element":{"level":0,"name":"neuropil","reliability":false}}]},"level":0,"reliability":false},"rna":{"level":-1,"unit":"","value":0.0,"zscore":-1}}},{"element":{"anatomical_systems":{"list":[{"element":"respiratory system"}]},"efo_code":"UBERON_0002048","label":"lung","organs":{"list":[{"element":"lung"}]},"protein":{"cell_type":{"list":[{"element":{"level":0,"name":"alveolar cells","reliability":false}},{"element":{"level":0,"name":"macrophages","reliability":false}}]},"level":0,"reliability":false},"rna":{"level":-1,"unit":"","value":0.0,"zscore":-1}}},{"element":{"anatomical...]
+
+## OPEN_TARGETS_PLATFORM.OT_RELEASE
+release: TEXT | NULL
+
+## OPEN_TARGETS_PLATFORM.DISEASES
+ontology: VARIANT | NULL | eg=[{"isTherapeuticArea":true,"leaf":false,"sources":{"name":"MONDO_0045024","url":"http://purl.obolibrary.org/obo/MONDO_0045024"}}, {"isTherapeuticArea":true,"leaf":false,"sources":{"name":"EFO_0005803","url":"http://www.ebi.ac.uk/efo/EFO_0005803"}}]
+name: TEXT | NULL | eg=["cancer or benign tumor", "hematologic disease"]
+directLocationIds: VARIANT | NULL
+obsoleteTerms: VARIANT | NULL
+descendants: VARIANT | NULL | eg=[{"list":[{"element":"MONDO_0004125"},{"element":"OTAR_0000003"},{"element":"EFO_0000284"},{"element":"MONDO_0001092"},{"element":"MONDO_0001093"},{"element":"MONDO_0004120"},{"element":"MONDO_0001096"},{"element":"EFO_0000281"},{"element":"EFO_1000925"},{"element":"EFO_1000921"},{"element":"MONDO_0013074"},{"element":"EFO_1000923"},{"element":"EFO_1000920"},{"element":"MONDO_0004117"},{"element":"MONDO_0004116"},{"element":"EFO_0000272"},{"element":"MONDO_0001082"},{"element":"MONDO_0004111"},{"element":"MONDO_0004110"},{"element":"EFO_1000932"},{"element":"EFO_1000934"},{"element":"MONDO_0001091"},{"element":"EFO_0005952"},{"element":"MONDO_0004104"},{"element":"MONDO_0004105"},{"element":"MONDO_0004107"},{"element":"MONDO_0018744"},{"element":"MONDO_0002398"},{"element":"EFO_0000294"},{"element":"Orphanet_847"},{"element":"MONDO_0001063"},{"element":"MONDO_0002395"},{"element":"MONDO_0002397"},{"element":"MONDO_0018734"},{"element":"EFO_1000958"},{"element":"MONDO_0017407"},{"elem...]
+code: TEXT | NULL | eg=["http://purl.obolibrary.org/obo/MONDO_0045024", "http://www.ebi.ac.uk/efo/EFO_0005803"]
+ancestors: VARIANT | NULL | eg=[{"list":[]}, {"list":[{"element":"GO_0002376"},{"element":"GO_0048583"},{"element":"GO_0050896"},{"element":"GO_0008150"},{"element":"GO_0050789"},{"element":"GO_0002682"}]}]
+parents: VARIANT | NULL | eg=[{"list":[]}, {"list":[{"element":"GO_0002682"},{"element":"GO_0050896"},{"element":"GO_0048583"},{"element":"GO_0002376"}]}]
+synonyms: VARIANT | NULL | eg=[{"hasNarrowSynonym":{"list":[{"element":"neoplasm"}]},"hasRelatedSynonym":{"list":[{"element":"cell proliferation disorder"}]}}]
+dbXRefs: VARIANT | NULL | eg=[{"list":[]}, {"list":[{"element":"ICD9:289.8"},{"element":"ICD9:289.9"},{"element":"MeSH:D006402"},{"element":"GARD:22522"},{"element":"MESH:D006402"},{"element":"SCTID:414022008"},{"element":"UMLS:C0018939"},{"element":"NCIT:C26323"},{"element":"GTR:AN1320635"},{"element":"MONDO:0005570"},{"element":"Orphanet:97992"},{"element":"ICD9:280-289.99"},{"element":"ICD10CM:D50-D89"},{"element":"ICD10:D75"},{"element":"DOID:74"}]}]
+children: VARIANT | NULL | eg=[{"list":[{"element":"MONDO_0021074"},{"element":"MONDO_0023370"},{"element":"MONDO_0045054"},{"element":"EFO_0000536"},{"element":"EFO_0000662"},{"element":"OTAR_0000003"}]}, {"list":[{"element":"MONDO_0000602"},{"element":"MONDO_0002243"},{"element":"MONDO_0002245"},{"element":"MONDO_0002280"},{"element":"MONDO_0002334"},{"element":"MONDO_0002901"},{"element":"MONDO_0003225"},{"element":"MONDO_0003393"},{"element":"MONDO_0004805"},{"element":"MONDO_0007716"},{"element":"MONDO_0008876"},{"element":"MONDO_0009332"},{"element":"MONDO_0010328"},{"element":"MONDO_0013540"},{"element":"MONDO_0014274"},{"element":"MONDO_0044347"},{"element":"MONDO_0060782"},{"element":"MONDO_0100089"},{"element":"MONDO_0700253"},{"element":"EFO_0000203"},{"element":"EFO_0007352"},{"element":"EFO_0009314"},{"element":"EFO_0010283"},{"element":"EFO_0011051"},{"element":"EFO_1000969"},{"element":"EFO_1001860"},{"element":"Orphanet_158300"},{"element":"Orphanet_93614"}]}]
+indirectLocationIds: VARIANT | NULL
+id: TEXT | NULL | eg=["MONDO_0045024", "EFO_0005803"]
+description: TEXT | NULL | eg=["Any disorder that features disrupted cell proliferation. Includes hyperplasia, neoplastic syndrome and isolated neoplasm diseases as well as precancerous conditions.", "Disorders of the blood and blood forming tissues."]
+therapeuticAreas: VARIANT | NULL | eg=[{"list":[{"element":"MONDO_0045024"}]}, {"list":[{"element":"EFO_0005803"}]}]
+
+## OPEN_TARGETS_PLATFORM.TARGETSPRIORISATION
+@use: [C1]
+hasMouseKO: NUMBER | NULL
+targetId: TEXT | NULL | eg=["ENSG00000176761", "ENSG00000198217"]
+
+## OPEN_TARGETS_PLATFORM.ASSOCIATIONBYDATATYPEDIRECT
+targetId: TEXT | NULL | eg=["ENSG00000118194", "ENSG00000100504"]
+diseaseId: TEXT | NULL | eg=["EFO_0000538", "MONDO_0009294"]
+score: FLOAT | NULL | eg=[0.6107447680992258, 0.900822981147149]
+datatypeId: TEXT | NULL | eg=["literature", "genetic_association"]
+evidenceCount: NUMBER | NULL | eg=[256, 1]

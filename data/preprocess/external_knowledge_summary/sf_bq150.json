@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq150",
+  "question": "Assess whether different genetic variants affect the log10-transformed TP53 expression levels in TCGA-BRCA samples using sequencing and mutation data. Provide the total number of samples, the number of mutation types, the mean square between groups, the mean square within groups, and the F-statistic.",
+  "db_id": "TCGA_HG19_DATA_V0",
+  "source_document": "TCGA_F_Score.md",
+  "evidence": "Objective: Test null hypothesis that mean gene expression levels are equal across different mutation types for TP53 gene in TCGA-BRCA project. Data: Use expression data (non-null positive normalized expression of TP53) and mutation data (TP53 mutation types) from same samples. Calculation: 1) Compute log-transformed expression: log_expression_i = log10(normalized_count_i). 2) Calculate grand mean: X̄ = (1/N)∑X_i. 3) Calculate group means for each mutation type: X̄_j = (1/n_j)∑X_ij. 4) Compute SSB = ∑n_j(X̄_j - X̄)². 5) Compute SSW = ∑∑(X_ij - X̄_j)². 6) Degrees of freedom: df_Between = k-1, df_Within = N-k. 7) Mean squares: MSB = SSB/df_Between, MSW = SSW/df_Within. 8) F-statistic: F = MSB/MSW. Key formulas: SSB weighted by group sizes (n_j), SSW sums all individual squared deviations. Required outputs: total samples (N), number of mutation types (k), MSB, MSW, F-statistic."
+}

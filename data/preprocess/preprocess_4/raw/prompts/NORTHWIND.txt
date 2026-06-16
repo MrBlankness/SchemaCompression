@@ -1,0 +1,125 @@
+[TABLES]
+## NORTHWIND.USSTATES
+stateregion: TEXT | NULL | eg=["west", "east"]
+statename: TEXT | NULL | eg=["Arizona", "Connecticut"]
+stateabbr: TEXT | NULL | eg=["AZ", "CT"]
+stateid: NUMBER | NULL | eg=[3, 7]
+
+## NORTHWIND.ORDER_DETAILS
+discount: FLOAT | NULL | eg=[0.0, 0.150000006]
+orderid: NUMBER | NULL | eg=[10248, 10250]
+unitprice: FLOAT | NULL | eg=[14.0, 42.4000015]
+quantity: NUMBER | NULL | eg=[12, 35]
+productid: NUMBER | NULL | eg=[11, 51]
+
+## NORTHWIND.SHIPPERS
+companyname: TEXT | NULL | eg=["Federal Shipping"]
+phone: TEXT | NULL | eg=["(503) 555-9931"]
+shipperid: NUMBER | NULL | eg=[3]
+
+## NORTHWIND.CUSTOMERGROUPTHRESHOLD
+groupname: TEXT | NULL | eg=["Medium", "Very High"]
+rangetop: FLOAT | NULL | eg=[4999.9999, 922337203685477.6]
+rangebottom: NUMBER | NULL | eg=[1000, 10000]
+
+## NORTHWIND.EMPLOYEES
+extension: TEXT | NULL | eg=["5467", "5176"]
+birthdate: TEXT | NULL | eg=["1948-12-08", "1937-09-19"]
+lastname: TEXT | NULL | eg=["Davolio", "Peacock"]
+firstname: TEXT | NULL | eg=["Nancy", "Margaret"]
+photo: TEXT | NULL | eg=["\\x"]
+postalcode: TEXT | NULL | eg=["98122", "98052"]
+titleofcourtesy: TEXT | NULL | eg=["Ms.", "Mrs."]
+city: TEXT | NULL | eg=["Seattle", "Redmond"]
+country: TEXT | NULL | eg=["USA", "UK"]
+notes: TEXT | NULL | eg=["Education includes a BA in psychology from Colorado State University in 1970.  She also completed The Art of the Cold Call.  Nancy is a member of Toastmasters International.", "Margaret holds a BA in English literature from Concordia College (1958) and an MA from the American Institute of Culinary Arts (1966).  She was assigned to the London office temporarily from July through November 1992."]
+title: TEXT | NULL | eg=["Sales Representative", "Sales Manager"]
+hiredate: TEXT | NULL | eg=["1992-05-01", "1993-05-03"]
+photopath: TEXT | NULL | eg=["http://accweb/emmployees/davolio.bmp", "http://accweb/emmployees/peacock.bmp"]
+homephone: TEXT | NULL | eg=["(206) 555-9857", "(206) 555-8122"]
+reportsto: FLOAT | NULL | eg=[2.0, 5.0]
+address: TEXT | NULL | eg=["507 - 20th Ave. E.\\nApt. 2A", "4110 Old Redmond Rd."]
+region: TEXT | NULL | eg=["WA", ""]
+employeeid: NUMBER | NULL | eg=[1, 4]
+
+## NORTHWIND.PRODUCTS
+productname: TEXT | NULL | eg=["Chai", "Chef Anton's Cajun Seasoning"]
+productid: NUMBER | NULL | eg=[1, 4]
+discontinued: NUMBER | NULL | eg=[1, 0]
+unitprice: FLOAT | NULL | eg=[18.0, 22.0]
+reorderlevel: NUMBER | NULL | eg=[10, 0]
+unitsinstock: NUMBER | NULL | eg=[39, 53]
+unitsonorder: NUMBER | NULL | eg=[0]
+supplierid: NUMBER | NULL | eg=[8, 2]
+quantityperunit: TEXT | NULL | eg=["10 boxes x 30 bags", "48 - 6 oz jars"]
+categoryid: NUMBER | NULL | eg=[1, 2]
+
+## NORTHWIND.ORDERS
+requireddate: TEXT | NULL | eg=["1996-08-01", "1996-08-05"]
+customerid: TEXT | NULL | eg=["VINET", "VICTE"]
+shippostalcode: TEXT | NULL | eg=["51100", "69004"]
+shipaddress: TEXT | NULL | eg=["59 rue de l'Abbaye", "2, rue du Commerce"]
+shipregion: TEXT | NULL | eg=["", "RJ"]
+employeeid: NUMBER | NULL | eg=[5, 3]
+shipcountry: TEXT | NULL | eg=["France", "Belgium"]
+orderid: NUMBER | NULL | eg=[10248, 10251]
+shippeddate: TEXT | NULL | eg=["1996-07-16", "1996-07-15"]
+shipvia: NUMBER | NULL | eg=[3, 1]
+freight: FLOAT | NULL | eg=[32.3800011, 41.3400002]
+orderdate: TEXT | NULL | eg=["1996-07-04", "1996-07-08"]
+shipcity: TEXT | NULL | eg=["Reims", "Lyon"]
+shipname: TEXT | NULL | eg=["Vins et alcools Chevalier", "Victuailles en stock"]
+
+## NORTHWIND.REGION
+regiondescription: TEXT | NULL | eg=["Western", "Northern"]
+regionid: NUMBER | NULL | eg=[2, 3]
+
+## NORTHWIND.CUSTOMERS
+fax: TEXT | NULL | eg=["030-0076545", "(5) 555-3745"]
+customerid: TEXT | NULL | eg=["ALFKI", "ANATR"]
+address: TEXT | NULL | eg=["Obere Str. 57", "Avda. de la Constitución 2222"]
+contacttitle: TEXT | NULL | eg=["Sales Representative", "Owner"]
+region: TEXT | NULL | eg=[""]
+phone: TEXT | NULL | eg=["030-0074321", "(5) 555-4729"]
+country: TEXT | NULL | eg=["Germany", "Mexico"]
+city: TEXT | NULL | eg=["Berlin", "México D.F."]
+postalcode: TEXT | NULL | eg=["12209", "05021"]
+companyname: TEXT | NULL | eg=["Alfreds Futterkiste", "Ana Trujillo Emparedados y helados"]
+contactname: TEXT | NULL | eg=["Maria Anders", "Ana Trujillo"]
+
+## NORTHWIND.CUSTOMERCUSTOMERDEMO
+customertypeid: TEXT | NULL
+customerid: TEXT | NULL
+
+## NORTHWIND.SUPPLIERS
+contactname: TEXT | NULL | eg=["Charlotte Cooper", "Shelley Burke"]
+postalcode: TEXT | NULL | eg=["EC1 4SD", "70117"]
+city: TEXT | NULL | eg=["London", "New Orleans"]
+country: TEXT | NULL | eg=["UK", "USA"]
+region: TEXT | NULL | eg=["", "LA"]
+homepage: TEXT | NULL | eg=["", "#CAJUN.HTM#"]
+address: TEXT | NULL | eg=["49 Gilbert St.", "P.O. Box 78934"]
+supplierid: NUMBER | NULL | eg=[1, 2]
+contacttitle: TEXT | NULL | eg=["Purchasing Manager", "Order Administrator"]
+companyname: TEXT | NULL | eg=["Exotic Liquids", "New Orleans Cajun Delights"]
+fax: TEXT | NULL | eg=["", "(313) 555-3349"]
+phone: TEXT | NULL | eg=["(171) 555-2222", "(100) 555-4822"]
+
+## NORTHWIND.TERRITORIES
+territorydescription: TEXT | NULL | eg=["Westboro", "Bedford"]
+territoryid: TEXT | NULL | eg=["01581", "01730"]
+regionid: NUMBER | NULL | eg=[1]
+
+## NORTHWIND.CUSTOMERDEMOGRAPHICS
+customerdesc: TEXT | NULL
+customertypeid: TEXT | NULL
+
+## NORTHWIND.CATEGORIES
+categoryid: NUMBER | NULL | eg=[2, 3]
+categoryname: TEXT | NULL | eg=["Condiments", "Confections"]
+description: TEXT | NULL | eg=["Sweet and savory sauces, relishes, spreads, and seasonings", "Desserts, candies, and sweet breads"]
+picture: TEXT | NULL | eg=["\\x"]
+
+## NORTHWIND.EMPLOYEETERRITORIES
+territoryid: TEXT | NULL | eg=["06897", "02139"]
+employeeid: NUMBER | NULL | eg=[1, 2]

@@ -1,0 +1,14 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: CALIFORNIA_TRAFFIC_COLLISION.VICTIMS
+Columns: victim_role, victim_safety_equipment_1, victim_safety_equipment_2, party_number, victim_seating_position, victim_age, victim_degree_of_injury, case_id, victim_ejected, victim_sex, id
+
+Table: CALIFORNIA_TRAFFIC_COLLISION.PARTIES
+Columns: party_safety_equipment_1, school_bus_related, other_associate_factor_1, vehicle_make, other_associate_factor_2, movement_preceding_collision, chp_vehicle_type_towing, direction_of_travel, party_drug_physical, oaf_violation_section, party_sex, oaf_violation_category, id, party_number_killed, party_race, at_fault, party_number_injured, cellphone_use_type, party_safety_equipment_2, oaf_violation_code, party_type, statewide_vehicle_type, case_id, party_age, chp_vehicle_type_towed, hazardous_materials, financial_responsibility, cellphone_in_use, party_number, oaf_violation_suffix, vehicle_year, party_sobriety
+
+Table: CALIFORNIA_TRAFFIC_COLLISION.COLLISIONS
+Columns: special_condition, county_city_location, truck_collision, case_id, pedestrian_collision, alcohol_involved, pedestrian_injured_count, route_suffix, direction, type_of_collision, chp_vehicle_type_at_fault, lighting, caltrans_district, jurisdiction, collision_date, chp_beat_class, secondary_ramp, hit_and_run, chp_road_type, intersection, officer_id, reporting_district, pcf_violation_code, motorcyclist_killed_count, postmile_prefix, road_condition_2, collision_time, road_condition_1, state_highway_indicator, control_device, weather_1, motor_vehicle_involved_with, road_surface, pcf_violation_subsection, primary_collision_factor, not_private_property, complaint_of_pain_injury_count, secondary_road, statewide_vehicle_type_at_fault, postmile, severe_injury_count, bicycle_collision, collision_severity, chp_shift, pcf_violation, pedestrian_killed_count, process_date, side_of_highway, bicyclist_injured_count, primary_ramp, tow_away, ramp_intersection, beat_number, state_route, pcf_violation_category, county_location, latitude, population, party_count, caltrans_county, beat_type, motorcycle_collision, primary_road, chp_beat_type, distance, weather_2, bicyclist_killed_count, killed_victims, pedestrian_action, city_division_lapd, longitude, location_type, other_visible_injury_count, motorcyclist_injured_count, injured_victims
+
+Table: CALIFORNIA_TRAFFIC_COLLISION.CASE_IDS
+Columns: case_id, db_year

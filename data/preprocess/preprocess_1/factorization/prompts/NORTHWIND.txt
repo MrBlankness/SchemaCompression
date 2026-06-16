@@ -1,0 +1,22 @@
+[COMPONENTS]
+@C1:address,city,country,postalcode,region
+@C2:companyname,phone
+@C3:contactname,contacttitle,fax
+
+[TABLES]
+Format: schema.table|components|columns
+NORTHWIND.USSTATES||stateregion,statename,stateabbr,stateid
+NORTHWIND.ORDER_DETAILS||discount,orderid,unitprice,quantity,productid
+NORTHWIND.SHIPPERS|@C2|shipperid
+NORTHWIND.CUSTOMERGROUPTHRESHOLD||groupname,rangetop,rangebottom
+NORTHWIND.EMPLOYEES|@C1|extension,birthdate,lastname,firstname,photo,titleofcourtesy,notes,title,hiredate,photopath,homephone,reportsto,employeeid
+NORTHWIND.PRODUCTS||productname,productid,discontinued,unitprice,reorderlevel,unitsinstock,unitsonorder,supplierid,quantityperunit,categoryid
+NORTHWIND.ORDERS||requireddate,customerid,shippostalcode,shipaddress,shipregion,employeeid,shipcountry,orderid,shippeddate,shipvia,freight,orderdate,shipcity,shipname
+NORTHWIND.REGION||regiondescription,regionid
+NORTHWIND.CUSTOMERS|@C1,@C2,@C3|customerid
+NORTHWIND.CUSTOMERCUSTOMERDEMO||customertypeid,customerid
+NORTHWIND.SUPPLIERS|@C1,@C2,@C3|homepage,supplierid
+NORTHWIND.TERRITORIES||territorydescription,territoryid,regionid
+NORTHWIND.CUSTOMERDEMOGRAPHICS||customerdesc,customertypeid
+NORTHWIND.CATEGORIES||categoryid,categoryname,description,picture
+NORTHWIND.EMPLOYEETERRITORIES||territoryid,employeeid

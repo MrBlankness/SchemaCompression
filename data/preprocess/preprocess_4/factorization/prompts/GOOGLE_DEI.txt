@@ -1,0 +1,762 @@
+[COMPONENTS]
+@C1
+area_fips: TEXT | US FIPS County Code | eg=["28011", "22001"]
+avg_wkly_wage_1011_natural_resources_and_mining: FLOAT | Average weekly wage for Natural resources and mining establishments | eg=[302.0, 605.0]
+avg_wkly_wage_1012_construction: FLOAT | Average weekly wage for Construction establishments | eg=[383.0, 294.0]
+avg_wkly_wage_1013_manufacturing: FLOAT | Average weekly wage for Manufacturing establishments | eg=[418.0, 297.0]
+avg_wkly_wage_1021_trade_transportation_and_utilities: FLOAT | Average weekly wage for Trade, transportation, and utilities establishments | eg=[402.0, 312.0]
+avg_wkly_wage_1022_information: FLOAT | Average weekly wage for Information establishments | eg=[465.0, 414.0]
+avg_wkly_wage_1023_financial_activities: FLOAT | Average weekly wage for Financial activities establishments | eg=[375.0, 415.0]
+avg_wkly_wage_1024_professional_and_business_services: FLOAT | Average weekly wage for Professional and business services establishments | eg=[320.0, 455.0]
+avg_wkly_wage_1025_education_and_health_services: FLOAT | Average weekly wage for Education and health services establishments | eg=[423.0, 334.0]
+avg_wkly_wage_1026_leisure_and_hospitality: FLOAT | Average weekly wage for Leisure and hospitality establishments | eg=[136.0, 145.0]
+avg_wkly_wage_1027_other_services: FLOAT | Average weekly wage for Other services establishments | eg=[227.0, 228.0]
+avg_wkly_wage_1029_unclassified: FLOAT | Average weekly wage for Unclassified establishments
+avg_wkly_wage_10_total_all_industries: FLOAT | Average weekly wage for Total, all industries establishments | eg=[376.0, 333.0]
+avg_wkly_wage_11_agriculture_forestry_fishing_and_hunting: FLOAT | Average weekly wage for Agriculture, forestry, fishing and hunting establishments | eg=[302.0, 253.0]
+avg_wkly_wage_21_mining_quarrying_and_oil_and_gas_extraction: FLOAT | Average weekly wage for Mining, quarrying, and oil and gas extraction establishments | eg=[NaN, 663.0]
+avg_wkly_wage_22_utilities: FLOAT | Average weekly wage for Utilities establishments | eg=[383.0, 632.0]
+avg_wkly_wage_23_construction: FLOAT | Average weekly wage for Construction establishments | eg=[383.0, 294.0]
+avg_wkly_wage_31_33_manufacturing: FLOAT | Average weekly wage for Manufacturing establishments | eg=[418.0, 297.0]
+avg_wkly_wage_42_wholesale_trade: FLOAT | Average weekly wage for Wholesale trade establishments | eg=[548.0, 326.0]
+avg_wkly_wage_44_45_retail_trade: FLOAT | Average weekly wage for Retail trade establishments | eg=[333.0, 246.0]
+avg_wkly_wage_48_49_transportation_and_warehousing: FLOAT | Average weekly wage for Transportation and warehousing establishments | eg=[460.0, 508.0]
+avg_wkly_wage_51_information: FLOAT | Average weekly wage for Information establishments | eg=[465.0, 414.0]
+avg_wkly_wage_52_finance_and_insurance: FLOAT | Average weekly wage for Finance and insurance establishments | eg=[408.0, 454.0]
+avg_wkly_wage_53_real_estate_and_rental_and_leasing: FLOAT | Average weekly wage for Real estate and rental and leasing establishments | eg=[181.0, 280.0]
+avg_wkly_wage_54_professional_and_technical_services: FLOAT | Average weekly wage for Professional and technical services establishments | eg=[451.0, 511.0]
+avg_wkly_wage_55_management_of_companies_and_enterprises: FLOAT | Average weekly wage for Management of companies and enterprises establishments | eg=[NaN, 0.0]
+avg_wkly_wage_56_administrative_and_waste_services: FLOAT | Average weekly wage for Administrative and waste services establishments | eg=[223.0, 429.0]
+avg_wkly_wage_61_educational_services: FLOAT | Average weekly wage for Educational services establishments
+avg_wkly_wage_62_health_care_and_social_assistance: FLOAT | Average weekly wage for Health care and social assistance establishments
+avg_wkly_wage_71_arts_entertainment_and_recreation: FLOAT | Average weekly wage for Arts, entertainment, and recreation establishments | eg=[133.0, 124.0]
+avg_wkly_wage_72_accommodation_and_food_services: FLOAT | Average weekly wage for Accommodation and food services establishments | eg=[136.0, 146.0]
+avg_wkly_wage_81_other_services_except_public_administration: FLOAT | Average weekly wage for Other services, except public administration establishments | eg=[227.0, 228.0]
+avg_wkly_wage_99_unclassified: FLOAT | Average weekly wage for Unclassified establishments
+geoid: TEXT | US FIPS County Code | eg=["28011", "22001"]
+lq_avg_wkly_wage_1011_natural_resources_and_mining: FLOAT | Average weekly wage location quotient for Natural resources and mining establishments | eg=[0.88, 1.93]
+lq_avg_wkly_wage_1012_construction: FLOAT | Average weekly wage location quotient for Construction establishments | eg=[0.98, 0.82]
+lq_avg_wkly_wage_1013_manufacturing: FLOAT | Average weekly wage location quotient for Manufacturing establishments | eg=[0.96, 0.75]
+lq_avg_wkly_wage_1021_trade_transportation_and_utilities: FLOAT | Average weekly wage location quotient for Trade, transportation, and utilities establishments | eg=[1.24, 1.05]
+lq_avg_wkly_wage_1022_information: FLOAT | Average weekly wage location quotient for Information establishments | eg=[0.92, 0.89]
+lq_avg_wkly_wage_1023_financial_activities: FLOAT | Average weekly wage location quotient for Financial activities establishments | eg=[0.72, 0.87]
+lq_avg_wkly_wage_1024_professional_and_business_services: FLOAT | Average weekly wage location quotient for Professional and business services establishments | eg=[0.73, 1.13]
+lq_avg_wkly_wage_1025_education_and_health_services: FLOAT | Average weekly wage location quotient for Education and health services establishments | eg=[1.17, 1.0]
+lq_avg_wkly_wage_1026_leisure_and_hospitality: FLOAT | Average weekly wage location quotient for Leisure and hospitality establishments | eg=[0.87, 1.01]
+lq_avg_wkly_wage_1027_other_services: FLOAT | Average weekly wage location quotient for Other services establishments | eg=[0.97, 1.06]
+lq_avg_wkly_wage_1029_unclassified: FLOAT | Average weekly wage location quotient for Unclassified establishments
+lq_avg_wkly_wage_10_total_all_industries: FLOAT | Average weekly wage location quotient for Total, all industries establishments | eg=[1.03, 0.99]
+lq_avg_wkly_wage_11_agriculture_forestry_fishing_and_hunting: FLOAT | Average weekly wage location quotient for Agriculture, forestry, fishing and hunting establishments | eg=[1.43, 1.3]
+lq_avg_wkly_wage_21_mining_quarrying_and_oil_and_gas_extraction: FLOAT | Average weekly wage location quotient for Mining, quarrying, and oil and gas extraction establishments | eg=[NaN, 1.23]
+lq_avg_wkly_wage_22_utilities: FLOAT | Average weekly wage location quotient for Utilities establishments | eg=[0.62, 1.13]
+lq_avg_wkly_wage_23_construction: FLOAT | Average weekly wage location quotient for Construction establishments | eg=[0.98, 0.82]
+lq_avg_wkly_wage_31_33_manufacturing: FLOAT | Average weekly wage location quotient for Manufacturing establishments | eg=[0.96, 0.75]
+lq_avg_wkly_wage_42_wholesale_trade: FLOAT | Average weekly wage location quotient for Wholesale trade establishments | eg=[1.1, 0.72]
+lq_avg_wkly_wage_44_45_retail_trade: FLOAT | Average weekly wage location quotient for Retail trade establishments | eg=[1.43, 1.15]
+lq_avg_wkly_wage_48_49_transportation_and_warehousing: FLOAT | Average weekly wage location quotient for Transportation and warehousing establishments | eg=[1.2, 1.45]
+lq_avg_wkly_wage_51_information: FLOAT | Average weekly wage location quotient for Information establishments | eg=[0.92, 0.89]
+lq_avg_wkly_wage_52_finance_and_insurance: FLOAT | Average weekly wage location quotient for Finance and insurance establishments | eg=[0.7, 0.85]
+lq_avg_wkly_wage_53_real_estate_and_rental_and_leasing: FLOAT | Average weekly wage location quotient for Real estate and rental and leasing establishments | eg=[0.56, 0.94]
+lq_avg_wkly_wage_54_professional_and_technical_services: FLOAT | Average weekly wage location quotient for Professional and technical services establishments | eg=[0.76, 0.94]
+lq_avg_wkly_wage_55_management_of_companies_and_enterprises: FLOAT | Average weekly wage location quotient for Management of companies and enterprises establishments | eg=[NaN, 0.0]
+lq_avg_wkly_wage_56_administrative_and_waste_services: FLOAT | Average weekly wage location quotient for Administrative and waste services establishments | eg=[0.92, 1.93]
+lq_avg_wkly_wage_61_educational_services: FLOAT | Average weekly wage location quotient for Educational services establishments
+lq_avg_wkly_wage_62_health_care_and_social_assistance: FLOAT | Average weekly wage location quotient for Health care and social assistance establishments
+lq_avg_wkly_wage_71_arts_entertainment_and_recreation: FLOAT | Average weekly wage location quotient for Arts, entertainment, and recreation establishments | eg=[0.46, 0.47]
+lq_avg_wkly_wage_72_accommodation_and_food_services: FLOAT | Average weekly wage location quotient for Accommodation and food services establishments | eg=[1.01, 1.18]
+lq_avg_wkly_wage_81_other_services_except_public_administration: FLOAT | Average weekly wage location quotient for Other services, except public administration establishments | eg=[0.97, 1.06]
+lq_avg_wkly_wage_99_unclassified: FLOAT | Average weekly wage location quotient for Unclassified establishments
+lq_month3_emplvl_1011_natural_resources_and_mining: FLOAT | Employment level location quotient in Natural resources and mining establishments | eg=[3.09, 3.92]
+lq_month3_emplvl_1012_construction: FLOAT | Employment level location quotient in Construction establishments | eg=[0.45, 0.8]
+lq_month3_emplvl_1013_manufacturing: FLOAT | Employment level location quotient in Manufacturing establishments | eg=[1.7, 1.2]
+lq_month3_emplvl_1021_trade_transportation_and_utilities: FLOAT | Employment level location quotient in Trade, transportation, and utilities establishments | eg=[0.94, 0.99]
+lq_month3_emplvl_1022_information: FLOAT | Employment level location quotient in Information establishments | eg=[0.28, 0.43]
+lq_month3_emplvl_1023_financial_activities: FLOAT | Employment level location quotient in Financial activities establishments | eg=[0.59, 0.72]
+lq_month3_emplvl_1024_professional_and_business_services: FLOAT | Employment level location quotient in Professional and business services establishments | eg=[0.24, 0.41]
+lq_month3_emplvl_1025_education_and_health_services: FLOAT | Employment level location quotient in Education and health services establishments | eg=[0.87, 1.05]
+lq_month3_emplvl_1026_leisure_and_hospitality: FLOAT | Employment level location quotient in Leisure and hospitality establishments | eg=[0.57, 0.56]
+lq_month3_emplvl_1027_other_services: FLOAT | Employment level location quotient in Other services establishments | eg=[0.65, 1.0]
+lq_month3_emplvl_1029_unclassified: FLOAT | Employment level location quotient in Unclassified establishments
+lq_month3_emplvl_10_total_all_industries: FLOAT | Employment level location quotient in Total, all industries establishments | eg=[0.9, 0.92]
+lq_month3_emplvl_11_agriculture_forestry_fishing_and_hunting: FLOAT | Employment level location quotient in Agriculture, forestry, fishing and hunting establishments | eg=[4.85, 0.89]
+lq_month3_emplvl_21_mining_quarrying_and_oil_and_gas_extraction: FLOAT | Employment level location quotient in Mining, quarrying, and oil and gas extraction establishments | eg=[NaN, 9.23]
+lq_month3_emplvl_22_utilities: FLOAT | Employment level location quotient in Utilities establishments | eg=[0.45, 0.53]
+lq_month3_emplvl_23_construction: FLOAT | Employment level location quotient in Construction establishments | eg=[0.45, 0.8]
+lq_month3_emplvl_31_33_manufacturing: FLOAT | Employment level location quotient in Manufacturing establishments | eg=[1.7, 1.2]
+lq_month3_emplvl_42_wholesale_trade: FLOAT | Employment level location quotient in Wholesale trade establishments | eg=[1.13, 1.1]
+lq_month3_emplvl_44_45_retail_trade: FLOAT | Employment level location quotient in Retail trade establishments | eg=[0.97, 1.13]
+lq_month3_emplvl_48_49_transportation_and_warehousing: FLOAT | Employment level location quotient in Transportation and warehousing establishments | eg=[0.63, 1.01]
+lq_month3_emplvl_51_information: FLOAT | Employment level location quotient in Information establishments | eg=[0.28, 0.43]
+lq_month3_emplvl_52_finance_and_insurance: FLOAT | Employment level location quotient in Finance and insurance establishments | eg=[0.68, 0.75]
+lq_month3_emplvl_53_real_estate_and_rental_and_leasing: FLOAT | Employment level location quotient in Real estate and rental and leasing establishments | eg=[0.32, 0.62]
+lq_month3_emplvl_54_professional_and_technical_services: FLOAT | Employment level location quotient in Professional and technical services establishments | eg=[0.24, 0.26]
+lq_month3_emplvl_55_management_of_companies_and_enterprises: FLOAT | Employment level location quotient in Management of companies and enterprises establishments | eg=[NaN, 0.0]
+lq_month3_emplvl_56_administrative_and_waste_services: FLOAT | Employment level location quotient in Administrative and waste services establishments | eg=[0.3, 0.43]
+lq_month3_emplvl_61_educational_services: FLOAT | Employment level location quotient in Educational services establishments
+lq_month3_emplvl_62_health_care_and_social_assistance: FLOAT | Employment level location quotient in Health care and social assistance establishments
+lq_month3_emplvl_71_arts_entertainment_and_recreation: FLOAT | Employment level location quotient in Arts, entertainment, and recreation establishments | eg=[0.22, 0.29]
+lq_month3_emplvl_72_accommodation_and_food_services: FLOAT | Employment level location quotient in Accommodation and food services establishments | eg=[0.62, 0.75]
+lq_month3_emplvl_81_other_services_except_public_administration: FLOAT | Employment level location quotient in Other services, except public administration establishments | eg=[0.65, 1.0]
+lq_month3_emplvl_99_unclassified: FLOAT | Employment level location quotient in Unclassified establishments
+lq_qtrly_estabs_1011_natural_resources_and_mining: FLOAT | Location quotient of establishments in Natural resources and mining | eg=[5.58, 2.52]
+lq_qtrly_estabs_1012_construction: FLOAT | Location quotient of establishments in Construction | eg=[0.61, 0.65]
+lq_qtrly_estabs_1013_manufacturing: FLOAT | Location quotient of establishments in Manufacturing | eg=[0.61, 0.9]
+lq_qtrly_estabs_1021_trade_transportation_and_utilities: FLOAT | Location quotient of establishments in Trade, transportation, and utilities | eg=[1.07, 1.13]
+lq_qtrly_estabs_1022_information: FLOAT | Location quotient of establishments in Information | eg=[0.84, 0.9]
+lq_qtrly_estabs_1023_financial_activities: FLOAT | Location quotient of establishments in Financial activities | eg=[1.17, 0.93]
+lq_qtrly_estabs_1024_professional_and_business_services: FLOAT | Location quotient of establishments in Professional and business services | eg=[0.47, 0.58]
+lq_qtrly_estabs_1025_education_and_health_services: FLOAT | Location quotient of establishments in Education and health services | eg=[0.59, 0.92]
+lq_qtrly_estabs_1026_leisure_and_hospitality: FLOAT | Location quotient of establishments in Leisure and hospitality | eg=[0.8, 0.75]
+lq_qtrly_estabs_1027_other_services: FLOAT | Location quotient of establishments in Other services | eg=[1.12, 1.0]
+lq_qtrly_estabs_1029_unclassified: FLOAT | Location quotient of establishments in Unclassified
+lq_qtrly_estabs_10_total_all_industries: FLOAT | Location quotient of establishments in Total, all industries | eg=[0.94, 0.93]
+lq_qtrly_estabs_11_agriculture_forestry_fishing_and_hunting: FLOAT | Location quotient of establishments in Agriculture, forestry, fishing and hunting | eg=[7.14, 1.21]
+lq_qtrly_estabs_21_mining_quarrying_and_oil_and_gas_extraction: FLOAT | Location quotient of establishments in Mining, quarrying, and oil and gas extraction | eg=[NaN, 7.18]
+lq_qtrly_estabs_22_utilities: FLOAT | Location quotient of establishments in Utilities | eg=[3.33, 3.28]
+lq_qtrly_estabs_23_construction: FLOAT | Location quotient of establishments in Construction | eg=[0.61, 0.65]
+lq_qtrly_estabs_31_33_manufacturing: FLOAT | Location quotient of establishments in Manufacturing | eg=[0.61, 0.9]
+lq_qtrly_estabs_42_wholesale_trade: FLOAT | Location quotient of establishments in Wholesale trade | eg=[0.5, 0.78]
+lq_qtrly_estabs_44_45_retail_trade: FLOAT | Location quotient of establishments in Retail trade | eg=[1.29, 1.22]
+lq_qtrly_estabs_48_49_transportation_and_warehousing: FLOAT | Location quotient of establishments in Transportation and warehousing | eg=[1.28, 1.47]
+lq_qtrly_estabs_51_information: FLOAT | Location quotient of establishments in Information | eg=[0.84, 0.9]
+lq_qtrly_estabs_52_finance_and_insurance: FLOAT | Location quotient of establishments in Finance and insurance | eg=[1.31, 1.19]
+lq_qtrly_estabs_53_real_estate_and_rental_and_leasing: FLOAT | Location quotient of establishments in Real estate and rental and leasing | eg=[1.01, 0.63]
+lq_qtrly_estabs_54_professional_and_technical_services: FLOAT | Location quotient of establishments in Professional and technical services | eg=[0.53, 0.56]
+lq_qtrly_estabs_55_management_of_companies_and_enterprises: FLOAT | Location quotient of establishments in Management of companies and enterprises | eg=[NaN, 0.0]
+lq_qtrly_estabs_56_administrative_and_waste_services: FLOAT | Location quotient of establishments in Administrative and waste services | eg=[0.37, 0.58]
+lq_qtrly_estabs_61_educational_services: FLOAT | Location quotient of establishments in Educational services
+lq_qtrly_estabs_62_health_care_and_social_assistance: FLOAT | Location quotient of establishments in Health care and social assistance
+lq_qtrly_estabs_71_arts_entertainment_and_recreation: FLOAT | Location quotient of establishments in Arts, entertainment, and recreation | eg=[1.17, 0.61]
+lq_qtrly_estabs_72_accommodation_and_food_services: FLOAT | Location quotient of establishments in Accommodation and food services | eg=[0.73, 0.77]
+lq_qtrly_estabs_81_other_services_except_public_administration: FLOAT | Location quotient of establishments in Other services, except public administration | eg=[1.12, 1.0]
+lq_qtrly_estabs_99_unclassified: FLOAT | Location quotient of establishments in Unclassified
+month3_emplvl_1011_natural_resources_and_mining: FLOAT | Employees in Natural resources and mining establishments | eg=[587.0, 724.0]
+month3_emplvl_1012_construction: FLOAT | Employees in Construction establishments | eg=[257.0, 438.0]
+month3_emplvl_1013_manufacturing: FLOAT | Employees in Manufacturing establishments | eg=[3397.0, 2330.0]
+month3_emplvl_1021_trade_transportation_and_utilities: FLOAT | Employees in Trade, transportation, and utilities establishments | eg=[2565.0, 2633.0]
+month3_emplvl_1022_information: FLOAT | Employees in Information establishments | eg=[91.0, 137.0]
+month3_emplvl_1023_financial_activities: FLOAT | Employees in Financial activities establishments | eg=[471.0, 560.0]
+month3_emplvl_1024_professional_and_business_services: FLOAT | Employees in Professional and business services establishments | eg=[335.0, 554.0]
+month3_emplvl_1025_education_and_health_services: FLOAT | Employees in Education and health services establishments | eg=[1259.0, 1473.0]
+month3_emplvl_1026_leisure_and_hospitality: FLOAT | Employees in Leisure and hospitality establishments | eg=[656.0, 632.0]
+month3_emplvl_1027_other_services: FLOAT | Employees in Other services establishments | eg=[277.0, 411.0]
+month3_emplvl_1029_unclassified: FLOAT | Employees in Unclassified establishments
+month3_emplvl_10_total_all_industries: FLOAT | Employees in Total, all industries establishments | eg=[9895.0, 9892.0]
+month3_emplvl_11_agriculture_forestry_fishing_and_hunting: FLOAT | Employees in Agriculture, forestry, fishing and hunting establishments | eg=[587.0, 105.0]
+month3_emplvl_21_mining_quarrying_and_oil_and_gas_extraction: FLOAT | Employees in Mining, quarrying, and oil and gas extraction establishments | eg=[NaN, 619.0]
+month3_emplvl_22_utilities: FLOAT | Employees in Utilities establishments | eg=[38.0, 43.0]
+month3_emplvl_23_construction: FLOAT | Employees in Construction establishments | eg=[257.0, 438.0]
+month3_emplvl_31_33_manufacturing: FLOAT | Employees in Manufacturing establishments | eg=[3397.0, 2330.0]
+month3_emplvl_42_wholesale_trade: FLOAT | Employees in Wholesale trade establishments | eg=[670.0, 630.0]
+month3_emplvl_44_45_retail_trade: FLOAT | Employees in Retail trade establishments | eg=[1600.0, 1559.0]
+month3_emplvl_48_49_transportation_and_warehousing: FLOAT | Employees in Transportation and warehousing establishments | eg=[257.0, 401.0]
+month3_emplvl_51_information: FLOAT | Employees in Information establishments | eg=[91.0, 137.0]
+month3_emplvl_52_finance_and_insurance: FLOAT | Employees in Finance and insurance establishments | eg=[404.0, 434.0]
+month3_emplvl_53_real_estate_and_rental_and_leasing: FLOAT | Employees in Real estate and rental and leasing establishments | eg=[67.0, 126.0]
+month3_emplvl_54_professional_and_technical_services: FLOAT | Employees in Professional and technical services establishments | eg=[146.0, 152.0]
+month3_emplvl_55_management_of_companies_and_enterprises: FLOAT | Employees in Management of companies and enterprises establishments | eg=[NaN, 0.0]
+month3_emplvl_56_administrative_and_waste_services: FLOAT | Employees in Administrative and waste services establishments | eg=[187.0, 258.0]
+month3_emplvl_61_educational_services: FLOAT | Employees in Educational services establishments
+month3_emplvl_62_health_care_and_social_assistance: FLOAT | Employees in Health care and social assistance establishments
+month3_emplvl_71_arts_entertainment_and_recreation: FLOAT | Employees in Arts, entertainment, and recreation establishments | eg=[36.0, 34.0]
+month3_emplvl_72_accommodation_and_food_services: FLOAT | Employees in Accommodation and food services establishments | eg=[620.0, 598.0]
+month3_emplvl_81_other_services_except_public_administration: FLOAT | Employees in Other services, except public administration establishments | eg=[277.0, 411.0]
+month3_emplvl_99_unclassified: FLOAT | Employees in Unclassified establishments
+qtrly_estabs_1011_natural_resources_and_mining: FLOAT | Establishments in Natural resources and mining | eg=[90.0, 48.0]
+qtrly_estabs_1012_construction: FLOAT | Establishments in Construction | eg=[50.0, 63.0]
+qtrly_estabs_1013_manufacturing: FLOAT | Establishments in Manufacturing | eg=[30.0, 53.0]
+qtrly_estabs_1021_trade_transportation_and_utilities: FLOAT | Establishments in Trade, transportation, and utilities | eg=[234.0, 292.0]
+qtrly_estabs_1022_information: FLOAT | Establishments in Information | eg=[11.0, 14.0]
+qtrly_estabs_1023_financial_activities: FLOAT | Establishments in Financial activities | eg=[88.0, 83.0]
+qtrly_estabs_1024_professional_and_business_services: FLOAT | Establishments in Professional and business services | eg=[54.0, 78.0]
+qtrly_estabs_1025_education_and_health_services: FLOAT | Establishments in Education and health services | eg=[44.0, 81.0]
+qtrly_estabs_1026_leisure_and_hospitality: FLOAT | Establishments in Leisure and hospitality | eg=[56.0, 62.0]
+qtrly_estabs_1027_other_services: FLOAT | Establishments in Other services | eg=[113.0, 120.0]
+qtrly_estabs_1029_unclassified: FLOAT | Establishments in Unclassified
+qtrly_estabs_10_total_all_industries: FLOAT | Establishments in Total, all industries | eg=[770.0, 894.0]
+qtrly_estabs_11_agriculture_forestry_fishing_and_hunting: FLOAT | Establishments in Agriculture, forestry, fishing and hunting | eg=[90.0, 18.0]
+qtrly_estabs_21_mining_quarrying_and_oil_and_gas_extraction: FLOAT | Establishments in Mining, quarrying, and oil and gas extraction | eg=[NaN, 30.0]
+qtrly_estabs_22_utilities: FLOAT | Establishments in Utilities | eg=[6.0, 7.0]
+qtrly_estabs_23_construction: FLOAT | Establishments in Construction | eg=[50.0, 63.0]
+qtrly_estabs_31_33_manufacturing: FLOAT | Establishments in Manufacturing | eg=[30.0, 53.0]
+qtrly_estabs_42_wholesale_trade: FLOAT | Establishments in Wholesale trade | eg=[32.0, 59.0]
+qtrly_estabs_44_45_retail_trade: FLOAT | Establishments in Retail trade | eg=[168.0, 188.0]
+qtrly_estabs_48_49_transportation_and_warehousing: FLOAT | Establishments in Transportation and warehousing | eg=[28.0, 38.0]
+qtrly_estabs_51_information: FLOAT | Establishments in Information | eg=[11.0, 14.0]
+qtrly_estabs_52_finance_and_insurance: FLOAT | Establishments in Finance and insurance | eg=[53.0, 57.0]
+qtrly_estabs_53_real_estate_and_rental_and_leasing: FLOAT | Establishments in Real estate and rental and leasing | eg=[35.0, 26.0]
+qtrly_estabs_54_professional_and_technical_services: FLOAT | Establishments in Professional and technical services | eg=[39.0, 48.0]
+qtrly_estabs_55_management_of_companies_and_enterprises: FLOAT | Establishments in Management of companies and enterprises | eg=[NaN, 0.0]
+qtrly_estabs_56_administrative_and_waste_services: FLOAT | Establishments in Administrative and waste services | eg=[14.0, 26.0]
+qtrly_estabs_61_educational_services: FLOAT | Establishments in Educational services
+qtrly_estabs_62_health_care_and_social_assistance: FLOAT | Establishments in Health care and social assistance
+qtrly_estabs_71_arts_entertainment_and_recreation: FLOAT | Establishments in Arts, entertainment, and recreation | eg=[13.0, 8.0]
+qtrly_estabs_72_accommodation_and_food_services: FLOAT | Establishments in Accommodation and food services | eg=[43.0, 54.0]
+qtrly_estabs_81_other_services_except_public_administration: FLOAT | Establishments in Other services, except public administration | eg=[113.0, 120.0]
+qtrly_estabs_99_unclassified: FLOAT | Establishments in Unclassified
+
+@C2
+race_black: FLOAT | The percentage of Googlers in the U.S. who identify as Black and zero or more other races | eg=[0.015, 0.024]
+race_hispanic_latinx: FLOAT | The percentage of Googlers in the U.S. who identify as Hispanic or Latinx and zero or more other races | eg=[0.022, 0.016]
+race_native_american: FLOAT | The percentage of Googlers in the U.S. who identify as Native American and zero or more other races | eg=[0.002, 0.003]
+race_white: FLOAT | The percentage of Googlers in the U.S. who identify as White and zero or more other races | eg=[0.491, 0.189]
+
+@C3
+report_year: NUMBER | The year the report was published | eg=[2024, 2023]
+workforce: TEXT | Overall and sub-categories | eg=["non_tech"]
+
+@C4
+date: DATE | NULL | eg=["2008-12-31", "2009-01-01"]
+period: TEXT | NULL | eg=["M13", "M01"]
+value: FLOAT | NULL | eg=[214.318, 212.826]
+
+@C5
+begin_period: TEXT | NULL | eg=["M01", "M03"]
+begin_year: NUMBER | NULL | eg=[1939, 1964]
+end_period: TEXT | NULL | eg=["M12"]
+end_year: NUMBER | NULL | eg=[2021]
+seasonal: TEXT | NULL | eg=["S"]
+
+@C6
+footnote_codes: TEXT | NULL | eg=["nan"]
+series_id: TEXT | NULL | eg=["CES0000000001", "CES0000000010"]
+
+@C7
+gender_global_men: FLOAT | The percentage of global Googlers hired who are men | eg=[0.739, 0.741]
+gender_global_women: FLOAT | The percentage of global Googlers hired who are women | eg=[0.261, 0.259]
+gender_us_men: FLOAT | The percentage of Googlers hired in the U.S. who are men | eg=[0.754, 0.74]
+gender_us_women: FLOAT | The percentage of Googlers hired in the U.S. who are women | eg=[0.246, 0.26]
+
+@C8
+area_code: TEXT | NULL | eg=["S35C"]
+area_name: TEXT | NULL | eg=["Atlanta-Sandy Springs-Roswell, GA"]
+item_code: TEXT | NULL | eg=["SEHC"]
+item_name: TEXT | NULL | eg=["Owners' equivalent rent of residences"]
+seasonal_code: TEXT | NULL | eg=["U"]
+survey_abbreviation: TEXT | NULL | eg=["CU"]
+
+@C9
+race_asian: NUMBER | The attrition index score of Googlers in the U.S. who identify as Asian and zero or more other races | eg=[88, 108]
+race_black: NUMBER | The attrition index score of Googlers in the U.S. who identify as Black and zero or more other races | eg=[68, 122]
+race_hispanic_latinx: NUMBER | The attrition index score of Googlers in the U.S. who identify as Hispanic or Latinx and zero or more other races | eg=[78, 115]
+race_native_american: NUMBER | The attrition index score of Googlers in the U.S. who identify as Native American and zero or more other races | eg=[124, 140]
+race_white: NUMBER | The attrition index score of Googlers in the U.S. who identify as White and zero or more other races | eg=[96, 106]
+
+@C10
+gender_men: FLOAT | The percentage of Googler exits in the region who are men | eg=[0.509, 0.514]
+gender_women: FLOAT | The percentage of Googler exits in the region who are women | eg=[0.491, 0.486]
+
+[TABLES]
+## BLS_QCEW._1993_Q4
+@use: [C1]
+
+## BLS_QCEW._1998_Q3
+@use: [C1]
+
+## BLS_QCEW._1997_Q2
+@use: [C1]
+
+## BLS_QCEW._2016_Q3
+@use: [C1]
+
+## BLS_QCEW._2015_Q2
+@use: [C1]
+
+## BLS_QCEW._2010_Q2
+@use: [C1]
+
+## BLS_QCEW._2004_Q2
+@use: [C1]
+
+## BLS_QCEW._2010_Q1
+@use: [C1]
+
+## BLS_QCEW._2008_Q1
+@use: [C1]
+
+## BLS_QCEW._1992_Q2
+@use: [C1]
+
+## BLS_QCEW._1995_Q2
+@use: [C1]
+
+## BLS_QCEW._1993_Q2
+@use: [C1]
+
+## BLS_QCEW._2005_Q2
+@use: [C1]
+
+## BLS_QCEW._2000_Q1
+@use: [C1]
+
+## BLS_QCEW._2001_Q1
+@use: [C1]
+
+## BLS_QCEW._1997_Q1
+@use: [C1]
+
+## BLS_QCEW._1996_Q4
+@use: [C1]
+
+## BLS_QCEW._2012_Q3
+@use: [C1]
+
+## BLS_QCEW._2000_Q3
+@use: [C1]
+
+## BLS_QCEW._1990_Q1
+@use: [C1]
+
+## BLS_QCEW._2003_Q2
+@use: [C1]
+
+## BLS_QCEW._2017_Q3
+@use: [C1]
+
+## BLS_QCEW._1994_Q1
+@use: [C1]
+
+## BLS_QCEW._2018_Q2
+@use: [C1]
+
+## BLS_QCEW._2019_Q1
+@use: [C1]
+
+## BLS_QCEW._2009_Q3
+@use: [C1]
+
+## BLS_QCEW._2006_Q3
+@use: [C1]
+
+## BLS_QCEW._1991_Q3
+@use: [C1]
+
+## BLS_QCEW._2002_Q2
+@use: [C1]
+
+## BLS_QCEW._2006_Q1
+@use: [C1]
+
+## BLS_QCEW._1990_Q3
+@use: [C1]
+
+## BLS_QCEW._1990_Q2
+@use: [C1]
+
+## BLS_QCEW._1994_Q2
+@use: [C1]
+
+## BLS_QCEW._2012_Q2
+@use: [C1]
+
+## BLS_QCEW._1992_Q4
+@use: [C1]
+
+## BLS_QCEW._2005_Q4
+@use: [C1]
+
+## BLS_QCEW._2009_Q2
+@use: [C1]
+
+## BLS_QCEW._2009_Q1
+@use: [C1]
+
+## BLS_QCEW._1999_Q2
+@use: [C1]
+
+## BLS_QCEW._2011_Q1
+@use: [C1]
+
+## BLS_QCEW._1995_Q1
+@use: [C1]
+
+## BLS_QCEW._2012_Q4
+@use: [C1]
+
+## BLS_QCEW._1998_Q1
+@use: [C1]
+
+## BLS_QCEW._2004_Q3
+@use: [C1]
+
+## BLS_QCEW._2004_Q4
+@use: [C1]
+
+## BLS_QCEW._1991_Q4
+@use: [C1]
+
+## BLS_QCEW._1992_Q3
+@use: [C1]
+
+## BLS_QCEW._2001_Q2
+@use: [C1]
+
+## BLS_QCEW._1997_Q3
+@use: [C1]
+
+## BLS_QCEW._2015_Q3
+@use: [C1]
+
+## BLS_QCEW._2014_Q4
+@use: [C1]
+
+## BLS_QCEW._2015_Q1
+@use: [C1]
+
+## BLS_QCEW._2018_Q3
+@use: [C1]
+
+## BLS_QCEW._2017_Q1
+@use: [C1]
+
+## BLS_QCEW._2008_Q4
+@use: [C1]
+
+## BLS_QCEW._1995_Q4
+@use: [C1]
+
+## BLS_QCEW._2010_Q4
+@use: [C1]
+
+## BLS_QCEW._2016_Q4
+@use: [C1]
+
+## BLS_QCEW._2000_Q2
+@use: [C1]
+
+## BLS_QCEW._1991_Q1
+@use: [C1]
+
+## BLS_QCEW._2007_Q4
+@use: [C1]
+
+## BLS_QCEW._2002_Q4
+@use: [C1]
+
+## BLS_QCEW._1997_Q4
+@use: [C1]
+
+## BLS_QCEW._2013_Q1
+@use: [C1]
+
+## BLS_QCEW._1994_Q3
+@use: [C1]
+
+## BLS_QCEW._2003_Q1
+@use: [C1]
+
+## BLS_QCEW._2003_Q3
+@use: [C1]
+
+## BLS_QCEW._2005_Q1
+@use: [C1]
+
+## BLS_QCEW._1999_Q3
+@use: [C1]
+
+## BLS_QCEW._1993_Q3
+@use: [C1]
+
+## BLS_QCEW._2002_Q1
+@use: [C1]
+
+## BLS_QCEW._1996_Q2
+@use: [C1]
+
+## BLS_QCEW._2016_Q2
+@use: [C1]
+
+## BLS_QCEW._1992_Q1
+@use: [C1]
+
+## BLS_QCEW._2018_Q4
+@use: [C1]
+
+## BLS_QCEW._2007_Q1
+@use: [C1]
+
+## BLS_QCEW._2006_Q4
+@use: [C1]
+
+## BLS_QCEW._2009_Q4
+@use: [C1]
+
+## BLS_QCEW._2019_Q2
+@use: [C1]
+
+## BLS_QCEW._2001_Q4
+@use: [C1]
+
+## BLS_QCEW._2006_Q2
+@use: [C1]
+
+## BLS_QCEW._2003_Q4
+@use: [C1]
+
+## BLS_QCEW._1995_Q3
+@use: [C1]
+
+## BLS_QCEW._2011_Q2
+@use: [C1]
+
+## BLS_QCEW._1994_Q4
+@use: [C1]
+
+## BLS_QCEW._2004_Q1
+@use: [C1]
+
+## BLS_QCEW._1998_Q2
+@use: [C1]
+
+## BLS_QCEW._2013_Q4
+@use: [C1]
+
+## BLS_QCEW._2017_Q2
+@use: [C1]
+
+## BLS_QCEW._2011_Q3
+@use: [C1]
+
+## BLS_QCEW._2012_Q1
+@use: [C1]
+
+## BLS_QCEW._2010_Q3
+@use: [C1]
+
+## BLS_QCEW._2001_Q3
+@use: [C1]
+
+## BLS_QCEW._2008_Q3
+@use: [C1]
+
+## BLS_QCEW._1999_Q4
+@use: [C1]
+
+## BLS_QCEW._1996_Q3
+@use: [C1]
+
+## BLS_QCEW._1996_Q1
+@use: [C1]
+
+## BLS_QCEW._2007_Q3
+@use: [C1]
+
+## BLS_QCEW._2014_Q2
+@use: [C1]
+
+## BLS_QCEW._2002_Q3
+@use: [C1]
+
+## BLS_QCEW._2016_Q1
+@use: [C1]
+
+## BLS_QCEW._2017_Q4
+@use: [C1]
+
+## BLS_QCEW._2007_Q2
+@use: [C1]
+
+## BLS_QCEW._2014_Q3
+@use: [C1]
+
+## BLS_QCEW._2018_Q1
+@use: [C1]
+
+## BLS_QCEW._2015_Q4
+@use: [C1]
+
+## BLS_QCEW._2014_Q1
+@use: [C1]
+
+## BLS_QCEW._1999_Q1
+@use: [C1]
+
+## BLS_QCEW._2011_Q4
+@use: [C1]
+
+## BLS_QCEW._1990_Q4
+@use: [C1]
+
+## BLS_QCEW._1991_Q2
+@use: [C1]
+
+## BLS_QCEW._2013_Q2
+@use: [C1]
+
+## BLS_QCEW._2013_Q3
+@use: [C1]
+
+## BLS_QCEW._1998_Q4
+@use: [C1]
+
+## BLS_QCEW._2008_Q2
+@use: [C1]
+
+## BLS_QCEW._2005_Q3
+@use: [C1]
+
+## BLS_QCEW._2000_Q4
+@use: [C1]
+
+## BLS_QCEW._1993_Q1
+@use: [C1]
+
+## BLS.EMPLOYMENT_HOURS_EARNINGS_SERIES
+@use: [C5, C6]
+industry_code: NUMBER | NULL | eg=[0, 5000000]
+series_title: TEXT | NULL | eg=["All employees, thousands, total nonfarm, seasonally adjusted", "Women employees, thousands, total nonfarm, seasonally adjusted"]
+supersector_code: NUMBER | NULL | eg=[0, 5]
+data_type_code: NUMBER | NULL | eg=[1, 10]
+
+## BLS.CPI_U
+@use: [C4, C6, C8]
+periodicity_code: TEXT | NULL | eg=["R"]
+year: NUMBER | NULL | eg=[2008, 2009]
+
+## BLS.UNEMPLOYMENT_CPS
+@use: [C4, C6]
+year: NUMBER | NULL | eg=[1943, 1946]
+series_title: TEXT | NULL | eg=["(unadj) Population - 14 years and over", "(Unadj) Labor force participation rate - 14 years and over"]
+
+## BLS.CPSAAT18
+year: NUMBER | NULL | eg=[2020]
+percent_black_or_african_american: FLOAT | NULL | eg=[0.03, 0.02]
+total_employed_in_thousands: NUMBER | NULL | eg=[2349, 1186]
+percent_hispanic_or_latino: FLOAT | NULL | eg=[0.24, 0.3]
+percent_asian: FLOAT | NULL | eg=[0.01, 0.02]
+sector: TEXT | NULL | eg=["Agriculture, forestry, fishing, and hunting"]
+percent_white: FLOAT | NULL | eg=[0.92, 0.93]
+subsector: TEXT | NULL | eg=["Crop production", "Animal production and aquaculture"]
+percent_women: FLOAT | NULL | eg=[0.28, 0.29]
+industry_group: TEXT | NULL
+industry: TEXT | NULL
+
+## BLS.WM
+@use: [C4, C6]
+series_title: TEXT | NULL | eg=["Average hourly wage for waiters and waitresses, in Wisconsin, Level 01", "Average hourly wage for waiters and waitresses, in Tennessee, Level 01"]
+year: NUMBER | NULL | eg=[2020]
+
+## BLS.WM_SERIES
+@use: [C5, C6]
+industry_code: NUMBER | NULL | eg=[0]
+area_code: NUMBER | NULL | eg=[3000006]
+series_title: TEXT | NULL | eg=["Average hourly wage for union cashiers in East-Central Montana nonmetropolitan area", "Average hourly wage for union office and administrative support occupations in East-Central Montana nonmetropolitan area"]
+subcell_code: NUMBER | NULL | eg=[23]
+datatype_code: NUMBER | NULL | eg=[30]
+level_code: NUMBER | NULL | eg=[0]
+estimate_code: NUMBER | NULL | eg=[2]
+ownership_code: NUMBER | NULL | eg=[1]
+occupation_code: NUMBER | NULL | eg=[412011, 430000]
+
+## BLS.UNEMPLOYMENT_CPS_SERIES
+@use: [C5, C6]
+disa_code: NUMBER | NULL | eg=[0]
+expr_code: NUMBER | NULL | eg=[0]
+entr_code: NUMBER | NULL | eg=[0]
+cert_code: NUMBER | NULL | eg=[0]
+education_code: NUMBER | NULL | eg=[0]
+vets_code: NUMBER | NULL | eg=[0]
+activity_code: NUMBER | NULL | eg=[0]
+absn_code: NUMBER | NULL | eg=[0]
+wkst_code: NUMBER | NULL | eg=[0]
+duration_code: NUMBER | NULL | eg=[0]
+rnlf_code: NUMBER | NULL | eg=[0]
+seek_code: NUMBER | NULL | eg=[0]
+occupation_code: NUMBER | NULL | eg=[0]
+indy_code: NUMBER | NULL | eg=[0]
+lfst_code: NUMBER | NULL | eg=[40]
+series_title: TEXT | NULL | eg=["(unadj) Unemployment rate - Other Central American (excludes Salvadoran), men", "(unadj) Unemployment rate - Other Central American (excludes Salvadoran), women"]
+pcts_code: NUMBER | NULL | eg=[0]
+chld_code: NUMBER | NULL | eg=[0]
+hheader_code: NUMBER | NULL | eg=[0]
+born_code: NUMBER | NULL | eg=[0]
+ages_code: NUMBER | NULL | eg=[0]
+tdat_code: NUMBER | NULL | eg=[1]
+periodicity_code: TEXT | NULL | eg=["A"]
+class_code: NUMBER | NULL | eg=[0]
+sexs_code: NUMBER | NULL | eg=[1, 2]
+rwns_code: NUMBER | NULL | eg=[0]
+look_code: NUMBER | NULL | eg=[0]
+race_code: NUMBER | NULL | eg=[0]
+hour_code: NUMBER | NULL | eg=[0]
+mari_code: NUMBER | NULL | eg=[0]
+jdes_code: NUMBER | NULL | eg=[0]
+orig_code: NUMBER | NULL | eg=[25, 30]
+mjhs_code: NUMBER | NULL | eg=[0]
+rjnw_code: NUMBER | NULL | eg=[0]
+
+## BLS.EMPLOYMENT_HOURS_EARNINGS
+@use: [C4, C6]
+year: NUMBER | NULL | eg=[1940, 1941]
+series_title: TEXT | NULL | eg=["Aggregate weekly hours of production and nonsupervisory employees, thousands, nondurable goods, seasonally adjusted", "Production and nonsupervisory employees, thousands, nondurable goods, seasonally adjusted"]
+
+## BLS.C_CPI_U
+@use: [C4, C6, C8]
+periodicity_code: TEXT | NULL | eg=["R"]
+year: NUMBER | NULL | eg=[1999, 2000]
+
+## GOOGLE_DEI.DAR_REGION_NON_INTERSECTIONAL_EXITS_REPRESENTATION
+@use: [C10, C3]
+region: TEXT | Region | eg=["AMERICAS (non-US)", "APAC"]
+
+## GOOGLE_DEI.DAR_INTERSECTIONAL_REPRESENTATION
+@use: [C2, C3]
+gender_us: TEXT | Gender | eg=["men", "women"]
+race_asian: FLOAT | The percentage of Googlers in the U.S. who identify as Asian and zero or more other races | eg=[0.211, 0.106]
+
+## GOOGLE_DEI.DAR_REGION_NON_INTERSECTIONAL_REPRESENTATION
+@use: [C10, C3]
+region: TEXT | Region | eg=["EMEA", "APAC"]
+race_black_african: FLOAT | The percentage of Googlers in the region who identify as Black or African and zero or more other races
+race_hispanic_latino_latinx: FLOAT | The percentage of Googlers in the region who identify as Hispanic, Latino, or Latinx and zero or more other races
+race_mena: FLOAT | The percentage of Googlers in the region who identify as Middle Eastern or North African and zero or more other races
+race_white_european: FLOAT | The percentage of Googlers in the region who identify as White or European and zero or more other races
+race_asian: FLOAT | The percentage of Googlers in the region who identify as Asian and zero or more other racesion
+race_indigenous: FLOAT | The percentage of Googlers in the region who identify as Indigenous and zero or more other races
+
+## GOOGLE_DEI.DAR_SELFID_REPRESENTATION
+@use: [C3]
+global: FLOAT | The percentage of global Googlers who identify as being part of the self-identification category (i.e., “workforce” type) | eg=[0.061, 0.056]
+
+## GOOGLE_DEI.DAR_REGION_NON_INTERSECTIONAL_ATTRITION_INDEX
+@use: [C3]
+gender_men: NUMBER | The attrition index score of Googlers in the region who are women | eg=[111, 105]
+region: TEXT | Region | eg=["APAC", "EMEA"]
+gender_women: NUMBER | The attrition index score of Googlers in the region who are women | eg=[79, 87]
+
+## GOOGLE_DEI.DAR_INTERSECTIONAL_ATTRITION_INDEX
+@use: [C3, C9]
+gender_us: TEXT | Gender of Googler exits in the U.S. | eg=["women", "men"]
+
+## GOOGLE_DEI.DAR_INTERSECTIONAL_HIRING
+@use: [C2, C3]
+race_asian: FLOAT | The percentage of Googlers hired in the U.S. who identify as Asian and zero or more other races | eg=[0.168, 0.208]
+gender_us: TEXT | Gender of Googlers in the U.S. | eg=["men", "women"]
+
+## GOOGLE_DEI.DAR_NON_INTERSECTIONAL_ATTRITION_INDEX
+@use: [C3, C9]
+gender_global_women: NUMBER | The attrition index score of global Googlers who are women | eg=[78, 94]
+gender_global_men: NUMBER | The attrition index score of global Googlers who are men | eg=[107, 103]
+gender_us_men: NUMBER | The attrition index score of Googlers in the U.S. who are men | eg=[108, 105]
+gender_us_women: NUMBER | The attrition index score of Googlers in the U.S. who are women | eg=[76, 90]
+
+## GOOGLE_DEI.DAR_NON_INTERSECTIONAL_HIRING
+@use: [C2, C3, C7]
+race_asian: FLOAT | The percentage of Googlers hired in the U.S. who identify as Asian and zero or more other races | eg=[0.28, 0.327]
+
+## GOOGLE_DEI.DAR_INTERSECTIONAL_EXITS_REPRESENTATION
+@use: [C2, C3]
+race_asian: FLOAT | The percentage of Googler exits in the U.S. who identify as Asian and zero or more other races | eg=[0.12, 0.088]
+gender_us: TEXT | Gender of Googler exits in the U.S. | eg=["women", "men"]
+
+## GOOGLE_DEI.DAR_NON_INTERSECTIONAL_REPRESENTATION
+@use: [C2, C3, C7]
+race_asian: FLOAT | The percentage of Googlers in the U.S. who identify as Asian and zero or more other races | eg=[0.273, 0.323]
+
+## GOOGLE_DEI.DAR_REGION_NON_INTERSECTIONAL_HIRING
+@use: [C10, C3]
+region: TEXT | Region | eg=["AMERICAS (non-US)"]
+
+## GOOGLE_DEI.DAR_NON_INTERSECTIONAL_EXITS_REPRESENTATION
+@use: [C2, C3, C7]
+race_asian: FLOAT | The percentage of Googler exits in the U.S. who identify as Asian and zero or more other races | eg=[0.352, 0.358]

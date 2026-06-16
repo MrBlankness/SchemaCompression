@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq128",
+  "question": "Retrieve the following information for U.S. patents filed between January 1, 2014, and February 1, 2014. The patent title and abstract. The publication date of the patent. The number of backward citations for each patent (i.e., the number of patents cited by the current patent before its filing date). The number of forward citations for each patent within the first 5 years of its publication (i.e., the number of patents that cited the current patent within 5 years after its publication). For each patent, ensure the forward citations are counted only for citations within 5 years after the publication date, and backward citations are counted for citations before the filing date.",
+  "db_id": "PATENTSVIEW",
+  "source_document": "forward_backward_citation.md",
+  "evidence": "Focus: U.S. patents in chemistry, biology, medical fields. CPC subsections: C5 to C13. CPC groups: A01G, A01H, A61K, A61P, A61Q, B01F, B01J, B81B, B82B, B82Y, G01N, G16H. Key concepts: Backward citations = cited patent documents (earlier patents affecting claims). Forward citations = citing documents (later filings affected by cited document). User needs: Patents filed between 2014-01-01 and 2014-02-01. Output: patent title, abstract, publication date, count of backward citations (before filing date), count of forward citations (within 5 years after publication date)."
+}

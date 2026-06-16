@@ -1,0 +1,111 @@
+[TABLES]
+## MODERN_DATA.PIZZA_RECIPES
+toppings: TEXT | NULL
+pizza_id: NUMBER | NULL
+
+## MODERN_DATA.PIZZA_CUSTOMER_ORDERS
+order_id: NUMBER | NULL
+customer_id: NUMBER | NULL
+exclusions: TEXT | NULL
+pizza_id: NUMBER | NULL
+extras: TEXT | NULL
+order_time: TEXT | NULL
+
+## MODERN_DATA.PIZZA_RUNNER_ORDERS
+distance: TEXT | NULL
+runner_id: NUMBER | NULL
+pickup_time: TEXT | NULL
+order_id: NUMBER | NULL
+cancellation: TEXT | NULL
+duration: TEXT | NULL
+
+## MODERN_DATA.INCOME_TREES
+zipcode: NUMBER | NULL
+Margin_of_Error_Total: NUMBER | NULL
+Estimate_Mean_income: NUMBER | NULL
+Estimate_Total: NUMBER | NULL
+Estimate_Median_income: NUMBER | NULL
+Margin_of_Error_Mean_income: NUMBER | NULL
+Margin_of_Error_Median_income: NUMBER | NULL
+
+## MODERN_DATA.PIZZA_RUNNERS
+runner_id: NUMBER | NULL
+registration_date: TEXT | NULL
+
+## MODERN_DATA.TREES
+state: TEXT | NULL
+latitude: FLOAT | NULL
+tree_id: NUMBER | NULL
+status: TEXT | NULL
+spc_common: TEXT | NULL
+nta_name: TEXT | NULL
+zipcode: NUMBER | NULL
+stump_diam: NUMBER | NULL
+longitude: FLOAT | NULL
+borocode: NUMBER | NULL
+health: TEXT | NULL
+boroname: TEXT | NULL
+tree_dbh: NUMBER | NULL
+address: TEXT | NULL
+spc_latin: TEXT | NULL
+idx: NUMBER | NULL
+
+## MODERN_DATA.PIZZA_CLEAN_RUNNER_ORDERS
+pickup_time: TEXT | NULL
+duration: FLOAT | NULL
+distance: FLOAT | NULL
+runner_id: NUMBER | NULL
+cancellation: TEXT | NULL
+order_id: NUMBER | NULL
+
+## MODERN_DATA.COMPANIES_FUNDING
+company_id: NUMBER | NULL
+funding: NUMBER | NULL
+select_investors: TEXT | NULL
+valuation: NUMBER | NULL
+
+## MODERN_DATA.PIZZA_GET_EXCLUSIONS
+row_id: NUMBER | NULL
+total_exclusions: NUMBER | NULL
+exclusions: NUMBER | NULL
+order_id: NUMBER | NULL
+
+## MODERN_DATA.PIZZA_CLEAN_CUSTOMER_ORDERS
+customer_id: NUMBER | NULL
+exclusions: TEXT | NULL
+order_time: TEXT | NULL
+extras: TEXT | NULL
+pizza_id: NUMBER | NULL
+order_id: NUMBER | NULL
+
+## MODERN_DATA.WORD_LIST
+words: TEXT | NULL
+
+## MODERN_DATA.PIZZA_GET_EXTRAS
+row_id: NUMBER | NULL
+extras_count: NUMBER | NULL
+order_id: NUMBER | NULL
+extras: NUMBER | NULL
+
+## MODERN_DATA.COMPANIES_DATES
+year_founded: NUMBER | NULL
+date_joined: TEXT | NULL
+company_id: NUMBER | NULL
+
+## MODERN_DATA.PIZZA_NAMES
+pizza_id: NUMBER | NULL
+pizza_name: TEXT | NULL
+
+## MODERN_DATA.STATISTICS
+total_deaths: NUMBER | NULL
+date: TEXT | NULL
+state: TEXT | NULL
+total_cases: NUMBER | NULL
+
+## MODERN_DATA.PIZZA_TOPPINGS
+topping_name: TEXT | NULL
+topping_id: NUMBER | NULL
+
+## MODERN_DATA.COMPANIES_INDUSTRIES
+industry: TEXT | NULL
+company_id: NUMBER | NULL

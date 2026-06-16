@@ -1,0 +1,87 @@
+[TABLES]
+## THELOOK_ECOMMERCE.EVENTS
+sequence_number: NUMBER | NULL | eg=[3]
+state: TEXT | NULL | eg=["Iwate", "São Paulo"]
+city: TEXT | NULL | eg=["Morioka City", "São Paulo"]
+uri: TEXT | NULL | eg=["/cancel"]
+user_id: NUMBER | NULL
+traffic_source: TEXT | NULL | eg=["Email", "Adwords"]
+browser: TEXT | NULL | eg=["Firefox", "Chrome"]
+created_at: NUMBER | NULL | eg=[1576417200000000, 1612523820000000]
+id: NUMBER | NULL | eg=[2105244, 1820591]
+ip_address: TEXT | NULL | eg=["94.182.172.118", "88.133.113.172"]
+session_id: TEXT | NULL | eg=["6c0e961a-bfac-462c-bd39-a52426df7ce7", "004548b4-5bf8-457b-bb88-22b06f2d5ab5"]
+event_type: TEXT | NULL | eg=["cancel"]
+postal_code: TEXT | NULL | eg=["020-0866", "02220-000"]
+
+## THELOOK_ECOMMERCE.PRODUCTS
+sku: TEXT | NULL | eg=["EE364229B2791D1EF9355708EFF0BA34", "00BD13095D06C20B11A2993CA419D16B"]
+distribution_center_id: NUMBER | NULL | eg=[1]
+name: TEXT | NULL | eg=["Enzyme Regular Solid Army Caps-Black W35S45D", "Enzyme Regular Solid Army Caps-Olive W35S45D (One Size)"]
+category: TEXT | NULL | eg=["Accessories", "Plus"]
+cost: FLOAT | NULL | eg=[4.879559879379869, 4.648769887297898]
+id: NUMBER | NULL | eg=[14115, 14157]
+brand: TEXT | NULL | eg=["MG"]
+retail_price: FLOAT | NULL | eg=[10.989999771118164, 15.989999771118164]
+department: TEXT | NULL | eg=["Women", "Men"]
+
+## THELOOK_ECOMMERCE.DISTRIBUTION_CENTERS
+name: TEXT | NULL | eg=["Chicago IL", "Houston TX"]
+longitude: FLOAT | NULL | eg=[-87.6847, -95.3698]
+latitude: FLOAT | NULL | eg=[41.8369, 29.7604]
+id: NUMBER | NULL | eg=[2, 3]
+
+## THELOOK_ECOMMERCE.ORDERS
+gender: TEXT | NULL | eg=["F"]
+created_at: NUMBER | NULL | eg=[1584925080000000, 1703481840000000]
+user_id: NUMBER | NULL | eg=[52, 120]
+shipped_at: NUMBER | NULL
+returned_at: NUMBER | NULL
+num_of_item: NUMBER | NULL | eg=[2, 1]
+delivered_at: NUMBER | NULL
+order_id: NUMBER | NULL | eg=[45, 136]
+status: TEXT | NULL | eg=["Cancelled"]
+
+## THELOOK_ECOMMERCE.USERS
+longitude: FLOAT | NULL | eg=[-72.87094866, -71.55302951]
+age: NUMBER | NULL | eg=[63, 38]
+email: TEXT | NULL | eg=["breannaritter@example.net", "richardsmith@example.net"]
+country: TEXT | NULL | eg=["Brasil"]
+city: TEXT | NULL | eg=["null", "Tarauacá"]
+street_address: TEXT | NULL | eg=["046 Tracy Loaf", "5962 Smith Hills Apt. 774"]
+last_name: TEXT | NULL | eg=["Ritter", "Smith"]
+created_at: NUMBER | NULL | eg=[1680349680000000, 1712810340000000]
+id: NUMBER | NULL | eg=[11668, 81441]
+first_name: TEXT | NULL | eg=["Breanna", "Richard"]
+traffic_source: TEXT | NULL | eg=["Search", "Display"]
+latitude: FLOAT | NULL | eg=[-8.065346116, -8.325245103]
+postal_code: TEXT | NULL | eg=["69980-000", "69970-000"]
+gender: TEXT | NULL | eg=["F", "M"]
+state: TEXT | NULL | eg=["Acre"]
+
+## THELOOK_ECOMMERCE.INVENTORY_ITEMS
+product_sku: TEXT | NULL | eg=["2A3E953A5E3D81E67945BCE5519F84C8"]
+sold_at: NUMBER | NULL | eg=[1702053341000000.0, NaN]
+id: NUMBER | NULL | eg=[30266, 30267]
+product_department: TEXT | NULL | eg=["Women"]
+product_distribution_center_id: NUMBER | NULL | eg=[7]
+cost: FLOAT | NULL | eg=[2.768039897618853]
+product_name: TEXT | NULL | eg=["(ONE) 1 Satin Headband"]
+product_category: TEXT | NULL | eg=["Accessories"]
+product_retail_price: FLOAT | NULL | eg=[6.989999771118164]
+product_id: NUMBER | NULL | eg=[13844]
+product_brand: TEXT | NULL | eg=["Funny Girl Designs"]
+created_at: NUMBER | NULL | eg=[1697415641000000, 1701168720000000]
+
+## THELOOK_ECOMMERCE.ORDER_ITEMS
+id: NUMBER | NULL | eg=[21512, 117211]
+status: TEXT | NULL | eg=["Cancelled", "Complete"]
+product_id: NUMBER | NULL | eg=[14235, 14159]
+shipped_at: NUMBER | NULL | eg=[NaN, 1661118900000000.0]
+order_id: NUMBER | NULL | eg=[14805, 81114]
+sale_price: FLOAT | NULL | eg=[0.0199999995529651, 0.4900000095367431]
+inventory_item_id: NUMBER | NULL | eg=[58236, 316883]
+user_id: NUMBER | NULL | eg=[12024, 64965]
+delivered_at: NUMBER | NULL | eg=[NaN, 1661222940000000.0]
+created_at: NUMBER | NULL | eg=[1720493802000000, 1661055328000000]
+returned_at: NUMBER | NULL

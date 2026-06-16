@@ -1,0 +1,53 @@
+[COMPONENTS]
+[TABLES]
+## IMDB_MOVIES.ROLE_MAPPING
+category: TEXT | NULL
+name_id: TEXT | NULL
+movie_id: TEXT | NULL
+
+## IMDB_MOVIES.GENRE
+genre: TEXT | NULL
+movie_id: TEXT | NULL
+
+## IMDB_MOVIES.RATINGS
+movie_id: TEXT | NULL
+median_rating: FLOAT | NULL
+total_votes: NUMBER | NULL
+avg_rating: FLOAT | NULL
+
+## IMDB_MOVIES.ERD
+column: TEXT | NULL
+Unnamed: 2: TEXT | NULL
+Unnamed: 3: TEXT | NULL
+Unnamed: 8: TEXT | NULL
+Unnamed: 7: TEXT | NULL
+table: TEXT | NULL
+Unnamed: 12: TEXT | NULL
+Unnamed: 4: TEXT | NULL
+Unnamed: 11: TEXT | NULL
+Unnamed: 10: TEXT | NULL
+Unnamed: 5: TEXT | NULL
+Unnamed: 6: TEXT | NULL
+Unnamed: 9: TEXT | NULL
+
+## IMDB_MOVIES.MOVIES
+languages: TEXT | NULL
+id: TEXT | NULL
+date_published: TEXT | NULL
+worlwide_gross_income: TEXT | NULL
+production_company: TEXT | NULL
+duration: NUMBER | NULL
+year: NUMBER | NULL
+country: TEXT | NULL
+title: TEXT | NULL
+
+## IMDB_MOVIES.DIRECTOR_MAPPING
+name_id: TEXT | NULL
+movie_id: TEXT | NULL
+
+## IMDB_MOVIES.NAMES
+known_for_movies: TEXT | NULL
+height: FLOAT | NULL
+name: TEXT | NULL
+date_of_birth: TEXT | NULL
+id: TEXT | NULL

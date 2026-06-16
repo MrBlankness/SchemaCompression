@@ -1,0 +1,93 @@
+[COMPONENTS]
+[TABLES]
+## E_COMMERCE.PRODUCT_CATEGORY_NAME_TRANSLATION
+product_category_name: TEXT | NULL
+product_category_name_english: TEXT | NULL
+
+## E_COMMERCE.LEADS_QUALIFIED
+first_contact_date: TEXT | NULL
+origin: TEXT | NULL
+landing_page_id: TEXT | NULL
+mql_id: TEXT | NULL
+
+## E_COMMERCE.ORDER_REVIEWS
+review_comment_title: TEXT | NULL
+review_answer_timestamp: TEXT | NULL
+review_score: NUMBER | NULL
+order_id: TEXT | NULL
+review_id: TEXT | NULL
+review_creation_date: TEXT | NULL
+review_comment_message: TEXT | NULL
+
+## E_COMMERCE.PRODUCTS
+product_photos_qty: FLOAT | NULL
+product_description_lenght: FLOAT | NULL
+product_height_cm: FLOAT | NULL
+product_width_cm: FLOAT | NULL
+product_name_lenght: FLOAT | NULL
+product_id: TEXT | NULL
+product_weight_g: FLOAT | NULL
+product_length_cm: FLOAT | NULL
+product_category_name: TEXT | NULL
+
+## E_COMMERCE.ORDERS
+order_delivered_customer_date: TEXT | NULL
+order_status: TEXT | NULL
+order_id: TEXT | NULL
+order_delivered_carrier_date: TEXT | NULL
+order_purchase_timestamp: TEXT | NULL
+order_estimated_delivery_date: TEXT | NULL
+order_approved_at: TEXT | NULL
+customer_id: TEXT | NULL
+
+## E_COMMERCE.LEADS_CLOSED
+business_type: TEXT | NULL
+has_gtin: FLOAT | NULL
+average_stock: TEXT | NULL
+won_date: TEXT | NULL
+lead_type: TEXT | NULL
+lead_behaviour_profile: TEXT | NULL
+has_company: FLOAT | NULL
+declared_monthly_revenue: FLOAT | NULL
+seller_id: TEXT | NULL
+sr_id: TEXT | NULL
+business_segment: TEXT | NULL
+sdr_id: TEXT | NULL
+mql_id: TEXT | NULL
+declared_product_catalog_size: FLOAT | NULL
+
+## E_COMMERCE.ORDER_PAYMENTS
+payment_sequential: NUMBER | NULL
+payment_installments: NUMBER | NULL
+payment_value: FLOAT | NULL
+order_id: TEXT | NULL
+payment_type: TEXT | NULL
+
+## E_COMMERCE.CUSTOMERS
+customer_city: TEXT | NULL
+customer_state: TEXT | NULL
+customer_id: TEXT | NULL
+customer_zip_code_prefix: NUMBER | NULL
+customer_unique_id: TEXT | NULL
+
+## E_COMMERCE.GEOLOCATION
+geolocation_zip_code_prefix: NUMBER | NULL
+geolocation_city: TEXT | NULL
+geolocation_lng: FLOAT | NULL
+geolocation_state: TEXT | NULL
+geolocation_lat: FLOAT | NULL
+
+## E_COMMERCE.SELLERS
+seller_zip_code_prefix: NUMBER | NULL
+seller_state: TEXT | NULL
+seller_city: TEXT | NULL
+seller_id: TEXT | NULL
+
+## E_COMMERCE.ORDER_ITEMS
+order_id: TEXT | NULL
+price: FLOAT | NULL
+order_item_id: NUMBER | NULL
+shipping_limit_date: TEXT | NULL
+product_id: TEXT | NULL
+seller_id: TEXT | NULL
+freight_value: FLOAT | NULL

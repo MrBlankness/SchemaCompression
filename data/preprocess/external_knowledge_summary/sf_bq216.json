@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq216",
+  "question": "Identify the top five patents filed in the same year as `US-9741766-B2` that are most similar to it based on technological similarities. Please provide the publication numbers.",
+  "db_id": "PATENTS_GOOGLE",
+  "source_document": "patents_info.md",
+  "evidence": "Textual embeddings for patent similarity are in `patents-public-data.google_patents_research.publications` table. Similarity between two patents i and k is calculated as the dot product of their embedding vectors: Similarity_{i,k} = v_i · v_k. To find patents filed in the same year as a given patent, need to extract year from publication number or use a date field. The example query for IPC codes uses `patents-public-data.patents.publications` table and UNNEST(ipc)."
+}

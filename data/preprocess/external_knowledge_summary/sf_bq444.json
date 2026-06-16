@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq444",
+  "question": "Can you pull the blockchain timestamp, block number, and transaction hash for the first five mint and burn events from Ethereum logs for the address '0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8'? Please include mint events identified by the topic '0x7a53080ba414158be7ec69b987b5fb7d07dee101fe85488f0853ae16239d0bde' and burn events by '0x0c396cd989a39f4459b5fa1aed6a9a8dcdbc45908acfd67e028cd568da98982c', and order them by block timestamp from the oldest to the newest.",
+  "db_id": "CRYPTO",
+  "source_document": "ethereum_logs_and_events_overview.md",
+  "evidence": "Ethereum logs represent activities recorded by smart contracts. Mint events refer to creation of tokens, burn events refer to removal. Each event is identified by a topic, which is the hash of the event's signature, allowing filtering of events related to specific actions. For this query: mint events use topic '0x7a53080ba414158be7ec69b987b5fb7d07dee101fe85488f0853ae16239d0bde', burn events use topic '0x0c396cd989a39f4459b5fa1aed6a9a8dcdbc45908acfd67e028cd568da98982c'. Need to filter logs for address '0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8' and retrieve blockchain timestamp, block number, transaction hash for first five mint and burn events, ordered by block timestamp oldest to newest."
+}

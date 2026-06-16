@@ -1,0 +1,35 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: MUSIC.TRACK
+Columns: MediaTypeId, GenreId, Composer, Milliseconds, UnitPrice, Bytes, Name, TrackId, AlbumId
+
+Table: MUSIC.GENRE
+Columns: GenreId, Name
+
+Table: MUSIC.PLAYLISTTRACK
+Columns: TrackId, PlaylistId
+
+Table: MUSIC.INVOICE
+Columns: BillingCountry, CustomerId, Total, InvoiceId, BillingAddress, InvoiceDate, BillingCity, BillingState, BillingPostalCode
+
+Table: MUSIC.CUSTOMER
+Columns: Country, PostalCode, City, SupportRepId, Phone, Fax, LastName, Address, FirstName, Email, State, CustomerId, Company
+
+Table: MUSIC.INVOICELINE
+Columns: InvoiceLineId, TrackId, InvoiceId, Quantity, UnitPrice
+
+Table: MUSIC.MEDIATYPE
+Columns: Name, MediaTypeId
+
+Table: MUSIC.PLAYLIST
+Columns: Name, PlaylistId
+
+Table: MUSIC.ALBUM
+Columns: AlbumId, Title, ArtistId
+
+Table: MUSIC.EMPLOYEE
+Columns: PostalCode, ReportsTo, BirthDate, Fax, Country, Phone, Address, LastName, HireDate, Email, EmployeeId, State, Title, FirstName, City
+
+Table: MUSIC.ARTIST
+Columns: ArtistId, Name

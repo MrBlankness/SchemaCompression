@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq236",
+  "question": "What are the top 5 zip codes of the areas in the United States that have experienced the most hail storm events in the past 10 years? Don't use data from hail reports table.",
+  "db_id": "NOAA_DATA_PLUS",
+  "source_document": "functions_st_within.md",
+  "evidence": "ST_WITHIN function returns true if first geospatial object is fully contained by second. Syntax: ST_WITHIN(<geography_expression_1>, <geography_expression_2>). Returns BOOLEAN. Example: SELECT ST_WITHIN(g1, g2) FROM geospatial_table_01;"
+}

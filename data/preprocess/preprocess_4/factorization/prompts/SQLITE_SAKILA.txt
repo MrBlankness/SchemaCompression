@@ -1,0 +1,123 @@
+[COMPONENTS]
+@C1
+first_name: TEXT | NULL | eg=["PENELOPE", "ED"]
+last_name: TEXT | NULL | eg=["GUINESS", "CHASE"]
+
+[TABLES]
+## SQLITE_SAKILA.FILM_TEXT
+description: TEXT | NULL
+title: TEXT | NULL
+film_id: TEXT | NULL
+
+## SQLITE_SAKILA.PAYMENT
+last_update: TEXT | NULL | eg=["2021-03-06 15:55:57"]
+staff_id: NUMBER | NULL | eg=[1, 2]
+payment_date: TEXT | NULL | eg=["2005-05-25 11:30:37.000", "2005-06-15 18:02:53.000"]
+rental_id: FLOAT | NULL | eg=[76.0, 1422.0]
+payment_id: NUMBER | NULL | eg=[1, 4]
+customer_id: NUMBER | NULL | eg=[1]
+amount: FLOAT | NULL | eg=[2.99, 0.99]
+
+## SQLITE_SAKILA.ACTOR
+@use: [C1]
+actor_id: NUMBER | NULL | eg=[1, 3]
+last_update: TEXT | NULL | eg=["2021-03-06 15:51:59"]
+
+## SQLITE_SAKILA.FILM_CATEGORY
+last_update: TEXT | NULL | eg=["2021-03-06 15:53:28"]
+film_id: NUMBER | NULL | eg=[9, 10]
+category_id: NUMBER | NULL | eg=[11, 15]
+
+## SQLITE_SAKILA.RENTAL
+last_update: TEXT | NULL | eg=["2021-03-06 15:53:41"]
+customer_id: NUMBER | NULL | eg=[130, 333]
+inventory_id: NUMBER | NULL | eg=[367, 2452]
+rental_date: TEXT | NULL | eg=["2005-05-24 22:53:30.000", "2005-05-24 23:04:41.000"]
+staff_id: NUMBER | NULL | eg=[1, 2]
+rental_id: NUMBER | NULL | eg=[1, 4]
+return_date: TEXT | NULL | eg=["2005-05-26 22:04:30.000", "2005-06-03 01:43:41.000"]
+
+## SQLITE_SAKILA.LANGUAGE
+last_update: TEXT | NULL | eg=["2021-03-06 15:51:48"]
+language_id: NUMBER | NULL | eg=[1, 2]
+name: TEXT | NULL | eg=["English", "Italian"]
+
+## SQLITE_SAKILA.STORE
+store_id: NUMBER | NULL | eg=[1]
+address_id: NUMBER | NULL | eg=[1]
+last_update: TEXT | NULL | eg=["2021-03-06 15:52:00"]
+manager_staff_id: NUMBER | NULL | eg=[1]
+
+## SQLITE_SAKILA.STAFF
+@use: [C1]
+picture: TEXT | NULL | eg=[""]
+username: TEXT | NULL | eg=["Mike", "Jon"]
+email: TEXT | NULL | eg=["Mike.Hillyer@sakilastaff.com", "Jon.Stephens@sakilastaff.com"]
+address_id: NUMBER | NULL | eg=[3, 4]
+staff_id: NUMBER | NULL | eg=[1, 2]
+last_update: TEXT | NULL | eg=["2021-03-06 15:52:00"]
+store_id: NUMBER | NULL | eg=[1, 2]
+password: TEXT | NULL | eg=["8cb2237d0679ca88db6464eac60da96345513964"]
+active: NUMBER | NULL | eg=[1]
+
+## SQLITE_SAKILA.FILM
+replacement_cost: FLOAT | NULL | eg=[20.99, 22.99]
+special_features: TEXT | NULL | eg=["Deleted Scenes,Behind the Scenes", "Deleted Scenes"]
+length: NUMBER | NULL | eg=[86, 130]
+description: TEXT | NULL | eg=["A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies", "A Fast-Paced Documentary of a Pastry Chef And a Dentist who must Pursue a Forensic Psychologist in The Gulf of Mexico"]
+original_language_id: TEXT | NULL | eg=[""]
+language_id: NUMBER | NULL | eg=[1]
+rental_rate: FLOAT | NULL | eg=[0.99, 2.99]
+rental_duration: NUMBER | NULL | eg=[6, 3]
+rating: TEXT | NULL | eg=["PG", "G"]
+title: TEXT | NULL | eg=["ACADEMY DINOSAUR", "AFRICAN EGG"]
+last_update: TEXT | NULL | eg=["2021-03-06 15:52:00"]
+film_id: NUMBER | NULL | eg=[1, 5]
+release_year: TEXT | NULL | eg=["2006"]
+
+## SQLITE_SAKILA.INVENTORY
+last_update: TEXT | NULL | eg=["2021-03-06 15:52:08"]
+inventory_id: NUMBER | NULL | eg=[1, 2]
+film_id: NUMBER | NULL | eg=[1]
+store_id: NUMBER | NULL | eg=[1, 2]
+
+## SQLITE_SAKILA.CUSTOMER
+@use: [C1]
+address_id: NUMBER | NULL | eg=[5, 11]
+customer_id: NUMBER | NULL | eg=[1, 7]
+last_update: TEXT | NULL | eg=["2021-03-06 15:53:36"]
+store_id: NUMBER | NULL | eg=[1, 2]
+active: TEXT | NULL | eg=["1"]
+create_date: TEXT | NULL | eg=["2006-02-14 22:04:36.000"]
+email: TEXT | NULL | eg=["MARY.SMITH@sakilacustomer.org", "MARIA.MILLER@sakilacustomer.org"]
+
+## SQLITE_SAKILA.FILM_ACTOR
+actor_id: NUMBER | NULL | eg=[1]
+last_update: TEXT | NULL | eg=["2021-03-06 15:52:45"]
+film_id: NUMBER | NULL | eg=[1, 438]
+
+## SQLITE_SAKILA.CATEGORY
+last_update: TEXT | NULL | eg=["2021-03-06 15:52:00"]
+name: TEXT | NULL | eg=["Action", "Animation"]
+category_id: NUMBER | NULL | eg=[1, 2]
+
+## SQLITE_SAKILA.CITY
+city: TEXT | NULL | eg=["Abha", "Aden"]
+last_update: TEXT | NULL | eg=["2021-03-06 15:51:49", "2021-03-06 15:51:50"]
+city_id: NUMBER | NULL | eg=[2, 7]
+country_id: NUMBER | NULL | eg=[82, 107]
+
+## SQLITE_SAKILA.ADDRESS
+address_id: NUMBER | NULL | eg=[3, 5]
+phone: TEXT | NULL | eg=[" "]
+city_id: NUMBER | NULL | eg=[300, 463]
+address2: TEXT | NULL | eg=[""]
+district: TEXT | NULL | eg=[" "]
+last_update: TEXT | NULL | eg=["2021-03-06 15:51:54"]
+postal_code: TEXT | NULL | eg=["", "35200"]
+address: TEXT | NULL | eg=["23 Workhaven Lane", "1913 Hanoi Way"]
+
+## SQLITE_SAKILA.COUNTRY
+country_id: NUMBER | NULL | eg=[2, 4]
+country: TEXT | NULL | eg=["Algeria", "Angola"]
+last_update: TEXT | NULL | eg=["2021-03-06 15:51:49"]

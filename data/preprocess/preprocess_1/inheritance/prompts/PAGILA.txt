@@ -1,0 +1,18 @@
+[STANDALONE]
+Format: schema.table|col1,col2
+PAGILA.ACTOR|actor_id,last_update,first_name,last_name
+PAGILA.ADDRESS|city_id,district,address_id,last_update,postal_code,address2,phone,address
+PAGILA.CATEGORY|last_update,name,category_id
+PAGILA.CITY|city,city_id,country_id,last_update
+PAGILA.COUNTRY|country_id,last_update,country
+PAGILA.CUSTOMER|email,create_date,first_name,active,address_id,last_name,last_update,customer_id,store_id
+PAGILA.FILM_ACTOR|last_update,actor_id,film_id
+PAGILA.FILM_CATEGORY|last_update,category_id,film_id
+PAGILA.FILM_TEXT|film_id,title,description
+PAGILA.FILM|language_id,title,rental_duration,rating,original_language_id,film_id,length,last_update,rental_rate,release_year,replacement_cost,description,special_features
+PAGILA.INVENTORY|inventory_id,film_id,last_update,store_id
+PAGILA.LANGUAGE|language_id,name,last_update
+PAGILA.PAYMENT|staff_id,last_update,rental_id,amount,payment_id,customer_id,payment_date
+PAGILA.RENTAL|last_update,rental_date,return_date,rental_id,staff_id,customer_id,inventory_id
+PAGILA.STAFF|last_name,store_id,username,first_name,last_update,password,email,staff_id,picture,address_id,active
+PAGILA.STORE|manager_staff_id,last_update,store_id,address_id

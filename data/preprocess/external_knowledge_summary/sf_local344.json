@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_local344",
+  "question": "Considering all races where pit stop data is available, and focusing on instances when a driver was not behind another car on the previous lap but is behind on the current lap (accounting for retirements, pit-stop entries, pit-stop exits, and race starts), how many times has each type of overtake occurred in Formula 1?",
+  "db_id": "F1",
+  "source_document": "f1_overtake.md",
+  "evidence": "Overtake classifications: R (Retirement) - overtaken driver retired on same lap as overtake. P (Pit) - two scenarios: Pit Entry (overtake while overtaken driver entering pit lane, pitted same lap); Pit Exit (overtake as overtaken driver exiting pit lane, especially if pitted previous lap and time gap less than typical pit stop duration). S (Start) - overtake on first lap, drivers within two grid positions at start. T (Track) - default classification when none of above conditions apply."
+}

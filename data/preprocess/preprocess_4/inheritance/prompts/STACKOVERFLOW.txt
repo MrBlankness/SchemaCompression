@@ -1,0 +1,175 @@
+[TEMPLATES]
+<T1>
+view_count: TEXT | NULL
+owner_display_name: TEXT | NULL
+answer_count: TEXT | NULL
+accepted_answer_id: TEXT | NULL
+creation_date: NUMBER | NULL | eg=[1289567414273000, 1280773367767000]
+last_activity_date: NUMBER | NULL | eg=[1289576937237000, 1280773367767000]
+last_editor_display_name: TEXT | NULL | eg=["Roger Pate"]
+body: TEXT | NULL | eg=["ADL is argument-dependent lookup, sometimes called Koenig lookup.", "<p><a href=\"http://www.gnu.org/software/emacs/manual/html_node/elisp/index.html\" rel=\"nofollow noreferrer\">Emacs Lisp</a> is the extension language for the <a href=\"http://www.gnu.org/software/emacs/\" rel=\"nofollow noreferrer\">GNU Emacs text editor</a>, and in fact, most of the functionality of Emacs is implemented using Emacs Lisp.  Users generally customize Emacs' behavior by adding Emacs Lisp statements to their .emacs, or writing separate packages.  A guide to learning Emacs Lisp for non-programmers can be found <a href=\"http://www.gnu.org/software/emacs/emacs-lisp-intro/html_node/index.html\" rel=\"nofollow noreferrer\">here</a>.</p>\n\n<p>Emacs Lisp differs from most other lisps in two main ways:</p>\n\n<ol>\n<li>It has special features for scanning and parsing text, as well as features for handling files, buffers, arrays, displays, and subprocesses.  This is due to the fact that it is designed to be used in a text editor</li>\n<li>It uses <a href=\"http://en.wikipedia.org/wiki/Scope_(p..."]
+comment_count: NUMBER | NULL | eg=[0]
+score: NUMBER | NULL | eg=[0]
+post_type_id: NUMBER | NULL | eg=[3]
+title: TEXT | NULL
+tags: TEXT | NULL
+parent_id: TEXT | NULL
+community_owned_date: NUMBER | NULL
+last_editor_user_id: NUMBER | NULL | eg=[NaN, 6148.0]
+owner_user_id: NUMBER | NULL | eg=[-1]
+last_edit_date: NUMBER | NULL | eg=[1289576937237000, 1280773367767000]
+id: NUMBER | NULL | eg=[4164934, 3625171]
+favorite_count: TEXT | NULL
+@Tables: [STACKOVERFLOW.POSTS_MODERATOR_NOMINATION,STACKOVERFLOW.POSTS_ORPHANED_TAG_WIKI,STACKOVERFLOW.POSTS_TAG_WIKI,STACKOVERFLOW.POSTS_TAG_WIKI_EXCERPT]
+
+<T4>
+last_editor_user_id: NUMBER | NULL | eg=[584192, 811]
+last_activity_date: NUMBER | NULL | eg=[1591680744067000, 1358385729657000]
+body: TEXT | NULL | eg=["<p><br></p>\n\n<h2>Welcome to the Stack Overflow Help Center!</h2>\n\n<p>If you are unable to find the answer you need here, you can also search for or ask a question about Stack Overflow on <a href=\"https://meta.stackoverflow.com\">Meta</a>!</p>\n\n<p><a href=\"https://meta.stackoverflow.com/questions/tagged/faq?tab=Votes\">Frequently Asked Questions</a> on Meta:<br></p>\n\n<ul>\n  <li><a href=\"https://meta.stackoverflow.com/q/334822\">How do I ask and answer homework questions?</a>\n  <li><a href=\"https://meta.stackoverflow.com/q/261592\">How much research effort is expected of Stack Overflow users?</a>\n  <li><a href=\"https://meta.stackoverflow.com/q/269653\">Why did I gain/lose reputation?</a>\n  <li><a href=\"https://meta.stackoverflow.com/q/252252\">What can I do when I think my question is not a duplicate?</a>\n  <li><a href=\"https://meta.stackoverflow.com/q/255583\">What can I do when getting “We are no longer accepting questions/answers from this account”?</a>\n  <li><i>see also</i> <a href=\"http...", "<ul>\n    <li>Specific programming problems</li>\n    <li>Software algorithms</li>\n    <li>Coding techniques</li>\n    <li>Software development tools</li></ul>"]
+owner_display_name: TEXT | NULL
+last_edit_date: NUMBER | NULL | eg=[1591680744067000, 1358385729657000]
+community_owned_date: TEXT | NULL
+answer_count: TEXT | NULL
+post_type_id: NUMBER | NULL | eg=[7]
+tags: TEXT | NULL
+id: NUMBER | NULL | eg=[58551602, 14264713]
+creation_date: NUMBER | NULL | eg=[1571972295170000, 1357842193957000]
+view_count: TEXT | NULL
+last_editor_display_name: TEXT | NULL
+title: TEXT | NULL
+owner_user_id: NUMBER | NULL | eg=[-1]
+comment_count: NUMBER | NULL | eg=[0]
+accepted_answer_id: TEXT | NULL
+favorite_count: TEXT | NULL
+score: NUMBER | NULL | eg=[0, 1]
+parent_id: TEXT | NULL
+@Tables: [STACKOVERFLOW.POSTS_PRIVILEGE_WIKI,STACKOVERFLOW.POSTS_WIKI_PLACEHOLDER]
+
+[STANDALONE]
+## STACKOVERFLOW.BADGES
+tag_based: BOOLEAN | NULL | eg=[false]
+id: NUMBER | NULL | eg=[28291962, 28374828]
+date: NUMBER | NULL | eg=[1527259383990000, 1527907395610000]
+user_id: NUMBER | NULL | eg=[9846917, 9883762]
+name: TEXT | NULL | eg=["Informed"]
+class: NUMBER | NULL | eg=[3]
+
+## STACKOVERFLOW.COMMENTS
+id: NUMBER | NULL | eg=[2048980, 2049122]
+creation_date: NUMBER | NULL | eg=[1264110960193000, 1264111921023000]
+user_id: NUMBER | NULL | eg=[32632, 98642]
+score: NUMBER | NULL | eg=[5]
+text: TEXT | NULL | eg=["This Won't work for non-virtual methods, as it will return the name of the type that the method is declared and implemented in, (possibly up the inheritance chain), not the concrete type of the instance you are actually executing the code from.", "I believe he was saying the opposite, that foo.get(i) can be a lot less efficient.  Think of LinkedList.  If you do a foo.get(i) on the middle of a LinkedList it has to traverse all the previous nodes to get to i.  An iterator, on the other hand, will keep a handle to the underlying data structure and will allow you to walk over the nodes one at a time."]
+user_display_name: TEXT | NULL
+post_id: NUMBER | NULL | eg=[2113099, 2113226]
+
+## STACKOVERFLOW.POSTS_ANSWERS
+view_count: TEXT | NULL
+tags: TEXT | NULL
+owner_user_id: NUMBER | NULL | eg=[155861, 697968]
+score: NUMBER | NULL | eg=[1]
+owner_display_name: TEXT | NULL
+answer_count: TEXT | NULL
+last_editor_display_name: TEXT | NULL
+last_activity_date: NUMBER | NULL | eg=[1302954623957000, 1303285246993000]
+last_editor_user_id: NUMBER | NULL | eg=[155861.0, NaN]
+favorite_count: TEXT | NULL
+post_type_id: NUMBER | NULL | eg=[2]
+community_owned_date: NUMBER | NULL
+accepted_answer_id: TEXT | NULL
+comment_count: NUMBER | NULL | eg=[14]
+body: TEXT | NULL | eg=["<p>first do</p>\n\n<pre><code>// only for the GUY who didn't read the complete answer :(\n$param=addslashes($param); \n</code></pre>\n\n<p>then write code in simple HTML    </p>\n\n<pre><code>&lt;input type='button' onclick=\"myFunc(&lt;?php echo $param?&gt;);\" /&gt;\n</code></pre>\n\n<p><strong>Note:</strong> <code>mysql_real_escape_string</code> works when we handle with mysqltry with <code>addslashes</code></p>", "<p>I agree with Noel</p>\n\n<p>There are many ways to achieve what you are trying. One way to do this is using <code>System.Reflection</code></p>\n\n<p>like this in formA </p>\n\n<pre><code> Assembly a = Assembly.LoadFrom(\"WindowsApplication1.exe\");\n        Form frm = a.CreateInstance(\"WindowsApplication1.FormB\") as Form;\n        frm.MdiParent = this;\n        frm.Show();\n</code></pre>"]
+parent_id: NUMBER | NULL | eg=[5686086, 5726895]
+id: NUMBER | NULL | eg=[5686118, 5727069]
+title: TEXT | NULL
+creation_date: NUMBER | NULL | eg=[1302952732137000, 1303285246993000]
+last_edit_date: NUMBER | NULL | eg=[1302954623957000.0, NaN]
+
+## STACKOVERFLOW.POSTS_QUESTIONS
+last_edit_date: NUMBER | NULL | eg=[1301584153647000.0, NaN]
+owner_display_name: TEXT | NULL
+accepted_answer_id: NUMBER | NULL | eg=[5501615.0, 5516812.0]
+owner_user_id: NUMBER | NULL | eg=[302677, 45580]
+tags: TEXT | NULL | eg=["c#|.net|desktop-application", "c++|embedded|battery"]
+last_activity_date: NUMBER | NULL | eg=[1301584636283000, 1451160022947000]
+body: TEXT | NULL | eg=["<p>I would like to open a website in a user's default web browser, however since the url is user-defined I would also like to prevent them from doing anything other than opening a website.</p>\n\n<p>I have seen people use <code>Process.Start(url);</code> to open a site in the default browser, but since the url is user-defined I want to be sure they don't enter something like a script location and execute it. </p>\n\n<p>I also don't want to use <code>Process.Start(\"iexplore\", url);</code> since I would rather open the link in the user's default browser.</p>\n\n<p>Is there a way I can open a website in the user's default browser, without letting them launch any other process or command?</p>\n\n<p><strong>EDIT</strong></p>\n\n<p>For example, I don't want users to be able to enter <code>C:\\Windows\\Notepad.exe</code> into the Customer's Website field and open Notepad when they click the Website link</p>\n\n<p><strong>EDIT #2</strong></p>\n\n<p>I am <strong>not</strong> looking for a way to filter user...", "<p>Reading a battery voltage in an embedded device.  However, the actual voltage varies greatly depending upon system load.  We need a method to reduce the fluctuation of the voltage to display the best value.</p>\n\n<p>Currently, we're using a rolling/moving average.  However, over the last 15 readings, the result still fluctuates too much.</p>\n\n<p>In reading about smoothing algorithms, it appears that b-splines, kernel filters, or some other smoothing algorithms would be ideal.  However, I can't find a simple example that doesn't use numpy or intrinsic functions within mathcad or some such.</p>\n\n<p>Anybody know of a simple-to-implement function that could help with this?  This is a C++ project (using Qt 4.5) with just the bar minimum of libraries.  I'd prefer to stay in the integer domain (showing the voltage in millivolts from 3300-4200).</p>\n\n<p>TIA\nMike</p>"]
+title: TEXT | NULL | eg=["Open website in the user's default browser without letting them launch anything else?", "Smoothing function for battery voltage display to reduce spikes in embedded system"]
+view_count: NUMBER | NULL | eg=[13116, 3023]
+community_owned_date: NUMBER | NULL
+creation_date: NUMBER | NULL | eg=[1301581207630000, 1301678181983000]
+post_type_id: NUMBER | NULL | eg=[1]
+answer_count: NUMBER | NULL | eg=[7]
+last_editor_display_name: TEXT | NULL
+id: NUMBER | NULL | eg=[5501349, 5516641]
+last_editor_user_id: NUMBER | NULL | eg=[302677.0, NaN]
+comment_count: NUMBER | NULL | eg=[19, 0]
+favorite_count: NUMBER | NULL | eg=[NaN, 2.0]
+parent_id: TEXT | NULL
+score: NUMBER | NULL | eg=[7, 8]
+
+## STACKOVERFLOW.POST_HISTORY
+creation_date: NUMBER | NULL | eg=[1387754944993000, 1387400631630000]
+post_history_type_id: NUMBER | NULL | eg=[2, 1]
+user_id: NUMBER | NULL | eg=[3128057, 506873]
+comment: TEXT | NULL | eg=["added 2 characters in body"]
+post_id: NUMBER | NULL | eg=[20735186, 20668336]
+revision_guid: TEXT | NULL | eg=["8b6aaedc-d207-4081-97a9-7035207f386d", "f61e987f-c4bd-424d-9b1f-b54d4c3a34b5"]
+text: TEXT | NULL | eg=["I am converting tutorials for students (2nd language speakers, 9 to 12 yrs old) to access in an offline / intranet context.  Hence the websites I would like them to use are unavailable.\n\nI am trying to mimic the 'alter the code' style of tutorials for helping with JavaScript / HTML5 Canvas.\n\nThis works :\n\n    <canvas id=\"myCanvas\" height=\"400px\" width=\"400px\"></canvas>\n    <script>\n    function update(){\n       eval(document.getElementById('demoScript').value);\n    }\n    \n    var ctx = document.getElementById(\"myCanvas\").getContext(\"2d\");\n    \n    </script>\n    <textarea id=\"demoScript\">\n    ctx.fillRect(100,100,50,50);\n    </textarea>\n    <input type=\"button\" value=\"update\" onClick=\"update()\">\n\n... but everything I have read says eval() is a bad idea.\n\nI can get the textarea content to pop-up in a div if I want, but I can't get it to pop-up in a script anywhere ... leaving me with just eval().\n\nOptions and recommendations for alternatives please ... or this is as good as it gets ?", "alternative to eval() in DOM manipulation"]
+id: NUMBER | NULL | eg=[54201121, 54201122]
+
+## STACKOVERFLOW.POST_LINKS
+post_id: NUMBER | NULL | eg=[22342898, 22343608]
+related_post_id: NUMBER | NULL | eg=[21111070, 2743989]
+creation_date: NUMBER | NULL | eg=[1394603209690000, 1394606380723000]
+id: NUMBER | NULL | eg=[880002256, 880016624]
+link_type_id: NUMBER | NULL | eg=[1]
+
+## STACKOVERFLOW.STACKOVERFLOW_POSTS
+tags: TEXT | NULL | eg=[""]
+score: NUMBER | NULL | eg=[3, 39]
+last_editor_display_name: TEXT | NULL
+comment_count: NUMBER | NULL | eg=[6]
+last_edit_date: NUMBER | NULL | eg=[1345489443110000.0, 1458102533000000.0]
+parent_id: NUMBER | NULL | eg=[12043365, 12165636]
+favorite_count: NUMBER | NULL
+creation_date: NUMBER | NULL | eg=[1345488922380000, 1384075370847000]
+answer_count: NUMBER | NULL
+owner_display_name: TEXT | NULL
+body: TEXT | NULL | eg=["<pre><code>lis = ['fi' 'do' 'ca'] for item in lis: for name in glob.glob('*.html'): if item in name: with open(name) as k: </code></pre> <p>or create a list of all files first and then filter that list with every iteration of <code>list</code>:</p> <pre><code>&gt;&gt;&gt; names=glob.glob('*.html') &gt;&gt;&gt; lis=['fi''do''ca'] &gt;&gt;&gt; for item in lis: ... for name in filter(lambda x:item in xnames): ... with open('name') as k: </code></pre>", "<p>it's possible using Django ORM:</p> <p>here's what you should do:</p> <pre><code>from django.db.models import Sum total = ( Task.objects .filter(your-filter-here) .aggregate( total=Sum('progress' field= progress*estimated_days ) )['total'] ) </code></pre> <p>Note: if the two fields are of different types say <code>integer</code> &amp; <code>float</code> the type you want to return should be passed as the first parameter of <code>Sum</code></p> <p>It's a late answer but I guess it'll help someone looking for the same.</p>"]
+title: TEXT | NULL
+community_owned_date: NUMBER | NULL
+id: NUMBER | NULL | eg=[12043418, 19888120]
+last_activity_date: NUMBER | NULL | eg=[1345489443110000, 1458102533000000]
+last_editor_user_id: NUMBER | NULL | eg=[846892.0, 1673391.0]
+owner_user_id: NUMBER | NULL | eg=[846892, 1232826]
+post_type_id: NUMBER | NULL | eg=[2]
+view_count: NUMBER | NULL
+accepted_answer_id: NUMBER | NULL
+
+## STACKOVERFLOW.TAGS
+tag_name: TEXT | NULL | eg=["regsvr32", "rpg"]
+excerpt_post_id: NUMBER | NULL | eg=[10051236, 7080550]
+id: NUMBER | NULL | eg=[2136, 8287]
+wiki_post_id: NUMBER | NULL | eg=[10051235, 7080549]
+count: NUMBER | NULL | eg=[256]
+
+## STACKOVERFLOW.USERS
+display_name: TEXT | NULL | eg=["Jaideep Datta", "Roland Zhou"]
+profile_image_url: TEXT | NULL | eg=["https://www.gravatar.com/avatar/9a78031187f403ddbdd4a98498324819?s=128&d=identicon&r=PG&f=1", "https://graph.facebook.com/100002177295288/picture?type=large"]
+last_access_date: NUMBER | NULL | eg=[1647675999303000, 1458871817860000]
+views: NUMBER | NULL | eg=[0]
+about_me: TEXT | NULL
+id: NUMBER | NULL | eg=[4391515, 4398511]
+up_votes: NUMBER | NULL | eg=[0]
+reputation: NUMBER | NULL | eg=[1]
+age: TEXT | NULL
+website_url: TEXT | NULL
+down_votes: NUMBER | NULL | eg=[0]
+creation_date: NUMBER | NULL | eg=[1419420461190000, 1419710146767000]
+location: TEXT | NULL
+
+## STACKOVERFLOW.VOTES
+creation_date: NUMBER | NULL | eg=[1384473600000000, 1384560000000000]
+vote_type_id: NUMBER | NULL | eg=[2]
+post_id: NUMBER | NULL | eg=[20009129, 18740897]
+id: NUMBER | NULL | eg=[57399609, 57404642]

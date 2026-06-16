@@ -1,0 +1,235 @@
+[TABLES]
+## ECOMMERCE.WEB_ANALYTICS_TEST
+customDimensions: VARIANT | NULL | eg=[[{"index":4,"value":"North America"}]]
+visitId: NUMBER | NULL | eg=[1484623631, 1479484411]
+fullVisitorId: TEXT | NULL | eg=["543872662475775750", "9443193409185498650"]
+trafficSource: VARIANT | NULL | eg=[{"adwordsClickInfo":{"criteriaParameters":"not available in demo dataset"},"campaign":"(not set)","keyword":"(not provided)","medium":"organic","source":"google"}, {"adwordsClickInfo":{"criteriaParameters":"not available in demo dataset"},"campaign":"(not set)","isTrueDirect":true,"medium":"(none)","source":"(direct)"}]
+userId: TEXT | NULL
+geoNetwork: VARIANT | NULL | eg=[{"city":"not available in demo dataset","cityId":"not available in demo dataset","continent":"Americas","country":"United States","latitude":"not available in demo dataset","longitude":"not available in demo dataset","metro":"not available in demo dataset","networkDomain":"(not set)","networkLocation":"not available in demo dataset","region":"not available in demo dataset","subContinent":"Northern America"}, {"city":"Mountain View","cityId":"not available in demo dataset","continent":"Americas","country":"United States","latitude":"not available in demo dataset","longitude":"not available in demo dataset","metro":"San Francisco-Oakland-San Jose CA","networkDomain":"(not set)","networkLocation":"not available in demo dataset","region":"California","subContinent":"Northern America"}]
+visitNumber: NUMBER | NULL | eg=[1, 2]
+hits: VARIANT | NULL | eg=[[{"appInfo":{"exitScreenName":"www.googlemerchandisestore.com/home","landingScreenName":"www.googlemerchandisestore.com/home","screenDepth":"0","screenName":"www.googlemerchandisestore.com/home"},"contentGroup":{"contentGroup1":"(not set)","contentGroup2":"(not set)","contentGroup3":"(not set)","contentGroup4":"(not set)","contentGroup5":"(not set)","previousContentGroup1":"(entrance)","previousContentGroup2":"(entrance)","previousContentGroup3":"(entrance)","previousContentGroup4":"(entrance)","previousContentGroup5":"(entrance)"},"customDimensions":[],"customMetrics":[],"customVariables":[],"eCommerceAction":{"action_type":"0","step":1},"exceptionInfo":{"isFatal":true},"experiment":[],"hitNumber":1,"hour":19,"isEntrance":true,"isInteraction":true,"minute":27,"page":{"hostname":"www.googlemerchandisestore.com","pagePath":"/home","pagePathLevel1":"/home","pagePathLevel2":"","pagePathLevel3":"","pagePathLevel4":"","pageTitle":"Google Online Store"},"product":[],"promotion":[],"publis...]
+date: TEXT | NULL | eg=["20170116", "20161118"]
+device: VARIANT | NULL | eg=[{"browser":"Chrome","browserSize":"not available in demo dataset","browserVersion":"not available in demo dataset","deviceCategory":"desktop","flashVersion":"not available in demo dataset","isMobile":false,"language":"not available in demo dataset","mobileDeviceBranding":"not available in demo dataset","mobileDeviceInfo":"not available in demo dataset","mobileDeviceMarketingName":"not available in demo dataset","mobileDeviceModel":"not available in demo dataset","mobileInputSelector":"not available in demo dataset","operatingSystem":"Windows","operatingSystemVersion":"not available in demo dataset","screenColors":"not available in demo dataset","screenResolution":"not available in demo dataset"}]
+socialEngagementType: TEXT | NULL | eg=["Not Socially Engaged"]
+channelGrouping: TEXT | NULL | eg=["Organic Search", "Direct"]
+visitStartTime: NUMBER | NULL | eg=[1484623631, 1479484411]
+totals: VARIANT | NULL | eg=[{"hits":5,"newVisits":1,"pageviews":5,"timeOnSite":43,"visits":1}, {"hits":36,"newVisits":1,"pageviews":25,"timeOnSite":461,"visits":1}]
+visitorId: NUMBER | NULL
+
+## ECOMMERCE.CLASSIFICATION_MODEL_2_RESULTS
+deviceCategory: TEXT | NULL | eg=["desktop"]
+unique_session_id: TEXT | NULL | eg=["8515268164140442346-1499821254", "9183889190192076181-1500066908"]
+latest_ecommerce_progress: NUMBER | NULL | eg=[0, 2]
+predicted_will_buy_on_return_visit: NUMBER | NULL | eg=[0]
+pageviews: NUMBER | NULL | eg=[2, 4]
+bounces: NUMBER | NULL | eg=[0, 1]
+source: TEXT | NULL | eg=["ask"]
+medium: TEXT | NULL | eg=["organic"]
+time_on_site: NUMBER | NULL | eg=[74, 33]
+country: TEXT | NULL | eg=["China", "Denmark"]
+predicted_will_buy_on_return_visit_probs: VARIANT | NULL | eg=[[{"label":1,"prob":0.006927288242416253},{"label":0,"prob":0.9930727117575837}], [{"label":1,"prob":0.01121615641405379},{"label":0,"prob":0.9887838435859462}]]
+will_buy_on_return_visit: NUMBER | NULL | eg=[0]
+channelGrouping: TEXT | NULL | eg=["Organic Search"]
+
+## ECOMMERCE.PARTITION_BY_DAY
+fullvisitorId: TEXT | NULL | eg=["9975702176622548240", "9924372129488395896"]
+date_formatted: DATE | NULL | eg=["2016-09-12"]
+
+## ECOMMERCE.PRODUCTS
+SKU: TEXT | NULL | eg=["GGADFBSBKS42347", "GGOEGAAX0605"]
+stockLevel: NUMBER | NULL | eg=[100, 16]
+orderedQuantity: NUMBER | NULL | eg=[0, 10]
+restockingLeadTime: NUMBER | NULL | eg=[1, 9]
+sentimentScore: FLOAT | NULL | eg=[NaN, 0.6]
+sentimentMagnitude: FLOAT | NULL | eg=[NaN, 1.6]
+name: TEXT | NULL | eg=["PC gaming speakers", " Women's Quilted Insulated Vest White"]
+
+## ECOMMERCE.REV_TRANSACTIONS_VIEW
+transactionId: TEXT | NULL | eg=["ORD201703202224", "ORD201612143100"]
+time: NUMBER | NULL | eg=[4457666, 2134051]
+timeOnSite: NUMBER | NULL | eg=[6427, 2134]
+transactions: NUMBER | NULL | eg=[7, 1]
+fullVisitorId: TEXT | NULL | eg=["8942866004645538967", "9671728324632392297"]
+productQuantity: NUMBER | NULL | eg=[2, 1]
+sessionQualityDim: NUMBER | NULL | eg=[NaN, 66.0]
+productSKU: TEXT | NULL | eg=["GGOEAAAB034814", "GGOEAAAB034815"]
+pageviews: NUMBER | NULL | eg=[343, 83]
+productRevenue: NUMBER | NULL | eg=[40622857, 16240000]
+eCommerceAction_step: NUMBER | NULL | eg=[1]
+pagePathLevel1: TEXT | NULL | eg=["/ordercompleted.html"]
+pageTitle: TEXT | NULL | eg=["Checkout Confirmation"]
+productPrice: NUMBER | NULL | eg=[19990000, 15990000]
+productVariant: TEXT | NULL | eg=[" MD", " LG"]
+country: TEXT | NULL | eg=["United States", "India"]
+visitId: NUMBER | NULL | eg=[1489999542, 1481767891]
+itemRevenue: NUMBER | NULL
+transactionRevenue: NUMBER | NULL | eg=[558740000, 57750000]
+channelGrouping: TEXT | NULL | eg=["Direct", "Referral"]
+currencyCode: TEXT | NULL | eg=["USD"]
+itemQuantity: NUMBER | NULL
+date: TEXT | NULL | eg=["20170320", "20161214"]
+type: TEXT | NULL | eg=["PAGE"]
+v2ProductCategory: TEXT | NULL | eg=["Apparel", "(not set)"]
+eCommerceAction_type: TEXT | NULL | eg=["6"]
+city: TEXT | NULL | eg=["not available in demo dataset", "Cambridge"]
+v2ProductName: TEXT | NULL | eg=["Android BTTF Cosmos Graphic Tee", "Android BTTF Moonshot Graphic Tee"]
+totalTransactionRevenue: NUMBER | NULL | eg=[3775800000, 57750000]
+searchKeyword: TEXT | NULL
+productRefundAmount: NUMBER | NULL
+eCommerceAction_option: TEXT | NULL
+
+## ECOMMERCE.ALL_SESSIONS_RAW
+v2ProductName: TEXT | NULL | eg=["Android Wool Heather Cap Heather/Black"]
+city: TEXT | NULL | eg=["not available in demo dataset", "New York"]
+productPrice: NUMBER | NULL | eg=[19990000, 24990000]
+type: TEXT | NULL | eg=["PAGE"]
+fullVisitorId: TEXT | NULL | eg=["0593634694870033414", "917551604501805376"]
+transactionId: TEXT | NULL
+time: NUMBER | NULL | eg=[505689, 87143]
+productSKU: TEXT | NULL | eg=["GGOEAHPA004110"]
+productRefundAmount: NUMBER | NULL
+country: TEXT | NULL | eg=["United States", "Russia"]
+channelGrouping: TEXT | NULL | eg=["Direct", "Social"]
+itemQuantity: NUMBER | NULL
+eCommerceAction_type: TEXT | NULL | eg=["0", "2"]
+visitId: NUMBER | NULL | eg=[1489158475, 1493445465]
+productQuantity: NUMBER | NULL
+pageTitle: TEXT | NULL | eg=["Android | Shop by Brand | Google Merchandise Store"]
+pageviews: NUMBER | NULL | eg=[50, 53]
+productVariant: TEXT | NULL | eg=["(not set)"]
+searchKeyword: TEXT | NULL
+v2ProductCategory: TEXT | NULL | eg=["Home/Shop by Brand/Android/"]
+eCommerceAction_option: TEXT | NULL
+pagePathLevel1: TEXT | NULL | eg=["/google+redesign/", "/store.html/"]
+itemRevenue: NUMBER | NULL
+productRevenue: NUMBER | NULL
+eCommerceAction_step: NUMBER | NULL | eg=[1]
+currencyCode: TEXT | NULL | eg=["USD"]
+totalTransactionRevenue: NUMBER | NULL
+date: TEXT | NULL | eg=["20170310", "20170428"]
+sessionQualityDim: NUMBER | NULL
+transactionRevenue: NUMBER | NULL
+timeOnSite: NUMBER | NULL | eg=[3340, 145]
+transactions: NUMBER | NULL
+
+## ECOMMERCE.WEB_ANALYTICS
+totals: VARIANT | NULL | eg=[{"hits":4,"newVisits":1,"pageviews":4,"timeOnSite":335,"visits":1}, {"hits":4,"newVisits":1,"pageviews":4,"timeOnSite":47,"visits":1}]
+geoNetwork: VARIANT | NULL | eg=[{"city":"not available in demo dataset","cityId":"not available in demo dataset","continent":"Asia","country":"India","latitude":"not available in demo dataset","longitude":"not available in demo dataset","metro":"not available in demo dataset","networkDomain":"unknown.unknown","networkLocation":"not available in demo dataset","region":"not available in demo dataset","subContinent":"Southern Asia"}, {"city":"not available in demo dataset","cityId":"not available in demo dataset","continent":"Europe","country":"Hungary","latitude":"not available in demo dataset","longitude":"not available in demo dataset","metro":"not available in demo dataset","networkDomain":"(not set)","networkLocation":"not available in demo dataset","region":"not available in demo dataset","subContinent":"Eastern Europe"}]
+date: TEXT | NULL | eg=["20161016", "20170122"]
+visitNumber: NUMBER | NULL | eg=[1, 321]
+trafficSource: VARIANT | NULL | eg=[{"adwordsClickInfo":{"criteriaParameters":"not available in demo dataset"},"campaign":"(not set)","keyword":"(not provided)","medium":"organic","source":"google"}, {"adwordsClickInfo":{"criteriaParameters":"not available in demo dataset"},"campaign":"(not set)","isTrueDirect":true,"keyword":"(not provided)","medium":"organic","source":"google"}]
+customDimensions: VARIANT | NULL | eg=[[{"index":4,"value":"APAC"}], []]
+hits: VARIANT | NULL | eg=[[{"appInfo":{"exitScreenName":"shop.googlemerchandisestore.com/home","landingScreenName":"www.googlemerchandisestore.com/home","screenDepth":"0","screenName":"www.googlemerchandisestore.com/home"},"contentGroup":{"contentGroup1":"(not set)","contentGroup2":"(not set)","contentGroup3":"(not set)","contentGroup4":"(not set)","contentGroup5":"(not set)","previousContentGroup1":"(entrance)","previousContentGroup2":"(entrance)","previousContentGroup3":"(entrance)","previousContentGroup4":"(entrance)","previousContentGroup5":"(entrance)"},"customDimensions":[],"customMetrics":[],"customVariables":[],"eCommerceAction":{"action_type":"0","step":1},"exceptionInfo":{"isFatal":true},"experiment":[],"hitNumber":1,"hour":10,"isEntrance":true,"isInteraction":true,"minute":29,"page":{"hostname":"www.googlemerchandisestore.com","pagePath":"/home","pagePathLevel1":"/home","pagePathLevel2":"","pagePathLevel3":"","pagePathLevel4":"","pageTitle":"Google Online Store"},"product":[],"promotion":[],"publi...]
+userId: TEXT | NULL
+fullVisitorId: TEXT | NULL | eg=["0588707039046082366", "5657078113647536975"]
+visitStartTime: NUMBER | NULL | eg=[1476638972, 1485109530]
+visitorId: NUMBER | NULL
+device: VARIANT | NULL | eg=[{"browser":"Chrome","browserSize":"not available in demo dataset","browserVersion":"not available in demo dataset","deviceCategory":"desktop","flashVersion":"not available in demo dataset","isMobile":false,"language":"not available in demo dataset","mobileDeviceBranding":"not available in demo dataset","mobileDeviceInfo":"not available in demo dataset","mobileDeviceMarketingName":"not available in demo dataset","mobileDeviceModel":"not available in demo dataset","mobileInputSelector":"not available in demo dataset","operatingSystem":"Windows","operatingSystemVersion":"not available in demo dataset","screenColors":"not available in demo dataset","screenResolution":"not available in demo dataset"}]
+socialEngagementType: TEXT | NULL | eg=["Not Socially Engaged"]
+channelGrouping: TEXT | NULL | eg=["Organic Search", "Social"]
+visitId: NUMBER | NULL | eg=[1476638972, 1485109530]
+
+## ECOMMERCE.SALES_BY_SKU
+total_ordered: NUMBER | NULL | eg=[334, 253]
+productSKU: TEXT | NULL | eg=["GGOEGDHC074099", "GGOEGFYQ016599"]
+
+## ECOMMERCE.REV_TRANSACTIONS
+totals_transactions: NUMBER | NULL | eg=[1]
+hits_page_pagePathLevel1: TEXT | NULL | eg=["/ordercompleted.html"]
+hits_product_productPrice: NUMBER | NULL | eg=[3500000, 1500000]
+hits_product_productQuantity: NUMBER | NULL | eg=[2, 1]
+hits_page_pageTitle: TEXT | NULL | eg=["Checkout Confirmation"]
+hits_transaction_transactionRevenue: NUMBER | NULL | eg=[42000000, 97580000]
+hits_product_v2ProductCategory: TEXT | NULL | eg=["(not set)", "Apparel"]
+hits_product_productRevenue: NUMBER | NULL | eg=[7800000, 3800000]
+hits_product_productSKU: TEXT | NULL | eg=["GGOEGHGC019799", "GGOEGHGH019699"]
+totals_timeOnSite: NUMBER | NULL | eg=[1834, 1036]
+hits_product_productVariant: TEXT | NULL | eg=[" BLUE", " GREEN"]
+hits_time: NUMBER | NULL | eg=[1819831, 1035884]
+hits_transaction_transactionId: TEXT | NULL | eg=["ORD20160807983", "ORD201702062188"]
+hits_product_productRefundAmount: NUMBER | NULL
+fullVisitorId: TEXT | NULL | eg=["7851878234225373633", "5719637398048239955"]
+totals_totalTransactionRevenue: NUMBER | NULL | eg=[42000000, 97580000]
+totals_pageviews: NUMBER | NULL | eg=[40, 38]
+geoNetwork_country: TEXT | NULL | eg=["Peru"]
+hits_product_v2ProductName: TEXT | NULL | eg=["Google Sunglasses", "Keyboard DOT Sticker"]
+hits_page_searchKeyword: TEXT | NULL
+hits_item_itemRevenue: NUMBER | NULL
+hits_item_itemQuantity: NUMBER | NULL
+hits_item_currencyCode: TEXT | NULL | eg=["USD"]
+visitId: NUMBER | NULL | eg=[1470617094, 1486405337]
+hits_type: TEXT | NULL | eg=["PAGE"]
+date: TEXT | NULL | eg=["20160807", "20170206"]
+channelGrouping: TEXT | NULL | eg=["Organic Search"]
+geoNetwork_city: TEXT | NULL | eg=["La Victoria", "(not set)"]
+
+## ECOMMERCE.SALES_REPORT
+sentimentMagnitude: FLOAT | NULL | eg=[0.5, 0.1]
+ratio: FLOAT | NULL | eg=[0.057692307692307696, 0.003278688524590164]
+restockingLeadTime: NUMBER | NULL | eg=[12, 5]
+name: TEXT | NULL | eg=[" Men's Short Sleeve Hero Tee Charcoal", " Metallic Notebook Set"]
+sentimentScore: FLOAT | NULL | eg=[0.0]
+productSKU: TEXT | NULL | eg=["GGOEGAAX0325", "GGOEGOLC014299"]
+stockLevel: NUMBER | NULL | eg=[104, 610]
+total_ordered: NUMBER | NULL | eg=[6, 2]
+
+## ECOMMERCE.ALL_SESSIONS
+itemQuantity: NUMBER | NULL
+productPrice: NUMBER | NULL | eg=[9990000]
+v2ProductCategory: TEXT | NULL | eg=["Home/Shop by Brand/Android/"]
+channelGrouping: TEXT | NULL | eg=["Organic Search", "Social"]
+date: TEXT | NULL | eg=["20170501", "20170507"]
+timeOnSite: NUMBER | NULL | eg=[155, 156]
+fullVisitorId: TEXT | NULL | eg=["841874072879545751", "8094864053975342083"]
+productRevenue: NUMBER | NULL
+pageTitle: TEXT | NULL | eg=["Android | Shop by Brand | Google Merchandise Store"]
+visitId: NUMBER | NULL | eg=[1493653088, 1494218402]
+city: TEXT | NULL | eg=["not available in demo dataset", "Hong Kong"]
+sessionQualityDim: NUMBER | NULL
+productRefundAmount: NUMBER | NULL
+productQuantity: NUMBER | NULL
+transactions: NUMBER | NULL
+transactionRevenue: NUMBER | NULL
+itemRevenue: NUMBER | NULL
+searchKeyword: TEXT | NULL
+transactionId: TEXT | NULL
+type: TEXT | NULL | eg=["PAGE"]
+currencyCode: TEXT | NULL | eg=["USD"]
+v2ProductName: TEXT | NULL | eg=["Android Spiral Journal with Pen"]
+pagePathLevel1: TEXT | NULL | eg=["/store.html", "/google+redesign/"]
+country: TEXT | NULL | eg=["Mexico", "Hong Kong"]
+eCommerceAction_type: TEXT | NULL | eg=["0"]
+pageviews: NUMBER | NULL | eg=[5, 3]
+productVariant: TEXT | NULL | eg=["(not set)"]
+totalTransactionRevenue: NUMBER | NULL
+productSKU: TEXT | NULL | eg=["GGOEAOCH077899"]
+time: NUMBER | NULL | eg=[123268, 156025]
+eCommerceAction_step: NUMBER | NULL | eg=[1]
+eCommerceAction_option: TEXT | NULL
+
+## ECOMMERCE.PARTITIONS
+date_formatted: DATE | NULL | eg=["2017-03-12", "2017-05-14"]
+total_transactions: NUMBER | NULL | eg=[57, 63]
+
+## ECOMMERCE.PRODUCT_LIST
+v2ProductName: TEXT | NULL | eg=["Maze Pen", "Yoga Mat"]
+productSKU: TEXT | NULL | eg=["9180842", "GGOEGGOA017399"]
+
+## ECOMMERCE.SITE_WIDE_PROMOTION
+discount: FLOAT | NULL
+
+## ECOMMERCE.CHECKOUT_NUDGE
+eCommerceAction_type_max: TEXT | NULL | eg=["5"]
+fullVisitorID: TEXT | NULL | eg=["0697698087141419098", "1495718436219461866"]
+session_time_on_site_minutes_max: FLOAT | NULL | eg=[7.2, 127.36666666666666]
+number_of_sessions: NUMBER | NULL | eg=[1]
+number_of_products_viewed: NUMBER | NULL | eg=[256, 1]
+
+## ECOMMERCE.CATEGORIES
+category: TEXT | NULL | eg=["Fun", "Bags"]
+productSKU: TEXT | NULL | eg=["GGOEGOBC078699", "GGOEGBJC019999"]
+
+## ECOMMERCE.DAYS_WITH_RAIN
+date: DATE | NULL
+prcp: FLOAT | NULL
+station_name: TEXT | NULL

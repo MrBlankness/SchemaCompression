@@ -1,0 +1,50 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: PAGILA.FILM_TEXT
+Columns: film_id, title, description
+
+Table: PAGILA.PAYMENT
+Columns: staff_id, last_update, rental_id, amount, payment_id, customer_id, payment_date
+
+Table: PAGILA.ACTOR
+Columns: actor_id, last_update, first_name, last_name
+
+Table: PAGILA.FILM_CATEGORY
+Columns: last_update, category_id, film_id
+
+Table: PAGILA.RENTAL
+Columns: last_update, rental_date, return_date, rental_id, staff_id, customer_id, inventory_id
+
+Table: PAGILA.LANGUAGE
+Columns: language_id, name, last_update
+
+Table: PAGILA.STORE
+Columns: manager_staff_id, last_update, store_id, address_id
+
+Table: PAGILA.STAFF
+Columns: last_name, store_id, username, first_name, last_update, password, email, staff_id, picture, address_id, active
+
+Table: PAGILA.FILM
+Columns: language_id, title, rental_duration, rating, original_language_id, film_id, length, last_update, rental_rate, release_year, replacement_cost, description, special_features
+
+Table: PAGILA.INVENTORY
+Columns: inventory_id, film_id, last_update, store_id
+
+Table: PAGILA.CUSTOMER
+Columns: email, create_date, first_name, active, address_id, last_name, last_update, customer_id, store_id
+
+Table: PAGILA.FILM_ACTOR
+Columns: last_update, actor_id, film_id
+
+Table: PAGILA.CATEGORY
+Columns: last_update, name, category_id
+
+Table: PAGILA.CITY
+Columns: city, city_id, country_id, last_update
+
+Table: PAGILA.ADDRESS
+Columns: city_id, district, address_id, last_update, postal_code, address2, phone, address
+
+Table: PAGILA.COUNTRY
+Columns: country_id, last_update, country

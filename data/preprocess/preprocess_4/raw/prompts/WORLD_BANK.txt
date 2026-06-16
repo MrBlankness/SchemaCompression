@@ -1,0 +1,355 @@
+[TABLES]
+## WORLD_BANK_HEALTH_POPULATION.SERIES_SUMMARY
+related_indicators: TEXT | In general indicator that are of interest and related to the specific series.
+base_period: NUMBER | Base period is the period of time for which data is used as the base of an index number or other ratio have been collected. This period is frequently one of a year but it may be as short as one day or as long as the average of a group of years.
+other_notes: TEXT | A brief record of facts topics or thoughts written down and used to contextualize the series definition values and other characteristics.
+series_code: TEXT | A number or a sequence of related statistical units arranged or occurring in temporal spatial or other order or succession. WDI carries mostly time series. | eg=["HD.HCI.OVRL", "HD.HCI.OVRL.LB.FE"]
+aggregation_method: TEXT | Aggregation methods are types of calculations used to group attribute values into a metric for each dimension value. For example for each region one may retrieve the total value of country entries (the sum of the series value for countries belonging to the region). | eg=["Weighted Average"]
+unit_of_measure: TEXT | A quantity used as a standard of measurement. Example: Units of time are second minute hour day week month year and decade.
+periodicity: TEXT | Applies to series recurring at regular intervals. Most of the time this term denotes that interval of recurrence. | eg=["Annual"]
+general_comments: TEXT | Other notes regarding the series which do not appear in Development relevance or Limitations or exceptions
+topic: TEXT | The matter dealt with in the context discourse or subject related to the series. | eg=["Public Sector: Policy & institutions", "Background: Economy"]
+short_definition: TEXT | Short statement of the exact meaning of a series.
+long_definition: TEXT | Extended statement of the exact meaning of a series. | eg=["The HCI calculates the contributions of health and education to worker productivity. The final index score ranges from zero to one and measures the productivity as a future worker of child born today relative to the benchmark of full health and complete education.", "The HCI lower bound reflects uncertainty in the measurement of the components and the overall index. It is obtained by recalculating the HCI using estimates of the lower bounds of each of the components of the HCI. The range between the upper and lower bound is the uncertainty interval. While the uncertainty intervals constructed here do not have a rigorous statistical interpretation, a rule of thumb is that if for two countries they overlap substantially, the differences between their HCI values are not likely to be practically meaningful."]
+source: TEXT | A place person or organization from which the series comes or can be obtained. | eg=["World Bank staff calculations based on the methodology described in World Bank (2018). https://openknowledge.worldbank.org/handle/10986/30498", "World Bank national accounts data, and OECD National Accounts data files."]
+indicator_name: TEXT | Given name of a series. | eg=["Human capital index (HCI) (scale 0-1)", "Human capital index (HCI), female, lower bound (scale 0-1)"]
+limitations_and_exceptions: TEXT | A limiting rule or circumstance that applies to usage of the series such as the scope of the survey collecting the data or missing years and countries.  It should also note when data are imputed or estimated
+notes_from_original_source: TEXT | A brief record of facts topics or thoughts written down and used to contextualize the series definition values and other characteristics.
+development_relevance: TEXT | The relevance of a series refers to how the indicator’s data may be used to monitor particular aspects of development goals and programs for example the Sustainable Development Goals. The indicator may conclusively measure progress towards a particular objective or may act as a proxy or interpretation of a development aim.
+related_source_links: TEXT | Internet address of related source page tool or knowledge base.
+statistical_concept_and_methodology: TEXT | The abstract idea general statistical notions or a system of methods used to generate the series. | eg=["The World Bank uses Atlas method GNI per capita in U.S. dollars to classify countries for analytical purposes and to determine borrowing eligibility. For more information, see the metadata for Atlas method GNI in current U.S. dollars (NY.GNP.ATLS.CD) and total population (SP.POP.TOTL)."]
+license_type: TEXT | Explains the rights conferred and restrictions imposed by the owner to the users of a series | eg=["CC BY-4.0"]
+other_web_links: TEXT | Internet addresses of related pages tools or knowledge bases.
+
+## WORLD_BANK_HEALTH_POPULATION.COUNTRY_SUMMARY
+latest_population_census: TEXT | Latest population census shows the most recent year in which a census was conducted and in which at least preliminary results have been released. The preliminary results from the very recent censuses could be reflected in timely revisions if basic data are available such as population by age and sex as well as the detailed definition of counting coverage and completeness.
+table_name: TEXT | Country name the country's name as approved by the relevant body (Italy is used as an example): conventional short form (Republic of Italy). | eg=["Arab World", "East Asia & Pacific (excluding high income)"]
+system_of_national_accounts: TEXT | System of National Accounts identifies whether a country uses the 1968 1993 or 2008 System of National Accounts (SNA). The 2008 SNA is an update of the 1993 SNA and retains its basic theoretical framework.
+imf_data_dissemination_standard: TEXT | IMF data dissemination standard shows the countries that subscribe to the IMF’s Special Data Dissemination Standard (S) or Enhanced General Data Dissemination System (e-GDDS). S refers to countries that subscribe to the SDDS and have posted data on the Dissemination Standards Bulletin Board at http://dsbb.imf.org. S+ countries must observe additional coverage periodicity and timeliness requirements. e-G refers to countries that subscribe to the e-GDDS.
+wb_2_code: TEXT | World Bank 2 digit code value of the country. | eg=["1A", "4E"]
+short_name: TEXT | Country name the country's official name as approved by the relevant body (Italy is used as an example): conventional short form (Italy). | eg=["Arab World", "East Asia & Pacific (excluding high income)"]
+source_of_most_recent_income_and_expenditure_data: TEXT | Source of most recent income and expenditure data shows household surveys that collect income and expenditure data. Names and detailed information on household surveys can be found on the website of the International Household Survey Network (www.surveynetwork.org). Core Welfare Indicator Questionnaire Surveys (CWIQ) developed by the World Bank measure changes in key social indicators for different population groups—specifically indicators of access utilization and satisfaction with core social and economic services. Expenditure survey/budget surveys (ES/BS) collect detailed information on household consumption as well as on general demographic social and economic characteristics. Integrated household surveys (IHS) collect detailed information on a wide variety of topics including health education economic activities housing and utilities.
+latest_trade_data: NUMBER | Latest trade data show the most recent year for which structure of merchandise trade data from the United Nations Statistics Division’s Commodity Trade (Comtrade) database are available.
+balance_of_payments_manual_in_use: TEXT | Balance of Payments Manual in use refers to the classification system used to compile and report data on balance of payments. 6 refers to the 6th edition of the IMF’s Balance of Payments Manual (2009).
+other_groups: TEXT | Other types of grouping approved by the WDI team.
+ppp_survey_year: TEXT | Purchasing power parity (PPP) survey year is the latest available survey year for the International Comparison Program’s estimates of PPPs.
+latest_agricultural_census: TEXT | Latest agricultural census shows the most recent year in which an agricultural census was conducted or planned to be conducted as reported to the Food and Agriculture Organization.
+income_group: TEXT | World Bank income group to which a country belongs after the country classification is completed every year.
+government_accounting_concept: TEXT | Government finance accounting concept is the accounting basis for reporting central government financial data. For most countries government finance data have been consolidated (C) into one set of accounts capturing all central government fiscal activities. Budgetary central government accounts (B) exclude some central government units.
+latest_household_survey: TEXT | Latest demographic education or health household survey indicates the household surveys used to compile the demographic education and health data. Detailed information on each survey is provided through the following links:  AIDS Indicator Survey Demographic and Health Survey Health Issues Survey and Malaria Indicator Survey - www.dhsprogram.com; Living Standards Measurement Study -  www.worldbank.org/lsms; Multiple Indicator Cluster Survey - http://mics.unicef.org; Reproductive Health Survey -  www.cdc.gov/reproductivehealth; World Health Survey is available at - www.who.int/healthinfo/survey/en.
+vital_registration_complete: TEXT | Vital registration complete identifies countries that report at least 90 percent complete registries of vital (birth and death) statistics to the United Nations Statistics Division and are reported in its Population and Vital Statistics Reports. Countries with complete vital statistics registries may have more accurate and more timely demographic indicators than other countries.
+national_accounts_reference_year: TEXT | Reference year is the year in which the local currency constant price series of a country is valued. The reference year is usually the same as the base year used to report the constant price series. However when the constant price data are chain linked the base year is changed annually so the data are rescaled to a specific reference year to provide a consistent time series. When the country has not rescaled following a change in base year World Bank staff rescale the data to maintain a longer historical series. To allow for cross-country comparison and data aggregation constant price data reported in World Development Indicators are rescaled to a common reference year (2010) and currency (U.S. dollars).
+alternative_conversion_factor: TEXT | Alternative conversion factor identifies the countries and years for which a World Bank–estimated conversion factor has been used in place of the official exchange rate (line rf in the International Monetary Fund’s [IMF] International Financial Statistics). See later in Sources and methods for further discussion of alternative conversion factors.
+two_alpha_code: TEXT | ISO-2 digit alpha code value of the country. Re: www.iso.org | eg=["1A", "4E"]
+latest_industrial_data: NUMBER | Latest industrial data show the most recent year for which manufacturing value added data at the three-digit level of the International Standard Industrial Classification (revision 2 or 3) are available in the United Nations Industrial Development Organization database.
+national_accounts_base_year: TEXT | Base year is the base or pricing period used for constant price calculations in the country’s national accounts. Price indexes derived from national accounts aggregates such as the implicit deflator for gross domestic product (GDP) express the price level relative to base year prices.
+long_name: TEXT | Country name the country's name as approved by the relevant body (Italy is used as an example): conventional long form (Republic of Italy). | eg=["Arab World", "East Asia & Pacific (excluding high income)"]
+external_debt_reporting_status: TEXT | External debt shows debt reporting status for 2016 data. A indicates that data are as reported P that data are based on reported or collected information but include an element of staff estimation and E that data are World Bank staff estimates.
+special_notes: TEXT | Country special notes for data and metadata users. | eg=["Arab World aggregate. Arab World is composed of members of the League of Arab States.", "East Asia and Pacific regional aggregate (includes all income levels)."]
+system_of_trade: TEXT | System of trade refers to the United Nations general trade system (G) or special trade system (S). Under the general trade system goods entering directly for domestic consumption and goods entered into customs storage are recorded as imports at arrival. Under the special trade system goods are recorded as imports when declared for domestic consumption whether at time of entry or on withdrawal from customs storage.
+currency_unit: TEXT | Currency unit (such as the dollar euro peso rupee) issued as a coin or banknote a standard unit of value and a unit of account.
+lending_category: TEXT | World Bank lending category to which a country belongs after the operational guidelines are completed every year.
+sna_price_valuation: TEXT | SNA price valuation shows whether value added in the national accounts is reported at basic prices (B) or producer prices (P). Producer prices include taxes paid by producers and thus tend to overstate the actual value added in production. However value added can be higher at basic prices than at producer prices in countries with high agricultural subsidies.
+region: TEXT | World Bank region to which a country belongs.
+country_code: TEXT | A short alphabetic or numeric geographical code representing a specific country or area. In April 2016 WDI has adopted the three digit ISO code to identify countries in its databases. | eg=["ARB", "EAP"]
+
+## WORLD_BANK_HEALTH_POPULATION.SERIES_TIMES
+series_code: TEXT | NULL | eg=["SP.UWT.TFRT", "SH.FPL.SATM.ZS"]
+year: NUMBER | NULL | eg=[1990]
+description: TEXT | NULL | eg=["Averages for regions/groups are based on country-level data around 1990."]
+
+## WORLD_BANK_HEALTH_POPULATION.HEALTH_NUTRITION_POPULATION
+value: FLOAT | NULL | eg=[5.21322866216277, 73.1306321479929]
+indicator_name: TEXT | NULL | eg=["Age dependency ratio, old", "Age dependency ratio, young"]
+country_code: TEXT | NULL | eg=["BWA"]
+country_name: TEXT | NULL | eg=["Botswana"]
+indicator_code: TEXT | NULL | eg=["SP.POP.DPND.OL", "SP.POP.DPND.YG"]
+year: NUMBER | NULL | eg=[2005, 1997]
+
+## WORLD_BANK_HEALTH_POPULATION.COUNTRY_SERIES_DEFINITIONS
+description: TEXT | NULL | eg=["Aggregate data are based on UNICEF, WHO, and the World Bank harmonized JME dataset."]
+country_code: TEXT | NULL | eg=["EAS", "ECS"]
+series_code: TEXT | NULL | eg=["SH.STA.STNT.ME.ZS", "SH.STA.OWGH.ME.ZS"]
+
+## WORLD_BANK_INTL_EDUCATION.INTERNATIONAL_EDUCATION
+value: FLOAT | NULL | eg=[1.95879995822906, 100974.0]
+year: NUMBER | NULL | eg=[2015, 1977]
+country_name: TEXT | NULL | eg=["Thailand"]
+indicator_code: TEXT | NULL | eg=["SE.PRM.REPT.ZS", "SE.PRM.TCHR.FE"]
+country_code: TEXT | NULL | eg=["THA"]
+indicator_name: TEXT | NULL | eg=["Percentage of repeaters in primary education, all grades, both sexes (%)", "Teachers in primary education, female (number)"]
+
+## WORLD_BANK_INTL_EDUCATION.SERIES_SUMMARY
+periodicity: TEXT | Applies to series recurring at regular intervals. Most of the time this term denotes that interval of recurrence.
+unit_of_measure: TEXT | A quantity used as a standard of measurement. Example: Units of time are second minute hour day week month year and decade.
+topic: TEXT | The matter dealt with in the context discourse or subject related to the series. | eg=["Attainment"]
+source: TEXT | A place person or organization from which the series comes or can be obtained. | eg=["Robert J. Barro and Jong-Wha Lee: http://www.barrolee.com/"]
+series_code: TEXT | A number or a sequence of related statistical units arranged or occurring in temporal spatial or other order or succession. WDI carries mostly time series. | eg=["BAR.NOED.15UP.FE.ZS", "BAR.NOED.15UP.ZS"]
+aggregation_method: TEXT | Aggregation methods are types of calculations used to group attribute values into a metric for each dimension value. For example for each region one may retrieve the total value of country entries (the sum of the series value for countries belonging to the region).
+related_indicators: TEXT | In general indicator that are of interest and related to the specific series.
+long_definition: TEXT | Extended statement of the exact meaning of a series. | eg=["Percentage of female population age 15+ with no education", "Percentage of population age 15+ with no education"]
+general_comments: TEXT | Other notes regarding the series which do not appear in Development relevance or Limitations or exceptions
+other_notes: TEXT | A brief record of facts topics or thoughts written down and used to contextualize the series definition values and other characteristics.
+notes_from_original_source: TEXT | A brief record of facts topics or thoughts written down and used to contextualize the series definition values and other characteristics.
+statistical_concept_and_methodology: TEXT | The abstract idea general statistical notions or a system of methods used to generate the series.
+other_web_links: TEXT | Internet addresses of related pages tools or knowledge bases.
+limitations_and_exceptions: TEXT | A limiting rule or circumstance that applies to usage of the series such as the scope of the survey collecting the data or missing years and countries.  It should also note when data are imputed or estimated
+short_definition: TEXT | Short statement of the exact meaning of a series. | eg=["Percentage of female population age 15+ with no education", "Percentage of population age 15+ with no education"]
+license_type: TEXT | Explains the rights conferred and restrictions imposed by the owner to the users of a series
+related_source_links: TEXT | Internet address of related source page tool or knowledge base.
+indicator_name: TEXT | Given name of a series. | eg=["Barro-Lee: Percentage of female population age 15+ with no education", "Barro-Lee: Percentage of population age 15+ with no education"]
+base_period: TEXT | Base period is the period of time for which data is used as the base of an index number or other ratio have been collected. This period is frequently one of a year but it may be as short as one day or as long as the average of a group of years.
+development_relevance: TEXT | The relevance of a series refers to how the indicator’s data may be used to monitor particular aspects of development goals and programs for example the Sustainable Development Goals. The indicator may conclusively measure progress towards a particular objective or may act as a proxy or interpretation of a development aim.
+
+## WORLD_BANK_INTL_EDUCATION.COUNTRY_SUMMARY
+other_groups: TEXT | Other types of grouping approved by the WDI team.
+national_accounts_reference_year: TEXT | Reference year is the year in which the local currency constant price series of a country is valued. The reference year is usually the same as the base year used to report the constant price series. However when the constant price data are chain linked the base year is changed annually so the data are rescaled to a specific reference year to provide a consistent time series. When the country has not rescaled following a change in base year World Bank staff rescale the data to maintain a longer historical series. To allow for cross-country comparison and data aggregation constant price data reported in World Development Indicators are rescaled to a common reference year (2010) and currency (U.S. dollars).
+latest_population_census: TEXT | Latest population census shows the most recent year in which a census was conducted and in which at least preliminary results have been released. The preliminary results from the very recent censuses could be reflected in timely revisions if basic data are available such as population by age and sex as well as the detailed definition of counting coverage and completeness.
+system_of_national_accounts: TEXT | System of National Accounts identifies whether a country uses the 1968 1993 or 2008 System of National Accounts (SNA). The 2008 SNA is an update of the 1993 SNA and retains its basic theoretical framework.
+national_accounts_base_year: TEXT | Base year is the base or pricing period used for constant price calculations in the country’s national accounts. Price indexes derived from national accounts aggregates such as the implicit deflator for gross domestic product (GDP) express the price level relative to base year prices.
+income_group: TEXT | World Bank income group to which a country belongs after the country classification is completed every year.
+latest_agricultural_census: TEXT | Latest agricultural census shows the most recent year in which an agricultural census was conducted or planned to be conducted as reported to the Food and Agriculture Organization.
+external_debt_reporting_status: TEXT | External debt shows debt reporting status for 2016 data. A indicates that data are as reported P that data are based on reported or collected information but include an element of staff estimation and E that data are World Bank staff estimates.
+region: TEXT | World Bank region to which a country belongs.
+short_name: TEXT | Country name the country's official name as approved by the relevant body (Italy is used as an example): conventional short form (Italy). | eg=["Arab World", "East Asia & Pacific (developing only)"]
+system_of_trade: TEXT | System of trade refers to the United Nations general trade system (G) or special trade system (S). Under the general trade system goods entering directly for domestic consumption and goods entered into customs storage are recorded as imports at arrival. Under the special trade system goods are recorded as imports when declared for domestic consumption whether at time of entry or on withdrawal from customs storage.
+vital_registration_complete: TEXT | Vital registration complete identifies countries that report at least 90 percent complete registries of vital (birth and death) statistics to the United Nations Statistics Division and are reported in its Population and Vital Statistics Reports. Countries with complete vital statistics registries may have more accurate and more timely demographic indicators than other countries.
+latest_industrial_data: NUMBER | Latest industrial data show the most recent year for which manufacturing value added data at the three-digit level of the International Standard Industrial Classification (revision 2 or 3) are available in the United Nations Industrial Development Organization database.
+wb_two_code: TEXT | NULL | eg=["1A", "4E"]
+latest_water_withdrawal_data: TEXT | NULL
+government_accounting_concept: TEXT | Government finance accounting concept is the accounting basis for reporting central government financial data. For most countries government finance data have been consolidated (C) into one set of accounts capturing all central government fiscal activities. Budgetary central government accounts (B) exclude some central government units.
+latest_household_survey: TEXT | Latest demographic education or health household survey indicates the household surveys used to compile the demographic education and health data. Detailed information on each survey is provided through the following links:  AIDS Indicator Survey Demographic and Health Survey Health Issues Survey and Malaria Indicator Survey - www.dhsprogram.com; Living Standards Measurement Study -  www.worldbank.org/lsms; Multiple Indicator Cluster Survey - http://mics.unicef.org; Reproductive Health Survey -  www.cdc.gov/reproductivehealth; World Health Survey is available at - www.who.int/healthinfo/survey/en.
+source_of_most_recent_income_and_expenditure_data: TEXT | Source of most recent income and expenditure data shows household surveys that collect income and expenditure data. Names and detailed information on household surveys can be found on the website of the International Household Survey Network (www.surveynetwork.org). Core Welfare Indicator Questionnaire Surveys (CWIQ) developed by the World Bank measure changes in key social indicators for different population groups—specifically indicators of access utilization and satisfaction with core social and economic services. Expenditure survey/budget surveys (ES/BS) collect detailed information on household consumption as well as on general demographic social and economic characteristics. Integrated household surveys (IHS) collect detailed information on a wide variety of topics including health education economic activities housing and utilities.
+two_alpha_code: TEXT | ISO-2 digit alpha code value of the country. Re: www.iso.org | eg=["1A", "4E"]
+ppp_survey_year: TEXT | Purchasing power parity (PPP) survey year is the latest available survey year for the International Comparison Program’s estimates of PPPs.
+latest_trade_data: NUMBER | Latest trade data show the most recent year for which structure of merchandise trade data from the United Nations Statistics Division’s Commodity Trade (Comtrade) database are available.
+alternative_conversion_factor: TEXT | Alternative conversion factor identifies the countries and years for which a World Bank–estimated conversion factor has been used in place of the official exchange rate (line rf in the International Monetary Fund’s [IMF] International Financial Statistics). See later in Sources and methods for further discussion of alternative conversion factors.
+balance_of_payments_manual_in_use: TEXT | Balance of Payments Manual in use refers to the classification system used to compile and report data on balance of payments. 6 refers to the 6th edition of the IMF’s Balance of Payments Manual (2009).
+lending_category: TEXT | World Bank lending category to which a country belongs after the operational guidelines are completed every year.
+currency_unit: TEXT | Currency unit (such as the dollar euro peso rupee) issued as a coin or banknote a standard unit of value and a unit of account.
+table_name: TEXT | Country name the country's name as approved by the relevant body (Italy is used as an example): conventional short form (Republic of Italy). | eg=["Arab World", "East Asia & Pacific"]
+long_name: TEXT | Country name the country's name as approved by the relevant body (Italy is used as an example): conventional long form (Republic of Italy). | eg=["Arab World", "East Asia & Pacific (developing only)"]
+special_notes: TEXT | Country special notes for data and metadata users. | eg=["Arab World aggregate. Arab World is composed of members of the League of Arab States.", "East Asia and Pacific regional aggregate (does not include high-income economies)."]
+country_code: TEXT | A short alphabetic or numeric geographical code representing a specific country or area. In April 2016 WDI has adopted the three digit ISO code to identify countries in its databases. | eg=["ARB", "EAP"]
+imf_data_dissemination_standard: TEXT | IMF data dissemination standard shows the countries that subscribe to the IMF’s Special Data Dissemination Standard (S) or Enhanced General Data Dissemination System (e-GDDS). S refers to countries that subscribe to the SDDS and have posted data on the Dissemination Standards Bulletin Board at http://dsbb.imf.org. S+ countries must observe additional coverage periodicity and timeliness requirements. e-G refers to countries that subscribe to the e-GDDS.
+sna_price_valuation: TEXT | SNA price valuation shows whether value added in the national accounts is reported at basic prices (B) or producer prices (P). Producer prices include taxes paid by producers and thus tend to overstate the actual value added in production. However value added can be higher at basic prices than at producer prices in countries with high agricultural subsidies.
+
+## WORLD_BANK_INTL_EDUCATION.COUNTRY_SERIES_DEFINITIONS
+country_code: TEXT | NULL | eg=["TZA", "CYP"]
+series_code: TEXT | NULL | eg=["NY.GDP.PCAP.KD", "NY.GNP.PCAP.PP.CD"]
+description: TEXT | NULL | eg=["Covers mainland Tanzania only.", "Data are for areas under the effective control of the Government of the Republic of Cyprus."]
+
+## WORLD_BANK_INTL_DEBT.SERIES_SUMMARY
+long_definition: TEXT | Extended statement of the exact meaning of a series. | eg=["Exports of goods, services and income is the sum of goods (merchandise) exports, exports of (nonfactor) services and primary income (factor) receipts. Data are in current U.S. dollars.", "Primary income on foreign direct investment covers payments of direct investment income (debit side), which consist of income on equity (dividends, branch profits, and reinvested earnings) and income on the intercompany debt (interest). Data are in current U.S. dollars."]
+limitations_and_exceptions: TEXT | A limiting rule or circumstance that applies to usage of the series such as the scope of the survey collecting the data or missing years and countries.  It should also note when data are imputed or estimated
+related_source_links: TEXT | Internet address of related source page tool or knowledge base.
+aggregation_method: TEXT | Aggregation methods are types of calculations used to group attribute values into a metric for each dimension value. For example for each region one may retrieve the total value of country entries (the sum of the series value for countries belonging to the region). | eg=["Gap-filled total", "Sum"]
+source: TEXT | A place person or organization from which the series comes or can be obtained. | eg=["International Monetary Fund, Balance of Payments Statistics Yearbook.", "International Monetary Fund, Balance of Payments Statistics Yearbook. Data starting from 2005 are based the sixth edition of the IMF's Balance of Payments Manual (BPM6)."]
+base_period: TEXT | Base period is the period of time for which data is used as the base of an index number or other ratio have been collected. This period is frequently one of a year but it may be as short as one day or as long as the average of a group of years.
+other_notes: TEXT | A brief record of facts topics or thoughts written down and used to contextualize the series definition values and other characteristics.
+statistical_concept_and_methodology: TEXT | The abstract idea general statistical notions or a system of methods used to generate the series.
+related_indicators: TEXT | In general indicator that are of interest and related to the specific series.
+other_web_links: TEXT | Internet addresses of related pages tools or knowledge bases.
+topic: TEXT | The matter dealt with in the context discourse or subject related to the series. | eg=["Economic Policy & Debt: Balance of payments: Current account: Goods, services & income", "Economic Policy & Debt: Balance of payments: Capital & financial account"]
+short_definition: TEXT | Short statement of the exact meaning of a series. | eg=["Exports of goods, services and primary income is the sum of goods (merchandise) exports, exports of (nonfactor) services and income (factor) receipts. Data are in current U.S. dollars.", "Primary income on foreign direct investment covers payments of direct investment income (debit side), which consist of income on equity (dividends, branch profits, and reinvested earnings) and income on the intercompany debt (interest). Data are in current U.S. dollars."]
+notes_from_original_source: TEXT | A brief record of facts topics or thoughts written down and used to contextualize the series definition values and other characteristics.
+periodicity: TEXT | Applies to series recurring at regular intervals. Most of the time this term denotes that interval of recurrence. | eg=["Annual"]
+license_type: TEXT | Explains the rights conferred and restrictions imposed by the owner to the users of a series
+general_comments: TEXT | Other notes regarding the series which do not appear in Development relevance or Limitations or exceptions | eg=["Note: Data starting from 2005 are based the sixth edition of the IMF's Balance of Payments Manual (BPM6)."]
+unit_of_measure: TEXT | A quantity used as a standard of measurement. Example: Units of time are second minute hour day week month year and decade.
+series_code: TEXT | A number or a sequence of related statistical units arranged or occurring in temporal spatial or other order or succession. WDI carries mostly time series. | eg=["BX.GSR.TOTL.CD", "BX.KLT.DREM.CD.DT"]
+development_relevance: TEXT | The relevance of a series refers to how the indicator’s data may be used to monitor particular aspects of development goals and programs for example the Sustainable Development Goals. The indicator may conclusively measure progress towards a particular objective or may act as a proxy or interpretation of a development aim.
+indicator_name: TEXT | Given name of a series. | eg=["Exports of goods, services and primary income (current US$)", "Primary income on FDI (current US$)"]
+
+## WORLD_BANK_INTL_DEBT.COUNTRY_SUMMARY
+system_of_trade: TEXT | System of trade refers to the United Nations general trade system (G) or special trade system (S). Under the general trade system goods entering directly for domestic consumption and goods entered into customs storage are recorded as imports at arrival. Under the special trade system goods are recorded as imports when declared for domestic consumption whether at time of entry or on withdrawal from customs storage.
+special_notes: TEXT | Country special notes for data and metadata users. | eg=["Latin America and Caribbean regional aggregate (does not include high-income economies).", "Least developed countries (UN classification) aggregate."]
+table_name: TEXT | Country name the country's name as approved by the relevant body (Italy is used as an example): conventional short form (Republic of Italy). | eg=["Latin America & Caribbean (excluding high income)", "Least developed countries: UN classification"]
+balance_of_payments_manual_in_use: TEXT | Balance of Payments Manual in use refers to the classification system used to compile and report data on balance of payments. 6 refers to the 6th edition of the IMF’s Balance of Payments Manual (2009).
+income_group: TEXT | World Bank income group to which a country belongs after the country classification is completed every year.
+national_accounts_reference_year: TEXT | Reference year is the year in which the local currency constant price series of a country is valued. The reference year is usually the same as the base year used to report the constant price series. However when the constant price data are chain linked the base year is changed annually so the data are rescaled to a specific reference year to provide a consistent time series. When the country has not rescaled following a change in base year World Bank staff rescale the data to maintain a longer historical series. To allow for cross-country comparison and data aggregation constant price data reported in World Development Indicators are rescaled to a common reference year (2010) and currency (U.S. dollars).
+vital_registration_complete: TEXT | Vital registration complete identifies countries that report at least 90 percent complete registries of vital (birth and death) statistics to the United Nations Statistics Division and are reported in its Population and Vital Statistics Reports. Countries with complete vital statistics registries may have more accurate and more timely demographic indicators than other countries.
+latest_water_withdrawal_data: TEXT | NULL
+latest_household_survey: TEXT | Latest demographic education or health household survey indicates the household surveys used to compile the demographic education and health data. Detailed information on each survey is provided through the following links:  AIDS Indicator Survey Demographic and Health Survey Health Issues Survey and Malaria Indicator Survey - www.dhsprogram.com; Living Standards Measurement Study -  www.worldbank.org/lsms; Multiple Indicator Cluster Survey - http://mics.unicef.org; Reproductive Health Survey -  www.cdc.gov/reproductivehealth; World Health Survey is available at - www.who.int/healthinfo/survey/en.
+latest_industrial_data: NUMBER | Latest industrial data show the most recent year for which manufacturing value added data at the three-digit level of the International Standard Industrial Classification (revision 2 or 3) are available in the United Nations Industrial Development Organization database.
+short_name: TEXT | Country name the country's official name as approved by the relevant body (Italy is used as an example): conventional short form (Italy). | eg=["Latin America & Caribbean (excluding high income)", "Least developed countries: UN classification"]
+external_debt_reporting_status: TEXT | External debt shows debt reporting status for 2016 data. A indicates that data are as reported P that data are based on reported or collected information but include an element of staff estimation and E that data are World Bank staff estimates.
+two_alpha_code: TEXT | ISO-2 digit alpha code value of the country. Re: www.iso.org | eg=["XJ", "XL"]
+long_name: TEXT | Country name the country's name as approved by the relevant body (Italy is used as an example): conventional long form (Republic of Italy). | eg=["Latin America & Caribbean (excluding high income)", "Least developed countries: UN classification"]
+government_accounting_concept: TEXT | Government finance accounting concept is the accounting basis for reporting central government financial data. For most countries government finance data have been consolidated (C) into one set of accounts capturing all central government fiscal activities. Budgetary central government accounts (B) exclude some central government units.
+latest_trade_data: NUMBER | Latest trade data show the most recent year for which structure of merchandise trade data from the United Nations Statistics Division’s Commodity Trade (Comtrade) database are available.
+alternative_conversion_factor: TEXT | Alternative conversion factor identifies the countries and years for which a World Bank–estimated conversion factor has been used in place of the official exchange rate (line rf in the International Monetary Fund’s [IMF] International Financial Statistics). See later in Sources and methods for further discussion of alternative conversion factors.
+latest_population_census: TEXT | Latest population census shows the most recent year in which a census was conducted and in which at least preliminary results have been released. The preliminary results from the very recent censuses could be reflected in timely revisions if basic data are available such as population by age and sex as well as the detailed definition of counting coverage and completeness.
+source_of_most_recent_Income_and_expenditure_data: TEXT | Source of most recent income and expenditure data shows household surveys that collect income and expenditure data. Names and detailed information on household surveys can be found on the website of the International Household Survey Network (www.surveynetwork.org). Core Welfare Indicator Questionnaire Surveys (CWIQ) developed by the World Bank measure changes in key social indicators for different population groups—specifically indicators of access utilization and satisfaction with core social and economic services. Expenditure survey/budget surveys (ES/BS) collect detailed information on household consumption as well as on general demographic social and economic characteristics. Integrated household surveys (IHS) collect detailed information on a wide variety of topics including health education economic activities housing and utilities.
+latest_agricultural_census: TEXT | Latest agricultural census shows the most recent year in which an agricultural census was conducted or planned to be conducted as reported to the Food and Agriculture Organization.
+lending_category: TEXT | World Bank lending category to which a country belongs after the operational guidelines are completed every year.
+country_code: TEXT | A short alphabetic or numeric geographical code representing a specific country or area. In April 2016 WDI has adopted the three digit ISO code to identify countries in its databases. | eg=["LAC", "LDC"]
+imf_data_dissemination_standard: TEXT | IMF data dissemination standard shows the countries that subscribe to the IMF’s Special Data Dissemination Standard (S) or Enhanced General Data Dissemination System (e-GDDS). S refers to countries that subscribe to the SDDS and have posted data on the Dissemination Standards Bulletin Board at http://dsbb.imf.org. S+ countries must observe additional coverage periodicity and timeliness requirements. e-G refers to countries that subscribe to the e-GDDS.
+currency_unit: TEXT | Currency unit (such as the dollar euro peso rupee) issued as a coin or banknote a standard unit of value and a unit of account.
+wb_2_code: TEXT | World Bank 2 digit code value of the country. | eg=["XJ", "XL"]
+region: TEXT | World Bank region to which a country belongs.
+national_accounts_base_year: TEXT | Base year is the base or pricing period used for constant price calculations in the country’s national accounts. Price indexes derived from national accounts aggregates such as the implicit deflator for gross domestic product (GDP) express the price level relative to base year prices.
+sna_price_valuation: TEXT | SNA price valuation shows whether value added in the national accounts is reported at basic prices (B) or producer prices (P). Producer prices include taxes paid by producers and thus tend to overstate the actual value added in production. However value added can be higher at basic prices than at producer prices in countries with high agricultural subsidies.
+other_groups: TEXT | Other types of grouping approved by the WDI team.
+system_of_national_accounts: TEXT | System of National Accounts identifies whether a country uses the 1968 1993 or 2008 System of National Accounts (SNA). The 2008 SNA is an update of the 1993 SNA and retains its basic theoretical framework.
+ppp_survey_year: TEXT | Purchasing power parity (PPP) survey year is the latest available survey year for the International Comparison Program’s estimates of PPPs.
+
+## WORLD_BANK_INTL_DEBT.SERIES_TIMES
+series_code: TEXT | NULL
+year: NUMBER | NULL
+description: TEXT | NULL
+
+## WORLD_BANK_INTL_DEBT.COUNTRY_SERIES_DEFINITIONS
+description: TEXT | NULL | eg=["Data on Foreign Direct Investment are based on Balance of Payments reported by the International Monetary Fund. Unless otherwise specified in the specific years."]
+series_code: TEXT | NULL | eg=["BX.KLT.DINV.CD.DT"]
+country_code: TEXT | NULL | eg=["AGO", "ARM"]
+
+## WORLD_BANK_INTL_DEBT.INTERNATIONAL_DEBT
+indicator_code: TEXT | NULL | eg=["NY.GNP.MKTP.CD"]
+country_name: TEXT | NULL | eg=["Chad", "Fiji"]
+country_code: TEXT | NULL | eg=["TCD", "FJI"]
+indicator_name: TEXT | NULL | eg=["GNI (current US$)"]
+value: FLOAT | NULL
+year: NUMBER | NULL
+
+## WORLD_BANK_WDI.SERIES_TIME
+year: NUMBER | NULL | eg=[1990]
+series_code: TEXT | NULL | eg=["SP.DYN.CONU.ZS", "SP.REG.DTHS.ZS"]
+description: TEXT | NULL | eg=["Averages for regions/groups are based on country-level data around 1990."]
+
+## WORLD_BANK_WDI.SERIES_SUMMARY
+other_notes: TEXT | A brief record of facts topics or thoughts written down and used to contextualize the series definition values and other characteristics. | eg=["Areas of former states are included in the successor states."]
+long_definition: TEXT | Extended statement of the exact meaning of a series. | eg=["Fertilizer consumption measures the quantity of plant nutrients used per unit of arable land. Fertilizer products cover nitrogenous, potash, and phosphate fertilizers (including ground rock phosphate). Traditional nutrients--animal and plant manures--are not included. For the purpose of data dissemination, FAO has adopted the concept of a calendar year (January to December). Some countries compile fertilizer data on a calendar year basis, while others are on a split-year basis. Arable land includes land defined by the FAO as land under temporary crops (double-cropped areas are counted once), temporary meadows for mowing or for pasture, land under market or kitchen gardens, and land temporarily fallow. Land abandoned as a result of shifting cultivation is excluded.", "Agricultural land refers to the share of land area that is arable, under permanent crops, and under permanent pastures. Arable land includes land defined by the FAO as land under temporary crops (double-cropped areas are counted once), temporary meadows for mowing or for pasture, land under market or kitchen gardens, and land temporarily fallow. Land abandoned as a result of shifting cultivation is excluded. Land under permanent crops is land cultivated with crops that occupy the land for long periods and need not be replanted after each harvest, such as cocoa, coffee, and rubber. This category includes land under flowering shrubs, fruit trees, nut trees, and vines, but excludes land under trees grown for wood or timber. Permanent pasture is land used for five or more years for forage, including natural and cultivated crops."]
+short_definition: TEXT | Short statement of the exact meaning of a series.
+series_code: TEXT | A number or a sequence of related statistical units arranged or occurring in temporal spatial or other order or succession. WDI carries mostly time series. | eg=["AG.CON.FERT.ZS", "AG.LND.AGRI.K2"]
+related_indicators: TEXT | In general indicator that are of interest and related to the specific series.
+other_web_links: TEXT | Internet addresses of related pages tools or knowledge bases.
+topic: TEXT | The matter dealt with in the context discourse or subject related to the series. | eg=["Environment: Agricultural production", "Environment: Land use"]
+notes_from_original_source: TEXT | A brief record of facts topics or thoughts written down and used to contextualize the series definition values and other characteristics.
+indicator_name: TEXT | Given name of a series. | eg=["Fertilizer consumption (kilograms per hectare of arable land)", "Agricultural land (sq. km)"]
+limitations_and_exceptions: TEXT | A limiting rule or circumstance that applies to usage of the series such as the scope of the survey collecting the data or missing years and countries.  It should also note when data are imputed or estimated | eg=["The FAO has revised the time series for fertilizer consumption and irrigation for 2002 onward. FAO collects fertilizer statistics for production, imports, exports, and consumption through the new FAO fertilizer resources questionnaire. In the previous release, the data were based on total consumption of fertilizers, but the data in the recent release are based on the nutrients in fertilizers. Some countries compile fertilizer data on a calendar year basis, while others compile on a crop year basis (July-June). Previous editions of this indicator, Fertilizer consumption (100 grams per hectare of arable land), reported data on a crop year basis, but this edition uses the calendar year, as adopted by the FAO. Caution should thus be used when comparing data over time.\n\nThe data are collected by the Food and Agriculture Organization of the United Nations (FAO) through annual questionnaires. The FAO tries to impose standard definitions and reporting methods, but complete consistency acros...", "The data are collected by the Food and Agriculture Organization of the United Nations (FAO) through annual questionnaires. The FAO tries to impose standard definitions and reporting methods, but complete consistency across countries and over time is not possible. Thus, data on agricultural land in different climates may not be comparable. For example, permanent pastures are quite different in nature and intensity in African countries and dry Middle Eastern countries. Data on agricultural employment, in particular, should be used with caution. In many countries much agricultural employment is informal and unrecorded, including substantial work performed by women and children. To address some of these concerns, this indicator is heavily footnoted in the database in sources, definition, and coverage. The secondary sources cover official country data from websites of national ministries, national publications and related country data reported by various international organizations."]
+general_comments: TEXT | Other notes regarding the series which do not appear in Development relevance or Limitations or exceptions
+license_type: TEXT | Explains the rights conferred and restrictions imposed by the owner to the users of a series | eg=["CC BY-4.0"]
+base_period: TEXT | Base period is the period of time for which data is used as the base of an index number or other ratio have been collected. This period is frequently one of a year but it may be as short as one day or as long as the average of a group of years.
+development_relevance: TEXT | The relevance of a series refers to how the indicator’s data may be used to monitor particular aspects of development goals and programs for example the Sustainable Development Goals. The indicator may conclusively measure progress towards a particular objective or may act as a proxy or interpretation of a development aim. | eg=["Factors such as the green revolution, has led to impressive progress in increasing crop yields over the last few decades. This progress, however, is not equal across all regions. Continued progress depends on maintaining agricultural research and education. The cultivation of cereals varies widely in different countries and depends partly upon the development of the economy. Production depends on the nature of the soil, the amount of rainfall, irrigation, quality od seeds, and the techniques applied to promote growth.\n\nAgriculture is still a major sector in many economies, and agricultural activities provide developing countries with food and revenue. But agricultural activities also can degrade natural resources. Poor farming practices can cause soil erosion and loss of soil fertility. Efforts to increase productivity by using chemical fertilizers, pesticides, and intensive irrigation have environmental costs and health impacts. Salinization of irrigated land diminishes soil fertil...", "Agricultural land covers more than one-third of the world's land area. In many industrialized countries, agricultural land is subject to zoning regulations. In the context of zoning, agricultural land (or more properly agriculturally zoned land) refers to plots that may be used for agricultural activities, regardless of the physical type or quality of land.\n\nFAO's agricultural land data contains a wide range of information on variables that are significant for understanding the structure of a country's agricultural sector; making economic plans and policies for food security; and deriving environmental indicators, including those related to investment in agriculture and data on gross crop area and net crop area which are useful for policy formulation and monitoring.\n\nAgriculture is still a major sector in many economies, and agricultural activities provide developing countries with food and revenue. But agricultural activities also can degrade natural resources. Poor farming practic..."]
+related_source_links: TEXT | Internet address of related source page tool or knowledge base.
+source: TEXT | A place person or organization from which the series comes or can be obtained. | eg=["Food and Agriculture Organization, electronic files and web site."]
+aggregation_method: TEXT | Aggregation methods are types of calculations used to group attribute values into a metric for each dimension value. For example for each region one may retrieve the total value of country entries (the sum of the series value for countries belonging to the region). | eg=["Weighted average", "Sum"]
+unit_of_measure: TEXT | A quantity used as a standard of measurement. Example: Units of time are second minute hour day week month year and decade.
+statistical_concept_and_methodology: TEXT | The abstract idea general statistical notions or a system of methods used to generate the series. | eg=["Fertilizer consumption measures the quantity of plant nutrients, and is calculated as production plus imports minus exports. Because some chemical compounds used for fertilizers have other industrial applications, the consumption data may overstate the quantity available for crops. Fertilizer consumption as a share of production shows the agriculture sector's vulnerability to import and energy price fluctuation.\n\nMost fertilizers that are commonly used in agriculture contain the three basic plant nutrients - nitrogen, phosphorus, and potassium. Some fertilizers also contain certain \"micronutrients,\" such as zinc and other metals that are necessary for plant growth. Materials that are applied to the land primarily to enhance soil characteristics (rather than as plant food) are commonly referred to as soil amendments. Fertilizers and soil amendments are largely derived from raw material, composts and other organic matter, and wastes, such as sewage sludge and certain industrial wastes...", "Agricultural land constitutes only a part of any country's total area, which can include areas not suitable for agriculture, such as forests, mountains, and inland water bodies. Three components of the agricultural land are a) arable land - land defined by the FAO as land under temporary crops (double-cropped areas are counted once), temporary meadows for mowing or for pasture, land under market or kitchen gardens, and land temporarily fallow, b) permanent pasture - land used for five or more years for forage, including natural and cultivated crops, and c) and under permanent crops - land cultivated with crops that occupy the land for long periods and need not be replanted after each harvest, such as cocoa, coffee, and rubber; land under flowering shrubs, fruit trees, nut trees, and vines is included, but land under trees grown for wood or timber is not.\n\nAgricultural land is also sometimes classified as irrigated and non-irrigated land. In arid and semi-arid countries agriculture i..."]
+periodicity: TEXT | Applies to series recurring at regular intervals. Most of the time this term denotes that interval of recurrence. | eg=["Annual"]
+
+## WORLD_BANK_WDI.COUNTRY_SUMMARY
+latest_agricultural_census: TEXT | Latest agricultural census shows the most recent year in which an agricultural census was conducted or planned to be conducted as reported to the Food and Agriculture Organization.
+source_of_most_recent_income_and_expenditure_data: TEXT | Source of most recent income and expenditure data shows household surveys that collect income and expenditure data. Names and detailed information on household surveys can be found on the website of the International Household Survey Network (www.surveynetwork.org). Core Welfare Indicator Questionnaire Surveys (CWIQ) developed by the World Bank measure changes in key social indicators for different population groups—specifically indicators of access utilization and satisfaction with core social and economic services. Expenditure survey/budget surveys (ES/BS) collect detailed information on household consumption as well as on general demographic social and economic characteristics. Integrated household surveys (IHS) collect detailed information on a wide variety of topics including health education economic activities housing and utilities.
+external_debt_reporting_status: TEXT | External debt shows debt reporting status for 2016 data. A indicates that data are as reported P that data are based on reported or collected information but include an element of staff estimation and E that data are World Bank staff estimates.
+wb_2_code: TEXT | World Bank 2 digit code value of the country. | eg=["ZH", "B8"]
+vital_registration_complete: TEXT | Vital registration complete identifies countries that report at least 90 percent complete registries of vital (birth and death) statistics to the United Nations Statistics Division and are reported in its Population and Vital Statistics Reports. Countries with complete vital statistics registries may have more accurate and more timely demographic indicators than other countries.
+latest_household_survey: TEXT | Latest demographic education or health household survey indicates the household surveys used to compile the demographic education and health data. Detailed information on each survey is provided through the following links:  AIDS Indicator Survey Demographic and Health Survey Health Issues Survey and Malaria Indicator Survey - www.dhsprogram.com; Living Standards Measurement Study -  www.worldbank.org/lsms; Multiple Indicator Cluster Survey - http://mics.unicef.org; Reproductive Health Survey -  www.cdc.gov/reproductivehealth; World Health Survey is available at - www.who.int/healthinfo/survey/en.
+imf_data_dissemination_standard: TEXT | IMF data dissemination standard shows the countries that subscribe to the IMF’s Special Data Dissemination Standard (S) or Enhanced General Data Dissemination System (e-GDDS). S refers to countries that subscribe to the SDDS and have posted data on the Dissemination Standards Bulletin Board at http://dsbb.imf.org. S+ countries must observe additional coverage periodicity and timeliness requirements. e-G refers to countries that subscribe to the e-GDDS.
+balance_of_payments_manual_in_use: TEXT | Balance of Payments Manual in use refers to the classification system used to compile and report data on balance of payments. 6 refers to the 6th edition of the IMF’s Balance of Payments Manual (2009).
+region: TEXT | World Bank region to which a country belongs.
+currency_unit: TEXT | Currency unit (such as the dollar euro peso rupee) issued as a coin or banknote a standard unit of value and a unit of account.
+latest_population_census: TEXT | Latest population census shows the most recent year in which a census was conducted and in which at least preliminary results have been released. The preliminary results from the very recent censuses could be reflected in timely revisions if basic data are available such as population by age and sex as well as the detailed definition of counting coverage and completeness.
+sna_price_valuation: TEXT | SNA price valuation shows whether value added in the national accounts is reported at basic prices (B) or producer prices (P). Producer prices include taxes paid by producers and thus tend to overstate the actual value added in production. However value added can be higher at basic prices than at producer prices in countries with high agricultural subsidies.
+country_code: TEXT | A short alphabetic or numeric geographical code representing a specific country or area. In April 2016 WDI has adopted the three digit ISO code to identify countries in its databases. | eg=["AFE", "CEB"]
+long_name: TEXT | Country name the country's name as approved by the relevant body (Italy is used as an example): conventional long form (Republic of Italy). | eg=["Africa Eastern and Southern", "Central Europe and the Baltics"]
+income_group: TEXT | World Bank income group to which a country belongs after the country classification is completed every year.
+government_accounting_concept: TEXT | Government finance accounting concept is the accounting basis for reporting central government financial data. For most countries government finance data have been consolidated (C) into one set of accounts capturing all central government fiscal activities. Budgetary central government accounts (B) exclude some central government units.
+latest_industrial_data: TEXT | Latest industrial data show the most recent year for which manufacturing value added data at the three-digit level of the International Standard Industrial Classification (revision 2 or 3) are available in the United Nations Industrial Development Organization database.
+special_notes: TEXT | Country special notes for data and metadata users. | eg=["26 countries, stretching from the Red Sea in the North to the Cape of Good Hope in the South (https://www.worldbank.org/en/region/afr/eastern-and-southern-africa)", "Central Europe and the Baltics aggregate."]
+two_alpha_code: TEXT | ISO-2 digit alpha code value of the country. Re: www.iso.org | eg=["ZH", "B8"]
+system_of_national_accounts: TEXT | System of National Accounts identifies whether a country uses the 1968 1993 or 2008 System of National Accounts (SNA). The 2008 SNA is an update of the 1993 SNA and retains its basic theoretical framework.
+other_groups: TEXT | Other types of grouping approved by the WDI team.
+ppp_survey_year: TEXT | Purchasing power parity (PPP) survey year is the latest available survey year for the International Comparison Program’s estimates of PPPs.
+national_accounts_reference_year: TEXT | Reference year is the year in which the local currency constant price series of a country is valued. The reference year is usually the same as the base year used to report the constant price series. However when the constant price data are chain linked the base year is changed annually so the data are rescaled to a specific reference year to provide a consistent time series. When the country has not rescaled following a change in base year World Bank staff rescale the data to maintain a longer historical series. To allow for cross-country comparison and data aggregation constant price data reported in World Development Indicators are rescaled to a common reference year (2010) and currency (U.S. dollars).
+short_name: TEXT | Country name the country's official name as approved by the relevant body (Italy is used as an example): conventional short form (Italy). | eg=["Africa Eastern and Southern", "Central Europe and the Baltics"]
+latest_trade_data: TEXT | Latest trade data show the most recent year for which structure of merchandise trade data from the United Nations Statistics Division’s Commodity Trade (Comtrade) database are available.
+table_name: TEXT | Country name the country's name as approved by the relevant body (Italy is used as an example): conventional short form (Republic of Italy). | eg=["Africa Eastern and Southern", "Central Europe and the Baltics"]
+system_of_trade: TEXT | System of trade refers to the United Nations general trade system (G) or special trade system (S). Under the general trade system goods entering directly for domestic consumption and goods entered into customs storage are recorded as imports at arrival. Under the special trade system goods are recorded as imports when declared for domestic consumption whether at time of entry or on withdrawal from customs storage.
+lending_category: TEXT | World Bank lending category to which a country belongs after the operational guidelines are completed every year.
+national_accounts_base_year: TEXT | Base year is the base or pricing period used for constant price calculations in the country’s national accounts. Price indexes derived from national accounts aggregates such as the implicit deflator for gross domestic product (GDP) express the price level relative to base year prices.
+alternative_conversion_factor: TEXT | Alternative conversion factor identifies the countries and years for which a World Bank–estimated conversion factor has been used in place of the official exchange rate (line rf in the International Monetary Fund’s [IMF] International Financial Statistics). See later in Sources and methods for further discussion of alternative conversion factors.
+
+## WORLD_BANK_WDI.INDICATORS_DATA
+country_code: TEXT | NULL | eg=["LKA"]
+year: NUMBER | NULL | eg=[1987, 2014]
+country_name: TEXT | NULL | eg=["Sri Lanka"]
+indicator_name: TEXT | NULL | eg=["Prevalence of stunting, height for age (% of children under 5)", "Prevalence of undernourishment (% of population)"]
+indicator_code: TEXT | NULL | eg=["SH.STA.STNT.ZS", "SN.ITK.DEFC.ZS"]
+value: FLOAT | NULL | eg=[32.3, 8.1]
+
+## WORLD_BANK_WDI.FOOTNOTES
+description: TEXT | NULL | eg=["Not specified", "Source: United Nations Conference on Trade and Development,  Foreign Direct Investment Online database."]
+year: TEXT | NULL | eg=["    ", "1994"]
+country_code: TEXT | NULL | eg=["ABW"]
+series_code: TEXT | NULL | eg=["AG.LND.FRST.K2", "BM.KLT.DINV.CD.WD"]
+
+## WORLD_BANK_WDI.COUNTRY_SERIES_DEFINITIONS
+series_code: TEXT | NULL | eg=["MS.MIL.XPND.CN", "MS.MIL.XPND.CD"]
+country_code: TEXT | NULL | eg=["JPN", "TUN"]
+description: TEXT | NULL | eg=["1960-1964 SIPRI estimates.", "1960-1969 & 1986-1992 SIPRI estimates."]
+
+## WORLD_BANK_GLOBAL_POPULATION.POPULATION_BY_COUNTRY
+year_2003: NUMBER | NULL | eg=[31472, 7480591]
+year_2014: NUMBER | NULL | eg=[37685, 7130576]
+year_1988: NUMBER | NULL | eg=[NaN, 8435912.0]
+year_1996: NUMBER | NULL | eg=[NaN, 7617794.0]
+year_2004: NUMBER | NULL | eg=[32488, 7463157]
+year_1963: NUMBER | NULL | eg=[NaN, 6183584.0]
+year_1989: NUMBER | NULL | eg=[NaN, 8691334.0]
+year_1997: NUMBER | NULL | eg=[NaN, 7596501.0]
+year_1970: NUMBER | NULL | eg=[NaN, 6996576.0]
+year_2019: NUMBER | NULL
+year_2001: NUMBER | NULL | eg=[30600, 7503433]
+year_1967: NUMBER | NULL | eg=[NaN, 6685960.0]
+year_2006: NUMBER | NULL | eg=[33441, 7411569]
+year_1961: NUMBER | NULL | eg=[NaN, 5872966.0]
+year_2008: NUMBER | NULL | eg=[33964, 7350222]
+year_1984: NUMBER | NULL | eg=[NaN, 7447853.0]
+year_1975: NUMBER | NULL | eg=[NaN, 7524447.0]
+year_1969: NUMBER | NULL | eg=[NaN, 6880623.0]
+year_2007: NUMBER | NULL | eg=[33811, 7381579]
+year_1960: NUMBER | NULL | eg=[NaN, 5722370.0]
+year_2009: NUMBER | NULL | eg=[34238, 7320807]
+year_1978: NUMBER | NULL | eg=[NaN, 6957265.0]
+year_1965: NUMBER | NULL | eg=[NaN, 6467197.0]
+year_1991: NUMBER | NULL | eg=[NaN, 7595636.0]
+year_2011: NUMBER | NULL | eg=[33435, 7234099]
+year_1973: NUMBER | NULL | eg=[NaN, 7449238.0]
+year_1994: NUMBER | NULL | eg=[NaN, 7734639.0]
+year_1990: NUMBER | NULL | eg=[NaN, 7586000.0]
+year_2017: NUMBER | NULL | eg=[40574, 7020858]
+year_1979: NUMBER | NULL | eg=[NaN, 6770396.0]
+year_1980: NUMBER | NULL | eg=[NaN, 6693764.0]
+year_2000: NUMBER | NULL | eg=[30519, 7516346]
+year_1966: NUMBER | NULL | eg=[NaN, 6585035.0]
+year_2018: NUMBER | NULL | eg=[40654, 6982084]
+year_1982: NUMBER | NULL | eg=[NaN, 6919801.0]
+year_1985: NUMBER | NULL | eg=[NaN, 7714880.0]
+year_1976: NUMBER | NULL | eg=[NaN, 7404684.0]
+year_1964: NUMBER | NULL | eg=[NaN, 6331449.0]
+year_1968: NUMBER | NULL | eg=[NaN, 6779787.0]
+year_1981: NUMBER | NULL | eg=[NaN, 6749847.0]
+year_1983: NUMBER | NULL | eg=[NaN, 7169997.0]
+year_1998: NUMBER | NULL | eg=[31240, 7567745]
+year_1993: NUMBER | NULL | eg=[NaN, 7699307.0]
+year_2013: NUMBER | NULL | eg=[36607, 7164132]
+year_1995: NUMBER | NULL | eg=[NaN, 7625357.0]
+year_2015: NUMBER | NULL | eg=[38825, 7095383]
+year_1986: NUMBER | NULL | eg=[NaN, 7960949.0]
+year_2012: NUMBER | NULL | eg=[34640, 7199077]
+country: TEXT | NULL | eg=["Sint Maarten (Dutch part)", "Serbia"]
+year_1962: NUMBER | NULL | eg=[NaN, 6028431.0]
+year_1977: NUMBER | NULL | eg=[NaN, 7196042.0]
+year_2016: NUMBER | NULL | eg=[39969, 7058322]
+year_2005: NUMBER | NULL | eg=[33011, 7440769]
+year_1971: NUMBER | NULL | eg=[NaN, 7139647.0]
+year_2002: NUMBER | NULL | eg=[30777, 7496522]
+year_2010: NUMBER | NULL | eg=[34056, 7291436]
+year_1999: NUMBER | NULL | eg=[31084, 7540401]
+year_1974: NUMBER | NULL | eg=[NaN, 7533336.0]
+year_1987: NUMBER | NULL | eg=[NaN, 8198082.0]
+country_code: TEXT | NULL | eg=["SXM", "SRB"]
+year_1972: NUMBER | NULL | eg=[NaN, 7302111.0]
+year_1992: NUMBER | NULL | eg=[NaN, 7646424.0]

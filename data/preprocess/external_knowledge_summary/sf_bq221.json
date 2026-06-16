@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq221",
+  "question": "Identify the CPC technology areas with the highest exponential moving average of patent filings each year (with a smoothing factor of 0.2), considering only the first CPC code for each patent that has a valid filing date and a non-empty application number, and report the full CPC title along with the best year associated with the highest exponential moving average for each CPC group at level 5.",
+  "db_id": "PATENTS",
+  "source_document": "sliding_windows_calculation_cpc.md",
+  "evidence": "Weighted Moving Average (WMA) method is applied to smooth annual patent filing counts for each CPC technology area and identify the 'best year' for each CPC group. Formula: WMA_t = α * x_t + (1 - α) * WMA_{t-1}. α is the smoothing factor (here, 0.2). Goal: reduce short-term fluctuations, capture long-term trends, highlight years with significant patent filing activity. Consider only the first CPC code for each patent with a valid filing date and non-empty application number. Report full CPC title and best year for highest exponential moving average for each CPC group at level 5."
+}

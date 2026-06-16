@@ -1,0 +1,384 @@
+[COMPONENTS]
+@C1
+id: TEXT | NULL
+identifier: VARIANT | NULL
+implicitRules: TEXT | NULL
+language: TEXT | NULL
+meta: VARIANT | NULL
+text: VARIANT | NULL
+
+@C2
+accident: VARIANT | NULL
+billablePeriod: VARIANT | NULL
+employmentImpacted: VARIANT | NULL
+enterer: VARIANT | NULL
+facility: VARIANT | NULL
+information: VARIANT | NULL
+insurance: VARIANT | NULL
+insurer: VARIANT | NULL
+item: VARIANT | NULL
+organization: VARIANT | NULL
+originalPrescription: VARIANT | NULL
+payee: VARIANT | NULL
+prescription: VARIANT | NULL
+procedure: VARIANT | NULL
+provider: VARIANT | NULL
+referral: VARIANT | NULL
+subType: VARIANT | NULL
+
+@C3
+active: BOOLEAN | NULL
+address: VARIANT | NULL
+telecom: VARIANT | NULL
+
+@C4
+birthDate: TEXT | NULL
+communication: VARIANT | NULL
+gender: TEXT | NULL
+name: VARIANT | NULL
+photo: VARIANT | NULL
+
+@C5
+assertedDate: TEXT | NULL
+asserter: VARIANT | NULL
+clinicalStatus: TEXT | NULL
+onset: VARIANT | NULL
+verificationStatus: TEXT | NULL
+
+@C6
+diagnosis: VARIANT | NULL
+hospitalization: VARIANT | NULL
+
+@C7
+location: VARIANT | NULL
+shr_action_PerformedContext_extension: VARIANT | NULL
+
+@C8
+effective: VARIANT | NULL
+issued: NUMBER | NULL
+specimen: VARIANT | NULL
+
+[TABLES]
+## FHIR_SYNTHEA.PRACTITIONER
+@use: [C1, C3, C4]
+qualification: VARIANT | NULL
+
+## FHIR_SYNTHEA.BASIC
+@use: [C1]
+created: TEXT | NULL
+subject: VARIANT | NULL
+code: VARIANT | NULL
+author: VARIANT | NULL
+
+## FHIR_SYNTHEA.EXPLANATION_OF_BENEFIT
+@use: [C1, C2, C6]
+claim: VARIANT | NULL
+StructureDefinition_bluebutton_outpatient_fi_num_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_nch_bene_pta_coinsrnc_lblty_amt_extension: VARIANT | NULL
+disposition: TEXT | NULL
+created: TEXT | NULL
+patient: VARIANT | NULL
+StructureDefinition_bluebutton_outpatient_prpayamt_extension: VARIANT | NULL
+outcome: VARIANT | NULL
+totalBenefit: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_clm_pps_cptl_dsprprtnt_shr_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_fi_num_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_dsh_op_clm_val_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_clm_pps_cptl_fsp_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_nch_bene_blood_ddctbl_lblty_am_extension: VARIANT | NULL
+claimResponse: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_clm_pass_thru_per_diem_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_ime_op_clm_val_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_clm_mdcr_non_pmt_rsn_cd_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_clm_pps_cptl_outlier_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_outpatient_nch_profnl_cmpnt_chrg_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_nch_ip_tot_ddctn_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_outpatient_nch_bene_blood_ddctbl_lblty_am_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_nch_ip_ncvrd_chrg_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_outpatient_clm_mdcr_non_pmt_rsn_cd_extension: VARIANT | NULL
+addItem: VARIANT | NULL
+StructureDefinition_bluebutton_outpatient_clm_op_bene_pmt_amt_extension: VARIANT | NULL
+totalCost: VARIANT | NULL
+status: TEXT | NULL
+StructureDefinition_bluebutton_outpatient_nch_bene_ptb_coinsrnc_amt_extension: VARIANT | NULL
+processNote: VARIANT | NULL
+StructureDefinition_bluebutton_outpatient_nch_bene_ptb_ddctbl_amt_extension: VARIANT | NULL
+benefitBalance: VARIANT | NULL
+payment: VARIANT | NULL
+precedence: NUMBER | NULL
+StructureDefinition_bluebutton_inpatient_nch_profnl_cmpnt_chrg_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_prpayamt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_clm_pps_cptl_excptn_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_nch_bene_ip_ddctbl_amt_extension: VARIANT | NULL
+related: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_nch_drg_outlier_aprvd_pmt_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_outpatient_clm_op_prvdr_pmt_amt_extension: VARIANT | NULL
+careTeam: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_clm_tot_pps_cptl_amt_extension: VARIANT | NULL
+unallocDeductable: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_clm_pps_old_cptl_hld_hrmls_amt_extension: VARIANT | NULL
+type: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_clm_pps_cptl_ime_amt_extension: VARIANT | NULL
+form: VARIANT | NULL
+
+## FHIR_SYNTHEA.CARE_PLAN
+@use: [C1]
+author: VARIANT | NULL
+addresses: VARIANT | NULL
+title: TEXT | NULL
+category: VARIANT | NULL
+supportingInfo: VARIANT | NULL
+activity: VARIANT | NULL
+status: TEXT | NULL
+period: VARIANT | NULL
+partOf: VARIANT | NULL
+definition: VARIANT | NULL
+intent: TEXT | NULL
+replaces: VARIANT | NULL
+careTeam: VARIANT | NULL
+subject: VARIANT | NULL
+basedOn: VARIANT | NULL
+context: VARIANT | NULL
+description: TEXT | NULL
+goal: VARIANT | NULL
+note: VARIANT | NULL
+
+## FHIR_SYNTHEA.MEDICATION_REQUEST
+@use: [C1]
+definition: VARIANT | NULL
+dispenseRequest: VARIANT | NULL
+recorder: VARIANT | NULL
+reasonReference: VARIANT | NULL
+requester: VARIANT | NULL
+authoredOn: TEXT | NULL
+dosageInstruction: VARIANT | NULL
+subject: VARIANT | NULL
+context: VARIANT | NULL
+reasonCode: VARIANT | NULL
+priority: TEXT | NULL
+shr_base_ActionCode_extension: VARIANT | NULL
+priorPrescription: VARIANT | NULL
+status: TEXT | NULL
+note: VARIANT | NULL
+substitution: VARIANT | NULL
+intent: TEXT | NULL
+shr_action_RequestedContext_extension: VARIANT | NULL
+medication: VARIANT | NULL
+category: VARIANT | NULL
+basedOn: VARIANT | NULL
+groupIdentifier: VARIANT | NULL
+detectedIssue: VARIANT | NULL
+eventHistory: VARIANT | NULL
+supportingInformation: VARIANT | NULL
+
+## FHIR_SYNTHEA.DIAGNOSTIC_REPORT
+@use: [C1, C8]
+presentedForm: VARIANT | NULL
+conclusion: TEXT | NULL
+result: VARIANT | NULL
+context: VARIANT | NULL
+imagingStudy: VARIANT | NULL
+basedOn: VARIANT | NULL
+image: VARIANT | NULL
+performer: VARIANT | NULL
+status: TEXT | NULL
+category: VARIANT | NULL
+code: VARIANT | NULL
+codedDiagnosis: VARIANT | NULL
+subject: VARIANT | NULL
+
+## FHIR_SYNTHEA.IMAGING_STUDY
+@use: [C1]
+uid: TEXT | NULL
+availability: TEXT | NULL
+accession: VARIANT | NULL
+patient: VARIANT | NULL
+referrer: VARIANT | NULL
+procedureReference: VARIANT | NULL
+basedOn: VARIANT | NULL
+numberOfSeries: NUMBER | NULL
+started: TEXT | NULL
+reason: VARIANT | NULL
+context: VARIANT | NULL
+description: TEXT | NULL
+modalityList: VARIANT | NULL
+procedureCode: VARIANT | NULL
+interpreter: VARIANT | NULL
+numberOfInstances: NUMBER | NULL
+endpoint: VARIANT | NULL
+series: VARIANT | NULL
+
+## FHIR_SYNTHEA.ENCOUNTER
+@use: [C1, C6, C7]
+incomingReferral: VARIANT | NULL
+period: VARIANT | NULL
+class: VARIANT | NULL
+appointment: VARIANT | NULL
+status: TEXT | NULL
+serviceProvider: VARIANT | NULL
+episodeOfCare: VARIANT | NULL
+length: VARIANT | NULL
+participant: VARIANT | NULL
+account: VARIANT | NULL
+statusHistory: VARIANT | NULL
+classHistory: VARIANT | NULL
+subject: VARIANT | NULL
+type: VARIANT | NULL
+partOf: VARIANT | NULL
+reason: VARIANT | NULL
+priority: VARIANT | NULL
+
+## FHIR_SYNTHEA.ORGANIZATION
+@use: [C1, C3]
+endpoint: VARIANT | NULL
+alias: VARIANT | NULL
+name: TEXT | NULL
+partOf: VARIANT | NULL
+type: VARIANT | NULL
+contact: VARIANT | NULL
+
+## FHIR_SYNTHEA.PATIENT
+@use: [C1, C3, C4]
+shr_actor_FictionalPerson_extension: VARIANT | NULL
+contact: VARIANT | NULL
+generalPractitioner: VARIANT | NULL
+deceased: VARIANT | NULL
+shr_demographics_SocialSecurityNumber_extension: VARIANT | NULL
+animal: VARIANT | NULL
+shr_entity_Person_extension: VARIANT | NULL
+us_core_birthsex: VARIANT | NULL
+maritalStatus: VARIANT | NULL
+us_core_race: VARIANT | NULL
+disability_adjusted_life_years: VARIANT | NULL
+link: VARIANT | NULL
+quality_adjusted_life_years: VARIANT | NULL
+multipleBirth: VARIANT | NULL
+birthPlace: VARIANT | NULL
+managingOrganization: VARIANT | NULL
+patient_mothersMaidenName: VARIANT | NULL
+us_core_ethnicity: VARIANT | NULL
+shr_entity_FathersName_extension: VARIANT | NULL
+
+## FHIR_SYNTHEA.ALLERGY_INTOLERANCE
+@use: [C1, C5]
+criticality: TEXT | NULL
+reaction: VARIANT | NULL
+note: VARIANT | NULL
+patient: VARIANT | NULL
+type: TEXT | NULL
+code: VARIANT | NULL
+category: VARIANT | NULL
+lastOccurrence: TEXT | NULL
+recorder: VARIANT | NULL
+
+## FHIR_SYNTHEA.GOAL
+@use: [C1]
+addresses: VARIANT | NULL
+priority: VARIANT | NULL
+category: VARIANT | NULL
+outcomeCode: VARIANT | NULL
+start: VARIANT | NULL
+expressedBy: VARIANT | NULL
+subject: VARIANT | NULL
+statusDate: TEXT | NULL
+statusReason: TEXT | NULL
+description: VARIANT | NULL
+target: VARIANT | NULL
+outcomeReference: VARIANT | NULL
+note: VARIANT | NULL
+status: TEXT | NULL
+
+## FHIR_SYNTHEA.CLAIM
+@use: [C1, C2, C6]
+related: VARIANT | NULL
+total: VARIANT | NULL
+careTeam: VARIANT | NULL
+patient: VARIANT | NULL
+use: TEXT | NULL
+priority: VARIANT | NULL
+status: TEXT | NULL
+fundsReserve: VARIANT | NULL
+type: VARIANT | NULL
+created: TEXT | NULL
+
+## FHIR_SYNTHEA.IMMUNIZATION
+@use: [C1, C7]
+route: VARIANT | NULL
+manufacturer: VARIANT | NULL
+explanation: VARIANT | NULL
+encounter: VARIANT | NULL
+notGiven: BOOLEAN | NULL
+reportOrigin: VARIANT | NULL
+vaccinationProtocol: VARIANT | NULL
+reaction: VARIANT | NULL
+status: TEXT | NULL
+patient: VARIANT | NULL
+practitioner: VARIANT | NULL
+lotNumber: TEXT | NULL
+primarySource: BOOLEAN | NULL
+doseQuantity: VARIANT | NULL
+note: VARIANT | NULL
+site: VARIANT | NULL
+vaccineCode: VARIANT | NULL
+expirationDate: TEXT | NULL
+date: TEXT | NULL
+
+## FHIR_SYNTHEA.PROCEDURE
+@use: [C1, C7]
+notDone: BOOLEAN | NULL
+reasonCode: VARIANT | NULL
+report: VARIANT | NULL
+followUp: VARIANT | NULL
+status: TEXT | NULL
+bodySite: VARIANT | NULL
+partOf: VARIANT | NULL
+complicationDetail: VARIANT | NULL
+context: VARIANT | NULL
+complication: VARIANT | NULL
+note: VARIANT | NULL
+notDoneReason: VARIANT | NULL
+basedOn: VARIANT | NULL
+reasonReference: VARIANT | NULL
+definition: VARIANT | NULL
+subject: VARIANT | NULL
+performer: VARIANT | NULL
+performed: VARIANT | NULL
+category: VARIANT | NULL
+code: VARIANT | NULL
+outcome: VARIANT | NULL
+usedReference: VARIANT | NULL
+focalDevice: VARIANT | NULL
+usedCode: VARIANT | NULL
+
+## FHIR_SYNTHEA.CONDITION
+@use: [C1, C5]
+note: VARIANT | NULL
+stage: VARIANT | NULL
+abatement: VARIANT | NULL
+severity: VARIANT | NULL
+category: VARIANT | NULL
+context: VARIANT | NULL
+code: VARIANT | NULL
+evidence: VARIANT | NULL
+subject: VARIANT | NULL
+bodySite: VARIANT | NULL
+
+## FHIR_SYNTHEA.OBSERVATION
+@use: [C1, C8]
+category: VARIANT | NULL
+dataAbsentReason: VARIANT | NULL
+related: VARIANT | NULL
+bodySite: VARIANT | NULL
+comment: TEXT | NULL
+referenceRange: VARIANT | NULL
+code: VARIANT | NULL
+context: VARIANT | NULL
+basedOn: VARIANT | NULL
+interpretation: VARIANT | NULL
+performer: VARIANT | NULL
+device: VARIANT | NULL
+subject: VARIANT | NULL
+method: VARIANT | NULL
+status: TEXT | NULL
+value: VARIANT | NULL
+component: VARIANT | NULL

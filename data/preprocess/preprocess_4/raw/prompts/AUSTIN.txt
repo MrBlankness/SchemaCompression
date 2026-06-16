@@ -1,0 +1,139 @@
+[TABLES]
+## AUSTIN_311._311_SERVICE_REQUESTS
+status: TEXT | Service request status. Duplicate statuses indicate that issue had previously been reported recently. | eg=["Closed"]
+latitude: FLOAT | Service request location latitude coordinate. | eg=[30.19211278, 30.19446507]
+close_date: NUMBER | Date Service request was closed. | eg=[1596178206000000, 1523713024000000]
+status_change_date: NUMBER | Date of last Service request status change. Status changes occur when service request moves from one status to another. I.E. new to open, open to closed. | eg=[1596178206000000, 1523713024000000]
+unique_key: TEXT | The service request tracking number. | eg=["20-00299938", "18-00105455"]
+city: TEXT | Parsed location information. City. | eg=["AUSTIN"]
+location: TEXT | Service request location latitude and longitude coordinates. | eg=["(30.19211278, -97.77308322)", "(30.19446507, -97.78124953)"]
+map_tile: TEXT | Service request location corresponding map tile. | eg=["MG16"]
+county: TEXT | Parsed location information. County. | eg=["TRAVIS"]
+incident_address: TEXT | Service location of Service request. | eg=["600 E WILLIAM CANNON DR, AUSTIN, TX 78745", "208 W WILLIAM CANNON DR, AUSTIN, TX 78745"]
+state_plane_y_coordinate: FLOAT | State plane Y coordinate. | eg=[10042916.001066, 10043712.0028692]
+state_plane_x_coordinate: TEXT | State plane X coordinate. | eg=["3105393.24918669", "3102794.25241984"]
+street_name: TEXT | Parsed location information. Street name. | eg=["WILLIAM CANNON"]
+map_page: TEXT | Service request location corresponding map page. | eg=["644X"]
+last_update_date: NUMBER | Date Service request was updated. Last date Service request received updates. Updates may include creation, status changes, or changes to data in Service request. | eg=[1596178206000000, 1523713024000000]
+created_date: NUMBER | Date Service request was created. | eg=[1595502808000000, 1523532564000000]
+source: TEXT | Contact method Service request was received from. Mass entry requests are submitted by dept. in groups after work is completed. | eg=["Phone"]
+incident_zip: TEXT | Parsed location information. Zip code. | eg=["78745"]
+longitude: FLOAT | Service request location longitude coordinate. | eg=[-97.77308322, -97.78124953]
+street_number: TEXT | Parsed location information. Street number. | eg=["600", "208"]
+council_district_code: NUMBER | Council district corresponding to Service request location. Locations outside of the City of Austin jurisdiction will not have a council district. | eg=[2]
+complaint_description: TEXT | Service request type | eg=["Traffic Signal - Maintenance", "Loose Dog"]
+
+## AUSTIN_INCIDENTS.INCIDENTS_2016
+unique_key: NUMBER | The unique incident number for this accident. | eg=[2016961144, 20168001601]
+address: TEXT | NULL | eg=["2600 BLOCK E 7TH ST", "800 BLOCK FAIRFIELD DR"]
+descript: TEXT | NULL | eg=["THEFT"]
+location: TEXT | Latitude/Longitude
+longitude: FLOAT | NULL
+time: TIME | NULL | eg=["15:47:00", "18:15:00"]
+latitude: FLOAT | NULL
+timestamp: NUMBER | NULL | eg=[1459892820000000, 1459901700000000]
+date: DATE | NULL | eg=["2016-04-05"]
+
+## AUSTIN_INCIDENTS.INCIDENTS_2009
+longitude: FLOAT | NULL
+date: DATE | NULL | eg=["2009-04-02"]
+descript: TEXT | NULL | eg=["DWI"]
+unique_key: NUMBER | The unique incident number for this accident. | eg=[2009920242, 2009920181]
+timestamp: NUMBER | NULL | eg=[1238664540000000, 1238661000000000]
+location: TEXT | Latitude/Longitude
+address: TEXT | NULL | eg=["300 BLOCK W 5TH ST", "1200 BLOCK W HOWARD LN"]
+time: TIME | NULL | eg=["03:29:00", "02:30:00"]
+latitude: FLOAT | NULL
+
+## AUSTIN_INCIDENTS.INCIDENTS_2011
+location: TEXT | Latitude/Longitude
+address: TEXT | NULL | eg=["500 BLOCK WOODWARD ST", "5200 BLOCK E STASSNEY LN"]
+unique_key: NUMBER | The unique incident number for this accident. | eg=[20111302003, 20111312329]
+time: TIME | NULL | eg=["21:41:00", "23:33:00"]
+latitude: FLOAT | NULL
+timestamp: NUMBER | NULL | eg=[1305085260000000, 1305091980000000]
+date: DATE | NULL | eg=["2011-05-10"]
+descript: TEXT | NULL | eg=["DWI", "RAPE"]
+longitude: FLOAT | NULL
+
+## AUSTIN_INCIDENTS.INCIDENTS_2008
+timestamp: NUMBER | NULL | eg=[1216535280000000, 1216544280000000]
+longitude: FLOAT | NULL
+unique_key: NUMBER | The unique incident number for this accident. | eg=[20082020068, 20082020396]
+descript: TEXT | NULL | eg=["DWI"]
+latitude: FLOAT | NULL
+location: TEXT | Latitude/Longitude
+time: TIME | NULL | eg=["00:28:00", "02:58:00"]
+address: TEXT | NULL | eg=["5100 BLOCK S 1ST ST", "12100 BLOCK N IH 35 NB"]
+date: DATE | NULL | eg=["2008-07-20"]
+
+## AUSTIN_INCIDENTS.INCIDENTS_2010
+address: TEXT | NULL | eg=["800 BLOCK SHERATON AVE", "800 BLOCK W 6TH ST"]
+descript: TEXT | NULL | eg=["DEBIT CARD ABUSE", "DWI"]
+longitude: FLOAT | NULL
+timestamp: NUMBER | NULL | eg=[1260827820000000, 1282973040000000]
+date: DATE | NULL | eg=["2009-12-14", "2010-08-27"]
+location: TEXT | Latitude/Longitude
+latitude: FLOAT | NULL
+unique_key: NUMBER | The unique incident number for this accident. | eg=[20105003000, 20102392717]
+time: TIME | NULL | eg=["15:57:00", "23:24:00"]
+
+## AUSTIN_BIKESHARE.BIKESHARE_STATIONS
+power_type: TEXT | NULL
+modified_date: NUMBER | NULL | eg=[1609718400000000]
+status: TEXT | NULL | eg=["closed"]
+city_asset_number: NUMBER | NULL
+location: TEXT | NULL | eg=["(30.26383, -97.72864)", "(30.25802, -97.7391)"]
+number_of_docks: NUMBER | NULL
+footprint_length: NUMBER | NULL
+image: TEXT | NULL
+alternate_name: TEXT | NULL
+station_id: NUMBER | Station ID number | eg=[1002, 2576]
+address: TEXT | NULL | eg=["1308 W. 6th St.", "64 Rainey St"]
+name: TEXT | Name of station | eg=["6th & Navasota St.", "Rainey @ River St"]
+council_district: NUMBER | NULL | eg=[3, 9]
+notes: TEXT | NULL
+property_type: TEXT | NULL
+footprint_width: FLOAT | NULL
+
+## AUSTIN_BIKESHARE.BIKESHARE_TRIPS
+subscriber_type: TEXT | Type of the Subscriber | eg=["Single Trip", "Pay-as-you-ride"]
+start_time: NUMBER | Start timestamp of trip | eg=[1541345975000000, 1683920482000000]
+end_station_id: TEXT | Numeric reference for end station | eg=["4051"]
+bike_type: TEXT | Type of bike used | eg=["classic", "electric"]
+start_station_id: NUMBER | Numeric reference for start station | eg=[2574, 4051]
+end_station_name: TEXT | Station name for end station | eg=["10th & Red River", "10th/Red River"]
+trip_id: TEXT | Numeric ID of bike trip | eg=["18939964", "29611056"]
+start_station_name: TEXT | Station name for start station | eg=["Zilker Park", "10th/Red River"]
+bike_id: TEXT | ID of bike used | eg=["263G", "19453"]
+duration_minutes: NUMBER | Time of trip in minutes | eg=[44, 64]
+
+## AUSTIN_CRIME.CRIME
+zipcode: TEXT | Indicates the zipcode where the incident occurred.
+address: TEXT | Full address where the incident occurred.
+timestamp: NUMBER | Time when the incident occurred. This is sometimes a best estimate. | eg=[1423094400000000, 1423440000000000]
+longitude: FLOAT | NULL
+location: TEXT | NULL | eg=["(0         \n1         \n2         \n3         \n4         \n        ..\n38567     \n38568     \n38569     \n38570     \n38571     \nName: latitude, Length: 38572, dtype: object,0         \n1         \n2         \n3         \n4         \n        ..\n38567     \n38568     \n38569     \n38570     \n38571     \nName: longitude, Length: 38572, dtype: object)"]
+council_district_code: NUMBER | Indicates the council district code where the incident occurred.
+location_description: TEXT | Description of the location where the incident occurred. | eg=["LOYOLA LN", "910 E VILLAGE LN"]
+year: NUMBER | Indicates the year in which the incident occurred. | eg=[2015]
+clearance_status: TEXT | NULL | eg=["Not cleared", "Cleared by Arrest"]
+latitude: FLOAT | NULL
+description: TEXT | The subcategory of the primary description. | eg=["BURGLARY OF VEHICLE           ", "THEFT FROM PERSON             "]
+district: TEXT | Indicates the police district where the incident occurred. | eg=["UK", "F"]
+unique_key: NUMBER | Unique identifier for the record. | eg=[20155005182, 20158000455]
+x_coordinate: NUMBER | The x coordinate of the location where the incident occurred
+primary_type: TEXT | The primary description of the NIBRS/UCR code. | eg=["Theft"]
+clearance_date: NUMBER | NULL | eg=[1424131200000000.0, NaN]
+y_coordinate: NUMBER | The y coordinate of the location where the incident occurred
+census_tract: FLOAT | NULL
+
+## AUSTIN_WASTE.WASTE_AND_DIVERSION
+dropoff_site: TEXT | NULL | eg=["AUSTIN IRON AND METAL"]
+load_weight: FLOAT | NULL | eg=[480.0, 490.0]
+report_date: DATE | NULL | eg=["2019-05-29", "2020-01-29"]
+route_number: TEXT | NULL | eg=["OCPBU09"]
+load_id: NUMBER | NULL | eg=[828282, 859153]
+load_time: NUMBER | NULL | eg=[1559123400000000, 1580314260000000]
+load_type: TEXT | NULL | eg=["RECYCLED METAL"]
+route_type: TEXT | NULL | eg=["ON CALL BULK"]

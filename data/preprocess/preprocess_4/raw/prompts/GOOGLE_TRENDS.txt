@@ -1,0 +1,42 @@
+[TABLES]
+## GOOGLE_TRENDS.TOP_TERMS
+week: DATE | NULL | eg=["2019-11-17", "2019-12-15"]
+term: TEXT | NULL | eg=["AC Milan"]
+rank: NUMBER | NULL | eg=[23]
+score: NUMBER | NULL
+refresh_date: DATE | NULL | eg=["2024-09-28"]
+dma_id: NUMBER | NULL | eg=[500]
+dma_name: TEXT | NULL | eg=["Portland-Auburn ME"]
+
+## GOOGLE_TRENDS.TOP_RISING_TERMS
+refresh_date: DATE | NULL | eg=["2024-09-17"]
+rank: NUMBER | NULL | eg=[13]
+dma_name: TEXT | NULL | eg=["Portland-Auburn ME"]
+score: NUMBER | NULL
+week: DATE | NULL | eg=["2019-09-15", "2019-11-17"]
+percent_gain: NUMBER | NULL | eg=[1650]
+term: TEXT | NULL | eg=["49ers vs vikings"]
+dma_id: NUMBER | NULL | eg=[500]
+
+## GOOGLE_TRENDS.INTERNATIONAL_TOP_TERMS
+week: DATE | NULL | eg=["2022-03-13", "2022-11-13"]
+term: TEXT | NULL | eg=["Galatasaray  PAOK"]
+rank: NUMBER | NULL | eg=[14]
+score: NUMBER | NULL
+refresh_date: DATE | NULL | eg=["2024-09-28"]
+region_code: TEXT | NULL | eg=["TR-39"]
+region_name: TEXT | NULL | eg=["Kırklareli"]
+country_code: TEXT | NULL | eg=["TR"]
+country_name: TEXT | NULL | eg=["Turkey"]
+
+## GOOGLE_TRENDS.INTERNATIONAL_TOP_RISING_TERMS
+rank: NUMBER | NULL | eg=[10]
+region_name: TEXT | NULL | eg=["Sibiu"]
+refresh_date: DATE | NULL | eg=["2024-09-17"]
+region_code: TEXT | NULL | eg=["RO-SB"]
+term: TEXT | NULL | eg=["gigi multescu"]
+week: DATE | NULL | eg=["2021-03-07", "2021-04-04"]
+country_name: TEXT | NULL | eg=["Romania"]
+percent_gain: NUMBER | NULL | eg=[3500]
+country_code: TEXT | NULL | eg=["RO"]
+score: NUMBER | NULL

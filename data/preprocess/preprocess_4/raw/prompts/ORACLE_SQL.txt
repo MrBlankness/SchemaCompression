@@ -1,0 +1,200 @@
+[TABLES]
+## ORACLE_SQL.WEB_PAGES
+app_id: NUMBER | NULL | eg=[542]
+page_no: NUMBER | NULL | eg=[1, 3]
+friendly_url: TEXT | NULL | eg=["/Shop", "/Breweries"]
+
+## ORACLE_SQL.GENDER_DIM
+name: TEXT | NULL | eg=["Female", "Male"]
+letter: TEXT | NULL | eg=["F", "M"]
+
+## ORACLE_SQL.WEB_DEVICES
+phone: NUMBER | NULL | eg=[1610, 2159]
+day: TEXT | NULL | eg=["2019-05-01", "2019-05-02"]
+tablet: NUMBER | NULL | eg=[812, 1102]
+pc: NUMBER | NULL | eg=[1042, 967]
+
+## ORACLE_SQL.CUSTOMER_REVIEWS
+customer_id: NUMBER | NULL | eg=[50042, 50741]
+review_list: TEXT | NULL | eg=["4040:A,6600:C,7950:B", "4160:A"]
+
+## ORACLE_SQL.PACKAGING_RELATIONS
+qty: NUMBER | NULL | eg=[72, 36]
+packaging_id: NUMBER | NULL | eg=[521, 522]
+contains_id: NUMBER | NULL | eg=[502, 501]
+
+## ORACLE_SQL.PRODUCT_MINIMUMS
+qty_purchase: FLOAT | NULL | eg=[400.0, 100.0]
+qty_minimum: FLOAT | NULL | eg=[100.0, 30.0]
+product_id: NUMBER | NULL | eg=[6520, 6600]
+
+## ORACLE_SQL.EMPLOYEES
+id: NUMBER | NULL | eg=[142, 143]
+title: TEXT | NULL | eg=["Managing Director", "IT Manager"]
+name: TEXT | NULL | eg=["Harold King", "Mogens Juel"]
+supervisor_id: FLOAT | NULL | eg=[NaN, 147.0]
+
+## ORACLE_SQL.PRODUCT_ALCOHOL
+abv: FLOAT | NULL | eg=[8.5, 7.0]
+product_id: NUMBER | NULL | eg=[4040, 4280]
+sales_volume: FLOAT | NULL | eg=[330.0]
+
+## ORACLE_SQL.WEB_APPS
+id: NUMBER | NULL | eg=[542]
+name: TEXT | NULL | eg=["Webshop"]
+
+## ORACLE_SQL.PRODUCTS
+id: NUMBER | NULL | eg=[4040, 4160]
+group_id: NUMBER | NULL | eg=[142, 152]
+name: TEXT | NULL | eg=["Coalminers Sweat", "Reindeer Fuel"]
+
+## ORACLE_SQL.PRODUCT_GROUPS
+id: NUMBER | NULL
+name: TEXT | NULL
+
+## ORACLE_SQL.CUSTOMER_FAVORITES
+customer_id: NUMBER | NULL | eg=[50741, 51069]
+favorite_list: TEXT | NULL | eg=["5430,7790,7870", "6520"]
+
+## ORACLE_SQL.ORDERS
+delivery: TEXT | NULL | eg=[""]
+id: NUMBER | NULL | eg=[421, 425]
+ordered: TEXT | NULL | eg=["2019-01-15", "2019-02-17"]
+customer_id: NUMBER | NULL | eg=[50042, 51069]
+
+## ORACLE_SQL.BREWERIES
+id: NUMBER | NULL | eg=[523]
+name: TEXT | NULL | eg=["Happy Hoppy Hippo"]
+
+## ORACLE_SQL.EMP_HIRE_PERIODS
+end_: TEXT | NULL | eg=["2012-04-01", "2013-07-01"]
+start_: TEXT | NULL | eg=["2010-07-01", "2012-04-01"]
+title: TEXT | NULL | eg=["Product Director", "Sales Manager"]
+emp_id: NUMBER | NULL | eg=[142, 144]
+
+## ORACLE_SQL.ID_NAME_TYPE
+name: TEXT | NULL
+id: TEXT | NULL
+
+## ORACLE_SQL.MONTHLY_BUDGET
+mth: TEXT | NULL | eg=["2018-02-01", "2018-04-01"]
+product_id: NUMBER | NULL | eg=[6520]
+qty: FLOAT | NULL | eg=[30.0, 40.0]
+
+## ORACLE_SQL.ORDERLINES
+order_id: NUMBER | NULL | eg=[422, 425]
+qty: FLOAT | NULL | eg=[80.0, 40.0]
+product_id: NUMBER | NULL | eg=[4280, 6520]
+amount: FLOAT | NULL | eg=[1750.0, 1275.0]
+id: NUMBER | NULL | eg=[9233, 9234]
+
+## ORACLE_SQL.PICKING_LINE
+picklist_id: NUMBER | NULL | eg=[841]
+qty: FLOAT | NULL | eg=[42.0, 14.0]
+product_id: NUMBER | NULL | eg=[6520, 4280]
+line_no: NUMBER | NULL | eg=[1, 2]
+order_id: NUMBER | NULL | eg=[421]
+location_id: NUMBER | NULL | eg=[16, 29]
+
+## ORACLE_SQL.CUSTOMERS
+name: TEXT | NULL | eg=["Boom Beer Bar"]
+id: NUMBER | NULL | eg=[51007]
+
+## ORACLE_SQL.ID_NAME_COLL_TYPE
+collection_id: TEXT | NULL
+
+## ORACLE_SQL.INVENTORY
+location_id: NUMBER | NULL | eg=[244, 23]
+product_id: NUMBER | NULL | eg=[7870, 7950]
+purchase_id: NUMBER | NULL | eg=[719, 720]
+id: NUMBER | NULL | eg=[1148, 1151]
+qty: FLOAT | NULL | eg=[11.0, 48.0]
+
+## ORACLE_SQL.PICKING_LOG
+log_time: TEXT | NULL | eg=["2019-01-16 14:05:44", "2019-01-16 14:06:01"]
+pickline_no: FLOAT | NULL | eg=[NaN, 2.0]
+picklist_id: NUMBER | NULL | eg=[841]
+activity: TEXT | NULL | eg=["A", "D"]
+location_id: FLOAT | NULL | eg=[16.0, 29.0]
+
+## ORACLE_SQL.MONTHLY_SALES
+mth: TEXT | NULL | eg=["2016-01-01", "2016-03-01"]
+product_id: NUMBER | NULL | eg=[4040]
+qty: NUMBER | NULL | eg=[42, 39]
+
+## ORACLE_SQL.STOCK
+company: TEXT | NULL
+symbol: TEXT | NULL
+
+## ORACLE_SQL.PURCHASES
+product_id: NUMBER | NULL | eg=[4280, 7870]
+purchased: TEXT | NULL | eg=["2016-01-03", "2016-01-09"]
+cost: FLOAT | NULL | eg=[122.0, 770.0]
+id: NUMBER | NULL | eg=[602, 605]
+qty: NUMBER | NULL | eg=[17, 105]
+brewery_id: NUMBER | NULL | eg=[536, 523]
+
+## ORACLE_SQL.WEB_PAGE_VISITS
+client_ip: TEXT | NULL | eg=["104.130.89.12"]
+page_no: NUMBER | NULL | eg=[3, 2]
+app_id: NUMBER | NULL | eg=[542]
+visit_time: TEXT | NULL | eg=["2019-04-20 08:16:31", "2019-04-20 08:41:12"]
+
+## ORACLE_SQL.FAVORITE_COLL_TYPE
+id: TEXT | NULL
+
+## ORACLE_SQL.TICKER
+price: FLOAT | NULL | eg=[14.2, 15.7]
+symbol: TEXT | NULL | eg=["BEER"]
+day: TEXT | NULL | eg=["2019-04-02", "2019-04-03"]
+
+## ORACLE_SQL.SERVER_HEARTBEAT
+beat_time: TEXT | NULL | eg=["2019-04-10 13:45", "2019-04-10 13:55"]
+server: TEXT | NULL | eg=["10.0.0.100", "10.0.0.142"]
+
+## ORACLE_SQL.PACKAGING
+name: TEXT | NULL | eg=["Bottle 330cl", "Pallet of L"]
+id: NUMBER | NULL | eg=[501, 531]
+
+## ORACLE_SQL.WEB_DEMOGRAPHICS
+f_tw_qty: NUMBER | NULL | eg=[76]
+f_fb_qty: NUMBER | NULL | eg=[68]
+m_tw_cnt: NUMBER | NULL | eg=[1232]
+m_tw_qty: NUMBER | NULL | eg=[86]
+f_fb_cnt: NUMBER | NULL | eg=[564]
+f_tw_cnt: NUMBER | NULL | eg=[651]
+m_fb_qty: NUMBER | NULL | eg=[64]
+day: TEXT | NULL | eg=["2019-05-01"]
+m_fb_cnt: NUMBER | NULL | eg=[1017]
+
+## ORACLE_SQL.WEB_COUNTER_HIST
+day: TEXT | NULL | eg=["2019-04-05", "2019-04-07"]
+app_id: NUMBER | NULL | eg=[542]
+page_no: NUMBER | NULL | eg=[1]
+counter: NUMBER | NULL | eg=[5311, 5458]
+
+## ORACLE_SQL.ID_NAME_COLL_ENTRIES
+collection_id: TEXT | NULL
+name: TEXT | NULL
+id: TEXT | NULL
+
+## ORACLE_SQL.LOCATIONS
+position: NUMBER | NULL | eg=[1, 3]
+warehouse: NUMBER | NULL | eg=[1]
+aisle: TEXT | NULL | eg=["A"]
+id: NUMBER | NULL | eg=[1, 3]
+
+## ORACLE_SQL.CONWAY_GEN_ZERO
+x: TEXT | NULL
+alive: TEXT | NULL
+y: TEXT | NULL
+
+## ORACLE_SQL.PICKING_LIST
+created: TEXT | NULL | eg=["2019-01-19 15:57:42"]
+id: NUMBER | NULL | eg=[842]
+picker_emp_id: NUMBER | NULL | eg=[152]
+
+## ORACLE_SQL.CHANNELS_DIM
+name: TEXT | NULL | eg=["Twitter"]
+id: NUMBER | NULL | eg=[42]
+shortcut: TEXT | NULL | eg=["tw"]

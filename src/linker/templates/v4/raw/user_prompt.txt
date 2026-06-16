@@ -1,0 +1,26 @@
+[DATABASE SCHEMA]
+{context}
+
+[USER QUESTION]
+{question}
+
+[INSTRUCTIONS]
+Provide explicit step-by-step reasoning for raw-schema linking.
+Prioritize recall first; improve precision only after required intent coverage is satisfied.
+
+[OUTPUT]
+Return exactly:
+THOUGHT:
+<your concise reasoning>
+
+FINAL_JSON:
+<JSON list of schema.table.column>
+
+[EXAMPLE OUTPUT]
+THOUGHT:
+1) Candidate tables: analytics.orders, analytics.customers.
+2) Keep columns required by joins, filters, grouping, and selected attributes.
+3) Validate each selected column exists in the provided schema.
+
+FINAL_JSON:
+["analytics.orders.customer_id", "analytics.orders.order_date", "analytics.customers.customer_name"]

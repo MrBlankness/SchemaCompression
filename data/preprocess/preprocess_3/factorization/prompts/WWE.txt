@@ -1,0 +1,56 @@
+[COMPONENTS]
+[TABLES]
+## WWE.WRESTLERS
+id: NUMBER | NULL
+name: TEXT | NULL
+
+## WWE.TABLES
+html: TEXT | NULL
+url: TEXT | NULL
+id: NUMBER | NULL
+
+## WWE.EVENTS
+name: TEXT | NULL
+id: NUMBER | NULL
+
+## WWE.MATCHES
+card_id: NUMBER | NULL
+match_type_id: TEXT | NULL
+id: NUMBER | NULL
+win_type: TEXT | NULL
+title_id: TEXT | NULL
+loser_id: TEXT | NULL
+winner_id: TEXT | NULL
+duration: TEXT | NULL
+title_change: NUMBER | NULL
+
+## WWE.PROMOTIONS
+name: TEXT | NULL
+id: NUMBER | NULL
+
+## WWE.CARDS
+event_id: NUMBER | NULL
+info_html: TEXT | NULL
+location_id: NUMBER | NULL
+match_html: TEXT | NULL
+id: NUMBER | NULL
+promotion_id: NUMBER | NULL
+url: TEXT | NULL
+table_id: NUMBER | NULL
+event_date: TEXT | NULL
+
+## WWE.BELTS
+name: TEXT | NULL
+id: NUMBER | NULL
+
+## WWE.SQLITE_SEQUENCE
+name: TEXT | NULL
+seq: NUMBER | NULL
+
+## WWE.MATCH_TYPES
+name: TEXT | NULL
+id: NUMBER | NULL
+
+## WWE.LOCATIONS
+id: NUMBER | NULL
+name: TEXT | NULL

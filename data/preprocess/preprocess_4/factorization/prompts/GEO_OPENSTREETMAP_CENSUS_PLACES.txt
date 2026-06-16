@@ -1,0 +1,262 @@
+[COMPONENTS]
+@C1
+area_land_meters: NUMBER | Area of the place that consists of land, in square meters | eg=[24994133, 76757662]
+area_water_meters: NUMBER | Area of the place that consists of water, in square meters | eg=[166794, 248832]
+fips_class_code: TEXT | Current FIPS class code | eg=["C1"]
+functional_status: TEXT | Current functional status code. A full list of possible results can be found: https://www.census.gov/geo/reference/funcstat.html | eg=["A"]
+internal_point_geom: BINARY | Geographic representation of the state's internal point, which is the point at or closest to the state's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xda\\x98\\x8d\\x84\\xec\\xd8S\\xc0\\xccu\\xbf\\xaf6\\x07B@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x92\\xf6\\xf52\\xc0TT\\xc0\\xa7\\xdc\\x8e\\xba\\xe7\\xdeA@')"]
+internal_point_lat: FLOAT | Latitude of the place's internal point, which is the point at or closest to the place's geographic center | eg=[36.0563564, 35.7414468]
+internal_point_lon: FLOAT | Longitude of the place's internal point, which is the point at or closest to the place's geographic center | eg=[-79.3894359, -81.3242309]
+lsad_code: TEXT | Current legal/statistical area description code for each place. This helps differentiate between Census Designated Places (CDPs), which are statistical entities) and incorporated places, which are legal entities, among other differences. Census LSAD codes and their descriptions can be found in bigquery-public-data.census_lsad_codes.lsad_codes | eg=["25"]
+name_lsad: TEXT | Current name and the translated legal/statistical area description for place | eg=["Graham city", "Hickory city"]
+place_fips_code: TEXT | Five-digit FIPS code for the given place | eg=["27280", "31060"]
+place_geom: BINARY | Geographical representation of the polygon that defines the perimeter of each place. This column should be used as the GEO column for visualization in BigQuery Geo Viz | eg=["bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x05\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00D\\x00\\x00\\x00\\x86{e\\xde\\xaa\\xdbS\\xc06r\\xdd\\x94\\xf2\\x04B@\\x9d\\xbd3\\xda\\xaa\\xdbS\\xc0\\x168\\xd9\\x06\\xee\\x04B@\\x96\\x95&\\xa5\\xa0\\xdbS\\xc0\\x80\\xee\\xcb\\x99\\xed\\x04B@f\\xda\\xfe\\x95\\x95\\xdbS\\xc0\\x1c)[$\\xed\\x04B@\\x19=\\xb7\\xd0\\x95\\xdbS\\xc0V\\xb9P\\xf9\\xd7\\x04B@\\xb6-\\xcal\\x90\\xdbS\\xc0\\x88\\xbc\\xe5\\xea\\xc7\\x04B@?\\xe3\\xc2\\x81\\x90\\xdbS\\xc0\\x00OZ\\xb8\\xac\\x04B@\\x06\\x81\\x95C\\x8b\\xdbS\\xc0\\xc2\\xde\\xc4\\x90\\x9c\\x04B@\\xed\\xd62\\x19\\x8e\\xdbS\\xc0\\xf2y\\xc5S\\x8f\\x04B@\\xd0\\x0bw.\\x8c\\xdbS\\xc0\\x07\\xccC\\xa6|\\x04B@\\xb1S\\xac\\x1a\\x84\\xdbS\\xc0X\\x1c\\xce\\xfcj\\x04B@\\x19\\x1d\\x90\\x84}\\xdbS\\xc0\\r\\xca4\\x9a\\\\\\x04B@\\xdb\\xc9\\xe0(y\\xdbS\\xc05\\x0c\\x1f\\x11S\\x04B@B_z\\xfbs\\xdbS\\xc0\\x99\\xb4\\xa9\\xbaG\\x04B@$`tys\\xdbS\\xc0d?\\x8b\\xa5H\\x04B@\\\\:\\xe6<c\\xdbS\\xc0s\\x14 \\nf\\x04B@a\\x8cH\\x14Z\\xdbS\\xc0\\x18J&\\xa7v\\x04B@,e\\x19\\xe2X\\xdbS\\xc0M\\xf3\\x8eSt\\x04B@\\x91D/\\xa3X\\xdbS\\xc0<\\x88\\x9d)t\\x04B@\\xe7\\xc6\\xf4\\x84%\\xdbS\\xc0\\xdf\\x1bC\\x00p\\x04B@@\\x12\\xf6\\xed$\\xdbS\\xc0\\xf9Ma\\xa5\\x8...", "bytearray(b'\\x01\\x06\\x00\\x00\\x00:\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00%\\x00\\x00\\x00X\\xabvMHST\\xc0\\x9f!\\x1c\\xb3\\xec\\xd3A@#M\\xbc\\x03<ST\\xc0S\\xech\\x1c\\xea\\xd3A@\\xda\\x01\\xd7\\x153ST\\xc0\\xdaSrN\\xec\\xd3A@9\\n\\x10\\x053ST\\xc0\\x03\\xed\\x0e)\\x06\\xd4A@\\x86s\\r34ST\\xc0~\\xda\\xa8N\\x07\\xd4A@^emS<ST\\xc0\\x0eg~5\\x07\\xd4A@/\\xe1\\xd0[<ST\\xc0y\\xb5\\xdc\\x99\\t\\xd4A@\\xfa\\xd3Fu:ST\\xc0\\xeb\\xad\\x81\\xad\\x12\\xd4A@Gq\\x8e::ST\\xc0\\xa21\\x93\\xa8\\x17\\xd4A@f\\xa4\\xdeS9ST\\xc0\\x0e\\xa1J\\xcd\\x1e\\xd4A@Z\\x10\\xca\\xfb8ST\\xc0{\\x10\\x02\\xf2%\\xd4A@~\\x00R\\x9b8ST\\xc0\\xb6\\xf7\\xa9*4\\xd4A@Z\\x10\\xca\\xfb8ST\\xc0\\xd7N\\x94\\x84D\\xd4A@$\\xb5P29ST\\xc0\\xf3\\xcb`\\x8cH\\xd4A@0c\\n\\xd68ST\\xc0\\xc74\\xd3\\xbdN\\xd4A@7n1?7ST\\xc09\\xf9-:Y\\xd4A@\\xceS\\x1dr3ST\\xc0\\xd3P\\xa3\\x90d\\xd4A@V\\xefp;4ST\\xc0\\xb0z\\xc0<d\\xd4A@&\\x1d\\xe5`6ST\\xc0J\\xb5O\\xc7c\\xd4A@TS\\x92u8ST\\xc0\\xe5\\xef\\xdeQc\\xd4A@\\xa1\\xd64\\xef8ST\\xc0\\xe6Ws\\x80`\\xd4A@\\xd0&\\x87O:ST\\xc0\\xa88\\x0e\\xbcZ\\xd4A@X\\xa85\\xcd;ST\\xc0<\\xfd\\xa0.R\\xd4A@/\\xe1\\xd0[<ST\\xc0\\xe9\\xd6kzP\\xd4A@\\xcf\\xbe\\xf2 =ST\\xc0\\xaaf\\xd6R@\\xd4A@\\..."]
+place_gnis_code: TEXT | Current place GNIS code | eg=["02403722", "02404693"]
+place_id: TEXT | Unique idenifier for each place. This is a concatenation of the current state FIPS code and the place FIPS code | eg=["3727280", "3731060"]
+place_name: TEXT | Full text name of the place | eg=["Graham", "Hickory"]
+principal_city_msa: BOOLEAN | Indicates if a place is the principal city for a metropolitan or micropolitan statistical area. The polygons defining metropolitan and micropolitan statistical areas are available in bigquery-public-data.geo_us_boundaries.us_msa | eg=[false, true]
+principal_city_ne: BOOLEAN | Indicates if a place is the principal city for a New England city and town area | eg=[false]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016 | eg=["37"]
+
+@C2
+all_tags: VARIANT | NULL | eg=[[{"key":"landuse","value":"forest"},{"key":"type","value":"multipolygon"}]]
+geometry: BINARY | NULL | eg=["bytearray(b\"\\x01\\x03\\x00\\x00\\x00\\x02\\x00\\x00\\x00/\\x00\\x00\\x00\\xd1\\x80\\xd5\\xec\\\\KV\\xc0\\x8f\\xe8\\x9eu\\x8dQB@\\xb6\\xac\\xb1:(JV\\xc0\\xac\\xfe\\x08\\xc3\\x80QB@\\x0f\\xf2z0)JV\\xc0\\x8cr\\x1fo\\xa8QB@\\xd5!7\\xc3\\rJV\\xc0\\xc9\\x17\\xfe\\x1d\\x9bQB@\\xf5@\\x1a\\x04\\x0cJV\\xc0\\xae\\xb7\\xcdT\\x88QB@\\xe9\\xa7\\xee\\x80!JV\\xc0*F\\x02\\xb2|QB@\\xbb}V\\x99)JV\\xc0\\xd5\\x0f\\xa0\\x95jQB@\\xabF\\n\\xc0\\x1aJV\\xc0u\\x87^\\x90>QB@rW\\n\\xdc\\x15JV\\xc0\\xa7\\x8e\\xfa\\x90\\\\QB@\\\\c\\x86|\\x06JV\\xc0\\xe5bgeVQB@0\\\\g\\x8d\\x0bJV\\xc0\\xe0\\xf6\\x04\\x89\\xedPB@\\x9a\\xd8\\xd7\\x15\\x0eJV\\xc0\\xae\\xaeTa}PB@5\\xfa\\x87\\xe3/JV\\xc0\\xd8aL\\xfa{PB@cG>\\n2JV\\xc0\\xbc\\xfc\\xf3\\xd9\\xa6OB@b1\\xeaZ\\xfbIV\\xc0\\xd6\\xb4\\x8bi\\xa6OB@\\xff\\xd3h\\xcd\\xeaIV\\xc0\\xddb\\xd9\\'\\xdbOB@\\x9f\\x94\\xa4\\xc6\\xdfIV\\xc0\\x02\\xf5f\\xd4|PB@\\x9d\\xe3\\x92\\x99\\xc1IV\\xc0\\xa0v\\t\\x98\\nRB@\\x85\\xa66\\x82\\x9eIV\\xc0\\x9b:\\x8f\\x8a\\xffQB@\\xd3/\\x11o\\x9dIV\\xc0\\x07\\xacf\\xe7~RB@\\xa9BM>\\x87IV\\xc0\\xbf\\xaep\\xdcsRB@9+\\xa2&zIV\\xc0L/\\xd6\\xdcvRB@\\x04\\xf0\\x05\\x1cxIV\\xc0\\xa8\\xe6(\\xf6\\x86RB@p\\x0e2$\\x82IV\\xc0\\xa3\\xd9\\x86\\x9b\\x9dRB@\\x86\\xf9<\\x90\\x8...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x13\\x00\\x00\\x00J3\\xcc\\xbfL.%@\\xfb48[\\x8a3H@\\xcb\\xd6\\xfa\"\\xa1-%@<\\xd0T\\x99s3H@\\xf6\\xf1\\x86\\xea\\x9c-%@\\x87l ]l3H@y\\xdb\\x96\\x12\\x93-%@\\x90{\\xba\\xbac3H@\\xfa\\\\\\x12\\x0c\\x8c-%@1d\\xd0dZ3H@xs\\x02\\xe4\\x95-%@\\x90\\xd9Y\\xf4N3H@\\x9e\\xbbn[\\xa5-%@\\xc9\\x15(s=3H@\\xd5?\\x88d\\xc8-%@\\x83\\x13v\\xf6:3H@\\xe4\\x1e\\xa6\\xd8,.%@\\x14\\xfa\\xaa\\xa653H@a6\\xa6\\xccr.%@\\xc7\\x8au\\x0563H@\\xfc\\x1a\\xa4;\\xe3.%@\\xdb3\\xa6\\xbbF3H@\\xb9\\x91\\xb2E\\xd2.%@;+\\xb3RR3H@\\x03\\x9e\\x0f*\\xcc.%@\\xd5\\x1a\\x94z`3H@e.\\xba\\x06\\xc7.%@w\\xc5\\xe7\\xa9i3H@\\x18n\\nu\\xa2.%@\\x1bk\\x7fg{3H@\\xa1\\x0cU1\\x95.%@\\xb2\\x17e\\x91\\x813H@\\xb4\\x9d\\xa5\\x1a\\xac.%@@\\xbb\\xe8\\xd0\\x8e3H@\\x02\\xd0\\xcd\\xa3\\x87.%@K/ j\\x913H@J3\\xcc\\xbfL.%@\\xfb48[\\x8a3H@\\x14\\x00\\x00\\x00\\xf6\\t\\xa0\\x18Y.%@\\xabhbp\\x833H@EC\\xc6\\xa3T.%@\\x11\\x8a\\xad\\xa0i3H@q\\xb1\\xfd\\xbfE.%@\\x17\\xc8\\xa2\\x9f_3H@a\\x14\\xa9\\xd5\\xfc-%@q\\xf1\\x01\\xcb[3H@M\\x1b\\xc4\\xbd\\xe8-%@iu\\xcd?U3H@(\\x95\\x95\\xcb\\xeb-%@w\\x8b\\x1b\\x12R3H@\\x1b##\\xb1\\xee-%@~\\xca\\x8c\\x12O3H@z\\x90\\xf9\\xdb\\xf9-%@h\\x18-\\xf6..."]
+osm_timestamp: NUMBER | NULL | eg=[1445109978000000, 1490100393000000]
+
+@C3
+changeset: NUMBER | NULL | eg=[34699994, 47039117]
+username: TEXT | NULL | eg=["pyram", "nebulon42"]
+version: NUMBER | NULL | eg=[1, 2]
+visible: BOOLEAN | NULL | eg=[true]
+
+@C4
+osm_id: NUMBER | NULL
+osm_version: NUMBER | NULL | eg=[1]
+osm_way_id: NUMBER | NULL | eg=[80820903, 365713935]
+
+@C5
+gdal_type: TEXT | NULL | eg=["multipolygons"]
+layer_class: TEXT | NULL | eg=["building"]
+layer_code: NUMBER | NULL | eg=[1500]
+layer_name: TEXT | NULL | eg=["building"]
+
+[TABLES]
+## GEO_OPENSTREETMAP.HISTORY_CHANGESETS
+osm_timestamp_min: NUMBER | Minimum timestamp of objects contained in this changeset. | eg=[1302298528, 1420405066]
+ways: VARIANT | Ways that are part of this way | eg=[[24231720,35379260,32322629,32321818,107747582,107747586,107747585], [132643052,132643058,132618517,194017211,197719767,151179844,240807518,145590403]]
+id: NUMBER | Changeset ID. | eg=[7808479, 27920130]
+osm_timestamp_max: NUMBER | Maximum timestamp of objects contained in this changeset. | eg=[1302298530, 1420405076]
+relations: VARIANT | Relations that are part of this way | eg=[[67141,48196,958202], [2700066,2724863,2725075,288170,3841999,2680799,2680800,2681322,307511,2863245,2863246,909386,909391,909393]]
+nodes: VARIANT | Nodes that are part of this way | eg=[[243185480,363889467,363889465,349275097,1237788547,1237788549,1237788555,1237788559,1237788562,1237788564,1237788566,1237788569,1237788571,1237788574,1237788582,1237788584,1237788585,1237788586], [2549881116,2549881127,2549881139,2549881171,2449880874,2395601193,2395601194,2395601195,2395601196,2395601197,2395601198,2018960482,2018960483,2018960491,2018960498,1862182222,1554639205,1589790484,1589790479,1458992914,1458992939,1458992948,1458992950,1458992899,1458992947,3269577773,3269577774,3269577775,3269577776,3269577777,3269577778,3269577779,3269577780,3269577781,3269577782,3269577783,3269577784,3269577785,3269577786,3269577787,3269577788,3269577789,3269577790,3269577791,3269577792,3269577793,3269577794,3269577795,3269577796,3269577797,3269577798,3269577799,3269577800,2130437703,1640062570,1640062586,1640062593]]
+
+## GEO_OPENSTREETMAP.PLANET_RELATIONS
+@use: [C2, C3]
+id: NUMBER | NULL | eg=[5595020, 1692685]
+members: VARIANT | NULL | eg=[[{"id":375717925,"role":"outer","type":"w"},{"id":375717933,"role":"inner","type":"w"}], [{"id":123902359,"role":"outer","type":"w"},{"id":123902369,"role":"inner","type":"w"}]]
+
+## GEO_OPENSTREETMAP.HISTORY_RELATIONS
+@use: [C2, C3]
+members: VARIANT | NULL | eg=[[{"id":778708628,"role":"stop_entry_only","type":"n"},{"id":538966273,"role":"platform","type":"w"},{"id":3429385180,"role":"stop","type":"n"},{"id":659993053,"role":"platform","type":"n"},{"id":2968693414,"role":"stop","type":"n"},{"id":3431284360,"role":"platform","type":"n"},{"id":2968693415,"role":"stop","type":"n"},{"id":3431460916,"role":"platform","type":"n"},{"id":5214265831,"role":"stop","type":"n"},{"id":3302668133,"role":"platform","type":"n"},{"id":3431357947,"role":"stop","type":"n"},{"id":1675761836,"role":"platform","type":"n"},{"id":3431357949,"role":"stop","type":"n"},{"id":3431357953,"role":"stop","type":"n"},{"id":3431357955,"role":"stop","type":"n"},{"id":2973030460,"role":"platform","type":"n"},{"id":3431357951,"role":"stop","type":"n"},{"id":2973030458,"role":"platform","type":"n"},{"id":3431460909,"role":"stop","type":"n"},{"id":2962596189,"role":"platform","type":"n"},{"id":577094026,"role":"stop","type":"n"},{"id":1548446269,"role":"platform","type":"n"},{"i...]
+id: NUMBER | NULL | eg=[4754869, 2348169]
+
+## GEO_OPENSTREETMAP.PLANET_LAYERS
+@use: [C2, C4, C5]
+
+## GEO_OPENSTREETMAP.HISTORY_NODES
+@use: [C2, C3]
+LONGITUDE: NUMBER | NULL | eg=["-41.061451400", "-40.990267200"]
+ID: NUMBER | NULL | eg=[6627767823, 5950013932]
+LATITUDE: NUMBER | NULL | eg=["-19.737889200", "-19.752204300"]
+
+## GEO_OPENSTREETMAP.PLANET_FEATURES
+@use: [C2, C4]
+feature_type: TEXT | NULL | eg=["multipolygons"]
+
+## GEO_OPENSTREETMAP.PLANET_FEATURES_POINTS
+@use: [C2, C4]
+
+## GEO_OPENSTREETMAP.HISTORY_LAYERS
+@use: [C2, C4, C5]
+
+## GEO_OPENSTREETMAP.PLANET_NODES
+@use: [C2, C3]
+latitude: NUMBER | NULL | eg=["47.590118100", "41.831882000"]
+longitude: NUMBER | NULL | eg=["13.732555100", "59.691949100"]
+id: NUMBER | NULL | eg=[2675154110, 3153341975]
+
+## GEO_OPENSTREETMAP.PLANET_WAYS
+@use: [C2, C3]
+nodes: VARIANT | NULL | eg=[[{"id":866315580},{"id":866469140},{"id":867906160},{"id":866405284},{"id":866497492},{"id":866302007},{"id":866449818},{"id":867897625},{"id":867903637},{"id":866402859},{"id":866540640}], [{"id":875203058},{"id":875126295},{"id":875250411},{"id":875165175},{"id":875297030},{"id":875213426},{"id":875076413},{"id":875191884},{"id":875320995},{"id":875238167}]]
+id: NUMBER | NULL | eg=[73165139, 73975367]
+
+## GEO_US_CENSUS_PLACES.PLACES_NORTH_CAROLINA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_MASSACHUSETTS
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_DISTRICT_OF_COLUMBIA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_WASHINGTON
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_CALIFORNIA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_WYOMING
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_FLORIDA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_NEW_JERSEY
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_KANSAS
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_CONNECTICUT
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_ARIZONA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_GEORGIA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_RHODE_ISLAND
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_IOWA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_AMERICAN_SAMOA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_OREGON
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_PENNSYLVANIA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_OHIO
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_WISCONSIN
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_NORTHERN_MARIANA_ISLANDS
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_US_VIRGIN_ISLANDS
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_VERMONT
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_HAWAII
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_ALABAMA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_KENTUCKY
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_ALASKA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_OKLAHOMA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_MISSOURI
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_GUAM
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.US_NATIONAL_PLACES
+@use: [C1]
+state_name: TEXT | Full text name of the state | eg=["Utah", "Iowa"]
+
+## GEO_US_CENSUS_PLACES.PLACES_NEBRASKA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_VIRGINIA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_NEW_YORK
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_MARYLAND
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_MAINE
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_PUERTO_RICO
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_UTAH
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_INDIANA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_MICHIGAN
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_COLORADO
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_SOUTH_CAROLINA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_IDAHO
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_TEXAS
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_NEW_MEXICO
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_NORTH_DAKOTA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_MINNESOTA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_MONTANA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_ARKANSAS
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_SOUTH_DAKOTA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_LOUISIANA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_NEVADA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_WEST_VIRGINIA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_NEW_HAMPSHIRE
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_MISSISSIPPI
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_DELAWARE
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_TENNESSEE
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_ILLINOIS
+@use: [C1]

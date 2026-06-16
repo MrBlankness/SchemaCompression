@@ -1,0 +1,123 @@
+[COMPONENTS]
+@C1
+first_name: TEXT | NULL
+last_name: TEXT | NULL
+
+[TABLES]
+## SQLITE_SAKILA.FILM_TEXT
+description: TEXT | NULL
+title: TEXT | NULL
+film_id: TEXT | NULL
+
+## SQLITE_SAKILA.PAYMENT
+last_update: TEXT | NULL
+staff_id: NUMBER | NULL
+payment_date: TEXT | NULL
+rental_id: FLOAT | NULL
+payment_id: NUMBER | NULL
+customer_id: NUMBER | NULL
+amount: FLOAT | NULL
+
+## SQLITE_SAKILA.ACTOR
+@use: [C1]
+actor_id: NUMBER | NULL
+last_update: TEXT | NULL
+
+## SQLITE_SAKILA.FILM_CATEGORY
+last_update: TEXT | NULL
+film_id: NUMBER | NULL
+category_id: NUMBER | NULL
+
+## SQLITE_SAKILA.RENTAL
+last_update: TEXT | NULL
+customer_id: NUMBER | NULL
+inventory_id: NUMBER | NULL
+rental_date: TEXT | NULL
+staff_id: NUMBER | NULL
+rental_id: NUMBER | NULL
+return_date: TEXT | NULL
+
+## SQLITE_SAKILA.LANGUAGE
+last_update: TEXT | NULL
+language_id: NUMBER | NULL
+name: TEXT | NULL
+
+## SQLITE_SAKILA.STORE
+store_id: NUMBER | NULL
+address_id: NUMBER | NULL
+last_update: TEXT | NULL
+manager_staff_id: NUMBER | NULL
+
+## SQLITE_SAKILA.STAFF
+@use: [C1]
+picture: TEXT | NULL
+username: TEXT | NULL
+email: TEXT | NULL
+address_id: NUMBER | NULL
+staff_id: NUMBER | NULL
+last_update: TEXT | NULL
+store_id: NUMBER | NULL
+password: TEXT | NULL
+active: NUMBER | NULL
+
+## SQLITE_SAKILA.FILM
+replacement_cost: FLOAT | NULL
+special_features: TEXT | NULL
+length: NUMBER | NULL
+description: TEXT | NULL
+original_language_id: TEXT | NULL
+language_id: NUMBER | NULL
+rental_rate: FLOAT | NULL
+rental_duration: NUMBER | NULL
+rating: TEXT | NULL
+title: TEXT | NULL
+last_update: TEXT | NULL
+film_id: NUMBER | NULL
+release_year: TEXT | NULL
+
+## SQLITE_SAKILA.INVENTORY
+last_update: TEXT | NULL
+inventory_id: NUMBER | NULL
+film_id: NUMBER | NULL
+store_id: NUMBER | NULL
+
+## SQLITE_SAKILA.CUSTOMER
+@use: [C1]
+address_id: NUMBER | NULL
+customer_id: NUMBER | NULL
+last_update: TEXT | NULL
+store_id: NUMBER | NULL
+active: TEXT | NULL
+create_date: TEXT | NULL
+email: TEXT | NULL
+
+## SQLITE_SAKILA.FILM_ACTOR
+actor_id: NUMBER | NULL
+last_update: TEXT | NULL
+film_id: NUMBER | NULL
+
+## SQLITE_SAKILA.CATEGORY
+last_update: TEXT | NULL
+name: TEXT | NULL
+category_id: NUMBER | NULL
+
+## SQLITE_SAKILA.CITY
+city: TEXT | NULL
+last_update: TEXT | NULL
+city_id: NUMBER | NULL
+country_id: NUMBER | NULL
+
+## SQLITE_SAKILA.ADDRESS
+address_id: NUMBER | NULL
+phone: TEXT | NULL
+city_id: NUMBER | NULL
+address2: TEXT | NULL
+district: TEXT | NULL
+last_update: TEXT | NULL
+postal_code: TEXT | NULL
+address: TEXT | NULL
+
+## SQLITE_SAKILA.COUNTRY
+country_id: NUMBER | NULL
+country: TEXT | NULL
+last_update: TEXT | NULL

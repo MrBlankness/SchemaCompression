@@ -1,0 +1,239 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: CPTAC.QUANT_PROTEOME_PTRC_TNBC_PDX_PDC_CURRENT
+Columns: sample_id, aliquot_id, protein_abundance_log2ratio, locus, study_name, uniprotkb_id, aliquot_submitter_id, authority, uniprotkb_ids, proteins, gene_id, case_id, organism, gene_symbol, NCBI_gene_id, authority_gene_id, chromosome, aliquot_run_metadata_id, gene_description, assays
+
+Table: CPTAC.QUANT_PROTEOME_CPTAC_HNSCC_DISCOVERY_STUDY_PDC_CURRENT
+Columns: assays, sample_id, gene_description, aliquot_submitter_id, gene_id, authority, uniprotkb_id, aliquot_run_metadata_id, organism, protein_abundance_log2ratio, locus, NCBI_gene_id, study_name, case_id, authority_gene_id, chromosome, gene_symbol, aliquot_id, proteins, uniprotkb_ids
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_AML_GILTERITINIB_RESISTANCE_PDC_CURRENT
+Columns: sample_id, aliquot_id, refseq_id, case_id, aliquot_submitter_id, protein_abundance_log2ratio, phosphorylation_sites, study_name, aliquot_run_metadata_id
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_PROSPECTIVE_COLON_PNNL_LUMOS_PDC_CURRENT
+Columns: aliquot_submitter_id, refseq_id, case_id, study_name, sample_id, aliquot_run_metadata_id, aliquot_id, protein_abundance_log2ratio, phosphorylation_sites
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_CPTAC_UCEC_CONFIRMATORY_STUDY_PDC_CURRENT
+Columns: phosphorylation_sites, aliquot_run_metadata_id, protein_abundance_log2ratio, case_id, sample_id, aliquot_submitter_id, study_name, aliquot_id, refseq_id
+
+Table: CPTAC.MIRNASEQ_HG38_GDC_CURRENT
+Columns: case_barcode, sample_barcode, primary_site, cross_mapped, sample_type_name, miRNA_id, case_gdc_id, reads_per_million_miRNA_mapped, file_gdc_id, sample_gdc_id, aliquot_barcode, read_count, aliquot_gdc_id, project_short_name
+
+Table: CPTAC.PER_SAMPLE_FILE_METADATA_HG38_GDC_CURRENT
+Columns: index_file_id, index_file_name_key, case_barcode, access, experimental_strategy, file_type, project_short_name, sample_gdc_id, case_gdc_id, acl, platform, sample_barcode, data_format, file_name_key, data_type, file_gdc_id, data_category, program_name, sample_type_name, file_size, project_short_name_suffix, index_file_size
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_AML_QUIZARTINIB_RESISTANCE_PDC_CURRENT
+Columns: study_name, aliquot_submitter_id, case_id, phosphorylation_sites, aliquot_id, sample_id, refseq_id, protein_abundance_log2ratio, aliquot_run_metadata_id
+
+Table: CPTAC.QUANT_PROTEOME_PROSPECTIVE_BREAST_BI_PDC_CURRENT
+Columns: organism, uniprotkb_id, chromosome, aliquot_submitter_id, uniprotkb_ids, proteins, assays, protein_abundance_log2ratio, gene_id, NCBI_gene_id, case_id, aliquot_run_metadata_id, aliquot_id, study_name, authority_gene_id, sample_id, locus, gene_description, authority, gene_symbol
+
+Table: CPTAC.QUANT_PROTEOME_CPTAC_PDA_DISCOVERY_STUDY_PDC_CURRENT
+Columns: aliquot_run_metadata_id, authority_gene_id, sample_id, case_id, study_name, uniprotkb_id, authority, protein_abundance_log2ratio, gene_symbol, organism, gene_id, locus, assays, aliquot_submitter_id, aliquot_id, proteins, NCBI_gene_id, uniprotkb_ids, gene_description, chromosome
+
+Table: CPTAC.QUANT_PROTEOME_PTRC_HGSOC_FROZEN_VALIDATION_PDC_CURRENT
+Columns: gene_symbol, aliquot_submitter_id, authority_gene_id, NCBI_gene_id, assays, proteins, study_name, uniprotkb_id, uniprotkb_ids, aliquot_run_metadata_id, organism, chromosome, authority, gene_description, aliquot_id, case_id, locus, protein_abundance_log2ratio, sample_id, gene_id
+
+Table: CPTAC.COPY_NUMBER_GENE_LEVEL_HG38_GDC_CURRENT
+Columns: primary_site, end_pos, start_pos, Ensembl_gene_id_v, case_gdc_id, aliquot_gdc_id, min_copy_number, case_barcode, aliquot_barcode, Ensembl_gene_id, sample_gdc_id, project_short_name, sample_barcode, file_gdc_id, max_copy_number, copy_number, gene_type, chromosome, gene_name
+
+Table: CPTAC.QUANT_ACETYLOME_CPTAC_UCEC_CONFIRMATORY_STUDY_PDC_CURRENT
+Columns: aliquot_id, aliquot_submitter_id, refseq_id, study_name, sample_id, aliquot_run_metadata_id, acetylation_sites, protein_abundance_log2ratio, case_id
+
+Table: CPTAC.QUANT_PROTEOME_CPTAC_UCEC_CONFIRMATORY_STUDY_PDC_CURRENT
+Columns: gene_symbol, authority, organism, NCBI_gene_id, chromosome, authority_gene_id, locus, aliquot_run_metadata_id, proteins, gene_description, uniprotkb_id, study_name, uniprotkb_ids, gene_id, protein_abundance_log2ratio, aliquot_id, assays, case_id, sample_id, aliquot_submitter_id
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_CPTAC_GBM_DISCOVERY_STUDY_PDC_CURRENT
+Columns: protein_abundance_log2ratio, case_id, aliquot_id, study_name, refseq_id, aliquot_submitter_id, phosphorylation_sites, aliquot_run_metadata_id, sample_id
+
+Table: CPTAC.PER_SAMPLE_FILE_METADATA_CPTAC2_OTHER_PDC_CURRENT
+Columns: program_short_name, sample_type, program_name, file_format, sample_id, case_submitter_id, file_name, project_submitter_id, project_short_name, data_category, experiment_type, file_size, sample_submitter_id, access, file_id, case_id, instrument, file_type, file_location
+
+Table: CPTAC.QUANT_PROTEOME_AML_QUIZARTINIB_RESISTANCE_PDC_CURRENT
+Columns: gene_id, sample_id, aliquot_submitter_id, study_name, aliquot_id, locus, proteins, uniprotkb_ids, organism, uniprotkb_id, assays, gene_symbol, case_id, authority_gene_id, aliquot_run_metadata_id, NCBI_gene_id, protein_abundance_log2ratio, gene_description, authority, chromosome
+
+Table: CPTAC.MIRNASEQ_ISOFORM_HG38_GDC_CURRENT
+Columns: miRNA_accession, cross_mapped, reads_per_million_miRNA_mapped, project_short_name, aliquot_barcode, case_gdc_id, sample_type_name, sample_barcode, chromosome, sample_gdc_id, miRNA_transcript, aliquot_gdc_id, miRNA_id, file_gdc_id, read_count, end_pos, primary_site, case_barcode, start_pos, strand
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_CPTAC_LSCC_DISCOVERY_STUDY_PDC_CURRENT
+Columns: sample_id, aliquot_run_metadata_id, refseq_id, phosphorylation_sites, case_id, aliquot_submitter_id, study_name, aliquot_id, protein_abundance_log2ratio
+
+Table: CPTAC.COPY_NUMBER_SEGMENT_HG38_GDC_CURRENT
+Columns: copy_number, sample_barcode, sample_gdc_id, start_pos, file_gdc_id, major_copy_number, aliquot_barcode, end_pos, project_short_name, aliquot_gdc_id, chromosome, minor_copy_number, primary_site, case_gdc_id, case_barcode
+
+Table: CPTAC.CLINICAL_DIAGNOSIS_PROTEOGENOMIC_TRANSLATIONAL_RESEARCH_CENTERS_PDC_CURRENT
+Columns: days_to_last_follow_up, diagnosis_id, tumor_grade, project_submitter_id, classification_of_tumor, days_to_recurrence, progression_or_recurrence, site_of_resection_or_biopsy, case_id, age_at_diagnosis, case_submitter_id, last_known_disease_status, tumor_stage, days_to_last_known_disease_status, morphology, diagnosis_is_primary_disease, primary_diagnosis, diagnosis_submitter_id, tissue_or_organ_of_origin
+
+Table: CPTAC.QUANT_PROTEOME_AML_EX_VIVO_DRUG_RESPONSE_SORAFENIB_TREATMENT_PDC_CURRENT
+Columns: gene_description, sample_id, aliquot_submitter_id, uniprotkb_ids, gene_id, gene_symbol, study_name, authority, uniprotkb_id, chromosome, locus, protein_abundance_log2ratio, case_id, proteins, assays, authority_gene_id, aliquot_run_metadata_id, NCBI_gene_id, organism, aliquot_id
+
+Table: CPTAC.QUANT_PROTEOME_CPTAC_LSCC_DISCOVERY_STUDY_PDC_CURRENT
+Columns: assays, locus, aliquot_id, organism, authority_gene_id, gene_description, sample_id, authority, aliquot_submitter_id, chromosome, aliquot_run_metadata_id, gene_symbol, uniprotkb_id, case_id, protein_abundance_log2ratio, gene_id, NCBI_gene_id, uniprotkb_ids, study_name, proteins
+
+Table: CPTAC.QUANT_PROTEOME_CPTAC_UCEC_DISCOVERY_STUDY_PDC_CURRENT
+Columns: study_name, gene_symbol, aliquot_id, gene_description, protein_abundance_log2ratio, uniprotkb_id, organism, chromosome, aliquot_run_metadata_id, gene_id, uniprotkb_ids, authority, case_id, authority_gene_id, sample_id, NCBI_gene_id, locus, aliquot_submitter_id, proteins, assays
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_PROSPECTIVE_OVARIAN_PNNL_LUMOS_PDC_CURRENT
+Columns: aliquot_id, refseq_id, aliquot_submitter_id, case_id, aliquot_run_metadata_id, sample_id, protein_abundance_log2ratio, study_name, phosphorylation_sites
+
+Table: CPTAC.QUANT_ACETYLOME_CPTAC_UCEC_DISCOVERY_STUDY_PDC_CURRENT
+Columns: case_id, sample_id, aliquot_submitter_id, protein_abundance_log2ratio, refseq_id, study_name, aliquot_id, acetylation_sites, aliquot_run_metadata_id
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_CPTAC_LUAD_DISCOVERY_STUDY_PDC_CURRENT
+Columns: sample_id, study_name, aliquot_submitter_id, case_id, aliquot_run_metadata_id, protein_abundance_log2ratio, phosphorylation_sites, aliquot_id, refseq_id
+
+Table: CPTAC.QUANT_GLYCOPROTEOME_PROSPECTIVE_OVARIAN_JHU_N_LINKED_GLYCOSITE_CONTAINING_PEPTIDE_PDC_CURRENT
+Columns: refseq_id, sample_id, study_name, protein_abundance_log2ratio, glycosylation_sites, aliquot_submitter_id, case_id, aliquot_run_metadata_id, aliquot_id
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_PTRC_HGSOC_FFPE_VALIDATION_PDC_CURRENT
+Columns: phosphorylation_sites, study_name, sample_id, aliquot_id, protein_abundance_log2ratio, aliquot_submitter_id, refseq_id, case_id, aliquot_run_metadata_id
+
+Table: CPTAC.CLINICAL_CPTAC3_OTHER_PDC_CURRENT
+Columns: age_at_diagnosis, cause_of_death, days_to_death, year_of_birth, diagnosis_is_primary_disease, diagnosis_submitter_id, year_of_death, gender, tumor_focality, morphology, ajcc_pathologic_n, ajcc_clinical_m, days_to_recurrence, case_submitter_id, vital_status, disease_type, tissue_or_organ_of_origin, days_to_last_known_disease_status, days_to_last_follow_up, primary_site, race, last_known_disease_status, demographic_id, project_submitter_id, ajcc_pathologic_t, primary_diagnosis, year_of_diagnosis, progression_or_recurrence, ajcc_pathologic_stage, residual_disease, demographic_submitter_id, case_id, days_to_birth, ajcc_pathologic_m, tumor_grade, diagnosis_id, ajcc_staging_system_edition, site_of_resection_or_biopsy, ethnicity
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_CPTAC_HNSCC_DISCOVERY_STUDY_PDC_CURRENT
+Columns: aliquot_run_metadata_id, phosphorylation_sites, case_id, aliquot_id, sample_id, refseq_id, study_name, aliquot_submitter_id, protein_abundance_log2ratio
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_AML_GILTERITINIB_TIMECOURSE_PDC_CURRENT
+Columns: case_id, protein_abundance_log2ratio, aliquot_id, aliquot_run_metadata_id, sample_id, aliquot_submitter_id, phosphorylation_sites, study_name, refseq_id
+
+Table: CPTAC.CLINICAL_PROTEOGENOMIC_TRANSLATIONAL_RESEARCH_CENTERS_PDC_CURRENT
+Columns: cause_of_death_source, demographic_id, days_to_birth, disease_type, cause_of_death, demographic_submitter_id, days_to_death, age_is_obfuscated, gender, vital_status, ethnicity, case_submitter_id, case_id, country_of_residence_at_enrollment, project_submitter_id, primary_site, age_at_index, race
+
+Table: CPTAC.QUANT_PROTEOME_PROSPECTIVE_OVARIAN_PNNL_QEPLUS_PDC_CURRENT
+Columns: proteins, aliquot_submitter_id, sample_id, authority, gene_symbol, aliquot_run_metadata_id, NCBI_gene_id, gene_id, gene_description, uniprotkb_id, uniprotkb_ids, locus, chromosome, organism, aliquot_id, case_id, study_name, assays, protein_abundance_log2ratio, authority_gene_id
+
+Table: CPTAC.QUANT_PROTEOME_AML_EX_VIVO_DRUG_RESPONSE_COMBINATION_TREATMENT_PDC_CURRENT
+Columns: aliquot_id, uniprotkb_id, uniprotkb_ids, gene_id, authority_gene_id, organism, case_id, sample_id, gene_description, aliquot_submitter_id, locus, study_name, chromosome, authority, assays, protein_abundance_log2ratio, NCBI_gene_id, gene_symbol, proteins, aliquot_run_metadata_id
+
+Table: CPTAC.MASKED_SOMATIC_MUTATION_HG38_GDC_CURRENT
+Columns: Hugo_Symbol, ESP_AA_AF, gnomAD_non_cancer_NFE_AF, SIFT, Existing_variation, RNA_depth, Consequence, Mutation_Status, pindel, DOMAINS, Matched_Norm_Aliquot_Barcode, SWISSPROT, mutect2, callers, CONTEXT, muse, HGVS_OFFSET, Variant_Classification, gnomAD_non_cancer_SAS_AF, gnomAD_AMR_AF, MOTIF_SCORE_CHANGE, sample_barcode_tumor, t_alt_count, Tumor_Validation_Allele2, HGVSp_Short, HIGH_INF_POS, gnomAD_non_cancer_MAX_AF_POPS_adj, ThousG_EAS_AF, gnomAD_AFR_AF, Sequencer, aliquot_barcode_tumor, varscan2, PUBMED, TRANSCRIPT_STRAND, ThousG_AF, Verification_Status, n_alt_count, Transcript_ID, ThousG_EUR_AF, INTRON, Match_Norm_Seq_Allele2, Matched_Norm_Aliquot_UUID, cDNA_position, gnomAD_AF, Reference_Allele, gnomAD_non_cancer_EAS_AF, Strand, n_depth, gnomAD_non_cancer_MAX_AF_adj, aliquot_barcode_normal, Match_Norm_Validation_Allele2, DISTANCE, COSMIC, ThousG_AFR_AF, GENE_PHENO, Match_Norm_Validation_Allele1, t_ref_count, UNIPROT_ISOFORM, tumor_submitter_uuid, MANE, Validation_Method, Tumor_Aliquot_Barcode, Chromosome, dbSNP_RS, case_id, PHENO, Codons, TREMBL, gnomAD_ASJ_AF, Tumor_Seq_Allele2, MAX_AF, gnomAD_EAS_AF, Feature_type, Tumor_Validation_Allele1, BAM_File, normal_submitter_uuid, gnomAD_OTH_AF, Variant_Type, gnomAD_non_cancer_AFR_AF, Validation_Status, Protein_position, UNIPARC, SOMATIC, HGNC_ID, Entrez_Gene_Id, PICK, ThousG_AMR_AF, gnomAD_non_cancer_ASJ_AF, MOTIF_NAME, Tumor_Seq_Allele1, HGVSc, IMPACT, t_depth, gnomAD_FIN_AF, Match_Norm_Seq_Allele1, APPRIS, ENSP, gnomAD_non_cancer_OTH_AF, file_gdc_id, HGVSp, RNA_Support, Sequence_Source, SYMBOL, case_barcode, all_effects, Score, Start_Position, primary_site, Allele, CDS_position, ThousG_SAS_AF, VARIANT_CLASS, RNA_alt_count, RefSeq, One_Consequence, ESP_EA_AF, NCBI_Build, TSL, Amino_acids, MOTIF_POS, gnomAD_non_cancer_AF, Center, PolyPhen, BIOTYPE, gnomAD_non_cancer_AMI_AF, miRNA, gnomAD_non_cancer_FIN_AF, CCDS, n_ref_count, Feature, CANONICAL, sample_barcode_normal, Sequencing_Phase, TRANSCRIPTION_FACTORS, Gene, Tumor_Aliquot_UUID, CLIN_SIG, project_short_name, SYMBOL_SOURCE, gnomAD_non_cancer_MID_AF, hotspot, MAX_AF_POPS, dbSNP_Val_Status, gnomAD_SAS_AF, gnomAD_NFE_AF, EXON, FLAGS, GDC_FILTER, RNA_ref_count, End_Position, gnomAD_non_cancer_AMR_AF, Exon_Number
+
+Table: CPTAC.QUANT_PROTEOME_CPTAC_GBM_DISCOVERY_STUDY_PDC_CURRENT
+Columns: NCBI_gene_id, gene_description, organism, gene_id, case_id, proteins, sample_id, authority, authority_gene_id, locus, chromosome, gene_symbol, assays, protein_abundance_log2ratio, aliquot_run_metadata_id, uniprotkb_ids, aliquot_id, study_name, uniprotkb_id, aliquot_submitter_id
+
+Table: CPTAC.QUANT_PROTEOME_CPTAC_LUAD_DISCOVERY_STUDY_PDC_CURRENT
+Columns: organism, authority_gene_id, proteins, gene_symbol, sample_id, uniprotkb_id, study_name, aliquot_id, gene_description, gene_id, NCBI_gene_id, aliquot_submitter_id, aliquot_run_metadata_id, authority, chromosome, assays, case_id, locus, uniprotkb_ids, protein_abundance_log2ratio
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_PTRC_HGSOC_FFPE_DISCOVERY_PDC_CURRENT
+Columns: protein_abundance_log2ratio, case_id, aliquot_submitter_id, aliquot_id, aliquot_run_metadata_id, phosphorylation_sites, study_name, sample_id, refseq_id
+
+Table: CPTAC.CLINICAL_CPTAC2_OTHER_PDC_CURRENT
+Columns: disease_type, case_id, case_submitter_id, diagnosis_submitter_id, project_submitter_id, demographic_submitter_id, diagnosis_id, demographic_id
+
+Table: CPTAC.CLINICAL_CPTAC_2_PDC_CURRENT
+Columns: diagnosis_id, gender, figo_stage, case_id, tumor_stage, days_to_last_follow_up, demographic_id, primary_diagnosis, tissue_or_organ_of_origin, days_to_last_known_disease_status, days_to_recurrence, ajcc_pathologic_stage, project_submitter_id, primary_site, prior_malignancy, morphology, ethnicity, demographic_submitter_id, disease_type, case_submitter_id, race, diagnosis_submitter_id, age_at_diagnosis
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_CPTAC_PDA_DISCOVERY_STUDY_PDC_CURRENT
+Columns: protein_abundance_log2ratio, aliquot_id, phosphorylation_sites, study_name, refseq_id, case_id, aliquot_run_metadata_id, aliquot_submitter_id, sample_id
+
+Table: CPTAC.QUANT_PROTEOME_CPTAC_CCRCC_DISCOVERY_STUDY_PDC_CURRENT
+Columns: sample_id, protein_abundance_log2ratio, authority_gene_id, aliquot_submitter_id, aliquot_run_metadata_id, proteins, uniprotkb_ids, uniprotkb_id, gene_description, gene_id, aliquot_id, assays, chromosome, organism, case_id, study_name, gene_symbol, locus, authority, NCBI_gene_id
+
+Table: CPTAC.QUANT_PROTEOME_AML_GILTERITINIB_TIMECOURSE_PDC_CURRENT
+Columns: aliquot_id, uniprotkb_ids, gene_id, aliquot_submitter_id, chromosome, uniprotkb_id, sample_id, protein_abundance_log2ratio, authority, case_id, gene_description, gene_symbol, assays, NCBI_gene_id, proteins, organism, authority_gene_id, study_name, aliquot_run_metadata_id, locus
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_PTRC_TNBC_PDC_CURRENT
+Columns: refseq_id, case_id, protein_abundance_log2ratio, phosphorylation_sites, study_name, aliquot_id, aliquot_run_metadata_id, sample_id, aliquot_submitter_id
+
+Table: CPTAC.QUANT_ACETYLOME_CPTAC_GBM_DISCOVERY_STUDY_PDC_CURRENT
+Columns: aliquot_submitter_id, sample_id, aliquot_id, protein_abundance_log2ratio, case_id, study_name, acetylation_sites, refseq_id, aliquot_run_metadata_id
+
+Table: CPTAC.QUANT_PROTEOME_AML_EX_VIVO_DRUG_RESPONSE_PRIMARY_COHORT_PDC_CURRENT
+Columns: gene_description, study_name, uniprotkb_id, case_id, chromosome, gene_id, proteins, aliquot_id, assays, authority_gene_id, NCBI_gene_id, gene_symbol, authority, protein_abundance_log2ratio, uniprotkb_ids, locus, sample_id, aliquot_submitter_id, organism, aliquot_run_metadata_id
+
+Table: CPTAC.PER_SAMPLE_FILE_METADATA_CPTAC3_DISCOVERY_AND_CONFIRMATORY_PDC_CURRENT
+Columns: experiment_type, file_format, sample_submitter_id, project_short_name, project_submitter_id, file_location, access, program_short_name, instrument, file_name, sample_type, program_name, case_id, file_size, sample_id, data_category, file_id, case_submitter_id, file_type
+
+Table: CPTAC.QUANT_PROTEOME_AML_GILTERITINIB_RESISTANCE_PDC_CURRENT
+Columns: aliquot_submitter_id, proteins, uniprotkb_id, NCBI_gene_id, gene_description, uniprotkb_ids, case_id, sample_id, gene_symbol, chromosome, gene_id, aliquot_id, locus, authority_gene_id, aliquot_run_metadata_id, authority, organism, protein_abundance_log2ratio, assays, study_name
+
+Table: CPTAC.PER_SAMPLE_FILE_METADATA_CPTAC_2_PDC_CURRENT
+Columns: file_type, case_submitter_id, project_submitter_id, sample_id, file_format, file_id, case_id, program_name, project_short_name, data_category, file_location, instrument, file_size, program_short_name, file_name, access, experiment_type, sample_type, sample_submitter_id
+
+Table: CPTAC.QUANT_PROTEOME_PTRC_HGSOC_FFPE_DISCOVERY_PDC_CURRENT
+Columns: organism, gene_id, authority_gene_id, protein_abundance_log2ratio, uniprotkb_id, aliquot_submitter_id, aliquot_run_metadata_id, uniprotkb_ids, gene_description, chromosome, sample_id, assays, study_name, aliquot_id, gene_symbol, proteins, NCBI_gene_id, case_id, locus, authority
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_PTRC_HGSOC_FROZEN_VALIDATION_PDC_CURRENT
+Columns: phosphorylation_sites, aliquot_submitter_id, study_name, case_id, refseq_id, protein_abundance_log2ratio, sample_id, aliquot_run_metadata_id, aliquot_id
+
+Table: CPTAC.QUANT_PROTEOME_PTRC_TNBC_PDC_CURRENT
+Columns: gene_id, study_name, authority, aliquot_id, chromosome, authority_gene_id, gene_description, case_id, sample_id, gene_symbol, uniprotkb_id, organism, uniprotkb_ids, aliquot_run_metadata_id, protein_abundance_log2ratio, aliquot_submitter_id, proteins, locus, assays, NCBI_gene_id
+
+Table: CPTAC.RNASEQ_HG38_GDC_CURRENT
+Columns: gene_name, fpkm_uq_unstranded, sample_type_name, Ensembl_gene_id, sample_gdc_id, fpkm_unstranded, file_gdc_id, aliquot_barcode, stranded_second, case_barcode, Ensembl_gene_id_v, case_gdc_id, platform, aliquot_gdc_id, gene_type, unstranded, project_short_name, primary_site, tpm_unstranded, sample_barcode, stranded_first
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_CPTAC_CCRCC_DISCOVERY_STUDY_PDC_CURRENT
+Columns: refseq_id, protein_abundance_log2ratio, aliquot_run_metadata_id, study_name, phosphorylation_sites, sample_id, aliquot_id, aliquot_submitter_id, case_id
+
+Table: CPTAC.CLINICAL_GDC_CURRENT
+Columns: updated_datetime, diag__path__tumor_largest_dimension_diameter, follow__mol_test__molecular_test_id, diag__updated_datetime, diag__path__updated_datetime, demo__created_datetime, follow__follow_up_id, exp__years_smoked, lost_to_followup, demo__age_at_index, consent_type, follow__height, demo__cause_of_death, submitter_id, diag__created_datetime, disease_type, follow__pancreatitis_onset_year, diag__ajcc_pathologic_t, diag__path__lymph_nodes_positive, follow__mol_test__laboratory_test, follow__dlco_ref_predictive_percent, follow__updated_datetime, exp__exposure_type, created_datetime, follow__mol_test__test_result, demo__demographic_id, diag__tissue_or_organ_of_origin, follow__cdc_hiv_risk_factors, diag__tumor_grade, diag__morphology, exp__exposure_duration_years, demo__year_of_death, exp__tobacco_smoking_quit_year, follow__hormonal_contraceptive_use, follow__fev1_ref_pre_bronch_percent, diag__residual_disease, follow__ecog_performance_status, exp__type_of_tobacco_used, exp__state, demo__year_of_birth, diag__ajcc_pathologic_stage, diag__days_to_recurrence, demo__days_to_death, index_date, follow__disease_response, proj__name, exp__updated_datetime, diag__ajcc_staging_system_edition, follow__fev1_fvc_pre_bronch_percent, days_to_lost_to_followup, demo__race, diag__last_known_disease_status, case_id, demo__ethnicity, exp__secondhand_smoke_as_child, primary_site, state, diag__ajcc_pathologic_m, follow__comorbidity, diag__path__pathology_detail_id, diag__ajcc_clinical_m, diag__prior_malignancy, exp__exposure_id, demo__gender, diag__days_to_last_known_disease_status, follow__state, follow__mol_test__created_datetime, diag__classification_of_tumor, demo__state, diag__age_at_diagnosis, diag__days_to_last_follow_up, follow__created_datetime, exp__alcohol_history, diag__year_of_diagnosis, demo__vital_status, follow__fev1_ref_post_bronch_percent, proj__project_id, follow__aids_risk_factors, follow__mol_test__state, diag__figo_stage, diag__path__created_datetime, diag__diagnosis_id, follow__progression_or_recurrence, follow__bmi, exp__type_of_smoke_exposure, diag__site_of_resection_or_biopsy, demo__updated_datetime, exp__cigarettes_per_day, exp__created_datetime, diag__primary_diagnosis, days_to_consent, follow__weight, diag__ajcc_pathologic_n, follow__mol_test__gene_symbol, follow__days_to_follow_up, exp__tobacco_smoking_onset_year, exp__alcohol_intensity, diag__progression_or_recurrence, diag__path__state, follow__karnofsky_performance_status, diag__tumor_focality, follow__days_to_recurrence, follow__hpv_positive_type, diag__state, follow__fev1_fvc_post_bronch_percent, exp__tobacco_smoking_status, demo__days_to_birth, exp__pack_years_smoked, follow__diabetes_treatment_type, follow__mol_test__updated_datetime
+
+Table: CPTAC.QUANT_ACETYLOME_CPTAC_LSCC_DISCOVERY_STUDY_PDC_CURRENT
+Columns: refseq_id, case_id, aliquot_submitter_id, protein_abundance_log2ratio, acetylation_sites, aliquot_run_metadata_id, aliquot_id, study_name, sample_id
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_AML_EX_VIVO_DRUG_RESPONSE_SORAFENIB_TREATMENT_PDC_CURRENT
+Columns: aliquot_submitter_id, study_name, case_id, refseq_id, protein_abundance_log2ratio, aliquot_run_metadata_id, phosphorylation_sites, sample_id, aliquot_id
+
+Table: CPTAC.QUANT_ACETYLOME_PROSPECTIVE_BREAST_BI_PDC_CURRENT
+Columns: case_id, study_name, aliquot_id, protein_abundance_log2ratio, aliquot_submitter_id, aliquot_run_metadata_id, sample_id, acetylation_sites, refseq_id
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_PROSPECTIVE_BREAST_BI_PDC_CURRENT
+Columns: aliquot_id, case_id, study_name, aliquot_submitter_id, protein_abundance_log2ratio, refseq_id, sample_id, phosphorylation_sites, aliquot_run_metadata_id
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_AML_EX_VIVO_DRUG_RESPONSE_COMBINATION_TREATMENT_PDC_CURRENT
+Columns: aliquot_run_metadata_id, refseq_id, sample_id, aliquot_id, protein_abundance_log2ratio, study_name, aliquot_submitter_id, phosphorylation_sites, case_id
+
+Table: CPTAC.PER_SAMPLE_FILE_METADATA_PROTEOGENOMIC_TRANSLATIONAL_RESEARCH_CENTERS_PDC_CURRENT
+Columns: experiment_type, project_submitter_id, instrument, file_name, case_id, sample_type, file_size, case_submitter_id, sample_submitter_id, project_short_name, data_category, file_type, file_location, program_short_name, program_name, sample_id, access, file_format, file_id
+
+Table: CPTAC.PER_SAMPLE_FILE_METADATA_CPTAC3_OTHER_PDC_CURRENT
+Columns: program_short_name, project_short_name, project_submitter_id, sample_submitter_id, instrument, program_name, file_location, file_type, sample_id, experiment_type, case_submitter_id, file_size, file_name, file_format, case_id, sample_type, data_category, access, file_id
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_AML_EX_VIVO_DRUG_RESPONSE_PRIMARY_COHORT_PDC_CURRENT
+Columns: study_name, phosphorylation_sites, aliquot_id, aliquot_submitter_id, protein_abundance_log2ratio, aliquot_run_metadata_id, sample_id, refseq_id, case_id
+
+Table: CPTAC.QUANT_ACETYLOME_CPTAC_LUAD_DISCOVERY_STUDY_PDC_CURRENT
+Columns: acetylation_sites, aliquot_submitter_id, aliquot_run_metadata_id, case_id, protein_abundance_log2ratio, study_name, aliquot_id, sample_id, refseq_id
+
+Table: CPTAC.CLINICAL_DIAGNOSES_PROTEOGENOMIC_TRANSLATIONAL_RESEARCH_CENTERS_PDC_CURRENT
+Columns: project_submitter_id, tumor_grade, morphology, days_to_last_follow_up, site_of_resection_or_biopsy, case_submitter_id, primary_diagnosis, diagnosis_id, age_at_diagnosis, progression_or_recurrence, diagnosis_submitter_id, last_known_disease_status, days_to_recurrence, tissue_or_organ_of_origin, classification_of_tumor, days_to_last_known_disease_status, tumor_stage, case_id
+
+Table: CPTAC.CLINICAL_CPTAC3_DISCOVERY_AND_CONFIRMATORY_PDC_CURRENT
+Columns: race, diagnosis_submitter_id, cause_of_death, days_to_last_follow_up, ajcc_staging_system_edition, classification_of_tumor, primary_site, metastasis_at_diagnosis_site, year_of_diagnosis, year_of_birth, gender, age_at_diagnosis, year_of_death, metastasis_at_diagnosis, diagnosis_is_primary_disease, case_submitter_id, ajcc_clinical_m, vital_status, lymphatic_invasion_present, age_at_index, days_to_recurrence, ajcc_pathologic_n, ethnicity, tumor_focality, demographic_submitter_id, ajcc_pathologic_stage, tumor_grade, sites_of_involvement, diagnosis_id, progression_or_recurrence, days_to_birth, tissue_or_organ_of_origin, last_known_disease_status, morphology, site_of_resection_or_biopsy, lymph_nodes_positive, ajcc_pathologic_m, demographic_id, residual_disease, ajcc_pathologic_t, case_id, primary_diagnosis, project_submitter_id, days_to_last_known_disease_status, disease_type, prior_malignancy, days_to_death
+
+Table: CPTAC.QUANT_PROTEOME_PROSPECTIVE_COLON_PNNL_QEPLUS_PDC_CURRENT
+Columns: gene_symbol, aliquot_id, gene_description, aliquot_run_metadata_id, uniprotkb_ids, study_name, proteins, NCBI_gene_id, chromosome, authority, aliquot_submitter_id, gene_id, uniprotkb_id, assays, protein_abundance_log2ratio, authority_gene_id, case_id, sample_id, organism, locus
+
+Table: CPTAC.QUANT_UBIQUITYLOME_CPTAC_LSCC_DISCOVERY_STUDY_PDC_CURRENT
+Columns: aliquot_submitter_id, study_name, refseq_id, case_id, aliquot_id, sample_id, aliquot_run_metadata_id, ubiquitylation_sites, protein_abundance_log2ratio
+
+Table: CPTAC.QUANT_PROTEOME_PTRC_HGSOC_FFPE_VALIDATION_PDC_CURRENT
+Columns: authority, assays, gene_id, aliquot_run_metadata_id, aliquot_submitter_id, gene_symbol, study_name, uniprotkb_id, case_id, locus, authority_gene_id, organism, protein_abundance_log2ratio, uniprotkb_ids, gene_description, chromosome, NCBI_gene_id, aliquot_id, proteins, sample_id
+
+Table: CPTAC.QUANT_PHOSPHOPROTEOME_CPTAC_UCEC_DISCOVERY_STUDY_PDC_CURRENT
+Columns: aliquot_id, sample_id, aliquot_submitter_id, study_name, protein_abundance_log2ratio, refseq_id, phosphorylation_sites, aliquot_run_metadata_id, case_id
+
+Table: CPTAC.QUANT_PROTEOME_PROSPECTIVE_OVARIAN_JHU_PDC_CURRENT
+Columns: aliquot_submitter_id, study_name, aliquot_id, authority_gene_id, locus, sample_id, chromosome, uniprotkb_ids, assays, organism, uniprotkb_id, gene_id, aliquot_run_metadata_id, case_id, proteins, gene_description, authority, protein_abundance_log2ratio, gene_symbol, NCBI_gene_id
+
+Table: PDC_METADATA.STUDIES_CURRENT
+Columns: study_id, program_labels, primary_site, experiment_type, program_id, project_submitter_id, study_grouping_name, analytical_fraction, project_friendly_name, pdc_study_id, study_friendly_name, submitter_id_name, project_name, project_id, program_name, start_date, study_submitter_id, project_short_name, program_manager, program_submitter_id, disease_type, program_short_name, study_name, end_date, acquisition_type
+
+Table: PDC_METADATA.REFSEQ_MAPPING_CURRENT
+Columns: uniprot_review_status, uniprot_id, refseq_id, gene_symbol
+
+Table: PDC_METADATA.CASE_METADATA_CURRENT
+Columns: file_count, primary_site, project_name, case_submitter_id, program_name, case_id, project_id, disease_type
+
+Table: PDC_METADATA.FILE_METADATA_CURRENT
+Columns: file_id, file_size, analyte, plex_or_dataset_name, study_run_metadata_id, data_category, access, file_format, fraction_number, experiment_type, pdc_study_ids, file_name, md5sum, file_type, study_run_metadata_submitter_id, instrument
+
+Table: PDC_METADATA.GENE_INFO_CURRENT
+Columns: authority, gene_symbol, locus, organism, NCBI_gene_id, chromosome, uniprotkb_ids, gene_description, proteins, gene_id, uniprotkb_id, assays, authority_gene_id
+
+Table: PDC_METADATA.ALIQUOT_TO_CASE_MAPPING_CURRENT
+Columns: initial_weight, preservation_method, longest_dimension, current_weight, project_name, time_between_excision_and_freezing, freezing_method, case_submitter_id, sample_submitter_id, time_between_clamping_and_freezing, intermediate_dimension, shortest_dimension, sample_id, sample_type, case_id, aliquot_id, days_to_collection, program_name, aliquot_submitter_id
+
+Table: PDC_METADATA.FILE_ASSOCIATED_ENTITY_MAPPING_CURRENT
+Columns: case_id, entity_submitter_id, entity_type, entity_id, file_id

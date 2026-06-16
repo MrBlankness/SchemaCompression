@@ -1,0 +1,41 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: ENTERTAINMENTAGENCY.ZTBLWEEKS
+Columns: WeekStart, WeekEnd
+
+Table: ENTERTAINMENTAGENCY.ZTBLSKIPLABELS
+Columns: LabelCount
+
+Table: ENTERTAINMENTAGENCY.MUSICAL_PREFERENCES
+Columns: CustomerID, StyleID, PreferenceSeq
+
+Table: ENTERTAINMENTAGENCY.ENTERTAINER_STYLES
+Columns: EntertainerID, StyleStrength, StyleID
+
+Table: ENTERTAINMENTAGENCY.CUSTOMERS
+Columns: CustStreetAddress, CustState, CustZipCode, CustPhoneNumber, CustLastName, CustomerID, CustFirstName, CustCity
+
+Table: ENTERTAINMENTAGENCY.ENTERTAINERS
+Columns: EntStreetAddress, EntZipCode, EntEMailAddress, EntState, EntWebPage, EntStageName, EntertainerID, DateEntered, EntSSN, EntCity, EntPhoneNumber
+
+Table: ENTERTAINMENTAGENCY.ENTERTAINER_MEMBERS
+Columns: MemberID, Status, EntertainerID
+
+Table: ENTERTAINMENTAGENCY.ZTBLMONTHS
+Columns: YearNumber, July, December, April, October, February, September, November, January, August, May, March, June, MonthYear, MonthEnd, MonthStart, MonthNumber
+
+Table: ENTERTAINMENTAGENCY.MEMBERS
+Columns: MbrLastName, Gender, MbrPhoneNumber, MbrFirstName, MemberID
+
+Table: ENTERTAINMENTAGENCY.MUSICAL_STYLES
+Columns: StyleID, StyleName
+
+Table: ENTERTAINMENTAGENCY.ENGAGEMENTS
+Columns: CustomerID, StartTime, EndDate, ContractPrice, EntertainerID, StartDate, StopTime, EngagementNumber, AgentID
+
+Table: ENTERTAINMENTAGENCY.AGENTS
+Columns: AgentID, Salary, AgtPhoneNumber, DateHired, AgtLastName, AgtCity, AgtState, CommissionRate, AgtFirstName, AgtStreetAddress, AgtZipCode
+
+Table: ENTERTAINMENTAGENCY.ZTBLDAYS
+Columns: DateField

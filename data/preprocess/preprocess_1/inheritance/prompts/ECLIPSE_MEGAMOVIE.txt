@@ -1,0 +1,14 @@
+[TEMPLATES]
+Format: Tn|col1,col2|schema1.table1;schema2.table2
+T2|width,vision_labels,height,detected_circle,lat,exposure_time,lon,state,equatorial_mount,image_bucket,upload_session_id,user,id,image_datetime,is_mobile,uploaded_date,storage_uri,camera_datetime,model,make,totality,aperture_value,datetime_repaired,image_type|ECLIPSE_MEGAMOVIE.PHOTOS_V_0_1;ECLIPSE_MEGAMOVIE.PHOTOS_V_0_2
+
+[DERIVED]
+Format: Tm<Tp|col1,col2|schema1.table1;schema2.table2
+T1<T2|jpeg_storage_uri|ECLIPSE_MEGAMOVIE.PHOTOS_V_0_3
+
+[STANDALONE]
+Format: schema.table|col1,col2
+ECLIPSE_MEGAMOVIE.ASTROMETRY_CORR_V_0_4|id,field_dec,field_x,BACKGROUND,index_y,index_ra,index_id,FLUX,field_id,field_y,index_x,match_weight,field_ra,index_dec
+ECLIPSE_MEGAMOVIE.ASTROMETRY_INDEX_V_0_4|id,X,Y
+ECLIPSE_MEGAMOVIE.ASTROMETRY_MATCH_V_0_4|CRPIX,NINDEX,FIELDNAME,NVERIFIED,STARS,CD,FIELDOBJS,CODEERR,LOGODDS,NDISTRACT,NCONFLICT,QTRIED,WORSTLOGODDS,NAGREE,QUADXYZ,WCS_VALID,NFIELD,NMATCH,TIMEUSED,CENTERXYZ,CRVAL,RADIUS,QSCALEOK,QUAD,QUADPIX,PARITY,HEALPIX,HPNSIDE,DIMQUADS,id,QMATCHED,IDS,FIELDID,QPEERS,INDEXID,FIELDNUM
+ECLIPSE_MEGAMOVIE.ASTROMETRY_RDLS_V_0_4|id,DEC,RA

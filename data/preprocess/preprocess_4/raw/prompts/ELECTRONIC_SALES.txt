@@ -1,0 +1,79 @@
+[TABLES]
+## ELECTRONIC_SALES.PRODUCT_CATEGORY_NAME_TRANSLATION
+index: NUMBER | NULL | eg=[1, 7]
+product_category_name_english: TEXT | NULL | eg=["computers_accessories", "housewares"]
+product_category_name: TEXT | NULL | eg=["informatica_acessorios", "utilidades_domesticas"]
+
+## ELECTRONIC_SALES.ORDER_REVIEWS
+review_comment_message: TEXT | NULL | eg=["", "Recebi bem antes do prazo estipulado."]
+review_comment_title: TEXT | NULL | eg=[""]
+review_creation_date: TEXT | NULL | eg=["2018-03-10 00:00:00", "2017-04-21 00:00:00"]
+index: NUMBER | NULL | eg=[1, 3]
+review_id: TEXT | NULL | eg=["80e641a11e56f04c1ad469d5645fdfde", "e64fb393e7b32834bb789ff8bb30750e"]
+order_id: TEXT | NULL | eg=["a548910a1c6147796b98fdf73dbeba33", "658677c97b385a9be170737859d3511b"]
+review_answer_timestamp: TEXT | NULL | eg=["2018-03-11 03:05:13", "2017-04-21 22:02:06"]
+review_score: NUMBER | NULL | eg=[5, 1]
+
+## ELECTRONIC_SALES.PRODUCTS
+product_name_lenght: FLOAT | NULL | eg=[40.0, 27.0]
+product_length_cm: FLOAT | NULL | eg=[16.0, 26.0]
+product_description_lenght: FLOAT | NULL | eg=[287.0, 261.0]
+product_width_cm: FLOAT | NULL | eg=[14.0, 26.0]
+product_weight_g: FLOAT | NULL | eg=[225.0, 371.0]
+product_photos_qty: FLOAT | NULL | eg=[1.0]
+product_category_name: TEXT | NULL | eg=["perfumaria", "bebes"]
+index: NUMBER | NULL | eg=[0, 3]
+product_id: TEXT | NULL | eg=["1e9e8ef04dbcff4541ed26657ea517e5", "cef67bcfe19066a932b7673e239eb23d"]
+product_height_cm: FLOAT | NULL | eg=[10.0, 4.0]
+
+## ELECTRONIC_SALES.ORDERS
+customer_id: TEXT | NULL | eg=["b0830fb4747a6c6d20dea0b8c802d7ef", "41ce2a54c0b03bf3443c3d931a367089"]
+order_approved_at: TEXT | NULL | eg=["2018-07-26 03:24:27", "2018-08-08 08:55:23"]
+order_purchase_timestamp: TEXT | NULL | eg=["2018-07-24 20:41:37", "2018-08-08 08:38:49"]
+order_delivered_carrier_date: TEXT | NULL | eg=["2018-07-26 14:31:00", "2018-08-08 13:50:00"]
+order_id: TEXT | NULL | eg=["53cdb2fc8bc7dce0b6741e2150273451", "47770eb9100c2d0c44946d9cf07ec65d"]
+order_delivered_customer_date: TEXT | NULL | eg=["2018-08-07 15:27:45", "2018-08-17 18:06:29"]
+order_status: TEXT | NULL | eg=["delivered", "invoiced"]
+index: NUMBER | NULL | eg=[1, 2]
+order_estimated_delivery_date: TEXT | NULL | eg=["2018-08-13 00:00:00", "2018-09-04 00:00:00"]
+
+## ELECTRONIC_SALES.ORDER_PAYMENTS
+payment_sequential: NUMBER | NULL | eg=[1]
+payment_installments: NUMBER | NULL | eg=[8, 1]
+index: NUMBER | NULL | eg=[0, 1]
+payment_value: FLOAT | NULL | eg=[99.33, 24.39]
+order_id: TEXT | NULL | eg=["b81ef226f3fe1789b1e8b2acac839d17", "a9810da82917af2d9aefd1278f1dcfa0"]
+payment_type: TEXT | NULL | eg=["credit_card"]
+
+## ELECTRONIC_SALES.CUSTOMERS
+index: NUMBER | NULL | eg=[0, 5]
+customer_state: TEXT | NULL | eg=["SP", "SC"]
+customer_unique_id: TEXT | NULL | eg=["861eff4711a542e4b93843c6dd7febb0", "4c93744516667ad3b8f1fb645a3116a4"]
+customer_zip_code_prefix: NUMBER | NULL | eg=[14409, 89254]
+customer_id: TEXT | NULL | eg=["06b8999e2fba1a1fbc88172c00ba8bc7", "879864dab9bc3047522c92c82e1212b8"]
+customer_city: TEXT | NULL | eg=["franca", "jaragua do sul"]
+
+## ELECTRONIC_SALES.GEOLOCATION
+geolocation_city: TEXT | NULL | eg=["presidente castello branco", "concórdia"]
+geolocation_lat: FLOAT | NULL | eg=[-27.22083994710839, -27.229079835306987]
+geolocation_lng: FLOAT | NULL | eg=[-51.81102224706286, -52.01942400322294]
+geolocation_zip_code_prefix: NUMBER | NULL | eg=[89745, 89700]
+index: NUMBER | NULL | eg=[933888, 933895]
+geolocation_state: TEXT | NULL | eg=["SC"]
+
+## ELECTRONIC_SALES.SELLERS
+seller_zip_code_prefix: NUMBER | NULL | eg=[13023, 55325]
+seller_id: TEXT | NULL | eg=["3442f8959a84dea7ee197c632cb2df15", "e49c26c3edfa46d227d5121a6b6e4d37"]
+seller_city: TEXT | NULL | eg=["campinas", "brejao"]
+seller_state: TEXT | NULL | eg=["SP", "PE"]
+index: NUMBER | NULL | eg=[0, 6]
+
+## ELECTRONIC_SALES.ORDER_ITEMS
+order_id: TEXT | NULL | eg=["000229ec398224ef6ca0657da4fc703e", "00024acbcdf0a6daa1e931b038114c75"]
+index: NUMBER | NULL | eg=[2, 3]
+freight_value: FLOAT | NULL | eg=[17.87, 12.79]
+seller_id: TEXT | NULL | eg=["5b51032eddd242adc84c38acab88f23d", "9d7a1d34a5052409006425275ba1c2b4"]
+price: FLOAT | NULL | eg=[199.0, 12.99]
+order_item_id: NUMBER | NULL | eg=[1]
+shipping_limit_date: TEXT | NULL | eg=["2018-01-18 14:48:30", "2018-08-15 10:10:18"]
+product_id: TEXT | NULL | eg=["c777355d18b72b67abbeef9df44fd0fd", "7634da152a4610f1595efa32f14722fc"]

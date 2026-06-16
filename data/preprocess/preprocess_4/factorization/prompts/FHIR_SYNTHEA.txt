@@ -1,0 +1,384 @@
+[COMPONENTS]
+@C1
+id: TEXT | NULL | eg=["02e8d822-b33c-439f-8f59-af9ff74c3cba", "05d54479-b5ae-4235-8d81-61c44ab013c8"]
+identifier: VARIANT | NULL | eg=[[{"system":"http://hl7.org/fhir/sid/us-npi","value":"350"}], [{"system":"http://hl7.org/fhir/sid/us-npi","value":"60"}]]
+implicitRules: TEXT | NULL
+language: TEXT | NULL
+meta: VARIANT | NULL
+text: VARIANT | NULL
+
+@C2
+accident: VARIANT | NULL
+billablePeriod: VARIANT | NULL | eg=[{"StructureDefinition_bluebutton_outpatient_claim_query_cd_extension":{"value":{"coding":{"code":"3","display":"Final Bill","system":"https://bluebutton.cms.gov/assets/ig/ValueSet-claim-query-cd"}}},"end":"2014-05-01T04:12:35+00:00","start":"2013-05-01T04:12:35+00:00"}, {"StructureDefinition_bluebutton_outpatient_claim_query_cd_extension":{"value":{"coding":{"code":"3","display":"Final Bill","system":"https://bluebutton.cms.gov/assets/ig/ValueSet-claim-query-cd"}}},"end":"2018-11-29T02:59:18+00:00","start":"2017-11-29T02:59:18+00:00"}]
+employmentImpacted: VARIANT | NULL
+enterer: VARIANT | NULL
+facility: VARIANT | NULL
+information: VARIANT | NULL | eg=[[]]
+insurance: VARIANT | NULL | eg=[{"coverage":{"reference":"#coverage"},"preAuthRef":[]}]
+insurer: VARIANT | NULL
+item: VARIANT | NULL | eg=[[{"StructureDefinition_bluebutton_outpatient_rev_cntr_ndc_qty_extension":{"value":{"quantity":{"value":0.0}}},"adjudication":[],"careTeamLinkId":[],"detail":[],"diagnosisLinkId":[],"encounter":[],"informationLinkId":[],"location":{"codeableConcept":{"coding":[{"code":"21","display":"Inpatient Hospital","system":"https://bluebutton.cms.gov/resources/variables/line_place_of_srvc_cd"}]}},"modifier":[],"noteNumber":[],"procedureLinkId":[],"programCode":[],"sequence":1,"subSite":[],"udi":[]},{"StructureDefinition_bluebutton_outpatient_rev_cntr_ndc_qty_extension":{"value":{"quantity":{"value":0.0}}},"adjudication":[{"amount":{"code":"USD","system":"urn:iso:std:iso:4217","value":1165.876},"category":{"coding":[{"code":"https://bluebutton.cms.gov/resources/variables/line_coinsrnc_amt","display":"Line Beneficiary Coinsurance Amount","system":"https://bluebutton.cms.gov/resources/codesystem/adjudication"}]}},{"amount":{"code":"USD","system":"urn:iso:std:iso:4217","value":4663.504},"category":...]
+organization: VARIANT | NULL | eg=[{"identifier":{"value":"ac8356a5-78f8-3a63-8a1e-59e832fd54e7"}}, {"identifier":{"value":"5844ad77-f653-3c2b-b7dd-e97576ab3b03"}}]
+originalPrescription: VARIANT | NULL
+payee: VARIANT | NULL
+prescription: VARIANT | NULL
+procedure: VARIANT | NULL | eg=[[]]
+provider: VARIANT | NULL | eg=[{"identifier":{"value":"b1a46f3e-2429-41f9-9b03-9cf2f4213988"}}, {"identifier":{"value":"79bc09ac-82c9-49ac-bade-bd747bfc542d"}}]
+referral: VARIANT | NULL
+subType: VARIANT | NULL | eg=[[]]
+
+@C3
+active: BOOLEAN | NULL | eg=[true]
+address: VARIANT | NULL | eg=[[{"city":"W CONCORD","country":"US","line":["133 OLD ROAD TO 9 ACRE CORNER"],"postalCode":"01742","state":"MA"}], [{"city":"NORTHAMPTON","country":"US","line":["30 LOCUST STREET"],"postalCode":"01060","state":"MA"}]]
+telecom: VARIANT | NULL | eg=[[]]
+
+@C4
+birthDate: TEXT | NULL
+communication: VARIANT | NULL | eg=[[]]
+gender: TEXT | NULL | eg=["male"]
+name: VARIANT | NULL | eg=[[{"family":"Predovic534","given":["Samuel331"],"prefix":["Dr."],"suffix":[]}], [{"family":"Stark857","given":["Antonia30"],"prefix":["Dr."],"suffix":[]}]]
+photo: VARIANT | NULL | eg=[[]]
+
+@C5
+assertedDate: TEXT | NULL | eg=["2010-11-20T15:16:58+00:00", "1991-10-07T23:12:49+00:00"]
+asserter: VARIANT | NULL
+clinicalStatus: TEXT | NULL | eg=["active"]
+onset: VARIANT | NULL
+verificationStatus: TEXT | NULL | eg=["confirmed"]
+
+@C6
+diagnosis: VARIANT | NULL | eg=[[]]
+hospitalization: VARIANT | NULL
+
+@C7
+location: VARIANT | NULL | eg=[[]]
+shr_action_PerformedContext_extension: VARIANT | NULL | eg=[{"shr_action_Status_extension":{"value":{"code":"finished"}}}]
+
+@C8
+effective: VARIANT | NULL | eg=[{"dateTime":"2014-04-06T20:05:10+00:00"}, {"dateTime":"1989-09-03T19:13:05+00:00"}]
+issued: NUMBER | NULL | eg=[1396814710377000, 620853185653000]
+specimen: VARIANT | NULL | eg=[[]]
+
+[TABLES]
+## FHIR_SYNTHEA.PRACTITIONER
+@use: [C1, C3, C4]
+qualification: VARIANT | NULL | eg=[[]]
+
+## FHIR_SYNTHEA.BASIC
+@use: [C1]
+created: TEXT | NULL
+subject: VARIANT | NULL
+code: VARIANT | NULL | eg=[{"coding":[{"code":"shr-entity-Person","display":"shr-entity-Person","system":"http://standardhealthrecord.org/fhir/basic-resource-type"}]}]
+author: VARIANT | NULL
+
+## FHIR_SYNTHEA.EXPLANATION_OF_BENEFIT
+@use: [C1, C2, C6]
+claim: VARIANT | NULL
+StructureDefinition_bluebutton_outpatient_fi_num_extension: VARIANT | NULL | eg=[{"value":{"identifier":{"system":"https://bluebutton.cms.gov/assets/ig/CodeSystem-fi-num","value":"002000"}}}]
+StructureDefinition_bluebutton_inpatient_nch_bene_pta_coinsrnc_lblty_amt_extension: VARIANT | NULL
+disposition: TEXT | NULL
+created: TEXT | NULL
+patient: VARIANT | NULL | eg=[{"patientId":"dca451ff-15b0-44eb-8a16-6a10e4bd023b"}, {"patientId":"b1be39bc-f0d3-4c43-a06a-05d8528ddce0"}]
+StructureDefinition_bluebutton_outpatient_prpayamt_extension: VARIANT | NULL | eg=[{"value":{"money":{"code":"USD","system":"urn:iso:std:iso:4217","value":0.0}}}]
+outcome: VARIANT | NULL
+totalBenefit: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_clm_pps_cptl_dsprprtnt_shr_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_fi_num_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_dsh_op_clm_val_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_clm_pps_cptl_fsp_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_nch_bene_blood_ddctbl_lblty_am_extension: VARIANT | NULL
+claimResponse: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_clm_pass_thru_per_diem_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_ime_op_clm_val_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_clm_mdcr_non_pmt_rsn_cd_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_clm_pps_cptl_outlier_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_outpatient_nch_profnl_cmpnt_chrg_amt_extension: VARIANT | NULL | eg=[{"value":{"money":{"code":"USD","system":"urn:iso:std:iso:4217","value":0.0}}}]
+StructureDefinition_bluebutton_inpatient_nch_ip_tot_ddctn_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_outpatient_nch_bene_blood_ddctbl_lblty_am_extension: VARIANT | NULL | eg=[{"value":{"money":{"code":"USD","system":"urn:iso:std:iso:4217","value":0.0}}}]
+StructureDefinition_bluebutton_inpatient_nch_ip_ncvrd_chrg_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_outpatient_clm_mdcr_non_pmt_rsn_cd_extension: VARIANT | NULL | eg=[{"value":{"coding":{"code":"N","display":"All other reasons for non-payment","system":"https://bluebutton.cms.gov/assets/ig/CodeSystem-clm-mdcr-non-pmt-rsn-cd"}}}]
+addItem: VARIANT | NULL | eg=[[]]
+StructureDefinition_bluebutton_outpatient_clm_op_bene_pmt_amt_extension: VARIANT | NULL | eg=[{"value":{"money":{"code":"USD","system":"urn:iso:std:iso:4217","value":0.0}}}]
+totalCost: VARIANT | NULL | eg=[{"code":"USD","system":"urn:iso:std:iso:4217","value":17558.44}, {"code":"USD","system":"urn:iso:std:iso:4217","value":14561.94}]
+status: TEXT | NULL | eg=["active"]
+StructureDefinition_bluebutton_outpatient_nch_bene_ptb_coinsrnc_amt_extension: VARIANT | NULL | eg=[{"value":{"money":{"code":"USD","system":"urn:iso:std:iso:4217","value":0.0}}}]
+processNote: VARIANT | NULL | eg=[[]]
+StructureDefinition_bluebutton_outpatient_nch_bene_ptb_ddctbl_amt_extension: VARIANT | NULL | eg=[{"value":{"money":{"code":"USD","system":"urn:iso:std:iso:4217","value":0.0}}}]
+benefitBalance: VARIANT | NULL | eg=[[]]
+payment: VARIANT | NULL | eg=[{"amount":{"code":"USD","system":"urn:iso:std:iso:4217","value":13946.752}}, {"amount":{"code":"USD","system":"urn:iso:std:iso:4217","value":11549.552}}]
+precedence: NUMBER | NULL
+StructureDefinition_bluebutton_inpatient_nch_profnl_cmpnt_chrg_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_prpayamt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_clm_pps_cptl_excptn_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_nch_bene_ip_ddctbl_amt_extension: VARIANT | NULL
+related: VARIANT | NULL | eg=[[]]
+StructureDefinition_bluebutton_inpatient_nch_drg_outlier_aprvd_pmt_amt_extension: VARIANT | NULL
+StructureDefinition_bluebutton_outpatient_clm_op_prvdr_pmt_amt_extension: VARIANT | NULL | eg=[{"value":{"money":{"code":"USD","system":"urn:iso:std:iso:4217","value":0.0}}}]
+careTeam: VARIANT | NULL | eg=[[{"provider":{"identifier":{"system":"http://hl7.org/fhir/sid/us-npi","value":"99999999"}},"role":{"coding":[{"code":"primary","display":"Primary Care Practitioner","system":"http://hl7.org/fhir/claimcareteamrole"}]},"sequence":1}]]
+StructureDefinition_bluebutton_inpatient_clm_tot_pps_cptl_amt_extension: VARIANT | NULL
+unallocDeductable: VARIANT | NULL
+StructureDefinition_bluebutton_inpatient_clm_pps_old_cptl_hld_hrmls_amt_extension: VARIANT | NULL
+type: VARIANT | NULL | eg=[{"coding":[{"code":"71","display":"Local carrier non-durable medical equipment, prosthetics, orthotics, and supplies (DMEPOS) claim","system":"https://bluebutton.cms.gov/resources/variables/nch_clm_type_cd"},{"code":"CARRIER","display":"EOB Type","system":"https://bluebutton.cms.gov/resources/codesystem/eob-type"},{"code":"professional","display":"Claim Type","system":"http://hl7.org/fhir/ex-claimtype"},{"code":"O","display":"Part B physician/supplier claim record (processed by local carriers; can include DMEPOS services)","system":"https://bluebutton.cms.gov/resources/variables/nch_near_line_rec_ident_cd"}]}]
+StructureDefinition_bluebutton_inpatient_clm_pps_cptl_ime_amt_extension: VARIANT | NULL
+form: VARIANT | NULL
+
+## FHIR_SYNTHEA.CARE_PLAN
+@use: [C1]
+author: VARIANT | NULL | eg=[[]]
+addresses: VARIANT | NULL | eg=[[{"conditionId":"7cda099f-ca44-49e3-b699-c02bef655635"}], [{"conditionId":"b23dd622-38cf-4bf9-b401-2809e82ddd77"}]]
+title: TEXT | NULL
+category: VARIANT | NULL | eg=[[{"coding":[{"code":"698360004","display":"Diabetes self management plan","system":"http://snomed.info/sct"}],"text":"Diabetes self management plan"}]]
+supportingInfo: VARIANT | NULL | eg=[[]]
+activity: VARIANT | NULL | eg=[[{"detail":{"code":{"coding":[{"code":"160670007","display":"Diabetic diet","system":"http://snomed.info/sct"}],"text":"Diabetic diet"},"goal":[],"performer":[],"reasonCode":[],"reasonReference":[],"status":"in-progress"},"outcomeCodeableConcept":[],"outcomeReference":[],"progress":[]},{"detail":{"code":{"coding":[{"code":"229065009","display":"Exercise therapy","system":"http://snomed.info/sct"}],"text":"Exercise therapy"},"goal":[],"performer":[],"reasonCode":[],"reasonReference":[],"status":"in-progress"},"outcomeCodeableConcept":[],"outcomeReference":[],"progress":[]}]]
+status: TEXT | NULL | eg=["active"]
+period: VARIANT | NULL | eg=[{"start":"2019-01-30T14:04:50+00:00"}, {"start":"2008-08-16T05:26:16+00:00"}]
+partOf: VARIANT | NULL | eg=[[]]
+definition: VARIANT | NULL | eg=[[]]
+intent: TEXT | NULL | eg=["order"]
+replaces: VARIANT | NULL | eg=[[]]
+careTeam: VARIANT | NULL | eg=[[]]
+subject: VARIANT | NULL | eg=[{"patientId":"ca379784-a2e1-4912-b13a-afb8145f9b4d"}, {"patientId":"a61f396a-fd64-48c1-8bfc-68b6bcc7a122"}]
+basedOn: VARIANT | NULL | eg=[[]]
+context: VARIANT | NULL | eg=[{"encounterId":"1f52f0d1-ac17-47a1-ad96-10ae59bf3035"}, {"encounterId":"7f005e88-5e1b-4cab-98de-398c4c5625f0"}]
+description: TEXT | NULL
+goal: VARIANT | NULL | eg=[[{"goalId":"f2927785-5b72-4bfe-900c-e19012ba079c"},{"goalId":"9d8d7ce7-a7c3-4cef-afa4-6ece700e0f6a"},{"goalId":"76ae88f9-04e4-4b51-ab45-5978fc453b24"},{"goalId":"da47b1a2-89c3-4fb2-8e35-648692447775"},{"goalId":"9500c42a-d912-4364-86f8-5fe81b8be186"}], [{"goalId":"e825dc3d-6ba1-42e4-aa15-8d39a94bf883"},{"goalId":"708de585-85e9-4c71-8e8e-7620c3b291e2"},{"goalId":"b3404f4f-87e7-4bf4-a0e8-6d61459fab76"},{"goalId":"4807a7ea-34b8-4801-a554-196e200c5f95"},{"goalId":"6aeafa1f-4e64-4117-a892-a93df5a1d2d8"}]]
+note: VARIANT | NULL | eg=[[]]
+
+## FHIR_SYNTHEA.MEDICATION_REQUEST
+@use: [C1]
+definition: VARIANT | NULL | eg=[[]]
+dispenseRequest: VARIANT | NULL
+recorder: VARIANT | NULL
+reasonReference: VARIANT | NULL | eg=[[{"conditionId":"450fb757-9181-4263-8c09-a6d253279007"}], [{"conditionId":"d09ebd2e-afa2-479b-ba23-f5d3653c65f5"}]]
+requester: VARIANT | NULL | eg=[{"agent":{"practitionerId":"5470f3a9-e102-4d5f-9633-5a789e81f33b"},"onBehalfOf":{"organizationId":"d7b11827-25f2-350b-bcd8-939fc59851b0"}}, {"agent":{"practitionerId":"55c62249-61c4-47fc-8d5f-51b8c8a9c691"},"onBehalfOf":{"organizationId":"161a799c-4894-36f6-8ca7-2a71c8107f79"}}]
+authoredOn: TEXT | NULL | eg=["1999-06-24T15:11:11+00:00", "2017-06-04T13:55:37+00:00"]
+dosageInstruction: VARIANT | NULL | eg=[[{"additionalInstruction":[],"asNeeded":{"boolean":false},"dose":{"quantity":{"value":1.0}},"sequence":1,"timing":{"event":[],"repeat":{"dayOfWeek":[],"frequency":1,"period":1.0,"periodUnit":"d","timeOfDay":[],"when":[]}}}]]
+subject: VARIANT | NULL | eg=[{"patientId":"9d6dd45e-761d-45be-b6cd-e288cf9e403b"}, {"patientId":"29a4b79d-045b-49a9-b7a2-7d6aed61a228"}]
+context: VARIANT | NULL | eg=[{"encounterId":"4372afb6-dec5-4cc0-a091-3959b5058ef0"}, {"encounterId":"3a69f6f8-7b54-4758-b04a-34c8a566a1fa"}]
+reasonCode: VARIANT | NULL | eg=[[]]
+priority: TEXT | NULL
+shr_base_ActionCode_extension: VARIANT | NULL | eg=[{"value":{"codeableConcept":{"coding":[{"code":"33633005","display":"Prescription of drug (procedure)","system":"http://snomed.info/sct"}],"text":"Prescription of drug (procedure)"}}}]
+priorPrescription: VARIANT | NULL
+status: TEXT | NULL | eg=["stopped"]
+note: VARIANT | NULL | eg=[[]]
+substitution: VARIANT | NULL
+intent: TEXT | NULL | eg=["order"]
+shr_action_RequestedContext_extension: VARIANT | NULL | eg=[{"shr_action_RequestIntent_extension":{"value":{"code":"original-order"}},"shr_action_Status_extension":{"value":{"code":"completed"}}}]
+medication: VARIANT | NULL | eg=[{"codeableConcept":{"coding":[{"code":"316672","display":"Simvistatin 10 MG","system":"http://www.nlm.nih.gov/research/umls/rxnorm"}],"text":"Simvistatin 10 MG"}}]
+category: VARIANT | NULL
+basedOn: VARIANT | NULL | eg=[[]]
+groupIdentifier: VARIANT | NULL
+detectedIssue: VARIANT | NULL | eg=[[]]
+eventHistory: VARIANT | NULL | eg=[[]]
+supportingInformation: VARIANT | NULL | eg=[[]]
+
+## FHIR_SYNTHEA.DIAGNOSTIC_REPORT
+@use: [C1, C8]
+presentedForm: VARIANT | NULL | eg=[[]]
+conclusion: TEXT | NULL
+result: VARIANT | NULL | eg=[[{"display":"Leukocytes [#/volume] in Blood by Automated count","observationId":"74181162-c641-4054-9414-35798616485a"},{"display":"Erythrocytes [#/volume] in Blood by Automated count","observationId":"2e1de6a5-bacc-4e4a-8f67-80befad91dbc"},{"display":"Hemoglobin [Mass/volume] in Blood","observationId":"3b9900da-ed4e-44a6-a702-7bdde9104a00"},{"display":"Hematocrit [Volume Fraction] of Blood by Automated count","observationId":"5bd47bc7-d145-429b-9de2-bace0973e1ad"},{"display":"MCV [Entitic volume] by Automated count","observationId":"f88bb4cc-0daa-4d9f-9f9b-32c2a67063a6"},{"display":"MCH [Entitic mass] by Automated count","observationId":"64b8d849-4946-447c-8f77-cb26d7cf3ee8"},{"display":"MCHC [Mass/volume] by Automated count","observationId":"26d38642-beb6-4367-aa6f-2eab5f09934c"},{"display":"Erythrocyte distribution width [Entitic volume] by Automated count","observationId":"49ac488f-1dd7-4ffa-90a9-717ad484f21d"},{"display":"Platelets [#/volume] in Blood by Automated count","obser...]
+context: VARIANT | NULL | eg=[{"encounterId":"63266349-8b76-44e6-a6ca-09ca35b6393e"}, {"encounterId":"9c608194-6a5f-4915-8483-a562312b5691"}]
+imagingStudy: VARIANT | NULL | eg=[[]]
+basedOn: VARIANT | NULL | eg=[[]]
+image: VARIANT | NULL | eg=[[]]
+performer: VARIANT | NULL | eg=[[]]
+status: TEXT | NULL | eg=["final"]
+category: VARIANT | NULL
+code: VARIANT | NULL | eg=[{"coding":[{"code":"58410-2","display":"Complete blood count (hemogram) panel - Blood by Automated count","system":"http://loinc.org"}],"text":"Complete blood count (hemogram) panel - Blood by Automated count"}]
+codedDiagnosis: VARIANT | NULL | eg=[[]]
+subject: VARIANT | NULL | eg=[{"patientId":"92ddef86-f75e-475e-9243-6b5ec76e4423"}, {"patientId":"cfc63057-3190-4a9e-9b77-c98a59428d36"}]
+
+## FHIR_SYNTHEA.IMAGING_STUDY
+@use: [C1]
+uid: TEXT | NULL | eg=["urn:oid:1.2.840.99999999.95957715.1569378915476", "urn:oid:1.2.840.99999999.29673829.1569293182845"]
+availability: TEXT | NULL
+accession: VARIANT | NULL
+patient: VARIANT | NULL | eg=[{"patientId":"720e84b7-354c-4b81-b864-60da002c8663"}, {"patientId":"e7e171c4-c508-4497-93bc-da003fdf1ffd"}]
+referrer: VARIANT | NULL
+procedureReference: VARIANT | NULL | eg=[[]]
+basedOn: VARIANT | NULL | eg=[[]]
+numberOfSeries: NUMBER | NULL | eg=[1]
+started: TEXT | NULL | eg=["1997-11-28T21:32:35+00:00", "2007-06-04T11:27:46+00:00"]
+reason: VARIANT | NULL
+context: VARIANT | NULL | eg=[{"encounterId":"fc8dfe86-e745-4d39-addf-78cb3467db35"}, {"encounterId":"13a14f09-9441-4a16-9974-9ab6d9e82891"}]
+description: TEXT | NULL
+modalityList: VARIANT | NULL | eg=[[]]
+procedureCode: VARIANT | NULL | eg=[[]]
+interpreter: VARIANT | NULL | eg=[[]]
+numberOfInstances: NUMBER | NULL | eg=[1]
+endpoint: VARIANT | NULL | eg=[[]]
+series: VARIANT | NULL | eg=[[{"availability":"UNAVAILABLE","bodySite":{"code":"261179002","display":"thoracic","system":"http://snomed.info/sct"},"endpoint":[],"instance":[{"number":1,"sopClass":"urn:oid:1.2.840.10008.5.1.4.1.1.3.1","title":"Ultrasound Multiframe Image Storage","uid":"urn:oid:1.2.840.99999999.1.1.55275508.1569378915476"}],"modality":{"code":"US","display":"Ultrasound","system":"http://dicom.nema.org/resources/ontology/DCM"},"number":1,"numberOfInstances":1,"performer":[],"started":"1997-11-28T21:32:35+00:00","uid":"urn:oid:1.2.840.99999999.1.84544524.1569378915476"}]]
+
+## FHIR_SYNTHEA.ENCOUNTER
+@use: [C1, C6, C7]
+incomingReferral: VARIANT | NULL | eg=[[]]
+period: VARIANT | NULL | eg=[{"end":"2014-02-27T08:55:00+00:00","start":"2014-02-27T08:40:00+00:00"}, {"end":"2006-03-02T11:00:15+00:00","start":"2006-03-02T10:45:15+00:00"}]
+class: VARIANT | NULL | eg=[{"code":"AMB","system":"http://terminology.hl7.org/CodeSystem/v3-ActCode"}]
+appointment: VARIANT | NULL
+status: TEXT | NULL | eg=["finished"]
+serviceProvider: VARIANT | NULL | eg=[{"organizationId":"69176529-fd1f-3b3f-abce-a0a3626769eb"}]
+episodeOfCare: VARIANT | NULL | eg=[[]]
+length: VARIANT | NULL
+participant: VARIANT | NULL | eg=[[{"individual":{"practitionerId":"c472ba3c-c32d-4472-a221-b8e5f28af56f"},"type":[]}]]
+account: VARIANT | NULL | eg=[[]]
+statusHistory: VARIANT | NULL | eg=[[]]
+classHistory: VARIANT | NULL | eg=[[]]
+subject: VARIANT | NULL | eg=[{"patientId":"bc05ecb7-9442-49b9-9fd4-b9a794cc9e04"}, {"patientId":"aafbd85f-4c63-4f7f-9e99-e866e0782cfd"}]
+type: VARIANT | NULL | eg=[[{"coding":[{"code":"390906007","display":"Follow-up encounter","system":"http://snomed.info/sct"}],"text":"Follow-up encounter"}]]
+partOf: VARIANT | NULL
+reason: VARIANT | NULL | eg=[[{"coding":[{"code":"55822004","display":"Hyperlipidemia","system":"http://snomed.info/sct"}]}]]
+priority: VARIANT | NULL
+
+## FHIR_SYNTHEA.ORGANIZATION
+@use: [C1, C3]
+endpoint: VARIANT | NULL | eg=[[]]
+alias: VARIANT | NULL | eg=[[]]
+name: TEXT | NULL | eg=["NASHOBA VALLEY MEDICAL CENTER", "ATHOL MEMORIAL HOSPITAL"]
+partOf: VARIANT | NULL
+type: VARIANT | NULL | eg=[[{"coding":[{"code":"prov","display":"Healthcare Provider","system":"http://hl7.org/fhir/organization-type"}],"text":"Healthcare Provider"}]]
+contact: VARIANT | NULL | eg=[[{"name":{"given":[],"prefix":[],"suffix":[],"text":"Synthetic Provider"},"telecom":[]}]]
+
+## FHIR_SYNTHEA.PATIENT
+@use: [C1, C3, C4]
+shr_actor_FictionalPerson_extension: VARIANT | NULL | eg=[{"value":{"boolean":true}}]
+contact: VARIANT | NULL | eg=[[]]
+generalPractitioner: VARIANT | NULL | eg=[[]]
+deceased: VARIANT | NULL | eg=[{"dateTime":"2011-05-05T10:10:29+00:00"}]
+shr_demographics_SocialSecurityNumber_extension: VARIANT | NULL | eg=[{"value":{"string":"999-71-8994"}}, {"value":{"string":"999-76-6068"}}]
+animal: VARIANT | NULL
+shr_entity_Person_extension: VARIANT | NULL | eg=[{"value":{"reference":{"basicId":"2ded143a-e8a6-4a84-afee-1d98550d99aa"}}}, {"value":{"reference":{"basicId":"f2e982b0-c7ca-44e5-b024-9d5d3d7cf415"}}}]
+us_core_birthsex: VARIANT | NULL | eg=[{"value":{"code":"F"}}]
+maritalStatus: VARIANT | NULL | eg=[{"coding":[{"code":"M","display":"M","system":"http://hl7.org/fhir/v3/MaritalStatus"}],"text":"M"}]
+us_core_race: VARIANT | NULL | eg=[{"ombCategory":{"value":{"coding":{"code":"2106-3","display":"White","system":"urn:oid:2.16.840.1.113883.6.238"}}},"text":{"value":{"string":"White"}}}, {"ombCategory":{"value":{"coding":{"code":"2054-5","display":"Black or African American","system":"urn:oid:2.16.840.1.113883.6.238"}}},"text":{"value":{"string":"Black or African American"}}}]
+disability_adjusted_life_years: VARIANT | NULL | eg=[{"value":{"decimal":1.331030512288361}}, {"value":{"decimal":4.337664551421943}}]
+link: VARIANT | NULL | eg=[[]]
+quality_adjusted_life_years: VARIANT | NULL | eg=[{"value":{"decimal":78.66896948771164}}, {"value":{"decimal":56.66233544857806}}]
+multipleBirth: VARIANT | NULL | eg=[{"boolean":false}]
+birthPlace: VARIANT | NULL | eg=[{"value":{"address":{"city":"Framingham","country":"US","state":"Massachusetts"}}}, {"value":{"address":{"city":"Northampton","country":"US","state":"Massachusetts"}}}]
+managingOrganization: VARIANT | NULL
+patient_mothersMaidenName: VARIANT | NULL | eg=[{"value":{"string":"Lacresha805 Cummings51"}}, {"value":{"string":"Tanika746 Nikolaus26"}}]
+us_core_ethnicity: VARIANT | NULL | eg=[{"ombCategory":{"value":{"coding":{"code":"2186-5","display":"Not Hispanic or Latino","system":"urn:oid:2.16.840.1.113883.6.238"}}},"text":{"value":{"string":"Not Hispanic or Latino"}}}]
+shr_entity_FathersName_extension: VARIANT | NULL | eg=[{"value":{"humanName":{"text":"Homer307 Nitzsche158"}}}, {"value":{"humanName":{"text":"Ismael683 Pouros728"}}}]
+
+## FHIR_SYNTHEA.ALLERGY_INTOLERANCE
+@use: [C1, C5]
+criticality: TEXT | NULL | eg=["low"]
+reaction: VARIANT | NULL | eg=[[]]
+note: VARIANT | NULL | eg=[[]]
+patient: VARIANT | NULL | eg=[{"patientId":"8aa399e4-52f3-4fbb-8103-ff1318b4f854"}, {"patientId":"8cea3975-7853-4c48-b585-ea5dabdbb823"}]
+type: TEXT | NULL | eg=["allergy"]
+code: VARIANT | NULL | eg=[{"coding":[{"code":"300916003","display":"Latex allergy","system":"http://snomed.info/sct"}],"text":"Latex allergy"}]
+category: VARIANT | NULL | eg=[["food"]]
+lastOccurrence: TEXT | NULL
+recorder: VARIANT | NULL
+
+## FHIR_SYNTHEA.GOAL
+@use: [C1]
+addresses: VARIANT | NULL | eg=[[]]
+priority: VARIANT | NULL
+category: VARIANT | NULL | eg=[[]]
+outcomeCode: VARIANT | NULL | eg=[[]]
+start: VARIANT | NULL
+expressedBy: VARIANT | NULL
+subject: VARIANT | NULL
+statusDate: TEXT | NULL
+statusReason: TEXT | NULL
+description: VARIANT | NULL | eg=[{"coding":[],"text":"improved systolic function"}]
+target: VARIANT | NULL
+outcomeReference: VARIANT | NULL | eg=[[]]
+note: VARIANT | NULL | eg=[[]]
+status: TEXT | NULL | eg=["achieved"]
+
+## FHIR_SYNTHEA.CLAIM
+@use: [C1, C2, C6]
+related: VARIANT | NULL | eg=[[]]
+total: VARIANT | NULL | eg=[{"code":"USD","system":"urn:iso:std:iso:4217","value":125.0}]
+careTeam: VARIANT | NULL | eg=[[]]
+patient: VARIANT | NULL | eg=[{"patientId":"05ac2a09-ae00-4133-96d5-bf31ec0d4d4d"}, {"patientId":"f92fcd6a-bc35-4908-9d06-1d42deec8c58"}]
+use: TEXT | NULL | eg=["complete"]
+priority: VARIANT | NULL
+status: TEXT | NULL | eg=["active"]
+fundsReserve: VARIANT | NULL
+type: VARIANT | NULL
+created: TEXT | NULL
+
+## FHIR_SYNTHEA.IMMUNIZATION
+@use: [C1, C7]
+route: VARIANT | NULL
+manufacturer: VARIANT | NULL
+explanation: VARIANT | NULL
+encounter: VARIANT | NULL | eg=[{"encounterId":"5c2511d5-8f83-4869-b3f5-7d3def8c7ba6"}, {"encounterId":"fab3c543-ba46-447d-afc7-3b1d61e9512c"}]
+notGiven: BOOLEAN | NULL | eg=[false]
+reportOrigin: VARIANT | NULL
+vaccinationProtocol: VARIANT | NULL | eg=[[]]
+reaction: VARIANT | NULL | eg=[[]]
+status: TEXT | NULL | eg=["completed"]
+patient: VARIANT | NULL | eg=[{"patientId":"aaf85b84-7f34-4d7d-9c5a-e1cd90d172ba"}, {"patientId":"9ae85227-1743-4359-8885-03743328d231"}]
+practitioner: VARIANT | NULL | eg=[[]]
+lotNumber: TEXT | NULL
+primarySource: BOOLEAN | NULL | eg=[true]
+doseQuantity: VARIANT | NULL
+note: VARIANT | NULL | eg=[[]]
+site: VARIANT | NULL
+vaccineCode: VARIANT | NULL | eg=[{"coding":[{"code":"140","display":"Influenza, seasonal, injectable, preservative free","system":"http://hl7.org/fhir/sid/cvx"}],"text":"Influenza, seasonal, injectable, preservative free"}]
+expirationDate: TEXT | NULL
+date: TEXT | NULL | eg=["2013-09-23T15:05:53+00:00", "2011-08-02T13:28:43+00:00"]
+
+## FHIR_SYNTHEA.PROCEDURE
+@use: [C1, C7]
+notDone: BOOLEAN | NULL
+reasonCode: VARIANT | NULL | eg=[[]]
+report: VARIANT | NULL | eg=[[]]
+followUp: VARIANT | NULL | eg=[[]]
+status: TEXT | NULL | eg=["completed"]
+bodySite: VARIANT | NULL | eg=[[]]
+partOf: VARIANT | NULL | eg=[[]]
+complicationDetail: VARIANT | NULL | eg=[[]]
+context: VARIANT | NULL | eg=[{"encounterId":"e417b124-e13c-4339-85e9-768a9190ea82"}, {"encounterId":"cc757673-6219-4e77-a238-1b018f6e4d64"}]
+complication: VARIANT | NULL | eg=[[]]
+note: VARIANT | NULL | eg=[[]]
+notDoneReason: VARIANT | NULL
+basedOn: VARIANT | NULL | eg=[[]]
+reasonReference: VARIANT | NULL | eg=[[{"conditionId":"9fbda7b1-8c72-42c9-a618-abf912938e05","display":"Pulmonary emphysema (disorder)"}], [{"conditionId":"45cdcfb5-506c-44d7-894e-06f14f1d74cb","display":"Pulmonary emphysema (disorder)"}]]
+definition: VARIANT | NULL | eg=[[]]
+subject: VARIANT | NULL | eg=[{"patientId":"56698067-f509-458e-bba2-b9981fe5bb72"}, {"patientId":"6b6688a9-2837-4719-a837-e5da9dc8118c"}]
+performer: VARIANT | NULL | eg=[[]]
+performed: VARIANT | NULL | eg=[{"period":{"end":"2003-09-24T04:41:27+00:00","start":"2003-09-24T04:26:27+00:00"}}, {"period":{"end":"1975-02-09T13:21:14+00:00","start":"1975-02-09T13:06:14+00:00"}}]
+category: VARIANT | NULL
+code: VARIANT | NULL | eg=[{"coding":[{"code":"15081005","display":"Pulmonary rehabilitation (regime/therapy)","system":"http://snomed.info/sct"}],"text":"Pulmonary rehabilitation (regime/therapy)"}]
+outcome: VARIANT | NULL
+usedReference: VARIANT | NULL | eg=[[]]
+focalDevice: VARIANT | NULL | eg=[[]]
+usedCode: VARIANT | NULL | eg=[[]]
+
+## FHIR_SYNTHEA.CONDITION
+@use: [C1, C5]
+note: VARIANT | NULL | eg=[[]]
+stage: VARIANT | NULL
+abatement: VARIANT | NULL | eg=[{"dateTime":"2018-10-02T13:46:17+00:00"}, {"dateTime":"2017-12-31T00:54:21+00:00"}]
+severity: VARIANT | NULL
+category: VARIANT | NULL | eg=[[{"coding":[{"code":"disease","display":"Disease","system":"http://standardhealthrecord.org/shr/condition/vs/ConditionCategoryVS"}]}]]
+context: VARIANT | NULL | eg=[{"encounterId":"1b841b64-0120-44ae-8633-1d60919cb576"}, {"encounterId":"2f915e4f-2074-4105-83cc-a4e026ef7476"}]
+code: VARIANT | NULL | eg=[{"coding":[{"code":"444814009","display":"Viral sinusitis (disorder)","system":"http://snomed.info/sct"}],"text":"Viral sinusitis (disorder)"}]
+evidence: VARIANT | NULL | eg=[[]]
+subject: VARIANT | NULL | eg=[{"patientId":"8b069d8c-4458-4eee-a144-3ffce2146761"}, {"patientId":"d0dfb5c5-8718-4d7f-8e77-0f8b0f341d90"}]
+bodySite: VARIANT | NULL | eg=[[]]
+
+## FHIR_SYNTHEA.OBSERVATION
+@use: [C1, C8]
+category: VARIANT | NULL | eg=[[{"coding":[{"code":"vital-signs","display":"vital-signs","system":"http://hl7.org/fhir/observation-category"}]}]]
+dataAbsentReason: VARIANT | NULL
+related: VARIANT | NULL | eg=[[]]
+bodySite: VARIANT | NULL
+comment: TEXT | NULL
+referenceRange: VARIANT | NULL | eg=[[]]
+code: VARIANT | NULL | eg=[{"coding":[{"code":"55284-4","display":"Blood Pressure","system":"http://loinc.org"}],"text":"Blood Pressure"}]
+context: VARIANT | NULL | eg=[{"encounterId":"788d8fb3-ce30-4447-ac83-63a21ec13273"}, {"encounterId":"a53e453c-bbe4-4f9d-9d6b-8f76180a4976"}]
+basedOn: VARIANT | NULL | eg=[[]]
+interpretation: VARIANT | NULL
+performer: VARIANT | NULL | eg=[[]]
+device: VARIANT | NULL
+subject: VARIANT | NULL | eg=[{"patientId":"7f07d70f-9491-44b4-aa54-3a2073027100"}, {"patientId":"f70d7b43-3afe-494b-8b41-231fdb34546e"}]
+method: VARIANT | NULL
+status: TEXT | NULL | eg=["final"]
+value: VARIANT | NULL
+component: VARIANT | NULL | eg=[[{"code":{"coding":[{"code":"8462-4","display":"Diastolic Blood Pressure","system":"http://loinc.org"}],"text":"Diastolic Blood Pressure"},"referenceRange":[],"value":{"quantity":{"code":"mm[Hg]","system":"http://unitsofmeasure.org","unit":"mm[Hg]","value":78.87701008967447}}},{"code":{"coding":[{"code":"8480-6","display":"Systolic Blood Pressure","system":"http://loinc.org"}],"text":"Systolic Blood Pressure"},"referenceRange":[],"value":{"quantity":{"code":"mm[Hg]","system":"http://unitsofmeasure.org","unit":"mm[Hg]","value":119.7930771374758}}}]]

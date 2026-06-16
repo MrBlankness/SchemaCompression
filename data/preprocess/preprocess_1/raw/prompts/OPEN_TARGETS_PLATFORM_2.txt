@@ -1,0 +1,89 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: OPEN_TARGETS_PLATFORM.ASSOCIATIONBYDATASOURCEINDIRECT
+Columns: targetId, diseaseId, datatypeId, datasourceId, evidenceCount, score
+
+Table: OPEN_TARGETS_PLATFORM.ASSOCIATIONBYOVERALLINDIRECT
+Columns: score, diseaseId, evidenceCount, targetId
+
+Table: OPEN_TARGETS_PLATFORM.INTERACTION
+Columns: targetB, intA, intBBiologicalRole, count, targetA, scoring, sourceDatabase, speciesA, speciesB, intABiologicalRole, intB
+
+Table: OPEN_TARGETS_PLATFORM.REACTOME
+Columns: parents, path, label, ancestors, children, id, descendants
+
+Table: OPEN_TARGETS_PLATFORM.ASSOCIATIONBYDATATYPEINDIRECT
+Columns: datatypeId, score, diseaseId, evidenceCount, targetId
+
+Table: OPEN_TARGETS_PLATFORM.INDICATION
+Columns: id, indications, approvedIndications, indicationCount
+
+Table: OPEN_TARGETS_PLATFORM.DISEASETOPHENOTYPE
+Columns: evidence, disease, phenotype
+
+Table: OPEN_TARGETS_PLATFORM.TARGETESSENTIALITY
+Columns: id, geneEssentiality
+
+Table: OPEN_TARGETS_PLATFORM.INTERACTIONEVIDENCE
+Columns: interactionTypeShortName, interactionDetectionMethodMiIdentifier, intA, intBBiologicalRole, participantDetectionMethodA, hostOrganismTaxId, interactionIdentifier, pubmedId, hostOrganismScientificName, interactionResources, expansionMethodMiIdentifier, interactionScore, targetA, intBSource, participantDetectionMethodB, interactionTypeMiIdentifier, evidenceScore, intB, speciesA, interactionDetectionMethodShortName, intASource, expansionMethodShortName, targetB, intABiologicalRole, speciesB, hostOrganismTissue
+
+Table: OPEN_TARGETS_PLATFORM.DRUGWARNINGS
+Columns: toxicityClass, country, efo_id_for_warning_class, efo_id, efo_term, warningType, year, references, id, chemblIds, description
+
+Table: OPEN_TARGETS_PLATFORM.EVIDENCE
+Columns: biomarkerName, crisprScreenLibrary, mutatedSamples, targetInModelMgiId, resourceScore, statisticalMethodOverview, ancestry, variantFunctionalConsequenceId, clinicalPhase, studyStartDate, studyStopReason, datatypeId, allelicRequirements, diseaseModelAssociatedModelPhenotypes, drugId, score, betaConfidenceIntervalLower, statisticalMethod, biologicalModelGeneticBackground, targetInModel, pValueMantissa, pmcIds, diseaseFromSourceId, studyId, biosamplesFromSource, contrast, significantDriverMethods, log2FoldChangePercentileRank, drugResponse, log2FoldChangeValue, reactionId, diseaseFromSourceMappedId, oddsRatioConfidenceIntervalLower, targetInModelEnsemblId, targetFromSource, diseaseId, sourceId, biomarkers, clinicalSignificances, pathways, statisticalTestTail, betaConfidenceIntervalUpper, beta, cellType, publicationYear, biologicalModelId, confidence, diseaseFromSource, cohortDescription, variantHgvsId, oddsRatio, projectId, studyCasesWithQualifyingVariants, reactionName, urls, oddsRatioConfidenceIntervalUpper, pValueExponent, releaseVersion, geneticBackground, publicationFirstAuthor, biologicalModelAllelicComposition, diseaseCellLines, variantEffect, variantId, cohortPhenotypes, studySampleSize, releaseDate, studyOverview, targetFromSourceId, literature, alleleOrigins, studyCases, clinicalStatus, variantFunctionalConsequenceFromQtlId, cohortShortName, targetModulation, diseaseModelAssociatedHumanPhenotypes, cohortId, drugFromSource, variantRsId, variantAminoacidDescriptions, textMiningSentences, datasourceId, sex, studyStopReasonCategories, _corrupt_record, ancestryId, targetId, directionOnTrait, id
+
+Table: OPEN_TARGETS_PLATFORM.MOLECULE
+Columns: parentId, childChemblIds, tradeNames, id, linkedTargets, synonyms, blackBoxWarning, hasBeenWithdrawn, drugType, maximumClinicalTrialPhase, inchiKey, isApproved, crossReferences, linkedDiseases, canonicalSmiles, yearOfFirstApproval, name, description
+
+Table: OPEN_TARGETS_PLATFORM.PHARMACOGENOMICS
+Columns: studyId, phenotypeFromSourceId, directionality, targetFromSourceId, genotypeAnnotationText, literature, haplotypeFromSourceId, genotypeId, isDirectTarget, datasourceId, datatypeId, haplotypeId, genotype, datasourceVersion, variantFunctionalConsequenceId, pgxCategory, phenotypeText, evidenceLevel, variantRsId, drugs
+
+Table: OPEN_TARGETS_PLATFORM.GO
+Columns: name, id
+
+Table: OPEN_TARGETS_PLATFORM.TARGETS
+Columns: genomicLocation, proteinIds, synonyms, safetyLiabilities, symbolSynonyms, go, constraint, targetClass, canonicalExons, obsoleteSymbols, subcellularLocations, id, approvedSymbol, homologues, approvedName, canonicalTranscript, transcriptIds, dbXrefs, tractability, alternativeGenes, chemicalProbes, tep, pathways, obsoleteNames, hallmarks, nameSynonyms, functionDescriptions, biotype
+
+Table: OPEN_TARGETS_PLATFORM.MECHANISMOFACTION
+Columns: targetName, chemblIds, references, targets, mechanismOfAction, targetType, actionType
+
+Table: OPEN_TARGETS_PLATFORM.EXPRESSIONSPECIFICITY
+Columns: ensemblGeneId, expression, expressionSpecificity
+
+Table: OPEN_TARGETS_PLATFORM.MOUSEPHENOTYPES
+Columns: modelPhenotypeId, targetFromSourceId, targetInModelEnsemblId, targetInModel, targetInModelMgiId, modelPhenotypeLabel, modelPhenotypeClasses, biologicalModels
+
+Table: OPEN_TARGETS_PLATFORM.TARGETPRIORITISATION
+Columns: hasSafetyEvent, hasTEP, isInMembrane, mouseOrthologMaxIdentityPercentage, maxClinicalTrialPhase, hasHighQualityChemicalProbes, isSecreted, targetId, tissueSpecificity, paralogMaxIdentityPercentage, hasSmallMoleculeBinder, tissueDistribution, geneticConstraint, isCancerDriverGene, mouseKOScore, hasPocket, hasLigand
+
+Table: OPEN_TARGETS_PLATFORM.SIGNIFICANTADVERSEDRUGREACTIONS
+Columns: meddraCode, count, critval, llr, chembl_id, event
+
+Table: OPEN_TARGETS_PLATFORM.ASSOCIATIONBYDATASOURCEDIRECT
+Columns: score, targetId, diseaseId, datatypeId, datasourceId, evidenceCount
+
+Table: OPEN_TARGETS_PLATFORM.ASSOCIATIONBYOVERALLDIRECT
+Columns: score, evidenceCount, diseaseId, targetId
+
+Table: OPEN_TARGETS_PLATFORM.KNOWNDRUGSAGGREGATED
+Columns: urls, drugId, status, tradeNames, label, targetId, approvedName, ancestors, targetName, phase, prefName, synonyms, drugType, approvedSymbol, diseaseId, mechanismOfAction, targetClass
+
+Table: OPEN_TARGETS_PLATFORM.HPO
+Columns: name, namespace, id, parents, description, obsolete_terms, dbXRefs
+
+Table: OPEN_TARGETS_PLATFORM.BASELINEEXPRESSION
+Columns: id, tissues
+
+Table: OPEN_TARGETS_PLATFORM.OT_RELEASE
+Columns: release
+
+Table: OPEN_TARGETS_PLATFORM.DISEASES
+Columns: ontology, name, directLocationIds, obsoleteTerms, descendants, code, ancestors, parents, synonyms, dbXRefs, children, indirectLocationIds, id, description, therapeuticAreas
+
+Table: OPEN_TARGETS_PLATFORM.TARGETSPRIORISATION
+Columns: maxClinicalTrialPhase, mouseOrthologMaxIdentityPercentage, tissueSpecificity, geneticConstraint, hasMouseKO, paralogMaxIdentityPercentage, hasLigand, isCancerDriverGene, hasPocket, hasHighQualityChemicalProbes, tissueDistribution, targetId, hasTEP, isInMembrane, hasSafetyEvent, isSecreted
+
+Table: OPEN_TARGETS_PLATFORM.ASSOCIATIONBYDATATYPEDIRECT
+Columns: targetId, diseaseId, score, datatypeId, evidenceCount

@@ -1,0 +1,83 @@
+[TEMPLATES]
+<T1>
+receipts_root: TEXT | NULL
+mix_hash: TEXT | NULL
+gas_used: NUMBER | NULL
+total_difficulty: TEXT | NULL
+uncles: TEXT | NULL
+uncles_sha3: TEXT | NULL
+nonce: NUMBER | NULL
+difficulty: TEXT | NULL
+size: NUMBER | NULL
+extra_data: TEXT | NULL
+gas_limit: NUMBER | NULL
+state_root: TEXT | NULL
+base_fee_per_gas: NUMBER | NULL
+block_timestamp: TIMESTAMP_NTZ | NULL
+parent_hash: TEXT | NULL
+block_number: NUMBER | NULL
+transactions_root: TEXT | NULL
+miner: TEXT | NULL
+block_hash: TEXT | NULL
+logs_bloom: TEXT | NULL
+@Tables: [GOOG_BLOCKCHAIN_CRONOS_MAINNET_US.BLOCKS,GOOG_BLOCKCHAIN_TRON_MAINNET_US.BLOCKS]
+
+<T2>
+transaction_index: NUMBER | NULL
+r: TEXT | NULL
+input: TEXT | NULL
+max_priority_fee_per_gas: NUMBER | NULL
+access_list: TEXT | NULL
+transaction_hash: TEXT | NULL
+v: TEXT | NULL
+to_address: TEXT | NULL
+block_hash: TEXT | NULL
+gas_price: TEXT | NULL
+nonce: NUMBER | NULL
+from_address: TEXT | NULL
+gas: NUMBER | NULL
+max_fee_per_gas: NUMBER | NULL
+block_timestamp: TIMESTAMP_NTZ | NULL
+value: TEXT | NULL
+transaction_type: NUMBER | NULL
+s: TEXT | NULL
+@Tables: [GOOG_BLOCKCHAIN_CRONOS_MAINNET_US.TRANSACTIONS,GOOG_BLOCKCHAIN_POLYGON_MAINNET_US.TRANSACTIONS]
+
+[STANDALONE]
+## GOOG_BLOCKCHAIN_ARBITRUM_ONE_US.DECODED_EVENTS
+EVENT_HASH: TEXT | NULL
+TRANSACTION_HASH: TEXT | NULL
+TRANSACTION_INDEX: NUMBER | NULL
+ARGS: TEXT | NULL
+ADDRESS: TEXT | NULL
+TOPICS: VARIANT | NULL
+BLOCK_NUMBER: NUMBER | NULL
+LOG_INDEX: NUMBER | NULL
+REMOVED: BOOLEAN | NULL
+BLOCK_HASH: TEXT | NULL
+BLOCK_TIMESTAMP: NUMBER | NULL
+EVENT_SIGNATURE: TEXT | NULL
+
+## GOOG_BLOCKCHAIN_ARBITRUM_ONE_US.LOGS
+topics: VARIANT | NULL
+log_index: NUMBER | NULL
+data: TEXT | NULL
+address: TEXT | NULL
+removed: BOOLEAN | NULL
+transaction_hash: TEXT | NULL
+block_number: NUMBER | NULL
+block_timestamp: NUMBER | NULL
+block_hash: TEXT | NULL
+transaction_index: NUMBER | NULL
+
+## GOOG_BLOCKCHAIN_TRON_MAINNET_US.LOGS
+removed: BOOLEAN | NULL
+data: TEXT | NULL
+block_number: NUMBER | NULL
+transaction_index: NUMBER | NULL
+block_hash: TEXT | NULL
+address: TEXT | NULL
+log_index: NUMBER | NULL
+block_timestamp: TIMESTAMP_NTZ | NULL
+transaction_hash: TEXT | NULL
+topics: TEXT | NULL

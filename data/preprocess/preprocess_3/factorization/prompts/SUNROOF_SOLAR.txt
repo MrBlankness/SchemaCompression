@@ -1,0 +1,41 @@
+[COMPONENTS]
+@C1
+carbon_offset_metric_tons: FLOAT | The potential carbon dioxide abatement of the solar capacity that meets the technical potential criteria. The calculation uses eGRID subregion CO2 equivalent non-baseload output emission rates. https://www.epa.gov/sites/production/files/2015-10/documents/egrid2012_summarytables_0.pdf
+center_point: BINARY | NULL
+count_qualified: NUMBER | # of buildings in Google Maps that are suitable for solar
+existing_installs_count: NUMBER | # of buildings estimated to have a solar installation, at time of data collection
+install_size_kw_buckets: TEXT | # of buildings with potential for various installation size buckets. Format is a JSON array, where each element is a tuple containing (1) lower bound of bucket, in kW, and (2) number of buildings in that bucket.
+kw_median: FLOAT | kW of solar potential for the median building in that region (assuming 250 watts per panel)
+kw_total: FLOAT | # of kW of solar potential for all roof types in that region (assuming 250 watts per panel)
+lat_avg: FLOAT | average latitude for that region
+lat_max: FLOAT | maximum latitude for that region
+lat_min: FLOAT | minimum latitude for that region
+lng_avg: FLOAT | average longitude for that region
+lng_max: FLOAT | maximum longitude for that region
+lng_min: FLOAT | minimum longitude for that region
+number_of_panels_e: NUMBER | # of solar panels potential for east-facing roof space in that region, assuming 1.650m x 0.992m panels
+number_of_panels_f: NUMBER | # of solar panels potential for flat roof space in that region, assuming 1.650m x 0.992m panels
+number_of_panels_median: NUMBER | # of panels that fit on the median roof
+number_of_panels_n: NUMBER | # of solar panels potential for north-facing roof space in that region, assuming 1.650m x 0.992m panels
+number_of_panels_s: NUMBER | # of solar panels potential for south-facing roof space in that region, assuming 1.650m x 0.992m panels
+number_of_panels_total: NUMBER | # of solar panels potential for all roof space in that region, assuming 1.650m 0.992m panels
+number_of_panels_w: NUMBER | # of solar panels potential for west-facing roof space in that region, assuming 1.650m x 0.992m panels
+percent_covered: FLOAT | % of buildings in Google Maps covered by Project Sunroof
+percent_qualified: FLOAT | % of buildings covered by Project Sunroof that are suitable for solar
+region_name: TEXT | Census Tract
+state_name: TEXT | Name of the state containing that region
+yearly_sunlight_kwh_e: FLOAT | total solar energy generation potential for east-facing roof space in that region
+yearly_sunlight_kwh_f: FLOAT | total solar energy generation potential for flat roof space in that region
+yearly_sunlight_kwh_kw_threshold_avg: FLOAT | 75% of the optimimum sunlight in the county containing that zip code
+yearly_sunlight_kwh_median: FLOAT | kWh/kw/yr for the median roof, in DC (not AC) terms
+yearly_sunlight_kwh_n: FLOAT | total solar energy generation potential for north-facing roof space in that region
+yearly_sunlight_kwh_s: FLOAT | total solar energy generation potential for south-facing roof space in that region
+yearly_sunlight_kwh_total: FLOAT | total solar energy generation potential for all roof space in that region
+yearly_sunlight_kwh_w: FLOAT | total solar energy generation potential for west-facing roof space in that region
+
+[TABLES]
+## SUNROOF_SOLAR.SOLAR_POTENTIAL_BY_CENSUSTRACT
+@use: [C1]
+
+## SUNROOF_SOLAR.SOLAR_POTENTIAL_BY_POSTAL_CODE
+@use: [C1]

@@ -1,0 +1,38 @@
+[TABLES]
+## OPEN_IMAGES.LABELS
+image_id: TEXT | NULL
+confidence: FLOAT | NULL
+label_name: TEXT | NULL
+source: TEXT | NULL
+
+## OPEN_IMAGES.DICT
+label_display_name: TEXT | NULL
+label_name: TEXT | NULL
+
+## OPEN_IMAGES.IMAGES
+original_size: NUMBER | NULL
+original_landing_url: TEXT | NULL
+original_url: TEXT | NULL
+title: TEXT | NULL
+license: TEXT | NULL
+image_id: TEXT | NULL
+author_profile_url: TEXT | NULL
+author: TEXT | NULL
+original_md5: TEXT | NULL
+thumbnail_300k_url: TEXT | NULL
+subset: TEXT | NULL
+
+## OPEN_IMAGES.ANNOTATIONS_BBOX
+is_inside: BOOLEAN | NULL
+x_max: FLOAT | NULL
+image_id: TEXT | NULL
+is_occluded: BOOLEAN | NULL
+is_truncated: BOOLEAN | NULL
+y_max: FLOAT | NULL
+source: TEXT | NULL
+x_min: FLOAT | NULL
+y_min: FLOAT | NULL
+is_depiction: BOOLEAN | NULL
+label_name: TEXT | NULL
+confidence: FLOAT | NULL
+is_group_of: BOOLEAN | NULL

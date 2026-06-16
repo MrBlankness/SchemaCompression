@@ -1,0 +1,12 @@
+[COMPONENTS]
+
+[TABLES]
+Format: schema.table|components|columns
+AIRLINES.BOARDING_PASSES||flight_id,ticket_no,seat_no,boarding_no
+AIRLINES.AIRPORTS_DATA||airport_code,coordinates,airport_name,timezone,city
+AIRLINES.TICKETS||ticket_no,passenger_id,book_ref
+AIRLINES.AIRCRAFTS_DATA||range,aircraft_code,model
+AIRLINES.FLIGHTS||aircraft_code,actual_departure,departure_airport,scheduled_departure,flight_id,scheduled_arrival,actual_arrival,arrival_airport,status,flight_no
+AIRLINES.BOOKINGS||book_date,total_amount,book_ref
+AIRLINES.SEATS||seat_no,fare_conditions,aircraft_code
+AIRLINES.TICKET_FLIGHTS||amount,ticket_no,flight_id,fare_conditions

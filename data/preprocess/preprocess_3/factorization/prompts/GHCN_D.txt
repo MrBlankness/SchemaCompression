@@ -1,0 +1,1354 @@
+[COMPONENTS]
+@C1
+date: DATE | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+
+@C2
+etl_timestamp: NUMBER | Load time for this data row
+source_url: TEXT | Source
+
+[TABLES]
+## GHCN_D.GHCND_1852
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2017
+@use: [C1, C2]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1878
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1988
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1930
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1916
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1781
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1932
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1962
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1883
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2013
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1867
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1928
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1868
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1779
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1853
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2012
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1982
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1857
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1904
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1766
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1808
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1941
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1831
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1967
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1894
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1842
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1780
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1877
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1999
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1838
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1954
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1827
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1812
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1811
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1966
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1823
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2007
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1775
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1802
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1797
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1769
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1979
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1805
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1931
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1935
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1786
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1790
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_STATIONS
+@use: [C2]
+latitude: FLOAT | NULL
+wmoid: NUMBER | NULL
+state: TEXT | NULL
+gsn_flag: TEXT | NULL
+hcn_crn_flag: TEXT | NULL
+elevation: FLOAT | NULL
+name: TEXT | NULL
+id: TEXT | NULL
+longitude: FLOAT | NULL
+
+## GHCN_D.GHCND_1784
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1829
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1991
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1910
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1995
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1824
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1953
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1897
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1994
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2004
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1952
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1998
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2002
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1997
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1822
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1833
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1809
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1942
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1957
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1903
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1958
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1918
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1980
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1768
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1914
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1960
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1965
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1989
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1923
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1874
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2022
+@use: [C1, C2]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1970
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1859
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1927
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1844
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1905
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1843
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1850
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2019
+@use: [C1, C2]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2005
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2018
+@use: [C1, C2]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1986
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1925
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1801
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1830
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1764
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1765
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1771
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1807
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1804
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1872
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1880
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1847
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1887
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1885
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1849
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1961
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1816
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1913
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1920
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1858
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1772
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1845
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1934
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1839
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1992
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1854
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1803
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1972
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1869
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1899
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1796
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2024
+@use: [C1, C2]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1890
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1813
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_STATES
+@use: [C2]
+code: TEXT | NULL
+name: TEXT | NULL
+
+## GHCN_D.GHCND_1840
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1879
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1933
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1818
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1990
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1782
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1964
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1949
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1901
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1871
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1783
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2001
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1785
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1955
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2000
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2020
+@use: [C1, C2]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1926
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1975
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1837
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1984
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1924
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1976
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2014
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1888
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2015
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1861
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1866
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2016
+@use: [C1, C2]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2021
+@use: [C1, C2]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1919
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1937
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1943
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1907
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1774
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1855
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2010
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1940
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1947
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1814
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1770
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1945
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1828
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1865
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1860
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1902
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1791
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1981
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1815
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1794
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1959
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1870
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1787
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1911
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1892
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1834
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1898
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2008
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1846
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1978
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1909
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1798
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1996
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1922
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1939
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1889
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_COUNTRIES
+@use: [C2]
+name: TEXT | NULL
+code: TEXT | NULL
+
+## GHCN_D.GHCND_1912
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1806
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1893
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1875
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1863
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1841
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1856
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1886
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1969
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2003
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1973
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1864
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1792
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1825
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1851
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1895
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2023
+@use: [C1, C2]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1963
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1821
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_INVENTORY
+@use: [C2]
+latitude: FLOAT | NULL
+longitude: FLOAT | NULL
+element: TEXT | NULL
+firstyear: NUMBER | NULL
+lastyear: NUMBER | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1983
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1881
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1977
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1944
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1767
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1789
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1906
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1800
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1948
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1891
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1876
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1917
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1836
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1915
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1810
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1820
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2009
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1778
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1776
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1773
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1921
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1848
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1763
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2006
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1950
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1795
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1788
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1884
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1971
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1793
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1985
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1968
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1974
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1835
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1873
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1936
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1819
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1900
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1938
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1799
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1777
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1993
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1862
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1882
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2011
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1929
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1817
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1896
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1908
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1946
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1987
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1832
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1826
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1956
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1951
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL

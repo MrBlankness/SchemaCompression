@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq003",
+  "question": "Between April 1 and July 31 of 2017, using the hits product revenue data along with the totals transactions to classify sessions as purchase (transactions ≥ 1 and productRevenue not null) or non-purchase (transactions null and productRevenue null), compare the average pageviews per visitor for each group by month",
+  "db_id": "GA360",
+  "source_document": "google_analytics_sample.ga_sessions.md",
+  "evidence": "Tables: Daily tables have format 'ga_sessions_YYYYMMDD'. Date range needed: April 1 to July 31, 2017. Columns: totals.transactions (INTEGER) - total ecommerce transactions within session. hits.product.productRevenue (INTEGER) - revenue of product, expressed as value passed to Analytics multiplied by 10^6. totals.pageviews (INTEGER) - total pageviews within session. fullVisitorId (STRING) - unique visitor ID. date (STRING) - session date in YYYYMMDD format. Classification logic: purchase sessions require transactions ≥ 1 AND productRevenue not null; non-purchase sessions require transactions null AND productRevenue null. Grouping by month from date field."
+}

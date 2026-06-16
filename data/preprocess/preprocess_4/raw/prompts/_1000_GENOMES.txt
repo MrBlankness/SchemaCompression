@@ -1,0 +1,120 @@
+[TABLES]
+## _1000_GENOMES.VARIANTS
+CIEND: VARIANT | NULL | eg=[[]]
+PV4: VARIANT | NULL | eg=[[]]
+THETA: FLOAT | NULL | eg=[0.0008, 0.0003]
+AFR_AF: FLOAT | NULL | eg=[NaN, 0.002]
+EUR_AF: FLOAT | NULL | eg=[0.0013, NaN]
+LDAF: FLOAT | NULL | eg=[0.0006, 0.0008]
+filter: VARIANT | NULL | eg=[["PASS"]]
+call: VARIANT | NULL | eg=[[{"DS":0.0,"PL":[],"call_set_id":"10473108253681171589-0","call_set_name":"HG00261","genotype":[0,0],"genotype_likelihood":[-0.06,-0.92,-5.0],"phaseset":"*"},{"DS":0.0,"PL":[],"call_set_id":"10473108253681171589-1","call_set_name":"HG00593","genotype":[0,0],"genotype_likelihood":[-0.06,-0.89,-4.7],"phaseset":"*"},{"DS":0.0,"PL":[],"call_set_id":"10473108253681171589-2","call_set_name":"NA12749","genotype":[0,0],"genotype_likelihood":[-0.05,-0.94,-4.7],"phaseset":"*"},{"DS":0.0,"PL":[],"call_set_id":"10473108253681171589-3","call_set_name":"HG00150","genotype":[0,0],"genotype_likelihood":[-0.03,-1.17,-5.0],"phaseset":"*"},{"DS":0.0,"PL":[],"call_set_id":"10473108253681171589-4","call_set_name":"NA19675","genotype":[0,0],"genotype_likelihood":[0.0,-1.99,-5.0],"phaseset":"*"},{"DS":0.0,"PL":[],"call_set_id":"10473108253681171589-5","call_set_name":"NA19651","genotype":[0,0],"genotype_likelihood":[0.0,-2.81,-5.0],"phaseset":"*"},{"DS":0.0,"PL":[],"call_set_id":"10473108253681171589-6","...]
+RSQ: FLOAT | NULL | eg=[0.7805, 0.5779]
+alternate_bases: VARIANT | NULL | eg=[["C"], ["A"]]
+DP4: VARIANT | NULL | eg=[[]]
+SOURCE: VARIANT | NULL | eg=[[]]
+ASN_AF: FLOAT | NULL | eg=[NaN, 0.0017]
+SVLEN: NUMBER | NULL
+ERATE: FLOAT | NULL | eg=[0.0003, 0.0005]
+HOMLEN: NUMBER | NULL
+CIPOS: VARIANT | NULL | eg=[[]]
+AVGPOST: FLOAT | NULL | eg=[0.9997, 0.9992]
+quality: FLOAT | NULL | eg=[100.0]
+AA: TEXT | NULL | eg=["T"]
+reference_name: TEXT | NULL | eg=["14", "7"]
+AC: VARIANT | NULL | eg=[[1]]
+HWE: FLOAT | NULL
+VT: TEXT | NULL | eg=["SNP"]
+AC1: NUMBER | NULL
+names: VARIANT | NULL | eg=[["rs149794549","rs149794549"], ["rs180930105","rs180930105"]]
+reference_bases: TEXT | NULL | eg=["T"]
+DP: NUMBER | NULL
+AMR_AF: FLOAT | NULL | eg=[NaN, 0.0028]
+AN: NUMBER | NULL | eg=[2184]
+start: NUMBER | NULL | eg=[65343625, 75658504]
+MQ: NUMBER | NULL
+SNPSOURCE: VARIANT | NULL | eg=[["LOWCOV"]]
+SVTYPE: TEXT | NULL
+FQ: FLOAT | NULL
+HOMSEQ: TEXT | NULL
+AF: FLOAT | NULL | eg=[0.0005]
+end: NUMBER | NULL | eg=[65343626, 75658505]
+G3: VARIANT | NULL | eg=[[]]
+AF1: FLOAT | NULL
+
+## _1000_GENOMES.PEDIGREE
+Second_Order: TEXT | NULL | eg=["0"]
+Individual_ID: TEXT | NULL | eg=["HG01960", "HG02559"]
+Other_Comments: TEXT | NULL | eg=["0"]
+Third_Order: TEXT | NULL | eg=["0"]
+Family_ID: TEXT | NULL | eg=["BB11", "BB68"]
+Maternal_ID: TEXT | NULL | eg=["HG01989", "HG02558"]
+Relationship: TEXT | NULL | eg=["child"]
+Phenotype: NUMBER | NULL | eg=[0]
+Gender: NUMBER | NULL | eg=[2, 1]
+Population: TEXT | NULL | eg=["ACB"]
+Paternal_ID: TEXT | NULL | eg=["HG01988", "HG02557"]
+Siblings: TEXT | NULL | eg=["0"]
+
+## _1000_GENOMES.SAMPLE_INFO
+In_Low_Coverage_Pilot: BOOLEAN | NULL
+Has_Phase1_chrY_SNPS: BOOLEAN | NULL
+ET_Pilot_Centers: TEXT | NULL | eg=[""]
+Super_Population: TEXT | NULL | eg=["AFR"]
+Third_Order: TEXT | NULL | eg=[""]
+LC_Indel_Ratio: FLOAT | NULL | eg=[1.3, 0.82]
+Unknown_Second_Order: TEXT | NULL | eg=[""]
+Has_Sequence_from_Blood_in_Index: BOOLEAN | NULL
+LC_Non_Duplicated_Aligned_Coverage: FLOAT | NULL | eg=[10.17, 6.87]
+X_Targets_Covered_to_20x_or_greater: FLOAT | NULL | eg=[0.917355, 0.937257]
+Unexpected_Parent_Child: TEXT | NULL | eg=[""]
+Has_Axiom_Genotypes: BOOLEAN | NULL
+VerifyBam_E_Omni_Chip: FLOAT | NULL
+Main_Project_E_Platform: TEXT | NULL | eg=["ILLUMINA"]
+Non_Paternity: TEXT | NULL | eg=[""]
+VerifyBam_E_Omni_Free: FLOAT | NULL | eg=[0.00487, 0.00208]
+Main_project_LC_Centers: TEXT | NULL | eg=["BI", "ILLUMINA"]
+LC_Passed_QC: BOOLEAN | NULL | eg=[true]
+Gender: TEXT | NULL | eg=["female", "male"]
+Has_Exome_LOF_Genotypes: BOOLEAN | NULL
+Has_phase1_chrY_Deletions: BOOLEAN | NULL
+In_High_Coverage_Pilot: BOOLEAN | NULL
+LC_Pilot_Centers: TEXT | NULL | eg=[""]
+HC_Pilot_Platforms: TEXT | NULL | eg=[""]
+Total_LC_Sequence: FLOAT | NULL | eg=[32595580924.0, 19321870100.0]
+Family_ID: TEXT | NULL | eg=["NG23", "NG11"]
+Grandparents: TEXT | NULL | eg=[""]
+In_Phase1_Integrated_Variant_Set: BOOLEAN | NULL
+Population_Description: TEXT | NULL | eg=["Esan in Nigeria"]
+Half_Siblings: TEXT | NULL | eg=[""]
+Population: TEXT | NULL | eg=["ESN"]
+Siblings: TEXT | NULL | eg=[""]
+VerifyBam_E_Affy_Chip: FLOAT | NULL | eg=[0.00543, 0.00262]
+VerifyBam_LC_Omni_Free: FLOAT | NULL | eg=[0.00263, 0.00018]
+E_Passed_QC: BOOLEAN | NULL | eg=[true]
+Sample: TEXT | NULL | eg=["HG02974", "HG02938"]
+Super_Population_Description: TEXT | NULL | eg=["African"]
+Main_Project_E_Centers: TEXT | NULL | eg=["BI", "BGI"]
+Has_Sequence_in_Phase1: BOOLEAN | NULL
+Total_Exome_Sequence: FLOAT | NULL | eg=[7576615180.0, 11664276400.0]
+Phase1_E_Centers: TEXT | NULL | eg=[""]
+VerifyBam_LC_Affy_Chip: FLOAT | NULL | eg=[0.00391, 0.00148]
+EBV_Coverage: FLOAT | NULL | eg=[92.29, 145.22]
+Phase1_E_Platform: TEXT | NULL | eg=[""]
+E_Indel_Ratio: FLOAT | NULL | eg=[1.09, 0.85]
+Has_phase1_chrMT_SNPs: BOOLEAN | NULL
+VerifyBam_LC_Affy_Free: FLOAT | NULL | eg=[0.0038, 0.00101]
+Has_Affy_6_0_Genotypes: BOOLEAN | NULL | eg=[true]
+HC_Pilot_Centers: TEXT | NULL | eg=[""]
+LC_Pilot_Platforms: TEXT | NULL | eg=[""]
+Has_Omni_Genotypes: BOOLEAN | NULL
+ET_Pilot_Platforms: TEXT | NULL | eg=[""]
+DNA_Source_from_Coriell: TEXT | NULL | eg=["LCL"]
+Phase1_LC_Centers: TEXT | NULL | eg=[""]
+Relationship: TEXT | NULL | eg=["mother", "father"]
+Avuncular: TEXT | NULL | eg=[""]
+In_Final_Phase_Variant_Calling: BOOLEAN | NULL | eg=[true]
+Main_project_LC_platform: TEXT | NULL | eg=["ILLUMINA"]
+Phase1_LC_Platform: TEXT | NULL | eg=[""]
+In_Exon_Targetted_Pilot: BOOLEAN | NULL
+VerifyBam_LC_Omni_Chip: FLOAT | NULL
+VerifyBam_E_Affy_Free: FLOAT | NULL | eg=[0.00541, 0.00257]

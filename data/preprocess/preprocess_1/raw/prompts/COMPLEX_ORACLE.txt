@@ -1,0 +1,32 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: COMPLEX_ORACLE.COSTS
+Columns: prod_id, time_id, channel_id, unit_price, promo_id, unit_cost
+
+Table: COMPLEX_ORACLE.SALES
+Columns: prod_id, channel_id, promo_id, amount_sold, time_id, cust_id, quantity_sold
+
+Table: COMPLEX_ORACLE.COUNTRIES
+Columns: country_name, country_total, country_subregion, country_total_id, country_subregion_id, country_id, country_iso_code, country_region, country_region_id
+
+Table: COMPLEX_ORACLE.PRODUCTS
+Columns: prod_subcategory_id, prod_name, prod_category_desc, prod_category, prod_valid, prod_eff_from, supplier_id, prod_subcategory_desc, prod_category_id, prod_total_id, prod_id, prod_weight_class, prod_total, prod_status, prod_list_price, prod_pack_size, prod_subcategory, prod_src_id, prod_eff_to, prod_unit_of_measure, prod_min_price, prod_desc
+
+Table: COMPLEX_ORACLE.CUSTOMERS
+Columns: cust_last_name, cust_valid, cust_gender, cust_credit_limit, cust_state_province_id, cust_id, cust_year_of_birth, cust_city, cust_postal_code, cust_street_address, cust_marital_status, cust_eff_to, cust_email, cust_eff_from, country_id, cust_main_phone_number, cust_total_id, cust_city_id, cust_income_level, cust_first_name, cust_state_province, cust_src_id, cust_total
+
+Table: COMPLEX_ORACLE.PROMOTIONS
+Columns: promo_total_id, promo_subcategory, promo_category_id, promo_id, promo_cost, promo_name, promo_subcategory_id, promo_total, promo_category, promo_begin_date, promo_end_date
+
+Table: COMPLEX_ORACLE.CHANNELS
+Columns: channel_desc, channel_class_id, channel_id, channel_total_id, channel_total, channel_class
+
+Table: COMPLEX_ORACLE.SUPPLEMENTARY_DEMOGRAPHICS
+Columns: unknown, golf, misc, household_size, soccer, occupation, education, tennis, affinity_card, yrs_residence, baseball, comments, cust_id, cricket
+
+Table: COMPLEX_ORACLE.CURRENCY
+Columns: year, country, to_us, month
+
+Table: COMPLEX_ORACLE.TIMES
+Columns: fiscal_month_desc, calendar_year_id, fiscal_month_number, calendar_month_name, end_of_fis_month, fiscal_quarter_desc, day_number_in_week, calendar_quarter_id, fiscal_year, calendar_month_id, end_of_cal_year, end_of_cal_quarter, end_of_cal_month, calendar_quarter_desc, week_ending_day_id, days_in_fis_quarter, fiscal_month_id, day_name, fiscal_quarter_id, end_of_fis_year, calendar_month_desc, days_in_fis_month, day_number_in_month, end_of_fis_quarter, week_ending_day, calendar_year, time_id, days_in_fis_year, days_in_cal_year, calendar_week_number, fiscal_year_id, calendar_quarter_number, days_in_cal_month, days_in_cal_quarter, fiscal_month_name, fiscal_quarter_number, calendar_month_number, fiscal_week_number

@@ -1,0 +1,98 @@
+[TABLES]
+## DEPS_DEV_V1.DEPENDENCYGRAPHEDGES
+System: TEXT | NULL
+Requirement: TEXT | NULL
+SnapshotAt: NUMBER | NULL
+Name: TEXT | NULL
+Version: TEXT | NULL
+From: VARIANT | NULL
+To: VARIANT | NULL
+
+## DEPS_DEV_V1.ADVISORIES
+ReferenceURLs: VARIANT | NULL
+CVSS3Score: NUMBER | NULL
+Packages: VARIANT | NULL
+Aliases: VARIANT | NULL
+SnapshotAt: NUMBER | NULL
+Severity: TEXT | NULL
+GitHubSeverity: TEXT | NULL
+SourceID: TEXT | NULL
+Description: TEXT | NULL
+SourceURL: TEXT | NULL
+Disclosed: NUMBER | NULL
+Source: TEXT | NULL
+Title: TEXT | NULL
+
+## DEPS_DEV_V1.PACKAGEVERSIONTOPROJECT
+SnapshotAt: NUMBER | NULL
+System: TEXT | NULL
+RelationType: TEXT | NULL
+ProjectType: TEXT | NULL
+ProjectName: TEXT | NULL
+Name: TEXT | NULL
+RelationProvenance: TEXT | NULL
+Version: TEXT | NULL
+
+## DEPS_DEV_V1.DEPENDENTS
+Name: TEXT | NULL
+SnapshotAt: NUMBER | NULL
+MinimumDepth: NUMBER | NULL
+System: TEXT | NULL
+DependentIsHighestReleaseWithResolution: BOOLEAN | NULL
+Dependent: VARIANT | NULL
+Version: TEXT | NULL
+
+## DEPS_DEV_V1.PROJECTS
+StarsCount: NUMBER | NULL
+ForksCount: NUMBER | NULL
+Type: TEXT | NULL
+Homepage: TEXT | NULL
+OpenIssuesCount: NUMBER | NULL
+SnapshotAt: NUMBER | NULL
+Licenses: VARIANT | NULL
+Description: TEXT | NULL
+OSSFuzz: VARIANT | NULL
+Name: TEXT | NULL
+
+## DEPS_DEV_V1.NUGETREQUIREMENTS
+DependencyGroups: VARIANT | NULL
+Version: TEXT | NULL
+Name: TEXT | NULL
+SnapshotAt: NUMBER | NULL
+
+## DEPS_DEV_V1.SNAPSHOTS
+Time: NUMBER | NULL
+
+## DEPS_DEV_V1.PACKAGEVERSIONS
+DependenciesProcessed: BOOLEAN | NULL
+Hashes: VARIANT | NULL
+Links: VARIANT | NULL
+Purl: TEXT | NULL
+SLSAProvenance: VARIANT | NULL
+Registries: VARIANT | NULL
+Name: TEXT | NULL
+DependencyError: BOOLEAN | NULL
+Version: TEXT | NULL
+UpstreamIdentifiers: VARIANT | NULL
+Advisories: VARIANT | NULL
+Licenses: VARIANT | NULL
+VersionInfo: VARIANT | NULL
+UpstreamPublishedAt: NUMBER | NULL
+System: TEXT | NULL
+SnapshotAt: NUMBER | NULL
+
+## DEPS_DEV_V1.PACKAGEVERSIONHASHES
+System: TEXT | NULL
+HashType: TEXT | NULL
+SnapshotAt: NUMBER | NULL
+Name: TEXT | NULL
+Version: TEXT | NULL
+Hash: TEXT | NULL
+
+## DEPS_DEV_V1.DEPENDENCIES
+Version: TEXT | NULL
+System: TEXT | NULL
+Name: TEXT | NULL
+SnapshotAt: NUMBER | NULL
+Dependency: VARIANT | NULL
+MinimumDepth: NUMBER | NULL

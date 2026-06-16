@@ -1,0 +1,21 @@
+[TEMPLATES]
+Format: Tn|col1,col2|schema1.table1;schema2.table2
+T2|order_id,customer_id,exclusions,pizza_id,extras,order_time|MODERN_DATA.PIZZA_CLEAN_CUSTOMER_ORDERS;MODERN_DATA.PIZZA_CUSTOMER_ORDERS
+
+[STANDALONE]
+Format: schema.table|col1,col2
+MODERN_DATA.COMPANIES_DATES|year_founded,date_joined,company_id
+MODERN_DATA.COMPANIES_FUNDING|company_id,funding,select_investors,valuation
+MODERN_DATA.COMPANIES_INDUSTRIES|industry,company_id
+MODERN_DATA.INCOME_TREES|zipcode,Margin_of_Error_Total,Estimate_Mean_income,Estimate_Total,Estimate_Median_income,Margin_of_Error_Mean_income,Margin_of_Error_Median_income
+MODERN_DATA.PIZZA_CLEAN_RUNNER_ORDERS|pickup_time,duration,distance,runner_id,cancellation,order_id
+MODERN_DATA.PIZZA_GET_EXCLUSIONS|row_id,total_exclusions,exclusions,order_id
+MODERN_DATA.PIZZA_GET_EXTRAS|row_id,extras_count,order_id,extras
+MODERN_DATA.PIZZA_NAMES|pizza_id,pizza_name
+MODERN_DATA.PIZZA_RECIPES|toppings,pizza_id
+MODERN_DATA.PIZZA_RUNNERS|runner_id,registration_date
+MODERN_DATA.PIZZA_RUNNER_ORDERS|distance,runner_id,pickup_time,order_id,cancellation,duration
+MODERN_DATA.PIZZA_TOPPINGS|topping_name,topping_id
+MODERN_DATA.STATISTICS|total_deaths,date,state,total_cases
+MODERN_DATA.TREES|state,latitude,tree_id,status,spc_common,nta_name,zipcode,stump_diam,longitude,borocode,health,boroname,tree_dbh,address,spc_latin,idx
+MODERN_DATA.WORD_LIST|words

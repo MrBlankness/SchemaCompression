@@ -1,0 +1,23 @@
+[COMPONENTS]
+@C1:body,comment_count,last_activity_date,last_edit_date,last_editor_display_name,last_editor_user_id,owner_display_name,owner_user_id,post_type_id,tags,title
+@C2:accepted_answer_id,answer_count,favorite_count,view_count
+@C3:accepted_answer_id,answer_count,favorite_count,view_count
+
+[TABLES]
+Format: schema.table|components|columns
+STACKOVERFLOW.POSTS_ORPHANED_TAG_WIKI|@C1,@C2|creation_date,score,parent_id,community_owned_date,id
+STACKOVERFLOW.VOTES||creation_date,vote_type_id,post_id,id
+STACKOVERFLOW.POST_LINKS||post_id,related_post_id,creation_date,id,link_type_id
+STACKOVERFLOW.POSTS_WIKI_PLACEHOLDER|@C1,@C2|community_owned_date,id,creation_date,score,parent_id
+STACKOVERFLOW.USERS||display_name,profile_image_url,last_access_date,views,about_me,id,up_votes,reputation,age,website_url,down_votes,creation_date,location
+STACKOVERFLOW.TAGS||tag_name,excerpt_post_id,id,wiki_post_id,count
+STACKOVERFLOW.POST_HISTORY||creation_date,post_history_type_id,user_id,comment,post_id,revision_guid,text,id
+STACKOVERFLOW.POSTS_QUESTIONS|@C1,@C3|community_owned_date,creation_date,id,parent_id,score
+STACKOVERFLOW.STACKOVERFLOW_POSTS|@C1,@C3|score,parent_id,creation_date,community_owned_date,id
+STACKOVERFLOW.POSTS_MODERATOR_NOMINATION|@C1,@C2|id,parent_id,score,community_owned_date,creation_date
+STACKOVERFLOW.POSTS_PRIVILEGE_WIKI|@C1,@C2|id,creation_date,community_owned_date,parent_id,score
+STACKOVERFLOW.COMMENTS||id,creation_date,user_id,score,text,user_display_name,post_id
+STACKOVERFLOW.BADGES||tag_based,id,date,user_id,name,class
+STACKOVERFLOW.POSTS_ANSWERS|@C1,@C2|score,community_owned_date,parent_id,id,creation_date
+STACKOVERFLOW.POSTS_TAG_WIKI_EXCERPT|@C1,@C2|score,creation_date,community_owned_date,parent_id,id
+STACKOVERFLOW.POSTS_TAG_WIKI|@C1,@C2|score,parent_id,id,creation_date,community_owned_date

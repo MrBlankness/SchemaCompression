@@ -1,0 +1,704 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: NOAA_PIFSC_METADATA.DCLDE_2020_1705_MINKE_DETECTIONS
+Columns: detection_time_end_utc, latitude, longitude, detection_time_start_local, detection_time_start_utc, point
+
+Table: NOAA_PIFSC_METADATA.DCLDE_2020_SPECIES_LOOKUP
+Columns: common_name, species_name, code
+
+Table: NOAA_PIFSC_METADATA.DCLDE_2020_1706_ODONTOCETE_DETECTIONS
+Columns: detection_time_end_utc, sighting_number, detection_distance, beam_time_utc, first_angle, latitude, species2_id, detection_time_start_local, longitude, point, detection_time_start_utc, species3_id, first_distance, acoustic_detection_number, beam_distance, species1_id
+
+Table: NOAA_PIFSC_METADATA.DCLDE_2020_1705_VISUAL_SIGHTINGS
+Columns: effort, sighting_number, longitude, latitude, local_ship_date, total_high, distance, total_best, point, bearing, total_low, effort_type, species_id, sighting_local_time
+
+Table: NOAA_PIFSC_METADATA.DCLDE_SETTE_GPS
+Columns: local_time, latitude, utc_time, speed, effort, point, longitude
+
+Table: NOAA_PIFSC_METADATA.DCLDE_LASKER_GPS
+Columns: longitude, latitude, effort, utc_time, speed, local_time
+
+Table: NOAA_PIFSC_METADATA.DCLDE_2020_1706_ARRAY
+Columns: hp6_ad, array1, hp6_dist, hp3_ad, hp4_dist, array2, hp3_dist, array_end_local, hp2_ad, hp1_ad, hp4_ad, hp5_dist, array_end_utc, hp2_dist, hp5_ad, hp1_dist, array_start_local, array_start_utc
+
+Table: NOAA_PIFSC_METADATA.DCLDE_2020_DETECTION_README
+Columns: field, description, table
+
+Table: NOAA_PIFSC_METADATA.DCLDE_2020_1705_ODONTOCETE_DETECTIONS
+Columns: first_distance, latitude, beam_time_utc, first_angle, species1_id, species3_id, detection_time_start_utc, point, sighting_number, longitude, species2_id, acoustic_detection_number, detection_time_end_utc, detection_distance, beam_distance, detection_time_start_local
+
+Table: NOAA_PIFSC_METADATA.DCLDE_LASKER_ARRAY_DEPTH
+Columns: end_depth, inline_depth, local_time, utc_time
+
+Table: NOAA_PIFSC_METADATA.DCLDE_2020_1706_VISUAL_SIGHTINGS
+Columns: total_best, total_high, species_id, point, sighting_local_time, bearing, effort_type, longitude, sighting_number, effort, total_low, distance, latitude, local_ship_date
+
+Table: NOAA_PIFSC_METADATA.DCLDE_2020_1705_ARRAY
+Columns: hp2_ad, array2, array_end_local, hp6_ad, array_start_local, hp5_ad, hp1_dist, hp6_dist, hp3_ad, hp4_dist, hp2_dist, hp1_ad, hp5_dist, array_start_utc, hp4_ad, array1, hp3_dist, array_end_utc
+
+Table: NOAA_PIFSC_METADATA.DCLDE_SETTE_ARRAY_DEPTH
+Columns: local_time, inline_depth, end_depth, utc_time
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1976
+Columns: state, event_type, reference_location, episode_id, cz_type, tor_other_wfo, event_azimuth, damage_crops, injuries_direct, cz_name, event_begin_time, magnitude_type, event_point, cz_fips_code, tor_length, deaths_direct, tor_width, damage_property, source, event_id, event_longitude, event_latitude, event_range, injuries_indirect, magnitude, event_timezone, location_index, wfo, event_end_time, flood_cause, state_fips_code, deaths_indirect, tor_f_scale
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1981
+Columns: source, event_azimuth, cz_name, wfo, event_id, tor_length, deaths_direct, injuries_indirect, deaths_indirect, event_latitude, damage_crops, tor_other_wfo, event_longitude, event_type, event_timezone, injuries_direct, event_end_time, event_point, event_range, episode_id, location_index, magnitude_type, event_begin_time, magnitude, tor_f_scale, flood_cause, cz_fips_code, tor_width, damage_property, reference_location, state_fips_code, cz_type, state
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2004
+Columns: episode_id, state_fips_code, injuries_indirect, flood_cause, event_id, event_end_time, event_type, event_longitude, tor_f_scale, tor_length, injuries_direct, tor_other_wfo, cz_type, event_azimuth, state, event_timezone, deaths_direct, cz_name, source, event_point, event_latitude, magnitude, event_range, damage_property, tor_width, reference_location, magnitude_type, damage_crops, cz_fips_code, wfo, event_begin_time, location_index, deaths_indirect
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1966
+Columns: event_timezone, location_index, event_id, magnitude_type, tor_f_scale, tor_width, state_fips_code, event_longitude, injuries_direct, event_begin_time, event_latitude, event_type, deaths_indirect, state, episode_id, magnitude, event_point, event_end_time, tor_length, tor_other_wfo, damage_property, cz_fips_code, cz_name, deaths_direct, event_range, event_azimuth, damage_crops, flood_cause, injuries_indirect, source, wfo, cz_type, reference_location
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1985
+Columns: reference_location, event_latitude, wfo, injuries_direct, injuries_indirect, magnitude, flood_cause, cz_fips_code, event_type, tor_width, cz_name, event_timezone, event_range, deaths_indirect, event_end_time, event_azimuth, state, damage_property, deaths_direct, event_id, state_fips_code, event_point, tor_length, damage_crops, tor_other_wfo, event_begin_time, magnitude_type, location_index, cz_type, event_longitude, episode_id, tor_f_scale, source
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1989
+Columns: tor_length, state_fips_code, cz_type, deaths_indirect, event_azimuth, location_index, wfo, event_longitude, deaths_direct, state, event_range, tor_width, cz_fips_code, event_type, damage_property, event_begin_time, magnitude_type, event_end_time, flood_cause, reference_location, source, injuries_indirect, injuries_direct, event_timezone, tor_other_wfo, event_point, damage_crops, cz_name, event_id, event_latitude, episode_id, magnitude, tor_f_scale
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1991
+Columns: magnitude_type, tor_width, episode_id, tor_other_wfo, deaths_direct, tor_length, reference_location, damage_property, event_id, event_begin_time, source, wfo, injuries_indirect, location_index, event_end_time, state, cz_name, cz_type, event_timezone, event_point, event_azimuth, cz_fips_code, injuries_direct, magnitude, event_type, event_range, state_fips_code, event_latitude, event_longitude, flood_cause, deaths_indirect, tor_f_scale, damage_crops
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1972
+Columns: injuries_indirect, event_point, deaths_indirect, cz_name, injuries_direct, magnitude_type, cz_type, flood_cause, tor_f_scale, event_type, wfo, event_begin_time, tor_width, event_id, damage_property, reference_location, event_latitude, damage_crops, source, deaths_direct, tor_other_wfo, event_range, episode_id, magnitude, location_index, event_timezone, cz_fips_code, tor_length, event_longitude, state_fips_code, event_azimuth, state, event_end_time
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2006
+Columns: event_latitude, damage_crops, event_type, state_fips_code, tor_length, magnitude, cz_fips_code, event_timezone, cz_type, source, deaths_indirect, magnitude_type, event_id, cz_name, injuries_direct, damage_property, injuries_indirect, wfo, event_longitude, location_index, state, event_end_time, event_begin_time, event_azimuth, episode_id, flood_cause, event_point, event_range, tor_f_scale, deaths_direct, tor_width, reference_location, tor_other_wfo
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2005
+Columns: source, event_range, wfo, cz_type, event_longitude, magnitude_type, tor_other_wfo, cz_fips_code, state_fips_code, injuries_indirect, cz_name, event_type, tor_f_scale, event_id, deaths_indirect, event_end_time, episode_id, tor_width, magnitude, event_point, reference_location, location_index, injuries_direct, tor_length, event_azimuth, deaths_direct, event_latitude, state, event_timezone, flood_cause, damage_crops, event_begin_time, damage_property
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2014
+Columns: cz_type, event_timezone, event_end_time, damage_crops, event_range, injuries_indirect, tor_other_wfo, cz_name, wfo, location_index, event_type, magnitude_type, event_latitude, event_point, flood_cause, deaths_direct, episode_id, cz_fips_code, deaths_indirect, tor_f_scale, reference_location, injuries_direct, damage_property, state_fips_code, source, tor_width, state, magnitude, event_begin_time, event_id, event_longitude, event_azimuth, tor_length
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1960
+Columns: event_latitude, cz_name, damage_property, magnitude, event_type, state, event_id, location_index, reference_location, cz_type, damage_crops, flood_cause, event_longitude, event_azimuth, injuries_indirect, wfo, tor_length, source, event_point, tor_f_scale, event_timezone, tor_width, injuries_direct, event_begin_time, episode_id, tor_other_wfo, deaths_indirect, deaths_direct, event_range, cz_fips_code, state_fips_code, event_end_time, magnitude_type
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1998
+Columns: damage_crops, reference_location, event_type, source, tor_length, event_latitude, injuries_indirect, flood_cause, tor_width, deaths_indirect, event_range, tor_other_wfo, episode_id, event_end_time, event_timezone, cz_fips_code, cz_name, magnitude_type, location_index, tor_f_scale, magnitude, damage_property, event_point, cz_type, injuries_direct, state, event_id, deaths_direct, state_fips_code, event_azimuth, event_begin_time, wfo, event_longitude
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1950
+Columns: cz_type, tor_other_wfo, tor_width, event_range, source, cz_fips_code, event_end_time, event_timezone, magnitude_type, cz_name, event_latitude, event_type, deaths_direct, event_azimuth, injuries_direct, tor_f_scale, event_id, damage_property, state_fips_code, state, location_index, flood_cause, deaths_indirect, episode_id, event_longitude, damage_crops, tor_length, wfo, event_begin_time, reference_location, magnitude, injuries_indirect, event_point
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1977
+Columns: reference_location, location_index, source, event_type, episode_id, cz_fips_code, tor_other_wfo, injuries_indirect, event_point, injuries_direct, state_fips_code, magnitude_type, cz_type, magnitude, event_id, event_begin_time, tor_f_scale, damage_property, cz_name, tor_length, event_timezone, event_longitude, deaths_indirect, damage_crops, state, deaths_direct, event_latitude, tor_width, event_range, event_azimuth, event_end_time, wfo, flood_cause
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1999
+Columns: flood_cause, tor_length, source, event_point, event_type, event_azimuth, magnitude, cz_name, state, location_index, event_longitude, event_latitude, cz_type, damage_crops, tor_width, tor_other_wfo, reference_location, event_timezone, injuries_indirect, injuries_direct, magnitude_type, deaths_indirect, event_begin_time, event_end_time, cz_fips_code, damage_property, state_fips_code, tor_f_scale, event_range, episode_id, deaths_direct, wfo, event_id
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.TORNADO_REPORTS
+Columns: location, timestamp, state, report_point, time, f_scale, latitude, county, comments, longitude
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2020
+Columns: reference_location, event_azimuth, cz_name, deaths_indirect, injuries_indirect, event_latitude, state_fips_code, event_end_time, event_id, magnitude_type, episode_id, source, damage_property, injuries_direct, deaths_direct, event_type, tor_f_scale, cz_fips_code, tor_width, event_longitude, event_timezone, tor_length, event_begin_time, event_range, state, cz_type, tor_other_wfo, event_point, wfo, magnitude, location_index, damage_crops, flood_cause
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1970
+Columns: tor_other_wfo, episode_id, injuries_indirect, deaths_indirect, event_timezone, injuries_direct, cz_fips_code, event_type, event_longitude, event_point, source, damage_crops, event_latitude, event_end_time, damage_property, location_index, reference_location, magnitude_type, cz_type, state, event_range, event_azimuth, event_id, event_begin_time, tor_length, magnitude, deaths_direct, state_fips_code, tor_f_scale, cz_name, flood_cause, tor_width, wfo
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1953
+Columns: event_type, magnitude_type, event_end_time, damage_property, tor_length, event_longitude, injuries_indirect, injuries_direct, event_timezone, deaths_direct, cz_fips_code, cz_name, location_index, tor_f_scale, state, magnitude, source, tor_width, cz_type, event_latitude, damage_crops, state_fips_code, event_range, event_begin_time, event_id, event_point, wfo, deaths_indirect, event_azimuth, episode_id, tor_other_wfo, flood_cause, reference_location
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1967
+Columns: event_point, state_fips_code, tor_other_wfo, injuries_direct, episode_id, source, event_type, tor_length, tor_width, deaths_indirect, flood_cause, wfo, reference_location, event_id, damage_property, event_range, deaths_direct, tor_f_scale, magnitude, cz_name, event_azimuth, event_end_time, event_begin_time, event_longitude, injuries_indirect, event_timezone, location_index, damage_crops, state, event_latitude, cz_type, cz_fips_code, magnitude_type
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1979
+Columns: event_id, event_type, event_range, tor_length, event_longitude, deaths_direct, deaths_indirect, magnitude, event_azimuth, damage_crops, state_fips_code, cz_type, tor_f_scale, cz_fips_code, tor_width, magnitude_type, event_timezone, injuries_direct, tor_other_wfo, flood_cause, event_point, reference_location, location_index, damage_property, injuries_indirect, episode_id, state, source, cz_name, event_latitude, wfo, event_begin_time, event_end_time
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1958
+Columns: tor_width, cz_type, tor_other_wfo, flood_cause, injuries_direct, damage_crops, episode_id, magnitude_type, tor_f_scale, location_index, event_azimuth, event_type, state_fips_code, event_timezone, event_longitude, event_end_time, damage_property, event_range, magnitude, injuries_indirect, tor_length, reference_location, event_point, cz_fips_code, deaths_indirect, event_id, cz_name, wfo, deaths_direct, state, event_latitude, event_begin_time, source
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1974
+Columns: damage_crops, location_index, reference_location, event_point, event_latitude, event_timezone, magnitude, episode_id, event_end_time, cz_type, event_begin_time, event_range, event_azimuth, event_type, tor_other_wfo, damage_property, tor_f_scale, event_longitude, cz_name, deaths_direct, wfo, flood_cause, injuries_direct, event_id, deaths_indirect, tor_length, magnitude_type, state, tor_width, cz_fips_code, state_fips_code, source, injuries_indirect
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2010
+Columns: event_azimuth, magnitude, cz_type, state, tor_width, tor_other_wfo, location_index, tor_length, magnitude_type, event_longitude, event_begin_time, event_id, deaths_direct, cz_name, event_type, tor_f_scale, event_range, damage_crops, reference_location, wfo, episode_id, event_end_time, event_latitude, event_point, injuries_indirect, flood_cause, event_timezone, state_fips_code, source, cz_fips_code, injuries_direct, damage_property, deaths_indirect
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1959
+Columns: event_begin_time, injuries_indirect, state, episode_id, tor_width, cz_type, source, damage_crops, flood_cause, cz_fips_code, deaths_indirect, event_id, location_index, event_type, injuries_direct, event_latitude, event_point, magnitude_type, state_fips_code, cz_name, event_timezone, magnitude, event_end_time, deaths_direct, tor_other_wfo, tor_f_scale, wfo, event_azimuth, damage_property, event_longitude, reference_location, tor_length, event_range
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1968
+Columns: source, event_longitude, magnitude, cz_fips_code, event_latitude, event_range, tor_width, tor_f_scale, event_id, deaths_direct, state, cz_name, magnitude_type, event_begin_time, deaths_indirect, flood_cause, reference_location, cz_type, tor_other_wfo, location_index, event_timezone, event_point, event_type, state_fips_code, event_end_time, injuries_indirect, tor_length, injuries_direct, wfo, damage_crops, damage_property, episode_id, event_azimuth
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1954
+Columns: event_longitude, tor_other_wfo, damage_property, state, deaths_direct, event_point, wfo, episode_id, cz_name, event_id, tor_length, state_fips_code, event_type, injuries_direct, injuries_indirect, location_index, event_range, deaths_indirect, cz_type, event_azimuth, event_latitude, reference_location, damage_crops, source, flood_cause, tor_width, tor_f_scale, event_begin_time, event_end_time, magnitude_type, event_timezone, cz_fips_code, magnitude
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2016
+Columns: event_latitude, episode_id, tor_length, location_index, event_end_time, tor_other_wfo, event_point, wfo, event_longitude, event_id, damage_crops, event_azimuth, cz_name, event_begin_time, state_fips_code, magnitude, source, tor_f_scale, tor_width, deaths_indirect, magnitude_type, event_timezone, event_range, flood_cause, cz_type, state, event_type, deaths_direct, injuries_indirect, cz_fips_code, damage_property, injuries_direct, reference_location
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2001
+Columns: event_azimuth, event_type, damage_property, event_point, location_index, wfo, tor_width, source, event_timezone, magnitude_type, episode_id, cz_type, reference_location, injuries_direct, event_range, event_longitude, event_begin_time, damage_crops, deaths_direct, deaths_indirect, cz_name, cz_fips_code, tor_other_wfo, state, magnitude, state_fips_code, injuries_indirect, flood_cause, tor_length, tor_f_scale, event_id, event_latitude, event_end_time
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2000
+Columns: event_id, cz_fips_code, event_point, cz_type, injuries_direct, deaths_indirect, event_latitude, location_index, tor_width, cz_name, event_end_time, flood_cause, damage_crops, event_azimuth, source, event_type, magnitude_type, injuries_indirect, event_begin_time, event_timezone, tor_f_scale, episode_id, state, event_range, wfo, magnitude, tor_length, event_longitude, state_fips_code, deaths_direct, tor_other_wfo, reference_location, damage_property
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1986
+Columns: source, tor_other_wfo, event_begin_time, damage_crops, injuries_indirect, event_point, event_azimuth, event_end_time, tor_f_scale, tor_width, cz_name, reference_location, injuries_direct, event_range, damage_property, location_index, wfo, event_longitude, state_fips_code, event_type, event_timezone, event_id, deaths_indirect, episode_id, magnitude, cz_type, magnitude_type, event_latitude, cz_fips_code, tor_length, flood_cause, state, deaths_direct
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1987
+Columns: event_end_time, event_azimuth, tor_width, event_latitude, deaths_direct, injuries_indirect, magnitude, event_begin_time, damage_crops, event_range, flood_cause, location_index, reference_location, event_timezone, tor_length, event_longitude, cz_fips_code, event_point, event_id, wfo, state_fips_code, cz_type, damage_property, episode_id, magnitude_type, tor_f_scale, state, tor_other_wfo, deaths_indirect, injuries_direct, cz_name, source, event_type
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2008
+Columns: deaths_direct, magnitude, injuries_direct, state, cz_fips_code, magnitude_type, event_range, wfo, tor_length, reference_location, source, event_latitude, event_begin_time, location_index, tor_f_scale, cz_type, damage_property, state_fips_code, event_id, injuries_indirect, cz_name, event_point, event_timezone, deaths_indirect, event_longitude, episode_id, tor_other_wfo, tor_width, flood_cause, event_azimuth, event_end_time, event_type, damage_crops
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1995
+Columns: event_latitude, damage_property, tor_other_wfo, wfo, deaths_indirect, location_index, magnitude_type, injuries_direct, tor_length, state_fips_code, cz_type, magnitude, deaths_direct, source, event_azimuth, episode_id, tor_width, reference_location, event_longitude, event_end_time, damage_crops, event_range, event_type, cz_name, event_begin_time, flood_cause, injuries_indirect, state, event_timezone, event_id, cz_fips_code, event_point, tor_f_scale
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1969
+Columns: reference_location, damage_crops, deaths_indirect, event_type, event_end_time, deaths_direct, state_fips_code, tor_width, state, tor_f_scale, wfo, event_range, magnitude, magnitude_type, flood_cause, cz_fips_code, event_point, cz_type, damage_property, event_latitude, tor_length, episode_id, location_index, event_azimuth, event_longitude, tor_other_wfo, injuries_direct, cz_name, event_begin_time, source, injuries_indirect, event_timezone, event_id
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1996
+Columns: event_latitude, location_index, event_longitude, event_point, tor_other_wfo, damage_crops, deaths_indirect, tor_length, event_timezone, event_end_time, state, source, tor_f_scale, tor_width, event_range, cz_type, injuries_direct, injuries_indirect, event_azimuth, flood_cause, episode_id, deaths_direct, event_begin_time, damage_property, state_fips_code, magnitude, cz_name, event_id, cz_fips_code, magnitude_type, wfo, reference_location, event_type
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1961
+Columns: tor_length, tor_other_wfo, state_fips_code, damage_crops, event_azimuth, flood_cause, event_type, magnitude_type, tor_f_scale, event_range, deaths_indirect, event_longitude, reference_location, cz_fips_code, event_begin_time, state, cz_name, cz_type, magnitude, event_timezone, damage_property, tor_width, event_point, deaths_direct, event_id, episode_id, source, wfo, injuries_indirect, event_latitude, event_end_time, injuries_direct, location_index
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1993
+Columns: event_begin_time, injuries_direct, damage_crops, cz_type, magnitude_type, event_end_time, event_latitude, reference_location, wfo, event_type, location_index, injuries_indirect, event_range, deaths_indirect, cz_name, tor_length, state_fips_code, event_timezone, flood_cause, tor_f_scale, cz_fips_code, deaths_direct, state, episode_id, event_longitude, tor_width, tor_other_wfo, event_azimuth, event_id, damage_property, magnitude, event_point, source
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2012
+Columns: state_fips_code, event_begin_time, injuries_indirect, magnitude_type, tor_other_wfo, damage_property, deaths_indirect, state, event_timezone, tor_length, cz_type, flood_cause, location_index, event_point, magnitude, cz_fips_code, reference_location, event_type, tor_f_scale, damage_crops, event_range, event_latitude, cz_name, source, wfo, event_longitude, episode_id, injuries_direct, tor_width, event_id, deaths_direct, event_end_time, event_azimuth
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.HAIL_REPORTS
+Columns: time, location, report_point, county, size, latitude, comments, timestamp, state, longitude
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2017
+Columns: tor_width, event_range, location_index, injuries_indirect, wfo, event_type, damage_crops, tor_f_scale, event_azimuth, injuries_direct, tor_other_wfo, event_longitude, state, state_fips_code, reference_location, magnitude_type, cz_name, deaths_indirect, episode_id, damage_property, event_latitude, cz_fips_code, magnitude, event_begin_time, deaths_direct, flood_cause, event_end_time, event_point, source, tor_length, cz_type, event_timezone, event_id
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1990
+Columns: state, reference_location, event_end_time, event_latitude, event_range, state_fips_code, injuries_indirect, event_timezone, flood_cause, cz_fips_code, damage_property, tor_width, event_longitude, wfo, damage_crops, event_type, event_begin_time, injuries_direct, deaths_indirect, event_azimuth, cz_type, magnitude_type, cz_name, magnitude, location_index, deaths_direct, episode_id, event_point, tor_length, tor_f_scale, event_id, tor_other_wfo, source
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1964
+Columns: source, event_timezone, event_longitude, event_point, flood_cause, event_type, deaths_indirect, tor_other_wfo, event_id, state_fips_code, injuries_direct, episode_id, magnitude_type, reference_location, cz_name, event_latitude, state, magnitude, cz_fips_code, tor_width, injuries_indirect, damage_crops, event_range, deaths_direct, wfo, event_end_time, event_azimuth, damage_property, event_begin_time, cz_type, location_index, tor_f_scale, tor_length
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1952
+Columns: event_end_time, state_fips_code, event_longitude, source, event_type, deaths_indirect, event_range, tor_f_scale, event_azimuth, state, injuries_indirect, cz_type, tor_other_wfo, damage_crops, cz_fips_code, tor_length, event_begin_time, reference_location, flood_cause, event_id, magnitude_type, damage_property, injuries_direct, episode_id, magnitude, location_index, event_point, event_latitude, deaths_direct, tor_width, event_timezone, wfo, cz_name
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2022
+Columns: deaths_direct, damage_crops, episode_id, event_timezone, event_begin_time, tor_width, cz_name, event_longitude, event_id, event_end_time, tor_other_wfo, tor_length, cz_type, event_azimuth, magnitude, wfo, event_range, event_type, state, injuries_indirect, flood_cause, tor_f_scale, deaths_indirect, damage_property, magnitude_type, state_fips_code, event_latitude, event_point, source, cz_fips_code, location_index, injuries_direct, reference_location
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1978
+Columns: cz_fips_code, cz_name, event_range, event_end_time, source, event_azimuth, injuries_indirect, tor_length, injuries_direct, cz_type, event_longitude, event_type, event_timezone, event_id, event_latitude, tor_width, damage_crops, state, wfo, magnitude_type, flood_cause, state_fips_code, damage_property, episode_id, deaths_indirect, deaths_direct, reference_location, magnitude, tor_f_scale, location_index, event_point, event_begin_time, tor_other_wfo
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1951
+Columns: state, deaths_direct, event_longitude, event_latitude, event_timezone, tor_length, deaths_indirect, cz_name, tor_width, magnitude_type, cz_type, flood_cause, tor_other_wfo, event_type, cz_fips_code, reference_location, damage_property, source, wfo, event_azimuth, event_point, damage_crops, tor_f_scale, event_end_time, injuries_direct, location_index, magnitude, event_id, episode_id, state_fips_code, event_begin_time, injuries_indirect, event_range
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2024
+Columns: damage_crops, tor_length, injuries_indirect, reference_location, tor_f_scale, event_end_time, event_point, flood_cause, event_range, event_timezone, deaths_direct, event_latitude, deaths_indirect, event_azimuth, location_index, tor_other_wfo, damage_property, source, episode_id, magnitude, wfo, state_fips_code, magnitude_type, tor_width, cz_fips_code, injuries_direct, state, event_type, cz_type, event_id, event_longitude, event_begin_time, cz_name
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2013
+Columns: event_timezone, event_range, injuries_direct, event_latitude, tor_width, event_id, magnitude_type, damage_crops, deaths_direct, location_index, event_type, cz_name, source, cz_type, flood_cause, reference_location, tor_length, event_point, magnitude, cz_fips_code, injuries_indirect, deaths_indirect, tor_other_wfo, event_longitude, event_azimuth, event_end_time, state, episode_id, tor_f_scale, damage_property, event_begin_time, wfo, state_fips_code
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2011
+Columns: event_type, event_azimuth, magnitude_type, event_timezone, event_end_time, event_range, event_id, magnitude, cz_fips_code, wfo, event_begin_time, episode_id, cz_name, tor_f_scale, damage_crops, state_fips_code, tor_other_wfo, tor_length, deaths_indirect, flood_cause, state, event_point, deaths_direct, event_longitude, source, cz_type, damage_property, injuries_indirect, location_index, tor_width, injuries_direct, reference_location, event_latitude
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2009
+Columns: damage_property, tor_width, reference_location, injuries_indirect, event_id, magnitude, tor_other_wfo, event_azimuth, flood_cause, event_timezone, event_point, state, magnitude_type, event_longitude, cz_type, tor_f_scale, tor_length, cz_fips_code, deaths_direct, event_range, location_index, event_type, event_begin_time, episode_id, damage_crops, wfo, event_end_time, source, event_latitude, state_fips_code, cz_name, deaths_indirect, injuries_direct
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.NWS_FORECAST_REGIONS
+Columns: state_zone, fe_area, shortname, cwa, time_zone, shape_geometry, name, zone, lat, lon, state
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1983
+Columns: event_range, tor_length, deaths_indirect, cz_fips_code, source, cz_type, event_timezone, location_index, event_point, deaths_direct, episode_id, event_end_time, injuries_direct, flood_cause, event_longitude, tor_other_wfo, event_azimuth, magnitude, event_begin_time, event_id, cz_name, tor_width, damage_property, state_fips_code, event_type, state, injuries_indirect, reference_location, event_latitude, wfo, damage_crops, magnitude_type, tor_f_scale
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1988
+Columns: location_index, magnitude_type, event_timezone, event_end_time, episode_id, magnitude, damage_crops, cz_fips_code, tor_f_scale, injuries_direct, injuries_indirect, reference_location, event_range, event_type, event_begin_time, tor_other_wfo, state_fips_code, deaths_direct, cz_type, source, event_latitude, damage_property, event_azimuth, deaths_indirect, event_longitude, cz_name, state, flood_cause, event_point, event_id, tor_length, tor_width, wfo
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1984
+Columns: event_timezone, event_latitude, wfo, deaths_indirect, event_end_time, damage_property, event_range, flood_cause, location_index, injuries_indirect, tor_f_scale, deaths_direct, event_longitude, reference_location, magnitude_type, damage_crops, cz_type, state_fips_code, magnitude, injuries_direct, event_point, cz_fips_code, tor_length, event_type, state, tor_other_wfo, episode_id, event_begin_time, source, event_id, tor_width, cz_name, event_azimuth
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2007
+Columns: episode_id, event_range, tor_length, event_end_time, location_index, state, state_fips_code, event_begin_time, source, injuries_direct, injuries_indirect, cz_fips_code, tor_f_scale, tor_other_wfo, damage_property, event_longitude, damage_crops, cz_type, event_latitude, reference_location, event_id, magnitude_type, wfo, cz_name, event_timezone, event_azimuth, deaths_indirect, flood_cause, magnitude, event_point, deaths_direct, event_type, tor_width
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1957
+Columns: magnitude_type, event_id, event_type, event_azimuth, cz_name, deaths_direct, state, injuries_indirect, episode_id, event_longitude, event_end_time, tor_length, tor_f_scale, cz_fips_code, source, event_point, reference_location, event_begin_time, event_range, flood_cause, tor_other_wfo, location_index, cz_type, injuries_direct, event_timezone, deaths_indirect, magnitude, state_fips_code, damage_crops, tor_width, damage_property, wfo, event_latitude
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1973
+Columns: tor_other_wfo, flood_cause, damage_crops, event_begin_time, magnitude, reference_location, injuries_indirect, episode_id, location_index, deaths_direct, state_fips_code, tor_length, magnitude_type, deaths_indirect, state, cz_type, event_end_time, tor_width, source, wfo, tor_f_scale, event_latitude, event_longitude, event_azimuth, event_id, event_point, event_range, damage_property, event_timezone, injuries_direct, cz_name, event_type, cz_fips_code
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1994
+Columns: wfo, deaths_indirect, location_index, state_fips_code, event_timezone, magnitude_type, event_longitude, tor_other_wfo, source, event_end_time, event_azimuth, damage_crops, event_begin_time, cz_fips_code, event_point, cz_type, event_id, cz_name, deaths_direct, state, event_latitude, magnitude, injuries_indirect, tor_width, event_range, reference_location, damage_property, flood_cause, tor_f_scale, episode_id, tor_length, injuries_direct, event_type
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1982
+Columns: event_range, magnitude_type, tor_other_wfo, event_latitude, event_azimuth, deaths_direct, state, event_id, event_point, state_fips_code, cz_fips_code, event_longitude, injuries_indirect, reference_location, source, deaths_indirect, damage_crops, tor_f_scale, cz_name, event_type, tor_width, damage_property, injuries_direct, magnitude, location_index, tor_length, episode_id, cz_type, wfo, event_end_time, event_begin_time, flood_cause, event_timezone
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2023
+Columns: episode_id, reference_location, damage_crops, source, magnitude_type, state_fips_code, injuries_direct, event_point, event_longitude, tor_other_wfo, location_index, event_timezone, state, tor_f_scale, flood_cause, cz_name, deaths_indirect, event_begin_time, event_type, event_end_time, event_azimuth, tor_width, event_latitude, magnitude, cz_fips_code, injuries_indirect, cz_type, event_range, event_id, damage_property, tor_length, deaths_direct, wfo
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1975
+Columns: magnitude, deaths_indirect, event_longitude, damage_property, injuries_direct, event_begin_time, cz_fips_code, tor_other_wfo, cz_type, episode_id, cz_name, event_latitude, location_index, state_fips_code, flood_cause, source, reference_location, event_range, event_id, event_timezone, tor_f_scale, tor_length, damage_crops, tor_width, state, event_point, event_azimuth, injuries_indirect, wfo, magnitude_type, deaths_direct, event_end_time, event_type
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1955
+Columns: wfo, event_longitude, magnitude, event_type, tor_length, episode_id, magnitude_type, reference_location, event_range, damage_crops, event_timezone, cz_type, event_id, flood_cause, tor_other_wfo, event_azimuth, source, damage_property, tor_width, state, tor_f_scale, injuries_indirect, cz_name, event_latitude, event_begin_time, cz_fips_code, location_index, deaths_direct, injuries_direct, event_end_time, state_fips_code, event_point, deaths_indirect
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1963
+Columns: event_end_time, tor_other_wfo, location_index, event_timezone, magnitude, injuries_direct, event_range, tor_f_scale, event_azimuth, flood_cause, wfo, state, event_latitude, state_fips_code, injuries_indirect, damage_crops, cz_type, cz_name, event_point, tor_width, source, event_type, event_id, deaths_direct, deaths_indirect, event_begin_time, tor_length, damage_property, episode_id, cz_fips_code, reference_location, magnitude_type, event_longitude
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2018
+Columns: tor_width, damage_crops, state_fips_code, deaths_direct, cz_name, deaths_indirect, event_begin_time, episode_id, event_id, cz_type, wfo, flood_cause, magnitude, event_range, source, event_point, damage_property, event_type, event_azimuth, event_timezone, state, event_end_time, tor_length, tor_other_wfo, tor_f_scale, event_latitude, location_index, cz_fips_code, reference_location, magnitude_type, injuries_indirect, event_longitude, injuries_direct
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1956
+Columns: event_range, event_begin_time, episode_id, event_azimuth, tor_other_wfo, state, tor_length, injuries_direct, tor_f_scale, damage_crops, reference_location, cz_name, state_fips_code, cz_type, wfo, tor_width, event_type, event_point, deaths_direct, damage_property, flood_cause, magnitude, deaths_indirect, injuries_indirect, event_timezone, event_end_time, magnitude_type, event_id, cz_fips_code, event_longitude, event_latitude, location_index, source
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2019
+Columns: deaths_direct, injuries_indirect, tor_f_scale, event_point, source, tor_other_wfo, magnitude, tor_length, location_index, state_fips_code, event_id, reference_location, damage_property, event_timezone, event_end_time, cz_fips_code, deaths_indirect, wfo, cz_type, damage_crops, flood_cause, event_longitude, injuries_direct, event_range, state, event_latitude, episode_id, cz_name, event_type, tor_width, event_begin_time, event_azimuth, magnitude_type
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1965
+Columns: tor_other_wfo, event_latitude, event_timezone, event_begin_time, tor_length, tor_f_scale, state, event_id, event_azimuth, tor_width, cz_name, location_index, event_end_time, state_fips_code, flood_cause, injuries_direct, magnitude_type, damage_property, cz_type, injuries_indirect, source, episode_id, deaths_indirect, event_longitude, reference_location, wfo, damage_crops, event_point, deaths_direct, event_type, magnitude, cz_fips_code, event_range
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2003
+Columns: event_latitude, episode_id, event_timezone, injuries_direct, state, cz_type, location_index, damage_crops, magnitude_type, event_range, event_point, event_end_time, tor_length, injuries_indirect, magnitude, tor_width, tor_f_scale, state_fips_code, flood_cause, deaths_indirect, cz_name, event_begin_time, cz_fips_code, tor_other_wfo, event_longitude, source, wfo, event_id, event_azimuth, event_type, reference_location, damage_property, deaths_direct
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1997
+Columns: source, injuries_direct, episode_id, state_fips_code, flood_cause, cz_fips_code, magnitude, event_latitude, damage_property, deaths_indirect, tor_f_scale, event_timezone, event_longitude, event_end_time, tor_length, tor_other_wfo, cz_type, magnitude_type, event_point, event_range, event_type, deaths_direct, cz_name, state, tor_width, event_azimuth, event_id, event_begin_time, damage_crops, reference_location, wfo, location_index, injuries_indirect
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1971
+Columns: reference_location, event_type, injuries_direct, deaths_direct, cz_name, event_timezone, tor_length, event_end_time, state, cz_type, event_latitude, cz_fips_code, state_fips_code, damage_property, wfo, tor_width, event_point, source, magnitude, event_azimuth, flood_cause, damage_crops, event_longitude, tor_f_scale, tor_other_wfo, episode_id, event_begin_time, location_index, deaths_indirect, event_range, magnitude_type, injuries_indirect, event_id
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2002
+Columns: tor_other_wfo, cz_name, event_id, event_point, cz_fips_code, source, event_begin_time, tor_f_scale, event_timezone, location_index, wfo, tor_length, injuries_indirect, damage_property, event_type, flood_cause, state, magnitude, event_latitude, state_fips_code, cz_type, event_azimuth, event_end_time, deaths_direct, magnitude_type, event_longitude, injuries_direct, episode_id, damage_crops, deaths_indirect, tor_width, event_range, reference_location
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.WIND_REPORTS
+Columns: comments, timestamp, report_point, location, state, longitude, speed, county, latitude, time
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2015
+Columns: tor_length, wfo, event_type, injuries_indirect, event_range, event_id, state_fips_code, event_begin_time, source, deaths_indirect, magnitude, deaths_direct, tor_f_scale, event_point, cz_fips_code, event_end_time, injuries_direct, event_longitude, reference_location, damage_crops, event_latitude, event_timezone, cz_type, episode_id, cz_name, damage_property, event_azimuth, location_index, flood_cause, magnitude_type, state, tor_width, tor_other_wfo
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.TORNADO_PATHS
+Columns: magnitude, time_zone_offset, end_lat, storm_date, injured_count, yearly_tornado_count, end_long, storm_time, length, crop_loss, start_lon, width, tornado_path_geom, state_fips_code, state_abbreviation, fatality_count, state_name, property_loss, start_lat
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1962
+Columns: state_fips_code, state, tor_other_wfo, event_type, event_latitude, damage_property, source, event_range, event_longitude, injuries_direct, event_id, magnitude_type, event_timezone, event_azimuth, magnitude, tor_length, tor_f_scale, tor_width, event_point, reference_location, deaths_indirect, damage_crops, event_end_time, flood_cause, cz_type, deaths_direct, cz_fips_code, location_index, cz_name, event_begin_time, wfo, injuries_indirect, episode_id
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1980
+Columns: event_latitude, tor_length, damage_crops, event_type, flood_cause, cz_name, episode_id, tor_width, wfo, source, event_timezone, event_point, event_end_time, state_fips_code, deaths_indirect, injuries_direct, damage_property, magnitude, reference_location, event_azimuth, cz_fips_code, magnitude_type, location_index, state, tor_other_wfo, event_range, injuries_indirect, event_id, cz_type, tor_f_scale, event_begin_time, deaths_direct, event_longitude
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_2021
+Columns: cz_name, event_longitude, deaths_indirect, event_range, episode_id, event_azimuth, tor_other_wfo, magnitude, cz_type, tor_length, magnitude_type, deaths_direct, event_id, event_timezone, state_fips_code, damage_property, state, location_index, cz_fips_code, event_latitude, event_end_time, flood_cause, event_type, event_begin_time, reference_location, tor_width, event_point, source, injuries_indirect, injuries_direct, wfo, tor_f_scale, damage_crops
+
+Table: NOAA_HISTORIC_SEVERE_STORMS.STORMS_1992
+Columns: tor_length, cz_type, reference_location, event_range, state, episode_id, event_timezone, cz_name, damage_property, magnitude, event_end_time, tor_other_wfo, damage_crops, state_fips_code, location_index, source, deaths_indirect, flood_cause, event_type, wfo, tor_width, magnitude_type, event_begin_time, cz_fips_code, deaths_direct, event_point, injuries_indirect, tor_f_scale, event_id, injuries_direct, event_azimuth, event_longitude, event_latitude
+
+Table: NOAA_ICOADS.ICOADS_CORE_2016
+Columns: wave_direction, air_temperature, dpt_indicator, wave_height, middle_cloud_type, year, ship_speed, dewpoint_temperature, nightday_flag, day, release_status_indicator, intermediate_reject_flag, swell_period, wave_period_indicator, swell_height, visibility_indicator, imma_version, sea_level_pressure, country_code, swell_period_indicator, timestamp, present_weather, release_no_secondary, sst_measurement_method, dup_check, wind_direction_true, sea_surface_temp, ncdc_qc_flags, high_cloud_type, id_indicator, wetbulb_temperature, pressure_bias, box_system_indicator, past_weather, month, wind_speed, indicator_for_temp, one_degree_box_number, source_exclusion_flags, dup_status, amt_pressure_tend, cloud_height_indicator, longitude, landlocked_flag, national_source_indicator, visibility, release_no_tertiary, lower_cloud_amount, cloud_height, wind_speed_indicator, low_cloud_type, track_check, unique_report_id, swell_direction, deck, latlong_indicator, ten_degree_box_number, source_id, characteristic_of_ppp, wbt_indicator, ship_course, wave_period, external, trimming_flags, release_no_primary, callsign, total_cloud_amount, wind_direction_indicator, adaptive_qc_flags, second_country_code, latitude, attm_count, platform_type, hour, time_indicator
+
+Table: NOAA_ICOADS.ICOADS_CORE_2015
+Columns: ship_course, wind_direction_true, hour, sea_surface_temp, wind_speed, longitude, present_weather, past_weather, lower_cloud_amount, year, adaptive_qc_flags, second_country_code, landlocked_flag, ten_degree_box_number, dup_check, swell_height, release_status_indicator, low_cloud_type, characteristic_of_ppp, wind_direction_indicator, ncdc_qc_flags, source_exclusion_flags, one_degree_box_number, box_system_indicator, imma_version, indicator_for_temp, high_cloud_type, amt_pressure_tend, wave_direction, visibility, timestamp, wave_height, release_no_secondary, wind_speed_indicator, platform_type, month, id_indicator, dpt_indicator, air_temperature, wave_period, visibility_indicator, wbt_indicator, cloud_height_indicator, dup_status, nightday_flag, intermediate_reject_flag, swell_period, external, middle_cloud_type, source_id, attm_count, swell_direction, dewpoint_temperature, sea_level_pressure, deck, pressure_bias, release_no_tertiary, ship_speed, unique_report_id, time_indicator, wave_period_indicator, cloud_height, track_check, trimming_flags, callsign, wetbulb_temperature, release_no_primary, latitude, national_source_indicator, day, total_cloud_amount, sst_measurement_method, latlong_indicator, swell_period_indicator, country_code
+
+Table: NOAA_ICOADS.ICOADS_CORE_2012
+Columns: characteristic_of_ppp, dpt_indicator, ncdc_qc_flags, id_indicator, ship_speed, wave_period_indicator, total_cloud_amount, lower_cloud_amount, national_source_indicator, wbt_indicator, high_cloud_type, wind_direction_indicator, dewpoint_temperature, year, release_no_secondary, wave_period, source_exclusion_flags, release_status_indicator, deck, past_weather, wetbulb_temperature, visibility_indicator, longitude, present_weather, sea_surface_temp, swell_period, middle_cloud_type, air_temperature, intermediate_reject_flag, latlong_indicator, amt_pressure_tend, callsign, dup_check, indicator_for_temp, attm_count, cloud_height_indicator, swell_period_indicator, ship_course, month, latitude, visibility, ten_degree_box_number, unique_report_id, low_cloud_type, landlocked_flag, wind_speed_indicator, cloud_height, second_country_code, hour, wave_height, one_degree_box_number, time_indicator, timestamp, platform_type, country_code, external, adaptive_qc_flags, release_no_primary, box_system_indicator, source_id, imma_version, wave_direction, sst_measurement_method, nightday_flag, pressure_bias, dup_status, track_check, wind_speed, day, trimming_flags, sea_level_pressure, swell_height, swell_direction, release_no_tertiary, wind_direction_true
+
+Table: NOAA_ICOADS.ICOADS_CORE_2001_2004
+Columns: month, hour, swell_direction, landlocked_flag, deck, lower_cloud_amount, characteristic_of_ppp, present_weather, dup_status, release_no_secondary, attm_count, longitude, ncdc_qc_flags, wave_height, sea_level_pressure, time_indicator, ship_course, air_temperature, high_cloud_type, wave_period_indicator, nightday_flag, cloud_height_indicator, wind_speed, second_country_code, ten_degree_box_number, middle_cloud_type, latlong_indicator, sst_measurement_method, dup_check, source_id, swell_height, platform_type, visibility_indicator, imma_version, release_no_primary, id_indicator, country_code, national_source_indicator, swell_period_indicator, box_system_indicator, source_exclusion_flags, release_status_indicator, latitude, wave_period, day, sea_surface_temp, wind_direction_indicator, wind_direction_true, year, adaptive_qc_flags, total_cloud_amount, timestamp, amt_pressure_tend, release_no_tertiary, wetbulb_temperature, callsign, intermediate_reject_flag, wave_direction, past_weather, wind_speed_indicator, indicator_for_temp, swell_period, track_check, visibility, dpt_indicator, unique_report_id, dewpoint_temperature, trimming_flags, low_cloud_type, external, one_degree_box_number, pressure_bias, wbt_indicator, cloud_height, ship_speed
+
+Table: NOAA_ICOADS.ICOADS_CORE_2007
+Columns: swell_height, present_weather, latitude, id_indicator, visibility_indicator, ship_course, second_country_code, pressure_bias, track_check, indicator_for_temp, month, source_exclusion_flags, low_cloud_type, ship_speed, swell_direction, deck, attm_count, day, dpt_indicator, intermediate_reject_flag, release_no_secondary, wind_direction_true, sea_surface_temp, middle_cloud_type, wave_period, swell_period, sst_measurement_method, wetbulb_temperature, cloud_height_indicator, wbt_indicator, characteristic_of_ppp, time_indicator, timestamp, imma_version, visibility, amt_pressure_tend, total_cloud_amount, year, wind_speed, callsign, wind_direction_indicator, dewpoint_temperature, national_source_indicator, adaptive_qc_flags, unique_report_id, ncdc_qc_flags, dup_check, cloud_height, wave_period_indicator, high_cloud_type, past_weather, release_no_tertiary, swell_period_indicator, air_temperature, trimming_flags, release_status_indicator, external, hour, one_degree_box_number, longitude, ten_degree_box_number, release_no_primary, platform_type, latlong_indicator, dup_status, wind_speed_indicator, wave_height, lower_cloud_amount, nightday_flag, box_system_indicator, landlocked_flag, source_id, wave_direction, sea_level_pressure, country_code
+
+Table: NOAA_ICOADS.ICOADS_CORE_2014
+Columns: latlong_indicator, wind_direction_indicator, total_cloud_amount, release_no_primary, middle_cloud_type, nightday_flag, swell_period, past_weather, track_check, swell_height, time_indicator, visibility, source_exclusion_flags, cloud_height_indicator, trimming_flags, unique_report_id, amt_pressure_tend, box_system_indicator, wbt_indicator, present_weather, second_country_code, month, one_degree_box_number, attm_count, wind_speed, deck, hour, wind_speed_indicator, sea_level_pressure, sst_measurement_method, swell_period_indicator, release_no_secondary, longitude, country_code, pressure_bias, swell_direction, ship_course, external, intermediate_reject_flag, dpt_indicator, ship_speed, day, characteristic_of_ppp, latitude, indicator_for_temp, visibility_indicator, release_no_tertiary, timestamp, wave_direction, wind_direction_true, ncdc_qc_flags, imma_version, source_id, landlocked_flag, platform_type, id_indicator, wave_height, adaptive_qc_flags, high_cloud_type, dup_check, low_cloud_type, year, wave_period, lower_cloud_amount, dewpoint_temperature, wetbulb_temperature, release_status_indicator, air_temperature, dup_status, sea_surface_temp, ten_degree_box_number, cloud_height, callsign, wave_period_indicator, national_source_indicator
+
+Table: NOAA_ICOADS.ICOADS_CORE_2005
+Columns: landlocked_flag, amt_pressure_tend, sst_measurement_method, swell_direction, visibility_indicator, longitude, day, sea_surface_temp, adaptive_qc_flags, nightday_flag, wind_direction_true, wind_speed_indicator, pressure_bias, high_cloud_type, hour, ten_degree_box_number, low_cloud_type, present_weather, swell_height, dewpoint_temperature, past_weather, trimming_flags, wbt_indicator, cloud_height_indicator, month, release_no_primary, external, cloud_height, swell_period_indicator, sea_level_pressure, middle_cloud_type, intermediate_reject_flag, callsign, imma_version, platform_type, source_id, wave_height, timestamp, wave_direction, one_degree_box_number, country_code, latitude, ncdc_qc_flags, ship_speed, year, release_no_secondary, dup_check, wetbulb_temperature, deck, dup_status, lower_cloud_amount, track_check, swell_period, visibility, wave_period_indicator, characteristic_of_ppp, release_status_indicator, latlong_indicator, dpt_indicator, total_cloud_amount, unique_report_id, wind_direction_indicator, second_country_code, indicator_for_temp, air_temperature, release_no_tertiary, national_source_indicator, id_indicator, wind_speed, attm_count, time_indicator, box_system_indicator, wave_period, ship_course, source_exclusion_flags
+
+Table: NOAA_ICOADS.ICOADS_CORE_2017
+Columns: landlocked_flag, source_id, hour, wave_period, high_cloud_type, dewpoint_temperature, dpt_indicator, wbt_indicator, amt_pressure_tend, release_no_tertiary, month, callsign, unique_report_id, intermediate_reject_flag, release_no_secondary, time_indicator, visibility, timestamp, national_source_indicator, wind_speed, imma_version, pressure_bias, latitude, dup_status, day, sea_level_pressure, wave_period_indicator, trimming_flags, low_cloud_type, sst_measurement_method, country_code, middle_cloud_type, cloud_height, year, attm_count, cloud_height_indicator, deck, characteristic_of_ppp, longitude, dup_check, release_no_primary, ship_course, track_check, indicator_for_temp, adaptive_qc_flags, box_system_indicator, air_temperature, total_cloud_amount, wave_direction, id_indicator, lower_cloud_amount, one_degree_box_number, external, wind_speed_indicator, swell_period_indicator, ncdc_qc_flags, sea_surface_temp, platform_type, latlong_indicator, past_weather, release_status_indicator, second_country_code, nightday_flag, visibility_indicator, ten_degree_box_number, wind_direction_true, swell_direction, wind_direction_indicator, source_exclusion_flags, ship_speed, wave_height, wetbulb_temperature, swell_period, swell_height, present_weather
+
+Table: NOAA_ICOADS.ICOADS_CORE_2009
+Columns: intermediate_reject_flag, callsign, time_indicator, cloud_height_indicator, external, swell_height, sea_level_pressure, visibility_indicator, wind_direction_indicator, sst_measurement_method, nightday_flag, wave_height, sea_surface_temp, source_exclusion_flags, wind_speed, ncdc_qc_flags, imma_version, id_indicator, track_check, high_cloud_type, ship_speed, swell_period, year, total_cloud_amount, release_no_secondary, swell_period_indicator, longitude, attm_count, past_weather, low_cloud_type, national_source_indicator, month, dup_check, day, latitude, wind_direction_true, source_id, country_code, second_country_code, dpt_indicator, wave_period, wave_direction, release_no_tertiary, visibility, landlocked_flag, ship_course, one_degree_box_number, middle_cloud_type, wetbulb_temperature, amt_pressure_tend, dup_status, swell_direction, characteristic_of_ppp, platform_type, wbt_indicator, ten_degree_box_number, timestamp, air_temperature, dewpoint_temperature, present_weather, deck, adaptive_qc_flags, cloud_height, release_no_primary, wave_period_indicator, hour, lower_cloud_amount, unique_report_id, wind_speed_indicator, indicator_for_temp, box_system_indicator, pressure_bias, trimming_flags, latlong_indicator, release_status_indicator
+
+Table: NOAA_ICOADS.ICOADS_CORE_2006
+Columns: source_exclusion_flags, id_indicator, national_source_indicator, month, past_weather, country_code, wbt_indicator, track_check, swell_direction, lower_cloud_amount, wind_speed, landlocked_flag, release_no_tertiary, release_no_secondary, attm_count, total_cloud_amount, release_status_indicator, wave_period, indicator_for_temp, release_no_primary, hour, ten_degree_box_number, wind_direction_indicator, wave_height, sea_surface_temp, source_id, unique_report_id, visibility_indicator, amt_pressure_tend, ncdc_qc_flags, swell_height, platform_type, intermediate_reject_flag, one_degree_box_number, swell_period_indicator, air_temperature, dpt_indicator, dup_status, pressure_bias, sst_measurement_method, time_indicator, wave_direction, wind_speed_indicator, dup_check, day, low_cloud_type, timestamp, dewpoint_temperature, present_weather, latitude, adaptive_qc_flags, year, sea_level_pressure, deck, box_system_indicator, second_country_code, characteristic_of_ppp, callsign, high_cloud_type, visibility, middle_cloud_type, cloud_height, wetbulb_temperature, cloud_height_indicator, latlong_indicator, wind_direction_true, ship_course, longitude, wave_period_indicator, external, imma_version, nightday_flag, swell_period, ship_speed, trimming_flags
+
+Table: NOAA_ICOADS.ICOADS_CORE_2011
+Columns: nightday_flag, swell_direction, month, trimming_flags, longitude, middle_cloud_type, latitude, wave_direction, characteristic_of_ppp, wave_period_indicator, release_no_tertiary, high_cloud_type, source_id, track_check, second_country_code, box_system_indicator, swell_period_indicator, wave_height, sea_level_pressure, callsign, present_weather, attm_count, dup_check, external, cloud_height, ten_degree_box_number, wind_speed_indicator, ncdc_qc_flags, low_cloud_type, wind_direction_true, landlocked_flag, wbt_indicator, swell_period, hour, lower_cloud_amount, dup_status, imma_version, platform_type, sst_measurement_method, national_source_indicator, visibility, wetbulb_temperature, latlong_indicator, id_indicator, past_weather, release_status_indicator, ship_course, unique_report_id, swell_height, adaptive_qc_flags, wind_speed, country_code, dpt_indicator, day, release_no_secondary, deck, ship_speed, source_exclusion_flags, cloud_height_indicator, time_indicator, year, indicator_for_temp, timestamp, air_temperature, dewpoint_temperature, sea_surface_temp, intermediate_reject_flag, visibility_indicator, wave_period, release_no_primary, total_cloud_amount, one_degree_box_number, wind_direction_indicator, pressure_bias, amt_pressure_tend
+
+Table: NOAA_ICOADS.ICOADS_CORE_2008
+Columns: second_country_code, swell_period_indicator, country_code, amt_pressure_tend, latitude, indicator_for_temp, time_indicator, low_cloud_type, wave_direction, total_cloud_amount, unique_report_id, lower_cloud_amount, timestamp, release_no_primary, year, cloud_height_indicator, landlocked_flag, swell_period, wind_speed, dpt_indicator, imma_version, characteristic_of_ppp, wind_direction_indicator, nightday_flag, ship_speed, cloud_height, air_temperature, high_cloud_type, national_source_indicator, wind_speed_indicator, sst_measurement_method, attm_count, track_check, wetbulb_temperature, dewpoint_temperature, ncdc_qc_flags, wbt_indicator, present_weather, month, callsign, ship_course, platform_type, adaptive_qc_flags, deck, release_no_secondary, release_no_tertiary, ten_degree_box_number, dup_check, swell_height, latlong_indicator, past_weather, source_exclusion_flags, wave_period_indicator, swell_direction, one_degree_box_number, external, wind_direction_true, middle_cloud_type, sea_surface_temp, hour, id_indicator, source_id, wave_height, wave_period, pressure_bias, visibility, box_system_indicator, visibility_indicator, longitude, release_status_indicator, trimming_flags, sea_level_pressure, day, dup_status, intermediate_reject_flag
+
+Table: NOAA_ICOADS.ICOADS_CORE_2010
+Columns: air_temperature, attm_count, dewpoint_temperature, lower_cloud_amount, intermediate_reject_flag, amt_pressure_tend, id_indicator, platform_type, wind_direction_indicator, cloud_height_indicator, wave_period, timestamp, adaptive_qc_flags, longitude, wind_speed_indicator, dup_check, ten_degree_box_number, national_source_indicator, day, ncdc_qc_flags, latlong_indicator, swell_direction, release_no_secondary, visibility_indicator, cloud_height, box_system_indicator, swell_period_indicator, callsign, country_code, external, source_exclusion_flags, year, wind_direction_true, one_degree_box_number, sst_measurement_method, wind_speed, second_country_code, ship_course, wave_height, ship_speed, nightday_flag, wave_period_indicator, sea_level_pressure, time_indicator, present_weather, release_no_tertiary, wave_direction, source_id, landlocked_flag, swell_height, latitude, imma_version, release_status_indicator, middle_cloud_type, trimming_flags, wetbulb_temperature, characteristic_of_ppp, past_weather, dup_status, total_cloud_amount, track_check, deck, low_cloud_type, high_cloud_type, month, sea_surface_temp, release_no_primary, dpt_indicator, swell_period, unique_report_id, visibility, hour, wbt_indicator, pressure_bias, indicator_for_temp
+
+Table: NOAA_ICOADS.ICOADS_CORE_1662_2000
+Columns: box_system_indicator, wave_period, swell_period, hour, air_temperature, adaptive_qc_flags, sea_surface_temp, imma_version, year, middle_cloud_type, sst_measurement_method, visibility, platform_type, present_weather, external, time_indicator, wind_direction_indicator, swell_direction, visibility_indicator, trimming_flags, nightday_flag, characteristic_of_ppp, month, low_cloud_type, track_check, amt_pressure_tend, ship_speed, wetbulb_temperature, source_exclusion_flags, dewpoint_temperature, indicator_for_temp, wind_speed, swell_height, past_weather, wind_direction_true, national_source_indicator, total_cloud_amount, swell_period_indicator, release_no_primary, country_code, deck, id_indicator, high_cloud_type, unique_report_id, landlocked_flag, latlong_indicator, wbt_indicator, dup_check, sea_level_pressure, day, callsign, one_degree_box_number, pressure_bias, wind_speed_indicator, wave_period_indicator, timestamp, release_no_secondary, cloud_height, release_status_indicator, wave_height, attm_count, release_no_tertiary, lower_cloud_amount, second_country_code, dpt_indicator, latitude, dup_status, wave_direction, ncdc_qc_flags, longitude, ship_course, source_id, intermediate_reject_flag, cloud_height_indicator, ten_degree_box_number
+
+Table: NOAA_ICOADS.ICOADS_CORE_2013
+Columns: indicator_for_temp, lower_cloud_amount, high_cloud_type, one_degree_box_number, trimming_flags, national_source_indicator, wind_speed, characteristic_of_ppp, release_no_primary, external, timestamp, present_weather, ncdc_qc_flags, release_no_secondary, track_check, cloud_height_indicator, imma_version, day, cloud_height, source_id, wave_period_indicator, dup_check, dewpoint_temperature, landlocked_flag, year, intermediate_reject_flag, wetbulb_temperature, swell_period, total_cloud_amount, ship_course, swell_height, middle_cloud_type, swell_direction, pressure_bias, sea_level_pressure, deck, month, latitude, air_temperature, hour, low_cloud_type, country_code, ship_speed, longitude, wave_direction, wind_speed_indicator, ten_degree_box_number, amt_pressure_tend, wave_period, time_indicator, release_no_tertiary, latlong_indicator, nightday_flag, wind_direction_true, swell_period_indicator, box_system_indicator, dpt_indicator, past_weather, second_country_code, attm_count, wind_direction_indicator, dup_status, unique_report_id, source_exclusion_flags, sst_measurement_method, visibility_indicator, wbt_indicator, sea_surface_temp, id_indicator, wave_height, release_status_indicator, platform_type, adaptive_qc_flags, visibility, callsign
+
+Table: NOAA_PASSIVE_ACOUSTIC_INDEX.SANCTSOUND_METADATA
+Columns: latitude, start_date, file_link, longitude, funding_organization, start_time, platform_name, source_organization, sample_rate, file_name, sensor_depth, recording_percent, project_name, data_collection_name
+
+Table: NOAA_PASSIVE_ACOUSTIC_INDEX.NRS_METADATA
+Columns: sample_rate, point_geom, funding_organization, file_name, source_organization, start_time, sensor_depth, start_date, project_name, deployment_name, file_link, duration, platform_name, lat, lon
+
+Table: NOAA_SIGNIFICANT_EARTHQUAKES.EARTHQUAKES
+Columns: missing_description, eq_mag_mfa, total_deaths, total_damage_millions_dollars, second, damage_description, total_missing, location_name, total_injuries_description, deaths_description, total_houses_damaged_description, damage_millions_dollars, eq_mag_mw, missing, eq_primary, state, houses_destroyed_description, longitude, latitude, intensity, flag_tsunami, total_injuries, focal_depth, total_deaths_description, year, id, eq_mag_mb, hour, region_code, injuries, injuries_description, houses_destroyed, eq_mag_unk, total_missing_description, country, eq_mag_ml, minute, eq_mag_ms, month, day, total_houses_damaged, deaths, houses_damaged_description, total_houses_destroyed, total_damage_description, houses_damaged, total_houses_destroyed_description
+
+Table: GEO_US_BOUNDARIES.ADJACENT_STATES
+Columns: state, neighbors_fips_code, state_fips_code, state_name, neighbors_state
+
+Table: GEO_US_BOUNDARIES.METROPOLITAN_DIVISIONS
+Columns: area_land_meters, csa_code, name, internal_point_geom, mtfcc_feature_class_code, internal_point_latitude, geo_id, area_water_meters, internal_point_longitude, lsad_code, metdiv_geom, cbsa_code, metdiv_code, lsad_name
+
+Table: GEO_US_BOUNDARIES.CBSA
+Columns: name, area_water_meters, cbsa_fips_code, cbsa_geom, csa_geo_id, lsad_code, msa_indicator, area_land_meters, internal_point_geom, lsad_name, internal_point_longitude, internal_point_latitude, mtfcc_feature_class_code, geo_id
+
+Table: GEO_US_BOUNDARIES.CONGRESS_DISTRICT_116
+Columns: lsad_name, lsad_code, congress_session, int_point_lon, district_geom, state_fips_code, geo_id, mtfcc_feature_class_code, area_water_meters, int_point_lat, int_point_geom, district_fips_code, area_land_meters, functional_status
+
+Table: GEO_US_BOUNDARIES.CSA
+Columns: internal_point_lon, internal_point_geom, geo_id, internal_point_lat, lsad_name, area_water_meters, area_land_meters, msa_lsad_code, mtfcc_feature_class_code, name, csa_geom, csa_code
+
+Table: GEO_US_BOUNDARIES.NATIONAL_OUTLINE
+Columns: aff_geo_id, us_outline_geom, name, geo_id
+
+Table: GEO_US_BOUNDARIES.RAILWAYS
+Columns: railway_geom, geo_id, mtfcc_feature_class_code, full_name
+
+Table: GEO_US_BOUNDARIES.COUNTIES
+Columns: cbsa_fips_code, county_gnis_code, lsad_code, mtfcc_feature_class_code, fips_class_code, int_point_lon, county_geom, geo_id, lsad_name, int_point_geom, area_water_meters, county_fips_code, functional_status, state_fips_code, csa_fips_code, area_land_meters, county_name, met_div_fips_code, int_point_lat
+
+Table: GEO_US_BOUNDARIES.NWS_FORECAST_REGIONS
+Columns: fe_area, name, cwa, shape_geometry, shortname, lon, state, state_zone, zone, time_zone, lat
+
+Table: GEO_US_BOUNDARIES.ZIP_CODES
+Columns: area_land_meters, internal_point_lat, zip_code, fips_class_code, zip_code_geom, state_code, area_water_meters, state_fips_code, county, functional_status, state_name, internal_point_geom, mtfcc_feature_class_code, internal_point_lon, city
+
+Table: GEO_US_BOUNDARIES.COASTLINE
+Columns: coastline_geom, name
+
+Table: GEO_US_BOUNDARIES.CONGRESS_DISTRICT_115
+Columns: congress_session, district_geom, functional_status, mtfcc_feature_class_code, geo_id, lsad_code, area_water_meters, int_point_geom, state_fips_code, lsad_name, area_land_meters, district_fips_code, int_point_lon, int_point_lat
+
+Table: GEO_US_BOUNDARIES.STATES
+Columns: state_fips_code, division_code, area_water_meters, int_point_lon, functional_status, int_point_geom, state_gnis_code, geo_id, state, region_code, area_land_meters, state_name, int_point_lat, state_geom, mtfcc_feature_class_code, lsad_code
+
+Table: GEO_US_BOUNDARIES.ADJACENT_COUNTIES
+Columns: neighbors_fips_code, county_fips_code, neighbors, neighbors_state, state, county
+
+Table: GEO_US_BOUNDARIES.URBAN_AREAS
+Columns: internal_point_lat, internal_point_geom, internal_point_lon, urban_area_geom, geo_id, name, functional_status, urban_area_code, area_lsad_code, lsad_name, type, mtfcc_feature_class_code, area_water_meters, area_land_meters
+
+Table: GEO_US_BOUNDARIES.CNECTA
+Columns: lsad, geo_id, mtfcc_feature_class_code, cnecta_geom, int_point_lat, int_point_lon, area_water_meters, name_lsad, name, cnecta_fips_code, area_land_meters
+
+Table: NOAA_PASSIVE_BIOACOUSTIC.NCEI_SANCTSOUND_PAD_METADATA
+Columns: start_time, data_collection_name, project_name, lon, sample_rate_hz, platform_name, sensor_depth, start_date, lat, recording, file_name, source_organization, funding_organization
+
+Table: NOAA_PASSIVE_BIOACOUSTIC.NCEI_NEFSC_PAD_METADATA
+Columns: shape4, platform_name, start_time, sample_rate, source_organization, shape1, duration, shape5, cloud_path, funding_organization, shape9, start_date, shape2, project_name, data_collection_name, shape3, sensor_depth, shape8, file_name, shape7, shape6, shape10
+
+Table: NOAA_PASSIVE_BIOACOUSTIC.NCEI_AFSC_PAD_METADATA
+Columns: platform_name, file_name, shape, project_name, funding_organization, cloud_path, source_organization, sample_rate, duration, start_date, data_collection_name, sensor_depth, start_time
+
+Table: NOAA_PASSIVE_BIOACOUSTIC.NCEI_NRS_PAD_METADATA
+Columns: funding_organization, platform_name, project_name, file_name, sensor_depth, lon, start_date, recording, source_organization, sample_rate_hz, start_time, deployment_name, lat
+
+Table: NOAA_PRELIMINARY_SEVERE_STORMS.TORNADO_REPORTS
+Columns: report_point, location, timestamp, f_scale, latitude, county, state, longitude, comments, time
+
+Table: NOAA_PRELIMINARY_SEVERE_STORMS.HAIL_REPORTS
+Columns: state, comments, location, county, timestamp, longitude, size, latitude, report_point, time
+
+Table: NOAA_PRELIMINARY_SEVERE_STORMS.WIND_REPORTS
+Columns: location, county, speed, report_point, state, comments, time, timestamp, longitude, latitude
+
+Table: NOAA_GSOD.GSOD1955
+Columns: da, wban, snow_ice_pellets, count_wdsp, flag_prcp, count_stp, visib, count_temp, hail, year, count_slp, thunder, stp, gust, flag_max, min, wdsp, mxpsd, tornado_funnel_cloud, rain_drizzle, flag_min, dewp, fog, max, slp, stn, count_visib, mo, count_dewp, sndp, temp, prcp
+
+Table: NOAA_GSOD.GSOD1957
+Columns: flag_max, count_dewp, flag_min, visib, year, da, prcp, hail, gust, count_wdsp, flag_prcp, fog, stn, mo, snow_ice_pellets, dewp, mxpsd, count_slp, max, min, stp, count_temp, rain_drizzle, count_visib, wdsp, tornado_funnel_cloud, sndp, thunder, wban, count_stp, slp, temp
+
+Table: NOAA_GSOD.GSOD2020
+Columns: hail, prcp, stn, flag_min, tornado_funnel_cloud, thunder, count_temp, count_dewp, count_visib, flag_prcp, count_slp, da, wban, mxpsd, rain_drizzle, count_wdsp, wdsp, mo, flag_max, visib, min, temp, slp, dewp, year, sndp, max, snow_ice_pellets, stp, count_stp, gust, fog, date
+
+Table: NOAA_GSOD.GSOD1981
+Columns: count_visib, hail, year, stn, mo, wban, prcp, wdsp, thunder, count_temp, snow_ice_pellets, sndp, tornado_funnel_cloud, count_wdsp, gust, mxpsd, flag_min, temp, min, slp, rain_drizzle, fog, flag_max, count_slp, count_stp, flag_prcp, da, dewp, stp, max, count_dewp, visib
+
+Table: NOAA_GSOD.STATIONS
+Columns: elev, usaf, country, lon, call, wban, name, begin, state, lat, end
+
+Table: NOAA_GSOD.GSOD1978
+Columns: dewp, temp, fog, wdsp, count_dewp, gust, min, count_temp, wban, max, sndp, count_wdsp, thunder, mxpsd, flag_max, hail, prcp, rain_drizzle, tornado_funnel_cloud, flag_min, slp, count_visib, count_stp, stp, da, year, flag_prcp, visib, snow_ice_pellets, count_slp, stn, mo
+
+Table: NOAA_GSOD.GSOD1931
+Columns: da, fog, slp, dewp, snow_ice_pellets, wdsp, count_stp, stp, flag_prcp, tornado_funnel_cloud, min, hail, wban, count_wdsp, mxpsd, prcp, stn, count_temp, thunder, max, count_visib, rain_drizzle, count_slp, count_dewp, temp, gust, mo, visib, flag_min, flag_max, year, sndp
+
+Table: NOAA_GSOD.GSOD1961
+Columns: stp, visib, flag_min, dewp, prcp, mxpsd, gust, snow_ice_pellets, rain_drizzle, wdsp, flag_prcp, da, year, thunder, count_slp, temp, count_dewp, count_stp, count_wdsp, sndp, slp, flag_max, min, count_temp, tornado_funnel_cloud, count_visib, mo, wban, fog, hail, max, stn
+
+Table: NOAA_GSOD.GSOD2007
+Columns: stp, rain_drizzle, snow_ice_pellets, temp, count_temp, da, flag_min, fog, visib, count_slp, prcp, sndp, tornado_funnel_cloud, slp, hail, min, flag_prcp, count_stp, wban, flag_max, count_wdsp, count_visib, thunder, max, gust, mo, dewp, stn, year, mxpsd, wdsp, count_dewp
+
+Table: NOAA_GSOD.GSOD1998
+Columns: count_temp, thunder, count_visib, flag_max, flag_prcp, max, min, sndp, hail, mxpsd, dewp, count_dewp, tornado_funnel_cloud, rain_drizzle, mo, da, snow_ice_pellets, temp, count_stp, prcp, gust, flag_min, visib, year, count_wdsp, stp, count_slp, wban, slp, wdsp, stn, fog
+
+Table: NOAA_GSOD.GSOD1943
+Columns: stp, stn, temp, sndp, count_wdsp, dewp, thunder, count_temp, rain_drizzle, count_slp, max, visib, wdsp, slp, fog, mxpsd, flag_prcp, year, prcp, flag_min, count_visib, snow_ice_pellets, flag_max, gust, min, count_stp, da, count_dewp, wban, hail, mo, tornado_funnel_cloud
+
+Table: NOAA_GSOD.GSOD1963
+Columns: snow_ice_pellets, mo, da, dewp, stn, year, flag_max, tornado_funnel_cloud, count_slp, max, slp, visib, mxpsd, thunder, hail, count_visib, rain_drizzle, sndp, wdsp, min, prcp, fog, stp, gust, temp, count_temp, wban, flag_min, count_stp, flag_prcp, count_wdsp, count_dewp
+
+Table: NOAA_GSOD.GSOD1977
+Columns: min, dewp, wban, wdsp, prcp, count_dewp, temp, tornado_funnel_cloud, da, flag_prcp, rain_drizzle, hail, sndp, fog, mxpsd, stp, count_slp, thunder, max, count_temp, stn, count_stp, mo, count_visib, gust, slp, year, flag_max, flag_min, count_wdsp, visib, snow_ice_pellets
+
+Table: NOAA_GSOD.GSOD1979
+Columns: wban, tornado_funnel_cloud, year, da, flag_prcp, count_dewp, count_wdsp, flag_max, flag_min, fog, hail, rain_drizzle, stn, wdsp, count_visib, sndp, dewp, gust, temp, visib, stp, thunder, prcp, min, max, mo, slp, count_stp, count_slp, snow_ice_pellets, count_temp, mxpsd
+
+Table: NOAA_GSOD.GSOD2013
+Columns: count_wdsp, hail, max, flag_min, count_slp, stp, count_visib, wban, rain_drizzle, visib, count_temp, stn, flag_prcp, mxpsd, sndp, mo, snow_ice_pellets, min, tornado_funnel_cloud, gust, wdsp, thunder, da, dewp, temp, slp, prcp, count_dewp, year, fog, count_stp, flag_max
+
+Table: NOAA_GSOD.GSOD1990
+Columns: stp, wban, gust, max, year, mo, visib, prcp, count_dewp, min, flag_max, dewp, count_stp, stn, rain_drizzle, tornado_funnel_cloud, flag_min, count_visib, wdsp, da, count_temp, thunder, temp, count_slp, fog, mxpsd, count_wdsp, flag_prcp, hail, slp, sndp, snow_ice_pellets
+
+Table: NOAA_GSOD.GSOD1965
+Columns: gust, stp, flag_max, da, visib, rain_drizzle, count_dewp, mo, hail, stn, thunder, prcp, temp, flag_min, year, slp, count_slp, min, mxpsd, wdsp, wban, count_stp, snow_ice_pellets, tornado_funnel_cloud, sndp, flag_prcp, fog, count_visib, max, count_temp, count_wdsp, dewp
+
+Table: NOAA_GSOD.GSOD1997
+Columns: rain_drizzle, max, snow_ice_pellets, dewp, sndp, gust, mo, wdsp, prcp, temp, count_dewp, wban, count_temp, visib, count_visib, da, stn, flag_prcp, hail, min, count_stp, fog, count_wdsp, thunder, stp, count_slp, tornado_funnel_cloud, mxpsd, slp, flag_max, flag_min, year
+
+Table: NOAA_GSOD.GSOD1995
+Columns: min, max, flag_max, rain_drizzle, dewp, prcp, temp, fog, count_visib, hail, wban, count_stp, wdsp, visib, mxpsd, tornado_funnel_cloud, flag_min, stp, sndp, mo, gust, snow_ice_pellets, count_slp, thunder, count_dewp, year, count_wdsp, stn, da, count_temp, slp, flag_prcp
+
+Table: NOAA_GSOD.GSOD1982
+Columns: flag_min, count_temp, tornado_funnel_cloud, gust, snow_ice_pellets, wban, stn, flag_prcp, dewp, rain_drizzle, prcp, count_slp, count_dewp, flag_max, count_stp, visib, stp, fog, hail, year, temp, da, mo, count_wdsp, sndp, wdsp, count_visib, thunder, min, slp, max, mxpsd
+
+Table: NOAA_GSOD.GSOD1973
+Columns: count_stp, prcp, mxpsd, count_slp, count_wdsp, da, wdsp, wban, tornado_funnel_cloud, rain_drizzle, year, stp, mo, min, sndp, slp, gust, temp, count_dewp, flag_prcp, stn, snow_ice_pellets, dewp, hail, flag_min, count_visib, flag_max, count_temp, visib, max, fog, thunder
+
+Table: NOAA_GSOD.GSOD1947
+Columns: year, count_temp, dewp, count_visib, stn, wban, temp, da, fog, gust, snow_ice_pellets, flag_max, flag_prcp, flag_min, tornado_funnel_cloud, mxpsd, slp, min, wdsp, rain_drizzle, count_slp, sndp, thunder, count_dewp, mo, prcp, stp, count_wdsp, visib, hail, count_stp, max
+
+Table: NOAA_GSOD.GSOD1964
+Columns: stn, wban, min, count_slp, visib, thunder, flag_prcp, mxpsd, year, count_wdsp, max, prcp, hail, flag_min, mo, gust, rain_drizzle, temp, dewp, da, flag_max, count_dewp, sndp, count_stp, fog, stp, snow_ice_pellets, tornado_funnel_cloud, count_visib, slp, count_temp, wdsp
+
+Table: NOAA_GSOD.GSOD1994
+Columns: count_temp, wdsp, max, count_wdsp, gust, flag_min, dewp, visib, thunder, tornado_funnel_cloud, temp, snow_ice_pellets, count_slp, count_visib, rain_drizzle, sndp, flag_max, count_stp, slp, stp, mxpsd, min, da, year, mo, wban, prcp, fog, hail, flag_prcp, count_dewp, stn
+
+Table: NOAA_GSOD.GSOD1941
+Columns: snow_ice_pellets, count_temp, min, count_visib, count_stp, da, prcp, count_slp, stn, fog, rain_drizzle, thunder, tornado_funnel_cloud, gust, stp, max, flag_max, flag_min, visib, sndp, slp, mo, flag_prcp, hail, year, wdsp, count_wdsp, wban, mxpsd, dewp, count_dewp, temp
+
+Table: NOAA_GSOD.GSOD2016
+Columns: count_stp, count_wdsp, count_dewp, count_slp, wdsp, min, max, dewp, flag_prcp, mxpsd, flag_max, gust, thunder, mo, rain_drizzle, slp, sndp, prcp, wban, hail, stn, tornado_funnel_cloud, temp, count_temp, count_visib, year, visib, da, snow_ice_pellets, fog, flag_min, stp
+
+Table: NOAA_GSOD.GSOD1936
+Columns: flag_prcp, count_temp, da, mo, thunder, mxpsd, slp, max, hail, fog, tornado_funnel_cloud, min, count_stp, temp, sndp, year, stn, prcp, rain_drizzle, count_slp, flag_min, gust, count_visib, flag_max, stp, wdsp, wban, count_wdsp, snow_ice_pellets, count_dewp, dewp, visib
+
+Table: NOAA_GSOD.GSOD1987
+Columns: temp, visib, rain_drizzle, thunder, count_slp, snow_ice_pellets, count_dewp, min, flag_min, flag_prcp, count_wdsp, gust, wban, prcp, flag_max, sndp, hail, fog, max, count_visib, year, dewp, mo, tornado_funnel_cloud, slp, wdsp, mxpsd, da, stp, count_stp, stn, count_temp
+
+Table: NOAA_GSOD.GSOD1953
+Columns: mo, rain_drizzle, tornado_funnel_cloud, stp, snow_ice_pellets, count_stp, hail, wban, slp, fog, count_dewp, count_visib, stn, max, dewp, prcp, temp, da, mxpsd, min, thunder, year, flag_min, flag_max, count_wdsp, gust, wdsp, count_slp, sndp, count_temp, flag_prcp, visib
+
+Table: NOAA_GSOD.GSOD1939
+Columns: hail, gust, count_temp, year, count_dewp, count_visib, tornado_funnel_cloud, count_wdsp, min, visib, temp, slp, mxpsd, dewp, max, da, sndp, rain_drizzle, flag_min, prcp, count_stp, wban, wdsp, snow_ice_pellets, flag_max, count_slp, stn, stp, fog, mo, flag_prcp, thunder
+
+Table: NOAA_GSOD.GSOD1937
+Columns: rain_drizzle, flag_max, tornado_funnel_cloud, wdsp, flag_min, count_wdsp, mo, gust, snow_ice_pellets, visib, flag_prcp, hail, count_stp, count_dewp, dewp, sndp, stn, da, fog, mxpsd, wban, stp, count_slp, min, thunder, count_temp, max, slp, year, prcp, temp, count_visib
+
+Table: NOAA_GSOD.GSOD1945
+Columns: flag_prcp, wban, flag_min, gust, min, sndp, count_dewp, wdsp, dewp, count_slp, da, tornado_funnel_cloud, count_wdsp, slp, year, thunder, count_visib, mxpsd, mo, hail, flag_max, rain_drizzle, max, count_temp, snow_ice_pellets, prcp, stn, temp, fog, stp, count_stp, visib
+
+Table: NOAA_GSOD.GSOD1954
+Columns: fog, stp, min, snow_ice_pellets, sndp, flag_prcp, rain_drizzle, flag_max, wdsp, slp, gust, visib, da, dewp, max, prcp, hail, temp, count_slp, mo, count_stp, count_wdsp, flag_min, year, stn, count_dewp, wban, thunder, tornado_funnel_cloud, count_temp, mxpsd, count_visib
+
+Table: NOAA_GSOD.GSOD1968
+Columns: count_slp, wban, wdsp, count_stp, count_wdsp, hail, tornado_funnel_cloud, count_temp, mxpsd, slp, count_dewp, thunder, sndp, year, prcp, flag_max, rain_drizzle, stp, min, visib, fog, temp, flag_min, count_visib, flag_prcp, da, gust, snow_ice_pellets, mo, max, stn, dewp
+
+Table: NOAA_GSOD.GSOD2001
+Columns: wdsp, fog, visib, dewp, snow_ice_pellets, count_wdsp, wban, prcp, flag_prcp, stn, count_dewp, sndp, min, hail, mo, count_temp, count_stp, temp, da, max, tornado_funnel_cloud, slp, flag_max, rain_drizzle, count_visib, stp, count_slp, year, thunder, mxpsd, gust, flag_min
+
+Table: NOAA_GSOD.GSOD1967
+Columns: rain_drizzle, da, count_visib, sndp, dewp, tornado_funnel_cloud, count_dewp, prcp, hail, stp, thunder, count_wdsp, wdsp, wban, flag_max, count_temp, max, flag_min, stn, gust, flag_prcp, mxpsd, count_slp, temp, mo, fog, min, snow_ice_pellets, year, slp, count_stp, visib
+
+Table: NOAA_GSOD.GSOD1966
+Columns: gust, count_temp, dewp, min, mo, da, year, temp, flag_min, prcp, count_dewp, wban, wdsp, count_stp, snow_ice_pellets, visib, hail, max, stn, count_visib, sndp, stp, slp, count_wdsp, count_slp, tornado_funnel_cloud, thunder, mxpsd, flag_max, fog, flag_prcp, rain_drizzle
+
+Table: NOAA_GSOD.GSOD2008
+Columns: flag_min, da, wdsp, temp, rain_drizzle, count_dewp, slp, fog, count_slp, prcp, gust, tornado_funnel_cloud, sndp, hail, flag_max, snow_ice_pellets, wban, count_temp, visib, count_wdsp, flag_prcp, count_stp, thunder, stn, stp, count_visib, mxpsd, mo, max, min, dewp, year
+
+Table: NOAA_GSOD.GSOD2005
+Columns: count_visib, slp, rain_drizzle, prcp, sndp, mxpsd, visib, temp, stp, hail, mo, thunder, min, wban, count_dewp, year, tornado_funnel_cloud, count_temp, fog, count_stp, count_wdsp, snow_ice_pellets, stn, dewp, count_slp, gust, flag_min, max, flag_max, flag_prcp, wdsp, da
+
+Table: NOAA_GSOD.GSOD1958
+Columns: count_dewp, thunder, flag_prcp, stn, year, mo, count_slp, hail, sndp, min, fog, stp, slp, snow_ice_pellets, dewp, count_wdsp, count_temp, flag_max, wdsp, flag_min, gust, prcp, visib, da, count_stp, temp, tornado_funnel_cloud, mxpsd, rain_drizzle, max, count_visib, wban
+
+Table: NOAA_GSOD.GSOD1952
+Columns: count_visib, gust, count_wdsp, count_temp, count_stp, dewp, wdsp, flag_min, flag_max, stp, mxpsd, visib, thunder, mo, da, flag_prcp, fog, tornado_funnel_cloud, count_slp, count_dewp, snow_ice_pellets, temp, rain_drizzle, sndp, max, stn, year, slp, wban, prcp, min, hail
+
+Table: NOAA_GSOD.GSOD2000
+Columns: flag_max, mxpsd, dewp, tornado_funnel_cloud, da, visib, sndp, count_temp, count_wdsp, stn, mo, flag_prcp, temp, wdsp, hail, count_slp, slp, count_visib, count_stp, min, rain_drizzle, max, count_dewp, year, snow_ice_pellets, fog, flag_min, prcp, stp, wban, thunder, gust
+
+Table: NOAA_GSOD.GSOD1950
+Columns: flag_min, count_temp, rain_drizzle, year, min, count_visib, stn, fog, slp, prcp, tornado_funnel_cloud, dewp, da, hail, temp, visib, thunder, stp, count_wdsp, flag_max, count_dewp, sndp, max, wban, mo, snow_ice_pellets, mxpsd, wdsp, count_slp, flag_prcp, gust, count_stp
+
+Table: NOAA_GSOD.GSOD1984
+Columns: dewp, wban, wdsp, sndp, min, hail, prcp, stn, flag_min, max, count_temp, count_dewp, count_slp, rain_drizzle, stp, mxpsd, gust, count_wdsp, da, fog, flag_max, slp, count_visib, visib, thunder, snow_ice_pellets, tornado_funnel_cloud, flag_prcp, temp, count_stp, mo, year
+
+Table: NOAA_GSOD.GSOD1946
+Columns: fog, slp, visib, stn, count_stp, flag_prcp, stp, wdsp, hail, min, dewp, da, max, count_temp, mxpsd, mo, wban, prcp, temp, rain_drizzle, count_wdsp, snow_ice_pellets, flag_max, tornado_funnel_cloud, gust, count_dewp, sndp, count_visib, thunder, year, flag_min, count_slp
+
+Table: NOAA_GSOD.GSOD1999
+Columns: count_stp, count_visib, flag_max, count_dewp, min, mxpsd, rain_drizzle, da, gust, count_wdsp, prcp, hail, wdsp, max, mo, sndp, slp, dewp, tornado_funnel_cloud, flag_min, thunder, count_slp, stp, year, temp, fog, snow_ice_pellets, stn, wban, visib, flag_prcp, count_temp
+
+Table: NOAA_GSOD.GSOD1971
+Columns: tornado_funnel_cloud, hail, wdsp, dewp, gust, mo, count_wdsp, slp, count_visib, sndp, prcp, snow_ice_pellets, count_dewp, max, thunder, visib, fog, wban, mxpsd, temp, stp, flag_prcp, flag_max, count_stp, rain_drizzle, year, flag_min, da, min, stn, count_temp, count_slp
+
+Table: NOAA_GSOD.GSOD2022
+Columns: count_wdsp, year, da, flag_prcp, slp, sndp, wban, count_visib, count_slp, count_dewp, mo, fog, dewp, temp, prcp, max, snow_ice_pellets, wdsp, date, stn, tornado_funnel_cloud, thunder, mxpsd, hail, rain_drizzle, flag_min, stp, flag_max, visib, gust, min, count_stp, count_temp
+
+Table: NOAA_GSOD.GSOD1988
+Columns: count_visib, count_stp, temp, min, count_temp, count_wdsp, gust, year, rain_drizzle, count_slp, mo, visib, tornado_funnel_cloud, snow_ice_pellets, stn, wdsp, stp, thunder, flag_min, count_dewp, dewp, flag_prcp, wban, prcp, flag_max, hail, sndp, slp, da, max, fog, mxpsd
+
+Table: NOAA_GSOD.GSOD1993
+Columns: snow_ice_pellets, count_slp, prcp, flag_prcp, stn, fog, flag_max, dewp, da, max, hail, visib, year, slp, mxpsd, gust, min, stp, count_visib, wban, thunder, temp, count_temp, flag_min, wdsp, rain_drizzle, tornado_funnel_cloud, count_stp, sndp, mo, count_wdsp, count_dewp
+
+Table: NOAA_GSOD.GSOD2018
+Columns: count_stp, stn, min, flag_max, gust, snow_ice_pellets, sndp, thunder, count_temp, year, wdsp, count_slp, rain_drizzle, slp, mo, hail, prcp, flag_prcp, stp, max, da, count_visib, wban, tornado_funnel_cloud, mxpsd, visib, fog, count_wdsp, temp, count_dewp, dewp, flag_min
+
+Table: NOAA_GSOD.GSOD1996
+Columns: wban, temp, count_slp, max, count_visib, wdsp, stp, count_temp, count_stp, flag_prcp, year, rain_drizzle, min, visib, count_dewp, tornado_funnel_cloud, sndp, gust, flag_min, mo, stn, count_wdsp, thunder, fog, slp, dewp, snow_ice_pellets, da, mxpsd, flag_max, prcp, hail
+
+Table: NOAA_GSOD.GSOD1944
+Columns: visib, mxpsd, tornado_funnel_cloud, count_slp, wdsp, prcp, rain_drizzle, sndp, dewp, slp, mo, stn, max, year, count_temp, stp, wban, hail, gust, temp, count_stp, count_visib, flag_max, flag_min, min, da, count_dewp, flag_prcp, snow_ice_pellets, fog, count_wdsp, thunder
+
+Table: NOAA_GSOD.GSOD1975
+Columns: min, count_visib, snow_ice_pellets, tornado_funnel_cloud, wban, stp, fog, slp, stn, visib, flag_min, dewp, wdsp, sndp, count_temp, flag_max, hail, mxpsd, rain_drizzle, da, flag_prcp, count_stp, mo, max, year, gust, prcp, count_dewp, thunder, temp, count_slp, count_wdsp
+
+Table: NOAA_GSOD.GSOD1972
+Columns: count_slp, dewp, tornado_funnel_cloud, flag_min, wdsp, fog, count_stp, hail, count_wdsp, flag_prcp, da, sndp, year, wban, count_temp, snow_ice_pellets, flag_max, mo, count_dewp, prcp, rain_drizzle, min, max, gust, count_visib, mxpsd, thunder, stp, visib, slp, temp, stn
+
+Table: NOAA_GSOD.GSOD2014
+Columns: thunder, wdsp, count_stp, da, count_wdsp, flag_prcp, mo, gust, year, prcp, flag_min, slp, count_temp, stp, dewp, count_visib, count_slp, min, hail, sndp, tornado_funnel_cloud, visib, wban, flag_max, rain_drizzle, mxpsd, snow_ice_pellets, temp, count_dewp, max, stn, fog
+
+Table: NOAA_GSOD.GSOD1989
+Columns: count_temp, year, da, flag_prcp, stn, stp, count_stp, min, count_wdsp, count_dewp, slp, mxpsd, hail, prcp, wban, snow_ice_pellets, count_slp, flag_min, rain_drizzle, mo, tornado_funnel_cloud, visib, gust, thunder, flag_max, sndp, count_visib, temp, dewp, fog, max, wdsp
+
+Table: NOAA_GSOD.GSOD1986
+Columns: count_wdsp, visib, snow_ice_pellets, temp, count_slp, count_dewp, flag_prcp, mxpsd, prcp, stp, count_visib, gust, fog, count_temp, hail, da, thunder, dewp, flag_max, flag_min, mo, stn, min, count_stp, wdsp, wban, sndp, max, year, slp, rain_drizzle, tornado_funnel_cloud
+
+Table: NOAA_GSOD.GSOD1929
+Columns: fog, flag_prcp, year, stp, min, prcp, count_wdsp, temp, da, wban, snow_ice_pellets, count_dewp, count_stp, thunder, dewp, max, visib, hail, count_temp, flag_min, mo, mxpsd, sndp, count_slp, gust, flag_max, wdsp, tornado_funnel_cloud, rain_drizzle, count_visib, slp, stn
+
+Table: NOAA_GSOD.GSOD1948
+Columns: visib, count_wdsp, prcp, fog, flag_prcp, mo, da, wban, count_dewp, thunder, dewp, flag_min, min, slp, stn, gust, count_temp, mxpsd, stp, sndp, temp, wdsp, count_stp, rain_drizzle, max, hail, count_visib, snow_ice_pellets, year, tornado_funnel_cloud, count_slp, flag_max
+
+Table: NOAA_GSOD.GSOD1932
+Columns: count_slp, mo, flag_max, temp, year, count_temp, rain_drizzle, sndp, da, flag_prcp, snow_ice_pellets, stn, prcp, gust, wdsp, thunder, count_visib, mxpsd, fog, visib, count_stp, dewp, slp, stp, count_dewp, tornado_funnel_cloud, wban, hail, count_wdsp, min, max, flag_min
+
+Table: NOAA_GSOD.GSOD1956
+Columns: count_dewp, year, visib, count_temp, max, flag_min, tornado_funnel_cloud, wban, flag_max, stn, sndp, wdsp, min, count_slp, prcp, stp, rain_drizzle, thunder, count_stp, fog, mxpsd, da, slp, temp, gust, flag_prcp, hail, mo, snow_ice_pellets, count_wdsp, dewp, count_visib
+
+Table: NOAA_GSOD.GSOD1974
+Columns: count_stp, count_temp, flag_min, count_visib, mo, hail, min, wdsp, count_wdsp, temp, flag_max, rain_drizzle, prcp, year, stn, flag_prcp, thunder, fog, sndp, mxpsd, da, max, stp, snow_ice_pellets, dewp, gust, tornado_funnel_cloud, count_slp, count_dewp, wban, visib, slp
+
+Table: NOAA_GSOD.GSOD2006
+Columns: thunder, fog, snow_ice_pellets, count_stp, flag_min, count_temp, hail, visib, temp, year, slp, rain_drizzle, gust, min, mxpsd, count_wdsp, sndp, dewp, flag_max, prcp, count_slp, count_dewp, stp, tornado_funnel_cloud, da, stn, max, wdsp, wban, flag_prcp, count_visib, mo
+
+Table: NOAA_GSOD.GSOD1980
+Columns: year, sndp, rain_drizzle, count_visib, thunder, prcp, wdsp, count_temp, gust, stp, stn, tornado_funnel_cloud, wban, max, flag_max, count_stp, da, count_dewp, dewp, mxpsd, mo, min, flag_prcp, fog, slp, snow_ice_pellets, count_slp, flag_min, count_wdsp, temp, visib, hail
+
+Table: NOAA_GSOD.GSOD2010
+Columns: flag_prcp, snow_ice_pellets, hail, flag_min, temp, count_slp, da, slp, count_visib, year, fog, count_temp, dewp, wdsp, count_stp, mxpsd, gust, count_wdsp, thunder, flag_max, tornado_funnel_cloud, min, stn, mo, rain_drizzle, stp, prcp, visib, count_dewp, sndp, max, wban
+
+Table: NOAA_GSOD.GSOD1992
+Columns: da, temp, rain_drizzle, count_visib, thunder, stp, count_slp, count_temp, count_dewp, count_stp, visib, flag_prcp, mxpsd, year, flag_min, prcp, snow_ice_pellets, hail, max, mo, flag_max, dewp, min, sndp, fog, tornado_funnel_cloud, wban, wdsp, count_wdsp, slp, gust, stn
+
+Table: NOAA_GSOD.GSOD2002
+Columns: prcp, flag_max, count_slp, stn, max, sndp, count_temp, rain_drizzle, slp, snow_ice_pellets, fog, da, year, wdsp, gust, temp, count_wdsp, visib, min, dewp, stp, mxpsd, tornado_funnel_cloud, count_stp, flag_prcp, hail, mo, flag_min, count_dewp, thunder, wban, count_visib
+
+Table: NOAA_GSOD.GSOD2003
+Columns: fog, stp, mo, max, visib, prcp, snow_ice_pellets, flag_max, slp, count_visib, count_slp, sndp, mxpsd, year, dewp, min, count_wdsp, thunder, da, tornado_funnel_cloud, flag_min, rain_drizzle, gust, hail, count_dewp, wban, count_stp, count_temp, temp, flag_prcp, stn, wdsp
+
+Table: NOAA_GSOD.GSOD2009
+Columns: count_stp, count_dewp, min, count_wdsp, count_slp, wban, wdsp, stn, rain_drizzle, dewp, sndp, temp, max, flag_min, stp, count_visib, flag_max, year, snow_ice_pellets, gust, da, tornado_funnel_cloud, visib, slp, mo, flag_prcp, prcp, count_temp, fog, hail, mxpsd, thunder
+
+Table: NOAA_GSOD.GSOD1960
+Columns: flag_max, flag_min, da, mo, hail, count_visib, visib, stp, thunder, max, mxpsd, sndp, fog, rain_drizzle, temp, year, count_slp, count_wdsp, wban, prcp, slp, tornado_funnel_cloud, snow_ice_pellets, count_temp, gust, stn, dewp, min, wdsp, count_stp, count_dewp, flag_prcp
+
+Table: NOAA_GSOD.GSOD2024
+Columns: max, dewp, stp, year, min, count_wdsp, count_visib, mo, gust, wdsp, snow_ice_pellets, stn, count_temp, fog, hail, prcp, visib, mxpsd, tornado_funnel_cloud, temp, wban, flag_min, count_dewp, slp, count_slp, rain_drizzle, count_stp, flag_prcp, sndp, da, date, flag_max, thunder
+
+Table: NOAA_GSOD.GSOD1942
+Columns: year, mo, count_stp, wban, wdsp, hail, snow_ice_pellets, sndp, visib, count_visib, da, thunder, rain_drizzle, count_temp, stp, fog, slp, flag_min, max, stn, dewp, prcp, temp, gust, flag_max, mxpsd, count_slp, count_dewp, flag_prcp, tornado_funnel_cloud, count_wdsp, min
+
+Table: NOAA_GSOD.GSOD1934
+Columns: gust, flag_min, min, count_dewp, dewp, hail, year, flag_max, visib, mxpsd, max, stp, flag_prcp, count_slp, stn, count_visib, sndp, prcp, tornado_funnel_cloud, thunder, snow_ice_pellets, slp, count_stp, temp, count_temp, wban, wdsp, fog, mo, rain_drizzle, da, count_wdsp
+
+Table: NOAA_GSOD.GSOD1940
+Columns: wdsp, flag_prcp, count_visib, sndp, gust, da, stn, hail, prcp, visib, slp, temp, mo, count_slp, flag_min, wban, thunder, count_stp, count_temp, rain_drizzle, count_wdsp, year, mxpsd, max, dewp, stp, flag_max, min, snow_ice_pellets, count_dewp, tornado_funnel_cloud, fog
+
+Table: NOAA_GSOD.GSOD2012
+Columns: stn, gust, prcp, count_slp, mo, count_temp, thunder, count_visib, count_stp, wban, dewp, da, hail, count_wdsp, temp, year, slp, wdsp, min, flag_max, tornado_funnel_cloud, stp, count_dewp, snow_ice_pellets, fog, flag_prcp, rain_drizzle, mxpsd, sndp, flag_min, visib, max
+
+Table: NOAA_GSOD.GSOD1962
+Columns: visib, count_wdsp, count_dewp, wban, count_slp, snow_ice_pellets, count_temp, tornado_funnel_cloud, min, slp, fog, dewp, count_visib, temp, flag_min, hail, mxpsd, sndp, rain_drizzle, year, flag_max, mo, wdsp, da, thunder, count_stp, max, gust, stp, flag_prcp, stn, prcp
+
+Table: NOAA_GSOD.GSOD1976
+Columns: mo, tornado_funnel_cloud, prcp, wdsp, count_dewp, temp, max, da, flag_max, flag_min, wban, stp, min, hail, rain_drizzle, gust, visib, count_temp, count_slp, fog, snow_ice_pellets, sndp, slp, count_stp, dewp, year, count_wdsp, mxpsd, flag_prcp, stn, thunder, count_visib
+
+Table: NOAA_GSOD.GSOD2017
+Columns: prcp, visib, da, flag_max, hail, wdsp, gust, snow_ice_pellets, sndp, mo, count_slp, count_stp, dewp, fog, thunder, flag_min, temp, count_wdsp, slp, tornado_funnel_cloud, flag_prcp, wban, count_temp, stp, stn, mxpsd, count_visib, min, rain_drizzle, max, year, count_dewp
+
+Table: NOAA_GSOD.GSOD1970
+Columns: prcp, stp, thunder, snow_ice_pellets, temp, wban, max, count_stp, dewp, year, hail, slp, flag_min, flag_max, count_visib, fog, gust, wdsp, visib, tornado_funnel_cloud, count_wdsp, stn, count_dewp, mo, min, count_temp, rain_drizzle, da, flag_prcp, sndp, count_slp, mxpsd
+
+Table: NOAA_GSOD.GSOD1985
+Columns: flag_min, fog, tornado_funnel_cloud, gust, min, wdsp, flag_max, stn, stp, prcp, count_visib, count_stp, rain_drizzle, count_dewp, count_temp, count_slp, count_wdsp, dewp, thunder, hail, mo, mxpsd, wban, sndp, year, flag_prcp, slp, snow_ice_pellets, temp, visib, da, max
+
+Table: NOAA_GSOD.GSOD1959
+Columns: min, prcp, count_stp, visib, count_dewp, wdsp, mxpsd, slp, da, wban, temp, rain_drizzle, count_visib, max, year, mo, gust, flag_max, sndp, dewp, stn, stp, fog, flag_min, count_temp, snow_ice_pellets, flag_prcp, thunder, tornado_funnel_cloud, hail, count_slp, count_wdsp
+
+Table: NOAA_GSOD.GSOD1983
+Columns: slp, dewp, thunder, max, count_dewp, visib, count_wdsp, mo, mxpsd, stp, flag_prcp, fog, wban, snow_ice_pellets, da, temp, flag_max, stn, rain_drizzle, wdsp, flag_min, hail, tornado_funnel_cloud, count_visib, count_stp, count_temp, gust, count_slp, sndp, min, prcp, year
+
+Table: NOAA_GSOD.GSOD2019
+Columns: tornado_funnel_cloud, count_wdsp, thunder, visib, year, stp, wban, mxpsd, stn, count_slp, count_dewp, mo, count_stp, slp, count_temp, flag_prcp, da, flag_max, gust, dewp, min, flag_min, snow_ice_pellets, rain_drizzle, wdsp, sndp, count_visib, max, fog, temp, prcp, hail
+
+Table: NOAA_GSOD.GSOD1938
+Columns: max, da, flag_prcp, min, prcp, fog, snow_ice_pellets, flag_max, thunder, wban, mo, slp, count_wdsp, stn, stp, gust, sndp, mxpsd, count_dewp, hail, count_slp, count_visib, flag_min, wdsp, dewp, rain_drizzle, year, tornado_funnel_cloud, visib, count_temp, temp, count_stp
+
+Table: NOAA_GSOD.GSOD1991
+Columns: year, mxpsd, da, snow_ice_pellets, wdsp, count_stp, slp, stp, fog, thunder, flag_max, count_slp, visib, count_visib, rain_drizzle, max, hail, count_temp, wban, gust, min, prcp, stn, dewp, sndp, count_wdsp, count_dewp, mo, flag_prcp, temp, tornado_funnel_cloud, flag_min
+
+Table: NOAA_GSOD.GSOD1935
+Columns: dewp, count_slp, wban, flag_prcp, prcp, da, mo, year, count_wdsp, stp, visib, sndp, max, flag_min, stn, rain_drizzle, tornado_funnel_cloud, slp, count_temp, hail, thunder, temp, wdsp, count_stp, fog, count_dewp, snow_ice_pellets, min, mxpsd, flag_max, gust, count_visib
+
+Table: NOAA_GSOD.GSOD2004
+Columns: fog, stn, da, sndp, min, mxpsd, slp, rain_drizzle, count_wdsp, flag_min, count_dewp, tornado_funnel_cloud, year, visib, dewp, hail, snow_ice_pellets, thunder, temp, flag_prcp, count_stp, prcp, flag_max, count_temp, count_slp, stp, gust, wdsp, count_visib, max, wban, mo
+
+Table: NOAA_GSOD.GSOD2021
+Columns: sndp, count_wdsp, mo, flag_max, mxpsd, rain_drizzle, stp, prcp, visib, wdsp, wban, gust, count_stp, da, slp, hail, flag_prcp, year, flag_min, date, temp, snow_ice_pellets, count_slp, count_visib, stn, tornado_funnel_cloud, min, fog, count_dewp, count_temp, dewp, thunder, max
+
+Table: NOAA_GSOD.GSOD2015
+Columns: stp, count_wdsp, rain_drizzle, prcp, tornado_funnel_cloud, visib, flag_max, wban, slp, stn, count_temp, min, snow_ice_pellets, sndp, mo, temp, hail, gust, max, flag_prcp, flag_min, count_slp, count_visib, count_stp, da, fog, dewp, count_dewp, wdsp, year, thunder, mxpsd
+
+Table: NOAA_GSOD.GSOD2011
+Columns: mxpsd, min, sndp, flag_max, prcp, count_dewp, count_visib, mo, max, dewp, wdsp, snow_ice_pellets, flag_prcp, hail, da, count_wdsp, temp, fog, thunder, flag_min, count_slp, wban, visib, count_temp, slp, stp, gust, count_stp, stn, year, tornado_funnel_cloud, rain_drizzle
+
+Table: NOAA_GSOD.GSOD1933
+Columns: max, stp, rain_drizzle, prcp, gust, count_stp, temp, mo, flag_min, hail, wban, flag_max, count_wdsp, count_temp, da, slp, wdsp, snow_ice_pellets, count_visib, thunder, mxpsd, stn, fog, count_slp, visib, year, dewp, count_dewp, tornado_funnel_cloud, sndp, min, flag_prcp
+
+Table: NOAA_GSOD.GSOD1951
+Columns: sndp, wdsp, flag_min, min, visib, mo, count_visib, stn, stp, year, prcp, snow_ice_pellets, count_slp, count_temp, dewp, tornado_funnel_cloud, slp, count_stp, max, fog, count_wdsp, mxpsd, flag_max, hail, flag_prcp, thunder, count_dewp, gust, wban, temp, rain_drizzle, da
+
+Table: NOAA_GSOD.GSOD1969
+Columns: wdsp, count_slp, count_visib, wban, year, dewp, stp, fog, sndp, thunder, prcp, count_stp, flag_min, stn, count_temp, rain_drizzle, visib, snow_ice_pellets, max, hail, count_dewp, count_wdsp, flag_max, gust, mo, mxpsd, flag_prcp, temp, da, slp, tornado_funnel_cloud, min
+
+Table: NOAA_GSOD.GSOD1930
+Columns: count_temp, mo, da, flag_min, fog, count_visib, wban, snow_ice_pellets, count_stp, hail, temp, rain_drizzle, stn, tornado_funnel_cloud, flag_max, stp, sndp, dewp, max, count_dewp, wdsp, gust, count_wdsp, visib, count_slp, min, slp, prcp, year, flag_prcp, thunder, mxpsd
+
+Table: NOAA_GSOD.GSOD2023
+Columns: year, flag_prcp, hail, stp, sndp, rain_drizzle, da, count_dewp, temp, count_slp, wdsp, thunder, count_temp, fog, count_wdsp, gust, slp, mo, mxpsd, prcp, count_visib, tornado_funnel_cloud, flag_min, min, snow_ice_pellets, wban, visib, flag_max, count_stp, stn, dewp, date, max
+
+Table: NOAA_GSOD.GSOD1949
+Columns: count_dewp, count_stp, min, gust, tornado_funnel_cloud, rain_drizzle, flag_prcp, max, mo, flag_min, stn, count_slp, year, thunder, count_temp, slp, visib, prcp, fog, temp, flag_max, da, dewp, wdsp, count_visib, snow_ice_pellets, stp, wban, mxpsd, hail, count_wdsp, sndp
+
+Table: NOAA_TSUNAMI.HISTORICAL_RUNUPS
+Columns: day, location_name, houses_damaged, distance_from_source, water_ht, tsevent_id, timestamp, region_code, period, injuries_description, travel_time_hours, horizontal_inundation, latitude, injuries, deaths, houses_damaged_description, houses_destroyed, damage_description, arr_day, longitude, month, doubtful, country, arr_hour, arr_min, first_motion, year, houses_destroyed_description, id, travel_time_minutes, state, type_measurement_id, deaths_description, damage_millions_dollars
+
+Table: NOAA_TSUNAMI.HISTORICAL_SOURCE_EVENT
+Columns: longitude, warning_status, state, day, iida, region_code, focal_depth, total_damage_description, timestamp, total_deaths_description, missing, total_injuries_description, houses_destroyed, houses_damaged_description, injuries_description, total_houses_damaged_description, abe, deaths, total_injuries, total_missing_description, damage_millions_dollars, total_deaths, location_name, soloviev, year, houses_destroyed_description, injuries, latitude, cause_code, total_houses_destroyed_description, id, month, total_houses_destroyed, missing_description, maximum_water_height, total_houses_damaged, event_validity, damage_description, deaths_description, houses_damaged, country, total_damage_in_millions_dollars, primary_magnitude, total_missing
+
+Table: NOAA_HURRICANES.HURRICANES
+Columns: bom_tnum, iflag, reunion_latitude, bom_r50_ne, season, ds824_pressure, hko_pressure, bom_eye, nature, reunion_longitude, usa_r50_sw, nadi_pressure, newdelhi_dp, bom_type, bom_r64_nw, mlc_class, reunion_wind, reunion_r34_nw, newdelhi_ci, usa_r50_ne, bom_r50_sw, usa_r34_se, bom_r64_se, reunion_r34_ne, reunion_r50_sw, mlc_wind, usa_r34_nw, td9635_latitude, bom_poci, usa_r64_ne, hko_wind, reunion_r50_ne, hko_cat, neumann_pressure, ds824_wind, basin, cma_cat, bom_pos_method, bom_latitude, usa_r64_se, ds824_longitude, usa_eye, tokyo_longitude, iso_time, newdelhi_pressure, reunion_tnum, usa_r64_nw, bom_r34_sw, tokyo_r30_long, wmo_agency, longitude, subbasin, bom_r34_nw, cma_pressure, cma_latitude, bom_r34_se, td9635_wind, wellington_latitude, usa_roci, bom_r64_ne, usa_r50_nw, usa_agency, tokyo_latitude, usa_r50_se, wmo_pressure, usa_longitude, td9635_longitude, landfall, usa_status, latitude, sid, nadi_wind, wmo_wind, usa_r34_sw, tokyo_r30_short, usa_pressure, reunion_r34_sw, nadi_longitude, tokyo_r50_short, usa_r34_ne, bom_pressure_method, mlc_pressure, track_type, usa_rmw, usa_r64_sw, usa_record, tokyo_grade, reunion_r64_nw, newdelhi_latitude, ds824_latitude, hko_latitude, tokyo_r50_longitude, cma_wind, cma_longitude, etl_timestamp, reunion_r64_sw, usa_atcf_id, reunion_r50_se, wellington_longitude, ds824_stage, tokyo_wind, nadi_latitude, reunion_r34_se, reunion_r64_ne, newdelhi_poci, neumann_latitude, reunion_pressure, newdelhi_longitude, source_url, bom_r50_se, usa_latitude, td9636_wind, td9636_longitude, td9636_pressure, bom_r34_ne, mlc_longitude, wellington_wind, bom_roci, bom_ci, hko_longitude, tokyo_r50_dir, newdelhi_grade, reunion_r64_se, neumann_class, reunion_rmw, usa_wind, name, td9635_roci, reunion_type, reunion_ci, bom_wind, usa_sshs, mlc_latitude, bom_rmw, tokyo_land, wellington_pressure, tokyo_pressure, nadi_cat, bom_pressure, td9636_stage, td9635_pressure, reunion_r50_nw, bom_longitude, tokyo_r30_dir, newdelhi_wind, number, usa_poci, bom_r50_nw, dist2land, neumann_wind, bom_r64_sw, neumann_longitude, td9636_latitude

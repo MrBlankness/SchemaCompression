@@ -1,0 +1,14 @@
+[COMPONENTS]
+@C1:AB,ABP,AC,AF,AN,AO,CIGAR,DP,DPB,DPRA,EPP,EPPR,GTI,LEN,MEANALT,MQM,MQMR,NS,NUMALT,ODDS,PAIRED,PAIREDR,PAO,PQA,PQR,PRO,QA,QR,RO,RPL,RPP,RPPR,RPR,RUN,SAF,SAP,SAR,SRF,SRP,SRR,TYPE,variant_id
+@C2:alternate_bases,call,filter,names,quality,reference_bases,reference_name
+@C3:end,start
+
+[TABLES]
+Format: schema.table|components|columns
+GENOMICS_CANNABIS.MNPR01_TRANSCRIPTOME_201703|@C1,@C2,@C3|
+GENOMICS_CANNABIS.CS10_GFF|@C3|derived_features,strand,source,id,attributes,phase,child_features,_part,seq_id,score,type,geometry
+GENOMICS_CANNABIS.CS3K_VCF_CS10_DV090|@C2|start_position,end_position,geometry,_part
+GENOMICS_CANNABIS.SAMPLE_INFO_201703||SRA_Sample_s,cultivar_s,Sample_Name_s,Library_Name_s
+GENOMICS_CANNABIS.MNPR01_201703|@C1,@C2,@C3|
+GENOMICS_CANNABIS.CS3K_PROJECT_INFO||Library_Name,Run,Platform,Instrument,LibrarySource,LibrarySelection,SRA_Study,Sample_Name,Consent,LibraryLayout,ReleaseDate,LoadDate,Assay_Type,Center_Name,BioProject,BioSample,SRA_Sample,Experiment,DATASTORE_filetype,AvgSpotLen,Organism,DATASTORE_provider,MBases,MBytes,DATASTORE_region,InsertSize
+GENOMICS_CANNABIS.MNPR01_REFERENCE_201703||length,name

@@ -1,0 +1,237 @@
+[COMPONENTS]
+@C1
+categories: VARIANT | NULL | eg=[{"for_2020_v2022":{"first_level":{"codes":["35"],"full":[{"code":"35","id":"80006","name":"Commerce, Management, Tourism And Services"}]},"second_level":{"codes":["3507"],"full":[{"code":"3507","id":"80079","name":"Strategy, Management And Organisational Behaviour"}]}},"for_v1":{"first_level":{"codes":["15","17"],"full":[{"code":"15","id":"2215","name":"Commerce, Management, Tourism and Services"},{"code":"17","id":"2217","name":"Psychology and Cognitive Sciences"}]},"second_level":{"codes":["1503","1701"],"full":[{"code":"1503","id":"3342","name":"Business and Management"},{"code":"1701","id":"3468","name":"Psychology"}]}},"for_v2020":{"first_level":{"codes":["15","17"],"full":[{"code":"15","id":"2215","name":"Commerce, Management, Tourism and Services"},{"code":"17","id":"2217","name":"Psychology and Cognitive Sciences"}]},"second_level":{"codes":["1503","1701"],"full":[{"code":"1503","id":"3342","name":"Business and Management"},{"code":"1701","id":"3468","name":"Psychology"}]}},...]
+category_bra: VARIANT | NULL
+category_for: VARIANT | NULL | eg=[{"first_level":{"codes":["15","17"],"full":[{"code":"15","id":"2215","name":"Commerce, Management, Tourism and Services"},{"code":"17","id":"2217","name":"Psychology and Cognitive Sciences"}]},"second_level":{"codes":["1503","1701"],"full":[{"code":"1503","id":"3342","name":"Business and Management"},{"code":"1701","id":"3468","name":"Psychology"}]}}, {"first_level":{"codes":["15"],"full":[{"code":"15","id":"2215","name":"Commerce, Management, Tourism and Services"}]},"second_level":{"codes":["1505"],"full":[{"code":"1505","id":"3364","name":"Marketing"}]}}]
+category_hra: VARIANT | NULL | eg=[{"full":[{"id":"3902","value":"Health services & systems"}],"values":["Health services & systems"]}]
+category_hrcs_hc: VARIANT | NULL
+category_hrcs_rac: VARIANT | NULL
+category_icrp_cso: VARIANT | NULL
+category_icrp_ct: VARIANT | NULL
+category_rcdc: VARIANT | NULL | eg=[{"full":[{"id":"558","value":"Prevention"}],"values":["Prevention"]}]
+category_sdg: VARIANT | NULL | eg=[{"codes":["8"],"full":[{"code":"8","id":"40008","name":"Decent Work and Economic Growth"}]}, {"codes":["11"],"full":[{"code":"11","id":"40011","name":"Sustainable Cities and Communities"}]}]
+category_uoa: VARIANT | NULL | eg=[{"codes":["C17"],"full":[{"code":"C17","id":"30017","name":"Business and Management Studies"}]}, {"codes":["C24"],"full":[{"code":"C24","id":"30024","name":"Sport and Exercise Sciences, Leisure and Tourism"}]}]
+date_imported_gbq: NUMBER | NULL | eg=[1661914996000000]
+researcher_ids: VARIANT | NULL | eg=[["ur.013517545456.43"], ["ur.010000477061.68"]]
+
+@C2
+active_years: VARIANT | NULL | eg=[[2020,2021,2022,2023,2024], [2021,2022,2023,2024]]
+end_date: TEXT | NULL | eg=["2024-03-31", "2025-03-31"]
+end_year: NUMBER | NULL | eg=[2024, 2025]
+investigators: VARIANT | NULL | eg=[[{"affiliations":[{"affiliation":"九州大学","cities":[1863967],"countries_territories":["JP"],"grid_ids":["grid.177174.3"],"states":[]}],"first_name":"Satomi","last_name":"Mikami","researcher_id":"ur.013517545456.43","role":"PI"}], [{"affiliations":[{"affiliation":"駒澤大学","cities":[1850147],"countries_territories":["JP"],"grid_ids":["grid.440902.b"],"states":[]}],"first_name":"Jeongsoo","last_name":"Park","researcher_id":"ur.010000477061.68","role":"PI"}]]
+linkout: TEXT | NULL | eg=["https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-20K13586", "https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-21K01745"]
+organisation_details: VARIANT | NULL | eg=[[{"city":"Fukuoka","country":"Japan","grid_id":"grid.177174.3","name":"Kyushu University"}], [{"city":"Tokyo","country":"Japan","grid_id":"grid.440902.b","name":"Komazawa University"}]]
+start_date: TEXT | NULL | eg=["2020-04-01", "2021-04-01"]
+start_year: NUMBER | NULL | eg=[2020, 2021]
+
+@C3
+research_org_cities: VARIANT | NULL | eg=[[1863967], [1850147]]
+research_org_countries: VARIANT | NULL | eg=[["JP"]]
+research_org_state_codes: VARIANT | NULL | eg=[[]]
+
+@C4
+funder_orgs: VARIANT | NULL | eg=[[]]
+funding_details: VARIANT | NULL | eg=[[]]
+
+@C5
+authors: VARIANT | NULL | eg=[[{"name":"MARCOS SILVEIRA BUCKERIDGE"},{"name":"ARLINDO PHILIPPI JUNIOR"}], [{"name":"Mahnaz Habibi"},{"name":"Golnaz Taheri"}]]
+doi: TEXT | NULL | eg=["10.6084/m9.figshare.14303676.v1", "10.1371/journal.pone.0255270.t003"]
+year: NUMBER | NULL | eg=[2020, 2021]
+
+[TABLES]
+## DIMENSIONS_AI_COVID19.GRID
+email_address: TEXT | NULL
+external_ids: VARIANT | NULL | eg=["null", {"fundref":{"all":["501100001465"]},"isni":{"all":["0000 0004 0640 9018"]},"orgref":{"all":["2265817"]},"ror":{"all":["https://ror.org/051zva233"]},"wikidata":{"all":["Q6974124"]}}]
+name: TEXT | NULL | eg=["Nestlé (Singapore)", "National Library Board"]
+redirect: TEXT | NULL
+closed: NUMBER | NULL
+links: VARIANT | NULL | eg=[["https://www.nestle.com.sg/"], ["https://www.nlb.gov.sg/"]]
+address: VARIANT | NULL | eg=[{"city":"Singapore","country":"Singapore","country_code":"SG","country_geonames_id":1880251,"geonames_city":{"city":"Singapore","id":1880252,"license":{"attribution":"Data from geonames.org under a CC-BY 3.0 license","license":"http://creativecommons.org/licenses/by/3.0/"}},"latitude":1.33800995349884,"longitude":103.9643020629883}, {"city":"Singapore","country":"Singapore","country_code":"SG","country_geonames_id":1880251,"geonames_city":{"city":"Singapore","id":1880252,"license":{"attribution":"Data from geonames.org under a CC-BY 3.0 license","license":"http://creativecommons.org/licenses/by/3.0/"}},"latitude":1.297652959823608,"longitude":103.8542251586914}]
+status: TEXT | NULL | eg=["active"]
+id: TEXT | NULL | eg=["grid.511673.7", "grid.462574.6"]
+labels: VARIANT | NULL | eg=[[], [{"iso639":"ta","label":"தேசிய நூலக வாரியம்"},{"iso639":"zh","label":"国家图书馆管理局"}]]
+types: VARIANT | NULL | eg=[["Company"], ["Government"]]
+wikipedia_url: TEXT | NULL | eg=["https://en.wikipedia.org/wiki/Nestl%C3%A9", "https://en.wikipedia.org/wiki/National_Library_Board"]
+relationships: VARIANT | NULL | eg=[[{"id":"grid.419905.0","label":"Nestlé (Switzerland)","type":"Parent"}], [{"id":"grid.453625.3","label":"Ministry of Communications and Information","type":"Parent"}]]
+aliases: VARIANT | NULL | eg=[[], ["Lembaga Perpustakaan Negara","Guójiā Túshūguǎn Guǎnlǐjú"]]
+established: NUMBER | NULL | eg=[1912.0, 1995.0]
+acronyms: VARIANT | NULL | eg=[[], ["NLB"]]
+
+## DIMENSIONS_AI_COVID19.GRANTS
+@use: [C1, C2, C3]
+language: TEXT | NULL | eg=["ja"]
+funding_cad: FLOAT | NULL | eg=[48057.0, 43698.0]
+funder_org_acronyms: VARIANT | NULL | eg=[["JSPS"]]
+id: TEXT | NULL | eg=["grant.9204573", "grant.9676826"]
+research_orgs: VARIANT | NULL | eg=[["grid.177174.3"], ["grid.440902.b"]]
+funding_nzd: FLOAT | NULL | eg=[55475.0, 50608.0]
+funding_cny: FLOAT | NULL | eg=[244391.0, 221221.0]
+funder_org_countries: VARIANT | NULL | eg=[["JP"]]
+abstract: TEXT | NULL | eg=["The purpose of this study is to clarify the effect of employee gratitude feelings by gratitude management by conducting empirical studies at the individual and organizational levels. Specifically, we will (1) verify the physical changes of organizational employees by feeling gratitude, and (2) verify the ripple effect of gratitude management. In the first year, we planned to conduct an experiment by measuring brain waves and heart rate for people working in the organization to see if \"gratitude\" in the organizational scene would bring out positive emotions for the organizational employees. However, due to the influence of COVID-19, it became impossible to use the room where the experiment was originally planned. Even if the planned laboratory could be secured, it was difficult to keep a sufficient distance between the experimenter and the collaborators due to the small room, and the ventilation function was not sufficient. It was decided that it would be difficult to carry out the e...", "What impact will the spread of the new coronavirus have on consumer animosity in the United States, China, and South Korea? The purpose of this research is to compare and analyze consumer hostility research, which has been attracting attention in the research area of global marketing in recent years, for consumers in the United States, China, and South Korea. Furthermore, by combining the results of this survey with research results in the field of global marketing communications, we will also try to present a new \"global marketing communications\" strategy for Japanese companies entering the market."]
+funding_aud: FLOAT | NULL | eg=[51906.0, 47224.0]
+funding_jpy: FLOAT | NULL | eg=[4290000.0, 4030000.0]
+funding_usd: FLOAT | NULL | eg=[37601.0, 34603.0]
+funding_gbp: FLOAT | NULL | eg=[28256.0, 25813.0]
+funding_eur: FLOAT | NULL | eg=[33136.0, 30648.0]
+title: TEXT | NULL | eg=["Elucidation of the effects of \"gratitude\" in organizational management on individuals and organizations", "Current Situation and Challenges of Consumer Hostility in the US, China, and Korea in the Coronavirus Disease"]
+funding_amount: FLOAT | NULL | eg=[4290000.0, 4030000.0]
+original_abstract: VARIANT | NULL | eg=[{"language":"ja","value":"本研究では、感謝マネジメントによる従業員の感謝感情の効果を、個人レベル・組織レベルで実証研究を行うことで明らかにすることを目的とする。具体的には、①感謝を感じることによる組織従業員の身体的変化の検証、②感謝マネジメントによる波及効果の検証を行っていく。初年度では、組織場面において「感謝すること」は、組織従業員にとってポジティブ感情を引き出すことになるのかについて、組織で働く人を対象に、脳波・心拍測定による実験を行う予定であった。しかし、COVID-19の影響により、当初、実験を予定していた部屋を使用することができなくなった。また、もし予定していた実験室を確保できたとしても、部屋が狭いために、実験者と実験協力者との距離を十分にとることが困難であったこと、換気機能が十分でなかったことなどの、リスク対策面も考慮したうえでの実験の実施が難しいと判断し、やむを得ず実験を行うことを断念するに至った。実証研究を行うことはできなかったが、本研究では「組織従業員の感謝感情」の文献の整理も行っているため、そちらに注力した。「感謝」についての先行研究は国内外で行われているものの、組織マネジメントとして感謝感情を引き起こす取り組みについては、学術研究としての文献は僅少である。今後の研究に向けて、先行研究における「感謝」の定義と組織場面で取り扱われている「感謝」の定義を整理・明確化、理論的枠組みの精緻化を進める予定をしている。"}, {"language":"ja","value":"新型コロナウィルスの感染拡大は、アメリカ・中国・韓国の消費者敵対心（Consumer Animosity）にいかなる影響を与えるものなのか。本研究の目的は、近年、グローバル・マーケティングの研究領域で注目されている消費者敵対心研究を、アメリカ・中国・韓国の消費者を対象に比較分析する。そして、さらにこの調査結果をグローバル・マーケティング・コミュニケーションの分野における研究成果と組み合わせることにより、当該市場に進出している日系企業のための新たな「グローバル・マーケティング・コミュニケーション」戦略の提示も試みる。"}]
+funder_org_cities: VARIANT | NULL | eg=[[1850147]]
+funder_org_state_codes: VARIANT | NULL | eg=[[]]
+original_title: VARIANT | NULL | eg=[{"language":"ja","value":"組織マネジメントにおける「感謝感情」が個人・組織にもたらす効果の解明"}, {"language":"ja","value":"新型コロナウィルス禍における米・中・韓の消費者敵対心の現状と課題"}]
+foa_number: TEXT | NULL | eg=["Not available"]
+concepts: VARIANT | NULL | eg=[[{"concept":"organizational employees","relevance":0.8455671619},{"concept":"organizational management","relevance":0.7975146023},{"concept":"empirical study","relevance":0.7587604599},{"concept":"organizational scene","relevance":0.693201182},{"concept":"organizational level","relevance":0.6843954452},{"concept":"organizational situations","relevance":0.6828582566},{"concept":"previous research","relevance":0.6741126485},{"concept":"academic research","relevance":0.6598410424},{"concept":"employees","relevance":0.6589735753},{"concept":"risk countermeasures","relevance":0.630441467},{"concept":"theoretical framework","relevance":0.6211673126},{"concept":"ripple effect","relevance":0.6145849082},{"concept":"positive emotions","relevance":0.5957342949},{"concept":"future research","relevance":0.5948425401},{"concept":"organization","relevance":0.5880494372},{"concept":"management","relevance":0.5731211498},{"concept":"little literature","relevance":0.5692747208},{"concept":"gratitude...]
+resulting_publication_ids: VARIANT | NULL | eg=[[]]
+grant_number: TEXT | NULL | eg=["20K13586", "21K01745"]
+funder_org: TEXT | NULL | eg=["grid.54432.34"]
+date_inserted: NUMBER | NULL | eg=[1591867583000000, 1622545394000000]
+funding_currency: TEXT | NULL | eg=["JPY"]
+funding_chf: FLOAT | NULL | eg=[34865.0, 32017.0]
+
+## DIMENSIONS_AI_COVID19.PATENTS
+@use: [C1, C4]
+application_number: TEXT | NULL | eg=["MC2698", "MA49712"]
+original_assignee: VARIANT | NULL | eg=[[{"country":"MC","name":"MOFFA RICCARDO"},{"country":"IT","name":"DE ROSA ALFREDO"},{"country":"IT","name":"DI DOMENICO MARINA"},{"country":"IT","name":"BOCCELLINO MARIAROSARIA"}], [{"country":"MA","name":"ECOLE SUPERIEURE DES IND DU TEXTILE ET DE LHABILLEMENT ESITH"},{"country":"MA","name":"Ecole Navale Royale"}]]
+filing_status: TEXT | NULL | eg=["N/A"]
+current_assignee: VARIANT | NULL | eg=[[]]
+legal_events: VARIANT | NULL | eg=[[]]
+cited_by_ids: VARIANT | NULL | eg=[[]]
+family_id: TEXT | NULL | eg=["75639655", "74669481"]
+title: TEXT | NULL | eg=["METHODE DE DEPISTAGE IN VITRO COTE PATIENT POUR LE DIAGNOSTIC RAPIDE DU SARS-COV-2", "Système d'identification des milieux infectés par covid-19"]
+priority_year: NUMBER | NULL | eg=[2020]
+abstract: TEXT | NULL | eg=["<p>Le syst&#232;me invent&#233; ci pr&#233;sent, est form&#233;e d&#8217;un aspirateur (1) et d&#8217;un filtre (2). Le filtre (2) est un cylindre &#233;vid&#233; (4) dans lequel se trouve log&#233;e une cartouche (7) charg&#233;e d&#8217;un produit fixateur (8) du covid-19. Le cylindre (4) est muni d&#8217;un bouchon (5) avec fentes (5&#8217;) et sa base circulaire (6) avec fentes (6&#8217;). Le filtre actif (2), ainsi d&#233;crit, est fix&#233; &#224; l&#8217;entr&#233;e d&#8217;air (9) de l&#8217;aspirateur (1). Le syst&#232;me est &#233;quip&#233; d&#8217;un filtre de s&#233;curit&#233; (11) qui est raccord&#233; &#224; la sortie d&#8217;air (10) de l&#8217;aspirateur (1). Au cours du fonctionnement du syst&#232;me, l&#8217;air ambiant infect&#233; (3) est drain&#233; par l&#8217;aspirateur (1), passe par le bouchon perfor&#233; (5,5&#8217;), traverse le cylindre (4) &#224; travers la cartouche (7) en d&#233;posant le covid-19, qu&#8217;il contenait, dans le lit du produit fixat...", "<p>Un dispositif pour se prot&#233;g&#233; contre les virus comme covid -19 sous forme de masque qui permet de couvrir tout le visage .Ce masque est modulaire permanent &#224; lunettes int&#233;gr&#233;es fabriqu&#233; par injection, menue de deux filtres &#233;changeables.</p>"]
+inventor_names: VARIANT | NULL | eg=[["MOFFA RICCARDO","DE ROSA ALFREDO","DI DOMENICO MARINA","BOCCELLINO MARIAROSARIA"], ["CHERKAOUI OMAR","BELKBIR LARBI","ZERIOUH ABDELOUAHHAB"]]
+ipcr: VARIANT | NULL | eg=[[], ["G01N1/22"]]
+jurisdiction: TEXT | NULL | eg=["MC", "MA"]
+current_assignee_orgs: VARIANT | NULL | eg=[[]]
+reference_ids: VARIANT | NULL | eg=[[]]
+filing_date: TEXT | NULL | eg=["2020-04-02", "2020-05-07"]
+assignee_orgs: VARIANT | NULL | eg=[[], ["grid.31143.34"]]
+cpc: VARIANT | NULL | eg=[["G01N2333/165","G01N33/558","G01N2469/10","G01N33/56983"], ["A61L2209/14","A61L2209/111","A61L2209/22","A61L9/014","G01N33/0036"]]
+federal_support: VARIANT | NULL | eg=[[]]
+associated_grant_ids: VARIANT | NULL | eg=[[]]
+orange_book: VARIANT | NULL
+family_count: NUMBER | NULL | eg=[2, 3]
+assignee_countries: VARIANT | NULL | eg=[["MC","IT"], ["MA"]]
+original_assignee_countries: VARIANT | NULL | eg=[["IT","MC"], ["MA"]]
+granted_date: TEXT | NULL
+kind: TEXT | NULL | eg=["B1", "A1"]
+priority_date: TEXT | NULL | eg=["2020-04-02", "2020-05-07"]
+expiration_year: NUMBER | NULL
+current_assignee_countries: VARIANT | NULL | eg=[[]]
+granted_year: NUMBER | NULL
+publication_year: NUMBER | NULL | eg=[2021, 2022]
+publication_ids: VARIANT | NULL | eg=[[]]
+original_assignee_orgs: VARIANT | NULL | eg=[[], ["grid.31143.34"]]
+legal_status: TEXT | NULL | eg=["N/A"]
+concepts: VARIANT | NULL | eg=[[]]
+filing_year: NUMBER | NULL | eg=[2020]
+publication_date: TEXT | NULL | eg=["2021-04-15", "2022-02-28"]
+expiration_date: TEXT | NULL
+id: TEXT | NULL | eg=["MC-200239-B1", "MA-49712-B1"]
+family_members_ids: VARIANT | NULL | eg=[["EP-3889607-A1"], ["MA-49712-A1","WO-2021225428-A1"]]
+
+## DIMENSIONS_AI_COVID19.DATASETS
+@use: [C1, C3, C5]
+associated_publication_pmid: TEXT | NULL
+id: TEXT | NULL | eg=["dataset.24895646", "dataset.25853890"]
+associated_publication_doi: TEXT | NULL | eg=["10.1590/s0103-4014.2020.3499.009", "10.1371/journal.pone.0255270"]
+associated_publication_id: TEXT | NULL | eg=["pub.1129311090", "pub.1140048453"]
+license: VARIANT | NULL | eg=[{"name":"CC BY-NC 4.0","url":"https://creativecommons.org/licenses/by-nc/4.0/"}, {"name":"CC BY 4.0","url":"https://creativecommons.org/licenses/by/4.0/"}]
+research_orgs: VARIANT | NULL | eg=[["grid.11899.38"], ["grid.5037.1","grid.452834.c","grid.449392.1"]]
+embargo_date: TEXT | NULL
+created_date: TEXT | NULL | eg=["2021-03-25", "2021-07-29"]
+repository_id: TEXT | NULL | eg=["portal_325", "portal_5"]
+associated_grant_ids: VARIANT | NULL | eg=[[]]
+associated_publication_arxiv_id: TEXT | NULL
+date_modified: NUMBER | NULL | eg=[1616630400000000.0, 1627516800000000.0]
+description: TEXT | NULL | eg=["ABSTRACT The covid-19 pandemic revealed the virtues and deficiencies of the city of São Paulo in facing one of the most extreme events of the 21st century. On the one hand, the robustness of science in São Paulo helped to face the pandemic, advising on health issues on the disease front. On the other hand, deficiencies in past public policies took their toll, revealing the most perverse face of inequality in the city, its vulnerability to extreme events. In this work, we describe a theory of cities, comparing their functioning to that of an ecosystem. We created the term urbsystem, comprising a Primary and a Secondary Urban Subsystem. The primary, analogous to that of an ecosystem, places the city as a processor of materials and a producer of waste, using water and energy for both activities. The Secondary Urban System contains the main services offered by the city - education, security, communication, transportation etc. The deficiencies in the functioning of these elements charact...", "The next columns show the average values obtained for each feature in each of the selected set. ( denotes the average values)."]
+date: NUMBER | NULL | eg=[1596240000000000, 1627516800000000]
+repository_name: TEXT | NULL | eg=["SciELO journals", "Public Library of Science"]
+title: TEXT | NULL | eg=["Ciência e políticas públicas nas cidades: revelações da pandemia da Covid-19", "The first column shows two groups of random sets in each selected set."]
+repository_url: TEXT | NULL | eg=["https://scielo.figshare.com/articles/dataset/Ci_ncia_e_pol_ticas_p_blicas_nas_cidades_revela_es_da_pandemia_da_Covid-19/14303676", "https://plos.figshare.com/articles/dataset/The_first_column_shows_two_groups_of_random_sets_in_each_selected_set_/15076336"]
+citation_string: TEXT | NULL | eg=["BUCKERIDGE, MARCOS SILVEIRA; PHILIPPI JUNIOR, ARLINDO (2020): Ciência e políticas públicas nas cidades: revelações da pandemia da Covid-19. SciELO journals. Dataset. https://doi.org/10.6084/m9.figshare.14303676.v1", "Habibi, Mahnaz; Taheri, Golnaz (2021): The first column shows two groups of random sets in each selected set.. PLOS ONE. Dataset. https://doi.org/10.1371/journal.pone.0255270.t003"]
+
+## DIMENSIONS_AI_COVID19.CLINICAL_TRIALS
+@use: [C1, C2, C4]
+study_outcome_measures: VARIANT | NULL | eg=[[], [{"measure":"total number of ICU bed days spared","time_frame":"during study period, up to 1 year","type":"primary"},{"measure":"amount of healthcare expenditures based on bed occupancy and manpower","time_frame":"during study period, up to 1 year","type":"secondary"},{"measure":"number of unanticipated intensive care unit admission within 48 hours upon discharge to general ward","time_frame":"48 hour","type":"secondary"},{"measure":"rate of elective discharge to the intensive care unit","time_frame":"After extended post anaesthetic care in PACU service by case. Up to 24 hour","type":"secondary"},{"measure":"length of hospital stays","time_frame":"during admission or patient death, typically up to 1 month","type":"secondary"}]]
+publication_ids: VARIANT | NULL | eg=[[]]
+interventions: VARIANT | NULL | eg=[[{"description":"Neurobics exercise protocol given for 12 sessions over 3 weeks for 20 mins","name":"Neurobics exercises","type":"Intervention"}], [{"arm_group_labels":"postoperative patients admitted to TMH extended post anaesthetic care in PACU","description":"From January 2020, during COVID-19 first pandemics in Hong Kong, a bundle of interim measures was implemented with the joint efforts of the Department of Anaesthesia and Operating Theatre Services (A&OT) and Intensive Care Unit (ICU), and two ordinary recovery beds were converted into extended post anesthetic care in PACU (ExRR), based on the concept of overnight intensive recovery (OIR) to provide level 2 intensive care to patients undergoing major or ultra-major operations or having multiple comorbidities warranted intensive care in the immediately postoperative periods. This was conducted over 3 pandemic waves in Hong Kong.","name":"overnight intensive recovery / extended post anaesthetic care in PACU","type":"Other"}]]
+study_type: TEXT | NULL | eg=["Observational", "Interventional"]
+acronym: TEXT | NULL | eg=["RECOUP-NY"]
+title: TEXT | NULL | eg=["Effect of Neurobics on stress & work-related quality of life in nurses", "The Rapid Conversion of Ordinary Recovery Beds to an Overnight Intensive Recovery (OIR) to Alleviate the High Pressure on Postoperative Intensive Care Demands During COVID-19 Pandemics in a Local Tertiary Hospital: a Multi-perspective Value-based Analysis"]
+study_maximum_age: TEXT | NULL | eg=["N/A"]
+study_eligibility_criteria: TEXT | NULL | eg=["Inclusion criterion: o Postoperative patients admitted to TMH Extended post anesthetic care in PACU during COVID-19 pandemics Exclusion criteria: Patients awaiting ICU admission in the ordinary recovery room Patients requiring level 3 intensive care on arrival at the recovery room", "Inclusion Criteria: Persons with Patient Health Questionnaire 9 scores between 10 and 20. Exclusion Criteria: Patient Health Questionnaire 9 scores below 10 or above 20."]
+mesh_terms: VARIANT | NULL | eg=[[], ["Central Nervous System Depressants","Anesthetics","Physiological Effects of Drugs"]]
+concepts: VARIANT | NULL | eg=[[{"concept":"related quality","relevance":0.6150655283446721},{"concept":"brain mapping","relevance":0.6142671981015843},{"concept":"work-related quality","relevance":0.6043822010552916},{"concept":"staff nurses","relevance":0.5972935266169345},{"concept":"patient safety incidences","relevance":0.5826758374599327},{"concept":"non-COVID wards","relevance":0.5826758374599327},{"concept":"atleast one year","relevance":0.5826758374599327},{"concept":"tertiary care hospital","relevance":0.5805453926747212},{"concept":"hospital staff nurses","relevance":0.5562876364089069},{"concept":"Nursing Stress Scale","relevance":0.5465170942769731},{"concept":"occupational stress","relevance":0.5409544847468188},{"concept":"Serum Brain","relevance":0.5403062487833563},{"concept":"Secondary outcomes","relevance":0.5382101994637861},{"concept":"hippocampal neurogenesis","relevance":0.5381579103181591},{"concept":"primary outcome","relevance":0.5374524685154707},{"concept":"care hospital","relevance":0...]
+gender: TEXT | NULL | eg=["All"]
+research_orgs: VARIANT | NULL | eg=[["grid.444588.1"], ["grid.417336.4"]]
+associated_grant_ids: VARIANT | NULL | eg=[[]]
+brief_title: TEXT | NULL | eg=["Effect of Neurobics on stress in nurses", "Extended Post Anaesthetic Care in PACU During COVID-19: Multi-perspective Value-based Analysis"]
+abstract: TEXT | NULL | eg=["Title of the study - Effect of neurobics on stress & work-related quality of life in nurses. Introduction - Nursing is an occupation with a constellation of circumstances leading to stress. . The doctor’s attitude, posting in busy departments (emergency/ICU), inadequate pay, too much work, time pressure, and tiring job with insufficient time for rest and meals were the nurses’ main occupational stressors. Stress decreases attention, concentration, and decision making, and judgment skills. Several biological mechanisms have been shown to be affected by prolonged psychosocial stress and among these are important adaptive responses that serve to protect the body’s organs from changes in the cellular environment that might arise due to stress. Ch ronic stress could result in inadequate brain plasticity by lowering of hippocampal neurogenesis via decreasing the study showed that serum brain derived neurotrophic factor levels levels. . With the current covid-19 pandemic leading to a surge...", "To evaluate the value-based effectiveness of the implementation of TMH Extended post anaesthetic care in PACU during COVID-19 pandemics by an institutional matched case-control and quantitative survey study Two ordinary recovery beds were converted to an overnight intensive recovery (\"Extended post-anesthetic care in PACU\") within the operating theatre complex of Tuen Mun Hospital during COVID-19 pandemics, in an attempt to free the ICU bed and resources from postoperative patients. This study was designed to evaluate the efficacy and staff perceptions towards the abrupt implementation of TMH extended post-anesthetic care in PACU by mobilization of the existing OT resources to cope with the COVID-19 emergency situations. The value-based analysis would look into the implementation effectiveness in twofold: 1) the clinical efficacy using a case-control audit on clinical outcomes and 2) the staff acceptance by means of the staff attitudes survey. Hopefully, this would provide a multi-p..."]
+date_inserted: NUMBER | NULL | eg=[1647734400000000, 1611187200000000]
+phase: TEXT | NULL | eg=["Phase 2", "N/A"]
+altmetrics: VARIANT | NULL | eg=["null", {"id":"103504243","score":1}]
+registry: TEXT | NULL | eg=["CTRI", "ClinicalTrials.gov"]
+id: TEXT | NULL | eg=["CTRI/2022/01/039375", "NCT04717089"]
+study_designs: VARIANT | NULL | eg=[[], [{}]]
+overall_status: TEXT | NULL | eg=["Completed", "Not yet recruiting"]
+study_participants: NUMBER | NULL | eg=[NaN, 299.0]
+study_minimum_age: TEXT | NULL | eg=["18 Years"]
+study_arms: VARIANT | NULL | eg=[[], [{"description":"Exclusion criteria:\n\nPatients awaiting ICU admission in the ordinary recovery room\nPatients requiring level 3 intensive care on arrival at the recovery room","label":"postoperative patients admitted to TMH extended post anaesthetic care in PACU"},{"description":"Inclusion criteria:\n\no Based on case matched with the extended post anaesthetic care in PACU","label":"Postoperative patient admitted to ICU with case matched"}]]
+conditions: VARIANT | NULL | eg=[["Hospital nursing staff"], ["Overnight Intensive Recovery","Postoperative Care"]]
+
+## DIMENSIONS_AI_COVID19.PUBLICATIONS
+@use: [C1, C3, C4, C5]
+research_orgs: VARIANT | NULL | eg=[["grid.5801.c","grid.484571.b","grid.443909.3"], ["grid.9723.f"]]
+pages: TEXT | NULL | eg=["136-150", "225-238"]
+eisbn: TEXT | NULL
+publisher: VARIANT | NULL | eg=[{"id":"pblshr.1000078","name":"Elsevier"}, {"id":"pblshr.1000140","name":"Emerald"}]
+date_online: TEXT | NULL | eg=["2022-07-15", "2022-07-21"]
+clinical_trial_ids: VARIANT | NULL | eg=[[]]
+research_org_country_names: VARIANT | NULL | eg=[["Chile","Switzerland"], ["Thailand"]]
+book_title: VARIANT | NULL
+copyright_statement: TEXT | NULL
+date_normal: DATE | NULL | eg=["2022-07-15", "2022-07-21"]
+patent_ids: VARIANT | NULL | eg=[[]]
+pmid: TEXT | NULL | eg=["35855479", "35880100"]
+issue: TEXT | NULL | eg=["7/8"]
+altmetrics: VARIANT | NULL | eg=["null", {"id":"122513734","score":3}]
+mesh_terms: VARIANT | NULL | eg=[[]]
+date_inserted: NUMBER | NULL | eg=[1658000078000000, 1658517542000000]
+journal_lists: VARIANT | NULL | eg=[["ERA 2023","Norwegian register level 1","ERIH PLUS","VABB-SHW","UGC Journal List Group II","ERA 2018","ERA 2015"], ["ERA 2023","Norwegian register level 2","VABB-SHW","UGC Journal List Group II","ERA 2018","ERA 2015"]]
+date: TEXT | NULL | eg=["2022-07-15", "2022-07-21"]
+funder_countries: VARIANT | NULL | eg=[["CL"], []]
+parent_id: TEXT | NULL
+isbn: TEXT | NULL
+editors: VARIANT | NULL | eg=[[]]
+conference: VARIANT | NULL
+abstract: VARIANT | NULL | eg=[{"preferred":"Governments around the globe have taken different measures to tackle the COVID-19 pandemic, including the lockdown of people to decrease infections. The effect of such a strategy on transport demand is important not only for the current pandemic but also to understand changes in transport use and for future emergencies. We analyse a 2019-2020 database of smartcard data of trips from the city of Santiago, Chile, which followed a dynamic lockdown strategy in which its municipalities were temporarily restricted. We use this variation over time across municipalities to study the effect of lockdowns on public transportation using trips on buses and metro, accounting for the variation of municipalities that were under lockdown in a given day. We found a decrease of 72.3% at the beginning of the pandemic when schools suspended in-person classes, while the dynamic lockdowns reduced public transport demand by 12.1%. We also found that the effect of lockdowns decreased after the...]
+supporting_grant_ids: VARIANT | NULL | eg=[[], ["grant.7923127"]]
+type: TEXT | NULL | eg=["article"]
+citations_count: NUMBER | NULL
+volume: TEXT | NULL | eg=["126", "157"]
+journal: VARIANT | NULL | eg=[{"eissn":"1879-310X","id":"jour.1052607","issn":"0967-070X","title":"Transport Policy"}, {"eissn":"1879-2375","id":"jour.1048107","issn":"0965-8564","title":"Transportation Research Part A Policy and Practice"}]
+date_print: TEXT | NULL | eg=["2022-09", "2022-03"]
+acknowledgements: VARIANT | NULL | eg=[{"preferred":"Financial support from 10.13039/501100020884ANID Chile (Grant PIA/BASAL AFB180003) is gratefully acknowledged by all authors. The second and third authors acknowledge the support of 10.13039/501100020884ANID, 10.13039/501100002850FONDECYT 1191104, and the fourth author of FONDECYT 1191745 and MIPP (ICS13_002 ANID)."}, {"preferred":"This research was financially supported by a grant from the Faculty of Engineering at Kamphaeng Saen, Kasetsart University, Thailand. Any opinions, findings, or recommendations written in this paper are those of the authors and do not necessarily reflect any opinions of the funding agencies."}]
+title: VARIANT | NULL | eg=[{"preferred":"The effect of dynamic lockdowns on public transport demand in times of COVID-19: Evidence from smartcard data"}, {"preferred":"Skip-Stop Strategy Patterns optimization to enhance mass transit operation under physical distancing policy due to COVID-19 pandemic outbreak"}]
+citations: VARIANT | NULL | eg=[[]]
+research_org_state_names: VARIANT | NULL | eg=[[], ["Lower Saxony","Rheinland-Pfalz","Alba","California"]]
+book_series_title: VARIANT | NULL
+open_access_categories_v2: VARIANT | NULL | eg=[["oa_all","green"], ["oa_all","hybrid"]]
+proceedings_title: VARIANT | NULL
+metrics: VARIANT | NULL | eg=[{"recent_citations":0,"times_cited":0}]
+subtitles: VARIANT | NULL | eg=[[]]
+document_type: VARIANT | NULL | eg=[{"classification":"RESEARCH_ARTICLE","is_citable":true,"versions":{"v0":{"classification":"RESEARCH_ARTICLE","is_citable":true}}}]
+id: TEXT | NULL | eg=["pub.1149495345", "pub.1149622521"]
+pmcid: TEXT | NULL | eg=["PMC9283383", "PMC9301585"]
+arxiv_id: TEXT | NULL
+open_access_categories: VARIANT | NULL | eg=[["oa_all","green_pub"], ["oa_all","gold_hybrid"]]
+funding_section: VARIANT | NULL
+research_org_city_names: VARIANT | NULL | eg=[["Zurich","Santiago"], ["Bangkok"]]
+mesh_headings: VARIANT | NULL | eg=[[]]
+concepts: VARIANT | NULL | eg=[[{"concept":"effect of lockdown","relevance":0.197},{"concept":"short-term effectiveness","relevance":0.189},{"concept":"elderly population","relevance":0.176},{"concept":"fifth week","relevance":0.167},{"concept":"COVID-19","relevance":0.163},{"concept":"COVID-19 pandemic","relevance":0.162},{"concept":"current pandemic","relevance":0.162},{"concept":"sociodemographic effects","relevance":0.155},{"concept":"pandemic","relevance":0.148},{"concept":"large proportion","relevance":0.147},{"concept":"lockdown strategies","relevance":0.145},{"concept":"lockdown","relevance":0.142},{"concept":"infection","relevance":0.138},{"concept":"weeks","relevance":0.135},{"concept":"future emergencies","relevance":0.133},{"concept":"effect","relevance":0.132},{"concept":"days","relevance":0.126},{"concept":"emergency","relevance":0.125},{"concept":"population","relevance":0.12},{"concept":"proportion","relevance":0.119},{"concept":"evidence","relevance":0.116},{"concept":"high-income households","re...]
+resulting_publication_doi: TEXT | NULL
+reference_ids: VARIANT | NULL | eg=[["pub.1021835664","pub.1053041590","pub.1063349000","pub.1126921143","pub.1127173503","pub.1131920080","pub.1133346716","pub.1144868882","pub.1146211152","pub.1137859569","pub.1128908338","pub.1047936422","pub.1148582757","pub.1129551978","pub.1131215984","pub.1002053010","pub.1127670740","pub.1130924813","pub.1131501897","pub.1092557915","pub.1130610683","pub.1128425482","pub.1128910111","pub.1130097575","pub.1128331725","pub.1127533723","pub.1105370545","pub.1127779098"]]
+source_id: TEXT | NULL | eg=["jour.1052607", "jour.1048107"]
+repository_dois: VARIANT | NULL | eg=[[], ["10.14456/easr.2022.1","10.18757/ejtir.2021.21.1.5129"]]

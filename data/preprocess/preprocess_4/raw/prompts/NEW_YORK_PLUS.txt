@@ -1,0 +1,931 @@
+[TABLES]
+## NEW_YORK_TREES.TREE_SPECIES
+location_tolerances: TEXT | NULL | eg=["Small Tree Pit (<3 ft)"]
+comments: TEXT | NULL | eg=["", "Asian Long Horn Beetle Quarantine Species – Planting NOT RECOMMENDED in Brooklyn, Manhattan, Queens, and Staten Island"]
+environmental_tolerances: TEXT | NULL | eg=["none", "Shade Tolerant"]
+tree_size: TEXT | NULL | eg=["Small (Mature Height < 25 ft)"]
+notes_suggested_cultivars: TEXT | NULL | eg=["'Royal Purple' or 'Grace'", "'Accolade' is Semi–double Flowering;"]
+species_common_name: TEXT | NULL | eg=["Smoke Tree", "Sargent Cherry"]
+growth_rate: TEXT | NULL | eg=["Slow"]
+fall_color: TEXT | NULL | eg=["Red/Bronze", "Yellow/Orange"]
+form: TEXT | NULL | eg=["Rounded"]
+species_scientific_name: TEXT | NULL | eg=["Cotinus sp.", "Prunus sargentii"]
+
+## NEW_YORK_TREES.TREE_CENSUS_2015
+state: TEXT | All features given value 'New York' | eg=["New York"]
+zip_city: TEXT | City as derived from zipcode. This is often (but not always) the same as borough. | eg=["Brooklyn"]
+nta_name: TEXT | This is the NTA name corresponding to the neighborhood tabulation area from the 2010 US Census that the tree point falls into. | eg=["Greenpoint"]
+address: TEXT | Nearest estimated address to tree | eg=["142 HURON STREET", "138 HURON STREET"]
+trunk_wire: TEXT | Indicates the presence of a trunk problem caused by wires or rope wrapped around the trunk | eg=["No"]
+borocode: NUMBER | Code for borough in which tree point is located | eg=[3]
+spc_common: TEXT | Common name for species, e.g. "red maple" | eg=["Japanese zelkova", "American hophornbeam"]
+zipcode: NUMBER | Five-digit zipcode in which tree is located | eg=[11222]
+root_grate: TEXT | Indicates the presence of a root problem caused by metal grates in tree bed | eg=["No"]
+longitude: FLOAT | Longitude of point, in decimal degrees | eg=[-73.95575544, -73.95595165]
+health: TEXT | Indicates the user's perception of tree health. | eg=["Good"]
+sidewalk: TEXT | Indicates whether one of the sidewalk flags immediately adjacent to the tree was damaged, cracked, or lifted. Not recorded for dead trees and stumps. | eg=["NoDamage"]
+x_sp: FLOAT | X coordinate, in state plane. Units are feet. | eg=[996512.1179, 996457.7426]
+latitude: FLOAT | Latitude of point, in decimal degrees | eg=[40.7328774, 40.73285878]
+user_type: TEXT | This field describes the category of user who collected this tree point's data. | eg=["Volunteer"]
+root_other: TEXT | Indicates the presence of other root problems | eg=["No"]
+stump_diam: NUMBER | Diameter of stump measured through the center, rounded to the nearest inch. | eg=[0]
+st_senate: NUMBER | State Senate District in which tree point is located | eg=[18]
+boro_ct: NUMBER | This is the boro_ct identifyer for the census tract that the tree point falls into. | eg=[3056300]
+boroname: TEXT | Name of borough in which tree point is located | eg=["Brooklyn"]
+root_stone: TEXT | Indicates the presence of a root problem caused by paving stones in tree bed | eg=["No"]
+cncldist: NUMBER | Council district in which tree point is located | eg=[33]
+trnk_other: TEXT | Indicates the presence of other trunk problems | eg=["No"]
+brch_light: TEXT | Indicates the presence of a branch problem caused by lights (usually string lights) or wires in the branches | eg=["No"]
+brch_other: TEXT | Indicates the presence of other branch problems | eg=["No"]
+y_sp: FLOAT | Y coordinate, in state plane. Units are feet | eg=[206286.6744, 206279.8644]
+brch_shoe: TEXT | Indicates the presence of a branch problem caused by sneakers in the branches | eg=["No"]
+tree_id: NUMBER | Unique identification number for each tree point | eg=[149558, 149557]
+created_at: DATE | The date tree points were collected in the census software | eg=["2015-08-16"]
+problems: TEXT | NULL | eg=["None"]
+status: TEXT | Indicates whether the tree is alive, standing dead, or a stump. | eg=["Alive"]
+nta: TEXT | This is the NTA Code corresponding to the neighborhood tabulation area from the 2010 US Census that the tree point falls into. | eg=["BK76"]
+curb_loc: TEXT | Location of tree bed in relationship to the curb; trees are either along the curb (OnCurb) or offset from the curb (OffsetFromCurb) | eg=["OnCurb"]
+spc_latin: TEXT | Scientific name for species, e.g. "Acer rubrum" | eg=["Zelkova serrata", "Ostrya virginiana"]
+cb_num: NUMBER | Community board in which tree point is located | eg=[301]
+guards: TEXT | Indicates whether a guard is present, and if the user felt it was a helpful or harmful guard. Not recorded for dead trees and stumps | eg=["Harmful", "None"]
+block_id: NUMBER | Identifier linking each tree to the block in the blockface table/shapefile that it is mapped on. | eg=[216398, 216460]
+trnk_light: TEXT | Indicates the presence of a trunk problem caused by lighting installed on the tree | eg=["No"]
+steward: TEXT | Indicates the number of unique signs of stewardship observed for this tree. Not recorded for stumps or dead trees. | eg=["None", "1or2"]
+st_assem: NUMBER | State Assembly District in which tree point is located | eg=[50]
+tree_dbh: NUMBER | Diameter of the tree, measured at approximately 54" / 137cm above the ground. | eg=[7, 9]
+
+## NEW_YORK_TREES.TREE_CENSUS_2005
+spc_common: TEXT | The common name of the species. | eg=["UNKNOWN", "HONEYLOCUST"]
+sidw_crack: BOOLEAN | Cracked sidewalk present | eg=[false]
+location_1: TEXT | NULL | eg=["(0.0, 0.0)"]
+spc_latin: TEXT | The scientific name of the species. | eg=["UNKNOWN", "GLEDITSIA TRIACANTHOS"]
+horz_grate: BOOLEAN | Tree grates present | eg=[false]
+wire_2nd: BOOLEAN | Indicates the presence of secondary wires | eg=[false]
+boro_ct: NUMBER | This is the boro_ct identifier for the census tract that the tree point falls into.
+horz_plant: BOOLEAN | Plantings present | eg=[false]
+zip_city: TEXT | City, as derived from the zipcode
+inf_lights: BOOLEAN | Tree lights present | eg=[false]
+bin: NUMBER | NULL
+objectid: NUMBER | NULL | eg=[1091299, 1091300]
+inf_wires: BOOLEAN | Choking wires present | eg=[false]
+census_tract: NUMBER | NULL
+horz_blck: BOOLEAN | Block pavers present | eg=[false]
+boroname: TEXT | Borough tree is in, full text | eg=["5"]
+wire_prime: BOOLEAN | Indicates the presence of primary wires | eg=[false]
+state: TEXT | NULL | eg=["New York"]
+st_senate: NUMBER | State Senate District tree point is in. | eg=[0]
+pit_type: TEXT | NULL | eg=["Lawn", "Continuous Pit"]
+tree_loc: TEXT | Establishes the location of the tree in relation to the address provided | eg=["Front", "Side"]
+inf_other: BOOLEAN | Other infrastructure conflicts present | eg=[false]
+nta_name: TEXT | Nta name for the neighborhood tabulation area the tree point is in
+vert_pgrd: BOOLEAN | Perimeter guard present | eg=[false]
+x_sp: NUMBER | X field | eg=[0]
+vert_other: BOOLEAN | Other Vertical Treatment Present | eg=[false]
+tree_dbh: NUMBER | The diameter of the tree in whole inches, measured at breast height. (4.5 feet from the ground.) | eg=[7, 6]
+st_assem: NUMBER | State Assembly District tree point is in. | eg=[0]
+soil_lvl: TEXT | NULL | eg=["Level"]
+inf_shoes: BOOLEAN | Sneakers present | eg=[false]
+cen_year: NUMBER | This is the year the tree was inventoried in. Data collection for the 2005 census spanned multiple seasons. Data is in YYYY format. | eg=[0]
+wire_htap: BOOLEAN | Indicates the presence of house tap wires | eg=[false]
+inf_guard: BOOLEAN | Choking guard or grate present | eg=[false]
+inf_canopy: BOOLEAN | Canopy debris present | eg=[false]
+cncldist: NUMBER | New York City Council District tree point is in. | eg=[0]
+bbl: NUMBER | NULL
+y_sp: NUMBER | y field | eg=[0]
+zipcode: TEXT | 2005 zipcode that the tree falls in. | eg=["0"]
+vert_wall: BOOLEAN | Walled tree well present | eg=[false]
+cb_num: NUMBER | Community Board that the tree falls in. | eg=[0]
+longitude: FLOAT | NULL | eg=[0.0]
+trunk_dmg: TEXT | Describes specific damage or wounds found on the trunk | eg=["None"]
+wire_other: BOOLEAN | Indicates the presence of other wires | eg=[false]
+nta: TEXT | nta code for the neighborhood tabulation area the tree point is in, from the 2010 census
+inf_outlet: BOOLEAN | Electrical outlet present | eg=[false]
+latitude: FLOAT | NULL | eg=[0.0]
+inf_paving: BOOLEAN | Close paving present | eg=[false]
+address: TEXT | NULL | eg=["cememtary SHARROTT AVENUE", "not listed not listed"]
+status: TEXT | Excellent: full, well balanced crown and limb structure; leaves normal size color; no dead or broken branches; trunk solid; bark intact. Good: crown uneven or misshapen; some mechanical damage to bark or trunk; some signs of insects or disease; leaves somewhat below normal size and quantity; some dead or broken branches (less than half of the tree). Poor: large dead limbs with over one- half of the tree already dead or removed; large cavities; drastic deformities; leaves significantly below normal size and quantity; severe insect or disease damage. Dead: dead tree; leaves absent; twigs brittle. Shaft: all branches removed; trunk left standing; sprouts may or may not be evident. Stump: stump shorter than breast height; leaves entirely absent or present only on stump sprouts Empty pit: Pit contains exposed soil and no tree | eg=["Good", "Excellent"]
+vert_tgrd: BOOLEAN | Tall guard present | eg=[false]
+horz_other: BOOLEAN | Other horizontal treatment present | eg=[false]
+objectid_1: NUMBER | NULL | eg=[498926, 498927]
+sidw_raise: BOOLEAN | Raised sidewalk present | eg=[false]
+borocode: NUMBER | Borough tree is in, using a one-digit borough code: 1 – Manhattan, 2 – Bronx, 3 – Brooklyn, 4 – Queens, 5 – Staten Island | eg=[5]
+
+## NEW_YORK_TREES.TREE_CENSUS_1995
+species: TEXT | Species of the tree using a four-letter code, comprised of the first two letters of the genus followed by the first two letters of the species. | eg=["ACPL", "QUPA"]
+sidewalk_condition: TEXT | Whether the tree roots have lifted the adjacent sidewalk. | eg=["Good", "Raised"]
+segmentid: NUMBER | LION SegmentID geocoded to the address using Geosupport 11.4 | eg=[101934, 101746]
+censustract_2010: TEXT | 2010 Census Tract geocoded to the address using Geosupport 11.4 | eg=["150701.0"]
+zip_original: NUMBER | The zip code originally geocoded to the address using LION 02A | eg=[11362]
+nta_2010: TEXT | Neighborhood Tabulation Area geocoded to the address using Geosupport 11.4 | eg=["QN45"]
+site: TEXT | This field clarifies the position relative to the address for trees not located in the front of buildings. | eg=["Front", "Assigned"]
+house_number: TEXT | Numerical portion of the address.
+spc_latin: TEXT | This is the latin/scientific name for the species of this tree. | eg=["ACER PLATANOIDES", "QUERCUS PALUSTRIS"]
+address: TEXT | Address of the tree. | eg=["53-024 MARATHAN PKWY", "53-006 MARATHAN PKWY"]
+longitude: FLOAT | Longitude of point in decimal degrees as geocoded using LION 02A | eg=[-73.732647, -73.73277]
+spc_common: TEXT | This is the common name for the species of this tree. | eg=["MAPLE, NORWAY", "OAK, PIN"]
+wires: TEXT | Whether the tree is located under utility wires | eg=["Yes"]
+location: TEXT | NULL | eg=["(40.761485, -73.732647)", "(40.76163, -73.73277)"]
+censusblock_2010: TEXT | 2010 Census Block geocoded to the address using Geosupport 11.4 | eg=["1015.0", "1008.0"]
+borough: TEXT | Borough where tree was recorded. | eg=["Queens"]
+zip_new: NUMBER | Zip Code geocoded to the address using Geosupport 11.4 | eg=[11362]
+recordid: NUMBER | A unique identifier for each record in the table. Does not correspond to other datasets or identify the tree itself. | eg=[281653, 281657]
+status: TEXT | Overall tree condition. | eg=["Excellent", "Good"]
+cb_new: NUMBER | Community Board geocoded to the address using Geosupport 11.4 | eg=[411]
+support_structure: TEXT | Whether the tree has support structures installed.
+y: FLOAT | Y coordinate of point in the NAD_1983_StatePlane_New_York_Long_Island_FIPS_3104_Feet coordinate system, geocoded using LION 02A | eg=[216819.2157, 216872.0458]
+diameter: NUMBER | Diameter of the tree as measured at approximately 4.5 feet from the ground. | eg=[17, 19]
+street: TEXT | Street where address for tree is located. | eg=["MARATHAN PKWY", "CAMBRIA AV"]
+cb_original: NUMBER | The community board originally geocoded to the address using LION 02A | eg=[411]
+latitude: FLOAT | Latitude of point in decimal degrees as geocoded using LION 02A | eg=[40.761485, 40.76163]
+x: FLOAT | X coordinate of point in the NAD_1983_StatePlane_New_York_Long_Island_FIPS_3104_Feet coordinate system, geocoded using LION 02A | eg=[1058313.256, 1058279.167]
+
+## NEW_YORK_CITIBIKE.CITIBIKE_TRIPS
+start_station_longitude: FLOAT | Start Station Longitude | eg=[-73.99906065, -73.95407149]
+customer_plan: TEXT | The name of the plan that determines the rate charged for the trip | eg=[""]
+birth_year: NUMBER | Year of Birth | eg=[1987]
+end_station_name: TEXT | End Station Name | eg=["E 7 St & Avenue A", "E 85 St & York Ave"]
+usertype: TEXT | User Type (Customer = 24-hour pass or 7-day pass user, Subscriber = Annual Member) | eg=["Subscriber", "Customer"]
+gender: TEXT | Gender (unknown, male, female) | eg=["female"]
+bikeid: NUMBER | Bike ID | eg=[18803, 17852]
+starttime: NUMBER | Start Time, in NYC local time. | eg=[1381344930000000, 1469298175000000]
+stoptime: NUMBER | Stop Time, in NYC local time. | eg=[1381345812000000, 1469298378000000]
+start_station_id: NUMBER | Start Station ID | eg=[336, 3147]
+end_station_latitude: FLOAT | End Station Latitude | eg=[40.72621788, 40.77536905]
+end_station_longitude: FLOAT | End Station Longitude | eg=[-73.98379855, -73.94803392]
+start_station_name: TEXT | Start Station Name | eg=["Sullivan St & Washington Sq", "E 85 St & 3 Ave"]
+start_station_latitude: FLOAT | Start Station Latitude | eg=[40.73047747, 40.77801203]
+tripduration: NUMBER | Trip Duration (in seconds) | eg=[882, 203]
+end_station_id: NUMBER | End Station ID | eg=[432, 3150]
+
+## NEW_YORK_CITIBIKE.CITIBIKE_STATIONS
+latitude: FLOAT | The latitude of station. The field value must be a valid WGS 84 latitude in decimal degrees format. | eg=[40.770513, 40.74783260583772]
+capacity: NUMBER | ANumber of total docking points installed at this station, both available and unavailable. | eg=[117, 38]
+rental_methods: TEXT | Array of enumerables containing the payment methods accepted at this station. | eg=["KEY, CREDITCARD"]
+is_renting: BOOLEAN | Is the station currently renting bikes? | eg=[false]
+num_bikes_disabled: NUMBER | Number of disabled bikes at the station. | eg=[0]
+station_id: TEXT | Unique identifier of a station. | eg=["66dc0dab-0aca-11e7-82f6-3863bb44ef7c", "39f756c2-3904-463e-95a8-8d8e3540e845"]
+num_docks_available: NUMBER | Number of docks accepting bike returns. | eg=[0]
+eightd_has_available_keys: BOOLEAN | NULL | eg=[false]
+region_id: NUMBER | ID of the region where station is located. | eg=[71]
+longitude: FLOAT | The longitude of station. The field value must be a valid WGS 84 latitude in decimal degrees format. | eg=[-73.988038, -74.0005722643582]
+eightd_has_key_dispenser: BOOLEAN | NULL | eg=[false]
+num_bikes_available: NUMBER | Number of bikes available for rental. | eg=[0]
+is_installed: BOOLEAN | Is the station currently on the street? | eg=[false]
+name: TEXT | Public name of the station. | eg=["W 59 St & 10 Ave", "W 25 St & 9 Ave"]
+short_name: TEXT | Short name or other type of identifier, as used by the data publisher. | eg=["7023.04", "6339.06"]
+last_reported: NUMBER | Timestamp indicating the last time this station reported its status to the backend, in NYC local time. | eg=[1726578102000000, 1728579451000000]
+is_returning: BOOLEAN | Is the station accepting bike returns? | eg=[false]
+num_docks_disabled: NUMBER | Number of empty but disabled dock points at the station. | eg=[0]
+
+## NEW_YORK_SUBWAY.STATIONS
+station_id: TEXT | NULL | eg=["1", "4"]
+station_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xc4\\xb5\\xda\\xc3^zR\\xc0\\x80\\x9c0a4cD@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xed\\x0b\\xe8\\x85;{R\\xc0(\\xb8XQ\\x83aD@')"]
+borough_name: TEXT | NULL | eg=["Queens", "Manhattan"]
+structure: TEXT | NULL | eg=["Elevated", "Subway"]
+division: TEXT | NULL | eg=["BMT"]
+complex_id: TEXT | NULL | eg=["1", "4"]
+north_direction_label: TEXT | NULL | eg=["Astoria - Ditmars Blvd", "Queens"]
+daytime_routes: TEXT | NULL | eg=["N W", "N W R"]
+station_name: TEXT | NULL | eg=["Astoria - Ditmars Blvd", "Broadway"]
+line: TEXT | NULL | eg=["Astoria", "Broadway - Brighton"]
+gtfs_stop_id: TEXT | NULL | eg=["R01", "R05"]
+south_direction_label: TEXT | NULL | eg=["Manhattan", "Downtown & Brooklyn"]
+station_lon: FLOAT | NULL | eg=[-73.912034, -73.925508]
+station_lat: FLOAT | NULL | eg=[40.775036, 40.76182]
+
+## NEW_YORK_SUBWAY.STOP_TIMES
+stop_sequence: TEXT | Identifies the order of the stops for a particular trip. The values for stop_sequence must increase throughout the trip but do not need to be consecutive. | eg=["1"]
+trip_id: TEXT | Identifies a trip. Multiple trips can have the same stop | eg=["BSP19GEN-FS012-Sunday-00_000000_FS.S01R", "BSP19GEN-FS011-Weekday-00_000000_FS.S01R"]
+arrival_time: TEXT | Specifies the scheduled arrival time at a specific stop for a specific trip on a route. | eg=["00:00:00", "00:01:00"]
+departure_time: TEXT | Specifies the scheduled departure time at a specific stop for a specific trip on a route. | eg=["00:00:00", "00:01:00"]
+stop_id: TEXT | Identifies the serviced stop. Multiple routes can use the same stop. | eg=["S01S", "M11S"]
+pickup_type: TEXT | NULL | eg=["0"]
+shape_dist_traveled: TEXT | NULL
+stop_headsign: TEXT | NULL
+dropoff_type: TEXT | "Indicates whether riders are dropped off at a stop as part of the normal schedule or whether a drop off at the stop isn't available. Available options:  -  regular -  none -  phone (indicates must phone agency to arrange drop off) -  driver (indicates must coordinate with driver to arrange drop off)" | eg=["0"]
+
+## NEW_YORK_SUBWAY.ROUTES
+route_long_name: TEXT | Contains the full name of a route. This name is generally more descriptive than the name from route_short_name and often includes the route's destination or stop. | eg=["42 St Shuttle", "8 Avenue Local"]
+route_describe: TEXT | NULL | eg=["Operates in Manhattan between Grand Central and Times Square. The shuttle provides a free transfer between 4, 5, 6, and 7 service at Grand Central-42 St and A, C, E, N, Q, R, W, 1, 2, 3, and 7 service at Times Square-42 St. The shuttle runs at all times except during late nights, from about 12 midnight to 6 AM.", "Trains operate between Jamaica Center (Parsons/Archer), Queens, and World Trade Center, Manhattan, at all times. E trains operate express in Queens at all times except late nights when they operate local."]
+route_type: TEXT | "Describes the type of transportation used on a route. The following are valid values for this field:  -  light_rail: Streetcar or light rail. Used for any light rail or street-level system within a metropolitan area. -  subway: Subway or metro. Used for any underground rail system within a metropolitan area. -  rail: Used for intercity or long-distance travel. -  bus: Used for short- and long-distance bus routes. -  ferry: Used for short- and long-distance boat service. -  cable_car: Used for street-level cable cars where the cable runs beneath the car. -  tram: Gondola or suspended cable car. Typically used for aerial cable cars where the car is suspended from the cable. -  funicular: Used for any rail system that moves on steep inclines with a cable traction system." | eg=["1"]
+route_short_name: TEXT | Contains the short name of a route. This is a short, abstract identifier like 32, 100X, or Green that riders use to identify a route, but which doesn't give any indication of what places the route serves. | eg=["S", "E"]
+route_id: TEXT | Unique identifier for each route. A single route will have multiple trips | eg=["GS", "E"]
+
+## NEW_YORK_SUBWAY.TRIPS
+shape_id: TEXT | Unique identifier for the geospatial shape that describes the vehicle travel for a trip along individual points. Use to JOIN with the shapes available in the shapes table | eg=["1..N03R"]
+trip_headsign: TEXT | Contains the text that appears on signage that identifies the trip's destination to riders. Use this field to distinguish between different patterns of service on the same route. | eg=["Van Cortlandt Park - 242 St"]
+direction_id: TEXT | NULL | eg=["0"]
+route_id: TEXT | Unique identifier for each route. A single route will have multiple trips | eg=["1"]
+service_id: TEXT | NULL | eg=["ASP19GEN-1037-Sunday-00"]
+trip_id: TEXT | Unique identifier for each trip | eg=["ASP19GEN-1037-Sunday-00_081250_1..N03R", "ASP19GEN-1037-Sunday-00_073250_1..N03R"]
+block_id: TEXT | Identifies the block to which the trip belongs. A block consists of a single trip or many sequential trips made with the same vehicle. The trips are grouped into a block by the use of a shared service day andblock_id. A block_id can include trips with different service days, which then makes distinct blocks. For more details, see: https://developers.google.com/transit/gtfs/reference/#example-showing-blocks-and-service-day
+
+## NEW_YORK_SUBWAY.STATION_COMPLEXES
+complex_name: TEXT | NULL | eg=["14 St - Union Sq", "Franklin Av / Botanic Garden"]
+complex_id: TEXT | NULL | eg=["602", "626"]
+
+## NEW_YORK_SUBWAY.STATION_ENTRANCES
+station_lat: FLOAT | NULL | eg=[40.706821, 40.709416]
+vending: BOOLEAN | NULL | eg=[true, false]
+route_2: TEXT | NULL | eg=["3", "C"]
+exit_only: BOOLEAN | NULL | eg=[false]
+north_south_street: TEXT | NULL | eg=["William St"]
+route_8: TEXT | NULL | eg=["5"]
+free_crossover: BOOLEAN | NULL | eg=[true]
+staff_hours: TEXT | NULL
+route_5: TEXT | NULL | eg=["2"]
+staff: TEXT | NULL | eg=["FULL", "NONE"]
+station_name: TEXT | NULL | eg=["Wall St", "Fulton St"]
+route_9: TEXT | NULL
+route_10: TEXT | NULL
+route_11: TEXT | NULL
+entrance_type: TEXT | NULL | eg=["Stair", "Easement"]
+entrance_lat: FLOAT | NULL | eg=[40.706392, 40.706272]
+station_lon: FLOAT | NULL | eg=[-74.0091, -74.006571]
+entrance_lon: FLOAT | NULL | eg=[-74.009332, -74.009447]
+line: TEXT | NULL | eg=["Clark"]
+corner: TEXT | NULL | eg=["NE", "SE"]
+route_7: TEXT | NULL | eg=["4"]
+division: TEXT | NULL | eg=["IRT"]
+east_west_street: TEXT | NULL | eg=["Wall St", "Pine St"]
+route_1: TEXT | NULL | eg=["2", "A"]
+entry: BOOLEAN | NULL | eg=[true, false]
+route_6: TEXT | NULL | eg=["3"]
+route_4: TEXT | NULL | eg=["Z"]
+route_3: TEXT | NULL | eg=["J"]
+ada_compliant: BOOLEAN | NULL | eg=[false]
+station_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x001\\x99*\\x18\\x95\\x80R\\xc0!\\x90K\\x1cyZD@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x87\\x86\\xc5\\xa8k\\x80R\\xc0+\\xa1\\xbb$\\xceZD@')"]
+ada_notes: TEXT | NULL
+entrance_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x001\\x99*\\x18\\x95\\x80R\\xc0!\\x90K\\x1cyZD@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x87\\x86\\xc5\\xa8k\\x80R\\xc0+\\xa1\\xbb$\\xceZD@')"]
+
+## NEW_YORK_SUBWAY.GEO_NYC_BOROUGH_BOUNDARIES
+borough_code: TEXT | NULL | eg=["5", "2"]
+borough_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\t\\x00\\x00\\x00\\x18\\xe4\\xdb\\xa6f\\x83R\\xc0\\'\\n\\x9f)\\xf2ID@G\\xb9\\x81<c\\x83R\\xc0\\x94\\xc7\\x89>:JD@@\\x90\\xa0\\x98o\\x83R\\xc0|#\\xf8kOJD@\\x80$\\x1f\\x97\\x82\\x83R\\xc03\\xd1\\xe7\\xa9;JD@#\\xde7\\xaf\\x82\\x83R\\xc0\\x9e\\xc1\\xc0\\xdb3JD@n\\x1f\\xc7\\x17\\x80\\x83R\\xc0Z\\x18\\xddU3JD@\\xb8\\xb1\\xfcq\\x83\\x83R\\xc0\\x11\\xfag\\xc6\\xf4ID@+\\x8b\\xf5\\xb9u\\x83R\\xc0n$\\xa1\\xf3\\xdeID@\\x18\\xe4\\xdb\\xa6f\\x83R\\xc0\\'\\n\\x9f)\\xf2ID@\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00/\\x00\\x00\\x00\\n\\xcd,\\x86;\\x83R\\xc0-:h\\x84\\x80HD@Rwy\\x06<\\x83R\\xc0^\\x8a\\xc4 \\x81HD@\\xdc\\xcdGG=\\x83R\\xc0\\xd3\\xe1\\xb1W\\x83HD@\\x10(l!>\\x83R\\xc0\\xe9\\xd0\\x90\\xb7\\x84HD@\\xfeY>\\xa2?\\x83R\\xc0\\xe1\\xa3\\x9c\\xdc\\x85HD@\\xaa\\xd4%#A\\x83R\\xc0\\x0fjA\\xc5\\x87HD@\\xd8\\xb8\\xe67B\\x83R\\xc0\\xc1\\x0f\\t{\\x89HD@4\\xd8\\x93cD\\x83R\\xc0|(\\xea\\xdf\\x8aHD@\\xe8\\xd4\\xce\\xc1D\\x83R\\xc0\\x8a\\x86\\xd7\\\\\\x8aHD@\\x0es\\xf4\\xc8D\\x83R\\xc0:&\\xcf\\xb7\\x89HD@\\xd9\\xd5\\x16\\xd0D\\x83R\\xc0\\xb7{\\xc3\\xf1\\x88HD@\\xa3\\x9d\\xac\\x80D\\x83R\\xc0\\xf36\\xcd6\\x88HD@...", "bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x18\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xf3\\x01\\x00\\x00\\xca\\xbaV\\xf1\\xe2xR\\xc08\\xfeL\\x02<fD@\\xb3\\xbc;\\xb4\\xe2xR\\xc0I\\xe7#U=fD@\\x010)\\x00\\xe5xR\\xc0\\x84\\xc5\\x16u=fD@\\xf8\\xc7\\xc0Q\\xe5xR\\xc0mP\\xc5+;fD@\\xfc\\xd8\\x7f\\r\\xdfxR\\xc0?\\xc7\\xe0)9fD@\\x84N\\x99\\x08\\xdfxR\\xc0x\\xc4 y8fD@O2\\x04e\\xddxR\\xc0\\x83I\\x0078fD@U\\xd4\\x94m\\xdbxR\\xc0\\x8b\\xa1D)1fD@$\\x13\\xbbS\\xddxR\\xc0\\'U\\r63fD@/\\xe0W3\\xdexR\\xc0\\xc7\\t\\xc0q0fD@\\xef\\x1f\\x05\\x8a\\xdcxR\\xc0H\\x96\\x15e.fD@\\'\\xcf_i\\xddxR\\xc0\\xcb-\\xec\\xd4,fD@\\xc3\\x9dC\\x16\\xdaxR\\xc0\\xb5,>\\xe6*fD@\\xd5H]\\xc4\\xdaxR\\xc0l\\xc87n)fD@\\xadS\\x83\\x87\\xdcxR\\xc0~\\x8bX\\xa6\\'fD@v\\xc3.4\\xdexR\\xc0j(\\xec\\x99%fD@+\\xbdS\\xa4\\xe0xR\\xc0\\x06C-\\xd7\"fD@\\x829\\xdb\\x1b\\xe3xR\\xc0f\\xf1O\\xb4 fD@1\\x9a\\'j\\xe6xR\\xc0B\\xe0\\xa6k\\x1ffD@\\xf5\\xa7D\\xd2\\xe7xR\\xc0\\xc09r\\xa4\\x1efD@\\xd4\\xa6\\xf7\\xdc\\xe8xR\\xc0\\x11+\\x90Y\\x1efD@\\x0f7\\x99[\\xebxR\\xc0E~V\\x93\\x1efD@5m\\xd9f\\xefxR\\xc0\\x1bU.\\xdf\\x1ffD@\\x0e\\xac\\x95\\xeb\\xf1xR\\xc0\\xaf\\xcay\\x93 fD@g\"\\xc1\\xd1\\xf5xR\\xc08T\\xe1Q!fD@\\t\\x10\\x7f\\x8..."]
+borough_len: FLOAT | NULL | eg=[325960.634597, 462958.188213]
+borough_area: FLOAT | NULL | eg=[1623756421.84, 1186612476.77]
+borough_name: TEXT | NULL | eg=["Staten Island", "Bronx"]
+
+## NEW_YORK_SUBWAY.SUBWAY_RIDERSHIP_2013_PRESENT
+station_name: TEXT | NULL | eg=["36 St", "W 4 St - Washington Sq"]
+ridership_2016: NUMBER | NULL | eg=[13180, 42755]
+change_2018_percent: FLOAT | NULL | eg=[-0.029, -0.028]
+ridership_2017: NUMBER | NULL | eg=[13894, 41835]
+ridership_2013: NUMBER | NULL | eg=[12059, 40798]
+ridership_2018: NUMBER | NULL | eg=[13493, 40666]
+ridership_2015: NUMBER | NULL | eg=[12810, 42760]
+ridership_2014: NUMBER | NULL | eg=[12497, 41968]
+change_2018_raw: NUMBER | NULL | eg=[-401, -1169]
+routes: TEXT | NULL | eg=["D,N,R", "A,B,C,D,E,F,M"]
+rank_ridership_2018: NUMBER | NULL | eg=[111, 22]
+
+## NEW_YORK_MV_COLLISIONS.NYPD_MV_COLLISIONS
+vehicle_type_code_3: TEXT | NULL
+on_street_name: TEXT | NULL | eg=["SOUTH AVENUE                    ", "HORACE HARDING EXPRESSWAY       "]
+number_of_pedestrians_killed: NUMBER | NULL | eg=[0]
+number_of_persons_killed: NUMBER | NULL | eg=[0]
+off_street_name: TEXT | NULL
+vehicle_type_code1: TEXT | NULL | eg=["BUS", "PASSENGER VEHICLE"]
+contributing_factor_vehicle_5: TEXT | NULL
+number_of_cyclist_killed: NUMBER | NULL | eg=[0]
+timestamp: NUMBER | NULL | eg=[1393937400000000, 1390320000000000]
+number_of_motorist_killed: NUMBER | NULL | eg=[0]
+cross_street_name: TEXT | NULL | eg=["FAHY AVENUE                     ", "108 STREET                      "]
+number_of_persons_injured: NUMBER | NULL | eg=[0]
+vehicle_type_code_5: TEXT | NULL
+borough: TEXT | NULL
+contributing_factor_vehicle_3: TEXT | NULL
+contributing_factor_vehicle_4: TEXT | NULL
+number_of_cyclist_injured: NUMBER | NULL | eg=[0]
+number_of_pedestrians_injured: NUMBER | NULL | eg=[0]
+longitude: FLOAT | NULL
+vehicle_type_code_4: TEXT | NULL
+contributing_factor_vehicle_2: TEXT | NULL | eg=["Unspecified", "Outside Car Distraction"]
+zip_code: NUMBER | NULL
+latitude: FLOAT | NULL
+vehicle_type_code2: TEXT | NULL | eg=["AMBULANCE", "SPORT UTILITY / STATION WAGON"]
+number_of_motorist_injured: NUMBER | NULL | eg=[0]
+unique_key: NUMBER | NULL | eg=[2879791, 292671]
+location: TEXT | NULL
+contributing_factor_vehicle_1: TEXT | NULL | eg=["Driver Inattention/Distraction", "Unspecified"]
+
+## NEW_YORK_311._311_SERVICE_REQUESTS
+location_type: TEXT | NULL | eg=["Street"]
+intersection_street_2: TEXT | NULL | eg=["DORA STREET", "THERESA PLACE"]
+resolution_description: TEXT | NULL | eg=["The Department of Transportation inspected the condition you reported and found that the condition meets its standards and/or there is a valid permit to conduct work.", "The Department of Transportation inspected and has requested the Department of Environmental Protection address the issue. The condition will be re-inspected in 60 days."]
+community_board: TEXT | NULL | eg=["01 STATEN ISLAND"]
+status: TEXT | Service request status. Duplicate statuses indicate that issue had previously been reported recently. | eg=["Closed"]
+park_facility_name: TEXT | NULL | eg=["Unspecified"]
+created_date: NUMBER | Date Service request was created. | eg=[1562071149000000, 1591961373000000]
+bridge_highway_segment: TEXT | NULL
+location: TEXT | Service request location latitude and longitude coordinates. | eg=["(40.61483077351915, -74.14254330060342)", "(40.62420877288155, -74.09246530867175)"]
+latitude: FLOAT | Service request location latitude coordinate. | eg=[40.61483077351915, 40.62420877288155]
+landmark: TEXT | NULL | eg=["CRYSTAL AVENUE", "JERSEY STREET"]
+incident_address: TEXT | Service location of Service request. | eg=["356 CRYSTAL AVENUE", "BERTHA PLACE"]
+vehicle_type: TEXT | NULL
+due_date: NUMBER | NULL | eg=[NaN, 1275226871000000.0]
+taxi_company_borough: TEXT | NULL
+complaint_type: TEXT | NULL | eg=["Street Condition"]
+road_ramp: TEXT | NULL
+descriptor: TEXT | NULL | eg=["Failed Street Repair"]
+street_name: TEXT | Parsed location information. Street name. | eg=["CRYSTAL AVENUE", "BERTHA PLACE"]
+agency: TEXT | NULL | eg=["DOT"]
+cross_street_2: TEXT | NULL | eg=["DORA STREET", "THERESA PLACE"]
+resolution_action_updated_date: NUMBER | NULL | eg=[1562074464000000, 1592223133000000]
+open_data_channel_type: TEXT | NULL | eg=["UNKNOWN", "OTHER"]
+agency_name: TEXT | NULL | eg=["Department of Transportation"]
+x_coordinate: NUMBER | NULL | eg=[944675, 958582]
+closed_date: NUMBER | NULL | eg=[1562074443000000, 1592223130000000]
+incident_zip: TEXT | Parsed location information. Zip code. | eg=["10314", "10301"]
+longitude: FLOAT | Service request location longitude coordinate. | eg=[-74.14254330060342, -74.09246530867175]
+y_coordinate: NUMBER | NULL | eg=[163308, 166706]
+borough: TEXT | NULL | eg=["STATEN ISLAND"]
+unique_key: NUMBER | The service request tracking number. | eg=[43174263, 46455654]
+bridge_highway_name: TEXT | NULL
+city: TEXT | Parsed location information. City. | eg=["STATEN ISLAND"]
+intersection_street_1: TEXT | NULL | eg=["DELMORE STREET", "BERTHA PLACE"]
+bbl: NUMBER | NULL | eg=[5004750090.0, NaN]
+address_type: TEXT | NULL | eg=["ADDRESS"]
+bridge_highway_direction: TEXT | NULL
+park_borough: TEXT | NULL | eg=["STATEN ISLAND"]
+cross_street_1: TEXT | NULL | eg=["DELMORE STREET", "BERTHA PLACE"]
+taxi_pickup_location: TEXT | NULL
+facility_type: TEXT | NULL | eg=["N/A"]
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2015
+airport_fee: NUMBER | NULL
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1447932797000000, 1448434112000000]
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["5.540000000", "0E-9"]
+data_file_month: NUMBER | Datafile timestamp month value | eg=[11]
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["1"]
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2015]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1, 5]
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["34.000000000"]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["0E-9", "0.500000000"]
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["233", "138"]
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["8.000000000", "11.060000000"]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["1", "2"]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1447935383000000, 1448435954000000]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["1"]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=["0.300000000"]
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["8.880000000", "10.440000000"]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["138", "181"]
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["49.220000000", "45.240000000"]
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0.500000000"]
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2016
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["5"]
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=["0E-9"]
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["0.100000000", "0.200000000"]
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2016]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["2", "3"]
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch | eg=["2.0"]
+ehail_fee: NUMBER | NULL
+time_between_service: NUMBER | NULL
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9"]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["36", "157"]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["Y", "N"]
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["0E-9"]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["1"]
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["0E-9"]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1, 4]
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0E-9"]
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["36", "157"]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["0E-9"]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1464743485000000, 1464767231000000]
+airport_fee: NUMBER | NULL
+distance_between_service: NUMBER | NULL
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["0E-9"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1464743477000000, 1464767208000000]
+data_file_month: NUMBER | Datafile timestamp month value | eg=[6]
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2014
+data_file_month: NUMBER | Datafile timestamp month value | eg=[2, 1]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["4.430000000", "4.560000000"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1393098135000000, 1393181823000000]
+time_between_service: NUMBER | NULL
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9"]
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["1"]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1, 5]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["0E-9", "1.000000000"]
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["40", "181"]
+airport_fee: NUMBER | NULL
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["3.400000000"]
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2014]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1393099333000000, 1393182984000000]
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["17.000000000", "16.000000000"]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["2"]
+ehail_fee: NUMBER | NULL
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+distance_between_service: NUMBER | NULL
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch | eg=["1.0"]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["1"]
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0.500000000"]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["61", "80"]
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["20.900000000"]
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2020
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1600450053000000, 1600880070000000]
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["1.0"]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["234", "263"]
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["10.560000000", "9.000000000"]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["1.000000000", "2.500000000"]
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["0.500000000", "0.600000000"]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+airport_fee: NUMBER | NULL
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=["0.300000000"]
+data_file_month: NUMBER | Datafile timestamp month value | eg=[9]
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9"]
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0.500000000"]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[NaN, 0.0]
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["113", "234"]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["1", "2"]
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2020]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1600450290000000, 1600880290000000]
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["1.760000000", "1.200000000"]
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["4.500000000"]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["0", "1"]
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2013
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1386353060000000, 1385903280000000]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["1", "2"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1386352789000000, 1385903100000000]
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["5.000000000"]
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["0.700000000", "0.900000000"]
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["237", "107"]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["229", "162"]
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0.500000000"]
+airport_fee: NUMBER | NULL
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=["0E-9"]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["1.000000000", "0E-9"]
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["1"]
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9"]
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2013]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["2", "1"]
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["0E-9", "1.000000000"]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["6.500000000"]
+data_file_month: NUMBER | Datafile timestamp month value | eg=[12]
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2017
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["32.250000000", "38.750000000"]
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0.500000000"]
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9", "5.760000000"]
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=["0.300000000"]
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["257", "181"]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1507308243000000, 1506628317000000]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1, 2]
+data_file_month: NUMBER | Datafile timestamp month value | eg=[10, 9]
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["6.450000000", "11.570000000"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1507306005000000, 1506626217000000]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["1", "2"]
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch | eg=["1.0", "1"]
+distance_between_service: NUMBER | NULL
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["3.900000000", "6.260000000"]
+airport_fee: NUMBER | NULL
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["24.000000000", "30.500000000"]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["33", "255"]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["1.000000000"]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["1"]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2017]
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["1"]
+ehail_fee: NUMBER | NULL
+time_between_service: NUMBER | NULL
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2021
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1619865080000000, 1619868237000000]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["2.0"]
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["7.200000000", "8.400000000"]
+data_file_month: NUMBER | Datafile timestamp month value | eg=[5]
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["5.0"]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["208", "32"]
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["0E-9"]
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch | eg=["2.0"]
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0E-9"]
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9"]
+ehail_fee: NUMBER | NULL
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["0E-9"]
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["0E-9"]
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2021]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1619863953000000, 1619866829000000]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["1"]
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["254", "147"]
+airport_fee: NUMBER | NULL
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=["0E-9"]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["0E-9"]
+distance_between_service: NUMBER | NULL
+time_between_service: NUMBER | NULL
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2021
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["1.760000000"]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["5.000000000"]
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["114", "238"]
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0.500000000"]
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2021]
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9"]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["1"]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["234", "151"]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["0.500000000"]
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["0.950000000", "0.640000000"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1615678733000000, 1615676728000000]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1615678960000000, 1615676950000000]
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["10.560000000"]
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["1.0"]
+airport_fee: NUMBER | NULL
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=["0.300000000"]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["2"]
+data_file_month: NUMBER | Datafile timestamp month value | eg=[3]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1, 4]
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2015
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1438412510000000, 1438453541000000]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["0E-9"]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1438413062000000, 1438453556000000]
+distance_between_service: NUMBER | NULL
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["2.400000000", "0E-9"]
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["5", "1"]
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["0E-9"]
+airport_fee: NUMBER | NULL
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0E-9"]
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["0E-9"]
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=["0E-9"]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1]
+data_file_month: NUMBER | Datafile timestamp month value | eg=[8]
+ehail_fee: NUMBER | NULL
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["126", "193"]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["2", "1"]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["1", "2"]
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9"]
+time_between_service: NUMBER | NULL
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["0E-9"]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["168", "193"]
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2015]
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch | eg=["2.0", "1.0"]
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2018
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["11.000000000"]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["14.160000000"]
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2018]
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["231", "234"]
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["2.770000000", "1.360000000"]
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0.500000000"]
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9"]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["2"]
+airport_fee: NUMBER | NULL
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["1"]
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["2.360000000"]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["246", "233"]
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=["0.300000000"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1543404327000000, 1541406932000000]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1, 2]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1543404963000000, 1541407900000000]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["0E-9"]
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["1.0"]
+data_file_month: NUMBER | Datafile timestamp month value | eg=[11]
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2019
+data_file_month: NUMBER | Datafile timestamp month value | eg=[12]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+airport_fee: NUMBER | NULL
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1576598928000000, 1577131053000000]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1576599573000000, 1577132482000000]
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0.500000000"]
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2019]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["237", "230"]
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["15.360000000", "25.600000000"]
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["1.0"]
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["8.500000000", "19.500000000"]
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=["0.300000000"]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["2"]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1, 5]
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["2.560000000", "1.800000000"]
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9"]
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["1.210000000", "4.690000000"]
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["162", "42"]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["1"]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["1.000000000"]
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2019
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1564635942000000, 1564641564000000]
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0E-9"]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["0E-9"]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1564636720000000, 1564642725000000]
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2019]
+ehail_fee: NUMBER | NULL
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["254", "174"]
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["6.000000000", "5.600000000"]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1]
+data_file_month: NUMBER | Datafile timestamp month value | eg=[8]
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9"]
+distance_between_service: NUMBER | NULL
+time_between_service: NUMBER | NULL
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch | eg=["2.0"]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["0E-9"]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["2.0"]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["1"]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["126", "147"]
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["0E-9"]
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=["0E-9"]
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["5.0"]
+airport_fee: NUMBER | NULL
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["0E-9"]
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2022
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2022]
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["23.800000000"]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["0.500000000", "3.000000000"]
+airport_fee: NUMBER | NULL | eg=["0E-9"]
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["0E-9"]
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["3.080000000", "5.850000000"]
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["114", "41"]
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["20.000000000"]
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["1.0"]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["2", "1"]
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0.500000000"]
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9"]
+data_file_month: NUMBER | Datafile timestamp month value | eg=[11]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1668807259000000, 1667859382000000]
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=["0.300000000"]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[2, 1]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["230", "170"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1668805320000000, 1667858168000000]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["2", "1"]
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2016
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1476730127000000, 1477799774000000]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["140", "148"]
+airport_fee: NUMBER | NULL
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["2", "1"]
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["0.740000000", "0.510000000"]
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["6.800000000"]
+data_file_month: NUMBER | Datafile timestamp month value | eg=[10]
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9"]
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2016]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["1.000000000", "0.500000000"]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1, 3]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1476730416000000, 1477800015000000]
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["5.000000000"]
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0.500000000"]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["1"]
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=["0.300000000"]
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["141", "79"]
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["0E-9", "0.500000000"]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["2", "1"]
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2022
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2022]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+time_between_service: NUMBER | NULL
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["0E-9"]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1661995448000000, 1662016455000000]
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9"]
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["0E-9"]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["3.0", "1.0"]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["1", "2"]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["0E-9"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1661995417000000, 1662016401000000]
+ehail_fee: NUMBER | NULL
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["93", "193"]
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0E-9"]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[0, 1]
+distance_between_service: NUMBER | NULL
+data_file_month: NUMBER | Datafile timestamp month value | eg=[9]
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["5.0", "1.0"]
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch | eg=["2.0", "1.0"]
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["0.100000000", "0E-9"]
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=["0E-9"]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["93", "7"]
+airport_fee: NUMBER | NULL
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["0E-9"]
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2018
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["1"]
+distance_between_service: NUMBER | NULL
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=["0E-9"]
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch | eg=["2"]
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["168", "60"]
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["0.800000000", "1.100000000"]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["2", "3"]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["0E-9"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1517443731000000, 1517461955000000]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0E-9"]
+data_file_month: NUMBER | Datafile timestamp month value | eg=[2]
+ehail_fee: NUMBER | NULL
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["5"]
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9"]
+time_between_service: NUMBER | NULL
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["168", "248"]
+airport_fee: NUMBER | NULL
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["0E-9"]
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["0E-9"]
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["0E-9"]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1517444114000000, 1517462246000000]
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2018]
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2020
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=["0E-9"]
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0E-9"]
+time_between_service: NUMBER | NULL
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["3.500000000", "5.100000000"]
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2020]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1]
+data_file_month: NUMBER | Datafile timestamp month value | eg=[12]
+ehail_fee: NUMBER | NULL
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["0E-9"]
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["0E-9"]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1606804926000000, 1606806033000000]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["78", "248"]
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["0E-9"]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["1", "2"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1606803624000000, 1606805169000000]
+airport_fee: NUMBER | NULL
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["2.0", "1.0"]
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["60", "235"]
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["5.0", "1.0"]
+distance_between_service: NUMBER | NULL
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9"]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["0E-9"]
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch | eg=["2.0", "1.0"]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2011
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["4.700000000"]
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["3.700000000"]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1]
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0.500000000"]
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9"]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1321274040000000, 1322049091000000]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["0E-9"]
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["1"]
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["211", "90"]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["2", "1"]
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2011]
+airport_fee: NUMBER | NULL
+data_file_month: NUMBER | Datafile timestamp month value | eg=[11]
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["0.450000000", "0.500000000"]
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=["0E-9"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1321273800000000, 1322048951000000]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["114", "90"]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["1"]
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["0.500000000"]
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2017
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["0E-9"]
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9"]
+data_file_month: NUMBER | Datafile timestamp month value | eg=[4]
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2017]
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0.500000000"]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["2", "1"]
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["5.800000000"]
+airport_fee: NUMBER | NULL
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["1"]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["2", "1"]
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["0.720000000", "0.600000000"]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1, 5]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1491514316000000, 1491516442000000]
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=["0.300000000"]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1491514519000000, 1491516657000000]
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["239", "140"]
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["4.500000000"]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["142", "140"]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["0.500000000"]
+
+## NEW_YORK_TAXI_TRIPS.TLC_FHV_TRIPS_2015
+zone: TEXT | This is Pickup zone | eg=[""]
+dispatching_base_num: TEXT | The TLC Base License Number of the base that dispatched the trip. | eg=["B00001"]
+location_id: NUMBER | The TLC taxi zone of the trip pick-up
+pickup_datetime: NUMBER | The date and time of the trip pick-up. | eg=[1444298700000000, 1446935400000000]
+service_zone: TEXT | This is Pickup service_zone | eg=[""]
+borough: TEXT | This is Pickup borough | eg=[""]
+
+## NEW_YORK_TAXI_TRIPS.TLC_FHV_TRIPS_2017
+pickup_datetime: NUMBER | The date and time of the trip pick-up. | eg=[1514459083000000, 1510687058000000]
+location_id: NUMBER | The TLC taxi zone of the trip pick-up | eg=[174]
+dropoff_datetime: NUMBER | NULL | eg=[1514460019000000, 1510687673000000]
+dropoff_service_zone: TEXT | NULL | eg=["Boro Zone"]
+dropoff_location_id: NUMBER | NULL | eg=[3]
+dropoff_zone: TEXT | NULL | eg=["Allerton/Pelham Gardens"]
+service_zone: TEXT | This is Pickup service_zone | eg=["Boro Zone"]
+zone: TEXT | This is Pickup zone | eg=["Norwood"]
+borough: TEXT | This is Pickup borough | eg=["Bronx"]
+dispatching_base_num: TEXT | The TLC Base License Number of the base that dispatched the trip. | eg=["B02510", "B02882"]
+dropoff_borough: TEXT | NULL | eg=["Bronx"]
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2012
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["1"]
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2012]
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["4.000000000"]
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["181", "127"]
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0.500000000"]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["1"]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1, 2]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+airport_fee: NUMBER | NULL
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["0.500000000", "1.000000000"]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1336434360000000, 1336959960000000]
+data_file_month: NUMBER | Datafile timestamp month value | eg=[5]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["142", "114"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1336432440000000, 1336958340000000]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["2"]
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["28.500000000", "23.700000000"]
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["10.950000000", "11.980000000"]
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=["0E-9"]
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9", "4.800000000"]
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["33.500000000", "36.800000000"]
+
+## NEW_YORK_TAXI_TRIPS.TLC_FHV_TRIPS_2016
+service_zone: TEXT | This is Pickup service_zone | eg=[""]
+borough: TEXT | This is Pickup borough | eg=[""]
+dispatching_base_num: TEXT | The TLC Base License Number of the base that dispatched the trip. | eg=["B00001"]
+pickup_datetime: NUMBER | The date and time of the trip pick-up. | eg=[1476875700000000, 1452795000000000]
+location_id: NUMBER | The TLC taxi zone of the trip pick-up
+zone: TEXT | This is Pickup zone | eg=[""]
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2023
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+data_file_year: NUMBER | Datafile timestamp year value
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+distance_between_service: NUMBER | NULL
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+ehail_fee: NUMBER | NULL
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+time_between_service: NUMBER | NULL
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+data_file_month: NUMBER | Datafile timestamp month value
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2023
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+data_file_year: NUMBER | Datafile timestamp year value
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+data_file_month: NUMBER | Datafile timestamp month value
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2014
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["2", "1"]
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter | eg=["10.000000000"]
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged | eg=["186", "236"]
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=["0E-9"]
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=["0E-9"]
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips. | eg=["10.500000000"]
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter. | eg=["2.280000000", "2.870000000"]
+data_file_year: NUMBER | Datafile timestamp year value | eg=[2014]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["2"]
+airport_fee: NUMBER | NULL
+tolls_amount: NUMBER | Total amount of all tolls paid in trip. | eg=["0E-9"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1416754188000000, 1416760153000000]
+data_file_month: NUMBER | Datafile timestamp month value | eg=[11]
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=["0.500000000"]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1416754908000000, 1416761144000000]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[4, 3]
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged | eg=["143", "140"]
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=["1"]
+
+## NEW_YORK_TAXI_TRIPS.TAXI_ZONE_GEOM
+zone_name: TEXT | Full text name of the taxi zone | eg=["Bronx Park", "Claremont/Bathgate"]
+borough: TEXT | Borough containing the taxi zone | eg=["Bronx"]
+zone_id: TEXT | Unique ID number of each taxi zone. Corresponds with the pickup_location_id and dropoff_location_id in each of the trips tables | eg=["31", "47"]
+zone_geom: BINARY | Geometric outline that defines the taxi zone suitable for GIS analysis. | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xa8\\x00\\x00\\x00\\xb8l\\x0c~\\xbewR\\xc0,g\\x8b>\\xbbmD@/\\x9dU\\x80\\xbewR\\xc0\\xc7&b?\\xbbmD@D\\xcc8\\x82\\xbewR\\xc0\\xd3\\xf8\\xa5A\\xbbmD@jg\\x8dD\\xbfwR\\xc0)L@(\\xbcmD@\\xac<1F\\xbfwR\\xc0\\x08\\xcf6*\\xbcmD@1\\xd4\"G\\xbfwR\\xc0\\xd3i\\xdd,\\xbcmD@\\x11\\xa1\\xba\\xb4\\xbfwR\\xc0\\xc7W\\xcb[\\xbdmD@\\xbd\\x19S\\xb5\\xbfwR\\xc0z\\x8bt]\\xbdmD@k\\xaex\\xb5\\xbfwR\\xc0\\x1a\\xbf\\x1d_\\xbdmD@(\\xb2W\\xd1\\xbfwR\\xc0\\r\\x92\\xe5\\x87\\xbemD@\\x18@\\xe4\\xff\\xbewR\\xc0+/Y\\xa5\\xccmD@\\n\\xb7g\\x1c\\xbewR\\xc0~ozz\\xd9mD@\\xc3o\\xa1\\x90\\xbcwR\\xc0\\x15\\x8b\\xfcF\\xf0mD@[2\\x90\\x92\\xb7wR\\xc0G\\xe1\\x1f\\x81BnD@\\x8bOc\\xa3\\xb5wR\\xc0H\\xbd1\\xae\\x7fnD@\\x9f*\\x9a\\xf2\\xb4wR\\xc0\\xfd\\xd4}5\\xc4nD@\\xcf\\x1eE\\x89\\xb5wR\\xc0 \\xffj\\xd3\\xednD@^E\\x88#\\xb6wR\\xc0[\\xb1F\\x03\\x19oD@\\x10$\\x8d<\\xb6wR\\xc0\\x0e0\\xa2i oD@\\xdd\\xe4\\xdfC\\xb6wR\\xc08\\xf4K\\x94\"oD@\\xe6:m\\x83\\xb6wR\\xc0h\\xd5x`5oD@\\xdb\\xa2\\xfd\\x89\\xb6wR\\xc0\\x83\\xbbZQ7oD@\\xd7\\x14\\x98\\xb3\\xb6wR\\xc0\\xb1\\x9c`\\x9fCoD@UP\\'\\xbf\\xb6wR\\xc0gj\\xc7\\nGoD@ \\x18\\xe3\\xd0\\xb6wR\\xc0\\x1f\\xbbYILoD@\\xf4\\xd85\\xd8\\xb...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x94\\x00\\x00\\x00\\xdb\\xd0\\xf8\\x11\\x01yR\\xc0\\xa6\\xc2\\x9br[mD@\\xfc\\xbfh$\\xfcxR\\xc0\\xef-xsfmD@\\x9d\\xf9\\xed\\x02\\xfdxR\\xc0\\xee\\r\\xa9(rmD@P\\x8c%r\\x02yR\\xc0\\xba\\xe9\\xe2>\\x8bmD@\\x8fw\\xc9\\x90\\x07yR\\xc0-T\\x9a\\xfa\\xa4mD@c\\xcf%\\xbc\\x07yR\\xc0P\\x80\\x00\\xf6\\xaamD@\\xcf\\x08\\xa7\\xdf\\x07yR\\xc0\\xffV4.\\xc0mD@y\\xf2\\x9c\\xff\\x07yR\\xc0\\xce\\xc5\\xc0\\x0f\\xcemD@\\xfa\\xe1\\x13\\xf7\\x07yR\\xc0\\xbd1\\x97\\x89\\xdfmD@+d\\xcd\\x19\\x08yR\\xc0z\\x1ap\\x89\\xe8mD@\\x90r\\x88/\\x08yR\\xc0v\\xa4\\xcds\\xefmD@p\\xa5\\t4\\x08yR\\xc0\\xd5t\\x81\\x81\\x16nD@\\xf0\\xc7\\xb7\\x81\\xffxR\\xc0\\xa1S\\x9b\\xee+nD@\\xab\\\\SF\\xfaxR\\xc0niu\\xd28nD@\\xb7\\xf9\\x10\\xcb\\xfbxR\\xc0\\x86\\x8d\\x86m:nD@\\x08\\x0e\\xd6\\xcf\\x00yR\\xc0\\xef\\xbd/\\xbc?nD@\\x89\\xde\\x029\\x03yR\\xc0\\x8dN\\xddUBnD@\\xca\\xafK,\\x07yR\\xc0t\\x8a\\x84\\x98FnD@A\\xf0\\t#\\x07yR\\xc0\\xdd\\xec[\\xb5DnD@\\x83n\\xc3\\xa9\\x08yR\\xc0R\\xb3\\xd8j2nD@\\xf1i7U\\x12yR\\xc0\\xd0\\x90\\xe5H\\x1anD@\\xceBl\\xbd\\x1ayR\\xc0Ocf%\\x01nD@R\\xaec\\xce&yR\\xc0\\xad^\\xac\\x98\\xdfmD@7\\xa9U\\x12>yR\\xc0\\t\\x8e9\\x9f\\x9fmD@wod\\x02DyR\\xc..."]

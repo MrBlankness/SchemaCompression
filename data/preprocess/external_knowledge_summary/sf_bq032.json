@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq032",
+  "question": "Can you provide the latitude of the final coordinates for the hurricane that traveled the second longest distance in the North Atlantic during 2020?",
+  "db_id": "NOAA_DATA",
+  "source_document": "functions_st_distance.md",
+  "evidence": "ST_DISTANCE returns minimum geodesic distance between two GEOGRAPHY objects in meters. For GEOGRAPHY input values, the distance is in meters. Example: ST_DISTANCE(ST_MAKEPOINT(0, 0), ST_MAKEPOINT(1, 0)) returns distance in meters. ST_MAKEPOINT function creates point geography objects."
+}

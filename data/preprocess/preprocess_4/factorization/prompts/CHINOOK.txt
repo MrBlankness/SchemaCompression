@@ -1,0 +1,90 @@
+[COMPONENTS]
+@C1
+Address: TEXT | NULL | eg=["683 10 Street SW", "7727B 41 Ave"]
+City: TEXT | NULL | eg=["Calgary", "Lethbridge"]
+Country: TEXT | NULL | eg=["Canada"]
+Email: TEXT | NULL | eg=["margaret@chinookcorp.com", "steve@chinookcorp.com"]
+Fax: TEXT | NULL | eg=["+1 (403) 263-4289", "1 (780) 836-9543"]
+FirstName: TEXT | NULL | eg=["Margaret", "Steve"]
+LastName: TEXT | NULL | eg=["Park", "Johnson"]
+Phone: TEXT | NULL | eg=["+1 (403) 263-4423", "1 (780) 836-9987"]
+PostalCode: TEXT | NULL | eg=["T2P 5G3", "T3B 1Y7"]
+State: TEXT | NULL | eg=["AB"]
+
+[TABLES]
+## CHINOOK.PLAYLIST_TRACK
+PlaylistId: NUMBER | NULL | eg=[1]
+TrackId: NUMBER | NULL | eg=[3390, 3393]
+
+## CHINOOK.EMPLOYEES
+@use: [C1]
+BirthDate: TEXT | NULL | eg=["1947-09-19 00:00:00", "1965-03-03 00:00:00"]
+ReportsTo: FLOAT | NULL | eg=[2.0, 6.0]
+EmployeeId: NUMBER | NULL | eg=[4, 5]
+Title: TEXT | NULL | eg=["Sales Support Agent", "IT Staff"]
+HireDate: TEXT | NULL | eg=["2003-05-03 00:00:00", "2003-10-17 00:00:00"]
+
+## CHINOOK.PLAYLISTS
+PlaylistId: NUMBER | NULL | eg=[3, 4]
+Name: TEXT | NULL | eg=["TV Shows", "Audiobooks"]
+
+## CHINOOK.ARTISTS
+ArtistId: NUMBER | NULL | eg=[8, 9]
+Name: TEXT | NULL | eg=["Audioslave", "BackBeat"]
+
+## CHINOOK.CUSTOMERS
+@use: [C1]
+CustomerId: NUMBER | NULL | eg=[3, 6]
+Company: TEXT | NULL | eg=["", "Woodstock Discos"]
+SupportRepId: NUMBER | NULL | eg=[3, 5]
+
+## CHINOOK.SQLITE_STAT1
+tbl: TEXT | NULL | eg=["playlist_track", "artists"]
+stat: TEXT | NULL | eg=["8715 623 1", "275"]
+idx: TEXT | NULL | eg=["sqlite_autoindex_playlist_track_1", ""]
+
+## CHINOOK.TRACKS
+TrackId: NUMBER | NULL | eg=[1, 5]
+GenreId: NUMBER | NULL | eg=[1]
+AlbumId: NUMBER | NULL | eg=[1, 3]
+Composer: TEXT | NULL | eg=["Angus Young, Malcolm Young, Brian Johnson", "Deaffy & R.A. Smith-Diesel"]
+Name: TEXT | NULL | eg=["For Those About To Rock (We Salute You)", "Princess of the Dawn"]
+Milliseconds: NUMBER | NULL | eg=[343719, 375418]
+MediaTypeId: NUMBER | NULL | eg=[1, 2]
+Bytes: NUMBER | NULL | eg=[11170334, 6290521]
+UnitPrice: FLOAT | NULL | eg=[0.99]
+
+## CHINOOK.SQLITE_SEQUENCE
+seq: NUMBER | NULL | eg=[5, 275]
+name: TEXT | NULL | eg=["media_types", "artists"]
+
+## CHINOOK.GENRES
+Name: TEXT | NULL | eg=["Jazz", "Blues"]
+GenreId: NUMBER | NULL | eg=[2, 6]
+
+## CHINOOK.INVOICES
+InvoiceId: NUMBER | NULL | eg=[1, 4]
+BillingCountry: TEXT | NULL | eg=["Germany", "Canada"]
+InvoiceDate: TEXT | NULL | eg=["2009-01-01 00:00:00", "2009-01-06 00:00:00"]
+BillingAddress: TEXT | NULL | eg=["Theodor-Heuss-Straße 34", "8210 111 ST NW"]
+Total: FLOAT | NULL | eg=[1.98, 8.91]
+CustomerId: NUMBER | NULL | eg=[2, 14]
+BillingState: TEXT | NULL | eg=["", "AB"]
+BillingPostalCode: TEXT | NULL | eg=["70174", "T6G 2C7"]
+BillingCity: TEXT | NULL | eg=["Stuttgart", "Edmonton"]
+
+## CHINOOK.MEDIA_TYPES
+MediaTypeId: NUMBER | NULL | eg=[4]
+Name: TEXT | NULL | eg=["Purchased AAC audio file"]
+
+## CHINOOK.ALBUMS
+AlbumId: NUMBER | NULL | eg=[1, 4]
+Title: TEXT | NULL | eg=["For Those About To Rock We Salute You", "Let There Be Rock"]
+ArtistId: NUMBER | NULL | eg=[1, 6]
+
+## CHINOOK.INVOICE_ITEMS
+InvoiceId: NUMBER | NULL | eg=[1, 2]
+InvoiceLineId: NUMBER | NULL | eg=[1, 5]
+TrackId: NUMBER | NULL | eg=[2, 10]
+Quantity: NUMBER | NULL | eg=[1]
+UnitPrice: FLOAT | NULL | eg=[0.99]

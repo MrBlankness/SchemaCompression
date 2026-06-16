@@ -1,0 +1,47 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: NORTHWIND.USSTATES
+Columns: stateregion, statename, stateabbr, stateid
+
+Table: NORTHWIND.ORDER_DETAILS
+Columns: discount, orderid, unitprice, quantity, productid
+
+Table: NORTHWIND.SHIPPERS
+Columns: companyname, phone, shipperid
+
+Table: NORTHWIND.CUSTOMERGROUPTHRESHOLD
+Columns: groupname, rangetop, rangebottom
+
+Table: NORTHWIND.EMPLOYEES
+Columns: extension, birthdate, lastname, firstname, photo, postalcode, titleofcourtesy, city, country, notes, title, hiredate, photopath, homephone, reportsto, address, region, employeeid
+
+Table: NORTHWIND.PRODUCTS
+Columns: productname, productid, discontinued, unitprice, reorderlevel, unitsinstock, unitsonorder, supplierid, quantityperunit, categoryid
+
+Table: NORTHWIND.ORDERS
+Columns: requireddate, customerid, shippostalcode, shipaddress, shipregion, employeeid, shipcountry, orderid, shippeddate, shipvia, freight, orderdate, shipcity, shipname
+
+Table: NORTHWIND.REGION
+Columns: regiondescription, regionid
+
+Table: NORTHWIND.CUSTOMERS
+Columns: fax, customerid, address, contacttitle, region, phone, country, city, postalcode, companyname, contactname
+
+Table: NORTHWIND.CUSTOMERCUSTOMERDEMO
+Columns: customertypeid, customerid
+
+Table: NORTHWIND.SUPPLIERS
+Columns: contactname, postalcode, city, country, region, homepage, address, supplierid, contacttitle, companyname, fax, phone
+
+Table: NORTHWIND.TERRITORIES
+Columns: territorydescription, territoryid, regionid
+
+Table: NORTHWIND.CUSTOMERDEMOGRAPHICS
+Columns: customerdesc, customertypeid
+
+Table: NORTHWIND.CATEGORIES
+Columns: categoryid, categoryname, description, picture
+
+Table: NORTHWIND.EMPLOYEETERRITORIES
+Columns: territoryid, employeeid

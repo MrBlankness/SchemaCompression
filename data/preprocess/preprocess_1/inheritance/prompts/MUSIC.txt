@@ -1,0 +1,13 @@
+[STANDALONE]
+Format: schema.table|col1,col2
+MUSIC.ALBUM|AlbumId,Title,ArtistId
+MUSIC.ARTIST|ArtistId,Name
+MUSIC.CUSTOMER|Country,PostalCode,City,SupportRepId,Phone,Fax,LastName,Address,FirstName,Email,State,CustomerId,Company
+MUSIC.EMPLOYEE|PostalCode,ReportsTo,BirthDate,Fax,Country,Phone,Address,LastName,HireDate,Email,EmployeeId,State,Title,FirstName,City
+MUSIC.GENRE|GenreId,Name
+MUSIC.INVOICELINE|InvoiceLineId,TrackId,InvoiceId,Quantity,UnitPrice
+MUSIC.INVOICE|BillingCountry,CustomerId,Total,InvoiceId,BillingAddress,InvoiceDate,BillingCity,BillingState,BillingPostalCode
+MUSIC.MEDIATYPE|Name,MediaTypeId
+MUSIC.PLAYLISTTRACK|TrackId,PlaylistId
+MUSIC.PLAYLIST|Name,PlaylistId
+MUSIC.TRACK|MediaTypeId,GenreId,Composer,Milliseconds,UnitPrice,Bytes,Name,TrackId,AlbumId

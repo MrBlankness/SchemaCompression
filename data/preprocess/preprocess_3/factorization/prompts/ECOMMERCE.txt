@@ -1,0 +1,175 @@
+[COMPONENTS]
+@C1
+city: TEXT | NULL
+currencyCode: TEXT | NULL
+eCommerceAction_option: TEXT | NULL
+eCommerceAction_step: NUMBER | NULL
+eCommerceAction_type: TEXT | NULL
+itemQuantity: NUMBER | NULL
+itemRevenue: NUMBER | NULL
+pagePathLevel1: TEXT | NULL
+pageTitle: TEXT | NULL
+productPrice: NUMBER | NULL
+productQuantity: NUMBER | NULL
+productRefundAmount: NUMBER | NULL
+productRevenue: NUMBER | NULL
+productVariant: TEXT | NULL
+searchKeyword: TEXT | NULL
+sessionQualityDim: NUMBER | NULL
+time: NUMBER | NULL
+timeOnSite: NUMBER | NULL
+totalTransactionRevenue: NUMBER | NULL
+transactionId: TEXT | NULL
+transactionRevenue: NUMBER | NULL
+transactions: NUMBER | NULL
+type: TEXT | NULL
+v2ProductCategory: TEXT | NULL
+
+@C2
+customDimensions: VARIANT | NULL
+device: VARIANT | NULL
+geoNetwork: VARIANT | NULL
+hits: VARIANT | NULL
+socialEngagementType: TEXT | NULL
+totals: VARIANT | NULL
+trafficSource: VARIANT | NULL
+userId: TEXT | NULL
+visitNumber: NUMBER | NULL
+visitorId: NUMBER | NULL
+visitStartTime: NUMBER | NULL
+
+@C3
+date: TEXT | NULL
+visitId: NUMBER | NULL
+
+@C4
+name: TEXT | NULL
+restockingLeadTime: NUMBER | NULL
+sentimentMagnitude: FLOAT | NULL
+sentimentScore: FLOAT | NULL
+stockLevel: NUMBER | NULL
+
+@C5
+country: TEXT | NULL
+pageviews: NUMBER | NULL
+
+[TABLES]
+## ECOMMERCE.WEB_ANALYTICS_TEST
+@use: [C2, C3]
+fullVisitorId: TEXT | NULL
+channelGrouping: TEXT | NULL
+
+## ECOMMERCE.CLASSIFICATION_MODEL_2_RESULTS
+@use: [C5]
+deviceCategory: TEXT | NULL
+unique_session_id: TEXT | NULL
+latest_ecommerce_progress: NUMBER | NULL
+predicted_will_buy_on_return_visit: NUMBER | NULL
+bounces: NUMBER | NULL
+source: TEXT | NULL
+medium: TEXT | NULL
+time_on_site: NUMBER | NULL
+predicted_will_buy_on_return_visit_probs: VARIANT | NULL
+will_buy_on_return_visit: NUMBER | NULL
+channelGrouping: TEXT | NULL
+
+## ECOMMERCE.PARTITION_BY_DAY
+fullvisitorId: TEXT | NULL
+date_formatted: DATE | NULL
+
+## ECOMMERCE.PRODUCTS
+@use: [C4]
+SKU: TEXT | NULL
+orderedQuantity: NUMBER | NULL
+
+## ECOMMERCE.REV_TRANSACTIONS_VIEW
+@use: [C1, C3, C5]
+fullVisitorId: TEXT | NULL
+productSKU: TEXT | NULL
+channelGrouping: TEXT | NULL
+v2ProductName: TEXT | NULL
+
+## ECOMMERCE.ALL_SESSIONS_RAW
+@use: [C1, C3, C5]
+v2ProductName: TEXT | NULL
+fullVisitorId: TEXT | NULL
+productSKU: TEXT | NULL
+channelGrouping: TEXT | NULL
+
+## ECOMMERCE.WEB_ANALYTICS
+@use: [C2, C3]
+fullVisitorId: TEXT | NULL
+channelGrouping: TEXT | NULL
+
+## ECOMMERCE.SALES_BY_SKU
+total_ordered: NUMBER | NULL
+productSKU: TEXT | NULL
+
+## ECOMMERCE.REV_TRANSACTIONS
+@use: [C3]
+totals_transactions: NUMBER | NULL
+hits_page_pagePathLevel1: TEXT | NULL
+hits_product_productPrice: NUMBER | NULL
+hits_product_productQuantity: NUMBER | NULL
+hits_page_pageTitle: TEXT | NULL
+hits_transaction_transactionRevenue: NUMBER | NULL
+hits_product_v2ProductCategory: TEXT | NULL
+hits_product_productRevenue: NUMBER | NULL
+hits_product_productSKU: TEXT | NULL
+totals_timeOnSite: NUMBER | NULL
+hits_product_productVariant: TEXT | NULL
+hits_time: NUMBER | NULL
+hits_transaction_transactionId: TEXT | NULL
+hits_product_productRefundAmount: NUMBER | NULL
+fullVisitorId: TEXT | NULL
+totals_totalTransactionRevenue: NUMBER | NULL
+totals_pageviews: NUMBER | NULL
+geoNetwork_country: TEXT | NULL
+hits_product_v2ProductName: TEXT | NULL
+hits_page_searchKeyword: TEXT | NULL
+hits_item_itemRevenue: NUMBER | NULL
+hits_item_itemQuantity: NUMBER | NULL
+hits_item_currencyCode: TEXT | NULL
+hits_type: TEXT | NULL
+channelGrouping: TEXT | NULL
+geoNetwork_city: TEXT | NULL
+
+## ECOMMERCE.SALES_REPORT
+@use: [C4]
+ratio: FLOAT | NULL
+productSKU: TEXT | NULL
+total_ordered: NUMBER | NULL
+
+## ECOMMERCE.ALL_SESSIONS
+@use: [C1, C3, C5]
+channelGrouping: TEXT | NULL
+fullVisitorId: TEXT | NULL
+v2ProductName: TEXT | NULL
+productSKU: TEXT | NULL
+
+## ECOMMERCE.PARTITIONS
+date_formatted: DATE | NULL
+total_transactions: NUMBER | NULL
+
+## ECOMMERCE.PRODUCT_LIST
+v2ProductName: TEXT | NULL
+productSKU: TEXT | NULL
+
+## ECOMMERCE.SITE_WIDE_PROMOTION
+discount: FLOAT | NULL
+
+## ECOMMERCE.CHECKOUT_NUDGE
+eCommerceAction_type_max: TEXT | NULL
+fullVisitorID: TEXT | NULL
+session_time_on_site_minutes_max: FLOAT | NULL
+number_of_sessions: NUMBER | NULL
+number_of_products_viewed: NUMBER | NULL
+
+## ECOMMERCE.CATEGORIES
+category: TEXT | NULL
+productSKU: TEXT | NULL
+
+## ECOMMERCE.DAYS_WITH_RAIN
+date: DATE | NULL
+prcp: FLOAT | NULL
+station_name: TEXT | NULL

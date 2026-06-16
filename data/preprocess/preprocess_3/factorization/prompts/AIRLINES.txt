@@ -1,0 +1,52 @@
+[COMPONENTS]
+[TABLES]
+## AIRLINES.BOARDING_PASSES
+flight_id: NUMBER | NULL
+ticket_no: TEXT | NULL
+seat_no: TEXT | NULL
+boarding_no: NUMBER | NULL
+
+## AIRLINES.AIRPORTS_DATA
+airport_code: TEXT | NULL
+coordinates: TEXT | NULL
+airport_name: TEXT | NULL
+timezone: TEXT | NULL
+city: TEXT | NULL
+
+## AIRLINES.TICKETS
+ticket_no: TEXT | NULL
+passenger_id: TEXT | NULL
+book_ref: TEXT | NULL
+
+## AIRLINES.AIRCRAFTS_DATA
+range: NUMBER | NULL
+aircraft_code: TEXT | NULL
+model: TEXT | NULL
+
+## AIRLINES.FLIGHTS
+aircraft_code: TEXT | NULL
+actual_departure: TEXT | NULL
+departure_airport: TEXT | NULL
+scheduled_departure: TEXT | NULL
+flight_id: NUMBER | NULL
+scheduled_arrival: TEXT | NULL
+actual_arrival: TEXT | NULL
+arrival_airport: TEXT | NULL
+status: TEXT | NULL
+flight_no: TEXT | NULL
+
+## AIRLINES.BOOKINGS
+book_date: TEXT | NULL
+total_amount: NUMBER | NULL
+book_ref: TEXT | NULL
+
+## AIRLINES.SEATS
+seat_no: TEXT | NULL
+fare_conditions: TEXT | NULL
+aircraft_code: TEXT | NULL
+
+## AIRLINES.TICKET_FLIGHTS
+amount: NUMBER | NULL
+ticket_no: TEXT | NULL
+flight_id: NUMBER | NULL
+fare_conditions: TEXT | NULL

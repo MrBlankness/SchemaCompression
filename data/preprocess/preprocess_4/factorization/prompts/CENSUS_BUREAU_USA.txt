@@ -1,0 +1,177 @@
+[COMPONENTS]
+@C1
+area_land_meters: NUMBER | Current land area, in square meters | eg=[82093, 2432605]
+area_water_meters: NUMBER | Current water area, in square meters | eg=[147383995, 149170814]
+
+@C2
+gender: TEXT | male or female. If empty, the row is a total population summary.
+maximum_age: NUMBER | The maximum age in the age range. If null, this indicates the row as having no maximum (such as 85 and over) or the row is a total of the male, female, or overall population.
+minimum_age: NUMBER | The minimum age in the age range. If null, this indicates the row as a total for male, female, or overall population.
+population: NUMBER | The total count of the population for this segment. | eg=[5376, 2305]
+
+@C3
+geo_code: TEXT | Unique identifier for each CSA; should be same as csa_code | eg=["544", "324"]
+lsad_code: TEXT | Legal/Statistical area description (LSAD) code for a given CSA.
+
+M0 indicates "CSA (suffix)".  A full list of LSAD codes can be found here: https://www.census.gov/geo/reference/lsad.html | eg=["M0"]
+
+@C4
+int_point_lat: TEXT | Current latitude of the internal point, which is the point at or closest to the state's geographic center | eg=["+48.1139054", "+36.6428920"]
+int_point_lon: TEXT | Current longitude of the internal point, which is the point at or closest to the state's geographic center | eg=["-105.1881895", "-095.1571515"]
+lsad_name: TEXT | 2010 Census name and the translated legal/statistical area description of a given urban area | eg=["Poplar, MT Urban Cluster", "Vinita, OK Urban Cluster"]
+
+[TABLES]
+## UTILITY_US.US_COUNTY_AREA
+@use: [C1]
+legal_area_code: TEXT | Current legal/statistical area description code. Full list of these can be found: https://www.census.gov/geo/reference/lsad.html | eg=["00", "03"]
+county_geom: BINARY | Geographical representation of the polygon that defines the perimeter of each county. This column should be used as the GEO column for visualization in BigQuery Geo Viz | eg=["bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x14\\x00\\x00\\x00v\\xfe\\xed\\xb2\\xdf\\x04e\\xc0\\xeb=\\x95\\xd3\\x9e\\x12-\\xc0v28J\\xde\\x04e\\xc0\\xc3i\\xc1\\x8b\\xbe\\x12-\\xc0\\x95\\xf2Z\\t\\xdd\\x04e\\xc0\\n\\x03\\x96\\\\\\xc5\\x12-\\xc0*\\xc9:\\x1c\\xdd\\x04e\\xc0\\xad\\x9c\\xbd3\\xda\\x12-\\xc0k\\xd2m\\x89\\xdc\\x04e\\xc0\\xed\\xe2\\xfd\\xb8\\xfd\\x12-\\xc0\\xd8I}Y\\xda\\x04e\\xc0\\xee9\\xb0\\x1c!\\x13-\\xc0\\x9de\\x16\\xa1\\xd8\\x04e\\xc05\\x16Mg\\'\\x13-\\xc0{j\\xf5\\xd5\\xd5\\x04e\\xc0\\tUj\\xf6@\\x13-\\xc0\\xb7]h\\xae\\xd3\\x04e\\xc0r\\x8cd\\x8fP\\x13-\\xc0\\xae\\x17C9\\xd1\\x04e\\xc0\\x9f\\xe3\\xa3\\xc5\\x19\\x13-\\xc0\\x18[\\x08r\\xd0\\x04e\\xc0\\xba=\\x08\\x01\\xf9\\x12-\\xc0\\xd7kzP\\xd0\\x04e\\xc0\\xa4\"N\\'\\xd9\\x12-\\xc0}\\xadK\\x8d\\xd0\\x04e\\xc0\\xe7mlv\\xa4\\x12-\\xc0\\x9b\\x92\\xac\\xc3\\xd1\\x04e\\xc0\\xd1\"\\xdb\\xf9~\\x12-\\xc0\\xed\\x11j\\x86\\xd4\\x04e\\xc0v\\xfb\\xac2S\\x12-\\xc0\\xf7=\\xea\\xaf\\xd7\\x04e\\xc0\\x97B \\x978\\x12-\\xc0\\x96@J\\xec\\xda\\x04e\\xc0\\xae6\\xff\\xaf:\\x12-\\xc0q\\x02\\xd3i\\xdd\\x04e\\xc0DV\\xb7zN\\x12-\\xc04\\x0f`\\x91\\xdf\\x04e\\xc0\\xb3q\\xc4Z|\\x12-\\xc0v\\xfe\\xed\\xb2\\xdf\\x04e\\...", "bytearray(b\"\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x19\\x00\\x00\\x00\\xb7\\xed{\\xd4\\xdfbe\\xc02r\\x16\\xf6\\xb4\\x1b&\\xc0\\xeau\\x8b\\xc0\\xd8be\\xc0[\\xd3\\xbc\\xe3\\x14\\x1d&\\xc0\\xaaD\\xd9[\\xcabe\\xc0\\x85[>\\x92\\x92\\x1e&\\xc0\\x91,`\\x02\\xb7be\\xc0\\xe3\\xbdje\\xc2\\x1f&\\xc0\\xd0\\xd2\\x15l\\xa3be\\xc0\\xc1\\xb0\\xfc\\xf9\\xb6 &\\xc0\\x83L2r\\x96be\\xc0mr\\xf8\\xa4\\x13!&\\xc0]\\xc5\\xe27\\x85be\\xc0\\x05X\\xe4\\xd7\\x0f!&\\xc0\\xd0*3\\xa5ube\\xc0\\x06@\\xdc\\xd5\\xab &\\xc0O\\x91C\\xc4Mbe\\xc0\\xfe\\x03\\xacU\\xbb\\x1e&\\xc0\\xa8\\x18\\xe7oBbe\\xc0SB\\xb0\\xaa^\\x1e&\\xc0&\\x00\\xff\\x94*be\\xc0\\'\\xa2_[?\\x1d&\\xc0\\\\>\\x92\\x92\\x1ebe\\xc0\\xbc\\xe7\\xc0r\\x84\\x1c&\\xc0u\\x02\\x9a\\x08\\x1bbe\\xc0\\x08 \\xb5\\x89\\x93\\x1b&\\xc0\\xa8\\xa7\\x8f\\xc0\\x1fbe\\xc0\\x82\\x92\\x02\\x0b`\\x1a&\\xc0\\xc2\\xa5c\\xce3be\\xc0\\x10{\\xa1\\x80\\xed\\x18&\\xc0\\xf2`\\x8b\\xdd>be\\xc0\\xcc\\xb6\\xd3\\xd6\\x88\\x18&\\xc0\\xb5\\xa4\\xa3\\x1cLbe\\xc0\\xad0}\\xaf!\\x18&\\xc0\\xe9\\x9a\\xc97[be\\xc0\\x14$\\xb6\\xbb\\x07\\x18&\\xc0\\xdc\\xb90\\xd2\\x8bbe\\xc0\\xc9\\xac\\xde\\xe1v\\x18&\\xc0]m\\xc5\\xfe\\xb2be\\xc0\\rT\\xc6\\xbf\\xcf\\x18&\\xc0\\xc3\\xd4\\x96:\\xc8be\\xc0\\x03\\xcc|\\x07?..."]
+county_name: TEXT | Full text name of the county | eg=["Rose Island", "Swains Island"]
+aff_geo_code: TEXT | 14-digit codes that identify the summary level of data, the geographic component of the data and FIPS codes that uniquely identify the data. Corresponds to geo_id from American Fact Finder data | eg=["0500000US60030", "0500000US60040"]
+county_fips_code: TEXT | Four-digit county FIPS code. 
+
+County names and their corresponding FIPS codes can be found in BigQuery: bigquery-public-data.census_fips_codes.counties_2016 | eg=["030", "040"]
+county_gnis_code: TEXT | Identifier for the USGS-maintained Geographic Names Information System (GNIS). GNIS database contains information about physical and cultural geographic features of all types in the United States, associated areas, and Antarctica, current and historical, but not including roads and highways. The database holds the Federally recognized name of each feature and defines the feature location by state, county, USGS topographic map, and geographic coordinates. Other attributes include names or spellings other than the official name, feature designations, feature classification, historical and descriptive information, and for some categories the geometric boundaries. | eg=["01805243", "01805244"]
+geo_id: TEXT | Unique county identifier. It is a concatenation of current state FIPS code and county FIPS code. | eg=["60030", "60040"]
+state_fips_code: TEXT | Two digit state FIPS code.  Unique identifier for states. More detail on FIPS codes and other geographic areas can be found here: https://www2.census.gov/geo/pdfs/reference/GARM/Ch4GARM.pdf
+
+State names and their corresponding FIPS codes can be found in BigQuery: bigquery-public-data.census_fips_codes.states_2016 | eg=["60", "66"]
+
+## UTILITY_US.TIME
+time: TIME | Time as TIME - CAST('23:59:59' AS TIME) | eg=["00:00:26", "00:00:37"]
+second: NUMBER | Second as INTEGER - [0, 59] | eg=[26, 37]
+hour: NUMBER | Hour as INTEGER - [0, 23] | eg=[0]
+is_pm: BOOLEAN | AM = False, PM = True | eg=[false]
+hour_ampm: NUMBER | Hour as INTEGER - [1, 12] | eg=[12]
+second_in_day: NUMBER | Seconds as INTEGER - [0, 86399]; 00:00:00 = 0, 23:59:59 = 86399 | eg=[26, 37]
+minute: NUMBER | Minute as INTEGER - [0, 59] | eg=[0]
+
+## UTILITY_US.US_BORDER_AREA
+aff_geo_id: TEXT | NULL | eg=["0100000US"]
+geo_id: TEXT | NULL | eg=["US"]
+us_border_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x06\\x00\\x00\\x00R\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xdc\\x04\\x00\\x00V\\xd4`\\x1a\\x86\\x01e\\xc0Ec\\xed\\xefldP@\\xc9\\xe7\\x15O=\\xfbd\\xc0\\x07\\x95\\xb8\\x8eqbP@C\\x03\\xb1l\\xe6\\xf5d\\xc0D\\x8a\\x01\\x12M_P@\\x9c0a4+\\xefd\\xc0\\xb2g\\xcfejZP@\\xdf\\xfa\\xb0\\xde(\\xebd\\xc0\\xdb\\x17\\xd0\\x0bwYP@\\xbb\\xd6\\xde\\xa7*\\xe2d\\xc0\\x8d\\x08\\xc6\\xc1\\xa5XP@\\xa4\\xfa\\xce/\\xca\\xdcd\\xc0\\x19\\xe4.\\xc2\\x14WP@Va3\\xc0\\x05\\xd8d\\xc0Y\\xfc\\xa6\\xb0RUP@v\\x1c?T\\x1a\\xd3d\\xc0KZ\\xf1\\r\\x85UP@i7\\xfa\\x98\\x0f\\xced\\xc0\\xbd\\xe1>rkTP@\\xfd\\x10\\x1b,\\x1c\\xcbd\\xc0\\xd0b)\\x92\\xafQP@\\xca\\x87\\xa0jt\\xced\\xc08\\x82T\\x8a\\x1dOP@\\x9c\\xfd\\x81r[\\xcfd\\xc0zR&5\\xb4JP@[?\\xfdgM\\xd4d\\xc0\\xc3\\x9c\\xa0M\\x0eHP@\\xb1\\xa3q\\xa8_\\xdcd\\xc0E\\xb94~\\xe1HP@\\x18\\xd0\\x0bw.\\xddd\\xc03\\xdc\\x80\\xcf\\x0fHP@;\\xdfO\\x8d\\x97\\xd7d\\xc0\\x8bri\\xfc\\xc2AP@d\\\\qqT\\xd6d\\xc0\\xcd\\xb0Q\\xd6o?P@\\x85\\xe9{\\r\\xc1\\xd2d\\xc0D\\x19\\xaab*=P@u:\\x90\\xf5\\xd4\\xcdd\\xc0\\xaaH\\x85\\xb1\\x858P@s\\x85w\\xb9\\x08\\xcdd\\xc0$\\x80\\x9b\\xc5\\x8b6P@\\x1d\\xb0\\xab\\xc9S\\xcfd\\xc0\\x05oH\\xa3\\x023P@\\xc6\\x8b\\x85!r\\xcfd\\xc0R\\x..."]
+name: TEXT | NULL | eg=["United States"]
+
+## UTILITY_US.ZIPCODE_AREA
+@use: [C1]
+area_land_miles: FLOAT | Land Area (square miles) - Created for statistical purposes only | eg=[236.045, 11.365]
+latitude: FLOAT | Latitude (decimal degrees) First character is blank or "-" denoting North or South latitude respectively | eg=[37.885102, 38.231324]
+zipcode_geom: TEXT | Generalized areal representations of United States Postal Service (USPS) ZIP Codes as polygons | eg=["MULTIPOLYGON (((-119.429721 37.867987,-119.427305 37.87187,-119.425922 37.873131,-119.423957 37.873821,-119.420639 37.874128,-119.419116 37.87475,-119.417878 37.876115,-119.416468 37.876681,-119.413545 37.876166,-119.411146 37.876015,-119.406436 37.876683,-119.40529 37.877473,-119.403616 37.879801,-119.401764 37.88115,-119.400841 37.88147,-119.39765 37.88083,-119.396124 37.879661,-119.395152 37.877323,-119.394165 37.876662,-119.38727 37.873921,-119.384796 37.873353,-119.381524 37.873496,-119.38259 37.87426,-119.383893 37.875415,-119.382576 37.876117,-119.380934 37.875699,-119.378669 37.876253,-119.377263 37.875631,-119.376438 37.874696,-119.374963 37.87416,-119.373765 37.874364,-119.371041 37.873207,-119.369039 37.873483,-119.368181 37.873972,-119.369499 37.875296,-119.367242 37.87712,-119.365947 37.877175,-119.364111 37.878241,-119.3624 37.878215,-119.3617 37.877512,-119.360474 37.877623,-119.3587 37.877903,-119.358007 37.877228,-119.357134 37.877201,-119.356233 37.876015,-119.3548...", "POLYGON ((-120.392004 38.202992,-120.39179 38.205061,-120.390818 38.20641,-120.38418 38.210471,-120.383124 38.211637,-120.380807 38.212798,-120.379379 38.214116,-120.378621 38.215916,-120.378453 38.218092,-120.376776 38.21676,-120.375098 38.216203,-120.373207 38.214119,-120.372931 38.216781,-120.373498 38.217842,-120.372308 38.218698,-120.370957 38.22196,-120.369696 38.221453,-120.369682 38.220358,-120.371155 38.218532,-120.371019 38.216776,-120.368248 38.209958,-120.3692 38.205735,-120.368575 38.205426,-120.367674 38.206785,-120.366544 38.206502,-120.363788 38.209558,-120.361887 38.213399,-120.360143 38.215057,-120.358368 38.217823,-120.357012 38.217528,-120.354836 38.21808,-120.354724 38.217365,-120.351807 38.216339,-120.350812 38.217043,-120.34873 38.217033,-120.344458 38.218977,-120.341266 38.219291,-120.338628 38.220303,-120.337317 38.219976,-120.334983 38.220934,-120.330958 38.223237,-120.329804 38.223375,-120.326247 38.227309,-120.325322 38.227776,-120.32281 38.2315,-120.3220..."]
+city: TEXT | Comma-separated list of cities | eg=["Wawona CDP, El Portal CDP, Yosemite Valley CDP", "Avery CDP, Arnold CDP"]
+zipcode: TEXT | Five digit ZIP Code Tabulation Area Census Code | eg=["95389", "95224"]
+longitude: FLOAT | Longitude (decimal degrees) First character is blank or "-" denoting East or West longitude respectively | eg=[-119.468036, -120.322688]
+state_fips: TEXT | FIPS state code for the zipcode | eg=["6"]
+area_water_miles: FLOAT | Water Area (square miles) - Created for statistical purposes only | eg=[1.361, 0.036]
+state_code: TEXT | Abbreviations of the state for the zipcode | eg=["CA"]
+county: TEXT | Comma-separated list of counties | eg=["Mariposa County", "Calaveras County"]
+state_name: TEXT | Name of the state for the zipcode | eg=["California"]
+
+## UTILITY_US.DATE_GREG
+quarter: NUMBER | Quarter as Integer - [1, 4] | eg=[1, 2]
+date_slash: TEXT | Date as STRING - '2000/12/31' | eg=["1970/01/26", "1970/01/19"]
+week_iso: NUMBER | Week Number - First Thursday (ISO) - [0, 53] ; https://en.wikipedia.org/wiki/ISO_week_date | eg=[5, 4]
+year_first_day: DATE | First Day of Year as DATE - [2000-01-01, 2001-01-01, 2002-01-01, ...] | eg=["1970-01-01"]
+dow_mon06: NUMBER | 0 = mon, 6 = sun | eg=[0]
+half: NUMBER | Half as Integer - [1, 2] | eg=[1]
+quarter_first_day: DATE | First Day of Quarter as DATE - [2000-01-01, 2000-04-01, 2000-07-01, 2000-10-01] | eg=["1970-01-01", "1970-04-01"]
+month_first_day: DATE | First Day of Month as DATE - [2000-01-01, 2000-02-01, 2000-03-01, ..., 2000-12-01] | eg=["1970-01-01", "1970-02-01"]
+dow_sun06: NUMBER | 0 = sun, 6 = sat | eg=[1]
+day_abbr: TEXT | Day as 3-letter STRING - [mon, tue, wed, thu, fri, sat, sun] | eg=["mon"]
+date_str: TEXT | Date as STRING - '20001231' | eg=["19700126", "19700119"]
+week_sun: NUMBER | Week Number - First Sunday - [0, 53] | eg=[4, 3]
+month_abbr: TEXT | Month as 3-letter STRING - [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec] | eg=["jan", "feb"]
+year_iso: NUMBER | Year ISO ; https://en.wikipedia.org/wiki/ISO_week_date | eg=[1970]
+day: NUMBER | Day as Integer - [1, 31] | eg=[26, 19]
+dow_mon17: NUMBER | 1 = mon, 7 = sun ; https://en.wikipedia.org/wiki/ISO_week_date) | eg=[1]
+dow_sun17: NUMBER | 1 = sun, 7 = sat | eg=[2]
+date_dash: TEXT | Date as STRING - '2000-12-31' | eg=["1970-01-26", "1970-01-19"]
+week_mon: NUMBER | Week Number - First Monday - [0, 53] | eg=[4, 3]
+date_int: NUMBER | Date as INTEGER - 20001231 | eg=[19700126, 19700119]
+half_first_day: DATE | First Day of Half as DATE - [2000-01-01, 2000-07-01] | eg=["1970-01-01"]
+month: NUMBER | Month as Integer - [1, 12] | eg=[1, 2]
+date: DATE | Date as DATE - CAST('2000-12-31' AS DATE); [1582-10-15, 2199-12-31] | eg=["1970-01-26", "1970-01-19"]
+year: NUMBER | Year as Integer - [1, 9999] | eg=[1970]
+
+## UTILITY_US.US_CSA_AREA
+@use: [C1, C3]
+aff_geo_code: TEXT | 14-digit codes that identify the summary level of data, the geographic component of the data and FIPS codes that uniquely identify the data. Corresponds to geo_id from American Fact Finder data | eg=["330M300US544", "330M300US324"]
+name: TEXT | Current full text name of CSA | eg=["Victoria-Port Lavaca, TX", "Lake Charles-Jennings, LA"]
+csa_code: TEXT | Current Combined Statistical Area (CSA) code | eg=["544", "324"]
+csa_geom: BINARY | Geographical representation of the polygon that defines the perimeter of each CSA. This should be used for geographic visualization | eg=["bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x03\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x10\\x00\\x00\\x00\\xda\\xa9\\xb9\\xdc`1X\\xc0\\xefq\\xa6\\t\\xdbk<@\\x84\\xf4\\x149D1X\\xc0\\xfcp\\x90\\x10\\xe5k<@%\\x03@\\x1571X\\xc0\\x9e\"\\x87\\x88\\x9bk<@\\xb0q\\xfd\\xbb>1X\\xc0%]3\\xf9fk<@\\xff\\xce\\xf6\\xe8\\r1X\\xc0.^,\\x0c\\x91k<@\\x86\\xacz\\x1c\\x021X\\xc0p\\xb5M\\xf9>k<@s,\\xef\\xaa\\x071X\\xc0\\xae+f\\x84\\xb7k<@\\xda\\x10,J\\xff0X\\xc0\\xfaK\"\\x87\\x1dl<@\\xf6\\rLn\\x141X\\xc0\\x88K\\x8e;\\xa5k<@\\xdbO\\xc6\\xf801X\\xc0\\x17\\xef\\xc7\\xed\\x97k<@\\xaf#\\x0e\\xd9@1X\\xc0U\\xd9wE\\xf0k<@\\xb6\\xf4h\\xaa\\'1X\\xc0|\\x10\\x02\\xf2%l<@r5\\xb2+-1X\\xc0\\x9e\\xb1/\\xd9xl<@\\xbf)\\xacTP1X\\xc0J\\x9e\\xeb\\xfbpl<@\\xf4p\\x02\\xd3i1X\\xc0\\xeeM\\xd3g\\x07l<@\\xda\\xa9\\xb9\\xdc`1X\\xc0\\xefq\\xa6\\t\\xdbk<@\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x16\\x00\\x00\\x00g\\xd4|\\x95|3X\\xc0\\x18\\x01\\x15\\x8e 9<@=|\\x99(B3X\\xc0\\xbb\\xcf\\xf1\\xd1\\xe28<@\\xc2\\xc3\\xb4o\\xee2X\\xc0\\x17*\\xffZ^9<@\\xf83\\xbcY\\x832X\\xc0\\xda\\x01\\xd7\\x153:<@\\x02~\\x8d$A2X\\xc0\\xb4\\x1f)\"\\xc3:<@\\xe9H.\\xff!2X\\xc0-^,\\x0c\\x91;<@n1?742X\\xc0[B>\\xe8\\xd9<<@((E+\\xf71X\\xc...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x08\\x03\\x00\\x00\\xd8\\x10\\x1c\\x97q{W\\xc0\\xb3KTo\\r\\xcc=@\\x8f)\\xf8\\xd2R{W\\xc0nU\\xf1\\xc3{\\xca=@>\\xe7n\\xd7K{W\\xc0\\xd4:\\xaa\\x9a \\xca=@\\x7f\\xa6^\\xb7\\x08{W\\xc0J\\xca\\xdd\\xe7\\xf8\\xc8=@\\xfa\\x9bP\\x88\\x80yW\\xc0\\x86X\\xfd\\x11\\x86\\xc5=@\\xc7H\\xf6\\x085yW\\xc0\\xa0\\x94I\\rm\\xc4=@\\xc3e\\x156\\x03yW\\xc0\\x07?q\\x00\\xfd\\xc2=@\\xd9\\xcd\\x8c~4yW\\xc0\\n\\xcfK\\xc5\\xc6\\xc0=@\\xd4\\xb9\\xa2\\x94\\x10yW\\xc0O\\x03\\x06I\\x9f\\xbe=@\\xdf\\xbfyq\\xe2xW\\xc0\\xaf\\xfa#\\x0c\\x03\\xbe=@\\x8ch;\\xa6\\xeewW\\xc0M\\xf8\\xa5~\\xde\\xbc=@k\\xb7]h\\xaewW\\xc0\\xf2\\xcb`\\x8cH\\xbc=@\\xb0q\\xfd\\xbb>wW\\xc0\\xde_=\\xee[\\xb9=@&$\\xd5\\xd8\\xa6uW\\xc0\\x9b)\\xd6\\xb8\\xe9\\xb0=@\\xc5\\xff\\x1dQ\\xa1uW\\xc0\\t\\xff\"h\\xcc\\xb0=@\\xc2V\\x07\\x04\\x80uW\\xc0\\xb1,\\xe2rR\\xb1=@1(\\xd3hruW\\xc0\\xa8\\xc6K7\\x89\\xb1=@h\\xae\\xd3HKuW\\xc0\\x02\\x7f\\xf8\\xf9\\xef\\xb1=@-\\x96\"\\xf9JuW\\xc0b\\xea\\xe7ME\\xb2=@\\xb6\\xa4\\xa3\\x1c\\xcctW\\xc0\\xd2\\xdam\\x17\\x9a\\xb3=@n\\xdd\\xcdS\\x1dtW\\xc0\\xec\\x11j\\x86T\\xb5=@\\x95e\\x88c]sW\\xc0\\xbf\\x01-]\\xc1\\xb6=@8\\xf7W\\x8f\\xfbrW\\xc0\\x8d\\x9b\\x1ah>\\xb7=@\\x87\\x..."]
+
+## UTILITY_US.US_STATES_AREA
+@use: [C1]
+functional_status_code: TEXT | Current functional status code. A full list of possible results can be found: https://www.census.gov/geo/reference/funcstat.html | eg=["A"]
+feature_class_code: TEXT | MAF/TIGER feature class code. G4000 indicates "State or Equivalent Feature" | eg=["G4000"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information
+
+State names and their corresponding FIPS codes can be found in BigQuery: bigquery-public-data.census_fips_codes.states_2016 | eg=["78", "69"]
+region_code: TEXT | Current region code. Regions consist of 2 or more divisions | eg=["9", "1"]
+internal_point_lon: TEXT | Current longitude of the internal point, which is the point at or closest to the state's geographic center | eg=["-064.9712505", "+145.6010210"]
+state_gnis_code: TEXT | Current state GNIS code as maintained by USGS. GNIS is a database that contains name and locative information about more than two million physical and cultural features. | eg=["01802710", "01779809"]
+legal_area_code: TEXT | Current legal/statistical area description code for state | eg=["00"]
+internal_point_lat: TEXT | Current latitude of the internal point, which is the point at or closest to the state's geographic center | eg=["+18.3267484", "+14.9367835"]
+division_code: TEXT | Current division code. Divisions consist of 2 or more states | eg=["0", "1"]
+state_abbreviation: TEXT | 2 letter abbreviation of state name as determined by the United States Postal Service | eg=["VI", "MP"]
+state_geo_id: TEXT | Unique identifier for each state. Identical to state_fips_code | eg=["78", "69"]
+state_geom: BINARY | Points of a polygon that encompass the state. Should be used for geographic visualization | eg=["bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xd6\\x00\\x00\\x00\\xf6~\\xa3\\x1d7=P\\xc0\\x03\\'\\xdb\\xc0\\x1d\\xac1@]\\xa9gA(=P\\xc0\\x03{L\\xa44\\xab1@\\x8b\\xa8\\x89>\\x1f=P\\xc0c\\'\\xbc\\x04\\xa7\\xaa1@\\xca\\x8a\\xe1\\xea\\x00=P\\xc0\\xbf\\xef\\xdf\\xbc8\\xa91@j\\xa3:\\x1d\\xc8<P\\xc0\\xbcS\\x01\\xf7<\\xa71@\\xf1\\x83\\xf3\\xa9c<P\\xc0b\\x84\\xf0h\\xe3\\xa41@\\xbaJw\\xd7\\xd9;P\\xc0\\x87\\xe0\\xb8\\x8c\\x9b\\xa21@8\\xd9\\x06\\xee@;P\\xc0\\x19\\xc7H\\xf6\\x08\\xa11@\\xb5\\xfc\\xc0U\\x9e:P\\xc0\\x04r\\x89#\\x0f\\xa01@\\x03A\\x80\\x0c\\x1d:P\\xc0\\xdb\\x13$\\xb6\\xbb\\x9f1@\\x02f\\xbe\\x83\\x9f9P\\xc0?\\x1aN\\x99\\x9b\\x9f1@2w-!\\x1f9P\\xc0\\x9d.\\x8b\\x89\\xcd\\x9f1@2!\\xe6\\x92\\xaa8P\\xc0\\xa5\\xdd\\xe8c>\\xa01@\\xdfP\\xf8l\\x1d8P\\xc0\\xa9\\xc14\\x0c\\x1f\\xa11@\\x0f\\x98\\x87L\\xf97P\\xc0ce4\\xf2y\\xa11@m<\\xd8b\\xb77P\\xc0\\xaa\\x0f$\\xef\\x1c\\xa21@\\x9c\\x04oH\\xa37P\\xc0h\\xb1\\x14\\xc9W\\xa21@+hZbe7P\\xc0L3\\xdd\\xeb\\xa4\\xa21@\\xc1\\x8b\\xbe\\x8247P\\xc0GY\\xbf\\x99\\x98\\xa21@\\x1c\\x9a\\xb2\\xd3\\x0f7P\\xc0\\xf5\\xec\\xb9LM\\xa21@U\\xf9\\x9e\\x91\\x087P\\xc0uYLl>\\xa21@\\xaf\\xb4\\x8c\\xd4{6P\\xc0\\xdfXP\\x18\\...", "bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x0c\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00(\\x00\\x00\\x00%\\xea\\x05\\x9ff6b@\\x14\\xd3\\x85X\\xfd\\xb50@\\x8fP3\\xa4\\x8a6b@1\\x94\\x13\\xed*\\xb00@\\xe2!\\x8c\\x9f\\xc66b@\\xca\\xc3B\\xadi\\xaa0@\\xffx\\xafZ\\x197b@F\\x07$a\\xdf\\xa60@[\\xd1\\xe6877b@\\xd3\\xf9\\xf0,A\\xa60@\\rm\\x006\\xa07b@\\x07_\\x98L\\x15\\xa40@\\x00\\x00\\x00\\x00\\x008b@;\\xe2\\x90\\r\\xa4\\xa30@#h\\xcc$j8b@7R\\xb6H\\xda\\xa10@\\xbf\\x10r\\xde\\xff8b@\\xef\\x1b_{f\\xa10@\\x0fc\\xd2\\xdfK9b@\\xb7J\\xb08\\x9c\\xa10@\\x17)\\x94\\x85\\xaf9b@\\x92\"2\\xac\\xe2\\xa10@\\\\\\xcc\\xcf\\rM:b@\\x1em\\x1c\\xb1\\x16\\xa30@\\xe3\\x17^I\\xf2:b@\\x82S\\x1fH\\xde\\xa50@~\\xe4\\xd6\\xa4[;b@\\xa3E\\xb6\\xf3\\xfd\\xa80@b\\x9f\\x00\\x8a\\x91;b@c\\x0bA\\x0eJ\\xac0@\\xd1\\x1e/\\xa4\\xc3;b@\\x833\\xf8\\xfb\\xc5\\xb00@\\xd5\\xccZ\\n\\xc8;b@e?\\x8b\\xa5H\\xb60@\\xaa\\xb7\\x06\\xb6\\xca;b@\\xd2\\xfb\\xc6\\xd7\\x9e\\xb90@q\\xc8\\x06\\xd2\\xc5;b@\\xfc\\xa4\\xda\\xa7\\xe3\\xbd0@^\\x83\\xbe\\xf4v;b@\\x00\\x00\\x00\\x00\\x00\\xc00@\\xca\\xfa\\xcd\\xc4t;b@\\xf7=\\xea\\xafW\\xc00@N\\xd1\\x91\\\\\\xfe:b@Q\\xdb\\x86Q\\x10\\xc40@^\\x80}t\\xea:b@\\xf2y\\xc5S\\x8f\\xc40@\\xab-u\\x90W:b..."]
+state_name: TEXT | Full text name of state | eg=["United States Virgin Islands", "Commonwealth of the Northern Mariana Islands"]
+
+## UTILITY_US.US_COASTLINE_AREA
+name: TEXT | NULL | eg=["Gulf"]
+coastline_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x02\\x00\\x00\\x00\\xe4\\r\\x00\\x00\\xbd\\x8a\\x8c\\x0eH\\x19V\\xc0%S\\x05\\xa3\\x92^>@\\xdd\\xb1\\xd8&\\x15\\x19V\\xc0!\\xfc\\x8b\\xa01_>@\\x92<\\xd7\\xf7\\xe1\\x18V\\xc0\\xc7Y\\x115\\xd1_>@T7\\x17\\x7f\\xdb\\x18V\\xc0\\x02.\\xc8\\x96\\xe5_>@\\x93S;\\xc3\\xd4\\x18V\\xc0\\x86\\xaeD\\xa0\\xfa_>@\\xb2\\xd4z\\xbf\\xd1\\x18V\\xc0\\xa2\\xf7\\xc6\\x10\\x00`>@~\\xe5Az\\x8a\\x18V\\xc0\\x90\\xf8\\x15k\\xb8`>@\\x0e\\xda\\xab\\x8f\\x87\\x18V\\xc0J\\xd1\\xca\\xbd\\xc0`>@\\xdf\\xa3\\xfez\\x85\\x18V\\xc0d\\xb2\\xb8\\xff\\xc8`>@\\x95\\xd6\\xdf\\x12\\x80\\x18V\\xc0\\xe6b\\x0c\\xac\\xe3`>@\\xea\\xb2\\x98\\xd8|\\x18V\\xc02\\xe9\\xef\\xa5\\xf0`>@\\xed\\x9cf\\x81v\\x18V\\xc0l\\ndv\\x16a>@$\\x12\\x85\\x96u\\x18V\\xc0d\\x9a\\xe9^\\'a>@\\x10\\xcbf\\x0eI\\x18V\\xc0~\\xa7\\xc9\\x8c\\xb7a>@\\xb2\\xf6w\\xb6G\\x18V\\xc0\\x97\\x03=\\xd4\\xb6a>@\\xc7\\x7f\\x81 @\\x18V\\xc0|?5^\\xbaa>@\\xa0n\\xa0\\xc0;\\x18V\\xc0h\\xd0\\xd0?\\xc1a>@\\xfb\\x07\\x91\\x0c9\\x18V\\xc0\\xc9\\xc5\\x18X\\xc7a>@\\xa9\\x15\\xa6\\xef5\\x18V\\xc0#.\\x00\\x8d\\xd2a>@w\\xbc\\xc9o\\xd1\\x17V\\xc0\\xde\\xe0\\x0b\\x93\\xa9b>@C\\xc9\\xe4\\xd4\\xce\\x17V\\xc06\\\\\\xe4\\x9e\\xaeb>@Uh \\x96\\xcd\\x17V\\xc0P\\xa5f\\x0f\\xb4b>@>\\r\\x18$...", "bytearray(b'\\x01\\x02\\x00\\x00\\x00\\xbb\\x08\\x00\\x00\\xc6o\\n+\\x153U\\xc0\\x14>[\\x07\\x07\\xb3=@\\xb5\\xdd\\x04\\xdf43U\\xc0\\xebUdt@\\xb2=@W\\x08\\xab\\xb1\\x843U\\xc0\\x9e\\xd5\\x02{L\\xb0=@\\xaa\\xb9\\xdc`\\xa83U\\xc0\\xb3\\x0cq\\xac\\x8b\\xaf=@\\xe3R\\x95\\xb6\\xb83U\\xc0\\xf7\\x00\\xdd\\x973\\xaf=@\\x9b>;\\xe0\\xba3U\\xc0Xq\\xaa\\xb50\\xaf=@\\x15\\x90\\xf6?\\xc03U\\xc0\\x16e6\\xc8$\\xaf=@A\\x10 C\\xc73U\\xc0\\x13\\xf3\\xac\\xa4\\x15\\xaf=@e\\xcc]K\\xc83U\\xc0\\xed/\\xbb\\'\\x0f\\xaf=@\\xb0\\x01\\x11\\xe2\\xca3U\\xc0@9\\n\\x10\\x05\\xaf=@z\\x8c\\xf2\\xcc\\xcb3U\\xc0J.\\xff!\\xfd\\xae=@g\\xed\\xb6\\x0b\\xcd3U\\xc0\\xf1\\xb2&\\x16\\xf8\\xae=@\\xcbd8\\x9e\\xcf3U\\xc0=/\\x15\\x1b\\xf3\\xae=@_\\x12gE\\xd43U\\xc0j\\xfa\\xec\\x80\\xeb\\xae=@n\\x15\\xc4@\\xd73U\\xc0\\x96@J\\xec\\xda\\xae=@\\x9d1\\xcc\\t\\xda3U\\xc0\\x96\\xbb\\xcf\\xf1\\xd1\\xae=@\\xc5\\xaaA\\x98\\xdb3U\\xc0\\x84TQ\\xbc\\xca\\xae=@]\\xfb\\x02z\\xe13U\\xc0\\x8c\\xd7\\xbc\\xaa\\xb3\\xae=@\\x8b\\x17\\x0bC\\xe43U\\xc0\\xdd\\xe0\\x0b\\x93\\xa9\\xae=@=Fy\\xe6\\xe53U\\xc0?d\\xca\\x87\\xa0\\xae=@q\\x1f\\xb95\\xe93U\\xc0\\x9bO\\x1d\\xab\\x94\\xae=@F$\\n-\\xeb3U\\xc0:Z\\xd5\\x92\\x8e\\xae=@D\\x88+g\\xef3U\\xc0\\xe1\\xf1\\xed]\\..."]
+
+## UTILITY_US.COUNTRY_CODE_ISO
+alpha_3_code: TEXT | NULL
+alpha_2_code: TEXT | NULL
+sub_continent_name: TEXT | NULL
+continent_code: TEXT | NULL
+cctlds: TEXT | NULL
+fips_code: TEXT | NULL | eg=["AX", "BS"]
+numeric_code: TEXT | NULL
+country_name: TEXT | NULL | eg=["Akrotiri", "Bassas da India"]
+continent_name: TEXT | Note: Australia has been grouped into the Oceania region.
+stanag_code: TEXT | NULL
+
+## UTILITY_US.NUM_999999
+num: NUMBER | Num as INTEGER - [0, 999999] | eg=[150, 170]
+
+## UTILITY_US.US_CITIES_AREA
+@use: [C1, C3, C4]
+area_type: TEXT | 2010 Census urban area type. 
+
+C indicates an "urban cluster", which is an area with a population between 2,500 and 49,999 
+U indicates an "urbanized area", which is an area with a population greater than or equal to 50,000
+
+More information on how the Census Bureau made these determinations can be found here: https://www.census.gov/geo/reference/urban-rural.html | eg=["C"]
+urban_area_code: TEXT | Urban area code from the 2010 Census | eg=["70777", "90784"]
+functional_status: TEXT | Current functional status code. A full list of possible results can be found: https://www.census.gov/geo/reference/funcstat.html 
+"A" refers to "active government providing primary general-purpose functions" | eg=["S"]
+feature_class_code: TEXT | 5-digit code assigned by the Census Bureau intended to classify and describe geographic objects or features. 
+"G3500" indicates "urban area" | eg=["G3500"]
+name: TEXT | Full text name for the urban area | eg=["Poplar, MT", "Vinita, OK"]
+city_geom: BINARY | Points of a polygon that encompass the urban area. Should be used for geographic visualization | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00e\\x01\\x00\\x00rR\\x98\\xf78LZ\\xc0\\x0cZH\\xc0\\xe8\\x0eH@\\xdbR\\x07y=LZ\\xc0\\xd3\\x14\\x01N\\xef\\x0eH@\\xb5\\xfd++MLZ\\xc0\\xeb\\xaa@-\\x06\\x0fH@\\xcb\\xd7e\\xf8OLZ\\xc0g0F$\\n\\x0fH@@\\xa03iSLZ\\xc0\\xab@-\\x06\\x0f\\x0fH@X\\xae\\xb7\\xcdTLZ\\xc0\\x80E~\\xfd\\x10\\x0fH@\\x87\\xfe\\t.VLZ\\xc0VJ\\xcf\\xf4\\x12\\x0fH@O\\x07\\xb2\\x9eZLZ\\xc0\\xc9\\x8d\"k\\r\\x0fH@7\\xff\\xaf:rLZ\\xc0\\x82\"\\x161\\xec\\x0eH@\\xc5W;\\x8asLZ\\xc0o\\xebn\\x9e\\xea\\x0eH@\\'3\\xdeVzLZ\\xc0\\x81\\x9d\\x9b6\\xe3\\x0eH@\\xc2\\xa4\\xf8\\xf8\\x84LZ\\xc0a3\\xc0\\x05\\xd9\\x0eH@z\\xc4\\xe8\\xb9\\x85LZ\\xc0\\xeb\\x02^f\\xd8\\x0eH@}\\xcb\\x9c.\\x8bLZ\\xc0\\xf2[t\\xb2\\xd4\\x0eH@\\xe4I\\xd25\\x93LZ\\xc0\\xa1\\x9d\\xd3,\\xd0\\x0eH@\\xe4/-\\xea\\x93LZ\\xc0\\xdd\\xcf)\\xc8\\xcf\\x0eH@8\\xdb\\xdc\\x98\\x9eLZ\\xc03\\xfa\\xd1p\\xca\\x0eH@\\x1cG\\xac\\xc5\\xa7LZ\\xc0\\x0b\\xcfK\\xc5\\xc6\\x0eH@mS<.\\xaaLZ\\xc0x\\x85>X\\xc6\\x0eH@3\\xc0\\x05\\xd9\\xb2LZ\\xc0\\xbfeN\\x97\\xc5\\x0eH@n\\xa4l\\x91\\xb4LZ\\xc0<\\x872T\\xc5\\x0eH@\\x0f\\xedc\\x05\\xbfLZ\\xc0\\xdb~\\xf9d\\xc5\\x0eH@\\xf5\\xfa\\x93\\xf8\\xdcLZ\\xc03\\x92=B\\xcd\\x0eH@\\xa4\\xa7\\xc8!\\xe2LZ\\xc0\\xfd...", "bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x03\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x17\\x00\\x00\\x00x\\x80\\'-\\\\\\xcaW\\xc0s\\xd5<G\\xe4OB@4\\xdb\\x15\\xfa`\\xcaW\\xc0\\x14\\xcd\\x03X\\xe4OB@\\n.V\\xd4`\\xcaW\\xc0*p\\xb2\\r\\xdcOB@=\\xb9\\xa6@f\\xcaW\\xc0<\\xdb\\xa37\\xdcOB@\\xe3S\\x00\\x8cg\\xcaW\\xc0\\xde\\xd2jH\\xdcOB@\\xdd|#\\xbag\\xcaW\\xc0\\tS\\x94K\\xe3OB@\\xd9x\\xb0\\xc5n\\xcaW\\xc0\\xf7\\xe7\\xa2!\\xe3OB@\\xd9x\\xb0\\xc5n\\xcaW\\xc0\\xf5\\x7f\\x0e\\xf3\\xe5OB@\\xdce\\xbf\\xeet\\xcaW\\xc0\\xb4\\x90\\x80\\xd1\\xe5OB@P\\xc6\\xf80{\\xcaW\\xc0t\\xa1\\xf2\\xaf\\xe5OB@P\\xc6\\xf80{\\xcaW\\xc0\\xd5yT\\xfc\\xdfOB@b\\x14\\x04\\x8fo\\xcaW\\xc0\\x1f\\xf6B\\x01\\xdbOB@zV\\xd2\\x8ao\\xcaW\\xc0\\x9a^b,\\xd3OB@*\\x1ak\\x7fg\\xcaW\\xc0\\xa6\\x0c\\x1c\\xd0\\xd2OB@\\x12\\xd8\\x9c\\x83g\\xcaW\\xc0\\xe7\\xaay\\x8e\\xc8OB@\\xd4\\xb87\\xbfa\\xcaW\\xc0\\xb1i\\xa5\\x10\\xc8OB@K\\x1d\\xe4\\xf5`\\xcaW\\xc0\\xe1\\xedA\\x08\\xc8OB@:\\xb2\\xf2\\xcb`\\xcaW\\xc0\\xad1\\xe8\\x84\\xd0OB@\\xaa\\xbaG6W\\xcaW\\xc0\\xeac> \\xd0OB@z6\\xab>W\\xcaW\\xc04e\\xa7\\x1f\\xd4OB@\\xeb\\xa9\\xd5WW\\xcaW\\xc0WXp?\\xe0OB@\\xa4\\xe3jdW\\xcaW\\xc0s\\xd5<G\\xe4OB@x\\x80\\'-\\\\\\xcaW\\xc0s\\xd5<G\\xe4OB@..."]
+
+## UTILITY_US.US_MSA_AREA
+@use: [C1, C3, C4]
+msa_geom: BINARY | Points of a polygon that encompass the state. Should be used for geographic visualization | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00C\\x18\\x00\\x00\\x9d\\xdc\\xefP\\x14k]\\xc0\\xa9\\xa3\\xe3jd\\xef@@3t\\xec\\xa0\\x12k]\\xc0\\xf9\\xa8\\xbf^a\\xef@@8en\\xbe\\x11k]\\xc0^\\xd6\\xc4\\x02_\\xef@@h\\x03\\xb0\\x01\\x11k]\\xc06w\\xf4\\xbf\\\\\\xef@@\\t\\x15\\x1c^\\x10k]\\xc0\\x1f\\x83\\x15\\xa7Z\\xef@@d`\\x1d\\xc7\\x0fk]\\xc0P;\\xfc5Y\\xef@@\\xecI`s\\x0ek]\\xc0\\xe6 \\xe8hU\\xef@@\\xdc,^,\\x0ck]\\xc0aU\\xbd\\xfcN\\xef@@\\x9bq\\x1a\\xa2\\nk]\\xc0\\xf2}q\\xa9J\\xef@@\\x1fj\\xdb0\\nk]\\xc0F\\x0c;\\x8cI\\xef@@\\x87S\\xe6\\xe6\\x1bk]\\xc0\\xd5{*\\xa7=\\xef@@\\x8f\\xfd,\\x96\"k]\\xc0\\x01\\xdfm\\xde8\\xef@@F\\x84\\x7f\\x114k]\\xc0\\xd9\\x1b|a2\\xef@@\\xc8\\x96\\xe5\\xeb2k]\\xc0 &\\xe1B\\x1e\\xef@@\\xda5!\\xad1k]\\xc0\\xfc\\xc4\\x01\\xf4\\xfb\\xee@@\\xa8\\\\\\xe1].k]\\xc0\\xc0B\\xe6\\xca\\xa0\\xee@@;\\xc0\\x93\\x16.k]\\xc0\\x0b\\'i\\xfe\\x98\\xee@@\\x13\\x13\\xd4\\xf0-k]\\xc0\\x01\\x15\\x8e \\x95\\xee@@\\xaeg\\x08\\xc7,k]\\xc0S\\xb0\\xc6\\xd9t\\xee@@\\x0cpA\\xb6,k]\\xc0\\xad/\\x12\\xdar\\xee@@\\x9c\\x16\\xbc\\xe8+k]\\xc0\\x84b+hZ\\xee@@\\x198\\xa0\\xa5+k]\\xc0\\xff\\xcaJ\\x93R\\xee@@\\xf7a\\xbdQ+k]\\xc0#P\\xfd\\x83H\\xee@@\\xd3\\xbf$\\x95)k]\\xc0\\xd2Q\\x0ef\\x13\\xee@@...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x81\\r\\x00\\x00sK\\xab!q\\xc6P\\xc0\\xc4[\\xe7\\xdf.\\x1b2@\\xef8EGr\\xc6P\\xc0\\x18e6\\xc8$\\x1b2@Q\\x14\\xe8\\x13y\\xc6P\\xc0\\xcd\\xae{+\\x12\\x1b2@\\xb5\\x8bi\\xa6{\\xc6P\\xc0T\\xc5T\\xfa\\t\\x1b2@/\\xdd$\\x06\\x81\\xc6P\\xc0\\x9c\\xd9\\xae\\xd0\\x07\\x1b2@&6\\x1f\\xd7\\x86\\xc6P\\xc0C\\x8e\\xadg\\x08\\x1b2@\\xadO9&\\x8b\\xc6P\\xc0\\xcf~\\xa4\\x88\\x0c\\x1b2@F\\x08\\x8f6\\x8e\\xc6P\\xc0T]\\xc0\\xcb\\x0c\\x1b2@\\x04\\xcb\\x112\\x90\\xc6P\\xc02W\\x06\\xd5\\x06\\x1b2@t\\n\\xf2\\xb3\\x91\\xc6P\\xc0\\x99g%\\xad\\xf8\\x1a2@\\x85A\\x99F\\x93\\xc6P\\xc0\\xdb9\\xcd\\x02\\xed\\x1a2@\\r\\xc3G\\xc4\\x94\\xc6P\\xc0=\\x12/O\\xe7\\x1a2@\\xb9\\x1a\\xd9\\x95\\x96\\xc6P\\xc0=\\x12/O\\xe7\\x1a2@}\\xe8\\x82\\xfa\\x96\\xc6P\\xc0#\\xb6\\xbb\\x07\\xe8\\x1a2@\\xb2\\x0f\\xb2,\\x98\\xc6P\\xc0S\\x06\\x0eh\\xe9\\x1a2@\\xe7\\x1c<\\x13\\x9a\\xc6P\\xc0\\xceW\\xc9\\xc7\\xee\\x1a2@\\xa8\\x1a\\xbd\\x1a\\xa0\\xc6P\\xc0\\xaa#G:\\x03\\x1b2@+\\xdf3\\x12\\xa1\\xc6P\\xc0\\xe5\\xed\\x08\\xa7\\x05\\x1b2@\\x18@\\xf8P\\xa2\\xc6P\\xc0\\x08\\xc4\\xeb\\xfa\\x05\\x1b2@\\xb2,\\x98\\xf8\\xa3\\xc6P\\xc0\\x99\\x84\\x0by\\x04\\x1b2@\\x9a\\xb6\\x7fe\\xa5\\xc6P\\xc0;\\xe4f\\xb8\\x01\\x..."]
+csa_code: TEXT | Current Combined Statistical Area (CSA) code of the CSA that contains the metropolitan statistical area/micropolitan statistical area (MSA) | eg=["348", "364"]
+name: TEXT | Full text name of the metropolitan statistical area/micropolitan statistical area | eg=["Riverside-San Bernardino-Ontario, CA", "San Germán, PR"]
+msa_code: TEXT | Current metropolitan statistical area/micropolitan
+statistical area (MSA) code | eg=["40140", "41900"]
+status_indicator: TEXT | Current metropolitan/micropolitan status indicator. 
+
+1 indicates a metropolitan statistical area. Each metropolitan statistical area must have at least one urbanized area of 50,000 or more inhabitants.
+2 indicates a micropolitan statistical area. Each micropolitan statistical area must have at least one urban cluster of at least 10,000 inhabitants, with no more than 49,999 | eg=["1"]
+feature_class_code: TEXT | MAF/TIGER feature class code 
+
+G3110 indicates either a metropolitan or micropolitan statistical area | eg=["G3110"]
+
+## CENSUS_BUREAU_USA.POPULATION_BY_ZIP_2010
+@use: [C2]
+geo_id: TEXT | Geo code | eg=["8600000US72106", "8600000US50833"]
+zipcode: TEXT | Five digit ZIP Code Tabulation Area Census Code | eg=["72106", "50833"]
+
+## CENSUS_BUREAU_USA.POPULATION_BY_ZIP_2000
+@use: [C2]
+geo_id: TEXT | Geo code | eg=["8600000US58577", "8600000US03447"]
+zipcode: TEXT | Five digit ZIP Code Tabulation Area Census Code | eg=["58577", "03447"]

@@ -1,0 +1,17 @@
+[STANDALONE]
+Format: schema.table|col1,col2
+NORTHWIND.CATEGORIES|categoryid,categoryname,description,picture
+NORTHWIND.CUSTOMERCUSTOMERDEMO|customertypeid,customerid
+NORTHWIND.CUSTOMERDEMOGRAPHICS|customerdesc,customertypeid
+NORTHWIND.CUSTOMERGROUPTHRESHOLD|groupname,rangetop,rangebottom
+NORTHWIND.CUSTOMERS|fax,customerid,address,contacttitle,region,phone,country,city,postalcode,companyname,contactname
+NORTHWIND.EMPLOYEES|extension,birthdate,lastname,firstname,photo,postalcode,titleofcourtesy,city,country,notes,title,hiredate,photopath,homephone,reportsto,address,region,employeeid
+NORTHWIND.EMPLOYEETERRITORIES|territoryid,employeeid
+NORTHWIND.ORDERS|requireddate,customerid,shippostalcode,shipaddress,shipregion,employeeid,shipcountry,orderid,shippeddate,shipvia,freight,orderdate,shipcity,shipname
+NORTHWIND.ORDER_DETAILS|discount,orderid,unitprice,quantity,productid
+NORTHWIND.PRODUCTS|productname,productid,discontinued,unitprice,reorderlevel,unitsinstock,unitsonorder,supplierid,quantityperunit,categoryid
+NORTHWIND.REGION|regiondescription,regionid
+NORTHWIND.SHIPPERS|companyname,phone,shipperid
+NORTHWIND.SUPPLIERS|contactname,postalcode,city,country,region,homepage,address,supplierid,contacttitle,companyname,fax,phone
+NORTHWIND.TERRITORIES|territorydescription,territoryid,regionid
+NORTHWIND.USSTATES|stateregion,statename,stateabbr,stateid

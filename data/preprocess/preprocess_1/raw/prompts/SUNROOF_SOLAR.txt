@@ -1,0 +1,8 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: SUNROOF_SOLAR.SOLAR_POTENTIAL_BY_CENSUSTRACT
+Columns: lng_avg, yearly_sunlight_kwh_f, yearly_sunlight_kwh_total, kw_total, install_size_kw_buckets, number_of_panels_n, lat_max, percent_covered, number_of_panels_s, lng_max, lng_min, state_name, number_of_panels_median, number_of_panels_f, kw_median, region_name, number_of_panels_w, lat_min, percent_qualified, count_qualified, carbon_offset_metric_tons, yearly_sunlight_kwh_e, yearly_sunlight_kwh_kw_threshold_avg, center_point, number_of_panels_e, yearly_sunlight_kwh_n, yearly_sunlight_kwh_s, yearly_sunlight_kwh_median, yearly_sunlight_kwh_w, lat_avg, number_of_panels_total, existing_installs_count
+
+Table: SUNROOF_SOLAR.SOLAR_POTENTIAL_BY_POSTAL_CODE
+Columns: yearly_sunlight_kwh_e, yearly_sunlight_kwh_f, lng_max, yearly_sunlight_kwh_s, yearly_sunlight_kwh_n, existing_installs_count, number_of_panels_w, lat_avg, lng_min, region_name, number_of_panels_total, lng_avg, kw_total, number_of_panels_f, yearly_sunlight_kwh_median, carbon_offset_metric_tons, number_of_panels_median, lat_max, yearly_sunlight_kwh_total, lat_min, number_of_panels_s, percent_covered, yearly_sunlight_kwh_kw_threshold_avg, number_of_panels_e, percent_qualified, number_of_panels_n, kw_median, center_point, yearly_sunlight_kwh_w, state_name, count_qualified, install_size_kw_buckets

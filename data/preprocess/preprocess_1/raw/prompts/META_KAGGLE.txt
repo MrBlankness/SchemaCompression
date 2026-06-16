@@ -1,0 +1,89 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: META_KAGGLE.SUBMISSIONS
+Columns: PublicScoreFullPrecision, SourceKernelVersionId, SubmissionDate, PublicScoreLeaderboardDisplay, IsAfterDeadline, PrivateScoreFullPrecision, ScoreDate, TeamId, Id, SubmittedUserId, PrivateScoreLeaderboardDisplay
+
+Table: META_KAGGLE.KERNELS
+Columns: ForumTopicId, Id, MedalAwardDate, MadePublicDate, FirstKernelVersionId, TotalComments, EvaluationDate, ForkParentKernelVersionId, IsProjectLanguageTemplate, Medal, CreationDate, TotalVotes, TotalViews, CurrentKernelVersionId, CurrentUrlSlug, AuthorUserId
+
+Table: META_KAGGLE.USERACHIEVEMENTS
+Columns: TotalGold, TierAchievementDate, HighestRanking, CurrentRanking, Id, UserId, TotalSilver, Tier, AchievementType, Points, TotalBronze
+
+Table: META_KAGGLE.KERNELLANGUAGES
+Columns: Id, DisplayName, IsNotebook, Name
+
+Table: META_KAGGLE.USERFOLLOWERS
+Columns: CreationDate, Id, UserId, FollowingUserId
+
+Table: META_KAGGLE.DATASETVOTES
+Columns: VoteDate, Id, UserId, DatasetVersionId
+
+Table: META_KAGGLE.KERNELVOTES
+Columns: Id, KernelVersionId, UserId, VoteDate
+
+Table: META_KAGGLE.DATASETTAGS
+Columns: DatasetId, TagId, Id
+
+Table: META_KAGGLE.KERNELVERSIONKERNELSOURCES
+Columns: KernelVersionId, SourceKernelVersionId, Id
+
+Table: META_KAGGLE.COMPETITIONS
+Columns: Title, LeaderboardPercentage, TeamMergerDeadlineDate, NumScoredSubmissions, MaxTeamSize, Slug, HasLeaderboard, ScoreTruncationNumDecimals, EvaluationAlgorithmName, EnabledDate, MaxDailySubmissions, ModelSubmissionDeadlineDate, FinalLeaderboardHasBeenVerified, DeadlineDate, HasKernels, EvaluationAlgorithmDescription, HostName, RewardQuantity, Id, ValidationSetValue, EvaluationAlgorithmIsMax, CompetitionTypeId, ValidationSetName, UserRankMultiplier, ForumId, OnlyAllowKernelSubmissions, Subtitle, RewardType, BanTeamMergers, EnableTeamModels, EnableSubmissionModelAttachments, EnableSubmissionModelHashes, NumPrizes, OrganizationId, EvaluationAlgorithmAbbreviation, TeamModelDeadlineDate, ProhibitNewEntrantsDeadlineDate, HostSegmentTitle, TotalTeams, TotalSubmissions, CanQualifyTiers, TotalCompetitors
+
+Table: META_KAGGLE.FORUMMESSAGEVOTES
+Columns: ToUserId, FromUserId, Id, VoteDate, ForumMessageId
+
+Table: META_KAGGLE.DATASETTASKS
+Columns: Subtitle, DatasetId, CreationDate, TotalVotes, Deadline, Description, Title, OwnerUserId, ForumId, Id
+
+Table: META_KAGGLE.FORUMMESSAGES
+Columns: PostUserId, PostDate, MedalAwardDate, Id, RawMarkdown, ForumTopicId, ReplyToForumMessageId, Medal, Message
+
+Table: META_KAGGLE.USERS
+Columns: Id, Country, RegisterDate, PerformanceTier, DisplayName, UserName
+
+Table: META_KAGGLE.TAGS
+Columns: CompetitionCount, Description, KernelCount, Name, DatasetCount, FullPath, ParentTagId, Id, Slug
+
+Table: META_KAGGLE.USERORGANIZATIONS
+Columns: Id, JoinDate, OrganizationId, UserId
+
+Table: META_KAGGLE.EPISODES
+Columns: CompetitionId, Id, EndTime, CreateTime, Type
+
+Table: META_KAGGLE.FORUMTOPICS
+Columns: TotalViews, LastForumMessageId, IsSticky, LastCommentDate, TotalReplies, Score, KernelId, Title, TotalMessages, CreationDate, FirstForumMessageId, Id, ForumId
+
+Table: META_KAGGLE.KERNELVERSIONCOMPETITIONSOURCES
+Columns: Id, SourceCompetitionId, KernelVersionId
+
+Table: META_KAGGLE.DATASETTASKSUBMISSIONS
+Columns: DatasetTaskId, DatasetId, SubmittedUserId, Id, AcceptedDate, KernelId, CreationDate
+
+Table: META_KAGGLE.DATASETS
+Columns: LastActivityDate, Id, OwnerUserId, Type, TotalDownloads, TotalVotes, CurrentDatasourceVersionId, TotalKernels, TotalViews, ForumId, OwnerOrganizationId, CreatorUserId, CurrentDatasetVersionId, CreationDate
+
+Table: META_KAGGLE.KERNELVERSIONDATASETSOURCES
+Columns: KernelVersionId, SourceDatasetVersionId, Id
+
+Table: META_KAGGLE.TEAMMEMBERSHIPS
+Columns: Id, TeamId, UserId, RequestDate
+
+Table: META_KAGGLE.EPISODEAGENTS
+Columns: Index, EpisodeId, Reward, InitialConfidence, InitialScore, SubmissionId, Id, State, UpdatedConfidence, UpdatedScore
+
+Table: META_KAGGLE.KERNELTAGS
+Columns: Id, TagId, KernelId
+
+Table: META_KAGGLE.KERNELVERSIONS
+Columns: VersionNumber, ScriptLanguageId, Title, LinesChangedFromFork, ParentScriptVersionId, LinesChangedFromPrevious, LinesUnchangedFromPrevious, CreationDate, AuthorUserId, TotalVotes, TotalLines, EvaluationDate, LinesInsertedFromFork, LinesUnchangedFromFork, ScriptId, LinesDeletedFromFork, IsChange, LinesInsertedFromPrevious, Id
+
+Table: META_KAGGLE.FORUMS
+Columns: Title, Id, ParentForumId
+
+Table: META_KAGGLE.COMPETITIONTAGS
+Columns: TagId, CompetitionId, Id
+
+Table: META_KAGGLE.DATASOURCES
+Columns: CreatorUserId, CreationDate, CurrentDatasourceVersionId, Id, Type

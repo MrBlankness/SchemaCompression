@@ -1,0 +1,54 @@
+[TABLES]
+## STACKING.EDA
+feature: TEXT | NULL | eg=["sepal_length", "sepal_width"]
+version: NUMBER | NULL | eg=[2]
+drop_correlation: NUMBER | NULL | eg=[0, 1]
+name: TEXT | NULL | eg=["iris"]
+target: NUMBER | NULL | eg=[0, 1]
+range: TEXT | NULL | eg=[[4.3,7.9], [2.0,4.4]]
+type: TEXT | NULL | eg=["num", ""]
+drop_user: NUMBER | NULL | eg=[0]
+
+## STACKING.SOLUTION
+version: NUMBER | NULL | eg=[2, 4]
+test_size: FLOAT | NULL | eg=[0.33]
+nb_model: NUMBER | NULL | eg=[2, 3]
+resampling: NUMBER | NULL | eg=[0]
+correlation: FLOAT | NULL | eg=[0.75]
+score: FLOAT | NULL | eg=[0.7]
+nb_feature: NUMBER | NULL | eg=[5, 3]
+name: TEXT | NULL | eg=["iris", "concrete"]
+
+## STACKING.MODEL_IMPORTANCE
+version: NUMBER | NULL | eg=[1]
+model: TEXT | NULL | eg=["LOGRLCV", "DTCG"]
+step: NUMBER | NULL | eg=[1]
+name: TEXT | NULL | eg=["iris"]
+importance: FLOAT | NULL | eg=[0.0027583162720716957, 0.027860703756201175]
+
+## STACKING.MODEL_SCORE
+name: TEXT | NULL | eg=["iris"]
+test_score: FLOAT | NULL | eg=[0.74, 0.78]
+step: NUMBER | NULL | eg=[1]
+version: NUMBER | NULL | eg=[1]
+model: TEXT | NULL | eg=["DTCE", "ABC"]
+train_score: FLOAT | NULL | eg=[0.96, 0.74]
+
+## STACKING.MODEL
+name: TEXT | NULL | eg=["iris", "concrete"]
+L1_model: TEXT | NULL | eg=["regression"]
+version: NUMBER | NULL | eg=[1, 2]
+step: NUMBER | NULL | eg=[1, 2]
+
+## STACKING.PROBLEM
+target: TEXT | NULL | eg=["Concrete compressive strength(MPa, megapascals) ", "chf_exp [MW/m2]"]
+path: TEXT | NULL | eg=["https://www.kaggle.com/datasets/prathamtripathi/regression-with-neural-networking", "https://www.kaggle.com/datasets/saurabhshahane/predicting-heat-flux"]
+name: TEXT | NULL | eg=["concrete", "Critical Heat Flux"]
+type: TEXT | NULL | eg=["regression", "classification"]
+
+## STACKING.FEATURE_IMPORTANCE
+feature: TEXT | NULL | eg=["petal_width", "sepal_width"]
+importance: FLOAT | NULL | eg=[0.0, 0.28125]
+step: NUMBER | NULL | eg=[1, 3]
+version: NUMBER | NULL | eg=[1, 2]
+name: TEXT | NULL | eg=["iris"]

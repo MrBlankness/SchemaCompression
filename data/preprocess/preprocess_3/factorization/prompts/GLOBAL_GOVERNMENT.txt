@@ -1,0 +1,452 @@
+[COMPONENTS]
+@C1
+UNIT: TEXT | Unit of measurement for the reported value.
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table.
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable.
+
+@C2
+FREQUENCY: TEXT | Frequency of aggregations.
+MEASURE: TEXT | Quantifiable attribute or subject; description of what is being recorded.
+
+@C3
+SERIES_LEVEL_1: TEXT | First characteristic that makes up a variable, specific to a series ID, helpful for comparison across variables within a series (if available).
+SERIES_LEVEL_2: TEXT | Second characteristic that makes up a variable, specific to a series ID, helpful for comparison across variables within a series (if available).
+SERIES_LEVEL_3: TEXT | Third characteristic that makes up a variable, specific to a series ID, helpful for comparison across variables within a series (if available).
+
+[TABLES]
+## CYBERSYN.UNITED_KINGDOM_TIMESERIES
+@use: [C1]
+GEO_ID: TEXT | A unique identifier for a place. Joinable to other geography tables including GEOGRAPHY_INDEX, GEOGRAPHY_RELATIONSHIPS, and GEOGRAPHY_CHARACTERISTICS.
+DATE: DATE | Date associated with the value.
+VALUE: FLOAT | Value reported for the variable.
+
+## CYBERSYN.PUBLIC_HOLIDAY_CALENDAR
+SUBDIVISION: TEXT | State, province, or other underlying geography that is specific to the holiday
+HOLIDAY_NAME: TEXT | Name of the Holiday
+ISO_ALPHA2: TEXT | 2 letter country code from International Organization for Standardization
+IS_FINANCIAL: BOOLEAN | Boolean denoting a stock market closure for the given region
+DATE: DATE | Date associated with the event
+GEO_ID: TEXT | GEO_ID from GEOGRAPHY_INDEX table
+
+## CYBERSYN.US_DEPARTMENT_OF_TRANSPORTATION_TIMESERIES
+@use: [C1]
+FLIGHT_TYPE_ID: TEXT | A unique hash for the combination of the origin and destination airports, aircraft carriers, and aircrafts. Primary key reflecting the flight pattern.
+AIRCRAFT_ID: TEXT | ID for the aircraft type, a distinctive model as designated by the manufacturer.
+DESTINATION_AIRPORT_ID: TEXT | ID for the destination airport that is part of the flight route being measured, combination of the DOT unique code and official 3 letter OAG code issued for that airport.
+VALUE: FLOAT | Value reported for the variable.
+DATE: DATE | Date associated with the value.
+SERVICE_CLASS: TEXT | Type of service provided by the airline on a specific flight, breaking out scheduled from non-scheduled service and the type of service.
+ORIGIN_AIRPORT_ID: TEXT | ID for the origin airport that is part of the flight route being measured, combination of the DOT unique code and official 3 letter OAG code issued for that airport.
+AIRCRAFT_CARRIER_ID: TEXT | ID for the aircraft carrier.
+
+## CYBERSYN.EUROPEAN_CENTRAL_BANK_ATTRIBUTES
+@use: [C1, C2]
+SEASONALLY_ADJUSTED: TEXT | Indicates whether the value is seasonally adjusted.
+ITEM_DESCRIPTION: TEXT | The item category referenced as part of the harmonized index of consumer prices.
+GEO_COVERAGE: TEXT | Determines whether the variable relates to part or all of a country (e.g., Whole country, Large cities, National excluding capital city).
+MEASUREMENT_TYPE: TEXT | Details how the variable was measured or calculated; specifications for the type of unit measured (e.g., 3-month moving average (Average of observations through period)).
+SOURCE: TEXT | Source where the variable is originally collected or published.
+
+## CYBERSYN.FBI_CRIME_ATTRIBUTES
+@use: [C1, C2]
+OFFENSE_CATEGORY: TEXT | Category of the offense, as defined by the Federal Bureau of Investigation (FBI).
+
+## CYBERSYN.UNITED_NATIONS_INDUSTRIAL_DEVELOPMENT_ORGANIZATION_ATTRIBUTES
+@use: [C1, C2]
+ISIC_ECONOMIC_ACTIVITY: TEXT | An economic activity category within the International Standard Industrial Classification (ISIC) of All Economic Activites system, which was developed by the United Nations.
+INDSTAT_VERSION: TEXT | INDSTAT database version; INDSTAT releases new versions of INDSTAT 2 with ISIC Revision 3 on an annual basis.
+
+## CYBERSYN.FBI_CRIME_TIMESERIES
+@use: [C1]
+DATE: DATE | Date associated with the value.
+VALUE: NUMBER | Value reported for the variable.
+GEO_ID: TEXT | A unique identifier for a place. Joinable to other geography tables including GEOGRAPHY_INDEX, GEOGRAPHY_RELATIONSHIPS, and GEOGRAPHY_CHARACTERISTICS.
+
+## CYBERSYN.US_ECONOMIC_CENSUS_ATTRIBUTES
+@use: [C1, C2]
+CREDIT_CARD_SERVICES_INCOME: TEXT | Specific source of credit card products or services income category (e.g., from cardholder fees, interest, merchant fees).
+NAICS_CODE: TEXT | Industry classification according to North American Industry Classification System.
+TAX_STATUS: TEXT | Establishment's tax status (e.g., exempt from or subject to federal income tax).
+PRODUCT_SERVICES_LINE: TEXT | Related product or service.
+NAICS_DESCRIPTION: TEXT | Description of Industry classification according to North American Industry Classification System.
+OPERATION_TYPE: TEXT | Type of operation run by the establishment (e.g., Merchant wholesalers; Manufacturer's sales branches and offices).
+
+## CYBERSYN.FEDERAL_RESERVE_ATTRIBUTES
+@use: [C1, C2]
+SECTOR: TEXT | Related fund, government, business, or other authority.
+SEASONALLY_ADJUSTED: TEXT | Indicates whether the value is seasonally adjusted.
+NAICS: TEXT | North American Industry Classification System code.
+CATEGORY: TEXT | Related industry or financial instrument category.
+TERMS: TEXT | Details the terms that apply to a particular financial object, like maturity range or maturity term.
+
+## CYBERSYN.WORLD_BANK_ATTRIBUTES
+@use: [C1, C2]
+ESG_PILLAR: TEXT | Either Environmental, Social, or Governance, if the variable is ESG-related (e.g., Worldwide Development Indicators).
+RELATED_TOPICS: ARRAY | Array of topics associated with the variable, according to the World Bank.
+SOURCE: TEXT | The source of the data as reported by the World Bank. The World Bank aggregates many of their tracked statistics from other international organizations.
+WORLD_BANK_SOURCE: TEXT | The World Bank data series that this variable belongs to.
+SOURCE_NOTE: TEXT | Note about the variable from the source of the data, often pertaining to how the variable is measured.
+
+## CYBERSYN.GEOGRAPHY_RELATIONSHIPS
+RELATED_GEO_NAME: TEXT | Name of the place related to GEO_NAME. This is a place that overlaps or is contained within the primary geo (e.g., city within a state)
+RELATED_LEVEL: TEXT | Geographic level or hierarchy of the related place (e.g., Country, State, County, City, Continent, CountrySubRegion, etc.)
+RELATIONSHIP_TYPE: TEXT | Relationship between the two places. Contains means the RELATED_GEO_ID is fully contained within the GEO_ID (e.g., relationship of state to a city) while Overlaps indicates the GEO_ID is a subpart of the RELATED_GEO_ID (e.g., relationship of city to a state)
+RELATED_GEO_ID: TEXT | A unique identifier for the related place joinable to the GEOGRAPHY_INDEX table
+GEO_ID: TEXT | A unique identifier for a place joinable to the GEOGRAPHY_INDEX table
+LEVEL: TEXT | Geographic level or hierarchy (e.g., Country, State, County, City, Continent, CountrySubRegion, etc.)
+GEO_NAME: TEXT | Full name of the place
+
+## CYBERSYN.DATACOMMONS_ATTRIBUTES
+@use: [C1]
+SOURCE_DOMAIN: TEXT | Domain of the URL where the raw data can be found
+VARIABLE_GROUP: TEXT | The core variable being measured excluding any information around measurement method. Variables belonging to the same group measure the same thing but differ on measurement method or reporting agency
+CATEGORY: TEXT | Overarching category of the variable or measure type (e.g., Weather, Demographics, etc.)
+
+## CYBERSYN.AIRCRAFT_CARRIER_INDEX
+CARRIER_WORLD_AREA_CODE: NUMBER | US DOT identifier for the geographical area where the carrier is based.
+AIRCRAFT_CARRIER_ID: TEXT | Unique ID for the aircraft carrier.
+CARRIER_TYPE: TEXT | Type of carrier based on its primary operational characteristics.
+CARRIER_NAME: TEXT | Name of the airport carrier.
+COUNTRY_GEO_ID: TEXT | A unique identifier for a country, joinable to the GEOGRAPHY_INDEX table, representing the primary geography for the variable.
+OAI_CARRIER_TYPE: TEXT | Operating Air Carrier (OAC) type that provides a detailed classification of the type of operations conducted by the carrier.
+STATE_GEO_ID: TEXT | A unique identifier for a state, joinable to the GEOGRAPHY_INDEX table, representing the primary geography for the variable.
+
+## CYBERSYN.EUROPEAN_CENTRAL_BANK_TIMESERIES
+@use: [C1]
+DATE: DATE | Date associated with the value.
+VALUE_COMMENT: TEXT | Comment on the source, measurement, or definition of the value.
+GEO_ID: TEXT | A unique identifier for a place. Joinable to other geography tables including GEOGRAPHY_INDEX, GEOGRAPHY_RELATIONSHIPS, and GEOGRAPHY_CHARACTERISTICS.
+VALUE: FLOAT | Value reported for the variable.
+
+## CYBERSYN.WORLD_TRADE_ORGANIZATION_TIMESERIES
+@use: [C1]
+PARTNER_GEO_ID: TEXT | The country or region involved in the trade with the reporting economy; the destination.
+REPORTING_GEO_ID: TEXT | Source (e.g., country or country group) reporting the trade data; the origin.
+DATE: DATE | Date the data was published.
+VALUE: FLOAT | Reported figure for the variable.
+
+## CYBERSYN.DATACOMMONS_TIMESERIES
+@use: [C1]
+DATE: DATE | Date associated with the value
+GEO_ID: TEXT | A unique identifier for a place joinable to the GEOGRAPHY_INDEX table
+VALUE: NUMBER | The actual numeric value for a given variable
+
+## CYBERSYN.US_DEPARTMENT_OF_AGRICULTURE_COMMODITIES_ATTRIBUTES
+@use: [C1, C2]
+COMMODITY_TYPE: TEXT | The type of agricultural product (e.g., wheat, corn, rice, cotton).
+
+## CYBERSYN.INTERNATIONAL_LABOUR_ORGANIZATION_TIMESERIES
+@use: [C1]
+VALUE: FLOAT | Value reported for the variable.
+DATE: DATE | Date associated with the value.
+GEO_ID: TEXT | A unique identifier for a place joinable to the GEOGRAPHY_INDEX table.
+VALUE_COMMENT: TEXT | Comment on the source, measurement, and definition of the value.
+
+## CYBERSYN.CYBERSYN_DATA_CATALOG
+DATA_SOURCE: ARRAY | Source of the data.
+LICENSE_URL: ARRAY | Array of URLs that provide the licensing for the data sources in this table.
+CREATED_DATE: DATE | Date for the table's addition to the Snowflake Marketplace.
+TABLE_NAME_PROPER: TEXT | Human-readable table name.
+LISTING_NAME: ARRAY | Human-readable name of listing(s) associated with table.
+LAST_UPDATED_TIMESTAMP: TIMESTAMP_TZ | Timestamp for the table's last update or modification.
+DESCRIPTION: TEXT | Details on the source of the data, the table, and what is included in the table.
+TABLE_TYPE: TEXT | Cybersyn table type as part of the unified schema.
+SELECT_RELATED_TABLES: ARRAY | Array of tables that you can join based on the entity and variable relationships; not an exhaustive list.
+DOCUMENTATION_URL: TEXT | URL of the documentation associated with the table.
+SHORT_DESCRIPTION: TEXT | Summarized details on the source of the data, the table, and what is included in the table.
+DATA_SOURCE_URL: ARRAY | Array of URLs that provide the overview of each of the data sources in this table.
+ENTITIES: ARRAY | Array of entities that are included in the table.
+LISTING_URL: ARRAY | URLs of listing(s) associated with table.
+TABLE_NAME: TEXT | Machine-readable table name.
+
+## CYBERSYN.US_DEPARTMENT_OF_LABOR_UNEMPLOYMENT_INSURANCE_CLAIMS_ATTRIBUTES
+@use: [C1, C2]
+MEASUREMENT_TYPE: TEXT | Additional information on how the variable value is calculated.
+
+## CYBERSYN.CALENDAR_INDEX
+CALENDAR_NAME: TEXT | Human-readable name for the type of calendar.
+CALENDAR_ID: TEXT | Unique ID denoting a type of calendar (e.g., Month, Quarter, Retail 4-5-4 Month).
+ORDINAL_POSITION_IN_ANNUAL_PERIOD: NUMBER | The ordinal position of the period within the annual period.
+PERIOD_END_DATE: DATE | The last day of the period.
+PERIOD_START_DATE: DATE | The first day of the period.
+ANNUAL_PERIOD: NUMBER | The year number related to the annual calendar for the period. It reflects the calendar year for calendar periods and the 4-5-4 retail year for retail periods.
+
+## CYBERSYN.WORLD_BANK_TIMESERIES
+@use: [C1]
+VALUE: FLOAT | Value reported for the variable.
+DATE: DATE | Date associated with the value.
+GEO_ID: TEXT | A unique identifier for a place. Joinable to other geography tables including GEOGRAPHY_INDEX, GEOGRAPHY_RELATIONSHIPS, and GEOGRAPHY_CHARACTERISTICS.
+
+## CYBERSYN.AMERICAN_COMMUNITY_SURVEY_TIMESERIES
+@use: [C1]
+VALUE: VARIANT | Value reported for the variable.
+DATE: DATE | Date associated with the value.
+GEO_ID: TEXT | A unique identifier for a place joinable to the GEOGRAPHY_INDEX table.
+
+## CYBERSYN.INTERNATIONAL_TRADE_ADMINISTRATION_TRADE_EVENTS_INDEX
+TERTIARY_VENUE: VARIANT | JSON details of the tertiary venue for the trade event (if applicable).
+TRADE_EVENT_URL: TEXT | URL to see the trade event details.
+RELEVANT_INDUSTRIES: ARRAY | Industries relevant to the trade event.
+TRADE_EVENT_DESCRIPTION: TEXT | Description of the trade event details.
+REGISTRATION_TYPE: TEXT | Type of registration required for the trade event (e.g., Registration, Application).
+PRIMARY_VENUE_GEO_ID_STATE: TEXT | Unique geographic identifier for the state associated with the trade event's primary venue.
+TRADE_EVENT_NAME: TEXT | Specific name of the trade event.
+PRIMARY_VENUE_STREET: TEXT | Street of the trade event space that is the primary venue.
+TRADE_EVENT_TYPE: TEXT | Trade event format.
+TRADE_EVENT_ID: TEXT | Unique identifier for a trade event provided by the International Trade Administration (ITA).
+START_DATE: DATE | First date of the trade event.
+REGISTRATION_URL: TEXT | URL to sign up for the trade event.
+END_DATE: DATE | Last date of the trade event.
+PRIMARY_VENUE_NAME: TEXT | Name of the trade event space that is the primary venue.
+PRIMARY_VENUE_CITY: TEXT | City of the primary venue for the trade event.
+SECONDARY_VENUE: VARIANT | JSON details of the secondary venue for the trade event (if applicable).
+CONTACTS: TEXT | List of points of contact associated with the trade event.
+PRIMARY_VENUE_GEO_ID_COUNTRY: TEXT | Unique geographic identifier for the country associated with the trade event's primary venue.
+
+## CYBERSYN.US_TREASURY_ATTRIBUTES
+@use: [C1, C2]
+TAX_CATEGORY: TEXT | Tax category as reported by the US Treasury, which are not mutually exclusive. The Tax Category Total contains the sum of the Non-Tax and Internal Revenue Service (IRS) Tax amounts. The five categories are 1. Non-Tax - Sum of IRS-Non-Tax and Non-Tax (other than IRS Non-Tax). 2. IRS Non-Tax - Collections for ALCs (Agency Location Codes) that begin with 2009 but do not include any of the IRS Service Centers. 3. IRS Tax - Collections for the IRS Service Center ALCs. 4. Non-Tax (other than IRS Non-Tax) - Collections that do not begin with ALC 2009. 5. IRS Tax & IRS Non-Tax - Sum of IRS Non-Tax and IRS Tax.
+MEASUREMENT_TYPE: TEXT | Type of US Treasury instrument being measured (e.g., Savings Bond Series E).
+
+## CYBERSYN.FEDERAL_RESERVE_TIMESERIES
+@use: [C1]
+DATE: DATE | Date associated with the value.
+VALUE: FLOAT | Value reported for the variable.
+GEO_ID: TEXT | A unique identifier for a place. Joinable to other geography tables including GEOGRAPHY_INDEX, GEOGRAPHY_RELATIONSHIPS, and GEOGRAPHY_CHARACTERISTICS.
+
+## CYBERSYN.WORLD_HEALTH_ORGANIZATION_TIMESERIES
+@use: [C1]
+DATE: DATE | Date the data was published.
+GEO_ID: TEXT | A unique identifier for a country, group of countries, or region, joinable to the GEOGRAPHY_INDEX table.
+WHO_SOURCE: TEXT | Source that the World Health Organization (WHO) has received this data.
+VALUE_COMMENT: TEXT | Comment on the source, measurement, or definition of the value.
+VALUE: FLOAT | Reported figure for the variable.
+
+## CYBERSYN.US_DEPARTMENT_OF_TRANSPORTATION_ATTRIBUTES
+@use: [C1, C2]
+
+## CYBERSYN.AMERICAN_COMMUNITY_SURVEY_ATTRIBUTES
+@use: [C1, C2, C3]
+SERIES_TYPE: TEXT | ACS detailed description for the subject/category of the variable.
+SERIES_ID: TEXT | Unique ACS identifier for the subject of the ACS variable.
+SERIES_LEVEL_5: TEXT | Fifth characteristic that makes up a variable, specific to a series ID, helpful for comparison across variables within a series (if available).
+SERIES_LEVEL_4: TEXT | Fourth characteristic that makes up a variable, specific to a series ID, helpful for comparison across variables within a series (if available).
+MEASUREMENT_PERIOD: TEXT | Data collection period for the variable (ex. 1YR or 5 YR).
+CENSUS_SUBJECT: TEXT | ACS high-level description for the subject/category of the variable.
+SERIES_LEVEL_6: TEXT | Sixth characteristic that makes up a variable, specific to a series ID, helpful for comparison across variables within a series (if available).
+RACE: TEXT | Associated race with the population variable.
+MEASUREMENT_TYPE: TEXT | Measurement classification of the variable (ex. estimate, margin of error).
+
+## CYBERSYN.HOUSING_URBAN_DEVELOPMENT_ATTRIBUTES
+@use: [C1, C2]
+
+## CYBERSYN.UNITED_KINGDOM_ATTRIBUTES
+@use: [C1, C2]
+SOURCE: TEXT | Source of the data.
+INDUSTRY: TEXT | Related industry.
+SEX: TEXT | Sex, if applicable.
+MEASUREMENT_TYPE: TEXT | Measurement classification of the variable.
+RELIGION: TEXT | Religion, if applicable.
+AGE: TEXT | Age category, if applicable.
+SEASONALLY_ADJUSTED: TEXT | Indicates whether the value is seasonally adjusted.
+
+## CYBERSYN.HOUSING_URBAN_DEVELOPMENT_TIMESERIES
+@use: [C1]
+VALUE: FLOAT | Value reported for the variable.
+DATE: DATE | Date associated with the value.
+GEO_ID: TEXT | A unique identifier for a place. Joinable to other geography tables including GEOGRAPHY_INDEX, GEOGRAPHY_RELATIONSHIPS, and GEOGRAPHY_CHARACTERISTICS.
+
+## CYBERSYN.US_DEPARTMENT_OF_AGRICULTURE_COMMODITIES_TIMESERIES
+@use: [C1]
+DATE: DATE | Date associated with the value (e.g., for ESR variables, it represents the sales week end). See the ATTRIBUTES table for more details.
+GEO_ID: TEXT | A unique identifier for a country joinable to the GEOGRAPHY_INDEX table.
+VALUE: FLOAT | Value reported for the variable.
+MARKETING_YEAR: TEXT | The marketing year tied to the agricultural seasons and harvest periods of a specific crop. A marketing year typically begins in the month when a particular crop's harvest starts and ends just before the next year's harvest begin. This period can vary significantly between different crops and different countries.
+CALENDAR_YEAR: DATE | Calendar year associated with the value.
+
+## CYBERSYN.US_DEPARTMENT_OF_LABOR_UNEMPLOYMENT_INSURANCE_CLAIMS_TIMESERIES
+@use: [C1]
+GEO_ID: TEXT | A unique identifier for a place. Joinable to other geography tables including GEOGRAPHY_INDEX, GEOGRAPHY_RELATIONSHIPS, and GEOGRAPHY_CHARACTERISTICS.
+DATE: DATE | Date associated with the value.
+VALUE: FLOAT | Value reported for the variable.
+
+## CYBERSYN.INTERNATIONAL_TRADE_ADMINISTRATION_EXPORT_ASSISTANCE_CENTERS_INDEX
+INTERNATIONAL_TRADE_ADMINISTRATION_EXPORT_ASSISTANCE_CENTER_NAME: TEXT | Name of the ITA export assistance center.
+APO_ADDRESS: TEXT | Mailing address for military posts abroad.
+MAIL_INSTRUCTIONS: TEXT | Special mail instructions for reaching out to the ITA export assistance center.
+ADDRESS: TEXT | Address for the ITA export assistance center.
+WEBSITE_URL: TEXT | URL for the ITA export assistance center.
+EMAIL: TEXT | Email address for the ITA export assistance center.
+GEO_ID_COUNTRY: TEXT | Unique geographic identifier for the country associated with the ITA export assistance center.
+INTERNATIONAL_TRADE_ADMINISTRATION_EXPORT_ASSISTANCE_CENTER_POST: TEXT | Name of the ITA post (usually a major city associated with the ITA export assistance center).
+ASSOCIATED_GEO_ID_ZIPS: ARRAY | Array of zip codes that are associated with the ITA export assistance center, joinable to GEOGRAPHY_INDEX.
+FAX: TEXT | Fax number for the ITA export assistance center.
+INTERNATIONAL_TRADE_ADMINISTRATION_EXPORT_ASSISTANCE_CENTER_ID: TEXT | Unique identifier for each International Trade Administration (ITA) export assistance center.
+GEO_ID_STATE: TEXT | Unique geographic identifier for the state associated with the ITA export assistance center.
+PHONE: TEXT | Phone number for the ITA export assistance center.
+
+## CYBERSYN.GEOGRAPHY_CHARACTERISTICS
+GEO_NAME: TEXT | Full name of the place
+RELATIONSHIP_START_DATE: DATE | The date from which a given characteristic is valid. For example, if the coordinates for ZIP code 12345 changed on 2023-04-01 (i.e., on 2023-04-01 the Census Bureau released shapefiles with updated coordinates for ZIP code 12345), then relationship_start_date of 2023-04-01 is assigned. However, currently, all the values in this column are NULL since it only contains most recent characteristics with no historical changes.
+RELATIONSHIP_END_DATE: DATE | The date through which a given characteristic is valid. For example, if the coordinates for ZIP code 12345 changed on 2023-04-01 (i.e., on 2023-04-01 the Census Bureau released shapefiles with updated coordinates for ZIP code 12345), then relationship_end_date of 2023-03-31 is assigned to the previous coordinates for ZIP code 12345. However, currently, all the values in this column are NULL since it only contains most recent characteristics with no historical changes.
+GEO_ID: TEXT | A unique identifier for a place (a nation, state, zip-code, etc.) joinable to the geography index table for adding geospatial information.
+RELATIONSHIP_TYPE: TEXT | Description of the provided characteristic. For example, 'coordinates_wkt' means that VALUE contains the GEO_ID's coordinates in WKT format, while 'coordinates_geojson' means that VALUE contains the GEO_ID's coordinates in GeoJSON format.
+VALUE: TEXT | Value of the characteristic specified in RELATIONSHIP_TYPE.
+
+## CYBERSYN.GOVERNMENT_CONTRACT_AWARD_INDEX
+AWARD_NAME: TEXT | A short summary of the goods and services in the awarded contract
+AWARD_AMOUNT: FLOAT | The total amount of the awarded contract
+PRIMARY_AWARDER_CONTACT_EMAIL: TEXT | Email of the primary government contact at the office awarding the contract
+CONTRACT_SOLICITATION_ID: TEXT | Unique solicitation number provided by the System for Award Management (sam.gov) for a specific contract.  Joinable to the GOVERNMENT_CONTRACT_INDEX table.
+AWARD_DATE: DATE | The date the contract was awarded
+RECIPIENT: TEXT | The name and address of the organization receiving the contract
+CONTRACT_AWARD_ID: TEXT | Award number provided by the System for Award Management (sam.gov) that is unique to each award for a given contract.
+PRIMARY_AWARDER_CONTACT_PHONE: TEXT | Phone number of the primary government contact at the office awarding the contract
+AWARD_DESCRIPTION: TEXT | A detailed statement of work and requirements of the services or products in the awarded contract
+PRIMARY_AWARDER_CONTACT_FAX: TEXT | Fax number of the primary government contact at the office awarding the contract
+PRIMARY_AWARDER_CONTACT_ID: TEXT | Unique identifier for the primary government contact awarding the contract.
+PRIMARY_AWARDER_CONTACT_NAME: TEXT | Name of the primary government contact at the office awarding the contract
+PRIMARY_AWARDER_CONTACT_TITLE: TEXT | Title of the primary government contact at the office awarding the contract
+
+## CYBERSYN.WORLD_HEALTH_ORGANIZATION_ATTRIBUTES
+@use: [C1, C2, C3]
+SERIES_LEVEL_3_TYPE: TEXT | Each variable can have multiple characteristics (e.g., Female). Each characteristic has an associated characteristic type, or category (e.g., Sex). Characteristic type for SERIES_LEVEL_3.
+SERIES_LEVEL_2_TYPE: TEXT | Each variable can have multiple characteristics (e.g., Female). Each characteristic has an associated characteristic type, or category (e.g., Sex). Characteristic type for SERIES_LEVEL_2.
+MEASUREMENT_TYPE: TEXT | Measurement classification of the variable (ex. Estimate).
+SERIES_LEVEL_1_TYPE: TEXT | Each variable can have multiple characteristics (e.g., Female). Each characteristic has an associated characteristic type, or category (e.g., Sex). Characteristic type for SERIES_LEVEL_1.
+
+## CYBERSYN.US_ECONOMIC_CENSUS_TIMESERIES
+@use: [C1]
+DATE: TEXT | Date associated with the value.
+VALUE: FLOAT | Value reported for the variable.
+GEO_ID: TEXT | A unique identifier for a place. Joinable to other geography tables including GEOGRAPHY_INDEX, GEOGRAPHY_RELATIONSHIPS, and GEOGRAPHY_CHARACTERISTICS.
+
+## CYBERSYN.UNITED_NATIONS_INDUSTRIAL_DEVELOPMENT_ORGANIZATION_TIMESERIES
+@use: [C1]
+VALUE: TEXT | Value reported for the variable.
+GEO_ID: TEXT | A unique identifier for a place. Joinable to other geography tables including GEOGRAPHY_INDEX, GEOGRAPHY_RELATIONSHIPS, and GEOGRAPHY_CHARACTERISTICS.
+DATE: DATE | Date associated with the value.
+
+## CYBERSYN.INTERNATIONAL_TRADE_ADMINISTRATION_BUSINESS_SERVICE_PROVIDERS_INDEX
+BUSINESS_SERVICE_PROVIDER_EMAIL: TEXT | Email of the point of contact at the business service provider.
+BUSINESS_SERVICE_PROVIDER_CONTACT: TEXT | Main point of contact for inquiries and requests at the business service provider.
+BUSINESS_SERVICE_PROVIDER_WEBSITE: TEXT | Website of the business service provider.
+BUSINESS_SERVICE_PROVIDER_DESCRIPTION: TEXT | Description of the business service provider.
+INTERNATIONAL_TRADE_ADMINISTRATION_EMAIL: TEXT | Email of the associated International Trade Administration office.
+GEO_ID_COUNTRY: TEXT | Unique geographic identifier for the country of the business service provider.
+BUSINESS_SERVICE_PROVIDER_ADDRESS: TEXT | Address of the business service provider.
+BUSINESS_SERVICE_PROVIDER_ID: TEXT | Unique company identifier for US and international business service providers provided by the US Commercial Service.
+BUSINESS_SERVICE_PROVIDER_NAME: TEXT | Name of the business service provider.
+SERVICE_CATEGORY: TEXT | Category of export/investment assistance service provided by the business service provider.
+BUSINESS_SERVICE_PROVIDER_PHONE: TEXT | Phone number of the point of contact at the business service provider.
+
+## CYBERSYN.INTERNATIONAL_TRADE_ADMINISTRATION_TRADE_LEADS_INDEX
+TRADE_LEAD_ID: TEXT | Unique identifier from the International Trade Administration (ITA) to specify a lead.
+CONTRACT_END_DATE: DATE | Date on which the contract ends, when all services or goods must be delivered and the work completed.
+TRADE_LEAD_DESCRIPTION: TEXT | Long-form text that specifies the details of the lead.
+CONTRACT_START_DATE: DATE | Date on which the contract begins and the associated work on the contract should begin.
+TENDER_END_DATE: DATE | Date on which the bidding process ends.
+TENDER_START_DATE: DATE | Date on which bids start to be accepted.
+TRADE_LEAD_URL: TEXT | URL to the details of the lead.
+PUBLISHED_DATE: DATE | Date the lead was made public or announced to potential bidders by the International Trade Administration (ITA).
+TRADE_LEAD_TITLE: TEXT | Title that identifies a lead.
+GEO_ID_COUNTRY: TEXT | Unique geographic identifier for the country associated with the contract.
+
+## CYBERSYN.AIRCRAFT_INDEX
+AIRCRAFT_NAME: TEXT | Specific model or type of the aircraft used for a flight; can include both the manufacturer and model.
+AIRCRAFT_ID: TEXT | ID for the aircraft type, a distinctive model as designated by the manufacturer.
+CABIN_CONFIGURATION: TEXT | Description of the layout and seating arrangement within the aircraft cabin.
+AIRCRAFT_GROUP: TEXT | Classification of an aircraft based on size, range, and operational characteristics.
+
+## CYBERSYN.INTERNATIONAL_LABOUR_ORGANIZATION_ATTRIBUTES
+@use: [C1, C2]
+SEX: TEXT | Sex (e.g., Female), if applicable.
+ECONOMIC_CLASS: TEXT | A grouping of individuals in a society based on economic terms (e.g., income, wealth, occupation), if applicable.
+MEASUREMENT_TYPE: TEXT | Measurement classification of the variable (ex. estimate, margin of error).
+SERIES_ID: TEXT | Unique ILO identifier for the subject and frequency of the ILO variable.
+AGE_GROUP: TEXT | A range of ages, if applicable.
+GEOGRAPHY_TYPE: TEXT | A settlement or land use classification (e.g., Rural, Urban), if applicable.
+ECONOMIC_ACTIVITY: TEXT | An industry classification based on type of production and market served, if applicable.
+OCCUPATION: TEXT | A person's regular, main work or profession, if applicable.
+EMPLOYMENT_STATUS: TEXT | A classification of the status of individuals based on their role in the workforce, if applicable.
+
+## CYBERSYN.GOVERNMENT_CONTRACT_INDEX
+PERFORMANCE_GEO_ID_ZIP: TEXT | The unique identifier for the contract fulfillment zipcode that is joinable to the GEOGRAPHY_INDEX
+PERFORMANCE_STATE: TEXT | The state location where the contract will be fulfilled
+PERFORMANCE_ZIPCODE: TEXT | The zipcode location where the contract will be fulfilled
+ORIGINAL_CONTRACT_TITLE: TEXT | A short summary of the goods and services to be provided to the Federal government in the contract.
+ORIGINAL_CONTRACT_DESCRIPTION: TEXT | A detailed statement of work and requirements of the services or products to be provided to the Federal government in the contract.
+PERFORMANCE_GEO_ID_COUNTRY: TEXT | The unique identifier for the contract fulfillment country that is joinable to the GEOGRAPHY_INDEX
+DEPARTMENT: TEXT | The Federal Department seeking services or products (e.g., Dept of Defense)
+AGENCY_OFFICE: TEXT | The specific office within the agency handling the contract (e.g., Naval Research Laboratory)
+CONTRACT_SOLICITATION_ID: TEXT | Unique solicitation number provided by the System for Award Management (sam.gov) for a specific contract.  Joinable to the GOVERNMENT_CONTRACT_AWARD_INDEX table.
+PERFORMANCE_CITY: TEXT | The city location where the contract will be fulfilled
+SPECIAL_AWARD_PROVISION: TEXT | Indication of exclusivity for all or part of a contract to be set aside or reserved for a small or underrepresented business
+FIRST_POSTED_DATE: TIMESTAMP_TZ | The earliest date the contract was posted on the System for Award Management (sam.gov)
+PERFORMANCE_GEO_ID_CITY: TEXT | The unique identifier for the contract fulfillment city that is joinable to the GEOGRAPHY_INDEX
+PERFORMANCE_COUNTRY: TEXT | The country location where the contract will be fulfilled
+NAICS_CODE: NUMBER | The North American Industry Classification System code that best classifies the goods or services in the contract opportunity
+AGENCY: TEXT | The agency underneath the department offering the contract (e.g., Dept of Navy)
+PERFORMANCE_GEO_ID_STATE: TEXT | The unique identifier for the contract fulfillment state that is joinable to the GEOGRAPHY_INDEX
+RESPONSE_DEADLINE: TIMESTAMP_TZ | Deadline for organizations to submit proposals for the contract
+NAICS_DESCRIPTION: TEXT | Human-readable description of the industry related to the contract
+
+## CYBERSYN.WORLD_TRADE_ORGANIZATION_ATTRIBUTES
+@use: [C1, C2]
+PRODUCT_SECTOR: TEXT | A specific category of goods or services that are traded internationally.
+WTO_INDICATOR: TEXT | World Trade Organization (WTO) indicator code for the variable.
+MEASUREMENT_TYPE: TEXT | Measurement classification of the variable (e.g., % change over previous year).
+
+## CYBERSYN.GEOGRAPHY_INDEX
+LEVEL: TEXT | Geographic level or hierarchy (e.g., Country, State, County, City, Continent, CountrySubRegion, etc.)
+ISO_ALPHA2: TEXT | 2 letter country code from International Organization for Standardization
+GEO_ID: TEXT | A unique identifier for a place (a nation, state, zip-code, etc.)
+ISO_3166_2_CODE: TEXT | Full ISO-3166 code
+ISO_NUMERIC_CODE: TEXT | Numeric code from International Organization for Standardization
+GEO_NAME: TEXT | Full name of the place
+ISO_NAME: TEXT | Country name from International Organization for Standardization
+ISO_ALPHA3: TEXT | 3 letter country code from International Organization for Standardization
+
+## CYBERSYN.INTERNATIONAL_TRADE_ADMINISTRATION_EXPORT_SCREENED_ENTITIES_INDEX
+CITIZENSHIPS: ARRAY | Citizenships of the listed individual.
+SOURCE_INFORMATION_URL: TEXT | URL for the source.
+ADDRESSES: ARRAY | The physical addresses associated with the entity.
+SOURCE: TEXT | Name of the source that identified and monitors this company, entity, or person.
+END_DATE: DATE | The date when the listing will no longer be valid.
+PROGRAMS: ARRAY | Specific sanction or restriction program under which the individual, entity, or vessel is listed.
+DATES_OF_BIRTH: ARRAY | Birth dates of the listed individual(s), if available.
+VESSEL_GROSS_TONNAGE: TEXT | A more modern measurement of a ship's size that is calculated based on the volume of all enclosed spaces of a ship.
+FEDERAL_REGISTER_NOTICE: TEXT | The Federal Register citation indicating the law or policy under which the entity is listed.
+EXPORT_RESTRICTED_ENTITY_TYPE: TEXT | The type of entity that is listed (e.g., Vessel, Individual, Entity, Aircraft).
+COMMENTS: TEXT | Associated comments from the organization on the entity.
+EXPORT_RESTRICTED_ENTITY_NUMBER: NUMBER | Unique identifier for the entity.
+VESSEL_CALL_SIGN: TEXT | The unique call sign assigned to a vessel for identification purposes, similar to a license plate number on a vehicle.
+ALT_NAMES: ARRAY | Any known alternate names for the entity.
+START_DATE: DATE | The date when the listing came into effect.
+GEO_ID_COUNTRY: TEXT | Unique geographic identifier for the country associated with the listing.
+SOURCE_LIST_URL: TEXT | URL for the source list or further information about the entry.
+NATIONALITIES: ARRAY | Nationality of the listed individual or entity's country of formation.
+EXPORT_RESTRICTED_ENTITY_NAME: TEXT | The name of the individual, group, vessel, or entity on the list (e.g., Khokhlova, Olga Nikolayevna).
+VESSEL_GROSS_REGISTERED_TONNAGE: TEXT | A measure of the overall internal volume of a vessel, with one gross registered tonnage unit representing 100 cubic feet of space.
+EXPORT_RESTRICTED_ENTITY_ID: TEXT | Unique identifier provided by the International Trade Administration (ITA) for the entity listed with a prefix associated with the source.
+EXPORT_RESTRICTED_ENTITY_TITLE: TEXT | The title for an individual, group, vessel, or entity on the list (e.g., Member of the Federation Council of the Federal Assembly of the Russian Federation).
+IDS: ARRAY | Associated IDs with an individual or group (e.g., passport details).
+PLACES_OF_BIRTH: ARRAY | Place of birth of the listed individual(s), if available.
+STANDARD_ORDER: TEXT | A general directive applied to transactions with the listed entity.
+
+## CYBERSYN.US_TREASURY_TIMESERIES
+@use: [C1]
+GEO_ID: TEXT | A unique identifier for a place. Joinable to other geography tables including GEOGRAPHY_INDEX, GEOGRAPHY_RELATIONSHIPS, and GEOGRAPHY_CHARACTERISTICS.
+DATE: DATE | Date associated with the value.
+VALUE: FLOAT | Value reported for the variable.
+
+## CYBERSYN.AIRPORT_INDEX
+AIRPORT_NAME: TEXT | Name of the airport.
+STATE_GEO_ID: TEXT | A unique identifier for a state, joinable to the GEOGRAPHY_INDEX table, representing the primary geography for the variable.
+AIRPORT_CITY_NAME: TEXT | Name of the city where the airport is located.
+AIRPORT_ALPHA_CODE: TEXT | Code assigned to airports by the International Air Transport Association (IATA), which are widely used in the aviation industry for ticketing, baggage handling, and flight planning.
+AIRPORT_DOT_CODE: NUMBER | Unique identifier assigned by the US DOT to each airport, used for administrative and reporting purposes.
+AIRPORT_WORLD_AREA_CODE: NUMBER | US DOT identifier for the geographical area where the airport is based.
+COUNTRY_GEO_ID: TEXT | A unique identifier for a country, joinable to the GEOGRAPHY_INDEX table, representing the primary geography for the variable.
+LOCATION: TEXT | Full location name of the airport.
+AIRPORT_ID: TEXT | ID for the origin airport that is part of the flight route being measured, combination of the DOT unique code and official 3 letter OAG code issued for that airport.

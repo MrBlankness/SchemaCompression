@@ -1,0 +1,26 @@
+[COMPONENTS]
+[TABLES]
+## WORD_VECTORS_US.WORD_FREQUENCIES
+word: TEXT | NULL
+frequency: NUMBER | NULL
+
+## WORD_VECTORS_US.GLOVE_VECTORS
+word: TEXT | NULL
+vector: VARIANT | NULL
+
+## WORD_VECTORS_US.NATURE
+acquisition_date: DATE | NULL
+title: TEXT | NULL
+abstract: TEXT | NULL
+citations: TEXT | NULL
+body: TEXT | NULL
+pdf_link: TEXT | NULL
+date: DATE | NULL
+doi: TEXT | NULL
+category: TEXT | NULL
+link: TEXT | NULL
+organization_affiliated: TEXT | NULL
+keywords: TEXT | NULL
+id: TEXT | NULL
+authors: TEXT | NULL
+nature_source: TEXT | NULL

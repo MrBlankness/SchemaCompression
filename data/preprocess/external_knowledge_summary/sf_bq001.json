@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq001",
+  "question": "For each visitor who made at least one transaction in February 2017, how many days elapsed between the date of their first visit in February and the date of their first transaction in February, and on what type of device did they make that first transaction?",
+  "db_id": "GA360",
+  "source_document": "google_analytics_sample.ga_sessions.md",
+  "evidence": "Tables: Daily tables have format 'ga_sessions_YYYYMMDD'. Each row corresponds to a session. Columns: date (STRING) - session date in YYYYMMDD format. totals.transactions (INTEGER) - total ecommerce transactions within session. device.deviceCategory (STRING) - type of device (Mobile, Tablet, Desktop). visitStartTime (INTEGER) - session timestamp. Key relationships: A session with at least one transaction has totals.transactions >= 1. For first visit/transaction in February 2017, need to filter date between 20170201 and 20170228 and find minimum date per visitor where totals.transactions > 0 for first transaction date, and minimum date overall for first visit date. Device type comes from device.deviceCategory of the session containing the first transaction."
+}

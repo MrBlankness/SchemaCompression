@@ -1,0 +1,23 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: STACKING.EDA
+Columns: feature, version, drop_correlation, name, target, range, type, drop_user
+
+Table: STACKING.SOLUTION
+Columns: version, test_size, nb_model, resampling, correlation, score, nb_feature, name
+
+Table: STACKING.MODEL_IMPORTANCE
+Columns: version, model, step, name, importance
+
+Table: STACKING.MODEL_SCORE
+Columns: name, test_score, step, version, model, train_score
+
+Table: STACKING.MODEL
+Columns: name, L1_model, version, step
+
+Table: STACKING.PROBLEM
+Columns: target, path, name, type
+
+Table: STACKING.FEATURE_IMPORTANCE
+Columns: feature, importance, step, version, name

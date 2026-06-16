@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq010",
+  "question": "Find the top-selling product among customers who bought 'Youtube Men’s Vintage Henley' in July 2017, excluding itself.",
+  "db_id": "GA360",
+  "source_document": "google_analytics_sample.ga_sessions.md",
+  "evidence": "Table format: 'ga_sessions_YYYYMMDD' for daily data. Each row corresponds to a session. Relevant columns: hits.product (RECORD) for Enhanced Ecommerce PRODUCT data, hits.type (STRING) for hit type (e.g., 'ITEM', 'TRANSACTION'), hits.product.productSKU (STRING), hits.product.v2ProductName (STRING), hits.product.productQuantity (INTEGER), hits.product.productRevenue (INTEGER). hits.product is a repeated field with an entry for each hit containing product data. To find purchases, look for hits with type 'ITEM' or 'TRANSACTION'. The date column (STRING) is in YYYYMMDD format for session date. Need to filter for July 2017 (date like '201707%') and product name 'Youtube Men’s Vintage Henley', then find other products bought in those same sessions, excluding that product itself, and aggregate by product to find top-selling based on quantity or revenue."
+}

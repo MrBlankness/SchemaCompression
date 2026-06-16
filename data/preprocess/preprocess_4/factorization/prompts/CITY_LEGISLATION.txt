@@ -1,0 +1,162 @@
+[COMPONENTS]
+@C1
+first_name: TEXT | NULL | eg=["tyrus", "ealasaid"]
+gender: TEXT | NULL | eg=["non-binary", "female"]
+last_name: TEXT | NULL | eg=["wrey", "st louis"]
+
+@C2
+country: TEXT | NULL | eg=["united states"]
+current_location: TEXT | NULL | eg=["cincinnati", "bethesda"]
+occupation: TEXT | NULL | eg=["senior cost accountant", "senior sales associate"]
+
+@C3
+birth_year: NUMBER | NULL | eg=[1717, 1673]
+email: TEXT | NULL | eg=["twrey0@sakura.ne.jp", "estlouis1@amazon.co.uk"]
+id: NUMBER | NULL | eg=[1, 2]
+
+@C4
+aggressive: NUMBER | NULL | eg=[1, 0]
+favorite_food: TEXT | NULL | eg=["white-faced tree rat", "lizard, goanna"]
+feeding_frequency: TEXT | NULL | eg=["weekly", "seldom"]
+
+[TABLES]
+## CITY_LEGISLATION.CITIES_CURRENCIES
+currency_code: TEXT | NULL | eg=["afn", "usd"]
+country_code_2: TEXT | NULL | eg=["af", "as"]
+currency_id: NUMBER | NULL | eg=[1, 4]
+currency_name: TEXT | NULL | eg=["afghani", "us dollar"]
+
+## CITY_LEGISLATION.ALIEN_DATA
+@use: [C1, C2, C3, C4]
+age: NUMBER | NULL | eg=[307, 351]
+type: TEXT | NULL | eg=["reptile", "flatwoods"]
+state: TEXT | NULL | eg=["ohio", "maryland"]
+us_region: TEXT | NULL | eg=["great lakes", "mideast"]
+
+## CITY_LEGISLATION.ALIENS_LOCATION
+@use: [C2]
+loc_id: NUMBER | NULL | eg=[2, 3]
+state: TEXT | NULL | eg=["Maryland", "California"]
+
+## CITY_LEGISLATION.CITIES
+capital: NUMBER | NULL | eg=[1, 0]
+insert_date: TEXT | NULL | eg=["2022-01-12", "2021-03-11"]
+city_id: NUMBER | NULL | eg=[1, 3]
+country_code_2: TEXT | NULL | eg=["jp", "in"]
+city_name: TEXT | NULL | eg=["tokyo", "delhi"]
+longitude: FLOAT | NULL | eg=[35.6897, 28.61]
+latitude: FLOAT | NULL | eg=[139.6922, 77.23]
+population: FLOAT | NULL | eg=[37732000.0, 32226000.0]
+
+## CITY_LEGISLATION.CITIES_LANGUAGES
+language_id: NUMBER | NULL | eg=[2, 8]
+language: TEXT | NULL | eg=["persian", "kabyle"]
+country_code_2: TEXT | NULL | eg=["af", "dz"]
+
+## CITY_LEGISLATION.SKILLS_JOB_DIM
+skill_id: NUMBER | NULL | eg=[1, 182]
+job_id: NUMBER | NULL | eg=[310991, 579478]
+
+## CITY_LEGISLATION.LEGISLATORS_TERMS
+rss_url: TEXT | NULL | eg=[""]
+term_start: TEXT | NULL | eg=["1993-01-05", "1987-01-06"]
+term_end: TEXT | NULL | eg=["1995-01-03", "1989-01-03"]
+phone: TEXT | NULL | eg=["", "202-224-6324"]
+term_number: NUMBER | NULL | eg=[0]
+party: TEXT | NULL | eg=["Democrat", "Republican"]
+id_bioguide: TEXT | NULL | eg=["B000944", "C000127"]
+contact_form: TEXT | NULL | eg=["", "http://www.casey.senate.gov/contact/"]
+term_id: TEXT | NULL | eg=["B000944-0", "C000127-0"]
+district: FLOAT | NULL | eg=[13.0, 1.0]
+fax: TEXT | NULL | eg=["", "202-228-0604"]
+state_rank: TEXT | NULL | eg=[""]
+state: TEXT | NULL | eg=["OH", "WA"]
+class: FLOAT | NULL | eg=[NaN, 1.0]
+address: TEXT | NULL | eg=["", "393 RUSSELL SENATE OFFICE BUILDING WASHINGTON DC 20510"]
+caucus: TEXT | NULL | eg=[""]
+office: TEXT | NULL | eg=["", "393 Russell Senate Office Building"]
+url: TEXT | NULL | eg=["", "http://casey.senate.gov/"]
+how: TEXT | NULL | eg=[""]
+term_type: TEXT | NULL | eg=["rep", "sen"]
+
+## CITY_LEGISLATION.CITIES_COUNTRIES
+country_name: TEXT | NULL | eg=["albania", "cyprus"]
+intermediate_region: TEXT | NULL | eg=["", "middle africa"]
+country_id: NUMBER | NULL | eg=[2, 7]
+sub_region: TEXT | NULL | eg=["southern europe", "western asia"]
+country_code_2: TEXT | NULL | eg=["al", "cy"]
+created_on: TEXT | NULL | eg=["2024-07-18"]
+region: TEXT | NULL | eg=["europe", "asia"]
+country_code_3: TEXT | NULL | eg=["alb", "cyp"]
+
+## CITY_LEGISLATION.JOB_POSTINGS_FACT
+job_schedule_type: TEXT | NULL | eg=["Full-time"]
+job_location: TEXT | NULL | eg=["Durban, South Africa", "Lyon, France"]
+job_posted_date: TEXT | NULL | eg=["2023-01-09 12:31:15", "2023-02-15 10:36:53"]
+job_title_short: TEXT | NULL | eg=["Data Analyst", "Senior Data Engineer"]
+job_work_from_home: NUMBER | NULL | eg=[0]
+job_id: NUMBER | NULL | eg=[1422666, 1541644]
+salary_hour_avg: FLOAT | NULL
+salary_year_avg: FLOAT | NULL
+company_id: NUMBER | NULL | eg=[58904, 1072]
+job_title: TEXT | NULL | eg=["JUNIOR IT DATA ANALYST (DURBAN)", "Senior Data Engineer H/F"]
+job_health_insurance: NUMBER | NULL | eg=[0, 1]
+search_location: TEXT | NULL | eg=["South Africa", "France"]
+salary_rate: TEXT | NULL | eg=[""]
+job_no_degree_mention: NUMBER | NULL | eg=[1, 0]
+job_country: TEXT | NULL | eg=["South Africa", "France"]
+job_via: TEXT | NULL | eg=["via Pnet", "via LinkedIn"]
+
+## CITY_LEGISLATION.ALIENS_DETAILS
+@use: [C4]
+detail_id: NUMBER | NULL | eg=[1, 3]
+
+## CITY_LEGISLATION.ALIENS
+@use: [C1, C3]
+type: TEXT | NULL | eg=["Reptile", "Nordic"]
+
+## CITY_LEGISLATION.LEGISLATORS
+@use: [C1]
+id_google_entity_id: TEXT | NULL | eg=["kg:/m/01x68t", "kg:/m/033d3p"]
+birthday: TEXT | NULL | eg=["1958-10-13", "1954-01-01"]
+id_fec_0: TEXT | NULL | eg=["S8WA00194", "H2NJ13075"]
+id_opensecrets: TEXT | NULL | eg=["N00007836", "N00000699"]
+other_names_end: TEXT | NULL | eg=[""]
+id_house_history: FLOAT | NULL | eg=[10608.0, 18124.0]
+other_names_middle: TEXT | NULL | eg=[""]
+nickname: TEXT | NULL | eg=["", "Bob"]
+id_thomas: FLOAT | NULL | eg=[172.0, 791.0]
+id_cspan: FLOAT | NULL | eg=[26137.0, 29608.0]
+id_wikipedia: TEXT | NULL | eg=["Maria Cantwell", "Bob Menendez"]
+id_bioguide_previous_0: TEXT | NULL | eg=[""]
+id_fec_2: TEXT | NULL | eg=[""]
+other_names_last: TEXT | NULL | eg=["", "Menendez"]
+id_bioguide: TEXT | NULL | eg=["C000127", "M000639"]
+id_govtrack: NUMBER | NULL | eg=[300018, 400272]
+id_icpsr: FLOAT | NULL | eg=[39310.0, 29373.0]
+id_lis: TEXT | NULL | eg=["S275", "S306"]
+full_name: TEXT | NULL | eg=["Maria Cantwell", "Robert Menendez"]
+id_fec_1: TEXT | NULL | eg=["H2WA01054", "S6NJ00289"]
+id_wikidata: TEXT | NULL | eg=["Q22250", "Q888132"]
+middle_name: TEXT | NULL | eg=["", "Ann"]
+id_house_history_alternate: FLOAT | NULL
+id_ballotpedia: TEXT | NULL | eg=["Maria Cantwell", "Bob Menendez"]
+suffix: TEXT | NULL | eg=[""]
+id_votesmart: FLOAT | NULL | eg=[27122.0, 26961.0]
+
+## CITY_LEGISLATION.LEGISLATION_DATE_DIM
+month_name: TEXT | NULL | eg=["January"]
+day_of_month: NUMBER | NULL | eg=[1, 5]
+date: TEXT | NULL | eg=["1917-01-01", "1917-01-05"]
+
+## CITY_LEGISLATION.JOB_COMPANY
+name: TEXT | NULL | eg=["acalerate", "Agile Rays"]
+thumbnail: TEXT | NULL | eg=["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCm6EZgIRlEbYcGXoDJebGoHBEYxzYRVLeizWvrxdzl450ZvIoKKmGHho&s", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn4Y07H9Jx7HKR_Q6XvX57PFoGHz2SKIATLFWygWU&s"]
+link_google: TEXT | NULL | eg=["https://www.google.com/search?gl=us&hl=en&q=acalerate&sa=X&ved=0ahUKEwjarf7iq7iAAxVjF1kFHS6SDlcQmJACCLQN", "https://www.google.com/search?hl=en&gl=us&q=Agile+Rays&sa=X&ved=0ahUKEwjV37OH2fj8AhVpKlkFHWP3AgwQmJACCJYK"]
+company_id: NUMBER | NULL | eg=[211890, 450894]
+link: TEXT | NULL | eg=["", "http://www.motivitylabs.com/"]
+
+## CITY_LEGISLATION.SKILLS_DIM
+type: TEXT | NULL | eg=["analyst_tools", "webframeworks"]
+skills: TEXT | NULL | eg=["sharepoint", "asp.netcore"]
+skill_id: NUMBER | NULL | eg=[195, 164]

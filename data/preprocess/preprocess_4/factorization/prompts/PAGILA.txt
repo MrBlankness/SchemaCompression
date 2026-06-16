@@ -1,0 +1,123 @@
+[COMPONENTS]
+@C1
+first_name: TEXT | NULL | eg=["ED", "JENNIFER"]
+last_name: TEXT | NULL | eg=["CHASE", "DAVIS"]
+
+[TABLES]
+## PAGILA.FILM_TEXT
+film_id: TEXT | NULL
+title: TEXT | NULL
+description: TEXT | NULL
+
+## PAGILA.PAYMENT
+staff_id: NUMBER | NULL | eg=[1, 2]
+last_update: TEXT | NULL | eg=["2021-03-06 15:55:57"]
+rental_id: FLOAT | NULL | eg=[76.0, 573.0]
+amount: FLOAT | NULL | eg=[2.99, 0.99]
+payment_id: NUMBER | NULL | eg=[1, 2]
+customer_id: NUMBER | NULL | eg=[1]
+payment_date: TEXT | NULL | eg=["2005-05-25 11:30:37.000", "2005-05-28 10:35:23.000"]
+
+## PAGILA.ACTOR
+@use: [C1]
+actor_id: NUMBER | NULL | eg=[3, 4]
+last_update: TEXT | NULL | eg=["2021-03-06 15:51:59"]
+
+## PAGILA.FILM_CATEGORY
+last_update: TEXT | NULL | eg=["2021-03-06 15:53:28"]
+category_id: NUMBER | NULL | eg=[6, 11]
+film_id: NUMBER | NULL | eg=[1, 4]
+
+## PAGILA.RENTAL
+last_update: TEXT | NULL | eg=["2021-03-06 15:53:41"]
+rental_date: TEXT | NULL | eg=["2005-05-24 22:54:33.000", "2005-05-24 23:03:39.000"]
+return_date: TEXT | NULL | eg=["2005-05-28 19:40:33.000", "2005-06-01 22:12:39.000"]
+rental_id: NUMBER | NULL | eg=[2, 3]
+staff_id: NUMBER | NULL | eg=[1, 2]
+customer_id: NUMBER | NULL | eg=[459, 408]
+inventory_id: NUMBER | NULL | eg=[1525, 1711]
+
+## PAGILA.LANGUAGE
+language_id: NUMBER | NULL | eg=[3, 4]
+name: TEXT | NULL | eg=["Japanese", "Mandarin"]
+last_update: TEXT | NULL | eg=["2021-03-06 15:51:48"]
+
+## PAGILA.STORE
+manager_staff_id: NUMBER | NULL
+last_update: TEXT | NULL
+store_id: NUMBER | NULL
+address_id: NUMBER | NULL
+
+## PAGILA.STAFF
+@use: [C1]
+store_id: NUMBER | NULL | eg=[2]
+username: TEXT | NULL | eg=["Jon"]
+last_update: TEXT | NULL | eg=["2021-03-06 15:52:00"]
+password: TEXT | NULL | eg=["8cb2237d0679ca88db6464eac60da96345513964"]
+email: TEXT | NULL | eg=["Jon.Stephens@sakilastaff.com"]
+staff_id: NUMBER | NULL | eg=[2]
+picture: TEXT | NULL | eg=[""]
+address_id: NUMBER | NULL | eg=[4]
+active: NUMBER | NULL | eg=[1]
+
+## PAGILA.FILM
+language_id: NUMBER | NULL | eg=[1]
+title: TEXT | NULL | eg=["ADAPTATION HOLES", "AFRICAN EGG"]
+rental_duration: NUMBER | NULL | eg=[7, 6]
+rating: TEXT | NULL | eg=["NC-17", "G"]
+original_language_id: TEXT | NULL | eg=[""]
+film_id: NUMBER | NULL | eg=[3, 5]
+length: NUMBER | NULL | eg=[50, 130]
+last_update: TEXT | NULL | eg=["2021-03-06 15:52:00"]
+rental_rate: FLOAT | NULL | eg=[2.99, 4.99]
+release_year: TEXT | NULL | eg=["2006"]
+replacement_cost: FLOAT | NULL | eg=[18.99, 22.99]
+description: TEXT | NULL | eg=["A Astounding Reflection of a Lumberjack And a Car who must Sink a Lumberjack in A Baloon Factory", "A Fast-Paced Documentary of a Pastry Chef And a Dentist who must Pursue a Forensic Psychologist in The Gulf of Mexico"]
+special_features: TEXT | NULL | eg=["Trailers,Deleted Scenes", "Deleted Scenes"]
+
+## PAGILA.INVENTORY
+inventory_id: NUMBER | NULL | eg=[1, 3]
+film_id: NUMBER | NULL | eg=[1]
+last_update: TEXT | NULL | eg=["2021-03-06 15:52:08"]
+store_id: NUMBER | NULL | eg=[1, 2]
+
+## PAGILA.CUSTOMER
+@use: [C1]
+email: TEXT | NULL | eg=["MARY.SMITH@sakilacustomer.org", "BARBARA.JONES@sakilacustomer.org"]
+create_date: TEXT | NULL | eg=["2006-02-14 22:04:36.000"]
+active: TEXT | NULL | eg=["1"]
+address_id: NUMBER | NULL | eg=[5, 8]
+last_update: TEXT | NULL | eg=["2021-03-06 15:53:36"]
+customer_id: NUMBER | NULL | eg=[1, 4]
+store_id: NUMBER | NULL | eg=[1, 2]
+
+## PAGILA.FILM_ACTOR
+last_update: TEXT | NULL | eg=["2021-03-06 15:52:45"]
+actor_id: NUMBER | NULL | eg=[1]
+film_id: NUMBER | NULL | eg=[1, 25]
+
+## PAGILA.CATEGORY
+last_update: TEXT | NULL | eg=["2021-03-06 15:52:00"]
+name: TEXT | NULL | eg=["Action", "Classics"]
+category_id: NUMBER | NULL | eg=[1, 4]
+
+## PAGILA.CITY
+city: TEXT | NULL | eg=["A Corua (La Corua)", "Acua"]
+city_id: NUMBER | NULL | eg=[1, 4]
+country_id: NUMBER | NULL | eg=[87, 60]
+last_update: TEXT | NULL | eg=["2021-03-06 15:51:49"]
+
+## PAGILA.ADDRESS
+city_id: NUMBER | NULL | eg=[300, 576]
+district: TEXT | NULL | eg=[" "]
+address_id: NUMBER | NULL | eg=[1, 3]
+last_update: TEXT | NULL | eg=["2021-03-06 15:51:54"]
+postal_code: TEXT | NULL | eg=["", "17886"]
+address2: TEXT | NULL | eg=[""]
+phone: TEXT | NULL | eg=[" "]
+address: TEXT | NULL | eg=["47 MySakila Drive", "23 Workhaven Lane"]
+
+## PAGILA.COUNTRY
+country_id: NUMBER | NULL | eg=[1, 6]
+last_update: TEXT | NULL | eg=["2021-03-06 15:51:49"]
+country: TEXT | NULL | eg=["Afghanistan", "Argentina"]

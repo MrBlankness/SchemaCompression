@@ -1,0 +1,8 @@
+[TEMPLATES]
+<T1>
+number: NUMBER | Number of occurrences of the name
+name: TEXT | Given name of a person at birth
+gender: TEXT | Sex (M=male or F=female)
+state: TEXT | 2-digit state code
+year: NUMBER | 4-digit year of birth
+@Tables: [USA_NAMES.USA_1910_2013,USA_NAMES.USA_1910_CURRENT]

@@ -1,0 +1,101 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHRY
+Columns: beta_value, case_barcode, probe_id, aliquot_barcode, project_short_name, platform, sample_barcode
+
+Table: TCGA_HG19_DATA_V0.COPY_NUMBER_SEGMENT_MASKED
+Columns: start_pos, project_short_name, sample_barcode, platform, chromosome, segment_mean, num_probes, case_barcode, aliquot_barcode, end_pos
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR5
+Columns: beta_value, aliquot_barcode, platform, sample_barcode, case_barcode, project_short_name, probe_id
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR2
+Columns: probe_id, aliquot_barcode, project_short_name, case_barcode, sample_barcode, platform, beta_value
+
+Table: TCGA_HG19_DATA_V0.MIRNASEQ_ISOFORM_EXPRESSION
+Columns: file_gdc_id, aliquot_barcode, strand, sample_barcode, mirna_id, mirna_accession, case_gdc_id, read_count, cross_mapped, aliquot_gdc_id, end_pos, project_short_name, sample_gdc_id, mirna_transcript, chromosome, case_barcode, start_pos, reads_per_million_miRNA_mapped
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR14
+Columns: project_short_name, platform, beta_value, case_barcode, sample_barcode, aliquot_barcode, probe_id
+
+Table: TCGA_HG19_DATA_V0.SOMATIC_MUTATION_MC3
+Columns: project_short_name, n_alt_count, Exon_Number, Hugo_Symbol, case_barcode, STRAND, sample_barcode_normal, Tumor_Seq_Allele1, NCBI_Build, Consequence, HGNC_ID, VARIANT_CLASS, SYMBOL, IMPACT, dbSNP_RS, EAS_MAF, HGVSp, AFR_MAF, n_ref_count, FILTER, HGVSc, CLIN_SIG, CDS_position, Amino_acids, Codons, HGVS_OFFSET, EA_MAF, ENSP, t_ref_count, CONTEXT, GMAF, t_depth, PUBMED, n_depth, AA_MAF, Feature_type, COSMIC, Transcript_ID, BIOTYPE, DBVS, NCALLERS, End_Position, Chromosome, aliquot_barcode_normal, AMR_MAF, DISTANCE, Feature, cDNA_position, SAS_MAF, t_alt_count, CCDS, TREMBL, UNIPARC, PHENO, PolyPhen, SYMBOL_SOURCE, Start_Position, SWISSPROT, CALLERS, Existing_variation, DOMAINS, Tumor_Seq_Allele2, Variant_Classification, aliquot_barcode_tumor, HGVSp_Short, EXON, Variant_Type, CANONICAL, Reference_Allele, EUR_MAF, all_effects, Gene, ASN_MAF, INTRON, SIFT, Protein_position, sample_barcode_tumor, SOMATIC
+
+Table: TCGA_HG19_DATA_V0.SOMATIC_MUTATION_DCC
+Columns: Validation_Method, HGNC_UniProt_ID_Supplied_By_UniProt, HGNC_Locus_Group, Normal_Validation_Allele1, Protein_Change, COSMIC_Total_Alterations_In_Gene, GO_Cellular_Component, OREGANNO_ID, Ref_Context, sample_barcode_tumor, Variant_Classification, UniProt_Region, Normal_Validation_Allele2, Entrez_Gene_Id, GENCODE_Transcript_Name, sample_barcode_normal, DbSNP_Val_Status, cDNA_Change, Sequencer, Normal_Seq_Allele1, HGNC_Accession_Numbers, Tumor_Validation_Allele1, Start_Position, SwissProt_Entry_Id, Secondary_Variant_Classification, GENCODE_Transcript_Type, Center, UniProt_AApos, Tumor_Validation_Allele2, SwissProt_Acc_Id, HGNC_Ensembl_ID_Supplied_By_Ensembl, DrugBank, aliquot_barcode_normal, GO_Molecular_Function, project_short_name, Chromosome, End_Position, Tumor_Seq_Allele2, Refseq_Prot_Id, GC_Content, HGNC_UCSC_ID_Supplied_By_UCSC, GENCODE_Transcript_Status, GO_Biological_Process, Mutation_Status, case_barcode, HGNC_OMIM_ID_Supplied_By_NCBI, Transcript_Strand, Transcript_Exon, HGNC_Locus_Type, Transcript_Position, HGNC_RefSeq_Supplied_By_NCBI, HGNC_HGNC_ID, aliquot_barcode_tumor, Variant_Type, CCLE_ONCOMAP_Total_Mutations_In_Gene, Hugo_Symbol, HGNC_CCDS_IDs, Reference_Allele, DNARepairGenes_Role, NCBI_Build, Gene_Type, Normal_Seq_Allele2, Genome_Change, Tumor_Seq_Allele1, Sequence_Source, Annotation_Transcript, DbSNP_RS
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR4
+Columns: project_short_name, beta_value, aliquot_barcode, platform, case_barcode, probe_id, sample_barcode
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR19
+Columns: platform, case_barcode, sample_barcode, probe_id, beta_value, aliquot_barcode, project_short_name
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR18
+Columns: beta_value, probe_id, platform, sample_barcode, project_short_name, case_barcode, aliquot_barcode
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR8
+Columns: probe_id, case_barcode, project_short_name, aliquot_barcode, platform, sample_barcode, beta_value
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR21
+Columns: aliquot_barcode, case_barcode, project_short_name, sample_barcode, beta_value, platform, probe_id
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR20
+Columns: aliquot_barcode, project_short_name, probe_id, beta_value, sample_barcode, platform, case_barcode
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR3
+Columns: beta_value, case_barcode, sample_barcode, aliquot_barcode, platform, probe_id, project_short_name
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR16
+Columns: aliquot_barcode, platform, probe_id, sample_barcode, case_barcode, beta_value, project_short_name
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR11
+Columns: aliquot_barcode, probe_id, beta_value, project_short_name, case_barcode, sample_barcode, platform
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHRX
+Columns: aliquot_barcode, beta_value, project_short_name, probe_id, platform, case_barcode, sample_barcode
+
+Table: TCGA_HG19_DATA_V0.PROTEIN_EXPRESSION
+Columns: aliquot_barcode, phospho, protein_base_name, gene_name, sample_barcode, protein_expression, case_barcode, protein_name, antibody_source, project_short_name, validation_status
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR9
+Columns: sample_barcode, project_short_name, beta_value, probe_id, case_barcode, aliquot_barcode, platform
+
+Table: TCGA_HG19_DATA_V0.TCGA_METADATA_DATA_HG19_R14
+Columns: type, case_gdc_id, experimental_strategy, disease_code, index_file_id, access, data_category, index_file_size, sample_gdc_id, file_gdc_id, data_format, data_type, platform, file_size, case_barcode, program_name, project_short_name, acl, index_file_name_key, sample_barcode, file_name_key
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR22
+Columns: platform, aliquot_barcode, project_short_name, beta_value, probe_id, case_barcode, sample_barcode
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR10
+Columns: aliquot_barcode, probe_id, sample_barcode, beta_value, case_barcode, project_short_name, platform
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR1
+Columns: sample_barcode, aliquot_barcode, beta_value, project_short_name, case_barcode, probe_id, platform
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR6
+Columns: platform, probe_id, project_short_name, aliquot_barcode, case_barcode, sample_barcode, beta_value
+
+Table: TCGA_HG19_DATA_V0.MIRNASEQ_EXPRESSION
+Columns: case_gdc_id, aliquot_barcode, aliquot_gdc_id, read_count, cross_mapped, sample_gdc_id, file_gdc_id, project_short_name, reads_per_million_miRNA_mapped, mirna_id, case_barcode, sample_barcode
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR12
+Columns: platform, case_barcode, sample_barcode, beta_value, probe_id, project_short_name, aliquot_barcode
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR17
+Columns: case_barcode, sample_barcode, project_short_name, aliquot_barcode, beta_value, probe_id, platform
+
+Table: TCGA_HG19_DATA_V0.RNASEQ_GENE_EXPRESSION_UNC_RSEM
+Columns: case_barcode, normalized_count, platform, gene_id, project_short_name, aliquot_barcode, sample_barcode, HGNC_gene_symbol, original_gene_symbol
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR13
+Columns: platform, aliquot_barcode, beta_value, case_barcode, sample_barcode, project_short_name, probe_id
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR15
+Columns: project_short_name, probe_id, case_barcode, sample_barcode, beta_value, aliquot_barcode, platform
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION
+Columns: project_short_name, aliquot_barcode, sample_barcode, probe_id, case_barcode, platform, beta_value
+
+Table: TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR7
+Columns: sample_barcode, probe_id, platform, case_barcode, project_short_name, beta_value, aliquot_barcode

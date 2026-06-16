@@ -1,0 +1,20 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: GITHUB_REPOS.LANGUAGES
+Columns: repo_name, language
+
+Table: GITHUB_REPOS.LICENSES
+Columns: repo_name, license
+
+Table: GITHUB_REPOS.SAMPLE_REPOS
+Columns: watch_count, repo_name
+
+Table: GITHUB_REPOS.SAMPLE_CONTENTS
+Columns: size, binary, sample_symlink_target, copies, sample_mode, sample_path, content, sample_ref, id, sample_repo_name
+
+Table: GITHUB_REPOS.SAMPLE_FILES
+Columns: symlink_target, id, mode, path, repo_name, ref
+
+Table: GITHUB_REPOS.SAMPLE_COMMITS
+Columns: parent, committer, difference, message, author, difference_truncated, subject, trailer, encoding, commit, repo_name, tree

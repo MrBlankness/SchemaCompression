@@ -1,0 +1,3200 @@
+[TABLES]
+## GHCN_D.GHCND_1852
+date: DATE | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_2017
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+source_url: TEXT | Source
+etl_timestamp: NUMBER | Load time for this data row
+value: FLOAT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1878
+value: FLOAT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1988
+element: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1930
+element: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1916
+time: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1781
+element: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1932
+element: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1962
+time: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1883
+date: DATE | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_2013
+element: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1867
+value: FLOAT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1928
+date: DATE | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1868
+time: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1779
+mflag: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1853
+date: DATE | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_2012
+id: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1982
+date: DATE | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1857
+element: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1904
+qflag: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1766
+element: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1808
+value: FLOAT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1941
+date: DATE | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1831
+id: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1967
+element: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1894
+value: FLOAT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1842
+time: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1780
+mflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1877
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1999
+time: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1838
+qflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1954
+time: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1827
+date: DATE | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1812
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1811
+sflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1966
+value: FLOAT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1823
+date: DATE | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_2007
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1775
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1802
+date: DATE | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1797
+value: FLOAT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1769
+mflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1979
+date: DATE | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1805
+id: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1931
+sflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1935
+element: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1786
+sflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1790
+date: DATE | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_STATIONS
+latitude: FLOAT | NULL
+wmoid: NUMBER | NULL
+state: TEXT | NULL
+gsn_flag: TEXT | NULL
+hcn_crn_flag: TEXT | NULL
+elevation: FLOAT | NULL
+name: TEXT | NULL
+etl_timestamp: NUMBER | NULL
+source_url: TEXT | NULL
+id: TEXT | NULL
+longitude: FLOAT | NULL
+
+## GHCN_D.GHCND_1784
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1829
+date: DATE | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1991
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1910
+id: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1995
+element: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1824
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1953
+value: FLOAT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1897
+mflag: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1994
+time: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_2004
+value: FLOAT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1952
+sflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1998
+id: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_2002
+value: FLOAT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1997
+id: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1822
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1833
+value: FLOAT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1809
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1942
+time: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1957
+date: DATE | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1903
+id: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1958
+qflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1918
+qflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1980
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1768
+id: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1914
+sflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1960
+time: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1965
+id: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1989
+sflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1923
+date: DATE | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1874
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_2022
+time: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+etl_timestamp: NUMBER | Load time for this data row
+value: FLOAT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+source_url: TEXT | Source
+
+## GHCN_D.GHCND_1970
+sflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1859
+mflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1927
+time: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1844
+id: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1905
+date: DATE | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1843
+time: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1850
+value: FLOAT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2019
+id: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+etl_timestamp: NUMBER | Load time for this data row
+mflag: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+source_url: TEXT | Source
+
+## GHCN_D.GHCND_2005
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_2018
+id: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+etl_timestamp: NUMBER | Load time for this data row
+source_url: TEXT | Source
+element: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1986
+sflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1925
+sflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1801
+time: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1830
+date: DATE | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1764
+element: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1765
+time: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1771
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1807
+sflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1804
+value: FLOAT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1872
+element: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1880
+mflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1847
+mflag: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1887
+element: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1885
+id: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1849
+date: DATE | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1961
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1816
+sflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1913
+element: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1920
+mflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1858
+time: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1772
+date: DATE | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1845
+value: FLOAT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1934
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1839
+element: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1992
+element: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1854
+value: FLOAT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1803
+element: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1972
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1869
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1899
+id: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1796
+sflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2024
+value: FLOAT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+source_url: TEXT | Source
+mflag: TEXT | NULL
+id: TEXT | NULL
+etl_timestamp: NUMBER | Load time for this data row
+qflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1890
+element: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1813
+value: FLOAT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_STATES
+etl_timestamp: NUMBER | Load time for this data row
+code: TEXT | NULL
+name: TEXT | NULL
+source_url: TEXT | Source
+
+## GHCN_D.GHCND_1840
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1879
+time: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1933
+qflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1818
+id: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1990
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1782
+element: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1964
+value: FLOAT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1949
+id: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1901
+time: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1871
+sflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1783
+value: FLOAT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2001
+element: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1785
+element: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1955
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_2000
+id: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_2020
+source_url: TEXT | Source
+id: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+etl_timestamp: NUMBER | Load time for this data row
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1926
+element: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1975
+element: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1837
+qflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1984
+mflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1924
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1976
+date: DATE | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2014
+value: FLOAT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1888
+value: FLOAT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_2015
+id: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1861
+qflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1866
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2016
+element: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+etl_timestamp: NUMBER | Load time for this data row
+source_url: TEXT | Source
+time: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_2021
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+source_url: TEXT | Source
+etl_timestamp: NUMBER | Load time for this data row
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1919
+value: FLOAT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1937
+qflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1943
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1907
+time: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1774
+element: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1855
+element: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_2010
+value: FLOAT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1940
+element: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1947
+mflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1814
+element: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1770
+date: DATE | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1945
+sflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1828
+element: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1865
+time: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1860
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1902
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1791
+time: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1981
+value: FLOAT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1815
+time: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1794
+id: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1959
+id: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1870
+qflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1787
+mflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1911
+element: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1892
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1834
+qflag: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1898
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_2008
+element: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1846
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1978
+time: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1909
+id: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1798
+mflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1996
+value: FLOAT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1922
+id: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1939
+qflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1889
+id: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_COUNTRIES
+source_url: TEXT | Source
+name: TEXT | NULL
+code: TEXT | NULL
+etl_timestamp: NUMBER | Load time for this data row
+
+## GHCN_D.GHCND_1912
+value: FLOAT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1806
+value: FLOAT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1893
+time: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1875
+sflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1863
+value: FLOAT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1841
+time: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1856
+date: DATE | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1886
+time: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1969
+date: DATE | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_2003
+mflag: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1973
+time: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1864
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1792
+date: DATE | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1825
+time: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1851
+qflag: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1895
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2023
+time: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+source_url: TEXT | Source
+date: DATE | NULL
+etl_timestamp: NUMBER | Load time for this data row
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1963
+date: DATE | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1821
+sflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_INVENTORY
+latitude: FLOAT | NULL
+source_url: TEXT | NULL
+longitude: FLOAT | NULL
+etl_timestamp: NUMBER | NULL
+firstyear: NUMBER | NULL
+element: TEXT | NULL
+lastyear: NUMBER | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1983
+value: FLOAT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1881
+value: FLOAT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1977
+value: FLOAT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1944
+qflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1767
+time: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1789
+qflag: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1906
+id: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1800
+id: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1948
+id: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1891
+time: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1876
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1917
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1836
+element: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1915
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1810
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1820
+sflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2009
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1778
+id: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1776
+qflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1773
+value: FLOAT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1921
+date: DATE | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1848
+date: DATE | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1763
+mflag: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2006
+time: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1950
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1795
+sflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1788
+id: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1884
+value: FLOAT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1971
+id: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1793
+value: FLOAT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1985
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1968
+value: FLOAT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1974
+date: DATE | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1835
+id: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1873
+id: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1936
+date: DATE | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1819
+element: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1900
+element: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1938
+element: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1799
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1777
+id: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1993
+id: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1862
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1882
+id: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_2011
+id: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1929
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1817
+value: FLOAT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1896
+id: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1908
+date: DATE | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1946
+id: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1987
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1832
+element: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1826
+element: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1956
+value: FLOAT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1951
+date: DATE | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## NEW_YORK.CITIBIKE_TRIPS
+start_station_name: TEXT | Start Station Name
+start_station_id: NUMBER | Start Station ID
+gender: TEXT | Gender (unknown, male, female)
+tripduration: NUMBER | Trip Duration (in seconds)
+end_station_name: TEXT | End Station Name
+stoptime: NUMBER | Stop Time, in NYC local time.
+start_station_latitude: FLOAT | Start Station Latitude
+usertype: TEXT | User Type (Customer = 24-hour pass or 7-day pass user, Subscriber = Annual Member)
+end_station_id: NUMBER | End Station ID
+birth_year: NUMBER | Year of Birth
+starttime: NUMBER | Start Time, in NYC local time.
+end_station_longitude: FLOAT | End Station Longitude
+start_station_longitude: FLOAT | Start Station Longitude
+end_station_latitude: FLOAT | End Station Latitude
+bikeid: NUMBER | Bike ID
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2009
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged.
+tolls_amount: FLOAT | Total amount of all tolls paid in trip.
+pickup_latitude: FLOAT | Latitude where the meter was engaged
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed trips at the flag drop. The improvement surcharge began being levied in 2015.
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter.
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges.
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+tip_amount: FLOAT | Tip amount – This field is automatically populated for credit card tips. Cash tips are not included.
+pickup_longitude: FLOAT | Longitude where the meter was engaged.
+dropoff_latitude: FLOAT | Latitude where the meter was disengaged
+pickup_datetime: NUMBER | The date and time when the meter was engaged.
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka “store and forward,” because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+dropoff_longitude: FLOAT | Longitude where the meter was disengaged.
+vendor_id: TEXT | A code indicating the TPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2015
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+dropoff_latitude: FLOAT | NULL
+tip_amount: FLOAT | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips.
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+tolls_amount: FLOAT | Total amount of all tolls paid in trip.
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+dropoff_longitude: FLOAT | NULL
+pickup_longitude: FLOAT | NULL
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter
+pickup_latitude: FLOAT | NULL
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter.
+
+## NEW_YORK.TLC_GREEN_TRIPS_2016
+tip_amount: FLOAT | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+time_between_service: NUMBER | NULL
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter
+payment_type: NUMBER | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+trip_type: NUMBER | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+dropoff_longitude: FLOAT | NULL
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips.
+tolls_amount: FLOAT | Total amount of all tolls paid in trip.
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+pickup_longitude: FLOAT | NULL
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+distance_between_service: FLOAT | NULL
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+ehail_fee: FLOAT | NULL
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter.
+dropoff_latitude: FLOAT | NULL
+pickup_latitude: FLOAT | NULL
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+
+## NEW_YORK.TLC_GREEN_TRIPS_2014
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+tip_amount: FLOAT | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips.
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+trip_type: NUMBER | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+pickup_longitude: FLOAT | NULL
+payment_type: NUMBER | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+distance_between_service: FLOAT | NULL
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter
+ehail_fee: FLOAT | NULL
+dropoff_latitude: FLOAT | NULL
+tolls_amount: FLOAT | Total amount of all tolls paid in trip.
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter.
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+dropoff_longitude: FLOAT | NULL
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+pickup_latitude: FLOAT | NULL
+time_between_service: NUMBER | NULL
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+
+## NEW_YORK.NYPD_MV_COLLISIONS
+borough: TEXT | NULL
+number_of_pedestrians_killed: NUMBER | NULL
+number_of_motorist_injured: NUMBER | NULL
+number_of_pedestrians_injured: NUMBER | NULL
+cross_street_name: TEXT | NULL
+contributing_factor_vehicle_5: TEXT | NULL
+contributing_factor_vehicle_4: TEXT | NULL
+number_of_cyclist_injured: NUMBER | NULL
+vehicle_type_code2: TEXT | NULL
+location: TEXT | NULL
+contributing_factor_vehicle_2: TEXT | NULL
+number_of_cyclist_killed: NUMBER | NULL
+number_of_persons_killed: NUMBER | NULL
+vehicle_type_code_4: TEXT | NULL
+latitude: FLOAT | NULL
+vehicle_type_code_3: TEXT | NULL
+vehicle_type_code1: TEXT | NULL
+unique_key: NUMBER | NULL
+zip_code: NUMBER | NULL
+vehicle_type_code_5: TEXT | NULL
+contributing_factor_vehicle_1: TEXT | NULL
+timestamp: NUMBER | NULL
+on_street_name: TEXT | NULL
+number_of_persons_injured: NUMBER | NULL
+longitude: FLOAT | NULL
+number_of_motorist_killed: NUMBER | NULL
+off_street_name: TEXT | NULL
+contributing_factor_vehicle_3: TEXT | NULL
+
+## NEW_YORK.TREE_SPECIES
+species_common_name: TEXT | NULL
+form: TEXT | NULL
+tree_size: TEXT | NULL
+growth_rate: TEXT | NULL
+location_tolerances: TEXT | NULL
+fall_color: TEXT | NULL
+environmental_tolerances: TEXT | NULL
+species_scientific_name: TEXT | NULL
+comments: TEXT | NULL
+notes_suggested_cultivars: TEXT | NULL
+
+## NEW_YORK.TREE_CENSUS_2015
+boro_ct: NUMBER | This is the boro_ct identifyer for the census tract that the tree point falls into.
+health: TEXT | Indicates the user's perception of tree health.
+st_assem: NUMBER | State Assembly District in which tree point is located
+boroname: TEXT | Name of borough in which tree point is located
+st_senate: NUMBER | State Senate District in which tree point is located
+root_other: TEXT | Indicates the presence of other root problems
+problems: TEXT | NULL
+y_sp: FLOAT | Y coordinate, in state plane. Units are feet
+borocode: NUMBER | Code for borough in which tree point is located
+longitude: FLOAT | Longitude of point, in decimal degrees
+trunk_wire: TEXT | Indicates the presence of a trunk problem caused by wires or rope wrapped around the trunk
+nta_name: TEXT | This is the NTA name corresponding to the neighborhood tabulation area from the 2010 US Census that the tree point falls into.
+tree_id: NUMBER | Unique identification number for each tree point
+stump_diam: NUMBER | Diameter of stump measured through the center, rounded to the nearest inch.
+x_sp: FLOAT | X coordinate, in state plane. Units are feet.
+block_id: NUMBER | Identifier linking each tree to the block in the blockface table/shapefile that it is mapped on.
+state: TEXT | All features given value 'New York'
+brch_other: TEXT | Indicates the presence of other branch problems
+zip_city: TEXT | City as derived from zipcode. This is often (but not always) the same as borough.
+cncldist: NUMBER | Council district in which tree point is located
+cb_num: NUMBER | Community board in which tree point is located
+user_type: TEXT | This field describes the category of user who collected this tree point's data.
+address: TEXT | Nearest estimated address to tree
+trnk_light: TEXT | Indicates the presence of a trunk problem caused by lighting installed on the tree
+zipcode: NUMBER | Five-digit zipcode in which tree is located
+spc_common: TEXT | Common name for species, e.g. "red maple"
+root_grate: TEXT | Indicates the presence of a root problem caused by metal grates in tree bed
+brch_shoe: TEXT | Indicates the presence of a branch problem caused by sneakers in the branches
+nta: TEXT | This is the NTA Code corresponding to the neighborhood tabulation area from the 2010 US Census that the tree point falls into.
+spc_latin: TEXT | Scientific name for species, e.g. "Acer rubrum"
+status: TEXT | Indicates whether the tree is alive, standing dead, or a stump.
+guards: TEXT | Indicates whether a guard is present, and if the user felt it was a helpful or harmful guard. Not recorded for dead trees and stumps
+steward: TEXT | Indicates the number of unique signs of stewardship observed for this tree. Not recorded for stumps or dead trees.
+root_stone: TEXT | Indicates the presence of a root problem caused by paving stones in tree bed
+sidewalk: TEXT | Indicates whether one of the sidewalk flags immediately adjacent to the tree was damaged, cracked, or lifted. Not recorded for dead trees and stumps.
+created_at: DATE | The date tree points were collected in the census software
+curb_loc: TEXT | Location of tree bed in relationship to the curb; trees are either along the curb (OnCurb) or offset from the curb (OffsetFromCurb)
+latitude: FLOAT | Latitude of point, in decimal degrees
+tree_dbh: NUMBER | Diameter of the tree, measured at approximately 54" / 137cm above the ground.
+brch_light: TEXT | Indicates the presence of a branch problem caused by lights (usually string lights) or wires in the branches
+trnk_other: TEXT | Indicates the presence of other trunk problems
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2010
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter.
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+pickup_datetime: NUMBER | The date and time when the meter was engaged.
+tip_amount: FLOAT | Tip amount – This field is automatically populated for credit card tips. Cash tips are not included.
+dropoff_latitude: FLOAT | Latitude where the meter was disengaged.
+tolls_amount: FLOAT | Total amount of all tolls paid in trip.
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges.
+dropoff_longitude: FLOAT | Longitude where the meter was disengaged.
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged.
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka “store and forward,” because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+vendor_id: TEXT | A code indicating the TPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value
+pickup_longitude: FLOAT | Longitude where the meter was engaged.
+pickup_latitude: FLOAT | Latitude where the meter was engaged
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed trips at the flag drop. The improvement surcharge began being levied in 2015.
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter.
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use.
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2013
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+dropoff_longitude: FLOAT | NULL
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+pickup_longitude: FLOAT | NULL
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips.
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+tolls_amount: FLOAT | Total amount of all tolls paid in trip.
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+pickup_latitude: FLOAT | NULL
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+dropoff_latitude: FLOAT | NULL
+tip_amount: FLOAT | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter.
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+
+## NEW_YORK.TREE_CENSUS_2005
+sidw_raise: TEXT | Raised sidewalk present
+location_1: TEXT | NULL
+wire_other: TEXT | Indicates the presence of other wires
+pit_type: TEXT | NULL
+spc_common: TEXT | The common name of the species.
+wire_2nd: TEXT | Indicates the presence of secondary wires
+vert_wall: TEXT | Walled tree well present
+spc_latin: TEXT | The scientific name of the species.
+borocode: NUMBER | Borough tree is in, using a one-digit borough code: 1 – Manhattan, 2 – Bronx, 3 – Brooklyn, 4 – Queens, 5 – Staten Island
+zip_city: TEXT | City, as derived from the zipcode
+cb_num: NUMBER | Community Board that the tree falls in.
+nta_name: TEXT | Nta name for the neighborhood tabulation area the tree point is in
+inf_wires: TEXT | Choking wires present
+inf_paving: TEXT | Close paving present
+inf_lights: TEXT | Tree lights present
+inf_guard: TEXT | Choking guard or grate present
+status: TEXT | Excellent: full, well balanced crown and limb structure; leaves normal size color; no dead or broken branches; trunk solid; bark intact. Good: crown uneven or misshapen; some mechanical damage to bark or trunk; some signs of insects or disease; leaves somewhat below normal size and quantity; some dead or broken branches (less than half of the tree). Poor: large dead limbs with over one- half of the tree already dead or removed; large cavities; drastic deformities; leaves significantly below normal size and quantity; severe insect or disease damage. Dead: dead tree; leaves absent; twigs brittle. Shaft: all branches removed; trunk left standing; sprouts may or may not be evident. Stump: stump shorter than breast height; leaves entirely absent or present only on stump sprouts Empty pit: Pit contains exposed soil and no tree
+vert_other: TEXT | Other Vertical Treatment Present
+sidw_crack: TEXT | Cracked sidewalk present
+nta: TEXT | nta code for the neighborhood tabulation area the tree point is in, from the 2010 census
+st_assem: NUMBER | State Assembly District tree point is in.
+soil_lvl: TEXT | NULL
+st_senate: NUMBER | State Senate District tree point is in.
+boro_ct: NUMBER | This is the boro_ct identifier for the census tract that the tree point falls into.
+horz_other: TEXT | Other horizontal treatment present
+vert_tgrd: TEXT | Tall guard present
+inf_other: TEXT | Other infrastructure conflicts present
+inf_canopy: TEXT | Canopy debris present
+horz_plant: TEXT | Plantings present
+objectid: NUMBER | NULL
+tree_loc: TEXT | Establishes the location of the tree in relation to the address provided
+cncldist: NUMBER | New York City Council District tree point is in.
+trunk_dmg: TEXT | Describes specific damage or wounds found on the trunk
+wire_prime: TEXT | Indicates the presence of primary wires
+objectid_1: NUMBER | NULL
+x_sp: NUMBER | X field
+inf_shoes: TEXT | Sneakers present
+vert_pgrd: TEXT | Perimeter guard present
+tree_dbh: NUMBER | The diameter of the tree in whole inches, measured at breast height. (4.5 feet from the ground.)
+wire_htap: TEXT | Indicates the presence of house tap wires
+y_sp: NUMBER | y field
+horz_grate: TEXT | Tree grates present
+zipcode: NUMBER | 2005 zipcode that the tree falls in.
+boroname: TEXT | Borough tree is in, full text
+inf_outlet: TEXT | Electrical outlet present
+horz_blck: TEXT | Block pavers present
+cen_year: NUMBER | This is the year the tree was inventoried in. Data collection for the 2005 census spanned multiple seasons. Data is in YYYY format.
+
+## NEW_YORK._311_SERVICE_REQUESTS
+agency: TEXT | NULL
+park_facility_name: TEXT | NULL
+location_type: TEXT | NULL
+cross_street_1: TEXT | NULL
+facility_type: TEXT | NULL
+bridge_highway_segment: TEXT | NULL
+due_date: NUMBER | NULL
+taxi_pickup_location: TEXT | NULL
+latitude: FLOAT | Service request location latitude coordinate.
+city: TEXT | Parsed location information. City.
+bbl: NUMBER | NULL
+incident_address: TEXT | Service location of Service request.
+x_coordinate: NUMBER | NULL
+bridge_highway_direction: TEXT | NULL
+created_date: NUMBER | Date Service request was created.
+closed_date: NUMBER | NULL
+longitude: FLOAT | Service request location longitude coordinate.
+location: TEXT | Service request location latitude and longitude coordinates.
+resolution_action_updated_date: NUMBER | NULL
+bridge_highway_name: TEXT | NULL
+open_data_channel_type: TEXT | NULL
+road_ramp: TEXT | NULL
+taxi_company_borough: TEXT | NULL
+resolution_description: TEXT | NULL
+borough: TEXT | NULL
+vehicle_type: TEXT | NULL
+agency_name: TEXT | NULL
+complaint_type: TEXT | NULL
+status: TEXT | Service request status. Duplicate statuses indicate that issue had previously been reported recently.
+cross_street_2: TEXT | NULL
+y_coordinate: NUMBER | NULL
+incident_zip: TEXT | Parsed location information. Zip code.
+community_board: TEXT | NULL
+landmark: TEXT | NULL
+descriptor: TEXT | NULL
+intersection_street_2: TEXT | NULL
+intersection_street_1: TEXT | NULL
+street_name: TEXT | Parsed location information. Street name.
+unique_key: NUMBER | The service request tracking number.
+park_borough: TEXT | NULL
+address_type: TEXT | NULL
+
+## NEW_YORK.TLC_GREEN_TRIPS_2015
+dropoff_longitude: FLOAT | NULL
+tolls_amount: FLOAT | Total amount of all tolls paid in trip.
+trip_type: NUMBER | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+pickup_latitude: FLOAT | NULL
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter
+tip_amount: FLOAT | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips.
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter.
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+time_between_service: NUMBER | NULL
+ehail_fee: FLOAT | NULL
+distance_between_service: FLOAT | NULL
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+dropoff_latitude: FLOAT | NULL
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+pickup_longitude: FLOAT | NULL
+payment_type: NUMBER | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+
+## NEW_YORK.TREE_CENSUS_1995
+recordid: NUMBER | A unique identifier for each record in the table. Does not correspond to other datasets or identify the tree itself.
+censustract_2010: TEXT | 2010 Census Tract geocoded to the address using Geosupport 11.4
+zip_new: NUMBER | Zip Code geocoded to the address using Geosupport 11.4
+longitude: FLOAT | Longitude of point in decimal degrees as geocoded using LION 02A
+borough: TEXT | Borough where tree was recorded.
+diameter: NUMBER | Diameter of the tree as measured at approximately 4.5 feet from the ground.
+house_number: TEXT | Numerical portion of the address.
+spc_latin: TEXT | This is the latin/scientific name for the species of this tree.
+sidewalk_condition: TEXT | Whether the tree roots have lifted the adjacent sidewalk.
+street: TEXT | Street where address for tree is located.
+nta_2010: TEXT | Neighborhood Tabulation Area geocoded to the address using Geosupport 11.4
+segmentid: NUMBER | LION SegmentID geocoded to the address using Geosupport 11.4
+censusblock_2010: TEXT | 2010 Census Block geocoded to the address using Geosupport 11.4
+latitude: FLOAT | Latitude of point in decimal degrees as geocoded using LION 02A
+species: TEXT | Species of the tree using a four-letter code, comprised of the first two letters of the genus followed by the first two letters of the species.
+cb_original: NUMBER | The community board originally geocoded to the address using LION 02A
+zip_original: NUMBER | The zip code originally geocoded to the address using LION 02A
+y: FLOAT | Y coordinate of point in the NAD_1983_StatePlane_New_York_Long_Island_FIPS_3104_Feet coordinate system, geocoded using LION 02A
+x: FLOAT | X coordinate of point in the NAD_1983_StatePlane_New_York_Long_Island_FIPS_3104_Feet coordinate system, geocoded using LION 02A
+location: TEXT | NULL
+spc_common: TEXT | This is the common name for the species of this tree.
+status: TEXT | Overall tree condition.
+address: TEXT | Address of the tree.
+site: TEXT | This field clarifies the position relative to the address for trees not located in the front of buildings.
+support_structure: TEXT | Whether the tree has support structures installed.
+cb_new: NUMBER | Community Board geocoded to the address using Geosupport 11.4
+wires: TEXT | Whether the tree is located under utility wires
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2016
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+dropoff_latitude: FLOAT | NULL
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter.
+tip_amount: FLOAT | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+pickup_latitude: FLOAT | NULL
+dropoff_longitude: FLOAT | NULL
+pickup_longitude: FLOAT | NULL
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips.
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+tolls_amount: FLOAT | Total amount of all tolls paid in trip.
+
+## NEW_YORK.CITIBIKE_STATIONS
+eightd_has_available_keys: BOOLEAN | NULL
+num_docks_available: NUMBER | Number of docks accepting bike returns.
+is_installed: BOOLEAN | Is the station currently on the street?
+latitude: FLOAT | The latitude of station. The field value must be a valid WGS 84 latitude in decimal degrees format.
+name: TEXT | Public name of the station.
+num_bikes_available: NUMBER | Number of bikes available for rental.
+region_id: NUMBER | ID of the region where station is located.
+is_renting: BOOLEAN | Is the station currently renting bikes?
+station_id: TEXT | Unique identifier of a station.
+num_bikes_disabled: NUMBER | Number of disabled bikes at the station.
+num_docks_disabled: NUMBER | Number of empty but disabled dock points at the station.
+short_name: TEXT | Short name or other type of identifier, as used by the data publisher.
+last_reported: NUMBER | Timestamp indicating the last time this station reported its status to the backend, in NYC local time.
+rental_methods: TEXT | Array of enumerables containing the payment methods accepted at this station.
+longitude: FLOAT | The longitude of station. The field value must be a valid WGS 84 latitude in decimal degrees format.
+capacity: NUMBER | ANumber of total docking points installed at this station, both available and unavailable.
+eightd_has_key_dispenser: BOOLEAN | NULL
+is_returning: BOOLEAN | Is the station accepting bike returns?
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2011
+tip_amount: FLOAT | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+pickup_latitude: FLOAT | NULL
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips.
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+dropoff_latitude: FLOAT | NULL
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter.
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+tolls_amount: FLOAT | Total amount of all tolls paid in trip.
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+dropoff_longitude: FLOAT | NULL
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+pickup_longitude: FLOAT | NULL
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter
+
+## NEW_YORK.TLC_GREEN_TRIPS_2013
+ehail_fee: FLOAT | NULL
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use.
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged.
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+tip_amount: FLOAT | Tip amount – This field is automatically populated for credit card tips. Cash tips are not included.
+dropoff_latitude: FLOAT | Latitude where the meter was timed off.
+pickup_datetime: NUMBER | The date and time when the meter was engaged.
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips
+time_between_service: NUMBER | NULL
+pickup_longitude: FLOAT | Longitude where the meter was engaged.
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+payment_type: NUMBER | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+distance_between_service: FLOAT | NULL
+dropoff_longitude: FLOAT | Longitude where the meter was timed off
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka “store and forward,” because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter
+tolls_amount: FLOAT | Total amount of all tolls paid in trip
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+trip_type: NUMBER | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+pickup_latitude: FLOAT | Latitude where the meter was engaged.
+
+## NEW_YORK.TLC_FHV_TRIPS_2015
+pickup_datetime: NUMBER | The date and time of the trip pick-up.
+zone: TEXT | This is Pickup zone
+borough: TEXT | This is Pickup borough
+service_zone: TEXT | This is Pickup service_zone
+location_id: NUMBER | The TLC taxi zone of the trip pick-up
+dispatching_base_num: TEXT | The TLC Base License Number of the base that dispatched the trip.
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2012
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+dropoff_longitude: FLOAT | NULL
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter.
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+tip_amount: FLOAT | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+pickup_latitude: FLOAT | NULL
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips.
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+dropoff_latitude: FLOAT | NULL
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+pickup_longitude: FLOAT | NULL
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+tolls_amount: FLOAT | Total amount of all tolls paid in trip.
+
+## NEW_YORK.TLC_FHV_TRIPS_2016
+location_id: NUMBER | The TLC taxi zone of the trip pick-up
+service_zone: TEXT | This is Pickup service_zone
+dispatching_base_num: TEXT | The TLC Base License Number of the base that dispatched the trip.
+borough: TEXT | This is Pickup borough
+pickup_datetime: NUMBER | The date and time of the trip pick-up.
+zone: TEXT | This is Pickup zone
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2014
+pickup_latitude: FLOAT | NULL
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter.
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter
+tip_amount: FLOAT | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+tolls_amount: FLOAT | Total amount of all tolls paid in trip.
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips.
+pickup_longitude: FLOAT | NULL
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+dropoff_latitude: FLOAT | NULL
+dropoff_longitude: FLOAT | NULL

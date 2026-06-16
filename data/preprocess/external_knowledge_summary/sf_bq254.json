@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq254",
+  "question": "Among all multipolygons located within the same geographic area as the multipolygon associated with Wikidata item Q191, but lacking a 'wikidata' tag themselves, which two rank highest by the number of points that lie within their boundaries, and what are their names?",
+  "db_id": "GEO_OPENSTREETMAP",
+  "source_document": "functions_st_dwithin.md",
+  "evidence": "Function: ST_DWITHIN - Returns TRUE if the minimum geodesic distance between two GEOGRAPHY objects is within the specified distance. Syntax: ST_DWITHIN(<geography_expression_1>, <geography_expression_2>, <distance_in_meters>). Arguments: Both must be GEOGRAPHY expressions, distance is in meters (REAL type). Returns BOOLEAN. Example: SELECT ST_DWITHIN(ST_MAKEPOINT(0, 0), ST_MAKEPOINT(1, 0), 150000); returns TRUE. Usage: Can be used with non-point GEOGRAPHY values (lines/polygons) - calculates minimum distance between closest points."
+}

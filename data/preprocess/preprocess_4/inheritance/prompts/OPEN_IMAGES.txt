@@ -1,0 +1,38 @@
+[STANDALONE]
+## OPEN_IMAGES.ANNOTATIONS_BBOX
+is_inside: BOOLEAN | NULL
+x_max: FLOAT | NULL | eg=[0.444, 0.345]
+image_id: TEXT | NULL | eg=["d7f443439c6ffbfe", "5e85a77309b69a5f"]
+is_occluded: BOOLEAN | NULL
+is_truncated: BOOLEAN | NULL
+y_max: FLOAT | NULL | eg=[0.248, 0.925]
+source: TEXT | NULL | eg=["human"]
+x_min: FLOAT | NULL | eg=[0.318, 0.143]
+y_min: FLOAT | NULL | eg=[0.016, 0.742]
+is_depiction: BOOLEAN | NULL
+label_name: TEXT | NULL | eg=["/m/0_k2"]
+confidence: FLOAT | NULL | eg=[1.0]
+is_group_of: BOOLEAN | NULL
+
+## OPEN_IMAGES.DICT
+label_display_name: TEXT | NULL | eg=["Ox", "Vj"]
+label_name: TEXT | NULL | eg=["/m/03bx7vb", "/m/012wxt"]
+
+## OPEN_IMAGES.IMAGES
+original_size: NUMBER | NULL | eg=[10603451, 4071452]
+original_landing_url: TEXT | NULL | eg=["https://www.flickr.com/photos/tonnerrelombard/9344598677", "https://www.flickr.com/photos/tonnerrelombard/9311210064"]
+original_url: TEXT | NULL | eg=["https://farm8.staticflickr.com/7337/9344598677_321768cee0_o.jpg", "https://c3.staticflickr.com/8/7329/9311210064_79cdf61a9a_o.jpg"]
+title: TEXT | NULL | eg=["Ultimaker Product Separation Device 1.0", "Robot"]
+license: TEXT | NULL | eg=["https://creativecommons.org/licenses/by/2.0/"]
+image_id: TEXT | NULL | eg=["74b636551c196dd7", "3231f7d3de4adaba"]
+author_profile_url: TEXT | NULL | eg=["https://www.flickr.com/people/tonnerrelombard/", "https://www.flickr.com/people/tonyadamsphotos/"]
+author: TEXT | NULL | eg=["Tonnerre Lombard", "farmboyz"]
+original_md5: TEXT | NULL | eg=["0/YcOvCN9eZ8BIY7xCIvAw==", "r06ZlEBcuB+9o9qxDzlweA=="]
+thumbnail_300k_url: TEXT | NULL | eg=["https://c5.staticflickr.com/8/7337/9344598677_2247c7b06a_z.jpg", "https://c6.staticflickr.com/8/7329/9311210064_4a0c6f95ee_z.jpg"]
+subset: TEXT | NULL | eg=["train"]
+
+## OPEN_IMAGES.LABELS
+image_id: TEXT | NULL | eg=["3974825c574dd5ca", "65618c88c607852b"]
+confidence: FLOAT | NULL | eg=[0.9]
+label_name: TEXT | NULL | eg=["/m/01g317"]
+source: TEXT | NULL | eg=["machine"]

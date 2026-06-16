@@ -1,0 +1,53 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: ECOMMERCE.WEB_ANALYTICS_TEST
+Columns: customDimensions, visitId, fullVisitorId, trafficSource, userId, geoNetwork, visitNumber, hits, date, device, socialEngagementType, channelGrouping, visitStartTime, totals, visitorId
+
+Table: ECOMMERCE.CLASSIFICATION_MODEL_2_RESULTS
+Columns: deviceCategory, unique_session_id, latest_ecommerce_progress, predicted_will_buy_on_return_visit, pageviews, bounces, source, medium, time_on_site, country, predicted_will_buy_on_return_visit_probs, will_buy_on_return_visit, channelGrouping
+
+Table: ECOMMERCE.PARTITION_BY_DAY
+Columns: fullvisitorId, date_formatted
+
+Table: ECOMMERCE.PRODUCTS
+Columns: SKU, stockLevel, orderedQuantity, restockingLeadTime, sentimentScore, sentimentMagnitude, name
+
+Table: ECOMMERCE.REV_TRANSACTIONS_VIEW
+Columns: transactionId, time, timeOnSite, transactions, fullVisitorId, productQuantity, sessionQualityDim, productSKU, pageviews, productRevenue, eCommerceAction_step, pagePathLevel1, pageTitle, productPrice, productVariant, country, visitId, itemRevenue, transactionRevenue, channelGrouping, currencyCode, itemQuantity, date, type, v2ProductCategory, eCommerceAction_type, city, v2ProductName, totalTransactionRevenue, searchKeyword, productRefundAmount, eCommerceAction_option
+
+Table: ECOMMERCE.ALL_SESSIONS_RAW
+Columns: v2ProductName, city, productPrice, type, fullVisitorId, transactionId, time, productSKU, productRefundAmount, country, channelGrouping, itemQuantity, eCommerceAction_type, visitId, productQuantity, pageTitle, pageviews, productVariant, searchKeyword, v2ProductCategory, eCommerceAction_option, pagePathLevel1, itemRevenue, productRevenue, eCommerceAction_step, currencyCode, totalTransactionRevenue, date, sessionQualityDim, transactionRevenue, timeOnSite, transactions
+
+Table: ECOMMERCE.WEB_ANALYTICS
+Columns: totals, geoNetwork, date, visitNumber, trafficSource, customDimensions, hits, userId, fullVisitorId, visitStartTime, visitorId, device, socialEngagementType, channelGrouping, visitId
+
+Table: ECOMMERCE.SALES_BY_SKU
+Columns: total_ordered, productSKU
+
+Table: ECOMMERCE.REV_TRANSACTIONS
+Columns: totals_transactions, hits_page_pagePathLevel1, hits_product_productPrice, hits_product_productQuantity, hits_page_pageTitle, hits_transaction_transactionRevenue, hits_product_v2ProductCategory, hits_product_productRevenue, hits_product_productSKU, totals_timeOnSite, hits_product_productVariant, hits_time, hits_transaction_transactionId, hits_product_productRefundAmount, fullVisitorId, totals_totalTransactionRevenue, totals_pageviews, geoNetwork_country, hits_product_v2ProductName, hits_page_searchKeyword, hits_item_itemRevenue, hits_item_itemQuantity, hits_item_currencyCode, visitId, hits_type, date, channelGrouping, geoNetwork_city
+
+Table: ECOMMERCE.SALES_REPORT
+Columns: sentimentMagnitude, ratio, restockingLeadTime, name, sentimentScore, productSKU, stockLevel, total_ordered
+
+Table: ECOMMERCE.ALL_SESSIONS
+Columns: itemQuantity, productPrice, v2ProductCategory, channelGrouping, date, timeOnSite, fullVisitorId, productRevenue, pageTitle, visitId, city, sessionQualityDim, productRefundAmount, productQuantity, transactions, transactionRevenue, itemRevenue, searchKeyword, transactionId, type, currencyCode, v2ProductName, pagePathLevel1, country, eCommerceAction_type, pageviews, productVariant, totalTransactionRevenue, productSKU, time, eCommerceAction_step, eCommerceAction_option
+
+Table: ECOMMERCE.PARTITIONS
+Columns: date_formatted, total_transactions
+
+Table: ECOMMERCE.PRODUCT_LIST
+Columns: v2ProductName, productSKU
+
+Table: ECOMMERCE.SITE_WIDE_PROMOTION
+Columns: discount
+
+Table: ECOMMERCE.CHECKOUT_NUDGE
+Columns: eCommerceAction_type_max, fullVisitorID, session_time_on_site_minutes_max, number_of_sessions, number_of_products_viewed
+
+Table: ECOMMERCE.CATEGORIES
+Columns: category, productSKU
+
+Table: ECOMMERCE.DAYS_WITH_RAIN
+Columns: date, prcp, station_name

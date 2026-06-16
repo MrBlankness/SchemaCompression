@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq250",
+  "question": "Based on the most recent 1km population grid data in Singapore before January 2023, using ST_CONVEXHULL to aggregate all population grid centroids into a bounding region and ST_INTERSECTS to identify hospitals from OpenStreetMap’s planet layer (layer_code in (2110, 2120)) that fall within this region, then calculating the distance from each grid cell to its nearest hospital, what is the total population of the grid cell that is farthest from any hospital?",
+  "db_id": "GEO_OPENSTREETMAP_WORLDPOP",
+  "source_document": "OpenStreetMap_data_in_layered_GIS_format.md",
+  "evidence": "Key OSM hospital layer codes: 2110 (hospital) and 2120 (doctors). These codes correspond to point features in the 'health' layer with amenity=hospital and amenity=doctors respectively. The question requires identifying hospitals using these specific layer codes from OpenStreetMap's planet layer."
+}

@@ -1,0 +1,86 @@
+[TEMPLATES]
+<T1>
+agg_level_desc: TEXT | Aggregation level or geographic granularity of the data (e.g., STATE, AG DISTRICT, COUNTY, REGION, ZIP CODE).
+year: TEXT | The numeric year of the data.
+sector_desc: TEXT | Five high level, broad categories useful to narrow down choices (CROPS, ANIMALS & PRODUCTS, ECONOMICS, DEMOGRAPHICS, and ENVIRONMENTAL).
+short_desc: TEXT | A concatenation of six columns: commodity_desc, class_desc, prodn_practice_desc, util_practice_desc, statisticcat_desc, and unit_desc.
+location_desc: TEXT | Full description for the location dimension.
+zip_5: TEXT | US Postal Service 5-digit zip code.
+watershed_code: TEXT | US Geological Survey (USGS) 8-digit Hydrologic Unit Code (HUC) for watersheds.
+freq_desc: TEXT | Length of time covered (ANNUAL, SEASON, MONTHLY, WEEKLY, POINT IN TIME). MONTHLY often covers more than one month. POINT IN TIME is as of a particular day.
+statisticcat_desc: TEXT | The aspect of a commodity being measured (e.g., AREA HARVESTED, PRICE RECEIVED, INVENTORY, SALES).
+week_ending: TEXT | Week ending date, used when freq_desc = WEEKLY.
+unit_desc: TEXT | The unit associated with the statistic category (e.g., ACRES, $ / LB, HEAD, $, OPERATIONS).
+state_name: TEXT | State full name.
+source_desc: TEXT | Source of data (CENSUS or SURVEY). Census program includes the Census of Ag as well as follow up projects. Survey program includes national, state, and county surveys.
+value: TEXT | Published data value.
+asd_desc: TEXT | Ag statistics district name.
+country_name: TEXT | Country name.
+county_name: TEXT | County name.
+reference_period_desc: TEXT | The specific time frame, within a freq_desc.
+prodn_practice_desc: TEXT | A method of production or action taken on the commodity (e.g., IRRIGATED, ORGANIC, ON FEED).
+class_desc: TEXT | Generally a physical attribute (e.g., variety, size, color, gender) of the commodity.
+state_alpha: TEXT | State abbreviation, 2-character alpha code.
+state_ansi: TEXT | American National Standards Institute (ANSI) standard 2-digit state codes.
+state_fips_code: TEXT | NASS 2-digit state codes; include 99 and 98 for US TOTAL and OTHER STATES, respectively; otherwise match ANSI codes.
+county_code: TEXT | NASS 3-digit county codes; includes 998 for OTHER (COMBINED) COUNTIES and Alaska county codes; otherwise match ANSI codes.
+load_time: TEXT | Date and time indicating when record was inserted into Quick Stats database.
+cv_percent: TEXT | Coefficient of variation. Available for the 2012 Census of Agriculture only. County-level CVs are generalized.
+domaincat_desc: TEXT | Categories or partitions within a domain (e.g., under domain = SALES, domain categories include $1,000 TO $9,999, $10,000 TO $19,999, etc).
+county_ansi: TEXT | ANSI standard 3-digit county codes.
+country_code: TEXT | US Census Bureau, Foreign Trade Division 4-digit country code, as of April, 2007.
+domain_desc: TEXT | Generally another characteristic of operations that produce a particular commodity (e.g., ECONOMIC CLASS, AREA OPERATED, NAICS CLASSIFICATION, SALES). For chemical usage data, the domain describes the type of chemical applied to the commodity. The domain = TOTAL will have no further breakouts; i.e., the data value pertains completely to the short_desc.
+region_desc: TEXT | NASS defined geographic entities not readily defined by other standard geographic levels. A region can be a less than a state (SUB-STATE) or a group of states (MULTI-STATE), and may be specific to a commodity.
+util_practice_desc: TEXT | Utilizations (e.g., GRAIN, FROZEN, SLAUGHTER) or marketing channels (e.g., FRESH MARKET, PROCESSING, RETAIL).
+watershed_desc: TEXT | Name assigned to the HUC.
+commodity_desc: TEXT | The primary subject of interest (e.g., CORN, CATTLE, LABOR, TRACTORS, OPERATORS).
+group_desc: TEXT | Subsets within sector (e.g., under sector = CROPS, the groups are FIELD CROPS, FRUIT & TREE NUTS, HORTICULTURE, and VEGETABLES).
+begin_code: TEXT | If applicable, a 2-digit code corresponding to the beginning of the reference period (e.g., for freq_desc = MONTHLY, begin_code ranges from 01 (January) to 12 (December)).
+end_code: TEXT | If applicable, a 2-digit code corresponding to the end of the reference period (e.g., the reference period of JAN THRU MAR will have begin_code = 01 and end_code = 03).
+congr_district_code: TEXT | US Congressional District 2-digit code.
+asd_code: TEXT | NASS defined county groups, unique within a state, 2-digit ag statistics district code.
+@Tables: [USDA_NASS_AGRICULTURE.ANIMALS_PRODUCTS,USDA_NASS_AGRICULTURE.CENSUS2002,USDA_NASS_AGRICULTURE.CENSUS2007,USDA_NASS_AGRICULTURE.CENSUS2012,USDA_NASS_AGRICULTURE.DEMOGRAPHICS,USDA_NASS_AGRICULTURE.ECONOMICS]
+
+<T2>
+county_name: TEXT | County name.
+state_ansi: NUMBER | American National Standards Institute (ANSI) standard 2-digit state codes.
+end_code: NUMBER | If applicable, a 2-digit code corresponding to the end of the reference period (e.g., the reference period of JAN THRU MAR will have begin_code = 01 and end_code = 03).
+value_suppression_code: TEXT | Any suppression codes used to avoid displaying data that should not be disclosed or from putting out data lower than the precision level defined by NASS. Code definitions can be found in the NASS publications.
+country_code: NUMBER | US Census Bureau, Foreign Trade Division 4-digit country code, as of April, 2007.
+state_alpha: TEXT | State abbreviation, 2-character alpha code.
+year: NUMBER | The numeric year of the data.
+begin_code: NUMBER | If applicable, a 2-digit code corresponding to the beginning of the reference period (e.g., for freq_desc = MONTHLY, begin_code ranges from 01 (January) to 12 (December)).
+state_name: TEXT | State full name.
+county_code: NUMBER | NASS 3-digit county codes; includes 998 for OTHER (COMBINED) COUNTIES and Alaska county codes; otherwise match ANSI codes.
+watershed_desc: TEXT | Name assigned to the HUC.
+asd_code: NUMBER | NASS defined county groups, unique within a state, 2-digit ag statistics district code.
+location_desc: TEXT | Full description for the location dimension.
+group_desc: TEXT | Subsets within sector (e.g., under sector = CROPS, the groups are FIELD CROPS, FRUIT & TREE NUTS, HORTICULTURE, and VEGETABLES).
+zip_5: NUMBER | US Postal Service 5-digit zip code.
+region_desc: TEXT | NASS defined geographic entities not readily defined by other standard geographic levels. A region can be a less than a state (SUB-STATE) or a group of states (MULTI-STATE), and may be specific to a commodity.
+reference_period_desc: TEXT | The specific time frame, within a freq_desc.
+agg_level_desc: TEXT | Aggregation level or geographic granularity of the data (e.g., STATE, AG DISTRICT, COUNTY, REGION, ZIP CODE).
+domaincat_desc: TEXT | Categories or partitions within a domain (e.g., under domain = SALES, domain categories include $1,000 TO $9,999, $10,000 TO $19,999, etc).
+county_ansi: NUMBER | ANSI standard 3-digit county codes.
+statisticcat_desc: TEXT | The aspect of a commodity being measured (e.g., AREA HARVESTED, PRICE RECEIVED, INVENTORY, SALES).
+source_desc: TEXT | Source of data (CENSUS or SURVEY). Census program includes the Census of Ag as well as follow up projects. Survey program includes national, state, and county surveys.
+congr_district_code: NUMBER | US Congressional District 2-digit code.
+watershed_code: NUMBER | US Geological Survey (USGS) 8-digit Hydrologic Unit Code (HUC) for watersheds.
+state_fips_code: NUMBER | NASS 2-digit state codes; include 99 and 98 for US TOTAL and OTHER STATES, respectively; otherwise match ANSI codes.
+prodn_practice_desc: TEXT | A method of production or action taken on the commodity (e.g., IRRIGATED, ORGANIC, ON FEED).
+cv_suppression_code: TEXT | Any suppression codes used to avoid displaying data that should not be disclosed or from putting out data lower than the precision level defined by NASS. Code definitions can be found in the NASS publications.
+util_practice_desc: TEXT | Utilizations (e.g., GRAIN, FROZEN, SLAUGHTER) or marketing channels (e.g., FRESH MARKET, PROCESSING, RETAIL).
+sector_desc: TEXT | Five high level, broad categories useful to narrow down choices (CROPS, ANIMALS & PRODUCTS, ECONOMICS, DEMOGRAPHICS, and ENVIRONMENTAL).
+class_desc: TEXT | Generally a physical attribute (e.g., variety, size, color, gender) of the commodity.
+country_name: TEXT | Country name.
+freq_desc: TEXT | Length of time covered (ANNUAL, SEASON, MONTHLY, WEEKLY, POINT IN TIME). MONTHLY often covers more than one month. POINT IN TIME is as of a particular day.
+cv_percent: FLOAT | Coefficient of variation. Available for the 2012 Census of Agriculture only. County-level CVs are generalized.
+domain_desc: TEXT | Generally another characteristic of operations that produce a particular commodity (e.g., ECONOMIC CLASS, AREA OPERATED, NAICS CLASSIFICATION, SALES). For chemical usage data, the domain describes the type of chemical applied to the commodity. The domain = TOTAL will have no further breakouts; i.e., the data value pertains completely to the short_desc.
+asd_desc: TEXT | Ag statistics district name.
+commodity_desc: TEXT | The primary subject of interest (e.g., CORN, CATTLE, LABOR, TRACTORS, OPERATORS).
+load_time: NUMBER | Date and time indicating when record was inserted into Quick Stats database.
+value: FLOAT | Published data value.
+unit_desc: TEXT | The unit associated with the statistic category (e.g., ACRES, $ / LB, HEAD, $, OPERATIONS).
+week_ending: DATE | Week ending date, used when freq_desc = WEEKLY.
+short_desc: TEXT | A concatenation of six columns: commodity_desc, class_desc, prodn_practice_desc, util_practice_desc, statisticcat_desc, and unit_desc.
+@Tables: [USDA_NASS_AGRICULTURE.CENSUS_2002,USDA_NASS_AGRICULTURE.CENSUS_2007,USDA_NASS_AGRICULTURE.CENSUS_2012,USDA_NASS_AGRICULTURE.CROPS,USDA_NASS_AGRICULTURE.ENVIRONMENTAL]

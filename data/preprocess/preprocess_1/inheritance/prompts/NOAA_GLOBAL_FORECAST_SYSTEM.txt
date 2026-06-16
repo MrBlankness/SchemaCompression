@@ -1,0 +1,16 @@
+[TEMPLATES]
+Format: Tn|col1,col2|schema1.table1;schema2.table2
+T3|visible,osm_timestamp,id,username,all_tags,geometry,members,changeset,version|GEO_OPENSTREETMAP.HISTORY_RELATIONS;GEO_OPENSTREETMAP.PLANET_RELATIONS
+T5|all_tags,changeset,longitude,username,latitude,id,osm_timestamp,geometry,visible,version|GEO_OPENSTREETMAP.HISTORY_NODES;GEO_OPENSTREETMAP.PLANET_NODES
+T7|geometry,osm_timestamp,osm_way_id,osm_id,osm_version,all_tags|GEO_OPENSTREETMAP.PLANET_FEATURES_POINTS
+
+[DERIVED]
+Format: Tm<Tp|col1,col2|schema1.table1;schema2.table2
+T4<T7|layer_code,layer_class,layer_name,gdal_type|GEO_OPENSTREETMAP.HISTORY_LAYERS;GEO_OPENSTREETMAP.PLANET_LAYERS
+T6<T7|feature_type|GEO_OPENSTREETMAP.PLANET_FEATURES
+
+[STANDALONE]
+Format: schema.table|col1,col2
+GEO_OPENSTREETMAP.HISTORY_CHANGESETS|osm_timestamp_min,ways,id,osm_timestamp_max,relations,nodes
+GEO_OPENSTREETMAP.PLANET_WAYS|geometry,version,visible,username,all_tags,osm_timestamp,nodes,id,changeset
+NOAA_GLOBAL_FORECAST_SYSTEM.NOAA_GFS0P25|creation_time,geography,forecast,geography_polygon

@@ -1,0 +1,2820 @@
+[TABLES]
+## NHTSA_TRAFFIC_FATALITIES.FACTOR_2018
+state_name: TEXT | NULL
+contributing_circumstances_motor_vehicle: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+contributing_circumstances_motor_vehicle_name: TEXT | NULL
+state_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.PBTYPE_2018
+crash_location_bicycle: TEXT | NULL
+marked_crosswalk_present: TEXT | NULL
+motorist_maneuver_name: TEXT | NULL
+crash_type_bicycle: NUMBER | NULL
+motorist_maneuver: TEXT | NULL
+marked_crosswalk_present_name: TEXT | NULL
+bicyclist_initial_direction_of_travel_name: TEXT | NULL
+crash_group_pedestrian: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+pedestrian_scenario: TEXT | NULL
+age_name: TEXT | NULL
+crash_group_bicycle: NUMBER | NULL
+state_number: NUMBER | NULL
+crash_location_bicycle_name: TEXT | NULL
+crash_type_pedestrian: NUMBER | NULL
+crash_type_pedestrian_name: TEXT | NULL
+crash_location_pedestrian_name: TEXT | NULL
+crash_group_bicycle_name: TEXT | NULL
+pedestrian_position: TEXT | NULL
+school_zone_name: TEXT | NULL
+pedestrian_initial_direction_of_travel_name: TEXT | NULL
+pedestrian_initial_direction_of_travel: TEXT | NULL
+school_zone: TEXT | NULL
+intersection_leg: TEXT | NULL
+pedestrian_scenario_name: TEXT | NULL
+intersection_leg_name: TEXT | NULL
+sex_name: TEXT | NULL
+bicyclist_position: TEXT | NULL
+person_number: NUMBER | NULL
+age: NUMBER | NULL
+sidewalk_present_name: TEXT | NULL
+sex: TEXT | NULL
+crash_group_pedestrian_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+pedestrian_position_name: TEXT | NULL
+crash_type_bicycle_name: TEXT | NULL
+sidewalk_present: TEXT | NULL
+bicyclist_initial_direction_of_travel: TEXT | NULL
+person_type: NUMBER | NULL
+motorist_initial_direction_of_travel_name: TEXT | NULL
+state_name: TEXT | NULL
+person_type_name: TEXT | NULL
+bicyclist_position_name: TEXT | NULL
+motorist_initial_direction_of_travel: TEXT | NULL
+crash_location_pedestrian: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.NMPRIOR_2018
+state_number: NUMBER | NULL
+non_motorist_action_circumstances_name: TEXT | NULL
+non_motorist_action_circumstances: NUMBER | NULL
+state_name: TEXT | NULL
+person_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VIOLATN_2019
+state_name: TEXT | NULL
+violations_charged_name: TEXT | NULL
+violations_charged: TEXT | NULL
+consecutive_number: NUMBER | NULL
+state_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VEVENT_2019
+area_of_impact_this_vehicle: NUMBER | NULL
+state_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+area_of_impact_other_vehicle_name: TEXT | NULL
+event_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+state_number: NUMBER | NULL
+sequence_of_events: NUMBER | NULL
+vehicle_number_other_vehicle_name: TEXT | NULL
+vehicle_number_this_vehicle: NUMBER | NULL
+vehicle_number_other_vehicle: NUMBER | NULL
+sequence_of_events_name: TEXT | NULL
+area_of_impact_this_vehicle_name: TEXT | NULL
+area_of_impact_other_vehicle: NUMBER | NULL
+vehicle_event_number: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.DRIMPAIR_2020
+state_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+condition_impairment_at_time_of_crash_driver: NUMBER | NULL
+condition_impairment_at_time_of_crash_driver_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+state_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.FACTOR_2015
+state_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+contributing_circumstances_motor_vehicle: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+contributing_circumstances_motor_vehicle_name: TEXT | NULL
+state_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.CEVENT_2018
+area_of_impact_this_vehicle_name: TEXT | NULL
+area_of_impact_other_vehicle: TEXT | NULL
+vehicle_number_this_vehicle: NUMBER | NULL
+area_of_impact_other_vehicle_name: TEXT | NULL
+event_number: NUMBER | NULL
+state_name: TEXT | NULL
+vehicle_number_other_vehicle: NUMBER | NULL
+area_of_impact_this_vehicle: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+state_number: NUMBER | NULL
+vehicle_number_other_vehicle_name: TEXT | NULL
+sequence_of_events_name: TEXT | NULL
+sequence_of_events: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.ACCIDENT_2018
+milepoint_name: TEXT | NULL
+trafficway_identifier_2: TEXT | NULL
+hour_of_notification_name: TEXT | NULL
+work_zone: NUMBER | NULL
+city_name: TEXT | NULL
+minute_of_ems_arrival_at_hospital_name: TEXT | NULL
+related_factors_crash_level_1_name: TEXT | NULL
+first_harmful_event: NUMBER | NULL
+related_factors_crash_level_2_name: TEXT | NULL
+day_name: TEXT | NULL
+related_factors_crash_level_1: NUMBER | NULL
+number_of_forms_submitted_for_persons_not_in_motor_vehicles: NUMBER | NULL
+ownership_name: TEXT | NULL
+relation_to_trafficway: NUMBER | NULL
+atmospheric_conditions_2: NUMBER | NULL
+relation_to_junction_within_interchange_area: NUMBER | NULL
+day_of_crash: NUMBER | NULL
+number_of_persons_not_in_motor_vehicles_in_transport_mvit: NUMBER | NULL
+city: NUMBER | NULL
+month_of_crash: NUMBER | NULL
+rail_grade_crossing_identifier: TEXT | NULL
+manner_of_collision: NUMBER | NULL
+atmospheric_conditions_name: TEXT | NULL
+atmospheric_conditions: NUMBER | NULL
+longitude_name: TEXT | NULL
+atmospheric_conditions_2_name: TEXT | NULL
+rail_grade_crossing_identifier_name: TEXT | NULL
+county: NUMBER | NULL
+national_highway_system: NUMBER | NULL
+special_jurisdiction_name: TEXT | NULL
+milepoint: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+ownership: NUMBER | NULL
+number_of_persons_in_motor_vehicles_in_transport_mvit: NUMBER | NULL
+type_of_intersection: NUMBER | NULL
+minute_of_notification_name: TEXT | NULL
+trafficway_identifier: TEXT | NULL
+state_name: TEXT | NULL
+minute_of_ems_arrival_at_hospital: NUMBER | NULL
+number_of_fatalities: NUMBER | NULL
+number_of_motor_vehicles_in_transport_mvit: NUMBER | NULL
+month_of_crash_name: TEXT | NULL
+school_bus_related: NUMBER | NULL
+minute_of_crash_name: TEXT | NULL
+county_name: TEXT | NULL
+hour_of_crash: NUMBER | NULL
+day_of_week_name: TEXT | NULL
+relation_to_junction_specific_location_name: TEXT | NULL
+special_jurisdiction: NUMBER | NULL
+atmospheric_conditions_1: NUMBER | NULL
+relation_to_junction_within_interchange_area_name: TEXT | NULL
+longitude: FLOAT | NULL
+related_factors_crash_level_3: NUMBER | NULL
+year_of_crash: NUMBER | NULL
+route_signing: NUMBER | NULL
+number_of_parked_working_vehicles: NUMBER | NULL
+first_harmful_event_name: TEXT | NULL
+light_condition: NUMBER | NULL
+type_of_intersection_name: TEXT | NULL
+timestamp_of_crash: NUMBER | NULL
+light_condition_name: TEXT | NULL
+minute_of_arrival_at_scene_name: TEXT | NULL
+hour_of_arrival_at_scene: NUMBER | NULL
+hour_of_ems_arrival_at_hospital_name: TEXT | NULL
+state_number: NUMBER | NULL
+related_factors_crash_level_3_name: TEXT | NULL
+land_use: NUMBER | NULL
+hour_of_ems_arrival_at_hospital: NUMBER | NULL
+atmospheric_conditions_1_name: TEXT | NULL
+relation_to_junction_specific_location: NUMBER | NULL
+hour_of_crash_name: TEXT | NULL
+number_of_forms_submitted_for_persons_in_motor_vehicles: NUMBER | NULL
+national_highway_system_name: TEXT | NULL
+related_factors_crash_level_2: NUMBER | NULL
+land_use_name: TEXT | NULL
+hour_of_notification: NUMBER | NULL
+day_of_week: NUMBER | NULL
+latitude_name: TEXT | NULL
+latitude: FLOAT | NULL
+number_of_drunk_drivers: NUMBER | NULL
+work_zone_name: TEXT | NULL
+manner_of_collision_name: TEXT | NULL
+minute_of_notification: NUMBER | NULL
+functional_system: NUMBER | NULL
+minute_of_crash: NUMBER | NULL
+number_of_vehicle_forms_submitted_all: NUMBER | NULL
+minute_of_arrival_at_scene: NUMBER | NULL
+functional_system_name: TEXT | NULL
+school_bus_related_name: TEXT | NULL
+hour_of_arrival_at_scene_name: TEXT | NULL
+route_signing_name: TEXT | NULL
+relation_to_trafficway_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.ACCIDENT_2017
+related_factors_crash_level_3_name: TEXT | NULL
+first_harmful_event_name: TEXT | NULL
+related_factors_crash_level_1_name: TEXT | NULL
+atmospheric_conditions_2: NUMBER | NULL
+land_use_name: TEXT | NULL
+ownership: NUMBER | NULL
+city_name: TEXT | NULL
+manner_of_collision: NUMBER | NULL
+special_jurisdiction: NUMBER | NULL
+route_signing_name: TEXT | NULL
+related_factors_crash_level_1: NUMBER | NULL
+number_of_persons_not_in_motor_vehicles_in_transport_mvit: NUMBER | NULL
+minute_of_crash_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+type_of_intersection: NUMBER | NULL
+rail_grade_crossing_identifier: TEXT | NULL
+milepoint: NUMBER | NULL
+number_of_fatalities: NUMBER | NULL
+relation_to_junction_within_interchange_area: NUMBER | NULL
+minute_of_ems_arrival_at_hospital: NUMBER | NULL
+minute_of_notification_name: TEXT | NULL
+trafficway_identifier_2: TEXT | NULL
+work_zone_name: TEXT | NULL
+special_jurisdiction_name: TEXT | NULL
+related_factors_crash_level_2: NUMBER | NULL
+city: NUMBER | NULL
+hour_of_ems_arrival_at_hospital: NUMBER | NULL
+light_condition: NUMBER | NULL
+longitude: FLOAT | NULL
+timestamp_of_crash: NUMBER | NULL
+longitude_name: TEXT | NULL
+minute_of_ems_arrival_at_hospital_name: TEXT | NULL
+number_of_drunk_drivers: NUMBER | NULL
+relation_to_junction_within_interchange_area_name: TEXT | NULL
+number_of_vehicle_forms_submitted_all: NUMBER | NULL
+day_name: TEXT | NULL
+hour_of_crash: NUMBER | NULL
+functional_system_name: TEXT | NULL
+number_of_motor_vehicles_in_transport_mvit: NUMBER | NULL
+state_name: TEXT | NULL
+related_factors_crash_level_3: NUMBER | NULL
+relation_to_junction_specific_location_name: TEXT | NULL
+first_harmful_event: NUMBER | NULL
+atmospheric_conditions_name: TEXT | NULL
+minute_of_crash: NUMBER | NULL
+number_of_persons_in_motor_vehicles_in_transport_mvit: NUMBER | NULL
+year_of_crash: NUMBER | NULL
+manner_of_collision_name: TEXT | NULL
+type_of_intersection_name: TEXT | NULL
+number_of_forms_submitted_for_persons_not_in_motor_vehicles: NUMBER | NULL
+atmospheric_conditions_1: NUMBER | NULL
+relation_to_trafficway_name: TEXT | NULL
+hour_of_arrival_at_scene_name: TEXT | NULL
+school_bus_related_name: TEXT | NULL
+relation_to_trafficway: NUMBER | NULL
+related_factors_crash_level_2_name: TEXT | NULL
+hour_of_arrival_at_scene: NUMBER | NULL
+minute_of_notification: NUMBER | NULL
+national_highway_system_name: TEXT | NULL
+day_of_week: NUMBER | NULL
+county_name: TEXT | NULL
+atmospheric_conditions_2_name: TEXT | NULL
+number_of_parked_working_vehicles: NUMBER | NULL
+latitude: FLOAT | NULL
+day_of_week_name: TEXT | NULL
+route_signing: NUMBER | NULL
+trafficway_identifier: TEXT | NULL
+functional_system: NUMBER | NULL
+light_condition_name: TEXT | NULL
+atmospheric_conditions_1_name: TEXT | NULL
+milepoint_name: TEXT | NULL
+hour_of_crash_name: TEXT | NULL
+minute_of_arrival_at_scene: NUMBER | NULL
+state_number: NUMBER | NULL
+number_of_forms_submitted_for_persons_in_motor_vehicles: NUMBER | NULL
+land_use: NUMBER | NULL
+relation_to_junction_specific_location: NUMBER | NULL
+county: NUMBER | NULL
+minute_of_arrival_at_scene_name: TEXT | NULL
+latitude_name: TEXT | NULL
+ownership_name: TEXT | NULL
+month_of_crash: NUMBER | NULL
+hour_of_ems_arrival_at_hospital_name: TEXT | NULL
+national_highway_system: NUMBER | NULL
+school_bus_related: NUMBER | NULL
+day_of_crash: NUMBER | NULL
+hour_of_notification_name: TEXT | NULL
+work_zone: NUMBER | NULL
+hour_of_notification: NUMBER | NULL
+month_of_crash_name: TEXT | NULL
+rail_grade_crossing_identifier_name: TEXT | NULL
+atmospheric_conditions: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.DRIMPAIR_2015
+vehicle_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+state_number: NUMBER | NULL
+condition_impairment_at_time_of_crash_driver_name: TEXT | NULL
+condition_impairment_at_time_of_crash_driver: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.MANEUVER_2016
+driver_maneuvered_to_avoid_name: TEXT | NULL
+state_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+driver_maneuvered_to_avoid: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VIOLATN_2015
+state_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+violations_charged_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+violations_charged: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.DRIMPAIR_2016
+condition_impairment_at_time_of_crash_driver: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+condition_impairment_at_time_of_crash_driver_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+state_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VSOE_2015
+vehicle_event_number: NUMBER | NULL
+sequence_of_events: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+sequence_of_events_name: TEXT | NULL
+area_of_Impact_associated_with_the_event_name: TEXT | NULL
+area_of_Impact_associated_with_the_event: NUMBER | NULL
+state_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.ACCIDENT_2015
+minute_of_ems_arrival_at_hospital: NUMBER | NULL
+trafficway_identifier: TEXT | NULL
+minute_of_crash: NUMBER | NULL
+related_factors_crash_level_1_name: TEXT | NULL
+relation_to_junction_specific_location_name: TEXT | NULL
+hour_of_arrival_at_scene: NUMBER | NULL
+atmospheric_conditions: NUMBER | NULL
+related_factors_crash_level_3: NUMBER | NULL
+number_of_drunk_drivers: NUMBER | NULL
+day_of_week: NUMBER | NULL
+hour_of_ems_arrival_at_hospital: NUMBER | NULL
+type_of_intersection: TEXT | NULL
+number_of_parked_working_vehicles: NUMBER | NULL
+hour_of_notification: NUMBER | NULL
+school_bus_related: TEXT | NULL
+city: NUMBER | NULL
+relation_to_junction_within_interchange_area: TEXT | NULL
+first_harmful_event: NUMBER | NULL
+ownership_name: TEXT | NULL
+relation_to_trafficway_name: TEXT | NULL
+special_jurisdiction: NUMBER | NULL
+minute_of_arrival_at_scene: NUMBER | NULL
+related_factors_crash_level_2_name: TEXT | NULL
+route_signing_name: TEXT | NULL
+latitude: FLOAT | NULL
+atmospheric_conditions_1_name: TEXT | NULL
+trafficway_identifier_2: TEXT | NULL
+hour_of_crash: NUMBER | NULL
+atmospheric_conditions_name: TEXT | NULL
+land_use_name: TEXT | NULL
+state_number: NUMBER | NULL
+manner_of_collision: NUMBER | NULL
+number_of_forms_submitted_for_persons_in_motor_vehicles: NUMBER | NULL
+number_of_motor_vehicles_in_transport_mvit: NUMBER | NULL
+first_harmful_event_name: TEXT | NULL
+year_of_crash: NUMBER | NULL
+related_factors_crash_level_3_name: TEXT | NULL
+functional_system: NUMBER | NULL
+related_factors_crash_level_1: NUMBER | NULL
+national_highway_system: NUMBER | NULL
+atmospheric_conditions_2: NUMBER | NULL
+number_of_fatalities: NUMBER | NULL
+relation_to_trafficway: NUMBER | NULL
+day_of_crash: NUMBER | NULL
+minute_of_notification: NUMBER | NULL
+related_factors_crash_level_2: NUMBER | NULL
+timestamp_of_crash: NUMBER | NULL
+county: NUMBER | NULL
+special_jurisdiction_name: TEXT | NULL
+manner_of_collision_name: TEXT | NULL
+light_condition: NUMBER | NULL
+milepoint: NUMBER | NULL
+light_condition_name: TEXT | NULL
+number_of_persons_in_motor_vehicles_in_transport_mvit: NUMBER | NULL
+rail_grade_crossing_identifier: TEXT | NULL
+number_of_persons_not_in_motor_vehicles_in_transport_mvit: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+work_zone: TEXT | NULL
+functional_system_name: TEXT | NULL
+month_of_crash: NUMBER | NULL
+longitude: FLOAT | NULL
+relation_to_junction_specific_location: NUMBER | NULL
+number_of_vehicle_forms_submitted_all: NUMBER | NULL
+state_name: TEXT | NULL
+number_of_forms_submitted_for_persons_not_in_motor_vehicles: NUMBER | NULL
+land_use: NUMBER | NULL
+route_signing: NUMBER | NULL
+atmospheric_conditions_1: NUMBER | NULL
+atmospheric_conditions_2_name: TEXT | NULL
+ownership: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VEVENT_2016
+event_number: NUMBER | NULL
+vehicle_event_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+sequence_of_events: NUMBER | NULL
+area_of_impact_this_vehicle: NUMBER | NULL
+area_of_impact_other_vehicle_name: TEXT | NULL
+area_of_impact_other_vehicle: NUMBER | NULL
+area_of_impact_this_vehicle_name: TEXT | NULL
+state_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+sequence_of_events_name: TEXT | NULL
+vehicle_number_this_vehicle: NUMBER | NULL
+vehicle_number_other_vehicle: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.NMCRASH_2015
+non_motorist_contributing_circumstances_name: TEXT | NULL
+person_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+non_motorist_contributing_circumstances: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+state_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VEHICLE_2016
+roadway_surface_condition_name: TEXT | NULL
+related_factors_driver_level_4: NUMBER | NULL
+vin_character_6: TEXT | NULL
+vin_character_9: TEXT | NULL
+first_harmful_event: NUMBER | NULL
+related_factors_vehicle_level_1: NUMBER | NULL
+release_of_hazardous_material_from_the_cargo_compartment: TEXT | NULL
+vin_character_8: TEXT | NULL
+driver_drinking: TEXT | NULL
+previous_recorded_crashes: NUMBER | NULL
+speed_limit: NUMBER | NULL
+critical_event_precrash: NUMBER | NULL
+driver_presence: TEXT | NULL
+vin_character_12: TEXT | NULL
+mcid_issuing_authority: NUMBER | NULL
+mcid_identification_number: TEXT | NULL
+day_of_crash: NUMBER | NULL
+drivers_zip_code: NUMBER | NULL
+vin_character_1: TEXT | NULL
+manner_of_collision: NUMBER | NULL
+fire_occurrence: TEXT | NULL
+vin_character_3: TEXT | NULL
+consecutive_number: NUMBER | NULL
+year_of_last_crash_suspension_or_conviction: NUMBER | NULL
+first_harmful_event_name: TEXT | NULL
+crash_type: NUMBER | NULL
+hazardous_material_class_number: NUMBER | NULL
+commercial_motor_vehicle_license_status: NUMBER | NULL
+compliance_with_license_restrictions: NUMBER | NULL
+minute_of_crash: NUMBER | NULL
+location_of_rollover: TEXT | NULL
+registration_state: NUMBER | NULL
+month_of_crash: NUMBER | NULL
+vehicle_make_name: TEXT | NULL
+roadway_surface_type: TEXT | NULL
+timestamp_of_crash: NUMBER | NULL
+registration_state_name: TEXT | NULL
+gross_vehicle_weight_rating: TEXT | NULL
+non_cdl_license_type: TEXT | NULL
+vehicle_model: NUMBER | NULL
+vin_character_7: TEXT | NULL
+most_harmful_event: NUMBER | NULL
+special_use_name: TEXT | NULL
+motor_carrier_identification_number_mcid: TEXT | NULL
+traffic_control_device: NUMBER | NULL
+vin_character_11: TEXT | NULL
+hour_of_crash: NUMBER | NULL
+related_factors_vehicle_level_2: NUMBER | NULL
+vin_character_4: TEXT | NULL
+drivers_license_state: NUMBER | NULL
+related_factors_driver_level_1: NUMBER | NULL
+roadway_surface_condition: NUMBER | NULL
+previous_recorded_suspensions_and_revocations: NUMBER | NULL
+speeding_related: TEXT | NULL
+previous_dwi_convictions: NUMBER | NULL
+previous_speeding_convictions: NUMBER | NULL
+critical_event_precrash_name: TEXT | NULL
+initial_contact_point: NUMBER | NULL
+compliance_with_cdl_endorsements: TEXT | NULL
+vehicle_make: NUMBER | NULL
+crash_type_name: TEXT | NULL
+non_cdl_license_status: NUMBER | NULL
+pre_impact_location: NUMBER | NULL
+bus_use: TEXT | NULL
+fatalities_in_vehicle: NUMBER | NULL
+year_of_first_crash_suspension_or_conviction: NUMBER | NULL
+jackknife: TEXT | NULL
+make_model_combined: NUMBER | NULL
+pre_impact_stability: TEXT | NULL
+registered_vehicle_owner: NUMBER | NULL
+vehicle_configuration_name: TEXT | NULL
+trafficway_description: TEXT | NULL
+month_of_last_crash_suspension_or_conviction: NUMBER | NULL
+rollover: TEXT | NULL
+vehicle_number: NUMBER | NULL
+registered_vehicle_owner_name: TEXT | NULL
+attempted_avoidance_maneuver: NUMBER | NULL
+hit_and_run: TEXT | NULL
+hazardous_material_involvement: TEXT | NULL
+vehicle_identification_number_vin: TEXT | NULL
+body_type: NUMBER | NULL
+emergency_motor_vehicle_use: TEXT | NULL
+underride_override: NUMBER | NULL
+extent_of_damage: TEXT | NULL
+traffic_control_device_functioning: TEXT | NULL
+related_factors_driver_level_2: NUMBER | NULL
+total_lanes_in_roadway: NUMBER | NULL
+state_number: NUMBER | NULL
+vin_character_10: TEXT | NULL
+body_type_name: TEXT | NULL
+number_of_occupants: NUMBER | NULL
+vin_character_5: TEXT | NULL
+vin_character_2: TEXT | NULL
+vehicle_trailing: TEXT | NULL
+related_factors_driver_level_3: NUMBER | NULL
+roadway_grade: TEXT | NULL
+driver_weight: NUMBER | NULL
+travel_speed: NUMBER | NULL
+month_of_first_crash_suspension_or_conviction: NUMBER | NULL
+special_use: NUMBER | NULL
+cargo_body_type_name: TEXT | NULL
+number_of_motor_vehicles_in_transport_mvit: NUMBER | NULL
+vehicle_removal: TEXT | NULL
+unit_type: TEXT | NULL
+previous_other_moving_violation_convictions: NUMBER | NULL
+driver_height: NUMBER | NULL
+cargo_body_type: NUMBER | NULL
+attempted_avoidance_maneuver_name: TEXT | NULL
+vehicle_configuration: NUMBER | NULL
+roadway_alignment: TEXT | NULL
+hazardous_material_placard: NUMBER | NULL
+pre_event_movement_prior_to_recognition_of_critical_event: NUMBER | NULL
+hazardous_material_identification_number: NUMBER | NULL
+vehicle_model_year: NUMBER | NULL
+license_compliance_with_class_of_vehicle: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.FACTOR_2019
+state_name: TEXT | NULL
+contributing_circumstances_motor_vehicle_name: TEXT | NULL
+contributing_circumstances_motor_vehicle: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+state_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VISION_2019
+state_name: TEXT | NULL
+drivers_vision_obscured_by: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+drivers_vision_obscured_by_name: TEXT | NULL
+state_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.NMIMPAIR_2017
+state_name: TEXT | NULL
+state_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+condition_impairment_at_time_of_crash_non_motorist_name: TEXT | NULL
+person_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+condition_impairment_at_time_of_crash_non_motorist: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.PBTYPE_2016
+consecutive_number: NUMBER | NULL
+state_number: NUMBER | NULL
+sex: TEXT | NULL
+motorist_maneuver: TEXT | NULL
+crash_group_pedestrian_name: TEXT | NULL
+person_type_name: TEXT | NULL
+crash_type_bicycle: NUMBER | NULL
+sidewalk_present: TEXT | NULL
+person_number: NUMBER | NULL
+pedestrian_position: TEXT | NULL
+pedestrian_scenario: TEXT | NULL
+pedestrian_scenario_name: TEXT | NULL
+pedestrian_initial_direction_of_travel: TEXT | NULL
+crash_type_pedestrian: NUMBER | NULL
+bicyclist_position: TEXT | NULL
+crash_type_pedestrian_name: TEXT | NULL
+intersection_leg: TEXT | NULL
+crash_group_pedestrian: NUMBER | NULL
+age: NUMBER | NULL
+school_zone: TEXT | NULL
+bicyclist_initial_direction_of_travel: TEXT | NULL
+crash_location_pedestrian: TEXT | NULL
+crash_group_bicycle_name: TEXT | NULL
+motorist_initial_direction_of_travel: TEXT | NULL
+crash_location_bicycle: TEXT | NULL
+marked_crosswalk_present: TEXT | NULL
+crash_type_bicycle_name: TEXT | NULL
+crash_group_bicycle: NUMBER | NULL
+person_type: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.ACCIDENT_2020
+light_condition_name: TEXT | NULL
+functional_system_name: TEXT | NULL
+national_highway_system_name: TEXT | NULL
+type_of_intersection_name: TEXT | NULL
+first_harmful_event: NUMBER | NULL
+relation_to_trafficway: NUMBER | NULL
+relation_to_junction_specific_location: NUMBER | NULL
+number_of_parked_working_vehicles: NUMBER | NULL
+manner_of_collision: NUMBER | NULL
+special_jurisdiction_name: TEXT | NULL
+latitude: FLOAT | NULL
+relation_to_junction_within_interchange_area: NUMBER | NULL
+year_of_crash: NUMBER | NULL
+land_use: NUMBER | NULL
+minute_of_arrival_at_scene_name: TEXT | NULL
+atmospheric_conditions_1: NUMBER | NULL
+milepoint: NUMBER | NULL
+county_name: TEXT | NULL
+atmospheric_conditions_2: NUMBER | NULL
+relation_to_junction_specific_location_name: TEXT | NULL
+number_of_motor_vehicles_in_transport_mvit: NUMBER | NULL
+timestamp_of_crash: NUMBER | NULL
+relation_to_junction_within_interchange_area_name: TEXT | NULL
+city: NUMBER | NULL
+ownership_name: TEXT | NULL
+state_number: NUMBER | NULL
+land_use_name: TEXT | NULL
+hour_of_notification_name: TEXT | NULL
+atmospheric_conditions_2_name: TEXT | NULL
+longitude: FLOAT | NULL
+hour_of_notification: NUMBER | NULL
+day_of_crash: NUMBER | NULL
+trafficway_identifier: TEXT | NULL
+rail_grade_crossing_identifier_name: TEXT | NULL
+milepoint_name: TEXT | NULL
+route_signing_name: TEXT | NULL
+national_highway_system: NUMBER | NULL
+state_name: TEXT | NULL
+light_condition: NUMBER | NULL
+special_jurisdiction: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+number_of_persons_in_motor_vehicles_in_transport_mvit: NUMBER | NULL
+minute_of_arrival_at_scene: NUMBER | NULL
+work_zone_name: TEXT | NULL
+hour_of_ems_arrival_at_hospital_name: TEXT | NULL
+minute_of_crash: NUMBER | NULL
+trafficway_identifier_2: TEXT | NULL
+hour_of_ems_arrival_at_hospital: NUMBER | NULL
+number_of_vehicle_forms_submitted_all: NUMBER | NULL
+county: NUMBER | NULL
+work_zone: NUMBER | NULL
+minute_of_ems_arrival_at_hospital: NUMBER | NULL
+number_of_persons_not_in_motor_vehicles_in_transport_mvit: NUMBER | NULL
+number_of_drunk_drivers: NUMBER | NULL
+manner_of_collision_name: TEXT | NULL
+type_of_intersection: NUMBER | NULL
+relation_to_trafficway_name: TEXT | NULL
+day_name: TEXT | NULL
+hour_of_arrival_at_scene_name: TEXT | NULL
+day_of_week: NUMBER | NULL
+city_name: TEXT | NULL
+first_harmful_event_name: TEXT | NULL
+functional_system: NUMBER | NULL
+number_of_forms_submitted_for_persons_in_motor_vehicles: NUMBER | NULL
+hour_of_arrival_at_scene: NUMBER | NULL
+number_of_forms_submitted_for_persons_not_in_motor_vehicles: NUMBER | NULL
+minute_of_crash_name: TEXT | NULL
+longitude_name: TEXT | NULL
+latitude_name: TEXT | NULL
+route_signing: NUMBER | NULL
+day_of_week_name: TEXT | NULL
+rail_grade_crossing_identifier: TEXT | NULL
+hour_of_crash: NUMBER | NULL
+hour_of_crash_name: TEXT | NULL
+ownership: NUMBER | NULL
+minute_of_notification: NUMBER | NULL
+atmospheric_conditions_1_name: TEXT | NULL
+month_of_crash_name: TEXT | NULL
+minute_of_notification_name: TEXT | NULL
+month_of_crash: NUMBER | NULL
+minute_of_ems_arrival_at_hospital_name: TEXT | NULL
+number_of_fatalities: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VINDECODE_2016
+fuel: TEXT | NULL
+fuel_code: TEXT | NULL
+vehicle_type: TEXT | NULL
+num_of_doors: NUMBER | NULL
+drive_type_2: TEXT | NULL
+vehicle_manufacturer_name: TEXT | NULL
+num_of_wheels_by_power_train: NUMBER | NULL
+rear_tire_size_code: TEXT | NULL
+brakes_abs_code: TEXT | NULL
+rear_tire_size: TEXT | NULL
+valves_total: NUMBER | NULL
+body_style_code: TEXT | NULL
+plant_state_code: TEXT | NULL
+restraint_type_code: TEXT | NULL
+vehicle_number: NUMBER | NULL
+total_battery_power: TEXT | NULL
+country_sold_code: TEXT | NULL
+type_of_fuel: TEXT | NULL
+plant_country: TEXT | NULL
+marketing_year: NUMBER | NULL
+cycle_count: NUMBER | NULL
+battery_voltage: TEXT | NULL
+axle_type_front_axle_code: TEXT | NULL
+daytime_running_lights_1: TEXT | NULL
+cylinder_count_code: TEXT | NULL
+vehicle_make: TEXT | NULL
+turbocharger_flag: TEXT | NULL
+valves_per_cylinder: NUMBER | NULL
+head_configuration_1: TEXT | NULL
+vehicle_trim_4: TEXT | NULL
+block_type: TEXT | NULL
+origin_code: TEXT | NULL
+security_type: TEXT | NULL
+state_number: NUMBER | NULL
+base_price: TEXT | NULL
+num_of_barrels: TEXT | NULL
+plant_country_code: TEXT | NULL
+brakes_abs_description: TEXT | NULL
+displacement_cid: NUMBER | NULL
+front_tire_size: TEXT | NULL
+vehicle_trim: TEXT | NULL
+drive_type_1: TEXT | NULL
+number_of_wheels: NUMBER | NULL
+distance_between_axles_for_particular_series: TEXT | NULL
+plant_city: TEXT | NULL
+gross_vehicle_weights_range_code: NUMBER | NULL
+engine_manufacture: TEXT | NULL
+engine_model: TEXT | NULL
+origin: TEXT | NULL
+carburetion_types_code: TEXT | NULL
+vehicle_manufacturer_code: TEXT | NULL
+daytime_running_lights_2: TEXT | NULL
+rear_tire: NUMBER | NULL
+motorcycles_body_style: TEXT | NULL
+supercharge_flag_description: TEXT | NULL
+cab_configuration: TEXT | NULL
+standard_segmentation: TEXT | NULL
+duty_type_code: TEXT | NULL
+model_code: TEXT | NULL
+variable_valve_timing_flag: TEXT | NULL
+axle_type_front_axle: TEXT | NULL
+turbocharger_flag_description: TEXT | NULL
+front_tire_pressure: NUMBER | NULL
+engine_manufacture_code: TEXT | NULL
+front_tire: NUMBER | NULL
+axle_type_rear_axle_code: TEXT | NULL
+standard_segmentation_code: TEXT | NULL
+displacement_cc: NUMBER | NULL
+head_configuration_2: TEXT | NULL
+engine_code: TEXT | NULL
+battery_type: TEXT | NULL
+shipping_weight: NUMBER | NULL
+motorcycles_body_style_code: TEXT | NULL
+vehicle_type_code: TEXT | NULL
+security_type_code: TEXT | NULL
+brake_type: TEXT | NULL
+brake_type_code: TEXT | NULL
+rear_tire_pressure: NUMBER | NULL
+make_name: TEXT | NULL
+carburetion_types: TEXT | NULL
+vehicle_trim_3: TEXT | NULL
+vehicle_trim_1: TEXT | NULL
+bed_length: TEXT | NULL
+axle_type_rear_axle: TEXT | NULL
+cab_configuration_code: TEXT | NULL
+front_tire_size_code: TEXT | NULL
+is_incomplete: TEXT | NULL
+supercharge_flag: TEXT | NULL
+displacement_liters: FLOAT | NULL
+vehicle_trim_2: TEXT | NULL
+tonnage_rating: TEXT | NULL
+plant_code: TEXT | NULL
+bed_length_code: TEXT | NULL
+type_of_fuel_code: TEXT | NULL
+battery_type_code: TEXT | NULL
+gross_vehicle_weights_range: TEXT | NULL
+plant_state: TEXT | NULL
+consecutive_number: NUMBER | NULL
+restraint_type: TEXT | NULL
+body_style: TEXT | NULL
+duty_type: TEXT | NULL
+country_sold: TEXT | NULL
+distance_between_axles_for_base_model: FLOAT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VSOE_2016
+state_number: NUMBER | NULL
+area_of_Impact_associated_with_the_event_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+sequence_of_events: NUMBER | NULL
+sequence_of_events_name: TEXT | NULL
+area_of_Impact_associated_with_the_event: NUMBER | NULL
+vehicle_event_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.NMCRASH_2020
+non_motorist_contributing_circumstances_name: TEXT | NULL
+person_number: NUMBER | NULL
+non_motorist_contributing_circumstances: NUMBER | NULL
+state_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+state_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.PERSON_2016
+vehicle_make_name: TEXT | NULL
+fire_occurrence: TEXT | NULL
+drug_test_type1: TEXT | NULL
+state_number: NUMBER | NULL
+sex: TEXT | NULL
+indication_of_misuse_of_restraint_system_helmet: TEXT | NULL
+police_reported_drug_involvement: TEXT | NULL
+drug_test_type4_name: TEXT | NULL
+hour_of_death: NUMBER | NULL
+related_factors_person_level3: NUMBER | NULL
+number_of_motor_vehicle_striking_non_motorist: NUMBER | NULL
+lag_hours: NUMBER | NULL
+special_use_name: TEXT | NULL
+hispanic_origin: NUMBER | NULL
+month_of_death: NUMBER | NULL
+initial_contact_point_name: TEXT | NULL
+ejection_name: TEXT | NULL
+month_of_crash: NUMBER | NULL
+number_of_motor_vehicles_in_transport_mvit: NUMBER | NULL
+hispanic_origin_name: TEXT | NULL
+county: NUMBER | NULL
+transported_to_first_treatment_facility: NUMBER | NULL
+died_at_scene_en_route: TEXT | NULL
+air_bag_deployed_name: TEXT | NULL
+initial_contact_point: NUMBER | NULL
+functional_system: TEXT | NULL
+extrication: TEXT | NULL
+fatal_injury_at_work: TEXT | NULL
+person_type: NUMBER | NULL
+year_of_death: NUMBER | NULL
+emergency_motor_vehicle_use: TEXT | NULL
+alcohol_test_status2: TEXT | NULL
+non_motorist_location_at_time_of_crash_name: TEXT | NULL
+first_harmful_event_name: TEXT | NULL
+person_number: NUMBER | NULL
+race: NUMBER | NULL
+transported_to_first_treatment_facility_name: TEXT | NULL
+method_of_drug_determination_by_police: TEXT | NULL
+method_of_alcohol_determination_by_police: TEXT | NULL
+land_use_name: TEXT | NULL
+related_factors_person_level1: NUMBER | NULL
+drug_test_type6_name: TEXT | NULL
+timestamp_of_crash: NUMBER | NULL
+non_motorist_location_at_time_of_crash: NUMBER | NULL
+manner_of_collision: NUMBER | NULL
+first_harmful_event: NUMBER | NULL
+alcohol_test_status3_name: TEXT | NULL
+functional_system_name: TEXT | NULL
+rollover: TEXT | NULL
+ejection_path_name: TEXT | NULL
+day_of_crash: NUMBER | NULL
+alcohol_test_status3: TEXT | NULL
+vehicle_make: NUMBER | NULL
+restraint_system_helmet_use: NUMBER | NULL
+drug_test_status: TEXT | NULL
+minute_of_death: NUMBER | NULL
+drug_test_type2: TEXT | NULL
+vehicle_number: NUMBER | NULL
+ejection: NUMBER | NULL
+day_of_death: NUMBER | NULL
+body_type: NUMBER | NULL
+drug_test_type3: TEXT | NULL
+hour_of_crash: NUMBER | NULL
+drug_test_type5_name: TEXT | NULL
+race_name: TEXT | NULL
+seating_position: NUMBER | NULL
+age: NUMBER | NULL
+body_type_name: TEXT | NULL
+drug_test_type4: NUMBER | NULL
+land_use: TEXT | NULL
+person_type_name: TEXT | NULL
+ejection_path: NUMBER | NULL
+police_reported_alcohol_involvement: TEXT | NULL
+injury_severity: NUMBER | NULL
+restraint_system_helmet_use_name: TEXT | NULL
+make_model_combined: NUMBER | NULL
+special_use: NUMBER | NULL
+manner_of_collision_name: TEXT | NULL
+related_factors_person_level2: NUMBER | NULL
+lag_minutes: NUMBER | NULL
+alcohol_test_status1: TEXT | NULL
+air_bag_deployed: NUMBER | NULL
+vehicle_trailing: TEXT | NULL
+injury_severity_name: TEXT | NULL
+drug_test_type6: NUMBER | NULL
+seating_position_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+school_bus_related: TEXT | NULL
+drug_test_type5: NUMBER | NULL
+death_time: NUMBER | NULL
+minute_of_crash: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.NMPRIOR_2015
+vehicle_number: NUMBER | NULL
+person_number: NUMBER | NULL
+non_motorist_action_circumstances_name: TEXT | NULL
+non_motorist_action_circumstances: NUMBER | NULL
+state_number: NUMBER | NULL
+state_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.SAFETYEQ_2018
+state_number: NUMBER | NULL
+nm_light_name: TEXT | NULL
+nm_helmet_name: TEXT | NULL
+person_number: NUMBER | NULL
+nm_helmet: TEXT | NULL
+nm_othpro_name: TEXT | NULL
+nm_propad_name: TEXT | NULL
+nm_othpre: TEXT | NULL
+state_name: TEXT | NULL
+nm_refclo_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+nm_light: TEXT | NULL
+nm_othpro: TEXT | NULL
+nm_propad: TEXT | NULL
+nm_othpre_name: TEXT | NULL
+nm_refclo: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.NMIMPAIR_2015
+vehicle_number: NUMBER | NULL
+condition_impairment_at_time_of_crash_non_motorist_name: TEXT | NULL
+condition_impairment_at_time_of_crash_non_motorist: NUMBER | NULL
+state_number: NUMBER | NULL
+person_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VEVENT_2018
+area_of_impact_this_vehicle: NUMBER | NULL
+area_of_impact_other_vehicle: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+sequence_of_events_name: TEXT | NULL
+event_number: NUMBER | NULL
+sequence_of_events: NUMBER | NULL
+vehicle_number_other_vehicle: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+area_of_impact_this_vehicle_name: TEXT | NULL
+state_name: TEXT | NULL
+area_of_impact_other_vehicle_name: TEXT | NULL
+state_number: NUMBER | NULL
+vehicle_number_other_vehicle_name: TEXT | NULL
+vehicle_event_number: TEXT | NULL
+vehicle_number_this_vehicle: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.PBTYPE_2017
+bicyclist_position: TEXT | NULL
+intersection_leg: TEXT | NULL
+bicyclist_initial_direction_of_travel_name: TEXT | NULL
+sidewalk_present: TEXT | NULL
+crash_group_bicycle: NUMBER | NULL
+crash_type_bicycle_name: TEXT | NULL
+pedestrian_scenario: TEXT | NULL
+person_type_name: TEXT | NULL
+crash_location_pedestrian_name: TEXT | NULL
+pedestrian_scenario_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+motorist_maneuver_name: TEXT | NULL
+pedestrian_initial_direction_of_travel: TEXT | NULL
+sex_name: TEXT | NULL
+crash_type_pedestrian_name: TEXT | NULL
+crash_group_pedestrian: NUMBER | NULL
+age: NUMBER | NULL
+crash_group_pedestrian_name: TEXT | NULL
+pedestrian_position_name: TEXT | NULL
+motorist_initial_direction_of_travel_name: TEXT | NULL
+sex: TEXT | NULL
+sidewalk_present_name: TEXT | NULL
+motorist_initial_direction_of_travel: TEXT | NULL
+marked_crosswalk_present: TEXT | NULL
+person_number: NUMBER | NULL
+crash_location_bicycle: TEXT | NULL
+crash_group_bicycle_name: TEXT | NULL
+intersection_leg_name: TEXT | NULL
+school_zone: TEXT | NULL
+crash_type_bicycle: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+bicyclist_position_name: TEXT | NULL
+state_number: NUMBER | NULL
+crash_location_pedestrian: TEXT | NULL
+school_zone_name: TEXT | NULL
+person_type: NUMBER | NULL
+crash_type_pedestrian: NUMBER | NULL
+pedestrian_initial_direction_of_travel_name: TEXT | NULL
+motorist_maneuver: TEXT | NULL
+crash_location_bicycle_name: TEXT | NULL
+marked_crosswalk_present_name: TEXT | NULL
+bicyclist_initial_direction_of_travel: TEXT | NULL
+pedestrian_position: TEXT | NULL
+age_name: TEXT | NULL
+state_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VEHICLE_2015
+day_of_crash: NUMBER | NULL
+underride_override: NUMBER | NULL
+cargo_body_type_name: TEXT | NULL
+pre_event_movement_prior_to_recognition_of_critical_event: NUMBER | NULL
+driver_presence: TEXT | NULL
+attempted_avoidance_maneuver_name: TEXT | NULL
+bus_use: TEXT | NULL
+year_of_last_crash_suspension_or_conviction: NUMBER | NULL
+vin_character_10: TEXT | NULL
+vehicle_make: NUMBER | NULL
+roadway_surface_type: TEXT | NULL
+drivers_zip_code: NUMBER | NULL
+related_factors_driver_level_1: NUMBER | NULL
+most_harmful_event: NUMBER | NULL
+crash_type: NUMBER | NULL
+mcid_identification_number: TEXT | NULL
+vehicle_model_year: NUMBER | NULL
+vehicle_removal: TEXT | NULL
+special_use: NUMBER | NULL
+traffic_control_device_functioning: TEXT | NULL
+jackknife: TEXT | NULL
+related_factors_vehicle_level_1: NUMBER | NULL
+crash_type_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+body_type_name: TEXT | NULL
+timestamp_of_crash: NUMBER | NULL
+special_use_name: TEXT | NULL
+hazardous_material_class_number: NUMBER | NULL
+vehicle_make_name: TEXT | NULL
+previous_recorded_suspensions_and_revocations: NUMBER | NULL
+mcid_issuing_authority: NUMBER | NULL
+initial_contact_point: NUMBER | NULL
+hit_and_run: TEXT | NULL
+hour_of_crash: NUMBER | NULL
+critical_event_precrash_name: TEXT | NULL
+make_model_combined: NUMBER | NULL
+related_factors_driver_level_3: NUMBER | NULL
+hazardous_material_identification_number: NUMBER | NULL
+unit_type: TEXT | NULL
+vin_character_12: TEXT | NULL
+vin_character_6: TEXT | NULL
+fire_occurrence: TEXT | NULL
+attempted_avoidance_maneuver: NUMBER | NULL
+driver_drinking: TEXT | NULL
+manner_of_collision: NUMBER | NULL
+extent_of_damage: TEXT | NULL
+rollover: TEXT | NULL
+vin_character_4: TEXT | NULL
+vehicle_configuration_name: TEXT | NULL
+driver_height: NUMBER | NULL
+roadway_alignment: TEXT | NULL
+travel_speed: NUMBER | NULL
+related_factors_vehicle_level_2: NUMBER | NULL
+previous_dwi_convictions: NUMBER | NULL
+related_factors_driver_level_4: NUMBER | NULL
+emergency_motor_vehicle_use: TEXT | NULL
+vehicle_trailing: TEXT | NULL
+pre_impact_stability: TEXT | NULL
+hazardous_material_involvement: TEXT | NULL
+traffic_control_device: NUMBER | NULL
+compliance_with_cdl_endorsements: TEXT | NULL
+driver_weight: NUMBER | NULL
+vin_character_1: TEXT | NULL
+roadway_surface_condition: NUMBER | NULL
+year_of_first_crash_suspension_or_conviction: NUMBER | NULL
+vin_character_5: TEXT | NULL
+month_of_first_crash_suspension_or_conviction: NUMBER | NULL
+roadway_surface_condition_name: TEXT | NULL
+vin_character_11: TEXT | NULL
+minute_of_crash: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+previous_recorded_crashes: NUMBER | NULL
+vin_character_8: TEXT | NULL
+registration_state: NUMBER | NULL
+speed_limit: NUMBER | NULL
+vin_character_9: TEXT | NULL
+number_of_motor_vehicles_in_transport_mvit: NUMBER | NULL
+speeding_related: TEXT | NULL
+month_of_crash: NUMBER | NULL
+vehicle_model: NUMBER | NULL
+fatalities_in_vehicle: NUMBER | NULL
+registration_state_name: TEXT | NULL
+non_cdl_license_type: TEXT | NULL
+motor_carrier_identification_number_mcid: TEXT | NULL
+related_factors_driver_level_2: NUMBER | NULL
+first_harmful_event_name: TEXT | NULL
+previous_speeding_convictions: NUMBER | NULL
+vin_character_3: TEXT | NULL
+vehicle_configuration: NUMBER | NULL
+critical_event_precrash: NUMBER | NULL
+state_number: NUMBER | NULL
+commercial_motor_vehicle_license_status: NUMBER | NULL
+release_of_hazardous_material_from_the_cargo_compartment: TEXT | NULL
+location_of_rollover: TEXT | NULL
+month_of_last_crash_suspension_or_conviction: NUMBER | NULL
+compliance_with_license_restrictions: NUMBER | NULL
+number_of_occupants: NUMBER | NULL
+total_lanes_in_roadway: NUMBER | NULL
+body_type: NUMBER | NULL
+vin_character_2: TEXT | NULL
+first_harmful_event: NUMBER | NULL
+non_cdl_license_status: NUMBER | NULL
+gross_vehicle_weight_rating: TEXT | NULL
+cargo_body_type: NUMBER | NULL
+license_compliance_with_class_of_vehicle: TEXT | NULL
+pre_impact_location: NUMBER | NULL
+registered_vehicle_owner: NUMBER | NULL
+drivers_license_state: NUMBER | NULL
+vehicle_identification_number_vin: TEXT | NULL
+hazardous_material_placard: NUMBER | NULL
+trafficway_description: TEXT | NULL
+roadway_grade: TEXT | NULL
+vin_character_7: TEXT | NULL
+previous_other_moving_violation_convictions: NUMBER | NULL
+registered_vehicle_owner_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.PARKWORK_2020
+emergency_motor_vehicle_use_name: TEXT | NULL
+hit_and_run_name: TEXT | NULL
+pvpicbodyclassname: TEXT | NULL
+minute_of_crash_name: TEXT | NULL
+vin_character_12: TEXT | NULL
+vin_character_11: TEXT | NULL
+vin_character_7: TEXT | NULL
+pgvwr_to: TEXT | NULL
+number_of_occupants: NUMBER | NULL
+vin_character_4: TEXT | NULL
+pgvwr_from: TEXT | NULL
+pvpicbodyclass: TEXT | NULL
+mcid_identification_number: TEXT | NULL
+special_use_name: TEXT | NULL
+vehicle_make_name: TEXT | NULL
+pvpicmake: TEXT | NULL
+registration_state_name: TEXT | NULL
+day_of_crash: NUMBER | NULL
+number_of_occupants_name: TEXT | NULL
+month_of_crash_name: TEXT | NULL
+registered_vehicle_owner: NUMBER | NULL
+pgvwr_toname: TEXT | NULL
+unit_type: NUMBER | NULL
+first_harmful_event_name: TEXT | NULL
+ptrlr3vinname: TEXT | NULL
+pvpicmodel: TEXT | NULL
+vehicle_configuration_name: TEXT | NULL
+ptrlr2vin: TEXT | NULL
+vin_character_8: TEXT | NULL
+ptrlr2gvwrname: TEXT | NULL
+hazardous_material_placard: NUMBER | NULL
+release_of_hazardous_material_from_the_cargo_compartment_name: TEXT | NULL
+registration_state: NUMBER | NULL
+vin_character_10: TEXT | NULL
+vehicle_configuration: NUMBER | NULL
+most_harmful_event: NUMBER | NULL
+hour_of_crash: NUMBER | NULL
+hit_and_run: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+bus_use_name: TEXT | NULL
+state_number: NUMBER | NULL
+vin_character_3: TEXT | NULL
+hour_of_crash_name: TEXT | NULL
+first_harmful_event: NUMBER | NULL
+registered_vehicle_owner_name: TEXT | NULL
+vin_character_2: TEXT | NULL
+vehicle_removal_name: TEXT | NULL
+body_type_name: TEXT | NULL
+fire_occurrence_name: TEXT | NULL
+release_of_hazardous_material_from_the_cargo_compartment: NUMBER | NULL
+most_harmful_event_name: TEXT | NULL
+vehicle_model_year: NUMBER | NULL
+ptrlr2vinname: TEXT | NULL
+minute_of_crash: NUMBER | NULL
+mcid_issuing_authority_name: TEXT | NULL
+fire_occurrence: NUMBER | NULL
+special_use: NUMBER | NULL
+motor_carrier_identification_number_name: TEXT | NULL
+make_model_combined: TEXT | NULL
+bus_use: NUMBER | NULL
+ptrlr1vin: TEXT | NULL
+pgvwr_fromname: TEXT | NULL
+ptrlr1gvwr: TEXT | NULL
+motor_carrier_identification_number: TEXT | NULL
+vehicle_number: NUMBER | NULL
+cargo_body_type: NUMBER | NULL
+vehicle_model: NUMBER | NULL
+extent_of_damage: NUMBER | NULL
+vehicle_make: NUMBER | NULL
+pvpicmodelname: TEXT | NULL
+picfinalbodyname: TEXT | NULL
+ptrlr2gvwr: TEXT | NULL
+ptrlr1vinname: TEXT | NULL
+ptrlr3vin: TEXT | NULL
+fatalities_in_vehicle: NUMBER | NULL
+vehicle_model_year_name: TEXT | NULL
+hazardous_material_identification_number_name: TEXT | NULL
+ptrlr1gvwrname: TEXT | NULL
+unit_type_name: TEXT | NULL
+mcid_identification_number_name: TEXT | NULL
+number_of_motor_vehicles_in_transport_mvit: NUMBER | NULL
+initial_contact_point: NUMBER | NULL
+vehicle_trailing: NUMBER | NULL
+vehicle_identification_number_vin_name: TEXT | NULL
+mcid_issuing_authority: NUMBER | NULL
+extent_of_damage_name: TEXT | NULL
+picfinalbody: TEXT | NULL
+day_of_crash_name: TEXT | NULL
+underride_override_name: TEXT | NULL
+vehicle_identification_number_vin: TEXT | NULL
+pvpicmakename: TEXT | NULL
+vehicle_removal: NUMBER | NULL
+hazardous_material_class_number_name: TEXT | NULL
+hazardous_material_involvement_name: TEXT | NULL
+cargo_body_type_name: TEXT | NULL
+month_of_crash: NUMBER | NULL
+hazardous_material_placard_name: TEXT | NULL
+underride_override: NUMBER | NULL
+ptrlr3gvwrname: TEXT | NULL
+vehicle_trailing_name: TEXT | NULL
+manner_of_collision: NUMBER | NULL
+hazardous_material_class_number: NUMBER | NULL
+vin_character_1: TEXT | NULL
+vin_character_5: TEXT | NULL
+hazardous_material_involvement: NUMBER | NULL
+vin_character_9: TEXT | NULL
+vin_character_6: TEXT | NULL
+manner_of_collision_name: TEXT | NULL
+emergency_motor_vehicle_use: NUMBER | NULL
+body_type: NUMBER | NULL
+ptrlr3gvwr: TEXT | NULL
+initial_contact_point_name: TEXT | NULL
+hazardous_material_identification_number: NUMBER | NULL
+state_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.DISTRACT_2019
+driver_distracted_by_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+state_number: NUMBER | NULL
+state_name: TEXT | NULL
+driver_distracted_by: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.ACCIDENT_2019
+trafficway_identifier: TEXT | NULL
+related_factors_crash_level_3_name: TEXT | NULL
+manner_of_collision_name: TEXT | NULL
+work_zone_name: TEXT | NULL
+related_factors_crash_level_2_name: TEXT | NULL
+hour_of_notification: NUMBER | NULL
+light_condition: NUMBER | NULL
+longitude: FLOAT | NULL
+atmospheric_conditions_2_name: TEXT | NULL
+month_of_crash_name: TEXT | NULL
+number_of_vehicle_forms_submitted_all: NUMBER | NULL
+special_jurisdiction_name: TEXT | NULL
+minute_of_notification: NUMBER | NULL
+number_of_fatalities: NUMBER | NULL
+ownership: NUMBER | NULL
+milepoint_name: TEXT | NULL
+minute_of_crash: NUMBER | NULL
+state_number: NUMBER | NULL
+atmospheric_conditions_1: NUMBER | NULL
+light_condition_name: TEXT | NULL
+national_highway_system: NUMBER | NULL
+ownership_name: TEXT | NULL
+related_factors_crash_level_2: NUMBER | NULL
+number_of_forms_submitted_for_persons_in_motor_vehicles: NUMBER | NULL
+school_bus_related_name: TEXT | NULL
+minute_of_notification_name: TEXT | NULL
+atmospheric_conditions_2: NUMBER | NULL
+functional_system: NUMBER | NULL
+latitude: FLOAT | NULL
+hour_of_ems_arrival_at_hospital: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+manner_of_collision: NUMBER | NULL
+type_of_intersection_name: TEXT | NULL
+number_of_motor_vehicles_in_transport_mvit: NUMBER | NULL
+atmospheric_conditions: NUMBER | NULL
+county_name: TEXT | NULL
+hour_of_notification_name: TEXT | NULL
+minute_of_arrival_at_scene_name: TEXT | NULL
+hour_of_arrival_at_scene: NUMBER | NULL
+milepoint: NUMBER | NULL
+special_jurisdiction: NUMBER | NULL
+route_signing: NUMBER | NULL
+rail_grade_crossing_identifier_name: TEXT | NULL
+state_name: TEXT | NULL
+related_factors_crash_level_3: NUMBER | NULL
+number_of_persons_not_in_motor_vehicles_in_transport_mvit: NUMBER | NULL
+month_of_crash: NUMBER | NULL
+county: NUMBER | NULL
+day_of_crash: NUMBER | NULL
+type_of_intersection: NUMBER | NULL
+city_name: TEXT | NULL
+functional_system_name: TEXT | NULL
+number_of_parked_working_vehicles: NUMBER | NULL
+land_use: NUMBER | NULL
+latitude_name: TEXT | NULL
+minute_of_ems_arrival_at_hospital_name: TEXT | NULL
+related_factors_crash_level_1: NUMBER | NULL
+hour_of_ems_arrival_at_hospital_name: TEXT | NULL
+relation_to_trafficway_name: TEXT | NULL
+first_harmful_event_name: TEXT | NULL
+day_name: TEXT | NULL
+number_of_persons_in_motor_vehicles_in_transport_mvit: NUMBER | NULL
+atmospheric_conditions_name: TEXT | NULL
+relation_to_junction_specific_location_name: TEXT | NULL
+national_highway_system_name: TEXT | NULL
+timestamp_of_crash: NUMBER | NULL
+relation_to_junction_within_interchange_area: NUMBER | NULL
+atmospheric_conditions_1_name: TEXT | NULL
+relation_to_junction_specific_location: NUMBER | NULL
+year_of_crash: NUMBER | NULL
+minute_of_ems_arrival_at_hospital: NUMBER | NULL
+number_of_drunk_drivers: NUMBER | NULL
+work_zone: NUMBER | NULL
+hour_of_arrival_at_scene_name: TEXT | NULL
+school_bus_related: NUMBER | NULL
+day_of_week: NUMBER | NULL
+minute_of_crash_name: TEXT | NULL
+relation_to_trafficway: NUMBER | NULL
+related_factors_crash_level_1_name: TEXT | NULL
+rail_grade_crossing_identifier: TEXT | NULL
+trafficway_identifier_2: TEXT | NULL
+minute_of_arrival_at_scene: NUMBER | NULL
+hour_of_crash_name: TEXT | NULL
+route_signing_name: TEXT | NULL
+hour_of_crash: NUMBER | NULL
+day_of_week_name: TEXT | NULL
+first_harmful_event: NUMBER | NULL
+number_of_forms_submitted_for_persons_not_in_motor_vehicles: NUMBER | NULL
+longitude_name: TEXT | NULL
+land_use_name: TEXT | NULL
+city: NUMBER | NULL
+relation_to_junction_within_interchange_area_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.CEVENT_2017
+area_of_impact_this_vehicle_name: TEXT | NULL
+area_of_impact_other_vehicle_name: TEXT | NULL
+event_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+area_of_impact_other_vehicle: TEXT | NULL
+vehicle_number_this_vehicle: NUMBER | NULL
+sequence_of_events: NUMBER | NULL
+sequence_of_events_name: TEXT | NULL
+state_name: TEXT | NULL
+state_number: NUMBER | NULL
+area_of_impact_this_vehicle: NUMBER | NULL
+vehicle_number_other_vehicle: NUMBER | NULL
+vehicle_number_other_vehicle_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VSOE_2017
+consecutive_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+state_name: TEXT | NULL
+state_number: NUMBER | NULL
+sequence_of_events: NUMBER | NULL
+sequence_of_events_name: TEXT | NULL
+area_of_Impact_associated_with_the_event_name: TEXT | NULL
+vehicle_event_number: NUMBER | NULL
+area_of_Impact_associated_with_the_event: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.DISTRACT_2018
+vehicle_number: NUMBER | NULL
+driver_distracted_by: NUMBER | NULL
+driver_distracted_by_name: TEXT | NULL
+state_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+state_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.PERSON_2015
+alcohol_test_status1: TEXT | This data element identifies whether an alcohol test was given to this person. 0 Test Not Given 1 Test Refused 2 Test Given 8 Not Reported -- Unknown if Tested/Not Reported 9 Unknown if Tested
+race_name: TEXT | This data element records the race of this person from the death certificate.
+drug_test_type2: TEXT | This data element identifies the type of drug test that was given to this person. 0 Test Not Given 1 Blood Test 2 Urine Test 3 Both Blood and Urine Tests 6 Not Reported 7 Unknown Test Type 8 Other Test Type -- Unknown if Tested/Not Reported 9 Unknown if Tested
+drug_test_type3: TEXT | This data element identifies the type of drug test that was given to this person. 0 Test Not Given 1 Blood Test 2 Urine Test 3 Both Blood and Urine Tests 6 Not Reported 7 Unknown Test Type 8 Other Test Type -- Unknown if Tested/Not Reported 9 Unknown if Tested
+injury_severity_name: TEXT | This data element describes the severity of the injury to this person in the crash using the KABCO scale.
+land_use_name: TEXT | 1 (Rural), 2 (Urban), 6 (Trafficway Not in State Inventory), 8 (Not Reported) and 9 (Unknown).
+air_bag_deployed: NUMBER | This data element records air bag availability and deployment for this person as reported in the case materials. For more info on the codes, please look at <P12 Air Bag Deployed> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+initial_contact_point: NUMBER | This data element identifies the area on this vehicle that produced the first instance of injury to non-motorists or occupants of this vehicle, or that resulted in the first instance of damage to other property or to this vehicle. For more info on the codes, please look at <V28A Initial Contact Point> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+hispanic_origin_name: TEXT | This data element records the Hispanic origin of this person from the death certificate.
+method_of_drug_determination_by_police: TEXT | This data element identifies the method by which the police made the determination as to whether drugs were involved for this person. 1 Evidential Test (Blood, Urine) 2 Drug Recognition Technician (DRT) Determination 3 Behavioral 7 Other 8 Not Reported
+person_type_name: TEXT | This data element describes the role of this person involved in the crash.
+related_factors_person_level1: NUMBER | This data element records factors related to motor vehicle occupants other than drivers and persons not in motor vehicles as expressed by the investigating officer. For more info on the codes, please look at <P26/NM25 Related Factors- Person Level> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+ejection_path_name: TEXT | This data element identifies the path by which this person was ejected from the vehicle.
+restraint_system_helmet_use_name: TEXT | This data element records the restraint equipment in use by the occupant, or the helmet in use by a motorcyclist, at the time of the crash.
+school_bus_related: TEXT | This data element identifies if a school bus, or motor vehicle functioning as a school bus, is related to the crash. 0 No 1 Yes -- Not Reported
+seating_position_name: TEXT | This data element identifies the location of this person in or on the vehicle.
+method_of_alcohol_determination_by_police: TEXT | This data element describes the method by which the police made the determination as to whether alcohol was involved for this person. 1 Evidential Test (Breath, Blood, Urine) 2 Preliminary Breath Test (PBT) 3 Behavioral 4 Passive Alcohol Sensor (PAS) 5 Observed 8 Other (e.g., Saliva Test) 9 Not Reported
+drug_test_type5: NUMBER | This data element identifies the drug test result for this person. For more info on the codes, please look at <P21C/NM20C Drug Test Result> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+month_of_death: NUMBER | This data element records the month of this person’s death. For more info on the codes, please look at <P24A/NM23A Month of Death> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+fire_occurrence: TEXT | This data element identifies whether a fire in any way related to the crash occurred in this vehicle. -- No Fire 0 No or Not Reported -- Fire Occurred in This Vehicle during Crash 1 Yes -- Fire Occurred in This Vehicle and Initiated Fire/Explosion in Another Vehicle
+special_use_name: TEXT | This data element identifies any special use associated with this vehicle at the time of the crash.
+number_of_motor_vehicle_striking_non_motorist: NUMBER | This data element identifies the “Vehicle Number” (VEH_NO) of the in-transport vehicle that made contact with this non-motorist. 000 Occupant of a Motor Vehicle 001-998 Vehicle Number of Striking Vehicle 999 Unknown
+vehicle_trailing: TEXT | This data element identifies whether this vehicle had any attached trailing units or was towing another motor vehicle. A trailing unit can be a horse trailer, fifth wheel trailer, camper, boat, truck trailer, towed vehicle or any other trailer. For more info on the codes, please look at <V14 Vehicle Trailing> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+emergency_motor_vehicle_use: TEXT | This data element identifies whether this vehicle was engaged in emergency use. Emergency Use indicates operation of any motor vehicle that is legally authorized by a government authority to respond to emergencies with or without the use of emergency warning equipment, such as a police vehicle, fire truck or ambulance while actually engaged in such response. -- No 0 Not Applicable -- Yes 2 Non-Emergency, Non-Transport 3 Non-Emergency Transport 4 Emergency Operation, Emergency Warning Equipment Not In Use 5 Emergency Operation, Emergency Warning Equipment In Use 6 Emergency Operation, Emergency Warning Equipment In Use Unknown 8 Not Reported 9 Unknown
+drug_test_type4: NUMBER | This data element identifies the drug test result for this person. For more info on the codes, please look at <P21C/NM20C Drug Test Result> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+race: NUMBER | This data element records the race of this person from the death certificate. For more info on the codes, please look at <SP3A Race> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+hour_of_crash: NUMBER | This data element records the hour at which the crash occurred. 00-23 Hour -- Not Applicable or Not Notified 99 Unknown
+non_motorist_location_at_time_of_crash: NUMBER | This data element identifies the attribute which best describes the location of this non-motorist with respect to the roadway at the time of the crash. For more info on the codes, please look at <NM10 Non-Motorist Location at Time of Crash> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+month_of_crash: NUMBER | This data element records the month in which the crash occurred. 01 January 02 February 03 March 04 April 05 May 06 June 07 July 08 August 09 September 10 October 11 November 12 December -- Unknown
+restraint_system_helmet_use: NUMBER | This data element records the restraint equipment in use by the occupant, or the helmet in use by a motorcyclist, at the time of the crash. For more info on the codes, please look at <P10 Restraint System/Helmet Use> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+died_at_scene_en_route: TEXT | This data element identifies if this person died at the scene of the crash or en route to a hospital/medical facility. 0 Not Applicable 7 Died at Scene 8 Died En Route 9 Unknown
+alcohol_test_status2: TEXT | This data element identifies the type of alcohol test that was given to this person. For more info on the codes, please look at <P18B/NM17B Alcohol Test Type> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+timestamp_of_crash: NUMBER | This data element records the date and time on which the crash occurred.
+sex: TEXT | This data element identifies the sex of this person involved in the crash. 1 Male 2 Female 8 Not Reported 9 Unknown
+police_reported_alcohol_involvement: TEXT | This data element records whether alcohol was involved for this person and reflects the judgment of law enforcement. 0 No (Alcohol Not Involved) 1 Yes (Alcohol Involved) 8 Not Reported 9 Unknown (Police Reported)
+drug_test_type6: NUMBER | This data element identifies the drug test result for this person. For more info on the codes, please look at <P21C/NM20C Drug Test Result> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+lag_hours: NUMBER | This data element records the hours between the time of the crash and this person’s time of death. 00-719 Hours 999 Unknown
+consecutive_number: NUMBER | This data element is the unique case number assigned to each crash. It appears on each data file and is used to merge information from the data files together. xxxxxx Two Characters for State Code followed by Four Characters for Case Number
+alcohol_test_status3_name: TEXT | This data element identifies the alcohol test result for this person. 000-939 Actual Value of BAC Test 940 0.94 or Greater (The value should be interpreted as  0.94 or greater, since 1995)  Test Refused (1991-2008) 995 Not Reported 996 None Given 997 AC Test Performed, Results Unknown 998 PBT Positive Reading with No Actual Value (Since 2004) -- Unknown if Tested/Not Reported 999 Unknown if Tested
+death_time: NUMBER | This data element records the hour and minute of this person’s death utilizing the 24-hour clock format. 0000 For Midnight 0001-2359 Time of Death in HHMM format 8888 Not Applicable (Non-Fatal) 9999 Unknown
+person_number: NUMBER | This data element is the consecutive number assigned to each person in the case (i.e., each occupant, pedestrian, or non-motorists involved in the crash). This data element appears on each person level data file and is used in conjunction with the ST_CASE data element (and sometimes the VEH_NO data element) to merge information from person level data files. 001-999 Assigned Person Number
+related_factors_person_level3: NUMBER | This data element records factors related to motor vehicle occupants other than drivers and persons not in motor vehicles as expressed by the investigating officer. For more info on the codes, please look at <P26/NM25 Related Factors- Person Level> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+vehicle_number: NUMBER | This data element is the consecutive number assigned to each vehicle in the case. This data element appears on each vehicle level data file and is used in conjunction with the ST_CASE data element to merge information from vehicle level data files. 000-999 Assigned Number of Motor Vehicle
+year_of_death: NUMBER | This data element records the year of this person’s death. 8888 Not Applicable (Non-Fatal) xxxx Year of the Death 9999 Unknown
+number_of_motor_vehicles_in_transport_mvit: NUMBER | This data element is a count of the number of vehicles in-transport involved in the crash. Legally parked vehicles are not included. 001-999 Number of Vehicle Forms
+related_factors_person_level2: NUMBER | This data element records factors related to motor vehicle occupants other than drivers and persons not in motor vehicles as expressed by the investigating officer. For more info on the codes, please look at <P26/NM25 Related Factors- Person Level> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+minute_of_crash: NUMBER | This data element records the minutes after the hour at which the crash occurred. 00-59 Minute -- Not Applicable or Not Notified 99 Unknown
+land_use: TEXT | 1 (Rural), 2 (Urban), 6 (Trafficway Not in State Inventory), 8 (Not Reported) and 9 (Unknown).
+day_of_crash: NUMBER | This data element records the day of the month on which the crash occurred. 01-31 Day of the Month of the Crash -- Unknown
+ejection_name: TEXT | This data element describes the ejection status and degree of ejection for this person, excluding motorcycle occupants.
+police_reported_drug_involvement: TEXT | This data element records whether drugs were involved for this person and reflects the judgment of law enforcement.0 No (Drugs Not Involved) 1 Yes (Drugs Involved) 8 Not Reported 9 Unknown (Police Reported)
+ejection_path: NUMBER | This data element identifies the path by which this person was ejected from the vehicle. For more info on the codes, please look at <P14 Ejection Path> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+transported_to_first_treatment_facility_name: TEXT | This data element identifies the mode of transportation to a hospital or medical facility provided for this person.
+drug_test_type1: TEXT | This data element identifies the type of drug test that was given to this person. 0 Test Not Given 1 Blood Test 2 Urine Test 3 Both Blood and Urine Tests 6 Not Reported 7 Unknown Test Type 8 Other Test Type -- Unknown if Tested/Not Reported 9 Unknown if Tested
+special_use: NUMBER | This data element identifies any special use associated with this vehicle at the time of the crash. For more info on the codes, please look at <V22 Special Use> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+make_model_combined: NUMBER | This derived data element represents the 5-digit combination of two data elements, the 2-digit “Vehicle Make” code (MAKE) followed by the 3-digit “Vehicle Model” code (MODEL). See the current FARS/NASS GES Coding and Validation Manual for vehicle make and model codes.
+lag_minutes: NUMBER | This data element records the minutes, in addition to hours (“Lag Hours”), between the time of the crash and this person’s time of death. 00-59 Minutes 99 Unknown
+person_type: NUMBER | This data element describes the role of this person involved in the crash. For more info on the codes, please look at <P7/NM7 Person Type> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+county: NUMBER | This data element records the location of the unstabilized event with regard to the County. The codes are from the General Services Administration’s (GSA) publication of worldwide Geographic Location Codes (GLC). 000 Not Applicable 001-996 Use GSA Geographical Codes 997 Other 998 Not Reported 999 Unknown
+hour_of_death: NUMBER | This data element records the hour of this person’s death utilizing the 24-hour clock format. 00-23 Valid Military Times 88 Not Applicable 99 Unknown
+functional_system: TEXT | 01 (Interstate), 02 (Principal Arterial – Other Freeways and Expressways), 03 (Principal Arterial – Other), 04 (Minor Arterial), 05 (Major Collector), 06 (Minor Collector), 07 (Local), 96 (Trafficway Not in State Inventory), 98 (Not Reported), and 99 (Unknown).
+functional_system_name: TEXT | 01 (Interstate), 02 (Principal Arterial – Other Freeways and Expressways), 03 (Principal Arterial – Other), 04 (Minor Arterial), 05 (Major Collector), 06 (Minor Collector), 07 (Local), 96 (Trafficway Not in State Inventory), 98 (Not Reported), and 99 (Unknown).
+body_type: NUMBER | This data element identifies a classification of this vehicle based on its general body configuration, size, shape, doors, etc. For more info on the codes, please look at <V11 Body Type> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+transported_to_first_treatment_facility: NUMBER | This data element identifies the mode of transportation to a hospital or medical facility provided for this person. For more info on the codes, please look at <P22/NM21 Transported to First Treatment Facility> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+vehicle_make: NUMBER | This data element identifies the make (manufacturer) of this vehicle. For more info on the codes, please look at <V9 Vehicle Make> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+indication_of_misuse_of_restraint_system_helmet: TEXT | This data element indicates any misuse of the restraint system or helmet used by this person. 0 No 1 Yes 8 Not a Motor Vehicle Occupant
+body_type_name: TEXT | This data element identifies a classification of this vehicle based on its general body configuration, size, shape, doors, etc.
+day_of_death: NUMBER | This data element records the day of the month of this person’s death. 88 Not Applicable (Non-Fatal) 01-31 Day of the Month of the Death 99 Unknown (Since 2008)
+hispanic_origin: NUMBER | This data element records the Hispanic origin of this person from the death certificate. For more info on the codes, please look at <SP3B Hispanic Origin> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+injury_severity: NUMBER | This data element describes the severity of the injury to this person in the crash using the KABCO scale. For more info on the codes, please look at <P8/NM8 Injury Severity> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+age: NUMBER | This data element identifies this person’s age at the time of the crash, in years, with respect to their last birthday. 000 Less than One Year 001-120 Age of the Individual in Years 998 Not Reported 999 Unknown
+minute_of_death: NUMBER | This data element records the minutes after the hour of this person’s death. 00-59 Valid Military Times 88 Not Applicable 99 Unknown
+drug_test_type6_name: TEXT | This data element identifies the drug test result for this person. For more info on the codes, please look at <P21C/NM20C Drug Test Result> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+state_number: NUMBER | This data element identifies the state in which the crash occurred. The codes are from the General Services Administration’s (GSA) publication of worldwide Geographic Location Codes (GLC). For more info on the codes, please look at <C1/V1/D1/PC1/P1/NM1 State Number> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+vehicle_make_name: TEXT | This data element identifies the make (manufacturer) of this vehicle.
+first_harmful_event: NUMBER | This data element describes the first injury or damage producing event of the crash. For more info on the codes, please look at <C19 First Harmful Event> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+alcohol_test_status3: TEXT | This data element identifies the alcohol test result for this person. 000-939 Actual Value of BAC Test 940 0.94 or Greater (The value should be interpreted as  0.94 or greater, since 1995)  Test Refused (1991-2008) 995 Not Reported 996 None Given 997 AC Test Performed, Results Unknown 998 PBT Positive Reading with No Actual Value (Since 2004) -- Unknown if Tested/Not Reported 999 Unknown if Tested
+drug_test_type4_name: TEXT | This data element identifies the drug test result for this person. For more info on the codes, please look at <P21C/NM20C Drug Test Result> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+first_harmful_event_name: TEXT | This data element describes the first injury or damage producing event of the crash.
+fatal_injury_at_work: TEXT | This data element records whether the death certificate indicated this person was "at work" at the time of the crash. 0 No (The Injury Was Not At Work) 1 Yes (The Injury Was At Work) 8 Not Applicable (Not A Fatality) 9 Unknown
+extrication: TEXT | This data element identifies if equipment or other force was used to remove this person from the vehicle. 0 Not Extricated/Not Applicable 1 Extricated 9 Unknown
+initial_contact_point_name: TEXT | This data element identifies the area on this vehicle that produced the first instance of injury to non-motorists or occupants of this vehicle, or that resulted in the first instance of damage to other property or to this vehicle.
+manner_of_collision_name: TEXT | This data element describes the orientation of two motor vehicles in-transport when they are involved in the “First Harmful Event” of a collision crash. If the “First Harmful Event” is not a collision between two motor vehicles in-transport it is classified as such.
+non_motorist_location_at_time_of_crash_name: TEXT | This data element identifies the attribute which best describes the location of this non-motorist with respect to the roadway at the time of the crash.
+ejection: NUMBER | This data element describes the ejection status and degree of ejection for this person, excluding motorcycle occupants. 0 Not Ejected 1 Totally Ejected 2 Partially Ejected 3 Ejected – Unknown Degree (Since 2008) 7 Not Reported 8 Not Applicable -- Unknown (2007-2008) 9 Unknown if Ejected (Since 2009)
+drug_test_type5_name: TEXT | This data element identifies the drug test result for this person. For more info on the codes, please look at <P21C/NM20C Drug Test Result> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+air_bag_deployed_name: TEXT | This data element records air bag availability and deployment for this person as reported in the case materials.
+manner_of_collision: NUMBER | This data element describes the orientation of two motor vehicles in-transport when they are involved in the “First Harmful Event” of a collision crash. If the “First Harmful Event” is not a collision between two motor vehicles in-transport it is classified as such. For more info on the codes, please look at <C20 Manner of Collision> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+drug_test_status: TEXT | This data element identifies whether a drug test was given to this person. 0 Test Not Given 1 Test Refused 2 Test Given 8 Not Reported -- Unknown if Tested/Not Reported 9 Unknown if Tested
+seating_position: NUMBER | This data element identifies the location of this person in or on the vehicle. For more info on the codes, please look at <P9 Seating Position> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+rollover: TEXT | This data element identifies this vehicle’s involvement in a rollover or overturn during the crash. Rollover is defined as any vehicle rotation of 90 degrees or more about any true longitudinal or lateral axis. Rollover can occur at any time during the crash. 0 No Rollover -- First Event 1 Rollover, Tripped by Object/Vehicle -- Subsequent Event 2 Rollover, Untripped 9 Rollover, Unknown Type
+
+## NHTSA_TRAFFIC_FATALITIES.DAMAGE_2018
+damaged_areas: NUMBER | NULL
+state_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+state_name: TEXT | NULL
+damaged_areas_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VISION_2018
+state_name: TEXT | NULL
+drivers_vision_obscured_by_name: TEXT | NULL
+state_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+drivers_vision_obscured_by: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.CEVENT_2016
+vehicle_number_this_vehicle: NUMBER | NULL
+area_of_impact_other_vehicle: NUMBER | NULL
+area_of_impact_other_vehicle_name: TEXT | NULL
+sequence_of_events: NUMBER | NULL
+area_of_impact_this_vehicle: NUMBER | NULL
+event_number: NUMBER | NULL
+area_of_impact_this_vehicle_name: TEXT | NULL
+sequence_of_events_name: TEXT | NULL
+state_number: NUMBER | NULL
+vehicle_number_other_vehicle: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.PARKWORK_2015
+number_of_motor_vehicles_in_transport_mvit: NUMBER | NULL
+vehicle_make: NUMBER | NULL
+mcid_issuing_authority_name: TEXT | NULL
+hazardous_material_identification_number: NUMBER | NULL
+vin_character_11: TEXT | NULL
+month_of_crash: NUMBER | NULL
+vehicle_identification_number_vin: TEXT | NULL
+minute_of_crash: NUMBER | NULL
+initial_contact_point: NUMBER | NULL
+vin_character_10: TEXT | NULL
+vin_character_4: TEXT | NULL
+vehicle_model_year: NUMBER | NULL
+vehicle_model: NUMBER | NULL
+vin_character_6: TEXT | NULL
+mcid_issuing_authority: NUMBER | NULL
+state_number: NUMBER | NULL
+registration_state_name: TEXT | NULL
+special_use: NUMBER | NULL
+hazardous_material_class_number: NUMBER | NULL
+vehicle_make_name: TEXT | NULL
+extent_of_damage: TEXT | NULL
+mcid_identification_number: TEXT | NULL
+most_harmful_event: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+related_factors_vehicle_level2: NUMBER | NULL
+body_type: NUMBER | NULL
+hit_and_run: TEXT | NULL
+day_of_crash: NUMBER | NULL
+first_harmful_event: NUMBER | NULL
+cargo_body_type: NUMBER | NULL
+fire_occurrence: TEXT | NULL
+vin_character_8: TEXT | NULL
+number_of_occupants: NUMBER | NULL
+unit_type: TEXT | NULL
+vehicle_configuration: NUMBER | NULL
+hour_of_crash: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+hazardous_material_placard: TEXT | NULL
+vin_character_2: TEXT | NULL
+registered_vehicle_owner_name: TEXT | NULL
+vin_character_12: TEXT | NULL
+underride_override_name: TEXT | NULL
+manner_of_collision: NUMBER | NULL
+gross_vehicle_weight_rating: NUMBER | NULL
+make_model_combined: NUMBER | NULL
+underride_override: NUMBER | NULL
+manner_of_collision_name: TEXT | NULL
+vin_character_3: TEXT | NULL
+fatalities_in_vehicle: NUMBER | NULL
+registration_state: NUMBER | NULL
+vin_character_9: TEXT | NULL
+motor_carrier_identification_number: TEXT | NULL
+related_factors_vehicle_level1: NUMBER | NULL
+vin_character_7: TEXT | NULL
+vin_character_5: TEXT | NULL
+vehicle_removal: TEXT | NULL
+emergency_motor_vehicle_use: TEXT | NULL
+vehicle_trailing: TEXT | NULL
+bus_use: TEXT | NULL
+hazardous_material_involvement: TEXT | NULL
+first_harmful_event_name: TEXT | NULL
+registered_vehicle_owner: NUMBER | NULL
+special_use_name: TEXT | NULL
+body_type_name: TEXT | NULL
+vin_character_1: TEXT | NULL
+release_of_hazardous_material_from_the_cargo_compartment: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.DAMAGE_2016
+damaged_areas_name: TEXT | This data element identifies all the areas on this vehicle that were damaged in the crash as reflected in the case materials.
+consecutive_number: NUMBER | This data element is the unique case number assigned to each crash. It appears on each data file and is used to merge information from the data files together. xxxxxx Two Characters for State Code followed by Four Characters for Case Number
+state_name: TEXT | NULL
+damaged_areas: NUMBER | This data element identifies all the areas on this vehicle that were damaged in the crash as reflected in the case materials. 1-12 Clock points 13 Top 14 Undercarriage 15 No Damage 99 Unknown
+vehicle_number: NUMBER | This data element is the consecutive number assigned to each vehicle in the case. This data element appears on each vehicle level data file and is used in conjunction with the ST_CASE data element to merge information from vehicle level data files. 000-999 Assigned Number of Motor Vehicle
+state_number: NUMBER | This data element identifies the state in which the crash occurred. The codes are from the General Services Administration’s (GSA) publication of worldwide Geographic Location Codes (GLC). For more info on the codes, please look at <C1/V1/D1/PC1/P1/NM1 State Number> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+
+## NHTSA_TRAFFIC_FATALITIES.MANEUVER_2020
+vehicle_number: NUMBER | NULL
+state_name: TEXT | NULL
+state_number: NUMBER | NULL
+driver_maneuvered_to_avoid: NUMBER | NULL
+driver_maneuvered_to_avoid_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VIOLATN_2020
+state_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+violations_charged_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+state_name: TEXT | NULL
+violations_charged: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.DISTRACT_2017
+consecutive_number: NUMBER | NULL
+state_name: TEXT | NULL
+driver_distracted_by: NUMBER | NULL
+driver_distracted_by_name: TEXT | NULL
+state_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.NMPRIOR_2019
+state_name: TEXT | NULL
+non_motorist_action_circumstances: NUMBER | NULL
+non_motorist_action_circumstances_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+person_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+state_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VIOLATN_2017
+state_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+violations_charged_name: TEXT | NULL
+violations_charged: TEXT | NULL
+vehicle_number: NUMBER | NULL
+state_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VISION_2017
+vehicle_number: NUMBER | NULL
+drivers_vision_obscured_by: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+state_name: TEXT | NULL
+state_number: NUMBER | NULL
+drivers_vision_obscured_by_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VEVENT_2020
+event_number: NUMBER | NULL
+area_of_impact_this_vehicle: NUMBER | NULL
+area_of_impact_other_vehicle: NUMBER | NULL
+vehicle_event_number: TEXT | NULL
+area_of_impact_this_vehicle_name: TEXT | NULL
+vehicle_number_this_vehicle: NUMBER | NULL
+vehicle_number_other_vehicle_name: TEXT | NULL
+vehicle_number_other_vehicle: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+state_number: NUMBER | NULL
+sequence_of_events: NUMBER | NULL
+state_name: TEXT | NULL
+area_of_impact_other_vehicle_name: TEXT | NULL
+sequence_of_events_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VEVENT_2017
+event_number: NUMBER | NULL
+sequence_of_events_name: TEXT | NULL
+area_of_impact_this_vehicle: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+vehicle_number_other_vehicle_name: TEXT | NULL
+vehicle_number_other_vehicle: NUMBER | NULL
+vehicle_number_this_vehicle: NUMBER | NULL
+vehicle_event_number: TEXT | NULL
+state_number: NUMBER | NULL
+area_of_impact_other_vehicle_name: TEXT | NULL
+state_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+sequence_of_events: NUMBER | NULL
+area_of_impact_this_vehicle_name: TEXT | NULL
+area_of_impact_other_vehicle: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.PBTYPE_2020
+age_name: TEXT | NULL
+crash_type_bicycle_name: TEXT | NULL
+person_type_name: TEXT | NULL
+crash_type_bicycle: NUMBER | NULL
+marked_crosswalk_present: TEXT | NULL
+motorist_initial_direction_of_travel_name: TEXT | NULL
+crash_group_pedestrian: NUMBER | NULL
+crash_group_pedestrian_name: TEXT | NULL
+bicyclist_position: TEXT | NULL
+bicyclist_initial_direction_of_travel: TEXT | NULL
+sex_name: TEXT | NULL
+age: NUMBER | NULL
+crash_location_pedestrian_name: TEXT | NULL
+crash_group_bicycle: NUMBER | NULL
+crash_group_bicycle_name: TEXT | NULL
+person_number: NUMBER | NULL
+pedestrian_initial_direction_of_travel: TEXT | NULL
+pedestrian_position_name: TEXT | NULL
+pedestrian_initial_direction_of_travel_name: TEXT | NULL
+motorist_initial_direction_of_travel: TEXT | NULL
+pedestrian_scenario: TEXT | NULL
+person_type: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+state_name: TEXT | NULL
+crash_type_pedestrian: NUMBER | NULL
+school_zone_name: TEXT | NULL
+sidewalk_present: TEXT | NULL
+bicyclist_initial_direction_of_travel_name: TEXT | NULL
+school_zone: TEXT | NULL
+marked_crosswalk_present_name: TEXT | NULL
+sidewalk_present_name: TEXT | NULL
+state_number: NUMBER | NULL
+bicyclist_position_name: TEXT | NULL
+pedestrian_position: TEXT | NULL
+vehicle_number: NUMBER | NULL
+crash_location_pedestrian: TEXT | NULL
+intersection_leg_name: TEXT | NULL
+sex: TEXT | NULL
+motorist_maneuver_name: TEXT | NULL
+motorist_maneuver: TEXT | NULL
+pedestrian_scenario_name: TEXT | NULL
+crash_location_bicycle: TEXT | NULL
+crash_location_bicycle_name: TEXT | NULL
+intersection_leg: TEXT | NULL
+crash_type_pedestrian_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.DAMAGE_2017
+consecutive_number: NUMBER | NULL
+damaged_areas_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+state_number: NUMBER | NULL
+damaged_areas: NUMBER | NULL
+state_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.CEVENT_2020
+state_name: TEXT | NULL
+area_of_impact_this_vehicle: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+vehicle_number_this_vehicle: NUMBER | NULL
+area_of_impact_other_vehicle: TEXT | NULL
+vehicle_number_other_vehicle_name: TEXT | NULL
+area_of_impact_this_vehicle_name: TEXT | NULL
+state_number: NUMBER | NULL
+vehicle_number_other_vehicle: NUMBER | NULL
+sequence_of_events: NUMBER | NULL
+event_number: NUMBER | NULL
+area_of_impact_other_vehicle_name: TEXT | NULL
+sequence_of_events_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VIOLATN_2016
+violations_charged_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+state_number: NUMBER | NULL
+violations_charged: TEXT | NULL
+state_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.NMIMPAIR_2016
+vehicle_number: NUMBER | NULL
+state_number: NUMBER | NULL
+condition_impairment_at_time_of_crash_non_motorist_name: TEXT | NULL
+person_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+condition_impairment_at_time_of_crash_non_motorist: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.CEVENT_2019
+area_of_impact_other_vehicle_name: TEXT | NULL
+area_of_impact_this_vehicle_name: TEXT | NULL
+vehicle_number_this_vehicle: NUMBER | NULL
+area_of_impact_other_vehicle: TEXT | NULL
+event_number: NUMBER | NULL
+state_name: TEXT | NULL
+vehicle_number_other_vehicle_name: TEXT | NULL
+sequence_of_events: NUMBER | NULL
+sequence_of_events_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+state_number: NUMBER | NULL
+vehicle_number_other_vehicle: NUMBER | NULL
+area_of_impact_this_vehicle: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.NMCRASH_2017
+person_number: NUMBER | NULL
+non_motorist_contributing_circumstances: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+state_name: TEXT | NULL
+state_number: NUMBER | NULL
+non_motorist_contributing_circumstances_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.PBTYPE_2015
+crash_location_pedestrian: TEXT | NULL
+crash_type_pedestrian_name: TEXT | NULL
+crash_type_bicycle: NUMBER | NULL
+crash_group_pedestrian_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+pedestrian_scenario: TEXT | NULL
+age: NUMBER | NULL
+school_zone: TEXT | NULL
+consecutive_number: NUMBER | NULL
+bicyclist_position: TEXT | NULL
+motorist_maneuver: TEXT | NULL
+bicyclist_initial_direction_of_travel: TEXT | NULL
+pedestrian_scenario_name: TEXT | NULL
+pedestrian_position: TEXT | NULL
+crash_type_pedestrian: NUMBER | NULL
+marked_crosswalk_present: TEXT | NULL
+sidewalk_present: TEXT | NULL
+crash_location_bicycle: TEXT | NULL
+person_type: NUMBER | NULL
+intersection_leg: TEXT | NULL
+crash_group_bicycle: NUMBER | NULL
+pedestrian_initial_direction_of_travel: TEXT | NULL
+crash_group_bicycle_name: TEXT | NULL
+sex: TEXT | NULL
+person_number: NUMBER | NULL
+motorist_initial_direction_of_travel: TEXT | NULL
+state_number: NUMBER | NULL
+person_type_name: TEXT | NULL
+crash_type_bicycle_name: TEXT | NULL
+crash_group_pedestrian: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.PBTYPE_2019
+crash_location_pedestrian: TEXT | NULL
+pedestrian_scenario: TEXT | NULL
+pedestrian_initial_direction_of_travel_name: TEXT | NULL
+crash_location_pedestrian_name: TEXT | NULL
+person_number: NUMBER | NULL
+intersection_leg: TEXT | NULL
+bicyclist_initial_direction_of_travel_name: TEXT | NULL
+bicyclist_initial_direction_of_travel: TEXT | NULL
+motorist_maneuver: TEXT | NULL
+pedestrian_position_name: TEXT | NULL
+state_name: TEXT | NULL
+crash_group_pedestrian: NUMBER | NULL
+state_number: NUMBER | NULL
+age_name: TEXT | NULL
+pedestrian_scenario_name: TEXT | NULL
+intersection_leg_name: TEXT | NULL
+crash_location_bicycle: TEXT | NULL
+crash_group_bicycle: NUMBER | NULL
+crash_group_bicycle_name: TEXT | NULL
+motorist_maneuver_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+crash_group_pedestrian_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+crash_type_bicycle_name: TEXT | NULL
+school_zone_name: TEXT | NULL
+marked_crosswalk_present_name: TEXT | NULL
+pedestrian_position: TEXT | NULL
+marked_crosswalk_present: TEXT | NULL
+motorist_initial_direction_of_travel: TEXT | NULL
+motorist_initial_direction_of_travel_name: TEXT | NULL
+sex: TEXT | NULL
+sidewalk_present: TEXT | NULL
+bicyclist_position: TEXT | NULL
+school_zone: TEXT | NULL
+age: NUMBER | NULL
+person_type_name: TEXT | NULL
+crash_type_pedestrian_name: TEXT | NULL
+crash_location_bicycle_name: TEXT | NULL
+crash_type_bicycle: NUMBER | NULL
+sex_name: TEXT | NULL
+person_type: NUMBER | NULL
+pedestrian_initial_direction_of_travel: TEXT | NULL
+sidewalk_present_name: TEXT | NULL
+crash_type_pedestrian: NUMBER | NULL
+bicyclist_position_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.SAFETYEQ_2016
+state_number: NUMBER | NULL
+person_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+non_motorist_safety_equipment_use: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.PARKWORK_2018
+motor_carrier_identification_number: TEXT | NULL
+initial_contact_point_name: TEXT | NULL
+vehicle_removal: NUMBER | NULL
+related_factors_vehicle_level2: NUMBER | NULL
+fire_occurrence_name: TEXT | NULL
+vin_character_6: TEXT | NULL
+related_factors_vehicle_level2_name: TEXT | NULL
+registration_state: NUMBER | NULL
+underride_override: NUMBER | NULL
+state_name: TEXT | NULL
+special_use_name: TEXT | NULL
+make_model_combined_name: TEXT | NULL
+most_harmful_event_name: TEXT | NULL
+hour_of_crash: NUMBER | NULL
+body_type: NUMBER | NULL
+cargo_body_type_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+vehicle_model_year: NUMBER | NULL
+vehicle_trailing_name: TEXT | NULL
+mcid_identification_number_name: TEXT | NULL
+ptrlr1vin: TEXT | NULL
+vin_character_12: TEXT | NULL
+month_of_crash_name: TEXT | NULL
+manner_of_collision_name: TEXT | NULL
+hazardous_material_involvement_name: TEXT | NULL
+hazardous_material_placard: NUMBER | NULL
+vehicle_make_name: TEXT | NULL
+vehicle_configuration: NUMBER | NULL
+first_harmful_event_name: TEXT | NULL
+vin_character_3: TEXT | NULL
+release_of_hazardous_material_from_the_cargo_compartment: NUMBER | NULL
+minute_of_crash: NUMBER | NULL
+hit_and_run_name: TEXT | NULL
+vin_character_1: TEXT | NULL
+month_of_crash: NUMBER | NULL
+first_harmful_event: NUMBER | NULL
+vin_character_2: TEXT | NULL
+motor_carrier_identification_number_name: TEXT | NULL
+fatalities_in_vehicle: NUMBER | NULL
+manner_of_collision: NUMBER | NULL
+vehicle_identification_number_vin_name: TEXT | NULL
+registered_vehicle_owner_name: TEXT | NULL
+day_of_crash: NUMBER | NULL
+vin_character_5: TEXT | NULL
+vehicle_configuration_name: TEXT | NULL
+emergency_motor_vehicle_use_name: TEXT | NULL
+extent_of_damage: NUMBER | NULL
+unit_type_name: TEXT | NULL
+fire_occurrence: NUMBER | NULL
+unit_type: NUMBER | NULL
+ptrlr2vin: TEXT | NULL
+related_factors_vehicle_level1: NUMBER | NULL
+extent_of_damage_name: TEXT | NULL
+vin_character_11: TEXT | NULL
+cargo_body_type: NUMBER | NULL
+initial_contact_point: NUMBER | NULL
+hazardous_material_class_number: NUMBER | NULL
+hazardous_material_identification_number_name: TEXT | NULL
+number_of_occupants_name: TEXT | NULL
+ptrlr3vinname: TEXT | NULL
+emergency_motor_vehicle_use: NUMBER | NULL
+body_type_name: TEXT | NULL
+vehicle_model: NUMBER | NULL
+state_number: NUMBER | NULL
+ptrlr1vinname: TEXT | NULL
+day_of_crash_name: TEXT | NULL
+bus_use_name: TEXT | NULL
+mcid_identification_number: TEXT | NULL
+number_of_motor_vehicles_in_transport_mvit: NUMBER | NULL
+vehicle_identification_number_vin: TEXT | NULL
+vehicle_trailing: NUMBER | NULL
+vehicle_model_year_name: TEXT | NULL
+vin_character_4: TEXT | NULL
+registration_state_name: TEXT | NULL
+vin_character_9: TEXT | NULL
+vehicle_removal_name: TEXT | NULL
+ptrlr3vin: TEXT | NULL
+mcid_issuing_authority: NUMBER | NULL
+hazardous_material_identification_number: NUMBER | NULL
+make_model_combined: TEXT | NULL
+underride_override_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+bus_use: NUMBER | NULL
+related_factors_vehicle_level1_name: TEXT | NULL
+hazardous_material_class_number_name: TEXT | NULL
+vin_character_8: TEXT | NULL
+vin_character_10: TEXT | NULL
+vin_character_7: TEXT | NULL
+ptrlr2vinname: TEXT | NULL
+hour_of_crash_name: TEXT | NULL
+most_harmful_event: NUMBER | NULL
+mcid_issuing_authority_name: TEXT | NULL
+release_of_hazardous_material_from_the_cargo_compartment_name: TEXT | NULL
+vehicle_make: NUMBER | NULL
+gross_vehicle_weight_rating: NUMBER | NULL
+hazardous_material_involvement: NUMBER | NULL
+number_of_occupants: NUMBER | NULL
+registered_vehicle_owner: NUMBER | NULL
+special_use: NUMBER | NULL
+gross_vehicle_weight_rating_name: TEXT | NULL
+hit_and_run: NUMBER | NULL
+minute_of_crash_name: TEXT | NULL
+hazardous_material_placard_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.NMIMPAIR_2019
+person_number: NUMBER | NULL
+condition_impairment_at_time_of_crash_non_motorist_name: TEXT | NULL
+condition_impairment_at_time_of_crash_non_motorist: NUMBER | NULL
+state_name: TEXT | NULL
+state_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.PARKWORK_2016
+first_harmful_event: NUMBER | NULL
+vin_character_9: TEXT | NULL
+vehicle_removal: NUMBER | NULL
+hazardous_material_class_number_name: TEXT | NULL
+vehicle_model: NUMBER | NULL
+hazardous_material_class_number: NUMBER | NULL
+fire_occurrence_name: TEXT | NULL
+vehicle_configuration_name: TEXT | NULL
+ptrlr2vin: TEXT | NULL
+vehicle_number: NUMBER | NULL
+hit_and_run: NUMBER | NULL
+manner_of_collision: NUMBER | NULL
+ptrlr3vinname: TEXT | NULL
+fatalities_in_vehicle: NUMBER | NULL
+motor_carrier_identification_number: TEXT | NULL
+initial_contact_point: NUMBER | NULL
+extent_of_damage_name: TEXT | NULL
+state_number: NUMBER | NULL
+body_type_name: TEXT | NULL
+first_harmful_event_name: TEXT | NULL
+hazardous_material_identification_number: NUMBER | NULL
+vehicle_model_year_name: TEXT | NULL
+vehicle_make_name: TEXT | NULL
+extent_of_damage: NUMBER | NULL
+related_factors_vehicle_level1: NUMBER | NULL
+minute_of_crash_name: TEXT | NULL
+hour_of_crash: NUMBER | NULL
+hazardous_material_involvement: NUMBER | NULL
+vin_character_11: TEXT | NULL
+manner_of_collision_name: TEXT | NULL
+unit_type_name: TEXT | NULL
+vin_character_7: TEXT | NULL
+hazardous_material_placard_name: TEXT | NULL
+mcid_issuing_authority_name: TEXT | NULL
+bus_use: NUMBER | NULL
+body_type: NUMBER | NULL
+hazardous_material_involvement_name: TEXT | NULL
+mcid_issuing_authority: NUMBER | NULL
+emergency_motor_vehicle_use: NUMBER | NULL
+mcid_identification_number_name: TEXT | NULL
+vehicle_identification_number_vin: TEXT | NULL
+registration_state_name: TEXT | NULL
+cargo_body_type: NUMBER | NULL
+vin_character_2: TEXT | NULL
+vehicle_trailing_name: TEXT | NULL
+minute_of_crash: NUMBER | NULL
+vin_character_4: TEXT | NULL
+hour_of_crash_name: TEXT | NULL
+gross_vehicle_weight_rating_name: TEXT | NULL
+special_use_name: TEXT | NULL
+motor_carrier_identification_number_name: TEXT | NULL
+registration_state: NUMBER | NULL
+hazardous_material_placard: NUMBER | NULL
+gross_vehicle_weight_rating: NUMBER | NULL
+initial_contact_point_name: TEXT | NULL
+month_of_crash: NUMBER | NULL
+release_of_hazardous_material_from_the_cargo_compartment: NUMBER | NULL
+underride_override_name: TEXT | NULL
+day_of_crash_name: TEXT | NULL
+unit_type: NUMBER | NULL
+ptrlr1vinname: TEXT | NULL
+number_of_occupants_name: TEXT | NULL
+registered_vehicle_owner_name: TEXT | NULL
+hazardous_material_identification_number_name: TEXT | NULL
+special_use: NUMBER | NULL
+vehicle_model_year: NUMBER | NULL
+ptrlr3vin: TEXT | NULL
+vehicle_trailing: NUMBER | NULL
+vin_character_8: TEXT | NULL
+number_of_motor_vehicles_in_transport_mvit: NUMBER | NULL
+release_of_hazardous_material_from_the_cargo_compartment_name: TEXT | NULL
+ptrlr1vin: TEXT | NULL
+vehicle_removal_name: TEXT | NULL
+vin_character_10: TEXT | NULL
+ptrlr2vinname: TEXT | NULL
+underride_override: NUMBER | NULL
+vin_character_3: TEXT | NULL
+most_harmful_event: NUMBER | NULL
+make_model_combined: TEXT | NULL
+vin_character_6: TEXT | NULL
+vehicle_make: NUMBER | NULL
+mcid_identification_number: TEXT | NULL
+month_of_crash_name: TEXT | NULL
+most_harmful_event_name: TEXT | NULL
+hit_and_run_name: TEXT | NULL
+state_name: TEXT | NULL
+bus_use_name: TEXT | NULL
+related_factors_vehicle_level2_name: TEXT | NULL
+vehicle_configuration: NUMBER | NULL
+related_factors_vehicle_level1_name: TEXT | NULL
+fire_occurrence: NUMBER | NULL
+emergency_motor_vehicle_use_name: TEXT | NULL
+vin_character_12: TEXT | NULL
+vin_character_5: TEXT | NULL
+number_of_occupants: NUMBER | NULL
+day_of_crash: NUMBER | NULL
+registered_vehicle_owner: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+vin_character_1: TEXT | NULL
+cargo_body_type_name: TEXT | NULL
+related_factors_vehicle_level2: NUMBER | NULL
+vehicle_identification_number_vin_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.SAFETYEQ_2015
+person_number: NUMBER | NULL
+state_number: NUMBER | NULL
+non_motorist_safety_equipment_use: TEXT | NULL
+vehicle_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VISION_2020
+state_number: NUMBER | NULL
+state_name: TEXT | NULL
+drivers_vision_obscured_by_name: TEXT | NULL
+drivers_vision_obscured_by: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.MANEUVER_2019
+driver_maneuvered_to_avoid_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+state_number: NUMBER | NULL
+state_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+driver_maneuvered_to_avoid: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.NMCRASH_2018
+state_number: NUMBER | NULL
+person_number: NUMBER | NULL
+non_motorist_contributing_circumstances_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+non_motorist_contributing_circumstances: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+state_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.FACTOR_2017
+vehicle_number: NUMBER | NULL
+state_number: NUMBER | NULL
+contributing_circumstances_motor_vehicle: NUMBER | NULL
+contributing_circumstances_motor_vehicle_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+state_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VISION_2016
+consecutive_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+state_number: NUMBER | NULL
+drivers_vision_obscured_by: NUMBER | NULL
+drivers_vision_obscured_by_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.NMIMPAIR_2018
+state_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+condition_impairment_at_time_of_crash_non_motorist_name: TEXT | NULL
+condition_impairment_at_time_of_crash_non_motorist: NUMBER | NULL
+person_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+state_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.CEVENT_2015
+vehicle_number_other_vehicle: NUMBER | NULL
+event_number: NUMBER | NULL
+area_of_impact_other_vehicle_name: TEXT | NULL
+area_of_impact_this_vehicle: NUMBER | NULL
+state_number: NUMBER | NULL
+sequence_of_events_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+area_of_impact_this_vehicle_name: TEXT | NULL
+vehicle_number_this_vehicle: NUMBER | NULL
+sequence_of_events: NUMBER | NULL
+area_of_impact_other_vehicle: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.SAFETYEQ_2020
+consecutive_number: NUMBER | NULL
+state_number: NUMBER | NULL
+nm_othpro: TEXT | NULL
+nm_othpro_name: TEXT | NULL
+person_number: NUMBER | NULL
+nm_othpre: TEXT | NULL
+vehicle_number: NUMBER | NULL
+state_name: TEXT | NULL
+nm_light_name: TEXT | NULL
+nm_refclo_name: TEXT | NULL
+nm_helmet_name: TEXT | NULL
+nm_othpre_name: TEXT | NULL
+nm_helmet: TEXT | NULL
+nm_light: TEXT | NULL
+nm_propad: TEXT | NULL
+nm_refclo: TEXT | NULL
+nm_propad_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.NMPRIOR_2017
+non_motorist_action_circumstances: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+person_number: NUMBER | NULL
+state_name: TEXT | NULL
+non_motorist_action_circumstances_name: TEXT | NULL
+state_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.PARKWORK_2019
+hazardous_material_placard_name: TEXT | NULL
+vehicle_configuration: NUMBER | NULL
+hazardous_material_involvement: NUMBER | NULL
+registered_vehicle_owner_name: TEXT | NULL
+hazardous_material_class_number: NUMBER | NULL
+mcid_issuing_authority: NUMBER | NULL
+related_factors_vehicle_level2_name: TEXT | NULL
+vin_character_6: TEXT | NULL
+registration_state: NUMBER | NULL
+vehicle_trailing_name: TEXT | NULL
+vehicle_removal: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+vin_character_4: TEXT | NULL
+hazardous_material_identification_number_name: TEXT | NULL
+vehicle_identification_number_vin_name: TEXT | NULL
+unit_type: NUMBER | NULL
+registered_vehicle_owner: NUMBER | NULL
+hour_of_crash: NUMBER | NULL
+vehicle_removal_name: TEXT | NULL
+hit_and_run_name: TEXT | NULL
+hazardous_material_placard: NUMBER | NULL
+emergency_motor_vehicle_use_name: TEXT | NULL
+vin_character_5: TEXT | NULL
+day_of_crash_name: TEXT | NULL
+fire_occurrence: NUMBER | NULL
+minute_of_crash_name: TEXT | NULL
+vehicle_make: NUMBER | NULL
+ptrlr1vinname: TEXT | NULL
+cargo_body_type_name: TEXT | NULL
+vin_character_12: TEXT | NULL
+ptrlr2vin: TEXT | NULL
+vehicle_identification_number_vin: TEXT | NULL
+hit_and_run: NUMBER | NULL
+most_harmful_event_name: TEXT | NULL
+gross_vehicle_weight_rating: NUMBER | NULL
+first_harmful_event: NUMBER | NULL
+vin_character_7: TEXT | NULL
+vin_character_11: TEXT | NULL
+vehicle_model_year: NUMBER | NULL
+release_of_hazardous_material_from_the_cargo_compartment_name: TEXT | NULL
+underride_override_name: TEXT | NULL
+vin_character_9: TEXT | NULL
+gross_vehicle_weight_rating_name: TEXT | NULL
+first_harmful_event_name: TEXT | NULL
+motor_carrier_identification_number: TEXT | NULL
+initial_contact_point_name: TEXT | NULL
+hazardous_material_involvement_name: TEXT | NULL
+day_of_crash: NUMBER | NULL
+ptrlr3vinname: TEXT | NULL
+mcid_identification_number_name: TEXT | NULL
+special_use: NUMBER | NULL
+motor_carrier_identification_number_name: TEXT | NULL
+vin_character_3: TEXT | NULL
+vehicle_configuration_name: TEXT | NULL
+vin_character_8: TEXT | NULL
+bus_use: NUMBER | NULL
+vehicle_make_name: TEXT | NULL
+vin_character_2: TEXT | NULL
+make_model_combined: TEXT | NULL
+extent_of_damage_name: TEXT | NULL
+body_type_name: TEXT | NULL
+vehicle_model: NUMBER | NULL
+most_harmful_event: NUMBER | NULL
+number_of_motor_vehicles_in_transport_mvit: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+ptrlr3vin: TEXT | NULL
+number_of_occupants: NUMBER | NULL
+vehicle_trailing: NUMBER | NULL
+registration_state_name: TEXT | NULL
+minute_of_crash: NUMBER | NULL
+special_use_name: TEXT | NULL
+month_of_crash_name: TEXT | NULL
+month_of_crash: NUMBER | NULL
+vehicle_model_year_name: TEXT | NULL
+hazardous_material_identification_number: NUMBER | NULL
+hazardous_material_class_number_name: TEXT | NULL
+underride_override: NUMBER | NULL
+fire_occurrence_name: TEXT | NULL
+mcid_issuing_authority_name: TEXT | NULL
+hour_of_crash_name: TEXT | NULL
+ptrlr2vinname: TEXT | NULL
+mcid_identification_number: TEXT | NULL
+initial_contact_point: NUMBER | NULL
+state_name: TEXT | NULL
+vin_character_10: TEXT | NULL
+fatalities_in_vehicle: NUMBER | NULL
+number_of_occupants_name: TEXT | NULL
+ptrlr1vin: TEXT | NULL
+manner_of_collision: NUMBER | NULL
+cargo_body_type: NUMBER | NULL
+related_factors_vehicle_level1_name: TEXT | NULL
+bus_use_name: TEXT | NULL
+related_factors_vehicle_level1: NUMBER | NULL
+manner_of_collision_name: TEXT | NULL
+vin_character_1: TEXT | NULL
+unit_type_name: TEXT | NULL
+related_factors_vehicle_level2: NUMBER | NULL
+extent_of_damage: NUMBER | NULL
+emergency_motor_vehicle_use: NUMBER | NULL
+body_type: NUMBER | NULL
+state_number: NUMBER | NULL
+release_of_hazardous_material_from_the_cargo_compartment: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.DRIMPAIR_2018
+vehicle_number: NUMBER | NULL
+state_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+condition_impairment_at_time_of_crash_driver: NUMBER | NULL
+state_name: TEXT | NULL
+condition_impairment_at_time_of_crash_driver_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.FACTOR_2020
+contributing_circumstances_motor_vehicle_name: TEXT | NULL
+state_number: NUMBER | NULL
+contributing_circumstances_motor_vehicle: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+state_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.NMCRASH_2016
+state_name: TEXT | NULL
+consecutive_number: NUMBER | This data element is the unique case number assigned to each crash. It appears on each data file and is used to merge information from the data files together. xxxxxx Two Characters for State Code followed by Four Characters for Case Number
+vehicle_number: NUMBER | This data element is the consecutive number assigned to each vehicle in the case. This data element appears on each vehicle level data file and is used in conjunction with the ST_CASE data element to merge information from vehicle level data files. 000-999 Assigned Number of Motor Vehicle
+person_number: NUMBER | This data element is the consecutive number assigned to each person in the case (i.e., each occupant, pedestrian, or non-motorists involved in the crash). This data element appears on each person level data file and is used in conjunction with the ST_CASE data element (and sometimes the VEH_NO data element) to merge information from person level data files. 001-999 Assigned Person Number
+non_motorist_contributing_circumstances: NUMBER | This data element describes the action(s) and/or circumstances of this non-motorist that law enforcement indicated may have contributed to the crash. For more info on the codes, please look at <NM12 Non-Motorist Contributing Circumstances> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+non_motorist_contributing_circumstances_name: TEXT | This data element describes the action(s) and/or circumstances of this non-motorist that law enforcement indicated may have contributed to the crash.
+state_number: NUMBER | This data element identifies the state in which the crash occurred. The codes are from the General Services Administration’s (GSA) publication of worldwide Geographic Location Codes (GLC). For more info on the codes, please look at <C1/V1/D1/PC1/P1/NM1 State Number> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+
+## NHTSA_TRAFFIC_FATALITIES.NMCRASH_2019
+vehicle_number: NUMBER | NULL
+state_name: TEXT | NULL
+state_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+non_motorist_contributing_circumstances_name: TEXT | NULL
+non_motorist_contributing_circumstances: NUMBER | NULL
+person_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.DRIMPAIR_2019
+consecutive_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+condition_impairment_at_time_of_crash_driver: NUMBER | NULL
+state_number: NUMBER | NULL
+state_name: TEXT | NULL
+condition_impairment_at_time_of_crash_driver_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.DAMAGE_2015
+vehicle_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+damaged_areas_name: TEXT | NULL
+damaged_areas: NUMBER | NULL
+state_number: NUMBER | NULL
+state_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.MANEUVER_2017
+consecutive_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+state_name: TEXT | NULL
+state_number: NUMBER | NULL
+driver_maneuvered_to_avoid_name: TEXT | NULL
+driver_maneuvered_to_avoid: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.DISTRACT_2015
+driver_distracted_by: NUMBER | NULL
+state_number: NUMBER | NULL
+driver_distracted_by_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.SAFETYEQ_2017
+nm_propad: TEXT | NULL
+nm_helmet: TEXT | NULL
+nm_propad_name: TEXT | NULL
+nm_refclo_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+nm_othpre: TEXT | NULL
+nm_refclo: TEXT | NULL
+vehicle_number: NUMBER | NULL
+nm_othpro: TEXT | NULL
+nm_light: TEXT | NULL
+person_number: NUMBER | NULL
+nm_othpro_name: TEXT | NULL
+state_name: TEXT | NULL
+state_number: NUMBER | NULL
+nm_othpre_name: TEXT | NULL
+nm_helmet_name: TEXT | NULL
+nm_light_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VISION_2015
+consecutive_number: NUMBER | NULL
+drivers_vision_obscured_by_name: TEXT | NULL
+state_name: TEXT | NULL
+drivers_vision_obscured_by: NUMBER | NULL
+state_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.SAFETYEQ_2019
+nm_light_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+nm_refclo: TEXT | NULL
+nm_othpre_name: TEXT | NULL
+nm_light: TEXT | NULL
+state_name: TEXT | NULL
+nm_propad: TEXT | NULL
+state_number: NUMBER | NULL
+nm_othpre: TEXT | NULL
+person_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+nm_helmet_name: TEXT | NULL
+nm_helmet: TEXT | NULL
+nm_othpro_name: TEXT | NULL
+nm_propad_name: TEXT | NULL
+nm_othpro: TEXT | NULL
+nm_refclo_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.DRIMPAIR_2017
+condition_impairment_at_time_of_crash_driver_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+state_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+condition_impairment_at_time_of_crash_driver: NUMBER | NULL
+state_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.DAMAGE_2019
+vehicle_number: NUMBER | NULL
+state_name: TEXT | NULL
+damaged_areas_name: TEXT | NULL
+state_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+damaged_areas: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VSOE_2019
+state_number: NUMBER | NULL
+area_of_Impact_associated_with_the_event: NUMBER | NULL
+sequence_of_events_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+sequence_of_events: NUMBER | NULL
+area_of_Impact_associated_with_the_event_name: TEXT | NULL
+vehicle_event_number: NUMBER | NULL
+state_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.MANEUVER_2018
+consecutive_number: NUMBER | NULL
+driver_maneuvered_to_avoid_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+state_number: NUMBER | NULL
+driver_maneuvered_to_avoid: NUMBER | NULL
+state_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.DAMAGE_2020
+vehicle_number: NUMBER | NULL
+damaged_areas: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+damaged_areas_name: TEXT | NULL
+state_number: NUMBER | NULL
+state_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.DISTRACT_2016
+state_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+state_name: TEXT | NULL
+driver_distracted_by: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+driver_distracted_by_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.FACTOR_2016
+state_name: TEXT | NULL
+contributing_circumstances_motor_vehicle_name: TEXT | This data element describes this vehicle’s possible pre-existing defects or maintenance conditions that may have contributed to the crash.
+vehicle_number: NUMBER | This data element is the consecutive number assigned to each vehicle in the case. This data element appears on each vehicle level data file and is used in conjunction with the ST_CASE data element to merge information from vehicle level data files. 000-999 Assigned Number of Motor Vehicle
+contributing_circumstances_motor_vehicle: NUMBER | This data element describes this vehicle’s possible pre-existing defects or maintenance conditions that may have contributed to the crash. For more info on the codes, please look at <PC4 Contributing Circumstances, Motor Vehicle> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+state_number: NUMBER | This data element identifies the state in which the crash occurred. The codes are from the General Services Administration’s (GSA) publication of worldwide Geographic Location Codes (GLC). For more info on the codes, please look at <C1/V1/D1/PC1/P1/NM1 State Number> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+consecutive_number: NUMBER | This data element is the unique case number assigned to each crash. It appears on each data file and is used to merge information from the data files together. xxxxxx Two Characters for State Code followed by Four Characters for Case Number
+
+## NHTSA_TRAFFIC_FATALITIES.VINDECODE_2015
+axle_type_rear_axle: TEXT | NULL
+vehicle_type_code: TEXT | NULL
+front_tire: NUMBER | NULL
+model_code: TEXT | NULL
+brakes_abs_code: TEXT | NULL
+valves_per_cylinder: NUMBER | NULL
+rear_tire_size_code: TEXT | NULL
+vehicle_trim_3: TEXT | NULL
+vehicle_type: TEXT | NULL
+battery_voltage: TEXT | NULL
+consecutive_number: NUMBER | NULL
+engine_model: TEXT | NULL
+front_tire_size: TEXT | NULL
+bed_length: TEXT | NULL
+bed_length_code: TEXT | NULL
+cylinder_count_code: TEXT | NULL
+tonnage_rating: TEXT | NULL
+vehicle_number: NUMBER | NULL
+engine_manufacture: TEXT | NULL
+drive_type_2: TEXT | NULL
+cycle_count: NUMBER | NULL
+marketing_year: NUMBER | NULL
+gross_vehicle_weights_range_code: NUMBER | NULL
+brake_type_code: TEXT | NULL
+supercharge_flag_description: TEXT | NULL
+origin: TEXT | NULL
+type_of_fuel: TEXT | NULL
+vehicle_make: TEXT | NULL
+num_of_barrels: TEXT | NULL
+block_type: TEXT | NULL
+head_configuration_1: TEXT | NULL
+battery_type: TEXT | NULL
+body_style_code: TEXT | NULL
+drive_type_1: TEXT | NULL
+carburetion_types_code: TEXT | NULL
+origin_code: TEXT | NULL
+brake_type: TEXT | NULL
+country_sold: TEXT | NULL
+num_of_wheels_by_power_train: NUMBER | NULL
+type_of_fuel_code: TEXT | NULL
+cab_configuration_code: TEXT | NULL
+turbocharger_flag_description: TEXT | NULL
+shipping_weight: TEXT | NULL
+plant_state: TEXT | NULL
+fuel: TEXT | NULL
+cab_configuration: TEXT | NULL
+rear_tire_size: TEXT | NULL
+motorcycles_body_style_code: TEXT | NULL
+carburetion_types: TEXT | NULL
+valves_total: NUMBER | NULL
+vehicle_trim: TEXT | NULL
+displacement_cc: NUMBER | NULL
+restraint_type: TEXT | NULL
+security_type: TEXT | NULL
+vehicle_trim_1: TEXT | NULL
+number_of_wheels: NUMBER | NULL
+vehicle_trim_4: TEXT | NULL
+base_price: TEXT | NULL
+supercharge_flag: TEXT | NULL
+battery_type_code: TEXT | NULL
+plant_city: TEXT | NULL
+displacement_liters: FLOAT | NULL
+rear_tire_pressure: NUMBER | NULL
+motorcycles_body_style: TEXT | NULL
+duty_type: TEXT | NULL
+is_incomplete: TEXT | NULL
+front_tire_pressure: NUMBER | NULL
+daytime_running_lights_1: TEXT | NULL
+rear_tire: NUMBER | NULL
+axle_type_front_axle: TEXT | NULL
+displacement_cid: NUMBER | NULL
+make_name: TEXT | NULL
+axle_type_front_axle_code: TEXT | NULL
+state_number: NUMBER | NULL
+standard_segmentation_code: TEXT | NULL
+country_sold_code: TEXT | NULL
+plant_country_code: TEXT | NULL
+vehicle_manufacturer_name: TEXT | NULL
+body_style: TEXT | NULL
+brakes_abs_description: TEXT | NULL
+distance_between_axles_for_particular_series: TEXT | NULL
+num_of_doors: NUMBER | NULL
+plant_country: TEXT | NULL
+vehicle_manufacturer_code: TEXT | NULL
+restraint_type_code: TEXT | NULL
+plant_code: TEXT | NULL
+duty_type_code: TEXT | NULL
+state_name: TEXT | NULL
+standard_segmentation: TEXT | NULL
+gross_vehicle_weights_range: TEXT | NULL
+fuel_code: TEXT | NULL
+daytime_running_lights_2: TEXT | NULL
+head_configuration_2: TEXT | NULL
+security_type_code: TEXT | NULL
+axle_type_rear_axle_code: TEXT | NULL
+total_battery_power: TEXT | NULL
+engine_manufacture_code: TEXT | NULL
+front_tire_size_code: TEXT | NULL
+distance_between_axles_for_base_model: FLOAT | NULL
+vehicle_trim_2: TEXT | NULL
+turbocharger_flag: TEXT | NULL
+variable_valve_timing_flag: TEXT | NULL
+plant_state_code: TEXT | NULL
+engine_code: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VSOE_2020
+area_of_Impact_associated_with_the_event_name: TEXT | NULL
+sequence_of_events_name: TEXT | NULL
+vehicle_event_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+state_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+area_of_Impact_associated_with_the_event: NUMBER | NULL
+state_number: NUMBER | NULL
+sequence_of_events: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VIOLATN_2018
+vehicle_number: NUMBER | NULL
+violations_charged_name: TEXT | NULL
+state_name: TEXT | NULL
+violations_charged: TEXT | NULL
+state_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.NMIMPAIR_2020
+person_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+condition_impairment_at_time_of_crash_non_motorist_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+condition_impairment_at_time_of_crash_non_motorist: NUMBER | NULL
+state_number: NUMBER | NULL
+state_name: TEXT | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.NMPRIOR_2016
+vehicle_number: NUMBER | NULL
+non_motorist_action_circumstances_name: TEXT | NULL
+non_motorist_action_circumstances: NUMBER | NULL
+state_number: NUMBER | NULL
+person_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.DISTRACT_2020
+state_number: NUMBER | NULL
+driver_distracted_by_name: TEXT | NULL
+state_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+driver_distracted_by: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.ACCIDENT_2016
+latitude: FLOAT | This element identifies the location of the crash using Global Position coordinates. This is the position of latitude. DDDDDD (DD.DDDD – Decimal Degrees) DD.DDDD Actual Degrees 77.7777 Not Reported 88.8888 Not Available (If State Exempt) 99.9999 Unknown
+hour_of_ems_arrival_at_hospital: NUMBER | This data element records the hour that emergency medical service arrived at the treatment facility to which it was transporting victims of the crash. 00-23 Hour -- Not Notified, Officially Cancelled or Not Transported (when HOSP_MIN = 00) -- Not Notified or Not Transported (when HOSP_MIN = 00) 88 Not Applicable or Not Notified 99 Unknown Hour 99 Officially Cancelled (when HOSP_MIN = 97) 99 Unknown if Transported (when HOSP_MIN = 98)
+relation_to_trafficway_name: TEXT | This data element identifies the location of the crash as it relates to its position within or outside the trafficway based on the “First Harmful Event.”
+national_highway_system: NUMBER | This data element identifies whether this crash occurred on a trafficway that is part of the National Highway System. 0 This Section is Not on the National Highway System 1 This Section is on the National Highway System 9 Unknown
+related_factors_crash_level_2: NUMBER | This data element records factors related to the crash expressed by the investigating officer. For more info on the codes, please look at <C32 Related Factors- Crash Level> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+functional_system: NUMBER | 01 (Interstate), 02 (Principal Arterial – Other Freeways and Expressways), 03 (Principal Arterial – Other), 04 (Minor Arterial), 05 (Major Collector), 06 (Minor Collector), 07 (Local), 96 (Trafficway Not in State Inventory), 98 (Not Reported), and 99 (Unknown).
+land_use_name: TEXT | 1 (Rural), 2 (Urban), 6 (Trafficway Not in State Inventory), 8 (Not Reported) and 9 (Unknown).
+number_of_fatalities: NUMBER | This data element records the number of fatally injured persons in the crash. 01-99 Number of Fatalities that Occurred in the Crash.
+number_of_persons_not_in_motor_vehicles_in_transport_mvit: NUMBER | This data element is a count of the number of non-motorists in the crash. A non-motorist is defined as a pedestrian, a cyclist, an occupant of a motor vehicle not intransport, a person riding a horse, an occupant of an animal drawn conveyance, person associated with non-motorist conveyance (e.g., baby carriage, skate board, wheelchair), or an other non-motorist (e.g., person outside a trafficway, person in a house). 0-98 Number of Persons Not in Motor Vehicles in Transport
+timestamp_of_crash: NUMBER | This data element records the date and time on which the crash occurred.
+relation_to_junction_specific_location_name: TEXT | This data element identifies the crash's location with respect to presence in or proximity to components typically in junction or interchange areas. The coding of this data element is done in two sub-fields (see also C20A) and is based on the location of the “First Harmful Event” of the crash.
+atmospheric_conditions_2_name: TEXT | This data element records the prevailing atmospheric conditions that existed at the time of the crash as indicated in the case material.
+number_of_motor_vehicles_in_transport_mvit: NUMBER | This data element is a count of the number of vehicles in-transport involved in the crash. Legally parked vehicles are not included. 001-999 Number of Vehicle Forms
+hour_of_crash: NUMBER | This data element records the hour at which the crash occurred. 00-23 Hour -- Not Applicable or Not Notified 99 Unknown
+related_factors_crash_level_1_name: TEXT | This data element records factors related to the crash expressed by the investigating officer.
+ownership: NUMBER | For more info on the codes, please look at <C13 Ownership> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+functional_system_name: TEXT | 01 (Interstate), 02 (Principal Arterial – Other Freeways and Expressways), 03 (Principal Arterial – Other), 04 (Minor Arterial), 05 (Major Collector), 06 (Minor Collector), 07 (Local), 96 (Trafficway Not in State Inventory), 98 (Not Reported), and 99 (Unknown).
+related_factors_crash_level_3: NUMBER | This data element records factors related to the crash expressed by the investigating officer. For more info on the codes, please look at <C32 Related Factors- Crash Level> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+atmospheric_conditions_name: TEXT | This data element records the prevailing atmospheric conditions that existed at the time of the crash as indicated in the case material.
+year_of_crash: NUMBER | This data element records the year in which the crash occurred. xxxx Year of the Crash
+minute_of_ems_arrival_at_hospital: NUMBER | This data element records the minutes after the hour that emergency medical service arrived at the treatment facility to which it was transporting victims of the crash. 00-59 Minute -- Not Notified, Officially Cancelled or Not Transported (when HOSP_HR = 00) -- Not Notified or Not Transported (when HOSP_HR = 00) 88 Not Applicable or Not Notified 96 Terminated Transport 97 Officially Cancelled 98 Unknown if Transported 99 Unknown Minutes
+atmospheric_conditions_1_name: TEXT | This data element records the prevailing atmospheric conditions that existed at the time of the crash as indicated in the case material.
+number_of_forms_submitted_for_persons_not_in_motor_vehicles: NUMBER | This data element is the number of Person Forms (Not a Motor Vehicle Occupant) that are applicable to this case (i.e., non-occupants). 00-99 Number of Persons Not in Motor Vehicles
+first_harmful_event: NUMBER | This data element describes the first injury or damage producing event of the crash. For more info on the codes, please look at <C19 First Harmful Event> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+atmospheric_conditions_1: NUMBER | This data element records the prevailing atmospheric conditions that existed at the time of the crash as indicated in the case material. For more info on the codes, please look at <C26 Atmospheric Conditions> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+work_zone: TEXT | This data element identifies a motor vehicle traffic crash in which the first harmful event occurs within the boundaries of a work zone or on an approach to or exit from a work zone, resulting from an activity, behavior, or control related to the movement of the traffic units through the work zone. 0 None 1 Construction 2 Maintenance -- Construction or Maintenance 3 Utility 4 Work Zone, Type Unknown -- Not Reported
+route_signing_name: TEXT | This data element identifies the route signing of the trafficway on which the crash occurred.
+longitude: FLOAT | This element identifies the location of the crash using Global Position coordinates. This is the position of longitude. DDDDDDD (DDD.DDDD – Decimal Degrees) DDD.DDDD Actual Degrees 777.7777 Not Reported 888.8888 Not Available (If State Exempt) 999.9999 Unknown
+atmospheric_conditions: NUMBER | This data element records the prevailing atmospheric conditions that existed at the time of the crash as indicated in the case material. For more info on the codes, please look at <C26 Atmospheric Conditions> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+month_of_crash: NUMBER | This data element records the month in which the crash occurred. For more info on the codes, please look at <C8A Month of Crash> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+relation_to_junction_specific_location: NUMBER | This data element identifies the crash's location with respect to presence in or proximity to components typically in junction or interchange areas. The coding of this data element is done in two sub-fields (see also C20A) and is based on the location of the “First Harmful Event” of the crash. For more info on the codes, please look at <C21B Relation to Junction- Specific Location> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+consecutive_number: NUMBER | This data element is the unique case number assigned to each crash. It appears on each data file and is used to merge information from the data files together. xxxxxx Two Characters for State Code followed by Four Characters for Case Number
+special_jurisdiction: NUMBER | This data element identifies if the location on the trafficway where the crash occurred qualifies as a Special Jurisdiction even though it may be patrolled by state, county or local police (e.g., all State highways running through Indian reservations are under the jurisdiction of the Indian reservation). 0 No Special Jurisdiction (Includes National Forests Since 2008) 1 National Park Service 2 Military 3 Indian Reservation 4 College/University Campus 5 Other Federal Properties (Since 1977) 8 Other (Since 1976) 9 Unknown
+atmospheric_conditions_2: NUMBER | This data element records the prevailing atmospheric conditions that existed at the time of the crash as indicated in the case material. For more info on the codes, please look at <C26 Atmospheric Conditions> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+hour_of_arrival_at_scene: NUMBER | This data element records the hour that emergency medical service arrived on the crash scene. 00-23 Hour -- Not Notified or Officially Cancelled (when ARR_MIN = 00) -- Not Notified (when ARR_MIN = 00) 88 Not Applicable or Not Notified 99 Unknown Hour 99 Officially Cancelled (when ARR_MIN = 97) 99 Unknown if Arrived (when ARR_MIN = 98)
+trafficway_identifier_2: TEXT | This data element records the trafficway on which the crash occurred. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Actual Posted Number, Assigned Number, or Common Name (30 characters) 999999999999999999999999999999 Unknown
+state_name: TEXT | This data element identifies the state in which the crash occurred. The codes are from the General Services Administration’s (GSA) publication of worldwide Geographic Location Codes (GLC).
+relation_to_junction_within_interchange_area: TEXT | This data element identifies the crash's location with respect to presence in an interchange area. The coding of this data element is done in two sub-fields (see also C20B) and is based on the location of the “First Harmful Event” of the crash. 0 No 1 Yes 8 Not Reported 9 Unknown
+number_of_drunk_drivers: NUMBER | This data element records the number of drunk drivers involved in the crash. 00-99 Number of Drunk Drivers Involved in the Fatal Crash.
+number_of_persons_in_motor_vehicles_in_transport_mvit: NUMBER | This data element is a count of the number of motorists in the crash. A motorist is a driver, passenger or unknown occupant type of a motor vehicle in-transport. 0-999 Number of Persons in Motor Vehicles In-Transport
+ownership_name: TEXT | For more info on the codes, please look at <C13 Ownership> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+manner_of_collision: NUMBER | This data element describes the orientation of two motor vehicles in-transport when they are involved in the “First Harmful Event” of a collision crash. If the “First Harmful Event” is not a collision between two motor vehicles in-transport it is classified as such. For more info on the codes, please look at <C20 Manner of Collision> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+minute_of_notification: NUMBER | This data element records the minutes after the hour that emergency medical service was notified. 00-59 Minute -- Not Applicable or Not Notified (when NOT_HOUR = 00) 88 Not Applicable or Not Notified 98 Unknown if Notified 99 Unknown Minutes
+special_jurisdiction_name: TEXT | This data element identifies if the location on the trafficway where the crash occurred qualifies as a Special Jurisdiction even though it may be patrolled by state, county or local police (e.g., all State highways running through Indian reservations are under the jurisdiction of the Indian reservation).
+day_of_crash: NUMBER | This data element records the day of the month on which the crash occurred. 01-31 Day of the Month of the Crash -- Unknown
+first_harmful_event_name: TEXT | This data element describes the first injury or damage producing event of the crash.
+relation_to_trafficway: NUMBER | This data element identifies the location of the crash as it relates to its position within or outside the trafficway based on the “First Harmful Event.” For more info on the codes, please look at <C23 Relation to Trafficway> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+type_of_intersection: TEXT | This data element identifies and allows separation of various intersection types. 1 Not an Intersection 2 Four-Way Intersection 3 T-Intersection 4 Y-Intersection 5 Traffic Circle 6 Roundabout 7 Five-Point, or More 10 L-Intersection 98 Not Reported 99 Unknown
+related_factors_crash_level_2_name: TEXT | This data element records factors related to the crash expressed by the investigating officer.
+county: NUMBER | This data element records the location of the unstabilized event with regard to the County. The codes are from the General Services Administration’s (GSA) publication of worldwide Geographic Location Codes (GLC). 000 Not Applicable 001-996 Use GSA Geographical Codes 997 Other 998 Not Reported 999 Unknown
+related_factors_crash_level_1: NUMBER | This data element records factors related to the crash expressed by the investigating officer. For more info on the codes, please look at <C32 Related Factors- Crash Level> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+number_of_vehicle_forms_submitted_all: NUMBER | number_of_vehicle_forms_submitted_all
+number_of_parked_working_vehicles: NUMBER | This data element is a count of the number of parked and working vehicles involved in the crash. 0-999 Number of Parked/Working Vehicles in the Crash
+trafficway_identifier: TEXT | This data element records the trafficway on which the crash occurred. xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Actual Posted Number, Assigned Number, or Common Name (30 characters) 999999999999999999999999999999 Unknown
+hour_of_notification: NUMBER | This data element records the hour that emergency medical service was notified. 00-23 Hour -- Not Applicable or Not Notified (when NOT_MIN = 00) 88 Not Applicable or Not Notified 99 Unknown Hour 99 Unknown if Notified (when NOT_MIN = 98)
+light_condition_name: TEXT | This data element records the type/level of light that existed at the time of the crash as indicated in the case material.
+light_condition: NUMBER | This data element records the type/level of light that existed at the time of the crash as indicated in the case material. For more info on the codes, please look at <C25 Light Condition> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+minute_of_arrival_at_scene: NUMBER | This data element records the minutes after the hour that emergency medical service arrived on the crash scene. 00-59 Minute 00 -- Not Notified or Officially Cancelled (when ARR_HOUR = 00) -- Not Notified (when ARR_HOUR = 00) 88 Not Applicable or Not Notified 97 Officially Cancelled 98 Unknown if Arrived 99 Unknown Minutes
+day_of_week: NUMBER | This data element records the day of the week on which the crash occurred. 1 Sunday 2 Monday 3 Tuesday 4 Wednesday 5 Thursday 6 Friday 7 Saturday -- Unknown
+land_use: NUMBER | 1 (Rural), 2 (Urban), 6 (Trafficway Not in State Inventory), 8 (Not Reported) and 9 (Unknown).
+milepoint: NUMBER | This data element records the milepoint nearest to the location where the crash occurred. 00000 None xxxxx Actual to Nearest Tenth Mile (Assume decimal, e.g., 12345 = 1234.5) 99998 Not Reported 99999 Unknown
+school_bus_related: TEXT | This data element identifies if a school bus, or motor vehicle functioning as a school bus, is related to the crash. 0 No 1 Yes -- Not Reported
+manner_of_collision_name: TEXT | This data element describes the orientation of two motor vehicles in-transport when they are involved in the “First Harmful Event” of a collision crash. If the “First Harmful Event” is not a collision between two motor vehicles in-transport it is classified as such.
+number_of_forms_submitted_for_persons_in_motor_vehicles: NUMBER | This data element is a count of the number of Person Level (Motor Vehicle Occupant) Forms that are applicable to this case (i.e., occupants). 000-999 Number of Person Forms
+state_number: NUMBER | This data element identifies the state in which the crash occurred. The codes are from the General Services Administration’s (GSA) publication of worldwide Geographic Location Codes (GLC). For more info on the codes, please look at <C1/V1/D1/PC1/P1/NM1 State Number> section in the pdf: https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812315
+city: NUMBER | This data element records the location of the unstabilized event with regard to the City. The codes are from the General Services Administration’s (GSA) publication of worldwide Geographic Location Codes (GLC). 0000 Not Applicable 0001-9996 GSA Geographical Codes 9997 Other 9898 Not Reported 9999 Unknown
+related_factors_crash_level_3_name: TEXT | This data element records factors related to the crash expressed by the investigating officer.
+rail_grade_crossing_identifier: TEXT | This data element identifies if the crash occurred in or near a rail grade crossing. 0000000 Not Applicable xxxxxxA Six Digits Followed by One Alphabetic Valid F.R.A. Code 9999999 Unknown
+route_signing: NUMBER | This data element identifies the route signing of the trafficway on which the crash occurred. 1 Interstate 2 U.S. Highway 3 State Highway 4 County Road 5 Local Street – Township 6 Local Street – Municipality 7 Local Street – Frontage Road (Since 1994) 8 Other 9 Unknown
+minute_of_crash: NUMBER | This data element records the minutes after the hour at which the crash occurred. 00-59 Minute -- Not Applicable or Not Notified 99 Unknown
+
+## NHTSA_TRAFFIC_FATALITIES.NMPRIOR_2020
+state_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+non_motorist_action_circumstances_name: TEXT | NULL
+person_number: NUMBER | NULL
+state_name: TEXT | NULL
+non_motorist_action_circumstances: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VEVENT_2015
+vehicle_event_number: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+area_of_impact_other_vehicle_name: TEXT | NULL
+sequence_of_events_name: TEXT | NULL
+area_of_impact_this_vehicle: NUMBER | NULL
+sequence_of_events: NUMBER | NULL
+event_number: NUMBER | NULL
+vehicle_number_this_vehicle: NUMBER | NULL
+vehicle_number_other_vehicle: NUMBER | NULL
+area_of_impact_other_vehicle: NUMBER | NULL
+area_of_impact_this_vehicle_name: TEXT | NULL
+state_number: NUMBER | NULL
+consecutive_number: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.PARKWORK_2017
+number_of_occupants_name: TEXT | NULL
+cargo_body_type: NUMBER | NULL
+vin_character_11: TEXT | NULL
+month_of_crash_name: TEXT | NULL
+hazardous_material_placard_name: TEXT | NULL
+make_model_combined: TEXT | NULL
+related_factors_vehicle_level1_name: TEXT | NULL
+vehicle_trailing_name: TEXT | NULL
+ptrlr1vin: TEXT | NULL
+vehicle_model_year_name: TEXT | NULL
+registration_state: NUMBER | NULL
+hazardous_material_identification_number: NUMBER | NULL
+state_number: NUMBER | NULL
+vin_character_6: TEXT | NULL
+vehicle_identification_number_vin_name: TEXT | NULL
+unit_type: NUMBER | NULL
+ptrlr1vinname: TEXT | NULL
+related_factors_vehicle_level2_name: TEXT | NULL
+vehicle_configuration_name: TEXT | NULL
+motor_carrier_identification_number: TEXT | NULL
+vin_character_3: TEXT | NULL
+hour_of_crash_name: TEXT | NULL
+related_factors_vehicle_level1: NUMBER | NULL
+gross_vehicle_weight_rating_name: TEXT | NULL
+mcid_identification_number_name: TEXT | NULL
+vehicle_make_name: TEXT | NULL
+fatalities_in_vehicle: NUMBER | NULL
+emergency_motor_vehicle_use: NUMBER | NULL
+vin_character_7: TEXT | NULL
+manner_of_collision: NUMBER | NULL
+vehicle_trailing: NUMBER | NULL
+motor_carrier_identification_number_name: TEXT | NULL
+mcid_issuing_authority: NUMBER | NULL
+vin_character_10: TEXT | NULL
+first_harmful_event_name: TEXT | NULL
+hazardous_material_involvement_name: TEXT | NULL
+ptrlr2vinname: TEXT | NULL
+month_of_crash: NUMBER | NULL
+release_of_hazardous_material_from_the_cargo_compartment: NUMBER | NULL
+hazardous_material_class_number_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+ptrlr2vin: TEXT | NULL
+vin_character_2: TEXT | NULL
+hazardous_material_class_number: NUMBER | NULL
+underride_override_name: TEXT | NULL
+number_of_motor_vehicles_in_transport_mvit: NUMBER | NULL
+hazardous_material_identification_number_name: TEXT | NULL
+unit_type_name: TEXT | NULL
+state_name: TEXT | NULL
+vehicle_configuration: NUMBER | NULL
+underride_override: NUMBER | NULL
+extent_of_damage_name: TEXT | NULL
+vehicle_model: NUMBER | NULL
+release_of_hazardous_material_from_the_cargo_compartment_name: TEXT | NULL
+vehicle_identification_number_vin: TEXT | NULL
+hazardous_material_involvement: NUMBER | NULL
+vin_character_5: TEXT | NULL
+minute_of_crash_name: TEXT | NULL
+special_use_name: TEXT | NULL
+cargo_body_type_name: TEXT | NULL
+vin_character_8: TEXT | NULL
+fire_occurrence: NUMBER | NULL
+mcid_identification_number: TEXT | NULL
+bus_use: NUMBER | NULL
+special_use: NUMBER | NULL
+registered_vehicle_owner_name: TEXT | NULL
+bus_use_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+vehicle_removal: NUMBER | NULL
+most_harmful_event_name: TEXT | NULL
+vin_character_1: TEXT | NULL
+vin_character_9: TEXT | NULL
+body_type: NUMBER | NULL
+ptrlr3vin: TEXT | NULL
+initial_contact_point: NUMBER | NULL
+related_factors_vehicle_level2: NUMBER | NULL
+gross_vehicle_weight_rating: NUMBER | NULL
+vehicle_removal_name: TEXT | NULL
+hit_and_run_name: TEXT | NULL
+manner_of_collision_name: TEXT | NULL
+vin_character_12: TEXT | NULL
+mcid_issuing_authority_name: TEXT | NULL
+registered_vehicle_owner: NUMBER | NULL
+fire_occurrence_name: TEXT | NULL
+ptrlr3vinname: TEXT | NULL
+vehicle_model_year: NUMBER | NULL
+vin_character_4: TEXT | NULL
+day_of_crash: NUMBER | NULL
+hit_and_run: NUMBER | NULL
+minute_of_crash: NUMBER | NULL
+vehicle_make: NUMBER | NULL
+body_type_name: TEXT | NULL
+number_of_occupants: NUMBER | NULL
+hazardous_material_placard: NUMBER | NULL
+initial_contact_point_name: TEXT | NULL
+extent_of_damage: NUMBER | NULL
+hour_of_crash: NUMBER | NULL
+registration_state_name: TEXT | NULL
+most_harmful_event: NUMBER | NULL
+emergency_motor_vehicle_use_name: TEXT | NULL
+day_of_crash_name: TEXT | NULL
+first_harmful_event: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.MANEUVER_2015
+state_number: NUMBER | NULL
+state_name: TEXT | NULL
+vehicle_number: NUMBER | NULL
+driver_maneuvered_to_avoid_name: TEXT | NULL
+consecutive_number: NUMBER | NULL
+driver_maneuvered_to_avoid: NUMBER | NULL
+
+## NHTSA_TRAFFIC_FATALITIES.VSOE_2018
+consecutive_number: NUMBER | NULL
+sequence_of_events_name: TEXT | NULL
+area_of_Impact_associated_with_the_event_name: TEXT | NULL
+vehicle_event_number: NUMBER | NULL
+sequence_of_events: NUMBER | NULL
+vehicle_number: NUMBER | NULL
+area_of_Impact_associated_with_the_event: NUMBER | NULL
+state_name: TEXT | NULL
+state_number: NUMBER | NULL

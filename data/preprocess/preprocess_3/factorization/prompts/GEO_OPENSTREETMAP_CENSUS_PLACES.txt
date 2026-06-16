@@ -1,0 +1,262 @@
+[COMPONENTS]
+@C1
+area_land_meters: NUMBER | Area of the place that consists of land, in square meters
+area_water_meters: NUMBER | Area of the place that consists of water, in square meters
+fips_class_code: TEXT | Current FIPS class code
+functional_status: TEXT | Current functional status code. A full list of possible results can be found: https://www.census.gov/geo/reference/funcstat.html
+internal_point_geom: BINARY | Geographic representation of the state's internal point, which is the point at or closest to the state's geographic center
+internal_point_lat: FLOAT | Latitude of the place's internal point, which is the point at or closest to the place's geographic center
+internal_point_lon: FLOAT | Longitude of the place's internal point, which is the point at or closest to the place's geographic center
+lsad_code: TEXT | Current legal/statistical area description code for each place. This helps differentiate between Census Designated Places (CDPs), which are statistical entities) and incorporated places, which are legal entities, among other differences. Census LSAD codes and their descriptions can be found in bigquery-public-data.census_lsad_codes.lsad_codes
+name_lsad: TEXT | Current name and the translated legal/statistical area description for place
+place_fips_code: TEXT | Five-digit FIPS code for the given place
+place_geom: BINARY | Geographical representation of the polygon that defines the perimeter of each place. This column should be used as the GEO column for visualization in BigQuery Geo Viz
+place_gnis_code: TEXT | Current place GNIS code
+place_id: TEXT | Unique idenifier for each place. This is a concatenation of the current state FIPS code and the place FIPS code
+place_name: TEXT | Full text name of the place
+principal_city_msa: BOOLEAN | Indicates if a place is the principal city for a metropolitan or micropolitan statistical area. The polygons defining metropolitan and micropolitan statistical areas are available in bigquery-public-data.geo_us_boundaries.us_msa
+principal_city_ne: BOOLEAN | Indicates if a place is the principal city for a New England city and town area
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016
+
+@C2
+all_tags: VARIANT | NULL
+geometry: BINARY | NULL
+osm_timestamp: NUMBER | NULL
+
+@C3
+changeset: NUMBER | NULL
+username: TEXT | NULL
+version: NUMBER | NULL
+visible: BOOLEAN | NULL
+
+@C4
+osm_id: NUMBER | NULL
+osm_version: NUMBER | NULL
+osm_way_id: NUMBER | NULL
+
+@C5
+gdal_type: TEXT | NULL
+layer_class: TEXT | NULL
+layer_code: NUMBER | NULL
+layer_name: TEXT | NULL
+
+[TABLES]
+## GEO_OPENSTREETMAP.HISTORY_CHANGESETS
+osm_timestamp_min: NUMBER | Minimum timestamp of objects contained in this changeset.
+ways: VARIANT | Ways that are part of this way
+id: NUMBER | Changeset ID.
+osm_timestamp_max: NUMBER | Maximum timestamp of objects contained in this changeset.
+relations: VARIANT | Relations that are part of this way
+nodes: VARIANT | Nodes that are part of this way
+
+## GEO_OPENSTREETMAP.PLANET_RELATIONS
+@use: [C2, C3]
+id: NUMBER | NULL
+members: VARIANT | NULL
+
+## GEO_OPENSTREETMAP.HISTORY_RELATIONS
+@use: [C2, C3]
+members: VARIANT | NULL
+id: NUMBER | NULL
+
+## GEO_OPENSTREETMAP.PLANET_LAYERS
+@use: [C2, C4, C5]
+
+## GEO_OPENSTREETMAP.HISTORY_NODES
+@use: [C2, C3]
+LONGITUDE: NUMBER | NULL
+ID: NUMBER | NULL
+LATITUDE: NUMBER | NULL
+
+## GEO_OPENSTREETMAP.PLANET_FEATURES
+@use: [C2, C4]
+feature_type: TEXT | NULL
+
+## GEO_OPENSTREETMAP.PLANET_FEATURES_POINTS
+@use: [C2, C4]
+
+## GEO_OPENSTREETMAP.HISTORY_LAYERS
+@use: [C2, C4, C5]
+
+## GEO_OPENSTREETMAP.PLANET_NODES
+@use: [C2, C3]
+latitude: NUMBER | NULL
+longitude: NUMBER | NULL
+id: NUMBER | NULL
+
+## GEO_OPENSTREETMAP.PLANET_WAYS
+@use: [C2, C3]
+nodes: VARIANT | NULL
+id: NUMBER | NULL
+
+## GEO_US_CENSUS_PLACES.PLACES_NORTH_CAROLINA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_MASSACHUSETTS
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_DISTRICT_OF_COLUMBIA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_WASHINGTON
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_CALIFORNIA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_WYOMING
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_FLORIDA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_NEW_JERSEY
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_KANSAS
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_CONNECTICUT
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_ARIZONA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_GEORGIA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_RHODE_ISLAND
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_IOWA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_AMERICAN_SAMOA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_OREGON
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_PENNSYLVANIA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_OHIO
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_WISCONSIN
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_NORTHERN_MARIANA_ISLANDS
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_US_VIRGIN_ISLANDS
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_VERMONT
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_HAWAII
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_ALABAMA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_KENTUCKY
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_ALASKA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_OKLAHOMA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_MISSOURI
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_GUAM
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.US_NATIONAL_PLACES
+@use: [C1]
+state_name: TEXT | Full text name of the state
+
+## GEO_US_CENSUS_PLACES.PLACES_NEBRASKA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_VIRGINIA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_NEW_YORK
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_MARYLAND
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_MAINE
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_PUERTO_RICO
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_UTAH
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_INDIANA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_MICHIGAN
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_COLORADO
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_SOUTH_CAROLINA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_IDAHO
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_TEXAS
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_NEW_MEXICO
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_NORTH_DAKOTA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_MINNESOTA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_MONTANA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_ARKANSAS
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_SOUTH_DAKOTA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_LOUISIANA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_NEVADA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_WEST_VIRGINIA
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_NEW_HAMPSHIRE
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_MISSISSIPPI
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_DELAWARE
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_TENNESSEE
+@use: [C1]
+
+## GEO_US_CENSUS_PLACES.PLACES_ILLINOIS
+@use: [C1]

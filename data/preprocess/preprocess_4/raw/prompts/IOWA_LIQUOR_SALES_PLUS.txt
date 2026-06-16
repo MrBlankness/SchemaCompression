@@ -1,0 +1,42 @@
+[TABLES]
+## IOWA_LIQUOR_SALES.SALES
+vendor_name: TEXT | The vendor name of the company for the brand of liquor ordered | eg=["SAZERAC COMPANY  INC", "DIAGEO AMERICAS"]
+item_number: TEXT | Item number for the individual liquor product ordered. | eg=["35317", "12408"]
+bottle_volume_ml: NUMBER | Volume of each liquor bottle ordered in milliliters. | eg=[1000, 1750]
+address: TEXT | Address of store who ordered the liquor. | eg=["2827 HAMILTON BLVD", "210 11TH STREET"]
+city: TEXT | City where the store who ordered the liquor is located | eg=["SIOUX CITY", "CHARLES CITY"]
+invoice_and_item_number: TEXT | Concatenated invoice and line number associated with the liquor order. This provides a unique identifier for the individual liquor products included in the store order. | eg=["RINV-05015300127", "RINV-04313400010"]
+state_bottle_cost: FLOAT | The amount that Alcoholic Beverages Division paid for each bottle of liquor ordered | eg=[3.97, 10.0]
+state_bottle_retail: FLOAT | The amount the store paid for each bottle of liquor ordered | eg=[5.96, 15.0]
+vendor_number: TEXT | The vendor number of the company for the brand of liquor ordered | eg=["421", "260"]
+pack: NUMBER | The number of bottles in a case for the liquor ordered | eg=[12, 6]
+category_name: TEXT | Category of the liquor ordered. | eg=["AMERICAN VODKAS", "CANADIAN WHISKIES"]
+store_name: TEXT | Name of store who ordered the liquor. | eg=["HY-VEE FOOD STORE #4 / SIOUX CITY", "FAREWAY STORES #501 / CHARLES CITY"]
+item_description: TEXT | Description of the individual liquor product ordered. | eg=["BARTON VODKA", "CANADIAN LTD WHISKY"]
+store_location: BINARY | Location of store who ordered the liquor. The Address, City, State and Zip Code are geocoded to provide geographic coordinates. Accuracy of geocoding is dependent on how well the address is interpreted and the completeness of the reference data used. | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xa8\\xcc\\xd7\\xa9\\xd5\\x1aX\\xc0U\\xb6\\x17\\xea\\x93BE@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00>\\\\r\\xdc)+W\\xc0\\xc2i\\xc1\\x8b\\xbe\\x86E@')"]
+zip_code: TEXT | Zip code where the store who ordered the liquor is located | eg=["51104.0", "50616.0"]
+sale_dollars: FLOAT | Total cost of liquor order (number of bottles multiplied by the state bottle retail) | eg=[-71.52, -90.0]
+county_number: TEXT | Iowa county number for the county where store who ordered the liquor is located
+county: TEXT | County where the store who ordered the liquor is located | eg=["WOODBURY", "FLOYD"]
+volume_sold_liters: FLOAT | Total volume of liquor ordered in liters. (i.e. (Bottle Volume (ml) x Bottles Sold)/1,000)" | eg=[-12.0, -10.5]
+store_number: TEXT | Unique number assigned to the store who ordered the liquor. | eg=["2623", "4321"]
+bottles_sold: NUMBER | The number of bottles of liquor ordered by the store | eg=[-12, -6]
+category: TEXT | Category code associated with the liquor ordered | eg=["1031100.0", "1012100.0"]
+volume_sold_gallons: FLOAT | Total volume of liquor ordered in gallons. (i.e. (Bottle Volume (ml) x Bottles Sold)/3785.411784)" | eg=[-3.17, -2.77]
+date: DATE | Date of order | eg=["2023-12-11", "2022-10-12"]
+
+## CENSUS_BUREAU_USA.POPULATION_BY_ZIP_2010
+gender: TEXT | male or female. If empty, the row is a total population summary.
+population: NUMBER | The total count of the population for this segment. | eg=[512, 2304]
+geo_id: TEXT | Geo code | eg=["8600000US36773", "8600000US84317"]
+minimum_age: NUMBER | The minimum age in the age range. If null, this indicates the row as a total for male, female, or overall population.
+maximum_age: NUMBER | The maximum age in the age range. If null, this indicates the row as having no maximum (such as 85 and over) or the row is a total of the male, female, or overall population.
+zipcode: TEXT | Five digit ZIP Code Tabulation Area Census Code | eg=["36773", "84317"]
+
+## CENSUS_BUREAU_USA.POPULATION_BY_ZIP_2000
+minimum_age: NUMBER | The minimum age in the age range. If null, this indicates the row as a total for male, female, or overall population.
+gender: TEXT | male or female. If empty, the row is a total population summary. | eg=[""]
+population: NUMBER | The total count of the population for this segment. | eg=[256, 512]
+geo_id: TEXT | Geo code | eg=["8600000US67355", "8600000US57461"]
+zipcode: TEXT | Five digit ZIP Code Tabulation Area Census Code | eg=["67355", "57461"]
+maximum_age: NUMBER | The maximum age in the age range. If null, this indicates the row as having no maximum (such as 85 and over) or the row is a total of the male, female, or overall population.

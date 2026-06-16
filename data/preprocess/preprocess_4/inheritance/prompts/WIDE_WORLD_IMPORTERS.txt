@@ -1,0 +1,430 @@
+[STANDALONE]
+## WIDE_WORLD_IMPORTERS.APPLICATION_CITIES
+LastEditedBy: NUMBER | NULL | eg=[1]
+CityName: TEXT | NULL | eg=["Alberta", "Fulton"]
+LatestRecordedPopulation: TEXT | NULL | eg=["NULL", "272"]
+Location: FLOAT | NULL | eg=[8.607660043233205e+52, 8.607660043233206e+52]
+CityID: NUMBER | NULL | eg=[323, 12470]
+ValidTo: NUMBER | NULL | eg=[253402300799999999]
+StateProvinceID: NUMBER | NULL | eg=[1]
+ValidFrom: NUMBER | NULL | eg=[1356998400000000]
+
+## WIDE_WORLD_IMPORTERS.APPLICATION_COUNTRIES
+FormalName: TEXT | NULL | eg=["Commonwealth of the Bahamas", "Barbados"]
+ValidTo: NUMBER | NULL | eg=[253402300799999999]
+CountryName: TEXT | NULL | eg=["Bahamas", "Barbados"]
+Region: TEXT | NULL | eg=["Americas"]
+LatestRecordedPopulation: NUMBER | NULL | eg=[309156, 284589]
+CountryID: NUMBER | NULL | eg=[18, 21]
+CountryType: TEXT | NULL | eg=["UN Member State"]
+Continent: TEXT | NULL | eg=["North America"]
+Border: FLOAT | NULL | eg=[Infinity]
+LastEditedBy: NUMBER | NULL | eg=[1]
+Subregion: TEXT | NULL | eg=["Caribbean"]
+ValidFrom: NUMBER | NULL | eg=[1356998400000000]
+IsoAlpha3Code: TEXT | NULL | eg=["BHS", "BRB"]
+IsoNumericCode: NUMBER | NULL | eg=[44, 52]
+
+## WIDE_WORLD_IMPORTERS.APPLICATION_DELIVERYMETHODS
+ValidTo: NUMBER | NULL | eg=[253402300799999999]
+ValidFrom: NUMBER | NULL | eg=[1356998400000000]
+DeliveryMethodName: TEXT | NULL | eg=["Post", "Courier"]
+DeliveryMethodID: NUMBER | NULL | eg=[1, 2]
+LastEditedBy: NUMBER | NULL | eg=[1]
+
+## WIDE_WORLD_IMPORTERS.APPLICATION_PAYMENTMETHODS
+PaymentMethodName: TEXT | NULL | eg=["Cash", "Credit-Card"]
+ValidFrom: NUMBER | NULL | eg=[1356998400000000, 1451664000000000]
+ValidTo: NUMBER | NULL | eg=[253402300799999999]
+PaymentMethodID: NUMBER | NULL | eg=[1, 3]
+LastEditedBy: NUMBER | NULL | eg=[1, 9]
+
+## WIDE_WORLD_IMPORTERS.APPLICATION_PEOPLE
+LogonName: TEXT | NULL | eg=["elizas@northwindelectriccars.com", "aakarsha@tailspintoys.com"]
+IsSystemUser: NUMBER | NULL | eg=[1, 0]
+HashedPassword: TEXT | NULL | eg=["0x2787527C41F2131B0C1314FA84D727BCA95A6AF9F7F3DD5A028344E4BD5E1B87", "0xCB200A535BFF77394C556E909F35158B7C45D318E7E0100E4B98899ABC5797C5"]
+FullName: TEXT | NULL | eg=["Eliza Soderberg", "Aakarsha Nookala"]
+EmailAddress: TEXT | NULL | eg=["elizas@northwindelectriccars.com", "aakarsha@tailspintoys.com"]
+FaxNumber: TEXT | NULL | eg=["(201) 555-0106", "(201) 555-0101"]
+Photo: TEXT | NULL | eg=["NULL"]
+UserPreferences: TEXT | NULL | eg=[{"theme":"ui-darkness","dateFormat":"mm/dd/yy","timeZone":"PST","table":{"pagingType":"simple","pageLength":10},"favoritesOnDashboard":true}, {"theme":"blitzer","dateFormat":"mm/dd/yy","timeZone":"PST","table":{"pagingType":"full","pageLength":50},"favoritesOnDashboard":true}]
+PhoneNumber: TEXT | NULL | eg=["(201) 555-0101", "(201) 555-0100"]
+PersonID: NUMBER | NULL | eg=[39, 1177]
+LastEditedBy: NUMBER | NULL | eg=[1]
+PreferredName: TEXT | NULL | eg=["Eliza", "Aakarsha"]
+IsExternalLogonProvider: NUMBER | NULL | eg=[0]
+SearchName: TEXT | NULL | eg=["Eliza Eliza Soderberg", "Aakarsha Aakarsha Nookala"]
+OtherLanguages: TEXT | NULL | eg=["NULL"]
+ValidFrom: NUMBER | NULL | eg=[1464736440000000]
+IsSalesperson: NUMBER | NULL | eg=[0]
+IsEmployee: NUMBER | NULL | eg=[0]
+CustomFields: TEXT | NULL | eg=["NULL"]
+ValidTo: NUMBER | NULL | eg=[253402300799999999]
+IsPermittedToLogon: NUMBER | NULL | eg=[1]
+
+## WIDE_WORLD_IMPORTERS.APPLICATION_STATEPROVINCES
+CountryID: NUMBER | NULL | eg=[230]
+StateProvinceName: TEXT | NULL | eg=["Hawaii", "South Carolina"]
+SalesTerritory: TEXT | NULL | eg=["Far West", "Southeast"]
+ValidTo: NUMBER | NULL | eg=[253402300799999999]
+StateProvinceID: NUMBER | NULL | eg=[12, 42]
+LatestRecordedPopulation: NUMBER | NULL | eg=[1404054, 4774839]
+LastEditedBy: NUMBER | NULL | eg=[1, 15]
+ValidFrom: NUMBER | NULL | eg=[1356998460000000, 1356998580000000]
+Border: BINARY | NULL | eg=["bytearray(b'\\xd3\\x11:\\xd7M4\\xd3M5\\xd3\\x81\\x01\\xd3M4\\xd3M=\\xd7\\xd0\\xbc\\x07p\\x81\\x0b\\xbd\\xf7\\xe3@\\xfa\\x03\\xa0u\\x04?z\\xf3^\\xb7\\x0bNA\\xd3\\xbd;\\xec\\x1dw\\x04\\x1d\\xf7\\xe3N:\\xeb]{\\xe3\\x9d\\x05\\xf3n\\xb7\\x0bO<\\xf3N7\\x03\\xcev\\x00\\x1d\\xf7\\xe3N\\xbc\\xd3pt\\xd3]u\\xf3^\\xb7\\x0bA\\x02\\xdf_u\\x0fn\\x82\\x03\\xad\\xf7\\xe3O:\\x0b\\x90<\\xe8\\x11\\x03\\xf3N\\xb7\\x0bN\\xf9\\xe7\\xc15\\xf7\\xaf\\x05\\x03\\x8d\\xf7\\xe3@z\\xe3\\xde9\\xebq\\x03\\xec^\\xb7\\x0b@4\\x0b\\x81;\\xe0@t\\xf4\\x1d\\xf7\\xe3M<\\xe7\\xc0\\x01\\xef\\xae\\x03\\xec^\\xb7\\x0bM\\xc0\\x0b\\xdez\\xf7\\xbew\\xf0M\\xf7\\xe3My\\xf0.\\x00\\x10\\r8\\xec^\\xb7\\x0bOt\\x03^\\xb7\\xd3\\xbfy\\xec-\\xf7\\xe3Mw\\xd0]\\xbc\\xf4\\x1e\\xf6\\xecN\\xb7\\x0b@\\x84\\xe7}C\\xefm\\xf7\\xef\\x8d\\xf7\\xe3Mv\\xdfot\\xeb\\xbf{\\xec>\\xb7\\x0b@\\x03\\x17\\x9e9\\xe3nA\\xe8\\r\\xf7\\xe3M4\\x0b\\xbfD\\xdc={\\xec>\\xb7\\x0bO6\\x14N6\\xf0]|\\xe7\\xdd\\xf7\\xe3O9\\xe4=x\\xdc>\\xf4\\xec.\\xb7\\x0bN\\xb6\\xf4 E\\xd3\\xdf9\\xe0-\\xf7\\xe3A;\\x14-x\\x0b\\xbf5\\xec.\\xb7\\x0bN8\\xeb\\xbf}\\xe3\\x9d\\xbc\\xe3m\\xf7\\xe3N\\xf8\\x07AD\\x08Q5\\xec.\\xb7\\x0bN\\xfc\\xe3^8\\xe8\\x00\\xc0\\xd8=\\xf7\\xe3N5\\x0f\\xaew\\x00\\x1d\\x85\\xec>...", "bytearray(b'\\xd3\\x11:\\xd7M4\\xd3M5\\xd3\\x80\\xb6\\xd3M4\\xd3@\\xc3\\xdb\\x9e\\xf5\\xe7\\xae8\\xe4>5\\xe3My\\xe8?\\x04\\xef\\x7fA\\x0f\\xaex\\x0bOy\\x03`y\\xd3@\\xbb\\xe4\\x1e5\\xe3@;\\xdf^\\xb4\\x14.E\\x0f\\xaex\\x0bN\\xc4\\xe3\\xbdE\\xf7\\xa0\\xfd\\xe7\\xbe5\\xe3M\\x04\\x0bN\\xb6\\xdfp\\xb7\\x0f\\x9ex\\x0bM\\xc4\\x13\\xbe\\x84\\x0f\\xbe\\x01\\xe7\\xbe5\\xe3@\\xc3\\xe4@\\xf6\\xd7\\xc0\\x03\\x0f\\x9ex\\x0bMD\\x0c=<\\xf0\\x1f\\x00\\xe7n5\\xe3M\\xbb\\xeb\\xa0C\\xd7\\xc0\\x80\\x0f^x\\x0bO\\x01\\x03\\x9e<\\x04Mv\\xe0N5\\xe3M\\xfb\\xe7^\\x01\\xef}\\x81\\x08Nx\\x0bN\\x01\\x0b\\xde\\xf6\\xd7n\\x00\\xe0\\x1e5\\xe3@\\x05\\x101\\x03\\xf7\\xa18\\x0b\\xdex\\x0b@9\\x03\\xad\\xc0\\xf3\\xd0\\x80\\xe3\\x8e5\\xe3M8\\xf4-}\\xec/y\\x0b\\xaex\\x0bM5\\xf3\\x9e\\xc0\\x14\\r<\\xe3\\x8e5\\xe3@\\xbc\\xf7\\xa19\\x10\\x1d\\xf6\\x0b\\xaex\\x0bN\\xf7\\x10\\r:\\x10\\x1eC\\xdc^5\\xe3N\\x82\\x07\\xce\\xb6\\xf7\\xad\\xc2\\x0b~x\\x0bO7\\xe0^\\xf7\\x17m\\xb6\\xdc^5\\xe3N\\x81\\x17@D\\xd8\\r{\\x0b~x\\x0bM\\xc4\\xef\\x90\\x02\\xe7n\\xc0\\xdc.5\\xe3A;\\x03\\x81{\\xf00\\x05\\x04^x\\x0bN:\\x08]v\\x03_\\x00\\xdc.5\\xe3@\\xf8\\x13~\\x01\\x13\\xbe\\xf6\\x04^x\\x0b@\\xc4\\xf7mB\\x07@\\x01\\xdc>5\\xe3A\\x01\\xe8]=\\x0bM\\xc5\\x04\\x1..."]
+StateProvinceCode: TEXT | NULL | eg=["HI", "SC"]
+
+## WIDE_WORLD_IMPORTERS.APPLICATION_SYSTEMPARAMETERS
+DeliveryPostalCode: NUMBER | NULL
+DeliveryCityID: NUMBER | NULL
+PostalAddressLine2: TEXT | NULL
+PostalAddressLine1: TEXT | NULL
+PostalCityID: NUMBER | NULL
+DeliveryAddressLine2: TEXT | NULL
+PostalPostalCode: NUMBER | NULL
+DeliveryLocation: TEXT | NULL
+SystemParameterID: NUMBER | NULL
+ApplicationSettings: TEXT | NULL
+DeliveryAddressLine1: TEXT | NULL
+LastEditedBy: NUMBER | NULL
+LastEditedWhen: TEXT | NULL
+
+## WIDE_WORLD_IMPORTERS.APPLICATION_TRANSACTIONTYPES
+TransactionTypeName: TEXT | NULL | eg=["Customer Refund", "Supplier Invoice"]
+TransactionTypeID: NUMBER | NULL | eg=[4, 5]
+ValidFrom: NUMBER | NULL | eg=[1356998400000000, 1451664300000000]
+LastEditedBy: NUMBER | NULL | eg=[1, 9]
+ValidTo: NUMBER | NULL | eg=[253402300799999999]
+
+## WIDE_WORLD_IMPORTERS.PURCHASING_PURCHASEORDER
+SupplierReference: TEXT | NULL | eg=["BC0280982"]
+DeliveryMethodID: NUMBER | NULL | eg=[2]
+PurchaseOrderID: NUMBER | NULL | eg=[42, 138]
+ContactPersonID: NUMBER | NULL | eg=[2]
+ExpectedDeliveryDate: DATE | NULL | eg=["2013-02-01", "2013-04-10"]
+OrderDate: DATE | NULL | eg=["2013-01-12", "2013-03-21"]
+LastEditedBy: NUMBER | NULL | eg=[2]
+SupplierID: NUMBER | NULL | eg=[7]
+IsOrderFinalized: NUMBER | NULL | eg=[1]
+Comments: TEXT | NULL | eg=["NULL"]
+InternalComments: TEXT | NULL | eg=["NULL"]
+LastEditedWhen: NUMBER | NULL | eg=[1358146800000000, 1363935600000000]
+
+## WIDE_WORLD_IMPORTERS.PURCHASING_PURCHASEORDERLINES
+StockItemID: NUMBER | NULL | eg=[25, 30]
+ExpectedUnitPricePerOuter: FLOAT | NULL | eg=[4.5, 19.0]
+LastEditedWhen: NUMBER | NULL | eg=[1358146800000000, 1357282800000000]
+Description: TEXT | NULL | eg=["DBA joke mug - I will get you in order (Black)", "Developer joke mug - Oct 31 = Dec 25 (White)"]
+IsOrderLineFinalized: NUMBER | NULL | eg=[1]
+LastReceiptDate: TEXT | NULL | eg=["2013-01-14", "2013-01-04"]
+OrderedOuters: NUMBER | NULL | eg=[26, 27]
+ReceivedOuters: NUMBER | NULL | eg=[26, 27]
+PackageTypeID: NUMBER | NULL | eg=[7]
+PurchaseOrderID: NUMBER | NULL | eg=[40, 12]
+LastEditedBy: NUMBER | NULL | eg=[2, 3]
+PurchaseOrderLineID: NUMBER | NULL | eg=[234, 235]
+
+## WIDE_WORLD_IMPORTERS.PURCHASING_SUPPLIERCATEGORIES
+SupplierCategoryName: TEXT | NULL | eg=["Novelty Goods Supplier", "Toy Supplier"]
+ValidTo: NUMBER | NULL | eg=[253402300799999999]
+SupplierCategoryID: NUMBER | NULL | eg=[2, 3]
+ValidFrom: NUMBER | NULL | eg=[1356998400000000]
+LastEditedBy: NUMBER | NULL | eg=[1]
+
+## WIDE_WORLD_IMPORTERS.PURCHASING_SUPPLIERS
+PostalAddressLine1: TEXT | NULL | eg=["PO Box 1012", "PO Box 8747"]
+BankInternationalCode: NUMBER | NULL | eg=[25868, 21569]
+PrimaryContactPersonID: NUMBER | NULL | eg=[23, 35]
+InternalComments: TEXT | NULL | eg=["NULL"]
+BankAccountCode: NUMBER | NULL | eg=[358698, 654789]
+ValidTo: NUMBER | NULL | eg=[253402300799999999]
+DeliveryLocation: FLOAT | NULL | eg=[8.607660043233234e+52, 8.607660043233227e+52]
+FaxNumber: TEXT | NULL | eg=["(360) 555-0101", "(423) 555-0105"]
+ValidFrom: NUMBER | NULL | eg=[1356998700000000]
+PostalAddressLine2: TEXT | NULL | eg=["Jolimont", "Westerfold"]
+SupplierID: NUMBER | NULL | eg=[2, 8]
+LastEditedBy: NUMBER | NULL | eg=[1]
+DeliveryAddressLine2: TEXT | NULL | eg=["2934 Night Road", "949482 Miller Boulevard"]
+SupplierReference: TEXT | NULL | eg=["B2084020", "JQ082304802"]
+SupplierCategoryID: NUMBER | NULL | eg=[2, 3]
+DeliveryMethodID: TEXT | NULL | eg=["9", "10"]
+DeliveryCityID: NUMBER | NULL | eg=[13870, 17161]
+DeliveryAddressLine1: TEXT | NULL | eg=["Unit 2", "Suite 34"]
+BankAccountName: TEXT | NULL | eg=["Contoso Ltd", "Lucerne Publishing"]
+PostalPostalCode: NUMBER | NULL | eg=[98253, 37659]
+BankAccountNumber: NUMBER | NULL | eg=[4587965215, 3254123658]
+PaymentDays: NUMBER | NULL | eg=[7, 30]
+PhoneNumber: TEXT | NULL | eg=["(360) 555-0100", "(423) 555-0103"]
+SupplierName: TEXT | NULL | eg=["Contoso, Ltd.", "Lucerne Publishing"]
+PostalCityID: NUMBER | NULL | eg=[13870, 17161]
+WebsiteURL: TEXT | NULL | eg=["http://www.contoso.com", "http://www.lucernepublishing.com"]
+DeliveryPostalCode: NUMBER | NULL | eg=[98253, 37659]
+AlternateContactPersonID: NUMBER | NULL | eg=[24, 36]
+BankAccountBranch: TEXT | NULL | eg=["Woodgrove Bank Greenbank", "Woodgrove Bank Jonesborough"]
+
+## WIDE_WORLD_IMPORTERS.PURCHASING_SUPPLIERTRANSACTIONS
+FinalizationDate: TEXT | NULL | eg=["2013-04-08"]
+PaymentMethodID: NUMBER | NULL | eg=[4]
+SupplierInvoiceNumber: TEXT | NULL | eg=["8940", "873"]
+IsFinalized: NUMBER | NULL | eg=[1]
+TaxAmount: FLOAT | NULL | eg=[10863.9, 10966.5]
+OutstandingBalance: FLOAT | NULL | eg=[0.0]
+LastEditedBy: NUMBER | NULL | eg=[2]
+SupplierID: NUMBER | NULL | eg=[4, 7]
+TransactionAmount: FLOAT | NULL | eg=[83289.9, 84076.5]
+LastEditedWhen: NUMBER | NULL | eg=[1365411600000000]
+AmountExcludingTax: FLOAT | NULL | eg=[72426.0, 73110.0]
+PurchaseOrderID: TEXT | NULL | eg=["153", "155"]
+TransactionTypeID: NUMBER | NULL | eg=[5]
+TransactionDate: DATE | NULL | eg=["2013-04-02", "2013-04-03"]
+SupplierTransactionID: NUMBER | NULL | eg=[21470, 21757]
+
+## WIDE_WORLD_IMPORTERS.SALES_BUYINGGROUPS
+BuyingGroupName: TEXT | NULL | eg=["Tailspin Toys"]
+ValidTo: NUMBER | NULL | eg=[253402300799999999]
+LastEditedBy: NUMBER | NULL | eg=[1]
+BuyingGroupID: NUMBER | NULL | eg=[1]
+ValidFrom: NUMBER | NULL | eg=[1356998400000000]
+
+## WIDE_WORLD_IMPORTERS.SALES_CUSTOMERCATEGORIES
+ValidFrom: NUMBER | NULL | eg=[1356998400000000, 1388592900000000]
+CustomerCategoryID: NUMBER | NULL | eg=[2, 4]
+CustomerCategoryName: TEXT | NULL | eg=["Wholesaler", "Supermarket"]
+LastEditedBy: NUMBER | NULL | eg=[1, 9]
+ValidTo: NUMBER | NULL | eg=[253402300799999999]
+
+## WIDE_WORLD_IMPORTERS.SALES_CUSTOMERS
+PhoneNumber: TEXT | NULL | eg=["(201) 555-0100"]
+DeliveryAddressLine1: TEXT | NULL | eg=["Suite 12", "Unit 148"]
+LastEditedBy: NUMBER | NULL | eg=[1]
+BillToCustomerID: NUMBER | NULL | eg=[1]
+DeliveryLocation: FLOAT | NULL | eg=[8.607660043233228e+52, 8.607660043233208e+52]
+ValidTo: NUMBER | NULL | eg=[253402300799999999]
+PostalPostalCode: NUMBER | NULL | eg=[90051, 90540]
+PrimaryContactPersonID: NUMBER | NULL | eg=[1101, 1165]
+PostalAddressLine1: TEXT | NULL | eg=["PO Box 5129", "PO Box 9374"]
+DeliveryRun: TEXT | NULL
+IsOnCreditHold: NUMBER | NULL | eg=[0]
+WebsiteURL: TEXT | NULL | eg=["http://www.tailspintoys.com/Imlaystown", "http://www.tailspintoys.com/Absecon"]
+FaxNumber: TEXT | NULL | eg=["(201) 555-0101"]
+CustomerCategoryID: NUMBER | NULL | eg=[3]
+AlternateContactPersonID: TEXT | NULL | eg=["1102", "1166"]
+DeliveryCityID: NUMBER | NULL | eg=[16430, 49]
+PostalAddressLine2: TEXT | NULL | eg=["Ghateville", "Chuville"]
+AccountOpenedDate: DATE | NULL | eg=["2013-01-01"]
+StandardDiscountPercentage: FLOAT | NULL | eg=[0.0]
+RunPosition: TEXT | NULL
+CreditLimit: TEXT | NULL | eg=["NULL"]
+IsStatementSent: NUMBER | NULL | eg=[0]
+CustomerID: NUMBER | NULL | eg=[51, 83]
+CustomerName: TEXT | NULL | eg=["Tailspin Toys (Imlaystown, NJ)", "Tailspin Toys (Absecon, NJ)"]
+PaymentDays: NUMBER | NULL | eg=[7]
+DeliveryMethodID: NUMBER | NULL | eg=[3]
+DeliveryAddressLine2: TEXT | NULL | eg=["1305 Kaleja Street", "1161 Chang Lane"]
+PostalCityID: NUMBER | NULL | eg=[16430, 49]
+BuyingGroupID: TEXT | NULL | eg=["1"]
+DeliveryPostalCode: NUMBER | NULL | eg=[90051, 90540]
+ValidFrom: NUMBER | NULL | eg=[1356998400000000]
+
+## WIDE_WORLD_IMPORTERS.SALES_CUSTOMERTRANSACTIONS
+OutstandingBalance: FLOAT | NULL | eg=[0.0]
+LastEditedBy: NUMBER | NULL | eg=[10]
+FinalizationDate: TEXT | NULL | eg=["2013-01-02"]
+TransactionAmount: FLOAT | NULL | eg=[465.75, 809.6]
+PaymentMethodID: FLOAT | NULL
+TransactionTypeID: NUMBER | NULL | eg=[1]
+CustomerID: NUMBER | NULL | eg=[803, 905]
+TaxAmount: FLOAT | NULL | eg=[60.75, 105.6]
+IsFinalized: NUMBER | NULL | eg=[1]
+AmountExcludingTax: FLOAT | NULL | eg=[405.0, 704.0]
+TransactionDate: TEXT | NULL | eg=["2013-01-01"]
+InvoiceID: FLOAT | NULL | eg=[2.0, 5.0]
+LastEditedWhen: TEXT | NULL | eg=["2013-01-02 11:30:00.0000000"]
+CustomerTransactionID: NUMBER | NULL | eg=[5, 15]
+
+## WIDE_WORLD_IMPORTERS.SALES_INVOICELINES
+TaxRate: FLOAT | NULL | eg=[15.0]
+LineProfit: FLOAT | NULL | eg=[-14.0, -56.0]
+InvoiceLineID: NUMBER | NULL | eg=[209233, 207422]
+UnitPrice: FLOAT | NULL | eg=[2.5, 25.0]
+StockItemID: NUMBER | NULL | eg=[1]
+Quantity: NUMBER | NULL | eg=[2, 8]
+Description: TEXT | NULL | eg=["USB missile launcher (Green)"]
+TaxAmount: FLOAT | NULL | eg=[0.75, 3.0]
+ExtendedPrice: FLOAT | NULL | eg=[5.75, 23.0]
+LastEditedWhen: NUMBER | NULL | eg=[1456488000000000, 1455710400000000]
+InvoiceID: NUMBER | NULL | eg=[64608, 64026]
+LastEditedBy: NUMBER | NULL | eg=[16, 7]
+PackageTypeID: NUMBER | NULL | eg=[7]
+
+## WIDE_WORLD_IMPORTERS.SALES_INVOICES
+RunPosition: FLOAT | NULL
+DeliveryInstructions: TEXT | NULL | eg=["Unit 20, 231 Kaulina Street", "Unit 115, 232 Abbasi Avenue"]
+LastEditedWhen: TEXT | NULL | eg=["2016-02-12 07:00:00.0000000", "2016-01-08 07:00:00.0000000"]
+ConfirmedReceivedBy: TEXT | NULL | eg=["Anda Liepa", "Nils Kalnins"]
+ContactPersonID: NUMBER | NULL | eg=[2227, 1075]
+IsCreditNote: NUMBER | NULL | eg=[0]
+TotalChillerItems: NUMBER | NULL | eg=[1]
+SalespersonPersonID: NUMBER | NULL | eg=[7, 8]
+DeliveryRun: FLOAT | NULL
+DeliveryMethodID: NUMBER | NULL | eg=[3]
+InternalComments: FLOAT | NULL
+BillToCustomerID: NUMBER | NULL | eg=[401, 1]
+CustomerID: NUMBER | NULL | eg=[514, 38]
+Comments: FLOAT | NULL
+PackedByPersonID: NUMBER | NULL | eg=[18, 15]
+TotalDryItems: NUMBER | NULL | eg=[0]
+AccountsPersonID: NUMBER | NULL | eg=[2001, 1001]
+InvoiceDate: TEXT | NULL | eg=["2016-02-11", "2016-01-07"]
+CreditNoteReason: FLOAT | NULL
+ReturnedDeliveryData: TEXT | NULL | eg=[{"Events":[{"Event":"Ready for collection","EventTime":"2016-02-11T12:00:00","ConNote":"EAN-125-64742"},{"Event":"DeliveryAttempt","EventTime":"2016-02-12T07:40:00","ConNote":"EAN-125-64742","DriverID":11,"Latitude":43.5475771,"Longitude":-71.4067385,"Status":"Delivered"}],"DeliveredWhen":"2016-02-12T07:40:00","ReceivedBy":"Anda Liepa"}, {"Events":[{"Event":"Ready for collection","EventTime":"2016-01-07T12:00:00","ConNote":"EAN-125-62774"},{"Event":"DeliveryAttempt","EventTime":"2016-01-08T07:25:00","ConNote":"EAN-125-62774","DriverID":19,"Latitude":37.1425588,"Longitude":-94.5107824,"Comment":"Receiver not present"}],"DeliveredWhen":"2016-01-08T07:25:00","ReceivedBy":"Nils Kalnins"}]
+InvoiceID: NUMBER | NULL | eg=[63692, 61724]
+OrderID: NUMBER | NULL | eg=[66440, 64377]
+LastEditedBy: NUMBER | NULL | eg=[11, 19]
+ConfirmedDeliveryTime: TEXT | NULL | eg=["2016-02-12 07:40:00.0000000", "2016-01-08 07:25:00.0000000"]
+CustomerPurchaseOrderNumber: NUMBER | NULL | eg=[15472, 16661]
+
+## WIDE_WORLD_IMPORTERS.SALES_ORDERLINES
+StockItemID: NUMBER | NULL | eg=[1]
+PickedQuantity: NUMBER | NULL | eg=[1]
+PackageTypeID: NUMBER | NULL | eg=[7]
+PickingCompletedWhen: TEXT | NULL | eg=["2013-02-21 11:00:00.0000000", "2013-03-07 11:00:00.0000000"]
+LastEditedWhen: NUMBER | NULL | eg=[1361444400000000, 1362654000000000]
+OrderLineID: NUMBER | NULL | eg=[8107, 8149]
+UnitPrice: FLOAT | NULL | eg=[25.0]
+OrderID: NUMBER | NULL | eg=[2538, 2549]
+Description: TEXT | NULL | eg=["USB missile launcher (Green)"]
+Quantity: NUMBER | NULL | eg=[1]
+TaxRate: FLOAT | NULL | eg=[15.0]
+LastEditedBy: NUMBER | NULL | eg=[17, 18]
+
+## WIDE_WORLD_IMPORTERS.SALES_ORDERS
+OrderID: NUMBER | NULL | eg=[70080, 56719]
+ExpectedDeliveryDate: DATE | NULL | eg=["2016-04-11", "2015-09-09"]
+SalespersonPersonID: NUMBER | NULL | eg=[13, 6]
+CustomerPurchaseOrderNumber: NUMBER | NULL | eg=[15124, 10585]
+CustomerID: NUMBER | NULL | eg=[89, 564]
+Comments: TEXT | NULL | eg=["NULL"]
+LastEditedWhen: NUMBER | NULL | eg=[1460196000000000, 1441882800000000]
+PickingCompletedWhen: TEXT | NULL | eg=["NULL", "2015-09-10 11:00:00.0000000"]
+PickedByPersonID: TEXT | NULL | eg=["NULL", "2"]
+LastEditedBy: NUMBER | NULL | eg=[1, 2]
+DeliveryInstructions: TEXT | NULL | eg=["NULL"]
+InternalComments: TEXT | NULL | eg=["NULL"]
+IsUndersupplyBackordered: NUMBER | NULL | eg=[1]
+ContactPersonID: NUMBER | NULL | eg=[1177, 2327]
+BackorderOrderID: TEXT | NULL | eg=["NULL"]
+OrderDate: DATE | NULL | eg=["2016-04-09", "2015-09-08"]
+
+## WIDE_WORLD_IMPORTERS.SALES_SPECIALDEALS
+DealDescription: TEXT | NULL
+DiscountAmount: TEXT | NULL
+DiscountPercentage: FLOAT | NULL
+CustomerID: TEXT | NULL
+LastEditedBy: NUMBER | NULL
+CustomerCategoryID: TEXT | NULL
+BuyingGroupID: NUMBER | NULL
+UnitPrice: TEXT | NULL
+StockItemID: TEXT | NULL
+StockGroupID: NUMBER | NULL
+StartDate: DATE | NULL
+EndDate: DATE | NULL
+SpecialDealID: NUMBER | NULL
+LastEditedWhen: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.WAREHOUSE_COLDROOMTEMPERATURES
+ValidTo: NUMBER | NULL | eg=[253402300799999999]
+ColdRoomTemperatureID: NUMBER | NULL | eg=[3654737, 3654738]
+Temperature: FLOAT | NULL | eg=[3.72, 4.7]
+RecordedWhen: NUMBER | NULL | eg=[1464739164000000]
+ValidFrom: NUMBER | NULL | eg=[1464739164000000]
+ColdRoomSensorNumber: NUMBER | NULL | eg=[1, 2]
+
+## WIDE_WORLD_IMPORTERS.WAREHOUSE_COLORS
+ColorName: TEXT | NULL | eg=["Black", "Blue"]
+ColorID: NUMBER | NULL | eg=[3, 4]
+LastEditedBy: NUMBER | NULL | eg=[1]
+ValidTo: NUMBER | NULL | eg=[253402300799999999]
+ValidFrom: NUMBER | NULL | eg=[1356998400000000]
+
+## WIDE_WORLD_IMPORTERS.WAREHOUSE_PACKAGETYPES
+ValidTo: NUMBER | NULL | eg=[253402300799999999]
+PackageTypeID: NUMBER | NULL | eg=[4, 5]
+PackageTypeName: TEXT | NULL | eg=["Box", "Can"]
+LastEditedBy: NUMBER | NULL | eg=[1]
+ValidFrom: NUMBER | NULL | eg=[1356998400000000]
+
+## WIDE_WORLD_IMPORTERS.WAREHOUSE_STOCKGROUPS
+StockGroupName: TEXT | NULL | eg=["Mugs", "Computing Novelties"]
+StockGroupID: NUMBER | NULL | eg=[3, 6]
+ValidFrom: NUMBER | NULL | eg=[1356998400000000, 1451664000000000]
+ValidTo: NUMBER | NULL | eg=[253402300799999999]
+LastEditedBy: NUMBER | NULL | eg=[1, 9]
+
+## WIDE_WORLD_IMPORTERS.WAREHOUSE_STOCKITEMHOLDINGS
+BinLocation: TEXT | NULL | eg=["D-2", "L-3"]
+LastEditedBy: NUMBER | NULL | eg=[3]
+LastStocktakeQuantity: NUMBER | NULL | eg=[14697, 194162]
+TargetStockLevel: NUMBER | NULL | eg=[3, 100]
+LastEditedWhen: NUMBER | NULL | eg=[1464696000000000]
+StockItemID: NUMBER | NULL | eg=[175, 5]
+ReorderLevel: NUMBER | NULL | eg=[2, 5]
+QuantityOnHand: NUMBER | NULL | eg=[15106, 199064]
+LastCostPrice: FLOAT | NULL | eg=[110.0, 12.0]
+
+## WIDE_WORLD_IMPORTERS.WAREHOUSE_STOCKITEMS
+CustomFields: TEXT | NULL | eg=[{"CountryOfManufacture":"USA","ShelfLife":"7 days","Tags":[]}, {"CountryOfManufacture":"China","Tags":[],"Range":"Children"}]
+Brand: TEXT | NULL | eg=["NULL"]
+LastEditedBy: NUMBER | NULL | eg=[1]
+StockItemName: TEXT | NULL | eg=["Chocolate frogs 250g", "White chocolate snow balls 250g"]
+Photo: TEXT | NULL | eg=["NULL"]
+OuterPackageID: NUMBER | NULL | eg=[6]
+ValidFrom: NUMBER | NULL | eg=[1464735600000000]
+UnitPackageID: NUMBER | NULL | eg=[1, 7]
+RecommendedRetailPrice: FLOAT | NULL | eg=[12.23, 26.91]
+InternalComments: TEXT | NULL | eg=["NULL"]
+Tags: TEXT | NULL | eg=[[]]
+Barcode: TEXT | NULL | eg=["8792838293987", "8792838293236"]
+LeadTimeDays: NUMBER | NULL | eg=[3, 7]
+MarketingComments: TEXT | NULL | eg=["Perfect for your child's party", "NULL"]
+TaxRate: FLOAT | NULL | eg=[10.0, 15.0]
+QuantityPerOuter: NUMBER | NULL | eg=[24, 12]
+StockItemID: NUMBER | NULL | eg=[224, 226]
+UnitPrice: FLOAT | NULL | eg=[8.55, 18.0]
+Size: TEXT | NULL | eg=["250g", "3XS"]
+TypicalWeightPerUnit: FLOAT | NULL | eg=[0.25, 0.3]
+ValidTo: NUMBER | NULL | eg=[253402300799999999]
+ColorID: TEXT | NULL | eg=["NULL", "35"]
+IsChillerStock: NUMBER | NULL | eg=[1, 0]
+SearchDetails: TEXT | NULL | eg=["Chocolate frogs 250g Perfect for your child's party", "White chocolate snow balls 250g Perfect for your child's party"]
+SupplierID: NUMBER | NULL | eg=[1, 4]
+
+## WIDE_WORLD_IMPORTERS.WAREHOUSE_STOCKITEMSTOCKGROUPS
+StockItemID: NUMBER | NULL | eg=[2, 3]
+StockItemStockGroupID: NUMBER | NULL | eg=[5, 8]
+StockGroupID: NUMBER | NULL | eg=[1]
+LastEditedWhen: NUMBER | NULL | eg=[1356998400000000]
+LastEditedBy: NUMBER | NULL | eg=[1]
+
+## WIDE_WORLD_IMPORTERS.WAREHOUSE_STOCKITEMTRANSACTIONS
+InvoiceID: FLOAT | NULL | eg=[129.0, 131.0]
+CustomerID: FLOAT | NULL | eg=[122.0, 543.0]
+TransactionTypeID: NUMBER | NULL | eg=[10]
+StockItemTransactionID: NUMBER | NULL | eg=[630, 635]
+StockItemID: NUMBER | NULL | eg=[118, 105]
+LastEditedBy: NUMBER | NULL | eg=[2]
+TransactionOccurredWhen: TEXT | NULL | eg=["2013-01-03 12:00:00.0000000"]
+PurchaseOrderID: FLOAT | NULL
+SupplierID: FLOAT | NULL
+LastEditedWhen: TEXT | NULL | eg=["2013-01-03 12:00:00.0000000"]
+Quantity: FLOAT | NULL | eg=[-10.0]
+
+## WIDE_WORLD_IMPORTERS.WAREHOUSE_VEHICLETEMPERATURES
+VehicleRegistration: TEXT | NULL | eg=["WWI-321-A"]
+CompressedSensorData: TEXT | NULL | eg=["NULL"]
+RecordedWhen: NUMBER | NULL | eg=[1464689767000000, 1464165910000000]
+IsCompressed: NUMBER | NULL | eg=[0]
+ChillerSensorNumber: NUMBER | NULL | eg=[1]
+VehicleTemperatureID: NUMBER | NULL | eg=[65731, 63011]
+Temperature: FLOAT | NULL | eg=[3.0]
+FullSensorData: TEXT | NULL | eg=["{\"Recordings\": [{\"type\":\"Feature\", \"geometry\": {\"type\":\"Point\", \"coordinates\":[-85.3249088,46.5837717] }, \"properties\":{\"rego\":\"WWI-321-A\",\"sensor\":\"1,\"when\":\"2016-05-31T10:16:07\",\"temp\":3.00}} ]", "{\"Recordings\": [{\"type\":\"Feature\", \"geometry\": {\"type\":\"Point\", \"coordinates\":[-117.6318604,63.2988934] }, \"properties\":{\"rego\":\"WWI-321-A\",\"sensor\":\"1,\"when\":\"2016-05-25T08:45:10\",\"temp\":3.00}} ]"]

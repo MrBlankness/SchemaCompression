@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq007",
+  "question": "Identify the top 10 U.S. states with the highest vulnerable population, calculated based on a weighted sum of employment sectors using 2017 ACS 5-Year data, and determine their average median income change from 2015 to 2018 using zip code data. ",
+  "db_id": "CENSUS_BUREAU_ACS_2",
+  "source_document": "total_vulnerable_weights.md",
+  "evidence": "Total vulnerable population is calculated based on a weighted sum of employment in various sectors. Sectors and weights: Wholesale Trade (0.38423645320197042), Natural Resources, Construction, and Maintenance (0.48071410777129553), Arts, Entertainment, Recreation, Accommodation, and Food (0.89455676291236841), Information (0.31315240083507306), Retail Trade (0.51), Public Administration (0.039299298394228743), Services (0.36555534476489654), Education, Health, and Social Services (0.20323178400562944), Transportation, Warehousing, and Utilities (0.3680506593618087), Manufacturing (0.40618955512572535). Use average median income change between 2015 and 2018 for U.S. states."
+}

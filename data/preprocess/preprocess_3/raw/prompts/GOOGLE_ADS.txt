@@ -1,0 +1,20 @@
+[TABLES]
+## GOOGLE_ADS_TRANSPARENCY_CENTER.CREATIVE_STATS
+creative_id: TEXT | A unique identifier for a specific ad
+is_funded_by_google_ad_grants: BOOLEAN | YYYY-MM-DD representation of the last date the ad was shown
+advertiser_disclosed_name: TEXT | The advertiser's name for transparency reporting and disclosures
+creative_page_url: TEXT | A link to the relevant Ads Transparency Center page for this ad
+ad_format_type: TEXT | A description of the ad type
+audience_selection_approach_info: VARIANT | ISO 3166-2 region code (for example "FR" for France) of the region where the ad was shown, or a text representation of an aggregate region (for example "EEA" for the European Economic Area)
+region_stats: VARIANT | Collection of regions in which the ad served (in the European Economic Area and Turkey) and their relevant stats
+topic: TEXT | YYYY-MM-DD representation of the first date the ad was shown. If the ad was first shown before March 1st, 2023, March 1st, 2023 will be reported as the first_shown date.
+advertiser_id: TEXT | A unique identifier for a specific advertiser
+advertiser_verification_status: TEXT | Whether or not the advertiser has verified their identity with Google yet
+advertiser_legal_name: TEXT | The legal name of the advertiser
+advertiser_location: TEXT | ISO 3166-2 region code (for example "FR" for France)
+
+## GOOGLE_ADS_TRANSPARENCY_CENTER.REMOVED_CREATIVE_STATS
+region_stats: VARIANT | Collection of regions in which the ad served (in the European Economic Area) and their relevant stats
+audience_selection_approach_info: VARIANT | ISO 3166-2 region code (for example "FR" for France) of the region where the ad was shown, or a text representation of an aggregate region (for example "EEA" for the European Economic Area)
+creative_page_url: TEXT | A link to the removed Ads Transparency Center page for this ad
+disapproval: VARIANT | YYYY-MM-DD representation of the first date the ad was shown. If the ad was first shown before March 1st, 2023, March 1st, 2023 will be reported as the first_shown date.

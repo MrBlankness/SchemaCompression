@@ -1,0 +1,95 @@
+[TABLES]
+## PATENTS_GOOGLE.ABS_AND_EMB
+cpc_inventive_low: VARIANT | NULL
+title_translated: BOOLEAN | NULL
+abstract: TEXT | NULL
+url: TEXT | NULL
+embedding_v1: VARIANT | NULL
+publication_number: TEXT | NULL
+country: TEXT | NULL
+publication_description: TEXT | NULL
+cpc: VARIANT | NULL
+title: TEXT | NULL
+similar: VARIANT | NULL
+cpc_low: VARIANT | NULL
+cited_by: VARIANT | NULL
+abstract_translated: BOOLEAN | NULL
+top_terms: VARIANT | NULL
+
+## PATENTS_GOOGLE.DISCLOSURES_13
+blanket_type: TEXT | NULL
+disclosure_event: TEXT | NULL
+reciprocity: TEXT | NULL
+standard: TEXT | NULL
+family_id: TEXT | NULL
+record_id: TEXT | NULL
+tc_name: TEXT | NULL
+pub_cleaned: TEXT | NULL
+sso: TEXT | NULL
+date: NUMBER | NULL
+patent_owner_unharmonized: TEXT | NULL
+licensing_commitment: TEXT | NULL
+committee_project: TEXT | NULL
+wg_name: TEXT | NULL
+third_party: TEXT | NULL
+sc_name: TEXT | NULL
+patent_owner_harmonized: TEXT | NULL
+copyright: TEXT | NULL
+blanket_scope: TEXT | NULL
+serial_cleaned: TEXT | NULL
+
+## PATENTS_GOOGLE.CPC_DEFINITION
+residualReferences: VARIANT | NULL
+childGroups: VARIANT | NULL
+parents: VARIANT | NULL
+synonyms: VARIANT | NULL
+breakdownCode: BOOLEAN | NULL
+precedenceLimitingReferences: VARIANT | NULL
+titlePart: VARIANT | NULL
+scopeLimitingReferences: VARIANT | NULL
+symbol: TEXT | NULL
+ipcConcordant: TEXT | NULL
+applicationReferences: VARIANT | NULL
+glossary: VARIANT | NULL
+dateRevised: FLOAT | NULL
+status: TEXT | NULL
+limitingReferences: VARIANT | NULL
+level: FLOAT | NULL
+rules: VARIANT | NULL
+informativeReferences: VARIANT | NULL
+children: VARIANT | NULL
+definition: VARIANT | NULL
+titleFull: TEXT | NULL
+notAllocatable: BOOLEAN | NULL
+
+## PATENTS_GOOGLE.PUBLICATIONS
+description_localized: VARIANT | The publication abstracts in different languages
+priority_claim: VARIANT | Two-letter language code for this text
+assignee_harmonized: VARIANT | Two-letter language code for this text
+inventor: VARIANT | Is this text truncated?
+grant_date: NUMBER | For US publications only, the claims in plain text
+abstract_localized: VARIANT | Localized text
+art_unit: TEXT | The grant date, or 0 if not granted.
+application_number_formatted: TEXT | Application number, formatted to the patent office format where possible.
+uspc: VARIANT | For US publications only, the description in plain text, limited to the first 9 megabytes
+kind_code: TEXT | Kind code, indicating application, grant, search report, correction, etc. These are different for each country.
+entity_status: TEXT | The filing date.
+application_number: TEXT | Patent application number (DOCDB compatible), eg: 'US-87124404-A'. This may not always be set.
+pct_number: TEXT | PCT number for this application if it was part of a PCT filing, eg: 'PCT/EP2008/062623'.
+title_localized: VARIANT | The publication titles in different languages
+publication_date: NUMBER | Two-letter language code for this text
+priority_date: NUMBER | Localized text
+family_id: TEXT | Family ID (simple family). Grouping on family ID will return all publications associated with a simple patent family (all publications share the same priority claims).
+country_code: TEXT | Country code, eg: 'US', 'EP', etc
+inventor_harmonized: VARIANT | For US publications only, the claims in HTML
+ipc: VARIANT | Localized text
+examiner: VARIANT | Is this text truncated?
+claims_localized: VARIANT | Two-letter language code for this text
+filing_date: NUMBER | Is this text truncated?
+publication_number: TEXT | Patent publication number (DOCDB compatible), eg: 'US-7650331-B1'
+citation: VARIANT | Two-letter language code for this text
+assignee: VARIANT | Localized text
+fi: VARIANT | Is this text truncated?
+application_kind: TEXT | High-level kind of the application: A=patent; U=utility; P=provision; W= PCT; F=design; T=translation.
+fterm: VARIANT | For US publications only, the description in HTML, limited to the first 9 megabytes
+cpc: VARIANT | Two-letter language code for this text

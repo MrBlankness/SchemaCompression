@@ -1,0 +1,244 @@
+[COMPONENTS]
+@C1
+ancestry_initial: VARIANT | NULL | eg=[{"list":[{"element":"European=408112"}]}]
+ancestry_replication: VARIANT | NULL | eg=[{"list":[]}]
+has_sumstats: BOOLEAN | NULL | eg=[true]
+n_initial: NUMBER | NULL | eg=[408112]
+n_replication: NUMBER | NULL
+num_assoc_loci: NUMBER | NULL | eg=[835]
+pmid: TEXT | NULL | eg=["PMID:32888494"]
+pub_author: TEXT | NULL | eg=["Vuckovic D"]
+pub_date: TEXT | NULL | eg=["2020-09-01"]
+pub_journal: TEXT | NULL | eg=["Cell"]
+pub_title: TEXT | NULL | eg=["The Polygenic and Monogenic Basis of Blood Traits and Diseases."]
+source: TEXT | NULL | eg=["GCST"]
+trait_category: TEXT | NULL | eg=["measurement"]
+trait_efos: VARIANT | NULL | eg=[{"list":[{"element":"EFO_0010701"}]}]
+trait_reported: TEXT | NULL | eg=["Mean reticulocyte volume"]
+
+@C2
+AFR_1000G_prop: FLOAT | NULL | eg=[0.0]
+AMR_1000G_prop: FLOAT | NULL | eg=[0.0]
+beta_ci_lower: FLOAT | NULL | eg=[0.0166737468, 0.0118647195999999]
+beta_ci_upper: FLOAT | NULL | eg=[0.0287166531999999, 0.0206944804]
+direction: TEXT | NULL | eg=["+", "-"]
+EAS_1000G_prop: FLOAT | NULL | eg=[0.0]
+EUR_1000G_prop: FLOAT | NULL | eg=[1.0]
+log10_ABF: FLOAT | NULL | eg=[NaN, 20.488303155989882]
+odds_ratio: FLOAT | NULL
+oddsr_ci_lower: FLOAT | NULL
+oddsr_ci_upper: FLOAT | NULL
+overall_r2: FLOAT | NULL | eg=[0.692728283809, 0.966161214225]
+posterior_prob: FLOAT | NULL | eg=[NaN, 0.006984791309124]
+pval_exponent: NUMBER | NULL | eg=[-13, -115]
+pval_mantissa: FLOAT | NULL | eg=[1.5, 4.9]
+SAS_1000G_prop: FLOAT | NULL | eg=[0.0]
+
+@C3
+d: NUMBER | NULL | eg=[377016]
+distance_score: FLOAT | NULL | eg=[2.6524073248880684e-06]
+distance_score_q: FLOAT | NULL | eg=[0.2]
+feature: TEXT | NULL | eg=["unspecified"]
+fpred_labels: VARIANT | NULL | eg=[{"list":[]}]
+fpred_max_label: TEXT | NULL
+fpred_max_score: FLOAT | NULL
+fpred_scores: VARIANT | NULL | eg=[{"list":[]}]
+interval_score: FLOAT | NULL
+interval_score_q: FLOAT | NULL
+qtl_beta: FLOAT | NULL
+qtl_pval: FLOAT | NULL
+qtl_score: FLOAT | NULL
+qtl_score_q: FLOAT | NULL
+qtl_se: FLOAT | NULL
+source_id: TEXT | NULL | eg=["canonical_tss"]
+
+@C4
+lead_alt: TEXT | NULL | eg=["C", "G"]
+lead_chrom: TEXT | NULL | eg=["9", "5"]
+lead_pos: NUMBER | NULL | eg=[110256475, 180560937]
+lead_ref: TEXT | NULL | eg=["T", "C"]
+tag_alt: TEXT | NULL | eg=["C", "G"]
+tag_chrom: TEXT | NULL | eg=["9", "5"]
+tag_pos: NUMBER | NULL | eg=[110274252, 180526646]
+tag_ref: TEXT | NULL | eg=["T", "CT"]
+
+@C5
+alt: TEXT | NULL | eg=["A", "T"]
+chrom: TEXT | NULL | eg=["15"]
+pos: NUMBER | NULL | eg=[71812458, 71812601]
+ref: TEXT | NULL | eg=["G", "C"]
+
+@C6
+eaf: FLOAT | NULL | eg=[0.0149701, 0.0671835]
+info: FLOAT | NULL | eg=[0.9635, NaN]
+is_cc: BOOLEAN | NULL | eg=[false]
+n_total: NUMBER | NULL | eg=[167, 387]
+se: FLOAT | NULL | eg=[0.111384, 0.0312722]
+
+@C7
+beta: FLOAT | NULL | eg=[-0.334174, -0.0903645]
+pval: FLOAT | NULL | eg=[0.00315092, 0.00408252]
+
+@C8
+alt_allele: TEXT | NULL | eg=["C", "A"]
+chr_id: TEXT | NULL | eg=["6"]
+position: NUMBER | NULL | eg=[42470447, 41122283]
+ref_allele: TEXT | NULL | eg=["T", "G"]
+
+[TABLES]
+## OPEN_TARGETS_GENETICS.SA_MOLECULAR_TRAIT
+@use: [C5, C6, C7]
+mac_cases: NUMBER | NULL
+type_id: TEXT | NULL | eg=["eqtl", "sqtl"]
+n_cases: NUMBER | NULL
+phenotype_id: TEXT | NULL | eg=["ENSG00000213614", "ENSG00000140463"]
+mac: NUMBER | NULL | eg=[5, 52]
+gene_id: TEXT | NULL | eg=["ENSG00000213614", "ENSG00000140463"]
+bio_feature: TEXT | NULL | eg=["MACROPHAGE_SALMONELLA", "ARTERY_AORTA"]
+study_id: TEXT | NULL | eg=["Nedelec_2016", "GTEx-eQTL"]
+num_tests: NUMBER | NULL | eg=[7131, 4533]
+
+## OPEN_TARGETS_GENETICS.VARIANTS
+@use: [C8]
+gene_id_any: TEXT | NULL | eg=["ENSG00000124496", "ENSG00000124596"]
+gene_id_prot_coding: TEXT | NULL | eg=["ENSG00000124496", "ENSG00000124596"]
+chr_id_b37: TEXT | NULL | eg=["6"]
+af: VARIANT | NULL | eg=[{"gnomad_afr":0.0003442735827404177,"gnomad_amr":0.0,"gnomad_asj":0.0,"gnomad_eas":0.0,"gnomad_fin":0.0,"gnomad_nfe":0.0005833549390718175,"gnomad_nfe_est":0.0002180549498473615,"gnomad_nfe_nwe":0.0004652244708071644,"gnomad_nfe_onf":0.001870907390084191,"gnomad_nfe_seu":0.0,"gnomad_oth":0.0}, {"gnomad_afr":0.0003444316877152698,"gnomad_amr":0.002364066193853428,"gnomad_asj":0.0,"gnomad_eas":0.0,"gnomad_fin":0.007200460829493088,"gnomad_nfe":0.002786417833074132,"gnomad_nfe_est":0.00174140182847192,"gnomad_nfe_nwe":0.00360716779148243,"gnomad_nfe_onf":0.001870907390084191,"gnomad_nfe_seu":0.0,"gnomad_oth":0.0009191176470588235}]
+position_b37: NUMBER | NULL | eg=[42438185, 41090022]
+most_severe_consequence: TEXT | NULL | eg=["intergenic_variant", "intron_variant"]
+gene_id_prot_coding_distance: NUMBER | NULL | eg=[18396, 24496]
+gene_id_any_distance: NUMBER | NULL | eg=[18396, 24496]
+rs_id: TEXT | NULL | eg=["rs531169951", "rs184798575"]
+cadd: VARIANT | NULL | eg=[{"phred":8.746,"raw":0.434241}, {"phred":6.941,"raw":0.279242}]
+
+## OPEN_TARGETS_GENETICS.VARIANT_DISEASE
+@use: [C1, C2, C4, C7]
+study_id: TEXT | NULL | eg=["GCST90002396"]
+pics_95perc_credset: BOOLEAN | NULL | eg=[false, true]
+n_cases: NUMBER | NULL
+
+## OPEN_TARGETS_GENETICS.STUDIES
+@use: [C1]
+study_id: TEXT | NULL | eg=["FINNGEN_R6_M13_RECUDISLOCATIO", "FINNGEN_R6_M13_TOEDEFORMOTH"]
+n_cases: NUMBER | NULL | eg=[1475, 599]
+
+## OPEN_TARGETS_GENETICS.GENES
+exons: TEXT | NULL | eg=[[105583731,105583853,105584133,105584368,105586999,105587331,105587554,105587874,105588089,105588395], [105597691,105597774,105597859,105597980,105600074,105600397,105600481,105600804,105600891,105601211,105601419,105601728]]
+biotype: TEXT | NULL | eg=["IG_C_gene"]
+description: TEXT | NULL | eg=["immunoglobulin heavy constant alpha 2 (A2m marker) [Source:HGNC Symbol;Acc:HGNC:5479]", "immunoglobulin heavy constant epsilon [Source:HGNC Symbol;Acc:HGNC:5522]"]
+chr: TEXT | NULL | eg=["14"]
+gene_id: TEXT | NULL | eg=["ENSG00000211890", "ENSG00000211891"]
+start: NUMBER | NULL | eg=[105583731, 105597691]
+end: NUMBER | NULL | eg=[105588395, 105601728]
+fwdstrand: NUMBER | NULL | eg=[0]
+gene_name: TEXT | NULL | eg=["IGHA2", "IGHE"]
+tss: NUMBER | NULL | eg=[105588395, 105601728]
+
+## OPEN_TARGETS_GENETICS.STUDIES_OVERLAP
+B_ref: TEXT | NULL | eg=["G", "T"]
+A_study_id: TEXT | NULL | eg=["NEALE2_50_raw"]
+B_study_id: TEXT | NULL | eg=["GCST90002381", "GCST90002382"]
+B_alt: TEXT | NULL | eg=["GTAGAGGATGGCTTGAACCTAGGAAC", "A"]
+B_distinct: NUMBER | NULL | eg=[4, 0]
+A_chrom: TEXT | NULL | eg=["12"]
+AB_overlap: NUMBER | NULL | eg=[19, 1]
+A_distinct: NUMBER | NULL | eg=[7, 25]
+A_alt: TEXT | NULL | eg=["A"]
+B_chrom: TEXT | NULL | eg=["12"]
+B_pos: NUMBER | NULL | eg=[92111827, 93813756]
+A_ref: TEXT | NULL | eg=["G"]
+A_pos: NUMBER | NULL | eg=[93813756]
+
+## OPEN_TARGETS_GENETICS.SA_GWAS
+@use: [C5, C6, C7]
+mac_cases: FLOAT | NULL | eg=[4652.143919872852, 29.872799999999998]
+study_id: TEXT | NULL | eg=["NEALE2_6152_100", "FINNGEN_R6_Z21_ROUTI_GENERAL_HEALTH_CHECK_DEFIN_SUBPO"]
+mac: FLOAT | NULL | eg=[14458.199999999999, 8918.229599999999]
+type_id: TEXT | NULL | eg=["gwas"]
+n_cases: NUMBER | NULL | eg=[116005.0, 461.0]
+
+## OPEN_TARGETS_GENETICS.OT_RELEASE
+release: TEXT | NULL | eg=["22.09"]
+
+## OPEN_TARGETS_GENETICS.VARIANT_DISEASE_COLOC
+left_type: TEXT | NULL | eg=["gwas"]
+coloc_n_vars: NUMBER | NULL | eg=[2541, 2590]
+right_chrom: TEXT | NULL | eg=["2"]
+right_alt: TEXT | NULL | eg=["G"]
+left_pos: NUMBER | NULL | eg=[168850918, 168888041]
+right_bio_feature: TEXT | NULL | eg=["Vagina", "Ovary"]
+coloc_h2: FLOAT | NULL | eg=[4.001278912083727e-07, 4.597035767819259e-16]
+coloc_h0: FLOAT | NULL | eg=[1.785935132002765e-16, 2.4658841718397848e-24]
+right_ref: TEXT | NULL | eg=["A"]
+is_flipped: BOOLEAN | NULL | eg=[true]
+left_var_right_study_beta: FLOAT | NULL | eg=[0.6359093189239502, 0.5891572833061218]
+coloc_h3: FLOAT | NULL | eg=[0.26311707355198927, 0.012891541078893246]
+left_ref: TEXT | NULL | eg=["C", "A"]
+left_var_right_study_se: FLOAT | NULL | eg=[0.122081605153034, 0.0815866344266889]
+left_var_right_isCC: BOOLEAN | NULL | eg=[false]
+coloc_log2_h4_h3: FLOAT | NULL | eg=[1.4857297758441592, 6.258711968373418]
+left_var_right_study_pval: FLOAT | NULL | eg=[1.0833125072276179e-06, 6.193301480196858e-11]
+right_phenotype: TEXT | NULL | eg=["chr2^168862049^168864834^clu_37840^ENSG00000163072", "chr2^168862049^168864834^clu_38100^ENSG00000163072"]
+left_chrom: TEXT | NULL | eg=["2"]
+right_study: TEXT | NULL | eg=["GTEx-sQTL"]
+right_gene_id: TEXT | NULL | eg=["ENSG00000163072"]
+right_type: TEXT | NULL | eg=["sqtl"]
+right_pos: NUMBER | NULL | eg=[168864871]
+coloc_h4_h3: FLOAT | NULL | eg=[2.8005880281909814, 76.570245000639]
+coloc_h4: FLOAT | NULL | eg=[0.7368825262023471, 0.9871084588466579]
+coloc_h1: FLOAT | NULL | eg=[1.177688584654438e-10, 7.444610820998443e-11]
+left_alt: TEXT | NULL | eg=["T", "G"]
+left_study: TEXT | NULL | eg=["NEALE2_20153_raw", "NEALE2_23101_raw"]
+
+## OPEN_TARGETS_GENETICS.VARIANT_DISEASE_CREDSET
+@use: [C4]
+lead_variant_id: TEXT | NULL | eg=["16:88859681:C:T"]
+study_id: TEXT | NULL | eg=["GTEx-sQTL"]
+multisignal_method: TEXT | NULL | eg=["conditional"]
+tag_se: FLOAT | NULL | eg=[0.165198702143443, 0.232980618529962]
+tag_pval_cond: FLOAT | NULL | eg=[0.002204009576863, 5.849564e-09]
+bio_feature: TEXT | NULL | eg=["Brain_Hypothalamus", "Brain_Nucleus_accumbens_basal_ganglia"]
+is95_credset: BOOLEAN | NULL | eg=[true]
+tag_variant_id: TEXT | NULL | eg=["16:88835979:A:G", "16:88859681:C:T"]
+tag_pval: FLOAT | NULL | eg=[0.002204009576863, 5.849564e-09]
+tag_se_cond: FLOAT | NULL | eg=[0.165198702143443, 0.232980618529962]
+tag_beta: FLOAT | NULL | eg=[0.51591145992279, 1.435778379440308]
+tag_beta_cond: FLOAT | NULL | eg=[0.51591145992279, 1.435778379440308]
+postprob_cumsum: FLOAT | NULL | eg=[0.127989430022184, 0.022010837942402]
+is99_credset: BOOLEAN | NULL | eg=[true]
+phenotype_id: TEXT | NULL | eg=["chr16:88858789:88859893:clu_14174:ENSG00000167515", "chr16:88858789:88859893:clu_14742:ENSG00000167515"]
+type: TEXT | NULL | eg=["sqtl"]
+gene_id: TEXT | NULL | eg=["ENSG00000167515"]
+logABF: FLOAT | NULL | eg=[1.676584172519616, 2.929041280206965]
+postprob: FLOAT | NULL | eg=[0.001186556345535, 0.003396616630789]
+
+## OPEN_TARGETS_GENETICS.VARIANT_GENE
+@use: [C3, C8]
+gene_id: TEXT | NULL | eg=["ENSG00000275954", "ENSG00000181038"]
+type_id: TEXT | NULL | eg=["distance"]
+
+## OPEN_TARGETS_GENETICS.LOCUS2GENE
+@use: [C5]
+y_proba_logi_pathogenicity: FLOAT | NULL | eg=[0.06419508904218674, 0.06463130563497543]
+y_proba_logi_molecularQTL: FLOAT | NULL | eg=[0.02663401886820793, 0.04719509184360504]
+y_proba_dist_foot: FLOAT | NULL | eg=[0.02039780281484127]
+y_proba_logo_molecularQTL: FLOAT | NULL | eg=[0.010547985322773457, 0.009728365577757359]
+training_gs: TEXT | NULL | eg=["high_medium"]
+training_clf: TEXT | NULL | eg=["xgboost"]
+y_proba_logo_interaction: FLOAT | NULL | eg=[0.011236511170864105, 0.009814477525651455]
+gene_id: TEXT | NULL | eg=["ENSG00000239474", "ENSG00000239697"]
+y_proba_logi_interaction: FLOAT | NULL | eg=[0.027016155421733856, 0.08312072604894638]
+y_proba_logo_pathogenicity: FLOAT | NULL | eg=[0.012834045104682446, 0.011792142875492573]
+training_fold: TEXT | NULL | eg=["fold3=12|2|7|17"]
+study_id: TEXT | NULL | eg=["GCST011521", "GCST008059"]
+y_proba_logi_distance: FLOAT | NULL | eg=[0.009156674146652222, 0.008775304071605206]
+y_proba_logo_distance: FLOAT | NULL | eg=[0.021092426031827927, 0.023806001991033554]
+y_proba_full_model: FLOAT | NULL | eg=[0.012625353410840034, 0.011795265600085258]
+y_proba_dist_tss: FLOAT | NULL | eg=[0.028209906071424484, 0.338593453168869]
+
+## OPEN_TARGETS_GENETICS.DISEASE_VARIANT_GENE
+@use: [C1, C2, C3, C4, C7]
+n_cases: NUMBER | NULL
+study_id: TEXT | NULL | eg=["GCST90002340"]
+type_id: TEXT | NULL | eg=["eqtl"]
+gene_id: TEXT | NULL | eg=["ENSG00000111801", "ENSG00000100304"]

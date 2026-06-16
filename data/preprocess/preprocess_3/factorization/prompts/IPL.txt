@@ -1,0 +1,66 @@
+[COMPONENTS]
+@C1
+ball_id: NUMBER | NULL
+innings_no: NUMBER | NULL
+over_id: NUMBER | NULL
+
+[TABLES]
+## IPL.BALL_BY_BALL
+@use: [C1]
+striker_batting_position: NUMBER | NULL
+striker: NUMBER | NULL
+team_batting: NUMBER | NULL
+match_id: NUMBER | NULL
+team_bowling: NUMBER | NULL
+bowler: NUMBER | NULL
+non_striker: NUMBER | NULL
+
+## IPL.MATCH
+man_of_the_match: NUMBER | NULL
+outcome_type: TEXT | NULL
+season_id: NUMBER | NULL
+venue: TEXT | NULL
+team_2: NUMBER | NULL
+match_winner: NUMBER | NULL
+match_date: TEXT | NULL
+match_id: NUMBER | NULL
+win_margin: NUMBER | NULL
+toss_winner: NUMBER | NULL
+team_1: NUMBER | NULL
+win_type: TEXT | NULL
+toss_decision: TEXT | NULL
+
+## IPL.TEAM
+name: TEXT | NULL
+team_id: NUMBER | NULL
+
+## IPL.PLAYER_MATCH
+team_id: NUMBER | NULL
+match_id: NUMBER | NULL
+player_id: NUMBER | NULL
+role: TEXT | NULL
+
+## IPL.EXTRA_RUNS
+@use: [C1]
+match_id: NUMBER | NULL
+extra_type: TEXT | NULL
+extra_runs: NUMBER | NULL
+
+## IPL.BATSMAN_SCORED
+@use: [C1]
+runs_scored: NUMBER | NULL
+match_id: NUMBER | NULL
+
+## IPL.PLAYER
+dob: TEXT | NULL
+batting_hand: TEXT | NULL
+bowling_skill: TEXT | NULL
+player_id: NUMBER | NULL
+player_name: TEXT | NULL
+country_name: TEXT | NULL
+
+## IPL.WICKET_TAKEN
+@use: [C1]
+match_id: NUMBER | NULL
+kind_out: TEXT | NULL
+player_out: NUMBER | NULL

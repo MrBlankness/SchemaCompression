@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq011",
+  "question": "How many distinct pseudo users had positive engagement time  in the 7-day period ending on January 7, 2021 at 23:59:59, but had no positive engagement time in the 2-day period ending on the same date (January 7, 2021 at 23:59:59) ?",
+  "db_id": "GA4",
+  "source_document": "ga4_obfuscated_sample_ecommerce.events.md",
+  "evidence": "Table: events_YYYYMMDD. Columns: user_pseudo_id (STRING) - pseudonymous id for the user. event_timestamp (INTEGER) - time (in microseconds, UTC) when event was logged. event_date (STRING) - date when event was logged (YYYYMMDD format). is_active_user (BOOLEAN) - whether user was active at any point in the calendar day (in daily tables only). Note: Data may be updated in daily tables for up to three days after event dates. Events have correct timestamp regardless of arrival time."
+}

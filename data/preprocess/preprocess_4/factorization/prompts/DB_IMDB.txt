@@ -1,0 +1,77 @@
+[COMPONENTS]
+[TABLES]
+## DB_IMDB.M_CAST
+ID: NUMBER | NULL | eg=[2, 3]
+PID: TEXT | NULL | eg=[" nm1212722", " nm0365140"]
+MID: TEXT | NULL | eg=["tt2388771"]
+index: NUMBER | NULL | eg=[2, 3]
+
+## DB_IMDB.M_PRODUCER
+MID: TEXT | NULL | eg=["tt2388771", "tt5164214"]
+ID: NUMBER | NULL | eg=[4, 5]
+PID: TEXT | NULL | eg=[" nm0672248", " nm1162642"]
+index: NUMBER | NULL | eg=[4, 5]
+
+## DB_IMDB.M_COUNTRY
+CID: FLOAT | NULL | eg=[0.0, 1.0]
+index: NUMBER | NULL | eg=[0, 1]
+MID: TEXT | NULL | eg=["tt2388771", "tt5164214"]
+ID: NUMBER | NULL | eg=[0, 1]
+
+## DB_IMDB.M_DIRECTOR
+index: NUMBER | NULL | eg=[1, 5]
+MID: TEXT | NULL | eg=["tt5164214", "tt7027278"]
+ID: NUMBER | NULL | eg=[1, 5]
+PID: TEXT | NULL | eg=["nm0002657", "nm0438461"]
+
+## DB_IMDB.GENRE
+index: NUMBER | NULL | eg=[0, 3]
+GID: NUMBER | NULL | eg=[0, 3]
+Name: TEXT | NULL | eg=["Adventure, Drama, Fantasy            ", "Action, Adventure, Sci-Fi            "]
+
+## DB_IMDB.MOVIE
+title: TEXT | NULL | eg=["Tumbbad", "Captain America: Civil War"]
+year: TEXT | NULL | eg=["2018", "2016"]
+num_votes: NUMBER | NULL | eg=[7483, 536641]
+MID: TEXT | NULL | eg=["tt8239946", "tt3498820"]
+index: NUMBER | NULL | eg=[4, 6]
+rating: FLOAT | NULL | eg=[8.5, 7.8]
+
+## DB_IMDB.LANGUAGE
+Name: TEXT | NULL | eg=["Cantonese", "Telugu"]
+index: NUMBER | NULL | eg=[3, 4]
+LAID: NUMBER | NULL | eg=[3, 4]
+
+## DB_IMDB.M_LOCATION
+LID: FLOAT | NULL | eg=[3.0, NaN]
+index: NUMBER | NULL | eg=[3, 4]
+MID: TEXT | NULL | eg=["tt0848228", "tt8239946"]
+ID: NUMBER | NULL | eg=[3, 4]
+
+## DB_IMDB.LOCATION
+index: NUMBER | NULL | eg=[0, 2]
+LID: NUMBER | NULL | eg=[0, 2]
+Name: TEXT | NULL | eg=["Durban, South Africa", "Cape Town Film Studios, Cape Town, Western Cape, South Africa"]
+
+## DB_IMDB.PERSON
+Gender: TEXT | NULL | eg=["Female", "Male"]
+Name: TEXT | NULL | eg=[" Cate Blanchett", " Benedict Cumberbatch"]
+PID: TEXT | NULL | eg=["nm0000949", "nm1212722"]
+index: NUMBER | NULL | eg=[1, 2]
+
+## DB_IMDB.M_LANGUAGE
+LAID: NUMBER | NULL | eg=[0, 2]
+index: NUMBER | NULL | eg=[2, 3]
+ID: NUMBER | NULL | eg=[2, 3]
+MID: TEXT | NULL | eg=["tt1365519", "tt0848228"]
+
+## DB_IMDB.M_GENRE
+MID: TEXT | NULL | eg=["tt0848228", "tt3741834"]
+GID: NUMBER | NULL | eg=[3, 7]
+index: NUMBER | NULL | eg=[3, 8]
+ID: NUMBER | NULL | eg=[3, 8]
+
+## DB_IMDB.COUNTRY
+index: NUMBER | NULL | eg=[1, 3]
+Name: TEXT | NULL | eg=["USA", "Australia"]
+CID: NUMBER | NULL | eg=[1, 3]

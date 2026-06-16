@@ -1,0 +1,134 @@
+[STANDALONE]
+## EDUCATION_BUSINESS.HARDWARE_DIM_CUSTOMER
+region: TEXT | NULL
+channel: TEXT | NULL
+market: TEXT | NULL
+customer_code: NUMBER | NULL
+sub_zone: TEXT | NULL
+platform: TEXT | NULL
+customer: TEXT | NULL
+
+## EDUCATION_BUSINESS.HARDWARE_DIM_PRODUCT
+product: TEXT | NULL
+division: TEXT | NULL
+category: TEXT | NULL
+product_code: TEXT | NULL
+segment: TEXT | NULL
+variant: TEXT | NULL
+
+## EDUCATION_BUSINESS.HARDWARE_FACT_GROSS_PRICE
+fiscal_year: NUMBER | NULL
+product_code: TEXT | NULL
+gross_price: FLOAT | NULL
+
+## EDUCATION_BUSINESS.HARDWARE_FACT_MANUFACTURING_COST
+product_code: TEXT | NULL
+manufacturing_cost: FLOAT | NULL
+cost_year: NUMBER | NULL
+
+## EDUCATION_BUSINESS.HARDWARE_FACT_PRE_INVOICE_DEDUCTIONS
+pre_invoice_discount_pct: FLOAT | NULL
+customer_code: NUMBER | NULL
+fiscal_year: NUMBER | NULL
+
+## EDUCATION_BUSINESS.HARDWARE_FACT_SALES_MONTHLY
+date: TEXT | NULL
+customer_code: NUMBER | NULL
+sold_quantity: NUMBER | NULL
+product_code: TEXT | NULL
+fiscal_year: NUMBER | NULL
+
+## EDUCATION_BUSINESS.SALARYDATASET
+Salary: TEXT | NULL
+CompanyName: TEXT | NULL
+SalariesReported: FLOAT | NULL
+Location: TEXT | NULL
+index: NUMBER | NULL
+JobTitle: TEXT | NULL
+
+## EDUCATION_BUSINESS.STAFFHOURS
+EventDate: TEXT | NULL
+EventType: TEXT | NULL
+StaffMember: TEXT | NULL
+EventTime: TEXT | NULL
+
+## EDUCATION_BUSINESS.UNIVERSITY_COURSE
+CourseNo: TEXT | NULL
+CrsDesc: TEXT | NULL
+CrsUnits: NUMBER | NULL
+
+## EDUCATION_BUSINESS.UNIVERSITY_ENROLLMENT
+EnrGrade: FLOAT | NULL
+StdNo: NUMBER | NULL
+OfferNo: NUMBER | NULL
+
+## EDUCATION_BUSINESS.UNIVERSITY_FACULTY
+FacFirstName: TEXT | NULL
+FacRank: TEXT | NULL
+FacCity: TEXT | NULL
+FacSalary: NUMBER | NULL
+FacState: TEXT | NULL
+FacDept: TEXT | NULL
+FacHireDate: TEXT | NULL
+FacLastName: TEXT | NULL
+FacSupervisor: FLOAT | NULL
+FacNo: NUMBER | NULL
+FacZipCode: TEXT | NULL
+
+## EDUCATION_BUSINESS.UNIVERSITY_OFFERING
+OffYear: NUMBER | NULL
+OfferNo: NUMBER | NULL
+OffTerm: TEXT | NULL
+CourseNo: TEXT | NULL
+OffLocation: TEXT | NULL
+FacNo: FLOAT | NULL
+OffTime: TEXT | NULL
+OffDays: TEXT | NULL
+
+## EDUCATION_BUSINESS.UNIVERSITY_STUDENT
+StdClass: TEXT | NULL
+StdMajor: TEXT | NULL
+StdCity: TEXT | NULL
+StdFirstName: TEXT | NULL
+StdGPA: FLOAT | NULL
+StdState: TEXT | NULL
+StdNo: NUMBER | NULL
+StdLastName: TEXT | NULL
+StdZip: TEXT | NULL
+
+## EDUCATION_BUSINESS.WEB_ACCOUNTS
+sales_rep_id: NUMBER | NULL
+primary_poc: TEXT | NULL
+website: TEXT | NULL
+id: NUMBER | NULL
+lat: FLOAT | NULL
+name: TEXT | NULL
+long: FLOAT | NULL
+
+## EDUCATION_BUSINESS.WEB_EVENTS
+id: NUMBER | NULL
+channel: TEXT | NULL
+account_id: NUMBER | NULL
+occurred_at: TEXT | NULL
+
+## EDUCATION_BUSINESS.WEB_ORDERS
+poster_amt_usd: FLOAT | NULL
+standard_qty: NUMBER | NULL
+occurred_at: TEXT | NULL
+gloss_qty: NUMBER | NULL
+poster_qty: NUMBER | NULL
+standard_amt_usd: FLOAT | NULL
+total: NUMBER | NULL
+id: NUMBER | NULL
+gloss_amt_usd: FLOAT | NULL
+account_id: NUMBER | NULL
+total_amt_usd: FLOAT | NULL
+
+## EDUCATION_BUSINESS.WEB_REGION
+id: NUMBER | NULL
+name: TEXT | NULL
+
+## EDUCATION_BUSINESS.WEB_SALES_REPS
+id: NUMBER | NULL
+name: TEXT | NULL
+region_id: NUMBER | NULL

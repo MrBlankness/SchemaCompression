@@ -1,0 +1,25 @@
+[COMPONENTS]
+@C1:customer_type,platform,sales,segment,transactions,week_date
+@C2:index,item_code
+
+[TABLES]
+Format: schema.table|components|columns
+BANK_SALES_TRADING.CUSTOMER_REGIONS||region_id,region_name
+BANK_SALES_TRADING.CUSTOMER_TRANSACTIONS||customer_id,txn_date,txn_amount,txn_type
+BANK_SALES_TRADING.SHOPPING_CART_CAMPAIGN_IDENTIFIER||start_date,campaign_id,campaign_name,end_date,products
+BANK_SALES_TRADING.INTEREST_METRICS||ranking,percentile_ranking,month_year,interest_id,composition,_month,index_value,_year
+BANK_SALES_TRADING.VEG_WHSLE_DF|@C2|whsle_px_rmb-kg,whsle_date
+BANK_SALES_TRADING.VEG_TXN_DF|@C2|txn_date,qty_sold(kg),sale/return,txn_time,unit_selling_px_rmb/kg,discount(%),day_of_week
+BANK_SALES_TRADING.SHOPPING_CART_PAGE_HIERARCHY||page_id,product_id,page_name,product_category
+BANK_SALES_TRADING.VEG_LOSS_RATE_DF|@C2|item_name,loss_rate_%
+BANK_SALES_TRADING.BITCOIN_MEMBERS||first_name,member_id,region
+BANK_SALES_TRADING.INTEREST_MAP||interest_summary,id,interest_name,last_modified,created_at
+BANK_SALES_TRADING.BITCOIN_TRANSACTIONS||quantity,member_id,txn_id,ticker,txn_type,percentage_fee,txn_time,txn_date
+BANK_SALES_TRADING.CLEANED_WEEKLY_SALES|@C1|month_number,age_band,calendar_year,region,demographic,week_number,avg_transaction,week_date_formatted
+BANK_SALES_TRADING.SHOPPING_CART_EVENTS||page_id,event_type,cookie_id,event_time,visit_id,sequence_number
+BANK_SALES_TRADING.CUSTOMER_NODES||region_id,start_date,end_date,customer_id,node_id
+BANK_SALES_TRADING.SHOPPING_CART_USERS||user_id,cookie_id,start_date
+BANK_SALES_TRADING.SHOPPING_CART_EVENT_IDENTIFIER||event_name,event_type
+BANK_SALES_TRADING.WEEKLY_SALES|@C1|region
+BANK_SALES_TRADING.VEG_CAT|@C2|category_code,category_name,item_name
+BANK_SALES_TRADING.BITCOIN_PRICES||low,change,price,open,volume,high,market_date,ticker

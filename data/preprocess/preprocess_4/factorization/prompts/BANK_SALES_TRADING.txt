@@ -1,0 +1,143 @@
+[COMPONENTS]
+@C1
+customer_type: TEXT | NULL | eg=["Guest", "New"]
+platform: TEXT | NULL | eg=["Retail", "Shopify"]
+sales: NUMBER | NULL | eg=[16509610, 141942]
+segment: TEXT | NULL | eg=["unknown", "C1"]
+transactions: NUMBER | NULL | eg=[529151, 4517]
+week_date: TEXT | NULL | eg=["2020-08-31"]
+
+@C2
+index: NUMBER | NULL | eg=[0, 5]
+item_code: NUMBER | NULL | eg=[102900005115762, 102900005115908]
+
+[TABLES]
+## BANK_SALES_TRADING.CUSTOMER_REGIONS
+region_id: NUMBER | NULL | eg=[3, 4]
+region_name: TEXT | NULL | eg=["Africa", "Asia"]
+
+## BANK_SALES_TRADING.CUSTOMER_TRANSACTIONS
+customer_id: NUMBER | NULL | eg=[429, 155]
+txn_date: TEXT | NULL | eg=["2020-01-21", "2020-01-10"]
+txn_amount: NUMBER | NULL | eg=[82, 712]
+txn_type: TEXT | NULL | eg=["deposit"]
+
+## BANK_SALES_TRADING.SHOPPING_CART_CAMPAIGN_IDENTIFIER
+start_date: TEXT | NULL
+campaign_id: NUMBER | NULL
+campaign_name: TEXT | NULL
+end_date: TEXT | NULL
+products: TEXT | NULL
+
+## BANK_SALES_TRADING.INTEREST_METRICS
+ranking: NUMBER | NULL | eg=[2, 3]
+percentile_ranking: FLOAT | NULL | eg=[99.73, 99.59]
+month_year: TEXT | NULL | eg=["07-2018"]
+interest_id: FLOAT | NULL | eg=[6106.0, 18923.0]
+composition: FLOAT | NULL | eg=[9.93, 10.85]
+_month: FLOAT | NULL | eg=[7.0]
+index_value: FLOAT | NULL | eg=[5.31, 5.29]
+_year: FLOAT | NULL | eg=[2018.0]
+
+## BANK_SALES_TRADING.VEG_WHSLE_DF
+@use: [C2]
+whsle_px_rmb-kg: FLOAT | NULL | eg=[3.88, 4.6]
+whsle_date: TEXT | NULL | eg=["2020-07-01 00:00:00"]
+
+## BANK_SALES_TRADING.VEG_TXN_DF
+@use: [C2]
+txn_date: TEXT | NULL | eg=["2020-07-01 00:00:00"]
+qty_sold(kg): FLOAT | NULL | eg=[0.849, 0.338]
+sale/return: TEXT | NULL | eg=["sale"]
+txn_time: TEXT | NULL | eg=["09:17:27", "09:21:56"]
+unit_selling_px_rmb/kg: FLOAT | NULL | eg=[3.2, 8.0]
+discount(%): NUMBER | NULL | eg=[1]
+day_of_week: TEXT | NULL | eg=["Wednesday"]
+
+## BANK_SALES_TRADING.SHOPPING_CART_PAGE_HIERARCHY
+page_id: NUMBER | NULL | eg=[2, 3]
+product_id: FLOAT | NULL | eg=[NaN, 1.0]
+page_name: TEXT | NULL | eg=["All Products", "Salmon"]
+product_category: TEXT | NULL | eg=["", "Fish"]
+
+## BANK_SALES_TRADING.VEG_LOSS_RATE_DF
+@use: [C2]
+item_name: TEXT | NULL | eg=["Niushou Shengcai", "Sichuan Red Cedar"]
+loss_rate_%: FLOAT | NULL | eg=[4.39, 10.46]
+
+## BANK_SALES_TRADING.BITCOIN_MEMBERS
+first_name: TEXT | NULL | eg=["Danny", "Vipul"]
+member_id: TEXT | NULL | eg=["c4ca42", "c81e72"]
+region: TEXT | NULL | eg=["Australia", "United States"]
+
+## BANK_SALES_TRADING.INTEREST_MAP
+interest_summary: TEXT | NULL | eg=["Consumers researching luxury product reviews and gift ideas.", "Consumers reading reviews of vacation destinations and accommodations."]
+id: NUMBER | NULL | eg=[4, 6]
+interest_name: TEXT | NULL | eg=["Luxury Retail Researchers", "Vacation Planners"]
+last_modified: TEXT | NULL | eg=["2018-05-23 11:30:12", "2018-05-23 11:30:13"]
+created_at: TEXT | NULL | eg=["2016-05-26 14:57:59"]
+
+## BANK_SALES_TRADING.BITCOIN_TRANSACTIONS
+quantity: FLOAT | NULL | eg=[50.0]
+member_id: TEXT | NULL | eg=["eccbc8", "a87ff6"]
+txn_id: NUMBER | NULL | eg=[2, 3]
+ticker: TEXT | NULL | eg=["BTC"]
+txn_type: TEXT | NULL | eg=["BUY"]
+percentage_fee: FLOAT | NULL | eg=[0.3, 0.0]
+txn_time: TEXT | NULL | eg=["2017-01-01T00:00:00.000Z"]
+txn_date: TEXT | NULL | eg=["01-01-2017"]
+
+## BANK_SALES_TRADING.CLEANED_WEEKLY_SALES
+@use: [C1]
+month_number: NUMBER | NULL | eg=[8]
+age_band: TEXT | NULL | eg=["unknown", "Young Adults"]
+calendar_year: NUMBER | NULL | eg=[2020]
+region: TEXT | NULL | eg=["USA", "EUROPE"]
+demographic: TEXT | NULL | eg=["unknown", "Couples"]
+week_number: NUMBER | NULL | eg=[36]
+avg_transaction: FLOAT | NULL | eg=[31.2, 31.42]
+week_date_formatted: TEXT | NULL | eg=["2020-8-31"]
+
+## BANK_SALES_TRADING.SHOPPING_CART_EVENTS
+page_id: NUMBER | NULL | eg=[9, 10]
+event_type: NUMBER | NULL | eg=[1, 2]
+cookie_id: TEXT | NULL | eg=["c4ca42", "c81e72"]
+event_time: TEXT | NULL | eg=["2020-02-04 19:16:58.609142", "2020-02-04 19:17:51.72942"]
+visit_id: TEXT | NULL | eg=["ccf365", "d58cbd"]
+sequence_number: NUMBER | NULL | eg=[4, 5]
+
+## BANK_SALES_TRADING.CUSTOMER_NODES
+region_id: NUMBER | NULL | eg=[3, 5]
+start_date: TEXT | NULL | eg=["2020-01-02", "2020-01-03"]
+end_date: TEXT | NULL | eg=["2020-01-03", "2020-01-17"]
+customer_id: NUMBER | NULL | eg=[1, 2]
+node_id: NUMBER | NULL | eg=[4, 5]
+
+## BANK_SALES_TRADING.SHOPPING_CART_USERS
+user_id: NUMBER | NULL | eg=[1, 2]
+cookie_id: TEXT | NULL | eg=["c4ca42", "c81e72"]
+start_date: TEXT | NULL | eg=["2020-02-04", "2020-01-18"]
+
+## BANK_SALES_TRADING.SHOPPING_CART_EVENT_IDENTIFIER
+event_name: TEXT | NULL | eg=["Add to Cart", "Purchase"]
+event_type: NUMBER | NULL | eg=[2, 3]
+
+## BANK_SALES_TRADING.WEEKLY_SALES
+@use: [C1]
+region: TEXT | NULL | eg=["ASIA", "OCEANIA"]
+
+## BANK_SALES_TRADING.VEG_CAT
+@use: [C2]
+category_code: NUMBER | NULL | eg=[1011010101]
+category_name: TEXT | NULL | eg=["Flower/Leaf Vegetables"]
+item_name: TEXT | NULL | eg=["Niushou Shengcai", "Local Xiaomao Cabbage"]
+
+## BANK_SALES_TRADING.BITCOIN_PRICES
+low: FLOAT | NULL | eg=[3162.79, 3063.37]
+change: TEXT | NULL | eg=["-2.04%", "5.82%"]
+price: FLOAT | NULL | eg=[3177.84, 3273.58]
+open: FLOAT | NULL | eg=[3243.96, 3093.78]
+volume: TEXT | NULL | eg=["582.04K", "839.54K"]
+high: FLOAT | NULL | eg=[3282.21, 3279.93]
+market_date: TEXT | NULL | eg=["29-08-2021", "27-08-2021"]
+ticker: TEXT | NULL | eg=["ETH"]

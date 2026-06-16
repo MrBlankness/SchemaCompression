@@ -1,0 +1,244 @@
+[COMPONENTS]
+@C1
+ancestry_initial: VARIANT | NULL
+ancestry_replication: VARIANT | NULL
+has_sumstats: BOOLEAN | NULL
+n_initial: NUMBER | NULL
+n_replication: NUMBER | NULL
+num_assoc_loci: NUMBER | NULL
+pmid: TEXT | NULL
+pub_author: TEXT | NULL
+pub_date: TEXT | NULL
+pub_journal: TEXT | NULL
+pub_title: TEXT | NULL
+source: TEXT | NULL
+trait_category: TEXT | NULL
+trait_efos: VARIANT | NULL
+trait_reported: TEXT | NULL
+
+@C2
+AFR_1000G_prop: FLOAT | NULL
+AMR_1000G_prop: FLOAT | NULL
+beta_ci_lower: FLOAT | NULL
+beta_ci_upper: FLOAT | NULL
+direction: TEXT | NULL
+EAS_1000G_prop: FLOAT | NULL
+EUR_1000G_prop: FLOAT | NULL
+log10_ABF: FLOAT | NULL
+odds_ratio: FLOAT | NULL
+oddsr_ci_lower: FLOAT | NULL
+oddsr_ci_upper: FLOAT | NULL
+overall_r2: FLOAT | NULL
+posterior_prob: FLOAT | NULL
+pval_exponent: NUMBER | NULL
+pval_mantissa: FLOAT | NULL
+SAS_1000G_prop: FLOAT | NULL
+
+@C3
+d: NUMBER | NULL
+distance_score: FLOAT | NULL
+distance_score_q: FLOAT | NULL
+feature: TEXT | NULL
+fpred_labels: VARIANT | NULL
+fpred_max_label: TEXT | NULL
+fpred_max_score: FLOAT | NULL
+fpred_scores: VARIANT | NULL
+interval_score: FLOAT | NULL
+interval_score_q: FLOAT | NULL
+qtl_beta: FLOAT | NULL
+qtl_pval: FLOAT | NULL
+qtl_score: FLOAT | NULL
+qtl_score_q: FLOAT | NULL
+qtl_se: FLOAT | NULL
+source_id: TEXT | NULL
+
+@C4
+lead_alt: TEXT | NULL
+lead_chrom: TEXT | NULL
+lead_pos: NUMBER | NULL
+lead_ref: TEXT | NULL
+tag_alt: TEXT | NULL
+tag_chrom: TEXT | NULL
+tag_pos: NUMBER | NULL
+tag_ref: TEXT | NULL
+
+@C5
+alt: TEXT | NULL
+chrom: TEXT | NULL
+pos: NUMBER | NULL
+ref: TEXT | NULL
+
+@C6
+eaf: FLOAT | NULL
+info: FLOAT | NULL
+is_cc: BOOLEAN | NULL
+n_total: NUMBER | NULL
+se: FLOAT | NULL
+
+@C7
+beta: FLOAT | NULL
+pval: FLOAT | NULL
+
+@C8
+alt_allele: TEXT | NULL
+chr_id: TEXT | NULL
+position: NUMBER | NULL
+ref_allele: TEXT | NULL
+
+[TABLES]
+## OPEN_TARGETS_GENETICS.SA_MOLECULAR_TRAIT
+@use: [C5, C6, C7]
+mac_cases: NUMBER | NULL
+type_id: TEXT | NULL
+n_cases: NUMBER | NULL
+phenotype_id: TEXT | NULL
+mac: NUMBER | NULL
+gene_id: TEXT | NULL
+bio_feature: TEXT | NULL
+study_id: TEXT | NULL
+num_tests: NUMBER | NULL
+
+## OPEN_TARGETS_GENETICS.VARIANTS
+@use: [C8]
+gene_id_any: TEXT | NULL
+gene_id_prot_coding: TEXT | NULL
+chr_id_b37: TEXT | NULL
+af: VARIANT | NULL
+position_b37: NUMBER | NULL
+most_severe_consequence: TEXT | NULL
+gene_id_prot_coding_distance: NUMBER | NULL
+gene_id_any_distance: NUMBER | NULL
+rs_id: TEXT | NULL
+cadd: VARIANT | NULL
+
+## OPEN_TARGETS_GENETICS.VARIANT_DISEASE
+@use: [C1, C2, C4, C7]
+study_id: TEXT | NULL
+pics_95perc_credset: BOOLEAN | NULL
+n_cases: NUMBER | NULL
+
+## OPEN_TARGETS_GENETICS.STUDIES
+@use: [C1]
+study_id: TEXT | NULL
+n_cases: NUMBER | NULL
+
+## OPEN_TARGETS_GENETICS.GENES
+exons: TEXT | NULL
+biotype: TEXT | NULL
+description: TEXT | NULL
+chr: TEXT | NULL
+gene_id: TEXT | NULL
+start: NUMBER | NULL
+end: NUMBER | NULL
+fwdstrand: NUMBER | NULL
+gene_name: TEXT | NULL
+tss: NUMBER | NULL
+
+## OPEN_TARGETS_GENETICS.STUDIES_OVERLAP
+B_ref: TEXT | NULL
+A_study_id: TEXT | NULL
+B_study_id: TEXT | NULL
+B_alt: TEXT | NULL
+B_distinct: NUMBER | NULL
+A_chrom: TEXT | NULL
+AB_overlap: NUMBER | NULL
+A_distinct: NUMBER | NULL
+A_alt: TEXT | NULL
+B_chrom: TEXT | NULL
+B_pos: NUMBER | NULL
+A_ref: TEXT | NULL
+A_pos: NUMBER | NULL
+
+## OPEN_TARGETS_GENETICS.SA_GWAS
+@use: [C5, C6, C7]
+mac_cases: FLOAT | NULL
+study_id: TEXT | NULL
+mac: FLOAT | NULL
+type_id: TEXT | NULL
+n_cases: NUMBER | NULL
+
+## OPEN_TARGETS_GENETICS.OT_RELEASE
+release: TEXT | NULL
+
+## OPEN_TARGETS_GENETICS.VARIANT_DISEASE_COLOC
+left_type: TEXT | NULL
+coloc_n_vars: NUMBER | NULL
+right_chrom: TEXT | NULL
+right_alt: TEXT | NULL
+left_pos: NUMBER | NULL
+right_bio_feature: TEXT | NULL
+coloc_h2: FLOAT | NULL
+coloc_h0: FLOAT | NULL
+right_ref: TEXT | NULL
+is_flipped: BOOLEAN | NULL
+left_var_right_study_beta: FLOAT | NULL
+coloc_h3: FLOAT | NULL
+left_ref: TEXT | NULL
+left_var_right_study_se: FLOAT | NULL
+left_var_right_isCC: BOOLEAN | NULL
+coloc_log2_h4_h3: FLOAT | NULL
+left_var_right_study_pval: FLOAT | NULL
+right_phenotype: TEXT | NULL
+left_chrom: TEXT | NULL
+right_study: TEXT | NULL
+right_gene_id: TEXT | NULL
+right_type: TEXT | NULL
+right_pos: NUMBER | NULL
+coloc_h4_h3: FLOAT | NULL
+coloc_h4: FLOAT | NULL
+coloc_h1: FLOAT | NULL
+left_alt: TEXT | NULL
+left_study: TEXT | NULL
+
+## OPEN_TARGETS_GENETICS.VARIANT_DISEASE_CREDSET
+@use: [C4]
+lead_variant_id: TEXT | NULL
+study_id: TEXT | NULL
+multisignal_method: TEXT | NULL
+tag_se: FLOAT | NULL
+tag_pval_cond: FLOAT | NULL
+bio_feature: TEXT | NULL
+is95_credset: BOOLEAN | NULL
+tag_variant_id: TEXT | NULL
+tag_pval: FLOAT | NULL
+tag_se_cond: FLOAT | NULL
+tag_beta: FLOAT | NULL
+tag_beta_cond: FLOAT | NULL
+postprob_cumsum: FLOAT | NULL
+is99_credset: BOOLEAN | NULL
+phenotype_id: TEXT | NULL
+type: TEXT | NULL
+gene_id: TEXT | NULL
+logABF: FLOAT | NULL
+postprob: FLOAT | NULL
+
+## OPEN_TARGETS_GENETICS.VARIANT_GENE
+@use: [C3, C8]
+gene_id: TEXT | NULL
+type_id: TEXT | NULL
+
+## OPEN_TARGETS_GENETICS.LOCUS2GENE
+@use: [C5]
+y_proba_logi_pathogenicity: FLOAT | NULL
+y_proba_logi_molecularQTL: FLOAT | NULL
+y_proba_dist_foot: FLOAT | NULL
+y_proba_logo_molecularQTL: FLOAT | NULL
+training_gs: TEXT | NULL
+training_clf: TEXT | NULL
+y_proba_logo_interaction: FLOAT | NULL
+gene_id: TEXT | NULL
+y_proba_logi_interaction: FLOAT | NULL
+y_proba_logo_pathogenicity: FLOAT | NULL
+training_fold: TEXT | NULL
+study_id: TEXT | NULL
+y_proba_logi_distance: FLOAT | NULL
+y_proba_logo_distance: FLOAT | NULL
+y_proba_full_model: FLOAT | NULL
+y_proba_dist_tss: FLOAT | NULL
+
+## OPEN_TARGETS_GENETICS.DISEASE_VARIANT_GENE
+@use: [C1, C2, C3, C4, C7]
+n_cases: NUMBER | NULL
+study_id: TEXT | NULL
+type_id: TEXT | NULL
+gene_id: TEXT | NULL

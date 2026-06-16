@@ -1,0 +1,43 @@
+[STANDALONE]
+## LONDON_CRIME.CRIME_BY_LSOA
+value: NUMBER | Summary of the number of crimes for the month | eg=[0, 1]
+year: NUMBER | NULL | eg=[2008]
+borough: TEXT | NULL | eg=["Camden", "Brent"]
+minor_category: TEXT | NULL | eg=["Rape"]
+lsoa_code: TEXT | Lower Layer Super Output Area code according to the Office for National Statistics | eg=["E01000898", "E01000927"]
+major_category: TEXT | NULL | eg=["Sexual Offences"]
+month: NUMBER | NULL | eg=[11, 6]
+
+## LONDON_FIRE_BRIGADE.FIRE_BRIGADE_SERVICE_CALLS
+incident_number: TEXT | NULL | eg=["033152-19032017", "034685-23032017"]
+property_category: TEXT | NULL | eg=["Outdoor"]
+ward_name_new: TEXT | NULL | eg=["Not geo-coded"]
+hour_of_call: NUMBER | NULL | eg=[14, 3]
+borough_code: TEXT | NULL | eg=["E00000000"]
+ward_name: TEXT | NULL | eg=[" Not geo-coded"]
+second_pump_arriving_deployed_from_station: TEXT | NULL
+num_stations_with_pumps_attending: NUMBER | NULL | eg=[1, 4]
+frs: TEXT | NULL | eg=["OverTheBorder"]
+incident_station_ground: TEXT | NULL | eg=["OverTheBorder"]
+date_of_call: DATE | NULL | eg=["2017-03-19", "2017-03-23"]
+postcode_full: TEXT | NULL | eg=["RM15 6RL", "CM13 3JJ"]
+first_pump_arriving_attendance_time: NUMBER | NULL
+time_of_call: TIME | NULL | eg=["14:09:14", "03:15:54"]
+northing_rounded: NUMBER | NULL | eg=[180450, 188450]
+ward_code: TEXT | NULL | eg=["E00000000"]
+special_service_type: TEXT | NULL | eg=["No action (not false alarm)"]
+property_type: TEXT | NULL | eg=["Tree scrub ", "Wasteland "]
+cal_year: NUMBER | NULL | eg=[2017]
+stop_code_description: TEXT | NULL | eg=["Secondary Fire", "Special Service"]
+num_pumps_attending: NUMBER | NULL | eg=[1, 4]
+incident_group: TEXT | NULL | eg=["Fire", "Special Service"]
+proper_case: TEXT | NULL | eg=["Not geo-coded"]
+postcode_district: TEXT | NULL | eg=["RM15", "CM13"]
+second_pump_arriving_attendance_time: NUMBER | NULL
+timestamp_of_call: NUMBER | NULL | eg=[1489932554000000, 1490238954000000]
+easting_m: NUMBER | NULL | eg=[557845, 558977]
+first_pump_arriving_deployed_from_station: TEXT | NULL
+easting_rounded: NUMBER | NULL | eg=[557850, 558950]
+northing_m: NUMBER | NULL | eg=[180497, 188473]
+borough_name: TEXT | NULL | eg=[" NOT GEO-CODED"]
+address_qualifier: TEXT | NULL | eg=["Open land/water - nearest gazetteer location"]

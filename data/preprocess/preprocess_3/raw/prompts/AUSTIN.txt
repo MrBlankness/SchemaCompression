@@ -1,0 +1,139 @@
+[TABLES]
+## AUSTIN_311._311_SERVICE_REQUESTS
+status: TEXT | Service request status. Duplicate statuses indicate that issue had previously been reported recently.
+latitude: FLOAT | Service request location latitude coordinate.
+close_date: NUMBER | Date Service request was closed.
+status_change_date: NUMBER | Date of last Service request status change. Status changes occur when service request moves from one status to another. I.E. new to open, open to closed.
+unique_key: TEXT | The service request tracking number.
+city: TEXT | Parsed location information. City.
+location: TEXT | Service request location latitude and longitude coordinates.
+map_tile: TEXT | Service request location corresponding map tile.
+county: TEXT | Parsed location information. County.
+incident_address: TEXT | Service location of Service request.
+state_plane_y_coordinate: FLOAT | State plane Y coordinate.
+state_plane_x_coordinate: TEXT | State plane X coordinate.
+street_name: TEXT | Parsed location information. Street name.
+map_page: TEXT | Service request location corresponding map page.
+last_update_date: NUMBER | Date Service request was updated. Last date Service request received updates. Updates may include creation, status changes, or changes to data in Service request.
+created_date: NUMBER | Date Service request was created.
+source: TEXT | Contact method Service request was received from. Mass entry requests are submitted by dept. in groups after work is completed.
+incident_zip: TEXT | Parsed location information. Zip code.
+longitude: FLOAT | Service request location longitude coordinate.
+street_number: TEXT | Parsed location information. Street number.
+council_district_code: NUMBER | Council district corresponding to Service request location. Locations outside of the City of Austin jurisdiction will not have a council district.
+complaint_description: TEXT | Service request type
+
+## AUSTIN_INCIDENTS.INCIDENTS_2016
+unique_key: NUMBER | The unique incident number for this accident.
+address: TEXT | NULL
+descript: TEXT | NULL
+location: TEXT | Latitude/Longitude
+longitude: FLOAT | NULL
+time: TIME | NULL
+latitude: FLOAT | NULL
+timestamp: NUMBER | NULL
+date: DATE | NULL
+
+## AUSTIN_INCIDENTS.INCIDENTS_2009
+longitude: FLOAT | NULL
+date: DATE | NULL
+descript: TEXT | NULL
+unique_key: NUMBER | The unique incident number for this accident.
+timestamp: NUMBER | NULL
+location: TEXT | Latitude/Longitude
+address: TEXT | NULL
+time: TIME | NULL
+latitude: FLOAT | NULL
+
+## AUSTIN_INCIDENTS.INCIDENTS_2011
+location: TEXT | Latitude/Longitude
+address: TEXT | NULL
+unique_key: NUMBER | The unique incident number for this accident.
+time: TIME | NULL
+latitude: FLOAT | NULL
+timestamp: NUMBER | NULL
+date: DATE | NULL
+descript: TEXT | NULL
+longitude: FLOAT | NULL
+
+## AUSTIN_INCIDENTS.INCIDENTS_2008
+timestamp: NUMBER | NULL
+longitude: FLOAT | NULL
+unique_key: NUMBER | The unique incident number for this accident.
+descript: TEXT | NULL
+latitude: FLOAT | NULL
+location: TEXT | Latitude/Longitude
+time: TIME | NULL
+address: TEXT | NULL
+date: DATE | NULL
+
+## AUSTIN_INCIDENTS.INCIDENTS_2010
+address: TEXT | NULL
+descript: TEXT | NULL
+longitude: FLOAT | NULL
+timestamp: NUMBER | NULL
+date: DATE | NULL
+location: TEXT | Latitude/Longitude
+latitude: FLOAT | NULL
+unique_key: NUMBER | The unique incident number for this accident.
+time: TIME | NULL
+
+## AUSTIN_BIKESHARE.BIKESHARE_STATIONS
+power_type: TEXT | NULL
+modified_date: NUMBER | NULL
+status: TEXT | NULL
+city_asset_number: NUMBER | NULL
+location: TEXT | NULL
+number_of_docks: NUMBER | NULL
+footprint_length: NUMBER | NULL
+image: TEXT | NULL
+alternate_name: TEXT | NULL
+station_id: NUMBER | Station ID number
+address: TEXT | NULL
+name: TEXT | Name of station
+council_district: NUMBER | NULL
+notes: TEXT | NULL
+property_type: TEXT | NULL
+footprint_width: FLOAT | NULL
+
+## AUSTIN_BIKESHARE.BIKESHARE_TRIPS
+subscriber_type: TEXT | Type of the Subscriber
+start_time: NUMBER | Start timestamp of trip
+end_station_id: TEXT | Numeric reference for end station
+bike_type: TEXT | Type of bike used
+start_station_id: NUMBER | Numeric reference for start station
+end_station_name: TEXT | Station name for end station
+trip_id: TEXT | Numeric ID of bike trip
+start_station_name: TEXT | Station name for start station
+bike_id: TEXT | ID of bike used
+duration_minutes: NUMBER | Time of trip in minutes
+
+## AUSTIN_CRIME.CRIME
+zipcode: TEXT | Indicates the zipcode where the incident occurred.
+address: TEXT | Full address where the incident occurred.
+timestamp: NUMBER | Time when the incident occurred. This is sometimes a best estimate.
+longitude: FLOAT | NULL
+location: TEXT | NULL
+council_district_code: NUMBER | Indicates the council district code where the incident occurred.
+location_description: TEXT | Description of the location where the incident occurred.
+year: NUMBER | Indicates the year in which the incident occurred.
+clearance_status: TEXT | NULL
+latitude: FLOAT | NULL
+description: TEXT | The subcategory of the primary description.
+district: TEXT | Indicates the police district where the incident occurred.
+unique_key: NUMBER | Unique identifier for the record.
+x_coordinate: NUMBER | The x coordinate of the location where the incident occurred
+primary_type: TEXT | The primary description of the NIBRS/UCR code.
+clearance_date: NUMBER | NULL
+y_coordinate: NUMBER | The y coordinate of the location where the incident occurred
+census_tract: FLOAT | NULL
+
+## AUSTIN_WASTE.WASTE_AND_DIVERSION
+dropoff_site: TEXT | NULL
+load_weight: FLOAT | NULL
+report_date: DATE | NULL
+route_number: TEXT | NULL
+load_id: NUMBER | NULL
+load_time: NUMBER | NULL
+load_type: TEXT | NULL
+route_type: TEXT | NULL

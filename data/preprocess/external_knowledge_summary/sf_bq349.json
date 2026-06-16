@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq349",
+  "question": "Which OpenStreetMap ID from the planet features table corresponds to an administrative boundary, represented as multipolygons, whose total number of 'amenity'-tagged Points of Interest (POIs), as derived from the planet nodes table, is closest to the median count among all such boundaries?",
+  "db_id": "GEO_OPENSTREETMAP",
+  "source_document": "functions_st_dwithin.md",
+  "evidence": "Function: ST_DWITHIN. Purpose: Returns TRUE if the minimum geodesic distance between two GEOGRAPHY objects is within a specified distance (meters). Syntax: ST_DWITHIN(<geography_expression_1>, <geography_expression_2>, <distance_in_meters>). Arguments: All must be GEOGRAPHY type, distance is REAL in meters. Returns: BOOLEAN. Usage: Returns NULL if any input is NULL. Example: SELECT ST_DWITHIN(ST_MAKEPOINT(0, 0), ST_MAKEPOINT(1, 0), 150000); returns TRUE."
+}

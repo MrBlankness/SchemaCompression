@@ -1,0 +1,50 @@
+[COMPONENTS]
+[TABLES]
+## CHICAGO_CRIME.CRIME
+primary_type: TEXT | The primary description of the NIBRS/UCR code.
+ward: NUMBER | NULL
+unique_key: NUMBER | Unique identifier for the record.
+arrest: BOOLEAN | NULL
+community_area: NUMBER | NULL
+x_coordinate: FLOAT | The x coordinate of the location where the incident occurred
+location: TEXT | NULL
+longitude: FLOAT | NULL
+iucr: TEXT | NULL
+updated_on: NUMBER | NULL
+beat: NUMBER | NULL
+domestic: BOOLEAN | NULL
+year: NUMBER | Indicates the year in which the incident occurred.
+district: NUMBER | Indicates the police district where the incident occurred.
+date: NUMBER | NULL
+location_description: TEXT | Description of the location where the incident occurred.
+description: TEXT | The subcategory of the primary description.
+latitude: FLOAT | NULL
+block: TEXT | NULL
+case_number: TEXT | NULL
+fbi_code: TEXT | NULL
+y_coordinate: FLOAT | The y coordinate of the location where the incident occurred
+
+## CHICAGO_TAXI_TRIPS.TAXI_TRIPS
+company: TEXT | The taxi company.
+dropoff_community_area: NUMBER | The Community Area where the trip ended.
+taxi_id: TEXT | A unique identifier for the taxi.
+trip_miles: FLOAT | Distance of the trip in miles.
+unique_key: TEXT | Unique identifier for the trip.
+dropoff_longitude: FLOAT | The longitude of the center of the dropoff census tract or the community area if the census tract has been hidden for privacy.
+pickup_community_area: NUMBER | The Community Area where the trip began.
+trip_total: FLOAT | Total cost of the trip, the total of the fare, tips, tolls, and extras.
+trip_start_timestamp: NUMBER | When the trip started, rounded to the nearest 15 minutes.
+trip_seconds: NUMBER | Time of the trip in seconds.
+pickup_census_tract: NUMBER | The Census Tract where the trip began. For privacy, this Census Tract is not shown for some trips.
+dropoff_latitude: FLOAT | The latitude of the center of the dropoff census tract or the community area if the census tract has been hidden for privacy.
+trip_end_timestamp: NUMBER | When the trip ended, rounded to the nearest 15 minutes.
+pickup_latitude: FLOAT | The latitude of the center of the pickup census tract or the community area if the census tract has been hidden for privacy.
+tolls: FLOAT | The tolls for the trip.
+pickup_location: TEXT | The location of the center of the pickup census tract or the community area if the census tract has been hidden for privacy.
+fare: FLOAT | The fare for the trip.
+tips: FLOAT | The tip for the trip. Cash tips generally will not be recorded.
+extras: FLOAT | Extra charges for the trip.
+pickup_longitude: FLOAT | The longitude of the center of the pickup census tract or the community area if the census tract has been hidden for privacy.
+dropoff_location: TEXT | The location of the center of the dropoff census tract or the community area if the census tract has been hidden for privacy.
+dropoff_census_tract: NUMBER | The Census Tract where the trip ended. For privacy, this Census Tract is not shown for some trips.
+payment_type: TEXT | Type of payment for the trip.

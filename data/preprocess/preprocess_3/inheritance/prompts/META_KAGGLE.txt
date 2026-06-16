@@ -1,0 +1,295 @@
+[STANDALONE]
+## META_KAGGLE.COMPETITIONS
+Title: TEXT | NULL
+LeaderboardPercentage: NUMBER | NULL
+TeamMergerDeadlineDate: NUMBER | NULL
+NumScoredSubmissions: NUMBER | NULL
+MaxTeamSize: NUMBER | NULL
+Slug: TEXT | NULL
+HasLeaderboard: BOOLEAN | NULL
+ScoreTruncationNumDecimals: NUMBER | NULL
+EvaluationAlgorithmName: TEXT | NULL
+EnabledDate: NUMBER | NULL
+MaxDailySubmissions: NUMBER | NULL
+ModelSubmissionDeadlineDate: NUMBER | NULL
+FinalLeaderboardHasBeenVerified: BOOLEAN | NULL
+DeadlineDate: NUMBER | NULL
+HasKernels: BOOLEAN | NULL
+EvaluationAlgorithmDescription: TEXT | NULL
+HostName: TEXT | NULL
+RewardQuantity: FLOAT | NULL
+Id: NUMBER | NULL
+ValidationSetValue: TEXT | NULL
+EvaluationAlgorithmIsMax: BOOLEAN | NULL
+CompetitionTypeId: NUMBER | NULL
+ValidationSetName: TEXT | NULL
+UserRankMultiplier: FLOAT | NULL
+ForumId: NUMBER | NULL
+OnlyAllowKernelSubmissions: BOOLEAN | NULL
+Subtitle: TEXT | NULL
+RewardType: TEXT | NULL
+BanTeamMergers: BOOLEAN | NULL
+EnableTeamModels: BOOLEAN | NULL
+EnableSubmissionModelAttachments: BOOLEAN | NULL
+EnableSubmissionModelHashes: BOOLEAN | NULL
+NumPrizes: NUMBER | NULL
+OrganizationId: FLOAT | NULL
+EvaluationAlgorithmAbbreviation: TEXT | NULL
+TeamModelDeadlineDate: NUMBER | NULL
+ProhibitNewEntrantsDeadlineDate: NUMBER | NULL
+HostSegmentTitle: TEXT | NULL
+TotalTeams: NUMBER | NULL
+TotalSubmissions: NUMBER | NULL
+CanQualifyTiers: BOOLEAN | NULL
+TotalCompetitors: NUMBER | NULL
+
+## META_KAGGLE.COMPETITIONTAGS
+TagId: NUMBER | NULL
+CompetitionId: NUMBER | NULL
+Id: NUMBER | NULL
+
+## META_KAGGLE.DATASETS
+LastActivityDate: DATE | NULL
+Id: NUMBER | NULL
+OwnerUserId: NUMBER | NULL
+Type: TEXT | NULL
+TotalDownloads: NUMBER | NULL
+TotalVotes: NUMBER | NULL
+CurrentDatasourceVersionId: NUMBER | NULL
+TotalKernels: NUMBER | NULL
+TotalViews: NUMBER | NULL
+ForumId: NUMBER | NULL
+OwnerOrganizationId: NUMBER | NULL
+CreatorUserId: NUMBER | NULL
+CurrentDatasetVersionId: NUMBER | NULL
+CreationDate: NUMBER | NULL
+
+## META_KAGGLE.DATASETTAGS
+DatasetId: NUMBER | NULL
+TagId: NUMBER | NULL
+Id: NUMBER | NULL
+
+## META_KAGGLE.DATASETTASKS
+Subtitle: TEXT | NULL
+DatasetId: NUMBER | NULL
+CreationDate: NUMBER | NULL
+TotalVotes: NUMBER | NULL
+Deadline: NUMBER | NULL
+Description: TEXT | NULL
+Title: TEXT | NULL
+OwnerUserId: NUMBER | NULL
+ForumId: TEXT | NULL
+Id: NUMBER | NULL
+
+## META_KAGGLE.DATASETTASKSUBMISSIONS
+DatasetTaskId: NUMBER | NULL
+DatasetId: NUMBER | NULL
+SubmittedUserId: NUMBER | NULL
+Id: NUMBER | NULL
+AcceptedDate: NUMBER | NULL
+KernelId: NUMBER | NULL
+CreationDate: NUMBER | NULL
+
+## META_KAGGLE.DATASETVOTES
+VoteDate: DATE | NULL
+Id: NUMBER | NULL
+UserId: NUMBER | NULL
+DatasetVersionId: NUMBER | NULL
+
+## META_KAGGLE.DATASOURCES
+CreatorUserId: NUMBER | NULL
+CreationDate: NUMBER | NULL
+CurrentDatasourceVersionId: NUMBER | NULL
+Id: NUMBER | NULL
+Type: TEXT | NULL
+
+## META_KAGGLE.EPISODEAGENTS
+Index: NUMBER | NULL
+EpisodeId: NUMBER | NULL
+Reward: FLOAT | NULL
+InitialConfidence: FLOAT | NULL
+InitialScore: FLOAT | NULL
+SubmissionId: NUMBER | NULL
+Id: NUMBER | NULL
+State: NUMBER | NULL
+UpdatedConfidence: FLOAT | NULL
+UpdatedScore: FLOAT | NULL
+
+## META_KAGGLE.EPISODES
+CompetitionId: NUMBER | NULL
+Id: NUMBER | NULL
+EndTime: NUMBER | NULL
+CreateTime: NUMBER | NULL
+Type: NUMBER | NULL
+
+## META_KAGGLE.FORUMMESSAGES
+PostUserId: NUMBER | NULL
+PostDate: TEXT | NULL
+MedalAwardDate: TEXT | NULL
+Id: NUMBER | NULL
+RawMarkdown: TEXT | NULL
+ForumTopicId: NUMBER | NULL
+ReplyToForumMessageId: FLOAT | NULL
+Medal: FLOAT | NULL
+Message: TEXT | NULL
+
+## META_KAGGLE.FORUMMESSAGEVOTES
+ToUserId: NUMBER | NULL
+FromUserId: NUMBER | NULL
+Id: NUMBER | NULL
+VoteDate: DATE | NULL
+ForumMessageId: NUMBER | NULL
+
+## META_KAGGLE.FORUMS
+Title: TEXT | NULL
+Id: NUMBER | NULL
+ParentForumId: NUMBER | NULL
+
+## META_KAGGLE.FORUMTOPICS
+TotalViews: NUMBER | NULL
+LastForumMessageId: FLOAT | NULL
+IsSticky: BOOLEAN | NULL
+LastCommentDate: NUMBER | NULL
+TotalReplies: NUMBER | NULL
+Score: NUMBER | NULL
+KernelId: FLOAT | NULL
+Title: TEXT | NULL
+TotalMessages: NUMBER | NULL
+CreationDate: NUMBER | NULL
+FirstForumMessageId: FLOAT | NULL
+Id: NUMBER | NULL
+ForumId: NUMBER | NULL
+
+## META_KAGGLE.KERNELLANGUAGES
+Id: NUMBER | NULL
+DisplayName: TEXT | NULL
+IsNotebook: BOOLEAN | NULL
+Name: TEXT | NULL
+
+## META_KAGGLE.KERNELS
+ForumTopicId: NUMBER | NULL
+Id: NUMBER | NULL
+MedalAwardDate: DATE | NULL
+MadePublicDate: DATE | NULL
+FirstKernelVersionId: NUMBER | NULL
+TotalComments: NUMBER | NULL
+EvaluationDate: DATE | NULL
+ForkParentKernelVersionId: NUMBER | NULL
+IsProjectLanguageTemplate: BOOLEAN | NULL
+Medal: NUMBER | NULL
+CreationDate: NUMBER | NULL
+TotalVotes: NUMBER | NULL
+TotalViews: NUMBER | NULL
+CurrentKernelVersionId: NUMBER | NULL
+CurrentUrlSlug: TEXT | NULL
+AuthorUserId: NUMBER | NULL
+
+## META_KAGGLE.KERNELTAGS
+Id: NUMBER | NULL
+TagId: NUMBER | NULL
+KernelId: NUMBER | NULL
+
+## META_KAGGLE.KERNELVERSIONCOMPETITIONSOURCES
+Id: NUMBER | NULL
+SourceCompetitionId: NUMBER | NULL
+KernelVersionId: NUMBER | NULL
+
+## META_KAGGLE.KERNELVERSIONDATASETSOURCES
+KernelVersionId: NUMBER | NULL
+SourceDatasetVersionId: NUMBER | NULL
+Id: NUMBER | NULL
+
+## META_KAGGLE.KERNELVERSIONKERNELSOURCES
+KernelVersionId: NUMBER | NULL
+SourceKernelVersionId: NUMBER | NULL
+Id: NUMBER | NULL
+
+## META_KAGGLE.KERNELVERSIONS
+VersionNumber: FLOAT | NULL
+ScriptLanguageId: NUMBER | NULL
+Title: TEXT | NULL
+LinesChangedFromFork: FLOAT | NULL
+ParentScriptVersionId: TEXT | NULL
+LinesChangedFromPrevious: FLOAT | NULL
+LinesUnchangedFromPrevious: FLOAT | NULL
+CreationDate: NUMBER | NULL
+AuthorUserId: NUMBER | NULL
+TotalVotes: NUMBER | NULL
+TotalLines: FLOAT | NULL
+EvaluationDate: DATE | NULL
+LinesInsertedFromFork: FLOAT | NULL
+LinesUnchangedFromFork: FLOAT | NULL
+ScriptId: NUMBER | NULL
+LinesDeletedFromFork: FLOAT | NULL
+IsChange: BOOLEAN | NULL
+LinesInsertedFromPrevious: FLOAT | NULL
+Id: NUMBER | NULL
+
+## META_KAGGLE.KERNELVOTES
+Id: NUMBER | NULL
+KernelVersionId: NUMBER | NULL
+UserId: NUMBER | NULL
+VoteDate: DATE | NULL
+
+## META_KAGGLE.SUBMISSIONS
+PublicScoreFullPrecision: FLOAT | NULL
+SourceKernelVersionId: TEXT | NULL
+SubmissionDate: DATE | NULL
+PublicScoreLeaderboardDisplay: FLOAT | NULL
+IsAfterDeadline: BOOLEAN | NULL
+PrivateScoreFullPrecision: FLOAT | NULL
+ScoreDate: DATE | NULL
+TeamId: NUMBER | NULL
+Id: NUMBER | NULL
+SubmittedUserId: NUMBER | NULL
+PrivateScoreLeaderboardDisplay: FLOAT | NULL
+
+## META_KAGGLE.TAGS
+CompetitionCount: NUMBER | NULL
+Description: TEXT | NULL
+KernelCount: NUMBER | NULL
+Name: TEXT | NULL
+DatasetCount: NUMBER | NULL
+FullPath: TEXT | NULL
+ParentTagId: NUMBER | NULL
+Id: NUMBER | NULL
+Slug: TEXT | NULL
+
+## META_KAGGLE.TEAMMEMBERSHIPS
+Id: NUMBER | NULL
+TeamId: NUMBER | NULL
+UserId: NUMBER | NULL
+RequestDate: DATE | NULL
+
+## META_KAGGLE.USERACHIEVEMENTS
+TotalGold: NUMBER | NULL
+TierAchievementDate: DATE | NULL
+HighestRanking: NUMBER | NULL
+CurrentRanking: NUMBER | NULL
+Id: NUMBER | NULL
+UserId: NUMBER | NULL
+TotalSilver: NUMBER | NULL
+Tier: NUMBER | NULL
+AchievementType: TEXT | NULL
+Points: NUMBER | NULL
+TotalBronze: NUMBER | NULL
+
+## META_KAGGLE.USERFOLLOWERS
+CreationDate: DATE | NULL
+Id: NUMBER | NULL
+UserId: NUMBER | NULL
+FollowingUserId: NUMBER | NULL
+
+## META_KAGGLE.USERORGANIZATIONS
+Id: NUMBER | NULL
+JoinDate: DATE | NULL
+OrganizationId: NUMBER | NULL
+UserId: NUMBER | NULL
+
+## META_KAGGLE.USERS
+Id: NUMBER | NULL
+Country: TEXT | NULL
+RegisterDate: TEXT | NULL
+PerformanceTier: NUMBER | NULL
+DisplayName: TEXT | NULL
+UserName: TEXT | NULL

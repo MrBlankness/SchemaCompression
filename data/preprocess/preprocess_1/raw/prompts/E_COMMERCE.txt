@@ -1,0 +1,35 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: E_COMMERCE.PRODUCT_CATEGORY_NAME_TRANSLATION
+Columns: product_category_name, product_category_name_english
+
+Table: E_COMMERCE.LEADS_QUALIFIED
+Columns: first_contact_date, origin, landing_page_id, mql_id
+
+Table: E_COMMERCE.ORDER_REVIEWS
+Columns: review_comment_title, review_answer_timestamp, review_score, order_id, review_id, review_creation_date, review_comment_message
+
+Table: E_COMMERCE.PRODUCTS
+Columns: product_photos_qty, product_description_lenght, product_height_cm, product_width_cm, product_name_lenght, product_id, product_weight_g, product_length_cm, product_category_name
+
+Table: E_COMMERCE.ORDERS
+Columns: order_delivered_customer_date, order_status, order_id, order_delivered_carrier_date, order_purchase_timestamp, order_estimated_delivery_date, order_approved_at, customer_id
+
+Table: E_COMMERCE.LEADS_CLOSED
+Columns: business_type, has_gtin, average_stock, won_date, lead_type, lead_behaviour_profile, has_company, declared_monthly_revenue, seller_id, sr_id, business_segment, sdr_id, mql_id, declared_product_catalog_size
+
+Table: E_COMMERCE.ORDER_PAYMENTS
+Columns: payment_sequential, payment_installments, payment_value, order_id, payment_type
+
+Table: E_COMMERCE.CUSTOMERS
+Columns: customer_city, customer_state, customer_id, customer_zip_code_prefix, customer_unique_id
+
+Table: E_COMMERCE.GEOLOCATION
+Columns: geolocation_zip_code_prefix, geolocation_city, geolocation_lng, geolocation_state, geolocation_lat
+
+Table: E_COMMERCE.SELLERS
+Columns: seller_zip_code_prefix, seller_state, seller_city, seller_id
+
+Table: E_COMMERCE.ORDER_ITEMS
+Columns: order_id, price, order_item_id, shipping_limit_date, product_id, seller_id, freight_value

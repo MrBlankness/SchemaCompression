@@ -1,0 +1,866 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: GHCN_D.GHCND_1852
+Columns: date, value, element, id, time, mflag, qflag, sflag
+
+Table: GHCN_D.GHCND_2017
+Columns: qflag, mflag, element, source_url, etl_timestamp, value, time, sflag, id, date
+
+Table: GHCN_D.GHCND_1878
+Columns: value, sflag, time, qflag, element, mflag, date, id
+
+Table: GHCN_D.GHCND_1988
+Columns: element, value, id, qflag, time, sflag, mflag, date
+
+Table: GHCN_D.GHCND_1930
+Columns: element, mflag, qflag, sflag, time, value, date, id
+
+Table: GHCN_D.GHCND_1916
+Columns: time, date, sflag, id, value, element, qflag, mflag
+
+Table: GHCN_D.GHCND_1781
+Columns: element, qflag, date, id, time, mflag, sflag, value
+
+Table: GHCN_D.GHCND_1932
+Columns: element, date, value, sflag, time, mflag, id, qflag
+
+Table: GHCN_D.GHCND_1962
+Columns: time, date, id, element, mflag, value, qflag, sflag
+
+Table: GHCN_D.GHCND_1883
+Columns: date, time, sflag, element, mflag, value, id, qflag
+
+Table: GHCN_D.GHCND_2013
+Columns: element, date, time, mflag, sflag, id, value, qflag
+
+Table: GHCN_D.GHCND_1867
+Columns: value, element, sflag, time, mflag, qflag, date, id
+
+Table: GHCN_D.GHCND_1928
+Columns: date, qflag, element, value, mflag, time, id, sflag
+
+Table: GHCN_D.GHCND_1868
+Columns: time, date, value, mflag, element, sflag, id, qflag
+
+Table: GHCN_D.GHCND_1779
+Columns: mflag, value, sflag, element, date, qflag, id, time
+
+Table: GHCN_D.GHCND_1853
+Columns: date, value, qflag, time, element, id, mflag, sflag
+
+Table: GHCN_D.GHCND_2012
+Columns: id, qflag, value, time, mflag, sflag, date, element
+
+Table: GHCN_D.GHCND_1982
+Columns: date, id, value, mflag, qflag, time, sflag, element
+
+Table: GHCN_D.GHCND_1857
+Columns: element, id, mflag, sflag, value, qflag, date, time
+
+Table: GHCN_D.GHCND_1904
+Columns: qflag, date, sflag, element, time, mflag, value, id
+
+Table: GHCN_D.GHCND_1766
+Columns: element, value, date, sflag, id, qflag, time, mflag
+
+Table: GHCN_D.GHCND_1808
+Columns: value, sflag, qflag, id, mflag, time, element, date
+
+Table: GHCN_D.GHCND_1941
+Columns: date, value, qflag, mflag, id, element, sflag, time
+
+Table: GHCN_D.GHCND_1831
+Columns: id, mflag, qflag, date, time, element, sflag, value
+
+Table: GHCN_D.GHCND_1967
+Columns: element, sflag, value, date, id, time, qflag, mflag
+
+Table: GHCN_D.GHCND_1894
+Columns: value, date, sflag, time, mflag, id, element, qflag
+
+Table: GHCN_D.GHCND_1842
+Columns: time, date, element, value, sflag, mflag, id, qflag
+
+Table: GHCN_D.GHCND_1780
+Columns: mflag, element, date, id, qflag, value, time, sflag
+
+Table: GHCN_D.GHCND_1877
+Columns: sflag, qflag, element, date, value, id, time, mflag
+
+Table: GHCN_D.GHCND_1999
+Columns: time, element, date, value, qflag, id, sflag, mflag
+
+Table: GHCN_D.GHCND_1838
+Columns: qflag, id, mflag, element, date, value, time, sflag
+
+Table: GHCN_D.GHCND_1954
+Columns: time, value, element, qflag, date, id, sflag, mflag
+
+Table: GHCN_D.GHCND_1827
+Columns: date, qflag, id, time, element, value, mflag, sflag
+
+Table: GHCN_D.GHCND_1812
+Columns: qflag, mflag, time, sflag, id, date, element, value
+
+Table: GHCN_D.GHCND_1811
+Columns: sflag, element, time, value, date, mflag, qflag, id
+
+Table: GHCN_D.GHCND_1966
+Columns: value, date, mflag, element, qflag, time, id, sflag
+
+Table: GHCN_D.GHCND_1823
+Columns: date, id, sflag, element, qflag, time, mflag, value
+
+Table: GHCN_D.GHCND_2007
+Columns: qflag, time, mflag, value, id, element, sflag, date
+
+Table: GHCN_D.GHCND_1775
+Columns: sflag, mflag, qflag, date, id, time, value, element
+
+Table: GHCN_D.GHCND_1802
+Columns: date, mflag, id, sflag, element, value, time, qflag
+
+Table: GHCN_D.GHCND_1797
+Columns: value, element, date, qflag, sflag, mflag, id, time
+
+Table: GHCN_D.GHCND_1769
+Columns: mflag, element, time, sflag, value, qflag, date, id
+
+Table: GHCN_D.GHCND_1979
+Columns: date, value, qflag, sflag, mflag, element, id, time
+
+Table: GHCN_D.GHCND_1805
+Columns: id, value, sflag, mflag, date, element, qflag, time
+
+Table: GHCN_D.GHCND_1931
+Columns: sflag, time, id, element, value, qflag, mflag, date
+
+Table: GHCN_D.GHCND_1935
+Columns: element, sflag, id, value, mflag, qflag, date, time
+
+Table: GHCN_D.GHCND_1786
+Columns: sflag, value, date, id, element, mflag, qflag, time
+
+Table: GHCN_D.GHCND_1790
+Columns: date, sflag, id, element, qflag, time, value, mflag
+
+Table: GHCN_D.GHCND_STATIONS
+Columns: latitude, wmoid, state, gsn_flag, hcn_crn_flag, elevation, name, etl_timestamp, source_url, id, longitude
+
+Table: GHCN_D.GHCND_1784
+Columns: qflag, sflag, id, date, value, element, time, mflag
+
+Table: GHCN_D.GHCND_1829
+Columns: date, mflag, id, time, qflag, value, element, sflag
+
+Table: GHCN_D.GHCND_1991
+Columns: time, mflag, qflag, element, sflag, id, value, date
+
+Table: GHCN_D.GHCND_1910
+Columns: id, qflag, mflag, time, date, sflag, value, element
+
+Table: GHCN_D.GHCND_1995
+Columns: element, qflag, mflag, id, sflag, date, time, value
+
+Table: GHCN_D.GHCND_1824
+Columns: date, id, time, sflag, mflag, qflag, value, element
+
+Table: GHCN_D.GHCND_1953
+Columns: value, date, mflag, time, id, qflag, sflag, element
+
+Table: GHCN_D.GHCND_1897
+Columns: mflag, id, sflag, element, time, qflag, date, value
+
+Table: GHCN_D.GHCND_1994
+Columns: time, element, sflag, id, date, value, qflag, mflag
+
+Table: GHCN_D.GHCND_2004
+Columns: value, qflag, sflag, date, element, time, id, mflag
+
+Table: GHCN_D.GHCND_1952
+Columns: sflag, id, time, value, mflag, date, element, qflag
+
+Table: GHCN_D.GHCND_1998
+Columns: id, time, element, date, qflag, sflag, mflag, value
+
+Table: GHCN_D.GHCND_2002
+Columns: value, mflag, id, element, time, qflag, sflag, date
+
+Table: GHCN_D.GHCND_1997
+Columns: id, sflag, date, qflag, time, element, mflag, value
+
+Table: GHCN_D.GHCND_1822
+Columns: qflag, sflag, time, element, mflag, value, date, id
+
+Table: GHCN_D.GHCND_1833
+Columns: value, qflag, sflag, mflag, element, date, id, time
+
+Table: GHCN_D.GHCND_1809
+Columns: mflag, sflag, date, qflag, value, element, time, id
+
+Table: GHCN_D.GHCND_1942
+Columns: time, value, id, element, date, mflag, qflag, sflag
+
+Table: GHCN_D.GHCND_1957
+Columns: date, time, sflag, mflag, id, qflag, element, value
+
+Table: GHCN_D.GHCND_1903
+Columns: id, qflag, time, date, value, sflag, mflag, element
+
+Table: GHCN_D.GHCND_1958
+Columns: qflag, element, date, sflag, time, value, id, mflag
+
+Table: GHCN_D.GHCND_1918
+Columns: qflag, id, date, sflag, time, value, element, mflag
+
+Table: GHCN_D.GHCND_1980
+Columns: qflag, mflag, id, time, element, value, date, sflag
+
+Table: GHCN_D.GHCND_1768
+Columns: id, date, time, value, element, sflag, qflag, mflag
+
+Table: GHCN_D.GHCND_1914
+Columns: sflag, id, element, qflag, date, time, mflag, value
+
+Table: GHCN_D.GHCND_1960
+Columns: time, value, date, element, id, sflag, qflag, mflag
+
+Table: GHCN_D.GHCND_1965
+Columns: id, time, sflag, element, mflag, value, date, qflag
+
+Table: GHCN_D.GHCND_1989
+Columns: sflag, date, qflag, id, mflag, element, time, value
+
+Table: GHCN_D.GHCND_1923
+Columns: date, sflag, time, element, qflag, id, value, mflag
+
+Table: GHCN_D.GHCND_1874
+Columns: qflag, time, mflag, sflag, element, id, date, value
+
+Table: GHCN_D.GHCND_2022
+Columns: time, id, qflag, date, etl_timestamp, value, mflag, sflag, element, source_url
+
+Table: GHCN_D.GHCND_1970
+Columns: sflag, value, date, element, qflag, id, mflag, time
+
+Table: GHCN_D.GHCND_1859
+Columns: mflag, id, element, time, value, sflag, qflag, date
+
+Table: GHCN_D.GHCND_1927
+Columns: time, value, id, sflag, element, mflag, qflag, date
+
+Table: GHCN_D.GHCND_1844
+Columns: id, sflag, time, date, qflag, mflag, value, element
+
+Table: GHCN_D.GHCND_1905
+Columns: date, qflag, sflag, element, value, mflag, id, time
+
+Table: GHCN_D.GHCND_1843
+Columns: time, qflag, mflag, date, element, value, id, sflag
+
+Table: GHCN_D.GHCND_1850
+Columns: value, time, date, sflag, id, qflag, mflag, element
+
+Table: GHCN_D.GHCND_2019
+Columns: id, qflag, time, sflag, etl_timestamp, mflag, date, value, element, source_url
+
+Table: GHCN_D.GHCND_2005
+Columns: qflag, sflag, value, time, mflag, id, element, date
+
+Table: GHCN_D.GHCND_2018
+Columns: id, time, value, qflag, mflag, etl_timestamp, source_url, element, date, sflag
+
+Table: GHCN_D.GHCND_1986
+Columns: sflag, date, id, element, qflag, mflag, value, time
+
+Table: GHCN_D.GHCND_1925
+Columns: sflag, id, qflag, mflag, date, time, value, element
+
+Table: GHCN_D.GHCND_1801
+Columns: time, date, element, mflag, qflag, sflag, id, value
+
+Table: GHCN_D.GHCND_1830
+Columns: date, mflag, qflag, sflag, id, value, time, element
+
+Table: GHCN_D.GHCND_1764
+Columns: element, id, qflag, time, sflag, date, value, mflag
+
+Table: GHCN_D.GHCND_1765
+Columns: time, qflag, element, mflag, sflag, id, date, value
+
+Table: GHCN_D.GHCND_1771
+Columns: sflag, qflag, element, time, mflag, value, id, date
+
+Table: GHCN_D.GHCND_1807
+Columns: sflag, time, element, value, date, id, mflag, qflag
+
+Table: GHCN_D.GHCND_1804
+Columns: value, element, time, id, date, sflag, mflag, qflag
+
+Table: GHCN_D.GHCND_1872
+Columns: element, time, sflag, mflag, qflag, value, id, date
+
+Table: GHCN_D.GHCND_1880
+Columns: mflag, id, element, qflag, date, time, value, sflag
+
+Table: GHCN_D.GHCND_1847
+Columns: mflag, element, qflag, date, value, sflag, id, time
+
+Table: GHCN_D.GHCND_1887
+Columns: element, id, sflag, qflag, value, mflag, date, time
+
+Table: GHCN_D.GHCND_1885
+Columns: id, qflag, date, mflag, value, time, sflag, element
+
+Table: GHCN_D.GHCND_1849
+Columns: date, mflag, sflag, id, element, time, qflag, value
+
+Table: GHCN_D.GHCND_1961
+Columns: time, mflag, value, date, element, id, qflag, sflag
+
+Table: GHCN_D.GHCND_1816
+Columns: sflag, element, date, id, qflag, value, mflag, time
+
+Table: GHCN_D.GHCND_1913
+Columns: element, mflag, id, value, time, qflag, date, sflag
+
+Table: GHCN_D.GHCND_1920
+Columns: mflag, date, qflag, id, sflag, element, value, time
+
+Table: GHCN_D.GHCND_1858
+Columns: time, sflag, mflag, qflag, element, date, id, value
+
+Table: GHCN_D.GHCND_1772
+Columns: date, qflag, id, mflag, element, time, sflag, value
+
+Table: GHCN_D.GHCND_1845
+Columns: value, sflag, mflag, id, time, qflag, date, element
+
+Table: GHCN_D.GHCND_1934
+Columns: mflag, time, sflag, value, date, qflag, element, id
+
+Table: GHCN_D.GHCND_1839
+Columns: element, id, time, mflag, sflag, qflag, value, date
+
+Table: GHCN_D.GHCND_1992
+Columns: element, value, time, qflag, date, sflag, id, mflag
+
+Table: GHCN_D.GHCND_1854
+Columns: value, sflag, time, qflag, date, mflag, element, id
+
+Table: GHCN_D.GHCND_1803
+Columns: element, time, qflag, value, date, id, sflag, mflag
+
+Table: GHCN_D.GHCND_1972
+Columns: sflag, qflag, value, time, id, element, date, mflag
+
+Table: GHCN_D.GHCND_1869
+Columns: date, id, time, sflag, element, value, mflag, qflag
+
+Table: GHCN_D.GHCND_1899
+Columns: id, mflag, qflag, time, sflag, date, element, value
+
+Table: GHCN_D.GHCND_1796
+Columns: sflag, time, date, value, element, qflag, mflag, id
+
+Table: GHCN_D.GHCND_2024
+Columns: value, sflag, time, element, source_url, mflag, id, etl_timestamp, qflag, date
+
+Table: GHCN_D.GHCND_1890
+Columns: element, qflag, time, id, mflag, date, sflag, value
+
+Table: GHCN_D.GHCND_1813
+Columns: value, date, mflag, qflag, time, element, sflag, id
+
+Table: GHCN_D.GHCND_STATES
+Columns: etl_timestamp, code, name, source_url
+
+Table: GHCN_D.GHCND_1840
+Columns: sflag, mflag, date, qflag, value, element, time, id
+
+Table: GHCN_D.GHCND_1879
+Columns: time, sflag, qflag, date, mflag, element, value, id
+
+Table: GHCN_D.GHCND_1933
+Columns: qflag, time, id, date, mflag, sflag, value, element
+
+Table: GHCN_D.GHCND_1818
+Columns: id, mflag, qflag, value, element, date, time, sflag
+
+Table: GHCN_D.GHCND_1990
+Columns: qflag, mflag, date, id, sflag, element, value, time
+
+Table: GHCN_D.GHCND_1782
+Columns: element, id, date, sflag, qflag, time, value, mflag
+
+Table: GHCN_D.GHCND_1964
+Columns: value, id, element, time, qflag, sflag, mflag, date
+
+Table: GHCN_D.GHCND_1949
+Columns: id, element, qflag, mflag, date, time, value, sflag
+
+Table: GHCN_D.GHCND_1901
+Columns: time, element, sflag, date, id, qflag, value, mflag
+
+Table: GHCN_D.GHCND_1871
+Columns: sflag, element, date, id, time, value, mflag, qflag
+
+Table: GHCN_D.GHCND_1783
+Columns: value, element, date, mflag, sflag, time, qflag, id
+
+Table: GHCN_D.GHCND_2001
+Columns: element, date, id, mflag, time, qflag, sflag, value
+
+Table: GHCN_D.GHCND_1785
+Columns: element, time, id, sflag, qflag, value, mflag, date
+
+Table: GHCN_D.GHCND_1955
+Columns: sflag, mflag, qflag, element, value, id, date, time
+
+Table: GHCN_D.GHCND_2000
+Columns: id, element, qflag, sflag, mflag, date, time, value
+
+Table: GHCN_D.GHCND_2020
+Columns: source_url, id, mflag, time, element, value, date, qflag, etl_timestamp, sflag
+
+Table: GHCN_D.GHCND_1926
+Columns: element, date, mflag, value, qflag, time, sflag, id
+
+Table: GHCN_D.GHCND_1975
+Columns: element, id, time, mflag, date, sflag, value, qflag
+
+Table: GHCN_D.GHCND_1837
+Columns: qflag, value, date, id, sflag, mflag, time, element
+
+Table: GHCN_D.GHCND_1984
+Columns: mflag, id, value, sflag, element, time, date, qflag
+
+Table: GHCN_D.GHCND_1924
+Columns: sflag, qflag, value, id, element, mflag, date, time
+
+Table: GHCN_D.GHCND_1976
+Columns: date, value, mflag, id, time, qflag, sflag, element
+
+Table: GHCN_D.GHCND_2014
+Columns: value, date, element, time, id, sflag, mflag, qflag
+
+Table: GHCN_D.GHCND_1888
+Columns: value, element, mflag, qflag, date, time, id, sflag
+
+Table: GHCN_D.GHCND_2015
+Columns: id, qflag, time, mflag, element, date, value, sflag
+
+Table: GHCN_D.GHCND_1861
+Columns: qflag, id, element, mflag, sflag, time, date, value
+
+Table: GHCN_D.GHCND_1866
+Columns: sflag, mflag, value, time, element, date, qflag, id
+
+Table: GHCN_D.GHCND_2016
+Columns: element, sflag, date, mflag, id, etl_timestamp, source_url, time, value, qflag
+
+Table: GHCN_D.GHCND_2021
+Columns: qflag, sflag, value, id, date, mflag, time, source_url, etl_timestamp, element
+
+Table: GHCN_D.GHCND_1919
+Columns: value, id, date, mflag, sflag, qflag, time, element
+
+Table: GHCN_D.GHCND_1937
+Columns: qflag, value, time, sflag, date, id, element, mflag
+
+Table: GHCN_D.GHCND_1943
+Columns: mflag, date, time, id, value, qflag, element, sflag
+
+Table: GHCN_D.GHCND_1907
+Columns: time, sflag, element, mflag, date, value, id, qflag
+
+Table: GHCN_D.GHCND_1774
+Columns: element, id, time, sflag, qflag, value, date, mflag
+
+Table: GHCN_D.GHCND_1855
+Columns: element, id, sflag, qflag, value, time, date, mflag
+
+Table: GHCN_D.GHCND_2010
+Columns: value, element, id, date, sflag, time, mflag, qflag
+
+Table: GHCN_D.GHCND_1940
+Columns: element, id, mflag, time, date, value, sflag, qflag
+
+Table: GHCN_D.GHCND_1947
+Columns: mflag, date, qflag, time, value, id, sflag, element
+
+Table: GHCN_D.GHCND_1814
+Columns: element, mflag, time, sflag, qflag, id, date, value
+
+Table: GHCN_D.GHCND_1770
+Columns: date, time, element, value, mflag, qflag, id, sflag
+
+Table: GHCN_D.GHCND_1945
+Columns: sflag, id, qflag, mflag, date, time, value, element
+
+Table: GHCN_D.GHCND_1828
+Columns: element, time, qflag, date, value, id, sflag, mflag
+
+Table: GHCN_D.GHCND_1865
+Columns: time, date, sflag, mflag, element, qflag, value, id
+
+Table: GHCN_D.GHCND_1860
+Columns: mflag, sflag, qflag, element, id, time, value, date
+
+Table: GHCN_D.GHCND_1902
+Columns: mflag, sflag, qflag, value, time, date, id, element
+
+Table: GHCN_D.GHCND_1791
+Columns: time, date, element, id, mflag, value, qflag, sflag
+
+Table: GHCN_D.GHCND_1981
+Columns: value, qflag, sflag, time, date, element, id, mflag
+
+Table: GHCN_D.GHCND_1815
+Columns: time, value, element, date, qflag, sflag, id, mflag
+
+Table: GHCN_D.GHCND_1794
+Columns: id, value, element, mflag, time, sflag, date, qflag
+
+Table: GHCN_D.GHCND_1959
+Columns: id, date, value, element, qflag, time, mflag, sflag
+
+Table: GHCN_D.GHCND_1870
+Columns: qflag, element, value, time, date, id, mflag, sflag
+
+Table: GHCN_D.GHCND_1787
+Columns: mflag, time, qflag, value, id, sflag, date, element
+
+Table: GHCN_D.GHCND_1911
+Columns: element, date, value, sflag, time, mflag, id, qflag
+
+Table: GHCN_D.GHCND_1892
+Columns: date, id, time, element, mflag, value, sflag, qflag
+
+Table: GHCN_D.GHCND_1834
+Columns: qflag, id, sflag, time, date, value, mflag, element
+
+Table: GHCN_D.GHCND_1898
+Columns: sflag, element, value, id, mflag, date, time, qflag
+
+Table: GHCN_D.GHCND_2008
+Columns: element, mflag, time, date, value, sflag, qflag, id
+
+Table: GHCN_D.GHCND_1846
+Columns: qflag, sflag, date, element, time, id, mflag, value
+
+Table: GHCN_D.GHCND_1978
+Columns: time, sflag, element, value, date, qflag, id, mflag
+
+Table: GHCN_D.GHCND_1909
+Columns: id, qflag, value, mflag, time, sflag, element, date
+
+Table: GHCN_D.GHCND_1798
+Columns: mflag, element, date, sflag, value, id, qflag, time
+
+Table: GHCN_D.GHCND_1996
+Columns: value, id, sflag, element, qflag, time, date, mflag
+
+Table: GHCN_D.GHCND_1922
+Columns: id, date, qflag, sflag, value, mflag, time, element
+
+Table: GHCN_D.GHCND_1939
+Columns: qflag, value, id, element, mflag, time, sflag, date
+
+Table: GHCN_D.GHCND_1889
+Columns: id, sflag, element, value, mflag, qflag, time, date
+
+Table: GHCN_D.GHCND_COUNTRIES
+Columns: source_url, name, code, etl_timestamp
+
+Table: GHCN_D.GHCND_1912
+Columns: value, qflag, element, sflag, date, time, mflag, id
+
+Table: GHCN_D.GHCND_1806
+Columns: value, element, sflag, mflag, qflag, date, id, time
+
+Table: GHCN_D.GHCND_1893
+Columns: time, value, date, mflag, qflag, sflag, id, element
+
+Table: GHCN_D.GHCND_1875
+Columns: sflag, id, qflag, date, time, mflag, value, element
+
+Table: GHCN_D.GHCND_1863
+Columns: value, id, time, mflag, date, element, sflag, qflag
+
+Table: GHCN_D.GHCND_1841
+Columns: time, element, date, value, qflag, mflag, sflag, id
+
+Table: GHCN_D.GHCND_1856
+Columns: date, mflag, value, id, sflag, qflag, element, time
+
+Table: GHCN_D.GHCND_1886
+Columns: time, date, mflag, value, sflag, element, id, qflag
+
+Table: GHCN_D.GHCND_1969
+Columns: date, sflag, value, id, element, mflag, qflag, time
+
+Table: GHCN_D.GHCND_2003
+Columns: mflag, element, qflag, date, time, sflag, id, value
+
+Table: GHCN_D.GHCND_1973
+Columns: time, date, mflag, value, qflag, element, sflag, id
+
+Table: GHCN_D.GHCND_1864
+Columns: qflag, sflag, value, time, element, mflag, date, id
+
+Table: GHCN_D.GHCND_1792
+Columns: date, value, time, qflag, mflag, sflag, id, element
+
+Table: GHCN_D.GHCND_1825
+Columns: time, mflag, element, id, qflag, sflag, value, date
+
+Table: GHCN_D.GHCND_1851
+Columns: qflag, element, mflag, value, id, sflag, date, time
+
+Table: GHCN_D.GHCND_1895
+Columns: mflag, date, time, sflag, value, id, qflag, element
+
+Table: GHCN_D.GHCND_2023
+Columns: time, id, mflag, element, sflag, qflag, source_url, date, etl_timestamp, value
+
+Table: GHCN_D.GHCND_1963
+Columns: date, mflag, time, sflag, value, element, qflag, id
+
+Table: GHCN_D.GHCND_1821
+Columns: sflag, id, element, qflag, date, time, mflag, value
+
+Table: GHCN_D.GHCND_INVENTORY
+Columns: latitude, source_url, longitude, etl_timestamp, firstyear, element, lastyear, id
+
+Table: GHCN_D.GHCND_1983
+Columns: value, mflag, sflag, qflag, date, time, id, element
+
+Table: GHCN_D.GHCND_1881
+Columns: value, date, mflag, element, sflag, qflag, time, id
+
+Table: GHCN_D.GHCND_1977
+Columns: value, qflag, element, time, date, id, sflag, mflag
+
+Table: GHCN_D.GHCND_1944
+Columns: qflag, id, time, date, mflag, sflag, value, element
+
+Table: GHCN_D.GHCND_1767
+Columns: time, value, id, qflag, sflag, date, mflag, element
+
+Table: GHCN_D.GHCND_1789
+Columns: qflag, element, mflag, id, sflag, time, value, date
+
+Table: GHCN_D.GHCND_1906
+Columns: id, value, date, sflag, mflag, time, qflag, element
+
+Table: GHCN_D.GHCND_1800
+Columns: id, qflag, time, element, date, sflag, value, mflag
+
+Table: GHCN_D.GHCND_1948
+Columns: id, qflag, value, time, date, mflag, sflag, element
+
+Table: GHCN_D.GHCND_1891
+Columns: time, date, mflag, id, sflag, value, element, qflag
+
+Table: GHCN_D.GHCND_1876
+Columns: mflag, sflag, qflag, element, id, value, date, time
+
+Table: GHCN_D.GHCND_1917
+Columns: sflag, qflag, mflag, element, id, date, time, value
+
+Table: GHCN_D.GHCND_1836
+Columns: element, qflag, mflag, date, time, sflag, value, id
+
+Table: GHCN_D.GHCND_1915
+Columns: sflag, qflag, date, element, id, value, mflag, time
+
+Table: GHCN_D.GHCND_1810
+Columns: time, mflag, qflag, date, sflag, value, id, element
+
+Table: GHCN_D.GHCND_1820
+Columns: sflag, id, qflag, mflag, date, time, value, element
+
+Table: GHCN_D.GHCND_2009
+Columns: mflag, sflag, time, value, element, qflag, id, date
+
+Table: GHCN_D.GHCND_1778
+Columns: id, element, qflag, mflag, date, time, sflag, value
+
+Table: GHCN_D.GHCND_1776
+Columns: qflag, value, mflag, sflag, time, date, id, element
+
+Table: GHCN_D.GHCND_1773
+Columns: value, sflag, id, mflag, date, time, element, qflag
+
+Table: GHCN_D.GHCND_1921
+Columns: date, element, value, qflag, id, time, mflag, sflag
+
+Table: GHCN_D.GHCND_1848
+Columns: date, element, id, qflag, value, time, mflag, sflag
+
+Table: GHCN_D.GHCND_1763
+Columns: mflag, id, sflag, value, qflag, time, date, element
+
+Table: GHCN_D.GHCND_2006
+Columns: time, value, qflag, sflag, element, id, date, mflag
+
+Table: GHCN_D.GHCND_1950
+Columns: date, id, time, mflag, qflag, sflag, element, value
+
+Table: GHCN_D.GHCND_1795
+Columns: sflag, element, date, time, mflag, value, qflag, id
+
+Table: GHCN_D.GHCND_1788
+Columns: id, element, value, sflag, time, qflag, date, mflag
+
+Table: GHCN_D.GHCND_1884
+Columns: value, qflag, date, sflag, id, element, time, mflag
+
+Table: GHCN_D.GHCND_1971
+Columns: id, mflag, date, qflag, time, value, sflag, element
+
+Table: GHCN_D.GHCND_1793
+Columns: value, sflag, date, element, qflag, time, mflag, id
+
+Table: GHCN_D.GHCND_1985
+Columns: sflag, qflag, date, id, element, value, time, mflag
+
+Table: GHCN_D.GHCND_1968
+Columns: value, time, element, sflag, mflag, date, qflag, id
+
+Table: GHCN_D.GHCND_1974
+Columns: date, value, element, mflag, time, sflag, id, qflag
+
+Table: GHCN_D.GHCND_1835
+Columns: id, time, element, sflag, mflag, date, qflag, value
+
+Table: GHCN_D.GHCND_1873
+Columns: id, value, element, qflag, mflag, time, date, sflag
+
+Table: GHCN_D.GHCND_1936
+Columns: date, element, sflag, time, qflag, id, mflag, value
+
+Table: GHCN_D.GHCND_1819
+Columns: element, id, qflag, value, mflag, sflag, time, date
+
+Table: GHCN_D.GHCND_1900
+Columns: element, id, value, qflag, sflag, mflag, date, time
+
+Table: GHCN_D.GHCND_1938
+Columns: element, value, qflag, date, time, sflag, mflag, id
+
+Table: GHCN_D.GHCND_1799
+Columns: sflag, qflag, element, time, date, value, id, mflag
+
+Table: GHCN_D.GHCND_1777
+Columns: id, date, element, value, sflag, time, mflag, qflag
+
+Table: GHCN_D.GHCND_1993
+Columns: id, time, value, element, date, mflag, qflag, sflag
+
+Table: GHCN_D.GHCND_1862
+Columns: time, qflag, date, element, sflag, id, mflag, value
+
+Table: GHCN_D.GHCND_1882
+Columns: id, mflag, qflag, time, value, date, element, sflag
+
+Table: GHCN_D.GHCND_2011
+Columns: id, time, qflag, date, mflag, value, sflag, element
+
+Table: GHCN_D.GHCND_1929
+Columns: qflag, time, sflag, id, value, mflag, element, date
+
+Table: GHCN_D.GHCND_1817
+Columns: value, mflag, sflag, qflag, element, id, date, time
+
+Table: GHCN_D.GHCND_1896
+Columns: id, time, sflag, mflag, element, value, qflag, date
+
+Table: GHCN_D.GHCND_1908
+Columns: date, qflag, time, element, id, sflag, value, mflag
+
+Table: GHCN_D.GHCND_1946
+Columns: id, element, value, mflag, sflag, qflag, date, time
+
+Table: GHCN_D.GHCND_1987
+Columns: date, id, time, mflag, value, qflag, element, sflag
+
+Table: GHCN_D.GHCND_1832
+Columns: element, time, sflag, id, qflag, mflag, date, value
+
+Table: GHCN_D.GHCND_1826
+Columns: element, value, qflag, id, date, sflag, time, mflag
+
+Table: GHCN_D.GHCND_1956
+Columns: value, date, id, time, mflag, sflag, qflag, element
+
+Table: GHCN_D.GHCND_1951
+Columns: date, mflag, id, element, time, value, qflag, sflag
+
+Table: NEW_YORK.CITIBIKE_TRIPS
+Columns: start_station_name, start_station_id, gender, tripduration, end_station_name, stoptime, start_station_latitude, usertype, end_station_id, birth_year, starttime, end_station_longitude, start_station_longitude, end_station_latitude, bikeid
+
+Table: NEW_YORK.TLC_YELLOW_TRIPS_2009
+Columns: mta_tax, fare_amount, dropoff_datetime, tolls_amount, pickup_latitude, total_amount, imp_surcharge, passenger_count, payment_type, trip_distance, extra, rate_code, tip_amount, pickup_longitude, dropoff_latitude, pickup_datetime, store_and_fwd_flag, dropoff_longitude, vendor_id
+
+Table: NEW_YORK.TLC_YELLOW_TRIPS_2015
+Columns: passenger_count, rate_code, extra, mta_tax, dropoff_latitude, tip_amount, vendor_id, imp_surcharge, total_amount, store_and_fwd_flag, dropoff_datetime, tolls_amount, payment_type, dropoff_longitude, pickup_longitude, fare_amount, pickup_latitude, pickup_datetime, trip_distance
+
+Table: NEW_YORK.TLC_GREEN_TRIPS_2016
+Columns: tip_amount, time_between_service, imp_surcharge, fare_amount, payment_type, dropoff_datetime, passenger_count, trip_type, dropoff_longitude, total_amount, tolls_amount, extra, pickup_longitude, pickup_datetime, distance_between_service, store_and_fwd_flag, ehail_fee, rate_code, mta_tax, trip_distance, dropoff_latitude, pickup_latitude, vendor_id
+
+Table: NEW_YORK.TLC_GREEN_TRIPS_2014
+Columns: mta_tax, tip_amount, total_amount, pickup_datetime, trip_type, extra, pickup_longitude, payment_type, distance_between_service, fare_amount, ehail_fee, dropoff_latitude, tolls_amount, trip_distance, passenger_count, dropoff_longitude, vendor_id, pickup_latitude, time_between_service, store_and_fwd_flag, dropoff_datetime, imp_surcharge, rate_code
+
+Table: NEW_YORK.NYPD_MV_COLLISIONS
+Columns: borough, number_of_pedestrians_killed, number_of_motorist_injured, number_of_pedestrians_injured, cross_street_name, contributing_factor_vehicle_5, contributing_factor_vehicle_4, number_of_cyclist_injured, vehicle_type_code2, location, contributing_factor_vehicle_2, number_of_cyclist_killed, number_of_persons_killed, vehicle_type_code_4, latitude, vehicle_type_code_3, vehicle_type_code1, unique_key, zip_code, vehicle_type_code_5, contributing_factor_vehicle_1, timestamp, on_street_name, number_of_persons_injured, longitude, number_of_motorist_killed, off_street_name, contributing_factor_vehicle_3
+
+Table: NEW_YORK.TREE_SPECIES
+Columns: species_common_name, form, tree_size, growth_rate, location_tolerances, fall_color, environmental_tolerances, species_scientific_name, comments, notes_suggested_cultivars
+
+Table: NEW_YORK.TREE_CENSUS_2015
+Columns: boro_ct, health, st_assem, boroname, st_senate, root_other, problems, y_sp, borocode, longitude, trunk_wire, nta_name, tree_id, stump_diam, x_sp, block_id, state, brch_other, zip_city, cncldist, cb_num, user_type, address, trnk_light, zipcode, spc_common, root_grate, brch_shoe, nta, spc_latin, status, guards, steward, root_stone, sidewalk, created_at, curb_loc, latitude, tree_dbh, brch_light, trnk_other
+
+Table: NEW_YORK.TLC_YELLOW_TRIPS_2010
+Columns: fare_amount, rate_code, payment_type, pickup_datetime, tip_amount, dropoff_latitude, tolls_amount, extra, dropoff_longitude, dropoff_datetime, store_and_fwd_flag, vendor_id, passenger_count, pickup_longitude, pickup_latitude, total_amount, imp_surcharge, trip_distance, mta_tax
+
+Table: NEW_YORK.TLC_YELLOW_TRIPS_2013
+Columns: rate_code, dropoff_longitude, pickup_datetime, pickup_longitude, total_amount, passenger_count, tolls_amount, payment_type, dropoff_datetime, pickup_latitude, mta_tax, imp_surcharge, vendor_id, extra, dropoff_latitude, tip_amount, trip_distance, fare_amount, store_and_fwd_flag
+
+Table: NEW_YORK.TREE_CENSUS_2005
+Columns: sidw_raise, location_1, wire_other, pit_type, spc_common, wire_2nd, vert_wall, spc_latin, borocode, zip_city, cb_num, nta_name, inf_wires, inf_paving, inf_lights, inf_guard, status, vert_other, sidw_crack, nta, st_assem, soil_lvl, st_senate, boro_ct, horz_other, vert_tgrd, inf_other, inf_canopy, horz_plant, objectid, tree_loc, cncldist, trunk_dmg, wire_prime, objectid_1, x_sp, inf_shoes, vert_pgrd, tree_dbh, wire_htap, y_sp, horz_grate, zipcode, boroname, inf_outlet, horz_blck, cen_year
+
+Table: NEW_YORK._311_SERVICE_REQUESTS
+Columns: agency, park_facility_name, location_type, cross_street_1, facility_type, bridge_highway_segment, due_date, taxi_pickup_location, latitude, city, bbl, incident_address, x_coordinate, bridge_highway_direction, created_date, closed_date, longitude, location, resolution_action_updated_date, bridge_highway_name, open_data_channel_type, road_ramp, taxi_company_borough, resolution_description, borough, vehicle_type, agency_name, complaint_type, status, cross_street_2, y_coordinate, incident_zip, community_board, landmark, descriptor, intersection_street_2, intersection_street_1, street_name, unique_key, park_borough, address_type
+
+Table: NEW_YORK.TLC_GREEN_TRIPS_2015
+Columns: dropoff_longitude, tolls_amount, trip_type, pickup_latitude, passenger_count, fare_amount, tip_amount, total_amount, store_and_fwd_flag, trip_distance, extra, time_between_service, ehail_fee, distance_between_service, dropoff_datetime, dropoff_latitude, vendor_id, rate_code, mta_tax, pickup_datetime, pickup_longitude, payment_type, imp_surcharge
+
+Table: NEW_YORK.TREE_CENSUS_1995
+Columns: recordid, censustract_2010, zip_new, longitude, borough, diameter, house_number, spc_latin, sidewalk_condition, street, nta_2010, segmentid, censusblock_2010, latitude, species, cb_original, zip_original, y, x, location, spc_common, status, address, site, support_structure, cb_new, wires
+
+Table: NEW_YORK.TLC_YELLOW_TRIPS_2016
+Columns: rate_code, vendor_id, store_and_fwd_flag, imp_surcharge, dropoff_latitude, fare_amount, passenger_count, trip_distance, tip_amount, mta_tax, pickup_latitude, dropoff_longitude, pickup_longitude, total_amount, payment_type, pickup_datetime, dropoff_datetime, extra, tolls_amount
+
+Table: NEW_YORK.CITIBIKE_STATIONS
+Columns: eightd_has_available_keys, num_docks_available, is_installed, latitude, name, num_bikes_available, region_id, is_renting, station_id, num_bikes_disabled, num_docks_disabled, short_name, last_reported, rental_methods, longitude, capacity, eightd_has_key_dispenser, is_returning
+
+Table: NEW_YORK.TLC_YELLOW_TRIPS_2011
+Columns: tip_amount, pickup_latitude, payment_type, total_amount, pickup_datetime, dropoff_latitude, passenger_count, trip_distance, extra, tolls_amount, dropoff_datetime, imp_surcharge, dropoff_longitude, rate_code, mta_tax, vendor_id, store_and_fwd_flag, pickup_longitude, fare_amount
+
+Table: NEW_YORK.TLC_GREEN_TRIPS_2013
+Columns: ehail_fee, mta_tax, dropoff_datetime, extra, tip_amount, dropoff_latitude, pickup_datetime, passenger_count, total_amount, time_between_service, pickup_longitude, fare_amount, imp_surcharge, payment_type, distance_between_service, dropoff_longitude, vendor_id, store_and_fwd_flag, trip_distance, tolls_amount, rate_code, trip_type, pickup_latitude
+
+Table: NEW_YORK.TLC_FHV_TRIPS_2015
+Columns: pickup_datetime, zone, borough, service_zone, location_id, dispatching_base_num
+
+Table: NEW_YORK.TLC_YELLOW_TRIPS_2012
+Columns: vendor_id, dropoff_longitude, payment_type, trip_distance, imp_surcharge, tip_amount, store_and_fwd_flag, dropoff_datetime, pickup_latitude, rate_code, mta_tax, total_amount, fare_amount, extra, dropoff_latitude, passenger_count, pickup_longitude, pickup_datetime, tolls_amount
+
+Table: NEW_YORK.TLC_FHV_TRIPS_2016
+Columns: location_id, service_zone, dispatching_base_num, borough, pickup_datetime, zone
+
+Table: NEW_YORK.TLC_YELLOW_TRIPS_2014
+Columns: pickup_latitude, store_and_fwd_flag, imp_surcharge, payment_type, pickup_datetime, extra, trip_distance, dropoff_datetime, mta_tax, vendor_id, fare_amount, tip_amount, rate_code, tolls_amount, total_amount, pickup_longitude, passenger_count, dropoff_latitude, dropoff_longitude

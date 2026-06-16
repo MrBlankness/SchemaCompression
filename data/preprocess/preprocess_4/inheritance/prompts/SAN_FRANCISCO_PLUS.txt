@@ -1,0 +1,316 @@
+[STANDALONE]
+## SAN_FRANCISCO_311._311_SERVICE_REQUESTS
+latitude: FLOAT | Service request location latitude coordinate. | eg=[0.0]
+neighborhood: TEXT | NULL
+status: TEXT | Service request status. Duplicate statuses indicate that issue had previously been reported recently. | eg=["Closed"]
+police_district: TEXT | NULL
+agency_name: TEXT | NULL | eg=["SSP - MTA Feedback Queue", "Clear Channel - Transit Queue"]
+longitude: FLOAT | Service request location longitude coordinate. | eg=[0.0]
+status_notes: TEXT | NULL | eg=["Case Transferred - transfer psr 442213", "Case is Invalid - No location or issue given"]
+supervisor_district: NUMBER | NULL
+unique_key: NUMBER | The service request tracking number. | eg=[2985411, 4816895]
+closed_date: NUMBER | NULL | eg=[1382927320000000, 1433940815000000]
+source: TEXT | Contact method Service request was received from. Mass entry requests are submitted by dept. in groups after work is completed. | eg=["Web"]
+descriptor: TEXT | NULL
+incident_address: TEXT | Service location of Service request. | eg=["Not associated with a specific address"]
+resolution_action_updated_date: NUMBER | NULL | eg=[1382927320000000, 1433940815000000]
+category: TEXT | NULL | eg=["MUNI Feedback", "Litter Receptacles"]
+complaint_type: TEXT | NULL | eg=["MUNI  -", "Transit_shelter_platform"]
+created_date: NUMBER | Date Service request was created. | eg=[1382690175000000, 1433939055000000]
+location: TEXT | Service request location latitude and longitude coordinates. | eg=["(0.0, 0.0)"]
+media_url: TEXT | NULL
+
+## SAN_FRANCISCO_BIKESHARE.BIKESHARE_REGIONS
+region_id: NUMBER | Unique identifier for the region | eg=[3, 5]
+name: TEXT | Public name for this region | eg=["San Francisco", "San Jose"]
+
+## SAN_FRANCISCO_BIKESHARE.BIKESHARE_STATION_INFO
+has_kiosk: BOOLEAN | NULL | eg=[false, true]
+region_id: NUMBER | ID of the region where station is located
+name: TEXT | Public name of the station | eg=["Lafayette Park (Laguna St at Washington St)", "Balboa Park (San Jose Ave at Sgt. John V. Young Ln"]
+short_name: TEXT | Short name or other type of identifier, as used by the data publisher | eg=["SF-E21", "SF-Y16"]
+rental_methods: TEXT | Array of enumerables containing the payment methods accepted at this station.  Current valid values (in CAPS) are: KEY (i.e. operator issued bike key / fob / card) CREDITCARD PAYPASS APPLEPAY ANDROIDPAY TRANSITCARD ACCOUNTNUMBER PHONE This list is intended to be as comprehensive at the time of publication as possible but is subject to change, as defined in File Requirements above
+external_id: TEXT | NULL
+lon: FLOAT | The longitude of station. The field value must be a valid WGS 84 longitude in decimal degrees format. See: http://en.wikipedia.org/wiki/World_Geodetic_System, https://en.wikipedia.org/wiki/Decimal_degrees | eg=[-122.429315, -122.4432385]
+eightd_has_key_dispenser: BOOLEAN | NULL
+station_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xaa+\\x9f\\xe5y\\x9b^\\xc0\\xa0\\xc5R$_\\xe5B@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00^<\\x00\\x05^\\x9c^\\xc0\\xe0q\\x91H\\xc9\\xdcB@')"]
+station_id: TEXT | Unique identifier of a station. | eg=["523", "501"]
+capacity: NUMBER | Number of total docking points installed at this station, both available and unavailable | eg=[0, 19]
+lat: FLOAT | The latitude of station. The field value must be a valid WGS 84 latitude in decimal degrees format. See: http://en.wikipedia.org/wiki/World_Geodetic_System, https://en.wikipedia.org/wiki/Decimal_degrees | eg=[37.791965999999995, 37.72489268]
+
+## SAN_FRANCISCO_BIKESHARE.BIKESHARE_STATION_STATUS
+is_renting: BOOLEAN | 1/0 boolean - is the station currently renting bikes (even if the station is empty, if it is set to allow rentals this value should be 1) | eg=[true]
+is_installed: BOOLEAN | 1/0 boolean - is the station currently on the street | eg=[true]
+station_id: TEXT | Unique identifier of a station | eg=["46b4ef45-b06b-40eb-9fdf-9bc8ff104a4f", "bb54f5c8-5578-4167-9599-8e55154de4fd"]
+num_bikes_available: NUMBER | Number of bikes available for rental | eg=[0]
+eightd_has_available_keys: BOOLEAN | NULL | eg=[false]
+num_docks_disabled: NUMBER | Number of empty but disabled dock points at the station. This value remains as part of the spec as it is possibly useful during development | eg=[0]
+last_reported: NUMBER | Integer POSIX timestamp indicating the last time this station reported its status to the backend | eg=[1729209514, 1729209462]
+is_returning: BOOLEAN | 1/0 boolean - is the station accepting bike returns (if a station is full but would allow a return if it was not full then this value should be 1) | eg=[true]
+num_ebikes_available: NUMBER | NULL | eg=[0]
+num_bikes_disabled: NUMBER | Number of disabled bikes at the station. Vendors who do not want to publicize the number of disabled bikes or docks in their system can opt to omit station capacity (in station_information), num_bikes_disabled and num_docks_disabled. If station capacity is published then broken docks/bikes can be inferred (though not specifically whether the decreased capacity is a broken bike or dock) | eg=[0]
+num_docks_available: NUMBER | Number of docks accepting bike returns | eg=[15, 27]
+
+## SAN_FRANCISCO_BIKESHARE.BIKESHARE_TRIPS
+end_date: NUMBER | NULL | eg=[1503348292000000, 1523293873000000]
+trip_id: TEXT | Numeric ID of bike trip | eg=["20170821170804431", "201804091702362074"]
+end_station_id: NUMBER | Numeric reference for end station | eg=[222]
+start_station_geom: BINARY | NULL | eg=["bytearray(b\"\\x01\\x01\\x00\\x00\\x00]zE\\x01\\xec\\x8f^\\xc0\\'\\xc9\\x84\\xa9w\\xe5B@\")", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xec\\x9b\\xa0\\xf2\\xd4\\x90^\\xc0Rtn$\\x1a\\xe6B@')"]
+start_date: NUMBER | NULL | eg=[1503335284000000, 1523293356000000]
+end_station_geom: BINARY | NULL | eg=["bytearray(b\"\\x01\\x01\\x00\\x00\\x00]zE\\x01\\xec\\x8f^\\xc0\\'\\xc9\\x84\\xa9w\\xe5B@\")"]
+start_station_longitude: FLOAT | NULL | eg=[-122.2487796, -122.2629973]
+member_gender: TEXT | NULL | eg=["Male", "Other"]
+end_station_latitude: FLOAT | NULL | eg=[37.7927143]
+bike_number: NUMBER | NULL | eg=[431, 2074]
+start_station_name: TEXT | Station name for start station | eg=["10th Ave at E 15th St", "10th St at Fallon St"]
+zip_code: TEXT | NULL
+end_station_longitude: FLOAT | NULL | eg=[-122.2487796]
+end_station_name: TEXT | Station name for end station | eg=["10th Ave at E 15th St"]
+c_subscription_type: TEXT | NULL
+duration_sec: NUMBER | NULL | eg=[13008, 517]
+start_station_id: NUMBER | Numeric reference for start station | eg=[222, 201]
+start_station_latitude: FLOAT | NULL | eg=[37.7927143, 37.7976728]
+subscriber_type: TEXT | Type of the Subscriber | eg=["Customer", "Subscriber"]
+member_birth_year: NUMBER | NULL | eg=[NaN, 1986.0]
+bike_share_for_all_trip: TEXT | NULL | eg=["No", "Yes"]
+
+## SAN_FRANCISCO_FILM_LOCATIONS.FILM_LOCATIONS
+writer: TEXT | NULL | eg=["Eric von Stroheim", "Anita Loos"]
+locations: TEXT | NULL | eg=["Cliff House (1090 Point Lobos Avenue)", "The Barbary Coast"]
+actor_3: TEXT | NULL | eg=["Jean Hersholt", "Spencer Tracy"]
+production_company: TEXT | NULL | eg=["Metro-Goldwyn-Mayer (MGM)", "Metro-Goldwyn Mayer"]
+actor_1: TEXT | NULL | eg=["Zasu Pitts", "Clark Gable"]
+fun_facts: TEXT | NULL | eg=["In 1887, the Cliff House was severely damaged when the schooner Parallel, abandoned and loaded with dynamite, ran aground on the rocks below.", "The Barbary Coast was a red-light district that was largely destroyed in the 1906 earthquake. Though some of the establishments were rebuilt after the earthquake, an anti-vice campaign put the establishments out of business."]
+title: TEXT | NULL | eg=["Greed", "San Francisco"]
+release_year: NUMBER | NULL | eg=[1924, 1936]
+director: TEXT | NULL | eg=["Eric von Stroheim", "W.S. Van Dyke"]
+distributor: TEXT | NULL | eg=["Metro-Goldwyn-Mayer (MGM)", "Metro-Goldwyn Mayer"]
+actor_2: TEXT | NULL | eg=["Gibson Gowland", "Jeanette MacDonald"]
+
+## SAN_FRANCISCO_NEIGHBORHOODS.BOUNDARIES
+internal_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00w\\xa8&T!\\x99^\\xc0e\\x83\\xf0,.\\xdcB@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xae4\\xe0@7\\x98^\\xc0]\\xae\\xec\\x06z\\xdeB@')"]
+internal_point_longitude: FLOAT | NULL | eg=[-122.39265922332002, -122.37837240119072]
+internal_point_latitude: FLOAT | NULL | eg=[37.720159165800204, 37.738098970000216]
+neighborhood_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00q\\x00\\x00\\x00G\\xed\\x11\\x0cU\\x99^\\xc0x\\x03\\x9e\\xb1x\\xdcB@\\x01\\x82\\xdcRb\\x99^\\xc0g.\\n\\x04\\x7f\\xdcB@\\x19\\x9f\\x0ces\\x99^\\xc0\\x1fE\\xef$\\x87\\xdcB@C\\x96\\x17\\x89~\\x99^\\xc0\\xc87\\xe6r\\x8c\\xdcB@\\x06\\x8a\\x95\\xba\\x8c\\x99^\\xc0\\x08\\xeb\\xe34\\x93\\xdcB@\\x8a\\xe6\\xca\\xcb\\x9a\\x99^\\xc0\\x97?r\\xe7\\x99\\xdcB@jF\\x11u\\xa6\\x99^\\xc0\\x9f\\x1b\\xb6t\\x9f\\xdcB@\\xea\\xb5`\\xdc\\x9f\\x99^\\xc0\\x01\\xe4X?\\x7f\\xdcB@{7\\x19_\\x98\\x99^\\xc0\\xdf8\\x8d\\xadZ\\xdcB@\\xe0D\\xe3\\xd2\\x96\\x99^\\xc0\\x88`\\xf7\\xb8W\\xdcB@+\\xfe\"\\r\\x93\\x99^\\xc0\\x88\\rS\\x1eG\\xdcB@\\x1c\\x1a\\xcb^\\x90\\x99^\\xc0\\x7f}\\xc3\\x9d;\\xdcB@5\\xcd~G\\x8e\\x99^\\xc0W \\x96\\x142\\xdcB@\\xe1\\xda\\xdf%\\x8d\\x99^\\xc0\\xef\\xcf\\xd0\\xa2+\\xdcB@\\xc4%#\\xa1\\x8c\\x99^\\xc0\\xe99\\xb3\\xae(\\xdcB@\\x02}\\xcf\\x99\\x8b\\x99^\\xc0\\xc1\\x18P0\"\\xdcB@KW\\xb3\\xd8\\x8a\\x99^\\xc0\\x1frXY\\x1c\\xdcB@\\xac\\xbfw$\\x89\\x99^\\xc0\\t\\x00\\xa5F\\r\\xdcB@\\xb1q\\x81\\x87\\x86\\x99^\\xc0H\\x03c\\xdd\\xf5\\xdbB@\\x91\\xb3\\x8b\\xbd\\x85\\x99^\\xc0\\x10\\xec\\x05\\xc7\\xee\\xdbB@ z\\xc5\\xc5\\x84\\x99^\\xc0\\xb7\\x1e>\\x83\\xe2\\xdbB@v\\xa...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x80\\x00\\x00\\x00&\\xd9\\x92\\x04\\xaa\\x97^\\xc0W\\xe8n7\\xbe\\xddB@\\x8a\\xac\\x9b\\t\\xa8\\x97^\\xc0_\\xda\\xb7\\x9a\\xc2\\xddB@R\\x9c}Z\\xaf\\x97^\\xc0\\x97\\xdaD\\x00\\xcc\\xddB@\\x9fTWx\\xb6\\x97^\\xc0OR\\x0b%\\xd3\\xddB@\\x1eM\\xbc\\x96\\xbf\\x97^\\xc0\\xc0QL\\xc7\\xe4\\xddB@\\'\\xe4b#\\xc8\\x97^\\xc0\\xef\\xa2\\x98\\xf1\\xf3\\xddB@\\xe2\\xb8\\x12h\\xcd\\x97^\\xc0\\xbf\\xe5\\xb6\\x8c\\xfa\\xddB@\\xdf\\xb8\\xc2\\xd7\\xd1\\x97^\\xc0amJ\\xee\\xfa\\xddB@r\\xdb\\x1aK\\xd7\\x97^\\xc0o\\xaa(\\xaa\\xf3\\xddB@\\xf9Z\\x12\\xbe\\xdc\\x97^\\xc0\\xa7\\xb8\\xad\\x11\\xe7\\xddB@\\x84\\x14IB\\xe2\\x97^\\xc0\\xe7\\n\\x0b5\\xdd\\xddB@\\xde\\xce\\xe4L\\xe7\\x97^\\xc0p\\x89fO\\xd6\\xddB@\\xe2\\xe1\\'\\xb5\\xe7\\x97^\\xc0\\xdf\\x87MH\\xd1\\xddB@\\xff\\x0c\\x19i\\xeb\\x97^\\xc0/;\\xbf\\xf3\\xce\\xddB@=\\xb1\\x98\\xb5\\xed\\x97^\\xc0G\\xa7\\x17\\x84\\xcb\\xddB@G\\xe9\\x89|\\xf1\\x97^\\xc0\\xe8]u\\xb7\\xc7\\xddB@|~\\x16\\xb3\\xf4\\x97^\\xc0\\xb0\\x9d` \\xc4\\xddB@\\xc0\\x8c\\xf5\\xaf\\xfa\\x97^\\xc0Om\\xbe\\x1e\\xc7\\xddB@\\xf3P\\xca\\xed\\xfc\\x97^\\xc0\\x00\\x08\\xd2\\xde\\xc3\\xddB@x\\xad\\tq\\xfe\\x97^\\xc0\\xef\\x99\\xcd\\xff\\xc5\\xddB@\\x1fI!\\xda\\..."]
+neighborhood: TEXT | NULL | eg=["Bret Harte", "India Basin"]
+
+## SAN_FRANCISCO_SFFD_SERVICE_CALLS.SFFD_SERVICE_CALLS
+location_geom: BINARY | NULL
+latitude: FLOAT | Latitude of the address | eg=[NaN]
+als_unit: BOOLEAN | Does this unit includes ALS (Advance Life Support) resources? Is there a paramedic in this unit? | eg=[false]
+watch_date: DATE | Watch date when the call is received. Watch date starts at 0800 each morning and ends at 0800 the next day. | eg=["2020-12-05", "2021-01-04"]
+priority: TEXT | Call priority (Code 2: Non-Emergency or Code 3:Emergency). | eg=["2", "3"]
+on_scene_timestamp: NUMBER | Date and time the unit records arriving to the location of the incident | eg=[1607130613000000.0, NaN]
+hospital_timestamp: NUMBER | If this unit is an ambulance, date and time the unit arrives to the hospital.
+entry_timestamp: NUMBER | Date and time the 911 operator submits the entry of the initical call information into the CAD system | eg=[1607171700000000, 1609727371000000]
+transport_timestamp: NUMBER | If this unit is an ambulance, date and time the unit begins the transport unit arrives to hospital
+call_type: TEXT | Type of call the incident falls into. See the list below. | eg=["Medical Incident", "Administrative"]
+final_priority: NUMBER | Final call priority (Code 2: Non-Emergency or Code 3:Emergency). | eg=[2, 3]
+call_number: NUMBER | A unique 9-digit number assigned by the 911 Dispatch Center (DEM) to this call. These number are used for both Police and Fire calls. | eg=[203401353, 210041909]
+incident_number: NUMBER | A unique 8-digit number assigned by DEM to this Fire incident. | eg=[20138897, 21001529]
+call_type_group: TEXT | Call types are divided into four main groups: Fire, Alarm, Potential Life Threatening and Non Life Threatening. | eg=["Fire"]
+response_timestamp: NUMBER | Date and time this unit acknowledges the dispatch and records that the unit is en route to the location of the call. | eg=[1607171700000000, 1609727371000000]
+call_final_disposition: TEXT | Disposition of the call (Code). For example TH2: Transport to Hospital - Code 2, FIR: Resolved by Fire Department | eg=["Other", "Fire"]
+dispatch_timestamp: NUMBER | Date and time the 911 operator dispatches this unit to the call. | eg=[1607171700000000, 1609727371000000]
+station_area: TEXT | Fire Station First Response Area associated with the address of the incident
+fire_prevention_district: TEXT | Bureau of Fire Prevention District associated with this address
+unit_type: TEXT | Unit type | eg=["CHIEF", "SUPPORT"]
+address: TEXT | Address of midblock point associated with incident (obfuscated address to protect caller privacy)
+original_priority: TEXT | Initial call priority (Code 2: Non-Emergency or Code 3:Emergency). | eg=["2", "3"]
+neighborhood_name: TEXT | NULL
+longitude: FLOAT | Longitude of the address | eg=[NaN]
+supervisor_district: TEXT | Supervisor District associated with this address
+available_timestamp: NUMBER | Date and time this unit is not longer assigned to this call and it is available for another dispatch. | eg=[1607133256000000, 1609730976000000]
+received_timestamp: NUMBER | Date and time of call is received at the 911 Dispatch Center. | eg=[1607171700000000, 1609727371000000]
+city: TEXT | City of incident
+zipcode_of_incident: TEXT | Zipcode of incident
+battalion: TEXT | Emergency Response District (There are 9 Fire Emergency Response Districts) | eg=["B12", "B10"]
+unit_sequence_in_call_dispatch: NUMBER | A number that indicates the order this unit was assigned to this call | eg=[1, 3]
+call_date: DATE | Date the call is received at the 911 Dispatch Center. Used for reporting purposes. | eg=["2020-12-05", "2021-01-04"]
+unit_id: TEXT | Unit Identifier. For example E01 for Engine 1 or T01 for Truck 1. | eg=["BLS839", "IMT"]
+number_of_alarms: NUMBER | Number of alarms associated with the incident. This is a number between 1 and 5. | eg=[1]
+box: TEXT | Fire box associated with the address of the incident. A box is the smallest area used to divide the City. Each box is associated with a unique unit dispatch order. The City is divided into more than 2,400 boxes.
+row_id: TEXT | Unique identifier used for managing data updates. It is the concatenation of Call Number and Unit ID separated by a dash | eg=["203401353-BLS839", "210041909-IMT"]
+
+## SAN_FRANCISCO_SFPD_INCIDENTS.SFPD_INCIDENTS
+address: TEXT | NULL | eg=["I-280 / CESAR CHAVEZ ST", "100 Block of CLEORAND AV"]
+resolution: TEXT | Whether there was an arrest, citation, booking, etc. | eg=["NONE"]
+location: TEXT | Latitude/Longitude | eg=["POINT (-120.50000000000001 90)", "POINT (-122.371185513221 37.7291049528122)"]
+pddistrict: TEXT | Police Department district | eg=["BAYVIEW"]
+category: TEXT | NULL | eg=["OTHER OFFENSES", "LARCENY/THEFT"]
+dayofweek: TEXT | NULL | eg=["Friday", "Saturday"]
+latitude: FLOAT | NULL | eg=[90.0, 37.7291049528122]
+longitude: FLOAT | NULL | eg=[-120.5, -122.371185513221]
+pdid: NUMBER | Unique Identifier for use in update and insert operations | eg=[4075398068020, 7040743606243]
+timestamp: NUMBER | NULL | eg=[1088775780000000, 1177126440000000]
+descript: TEXT | NULL | eg=["MISCELLANEOUS INVESTIGATION", "PETTY THEFT FROM LOCKED AUTO"]
+unique_key: NUMBER | The unique incident number for this accident | eg=[40753980, 70407436]
+
+## SAN_FRANCISCO_TRANSIT_MUNI.CALENDAR
+friday: BOOLEAN | Indicates whether the service is valid for all Sundays operating on the agency is using normal schedules and fare categories | eg=[false, true]
+exception_type: BOOLEAN | Indicates whether service is available on the date specified in the exceptions field. The following are valid values for this field:  - TRUE: Service will be operating during the date listed in the column exceptions -  FALSE: Service will not be operating during the date listed in the column exceptions | eg=[false, true]
+thursday: BOOLEAN | Indicates whether the service is valid for all Sundays operating on the agency is using normal schedules and fare categories | eg=[true, false]
+wednesday: BOOLEAN | Indicates whether the service is valid for all Sundays operating on the agency is using normal schedules and fare categories | eg=[true, false]
+monday: BOOLEAN | Indicates whether the service is valid for all Sundays operating on the agency is using normal schedules and fare categories | eg=[true, false]
+service_desc: TEXT | Text description of service category | eg=["Weekday", "Saturday"]
+sunday: BOOLEAN | Indicates whether the service is valid for all Sundays operating on the agency is using normal schedules and fare categories | eg=[true, false]
+service_id: TEXT | Unique identifier for a set of dates when service is available for one or more routes | eg=["73692", "73693"]
+saturday: BOOLEAN | Indicates whether the service is valid for all Sundays operating on the agency is using normal schedules and fare categories | eg=[false]
+tuesday: BOOLEAN | Indicates whether the service is valid for all Sundays operating on the agency is using normal schedules and fare categories | eg=[true, false]
+exceptions: DATE | Specifies a particular date when this service is not available. This is typically during holidays, special events, etc. If applicable, the operating service for the day is indicated in replacement_service. Format for the date is YYYY-MM-DD | eg=["2019-12-25", "2020-01-20"]
+
+## SAN_FRANCISCO_TRANSIT_MUNI.FARES
+transfer_duration: NUMBER | Specifies the length of time, in seconds, before a transfer expires. When used with a transfers_permitted value of 0, the transfer_duration field indicates how long a ticket is valid for a fare where no transfers are allowed. | eg=[5400]
+rider_id: TEXT | Unique identifier a rider category. Rider categories are used to assign different pricing to different groups of individuals | eg=["2"]
+transfers_permitted: TEXT | Specifies the number of transfers permitted on this fare.  -  0: No transfers are permitted on this fare. -  1: One transfer is permitted on this fare. -  2: Two transfers are permitted on this fare. -  NULL: Unlimited transfers are permitted on this fare.
+payment_method: TEXT | Indicates when the fare must be paid. The following are valid values for this field: -  during: Indicates the fare is paid when riders board -  before: Indicates fare must be paid before riders board | eg=["0"]
+rider_desc: TEXT | Text description of the rider category | eg=["Senior"]
+fare_id: TEXT | Unique identifier a fare class. | eg=["5398"]
+price: NUMBER | Contains the fare price, in USD | eg=["3.000000000"]
+
+## SAN_FRANCISCO_TRANSIT_MUNI.ROUTES
+route_type: TEXT | "Describes the type of transportation used on a route. The following are valid values for this field:  -  light_rail: Streetcar or light rail. Used for any light rail or street-level system within a metropolitan area. -  subway: Subway or metro. Used for any underground rail system within a metropolitan area. -  rail: Used for intercity or long-distance travel. -  bus: Used for short- and long-distance bus routes. -  ferry: Used for short- and long-distance boat service. -  cable_car: Used for street-level cable cars where the cable runs beneath the car. -  tram: Gondola or suspended cable car. Typically used for aerial cable cars where the car is suspended from the cable. -  funicular: Used for any rail system that moves on steep inclines with a cable traction system." | eg=["3", "0"]
+route_long_name: TEXT | Contains the full name of a route. This name is generally more descriptive than the name from route_short_name and often includes the route's destination or stop. | eg=["MID-MARKET EXPRESS", "EMBARCADERO"]
+route_short_name: TEXT | Contains the short name of a route. This is a short, abstract identifier like 32, 100X, or Green that riders use to identify a route, but which doesn't give any indication of what places the route serves. | eg=["83X", "E"]
+route_id: TEXT | Unique identifier for each route. A single route will have multiple trips | eg=["83X", "E"]
+
+## SAN_FRANCISCO_TRANSIT_MUNI.SHAPES
+shape_point_sequence: NUMBER | Associates the latitude and longitude of a shape point with its sequence order along the shape. The values for shape_pt_sequence must increase throughout the trip but don't need to be consecutive. | eg=[195, 92]
+shape_point_geom: BINARY | Geographic representation of the points latitude and longitude | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00K\\x8f\\xa6z2\\x9b^\\xc08\\x87k\\xb5\\x87\\xdbB@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xe7\\xaf\\x90\\xb92\\x9c^\\xc0\\x1bKX\\x1bc\\xe1B@')"]
+shape_id: TEXT | Uniquely identifies each shape | eg=["173976", "174271"]
+shape_point_lat: FLOAT | Associates a shape point's latitude with a shape ID. | eg=[37.715079, 37.760837]
+shape_point_lon: FLOAT | Associates a shape point's longitude with a shape ID. | eg=[-122.424956, -122.440596]
+shape_distance_traveled: FLOAT | Provides the actual distance traveled along the shape from the first shape point to the point specified in this record. This information allows the trip planner to determine how much of the shape to draw when they show part of a trip on the map. The values used for shape_dist_traveled must increase along with shape_pt_sequence: they can't be used to show reverse travel along a route. | eg=[14391.0, 5348.0]
+
+## SAN_FRANCISCO_TRANSIT_MUNI.STOPS
+stop_lon: FLOAT | Longitude of the stop | eg=[-122.39565, -122.397341]
+stop_name: TEXT | Full text name of the  transit stop | eg=["101 Dakota St", "1095 CONNECTICUT ST"]
+stop_lat: FLOAT | Latitude of the stop | eg=[37.75374, 37.753902]
+stop_id: TEXT | Unique identifier for each stop | eg=["14343", "14122"]
+stop_geom: BINARY | Geographic representation of the stop's position | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00d\\xaa`TR\\x99^\\xc0\\xf2\\xd7d\\x8dz\\xe0B@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x08\\x17\\xf2\\x08n\\x99^\\xc0\\xca1Y\\xdc\\x7f\\xe0B@')"]
+
+## SAN_FRANCISCO_TRANSIT_MUNI.STOP_MONITORING
+route_id: TEXT | Unique reference for the route on which the vehicle is traveling. Maps to route_id in the routes table | eg=["15"]
+aimed_arrival_time: NUMBER | Vehicle's expected arrival time | eg=[1620745990000000, 1620739930000000]
+direction: TEXT | Indicates the direction of travel for a trip. The following values are valid: - O: Outbound travel - I: Inbound travel  This field is not used in routing, but instead provides a way to separate trips by direction | eg=["IB"]
+trip_id: TEXT | Unique reference for the trip that the vehicle is traveling. Maps to trip_id in the trips table | eg=["9757413", "9757433"]
+stop_name: TEXT | Full text name of the stop being monitored. Maps to stop_name in the stops table | eg=["3rd St & Stevenson St"]
+trip_date: DATE | The service date for the trip the vehicle is serving. | eg=["2021-05-11"]
+time_recorded: NUMBER | The timestamp of the real-time update from the particular vehicle. | eg=[1620745923000000, 1620739679000000]
+route_long_name: TEXT | Contains the full name of a route. This name is generally more descriptive than the name from route_short_name and often includes the route's destination or stop. Maps to route_long_name in routes table | eg=["BAYVIEW HUNTERS POINT EXPRESS"]
+vehicle_id: TEXT | The unique identifier of the vehicle to be monitored. | eg=["8887", "8645"]
+vehicle_at_stop: BOOLEAN | Determines if the vehicle is at the monitored stop during the time_recorded. TRUE if vehicle is at the stop
+aimed_departure_time: NUMBER | Vehicle's expected departure time | eg=[1620745990000000, 1620739930000000]
+vehicle_location_lat: FLOAT | The latitude of the vehicle's location at the time when time_recorded indicates | eg=[37.7802238, 37.7784233]
+stop_id: TEXT | Unique reference for the stop being monitored. Maps to stop_id in the stops table | eg=["13136"]
+vehicle_location: BINARY | The geographic representation of the vehicle's location at the time indicated in the time_recorded column | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xab\\xcej\\x81=\\x99^\\xc0\\xcaG\\x9c_\\xde\\xe3B@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x004GV~\\x19\\x99^\\xc0\\xe1\\xf8\\xeb_\\xa3\\xe3B@')"]
+vehicle_location_lon: FLOAT | The longitude of the vehicle's location at the time when time_recorded indicates | eg=[-122.394379, -122.392181]
+
+## SAN_FRANCISCO_TRANSIT_MUNI.STOP_TIMES
+arrival_time: TIME | Specifies the scheduled arrival time at a specific stop for a specific trip on a route. | eg=["06:54:55", "06:55:33"]
+exact_timepoint: BOOLEAN | Indicates if the specified arrival and departure times for a stop are strictly adhered to by the transit vehicle, or if they're instead approximate or interpolated times. | eg=[false, true]
+stop_sequence: NUMBER | Identifies the order of the stops for a particular trip. The values for stop_sequence must increase throughout the trip but do not need to be consecutive. | eg=[51, 52]
+stop_id: NUMBER | Identifies the serviced stop. Multiple routes can use the same stop. | eg=[15759, 15761]
+arrives_next_day: BOOLEAN | Several routes begin before midnight, with service continuing throughout the night. This variable specifies whether arrival_time occurs after midnight the day after the scheduled day.  This is useful for identifying routes that begin one day and end the next day | eg=[false]
+trip_id: NUMBER | Identifies a trip. Multiple trips can have the same stop | eg=[8951406, 8951253]
+departure_time: TIME | Specifies the scheduled departure time at a specific stop for a specific trip on a route. | eg=["06:54:55", "06:55:33"]
+dropoff_type: TEXT | "Indicates whether riders are dropped off at a stop as part of the normal schedule or whether a drop off at the stop isn't available. Available options:  -  regular -  none -  phone (indicates must phone agency to arrange drop off) -  driver (indicates must coordinate with driver to arrange drop off)" | eg=["regular"]
+departs_next_day: BOOLEAN | Several routes begin before midnight, with service continuing throughout the night. This variable specifies whether departure_time occurs after midnight the day after the scheduled day.  This is useful for identifying routes that begin one day and end the next day | eg=[false]
+
+## SAN_FRANCISCO_TRANSIT_MUNI.TRIPS
+trip_headsign: TEXT | Contains the text that appears on signage that identifies the trip's destination to riders. Use this field to distinguish between different patterns of service on the same route. | eg=["Caltrain Depot"]
+trip_id: TEXT | Unique identifier for each trip | eg=["8999873", "8999875"]
+block_id: TEXT | Identifies the block to which the trip belongs. A block consists of a single trip or many sequential trips made with the same vehicle. The trips are grouped into a block by the use of a shared service day andblock_id. A block_id can include trips with different service days, which then makes distinct blocks. For more details, see: https://developers.google.com/transit/gtfs/reference/#example-showing-blocks-and-service-day | eg=["8302", "8301"]
+route_id: TEXT | Unique identifier for each route. A single route will have multiple trips | eg=["83X"]
+shape_id: TEXT | Unique identifier for the geospatial shape that describes the vehicle travel for a trip along individual points. Use to JOIN with the shapes available in the shapes table | eg=["174188"]
+trip_shape: BINARY | Geographical representation of the trip's entire route.
+service_category: TEXT | Indicates the type of service for this trip
+direction: TEXT | "Indicates the direction of travel for a trip. The following values are valid:   -  O: Outbound travel -  I: Inbound travel  This field is not used in routing, but instead provides a way to separate trips by direction" | eg=["O"]
+
+## SAN_FRANCISCO_TRANSIT_MUNI.VEHICLE_MONITORING
+onward_stop_aimed_arrival_time_5: NUMBER | Estimated arrival time at onward stop 5 | eg=[NaN, 1639296090000000.0]
+onward_stop_id_7: TEXT | Unique reference for onward stop 7. Maps to stop_id in the stops table
+onward_stop_aimed_arrival_time_1: NUMBER | Estimated arrival time at onward stop 1 | eg=[1639296098000000.0, 1639295880000000.0]
+onward_stop_id_10: TEXT | Unique reference for onward stop 10. Maps to stop_id in the stops table
+onward_stop_aimed_departure_time_8: NUMBER | Aimed departure time from onward stop 8
+onward_stop_expected_arrival_time_7: NUMBER | Estimated arrival time at onward stop 7
+onward_stop_aimed_departure_time_7: NUMBER | Aimed departure time from onward stop 7
+onward_stop_name_9: TEXT | Full text name of onward stop 9. Maps to stop_name in the stops table
+vehicle_location_lon: FLOAT | The longitude of the vehicle's location at the time when time_recorded indicates | eg=[-122.39519, -122.40135]
+onward_stop_aimed_arrival_time_6: NUMBER | Estimated arrival time at onward stop 6 | eg=[NaN, 1639296137000000.0]
+onward_stop_id_1: TEXT | Unique reference for onward stop 1. Maps to stop_id in the stops table | eg=["The Embarcadero & Brannan St", "Metro Embarcadero Station"]
+onward_stop_id_9: TEXT | Unique reference for onward stop 9. Maps to stop_id in the stops table
+next_stop_aimed_arrival_time: NUMBER | Aimed arrival time at the next stop | eg=[1639295880000000, 1639295814000000]
+onward_stop_name_2: TEXT | Full text name of onward stop 2. Maps to stop_name in the stops table | eg=["15234", "14509"]
+onward_stop_aimed_arrival_time_10: NUMBER | Estimated arrival time at onward stop 10
+onward_stop_id_5: TEXT | Unique reference for onward stop 5. Maps to stop_id in the stops table | eg=["San Jose Ave & Mt Vernon Ave", "Fillmore St & Chestnut St"]
+vehicle_location: BINARY | The geographic representation of the vehicle's location at the time indicated in the time_recorded column | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00|3j\\xbeJ\\x99^\\xc0\\x11I>\\xc0\\xa4\\xe5B@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xca\\x8bL\\xc0\\xaf\\x99^\\xc0\\xbd`&@\\x03\\xe5B@')"]
+onward_stop_aimed_departure_time_2: NUMBER | Aimed departure time from onward stop 2 | eg=[1639296265000000.0, 1639296060000000.0]
+onward_stop_expected_arrival_time_1: NUMBER | Estimated arrival time at onward stop 1 | eg=[1639296035000000.0, 1639296000000000.0]
+onward_stop_id_8: TEXT | Unique reference for onward stop 8. Maps to stop_id in the stops table
+onward_stop_aimed_departure_time_4: NUMBER | Aimed departure time from onward stop 4 | eg=[NaN, 1639296006000000.0]
+vehicle_location_lat: FLOAT | The latitude of the vehicle's location at the time when time_recorded indicates | eg=[37.79409, 37.78916]
+next_stop_expected_departure_time: NUMBER | Estimated departure time from the next stop
+trip_id: TEXT | Unique reference for the trip that the vehicle is traveling. Maps to trip_id in the trips table | eg=["10420258", "10421885"]
+onward_stop_expected_arrival_time_3: NUMBER | Estimated arrival time at onward stop 3 | eg=[1639296381000000.0, NaN]
+onward_stop_name_10: TEXT | Full text name of onward stop 10. Maps to stop_name in the stops table
+onward_stop_id_6: TEXT | Unique reference for onward stop 6. Maps to stop_id in the stops table | eg=["San Jose Ave & Niagra Ave"]
+onward_stop_name_1: TEXT | Full text name of onward stop 1. Maps to stop_name in the stops table | eg=["14506", "16992"]
+route_long_name: TEXT | Contains the full name of a route. This name is generally more descriptive than the name from route_short_name and often includes the route's destination or stop. Maps to route_long_name in routes table | eg=["JUDAH", "OCEAN VIEW"]
+next_stop_expected_arrival_time: NUMBER | Estimated arrival time at the next stop | eg=[1639295947000000, 1639295888000000]
+onward_stop_aimed_arrival_time_7: NUMBER | Estimated arrival time at onward stop 7
+vehicle_id: TEXT | The unique identifier of the vehicle to be monitored. | eg=["1442", "1464"]
+onward_stop_name_3: TEXT | Full text name of onward stop 3. Maps to stop_name in the stops table | eg=["15239", "16259"]
+onward_stop_aimed_arrival_time_8: NUMBER | Estimated arrival time at onward stop 8
+time_recorded: NUMBER | The timestamp of the last real-time update from the particular vehicle. | eg=[1639295864000000]
+onward_stop_name_4: TEXT | Full text name of onward stop 4. Maps to stop_name in the stops table | eg=["16266", "14626"]
+onward_stop_name_5: TEXT | Full text name of onward stop 5. Maps to stop_name in the stops table | eg=["16268", "14608"]
+onward_stop_aimed_departure_time_1: NUMBER | Aimed departure time from onward stop 1 | eg=[1639296098000000.0, 1639295880000000.0]
+route_id: TEXT | Unique reference for the route on which the vehicle is traveling. Maps to route_id in the routes table | eg=["N", "M"]
+trip_date: DATE | The service date for the trip the vehicle is serving. | eg=["2021-12-11"]
+onward_stop_aimed_arrival_time_3: NUMBER | Estimated arrival time at onward stop 3 | eg=[1639296420000000.0, NaN]
+onward_stop_expected_arrival_time_2: NUMBER | Estimated arrival time at onward stop 2 | eg=[1639296148000000.0, 1639296130000000.0]
+onward_stop_id_2: TEXT | Unique reference for onward stop 2. Maps to stop_id in the stops table | eg=["King St & 2nd St", "The Embarcadero & Folsom St"]
+onward_stop_aimed_arrival_time_9: NUMBER | Estimated arrival time at onward stop 9
+onward_stop_expected_arrival_time_4: NUMBER | Estimated arrival time at onward stop 4 | eg=[NaN, 1639296128000000.0]
+onward_stop_aimed_departure_time_6: NUMBER | Aimed departure time from onward stop 6 | eg=[NaN, 1639296137000000.0]
+onward_stop_expected_arrival_time_9: NUMBER | Estimated arrival time at onward stop 9
+next_stop_aimed_departure_time: NUMBER | Aimed departure time from the next stop | eg=[1639295880000000, 1639295814000000]
+next_stop_id: TEXT | Unique reference for the stop being monitored. Maps to stop_id in the stops table | eg=["14509", "15731"]
+onward_stop_aimed_arrival_time_2: NUMBER | Estimated arrival time at onward stop 2 | eg=[1639296265000000.0, 1639296060000000.0]
+onward_stop_expected_arrival_time_8: NUMBER | Estimated arrival time at onward stop 8
+onward_stop_name_6: TEXT | Full text name of onward stop 6. Maps to stop_name in the stops table | eg=["16269"]
+onward_stop_id_3: TEXT | Unique reference for onward stop 3. Maps to stop_id in the stops table | eg=["King St & 4th St", "San Jose Ave & Farallones St"]
+onward_stop_aimed_departure_time_3: NUMBER | Aimed departure time from onward stop 3 | eg=[1639296420000000.0, NaN]
+onward_stop_expected_arrival_time_6: NUMBER | Estimated arrival time at onward stop 6 | eg=[NaN, 1639296272000000.0]
+onward_stop_expected_arrival_time_5: NUMBER | Estimated arrival time at onward stop 5 | eg=[NaN, 1639296186000000.0]
+onward_stop_name_7: TEXT | Full text name of onward stop 7. Maps to stop_name in the stops table
+onward_stop_aimed_departure_time_9: NUMBER | Aimed departure time from onward stop 9
+direction: TEXT | Indicates the direction of travel for a trip. The following values are valid:   -  O: Outbound travel -  I: Inbound travel  This field is not used in routing, but instead provides a way to separate trips by direction | eg=["IB", "OB"]
+onward_stop_aimed_departure_time_5: NUMBER | Aimed departure time from onward stop 5 | eg=[NaN, 1639296090000000.0]
+onward_stop_aimed_departure_time_10: NUMBER | Aimed departure time from onward stop 10
+onward_stop_aimed_arrival_time_4: NUMBER | Estimated arrival time at onward stop 4 | eg=[NaN, 1639296006000000.0]
+onward_stop_expected_arrival_time_10: NUMBER | Estimated arrival time at onward stop 10
+onward_stop_id_4: TEXT | Unique reference for onward stop 4. Maps to stop_id in the stops table | eg=["San Jose Ave & Lakeview Ave", "Fillmore St & Lombard St"]
+onward_stop_name_8: TEXT | Full text name of onward stop 8. Maps to stop_name in the stops table
+next_stop_name: TEXT | Full text name of the stop being monitored. Maps to stop_name in the stops table | eg=["The Embarcadero & Folsom St", "Metro Montgomery Station/Downtown"]
+
+## SAN_FRANCISCO_TREES.STREET_TREES
+longitude: FLOAT | WGS84
+tree_id: NUMBER | Unique ID for Tree | eg=[45997, 48142]
+species: TEXT | Species of tree | eg=["Tree(s) ::"]
+site_info: TEXT | Description of location of tree | eg=["Sidewalk: Curb side : Cutout"]
+care_assistant: TEXT | Agency or person that is secondary caregiver to tree
+y_coordinate: FLOAT | CA State Plane III
+plant_date: NUMBER | Date tree was planted | eg=[1007640000000000, 1026907200000000]
+location: TEXT | Location formatted for mapping
+permit_notes: TEXT | Tree permit number reference | eg=["Permit Number 44451", "Permit Number 45761"]
+dbh: TEXT | depth height
+latitude: FLOAT | WGS84
+address: TEXT | Address of Tree
+care_taker: TEXT | Agency or person that is primary caregiver to tree. Owner of Tree | eg=["Private"]
+site_order: NUMBER | Order of tree at address where multiple trees are at same address. Trees are ordered in ascending address order | eg=[115, 252]
+legal_status: TEXT | Legal staus: Permitted or DPW maintained | eg=["Permitted Site"]
+plant_type: TEXT | Landscaping or Tree | eg=["Tree"]
+x_coordinate: FLOAT | CA State Plane III
+plot_size: TEXT | dimension of tree plot

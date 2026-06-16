@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq330",
+  "question": "Which Colorado zip code has the highest concentration of bank locations per block group, based on the overlap between zip codes and block groups?",
+  "db_id": "FDA",
+  "source_document": "overlap_ratio.md",
+  "evidence": "Method: Calculate overlap ratio (intersection area / block group area) between ZIP code and census block group geometries. Distribute bank locations to block groups using this ratio. Aggregate by ZIP code to find the one with the maximum number of bank locations per block group."
+}

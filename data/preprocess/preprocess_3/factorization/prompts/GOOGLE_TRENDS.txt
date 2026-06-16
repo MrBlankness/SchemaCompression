@@ -1,0 +1,32 @@
+[COMPONENTS]
+@C1
+rank: NUMBER | NULL
+refresh_date: DATE | NULL
+score: NUMBER | NULL
+term: TEXT | NULL
+week: DATE | NULL
+
+@C2
+country_code: TEXT | NULL
+country_name: TEXT | NULL
+region_code: TEXT | NULL
+region_name: TEXT | NULL
+
+[TABLES]
+## GOOGLE_TRENDS.TOP_TERMS
+@use: [C1]
+dma_id: NUMBER | NULL
+dma_name: TEXT | NULL
+
+## GOOGLE_TRENDS.TOP_RISING_TERMS
+@use: [C1]
+dma_name: TEXT | NULL
+percent_gain: NUMBER | NULL
+dma_id: NUMBER | NULL
+
+## GOOGLE_TRENDS.INTERNATIONAL_TOP_TERMS
+@use: [C1, C2]
+
+## GOOGLE_TRENDS.INTERNATIONAL_TOP_RISING_TERMS
+@use: [C1, C2]
+percent_gain: NUMBER | NULL

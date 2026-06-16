@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq442",
+  "question": "Please collect the information of the top 6 trade report with the highest closing prices. Refer to the document for all the information I want.",
+  "db_id": "CYMBAL_INVESTMENTS",
+  "source_document": "Trade_Capture_Report_Data_List.md",
+  "evidence": "Extracted fields: tradeID, tradeTimestamp, algorithm, symbol, openPrice, closePrice, tradeDirection, tradeMultiplier. closePrice is the strike price of the option, used as the closing price for analysis. Need top 6 highest closing prices."
+}

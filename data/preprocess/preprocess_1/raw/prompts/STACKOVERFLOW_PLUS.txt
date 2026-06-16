@@ -1,0 +1,74 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: HACKERNEWS.FULL_201510
+Columns: title, dead, text, url, parent, ranking, descendants, deleted, time, score, type, by, id
+
+Table: HACKERNEWS.STORIESV2
+Columns: ranking, by, dead, id, parent, fake_date, time, url, text, score, deleted, timestamp, type, title, descendants
+
+Table: HACKERNEWS.FULL_PARTITIONED
+Columns: title, url, time, id, timestamp, by, text, dead, type, ranking, deleted, month, score, parent, descendants
+
+Table: HACKERNEWS.STORIES
+Columns: author, by, time_ts, deleted, score, descendants, title, dead, text, id, time, url
+
+Table: HACKERNEWS.COMMENTSV2
+Columns: story_id, timestamp, ranking, url, type, level, time, descendants, parent, title, text, id, fake_date, score, by, dead, deleted
+
+Table: HACKERNEWS.FULL_PARTITION_EXTRA
+Columns: level, timestamp, post_id, score, parent, type, by, month, title, descendants, deleted, text, dead, id, url, tags, ranking, time
+
+Table: HACKERNEWS.COMMENTS
+Columns: ranking, text, deleted, time_ts, by, dead, author, time, id, parent
+
+Table: HACKERNEWS.COMMENTS_CONVOLUTION
+Columns: text, type, post_id, dead, level, time, title, timestamp, score, by, parent, ranking, descendants, deleted, month, url, id
+
+Table: STACKOVERFLOW.POSTS_ORPHANED_TAG_WIKI
+Columns: view_count, owner_display_name, answer_count, creation_date, accepted_answer_id, last_activity_date, last_editor_display_name, comment_count, score, body, post_type_id, title, tags, parent_id, community_owned_date, last_editor_user_id, owner_user_id, last_edit_date, id, favorite_count
+
+Table: STACKOVERFLOW.VOTES
+Columns: creation_date, vote_type_id, post_id, id
+
+Table: STACKOVERFLOW.POST_LINKS
+Columns: post_id, related_post_id, creation_date, link_type_id, id
+
+Table: STACKOVERFLOW.POSTS_WIKI_PLACEHOLDER
+Columns: last_editor_user_id, last_activity_date, body, owner_display_name, last_edit_date, community_owned_date, answer_count, tags, post_type_id, id, creation_date, view_count, last_editor_display_name, title, owner_user_id, comment_count, accepted_answer_id, favorite_count, parent_id, score
+
+Table: STACKOVERFLOW.USERS
+Columns: display_name, profile_image_url, last_access_date, views, about_me, id, up_votes, reputation, age, website_url, down_votes, creation_date, location
+
+Table: STACKOVERFLOW.TAGS
+Columns: tag_name, excerpt_post_id, id, wiki_post_id, count
+
+Table: STACKOVERFLOW.POST_HISTORY
+Columns: creation_date, post_history_type_id, comment, user_id, post_id, revision_guid, text, id
+
+Table: STACKOVERFLOW.POSTS_QUESTIONS
+Columns: last_edit_date, owner_display_name, accepted_answer_id, owner_user_id, tags, last_activity_date, title, body, view_count, community_owned_date, creation_date, post_type_id, answer_count, last_editor_display_name, last_editor_user_id, id, comment_count, favorite_count, parent_id, score
+
+Table: STACKOVERFLOW.STACKOVERFLOW_POSTS
+Columns: tags, last_editor_display_name, score, comment_count, last_edit_date, parent_id, favorite_count, creation_date, answer_count, body, owner_display_name, title, community_owned_date, id, last_activity_date, last_editor_user_id, owner_user_id, post_type_id, view_count, accepted_answer_id
+
+Table: STACKOVERFLOW.POSTS_MODERATOR_NOMINATION
+Columns: last_editor_display_name, post_type_id, owner_user_id, id, last_activity_date, last_editor_user_id, tags, favorite_count, parent_id, owner_display_name, comment_count, score, accepted_answer_id, last_edit_date, community_owned_date, answer_count, view_count, title, body, creation_date
+
+Table: STACKOVERFLOW.POSTS_PRIVILEGE_WIKI
+Columns: last_edit_date, title, id, last_editor_user_id, favorite_count, comment_count, tags, last_activity_date, owner_display_name, post_type_id, parent_id, community_owned_date, creation_date, answer_count, view_count, accepted_answer_id, last_editor_display_name, body, owner_user_id, score
+
+Table: STACKOVERFLOW.COMMENTS
+Columns: id, creation_date, user_id, score, text, user_display_name, post_id
+
+Table: STACKOVERFLOW.BADGES
+Columns: tag_based, id, date, user_id, name, class
+
+Table: STACKOVERFLOW.POSTS_ANSWERS
+Columns: view_count, owner_user_id, tags, score, owner_display_name, answer_count, last_activity_date, last_editor_user_id, last_editor_display_name, favorite_count, post_type_id, community_owned_date, accepted_answer_id, comment_count, body, parent_id, id, title, creation_date, last_edit_date
+
+Table: STACKOVERFLOW.POSTS_TAG_WIKI_EXCERPT
+Columns: accepted_answer_id, view_count, favorite_count, comment_count, last_edit_date, score, owner_user_id, creation_date, post_type_id, title, community_owned_date, last_activity_date, parent_id, body, owner_display_name, id, last_editor_user_id, tags, last_editor_display_name, answer_count
+
+Table: STACKOVERFLOW.POSTS_TAG_WIKI
+Columns: tags, comment_count, last_editor_display_name, answer_count, view_count, body, score, last_editor_user_id, post_type_id, parent_id, id, creation_date, last_edit_date, owner_display_name, favorite_count, last_activity_date, owner_user_id, community_owned_date, accepted_answer_id, title

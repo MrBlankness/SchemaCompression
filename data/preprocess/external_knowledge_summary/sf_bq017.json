@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq017",
+  "question": "What are the five longest types of highways within the multipolygon boundary of Denmark (as defined by Wikidata ID 'Q35') by total length, analyzed through planet features?",
+  "db_id": "GEO_OPENSTREETMAP",
+  "source_document": "functions_st_dwithin.md",
+  "evidence": "Function: ST_DWITHIN(<geography_expression_1>, <geography_expression_2>, <distance_in_meters>) returns BOOLEAN. It returns TRUE if the minimum geodesic distance between two GEOGRAPHY objects is within the specified distance (in meters). If the GEOGRAPHY values are not points (e.g., lines or polygons), it returns TRUE/FALSE based on the minimum geodesic distance between the two closest points of the two values. Returns NULL if any input is NULL. Example: SELECT ST_DWITHIN(ST_MAKEPOINT(0, 0), ST_MAKEPOINT(1, 0), 150000); returns True."
+}

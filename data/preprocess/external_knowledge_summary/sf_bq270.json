@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq270",
+  "question": "What were the monthly add-to-cart and purchase conversion rates, calculated as a percentage of pageviews on product details, from January to March 2017?",
+  "db_id": "GA360",
+  "source_document": "ga360_hits.eCommerceAction.action_type.md",
+  "evidence": "hits.eCommerceAction.action_type values: Add product(s) to cart = 3, Completed purchase = 6, Product detail views = 2. When hits.product.isImpression = TRUE, product is a product impression seen during product action. Example query structure for counting products with conditions: SELECT COUNT(hits.product.v2ProductName) FROM [table] WHERE hits.ecommerceaction.action_type = '2' AND (BOOLEAN(hits.product.isImpression) IS NULL OR BOOLEAN(hits.product.isImpression) == FALSE)."
+}

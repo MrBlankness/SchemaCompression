@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_local003",
+  "question": "According to the RFM definition document, calculate the average sales per order for each customer within distinct RFM segments, considering only 'delivered' orders. Use the customer unique identifier. Clearly define how to calculate Recency based on the latest purchase timestamp and specify the criteria for classifying RFM segments. The average sales should be computed as the total spend divided by the total number of orders. Please analyze and report the differences in average sales across the RFM segments",
+  "db_id": "E_COMMERCE",
+  "source_document": "RFM.md",
+  "evidence": "RFM model segments customers based on Recency (R), Frequency (F), Monetary (M) scores (1-5). Recency: lower score = more recent purchase (R=1 very recent, R=5 not recent). Frequency: lower score = more frequent purchases (F=1 most frequent, F=5 least frequent). Monetary: lower score = higher spending (M=1 highest spending, M=5 lowest spending). RFM cell = concatenated R+F+M scores (e.g., 152). Segmentation logic: Champions (R=1, F+M=1-4), Can't Lose Them (R=4-5, F+M=1-2), Hibernating (R=4-5, F+M=3-6), Lost (R=4-5, F+M=7-10), Loyal Customers (R=2-3, F+M=1-4), Needs Attention (R=3, F+M=5-6), Recent Users (R=1, F+M=7-8), Potential Loyalists (R=1, F+M=5-6 OR R=2, F+M=5-8), Price Sensitive (R=1, F+M=9-10), Promising (R=2, F+M=9-10), About to Sleep (R=3, F+M=7-10). Average sales per order = total spend / total number of orders. Use customer unique identifier."
+}

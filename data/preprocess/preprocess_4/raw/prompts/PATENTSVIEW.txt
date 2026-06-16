@@ -1,0 +1,422 @@
+[TABLES]
+## PATENTSVIEW.DRAW_DESC_TEXT
+sequence: TEXT | NULL | eg=["10"]
+patent_id: TEXT | NULL | eg=["8907906", "5940440"]
+text: TEXT | NULL | eg=["FIG. 1J  includes a tenth view of an embodiment of a multi-screen user device;", "FIG. 9 is an illustrative signal point plot illustrating the circular contour of the CMA blind equalization method;"]
+uuid: TEXT | NULL | eg=["bnl69b122zl4lj951qjrsulr0", "2f5gqx6knnoz8hzfd535jwr6n"]
+
+## PATENTSVIEW.MAINCLASS
+id: TEXT | NULL | eg=["154", "41"]
+
+## PATENTSVIEW.WIPO
+patent_id: TEXT | NULL | eg=["10020849", "10027265"]
+field_id: TEXT | NULL | eg=["1"]
+sequence: TEXT | NULL | eg=["0"]
+
+## PATENTSVIEW.IPCR
+classification_level: TEXT | NULL
+ipc_version_indicator: TEXT | NULL
+section: TEXT | NULL | eg=["F", "C"]
+classification_status: TEXT | NULL
+patent_id: TEXT | NULL | eg=["6530169", "6591733"]
+classification_value: TEXT | NULL
+uuid: TEXT | NULL | eg=["fwu2zrloyrwcwdgaktjgkx6mr", "kavup1p4zsm3wjwhdgwzfb3p0"]
+classification_data_source: TEXT | NULL
+symbol_position: TEXT | NULL
+subclass: TEXT | NULL | eg=["A"]
+ipc_class: TEXT | NULL | eg=["41", "07"]
+subgroup: TEXT | NULL | eg=["00", "58"]
+main_group: TEXT | NULL | eg=["15", "9"]
+action_date: TEXT | NULL
+sequence: NUMBER | NULL | eg=[0]
+
+## PATENTSVIEW.MATCH
+patent_id: TEXT | NULL | eg=["3930423", "3930679"]
+publication_number: TEXT | NULL | eg=["US-3930423-A", "US-3930679-A"]
+
+## PATENTSVIEW.NBER
+patent_id: TEXT | NULL | eg=["5957794", "5836287"]
+uuid: TEXT | NULL | eg=["j8tuxh72edfxc9ap6ykjsssph", "je9c7em7fvi10jxtsr6f0p625"]
+category_id: TEXT | NULL | eg=["5"]
+subcategory_id: TEXT | NULL | eg=["53"]
+
+## PATENTSVIEW.SUBCLASS
+id: TEXT | NULL | eg=["015/210.1", "033/334"]
+
+## PATENTSVIEW.DRAW_DESC_TEXT_2021
+text: TEXT | NULL | eg=["FIG. 9 is a top view of the design of FIG. 6 ;", "FIG. 9 is a logic flow diagram of assessing a security risk and performing a security response in accordance with the present invention."]
+sequence: NUMBER | NULL | eg=[10]
+uuid: TEXT | NULL | eg=["72404f44-9964-11eb-9615-121df0c29c1e", "73f4ba4a-9964-11eb-9615-121df0c29c1e"]
+patent_id: TEXT | NULL | eg=["D908485", "10904214"]
+
+## PATENTSVIEW.NBER_SUBCATEGORY
+id: TEXT | NULL | eg=["31", "15"]
+title: TEXT | NULL | eg=["Drugs", "Resins"]
+
+## PATENTSVIEW.PERSISTENT_ASSIGNEE_DISAMBIG
+disamb_assignee_id_20200331: TEXT | NULL | eg=["org_lzqPgin2dVISUmrcJ2NI", "org_5jmx9triBfVN0PdZ4jej"]
+disamb_assignee_id_20181127: TEXT | NULL | eg=["org_HBn0m2UXFTu1sqbCc9ef", "org_VvOqlh1veAQhGtpEm3Pu"]
+disamb_assignee_id_20200929: TEXT | NULL | eg=["org_twu8vYBiARRSKaOfpKaq", "org_dUehhs0cRggrHyKRoXWk"]
+disamb_assignee_id_20200630: TEXT | NULL | eg=["org_twu8vYBiARRSKaOfpKaq", "org_dUehhs0cRggrHyKRoXWk"]
+rawassignee_id: TEXT | NULL | eg=["dp7vu225vgmbczqehgbm17r1k", "acso0u0s2os150vuz2k87jvwi"]
+disamb_assignee_id_20190820: TEXT | NULL | eg=["org_kEnV6I8cuBHV5fQ0ZCZN", "org_npVJ4j7RstzxqbGCrc8t"]
+disamb_assignee_id_20190312: TEXT | NULL | eg=["org_XY9itoQIZtoEnvTyof61", "org_67YzfuOA09U6exgSWnkm"]
+disamb_assignee_id_20191008: TEXT | NULL | eg=["org_00JIuEjOeTD9FaaMEPbp", "org_00VTI7dJwHgr26VkL4NM"]
+disamb_assignee_id_20191231: TEXT | NULL | eg=["org_OhzNz0dANlu1NfK7TdCR", "org_03jQkU3MS8JEguCAlklK"]
+
+## PATENTSVIEW.CLAIMS_2021
+sequence: NUMBER | NULL | eg=[0]
+exemplary: NUMBER | NULL | eg=[1]
+num: TEXT | NULL | eg=["00001"]
+uuid: TEXT | NULL | eg=["2bfb6c99-9cb0-11eb-9615-121df0c29c1e", "432b87e8-9cbb-11eb-9615-121df0c29c1e"]
+patent_id: TEXT | NULL | eg=["10931345", "10961653"]
+dependent: TEXT | NULL
+text: TEXT | NULL | eg=["1. A testing system, comprising: a first radio frequency system comprising a first plurality of antennas; and a second radio frequency system comprising a second plurality of antennas, wherein the second radio frequency system is configured to: transmit a first test data packet to the first radio frequency system; receive a beamforming parameter from the first radio frequency system via a wired connection that bypasses the first plurality of antennas and the second plurality of antennas, wherein the beamforming parameter is configured to indicate a difference between the first test data packet and an expected data packet; and adjust a magnitude, a phase, or both, of a second test data packet based at least in part on the beamforming parameter.", "1. A method for controlling a laundry treatment apparatus including an outer tub, an inner tub disposed inside the outer tub, an air circulation path having a start end connected to a side surface of the outer tub and a section upwardly extending relative to the start end, a water drain path connected to a lower surface of the outer tub and configured to guide and drain water inside the outer tub to an outside, a filter part that includes a filter net disposed to traverse the upwardly extending section of the air circulation path and an edge frame disposed around the filter net and configured to support the filter net, and a plurality of nozzles configured to spray cleaning water to the filter net, the method comprising: supplying wash water into the outer tub; washing or rinsing laundry in the inner tub by using the wash water; and draining the wash water through the water drain path, wherein draining the washing water comprises: rotating the edge frame relative to the filter net, ..."]
+
+## PATENTSVIEW.PERSISTENT_INVENTOR_DISAMB
+rawinventor_id: TEXT | NULL | eg=["moiwnphsjz4p21yhid35tij7k", "ksnu19780aco8xp2fx6oxlmzn"]
+disamb_inventor_id_20170808: TEXT | NULL | eg=["6352699-3", "6352728-2"]
+disamb_inventor_id_20170307: TEXT | NULL | eg=["6352699-3", "6352728-2"]
+
+## PATENTSVIEW.USRELDOC
+date: TEXT | NULL | eg=["2013-06-20", "2017-09-14"]
+reldocno: TEXT | NULL | eg=["20130154389", "20170262782"]
+status: TEXT | NULL | eg=["NULL"]
+relkind: TEXT | NULL | eg=["NULL"]
+kind: TEXT | NULL | eg=["A1"]
+uuid: TEXT | NULL | eg=["bg35bwgdg1rmbx1kshsjx1xf7", "z0i9pkakju0epdip0vtmcadnf"]
+patent_id: TEXT | NULL | eg=["8618696", "10037507"]
+sequence: TEXT | NULL | eg=["28", "19"]
+country: TEXT | NULL | eg=["US"]
+doctype: TEXT | NULL | eg=["related-publication"]
+
+## PATENTSVIEW.SUBCLASS_CURRENT
+title: TEXT | NULL | eg=["Divalent chalcogen, bonded directly to two carbons or to carbon and hydrogen, attached indirectly to phosphorus by acyclic nonionic bonding (wherein the hydrogen may be replaced by substituted or unsubstituted ammonium, or by a Group IA or IIA light metal)", "1"]
+id: TEXT | NULL | eg=["558/165", "210/DIG.*"]
+
+## PATENTSVIEW.PATENT_ASSIGNEE
+assignee_id: TEXT | NULL | eg=["00241bc8-9510-47c5-9ecd-62fe4ab7906c", "00d8ce38-147e-4f7d-81fb-5650b64bb0ad"]
+patent_id: TEXT | NULL | eg=["11179164", "11139018"]
+location_id: TEXT | NULL
+
+## PATENTSVIEW.PATENT_LAWYER
+patent_id: TEXT | NULL | eg=["D647010", "D735919"]
+lawyer_id: TEXT | NULL | eg=["0005647487ba7841035ebb6b6e06c1e2", "00056e250abdbd1e1d6358ed439ed25b"]
+
+## PATENTSVIEW.RAWEXAMINER
+uuid: TEXT | NULL | eg=["m9aj3t1pcki5f234kg4oo41js", "5jjrb6305vakuk8d1a7g29th8"]
+name_first: TEXT | NULL | eg=["Christopher A", "Christopher D"]
+role: TEXT | NULL | eg=["primary"]
+group: TEXT | NULL | eg=["3762"]
+patent_id: TEXT | NULL | eg=["9974952", "9839492"]
+name_last: TEXT | NULL | eg=["Flory", "Koharski"]
+
+## PATENTSVIEW.PATENT_CONTRACTAWARDNUMBER
+contract_award_number: TEXT | NULL | eg=["C ", "465"]
+patent_id: TEXT | NULL | eg=["10169847", "PP21965"]
+
+## PATENTSVIEW.PCT_DATA
+date: TEXT | NULL | eg=["1997-05-14", "1996-11-28"]
+doc_type: TEXT | NULL | eg=["pct_application", "wo_grant"]
+country: TEXT | NULL | eg=["WO"]
+kind: TEXT | NULL | eg=["00", "A"]
+uuid: TEXT | NULL | eg=["v8ytczzfg5xril2pulgae7mpz", "f7geredanvenr1ckxav8tipvg"]
+_371_date: TEXT | NULL | eg=["1998-11-24", "1998-11-25"]
+_102_date: TEXT | NULL | eg=["1998-11-24", "1998-11-25"]
+rel_id: TEXT | NULL | eg=["PCT/SE97/00794", "WO96/37437"]
+patent_id: TEXT | NULL | eg=["6136157", "6183621"]
+
+## PATENTSVIEW.NON_INVENTOR_APPLICANT
+applicant_type: TEXT | NULL | eg=["applicant"]
+sequence: NUMBER | NULL | eg=[0]
+designation: TEXT | NULL | eg=["us-only"]
+rawlocation_id: TEXT | NULL | eg=["hj5hpw0v5loq0d1mvau2570b1", "h5llpm30mei4bbky4qowpwg52"]
+uuid: TEXT | NULL | eg=["1zpd0v8dy5fcks8ri0tehjph5", "i5m4lekiy3q3ob4vd6bca7kzz"]
+organization: TEXT | NULL
+lname: TEXT | NULL | eg=["Martin J.", "Dawei"]
+patent_id: TEXT | NULL | eg=["9593885", "10076763"]
+fname: TEXT | NULL | eg=["Cuerdon", "Dong"]
+
+## PATENTSVIEW.NBER_CATEGORY
+title: TEXT | NULL | eg=["Cmp&Cmm", "Others"]
+id: TEXT | NULL | eg=["2", "6"]
+
+## PATENTSVIEW.FOREIGN_PRIORITY
+country_transformed: TEXT | NULL | eg=["EP"]
+number: TEXT | NULL | eg=["10152097", "05026538"]
+date: TEXT | NULL | eg=["2010-01-29", "2005-12-06"]
+kind: TEXT | NULL | eg=["regional"]
+sequence: NUMBER | NULL | eg=[0, 1]
+uuid: TEXT | NULL | eg=["ztgvs4z21xu7ukrf4w7ki6sv9", "3kpkrndj6lrrficcwvvd953b2"]
+patent_id: TEXT | NULL | eg=["9422244", "7689264"]
+country: TEXT | NULL | eg=["EP"]
+
+## PATENTSVIEW.FIGURES
+uuid: TEXT | NULL | eg=["mjc0asaj8ajqw3mihluefyczd", "gqeaccvlqdbrbdo3huogk4s9c"]
+num_figures: NUMBER | NULL | eg=[10]
+patent_id: TEXT | NULL | eg=["7945619", "9736480"]
+num_sheets: NUMBER | NULL | eg=[10]
+
+## PATENTSVIEW.BOTANIC
+variety: TEXT | NULL | eg=["Magic Summer", "RUIZ012A"]
+uuid: TEXT | NULL | eg=["06i082at44feqh3567o765fxg", "1pi7xr52gijr0g3czo4rg3mjc"]
+latin_name: TEXT | NULL | eg=["Hebe", "Rosa"]
+patent_id: TEXT | NULL | eg=["PP20359", "PP16970"]
+
+## PATENTSVIEW.DETAIL_DESC_TEXT_2021
+text: TEXT | NULL | eg=["DETAILED DESCRIPTION\n\nPersons of ordinary skill in the art will realize that the following description is illustrative only and not in any way limiting. Other aspects will readily suggest themselves to such skilled persons.\n\nThe present invention improves the efficiency of existing LUT-based FPGA logic cells at implementing up, down and pop counters. When implementing each of these functions, some of the K-input LUTs in some of the logic cells remain available to generate any function of the K inputs to those LUTs.\n\nIn accordance with one aspect of the present invention, an illustrative LUT-based logic cell120that allows improved efficiency for up counters and pop counters is shown inFIG. 4, to which attention is now drawn. Some of the elements of logic cell120ofFIG. 4are common to the logic cells shown in previous drawing figures and will be referred to inFIG. 4using the same reference numerals used to designate those same elements in the previous drawing figures.\n\nThe logic cell12...", "DETAILED DESCRIPTION\n\nIn a cohesive granular material according to the present invention, the granules are made of stiff substance and have a grain size in the range from 55 μm to 2.0 mm. This range of grain sizes corresponds to the definition of sand. However, the granules are not restricted to sand, neither with regard to the substance of the granules, i.e. their chemical composition, nor with regard to the shape of the granules.\n\nThe elastomeric substance of the cohesive granular material according to the present invention is elastic and its young's modulus is not more than 0.5 times the Young's modulus of the stiff substance. Typically, the difference in Young's modulus is much higher. The elastomeric substance elastically connects the granules, particularly with regard to a tensile or a shear load but also with regard to a pressure load on the cohesive granular material. Already with regard to a shear load and particularly with regard to a pressure load on the cohesive granular..."]
+patent_id: TEXT | NULL | eg=["10936286", "10941081"]
+length: NUMBER | NULL | eg=[16627, 17139]
+
+## PATENTSVIEW.US_TERM_OF_GRANT
+uuid: TEXT | NULL | eg=["z9y4m0a49rrv13oobfjfhruyt", "3zitfb2aia6u8nlr3n5uta60p"]
+term_grant: TEXT | NULL | eg=["NULL"]
+term_extension: TEXT | NULL | eg=["NULL"]
+patent_id: TEXT | NULL | eg=["5174504", "5074838"]
+disclaimer_date: TEXT | NULL | eg=["2008-05-14", "2007-03-13"]
+lapse_of_patent: TEXT | NULL | eg=["NULL"]
+term_disclaimer: TEXT | NULL | eg=["NULL"]
+
+## PATENTSVIEW.LAWYER
+name_last: TEXT | NULL
+id: TEXT | NULL | eg=["007bf9adef356f708442479c51664e88", "0130c675635a408305bd352c862f3e8b"]
+name_first: TEXT | NULL
+organization: TEXT | NULL | eg=["Leygid, Voit & Mayer, Ltd.", "Renner Kenner Greive Bobaktaylor & Weber"]
+country: TEXT | NULL
+
+## PATENTSVIEW.LOCATION
+state_fips: FLOAT | NULL
+city: TEXT | NULL | eg=["Rio Cuarto", "St Martin"]
+state: TEXT | NULL
+latitude: FLOAT | NULL | eg=[18.4365, -33.1223]
+county: TEXT | NULL
+longitude: FLOAT | NULL | eg=[-63.1754, -64.3593]
+county_fips: TEXT | NULL
+country: TEXT | NULL | eg=["AI", "AR"]
+id: TEXT | NULL | eg=["d7d40b84-cb90-11eb-9615-121df0c29c1e", "76690a33-cbae-11eb-9615-121df0c29c1e"]
+
+## PATENTSVIEW.RAWASSIGNEE
+assignee_id: TEXT | NULL | eg=["a4730192-57df-482a-b741-5f51986d6d33"]
+name_first: TEXT | NULL
+sequence: NUMBER | NULL | eg=[0]
+rawlocation_id: TEXT | NULL | eg=["b9cui9stli50um6cqid7799p5", "ucwouuv2681yeotm5dg0g0c5j"]
+uuid: TEXT | NULL | eg=["kdchn2f76p5ppvohmhgjdymn3", "w013fx7xgo14m9ar7rdd1y5v0"]
+organization: TEXT | NULL | eg=["Matsushita Electric Industrial Co., Ltd."]
+type: FLOAT | NULL | eg=[3.0]
+patent_id: TEXT | NULL | eg=["6519094", "7119958"]
+name_last: TEXT | NULL
+
+## PATENTSVIEW.PATENT_GOVINTORG
+organization_id: NUMBER | NULL | eg=[256]
+patent_id: TEXT | NULL | eg=["10074282", "10096097"]
+
+## PATENTSVIEW.USAPPLICATIONCITATION
+name: TEXT | NULL | eg=["Klingel et al.", "Shiraishi"]
+kind: TEXT | NULL | eg=["A1", "S"]
+application_id: TEXT | NULL | eg=["WO 96/13790", "D. 434674"]
+country: TEXT | NULL | eg=["US"]
+patent_id: TEXT | NULL | eg=["8712582", "6857775"]
+sequence: NUMBER | NULL | eg=[28, 2]
+uuid: TEXT | NULL | eg=["wckile03msbg8fr0rtxy7b2m3", "18dkuauyvinnam00r3wbfft9o"]
+category: TEXT | NULL | eg=["cited by applicant", "cited by other"]
+date: TEXT | NULL | eg=["1996-05-01", "2000-12-01"]
+number: TEXT | NULL | eg=["WO 96/13790", "D. 434674"]
+
+## PATENTSVIEW.BRF_SUM_TEXT
+uuid: TEXT | NULL | eg=["trk41aa0c2vx03i8zta2low1w", "3su3q8p4ekjd6xhnx2t4jys8t"]
+patent_id: TEXT | NULL | eg=["8340917", "9223704"]
+text: TEXT | NULL | eg=["BACKGROUND Research in many areas of biotechnology, such as drug discovery, disease analysis, and crop improvements, involves matching fragments of sequences that are generated from a sample, with long sequences that represent biological components. For example, the human genome is a double helix of sequences of nucleotides, where one sequence is a complement of the other. There are 4 nucleotides in DNA sequences, more in RNA and protein sequences. Each nucleotide in a DNA sequence is represented by a character from the alphabet {a,c,t,g}. Each strand of the double helix that constitutes the human genome is a sequence of more than 3 billion characters. The 2 strands are not independent. For each character position in one strand, there is a complementary character in the corresponding position of the second strand. The characters a and t are complements of one another, and the characters c and g are complements of one another. Each character is also called a base, hence a genomic seq...", "BACKGROUND The present disclosure relates to a memory access control circuit, and more particularly, to a memory access control circuit, prefetch circuit, memory device and information processing system for gaining burst access to a memory. A processor uses a memory both as an instruction storage area and as a data storage area. Therefore, it is necessary for the processor to access the memory highly frequently during the execution of a program. In order to reduce the burden on the memory resulting from such frequent accesses, a cache memory is provided between the processor and memory. A cache memory manages a plurality of continuous words as a line. Therefore, the plurality of words are filled altogether at the time of a cache mishit. At this time, a burst transfer is used to transfer data from the memory. In order to achieve transfer of a plurality of words using a burst transfer, a system is known which can change the sequence of the words to be transferred by using the wraparou..."]
+
+## PATENTSVIEW.MAINCLASS_CURRENT
+title: TEXT | NULL | eg=["BEDS", "LOCKS"]
+id: TEXT | NULL | eg=["5", "70"]
+
+## PATENTSVIEW.WIPO_FIELD
+field_title: TEXT | NULL | eg=["Household goods, not elsewhere specified", "Miscellaneous"]
+sector_title: TEXT | NULL | eg=["Design"]
+id: TEXT | NULL | eg=["D07", "D99"]
+
+## PATENTSVIEW.PATENT
+filename: TEXT | NULL | eg=["ipg131001.xml", "ipg160503.xml"]
+id: TEXT | NULL | eg=["D690894", "D755392"]
+number: TEXT | NULL | eg=["D690894", "D755392"]
+title: TEXT | NULL | eg=["Cremation remains keepsake charm", "Pulse oximetry sensor"]
+kind: TEXT | NULL | eg=["S1"]
+type: TEXT | NULL | eg=["design"]
+date: TEXT | NULL | eg=["2013-10-01", "2016-05-03"]
+withdrawn: NUMBER | NULL | eg=[0]
+abstract: TEXT | NULL
+num_claims: NUMBER | NULL | eg=[1]
+country: TEXT | NULL | eg=["US"]
+
+## PATENTSVIEW.CPC_CURRENT
+category: TEXT | NULL | eg=["inventional"]
+group_id: TEXT | NULL | eg=["C08K", "C08L"]
+section_id: TEXT | NULL | eg=["C"]
+subsection_id: TEXT | NULL | eg=["C08", "C09"]
+subgroup_id: TEXT | NULL | eg=["C08K5/3462", "C08L101/00"]
+sequence: NUMBER | NULL | eg=[4]
+uuid: TEXT | NULL | eg=["0fccb987-5388-476f-8391-f47d2e55a308", "b51fcbe9-5f0b-478c-9292-7a4e7721bbe9"]
+patent_id: TEXT | NULL | eg=["10396367", "5308489"]
+
+## PATENTSVIEW.USPATENTCITATION
+date: TEXT | NULL | eg=["2005-11-01"]
+category: TEXT | NULL | eg=["cited by applicant"]
+name: TEXT | NULL | eg=["Schuldt-Hempe et al.", "Sixto, Jr. et al."]
+uuid: TEXT | NULL | eg=["57ncvypgc6olzvvyu8cyrup28", "ku1vpwjzed77n4wajpnj8s0bc"]
+sequence: NUMBER | NULL | eg=[66, 574]
+patent_id: TEXT | NULL | eg=["9089501", "8568410"]
+citation_id: TEXT | NULL | eg=["6966918", "6966919"]
+kind: TEXT | NULL | eg=["B1", "B2"]
+country: TEXT | NULL | eg=["US"]
+
+## PATENTSVIEW.USPC_CURRENT
+sequence: NUMBER | NULL
+patent_id: TEXT | NULL
+subclass_id: TEXT | NULL
+mainclass_id: TEXT | NULL
+uuid: TEXT | NULL
+
+## PATENTSVIEW.INVENTOR
+attribution_status: NUMBER | NULL | eg=[1]
+id: TEXT | NULL | eg=["fl:r_ln:kitago-2", "fl:r_ln:baba-13"]
+male_flag: FLOAT | NULL | eg=[1.0]
+name_last: TEXT | NULL | eg=["Kitago", "BABA"]
+name_first: TEXT | NULL | eg=["Ryosuke"]
+
+## PATENTSVIEW.RAWLOCATION
+country: TEXT | NULL | eg=["US"]
+location_id: TEXT | NULL | eg=["ff1b0420-cb90-11eb-9615-121df0c29c1e"]
+city: TEXT | NULL | eg=["Fremont"]
+id: TEXT | NULL | eg=["vfu7odn7e9oa9s5ypan8plop1", "16xusuap7rdacrx87mg3hizxe"]
+state: TEXT | NULL | eg=["CA"]
+latlong: TEXT | NULL | eg=["37.5308|-121.942"]
+
+## PATENTSVIEW.CPC_SUBGROUP
+title: TEXT | NULL | eg=["Accessing, addressing or allocating within memory systems or architectures -Protection against unauthorised use of memory ; or access to memory-by checking the object accessibility, e.g. type of access defined by the memory independently of subject rights ", "Accessories for mixers ; ; Auxiliary operations or auxiliary devices; Parts or details of general application-Feed or discharge mechanisms-Feed mechanisms -characterized by the means for feeding the components to the mixer-using gravity, e.g. from a hopper"]
+id: TEXT | NULL | eg=["G06F12/1416", "B01F15/0234"]
+
+## PATENTSVIEW.FOREIGNCITATION
+patent_id: TEXT | NULL | eg=["7329559", "7870461"]
+category: TEXT | NULL | eg=["cited by other", "cited by applicant"]
+uuid: TEXT | NULL | eg=["xhj001ca1uk574sktzgyjbpc4", "wxddvgazkrhjza59ens6ajy6e"]
+sequence: NUMBER | NULL | eg=[116, 1]
+date: TEXT | NULL | eg=["2002-12-01"]
+country: TEXT | NULL | eg=["WO"]
+number: TEXT | NULL | eg=["WO 02/099907", "WO 02/100026"]
+
+## PATENTSVIEW.RAWLAWYER
+organization: TEXT | NULL | eg=["Law Offices of Brian S. Steinberger", "Edwards & Angell, LLP"]
+name_last: TEXT | NULL
+uuid: TEXT | NULL | eg=["5edfd333-e134-46a0-b034-e25351c51a02", "3cf16744-4473-46f3-9545-e642ba5d9bbd"]
+lawyer_id: TEXT | NULL
+patent_id: TEXT | NULL | eg=["6223689", "6290358"]
+name_first: TEXT | NULL
+sequence: NUMBER | NULL | eg=[1, 3]
+country: TEXT | NULL
+
+## PATENTSVIEW.ASSIGNEE
+name_last: TEXT | NULL
+name_first: TEXT | NULL
+organization: TEXT | NULL | eg=["pneuPAC Limited", "ACTION STAR TECHNOLOGY CO., LTD."]
+type: FLOAT | NULL | eg=[3.0]
+id: TEXT | NULL | eg=["e7708504-153e-4914-91ef-d99c05a96873", "e7819615-e086-4867-81e2-77c1e05d18e4"]
+
+## PATENTSVIEW.LOCATION_ASSIGNEE
+assignee_id: TEXT | NULL | eg=["org_kRjyv0KZaq1vxlke8GGs", "org_GsbxlLrrhwI9cCcS7lQB"]
+location_id: TEXT | NULL | eg=["001hohwabp5m", "002hstf5v4dg"]
+
+## PATENTSVIEW.CPC_SUBSECTION
+title: TEXT | NULL | eg=["WEAPONS", "FOOTWEAR"]
+id: TEXT | NULL | eg=["F41", "A43"]
+
+## PATENTSVIEW.RAWINVENTOR
+inventor_id: TEXT | NULL | eg=["fl:k_ln:mccullen-2", "fl:a_ln:mitani-6"]
+patent_id: TEXT | NULL | eg=["7882463", "9917285"]
+rawlocation_id: TEXT | NULL | eg=["brya0bg94ajtv3l62678tlb00", "vffscs241hbimzpbtn2t2mar5"]
+name_first: TEXT | NULL | eg=["Kevin W.", "Atsushi"]
+sequence: NUMBER | NULL | eg=[2]
+name_last: TEXT | NULL | eg=["McCullen", "Mitani"]
+uuid: TEXT | NULL | eg=["ug5gxv4ejs51vicvvogx84hr5", "lfohk4vbmka08yu3djvfquwx8"]
+rule_47: TEXT | NULL | eg=["FALSE"]
+deceased: TEXT | NULL | eg=["FALSE"]
+
+## PATENTSVIEW.REL_APP_TEXT
+text: TEXT | NULL | eg=["BENEFIT OF PROVISIONAL APPLICATION This application is a continuation of and claims the benefit of U.S. patent application Ser. No. 11/820,489, filed 19 Jun. 2007, which claims the benefit of U.S. Provisional Application No. 60/814,731, filed 19 Jun. 2006.", "CLAIM OF PRIORITY 1. This application claims the benefit of U.S. Provisional Patent Application Ser. No. 60/385,167, filed 31 May 2002, entitled “Improved Y-Site Medical Valve.” This provisional application is incorporated herein as if fully set forth."]
+patent_id: TEXT | NULL | eg=["7899432", "7160272"]
+uuid: TEXT | NULL | eg=["zbgmunbx6p8b9a81z1ct4qbn0", "0i5rwno3ssh2er5s1usocefd8"]
+
+## PATENTSVIEW.LOCATION_INVENTOR
+location_id: TEXT | NULL | eg=["003kpxfcmeo4", "004xp0s6ifjz"]
+inventor_id: TEXT | NULL | eg=["7877596-2", "6224117-2"]
+
+## PATENTSVIEW.PATENT_INVENTOR
+location_id: TEXT | NULL | eg=["ff6637c1-cb8e-11eb-9615-121df0c29c1e"]
+inventor_id: TEXT | NULL | eg=["fl:m_ln:watanabe-86", "fl:h_ln:naya-1"]
+patent_id: TEXT | NULL | eg=["4633115", "7099733"]
+
+## PATENTSVIEW.USPC
+patent_id: TEXT | NULL | eg=["4733714", "4715905"]
+sequence: NUMBER | NULL | eg=[6]
+uuid: TEXT | NULL | eg=["vx63cj017gh32rnj8qou8whzr", "no3fq6xhprzuyjmzloepaacj0"]
+subclass_id: TEXT | NULL | eg=["164/306", "164/480"]
+mainclass_id: TEXT | NULL | eg=["164", "165"]
+
+## PATENTSVIEW.GOVERNMENT_INTEREST
+patent_id: TEXT | NULL | eg=["10593821", "8377831"]
+gi_statement: TEXT | NULL | eg=["ACKNOWLEDGEMENT OF GOVERNMENT SUPPORT This invention was made with Government support under Grant no. IIP-1134849, Grant no. 1357419, and Grant no. DGE1110007, awarded by the National Science Foundation. The Government has certain rights in this invention.", "ACKNOWLEDGEMENTS This invention was made with government support under funding by the Department of Energy Basic Energy Sciences (DE-FG02-01ER15255) and the National Science Foundation (CTS-0207781). The government may have certain rights in the invention."]
+
+## PATENTSVIEW.CPC_GROUP
+title: TEXT | NULL | eg=["ENZYMES", "SEWING "]
+id: TEXT | NULL | eg=["C12Y", "D05B"]
+
+## PATENTSVIEW.CLAIM
+uuid: TEXT | NULL | eg=["f14iorboawm0ew4zxz095hkf1", "br6in9paqszb9k8q5qcskbwrr"]
+text: TEXT | NULL | eg=["The apparatus of claim 11 further comprising:means for coupling said guide rails to said support fingers and to said lateral guide means, said coupling means permitting movement of said support fingers relative to said slots in a pair of mutually orthogonal directions whereby the width and depth of the transport channel may be varied.", "13. A fusion protein of the formula: wherein GFP is green fluorescent protein; AEQ is aequorin; and LINKER is a polypeptide of 5-63 amino acids; wherein the linker includes the amino acid sequence Ser Gly Leu Arg Ser [SEQ ID NO: 26]."]
+sequence: TEXT | NULL | eg=["13"]
+dependent: TEXT | NULL | eg=["-1"]
+patent_id: TEXT | NULL | eg=["5080217", "6936475"]
+exemplary: TEXT | NULL | eg=["False"]
+
+## PATENTSVIEW.OTHERREFERENCE
+patent_id: TEXT | NULL | eg=["7423119", "9988908"]
+text: TEXT | NULL | eg=["Database Search, DNA Sequence Alignments [BLASTN 2.2.1[Jul. 12, 2001], NCBI].", "International Preliminary Report on Patentability for PCT Application No. PCT/US2014/052447, dated Sep. 1, 2016."]
+uuid: TEXT | NULL | eg=["en76sg4rufqs84o9cyjhu3uyg", "kbdmsnzl7bdtmmh459fkbuo84"]
+sequence: NUMBER | NULL | eg=[207]
+
+## PATENTSVIEW.INVENTOR_GENDER
+disamb_inventor_id_20170808: TEXT | NULL | eg=["3960863-3", "6399637-5"]
+disamb_inventor_id_20190312: TEXT | NULL | eg=["3960863-3", "6399637-5"]
+male: TEXT | NULL | eg=["\"", "0"]
+disamb_inventor_id_20181127: TEXT | NULL | eg=["3960863-3", "6399637-5"]
+
+## PATENTSVIEW.GOVERNMENT_ORGANIZATION
+name: TEXT | NULL | eg=["Postal Service", "Denali Commission"]
+level_three: TEXT | NULL
+level_one: TEXT | NULL | eg=["Postal Service", "Denali Commission"]
+level_two: TEXT | NULL | eg=["Agency for International Development", "Argonne National Laboratory"]
+organization_id: NUMBER | NULL | eg=[11, 4]
+
+## PATENTSVIEW.PERSISTENT_INVENTOR_DISAMBIG
+disamb_inventor_id_20191231: TEXT | NULL | eg=["4358730-1", "7037408-1"]
+disamb_inventor_id_20200929: TEXT | NULL | eg=["4358730-1", "7037408-1"]
+disamb_inventor_id_20181127: TEXT | NULL | eg=["10006462-2", "7037408-1"]
+rawinventor_id: TEXT | NULL | eg=["bnotsd4fa04zyo41j8eve1tq5", "1f8r92z6av5b6bkwpadvojrc8"]
+disamb_inventor_id_20171226: TEXT | NULL | eg=["4358730-1", "9809753-1"]
+disamb_inventor_id_20190312: TEXT | NULL | eg=["4358730-1", "7037408-1"]
+disamb_inventor_id_20180528: TEXT | NULL | eg=["4358730-1", "7037408-1"]
+disamb_inventor_id_20191008: TEXT | NULL | eg=["4358730-1", "7037408-1"]
+disamb_inventor_id_20200630: TEXT | NULL | eg=["4358730-1", "7037408-1"]
+disamb_inventor_id_20170808: TEXT | NULL
+disamb_inventor_id_20171003: TEXT | NULL
+disamb_inventor_id_20200331: TEXT | NULL | eg=["4358730-1", "7037408-1"]
+disamb_inventor_id_20201229: TEXT | NULL | eg=["fl:b_ln:beifus-1", "fl:d_ln:wilborn-1"]
+disamb_inventor_id_20190820: TEXT | NULL | eg=["4358730-1", "7037408-1"]
+
+## PATENTSVIEW.APPLICATION
+series_code: TEXT | NULL | eg=["D"]
+number: TEXT | NULL | eg=["D535207", "D002048"]
+date: TEXT | NULL | eg=["1990-07-26", "1992-11-30"]
+id: TEXT | NULL | eg=["D/535207", "D002048"]
+country: TEXT | NULL | eg=["US"]
+patent_id: TEXT | NULL | eg=["D371814", "D390605"]

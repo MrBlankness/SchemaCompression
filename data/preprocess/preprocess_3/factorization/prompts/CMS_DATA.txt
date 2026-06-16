@@ -1,0 +1,786 @@
+[COMPONENTS]
+@C1
+average_medicare_allowed_amt: FLOAT | Average Medicare Allowed Amount
+average_medicare_payment_amt: FLOAT | Average Medicare Payment Amount
+average_submitted_chrg_amt: FLOAT | Average Submitted Charge Amount
+bene_day_srvc_cnt: NUMBER | Number of Distinct Medicare Beneficiary/Per Day Services
+bene_unique_cnt: NUMBER | Number of Medicare Beneficiaries
+hcpcs_code: TEXT | HCPCS
+hcpcs_description: TEXT | HCPCS Description
+hcpcs_drug_indicator: TEXT | Identifies HCPCS As Drug Included in the ASP Drug List
+line_srvc_cnt: FLOAT | Number of Services
+medicare_participation_indicator: TEXT | Medicare Participation Indicator
+nppes_credentials: TEXT | Credentials of the Provider
+nppes_entity_code: TEXT | Entity Type of the Provider
+nppes_provider_country: TEXT | Country Code of the Provider
+nppes_provider_gender: TEXT | Gender of the Provider
+nppes_provider_mi: TEXT | Middle Initial of the Provider
+nppes_provider_street1: TEXT | Street Address 1 of the Provider
+nppes_provider_street2: TEXT | Street Address 2 of the Provider
+nppes_provider_zip: TEXT | Zip Code of the Provider
+place_of_service: TEXT | Place of Service
+
+@C2
+american_indian_or_alaska_native_beneficiaries: NUMBER | Number of American Indian or Alaska Native beneficiaries.
+asian_pacific_islander_beneficiaries: NUMBER | Number of Asian Pacific Islander beneficiaries.
+average_age: NUMBER | Average age of beneficiaries. Beneficiary age is calculated at the end of the calendar year or at the time of death.
+average_hcc_score: FLOAT | Average Hierarchical Condition Category (HCC) risk score of beneficiaries. Please refer to the “Additional Information” section of the Methodology document for more details on HCC risk scores.
+black_beneficiaries: NUMBER | Number of non-Hispanic black or African American beneficiaries.
+female_beneficiaries: NUMBER | Number of female beneficiaries.
+hispanic_beneficiaries: NUMBER | Number of Hispanic beneficiaries.
+male_beneficiaries: NUMBER | Number of male beneficiaries.
+nondual_beneficiaries: NUMBER | Number of Medicare beneficiaries qualified to receive Medicare only benefits. Beneficiaries are classified as Medicare only entitlement if they received zero months of any Medicaid benefits (full or partial) in the given calendar year.
+other_unknown_beneficiaries: NUMBER | Number of beneficiaries with race not elsewhere classified.
+percent_of_beneficiaries_with_alzheimers: NUMBER | Percent of beneficiaries meeting the CCW chronic condition algorithm for Alzheimer’s, related disorders, or dementia.
+percent_of_beneficiaries_with_asthma: NUMBER | Percent of beneficiaries meeting the CCW chronic condition algorithm for Asthma.
+percent_of_beneficiaries_with_atrial_fibrillation: NUMBER | Percent of beneficiaries meeting the CCW chronic condition algorithm for atrial fibrillation.
+percent_of_beneficiaries_with_cancer: NUMBER | Percent of beneficiaries meeting the CCW chronic condition algorithms for cancer. Includes breast cancer, colorectal cancer, lung cancer and prostate cancer.
+percent_of_beneficiaries_with_chf: NUMBER | Percent of beneficiaries meeting the CCW chronic condition algorithm for heart failure.
+percent_of_beneficiaries_with_chronic_kidney_disease: NUMBER | Percent of beneficiaries meeting the CCW chronic condition algorithm for chronic kidney disease.
+percent_of_beneficiaries_with_copd: NUMBER | Percent of beneficiaries meeting the CCW chronic condition algorithm for chronic obstructive pulmonary disease.
+percent_of_beneficiaries_with_depression: NUMBER | Percent of beneficiaries meeting the CCW chronic condition algorithm for depression.
+percent_of_beneficiaries_with_diabetes: NUMBER | Percent of beneficiaries meeting the CCW chronic condition algorithm for diabetes.
+percent_of_beneficiaries_with_hyperlipidemia: NUMBER | Percent of beneficiaries meeting the CCW chronic condition algorithm for hyperlipidemia.
+percent_of_beneficiaries_with_hypertension: NUMBER | Percent of beneficiaries meeting the CCW chronic condition algorithm for hypertension.
+percent_of_beneficiaries_with_ihd: NUMBER | Percent of beneficiaries meeting the CCW chronic condition algorithm for ischemic heart disease.
+percent_of_beneficiaries_with_osteoporosis: NUMBER | Percent of beneficiaries meeting the CCW chronic condition algorithm for osteoporosis.
+percent_of_beneficiaries_with_ra_oa: NUMBER | Percent of beneficiaries meeting the CCW chronic condition algorithm for rheumatoid arthritis/osteoarthritis.
+percent_of_beneficiaries_with_schizophrenia: NUMBER | Percent of beneficiaries meeting the CCW chronic condition algorithm for schizophrenia and other psychotic disorders.
+percent_of_beneficiaries_with_stroke: NUMBER | Percent of beneficiaries meeting the CCW chronic condition algorithm for stroke.
+white_beneficiaries: NUMBER | Number of non-Hispanic white beneficiaries.
+
+@C3
+drug_and_nutritional_products_medicare_allowed_amount: FLOAT | The Medicare allowed amount for drug and nutritional products/services ordered by the referring provider. This figure is the sum of the amount Medicare pays, the deductible and coinsurance amounts that the beneficiary is responsible for paying, and any amounts that a third party is responsible for paying.
+drug_and_nutritional_products_medicare_payment_amount: FLOAT | Amount that Medicare paid suppliers after deductible and coinsurance amounts have been deducted for drug and nutritional line item products/services ordered by the referring provider.
+drug_and_nutritional_products_submitted_charges: FLOAT | The total charges that suppliers submitted for drug and nutritional products/services ordered by the referring provider.
+drug_and_nutritional_suppression_indicator: TEXT | A 1-byte value which defines the suppression, if needed, of the utilization, charge and payment information associated with drug and nutritional HCPCS codes. A value of '*' means the suppressed information is based on a drug and nutritional-specific claim count of 1 through 10. A value of '#' means the drug and nutritional-specific information has been counter-suppressed. Counter-suppression is needed when the display of drug and nutritional-specific data could be used to recalculate suppressed values in non-drug and nutritional-specific columns.
+durable_medical_equipment_suppression_indicator: TEXT | A 1-byte value which defines the suppression, if needed, of the utilization, charge and payment information associated with durable medical equipment HCPCS codes. A value of '*' means the suppressed information is based on a dme-specific claim count of 1 through 10. A value of '#' means the dme-specific information has been counter-suppressed. Counter-suppression is needed when the display of dme-specific data could be used to recalculate suppressed values in non-dme-specific columns.
+number_of_drug_and_nutritional_products_beneficiaries: NUMBER | Total number of unique beneficiaries associated with drug and nutritional product claims submitted by suppliers and ordered by the referring provider. Beneficiary counts fewer than 11 have been suppressed to protect the privacy of Medicare beneficiaries.
+number_of_drug_and_nutritional_products_claims: NUMBER | Total number of drug and nutritional product claims submitted by suppliers, reflecting services ordered by the referring provider.
+number_of_drug_and_nutritional_products_hcpcs: NUMBER | Total number of unique drug and nutritional product hcpcs codes billed by suppliers and ordered by the referring provider.
+number_of_drug_and_nutritional_products_services: NUMBER | Total drug and nutritional products/services rendered by suppliers and ordered by the referring provider.
+number_of_drug_and_nutritional_products_suppliers: NUMBER | Number of suppliers rendering drug and nutritional products/services.
+number_of_supplier_beneficiaries: NUMBER | Total number of unique beneficiaries associated with DMEPOS claims submitted by suppliers and ordered by the referring provider. Beneficiary counts fewer than 11 have been suppressed to protect the privacy of Medicare beneficiaries.
+number_of_supplier_claims: NUMBER | Total number of DMEPOS claims submitted by suppliers, reflecting products/services ordered by the referring provider.
+number_of_supplier_hcpcs: NUMBER | Total number of unique DMEPOS product/service hcpcs codes billed by suppliers and ordered by the referring provider.
+number_of_supplier_services: NUMBER | Total DMEPOS products/services rendered by suppliers and ordered by the referring provider.
+number_of_suppliers: NUMBER | Number of suppliers rendering products/services billed through DMEPOS MACs.
+prosthetic_and_orthotic_suppression_indicator: TEXT | A 1-byte value which defines the suppression, if needed, of the utilization, charge and payment information associated with prosthetic and orthotic HCPCS codes. A value of '*' means the suppressed information is based on a prosthetic and orthotic-specific claim count of 1 through 10. A value of '#' means the prosthetic and orthotic-specific information has been counter-suppressed. Counter-suppression is needed when the display of prosthetic and orthotic-specific data could be used to recalculate suppressed values in non-prosthetic and orthotic-specific columns.
+referring_npi: TEXT | NPI for the referring provider on the DMEPOS claim.
+supplier_medicare_allowed_amount: FLOAT | The Medicare allowed amount for all DMEPOS products/services ordered by the referring provider. This figure is the sum of the amount Medicare pays, the deductible and coinsurance amounts that the beneficiary is responsible for paying, and any amounts that a third party is responsible for paying.
+supplier_medicare_payment_amount: FLOAT | Amount that Medicare paid after deductible and coinsurance amounts have been deducted for all supplier's DMEPOS line item products/services ordered by the referring provider.
+supplier_submitted_charges: FLOAT | The total charges that suppliers submitted for all DMEPOS products/services ordered by the referring provider.
+
+@C4
+average_covered_charges: FLOAT | The provider's average charge for services covered by Medicare for all discharges in the MS-DRG. These will vary from hospital to hospital because of differences in hospital charge structures
+average_medicare_payments: FLOAT | The average amount that Medicare pays to the provider for Medicare's share of the MS-DRG. Average Medicare payment amounts include the MS-DRG amount, teaching, disproportionate share, capital, and outlier payments for all cases. Medicare payments DO NOT include beneficiary co-payments and deductible amounts nor any additional payments from third parties for coordination of benefits
+drg_definition: TEXT | The code and description identifying the MS-DRG. MS-DRGs are a classification system that groups similar clinical conditions (diagnoses) and the procedures furnished by the hospital during the stay
+hospital_referral_region_description: TEXT | The Hospital Referral Region (HRR) in which the provider is physically located
+total_discharges: NUMBER | The number of discharges billed by the provider for inpatient hospital services
+
+@C5
+apc: TEXT | The code and description identifying the MS-DRG. MS-DRGs are a classification system that groups similar clinical conditions (diagnoses) and the procedures furnished by the hospital during the stay
+average_estimated_submitted_charges: FLOAT | The number of services billed by the provider for outpatient hospital services
+hospital_referral_region: TEXT | Code and description identifying the APC. APCs are a classification system where individual services (Healthcare Common Procedure Coding System [HCPCS] codes) are assigned based on similar clinical characteristics and similar costs
+outpatient_services: NUMBER | The number of discharges billed by the provider for inpatient hospital services
+
+@C6
+nppes_provider_city: TEXT | City of the Provider
+nppes_provider_first_name: TEXT | First Name of the Provider
+nppes_provider_last_org_name: TEXT | Last Name/Organization Name of the Provider
+nppes_provider_state: TEXT | State Code of the Provider
+
+@C7
+provider_city: TEXT | The city in which the provider is physically located
+provider_state: TEXT | The state in which the provider is physically located
+
+@C8
+average_total_payments: FLOAT | The average total payments to all providers for the MS-DRG including the MSDRG amount, teaching, disproportionate share, capital, and outlier payments for all cases. Also included 5 in average total payments are co-payment and deductible amounts that the patient is responsible for and any additional payments by third parties for coordination of benefits
+provider_street_address: TEXT | The street address in which the provider is physically located
+
+@C9
+city: TEXT | The city where the home health agency is located, as reported in the POS file.
+state: TEXT | The state where the home health agency is located, as reported in POS file. The fifty U.S. states and the District of Columbia are reported by the state postal abbreviation.
+
+@C10
+agency_name: TEXT | The home health agency name, as reported in the POS file.
+total_episodes_non_lupa: NUMBER | Total count of non-LUPA episodes provided by a specific home health agency or in a unique HHRG category in the calendar year.
+total_hha_charge_amount_non_lupa: NUMBER | Total charges that the home health agency submitted for non-LUPA episodes.
+total_hha_medicare_payment_amount_for_lupas: NUMBER | Total amount that Medicare paid for LUPA episodes provided by a specific HHA in the calendar year.
+total_hha_medicare_payment_amount_non_lupa: NUMBER | Total amount that Medicare paid for non-LUPA episodes. Home health services do not have any cost-sharing requirements and the Medicare payment amount will equal the allowed amount.
+total_hha_medicare_standard_payment_amount_non_lupa: NUMBER | Total amount that Medicare paid for non-LUPA episodes adjusted for geographic differences in payment rates.
+total_lupa_episodes: NUMBER | Total count of low utilization payment amount episodes provided by a specific HHA in the calendar year.
+
+@C11
+distinct_beneficiaries_per_provider: NUMBER | Number of distinct Medicare beneficiaries with at least one skilled nursing facility day per provider. A beneficiary will only be counted once per provider, but may be double-counted across providers.
+facility_name: TEXT | The skilled nursing facility name, as reported in the POS file.
+total_snf_charge_amount: NUMBER | Total of the charges that the skilled nursing facility submitted for all Medicare stays in the year.
+total_snf_medicare_allowed_amount: NUMBER | Total Medicare allowed amount for all Medicare stays in the year. This figure is the sum of the amount Medicare pays, the deductible and coinsurance amounts that the beneficiary is responsible for paying, and any amounts that a third party is responsible for paying.
+total_snf_medicare_payment_amount: NUMBER | Total amount that Medicare paid for all Medicare stays in the year after deductible and coinsurance amounts have been deducted.
+total_snf_medicare_standard_payment_amount: NUMBER | Total amount that Medicare paid for all Medicare stays in the year after deductible and coinsurance amounts have been deducted, adjusted for geographic differences in payment rates.
+total_stays: NUMBER | Total number of skilled nursing facility stays.
+
+@C12
+street_address: TEXT | The home health agency address, as reported in the POS file.
+zip_code: NUMBER | The home health agency’s zip code, as reported in the POS file.
+
+@C13
+visit_detail_id: NUMBER | NULL
+visit_occurrence_id: NUMBER | NULL
+
+@C14
+LONG_DESCRIPTION: TEXT | NULL
+SHORT_DESCRIPTION: TEXT | NULL
+
+@C15
+invalid_reason: TEXT | NULL
+valid_end_date: DATE | NULL
+valid_start_date: DATE | NULL
+
+@C16
+gender_concept_id: NUMBER | NULL
+gender_source_concept_id: NUMBER | NULL
+gender_source_value: TEXT | NULL
+year_of_birth: NUMBER | NULL
+
+@C17
+stdev_medicare_allowed_amt: FLOAT | NULL
+stdev_medicare_payment_amt: FLOAT | NULL
+stdev_submitted_chrg_amt: FLOAT | NULL
+
+[TABLES]
+## CMS_MEDICARE.REFERRING_DURABLE_MEDICAL_EQUIP_2013
+@use: [C3]
+referring_provider_street_1: TEXT | The first line of the referring provider’s street address, as reported in NPPES.
+prosthetic_and_orthotic_medicare_allowed_amount: FLOAT | The Medicare allowed amount for all prosthetic and orthotic products/services ordered by the referring provider. This figure is the sum of the amount Medicare pays, the deductible and coinsurance amounts that the beneficiary is responsible for paying, and any amounts that a third party is responsible for paying.
+number_of_durable_medical_equipment_claims: NUMBER | Total number of durable medical equipment claims submitted by suppliers, reflecting services ordered by the referring provider.
+number_of_durable_medical_equipment_suppliers: NUMBER | Number of suppliers rendering durable medical equipment products/services.
+referring_provider_credentials: TEXT | When the referring provider is registered in NPPES as an individual (entity type code=’I’), these are the referring provider’s credentials. When the referring provider is registered as an organization (entity type code = ‘O’), this will be blank.
+referring_provider_state: TEXT | The state where the referring provider is located, as reported in NPPES. The fifty U.S. states and the District of Columbia are reported by the state postal abbreviation. The following values are used for other areas: 'XX' = 'Unknown' 'AA' = 'Armed Forces Central/South America' 'AE' = 'Armed Forces Europe' 'AP' = 'Armed Forces Pacific' 'AS' = 'American Samoa' 'GU' = 'Guam' 'MP' = 'North Mariana Islands' 'PR' = 'Puerto Rico' 'VI' = 'Virgin Islands' 'ZZ' = 'Foreign Country'
+referring_provider_last_name_organization_name: TEXT | When the referring provider is registered in NPPES as an individual (entity type code=’I’), this is the referring provider’s last name. When the referring provider is registered as an organization (entity type code = ‘O’), this is the organization name.
+durable_medical_equipment_medicare_allowed_amount: FLOAT | The Medicare allowed amount for all durable medical equipment products/services ordered by the referring provider. This figure is the sum of the amount Medicare pays, the deductible and coinsurance amounts that the beneficiary is responsible for paying, and any amounts that a third party is responsible for paying.
+number_of_durable_medical_equipment_hcpcs: NUMBER | Total number of unique beneficiaries associated with durable medical equipment claims submitted by suppliers and ordered by the referring provider. Beneficiary counts fewer than 11 have been suppressed to protect the privacy of Medicare beneficiaries.
+number_of_prosthetic_and_orthotic_hcpcs: NUMBER | Total number of unique prosthetic and orthotic hcpcs codes billed by suppliers and ordered by the referring provider.
+prosthetic_and_orthotic_submitted_charges: FLOAT | The total charges that suppliers submitted for all prosthetic and orthotic products/services ordered by the referring provider.
+durable_medical_equipment_submitted_charges: FLOAT | The total charges that suppliers submitted for all durable medical equipment products/services ordered by the referring provider.
+number_of_prosthetic_and_orthotic_claims: NUMBER | Total number of prosthetic and orthotic claims submitted by suppliers, reflecting products/services ordered by the referring provider.
+number_of_prosthetic_and_orthotic_services: NUMBER | Total prosthetic and orthotic products/services rendered by suppliers and ordered by the referring provider.
+number_of_prosthetic_and_orthotic_beneficiaries: NUMBER | Total number of unique beneficiaries associated with prosthetic and orthotic claims submitted by suppliers and ordered by the referring provider. Beneficiary counts fewer than 11 have been suppressed to protect the privacy of Medicare beneficiaries.
+referring_provider_city: TEXT | The city where the referring provider is located, as reported in NPPES.
+referring_provider_zip: TEXT | The referring provider’s zip code, as reported in NPPES.
+referring_provider_gender: TEXT | When the referring provider is registered in NPPES as an individual (entity type code=’I’), this is the referring provider’s gender. When the referring provider is registered as an organization (entity type code = ‘O’), this will be blank.
+referring_provider_country: TEXT | The country where the referring provider is located, as reported in NPPES. The country code will be ‘US’ for any state or U.S. possession. For foreign countries (i.e., state values of ‘ZZ’), the provider country values include the following: ‘AE’ = ‘United Arab Emirates’; ‘IL’= Israel’; ‘AR’= ‘Argentina’; ‘IN’= India’; ‘AU’= ‘Australia’; ‘IS’= Iceland; ‘BR’= ‘Brazil’; ‘IT’= Italy’; ‘CA’= ‘Canada’; ‘JP’= Japan’; ‘CH’= Switzerland’; ‘KR’= ‘Korea’; ‘CN’= China’; ‘NL’= ‘Netherlands’; ‘CO’= Colombia’; ‘PK’= ‘Pakistan’; ‘DE’= ‘Germany’; ‘SA’= ‘Saudi Arabia’; ‘ES’= ‘Spain’; ‘SY’= ‘Syria’; ‘FR’= France’; ‘TR’= ‘Turkey’; ‘GB’= Great Britain’; ‘VE’= ‘Venezuela’; ‘HU’= Hungary’
+prosthetic_and_orthotic_medicare_payment_amount: FLOAT | Amount that Medicare paid after deductible and coinsurance amounts have been deducted for all supplier's prosthetic and orthotic line item products/services ordered by the referring provider.
+number_of_prosthetic_and_orthotic_suppliers: NUMBER | Number of suppliers rendering prosthetic and orthotic products/services.
+referring_provider_street_2: TEXT | The second line of the referring provider’s street address, as reported in NPPES.
+number_of_durable_medical_equipment_beneficiaries: NUMBER | Total number of unique durable medical equipment hcpcs codes billed by suppliers and ordered by the referring provider.
+referring_provider_first_name: TEXT | When the referring provider is registered in NPPES as an individual (entity type code=’I’), this is the referring provider’s first name. When the referring provider is registered as an organization (entity type code = ‘O’), this will be blank.
+durable_medical_equipment_medicare_payment_amount: FLOAT | Amount that Medicare paid after deductible and coinsurance amounts have been deducted for all supplier's durable medical equipment line item products/services ordered by the referring provider.
+number_of_durable_medical_equipment_services: NUMBER | Total durable medical equipment products/services rendered by suppliers and ordered by the referring provider.
+referring_provider_type: TEXT | Derived from the Medicare provider/supplier specialty code reported on all of the NPI's Part B non-institutional claims (DMEPOS & non-DMEPOS). For referring providers that have more than one Medicare specialty code reported on their claims, the Medicare specialty code associated with the largest number of services was used. Where a prescriber's NPI did not have associated Part B claims, the taxonomy code associated with the NPI in NPPES was mapped to a Medicare specialty code using an external crosswalk published here: http://www.cms.gov/Medicare/Provider-Enrollment-and-Certification/MedicareProviderSupEnroll/Taxonomy.html. For any taxonomy codes that could not be mapped to a Medicare specialty code, the taxonomy classification description was used.
+referring_provider_type_flag: TEXT | A flag variable that indicates the source of the Referring Provider Type: "S" = Medicare Specialty Code description "T" = Taxonomy Code Classification description
+referring_provider_entity_code: TEXT | Type of entity reported in NPPES. An entity code of ‘I’ identifies referring providers registered as individuals and an entity type code of ‘O’ identifies referring providers registered as organizations.
+referring_provider_middle_initial: TEXT | When the referring provider is registered in NPPES as an individual (entity type code=’I’), this is the referring provider’s middle initial. When the referring provider is registered as an organization (entity type code = ‘O’), this will be blank.
+
+## CMS_MEDICARE.INPATIENT_CHARGES_2013
+@use: [C4, C7, C8]
+provider_id: TEXT | The CMS Certification Number (CCN) of the provider billing for outpatient hospital services
+provider_zipcode: TEXT | The zip code in which the provider is physically located
+provider_name: TEXT | The name of the provider
+
+## CMS_MEDICARE.OUTPATIENT_CHARGES_2013
+@use: [C5, C7, C8]
+provider_zipcode: TEXT | The zip code in which the provider is physically located
+provider_id: TEXT | The CMS Certification Number (CCN) of the provider billing for outpatient hospital services
+provider_name: TEXT | The name of the provider
+
+## CMS_MEDICARE.PHYSICIANS_AND_OTHER_SUPPLIER_2013
+@use: [C1, C17, C6]
+npi: TEXT | National Provider Identifier
+provider_type: TEXT | Provider Type of the Provider
+
+## CMS_MEDICARE.INPATIENT_CHARGES_2012
+@use: [C4, C7, C8]
+provider_zipcode: TEXT | The zip code in which the provider is physically located
+provider_id: TEXT | The CMS Certification Number (CCN) of the provider billing for outpatient hospital services
+provider_name: TEXT | The name of the provider
+
+## CMS_MEDICARE.PHYSICIANS_AND_OTHER_SUPPLIER_2014
+@use: [C1, C6]
+provider_type: TEXT | Provider Type of the Provider
+average_medicare_standard_amt: FLOAT | Average Medicare Standardized Payment Amount
+npi: TEXT | National Provider Identifier
+
+## CMS_MEDICARE.HOME_HEALTH_AGENCIES_2014
+@use: [C10, C12, C2, C9]
+average_number_of_skilled_nursing_visits_per_episode_non_lupa: FLOAT | Average number of skilled nursing visits provided by the HHA during a non-LUPA episode.
+average_number_of_home_health_aide_visits_per_episode_non_lupa: FLOAT | Average number of home health aide visits provided by the HHA during a non-LUPA episode.
+outlier_payments_as_a_percent_of_medicare_payment_amount_non_lupa: FLOAT | The percent of total Medicare payments for non-LUPA episodes paid to an HHA for outlier episodes.
+average_number_of_pt_visits_per_episode_non_lupa: FLOAT | Average number of physical therapy visits provided by the HHA during a non-LUPA episode.
+average_number_of_total_visits_per_episode_non_lupa: FLOAT | Average number of total visits provided by the HHA during a non-LUPA episode.
+provider_id: TEXT | The 6-digit identification number for the home health agency on the claim.
+dua_beneficiaries: NUMBER | Number of Medicare beneficiaries qualified to receive Medicare and Medicaid benefits. Beneficiaries are classified as Medicare and Medicaid entitlement if in any month in the given calendar year they were receiving full or partial Medicaid benefits.
+average_number_of_st_visits_per_episode_non_lupa: FLOAT | Average number of speech therapy visits provided by the HHA during a non-LUPA episode.
+average_number_of_ot_visits_per_episode_non_lupa: FLOAT | Average number of occupational therapy visits provided by the HHA during a non-LUPA episode.
+average_number_of_medical_social_visits_per_episode_non_lupa: FLOAT | Average number of medical-social visits provided by the HHA during a non-LUPA episode.
+distinct_beneficiaries_non_lupa: NUMBER | Number of distinct Medicare beneficiaries receiving at least one non-LUPA home health episode in the calendar year. Beneficiaries may receive multiple home health episodes per year but are only counted once in this field.
+
+## CMS_MEDICARE.INPATIENT_CHARGES_2014
+@use: [C4, C7, C8]
+provider_name: TEXT | The name of the provider
+provider_id: TEXT | The CMS Certification Number (CCN) of the provider billing for outpatient hospital services
+provider_zipcode: TEXT | The zip code in which the provider is physically located
+
+## CMS_MEDICARE.HOSPITAL_GENERAL_INFO
+@use: [C9]
+facility_readmission_measures_count: TEXT | Number of Readmission measures used in the hospital’s overall star rating
+safety_measures_better_count: TEXT | Number of Safety of care measures that are better than the national value
+patient_experience_measures_count: TEXT | Count of measures included in the Patient experience measure group
+safety_measures_count: TEXT | Count of measures included in the Safety of Care measure group
+provider_id: TEXT | NULL
+meets_criteria_for_promoting_interoperability_of_ehrs: BOOLEAN | NULL
+facility_patient_experience_measures_count: TEXT | Number of Patient experience measures used in the hospital’s overall star rating
+county_name: TEXT | NULL
+readmission_measures_worse_count: TEXT | Number of Readmission measures that are worse than the national value
+patient_experience_measures_footnote: TEXT | Footnote about Patient experience measures
+readmission_measures_footnote: TEXT | Footnote about Readmission measures
+safety_measures_worse_count: TEXT | Number of Safety of care measures that are worse than the national value
+hospital_type: TEXT | NULL
+hospital_overall_rating_footnote: TEXT | NULL
+facility_timely_and_effective_care_measures_count: TEXT | Number of Timely and effective care measures used in the hospital’s overall star rating
+timely_and_effective_care_measures_count: TEXT | Count of measures included in the Timely and effective care measure group
+zip_code: TEXT | NULL
+mortaility_group_footnote: TEXT | Footnote about Mortality measures
+mortality_group_measure_count: TEXT | Count of measures included in the Mortality measure group
+address: TEXT | NULL
+hospital_name: TEXT | NULL
+mortality_measures_worse_count: TEXT | Number of Mortality measures that are worse than the national value
+safety_measures_no_different_count: TEXT | Number of Safety of care measures that are no different than the national value
+phone_number: TEXT | NULL
+emergency_services: BOOLEAN | NULL
+facility_care_safety_measures_count: TEXT | Number of Safety of care measures used in the hospital’s overall star rating
+readmission_measures_better_count: TEXT | Number of Readmission measures that are better than the national value
+readmission_measures_no_different_count: TEXT | Number of Readmission measures that are no different than the national value
+timely_and_effective_care_measures_footnote: TEXT | Footnote about Timely and effective care measures
+readmission_measures_count: TEXT | Count of measures included in the Readmission measure group
+safety_group_footnote: TEXT | Footnote about Safety of care measures
+mortality_measures_no_different_count: TEXT | Number of Mortality measures that are no different than the national value
+hospital_ownership: TEXT | NULL
+hospital_overall_rating: TEXT | NULL
+facility_mortaility_measures_count: TEXT | Number of Mortality measures used in the hospital’s overall star rating
+mortality_measures_better_count: TEXT | Number of Mortality measures that are better than the national value
+
+## CMS_MEDICARE.REFERRING_DURABLE_MEDICAL_EQUIP_2014
+@use: [C3, C7]
+po_medicare_allowed_amount: FLOAT | The Medicare allowed amount for all prosthetic and orthotic products/services ordered by the referring provider. This figure is the sum of the amount Medicare pays, the deductible and coinsurance amounts that the beneficiary is responsible for paying, and any amounts that a third party is responsible for paying. A blank indicates the value is suppressed.
+po_submitted_charges: FLOAT | The total charges that suppliers submitted for all prosthetic and orthotic products/services ordered by the referring provider. A blank indicates the value is suppressed.
+po_claims: NUMBER | Total number of prosthetic and orthotic claims submitted by suppliers, reflecting products/services ordered by the referring provider. A blank indicates the value is suppressed.
+dme_medicare_allowed_amount: FLOAT | The Medicare allowed amount for all durable medical equipment products/services ordered by the referring provider. This figure is the sum of the amount Medicare pays, the deductible and coinsurance amounts that the beneficiary is responsible for paying, and any amounts that a third party is responsible for paying. A blank indicates the value is suppressed.
+po_medicare_standard_payment_amount: FLOAT | Amount that Medicare paid after beneficiary deductible and coinsurance amounts have been deducted for all supplier’s prosthetic and orthotic line item products/services and after standardization of the Medicare payment has been applied. Standardization removes geographic differences in payment rates for individual product/services and makes Medicare payments across geographic areas comparable. A blank indicates the value is suppressed.
+provider_credentials: TEXT | When the referring provider is registered in NPPES as an individual (entity type code=’I’), these are the referring provider’s credentials. When the referring provider is registered as an organization (entity type code = ‘O’), this will be blank.
+provider_middle_initial: TEXT | When the referring provider is registered in NPPES as an individual (entity type code=’I’), this is the referring provider’s middle initial. When the referring provider is registered as an organization (entity type code = ‘O’), this will be blank.
+dme_medicare_standard_payment_amount: FLOAT | Amount that Medicare paid after beneficiary deductible and coinsurance amounts have been deducted for all supplier’s durable medical equipment line item products/services and after standardization of the Medicare payment has been applied. Standardization removes geographic differences in payment rates for individual product/services and makes Medicare payments across geographic areas comparable. A blank indicates the value is suppressed.
+provider_gender: TEXT | When the referring provider is registered in NPPES as an individual (entity type code=’I’), this is the referring provider’s gender. When the referring provider is registered as an organization (entity type code = ‘O’), this will be blank.
+dme_medicare_payment_amount: FLOAT | Amount that Medicare paid after deductible and coinsurance amounts have been deducted for all supplier's durable medical equipment line item products/services ordered by the referring provider. A blank indicates the value is suppressed.
+po_medicare_payment_amount: FLOAT | Amount that Medicare paid after deductible and coinsurance amounts have been deducted for all supplier prosthetic and orthotic line item products/services ordered by the referring provider. A blank indicates the value is suppressed.
+provider_entity_code: TEXT | Type of entity reported in NPPES. An entity code of ‘I’ identifies referring providers registered as individuals and an entity type code of ‘O’ identifies referring providers registered as organizations.
+provider_country: TEXT | The country where the referring provider is located, as reported in NPPES. The country code will be ‘US’ for any state or U.S. possession. For foreign countries (i.e., state values of ‘ZZ’), the provider country values include the following: AE=United Arab Emirates IT=Italy AG=Antigua JP=Japan AR=Argentina KR=Korea AU=Australia KW=Kuwait BO=Bolivia KY=Cayman Islands BR=Brazil LB=Lebanon CA=Canada MX=Mexico CH=Switzerland NL=Netherlands CN=China NO=Norway CO=Colombia NZ=New Zealand DE= Germany PA=Panama ES= Spain PK=Pakistan FR=France RW=Rwanda GB=Great Britain SA=Saudi Arabia HU= Hungary SY=Syria IL= Israel TH=Thailand IN=India TR=Turkey IS= Iceland VE=Venezuela
+provider_street_2: TEXT | The second line of the referring provider’s street address, as reported in NPPES.
+dme_claims: NUMBER | Total number of durable medical equipment claims submitted by suppliers, reflecting services ordered by the referring provider. A blank indicates the value is suppressed.
+dme_hcpcs: NUMBER | Total number of unique durable medical equipment HCPCS codes billed by suppliers and ordered by the referring provider. A blank indicates the value is suppressed.
+dme_beneficiaries: NUMBER | Total number of unique beneficiaries associated with durable medical equipment claims submitted by suppliers and ordered by the referring provider. Beneficiary counts fewer than 11 have been suppressed to protect the privacy of Medicare beneficiaries. A blank indicates the value is suppressed.
+po_beneficiaries: NUMBER | Total number of unique beneficiaries associated with prosthetic and orthotic claims submitted by suppliers and ordered by the referring provider. Beneficiary counts fewer than 11 have been suppressed to protect the privacy of Medicare beneficiaries. A blank indicates the value is suppressed.
+dme_suppliers: NUMBER | Number of suppliers rendering durable medical equipment products/services. A blank indicates the value is suppressed.
+po_hcpcs: NUMBER | Total number of unique prosthetic and orthotic HCPCS codes billed by suppliers and ordered by the referring provider. A blank indicates the value is suppressed.
+provider_first_name: TEXT | When the referring provider is registered in NPPES as an individual (entity type code=’I’), this is the referring provider’s first name. When the referring provider is registered as an organization (entity type code = ‘O’), this will be blank.
+po_services: NUMBER | Total prosthetic and orthotic products/services rendered by suppliers and ordered by the referring provider. A blank indicates the value is suppressed..
+provider_zip: TEXT | The referring provider’s zip code, as reported in NPPES.
+provider_type: TEXT | Derived from the Medicare provider/supplier specialty code reported on all of the NPI's Part B non-institutional claims (DMEPOS and non-DMEPOS). For referring providers that have more than one Medicare specialty code reported on their claims, the Medicare specialty code associated with the largest number of services was used.
+provider_street_1: TEXT | The first line of the referring provider’s street address, as reported in NPPES.
+dme_services: NUMBER | Total durable medical equipment products/services rendered by suppliers and ordered by the referring provider. A blank indicates the value is suppressed.
+provider_last_name: TEXT | When the referring provider is registered in NPPES as an individual (entity type code=’I’), this is the referring provider’s last name. When the referring provider is registered as an organization (entity type code = ‘O’), this is the organization name.
+drug_and_nutritional_products_medicare_standard_payment_amount: FLOAT | Amount that Medicare paid after beneficiary deductible and coinsurance amounts have been deducted for all supplier’s drug and nutritional line item products/services and after standardization of the Medicare payment has been applied.
+supplier_medicare_standard_payment_amount: FLOAT | Average amount that Medicare paid after beneficiary deductible and coinsurance amounts have been deducted for the line item DMEPOS product/service and after standardization of the Medicare payment has been applied. Standardization removes geographic differences in payment rates for individual product/services and makes Medicare payments across geographic areas comparable.
+po_suppliers: NUMBER | Number of suppliers rendering prosthetic and orthotic products/services. A blank indicates the value is suppressed.
+provider_type_flag: TEXT | A flag variable that indicates the source of the Referring Provider Type: "S" = Medicare Specialty Code description "T" = Taxonomy Code Classification description
+dme_submitted_charges: FLOAT | The total charges that suppliers submitted for all durable medical equipment products/services ordered by the referring provider. A blank indicates the value is suppressed.
+
+## CMS_MEDICARE.NURSING_FACILITIES_2014
+@use: [C11, C12, C2, C9]
+average_length_of_stays_days: FLOAT | Average lenth of stay, in days, for all Medicare beneficiaries with at least one stay in the skilled nursing facility in the year.
+dual_beneficiaries: NUMBER | Number of Medicare beneficiaries qualified to receive Medicare and Medicaid benefits. Beneficiaries are classified as Medicare and Medicaid entitlement if in any month in the given calendar year they were receiving full or partial Medicaid benefits.
+provider_id: TEXT | The 6-digit identification number for the skilled nursing facility on the claim.
+
+## CMS_MEDICARE.PHYSICIANS_AND_OTHER_SUPPLIER_2012
+@use: [C1, C17, C6]
+provider_type: TEXT | Provider Type of the Provider
+npi: TEXT | National Provider Identifier
+
+## CMS_MEDICARE.PHYSICIANS_AND_OTHER_SUPPLIER_2015
+@use: [C1, C6]
+average_medicare_standard_amt: FLOAT | Average Medicare Standardized Payment Amount
+npi: TEXT | National Provider Identifier
+provider_type: TEXT | Provider Type of the Provider
+
+## CMS_MEDICARE.OUTPATIENT_CHARGES_2011
+@use: [C5, C7, C8]
+provider_id: TEXT | The CMS Certification Number (CCN) of the provider billing for outpatient hospital services
+provider_name: TEXT | The name of the provider
+provider_zipcode: TEXT | The zip code in which the provider is physically located
+
+## CMS_MEDICARE.OUTPATIENT_CHARGES_2014
+@use: [C5, C7, C8]
+provider_zipcode: TEXT | The zip code in which the provider is physically located
+provider_id: TEXT | The CMS Certification Number (CCN) of the provider billing for outpatient hospital services
+provider_name: TEXT | The name of the provider
+
+## CMS_MEDICARE.OUTPATIENT_CHARGES_2012
+@use: [C5, C7, C8]
+provider_zipcode: TEXT | The zip code in which the provider is physically located
+provider_name: TEXT | The name of the provider
+provider_id: TEXT | The CMS Certification Number (CCN) of the provider billing for outpatient hospital services
+
+## CMS_MEDICARE.INPATIENT_CHARGES_2011
+@use: [C4, C7, C8]
+provider_id: TEXT | The CMS Certification Number (CCN) of the provider billing for outpatient hospital services
+provider_name: TEXT | The name of the provider
+provider_zipcode: TEXT | The zip code in which the provider is physically located
+
+## CMS_MEDICARE.NURSING_FACILITIES_2013
+@use: [C11, C12, C9]
+average_length_of_stay_days: NUMBER | Average lenth of stay, in days, for all Medicare beneficiaries with at least one stay in the skilled nursing facility in the year.
+provider_id: TEXT | The 6-digit identification number for the skilled nursing facility on the claim.
+
+## CMS_MEDICARE.HOSPICE_PROVIDERS_2014
+@use: [C12, C9]
+social_service_visit_hours_per_day: FLOAT | Average number of hours per day of social services hospice care provided. Social service visits identified using Revenue Codes 0560, 0561, 0562 and 0569.
+hrr: TEXT | The Hospital Referral Region the hospice provider is located, based on provider ZIP code.
+medicare_advantage_hospice_beneficiaries: NUMBER | Number of distinct Medicare beneficiaries enrolled in Medicare Advantage for at least one month and receiving at least one day of hospice care in the calendar year.
+male_hospice_beneficiaries: NUMBER | Number of distinct male Medicare beneficiaries receiving at least one day of hospice care in the calendar year.
+hospice_beneficiaries_with_more_than_sixty_hospice_care_days: NUMBER | Number of distinct Medicare beneficiaries with more than 60 hospice care days in CY2014.
+percent_routine_home_care_days: NUMBER | Percent of total number of hospice days that were routine home care (RHC) days. RHC days identified using Revenue Code 0651.
+medicaid_eligible_hospice_beneficiaries: NUMBER | Number of distinct Medicare beneficiaries eligible for Medicaid for at least one month and receiving at least one day of hospice care in the calendar year.
+site_of_service_long_term_care_or_non_skilled_nursing_facility_hospice_beneficiaries: NUMBER | Number of distinct Medicare beneficiaries receiving the majority of their hospice care days in a long term care or non-skilled nursing facility. Site of service was determined using HCPCS codes Q5001-Q5010, Q5003 indicates care provided in a long term care or non-skilled nursing facility.
+hospice_beneficiaries_with_a_primary_diagnosis_of_circulatory_heart_disease: NUMBER | Number of distinct Medicare beneficiaries receiving hospice care for a primary diagnosis of stroke. Clinical Classifications Software single level diagnosis categories 109-113 were used to define stroke diagnoses. If a hospice beneficiaryhad more than one primary diagnosis the most frequent diagnosis in terms of hospice care days was used.
+site_of_service_skilled_nursing_facility_hospice_beneficiaries: NUMBER | Number of distinct Medicare beneficiaries receiving the majority of their hospice care days in a skilled nursing facility. Site of service was determined using HCPCS codes Q5001-Q5010, Q5004 indicates care provided in a skilled nursing facility.
+hospice_beneficiaries_with_a_primary_diagnosis_of_stroke: NUMBER | Number of distinct Medicare beneficiaries receiving hospice care for a primary diagnosis of circulatory/heart disease. Clinical Classifications Software single level diagnosis categories 96-108 and 114-121 were used to define circulatory/heart diagnoses. If a hospice beneficiary had more than one primary diagnosis the most frequent diagnosis in terms of hospice care days was used.
+white_hospice_beneficiaries: NUMBER | Number of distinct white Medicare beneficiaries receiving at least one day of hospice care in the calendar year.
+site_of_service_assisted_living_facility_hospice_beneficiaries: NUMBER | Number of distinct Medicare beneficiaries receiving the majority of their hospice care days in an assisted living facility. Site of service was determined using HCPCS codes Q5001-Q5010, Q5002 indicates care provided in an assisted living facility.
+hospice_beneficiaries_with_a_primary_diagnosis_of_cancer: NUMBER | Number of distinct Medicare beneficiaries receiving hospice care for a primary diagnosis of cancer. Clinical Classifications Software single level diagnosis categories 11-17 were used to define cancer diagnoses. If a hospice beneficiary had more than one primary diagnosis the most frequent diagnosis in terms of hospice care days was used.
+black_hospice_beneficiaries: NUMBER | Number of distinct black Medicare beneficiaries receiving at least one day of hospice care in the calendar year.
+hospice_beneficiaries_with_more_than_one_hundred_eighty_hospice_care_days: NUMBER | Number of distinct Medicare beneficiaries with more than 180 hospice care days in CY2014.
+total_charge_amount: NUMBER | Total charges that hospice providers submitted for hospice care.
+hospice_beneficiaries_with_a_primary_diagnosis_of_respiratory_disease: NUMBER | Number of distinct Medicare beneficiaries receiving hospice care for a primary diagnosis of respiratory disease. Clinical Classifications Software single level diagnosis categories 127-134 were used to define respiratory diagnoses. If a hospice beneficiary had more than one primary diagnosis the most frequent diagnosis in terms of hospice care days was used.
+skilled_nursing_visit_hours_per_day_during_week_prior_to_death: FLOAT | Average number of hours per day of skilled nursing hospice care provided during the seven days prior to death. Skilled nursing visits identified using Revenue Codes 0550, 0551, 0552 and 0559.
+skilled_nursing_visit_hours_per_day: FLOAT | Average number of hours per day of skilled nursing hospice care provided. Skilled nursing visits identified using Revenue Codes 0550, 0551, 0552 and 0559.
+site_of_service_inpatient_hospital_hospice_beneficiaries: NUMBER | Number of distinct Medicare beneficiaries receiving the majority of their hospice care days in an inpatient hospital. Site of service was determined using HCPCS codes Q5001-Q5010, Q5005 indicates care provided in an inpatient hospital.
+average_age: FLOAT | Average age of Medicare beneficiaries using hospice care in CY2014.
+total_medicare_standard_payment_amount: NUMBER | Total amount that Medicare paid for hospice care adjusted for geographic differences in payment rates.
+site_of_service_other_facility_hospice_beneficiaries: NUMBER | Number of distinct Medicare beneficiaries receiving the majority of their hospice care days in a long term care hospital, psychiatric facility, home care in a hospice facility or unknown facility. Site of service was determined using HCPCS codes Q5001-Q5010, Q5007-Q5010 indicate care provided in other facilities.
+name: TEXT | The hospice provider name, as reported in the POS file.
+total_medicare_payment_amount: NUMBER | Total amount that Medicare paid for hospice care. Hospice services do not have any cost-sharing requirements and the Medicare payment amount will equal the allowed amount.
+hispanic_hospice_beneficiaries: NUMBER | Number of distinct Hispanic Medicare beneficiaries receiving at least one day of hospice care in the calendar year.
+other_unknown_race_hospice_beneficiaries: NUMBER | Number of distinct Medicare beneficiaries of other/unknown race receiving at least one day of hospice care in the calendar year.
+asian_hospice_beneficiaries: NUMBER | Number of distinct Asian Medicare beneficiaries receiving at least one day of hospice care in the calendar year.
+home_health_visit_hours_per_day: FLOAT | Average number of hours per day of home health hospice care provided. Home health visits identified using Revenue Codes 0570, 0571, 0572 and 0579.
+provider_id: TEXT | The 6-digit identification number for the hospice provider on the claim.
+hospice_beneficiaries_with_other_primary_diagnoses: NUMBER | Number of distinct Medicare beneficiaries receiving hospice care for a primary diagnosis other than cancer, dementia, circulatory/heart, stroke, or respiratory. If a hospice beneficiary had more than one primary diagnosis the most frequent diagnosis in terms of hospice care days was used.
+total_live_discharges: NUMBER | Number of distinct Medicare beneficiaries with live discharges from hospice care. A hospice beneficiary was considered to have a live discharge if hospice beneficary did not die in hospice care and was not receiving hospice care in CY2015. Includes live discharges for any reason including revocation.
+site_of_service_home_hospice_beneficiaries: NUMBER | Number of distinct Medicare beneficiaries receiving the majority of their hospice care days at home. Site of service was determined using HCPCS codes Q5001-Q5010, Q5001 indicates care provided in hospice beneficiary's private residence (home).
+social_service_visit_hours_per_day_during_week_prior_to_death: FLOAT | Average number of hours per day of social services hospice care provided during the seven days prior to death. Social service visits identified using Revenue Codes 0560, 0561, 0562 and 0569.
+female_hospice_beneficiaries: NUMBER | Number of distinct female Medicare beneficiaries receiving at least one day of hospice care in the calendar year.
+hospice_beneficiaries: NUMBER | Number of distinct Medicare beneficiaries receiving at least one day of hospice care in the calendar year.
+physician_services: NUMBER | Total number of hospice care physician services provided. Physician services identified using Revenue Code 0657.
+total_days: NUMBER | Total count of hospice care days provided in the calendar year. Includes first and last day of care.
+hospice_beneficiaries_with_seven_or_fewer_hospice_care_days: NUMBER | Number of distinct Medicare beneficiaries with 7 or fewer hospice care days in CY2014. Excludes hospice beneficaries whose hospice care continued from a previous calendar year or into the next calendar year.
+site_of_service_inpatient_hospice_hospice_beneficiaries: NUMBER | Number of distinct Medicare beneficiaries receiving the majority of their hospice care days in an inpatient hospice facility. Site of service was determined using HCPCS codes Q5001-Q5010, Q5006 indicates care provided in an inpatient hospice facility.
+hospice_beneficiaries_with_a_primary_diagnosis_of_dementia: NUMBER | Number of distinct Medicare beneficiaries receiving hospice care for a primary diagnosis of dementia. Clinical Classifications Software single level diagnosis category 653 were used to define dementia diagnoses. If a hospice beneficiary had more than one primary diagnosis the most frequent diagnosis in terms of hospice care days was used.
+home_health_visit_hours_per_day_during_week_prior_to_death: FLOAT | Average number of hours per day of home health hospice care provided during the seven days prior to death. Home health visits identified using Revenue Codes 0570, 0571, 0572 and 0579.
+
+## CMS_MEDICARE.INPATIENT_CHARGES_2015
+@use: [C4, C7, C8]
+provider_name: TEXT | The name of the provider
+provider_id: TEXT | The CMS Certification Number (CCN) of the provider billing for outpatient hospital services
+provider_zipcode: TEXT | The zip code in which the provider is physically located
+
+## CMS_MEDICARE.OUTPATIENT_CHARGES_2015
+@use: [C5, C7, C8]
+provider_name: TEXT | The name of the provider
+provider_zipcode: NUMBER | The zip code in which the provider is physically located
+provider_id: TEXT | The CMS Certification Number (CCN) of the provider billing for outpatient hospital services
+
+## CMS_MEDICARE.HOME_HEALTH_AGENCIES_2013
+@use: [C10, C12, C9]
+distinct_users_non_lupa: NUMBER | Number of distinct Medicare beneficiaries receiving at least one non-LUPA home health episode in the calendar year. Beneficiaries may receive multiple home health episodes per year but are only counted once in this field.
+provider_id: TEXT | The 6-digit identification number for the home health agency on the claim.
+outlier_payments_as_a_percent_of_medicare_payment_amount_non_lupa: NUMBER | The percent of total Medicare payments for non-LUPA episodes paid to an HHA for outlier episodes.
+
+## CMS_MEDICARE.PART_D_PRESCRIBER_2014
+@use: [C6]
+bene_count_ge65: NUMBER | Number of Medicare Beneficiaries Age 65+
+description_flag: TEXT | Source of Provider Specialty
+total_claim_count: NUMBER | Number of Medicare Part D Claims, Including Refills
+npi: TEXT | National Provider Identifier
+total_day_supply: NUMBER | Number of Day's Supply for All Claims
+total_30_day_fill_count_ge65: FLOAT | The number of Medicare Part D standardized 30-day fills for beneficiaries age 65 and older. The standardized 30-day fill is derived from the number of days supplied on each Part D claim divided by 30. Standardized 30-day fill values less than 1.0 were bottom-coded with a value of 1.0 and standardized 30-day fill values greater than 12.0 were top-coded with a value of 12.0.
+generic_name: TEXT | Generic name of the drug
+specialty_description: TEXT | Provider Specialty Type
+total_30_day_fill_count: FLOAT | The aggregate number of Medicare Part D standardized 30-day fills. The standardized 30-day fill is derived from the number of days supplied on each Part D claim divided by 30. Standardized 30-day fill values less than 1.0 were bottom-coded with a value of 1.0 and standardized 30- day fill values greater than 12.0 were top-coded with a value of 12.0.
+ge65_suppress_flag: TEXT | Reason for Suppression of Total_Claim_Count_Ge65, Total_Drug_Cost_Ge65, and Total_Day_Supply_Ge65
+total_drug_cost_ge65: FLOAT | Aggregate Cost Paid for All Claims for Beneficiaries Age 65+
+bene_count: NUMBER | Number of Medicare Beneficiaries
+bene_count_ge65_suppress_flag: TEXT | Reason for Suppression of Bene_Count_ge65
+total_drug_cost: FLOAT | Aggregate Cost Paid for All Claims
+total_day_supply_ge65: NUMBER | Number of Day's Supply for All Claims for Beneficiaries Age 65+
+total_claim_count_ge65: NUMBER | Number of Claims, Including Refills, for Beneficiaries Age 65+
+drug_name: TEXT | Name of the drug
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.CONDITION_OCCURRENCE
+@use: [C13]
+condition_end_date: DATE | NULL
+provider_id: NUMBER | NULL
+condition_concept_id: NUMBER | NULL
+condition_status_concept_id: NUMBER | NULL
+person_id: NUMBER | NULL
+condition_end_datetime: NUMBER | NULL
+condition_start_date: DATE | NULL
+condition_type_concept_id: NUMBER | NULL
+condition_source_value: TEXT | NULL
+condition_start_datetime: NUMBER | NULL
+condition_status_source_value: TEXT | NULL
+condition_source_concept_id: NUMBER | NULL
+condition_occurrence_id: NUMBER | NULL
+stop_reason: TEXT | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.PAYER_PLAN_PERIOD
+family_source_value: TEXT | NULL
+plan_source_concept_id: NUMBER | NULL
+plan_source_value: TEXT | NULL
+payer_plan_period_start_date: DATE | NULL
+stop_reason_concept_id: NUMBER | NULL
+payer_source_value: TEXT | NULL
+payer_source_concept_id: NUMBER | NULL
+sponsor_source_value: TEXT | NULL
+stop_reason_source_value: TEXT | NULL
+payer_concept_id: NUMBER | NULL
+payer_plan_period_end_date: DATE | NULL
+payer_plan_period_id: NUMBER | NULL
+sponsor_concept_id: NUMBER | NULL
+plan_concept_id: NUMBER | NULL
+person_id: NUMBER | NULL
+stop_reason_source_concept_id: NUMBER | NULL
+sponsor_source_concept_id: NUMBER | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.DOSE_ERA
+unit_concept_id: NUMBER | NULL
+dose_era_end_date: DATE | NULL
+drug_concept_id: NUMBER | NULL
+person_id: NUMBER | NULL
+dose_value: FLOAT | NULL
+dose_era_start_date: DATE | NULL
+dose_era_id: NUMBER | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.DRUG_ERA
+gap_days: NUMBER | NULL
+person_id: NUMBER | NULL
+drug_era_start_date: DATE | NULL
+drug_concept_id: NUMBER | NULL
+drug_era_end_date: DATE | NULL
+drug_era_id: NUMBER | NULL
+drug_exposure_count: NUMBER | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.PROVIDER
+@use: [C16]
+specialty_source_concept_id: NUMBER | NULL
+npi: TEXT | NULL
+specialty_concept_id: NUMBER | NULL
+provider_source_value: TEXT | NULL
+dea: TEXT | NULL
+provider_name: TEXT | NULL
+specialty_source_value: TEXT | NULL
+care_site_id: NUMBER | NULL
+provider_id: NUMBER | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.VOCABULARY
+vocabulary_reference: TEXT | NULL
+vocabulary_concept_id: NUMBER | NULL
+vocabulary_name: TEXT | NULL
+vocabulary_id: TEXT | NULL
+vocabulary_version: TEXT | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.CONDITION_ERA
+condition_concept_id: NUMBER | NULL
+condition_era_id: NUMBER | NULL
+condition_occurrence_count: NUMBER | NULL
+condition_era_end_date: DATE | NULL
+condition_era_start_date: DATE | NULL
+person_id: NUMBER | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.CONCEPT_CLASS
+concept_class_concept_id: NUMBER | NULL
+concept_class_name: TEXT | NULL
+concept_class_id: TEXT | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.DRUG_STRENGTH
+@use: [C15]
+ingredient_concept_id: NUMBER | NULL
+amount_unit_concept_id: NUMBER | NULL
+denominator_unit_concept_id: NUMBER | NULL
+amount_value: FLOAT | NULL
+drug_concept_id: NUMBER | NULL
+numerator_value: FLOAT | NULL
+numerator_unit_concept_id: NUMBER | NULL
+box_size: NUMBER | NULL
+denominator_value: FLOAT | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.DOMAIN
+domain_concept_id: NUMBER | NULL
+domain_id: TEXT | NULL
+domain_name: TEXT | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.LOCATION
+@use: [C9]
+county: TEXT | NULL
+location_id: NUMBER | NULL
+zip: TEXT | NULL
+address_2: TEXT | NULL
+address_1: TEXT | NULL
+location_source_value: TEXT | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.PERSON
+@use: [C16]
+ethnicity_concept_id: NUMBER | NULL
+birth_datetime: NUMBER | NULL
+ethnicity_source_concept_id: NUMBER | NULL
+day_of_birth: NUMBER | NULL
+location_id: NUMBER | NULL
+month_of_birth: NUMBER | NULL
+race_source_value: TEXT | NULL
+person_source_value: TEXT | NULL
+ethnicity_source_value: TEXT | NULL
+person_id: NUMBER | NULL
+race_concept_id: NUMBER | NULL
+provider_id: NUMBER | NULL
+care_site_id: NUMBER | NULL
+race_source_concept_id: NUMBER | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.CONCEPT_RELATIONSHIP
+@use: [C15]
+relationship_id: TEXT | NULL
+concept_id_1: NUMBER | NULL
+concept_id_2: NUMBER | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.CARE_SITE
+care_site_source_value: TEXT | NULL
+place_of_service_concept_id: NUMBER | NULL
+place_of_service_source_value: TEXT | NULL
+care_site_name: TEXT | NULL
+location_id: NUMBER | NULL
+care_site_id: NUMBER | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.OBSERVATION_PERIOD
+period_type_concept_id: NUMBER | NULL
+observation_period_end_date: DATE | NULL
+observation_period_start_date: DATE | NULL
+person_id: NUMBER | NULL
+observation_period_id: NUMBER | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.DRUG_EXPOSURE
+@use: [C13]
+stop_reason: TEXT | NULL
+drug_exposure_start_datetime: NUMBER | NULL
+drug_concept_id: NUMBER | NULL
+drug_source_value: TEXT | NULL
+drug_type_concept_id: NUMBER | NULL
+drug_exposure_end_date: DATE | NULL
+drug_exposure_id: NUMBER | NULL
+drug_source_concept_id: NUMBER | NULL
+sig: TEXT | NULL
+quantity: FLOAT | NULL
+person_id: NUMBER | NULL
+refills: NUMBER | NULL
+lot_number: TEXT | NULL
+provider_id: NUMBER | NULL
+drug_exposure_start_date: DATE | NULL
+drug_exposure_end_datetime: NUMBER | NULL
+dose_unit_source_value: TEXT | NULL
+verbatim_end_date: DATE | NULL
+days_supply: NUMBER | NULL
+route_concept_id: NUMBER | NULL
+route_source_value: TEXT | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.CONCEPT_ANCESTOR
+ancestor_concept_id: NUMBER | NULL
+descendant_concept_id: NUMBER | NULL
+max_levels_of_separation: NUMBER | NULL
+min_levels_of_separation: NUMBER | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.DEVICE_EXPOSURE
+@use: [C13]
+device_exposure_end_date: DATE | NULL
+device_exposure_end_datetime: NUMBER | NULL
+device_source_value: TEXT | NULL
+device_concept_id: NUMBER | NULL
+quantity: NUMBER | NULL
+unique_device_id: TEXT | NULL
+person_id: NUMBER | NULL
+device_type_concept_id: NUMBER | NULL
+device_exposure_start_datetime: NUMBER | NULL
+provider_id: NUMBER | NULL
+device_exposure_start_date: DATE | NULL
+device_source_concept_id: NUMBER | NULL
+device_exposure_id: NUMBER | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.DEATH
+cause_source_value: TEXT | NULL
+person_id: NUMBER | NULL
+cause_concept_id: NUMBER | NULL
+cause_source_concept_id: NUMBER | NULL
+death_date: DATE | NULL
+death_datetime: NUMBER | NULL
+death_type_concept_id: NUMBER | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.COST
+total_charge: FLOAT | NULL
+paid_by_patient: FLOAT | NULL
+payer_plan_period_id: NUMBER | NULL
+cost_type_concept_id: NUMBER | NULL
+currency_concept_id: NUMBER | NULL
+revenue_code_source_value: TEXT | NULL
+cost_event_id: NUMBER | NULL
+paid_patient_coinsurance: FLOAT | NULL
+drg_concept_id: NUMBER | NULL
+paid_by_payer: FLOAT | NULL
+total_cost: FLOAT | NULL
+revenue_code_concept_id: NUMBER | NULL
+amount_allowed: FLOAT | NULL
+paid_patient_deductible: FLOAT | NULL
+paid_patient_copay: FLOAT | NULL
+drg_source_value: TEXT | NULL
+paid_by_primary: FLOAT | NULL
+paid_dispensing_fee: FLOAT | NULL
+paid_ingredient_cost: FLOAT | NULL
+total_paid: FLOAT | NULL
+cost_domain_id: TEXT | NULL
+cost_id: NUMBER | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.PROCEDURE_OCCURRENCE
+@use: [C13]
+procedure_datetime: NUMBER | NULL
+modifier_concept_id: NUMBER | NULL
+procedure_occurrence_id: NUMBER | NULL
+provider_id: NUMBER | NULL
+modifier_source_value: TEXT | NULL
+procedure_source_value: TEXT | NULL
+procedure_source_concept_id: NUMBER | NULL
+procedure_type_concept_id: NUMBER | NULL
+person_id: NUMBER | NULL
+procedure_concept_id: NUMBER | NULL
+procedure_dat: DATE | NULL
+quantity: NUMBER | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.CONCEPT
+@use: [C15]
+standard_concept: TEXT | NULL
+concept_name: TEXT | NULL
+concept_code: TEXT | NULL
+concept_id: NUMBER | NULL
+domain_id: TEXT | NULL
+vocabulary_id: TEXT | NULL
+concept_class_id: TEXT | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.RELATIONSHIP
+relationship_concept_id: NUMBER | NULL
+relationship_id: TEXT | NULL
+is_hierarchical: TEXT | NULL
+relationship_name: TEXT | NULL
+reverse_relationship_id: TEXT | NULL
+defines_ancestry: TEXT | NULL
+
+## CMS_SYNTHETIC_PATIENT_DATA_OMOP.OBSERVATION
+@use: [C13]
+observation_date: DATE | NULL
+value_as_concept_id: NUMBER | NULL
+observation_source_concept_id: NUMBER | NULL
+unit_concept_id: NUMBER | NULL
+observation_source_value: TEXT | NULL
+unit_source_value: TEXT | NULL
+value_as_number: FLOAT | NULL
+qualifier_concept_id: NUMBER | NULL
+person_id: NUMBER | NULL
+value_as_string: TEXT | NULL
+observation_concept_id: NUMBER | NULL
+observation_id: NUMBER | NULL
+observation_datetime: NUMBER | NULL
+observation_type_concept_id: NUMBER | NULL
+qualifier_source_value: TEXT | NULL
+provider_id: NUMBER | NULL
+
+## CMS_CODES.ICD9_DIAGNOSES
+@use: [C14]
+DIAGNOSIS_CODE: TEXT | NULL
+
+## CMS_CODES.ICD10_DIAGNOSES_2019
+@use: [C14]
+order_number: TEXT | Unique header code that makes it easier for users to communicate a range of codes
+cm_code: TEXT | Diagnosis code
+is_header_code: BOOLEAN | TRUE -  The code is a “header” code and not valid for HIPAA-covered transactions. FALSE - The code is valid for submission for HIPAA-covered transactions.
+
+## CMS_CODES.HCPCS
+@use: [C14]
+MCM3: TEXT | NULL
+TERM_DT: TEXT | NULL
+LABCERT2: TEXT | NULL
+XREF2: TEXT | NULL
+CIM1: TEXT | NULL
+OPPS_DT: TEXT | NULL
+RECID: NUMBER | NULL
+LABCERT4: TEXT | NULL
+ASC_DT: TEXT | NULL
+PRICE4: TEXT | NULL
+HCPC: TEXT | NULL
+ACTION_CD: BOOLEAN | NULL
+ACT_EFF_DT: TEXT | NULL
+TOS1: TEXT | NULL
+COV: TEXT | NULL
+ANEST_BU: TEXT | NULL
+TOS3: TEXT | NULL
+XREF5: TEXT | NULL
+PROCNOTE: TEXT | NULL
+TOS4: TEXT | NULL
+LABCERT3: TEXT | NULL
+LABCERT5: TEXT | NULL
+MULT_PI: TEXT | NULL
+BETOS: TEXT | NULL
+LABCERT6: TEXT | NULL
+CIM2: TEXT | NULL
+OPPS_PI: TEXT | NULL
+MCM1: FLOAT | NULL
+LABCERT8: TEXT | NULL
+TOS2: TEXT | NULL
+XREF3: TEXT | NULL
+PRICE3: TEXT | NULL
+ASC_GRP: TEXT | NULL
+CIM3: TEXT | NULL
+XREF4: TEXT | NULL
+OPPS: TEXT | NULL
+TOS5: TEXT | NULL
+STATUTE: TEXT | NULL
+LABCERT7: TEXT | NULL
+ADD_DT: TEXT | NULL
+SEQNUM: TEXT | NULL
+XREF1: TEXT | NULL
+PRICE2: TEXT | NULL
+LABCERT1: TEXT | NULL
+PRICE1: TEXT | NULL
+MCM2: NUMBER | NULL
+
+## CMS_CODES.ICD9_PROCEDURES
+@use: [C14]
+PROCEDURE_CODE: TEXT | NULL
+
+## CMS_CODES.ICD10_PROCEDURES_2019
+@use: [C14]
+is_header_code: BOOLEAN | TRUE - The code is a “header” code and not valid for HIPAA-covered transactions. FALSE - The code is valid for submission for HIPAA-covered transactions.
+order_number: TEXT | Unique identifier that makes it easier for users to communicate a range of codes
+pcs_code: TEXT | Procedure code

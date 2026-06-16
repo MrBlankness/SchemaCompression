@@ -1,0 +1,116 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: GITHUB_REPOS.LANGUAGES
+Columns: repo_name, language
+
+Table: GITHUB_REPOS.LICENSES
+Columns: repo_name, license
+
+Table: GITHUB_REPOS.SAMPLE_REPOS
+Columns: watch_count, repo_name
+
+Table: GITHUB_REPOS.SAMPLE_CONTENTS
+Columns: size, binary, sample_symlink_target, copies, sample_mode, sample_path, content, sample_ref, sample_repo_name, id
+
+Table: GITHUB_REPOS.SAMPLE_FILES
+Columns: symlink_target, id, mode, path, ref, repo_name
+
+Table: GITHUB_REPOS.SAMPLE_COMMITS
+Columns: parent, committer, difference, message, author, difference_truncated, subject, trailer, encoding, commit, repo_name, tree
+
+Table: DAY._20230118
+Columns: other, public, payload, org, id, type, actor, created_at, repo
+
+Table: DAY._20140302
+Columns: other, public, type, repo, id, created_at, org, payload, actor
+
+Table: DAY._20121228
+Columns: type, actor, repo, created_at, public, id, other, org, payload
+
+Table: DAY._20110731
+Columns: public, actor, created_at, type, repo, payload, id, other, org
+
+Table: DAY._20170416
+Columns: org, id, repo, type, other, created_at, payload, public, actor
+
+Table: DAY._20181201
+Columns: repo, created_at, public, type, payload, id, actor, other, org
+
+Table: DAY._20171026
+Columns: other, public, type, created_at, actor, id, org, repo, payload
+
+Table: DAY._20210612
+Columns: created_at, type, actor, payload, repo, other, public, id, org
+
+Table: DAY._20170508
+Columns: payload, org, repo, id, actor, other, created_at, public, type
+
+Table: DAY._20180116
+Columns: type, id, actor, created_at, payload, public, other, org, repo
+
+Table: DAY._20191129
+Columns: repo, id, org, payload, other, public, created_at, actor, type
+
+Table: YEAR._2020
+Columns: actor, org, type, id, other, created_at, repo, public, payload
+
+Table: YEAR._2013
+Columns: org, type, repo, public, other, created_at, payload, actor, id
+
+Table: YEAR._2019
+Columns: actor, repo, created_at, type, org, payload, other, public, id
+
+Table: YEAR._2011
+Columns: id, type, org, actor, payload, created_at, repo, other, public
+
+Table: YEAR._2012
+Columns: payload, org, created_at, type, id, other, public, repo, actor
+
+Table: YEAR._2023
+Columns: org, id, repo, payload, type, other, created_at, actor, public
+
+Table: YEAR._2017
+Columns: type, created_at, id, public, payload, other, actor, org, repo
+
+Table: YEAR._2015
+Columns: other, payload, type, created_at, repo, org, id, actor, public
+
+Table: YEAR._2016
+Columns: repo, id, org, other, created_at, type, payload, actor, public
+
+Table: YEAR._2018
+Columns: public, id, type, payload, actor, repo, other, org, created_at
+
+Table: MONTH._202406
+Columns: payload, actor, type, other, id, public, created_at, repo, org
+
+Table: MONTH._201706
+Columns: created_at, type, actor, public, payload, repo, id, other, org
+
+Table: MONTH._201601
+Columns: payload, type, org, other, actor, created_at, public, repo, id
+
+Table: MONTH._201904
+Columns: payload, id, public, org, other, type, actor, created_at, repo
+
+Table: MONTH._202008
+Columns: org, public, payload, type, actor, id, other, repo, created_at
+
+Table: MONTH._201211
+Columns: created_at, repo, other, public, type, id, payload, actor, org
+
+Table: MONTH._201307
+Columns: other, repo, actor, type, org, payload, id, public, created_at
+
+Table: MONTH._202204
+Columns: created_at, repo, actor, type, payload, other, public, org, id
+
+Table: MONTH._201409
+Columns: repo, id, type, other, org, payload, public, actor, created_at
+
+Table: MONTH._201110
+Columns: id, type, org, other, repo, created_at, actor, payload, public
+
+Table: MONTH._202312
+Columns: repo, id, other, public, created_at, org, payload, type, actor

@@ -1,0 +1,16 @@
+[STANDALONE]
+## HACKER_NEWS.FULL
+by: TEXT | The username of the item's author. | eg=["int0x20", "selectnull"]
+id: NUMBER | The item's unique id. | eg=[32053663, 32053345]
+score: NUMBER | Story score
+deleted: BOOLEAN | Is deleted?
+descendants: NUMBER | Number of story or poll descendants
+title: TEXT | Story title
+time: NUMBER | Unix time | eg=[1657528667, 1657525277]
+text: TEXT | Story or comment text | eg=["But I&#x27;m buying from&#x2F;through Steam and expect that refunds will be handled by them as well", "Self hosted.<p>I pay about 40 Eur (Hetzner) per database server. You can get cheaper; I used to pay 50 usd for 2 database nodes with backup at digitalocean."]
+type: TEXT | type of details (comment comment_ranking poll story job pollopt) | eg=["comment"]
+timestamp: NUMBER | Timestamp for the unix time | eg=[1657528667000000, 1657525277000000]
+parent: NUMBER | Parent comment ID | eg=[32053263, 32053265]
+ranking: NUMBER | Comment ranking
+url: TEXT | Story url
+dead: BOOLEAN | Is dead?

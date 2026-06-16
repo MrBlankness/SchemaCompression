@@ -1,0 +1,2 @@
+- 配置 `config.yaml` 中的参数
+- 运行 `python src/main.py`

@@ -1,0 +1,1002 @@
+[COMPONENTS]
+@C1
+blockgroup_ce: TEXT | Current block group number | eg=["3"]
+blockgroup_geom: BINARY | Geographical representation of the polygon that defines the perimeter of the block group. This column should be used as the GEO column for visualization in BigQuery Geo Viz | eg=["bytearray(b\"\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00#\\x00\\x00\\x00\\x13+1\\xcfJ\\x87]\\xc0\\x97\\xf5b(\\'\\xe8@@\\xf8\\x93\\xbf{G\\x87]\\xc0\\xdb\\x80\\xcf\\x0f#\\xe8@@\\xc5\\xc9\\xfd\\x0eE\\x87]\\xc0\\xfa\\x01\\x0f\\x0c \\xe8@@\\x01;\\xc5\\xaaA\\x87]\\xc0\\xce\\x19Q\\xda\\x1b\\xe8@@i\\xea\\x03\\xc9;\\x87]\\xc0\\x1e\\xbb\\x0b\\x94\\x14\\xe8@@\\xe9b\\xd3J!\\x87]\\xc0\\xdb\\x0c7\\xe0\\xf3\\xe7@@\\xc0\\x1d\\xa8S\\x1e\\x87]\\xc0X.\\x1b\\x9d\\xf3\\xe7@@\\x9c\\x01\\xbc\\x05\\x12\\x87]\\xc0\\x88\\xb2\\xb7\\x94\\xf3\\xe7@@\\xe0Jvl\\x04\\x87]\\xc0\\xb96T\\x8c\\xf3\\xe7@@\\x9b\\xb5\\x14\\x90\\xf6\\x86]\\xc0\\x17?\\x8d{\\xf3\\xe7@@\\x11\\x00\\x1c{\\xf6\\x86]\\xc0[\\xac\\xa8\\xc14\\xe8@@\\x81sF\\x94\\xf6\\x86]\\xc0\\xbc?\\xde\\xabV\\xe8@@{\\xe3\\xa40\\xef\\x86]\\xc0\\xea\\xc3z\\xa3V\\xe8@@\\xcbu\\xe1\\x07\\xe7\\x86]\\xc0\\xcb\\xaa\\xcf\\xd5V\\xe8@@\\t6\\xae\\x7f\\xd7\\x86]\\xc0-\\xb3\\x08\\xc5V\\xe8@@\\x04\\x90\\xda\\xc4\\xc9\\x86]\\xc0\\xaa\\xd4\\xec\\x81V\\xe8@@\\xbe\\xfax\\xe8\\xbb\\x86]\\xc0\\x08\\xdd%qV\\xe8@@\\x04\\x98\\xc0\\xad\\xbb\\x86]\\xc0T.T\\xfe\\xb5\\xe8@@:\\x1c]\\xa5\\xbb\\x86]\\xc0&\\xb09\\x07\\xcf\\xe8@@m\\xec\\xa0\\x12\\xd7\\x86]\\xc0\\xb5<\\x0f\\xee\\xce\\xe8@@}\\xd5X\\xc2\\xda\\x8...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00o\\x00\\x00\\x00\"\\x19\\x00\\xaa\\xb8\\x9c]\\xc0\\xe8\\'\\x9c\\xddZ\\x1cA@<[\\xce\\xa5\\xb8\\x9c]\\xc0x\\xef\\xa81!\\x1cA@S\\x9d\\x9c\\xa1\\xb8\\x9c]\\xc0\\x12\\x99\\xb9\\xc0\\xe5\\x1bA@S\\x9d\\x9c\\xa1\\xb8\\x9c]\\xc0\\x17c`\\x1d\\xc7\\x1bA@S\\x9d\\x9c\\xa1\\xb8\\x9c]\\xc0\\xfd\\x81r\\xdb\\xbe\\x1bA@\\x9b\\xa6\\xcf\\x0e\\xb8\\x9c]\\xc0\\xf6\\xf8\\x84\\xec\\xbc\\x1bA@\\xc0\\x96W\\xae\\xb7\\x9c]\\xc0\\x04\\xdb\\x88\\'\\xbb\\x1bA@\\x95\\xc0tZ\\xb7\\x9c]\\xc0\\x8a!9\\x99\\xb8\\x1bA@\\xfc\\xc8\\xadI\\xb7\\x9c]\\xc0\\xdd\\xe3L\\x13\\xb6\\x1bA@$MJA\\xb7\\x9c]\\xc0{\\x97R\\x97\\x8c\\x1bA@$MJA\\xb7\\x9c]\\xc0\\x16\\xab\\x06an\\x1bA@C\\x8f\\x18=\\xb7\\x9c]\\xc0\\xe7\\xbc\\xc6.Q\\x1bA@Z\\xd1\\xe68\\xb7\\x9c]\\xc0C\\xc8y\\xff\\x1f\\x1bA@Z\\xd1\\xe68\\xb7\\x9c]\\xc0\\x17HP\\xfc\\x18\\x1bA@\\xa8\\xe9\\xb3\\x03\\xae\\x9c]\\xc0\\xdc\\xb1\\xd8&\\x15\\x1bA@\\xce\\x97\\xa5\\x9d\\x9a\\x9c]\\xc0u3\\xa3\\x1f\\r\\x1bA@\\xe9d\\xa9\\xf5~\\x9c]\\xc0s\\xe2r\\xbc\\x02\\x1bA@A\\x9e\\xeb\\xfbp\\x9c]\\xc0\\x18\\xaab*\\xfd\\x1aA@\\xf1\\xe9x\\xcc@\\x9c]\\xc0*s\\xf3\\x8d\\xe8\\x1aA@\\xcf^D\\xdb1\\x9c]\\xc0n2\\xaa\\x0c\\xe3\\x1aA@),\\x7f\\xbe-\\x9c]\\xc0\\xbb\\x03<i\\xe1..."]
+tract_ce: TEXT | Current Census tract code | eg=["574000", "120300"]
+
+@C2
+area_land_meters: NUMBER | Current land area | eg=[341343, 980312]
+area_water_meters: NUMBER | Current water area | eg=[0]
+
+@C3
+internal_point_lat: FLOAT | Latitude of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=[33.8156456, 34.2138786]
+internal_point_lon: FLOAT | Longitude of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=[-118.1091609, -118.4423484]
+
+@C4
+cbsa_division_flag: BOOLEAN | A flag used to indicate whether an institution is in a CBSA division | eg=[false]
+cbsa_division_name: TEXT | "The name associated with the numeric code given by the US Census Bureau office of Management and Budget (2000 standards) that represents the core based statistical division (CBSADIV). A    metropolitan division is a county or group of counties    within a core based statistical area that contains a core    with a population of at least 2.5 million. A CBSA metropolitan    division consists of one or more main/secondary counties    that represent an employment center or centers, plus    adjacent counties associated with the main county or    counties through commuting ties. If an institution is not defined as a CBSA division the value of the field will be zero."
+cbsa_metro_flag: BOOLEAN | A flag used to indicate whether an institution is in a metropolitan statistical area. The US Census bureau office of Management and Budget defines the metropolitan statistical area. A core based statistical area associated with at least one urbanized area that has a population of at least 50,000. The metropolitan statistical area comprises the central county or counties containing the core, plus adjacent outlying counties having a high degree of social and economic integration with the central county as measured through commuting. | eg=[true, false]
+cbsa_micro_flag: BOOLEAN | A flag used to indicate whether an institution is in a micropolitan statistical area. The US Census bureau office of Management and Budget defines the micropolitan statistical area. A core based statistical area associated with at least one urbanized area that has a population of at least 50,000. The micropolitan statistical area comprises the central county or counties containing the core, plus adjacent outlying counties having a high degree of social and economic integration with the central county as measured through commuting. | eg=[false, true]
+cbsa_name: TEXT | The name associated with the numeric code that the U.S. Census Bureau Office of Management and Budget assigns for the CBSA. The 2000 standards provide that each CBSA must contain at least one urban area of 10,000 or more population. Metropolitan and micropolitan statistical areas are two categories of core based statistical areas. If an institution is not defined as a CBSA, the value of the field will be zero. For more information see: http://www.census.gov/population/www/estimates/metroarea.html . | eg=["Montgomery, AL", "Daphne-Fairhope-Foley, AL"]
+csa_name: TEXT | "The name associated with the numeric code that the U.S. Census Bureau Office of Management and Budget assigns for the combined statistical area (CSA) per the 2000 standards. If an institution is not defined as a CSA, the value of the field will be blank. For more information see: http://www.census.gov/population/www/estimates/metroarea.html . " | eg=["Montgomery-Selma-Alexander City, AL", "Mobile-Daphne-Fairhope, AL"]
+fdic_certificate_number: TEXT | A unique number assigned by the FDIC used to identify institutions and for the issuance of insurance certificates. | eg=["21314", "15722"]
+institution_name: TEXT | The legal name of the institution. | eg=["The First National Bank of Autauga County", "Baldwin National Bank"]
+last_updated: DATE | Date the data was last updated | eg=["1998-12-10", "1990-10-04"]
+
+@C5
+area_land_meters: FLOAT | NULL | eg=[2882492193.0, 1853770821.0]
+area_water_meters: FLOAT | NULL | eg=[1411373083.0, 3643100055.0]
+
+@C6
+int_point_lat: FLOAT | NULL | eg=[26.204284, 34.588062]
+int_point_lon: FLOAT | NULL | eg=[-81.2029593, -118.2802639]
+
+@C7
+congress_session: TEXT | NULL | eg=["116"]
+district_fips_code: TEXT | NULL | eg=["25", "26"]
+district_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x9e\\x0c\\x00\\x00\\x0f@j\\x13\\'pT\\xc0\\xc5E\\xb5\\x88(>:@.\\xa7\\x04\\xc4$pT\\xc0\\xfc\\xfdb\\xb6d=:@\\x82\\x1b)[$pT\\xc0\\xbftZ\\xb7A=:@f\\x9e\\\\S pT\\xc0\\xf3:\\xe2\\x90\\r<:@\\xfb\\xcd\\xc4t!pT\\xc0\\x92E\\x9ax\\x07<:@C\\x16i\\xe2\\x1dpT\\xc0\\x11TT\\xfdJ;:@y\\x8b\\x87\\xf7\\x1cpT\\xc0\\xd3\\x01\\x10w\\xf5::@\\xfd\\x83H\\x86\\x1cpT\\xc0\\xa7\\x9b\\xc4 \\xb0::@\\'K\\xad\\xf7\\x1bpT\\xc0Wg|_\\\\::@]\\xa6&\\xc1\\x1bpT\\xc06\\'\\xf6\\xd0>::@\\xfe\\xb7\\x92\\x1d\\x1bpT\\xc0\\xf9<Fy\\xe69:@E~\\xfd\\x10\\x1bpT\\xc0K\\xde\\x003\\xdf9:@\\xbd\\xe2\\xa9G\\x1apT\\xc0M\\xbc\\x03<i9:@\\x9a&l?\\x19pT\\xc0S.T\\xfe\\xb58:@vP\\x89\\xeb\\x18pT\\xc0YZ\\r\\x89{8:@\\x1d9\\xd2\\x19\\x18pT\\xc0\\xa5\\x12\\x9e\\xd0\\xeb7:@\\xa01\\x93\\xa8\\x17pT\\xc0&\\t\\x89\\xb4\\x8d7:@;l\"3\\x17pT\\xc02~\\xe1\\x95$7:@\\x822\\x8d&\\x17pT\\xc0.\\x0cXr\\x157:@\\xe3:\\xc6\\x15\\x17pT\\xc0\\'\\xad\\xbf%\\x007:@q\\xc7\\x9b\\xfc\\x16pT\\xc0\\xd6\\xe4)\\xab\\xe96:@x\\xecg\\xb1\\x14pT\\xc0\\xc3\\x1c\\x04\\x1d\\xad6:@\\xb9\\xf5\\x9a\\x1e\\x14pT\\xc06,\\r\\xfc\\xa86:@=\\x08\\x01\\xf9\\x12pT\\xc0\\xa8;\\x16\\xdb\\xa46:@\\x15\\x8f\\x8bj\\x11pT\\xc0\\xb1\\xc8v\\xbe\\x...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x1b\\x15\\x00\\x00\\xd5G\\xe0\\x0f?\\xb9]\\xc0\\x97\\x85vN\\xb3hA@\\xea\\xf8\\xf6\\xaeA\\xb9]\\xc0\\x98\\x85vN\\xb3hA@\\xc8_Z\\xd4\\'\\xb9]\\xc0d?\\x8b\\xa5HhA@\\xf0\\xea\\xe3\\xa1\\xef\\xb8]\\xc0\\x05Wy\\x02agA@^\\x8b\\xa4\\xdd\\xe8\\xb8]\\xc06=((EgA@\\xf8\\xc53h\\xe8\\xb8]\\xc0\\x000\\x9eACgA@\\x13\\x7f\\x14u\\xe6\\xb8]\\xc0\\x9a\\xb1h:;gA@\\xa1\\x8b\\x14\\xca\\xc2\\xb8]\\xc0O\\x88\\x80C\\xa8fA@\\xb4Ss\\xb9\\xc1\\xb8]\\xc0@\\xb9m\\xdf\\xa3fA@\\x9d\\xa0M\\x0e\\x9f\\xb8]\\xc0\\xf4\\xf3\\xa6\"\\x15fA@F\\xfcQ\\xd4\\x99\\xb8]\\xc0\\x0b\\xae\\xb9\\xa3\\xffeA@\\x1b\\r\\xe0-\\x90\\xb8]\\xc0,\\x0c\\x91\\xd3\\xd7eA@\\x1e\\xc3c?\\x8b\\xb8]\\xc0\\x90/\\xa1\\x82\\xc3eA@7\\xce\\xa6#\\x80\\xb8]\\xc0\\xbd\\x0b[\\xb3\\x95eA@\\x9c\\x90\\xd6\\x18t\\xb8]\\xc0TId\\x1fdeA@\\x97\\x94I\\rm\\xb8]\\xc0iJ\\xb2\\x0eGeA@\\xc4\\xf7\\x8cDh\\xb8]\\xc0r\"\\xc1T3eA@\\xb0\\x91$\\x08W\\xb8]\\xc0\\x93\\x8d\\x07[\\xecdA@E\\xd8\\xf0\\xf4J\\xb8]\\xc0whX\\x8c\\xbadA@D6\\x90.6\\xb8]\\xc0$\\xab\"\\xdcddA@K}\\xe7\\x17%\\xb8]\\xc0xW=`\\x1edA@?\\xa7 ?\\x1b\\xb8]\\xc0\\x11\\x1a\\xc1\\xc6\\xf5cA@\\x90\\xdd\\x05J\\n\\xb8]\\xc0;\\xffv\\xd9\\xafcA@qY\\x85\\xcd\\x00\\xb8]\\x..."]
+functional_status: BOOLEAN | NULL | eg=[false]
+
+[TABLES]
+## FDA_FOOD.FOOD_EVENTS
+products_role: TEXT | NULL | eg=["SUSPECT", "CONCOMITANT"]
+products_industry_name: TEXT | NULL | eg=["Egg/Egg Prod", "Vit/Min/Prot/Unconv Diet(Human/Animal)"]
+date_created: DATE | NULL | eg=["2008-10-14", "2010-10-05"]
+outcomes: TEXT | NULL | eg=["Visited Emergency Room", "Other Serious or Important Medical Event"]
+consumer_age_unit: TEXT | NULL
+reactions: TEXT | NULL | eg=["\"BARRETTS OESOPHAGUS\", DYSPHAGIA, DYSPNOEA, HYPERSENSITIVITY, MUCOUS MEMBRANE DISORDER", "\"BASEDOWS DISEASE\""]
+products_industry_code: TEXT | NULL | eg=["15", "54"]
+consumer_gender: TEXT | NULL | eg=["Male", "Female"]
+products_brand_name: TEXT | NULL | eg=["EGG BEATERS EGG SUBSTITUTE", "ONE A DAY WOMEN'S"]
+consumer_age: FLOAT | NULL
+report_number: TEXT | NULL | eg=["109790", "131807"]
+date_started: DATE | NULL
+
+## FDA_FOOD.FOOD_ENFORCEMENT
+initial_firm_notification: TEXT | NULL | eg=["E-Mail"]
+code_info: TEXT | NULL | eg=["Lot 81 14055 T  Expiration: Nov 25 18", "Manufacturer Lot #2633;  Expiration Date: 07/25"]
+product_description: TEXT | NULL | eg=["Orange plus Citrus Beverage from Concentrate", "Brand Name: SUPREX Plant Based Nutrition. Product Name: Carb & Sugar Block.  Product Size: 120 Vegetable Cellulose Capsules per bottle. Container description: White Plastic Bottle 300CC with white cap sealed with clear plastic Total Package size: Master Case with 81 Bottles containing 120 capsules each one. Lot no. 2633, Exp. 07/25 Manufactured in the US"]
+product_type: TEXT | NULL | eg=["Food"]
+reason_for_recall: TEXT | NULL | eg=["The product may be contaminated with a sanitizing solution", "FDA lab analysis of product sampled revealed Chromium content was determined subpotent as 16 mcg/serving or 16% of declared."]
+event_id: NUMBER | NULL | eg=[81245, 93627]
+recall_initiation_date: DATE | NULL | eg=["2018-10-04", "2023-12-07"]
+center_classification_date: DATE | NULL | eg=["2018-11-06", "2024-01-09"]
+status: TEXT | NULL | eg=["Terminated"]
+more_code_info: TEXT | NULL | eg=["nan"]
+recalling_firm: TEXT | NULL | eg=["Campofresco Corp.", "Vita 360, LLC"]
+address_2: TEXT | NULL | eg=["nan", "Bo. Palmas"]
+distribution_pattern: TEXT | NULL | eg=["US Consignees only. No government nor foreign consignees.", "Domestic distribution only throughout Puerto Rico"]
+city: TEXT | NULL | eg=["Santa Isabel", "San Juan"]
+termination_date: DATE | NULL | eg=["2019-04-24", "2024-05-01"]
+postal_code: TEXT | NULL | eg=["00757", "00911-2317"]
+address_1: TEXT | NULL | eg=["Road  #545, Km 0.3", "227 Calle Betances"]
+country: TEXT | NULL | eg=["United States"]
+state: TEXT | NULL | eg=["PR"]
+product_quantity: TEXT | NULL | eg=["1,010 cases (8 units ea)", "1999 units"]
+report_date: DATE | NULL | eg=["2018-11-14", "2024-01-17"]
+voluntary_mandated: TEXT | NULL | eg=["Voluntary: Firm initiated"]
+recall_number: TEXT | NULL | eg=["F-0372-2019", "F-0710-2024"]
+classification: TEXT | NULL | eg=["Class II", "Class III"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_06
+@use: [C1, C2, C3]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00 \\xe0\\xff}\\xfc\\x86]\\xc0*\\x904\\x13g\\xe8@@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x07\\xdc\\xa9oO\\x9c]\\xc0:(\\xbc_`\\x1bA@')"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["06"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["060375740003", "060371203003"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 3"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["037"]
+functional_status: TEXT | Current functional status | eg=["S"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_21
+@use: [C1, C2, C3]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["210039201001", "210619203001"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["003", "061"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00> u\\xe0\\xc1\\x8dU\\xc0Z\\x07Q\\x08.mB@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00]\\xe5d=\\x10\\x8dU\\xc0\\xc2\\xddY\\xbb\\xed\\xa2B@')"]
+functional_status: TEXT | Current functional status | eg=["S"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["21"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_60
+@use: [C1, C2, C3]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["010", "020"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["60"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00V\\x1e\\xee4\\xe3Qe\\xc0\\x89\\x1cl\\xfbh\\x92,\\xc0')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xf9\\xf6\\xaeA\\xdf4e\\xc0\\x14\\xf7i&)Z,\\xc0')"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["600109502001", "600209518001"]
+functional_status: TEXT | Current functional status | eg=["S"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_16
+@use: [C1, C2, C3]
+functional_status: TEXT | Current functional status | eg=["S"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["025", "033"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["160259701001", "160339501001"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00k\\xe6\\x7f\\xa8j\\xb1\\\\\\xc0#\\x87\\x88\\x9bS\\xc0E@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x8d\\xaf\\xe2\\xf9\\xb1\\x16\\\\\\xc0\\xf3Z\\t\\xdd%%F@')"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["16"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_17
+@use: [C1, C2, C3]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["170630007001", "170679543001"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["17"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+functional_status: TEXT | Current functional status | eg=["S"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00j\\xd2\\xb7\\x16\\xf7\\x12V\\xc0\\x17.P\\xf7\\xa6\\xaeD@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xa3\\xbaok\\xc1\\xbfV\\xc0\\xa7\\x94\\xd7J\\xe8 D@')"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["063", "067"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_25
+@use: [C1, C2, C3]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["25"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xed\\xee\\xa6\\x00=\\xb6Q\\xc0\\xe5G\\xfc\\x8a5\\xbcD@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x9cqu[\\xfd\\xa3Q\\xc0\\xe0\\xfc\\x86\\x89\\x06\\x08E@')"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["007", "023"]
+functional_status: TEXT | Current functional status | eg=["S"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["250079900000", "250239900030"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 0", "Block Group 1"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_37
+@use: [C1, C2, C3]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xb6S\\xcer\\xb4\\xf2R\\xc0\\x0b\\xa1\\xde\\xe7S2B@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00z\">fV S\\xc0]\\x1ad7\\xd8\\xfcA@')"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["370539901000", "371879501000"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["053", "187"]
+functional_status: TEXT | Current functional status | eg=["S"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 0", "Block Group 1"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["37"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_20
+@use: [C1, C2, C3]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["200895762001", "200779618001"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["20"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["089", "077"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xc4\\xc40qu\\x8fX\\xc0~\\xd2\\x9a0\\xab\\xd4C@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xb1\\x860#\\xe1\\x82X\\xc0\\x8e\\xfc\\xc1\\xc0s\\x95B@')"]
+functional_status: TEXT | Current functional status | eg=["S"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_31
+@use: [C1, C2, C3]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["31"]
+functional_status: TEXT | Current functional status | eg=["S"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x08{n\\xfc\\xe4\\xf5W\\xc0\\x98\\xb3\\x88r\\xb3\\x08D@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xf8N\\x16\\x08L\\xefW\\xc0\\xae\\xf7\\xd1_\\x9e\\x17D@')"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["311479685001", "311479645001"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["147", "125"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_18
+@use: [C1, C2, C3]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["180319694004", "180319692004"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["18"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xe434\\xf9\\xc1\\\\U\\xc0\\\\\\xf4\\xba\\xea\\xa6\\xa0C@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x105\\xc0\\xbbK`U\\xc0\\x89l\\xd6\\xcfQ\\xaaC@')"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 4"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["031", "033"]
+functional_status: TEXT | Current functional status | eg=["S"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_04
+@use: [C1, C2, C3]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xb9\\x8b0E\\xb9S[\\xc0)@\\x14\\xcc\\x98\\x84@@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x10h\\x9f}\\x1bR[\\xc0\"\\xb5?\\x06\\xe1\\xbd@@')"]
+functional_status: TEXT | Current functional status | eg=["S"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["040119602001", "040119601001"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["011", "001"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["04"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_44
+@use: [C1, C2, C3]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["44"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xad\\x92~\\xb1\\xad\\xd2Q\\xc0\\xf1L\\xc3K\\xcb\\xdfD@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x86\\x9fI\\xac\\xd6\\xd4Q\\xc0n\\xa7\\x08\\xcb3\\xe1D@')"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["440010303001", "440010302001"]
+functional_status: TEXT | Current functional status | eg=["S"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["001"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_26
+@use: [C1, C2, C3]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 0"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["260039900000", "260059900000"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x004[\\xc3V\\x1a\\xa4U\\xc0\\xceV^\\xf2?\\x8aG@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x02\\x94\\xd0\\xa7\\x9f\\xa8U\\xc0\\xcc\\xee\\xc9\\xc3BLE@')"]
+functional_status: TEXT | Current functional status | eg=["S"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["26"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["003", "005"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_38
+@use: [C1, C2, C3]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["38"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+functional_status: TEXT | Current functional status | eg=["S"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["380039680001", "380059566001"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x16\\xcf\\xea.\\x1a\\x8fX\\xc0\\xebn\\x9e\\xea\\x90\\x95G@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xfa\\xef\\xc1k\\x97\\xf5X\\xc0\\xa2`\\xc6\\x14\\xac\\x03H@')"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["003", "005"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_23
+@use: [C1, C2, C3]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["23"]
+functional_status: TEXT | Current functional status | eg=["S"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xe2.\\x0c\\xa2\\xff\\x0cQ\\xc0\\xfej\\x0e\\x10\\xcc\\x19F@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00L\\xa9K\\xc6\\xb1;Q\\xc0#\\x80@\\x0c\\x19\\xfaE@')"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 0"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["230099900000", "230139900000"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["009", "013"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_30
+@use: [C1, C2, C3]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["075", "037"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["300750001001", "300370001001"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["30"]
+functional_status: TEXT | Current functional status | eg=["S"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00J\\xad\\xe6\\xef\\x94hZ\\xc0\\x7fT\\x1e8\\xc2\\xb0F@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xc66\\xa9h,K[\\xc0\\rH\\x0cL\\xb80G@')"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_27
+@use: [C1, C2, C3]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["27"]
+functional_status: TEXT | Current functional status | eg=["S"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["139", "141"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xd6\\x18\\x19\\x89ueW\\xc0\\x84\\x8bp\\xee\\nWF@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00}$%=\\x8caW\\xc0\\xb2\\x1dBK\\rfF@')"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["271390808003", "271390804003"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 3"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_66
+@use: [C1, C2, C3]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+functional_status: TEXT | Current functional status | eg=["S"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["66"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["010"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 0", "Block Group 1"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xeav\\xf6\\x95\\x07\\x12b@\\xe9\\xf6\\x92\\xc6h\\xe5*@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xe7\\x1f\\xd8L\\x99\\x19b@\\x02\\x0f\\x0c |\\xec*@')"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["660109900000", "660109527001"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_35
+@use: [C1, C2, C3]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["350339552001", "350199616001"]
+functional_status: TEXT | Current functional status | eg=["S"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["033", "019"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x96\\xedC\\xde\\xf2QZ\\xc0\\xb7\\x0f\\xd4\\x84H\\rB@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xa4\\xae\\x10\\xb1\\x1c Z\\xc0o#e\\x8b\\xa4wA@')"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["35"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_47
+@use: [C1, C2, C3]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x88]\\x80\";>V\\xc0\\x03\\xe9\\xac`e\\xe0A@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x96\\x9b\\xa8\\xa5\\xb97U\\xc0$W\\xfb\\x85h\\xb5A@')"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["470339610001", "471219603001"]
+functional_status: TEXT | Current functional status | eg=["S"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["47"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["033", "121"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_09
+@use: [C1, C2, C3]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+functional_status: TEXT | Current functional status | eg=["S"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["001", "011"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xfbLQ\\x89\\xc6RR\\xc0|^\\x96\\x1b\\xb1\\x87D@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x80\\xc3\\xfa\\xf5y\\x0eR\\xc0\\x8f\\x8f\\xbb\\xad\\x99\\xa0D@')"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 0", "Block Group 1"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["09"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["090019900000", "090119901000"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_41
+@use: [C1, C2, C3]
+functional_status: TEXT | Current functional status | eg=["S"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["027", "055"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["410279504001", "410559501001"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1", "Block Group 2"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xc6\\xf3\\x19Po^^\\xc0\\xf1?CI\\x92\\xd1F@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xd2\\x9c\\x06V\\x9f-^\\xc0\\xe6\\x15\\x99\\xca\\xec\\xa5F@')"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["41"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_34
+@use: [C1, C2, C3]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["029"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["340297330000", "340297310020"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x00\\xfe)U\"\\x8aR\\xc0\\xd2\\xf3\\xb8\\xb9B\\xe4C@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00?\\x9cv\\xe7?\\x87R\\xc0A\\x92H\\x91k\\xf1C@')"]
+functional_status: TEXT | Current functional status | eg=["S"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["34"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 0"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_45
+@use: [C1, C2, C3]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["45"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xe7f\\xc9-\\xf7\\x9cT\\xc0\\x9b\\x7f\\xaa\\xc0\\x7f+A@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x04\\x99S\\xb8\\xd4\\xa0T\\xc0\\x845\\x84\\x19\\t&A@')"]
+functional_status: TEXT | Current functional status | eg=["S"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["001"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1", "Block Group 2"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["450019502001", "450019503001"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_15
+@use: [C1, C2, C3]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["001"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["150019907000", "150019915000"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xe1\\x91\\x1d\\xc0Gac\\xc0\\xeb\\x05\\xfa\\x9fW\\xc53@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xa6\\x92K-\\xa5\\x80c\\xc0\\x04)g\\xde`\\x9c3@')"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 0"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["15"]
+functional_status: TEXT | Current functional status | eg=["S"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_55
+@use: [C1, C2, C3]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["025"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 2"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+functional_status: TEXT | Current functional status | eg=["S"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b\"\\x01\\x01\\x00\\x00\\x00{8\\xdc\\xa2\\'^V\\xc0+\\xf3\\xfb\\xa3\\x14\\x8aE@\")", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xa2\\xa4vu\\xfd\\\\V\\xc0x\\xdb;Y \\x8aE@')"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["550250001002", "550250101002"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["55"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_39
+@use: [C1, C2, C3]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00p4\\x91\\xe3\\x98\\xdeT\\xc0<\\x06u\\xdb\\xcfjC@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00$\\x03\\xe5[\\xc4\\xe2T\\xc0\\xe9\\x04\\xd9W\\xc3gC@')"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["390017703001", "390017704002"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["001", "003"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1", "Block Group 2"]
+functional_status: TEXT | Current functional status | eg=["S"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["39"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_53
+@use: [C1, C2, C3]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["055", "059"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["530559901000", "530599504001"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00p\\x96\\x92\\xe5$\\xd1^\\xc0\\x92S;\\xc3\\xd4XH@')", "bytearray(b\"\\x01\\x01\\x00\\x00\\x00\\'$\\xe3bVp^\\xc0\\xbf\\x8fY\\xac\\x97\\xdeF@\")"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["53"]
+functional_status: TEXT | Current functional status | eg=["S"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 0", "Block Group 1"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_01
+@use: [C1, C2, C3]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["010279591001", "010419639001"]
+functional_status: TEXT | Current functional status | eg=["S"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["01"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["027", "041"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x7f\\xa6^\\xb7\\x88mU\\xc0\\x08R)v4\\x9d@@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xd3\\xa2>\\xc9\\x9d\\x8dU\\xc0,\\xe2\\x19\\xd9:\\x8b?@')"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_54
+@use: [C1, C2, C3]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+functional_status: TEXT | Current functional status | eg=["S"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["54"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["540059584001", "540090314001"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xa6\\x19A\\x19\\x99vT\\xc0\\x13\\xe7\\xf20\\xfe\\x04C@')", "bytearray(b\"\\x01\\x01\\x00\\x00\\x00\\xa3\\x8e3\\xf2\\x1e\\'T\\xc0\\x7f\\xf2\\xc1|\\xc3$D@\")"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["005", "009"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_42
+@use: [C1, C2, C3]
+functional_status: TEXT | Current functional status | eg=["S"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["42"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["420010306001", "420010315011"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["001"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xc0\\x8c\\xce\\x9e\\xf0KS\\xc0\\xbbn\\x00\\xec\\x92\\xefC@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xb5ee\\xa0WOS\\xc0f\\xef\\x8c\\xb6*\\xebC@')"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_24
+@use: [C1, C2, C3]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["240099901000", "240199900000"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xec\\x11\\x0f\\xcda\\x1cS\\xc0\\x9b\\x83\\xb1\\xcf\\xadBC@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xab{dsU\\x10S\\xc0}\\x95|\\xec..C@')"]
+functional_status: TEXT | Current functional status | eg=["S"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["009", "019"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 0", "Block Group 1"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["24"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_36
+@use: [C1, C2, C3]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["36"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["001"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x009\\xabO\\x83\\xb3uR\\xc0\\x95\\x86u>\\x97WE@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00{&\\xea\\xbb\\x11nR\\xc0B\\xbd\\xcf\\xa7DXE@')"]
+functional_status: TEXT | Current functional status | eg=["S"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["360010146081", "360010136021"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_78
+@use: [C1, C2, C3]
+functional_status: TEXT | Current functional status | eg=["S"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x001\\xa0r\\xa7O>P\\xc0\\x0c;\\x8cI\\x7fS2@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\t\\x81\\x01)\\xd60P\\xc0!\\xd1_C\\xcb\\xb31@')"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["780309900000", "780109715001"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["030", "010"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["78"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 0", "Block Group 1"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_10
+@use: [C1, C2, C3]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["003", "005"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x90/\\xa1\\x82C\\xe2R\\xc0\\xdd\\xe0\\xfafQ\\xcbC@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xe3\\x11\\x81\\x8ff\\xceR\\xc0:\\xb1\\x87\\xf6\\xb1nC@')"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["10"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 0", "Block Group 1"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["100039901000", "100059900000"]
+functional_status: TEXT | Current functional status | eg=["S"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_33
+@use: [C1, C2, C3]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 0", "Block Group 1"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00A\\x10 CG\\xb0Q\\xc0\\\\j\\xce\\x0b\\xc1sE@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xd8\\xbe\\xdb\\x17\\xab\\xe0Q\\xc0w\\xb7W\\x8b\\xf4\\xd9E@')"]
+functional_status: TEXT | Current functional status | eg=["S"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["330159900000", "330019651001"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["015", "001"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["33"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_08
+@use: [C1, C2, C3]
+functional_status: TEXT | Current functional status | eg=["S"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["081230019053", "081230004023"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 3", "Block Group 4"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["08"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["123", "005"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xf8U\\x14\\n\\xec2Z\\xc0\\xc11\\x15,\\x1f\\x0cD@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00M\\xb6&\\x82]-Z\\xc0\\x0c\\x1a\\x9fnE5D@')"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_29
+@use: [C1, C2, C3]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["290154601001", "290630801001"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xecay\\xa1JPW\\xc0\\xa0k_@/8C@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00~\\x1bb\\xbc\\xe6\\x96W\\xc0\\xfc\\x8fL\\x87N\\xf1C@')"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["015", "063"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["29"]
+functional_status: TEXT | Current functional status | eg=["S"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_51
+@use: [C1, C2, C3]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["650"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["51"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x12J_\\x089\\x14S\\xc0-&6\\x1f\\xd7\\x86B@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x9b\\x87]%\\xe9\\x17S\\xc0\\xd2\\tW\\xf6\\x13\\x82B@')"]
+functional_status: TEXT | Current functional status | eg=["S"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["516500101041", "516500119001"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_02
+@use: [C1, C2, C3]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["02"]
+functional_status: TEXT | Current functional status | eg=["S"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["282", "016"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x86\\xca\\xbf\\x96W\\x8da\\xc0\\xa0\\x9c\\xb2\\xe4;\\x02N@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00F#\\x9fW|\\xdcd\\xc0X\\x10\\xb9\\xcf\\xe0\\xedJ@')"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["022820001001", "020160002001"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_40
+@use: [C1, C2, C3]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["400013767001", "400013769001"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00H\\xdc\\x080\\xd1\\xa6W\\xc0\\xf6#EdX\\x03B@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00t%\\x02\\xd5?\\xaaW\\xc0\\xf1z\\xd5o\\xcb\\xe8A@')"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+functional_status: TEXT | Current functional status | eg=["S"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["40"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["001", "003"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_69
+@use: [C1, C2, C3]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 0", "Block Group 1"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["691009900000", "691209900000"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["100", "120"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xbe\\xdaQ\\x9cc$b@\\rpA\\xb6,k,@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xb2fd\\x90;3b@f\\xdd?\\x16\\xa2\\xdf-@')"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["69"]
+functional_status: TEXT | Current functional status | eg=["S"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_46
+@use: [C1, C2, C3]
+functional_status: TEXT | Current functional status | eg=["S"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["46"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["460750916001", "460739741001"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00Sb2\\xb0\\xe9+Y\\xc0\\r\\x8bQ\\xd7\\xda\\xf9E@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xe05C\\x05\\xe2\\xa7X\\xc0\\x10_\\xcb\\xd0\\x1d\\x08F@')"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["075", "073"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_28
+@use: [C1, C2, C3]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xbe\\xf5\\x06\\x04\\xdfAV\\xc0\\x82!P\\xa2\\xcaC>@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00^\\x7f\\xb7\\xe5H\\x82V\\xc0ru\\x11\\xf0\\xb5lA@')"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["280479900000", "280330711101"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["047", "033"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 0", "Block Group 1"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["28"]
+functional_status: TEXT | Current functional status | eg=["S"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_50
+@use: [C1, C2, C3]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["001"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["500019609001", "500019607001"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x81g1glLR\\xc0#\\x97I\\x1e\\x99\\xf7E@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xb6\\xf6>U\\x05ER\\xc0\\xb7\\xc6\\xb1?\\x9a\\xffE@')"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["50"]
+functional_status: TEXT | Current functional status | eg=["S"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_72
+@use: [C1, C2, C3]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["720139929000", "720339902010"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["72"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 0"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+functional_status: TEXT | Current functional status | eg=["S"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["013", "033"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00#\\xdcdT\\x19\\xabP\\xc0m2OSp\\x832@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x08\\xa1\\xcd\\xbb\\xfb\\x87P\\xc0\\xaa\\xbd\\xe3o\\xd6s2@')"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_12
+@use: [C1, C2, C3]
+functional_status: TEXT | Current functional status | eg=["S"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["12"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["120010021021", "120010022081"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["001"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\n2\\x02*\\x1c\\x96T\\xc0;AQ\\x8f#\\x84=@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x98k\\xd1\\x024\\x9dT\\xc0\\x89\\xc9e\\xed\\x00\\xa7=@')"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_22
+@use: [C1, C2, C3]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["22"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 4"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["220890632004", "220919511004"]
+functional_status: TEXT | Current functional status | eg=["S"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["089", "091"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x8a\\xdb\\xb2\\x8d\\x89\\x9cV\\xc0\\xf4I\\xee\\xb0\\x89\\xd2=@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xc8\\xf8\\xe6\\xed>\\xabV\\xc0\\xcfD}7\\x82\\xdb>@')"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_19
+@use: [C1, C2, C3]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["001", "003"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b\"\\x01\\x01\\x00\\x00\\x00\\x13\\x03n\\'\\xdb\\x98W\\xc0N\\xcaI\\xcd\\xc3\\xb4D@\")", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xcdP\\x8184\\xb1W\\xc0V\\xe6\\xf7G)\\x81D@')"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["190019601001", "190039502001"]
+functional_status: TEXT | Current functional status | eg=["S"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["19"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_11
+@use: [C1, C2, C3]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["001"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["11"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xf4\\xe3\\x8a\\xe6\\\\=S\\xc0\\xb9\\xd0K{9rC@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xa3\\xfb\\xdeK\\x06=S\\xc0\\xb6wW\\x87\\xeduC@')"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["110010096041", "110010090001"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+functional_status: TEXT | Current functional status | eg=["S"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_13
+@use: [C1, C2, C3]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["131018801001", "131050002001"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["101", "105"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["13"]
+functional_status: TEXT | Current functional status | eg=["S"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xcd\\xc0\\x12Y\\xb5\\xb5T\\xc0\\xc2%\\xb6qz\\xb5>@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xef\\xeb\\x1b\\xf3\\x15\\xb4T\\xc0\\xabi\\xcdE2\\x1fA@')"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_56
+@use: [C1, C2, C3]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["56"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x16\\xf1B\\xdf\\x02gZ\\xc0\\x90H%\\x86.\\xa8D@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x008U\\xad;LlZ\\xc0\\xf9\\x1bHrT\\xebD@')"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["001", "003"]
+functional_status: TEXT | Current functional status | eg=["S"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["560019629001", "560019639001"]
+
+## GEO_CENSUS_BLOCKGROUPS.US_BLOCKGROUPS_NATIONAL
+@use: [C1, C2, C3]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["280350002001", "240199702001"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["28", "24"]
+county_name: TEXT | Full text name of the country that contains the block group | eg=["Forrest County", "Dorchester County"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xf8\\xd7<X\\x90RV\\xc0\\xed\\xe26\\x1a\\xc0Q?@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00&\\xdflsc\\xf5R\\xc0\\xccM\\xd4\\xd2\\xdcUC@')"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["035", "019"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+state_name: TEXT | Full text name of the state that contains the block group | eg=["Mississippi", "Maryland"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1", "Block Group 3"]
+functional_status: TEXT | Current functional status | eg=["S"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_48
+@use: [C1, C2, C3]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["48"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["483559900000", "480019511001"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 0", "Block Group 1"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00k) \\xed\\xffFX\\xc0\\xab\\xc6\\\\c\\xe1\\xb3;@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x003aEW\\xb3\\xf0W\\xc0\\x1e\\xb27\\xe7\\x96\\xf6?@')"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["355", "001"]
+functional_status: TEXT | Current functional status | eg=["S"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_49
+@use: [C1, C2, C3]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["490170004001", "490299701001"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["49"]
+functional_status: TEXT | Current functional status | eg=["S"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["017", "029"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xcb\\x112\\x90\\xe7\\xc5[\\xc0\\xc2\\xd1\\x9fG\\xd6\\xfaB@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00s\\xc4\\x10\\xefo\\xe0[\\xc0\\xa0\\xf8\\xd6,<\\x97D@')"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_32
+@use: [C1, C2, C3]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["510", "029"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x91\\xff\\x13mX\\xfe]\\xc0\\xf5ip\\xb6\\x14\\x92C@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x1c\\x13\\xbd\\xe7\\x1b\\xe0]\\xc0)\\xf4UMk\\xc2C@')"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["32"]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 0", "Block Group 1"]
+functional_status: TEXT | Current functional status | eg=["S"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["325109900000", "320299702001"]
+
+## GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_05
+@use: [C1, C2, C3]
+lsad_name: TEXT | Current translated legal/statistical area description and the block group number | eg=["Block Group 1"]
+state_fips_code: TEXT | Two digit FIPS code that uniquely identifies each state. See https://www.census.gov/geo/reference/ansi_statetables.html for more information State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: `bigquery-public-data.census_utility.fips_codes_states` | eg=["05"]
+mtfcc_feature_class_code: TEXT | MAF/TIGER feature class code (G5030) | eg=["G5030"]
+county_fips_code: TEXT | Four-digit county FIPS code. County names and their corresponding FIPS codes can be found in BigQuery: `bigquery-public-data.census_utility.fips_codes_all` | eg=["099", "013"]
+functional_status: TEXT | Current functional status | eg=["S"]
+geo_id: TEXT | Unique identifier for each block group. Census block group identifier; a concatenation of the current state FIPS code, county FIPS code, census tract code, and block group number. | eg=["050990902001", "050134801001"]
+internal_point_geom: BINARY | Geographical representation of the block group's internal point, which is the point at or closest to the block group's geographic center | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x001J+\\x19\\xdbXW\\xc0%\\xa9L1\\x07\\xe3@@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x9a\\xfa/\\xc6\\xf6\\x19W\\xc0Qz\\xf0$3\\xc5@@')"]
+
+## GEO_US_BOUNDARIES.ADJACENT_STATES
+state: TEXT | NULL | eg=["AR", "CA"]
+neighbors_fips_code: VARIANT | NULL | eg=[["47","48","29","28","22","40"], ["04","32","41"]]
+state_fips_code: TEXT | NULL | eg=["05", "06"]
+state_name: TEXT | NULL | eg=["Arkansas", "California"]
+neighbors_state: VARIANT | NULL | eg=[["Tennessee","Texas","Missouri","Mississippi","Louisiana","Oklahoma"], ["Arizona","Nevada","Oregon"]]
+
+## GEO_US_BOUNDARIES.METROPOLITAN_DIVISIONS
+@use: [C5]
+name: TEXT | NULL | eg=["Boston, MA", "Lake County-Kenosha County, IL-WI"]
+csa_code: TEXT | NULL | eg=["148", "176"]
+internal_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00&d1\\xfb\\x06\\xb8Q\\xc0\\x89\\xaf\\xc0\\xa1\\x01\\x08E@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xd1u\\xe1\\x07\\xe7\\xdbU\\xc0j\\x89\\x95\\xd1\\xc8)E@')"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G3120"]
+internal_point_latitude: FLOAT | NULL | eg=[42.0625498, 42.326441]
+geo_id: TEXT | NULL | eg=["1446014454", "1698029404"]
+metdiv_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x04\\x10\\x00\\x00}\\xe5Az\\x8a\\xcaQ\\xc0\\x96\\xc5\\xc4\\xe6\\xe3&E@hv\\xdd[\\x91\\xcaQ\\xc0SQ\\xbc\\xca\\xda&E@\\x8c\\xa01\\x93\\xa8\\xcaQ\\xc0E\\xb0q\\xfd\\xbb&E@\\x98\\xb9\\xc0\\xe5\\xb1\\xcaQ\\xc0\\x9f\\xde\\x8c\\x9a\\xaf&E@\\xaa\\xd6\\xc2,\\xb4\\xcaQ\\xc0\\x90\\xdb/\\x9f\\xac&E@\\xea\\x91\\x06\\xb7\\xb5\\xcaQ\\xc0\\x83\\x95\\n*\\xaa&E@h\\x1e\\xc0\"\\xbf\\xcaQ\\xc0=\\xcc^\\xb6\\x9d&E@\\x19\\x19\\xe4.\\xc2\\xcaQ\\xc0\\xe1_\\x04\\x8d\\x99&E@\\xd7\\xc1\\xc1\\xde\\xc4\\xcaQ\\xc0\\x0c\\x8f\\xfd,\\x96&E@\\xb3\\xd19?\\xc5\\xcaQ\\xc0\\xb84~\\xe1\\x95&E@#\\xf7tu\\xc7\\xcaQ\\xc0\\xea \\xaf\\x07\\x93&E@Y\\xa6_\"\\xde\\xcaQ\\xc0\\xf4\\xa7\\x8d\\xeat&E@\\xa1\\xbd\\xfax\\xe8\\xcaQ\\xc0\\x7f\\x8e\\x8f\\x16g&E@t\\x90\\xd7\\x83I\\xcbQ\\xc0\\xdb#\\x9b\\xab\\xe6%E@-\\xed\\xd4\\\\n\\xcbQ\\xc0\\x8a\\x89\\xcd\\xc7\\xb5%E@\\xd8x\\xb0\\xc5n\\xcbQ\\xc0WH\\xf9I\\xb5%E@\\x03\\xe7\\x8c(\\xed\\xcbQ\\xc0=tA}\\xcb$E@Z\\x7fK\\x00\\xfe\\xcbQ\\xc0\\x1fh\\x05\\x86\\xac$E@\\x1c\\xce\\xfcj\\x0e\\xccQ\\xc0\\xf3\\xad\\x0f\\xeb\\x8d$E@\\xef\\xa4\\x85\\xcb*\\xccQ\\xc0\\xb9\\xd7I}Y$E@9\\xd6\\xc5m4\\xccQ\\xc0&A\\x7f\\xa1G$E@=+i\\xc57\\xccQ\\xc0&TpxA$E@\\xe1].\\xe2;\\...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xb6\\x07\\x00\\x00\\xa8\\x8b\\x14\\xca\\xc2\\x0cV\\xc0\\xce\\x15\\xa5\\x84`?E@\\xa8\\x8b\\x14\\xca\\xc2\\x0cV\\xc0\\xd5\\x06\\'\\xa2_?E@\\xa8\\x8b\\x14\\xca\\xc2\\x0cV\\xc0@\\xf1c\\xcc]?E@\\x90IF\\xce\\xc2\\x0cV\\xc0\\xd1\\xfc1\\xadM?E@_\\xc5\\xa9\\xd6\\xc2\\x0cV\\xc0\\x02\\xc6\\xfa\\x06&?E@0A\\r\\xdf\\xc2\\x0cV\\xc0\\x0f\\xd2S\\xe4\\x10?E@0A\\r\\xdf\\xc2\\x0cV\\xc0\\xd8\\x05\\x83k\\xee>E@0A\\r\\xdf\\xc2\\x0cV\\xc0L\\xc4[\\xe7\\xdf>E@\\x8ari\\xfc\\xc2\\x0cV\\xc0b\\xb3#\\xd5w>E@\\x13B\\x07]\\xc2\\x0cV\\xc0\\xcc\\x8d\\xe9\\tK>E@a\\xf9\\xf3m\\xc1\\x0cV\\xc0\\xd4\\x04Q\\xf7\\x01>E@!>\\xb0\\xe3\\xbf\\x0cV\\xc0K\\xdfk\\x08\\x8e=E@\\xeb\\xfc\\xdbe\\xbf\\x0cV\\xc0\\x99\\xf2!\\xa8\\x1a=E@3\\xc3FY\\xbf\\x0cV\\xc0\\xcd\\x16\\x10Z\\x0f=E@\\x9ey9\\xec\\xbe\\x0cV\\xc0\\\\\\x02\\xf0O\\xa9<E@\\xce\\xfd\\xd5\\xe3\\xbe\\x0cV\\xc0\\x9f<,\\xd4\\x9a<E@\\x94\\xff\\xc9\\xdf\\xbd\\x0cV\\xc0X\\xe4\\xd7\\x0f\\xb1;E@\\x88\\x9f\\xff\\x1e\\xbc\\x0cV\\xc0\\xf7\\x98Hi6;E@\\xee\\xb2_w\\xba\\x0cV\\xc0\\x89\\x8c\\x0eH\\xc2:E@\\x06\\xf5-s\\xba\\x0cV\\xc0\\x81#\\x81\\x06\\x9b:E@6y\\xcaj\\xba\\x0cV\\xc0\\xb0\\x84\\xb51v:E@}?5^\\xba\\x0cV\\xc0\\xd1\\x16\\xd7\\xf8L:E@\\x..."]
+lsad_code: TEXT | NULL | eg=["M3"]
+internal_point_longitude: FLOAT | NULL | eg=[-70.8754261, -87.435976]
+cbsa_code: TEXT | NULL | eg=["14460", "16980"]
+metdiv_code: TEXT | NULL | eg=["14454", "29404"]
+lsad_name: TEXT | NULL | eg=["Boston, MA Metro Division", "Lake County-Kenosha County, IL-WI Metro Division"]
+
+## GEO_US_BOUNDARIES.CBSA
+@use: [C5]
+cbsa_fips_code: TEXT | NULL | eg=["26540", "26090"]
+name: TEXT | NULL | eg=["Huntington, IN", "Holland, MI"]
+cbsa_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00x\\x03\\x00\\x00\\xe8+H3\\x16iU\\xc0I4\\x81\"\\x16uD@k\\ndv\\x16iU\\xc0\\x8a\\x92\\x90H\\xdbtD@\\xcb\\x12\\x9de\\x16iU\\xc0j\\xee\\xe8\\x7f\\xb9tD@)\\x1b\\xd6T\\x16iU\\xc0Q\\xd3.\\xa6\\x99tD@<\\x86\\xc7~\\x16iU\\xc0\\x84\\xd6\\xc3\\x97\\x89tD@R\\xc8\\x95z\\x16iU\\xc0\\x8cz\\x88FwtD@\\xe2Tka\\x16iU\\xc0\\xde2\\xa7\\xcbbtD@\\r\\x02+\\x87\\x16iU\\xc0>5^\\xbaItD@`vO\\x1e\\x16iU\\xc0\\x96Y\\x84b+tD@\\xd1\\xe9y7\\x16iU\\xc0\\xb42\\xe1\\x97\\xfasD@M\\x0b^\\xf4\\x15iU\\xc0U\\x82\\xc5\\xe1\\xccsD@\\xe9_\\x92\\xca\\x14iU\\xc0\\x15q:\\xc9VsD@r/0+\\x14iU\\xc0#0\\xd670sD@\\xe2\\xa2ZD\\x14iU\\xc0\\x95\\xe8,\\xb3\\x08sD@\\xc0\\xccw\\xf0\\x13iU\\xc0\\xa4,C\\x1c\\xebrD@\\xb48c\\x98\\x13iU\\xc0\\xe6f\\x7f\\xa0\\xdcrD@\\xaf{+\\x12\\x13iU\\xc0\\n\\xcfK\\xc5\\xc6rD@\\xc6\\xbd\\xf9\\r\\x13iU\\xc0\\xa4\\t\\xdbO\\xc6rD@\\xde\\xff\\xc7\\t\\x13iU\\xc0\\xdc~\\xf9d\\xc5rD@\\xf0\\x84^\\x7f\\x12iU\\xc0\\xb7:\\x00\\xe2\\xaerD@\\xd8\\\\5\\xcf\\x11iU\\xc0#`tysrD@\\xf1\\x9e\\x03\\xcb\\x11iU\\xc0%\\x94\\xbe\\x10rrD@\\xa9\\xd8\\x98\\xd7\\x11iU\\xc0+\\xfaC3OrD@ #\\xa0\\xc2\\x11iU\\xc0\\x06\\xd30|DrD@\\x97m\\xa7\\xad\\x11iU\\xc0^\\xcd\\x01\\x829rD@\\xaf\\xa...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x7f\\x03\\x00\\x00\\xdd\\xcb}r\\x14rU\\xc0\\xc3d\\xaa`TbE@,\\x9b9$\\xb5rU\\xc0\\xd7kzPPbE@\\x03\\xec\\xa3SWsU\\xc0\\x00\\x9bs\\xf0LbE@0^\\xf3\\xaa\\xcesU\\xc0\\xf6TN{JbE@\\xbdU\\xd7\\xa1\\x9atU\\xc0\\xf9\\xf0,AFbE@G\\xb2G\\xa8\\x19uU\\xc0\\x94_\\x06cDbE@\\xa5\\xbcVBwuU\\xc0\\x95\\x93P\\xfaBbE@J\\x02\\xd4\\xd4\\xb2uU\\xc0\\xcc\\x08o\\x0fBbE@+\\xd8F<\\xd9uU\\xc0\\xf6\\xcf\\xd3\\x80AbE@e\\x80\\x0b\\xb2evU\\xc016t\\xb3?bE@7\\x89A`\\xe5vU\\xc0[\\xfd\\xd8$?bE@\\xd2n\\xf41\\x1fwU\\xc03j\\xbeJ>bE@D\\xfbX\\xc1owU\\xc0 \\xff\\xcc >bE@\\xbe\\x83\\x9f8\\x80wU\\xc0\\x81\\x07\\x06\\x10>bE@\\xe0\\xd0[<\\xbcwU\\xc0\\x9e \\xb1\\xdd=bE@sZ\\xb7A\\xedwU\\xc0\\\\1#\\xbc=bE@o\\xd4\\n\\xd3\\xf7wU\\xc0\\x8c\\xb5\\xbf\\xb3=bE@\\xbbB\\x1f,cxU\\xc0h\\xdf\\xdc_=bE@\\x92\\xe1x>\\x03yU\\xc0U\\x0cW\\x07@bE@Fy\\xe6\\xe5\\xb0yU\\xc0\\xf5\\x9b\\x89\\xe9BbE@s\\xf5c\\x93\\xfcyU\\xc0\\xf8\\xbc\\xe2\\xa9GbE@\\xee,z\\xa7\\x02zU\\xc0\\xbc\\x8a\\x8c\\x0eHbE@\\xe6X\\xdeU\\x0fzU\\xc0R\\x08\\xe4\\x12GbE@\\x97\\x1f\\xb8\\xca\\x13zU\\xc0_\\xb6\\x9d\\xb6FbE@\\xa1\\x7f\\x82\\x8b\\x15zU\\xc0\\x1c\\xc7\\x0f\\x95FbE@4\\xf9f\\x9b\\x1bzU\\xc0\\xff\\xadd\\xc7FbE..."]
+csa_geo_id: TEXT | NULL | eg=["258", "266"]
+lsad_code: TEXT | NULL | eg=["M2", "M1"]
+msa_indicator: TEXT | NULL | eg=["2", "1"]
+internal_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xa2\\x9chW\\xa1^U\\xc0\\xfeN\\xa4E\\xc7iD@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x02\\x94\\xd0\\xa7\\x9f\\xa8U\\xc0\\xcc\\xee\\xc9\\xc3BLE@')"]
+lsad_name: TEXT | NULL | eg=["Huntington, IN Micro Area", "Holland, MI Micro Area"]
+internal_point_longitude: FLOAT | NULL | eg=[-85.4785975, -86.6347446]
+internal_point_latitude: FLOAT | NULL | eg=[40.8263938, 42.5957875]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G3110"]
+geo_id: TEXT | NULL | eg=["26540", "26090"]
+
+## GEO_US_BOUNDARIES.CONGRESS_DISTRICT_116
+@use: [C2, C6, C7]
+lsad_name: TEXT | NULL | eg=["Congressional District 25", "Congressional District 26"]
+lsad_code: TEXT | NULL | eg=["C2"]
+state_fips_code: TEXT | NULL | eg=["12", "06"]
+geo_id: TEXT | NULL | eg=["1225", "0625"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G5200"]
+int_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xd2\\xfa\\x00I\\xfdLT\\xc0\\x99\\x18\\xcb\\xf4K4:@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xf6/\\xff\\xd7\\xef\\x91]\\xc0\\x9b\\x02\\x99\\x9dEKA@')"]
+
+## GEO_US_BOUNDARIES.CSA
+@use: [C3, C5]
+internal_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x1f\\xa1fH\\x95\\rW\\xc0D\\x0f!S\\xe3Z@@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xe9\\x96\\xc2(-\\xdcT\\xc0\\xa1\\x1d&\\xd0\\x16DE@')"]
+geo_id: TEXT | NULL | eg=["384", "220"]
+lsad_name: TEXT | NULL | eg=["Monroe-Ruston, LA CSA", "Detroit-Warren-Ann Arbor, MI CSA"]
+msa_lsad_code: TEXT | NULL | eg=["M0"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G3100"]
+name: TEXT | NULL | eg=["Monroe-Ruston, LA", "Detroit-Warren-Ann Arbor, MI"]
+csa_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00t\\x11\\x00\\x00/\\x99*\\x18\\x95\\x1aW\\xc0\\x1c\\xd0\\xd2\\x15l?@@I\\xf5\\x9d_\\x94\\x1aW\\xc0\\xb5o\\xee\\xaf\\x1e?@@\\x01/3l\\x94\\x1aW\\xc0\\x8dx\\xb2\\x9b\\x19?@@*\\xc2MF\\x95\\x1aW\\xc0\\xa2(\\xd0\\'\\xf2>@@\\xe9\\xd2\\xbf$\\x95\\x1aW\\xc0\\x83-v\\xfb\\xac>@@\\xa7\\xc9\\x8c\\xb7\\x95\\x1aW\\xc0\\x9f\\x1fF\\x08\\x8f>@@\\xa1\\xf2\\xaf\\xe5\\x95\\x1aW\\xc0;Z\\xd5\\x92\\x8e>@@`\\x03\"\\xc4\\x95\\x1aW\\xc0\\xbf\\xd4\\xcf\\x9b\\x8a>@@e\\xda\\xfe\\x95\\x95\\x1aW\\xc0\\xd7\\x99B\\xe75>@@C\\x04\\x1cB\\x95\\x1aW\\xc0\\x906\\x8eX\\x8b=@@\\x90\\xa1c\\x07\\x95\\x1aW\\xc0\\xe6Z\\xb4\\x00m=@@\\xa3\\x0cU1\\x95\\x1aW\\xc0$*T7\\x17=@@H\\xdb\\xf8\\x13\\x95\\x1aW\\xc0bC7\\xfb\\x03=@@\\x8a\\xca\\x865\\x95\\x1aW\\xc0\\xbe\\xf0J\\x92\\xe7<@@ZF\\xea=\\x95\\x1aW\\xc0\\x90}\\x90e\\xc1<@@\\x00\\x15\\x8e \\x95\\x1aW\\xc09\\xc8\\xeb\\xc1\\xa4<@@\\x13\\x80\\x7fJ\\x95\\x1aW\\xc0\\xf7Ma\\xa5\\x82<@@\\xfa=\\xb1N\\x95\\x1aW\\xc0\\xdc\\xd0\\x94\\x9d~<@@\\x8a\\xca\\x865\\x95\\x1aW\\xc0\\xf4\\x8a\\xa7\\x1ei<@@\\xbf%\\x00\\xff\\x94\\x1aW\\xc0n\\'\\x11\\xe1_<@@\\xc5\\xfc\\xdc\\xd0\\x94\\x1aW\\xc0\\x1f\\xd1\\x04\\x8aX<@@*\\xc2MF\\x95\\x1aW\\xc0zPP\\x8aV<@@xE\\xf0...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00f\\t\\x00\\x00Z\\x82\\x8c\\x80\\n\\xfbT\\xc0\\xd6\\x83I\\xf1\\xf1cE@\\x88\\xf1\\x9aWu\\xfbT\\xc0h\\xe0G5\\xeccE@\\x91C\\xc4\\xcd\\xa9\\xfbT\\xc0\\xbe\\xa2[\\xaf\\xe9cE@Vb\\x9e\\x95\\xb4\\xfbT\\xc0\\xc3\\x93\\xdd\\xcc\\xe8cE@\\r\\xfb=\\xb1N\\xfcT\\xc0mLOX\\xe2cE@^d\\x02~\\x8d\\xfcT\\xc0{.S\\x93\\xe0cE@\\x9d\\xb9\\x87\\x84\\xef\\xfcT\\xc0S7\\x17\\x7f\\xdbcE@\\xbc\"\\xf8\\xdfJ\\xfdT\\xc0\\x96\\xc2\\x83f\\xd7cE@\\xdf\\xc0\\xe4F\\x91\\xfdT\\xc0PJ\\x08V\\xd5cE@4\\x81\"\\x161\\xfeT\\xc0\\xe3\\x0e\\x9b\\xc8\\xcccE@\\x11\\xde\\x1e\\x84\\x80\\xfeT\\xc0\\x98\\xd9\\xe71\\xcacE@\\xf4\\xf3\\xa6\"\\x15\\xffT\\xc0Y\\xee\\xcc\\x04\\xc3cE@^*6\\xe6u\\xffT\\xc0\\x15\\xaa\\x9b\\x8b\\xbfcE@2;\\x8b\\xde\\xa9\\xffT\\xc0n)\\xe7\\x8b\\xbdcE@\\x12\\xd71\\xae\\xb8\\xffT\\xc0\\x98\\xf0K\\xfd\\xbccE@\\x06\\x83k\\xee\\xe8\\xffT\\xc0;\\x1c]\\xa5\\xbbcE@\\x11n2\\xaa\\x0c\\x00U\\xc06\\x93o\\xb6\\xb9cE@\\xe7\\xfc\\x14\\xc7\\x81\\x00U\\xc0\\xa7n.\\xfe\\xb6cE@\\xb4\\x1c\\xe8\\xa1\\xb6\\x00U\\xc0C\\xdd\\x07 \\xb5cE@(\\xd7\\x14\\xc8\\xec\\x00U\\xc0\\xb6\\x84|\\xd0\\xb3cE@\\xc7\\x82\\xc2\\xa0L\\x01U\\xc0\\x05\\x8aX\\xc4\\xb0cE@\\xca\\xd7e\\xf8O\\x01U\\xc0\\xa5\\x81\\x1f\\xd5..."]
+csa_code: TEXT | NULL | eg=["384", "220"]
+
+## GEO_US_BOUNDARIES.NATIONAL_OUTLINE
+aff_geo_id: TEXT | NULL | eg=["0100000US"]
+us_outline_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x06\\x00\\x00\\x00\"\\x01\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x92\\x15\\x00\\x00c\\x9f\\xc7(O\\x04e\\xc0\\xfd}\\xc6\\x85\\x03iP@\\xe6$\\x94\\xbe\\x10\\x04e\\xc0\\x99\\x0c\\xc7\\xf3\\x19hP@\\x0f\\xd0}93\\x03e\\xc0d\\xb1M*\\x1agP@\\xc9z1\\x94\\x13\\x03e\\xc0R\\xb0\\xc6\\xd9tfP@*U\\xa2\\xec-\\x03e\\xc0E\\xf5\\xd6\\xc0VfP@\\x93Y\\x84b+\\x03e\\xc0\\x9b\\x1ah>\\xe7eP@\\x15\\x95\\xd4\\th\\x02e\\xc0\\xb5\\xf8\\x14\\x00\\xe3dP@S\\xd4`\\x1a\\x86\\x01e\\xc0Ec\\xed\\xefldP@JI\\xd6\\xe1\\xe8\\xffd\\xc0\\x7fI*S\\xcccP@c\\x83L2\\xf2\\xfed\\xc0\\x03%\\x05\\x16\\xc0cP@-\\xaf\\\\o\\x1b\\xfdd\\xc0\\xb0\\ti\\x8dAcP@\\xc5\\xe7\\x15O=\\xfbd\\xc0\\x07\\x95\\xb8\\x8eqbP@\\x0e\\x13\\rR\\xf0\\xfad\\xc0%o\\x80\\x99\\xefaP@\\xcf\\xe30\\x98\\xbf\\xf6d\\xc0Z\\x115\\xd1\\xe7_P@\\xdauoE\\xe2\\xf3d\\xc0\\x17\\xeb\\x1b\\x98\\xdc]P@\\x93Z\\xef7\\xda\\xf3d\\xc0\\xfc\\xf9\\xb6`\\xa9]P@/\\x00Tqc\\xf2d\\xc0\\t\\x1a3\\x89z\\\\P@\\x990a4+\\xefd\\xc0\\xb2g\\xcfejZP@\\x8c\\xda\\xfd*\\xc0\\xecd\\xc0\\x7f\\xbb\\xec\\xd7\\x9dYP@\\x97\\x03\\x04st\\xe5d\\xc0.\\x16\\x86\\xc8\\xe9XP@\\xa5\\x18\\xe7oB\\xe3d\\xc0\\xbf\\x9c\\xd9\\xae\\xd0XP@\\xe0\\xc3\\xece\\xdb\\xe0d\\xc0\\xaeI\\xb7%rXP@\\xa1\\xfa\\xc..."]
+name: TEXT | NULL | eg=["United States"]
+geo_id: TEXT | NULL | eg=["US"]
+
+## GEO_US_BOUNDARIES.RAILWAYS
+railway_geom: TEXT | NULL | eg=[{"type":"LineString","coordinates":[[-85.756163,30.789894],[-85.749904,30.79131299999999],[-85.74871499999999,30.79155899999999],[-85.74010599999998,30.79322499999998],[-85.73695699999999,30.793934],[-85.736812,30.79396699999999],[-85.735137,30.79429],[-85.73469899999999,30.79452799999998],[-85.730451,30.79541499999998],[-85.72664999999999,30.79618299999999],[-85.72593499999999,30.79632699999999],[-85.72435899999999,30.79647599999999],[-85.72298599999999,30.79634799999999],[-85.72159299999998,30.79626999999998],[-85.71938999999999,30.79606399999999],[-85.71445399999998,30.79571999999998],[-85.712805,30.79557799999998],[-85.70494399999998,30.79490399999998],[-85.702379,30.794684],[-85.69897499999999,30.79436199999998],[-85.69579699999998,30.79413699999998],[-85.69317199999999,30.79394299999998],[-85.69315299999998,30.79394199999999],[-85.69268699999999,30.79390899999998],[-85.687477,30.79337899999999],[-85.687269,30.793357],[-85.686022,30.79321999999999],[-85.685447,30.79305399999999..., {"type":"LineString","coordinates":[[-86.59328399999998,36.01725299999999],[-86.59332799999999,36.018155],[-86.593507,36.01917199999999],[-86.59366099999998,36.01952599999999],[-86.59390399999998,36.01991399999998],[-86.59409399999998,36.02019899999999],[-86.59411899999999,36.02026099999999]]}]
+geo_id: NUMBER | NULL | eg=[11094844118, 110215163217]
+mtfcc_feature_class_code: TEXT | NULL | eg=["R1011"]
+full_name: TEXT | NULL | eg=["Louisville and Nashville RR"]
+
+## GEO_US_BOUNDARIES.COUNTIES
+@use: [C2, C6]
+cbsa_fips_code: TEXT | NULL
+county_gnis_code: TEXT | NULL | eg=["01581062", "01581101"]
+lsad_code: TEXT | NULL | eg=["06"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G4020"]
+fips_class_code: TEXT | NULL | eg=["H1"]
+county_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xa6\\x04\\x00\\x000\\xd2\\x8b\\xda\\xfd\\tW\\xc0\\xd3($\\x99\\xd5\\xbbF@\\x1eM\\xf5d\\xfe\\tW\\xc0\\x8269|\\xd2\\xbbF@\\x8a\\x1d\\x8dC\\xfd\\tW\\xc0\\x02(F\\x96\\xcc\\xbbF@\\x19\\xaab*\\xfd\\tW\\xc0uk\\x99\\x0c\\xc7\\xbbF@\\xc0x\\x06\\r\\xfd\\tW\\xc0\\xf6\\x90\\xf0\\xbd\\xbf\\xbbF@%>w\\x82\\xfd\\tW\\xc0\\xb9H\\xa1,|\\xbbF@\\xb9m\\xdf\\xa3\\xfe\\tW\\xc0\\xfd\\xbe\\x7f\\xf3\\xe2\\xbaF@*\\x15TT\\xfd\\tW\\xc0\\x93\\xbb\\xcf\\xf1\\xd1\\xbaF@\\x01h\\x94.\\xfd\\tW\\xc0\\xa39\\xb2\\xf2\\xcb\\xbaF@z\\x1a0H\\xfa\\tW\\xc0Z\\xb2*\\xc2M\\xbaF@ \\x03yv\\xf9\\tW\\xc0U\\x0cW\\x07@\\xbaF@\\xeas\\xb5\\x15\\xfb\\tW\\xc0\\xeb,z\\xa7\\x02\\xbaF@\\xa3\\xadJ\"\\xfb\\tW\\xc0\\x98l<\\xd8b\\xb9F@\\xcdZ\\nH\\xfb\\tW\\xc0G\\x160\\x81[\\xb9F@Z\\x7fK\\x00\\xfe\\tW\\xc0\\x8a\\xdd>\\xab\\xcc\\xb8F@\\x17()\\xb0\\x00\\nW\\xc0\\xa8\\xfeA$C\\xb8F@\\xe8\\xa3\\x8c\\xb8\\x00\\nW\\xc0\\x9f \\xb1\\xdd=\\xb8F@wd\\xac6\\xff\\tW\\xc0\\x00:\\xcc\\x97\\x17\\xb8F@\\x89\\xcf\\x9d`\\xff\\tW\\xc0\\xa6\\x92\\x01\\xa0\\x8a\\xb7F@\\xca\\xbe+\\x82\\xff\\tW\\xc0I\\xec\\xda\\xden\\xb7F@\\x89\\xcf\\x9d`\\xff\\tW\\xc0w\\x8aU\\x830\\xb7F@\\xb3|]\\x86\\xff\\tW\\xc0,,\\xb8\\x1f\\xf0\\xb6F@\\xca\\xbe+\\x...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00x\\x04\\x00\\x00K\\x92\\xe7\\xfa>\\xbaV\\xc0\\xe5\\xcb\\x0b\\xb0\\x8f\\xf4E@\\x8c\\x9b\\x1ah>\\xbaV\\xc0\\xbc\\x8a\\x8c\\x0eH\\xf4E@\\x04\\xe6!S>\\xbaV\\xc0\\xaf\\x8b\\xa2\\x07>\\xf4E@E\\xd5\\xaft>\\xbaV\\xc0\\x84\"\\xdd\\xcf)\\xf4E@\\xce\\x8a\\xa8\\x89>\\xbaV\\xc0\\xc8\\\\\\x19T\\x1b\\xf4E@\\xb6H\\xda\\x8d>\\xbaV\\xc0q\\xad\\xf6\\xb0\\x17\\xf4E@W@\\xa1\\x9e>\\xbaV\\xc0;\\x1b\\xf2\\xcf\\x0c\\xf4E@\\'\\xbc\\x04\\xa7>\\xbaV\\xc0\\xe2k\\xcf,\\t\\xf4E@\\x0fz6\\xab>\\xbaV\\xc0\\xfdc!:\\x04\\xf4E@\\x80\\xed`\\xc4>\\xbaV\\xc0\\xdc\\xd8\\xecH\\xf5\\xf3E@8\\'\\xf6\\xd0>\\xbaV\\xc0\\xf6\\xd0>V\\xf0\\xf3E@\\t\\xa3Y\\xd9>\\xbaV\\xc0\\xa2\\xaa\\t\\xa2\\xee\\xf3E@\\xc1\\xdc\\xee\\xe5>\\xbaV\\xc0\\xd5b\\xf00\\xed\\xf3E@2P\\x19\\xff>\\xbaV\\xc0\\x1d\\xab\\x94\\x9e\\xe9\\xf3E@\\xeb\\x89\\xae\\x0b?\\xbaV\\xc0\\x9a\\x00\\xc3\\xf2\\xe7\\xf3E@\\x03\\xcc|\\x07?\\xbaV\\xc0\\xd5fc%\\xe6\\xf3E@K\\x92\\xe7\\xfa>\\xbaV\\xc0\\x8d\\x99D\\xbd\\xe0\\xf3E@K\\x92\\xe7\\xfa>\\xbaV\\xc0\\xc8\\xff\\xe4\\xef\\xde\\xf3E@K\\x92\\xe7\\xfa>\\xbaV\\xc0\\xd1\\xf0f\\r\\xde\\xf3E@2P\\x19\\xff>\\xbaV\\xc0\\xb3?Pn\\xdb\\xf3E@\\x1b\\x0eK\\x03?\\xbaV\\xc0\\x88\\xac5\\x94\\xda\\xf3E@\\x1b\\..."]
+geo_id: TEXT | NULL | eg=["55005", "55081"]
+lsad_name: TEXT | NULL | eg=["Barron County", "Monroe County"]
+int_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x13!\\xbf\\xc8\\x95\\xf6V\\xc0\\x94\\xca\\xca\\xe5\\xf5\\xb7F@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xcb\\xc22\\x91\\xad\\xa7V\\xc0-\\xbfg\\x7f\\xfb\\xf8E@')"]
+county_fips_code: TEXT | NULL | eg=["55005", "55081"]
+functional_status: TEXT | NULL | eg=["A"]
+state_fips_code: TEXT | NULL | eg=["55"]
+csa_fips_code: TEXT | NULL
+met_div_fips_code: TEXT | NULL
+county_name: TEXT | NULL | eg=["Barron", "Monroe"]
+
+## GEO_US_BOUNDARIES.NWS_FORECAST_REGIONS
+fe_area: TEXT | NULL | eg=["wu", "sr"]
+name: TEXT | NULL | eg=["Keweenaw", "Houghton"]
+cwa: TEXT | NULL | eg=["MQT"]
+shape_geometry: BINARY | NULL | eg=["bytearray(b'\\x01\\x06\\x00\\x00\\x00;\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x0c\\x00\\x00\\x00\\x008\\x81\\xdf\\xa2&V\\xc0\\xb1 \\xff\\xffQ\\x12H@\\xc4Q\\x81\\xdf\\xdb&V\\xc0\\xc8\\x87\\xff\\xff5\\x12H@\\xf4b\\x81\\xdf\\x01\\'V\\xc0\\xa8\\x9a\\x00\\x00\\x16\\x12H@,I\\x81\\xdf\\x08\\'V\\xc0Ix\\x00\\x00\\n\\x12H@,I\\x81\\xdf\\x08\\'V\\xc0a\\xdf\\x00\\x00\\xee\\x11H@(\\xafb\\xdf\\x18\\'V\\xc0\\xf0T2\\x00\\xd4\\x11H@\\xb8\\'\\x00\\xe0\\xe7&V\\xc0P\\xbb\\xff\\xff\\xe7\\x11H@4\\x86\\x00\\xe0X&V\\xc0Gx\\x00\\x00J\\x12H@\\x08\\xc0\\xc7\\xdfd&V\\xc0\\xd9\\x9e\\xda\\xffQ\\x12H@\\x14J\\x00\\xe0s&V\\xc0Hx\\x00\\x00J\\x12H@\\xacR\\x00\\xe0\\x86&V\\xc0\\xc0D\\x00\\x00X\\x12H@\\x008\\x81\\xdf\\xa2&V\\xc0\\xb1 \\xff\\xffQ\\x12H@\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x0c\\x00\\x00\\x00i\\xda\\xff\\xdf<#V\\xc0_\\xdf\\x00\\x00\\xee\\x14H@ \\x1f\\x00\\xe04#V\\xc0\\xb8\\x01\\x01\\x00\\xfa\\x14H@\\xf0f\\x11\\xe0-#V\\xc0\\xe0\\x8d\\xd0\\xff\\r\\x15H@\\xf8\\xa5\\x80\\xdf?#V\\xc00\\xce\\x00\\x00\\x08\\x15H@\\x80\\xd9\\x80\\xdfQ#V\\xc0\\xa8\\xdd\\xff\\xff\\xf3\\x14H@,\\xfa\\x7f\\xdfc#V\\xc0P\\xbb\\xff\\xff\\xe7\\x14H@\\xd0&\\x81\\xdf|#V\\xc0\\xe8\\x12\\x01\\x00\\xe0\\x14H@T\\xc8\\x80\\xdf\\x...", "bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x15\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x0b\\x00\\x00\\x00\\xd0|Q_\\x0f\\x1dV\\xc0\\x8f#~\\xe1o\\x81G@\\xd0\\xd1\\xff\\xdf\\t\\x1dV\\xc0h\\x05\\x00\\xe0{\\x81G@d\\xae\\xff\\x7f\\x0b\\x1dV\\xc0P\\x1b\\xff\\x1f\\x96\\x81G@\\xb8\\xeag\\xd5\\x1a\\x1dV\\xc0g<\\'\\x16\\xa8\\x81G@\\x1b\\xd4~k\\'\\x1dV\\xc0hb\\xba\\x10\\xab\\x81G@j\\xf6@+0\\x1dV\\xc0\\xd8\\xa1\\x9a\\x92\\xac\\x81G@\\xb7b\\x7f\\xd9=\\x1dV\\xc0\\xf5\\x9d_\\x94\\xa0\\x81G@l#\\x00`>\\x1dV\\xc0\\xd00\\xff\\x9f\\x85\\x81G@\\xc8b\\x00\\x80:\\x1dV\\xc0\\x98\\x93\\xff\\x1f`\\x81G@\\x95\\x85\\xff?1\\x1dV\\xc0\\xe8\\x0c\\x00\\x80\\\\\\x81G@\\xd0|Q_\\x0f\\x1dV\\xc0\\x8f#~\\xe1o\\x81G@\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x0c\\x00\\x00\\x00)v4\\x0e\\xf5\\x1cV\\xc0UN{J\\xce\\x81G@\\x04\\xa9\\xff\\x9f\\xef\\x1cV\\xc0\\xb7\\xb2\\xff\\xff\\xd4\\x81G@\\xfc\\x1c\\x00 \\xf0\\x1cV\\xc0\\x11C\\xff\\xff\\xdd\\x81G@\\x16;\\x1a\\x87\\xfa\\x1cV\\xc0\\xca\\x1c\\xcb\\xbb\\xea\\x81G@\\xe4\\xa2ZD\\x14\\x1dV\\xc0\\xbb\\x9e\\xe8\\xba\\xf0\\x81G@B\\x94/h!\\x1dV\\xc0s\\xbe\\xd8{\\xf1\\x81G@\\x04\\xe3\\xe0\\xd21\\x1dV\\xc0\\xca\\x1c\\xcb\\xbb\\xea\\x81G@\\xf2]J]2\\x1dV\\xc0\\x80\\xb7@\\x82\\xe2\\x81G@..."]
+shortname: TEXT | NULL | eg=["Keweenaw", "Houghton"]
+lon: FLOAT | NULL | eg=[-88.4287, -88.6207]
+state_zone: TEXT | NULL | eg=["MI001", "MI003"]
+state: TEXT | NULL | eg=["MI"]
+zone: TEXT | NULL | eg=["001", "003"]
+time_zone: TEXT | NULL | eg=["E", "C"]
+lat: FLOAT | NULL | eg=[47.6104, 47.0531]
+
+## GEO_US_BOUNDARIES.ZIP_CODES
+@use: [C3, C5]
+zip_code: TEXT | NULL | eg=["44253", "60643"]
+zip_code_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xa5\\x01\\x00\\x00\\xe8.\\x89\\xb3\"\\x86T\\xc0\\xe8\\xdb\\x82\\xa5\\xba\\x92D@>|\\x99(B\\x86T\\xc0\\x99?\\xa6\\xb5i\\x92D@\\x0b\\xd2\\x8cE\\xd3\\x85T\\xc0\\xda\\xc9\\xe0(y\\x91D@\\xa8W\\xca2\\xc4\\x85T\\xc0\\xc8^\\xef\\xfex\\x91D@\\x07\\xe9)r\\x88\\x85T\\xc02\\x15\\xe2\\x91x\\x91D@\\x07\\n\\xbc\\x93O\\x85T\\xc0mG8-x\\x91D@\\xfau\\xa7;O\\x85T\\xc0oG8-x\\x91D@\\x047R\\xb6H\\x85T\\xc0\\x9f\\xcb\\xd4$x\\x91D@,\\xd7\\xdbf*\\x85T\\xc0\\xech\\x1c\\xeaw\\x91D@\\x1aM.\\xc6\\xc0\\x84T\\xc0\\xe5\\xab\\xe4cw\\x91D@\\x88\\x80C\\xa8R\\x84T\\xc0\\xbd\\x18\\xca\\x89v\\x91D@$\\xd0`S\\xe7\\x83T\\xc0\\xdbe\\xbf\\xeet\\x91D@\\xc4=\\x96>t\\x83T\\xc0j&\\xdfls\\x91D@eO\\x02\\x9bs\\x83T\\xc0\\x99\\xaa{ds\\x91D@\\xe0)\\xe4J=\\x83T\\xc0\\xee8EGr\\x91D@\\x10z6\\xab>\\x83T\\xc0\\x00\\x0c\\xcb\\x9fo\\x91D@R\\xb0\\xc6\\xd9t\\x83T\\xc0\\xb3e\\xf9\\xba\\x0c\\x91D@\\xf6\\x02\\xb3B\\x91\\x83T\\xc0\\xbf;\\xf9\\xf4\\xd8\\x90D@Jp\\xea\\x03\\xc9\\x83T\\xc0\\x9c\\xc4 \\xb0r\\x90D@:<\\x84\\xf1\\xd3\\x83T\\xc0\\xec|?5^\\x90D@\\x06\\x80*n\\xdc\\x83T\\xc0\\x1a\\xc3\\x9c\\xa0M\\x90D@\\xd8\\x9a\\xad\\xbc\\xe4\\x83T\\xc0\\x92\\xa6A\\xd1<\\x90D@\\x1f\\xf9\\x83\\x81\\xe7\\x...", "bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00>\\x00\\x00\\x00\\xa5\\xb9\\x15\\xc2j\\xe9U\\xc0\\xaf\\xc4\\x03\\xca\\xa6\\xd4D@\\x1b\\x04\\x1d\\xadj\\xe9U\\xc0a\\xb9\\xa5\\xd5\\x90\\xd4D@d\\xca\\x87\\xa0j\\xe9U\\xc0:\\xa5\\x83\\xf5\\x7f\\xd4D@\\x8b\\x8a8\\x9dd\\xe9U\\xc0voEb\\x82\\xd4D@=\\xed\\xf0\\xd7d\\xe9U\\xc0->\\x05\\xc0x\\xd4D@e\\x80\\x0b\\xb2e\\xe9U\\xc0\\x1b\\xb0\\xab\\xc9S\\xd4D@O>=\\xb6e\\xe9U\\xc0u\\xfb\\xac2S\\xd4D@Z\\xd2Q\\x0ef\\xe9U\\xc0/\\x9a\\x95\\xedC\\xd4D@\\xb3\\xb5\\xbeHh\\xe9U\\xc0\\xbai3NC\\xd4D@\\x05\\xf6\\x98Hi\\xe9U\\xc0\\x07\\x07{\\x13C\\xd4D@\\xa5\\x07\\x05\\xa5h\\xe9U\\xc0hwH1@\\xd4D@\\xf4\\xa4Ljh\\xe9U\\xc0\\r\\x0fa\\xfc4\\xd4D@\\xf4\\xa4Ljh\\xe9U\\xc0\\xf4\\x91\\x94\\xf40\\xd4D@\\xad\\xde\\xe1vh\\xe9U\\xc0\\xaf\\x00\\xa6\\x0c\\x1c\\xd4D@\\x95\\x9c\\x13{h\\xe9U\\xc0#\\x10\\xaf\\xeb\\x17\\xd4D@\\x01\\xa1\\xf5\\xf0e\\xe9U\\xc0\\x15.\\xab\\xb0\\x19\\xd4D@\\xb1\\x13^\\x82S\\xe9U\\xc03\\xdf\\xc1O\\x1c\\xd4D@\\xa9)\\xc9:\\x1c\\xe9U\\xc0\\xb8v\\xa2$$\\xd4D@\\xaf\\xafu\\xa9\\x11\\xe9U\\xc0\\'\\xb6\\x82\\xa6%\\xd4D@q\\xc4Z|\\n\\xe9U\\xc030\\xf2\\xb2&\\xd4D@BZc\\xd0\\t\\xe9U\\xc0\\xa3\\xa3\\x1c\\xcc&\\xd4D@\\x95\\xb4..."]
+fips_class_code: TEXT | NULL | eg=["B5"]
+state_code: TEXT | NULL | eg=["OH", "IL"]
+state_fips_code: TEXT | NULL | eg=["39", "17"]
+county: TEXT | NULL | eg=["Medina", "Cook County, DuPage County"]
+functional_status: TEXT | NULL | eg=["S"]
+state_name: TEXT | NULL | eg=["Ohio", "Illinois"]
+internal_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x91_\\xe4\\n\\x14\\x82T\\xc0\\x9c\\x0eS\\x11]\\x95D@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x000\\xe0\\x1b\\xf9r\\xeaU\\xc0\\x0cd,\\x89\\xa2\\xd9D@')"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G6350"]
+city: TEXT | NULL | eg=["Litchfield", "Chicago city"]
+
+## GEO_US_BOUNDARIES.COASTLINE
+coastline_geom: BINARY | NULL | eg=["bytearray(b\"\\x01\\x02\\x00\\x00\\x00\\x08\\x00\\x00\\x00[\\x1d\\x00qWQT\\xc0\\x89\\x92W\\xe7\\x18T?@\\x07\\'\\xa2_[QT\\xc0\\x12\\x98N\\xeb6T?@s_\\xcelWQT\\xc0&TpxAT?@\\x1eL\\x8a\\x8fOQT\\xc0\\xb7\\x99\\n\\xf1HT?@\\x86\\x934\\x7fLQT\\xc0\\xd5\\x95\\xcf\\xf2<T?@\\xe7\\xe9\\\\QJQT\\xc0k\\x96\\x92\\xe5$T?@\\x1eL\\x8a\\x8fOQT\\xc0k\\x11\\x18\\xeb\\x1bT?@[\\x1d\\x00qWQT\\xc0\\x89\\x92W\\xe7\\x18T?@\")", "bytearray(b'\\x01\\x02\\x00\\x00\\x00^\\x00\\x00\\x00\\x88\\xd8`\\xe1$CP\\xc0r\\xdfj\\x9d\\xb8h2@c\\xe8\\xd8A%CP\\xc0`\\xfdfb\\xbah2@\\x0et\\xb4\\xaa%CP\\xc0\\xe8\\xdb\\x82\\xa5\\xbah2@\\x87\\x8aq\\xfe&CP\\xc0$\\xcb\\x10\\xc7\\xbah2@\\x1a\\xba\\xd9\\x1f(CP\\xc0#\\xcb\\x10\\xc7\\xbah2@\\x9e\\x98\\xf5b(CP\\xc0\\x1fvmo\\xb7h2@\\xf6\\xc9Q\\x80(CP\\xc0\\x1a\\xfc\\xfdb\\xb6h2@\\xa2;\\x88\\x9d)CP\\xc0|\\xc1n\\xd8\\xb6h2@\\x1f)\"\\xc3*CP\\xc0\\xd7\\xa4\\xdb\\x12\\xb9h2@\\xef\\x8a\\xe0\\x7f+CP\\xc0\\xc4\\xc2\\xd7\\xd7\\xbah2@\\x89\\xab\\xca\\xbe+CP\\xc0\\xf8z\\xbef\\xb9h2@\\x89\\xab\\xca\\xbe+CP\\xc0\\xc9*l\\x06\\xb8h2@\\x89\\xab\\xca\\xbe+CP\\xc0\\xfc\\xe2R\\x95\\xb6h2@\\x89\\x91%s,CP\\xc0\\x98\\x1d\\xe2\\x1f\\xb6h2@\\xfb\\xea\\xaa@-CP\\xc0\\xa1\\xff\\xe5Z\\xb4h2@\\xc92\\xc4\\xb1.CP\\xc0\\xfb7\\xf6\\xec\\xb9h2@\\xb7\\xad-</CP\\xc0\\x02%\\x05\\x16\\xc0h2@\\xb2\\xbc\\xab\\x1e0CP\\xc0\\xeb\\xb5\\xa0\\xf7\\xc6h2@\\x85\\xdb\\xa1a1CP\\xc0\\xb3pY\\x85\\xcdh2@z\\xf9\\x9d&3CP\\xc0|\\xfb:p\\xceh2@\\xc5b\\x9bT4CP\\xc0\\x8b\\x9av1\\xcdh2@\\xf0\\xf5\\xb5.5CP\\xc0\\x15\\x9e^)\\xcbh2@\\x84?\\xc3\\x9b5CP\\xc0GVE\\xb8\\xc9h2@I\\rm\\x006CP\\xc0\\x1a\\x06\\xf3W\\xc8h2@f\\x0cs\\x826CP\\xc0\\x87\\xf0/\\..."]
+name: TEXT | NULL | eg=["Atlantic"]
+
+## GEO_US_BOUNDARIES.CONGRESS_DISTRICT_115
+@use: [C2, C6, C7]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G5200"]
+geo_id: TEXT | NULL | eg=["1224", "3625"]
+lsad_code: TEXT | NULL | eg=["C2"]
+int_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xadwn\\x90\\x7f\\rT\\xc0\\xcd\\x83\\x05A\\x91\\xe89@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00v\\xe9_\\x92\\xcamS\\xc0y\\xd7\\x8f\\x03e\\xa9E@')"]
+state_fips_code: TEXT | NULL | eg=["12", "36"]
+lsad_name: TEXT | NULL | eg=["Congressional District 24", "Congressional District 25"]
+
+## GEO_US_BOUNDARIES.STATES
+@use: [C2, C6]
+state_fips_code: TEXT | NULL | eg=["69", "60"]
+division_code: TEXT | NULL | eg=["0", "1"]
+functional_status: TEXT | NULL | eg=["A"]
+int_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xb2fd\\x90;3b@f\\xdd?\\x16\\xa2\\xdf-@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00t\\x7fPrbUe\\xc0\\x05\\xaa\\x7f\\x10\\xc9\\x88,\\xc0')"]
+geo_id: TEXT | NULL | eg=["69", "60"]
+state_gnis_code: TEXT | NULL | eg=["01779809", "01802701"]
+state: TEXT | NULL | eg=["MP", "AS"]
+region_code: TEXT | NULL | eg=["9", "1"]
+state_name: TEXT | NULL | eg=["Commonwealth of the Northern Mariana Islands", "American Samoa"]
+state_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x0c\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00(\\x00\\x00\\x00&\\xe2\\xad\\xf3o6b@\\x1f\\xa4ng_\\xb90@%\\xea\\x05\\x9ff6b@\\x10\\xd3\\x85X\\xfd\\xb50@\\x8cP3\\xa4\\x8a6b@/\\x94\\x13\\xed*\\xb00@\\xe2!\\x8c\\x9f\\xc66b@\\xca\\xc3B\\xadi\\xaa0@\\xffx\\xafZ\\x197b@B\\x07$a\\xdf\\xa60@[\\xd1\\xe6877b@\\xd3\\xf9\\xf0,A\\xa60@\\nm\\x006\\xa07b@\\x07_\\x98L\\x15\\xa40@\\x00\\x00\\x00\\x00\\x008b@;\\xe2\\x90\\r\\xa4\\xa30@#h\\xcc$j8b@7R\\xb6H\\xda\\xa10@\\xbb\\x10r\\xde\\xff8b@\\xec\\x1b_{f\\xa10@\\x0fc\\xd2\\xdfK9b@\\xb7J\\xb08\\x9c\\xa10@\\x14)\\x94\\x85\\xaf9b@\\x92\"2\\xac\\xe2\\xa10@\\\\\\xcc\\xcf\\rM:b@\\x1em\\x1c\\xb1\\x16\\xa30@\\xe0\\x17^I\\xf2:b@\\x81S\\x1fH\\xde\\xa50@~\\xe4\\xd6\\xa4[;b@\\xa3E\\xb6\\xf3\\xfd\\xa80@`\\x9f\\x00\\x8a\\x91;b@c\\x0bA\\x0eJ\\xac0@\\xd1\\x1e/\\xa4\\xc3;b@\\x833\\xf8\\xfb\\xc5\\xb00@\\xd2\\xccZ\\n\\xc8;b@d?\\x8b\\xa5H\\xb60@\\xa7\\xb7\\x06\\xb6\\xca;b@\\xd0\\xfb\\xc6\\xd7\\x9e\\xb90@n\\xc8\\x06\\xd2\\xc5;b@\\xfa\\xa4\\xda\\xa7\\xe3\\xbd0@^\\x83\\xbe\\xf4v;b@\\x00\\x00\\x00\\x00\\x00\\xc00@\\xc7\\xfa\\xcd\\xc4t;b@\\xf7=\\xea\\xafW\\xc00@K\\xd1\\x91\\\\\\xfe:b@Q\\xdb\\x86Q\\x10\\xc40@[\\x80}t\\xea:b...", "bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xf0\\x00\\x00\\x00\\xed\\xb9LM\\x82Ye\\xc0\\x94\\xf7q4G~,\\xc0\\xf9\\xa1\\xd2\\x88\\x99Ye\\xc0\\xf0\\x01\\xba/g~,\\xc0{0)>\\xbeYe\\xc0\\n\\x18]\\xde\\x1c~,\\xc0\\xf1\\xc2\\x9d\\x0b#Ze\\xc0trM\\x81\\xcc~,\\xc0tE)!XZe\\xc0\\x01\\x00\\x00\\x00\\x00\\x80,\\xc0T`\\xc8\\xeaVZe\\xc0L9&\\x8b\\xfb\\x7f,\\xc0\\xda\\xcb\\xb6\\xd3VZe\\xc0Q\\xf6]\\x11\\xfc\\x7f,\\xc0\\xa7\\xee\\x91\\xcdUZe\\xc0\\x01\\x00\\x00\\x00\\x00\\x80,\\xc0\\x8b\\x8e\\xab\\x91]Ze\\xc0Dd\\x1fdY\\x80,\\xc0\\x91\\x12\\x82UuZe\\xc0\\xd5\\\\n0\\xd4\\x81,\\xc0\\xbf\\xeet\\xe7\\x89Ze\\xc0\\x7f\\x15\\xe0\\xbb\\xcd\\x83,\\xc0\\xeb>\\xc7G\\x8bZe\\xc0i5\\xeb\\x8c\\xef\\x83,\\xc0iu9%\\xa0Ze\\xc0\\x02\\x9dI\\x9b\\xaa\\x83,\\xc0\\xdf\\x18\\x02\\x80\\xe3Ze\\xc0\\x03\\x8fo\\xef\\x1a\\x84,\\xc0\\x14\\x98N\\xeb6[e\\xc0\\xa9\\xb7\\xcdT\\x88\\x87,\\xc0\\x9d\\xf9\\x9c\\xbb][e\\xc0\\'\\xaf\\\\o\\x9b\\x89,\\xc0\\rW\\xce\\xde\\x99[e\\xc0\\x07\\xec1\\x91\\xd2\\x8c,\\xc0\\x8dDh\\x04\\x9b[e\\xc0\\\\\\x1c\\\\:\\xe6\\x8c,\\xc0\\x9d\\x85\\x04\\x8c\\xae[e\\xc0P\\xbb&\\xa45\\x8e,\\xc0\\x04YO\\xad\\xbe[e\\xc0Q\\x86\\xaa\\x98J\\x8f,\\xc0\\xddD\\xf4k\\xeb[e\\xc0r0b\\x9f..."]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G4000"]
+lsad_code: TEXT | NULL | eg=["00"]
+
+## GEO_US_BOUNDARIES.ADJACENT_COUNTIES
+neighbors_fips_code: VARIANT | NULL | eg=[["19153","19049","19187","19073","19169","19079"], ["19163","19105","19045","19103","19139","19113"]]
+county_fips_code: TEXT | NULL | eg=["19015", "19031"]
+neighbors: VARIANT | NULL | eg=[["Polk","Dallas","Webster","Greene","Story","Hamilton"], ["Scott","Jones","Clinton","Johnson","Muscatine","Linn"]]
+neighbors_state: VARIANT | NULL | eg=[["Iowa","Iowa","Iowa","Iowa","Iowa","Iowa"]]
+state: TEXT | NULL | eg=["Iowa"]
+county: TEXT | NULL | eg=["Boone County", "Cedar County"]
+
+## GEO_US_BOUNDARIES.URBAN_AREAS
+@use: [C3, C5]
+internal_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x1c(\\xf0N>XX\\xc0\\xb0!\\x93\\xe7U\\x82A@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00GB\\xb6\\x87\\x98nV\\xc0\\x9b\\xb65\\xd8\\x8a\\xa3E@')"]
+urban_area_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x0c\\x00\\x00\\x00\\xf2@d\\x91&YX\\xc0\\xb6\\xcf*3\\xa5\\x85A@\\x99\\x0f\\x08t&YX\\xc0\\x8al\\xe7\\xfb\\xa9\\x85A@=B\\xcd\\x90*YX\\xc0\\xbb\\xf0\\x83\\xf3\\xa9\\x85A@o\\x9c\\x14\\xe6=YX\\xc0\\x96\\x1a\\xa1\\x9f\\xa9\\x85A@\\x86\\xde\\xe2\\xe1=YX\\xc0W\\xc7\\xf1C\\xa5\\x85A@\\x07! _BYX\\xc0\\x87K\\x8e;\\xa5\\x85A@r\\x89#\\x0fDYX\\xc0\\xb6\\xcf*3\\xa5\\x85A@=\\x99\\x7f\\xf4MYX\\xc0\\xc8:\\x1c]\\xa5\\x85A@=\\xb3$@MYX\\xc0\\xda\\xa0\\xf6[;\\x85A@\\x91\\xd0\\x96s)YX\\xc0\\xda\\xa0\\xf6[;\\x85A@\\xf2Z\\t\\xdd%YX\\xc0\\xda\\xa0\\xf6[;\\x85A@\\xf2@d\\x91&YX\\xc0\\xb6\\xcf*3\\xa5\\x85A@\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00+\\x00\\x00\\x00x\\x9a\\xccx[XX\\xc0\\xf6\\xca\\xbcU\\xd7\\x83A@\\xb9o\\xb5N\\\\XX\\xc0=w\\x82\\xfd\\xd7\\x83A@\\xe9^\\'\\xf5eXX\\xc0\\x86tx\\x08\\xe3\\x83A@\\xf8\\xab\\x00\\xdfmXX\\xc08\\xf4\\x16\\x0f\\xef\\x83A@\\xf8Ma\\xa5\\x82XX\\xc0\\xf8\\xe0\\xb5K\\x1b\\x84A@3\\x18#\\x12\\x85XX\\xc0\\xeeSUh \\x84A@u\\xa6\\xd0y\\x8dXX\\xc0n\\x7f.\\x1a2\\x84A@D\\xee\\xe9\\xea\\x8eXX\\xc0P\\xfe\\xee\\x1d5\\x84A@\\xa0\\xd8\\n\\x9a\\x96XX\\xc0\\x18rl=C\\x84A@(\\xf2$\\xe9\\x9aXX\\xc...", "bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00c\\x00\\x00\\x00,\\xd1Yf\\x11nV\\xc0\\xcc\\xa3\\xe2\\xff\\x8e\\xa2E@\\xa2\\xcdqn\\x13nV\\xc0%\\x88\\xba\\x0f@\\xa2E@\\x12A\\x9c\\x87\\x13nV\\xc0\\xee\\x1f\\x0b\\xd1!\\xa2E@\\xfd\\xfe\\xcd\\x8b\\x13nV\\xc0\\r\\xd5\\x94d\\x1d\\xa2E@\\xb48c\\x98\\x13nV\\xc0\\x99\\xbb\\x96\\x90\\x0f\\xa2E@\\x9d\\xf6\\x94\\x9c\\x13nV\\xc0\\xdczM\\x0f\\n\\xa2E@T0*\\xa9\\x13nV\\xc0\\x9d>\\x02\\x7f\\xf8\\xa1E@T0*\\xa9\\x13nV\\xc0\\\\\\x8b\\x16\\xa0m\\xa1E@\\xf0\\x84^\\x7f\\x12nV\\xc07en\\xbe\\x11\\xa1E@\\x02\\n\\xf5\\xf4\\x11nV\\xc0b\\x84\\xf0h\\xe3\\xa0E@\\\\o\\x9b\\xa9\\x10nV\\xc0\\xc0\\x19\\xfc\\xfdb\\xa0E@\\xf5{b\\x9d*nV\\xc0\\xa6\\xe8H.\\xff\\x9fE@\\xe81\\xca3/nV\\xc02k) \\xed\\x9fE@\\xaaCn\\x86\\x1bnV\\xc0\\x8b\\x82\\xe0\\xf1\\xed\\x9fE@\\xa8\\x8a\\xa9\\xf4\\x13nV\\xc0\\xccqn\\x13\\xee\\x9fE@Q\\xdb\\x86Q\\x10nV\\xc0mi5$\\xee\\x9fE@b\\x9e\\x95\\xb4\\xe2mV\\xc0\\xd2.\\xa6\\x99\\xee\\x9fE@aMeQ\\xd8mV\\xc0\\x86\\x91^\\xd4\\xee\\x9fE@-\\x06\\x0f\\xd3\\xbemV\\xc0\\x07pz\\x17\\xef\\x9fE@\\x8e\\xa7\\xe5\\x07\\xaemV\\xc0\\xb9\\xd22R\\xef\\x9fE@\\x07\\xa8p\\x04\\xa9mV\\xc0\\x9c\\xb9\\x87\\x84\\xef\\x9fE@\\xa9\\x14;\\x1a..."]
+geo_id: TEXT | NULL | eg=["72829", "71884"]
+name: TEXT | NULL | eg=["Purcell, OK", "Prairie du Sac--Sauk City, WI"]
+functional_status: TEXT | NULL | eg=["S"]
+urban_area_code: TEXT | NULL | eg=["72829", "71884"]
+area_lsad_code: TEXT | NULL | eg=["76"]
+lsad_name: TEXT | NULL | eg=["Purcell, OK Urban Cluster", "Prairie du Sac--Sauk City, WI Urban Cluster"]
+type: TEXT | NULL | eg=["C"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G3500"]
+
+## GEO_US_BOUNDARIES.CNECTA
+@use: [C2, C6]
+lsad: TEXT | NULL | eg=["M4"]
+geo_id: TEXT | NULL | eg=["770", "720"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G3200"]
+cnecta_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xdb\\x04\\x00\\x00L\\x198\\xa0\\xa5SR\\xc0\\xfc\\xf8K\\x8b\\xfaPE@\\xc3\\xd1U\\xba\\xbbSR\\xc0\\xa3\\x8bM+\\x85PE@\\xa5\\xd8\\xd18\\xd4SR\\xc0\\xed,z\\xa7\\x02PE@\\xd8}\\xc7\\xf0\\xd8SR\\xc0\\x83\\xa4O\\xab\\xe8OE@\\xfa(#.\\x00TR\\xc0\\xd2\\x9f\\xfdH\\x11OE@\\xd0 \\x05O!TR\\xc0p\\x8f\\xa5\\x0f]NE@\\x8e\\xfd,\\x96\"TR\\xc0\\xe6\\x06C\\x1dVNE@\\x8e\\xc9\\xe2\\xfe#TR\\xc0DV\\xb7zNNE@\\x8e\\xaf=\\xb3$TR\\xc0\\x08\\xc0?\\xa5JNE@\\x88\\xd8`\\xe1$TR\\xc0\\x9f=\\x97\\xa9INE@\\xe6\\xacO9&TR\\xc0\\x7fk\\'JBNE@\\x0e\\xf2z0)TR\\xc0\\x10w\\xf5*2NE@\\xec\\xf1B:<TR\\xc0]\\xa7\\x91\\x96\\xcaME@j\\xf9\\x81\\xab<TR\\xc0\\x93P\\xfaB\\xc8ME@\\xbcS\\x01\\xf7<TR\\xc0\\xf2\\x8c}\\xc9\\xc6ME@\\x98\\x80_#ITR\\xc0\\xc5\\x13A\\x9c\\x87ME@ \\x1f\\xf4lVTR\\xc0\\xc0\\xa8\\xa4N@ME@\\xe8ME*\\x8cTR\\xc0\\x8a\\xc2.\\x8a\\x1eLE@\\x1baQ\\x11\\xa7TR\\xc0\\xec\\n}\\xb0\\x8cKE@u\\x92\\xad.\\xa7TR\\xc0\\x07g\\xf0\\xf7\\x8bKE@\\xa3\\x05h[\\xcdTR\\xc0z\\x89\\xb1L\\xbfJE@\\xc4?l\\xe9\\xd1TR\\xc0P\\xbc\\xca\\xda\\xa6JE@\\x9ax\\x07x\\xd2TR\\xc0o=\\n\\xd7\\xa3JE@\\xb0\\xa9\\xf3\\xa8\\xf8TR\\xc0\\xdfnI\\x0e\\xd8IE@_\"\\xde:\\xffTR\\xc0\\x02\\xeey\\xfe\\xb4IE@\\x...", "bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x18\\x00\\x00\\x002\\xe7\\x19\\xfb\\x92&R\\xc0\\x83\\xd1\\xacl\\x1f\\xa2D@={.S\\x93&R\\xc0\\xf8\\xe0\\xb5K\\x1b\\xa2D@\\x9f\\x1fF\\x08\\x8f&R\\xc0\\x13u\\xe6\\x1e\\x12\\xa2D@^J]2\\x8e&R\\xc0J\\x1eO\\xcb\\x0f\\xa2D@\\x89\\xad\\xa0i\\x89&R\\xc0\\xa1H\\xf7s\\n\\xa2D@bhur\\x86&R\\xc0lo\\xb7$\\x07\\xa2D@i\\xdb0\\n\\x82&R\\xc0\\x9d[\\xe8J\\x04\\xa2D@f\\xa02\\xfe}&R\\xc0\\xc3e\\x156\\x03\\xa2D@9\\xec\\xbecx&R\\xc0\\xaf\\xc6\\xd9t\\x04\\xa2D@\\xf90{\\xd9v&R\\xc0a\\xf5G\\x18\\x06\\xa2D@(\\xe9ahu&R\\xc0)L\\xdfk\\x08\\xa2D@\\x1dUM\\x10u&R\\xc0\\xbd-X\\xaa\\x0b\\xa2D@\\xc4\\tL\\xa7u&R\\xc08\\xb3]\\xa1\\x0f\\xa2D@\"\\xde:\\xffv&R\\xc08K\\xc9r\\x12\\xa2D@\\x927\\xc0\\xccw&R\\xc0\\xb9\\xf5\\x9a\\x1e\\x14\\xa2D@\\xaf\\xe8\\xd6kz&R\\xc0\\xce\\x19Q\\xda\\x1b\\xa2D@1\\x93\\xa8\\x17|&R\\xc0\\x8b\\xc2.\\x8a\\x1e\\xa2D@\\xcf\\xee\\x90b\\x80&R\\xc0\\x05H4\\x81\"\\xa2D@F\\xeb\\xa8j\\x82&R\\xc0\\xc9\\xe1\\x93N$\\xa2D@\\xcc\\xd0x\"\\x88&R\\xc0\\xbc3\\xda\\xaa$\\xa2D@z/\\xbeh\\x8f&R\\xc0\\xf9e0F$\\xa2D@\\xe5\\x97\\xc1\\x18\\x91&R\\xc0dPmp\"\\xa2D@U\\xf1F\\xe6\\x91&R\\xc0;\\xbdR\\x96!\\xa2D@2\\xe7\\x19\\xfb..."]
+name_lsad: TEXT | NULL | eg=["Pittsfield-North Adams, MA-VT Combined NECTA", "Bridgeport-New Haven-Stamford, CT Combined NECTA"]
+name: TEXT | NULL | eg=["Pittsfield-North Adams, MA-VT", "Bridgeport-New Haven-Stamford, CT"]
+cnecta_fips_code: TEXT | NULL | eg=["770", "720"]
+
+## FDIC_BANKS.INSTITUTIONS
+@use: [C4]
+fdic_supervisory_region: TEXT | The supervisory FDIC office assigned to the institution.  The eight FDIC Supervisory Regions and their respective states are:    Boston - Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, Vermont  New York - Delaware, District of Columbia, Maryland, New Jersey, New York, Pennsylvania, Puerto Rico, U.S. Virgin Islands  Atlanta - Alabama, Florida, Georgia, North Carolina, South Carolina, Virginia, West Virginia  Memphis - Arkansas, Kentucky, Louisiana, Mississippi, Tennessee  Chicago - Illinois, Indiana, Michigan, Ohio, Wisconsin   Kansas City - Iowa, Kansas, Minnesota, Missouri, Nebraska, North Dakota, South Dakota  Dallas - Colorado, New Mexico, Oklahoma, Texas  San Francisco - Alaska, American Samoa, Arizona, California, Guam, Hawaii, Idaho, Montana, Nevada, Oregon, States of Micronesia, Utah, Washington, Wyoming | eg=["Atlanta"]
+trade_name_2: TEXT | Trade name other than the institution's legal name used to identify one of the institution's physical offices at which deposits are accepted or solicited from the public
+change_code_12: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+change_code_10: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+fdic_insured: BOOLEAN | Includes institutions insured by the FDIC. | eg=[true]
+ag_lending_flag: BOOLEAN | A flag used to indicate whether an institution is an agricultural lending institution
+total_assets: NUMBER | The sum of all assets owned by the institution including cash, loans, securities, bank premises and other assets. This total does not include off-balance-sheet accounts.
+csa_indicator: BOOLEAN | A flag used to indicate whether an institution is in a Combined Statistical Area. | eg=[true, false]
+change_code_13: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+total_deposits: NUMBER | The sum of all deposits including demand deposits, money market deposits, other savings deposits, time deposits and deposits in foreign offices.
+fed_reserve_unique_id: TEXT | A unique number assigned by the Federal Reserve board as the entity's unique identifier | eg=["499734", "2720740"]
+denovo_institute: BOOLEAN | A flag used to indicate whether an institution is a new institution (not a recharter). This flag is set quarterly. For instance, if REPDTE is 3/31/98 and DENOVO equals 1, the institution was a denovo during the first quarter of 1998.
+cbsa_fips_code: TEXT | The numeric code that the U.S. Census Bureaus Office of Management and Budget assigns for the CBSA. The 2000 standards provide that each CBSA must contain at least one urban area of 10,000 or more population. Metropolitan and micropolitan statistical areas are two categories of core based statistical areas. If an institution is not defined as a CBSA, the value of the field will be zero. For more information see: http://www.census.gov/population/www/estimates/metroarea.html . | eg=["33860", "19300"]
+parent_fdic_cert: TEXT | FDIC certificate number of the parent bank or savings institution with which the reported institution;s financial data has been consolidated. Beginning in March 1997, both the Thrift Financial Reports and Call Reports are completed on a fully consolidated basis. Previously, the consolidation of subsidiary depository institutions was prohibited. Now, parent institutions are required to file consolidated reports, while their subsidiary financial institutions are still required to file separate reports. Click on the certificate number to identify the parent bank or thrift.
+total_domestic_deposits: NUMBER | The sum of all domestic office deposits, including demand deposits, money market deposits, other savings deposits and time deposits.
+fed_reserve_district_id: TEXT | A number used to identify the Federal Reserve district in which the institution is located. 01 = Boston,  02 - New York, 03 = Philadelphia,  04 = Cleveland, 05 = Richmond, 06 = Atlanta, 07 = Chicago, 08 - St. Louis, 09 = Minneapolis, 10 - Kansas city, 11 = Dallas, 12 - San Francisco | eg=["6"]
+docket: TEXT | An identification number assigned to institutions chartered by the office of thrift supervision or members of the federal housing finance board (FHFB) and formerly by the federal home loan bank board.  The value is "00000" for institutions not members of the FHFB. | eg=["0"]
+office_count_foreign: NUMBER | The number of foreign offices (outside the U.S.) operated by the institution.
+chartering_agency: TEXT | All Chartering Agencies - State and Federal  Comptroller of the Currency - Chartering authority for nationally chartered commercial banks and for federally chartered savings associations (The Office of Thrift Supervision (OTS) before 7/21/11)  State (includes U.S. Territories) - Chartering authority for institutions that are not chartered by the OCC or OTS | eg=["OCC", "STATE"]
+roe_quarterly: FLOAT | Quarterly net income (including gains or losses on securities and extraordinary items) as a percentage of average total equity capital.
+quarterly_net_income: NUMBER | Quarterly net interest income plus total noninterest income plus realized gains (losses) on securities and extraordinary items, less total noninterest expense, loan loss provisions and income taxes.
+trade_name_5: TEXT | Trade name other than the institution's legal name used to identify one of the institution's physical offices at which deposits are accepted or solicited from the public
+city: TEXT | City in which an institution's headquarters or one of its branches is physically located. | eg=["Prattville", "Robertsdale"]
+fdic_geo_region: TEXT | The FDIC Office assigned to the geographic area.  The eight FDIC Regions and their respective states are:    Boston - Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, Vermont  New York - Delaware, District of Columbia, Maryland, New Jersey, New York, Pennsylvania, Puerto Rico, U.S. Virgin Islands  Atlanta - Alabama, Florida, Georgia, North Carolina, South Carolina, Virginia, West Virginia  Memphis - Arkansas, Kentucky, Louisiana, Mississippi, Tennessee  Chicago - Illinois, Indiana, Michigan, Ohio, Wisconsin   Kansas City - Iowa, Kansas, Minnesota, Missouri, Nebraska, North Dakota, South Dakota  Dallas - Colorado, New Mexico, Oklahoma, Texas  San Francisco - Alaska, American Samoa, Arizona, California, Guam, Hawaii, Idaho, Montana, Nevada, Oregon, States of Micronesia, Utah, Washington, Wyoming | eg=["5"]
+end_effective_date: DATE | The date that ends or closes out the last structural event relating to an institution. For closed institutions, this date represents the day that the institution became inactive. | eg=["1983-11-18", "1983-10-14"]
+state_name: TEXT | State in which the the institution is physically located. The FDIC Act defines state as any State of the United States, the District of Columbia, and any territory of the United States, Puerto Rico, Guam, American Samoa, the Trust Territory of the Pacific Islands, the Virgin Island, and the Northern Mariana Islands. | eg=["Alabama"]
+rssd_id: TEXT | The unique number assigned by the Federal Reserve Board to the regulatory high holding company of the institution.
+report_date: DATE | The last day of the financial reporting period selected.
+office_count_domestic: NUMBER | The number of domestic offices (including headquarters) operated by active institutions in the 50 states of the U.S.A.
+trade_name_4: TEXT | Trade name other than the institution's legal name used to identify one of the institution's physical offices at which deposits are accepted or solicited from the public
+cfpb_supervisory_flag: BOOLEAN | Indicates secondary supervision by CFPB | eg=[false]
+office_count_us_territories: NUMBER | The number of offices operated by an FDIC-insured institution in all commonwealths and terrirtories of the US, along with those in freely associated states under the Compact of Free Association
+state_chartered: BOOLEAN | A flag that indicates if an institution is state chartered. | eg=[false, true]
+holding_company_flag: BOOLEAN | A flag used to indicate whether an institution is a member of a multibank holding company
+primary_specialization: TEXT | " Name associated with the numeric indicator (SPECGRP) of an institution's primary specialization in terms of asset concentration: 1 - International Specialization 2 - Agricultural Specialization 3 - Credit-card Specialization  4 - Commercial Lending Specialization  5 - Mortgage Lending Specialization 6 - Consumer Lending SpecializationI 7 - Other Specialized < $1 Billion  8 - All Other < $1 Billion  9 - All Other > $1 Billion"
+regulator: TEXT | NULL | eg=["OCC", "FDIC"]
+return_on_assets: FLOAT | Net income after taxes and extraordinary items (annualized) as a percent of average total assets.
+change_code_1: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes` | eg=["223"]
+change_code_5: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+run_date: DATE | The day the institution information was updated. | eg=["2022-10-14"]
+county_fips_code: TEXT | A five digit number representing the state and county in which the institution is physically located.  The first two digits represent the FIPS state numeric code and the last three digits represent the FIPS county numeric code. | eg=["01001", "01003"]
+ownership_type: TEXT | Banking institutions fall into one of two ownership types, stock or non-stock. An institution which sells stock to raise capital is called a stock institution. It is owned by the shareholders who benefit from profits earned by the institution. A non-stock institution, or mutual institution, is owned and controlled solely by its depositors. A mutual does not issue capital stock.
+net_income: NUMBER | Net interest income plus total noninterest income plus realized gains (losses) on securities and extraordinary items, less total noninterest expense, loan loss provisions and income taxes.
+deposit_insurance_fund_member: BOOLEAN | "A flag used to indicate whether an institution is insured under the Deposit Insurance Fund (DIF).  As of April 1, 2006 the Bank Insurance Fund (BIF) was merged together with the Savings Institution Insurance Fund (SAIF) to create a single Deposit Insurance Fund (DIF).  All FDIC insured BIF and SAIF member institutions that are still active or open are now insured members of DIF.    False = No, not DIF insured and True = Yes, DIF insured.  Note that institutions that became inactive prior to April 2006 will also have false value.   " | eg=[false]
+category_code: TEXT | Numeric code which identifies the major and minor categories of an institution.  Definitions of these are available in`bigquery-public-data.fdic_banks.category_code` | eg=["3", "21"]
+trade_name_3: TEXT | Trade name other than the institution's legal name used to identify one of the institution's physical offices at which deposits are accepted or solicited from the public
+active: BOOLEAN | Institutions that are currently open and insured by the FDIC | eg=[false]
+credit_card_institution: BOOLEAN | Institutions with total loans greater than 50% of total assets and credit card loans greater than 50% of total loans, including loans that have been securitized and sold.
+trade_name_1: TEXT | Trade name other than the institution's legal name used to identify one of the institution's physical offices at which deposits are accepted or solicited from the public
+zip_code: TEXT | The first three, four, or five digits of the full postal zip code representing physical location of the institution or its branch office. | eg=["36067", "36567"]
+offices_count: NUMBER | NULL
+cbsa_division_fips_code: TEXT | The numeric code given by the US Census Bureau office of Management and Budget that represents the core based statistical division (CBSADIV) under the year 2000 standards. A metropolitan division is a county or group of counties within a core based statistical area that contains a core with a population of at least 2.5 million. A CBSA metropolitan division consists of one or more main/secondary counties that represent an employment center or centers, plus adjacent counties associated with the main county or counties through commuting ties. If an institution is not defined as a CBSA division the value of the field will be zero.
+trust_powers_status: TEXT | "A flag used to indicate an institution's Trust Powers Granted status. 0 = No Trust Power Granted 1 = Trust Power Granted Where Trust Power has been granted specific codes are: 00 - Trust powers not know 10 - Full trust powers granted 11 - Full trust powers granted, exercised 12 - Full trust powers granted, not exercised 20 - Limited trust powers granted 21 - Limited trust powers granted, exercised 22 - Limited trust powers granted, not exercised 30 - Trust powers not granted 31 - Trust powers not granted, but exercised "
+law_sasser: BOOLEAN | A flag associated with OTS supervised savings associations that converted their charter to that of a commercial or savings bank.  Converted associations remain members of the SAIF, but they become subject to supervision by one of the three federal banking agencies. Not Applicable as of March 31, 2006. | eg=[false]
+roa_pretax: FLOAT | Annualized pre-tax net income as a percent of average assets. Note: Includes extraordinary items and other adjustments, net of taxes.
+high_holder_city: TEXT | City in which the headquarters of the institution's regulatory high holder are physically located.
+deposit_insurance_date: DATE | The date that an institution obtained federal deposit insurance. | eg=["1973-11-15", "1940-02-24"]
+change_code_9: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+fdic_supervisory_region_code: TEXT | "A numeric value associated with the name of an FDIC supervisory region  2 - New York - states: Connecticut, Delaware, Maine, Maryland, Massachusetts, New Hampshire, New Jersey, New York, Pennsylvania, Puerto Rico, Rhode Island, Vermont, Virgin Islands  5 - Atlanta - states: Alabama, Florida, Georgia, North Carolina, South Carolina, Virginia  9 - Chicago - states: Illinois, Indiana, Kentucky, Michigan, Ohio  11 - Kansas City - states: Iowa, Kansas, Minnesota, Missouri, Nebraska, North Dakota, South Dakota  13 - Dallas - states: Arkansas, Colorado, Louisiana, Mississippi, New Mexico, Oklahoma, Tennessee, Texas  14 - San Francisco - states: Alaska, American Samoa, Arizona, California, Federated States of Micronesia, Guam, Hawaii, Idaho, Montana, Nevada, Oregon, Utah, Washington, Wyoming  15 - Washington Office - Division of Risk Management Supervision (RMS)  16 - Washington Office - The Office of Complex Financial Institutions (CFI) " | eg=["05"]
+effective_date: DATE | Effective Start Date of the data contained in this row. | eg=["1983-11-18", "1983-10-14"]
+fed_reserve_district: TEXT | NULL | eg=["Atlanta"]
+fdic_id: TEXT | FDIC's unique identifier number for holding companies, banks, branches and nondeposit subsidiaries. | eg=["14751", "9984"]
+top_holder: TEXT | Regulatory top holder is assigned by the Federal Reserve Board based on ownership and control percentages. "Note: Information on bank holding companies is only as of quarter-end. Regulatory top holder is any company that directly or indirectly owns, controls or has power to vote 25 percent or more of a bank's or direct holding company's shares or controls in any manner the election of a majority of the directors or trustees of a bank or direct holding company or exercises a controlling influence over the management or policies of a bank or direct holding company. Information on Thrift Holding Companies that own Savings Associations but do not own banks is not currently available in the ID System. Source: Federal Reserve Board National Information Center data base."
+csa_fips_code: TEXT | The numeric code that the U.S. Census Bureau Office of Management and Budget assigns for the combined statistical area (CSA) per the 2000 standards. If an institution is not defined as a CSA, the value of the field will be zero. For more information see: http://www.census.gov/population/www/estimates/metroarea.html . | eg=["388", "380"]
+federal_charter: BOOLEAN | A flag used to indicate whether the institution is chartered by an agent of the federal government. | eg=[true, false]
+cfpb_supervisory_start_date: DATE | Date the institution began secondary supervision by CFPB
+trade_name_6: TEXT | Trade name other than the institution's legal name used to identify one of the institution's physical offices at which deposits are accepted or solicited from the public
+conservatorship: BOOLEAN | A flag that indicates if an institution is being operated in government conservatorship. | eg=[false]
+insured_commercial_bank: BOOLEAN | Includes commercial banks insured by the FDIC.  These institutions are regulated by one of the three Federal commercial bank regulators (FDIC, Federal Reserve Board, or Office of the Comptroller of the Currency).  They submit financial reports to the Federal Reserve (state member banks) or the FDIC (state non-member banks and national banks). | eg=[true]
+change_code_4: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+occ_district: TEXT | The Office of the Comptroller of the Currency (OCC) District in which the institution is physically located. The six OCC Districts and their respective states are: Northeast - Connecticut, Delaware, District of Columbia, Maine, Maryland, Massachusetts, New Hampshire, New Jersey, New York, Pennsylvania, Puerto Rico, Rhode Island, Vermont, U.S. Virgin Islands  Southeast - Alabama, Florida, Georgia, Mississippi, North Carolina, South Carolina, Tennessee, Virginia, West Virginia  Central - Illinois, Indiana, Kentucky, Michigan, Ohio, Wisconsin  Midwest - Iowa, Kansas, Minnesota, Missouri, Nebraska, North Dakota, South Dakota  Southwest - Arkansas, Louisiana, New Mexico, Oklahoma, Texas  West - Alaska, American Samoa, Arizona, California, Colorado, Guam, Hawaii, Idaho, Montana, Nevada, Oregon, States of Micronesia, Utah, Washington, Wyoming | eg=["5"]
+return_on_equity: FLOAT | Annualized net income as a percent of average equity on a consolidated basis.     Note: If retained earnings are  negative, the ratio is shown as NA.
+saif_insured: BOOLEAN | Institutions who are members of the Savings Association Insurance Fund. As of April 1, 2006 SAIF was merged together with the Bank Insurance Fund (BIF) to create a single Deposit Insurance Fund (DIF).  All FDIC insured SAIF member institutions, that are still active or open, are now insured members of DIF. | eg=[false]
+change_code_14: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+secondary_insurance_fund: TEXT | As a result of the establishment of a single Deposit Insurance Fund (DIF) effective April 1, 2006, the Secondary Insurance fund is no longer applicable. previously both bif and saif bank insurance fund - institutions that are members of the bank insurance fund savings association insurance fund - Institutions that are members of the Savings Association Insurance Fund
+roa_quarterly: FLOAT | Quarterly net income after taxes and extraordinary items as a percent of average total assets.
+county_name: TEXT | County where the institution is physically located (abbreviated if the county name exceeds 16 characters). | eg=["Autauga", "Baldwin"]
+ffiec_call_report_filer: BOOLEAN | A flag that indicates whether and institution filed an FFIEC 031 Call Report. Commercial banks with domestic and foreign offices are required to file such a report.
+change_code_3: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+equity_capital: NUMBER | Total equity capital (includes preferred and common stock, surplus and undivided profits).
+subchap_s_indicator: BOOLEAN | NULL
+holding_company_state: TEXT | State location of the regulatory high holding company (either direct or indirect owner).
+occ_charter: TEXT | A unique number assigned by the Office of the Comptroller of the Currency (OCC) used to identify institutions that it has chartered and regulates (i.e. national  banks). | eg=["16219", "15402"]
+iba: BOOLEAN | Includes Bank Insurance Fund insured branches in the U.S. established by banks chartered and headquartered in foreign countries.  These institutions are regulated by one of the three Federal commercial bank regulators and submit financial data to the Federal Reserve. | eg=[false]
+change_code_11: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+oakar_institute: BOOLEAN | A member of one insurance fund that acquired deposits insured by the other fund, where that portion of the buyer's deposits remained insured by, and assessable by, the other fund. | eg=[false]
+change_code_2: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+address: TEXT | Street address at which the institution or one of its branches is physically located. | eg=["744 East Main Street", "Milwaukee And Ohio Streets"]
+fdic_field_office: TEXT | The FDIC Field Office where an institution is physically located. | eg=["Montgomery"]
+reporting_period_end_date: DATE | The financial reporting period selected in CCYYMM format. | eg=["2022-06-30"]
+inactive_flag: BOOLEAN | Institutions that are currently closed but were once insured by the FDIC. | eg=[true]
+sasser_institute: BOOLEAN | OTS supervised savings associations that converted their charter to that of a commercial or savings bank.  Converted associations remain members of the SAIF, but they become subject to supervision by one of the three federal banking agencies. Not Applicable as of March 31, 2006. | eg=[false]
+change_code_8: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+established_date: DATE | The date on which the institution began operations. | eg=["1973-11-15", "1940-01-17"]
+change_code_15: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+new_cert_number: TEXT | A new certificate number of an already existing FDIC-insured institution resulting from either a merger or an acquisition. | eg=["2782", "19048"]
+insurance_fund_membership: TEXT | Deposit Insurance Fund (DIF), Bank Insurance Fund (BIF), Savings Association Insurance Fund (SAIF) | eg=["BIF"]
+state_fips_code: TEXT | 2 digit FIPS code to uniquely identify the state | eg=["1"]
+ots_region: TEXT | Prior to 7/21/11, the Office of Thrift Supervision (OTS) Region in which the institution is physically located. The five OTS Regions and their respective states are: Northeast - Connecticut, Delaware, Maine, Massachusetts, New Hampshire, New Jersey, New York, Pennsylvania, Rhode Island, Vermont, West Virginia Southeast - Alabama, District of Columbia, Florida, Georgia, Maryland, North Carolina, Puerto Rico, South Carolina, U.S. Virgin Islands, Virginia Central - Illinois, Indiana, Kentucky, Michigan, Ohio, Tennessee, Wisconsin Midwest - Arkansas, Colorado, Iowa, Kansas, Louisiana, Minnesota, Mississippi, Missouri, Nebraska, New Mexico, North Dakota, Oklahoma, South Dakota, Texas West - Alaska, American Samoa, Arizona, California, Guam, Hawaii, Idaho, Montana, Nevada, States of Micronesia, Oregon, Utah, Washington, Wyoming " | eg=["Southeast"]
+last_structural_change: DATE | A date field indicating the date that a change to this record was processed. Standard format = "CCYYMMDD" (Length = 8) which has been converted to Month, Day, Year format for display purposes. | eg=["1990-01-01", "1983-10-25"]
+asset_concentration_hierarchy: TEXT | "Asset Concentration Hierarchy - An indicator of an institution's primary specialization in terms of asset concentration 1 - International Specialization 2 - Agricultural Specialization 3 - Credit-card Specialization  4 - Commercial Lending Specialization  5 - Mortgage Lending Specialization 6 - Consumer Lending SpecializationI 7 - Other Specialized < $1 Billion  8 - All Other < $1 Billion  9 - All Other > $1 Billion"
+row_pretax_quarterly: FLOAT | Quarterly pre-tax net income as a percent of average assets. Note: Includes extraordinary items and other adjustments, net of taxes.
+parent_parcert: TEXT | The PARCERT number identifies the subsidiary institutions parent certificate number. Beginning in March 1997, both the Thrift Financial Reports and Call Reports are completed on a fully consolidated basis. Previously, the consolidation of subsidiary depository institutions was prohibited. Now, parent institutions are required to file consolidated reports, while their subsidiary financial institutions are still required to file separate reports.
+cfpb_supervisory_end_date: DATE | Date the institution ended supervision by CFPB
+qbp_region: TEXT | The Quarterly Banking Profile (QBP) Commercial Bank Region in which the institution is physically located. | eg=["2"]
+change_code_6: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+state: TEXT | 2 letter postal abbreviation for the state in which the the headquarters are physically located. The FDIC Act defines state as any State of the United States, the District of Columbia, and any territory of the United States, Puerto Rico, Guam, American Samoa, the Trust Territory of the Pacific Islands, the Virgin Island, and the Northern Mariana Islands. | eg=["AL"]
+bank_charter_class: TEXT | A classification code assigned by the FDIC based on the institution's charter type (commercial bank or savings institution), charter agent (state or federal), Federal Reserve membership status (Fed member, Fed nonmember)and its primary federal regulator (state chartered institutions are subject to both federal and state supervision).   N = commercial bank, national (federal) charter and Fed member, supervised by the Office of the Comptroller of the Currency (OCC)  SM = commercial bank, state charter and Fed member, supervised by the Federal Reserve (FRB)  NM = commercial bank, state charter and Fed nonmember, supervised by the FDIC  SB = savings banks, state charter, supervised by the FDIC  SA = savings associations, state or federal charter, supervised by the Office of Thrift Supervision (OTS)  OI = insured U.S. branch of a foreign chartered institution (IBA) | eg=["N", "NM"]
+ultimate_cert_number: TEXT | The cert number of the last successor or acquirer of the institution | eg=["12368", "6384"]
+insured_savings_institute: BOOLEAN | Includes savings institutions insured by the FDIC that operate under state or federal banking codes applicable to thrift institutions.  These institutions are regulated by and submit financial reports to one of two Federal regulators (FDIC or Office of Thrift Supervision). | eg=[false]
+change_code_7: TEXT | FDIC code used to signify a structural event relating to an institution.  The definitions of the codes are available in the `bigquery-public-data.fdic_banks.change_codes`
+bank_insurance_fund_member: BOOLEAN | Institutions who are members of the Bank Insurance Fund. As of April 1, 2006 BIF was merged together with the Savings Institution Insurance Fund (SAIF) to create a single Deposit Insurance Fund (DIF).  All FDIC insured BIF member institutions, that are still active or open, are now insured members of DIF. | eg=[true]
+
+## FDIC_BANKS.LOCATIONS
+@use: [C4]
+date_established: DATE | The date on which the branch began operations. | eg=["2002-06-17", "1972-08-23"]
+cbsa_metro_name: TEXT | Name of the Metropolitan Statistical Area as defined by the US Census Bureau Office of Management and Budget | eg=["Anniston-Oxford, AL"]
+branch_county: TEXT | County where the branch is physically located. | eg=["Barbour", "Calhoun"]
+cbsa_fips_code: TEXT | Numeric code of the Core Based Statistical Area (CBSA) as defined by the US Census Bureau Office of Management and Budget. | eg=["21640", "11500"]
+institution_class: TEXT | "A classification code assigned by the FDIC based on the institution's charter type (commercial bank or savings institution), charter agent (state or federal), Federal Reserve membership status (Fed member, Fed nonmember) and its primary federal regulator (state chartered institutions are subject to both federal and state supervision). N -Commercial bank, national (federal) charter and Fed member, supervised by the Office of the Comptroller of the Currency (OCC) NM -Commercial bank, state charter and Fed nonmember, supervised by the FDIC OI - Insured U.S. branch of a foreign chartered institution (IBA) SA - Savings associations, state or federal charter, supervised by the Office of Thrift Supervision (OTS) SB - Savings banks, state charter, supervised by the FDIC SM - Commercial bank, state charter and Fed member, supervised by the Federal Reserve (FRB)" | eg=["NM", "N"]
+zip_code: TEXT | The first five digits of the full postal zip code representing physical location of the branch. | eg=["36017", "36027"]
+service_type: TEXT | "Define the various types of offices of FDIC-insured institutions. 11 -  Full Service Brick and Mortar Office 12 -  Full Service Retail Office 13 -  Full Service Cyber Office 14 -  Full Service Mobile Office 15 -  Full Service Home/Phone Banking 16 -  Full Service Seasonal Office 21 -  Limited Service Administrative Office 22 -  Limited Service Military Facility 23 -  Limited Service Facility Office 24 -  Limited Service Loan Production Office 25 -  Limited Service Consumer Credit Office 26 -  Limited Service Contractual Office 27 -  Limited Service Messenger Office 28 -  Limited Service Retail Office 29 -  Limited Service Mobile Office 30 -  Limited Service Trust Office" | eg=["11"]
+county_fips_code: TEXT | A five digit number representing the state and county in which the institution is physically located.  The first two digits represent the FIPS state numeric code and the last three digits represent the FIPS county numeric code. | eg=["01005", "01015"]
+csa_fips_code: TEXT | Numeric code of the Combined Statistical Area (CSA) as defined by the US Census Bureau Office of Management and Budget
+state: TEXT | State abbreviation in which the branch is physically located. The FDIC Act defines state as any State of the United States, the District of Columbia, and any territory of the United States, Puerto Rico, Guam, American Samoa, the Trust Territory of the Pacific Islands, the Virgin Island, and the Northern Mariana Islands. | eg=["AL"]
+cbsa_division_fips_code: NUMBER | Numeric code of the Core Based Statistical Division as defined by the US Census Bureau Office of Management and Budget.
+branch_fdic_uninum: TEXT | Unique Identification Number for a Branch Office as assigned by the FDIC | eg=["363899", "248463"]
+main_office: BOOLEAN | The main office for the institution. | eg=[false]
+branch_name: TEXT | Name of the branch. | eg=["CLIO BRANCH", "EUFAULA SQUARE BRANCH"]
+branch_address: TEXT | Street address at which the branch is physically located. | eg=["3274 Louisville Street", "1009 South Eufaula Avenue"]
+csa_flag: BOOLEAN | Flag (1=Yes) indicating member of a Combined Statistical Area (CSA) as defined by the US Census Bureau Office of Management and Budget | eg=[false]
+cbsa_metro_fips_code: TEXT | Numeric code of the Metropolitan Statistical Area as defined by the US Census Bureau Office of Management and Budget | eg=["NULL", "11500"]
+fdic_uninum: TEXT | This is the FDIC UNINUM of the institution that owns the branch. A UNINUM is a unique sequentially number added to the FDIC database for both banks and branches. There is no pattern imbedded within the number. The FI_UNINUM is updated with every merger or purchase of branches to reflect the most current owner. | eg=["12486", "4287"]
+state_name: TEXT | State in which the  branch is physically located. The FDIC Act defines state as any State of the United States, the District of Columbia, and any territory of the United States, Puerto Rico, Guam, American Samoa, the Trust Territory of the Pacific Islands, the Virgin Island, and the Northern Mariana Islands. | eg=["Alabama"]
+branch_city: TEXT | City in which branch is physically located. | eg=["Clio", "Eufaula"]
+branch_number: TEXT | The branch's corresponding office number. | eg=["1", "4716"]
+
+## CENSUS_UTILITY.MTFCC_FEATURE_CLASS_CODES
+superclass: TEXT | NULL | eg=["Miscellaneous Topographic Features"]
+description: TEXT | NULL | eg=["An expanded paved area at the end of a street used by vehicles for turning around. The placement of addressed structures located along the street may wrap around the end of the cul-de-sac.", "A circular intersection allowing for continuous movement of traffic at the meeting of roadways, when the circle is represented as a point."]
+point: BOOLEAN | NULL | eg=[true]
+feature_class_code: TEXT | NULL | eg=["C3061", "C3062"]
+feature_class: TEXT | NULL | eg=["Cul-de-sac", "Traffic Circle"]
+areal: BOOLEAN | NULL | eg=[false]
+linear: BOOLEAN | NULL | eg=[false]
+
+## CENSUS_UTILITY.FIPS_CODES_STATES
+state_name: TEXT | NULL | eg=["Alabama", "California"]
+state_gnisid: TEXT | NULL | eg=["01779775", "01779778"]
+state_fips_code: TEXT | NULL | eg=["01", "06"]
+state_postal_abbreviation: TEXT | NULL | eg=["AL", "CA"]
+
+## CENSUS_UTILITY.FUNCTIONAL_STATUS_CODES
+code_description: TEXT | NULL
+associated_geographic_entity: TEXT | NULL
+functional_status_code: TEXT | NULL
+
+## CENSUS_UTILITY.FIPS_CODES_ALL
+county_subdivision_fips_code: TEXT | NULL
+place_fips_code: TEXT | NULL
+summary_level_name: TEXT | NULL | eg=["state-county"]
+state_fips_code: TEXT | NULL | eg=["01"]
+area_name: TEXT | NULL | eg=["Autauga County", "Baldwin County"]
+county_fips_code: TEXT | NULL | eg=["01001", "01003"]
+consolidated_city_fips_code: TEXT | NULL
+summary_level: TEXT | NULL | eg=["050"]
+
+## CENSUS_UTILITY.LSAD_CODES
+associated_geographic_entities: TEXT | NULL | eg=["Urban Area", "Census Division"]
+lsad_code: TEXT | NULL | eg=["75", "69"]
+lsad_description: TEXT | NULL | eg=["Urbanized Area (suffix)", "Division (suffix)"]
+
+## CENSUS_UTILITY.FIPS_CLASS_CODE
+fips_class_code: TEXT | NULL
+code_description: TEXT | NULL

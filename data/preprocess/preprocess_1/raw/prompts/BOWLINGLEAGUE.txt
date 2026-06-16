@@ -1,0 +1,38 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: BOWLINGLEAGUE.MATCH_GAMES
+Columns: MatchID, WinningTeamID, GameNumber
+
+Table: BOWLINGLEAGUE.MATCH_GAMES_ARCHIVE
+Columns: GameNumber, WinningTeamID, MatchID
+
+Table: BOWLINGLEAGUE.BOWLER_SCORES
+Columns: HandiCapScore, BowlerID, MatchID, RawScore, GameNumber, WonGame
+
+Table: BOWLINGLEAGUE.BOWLERS
+Columns: BowlerState, BowlerPhoneNumber, BowlerGamesBowled, BowlerCity, BowlerID, BowlerFirstName, BowlerCurrentHcp, BowlerAddress, TeamID, BowlerLastName, BowlerMiddleInit, BowlerZip, BowlerTotalPins, BowlerCurrentAverage
+
+Table: BOWLINGLEAGUE.BOWLER_SCORES_ARCHIVE
+Columns: BowlerID, WonGame, GameNumber, HandiCapScore, RawScore, MatchID
+
+Table: BOWLINGLEAGUE.SQLITE_SEQUENCE
+Columns: seq, name
+
+Table: BOWLINGLEAGUE.TOURNEY_MATCHES_ARCHIVE
+Columns: EvenLaneTeamID, MatchID, TourneyID, OddLaneTeamID, Lanes
+
+Table: BOWLINGLEAGUE.TOURNAMENTS
+Columns: TourneyDate, TourneyLocation, TourneyID
+
+Table: BOWLINGLEAGUE.TEAMS
+Columns: TeamName, TeamID, CaptainID
+
+Table: BOWLINGLEAGUE.TOURNEY_MATCHES
+Columns: OddLaneTeamID, Lanes, TourneyID, EvenLaneTeamID, MatchID
+
+Table: BOWLINGLEAGUE.WAZIPS
+Columns: State, ZIP, City
+
+Table: BOWLINGLEAGUE.TOURNAMENTS_ARCHIVE
+Columns: TourneyLocation, TourneyDate, TourneyID

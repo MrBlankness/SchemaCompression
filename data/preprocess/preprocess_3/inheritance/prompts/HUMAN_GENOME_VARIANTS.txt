@@ -1,0 +1,193 @@
+[TEMPLATES]
+<T1>
+quality: FLOAT | Total number of alternate alleles in called genotypes
+NS: NUMBER | Copy number likelihoods with no frequency prior
+end_position: NUMBER | End position (0-based). Corresponds to the first base after the last base in the reference allele.
+EX_TARGET: BOOLEAN | Per-sample genotype filter
+alternate_bases: VARIANT | One record for each alternate base (if any).
+SVLEN: VARIANT | Genotype of the call. "-1" is used in cases where the genotype is not called.
+reference_bases: TEXT | Reference bases.
+TSD: TEXT | Copy number genotype for imprecise events
+reference_name: TEXT | Reference name.
+start_position: NUMBER | Start position (0-based). Corresponds to the first base of the string of reference bases.
+call: VARIANT | Allele frequency in the EAS populations calculated from AC and AN, in the range (0,1)
+SVTYPE: TEXT | Phaseset of the call (if any). "*" is used in cases where the genotype is phased, but no phase set ("PS" in FORMAT) was specified.
+AN: NUMBER | Copy number likelihoods
+DP: NUMBER | Copy number genotype quality for imprecise events
+MC: VARIANT | Variant names (e.g. RefSNP ID).
+CIEND: VARIANT | Allele frequency in the EUR populations calculated from AC and AN, in the range (0,1)
+MULTI_ALLELIC: BOOLEAN | Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification
+CS: TEXT | Allele frequency in the AMR populations calculated from AC and AN, in the range (0,1)
+IMPRECISE: BOOLEAN | Allele frequency in the SAS populations calculated from AC and AN, in the range (0,1)
+MEINFO: VARIANT | Phred-scaled quality score (-10log10 prob(call is wrong)). Higher values imply better quality.
+OLD_VARIANT: TEXT | Confidence interval around END for imprecise variants
+VT: VARIANT | Genotype Quality
+AA: TEXT | Genotype likelihoods
+MEND: NUMBER | List of failed filters (if any) or "PASS" indicating the variant has passed all filters.
+MSTART: NUMBER | Name of the call.
+filter: VARIANT | Estimated allele frequency in the range (0,1)
+names: VARIANT | Alternate base.
+partition_date_please_ignore: DATE | Confidence interval around POS for imprecise variants
+MLEN: NUMBER | One record for each call.
+CIPOS: VARIANT | Allele frequency in the AFR populations calculated from AC and AN, in the range (0,1)
+@Tables: [HUMAN_GENOME_VARIANTS._1000_GENOMES_PHASE_3_VARIANTS_20150220]
+
+[DERIVED]
+<T2> extends <T1>
+no_call: VARIANT | Total read depth; only low coverage data were counted towards the DP, exome data were not used
+hom_ref_call: VARIANT | Total number of alleles in called genotypes
+@Tables: [HUMAN_GENOME_VARIANTS._1000_GENOMES_PHASE_3_OPTIMIZED_SCHEMA_VARIANTS_20150220]
+
+[STANDALONE]
+## HUMAN_GENOME_VARIANTS.PLATINUM_GENOMES_DEEPVARIANT_VARIANTS_20180823
+names: VARIANT | Alternate base.
+alternate_bases: VARIANT | One record for each alternate base (if any).
+start_position: NUMBER | Start position (0-based). Corresponds to the first base of the string of reference bases.
+reference_name: TEXT | Reference name.
+end_position: NUMBER | End position (0-based). Corresponds to the first base after the last base in the reference allele.
+partition_date_please_ignore: DATE | One record for each call.
+filter: VARIANT | Phred-scaled quality score (-10log10 prob(call is wrong)). Higher values imply better quality.
+reference_bases: TEXT | Reference bases.
+call: VARIANT | List of failed filters (if any) or "PASS" indicating the variant has passed all filters.
+quality: FLOAT | Variant names (e.g. RefSNP ID).
+
+## HUMAN_GENOME_VARIANTS.SIMONS_GENOME_DIVERSITY_PROJECT_SAMPLE_ATTRIBUTES
+illumina_id: TEXT | NULL
+ena_checklist: TEXT | NULL
+id_from_vcf: TEXT | NULL
+region: TEXT | NULL
+ena_last_update: DATE | NULL
+latitude: FLOAT | NULL
+era_id: TEXT | NULL
+ena_spot_count: NUMBER | NULL
+country: TEXT | NULL
+sex: TEXT | NULL
+longitude: FLOAT | NULL
+ena_first_public: DATE | NULL
+town: TEXT | NULL
+ena_base_count: NUMBER | NULL
+dna_source: TEXT | NULL
+population: TEXT | NULL
+
+## HUMAN_GENOME_VARIANTS.SIMONS_GENOME_DIVERSITY_PROJECT_SAMPLE_METADATA
+SGDP_ID: TEXT | NULL
+Coverage: NUMBER | NULL
+Panel: TEXT | NULL
+Gender: TEXT | NULL
+HetRateAuto: FLOAT | NULL
+Region: TEXT | NULL
+Longitude: FLOAT | NULL
+Population_ID: TEXT | NULL
+Latitude: FLOAT | NULL
+Country: TEXT | NULL
+Contributor: TEXT | NULL
+
+## HUMAN_GENOME_VARIANTS.SIMONS_GENOME_DIVERSITY_PROJECT_SAMPLE_VARIANTS
+RPA: VARIANT | Counts of each base
+DB: BOOLEAN | List of failed filters (if any) or "PASS" indicating the variant has passed all filters.
+DS: BOOLEAN | Name of the call.
+MQRankSum: FLOAT | Phred-scaled quality score (-10log10 prob(call is wrong)). Higher values imply better quality.
+Note: this field has been copied from QUAL field from individual VCF files.
+QD: FLOAT | Total number of alleles in called genotypes
+ReadPosRankSum: FLOAT | dbSNP Membership
+names: VARIANT | Alternate base.
+start_position: NUMBER | Start position (0-based). Corresponds to the first base of the string of reference bases.
+filter: VARIANT | Allele Frequency, for each ALT allele, in the same order as listed
+reference_name: TEXT | Reference name.
+STR: BOOLEAN | Approximate read depth; some reads may have been filtered
+BaseQRankSum: FLOAT | Phred-scaled quality score (-10log10 prob(call is wrong)). Higher values imply better quality.
+HaplotypeScore: FLOAT | Approximate read depth (reads with MQ=255 or with bad mates are filtered)
+RU: TEXT | Z-score from Wilcoxon rank sum test of Alt Vs. Ref base qualities
+call: VARIANT | Maximum likelihood expectation (MLE) for the allele counts (not necessarily the same as the AC), for each ALT allele, in the same order as listed
+alternate_bases: VARIANT | One record for each alternate base (if any).
+BaseCounts: VARIANT | Variant names (e.g. RefSNP ID).
+partition_date_please_ignore: DATE | Were any of the samples downsampled?
+end_position: NUMBER | End position (0-based). Corresponds to the first base after the last base in the reference allele.
+reference_bases: TEXT | Reference bases.
+MQ0: NUMBER | filter level in range 0-9 or no value (non-integer: N,?) with zero being least reliable; to threshold at FL=n, use all levels n-9
+quality: FLOAT | Allele count in genotypes, for each ALT allele, in the same order as listed
+Dels: FLOAT | Genotype of the call. "-1" is used in cases where the genotype is not called.
+DP: NUMBER | One record for each call.
+GC: FLOAT | Allelic depths for the ref and alt alleles in the order listed
+AN: NUMBER | Maximum likelihood expectation (MLE) for the allele frequency (not necessarily the same as the AF), for each ALT allele, in the same order as listed
+InbreedingCoeff: FLOAT | Genotype Quality
+MQ: FLOAT | Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification
+FS: FLOAT | Phaseset of the call (if any). "*" is used in cases where the genotype is phased, but no phase set ("PS" in FORMAT) was specified.
+
+## HUMAN_GENOME_VARIANTS._1000_GENOMES_PEDIGREE
+Maternal_ID: TEXT | NULL
+Other_Comments: TEXT | NULL
+Relationship: TEXT | NULL
+Family_ID: TEXT | NULL
+Individual_ID: TEXT | NULL
+Paternal_ID: TEXT | NULL
+Siblings: TEXT | NULL
+Second_Order: TEXT | NULL
+Third_Order: TEXT | NULL
+Gender: NUMBER | NULL
+Population: TEXT | NULL
+Phenotype: NUMBER | NULL
+
+## HUMAN_GENOME_VARIANTS._1000_GENOMES_SAMPLE_INFO
+In_Exon_Targetted_Pilot: BOOLEAN | The Sample is in the exon targetted pilot experiment
+Has_Sequence_in_Phase1: BOOLEAN | Has sequence low coverage sequence in the 20101123.sequence.index file or exome sequence in the 20110522 sequence index file
+LC_Indel_Ratio: FLOAT | Both Indel ratios are the ratio of insertions to deletions found in that sample using a quick test (based on samtools). If the ratio is higher than 5 the sample is withdrawn.
+LC_Passed_QC: BOOLEAN | These are binary flags showing if the sample passed QC, All samples which have passed QC have bam files. Only samples which have both exome and low coverage data are found under ftp/data and listed in the standard alignment index. The small number of other samples are found in ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/phase3_EX_or_LC_only_alignment/
+VerifyBam_E_Omni_Free: FLOAT | Value from UMich's VerifyBamID BAM QC program http://genome.sph.umich.edu/wiki/VerifyBamID.  The Free measures use a statistical model based on the haplotypes discovered by the chip. The Chip measure considers the genotypes available for that individual from that chip. We use greater than 3% as a cut off for our our low coverage samples and greater than 3.5% for our exome samples.
+Gender: TEXT | Gender
+DNA_Source_from_Coriell: TEXT | This was the annotated DNA Source from Coriell
+Non_Paternity: TEXT | sample ids for annotated non paternal relationships
+VerifyBam_E_Affy_Free: FLOAT | Value from UMich's VerifyBamID BAM QC program http://genome.sph.umich.edu/wiki/VerifyBamID.  The Free measures use a statistical model based on the haplotypes discovered by the chip. The Chip measure considers the genotypes available for that individual from that chip. We use greater than 3% as a cut off for our our low coverage samples and greater than 3.5% for our exome samples.
+In_Low_Coverage_Pilot: BOOLEAN | The sample is in the low coverage pilot experiment
+Has_Affy_6_0_Genotypes: BOOLEAN | Affy 6.0 Genotypes in  ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/working/20121128_corriel_p3_sample_genotypes/
+Total_LC_Sequence: FLOAT | The total amount of low coverage sequence available
+LC_Non_Duplicated_Aligned_Coverage: FLOAT | The non duplicated aligned coverage for the low coverage sequence data.  This was calculated using the ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/alignment_indices/20130502.low_coverage.alignment.index.bas.gz file, the (mapped bases - duplicated bases) was summed for each sample and divided by 2.75GB and rounded to 2dp
+Main_project_LC_Centers: TEXT | low coverage sequencing centers for final sequencing round
+In_Final_Phase_Variant_Calling: BOOLEAN | Any sample which has both LC and E QC passed bams is in the final analysis set
+Sample: TEXT | Sample ID
+VerifyBam_LC_Omni_Chip: FLOAT | Value from UMich's VerifyBamID BAM QC program http://genome.sph.umich.edu/wiki/VerifyBamID.  The Free measures use a statistical model based on the haplotypes discovered by the chip. The Chip measure considers the genotypes available for that individual from that chip. We use greater than 3% as a cut off for our our low coverage samples and greater than 3.5% for our exome samples.
+Population_Description: TEXT | Description of Population
+HC_Pilot_Centers: TEXT | high coverage sequencing centers
+X_Targets_Covered_to_20x_or_greater: FLOAT | The percentage of targets covered to 20x or greater as calculated by the picard function CalculateHsMetrics using these targets ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/exome_pull_down_targets_phases1_and_2/20120518.consensus.annotation.bed
+Phase1_LC_Platform: TEXT | phase1 low coverage sequencing platforms
+Has_Axiom_Genotypes: BOOLEAN | Axiom Genotypes in ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/working/20110210_Affymetrix_Axiom/Affymetrix_Axiom_DB_2010_v4_b37.vcf.gz
+ET_Pilot_Centers: TEXT | exon targetted sequencing centers,
+In_High_Coverage_Pilot: BOOLEAN | The sample is in the high coverage pilot
+ET_Pilot_Platforms: TEXT | exon targetted sequencing platforms,
+Relationship: TEXT | Relationship to other members of the family
+Super_Population: TEXT | From ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/20131219.superpopulations.tsv
+Third_Order: TEXT | sample ids for any third order cryptic relations. As mentioned above, this analysis was not as widely run as the other relatedness analyses and as such there may still be unannotated third order relations in the set
+Population: TEXT | 3 letter population code
+Main_Project_E_Platform: TEXT | Exome sequencing platform for the final sequencing round
+Siblings: TEXT | sample ids for any siblings
+Has_phase1_chrY_Deletions: BOOLEAN | The sample is genotyepd in the chrY phase1 deletions
+Half_Siblings: TEXT | sample ids for any half siblings
+Grandparents: TEXT | sample ids for any grand parents
+VerifyBam_E_Affy_Chip: FLOAT | Value from UMich's VerifyBamID BAM QC program http://genome.sph.umich.edu/wiki/VerifyBamID.  The Free measures use a statistical model based on the haplotypes discovered by the chip. The Chip measure considers the genotypes available for that individual from that chip. We use greater than 3% as a cut off for our our low coverage samples and greater than 3.5% for our exome samples.
+Main_Project_E_Centers: TEXT | Exome sequencing centers for the final sequencing round
+HC_Pilot_Platforms: TEXT | high coverage sequencing platforms
+Has_Exome_LOF_Genotypes: BOOLEAN | ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/working/20121009_broad_exome_chip/ALL.wgs.broad_exome_lof_indel_v2.20121009.snps_and_indels.snpchip.genotypes.vcf.gz
+Total_Exome_Sequence: FLOAT | The total amount of exome sequence available
+VerifyBam_LC_Affy_Free: FLOAT | Value from UMich's VerifyBamID BAM QC program http://genome.sph.umich.edu/wiki/VerifyBamID.  The Free measures use a statistical model based on the haplotypes discovered by the chip. The Chip measure considers the genotypes available for that individual from that chip. We use greater than 3% as a cut off for our our low coverage samples and greater than 3.5% for our exome samples.
+VerifyBam_LC_Omni_Free: FLOAT | Value from UMich's VerifyBamID BAM QC program http://genome.sph.umich.edu/wiki/VerifyBamID.  The Free measures use a statistical model based on the haplotypes discovered by the chip. The Chip measure considers the genotypes available for that individual from that chip. We use greater than 3% as a cut off for our our low coverage samples and greater than 3.5% for our exome samples.
+Has_Omni_Genotypes: BOOLEAN | Omni Genotypes in ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/working/20120131_omni_genotypes_and_intensities/Omni25_genotypes_2141_samples.b37.vcf.gz
+Has_phase1_chrMT_SNPs: BOOLEAN | The sample is genotyped in the phase1 chrMT snps
+Phase1_E_Platform: TEXT | phase1 exome sequencing platforms
+LC_Pilot_Centers: TEXT | low coverage pilot sequencing centers
+Super_Population_Description: TEXT | From ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/20131219.superpopulations.tsv
+Avuncular: TEXT | sample ids for any avuncular relationships
+E_Indel_Ratio: FLOAT | Both Indel ratios are the ratio of insertions to deletions found in that sample using a quick test (based on samtools). If the ratio is higher than 5 the sample is withdrawn.
+Unexpected_Parent_Child: TEXT | sample id for unexpected parent child relationships
+E_Passed_QC: BOOLEAN | These are binary flags showing if the sample passed QC, All samples which have passed QC have bam files. Only samples which have both exome and low coverage data are found under ftp/data and listed in the standard alignment index. The small number of other samples are found in ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/phase3_EX_or_LC_only_alignment/
+Has_Phase1_chrY_SNPS: BOOLEAN | The sample is genotyped in the chrY phase1 snp set
+Family_ID: TEXT | Family ID
+EBV_Coverage: FLOAT | This was calculated by looking at the alignment of the data to NC_007605 in the low coverage bam files and using that to calculate coverage
+In_Phase1_Integrated_Variant_Set: BOOLEAN | The sample is genotyped in the phase1 integrated call set on autosomes and chrX
+LC_Pilot_Platforms: TEXT | low coverage pilot sequencing platforms
+Main_project_LC_platform: TEXT | low coverage sequencing platform for final sequencing round
+VerifyBam_LC_Affy_Chip: FLOAT | Value from UMich's VerifyBamID BAM QC program http://genome.sph.umich.edu/wiki/VerifyBamID.  The Free measures use a statistical model based on the haplotypes discovered by the chip. The Chip measure considers the genotypes available for that individual from that chip. We use greater than 3% as a cut off for our our low coverage samples and greater than 3.5% for our exome samples.
+Has_Sequence_from_Blood_in_Index: BOOLEAN | In the later stages of the project some populations has multiple study ids, one to indicate sequencing from blood. This data for each sample has not been treated independently in the alignment process but when there is both LCL and Blood sourced data they are both together in single bams
+Phase1_LC_Centers: TEXT | phase1 low coverage sequencing centers
+VerifyBam_E_Omni_Chip: FLOAT | Value from UMich's VerifyBamID BAM QC program http://genome.sph.umich.edu/wiki/VerifyBamID.  The Free measures use a statistical model based on the haplotypes discovered by the chip. The Chip measure considers the genotypes available for that individual from that chip. We use greater than 3% as a cut off for our our low coverage samples and greater than 3.5% for our exome samples.
+Phase1_E_Centers: TEXT | phase1 exome sequencing centers
+Unknown_Second_Order: TEXT | sample ids for any unknown second order relations

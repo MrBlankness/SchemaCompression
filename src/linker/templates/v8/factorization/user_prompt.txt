@@ -1,0 +1,32 @@
+[COMPRESSED SCHEMA]
+{context}
+
+[EXTERNAL_KNOWLEDGE]
+```
+{external_knowledge}
+```
+
+[USER QUESTION]
+{question}
+
+[INSTRUCTIONS]
+Provide explicit step-by-step reasoning for schema decompression and linking.
+Prioritize recall first; improve precision only after required intent coverage is satisfied.
+
+[OUTPUT]
+Return exactly:
+THOUGHT:
+<your concise reasoning>
+
+FINAL_JSON:
+<JSON list of schema.table.column>
+
+[EXAMPLE OUTPUT]
+THOUGHT:
+1) Parse intent and extract required entities/filters/metrics.
+2) Use external knowledge (if provided) to resolve domain terms and metric definitions.
+3) Expand component references and collect available columns.
+4) Map resolved terms to concrete columns and keep required joins/filters/attributes.
+
+FINAL_JSON:
+["analytics.orders.customer_id", "analytics.orders.order_date", "analytics.customers.customer_name"]

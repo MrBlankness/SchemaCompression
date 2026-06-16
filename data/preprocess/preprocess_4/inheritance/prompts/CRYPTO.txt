@@ -1,0 +1,363 @@
+[TEMPLATES]
+<T1>
+merkle_root: TEXT | The root node of a Merkle tree, where leaves are transaction hashes | eg=["899cb0460b5dfadec7b4fb65d50d04745b203474c0f77036ff1912f0463fd87d", "d93db573502d46831be5ca56dd1c70c4a17170113be9bd66cb8540a29c542f11"]
+timestamp_month: DATE | Month of the block creation timestamp specified in block header | eg=["2018-06-01", "2023-05-01"]
+version: NUMBER | Protocol version specified in block header | eg=[536870912, 536871168]
+hash: TEXT | Hash of this block | eg=["00000000000000167e2beb41c3590e54e7caff23c528d6c8425c656940acadeb", "00000000000000001314706b8211343e2eac23bd86bb03d1e24beb79ab2cf5fd"]
+timestamp: NUMBER | Block creation timestamp specified in block header | eg=[1528924702000000, 1528982631000000]
+size: NUMBER | The size of block data in bytes | eg=[11431, 9467]
+weight: NUMBER | Three times the base size plus the total size. https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki
+transaction_count: NUMBER | Number of transactions included in this block | eg=[23]
+number: NUMBER | The number of the block | eg=[886481, 886849]
+bits: TEXT | Difficulty threshold specified in block header | eg=["19526b07", "1954acdf"]
+nonce: TEXT | Difficulty solution specified in block header | eg=["8cc435a7", "e61554c6"]
+stripped_size: NUMBER | The size of block data in bytes excluding witness data
+coinbase_param: TEXT | Data specified in the coinbase transaction of this block | eg=["03d1860d1b2f5669614254432f4d696e6564206279206f736d6f6d696e65722f102c926500dec72df69b3cb8aa4e020000", "0341880d04676c225b08fabe6d6d2c2bc0be641f54dd1b1ae22b104cbb79802d757dbd9e040d57f3414570b72d4c0100000000000000580934d74d0400000d2f6e6f64655374726174756d2f"]
+@Tables: [CRYPTO_BITCOIN.BLOCKS,CRYPTO_BITCOIN_CASH.BLOCKS,CRYPTO_DASH.BLOCKS]
+
+<T2>
+value: NUMBER | NULL | eg=["1564464353.000000000", "969722.000000000"]
+block_timestamp: NUMBER | NULL | eg=[1519952693000000, 1521155610000000]
+type: TEXT | NULL | eg=["pubkeyhash", "scripthash"]
+script_asm: TEXT | NULL | eg=["OP_DUP OP_HASH160 bdac34c8369c3278c19ce857bf3cda38e6e74631 OP_EQUALVERIFY OP_CHECKSIG", "OP_HASH160 29a87b7938faafa35f3aae472ce258f0fb095ad8 OP_EQUAL"]
+block_hash: TEXT | NULL | eg=["000000000000001b7e10f2c2c604d6670ab0ee160b54b4245b4d8a7db90b3299", "000000000000001dacd520c1501e8d2046c3ab13b7e173d184e83d4f43621813"]
+addresses: VARIANT | NULL | eg=[["Xsyjqc1zZ19T3FtJ97WrCLzXUmnE4P6ACP"], ["7WCvHxdcQ67mxrodC88544Nqj8YKZNKeRW"]]
+index: NUMBER | NULL | eg=[1, 185]
+required_signatures: NUMBER | NULL | eg=[1]
+transaction_hash: TEXT | NULL | eg=["d8e3ee4b126fcea18d82af9945370d8db4e4bf08d884bbb6b38f6fae97483790", "592f9f9565b0c97460e52f125165fe9332e8ba93fcff93cb8bc3c9f7189d2e06"]
+block_number: NUMBER | NULL | eg=[829538, 837169]
+script_hex: TEXT | NULL | eg=["76a914bdac34c8369c3278c19ce857bf3cda38e6e7463188ac", "a91429a87b7938faafa35f3aae472ce258f0fb095ad887"]
+@Tables: [CRYPTO_BITCOIN.OUTPUTS,CRYPTO_BITCOIN_CASH.OUTPUTS,CRYPTO_DASH.OUTPUTS]
+
+<T3>
+input_count: NUMBER | The number of inputs in the transaction | eg=[0]
+inputs: VARIANT | Transaction inputs | eg=[[]]
+block_timestamp_month: DATE | Month of the block which contains this transaction | eg=["2023-04-01"]
+block_number: NUMBER | Number of the block which contains this transaction | eg=[1861655, 1847614]
+output_count: NUMBER | The number of outputs in the transaction | eg=[2]
+fee: NUMBER | The fee paid by this transaction | eg=["0E-9"]
+hash: TEXT | The hash of this transaction | eg=["2b02c8fc751a891e10509a36ae0662c835c8d5238af5381f76df5bc664822acd", "c13fe342f93176ccd3aa9036b6a3c8ac142194185941c689b1d396a213b2b307"]
+version: NUMBER | Protocol version specified in block which contained this transaction | eg=[3]
+size: NUMBER | The size of this transaction in bytes | eg=[241]
+input_value: NUMBER | Total value of inputs in the transaction
+is_coinbase: BOOLEAN | true if this transaction is a coinbase transaction | eg=[true]
+lock_time: NUMBER | Earliest time that miners can include the transaction in their hashing of the Merkle root to attach it in the latest block of the blockchain | eg=[0]
+outputs: VARIANT | 0-indexed number of an input within a transaction | eg=[[{"addresses":["XxEcuVw1rbDkRePTHnqtRwMTWqL42Tg9kK"],"index":0,"required_signatures":1,"script_asm":"OP_DUP OP_HASH160 ec5d2957c6407c8915003ad478ca459fac1b0d42 OP_EQUALVERIFY OP_CHECKSIG","script_hex":"76a914ec5d2957c6407c8915003ad478ca459fac1b0d4288ac","type":"pubkeyhash","value":142275814},{"addresses":["Xr5ZkoaLAeoFw7GGiNvuwTYZFeDcM9knMg"],"index":1,"required_signatures":1,"script_asm":"OP_DUP OP_HASH160 a8d608a131a5fd9c0ac063b33629da422adab17f OP_EQUALVERIFY OP_CHECKSIG","script_hex":"76a914a8d608a131a5fd9c0ac063b33629da422adab17f88ac","type":"pubkeyhash","value":106458128}]]
+output_value: NUMBER | Total value of outputs in the transaction | eg=["248733942.000000000", "248744170.000000000"]
+block_timestamp: NUMBER | Timestamp of the block which contains this transaction | eg=[1682640175000000, 1680426669000000]
+block_hash: TEXT | Hash of the block which contains this transaction | eg=["0000000000000004538f222078562070336d99b89bbbd477bc34fe4abb897437", "000000000000001522ad54b3a1fcdf2d8b3d8ea22bb0243524ea1099d60c41c7"]
+virtual_size: NUMBER | The virtual transaction size (differs from size for witness transactions)
+@Tables: [CRYPTO_BITCOIN.TRANSACTIONS,CRYPTO_BITCOIN_CASH.TRANSACTIONS,CRYPTO_DASH.TRANSACTIONS]
+
+<T13>
+block_number: NUMBER | Block number where this contract was created | eg=[19281125, 20262832]
+block_timestamp: NUMBER | Timestamp of the block where this contract was created | eg=[1708580231000000, 1720454267000000]
+block_hash: TEXT | Hash of the block where this contract was created | eg=["0xe67cf196c8c3733cc56899a49fa9ca8c90494df6093bd3fe07451e6512306731", "0xbd70f365e78e8af9da1376c132a58eb9674238312ec6d92dab6e92ef352eb554"]
+address: TEXT | Address of the contract | eg=["0x1babaff436c67963582cd95c468bf7f1bfaf1cfd", "0xc3c64bf8778946ad819fd40c00c225408cc6782c"]
+is_erc20: BOOLEAN | Whether this contract is an ERC20 contract | eg=[false]
+bytecode: TEXT | Bytecode of the contract | eg=["0x00483473494141414141414141412b3161793435647478483846574e574358417859504e4e4c59503851786143466b4930646f77345371434d466f6d6766303958565a506e536f706a655a4d346747466f357378356b4d31696433563130392b2b662f7648352b2f2f2b76616237353665662f2f2b7a644e766e6d3676662f76683364507a2b336476503778392f5a656e46772b342f63306658762f77352b2f666676664e372f3778635076623633665066332f7838734f6231382b7658377838654f505048323450396e424c2f7038396c7475442f2f6e747536656e662b4c2b7779762f34506c502f73484c334f646a752b565362376b33584932436e37336a353872343264617470486e4c7464364b4a64354a2f6f7a7674587a4c302f7a5a3844456133764737747677757837585662326547563764665a2f742f6e57307566796635654a68702b486a2b356d722b39337263502f6d333452336a7637797135686a46763858496e4e6e387a76513743525a7756497776717a4a6d4c4e6e6636414e587861305976677173636a552b38792f58306c7634596d4b39786370652f7941573155646f65474a7a3843337a713336376d3257767951726e4554726c5668712b354e776459324b4f306f6a6d6f47316c415265664865757850562f68477858584e71723234576164714f785a4...", "0x60806040526004361061008a5760003560e01c806330f0dbe01161005957806330f0dbe01461017e578063bb4b5734146101ca578063c940baf8146101fe578063f12c2eb41461024a578063f676d67a1461029657610091565b806301b4f0f81461009b57806305d1294a146100e25780630d9019e11461011657806316e73a551461014a57610091565b3661009157005b6100996104ca565b005b3480156100a757600080fd5b506100cf7f053c91253bc9682c04929ca02ed00b3e423f6710d2ee7e0d5ebb06f3ecf368a881565b6040519081526020015b60405180910390f35b3480156100ee57600080fd5b506100cf7f0000000000000000000000000000000000000000000000000021b6e7ce44ffdb81565b34801561012257600080fd5b506100cf7f0685fc1b003cdcc592202dc2e44c9ce54ed87f8744d175fc91848e98fbee23e281565b34801561015657600080fd5b506100cf7f000000000000000000000000000000000000000000000000000000000000000081565b34801561018a57600080fd5b506101b27f00000000000000000000000000000000000000000000000000000000002dc6c081565b6040516001600160801b0390911681526020016100d9565b3480156101d657600080fd5b506101b27f0000000000000000000000000000000000000000000..."]
+is_erc721: BOOLEAN | Whether this contract is an ERC721 contract | eg=[false]
+function_sighashes: VARIANT | 4-byte function signature hashes | eg=[["0x30665876","0x36447674","0x396d4277","0x47725877","0x4f64576c","0x59376a33","0x7335416b"], ["0x30f0dbe0","0xbb4b5734","0xc940baf8","0xf12c2eb4","0xf676d67a"]]
+@Tables: [CRYPTO_ETHEREUM.CONTRACTS,CRYPTO_ETHEREUM_CLASSIC.CONTRACTS]
+
+<T14>
+error: TEXT | Error if message call failed. This field doesn't contain top-level trace errors.
+block_hash: TEXT | Hash of the block where this trace was in | eg=["0x5bacef170983a9481b1a64ac9fe34f9944ce68280a1f278b7984b761848e9663", "0x60cbb4475aabc5c613aa9f0eb545693425fb29b47b209fd64b88e7ea1d550d40"]
+subtraces: NUMBER | Number of subtraces | eg=[0]
+transaction_index: NUMBER | Integer of the transactions index position in the block | eg=[127, 53]
+block_number: NUMBER | Block number where this trace was in | eg=[13157503, 17067435]
+trace_address: TEXT | Comma separated list of trace address in call tree | eg=["0"]
+transaction_hash: TEXT | Transaction hash where this trace was in | eg=["0x48d0e5ceea7c75c4a5604c237c34be896ea56b656c76263151cbbd47b39c24e9", "0xbc644d31459d6400aacc0e6a40a0e391a2b01b2c9fa40dad8fa94f4aa9e8ae51"]
+status: NUMBER | Either 1 (success) or 0 (failure, due to any operation that can cause the call itself or any top-level call to revert) | eg=[1]
+value: NUMBER | Value transferred in Wei | eg=["0E-9"]
+block_timestamp: NUMBER | Timestamp of the block where this trace was in | eg=[1630735736000000, 1681745987000000]
+reward_type: TEXT | One of block, uncle
+to_address: TEXT | Address of the receiver if trace_type is call, address of new contract or null if trace_type is create, beneficiary address if trace_type is suicide, miner address if trace_type is reward, shareholder address if trace_type is genesis, WithdrawDAO address if trace_type is daofork | eg=["0xa2327a938febf5fec13bacfb16ae10ecbc4cbdcf"]
+gas: NUMBER | Gas provided with the message call | eg=[67472, 67587]
+trace_type: TEXT | One of call, create, suicide, reward, genesis, daofork | eg=["call"]
+gas_used: NUMBER | Gas used by the message call | eg=[36728]
+output: TEXT | The output of the message call, bytecode of contract when trace_type is create | eg=["0x0000000000000000000000000000000000000000000000000000000000000001"]
+input: TEXT | The data sent along with the message call | eg=["0xa9059cbb00000000000000000000000011fc728dc0867a66fa10d609ca6051cdaf15f26b000000000000000000000000000000000000000000000000000000000bfb0440", "0xa9059cbb0000000000000000000000005f41e3076a04761d38d3aad6aae525d32e4ef89b000000000000000000000000000000000000000000000000000000000299bdb0"]
+call_type: TEXT | One of call, callcode, delegatecall, staticcall | eg=["delegatecall"]
+trace_id: TEXT | NULL | eg=["call_0x48d0e5ceea7c75c4a5604c237c34be896ea56b656c76263151cbbd47b39c24e9_0", "call_0xbc644d31459d6400aacc0e6a40a0e391a2b01b2c9fa40dad8fa94f4aa9e8ae51_0"]
+from_address: TEXT | Address of the sender, null when trace_type is genesis or reward | eg=["0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"]
+@Tables: [CRYPTO_ETHEREUM.TRACES,CRYPTO_ETHEREUM_CLASSIC.TRACES]
+
+<T16>
+transaction_index: NUMBER | Integer of the transactions index position log was created from | eg=[97, 98]
+address: TEXT | Address from which this log originated | eg=["0x39053d51b77dc0d36036fc1fcc8cb819df8ef37a", "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"]
+block_number: NUMBER | The block number where this log was in | eg=[20162083, 18781051]
+data: TEXT | Contains one or more 32 Bytes non-indexed arguments of the log | eg=["0x000000000000000000000000754238f520b0d11e700e31190133a15f635dd3aa000000000000000000000000acb55c530acdb2849e6d4f36992cd8c9d50ed8f7000000000000000000000000000000000000000000000005f68e8131ecf80000", "0x00000000000000000000000000000000000000000000000000000000ed864640"]
+topics: VARIANT | Indexed log arguments (0 to 4 32-byte hex strings). (In solidity: The first topic is the hash of the signature of the event (e.g. Deposit(address,bytes32,uint256)), except you declared the event with the anonymous specifier.) | eg=[["0x1ec042c965e2edd7107b51188ee0f383e22e76179041ab3a9d18ff151405166c","0x0000000000000000000000005accc90436492f24e6af278569691e2c942a676d"], ["0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925","0x000000000000000000000000962827ba450d5d319e07da61b4bb508af077500a","0x0000000000000000000000001715a3e4a142d8b698131108995174f37aeba10d"]]
+transaction_hash: TEXT | Hash of the transactions this log was created from | eg=["0x8d2aeccb668f0c7cecce04784366c738e058741b3769a0a8b453f09ec4e17da5", "0xa0383b2d1dd47f17d47532d1941c5828de645a44f9f820dba6a3591dd473ae3d"]
+log_index: NUMBER | Integer of the log index position in the block | eg=[244]
+block_timestamp: NUMBER | Timestamp of the block where this log was in | eg=[1719238631000000, 1702516559000000]
+block_hash: TEXT | Hash of the block where this log was in | eg=["0x7b782c6f4bf52787f5c4790b3dbdfa9c4ea41d6dc0964d64bb599d1f173dec16", "0x93f8d1ec09b21f8205812736b8ad0d5e7fee21bcbdd3173829918dd0c1e1fb9e"]
+@Tables: [CRYPTO_ETHEREUM.LOGS,CRYPTO_ETHEREUM_CLASSIC.LOGS]
+
+<T17>
+value: TEXT | Amount of tokens transferred (ERC20) / id of the token transferred (ERC721). Use safe_cast for casting to NUMERIC or FLOAT64 | eg=["3303", "10000000000000000000"]
+transaction_hash: TEXT | Transaction hash | eg=["0xfe3f77e61c8bf9e13bd31ff08eac0b0ae13fa18fa514b6e57ed4bb654dcdee14", "0xf160fa3511463539ed4cc2036e6379d00edf04c35d591d5314ae65924dbb708a"]
+to_address: TEXT | Address of the receiver | eg=["0x83c8f28c26bf6aaca652df1dbbe0e1b56f8baba2", "0x882c874c31297bc03fc8e6696e3b512b95f0de1b"]
+from_address: TEXT | Address of the sender | eg=["0x5a7a6b69c6382000fd35711fd28440f415417318", "0x80a17eaf3b10dcac016916bc239d823ddb423ba0"]
+block_hash: TEXT | Hash of the block where this transfer was in | eg=["0xe21f55ec59367a04575352bd9be36840f4b6cf0087592434ab90e53645aa9491", "0x245043fbd95f71bc670bc9f9ba20e3bad632bb3cd16084c816522a9fc1dd7da8"]
+log_index: NUMBER | Log index in the transaction receipt | eg=[205]
+block_number: NUMBER | Block number where this transfer was in | eg=[15324735, 12414767]
+token_address: TEXT | ERC20 token address | eg=["0x67a6e7372b805b430240f6a545273efa89a3c18b", "0x6a625ddb2e2a2de0257c5129364dd80bb4afa3b9"]
+block_timestamp: NUMBER | Timestamp of the block where this transfer was in | eg=[1660275833000000, 1620758235000000]
+@Tables: [CRYPTO_ETHEREUM.TOKEN_TRANSFERS,CRYPTO_ETHEREUM_CLASSIC.TOKEN_TRANSFERS]
+
+<T25>
+state_root: TEXT | NULL | eg=["0x244d7c3f33cabee5a6834259d4cd1896f5cf0ddb99f25f4d7425df291779789f", "0x5b7a1233d18f06101f151effd86b2f1363a1e317eb9c67115a6da3ea95faf5d6"]
+extra_data: TEXT | NULL | eg=["0xd783010406844765746887676f312e362e31856c696e7578"]
+sha3_uncles: TEXT | NULL | eg=["0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347"]
+difficulty: NUMBER | NULL | eg=["47048349841888.000000000", "46984076346511.000000000"]
+receipts_root: TEXT | NULL | eg=["0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421"]
+gas_limit: NUMBER | NULL | eg=[4712388]
+total_difficulty: NUMBER | NULL | eg=["28350603078681157226.000000000", "28451907546152223587.000000000"]
+parent_hash: TEXT | NULL | eg=["0x90ac6bccefcdfba5df159eb2a46cfc3889dc640148c6680b3664a11ffbf4ba94", "0xe70cbd399f766e3daefb354a6143b1eefd821b6b297cc8862c9abb637de9227d"]
+transaction_count: NUMBER | Number of transactions included in this block | eg=[0]
+nonce: TEXT | Difficulty solution specified in block header | eg=["0x77951055c1c5d95c", "0xbe60053c1cf0c541"]
+miner: TEXT | NULL | eg=["0x2a65aca4d5fc5b5c859090a6c34d164135398226"]
+logs_bloom: TEXT | NULL | eg=["0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"]
+number: NUMBER | The number of the block | eg=[1720715, 1722896]
+hash: TEXT | Hash of this block | eg=["0xda7b01b00021b2d7626621887998eda9c971a4abeb61ae5e6176f779ba284641", "0xa04692ec8e653ad94047a169dc444bc2112b30f57f7f20b33e451df13847cd07"]
+gas_used: NUMBER | NULL | eg=[0]
+timestamp: NUMBER | Block creation timestamp specified in block header | eg=[1466168298000000, 1466200222000000]
+size: NUMBER | The size of block data in bytes | eg=[541]
+transactions_root: TEXT | NULL | eg=["0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421"]
+@Tables: [CRYPTO_ETHEREUM_CLASSIC.BLOCKS]
+
+<T26>
+hash: TEXT | The hash of this transaction | eg=["0xed8dffadb17c412e94d135ccbd2185dc5a482afab1bfae9d97ed6c0a59e082da", "0xde6e242f61af018df4edf471fc9ffd5b257f299ec0c9d7a875c3a3207ea1b915"]
+value: NUMBER | NULL | eg=["2689026035000000000.000000000", "0E-9"]
+receipt_gas_used: NUMBER | NULL | eg=[21000]
+to_address: TEXT | NULL | eg=["0xaaf9b4d74782d75e5daf81d5acb562ea6409dcf6", "0xc1e57e7bbff036649c2ea2b52f1ff558d77ab85f"]
+transaction_index: NUMBER | NULL | eg=[240, 4]
+input: TEXT | NULL | eg=["0x"]
+block_number: NUMBER | Number of the block which contains this transaction | eg=[11340491, 8481481]
+block_hash: TEXT | Hash of the block which contains this transaction | eg=["0xeb2ec5e716d79e7e93fd746fd2034c02c3ac45638b8c13d60059b576cfcfb37c", "0x2b2dba6d8a997cb53e2f2a1d17bffe5d1beb8d4f8d5a0dc0d43c91eda914f74f"]
+block_timestamp: NUMBER | Timestamp of the block which contains this transaction | eg=[1601883066000000, 1564190465000000]
+gas_price: NUMBER | NULL | eg=[0]
+receipt_cumulative_gas_used: NUMBER | NULL | eg=[5061000, 7465984]
+gas: NUMBER | NULL | eg=[21000]
+from_address: TEXT | NULL | eg=["0x13198af175291a4a33a9f3e982d7b603b39529db", "0xc1e57e7bbff036649c2ea2b52f1ff558d77ab85f"]
+receipt_status: NUMBER | NULL | eg=[1.0, NaN]
+nonce: NUMBER | NULL | eg=[13917, 0]
+receipt_root: TEXT | NULL | eg=["0xacf2e3a8690836e40aa1ca5f46c4ceef6e2ba2c600bc48475cd01fdd80b16cdf"]
+receipt_contract_address: TEXT | NULL
+@Tables: [CRYPTO_ETHEREUM_CLASSIC.TRANSACTIONS]
+
+[DERIVED]
+<T4> extends <T2>
+spent_output_index: NUMBER | NULL | eg=[3, 4]
+sequence: NUMBER | NULL | eg=[4294967295, 4294967294]
+spent_transaction_hash: TEXT | NULL | eg=["1356961f9f68ace94e0d66b7694c320733ea95a1534745f1a41d037540e0826c", "df938c0bbde6fad8a54805ede0ea3987cfc9aeb3d260d204f64095aafb27a18e"]
+@Tables: [CRYPTO_BITCOIN.INPUTS,CRYPTO_BITCOIN_CASH.INPUTS,CRYPTO_DASH.INPUTS]
+
+<T12> extends <T25>
+excess_blob_gas: NUMBER | NULL
+blob_gas_used: NUMBER | NULL
+base_fee_per_gas: NUMBER | NULL
+withdrawals: VARIANT | NULL | eg=[[]]
+withdrawals_root: TEXT | NULL
+@Tables: [CRYPTO_ETHEREUM.BLOCKS]
+
+<T15> extends <T26>
+receipt_blob_gas_price: NUMBER | NULL
+transaction_type: NUMBER | NULL | eg=[2]
+max_fee_per_gas: NUMBER | NULL | eg=[56000000000, 171000000000]
+receipt_effective_gas_price: NUMBER | NULL | eg=[29163806143, 108459751613]
+max_fee_per_blob_gas: NUMBER | NULL
+blob_versioned_hashes: VARIANT | NULL | eg=[[]]
+receipt_blob_gas_used: NUMBER | NULL
+max_priority_fee_per_gas: NUMBER | NULL | eg=[2000000000]
+@Tables: [CRYPTO_ETHEREUM.TRANSACTIONS]
+
+[STANDALONE]
+## CRYPTO_BAND.BLOCKS
+signatures: VARIANT | NULL | eg=[[{"block_id_flag":2,"timestamp":1623233772796056,"validator_address":"061D655D415EB90B36CA9E7311EF1116AC4CBEEF"},{"block_id_flag":2,"timestamp":1623233772667243,"validator_address":"0AB78F6B4A1DA37B633210B78CF8FB9346BB8614"},{"block_id_flag":2,"timestamp":1623233772659951,"validator_address":"0BD952BD49924499F07EFF3343491E31A55DA644"},{"block_id_flag":2,"timestamp":1623233772649577,"validator_address":"0F2CBF6E526737DD360B104CEB2D28E69847AFB0"},{"block_id_flag":2,"timestamp":1623233886848139,"validator_address":"11A31B5C8F997DEF2CAD9A7687A2D4AFEC895129"},{"block_id_flag":2,"timestamp":1623233772657029,"validator_address":"13615FC5740BF4583EBAE5B8F3C7EAF894EBFC85"},{"block_id_flag":2,"timestamp":1623233772693399,"validator_address":"14C17FDD89475DB56DC8399D6F134BC936CCFC41"},{"block_id_flag":2,"timestamp":1623233770577986,"validator_address":"1549FC99468E41E5E5736A06FFDB376721A64A0B"},{"block_id_flag":2,"timestamp":1623233772598118,"validator_address":"1C69616391B22E974E83C59CFB1EE88...]
+block_hash: TEXT | NULL | eg=["B4747CFF468927FBD4FA90B1DAD1D96FA5270388771893D565E8606CF7983EA1", "59429D8194A646E55E2EE15AAA6980035D165BFFF9B65B1924553EBB9427DB57"]
+proposer_address: TEXT | NULL | eg=["E7016315610DDCE9685BB3106182F58BFE8D16B7", "F2366080D68C57913FBF3D90BC9DBC255A26A9D8"]
+block_timestamp: TEXT | NULL | eg=["2021-06-09T10:16:12.655083898Z", "2021-06-09T10:14:26.642437525Z"]
+block_height: NUMBER | NULL | eg=[6528067, 6528036]
+consensus_hash: TEXT | NULL | eg=["0EAA6F4F4B8BD1CC222D93BBD391D07F074DE6BE5A52C6964875BB355B7D0B45"]
+last_results_hash: TEXT | NULL | eg=["F5C71A1A44C3532FC4F36DFC2E43DD80AA90E93C669EA9641EBDEE8B23D8BA17", "F857106116E31EA0951D99C76A1F0E19C5ADEA0A92791B38670D8D1B2D820150"]
+data_hash: TEXT | NULL | eg=["5AAA22C04F11865C22B8C9B8BE5383C2E252A243EACAE28734B69A9AE37656FA", "AAD09D3CCA6B7F3CC044AA280BFC37E1E78EF41A1E9A634A127F5C1BB9CB265A"]
+last_commit_hash: TEXT | NULL | eg=["6874AC72F19C793DA3AB8EB1755D91CC0FD80BD38FDC96CB66EED9043B09A854", "31D93A33A5D9927CD3405EA59561EEF2F968CA3E7DAAD6F9EA289B907ED35C00"]
+block_timestamp_truncated: NUMBER | NULL | eg=[1623233772655083, 1623233666642437]
+evidence_hash: TEXT | NULL | eg=[""]
+app_hash: TEXT | NULL | eg=["422BBCE1B1BB05E25FEE612EF3E969A8BEB20E77E3A1A1F27F951F592F4790A5", "20C31AC27DA12D261A3C9FA3625199CDC674C95B7850740BB6649F96A5F98A5C"]
+validators_hash: TEXT | NULL | eg=["00E1F37BAE108336B8E3129DF8CE85B6E0F77054372A945CBEACFD34635E7CD4"]
+next_validators_hash: TEXT | NULL | eg=["00E1F37BAE108336B8E3129DF8CE85B6E0F77054372A945CBEACFD34635E7CD4"]
+
+## CRYPTO_BAND.BLOCK_EVENTS
+block_height: NUMBER | NULL | eg=[4561369, 4560826]
+block_timestamp: TEXT | NULL | eg=["2021-03-29T23:27:14.111869Z", "2021-03-29T22:59:30.7985516Z"]
+event_type: TEXT | NULL | eg=["proposer_reward", "mint"]
+block_timestamp_truncated: NUMBER | NULL | eg=[1617060434111869, 1617058770798551]
+attributes: VARIANT | NULL | eg=[[]]
+block_event_type: TEXT | NULL | eg=["begin"]
+
+## CRYPTO_BAND.ERRORS
+tableRow: TEXT | Failed TableRow serialized to json string | eg=[{"type":"message","block_height":"7119364","block_timestamp":"2021-06-30T06:43:36.530169003Z","block_timestamp_truncated":"2021-06-30T06:43:36.530169Z","txhash":"E6B6D4F78107E781489E17955299F8949B2247F5F11120298799D7570A24CADF","message_type":"cosmos-sdk/MsgVote","normalized_message_type":"cosmos_sdk_MsgVote","cosmos_sdk_MsgVote":{"proposal_id":"2","voter":"band1576rx9scnjz0khjpg8wqm9kwlgtmzknxwt8zce","option":"Yes"},"index":0,"item_id":"message_E6B6D4F78107E781489E17955299F8949B2247F5F11120298799D7570A24CADF_0"}, {"type":"message","block_height":"7412432","block_timestamp":"2021-07-10T15:41:09.849809296Z","block_timestamp_truncated":"2021-07-10T15:41:09.849809Z","txhash":"9899A1001CC7E258809A90D7E8D339FD349A085A3B30F75932D077B20AD7F14F","message_type":"cosmos-sdk/MsgVote","normalized_message_type":"cosmos_sdk_MsgVote","cosmos_sdk_MsgVote":{"proposal_id":"2","voter":"band144hjwws8wnua6z8nd0ej7sf8686s9gtxwseggx","option":"Yes"},"index":0,"item_id":"message_9899A1001CC7E258809A90D7E8D339FD349A085A3B30F75932D077B20AD7F14F_0"}]
+errors: TEXT | Insert errors serialized to json string | eg=[{"errors":[{"debugInfo":"","location":"cosmos_sdk_msgvote.option","message":"Cannot convert value to integer (bad value): Yes","reason":"invalid"}],"index":0}]
+
+## CRYPTO_BAND.LOGS
+msg_index: NUMBER | NULL | eg=[0]
+events: VARIANT | NULL | eg=[[{"attributes":[{"key":"action","value":"request"}],"type":"message"},{"attributes":[{"key":"data_source_id","value":"4"},{"key":"data_source_hash","value":"07be7bd61667327aae10b7a13a542c7dfba31b8f4c52b0b60bf9c7b11b1a72ef"},{"key":"external_id","value":"6"},{"key":"calldata","value":"DAI"},{"key":"data_source_id","value":"5"},{"key":"data_source_hash","value":"107048da9dbf7960c79fb20e0585e080bb9be07d42a1ce09c5479bbada8d0289"},{"key":"external_id","value":"3"},{"key":"calldata","value":"NXM AMPL DAI TUSD BAND EGLD ANT"},{"key":"data_source_id","value":"11"},{"key":"data_source_hash","value":"c2b071faa3688564bc9b57eb3a554b2c542fffe3b0ab92bcfe7c814260376728"},{"key":"external_id","value":"0"},{"key":"calldata","value":"BAND"},{"key":"data_source_id","value":"3"},{"key":"data_source_hash","value":"4292e26d7c98c76b08c3c87d2d18f135f2cbb0c2e4081cab52a7ebeb0740a705"},{"key":"external_id","value":"5"},{"key":"calldata","value":"huobipro BAND ANT"},{"key":"data_source_id","value":"2"},{"key":...]
+log_index: NUMBER | Integer of the log index position in the block | eg=[0]
+txhash: TEXT | NULL | eg=["AD1E4CC752B9860DD494AEEF63843D552E6170E1591DF56F71388C8B3B42BDFF", "485C665F88341AFF8D645E44553C2B725249384D5B96843A2B8517B984BE1998"]
+block_timestamp: NUMBER | Timestamp of the block where this log was in | eg=[1621725640055018, 1621656684197429]
+block_height: NUMBER | NULL | eg=[6050867, 6028851]
+log: TEXT | NULL | eg=[""]
+block_timestamp_truncated: NUMBER | NULL | eg=[1621725640055018, 1621656684197429]
+
+## CRYPTO_BAND.MESSAGES
+oracle_CreateOracleScript: VARIANT | NULL
+cosmos_sdk_MsgVerifyInvariant: VARIANT | NULL
+cosmos_sdk_MsgMultiSend: VARIANT | NULL
+oracle_Report: VARIANT | NULL | eg=[{"raw_reports":[{"data":"MTkuMTEyMgo="},{"data":"MTMyLjY5NDcsMS4zNjczMDEsMC45OTk4Njc5MywwLjk5ODg0MTYxLDE5LjA3NzIsMTkxLjE4MTYsOS40NDcyMzIK","external_id":3},{"data":"MS4zNjgsMS4wMDEsMC45OTk4LDE5LjEsMTkxLjM0LDkuNDcK","external_id":1},{"data":"U0xVR19BTkRfU1lNQk9MX0xFTl9OT1RfTUFUQ0gK","exit_code":1,"external_id":2},{"data":"MS4wMDAzCg==","external_id":8},{"data":"MS4wMDEK","external_id":6},{"data":"MS4wMDEyCg==","external_id":7},{"data":"MTkuMTIxNyw5LjQ1OTU1Cg==","external_id":5},{"data":"MC45OTk3OTg4LDE5LjEyNzEsMTkxLjI0MTEsOS40MzE1MjIK","external_id":4}],"reporter":"band103vkesflkj833nay8j8kww87n72jjynqfun8wu","request_id":4686640,"validator":"bandvaloper1vvevlfz7r9xrj9kghhguw8ygwvv9x3duldlw3j"}]
+cosmos_sdk_MsgUndelegate: VARIANT | NULL
+cosmos_sdk_MsgSubmitProposal: VARIANT | NULL
+cosmos_sdk_MsgVote: VARIANT | NULL
+cosmos_sdk_MsgUnjail: VARIANT | NULL
+block_timestamp: TEXT | NULL | eg=["2021-05-06T03:58:01.899848143Z", "2021-05-06T14:09:43.281723906Z"]
+cosmos_sdk_MsgSend: VARIANT | NULL
+cosmos_sdk_MsgModifyWithdrawAddress: VARIANT | NULL
+cosmos_sdk_MsgDelegate: VARIANT | NULL
+oracle_Request: VARIANT | NULL
+cosmos_sdk_MsgWithdrawValidatorCommission: VARIANT | NULL
+message_type: TEXT | NULL | eg=["oracle/Report"]
+block_height: NUMBER | NULL | eg=[5589152, 5600683]
+cosmos_sdk_MsgEditValidator: VARIANT | NULL
+cosmos_sdk_MsgCreateValidator: VARIANT | NULL
+cosmos_sdk_MsgFundCommunityPool: VARIANT | NULL
+oracle_RemoveReporter: VARIANT | NULL
+cosmos_sdk_MsgDeposit: VARIANT | NULL
+cosmos_sdk_MsgWithdrawDelegationReward: VARIANT | NULL
+cosmos_sdk_MsgBeginRedelegate: VARIANT | NULL
+oracle_EditDataSource: VARIANT | NULL
+oracle_CreateDataSource: VARIANT | NULL
+cosmos_sdk_MsgSubmitEvidence: VARIANT | NULL
+oracle_Activate: VARIANT | NULL
+block_timestamp_truncated: NUMBER | NULL | eg=[1620273481899848, 1620310183281723]
+txhash: TEXT | NULL | eg=["0E242F308B25CD43215920BDEBA2534E8A862B6553C5477A2DC50A71D5F74DF6", "D121F977D4258C611B2E053D788B1AC5F70A7CFD474D513DC866585CABF5C2C4"]
+oracle_EditOracleScript: VARIANT | NULL
+oracle_AddReporter: VARIANT | NULL
+
+## CRYPTO_BAND.ORACLE_REQUESTS
+reports: VARIANT | NULL | eg=[[{"in_before_resolve":true,"raw_reports":[{"data":"33343135332E3433373920323030332E333635350A","external_id":3},{"data":"33343135332E3433373920323030332E333635350A","external_id":2},{"data":"33343135332E3433373920323030332E333635350A","external_id":1},{"data":"33343135332E3433373920323030332E333635350A"}],"validator":"bandvaloper1q894x7p4ugl3q5l47e8ksll5k5lmx74fxqez5y"},{"in_before_resolve":true,"raw_reports":[{"data":"33343135332E3433373920323030332E333635350A"},{"data":"33343135332E3433373920323030332E333635350A","external_id":3},{"data":"33343135332E3433373920323030332E333635350A","external_id":1},{"data":"33343135332E3433373920323030332E333635350A","external_id":2}],"validator":"bandvaloper1zm5p8gg3ugjcdwz9yrxaf6fdptxa4gw04rplr9"},{"in_before_resolve":true,"raw_reports":[{"data":"33343135332E3433373920323030332E333635350A","external_id":3},{"data":"33343135332E3433373920323030332E333635350A","external_id":2},{"data":"33343135332E3433373920323030332E333635350A"},{"data":"33343135...]
+block_timestamp_truncated: NUMBER | NULL | eg=[1624445303446070, 1630830861417317]
+oracle_request_id: NUMBER | NULL | eg=[6957743, 10182920]
+request: VARIANT | NULL | eg=[{"calldata":"AAAAAgAAAARCVENCAAAABEJFVEgAAAAAO5rKAA==","min_count":10,"oracle_script_id":18,"raw_requests":[{"calldata":"aHR0cHM6Ly91cy1ycGMuYmFuZGNoYWluLm9yZy9vcmFjbGUvcmVxdWVzdF9wcmljZXMgQlRDIEVUSA==","data_source_id":24},{"calldata":"aHR0cHM6Ly9ldS1ycGMuYmFuZGNoYWluLm9yZy9vcmFjbGUvcmVxdWVzdF9wcmljZXMgQlRDIEVUSA==","data_source_id":24,"external_id":1},{"calldata":"aHR0cHM6Ly9hc2lhLXJwYy5iYW5kY2hhaW4ub3JnL29yYWNsZS9yZXF1ZXN0X3ByaWNlcyBCVEMgRVRI","data_source_id":24,"external_id":2},{"calldata":"aHR0cHM6Ly9hdXMtcnBjLmJhbmRjaGFpbi5vcmcvb3JhY2xlL3JlcXVlc3RfcHJpY2VzIEJUQyBFVEg=","data_source_id":24,"external_id":3}],"request_height":6925165,"request_time":1624445297218358,"requested_validators":["bandvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0wz502z","bandvaloper1hln9scsl9yqup8nxyum06rmggql5m5zqwxmt3p","bandvaloper1wja9nds8klxcjurvxerdsun4t52zfjvqpj6y54","bandvaloper17d3uhcjlh4jyqcep82jfsrg8avsngklxxan5tg","bandvaloper1r00x80djyu6wkxpceegmvn5w9nx65prgqhxkzq","bandvaloper1m88fha4982ev7smpt...]
+block_height: NUMBER | NULL | eg=[6925167, 8952552]
+oracle_script: VARIANT | NULL | eg=[{"filename":"5ee1c2a95f867ae8725b1ba9816e57c8def1f507dba6f06ef47bd95bd6a3a0b8","name":"Symbol Token Map","owner":"band1nl23kd2w7vehmk6d6scrs9jagqrdrxrat32vxv","schema":"{symbols:[string],multiplier:u64}/{rates:[u64]}"}]
+decoded_result: VARIANT | NULL | eg=[{"calldata":"{\"symbols\":[\"BTCB\",\"BETH\"],\"multiplier\":1000000000}","result":"{\"rates\":[34153437899999,2003365500000]}"}, {"calldata":"{\"symbols\":[\"BTCB\",\"BETH\"],\"multiplier\":1000000000}","result":"{\"rates\":[49956329300000,3880739100000]}"}]
+block_timestamp: TEXT | NULL | eg=["2021-06-23T10:48:23.446070108Z", "2021-09-05T08:34:21.417317401Z"]
+result: VARIANT | NULL | eg=[{"request_packet_data":{"ask_count":16,"calldata":"AAAAAgAAAARCVENCAAAABEJFVEgAAAAAO5rKAA==","min_count":10,"oracle_script_id":18},"response_packet_data":{"ans_count":16,"request_id":6957743,"request_time":1624445297,"resolve_status":1,"resolve_time":1624445303,"result":"AAAAAgAAHw/3iKzfAAAB0nHjlGA="}}, {"request_packet_data":{"ask_count":16,"calldata":"AAAAAgAAAARCVENCAAAABEJFVEgAAAAAO5rKAA==","min_count":10,"oracle_script_id":18},"response_packet_data":{"ans_count":16,"request_id":10182920,"request_time":1630830855,"resolve_status":1,"resolve_time":1630830861,"result":"AAAAAgAALW9dQyAgAAADh44TVWA="}}]
+
+## CRYPTO_BAND.TRANSACTIONS
+gas_used: NUMBER | NULL | eg=["71770.000000000", "78818.000000000"]
+sender: TEXT | NULL | eg=["band1yupjfyaxjvrmzm5ydmnjgczdj4wkan9mzk3v4p", "band1rf3fgq8y49u9ju3tz625y8e2jjyspkvevxsh3n"]
+block_timestamp_truncated: NUMBER | NULL | eg=[1621252763539267, 1621233837331940]
+gas_wanted: NUMBER | NULL | eg=["79488.000000000"]
+memo: TEXT | NULL | eg=["yoda:1.2.7/exec:google-cloud-function:1.1.2,", "yoda:1.2.7a/exec:google-cloud-function:1.1.2,"]
+txhash: TEXT | NULL | eg=["1BB3CF0904BA04BF74B692A998D3F20BDEB5D7B09AE5DA26F81C2DBB79DE83C2", "F0B8051D688EB353754D78A5A373D57405FE63EDC0EA3E7FAA40F5539935E059"]
+block_height: NUMBER | NULL | eg=[5900625, 5894547]
+fee: VARIANT | The fee paid by this transaction | eg=[{"amount":[],"gas":79488}]
+transaction_type: TEXT | NULL | eg=["cosmos-sdk/StdTx"]
+block_timestamp: TEXT | Timestamp of the block which contains this transaction | eg=["2021-05-17T11:59:23.53926789Z", "2021-05-17T06:43:57.331940073Z"]
+
+## CRYPTO_ETHEREUM_CLASSIC.BALANCES
+eth_balance: NUMBER | Ether balance | eg=["0E-9"]
+address: TEXT | Address | eg=["0xe485aee166761631ee5f0d0ce27c6f69dd7a3c5d", "0x2f3b226c145870235b502117358ddc09652cdbbd"]
+
+## CRYPTO_ETHEREUM_CLASSIC.TOKENS
+name: TEXT | The name of the ERC20 token
+address: TEXT | The address of the ERC20 token | eg=["0x1141608659ed28bdc60c4915b86907b4e24bde5e", "0xbd3419e2d4a4b3a34a92ccb8927e99ac0da1f75e"]
+symbol: TEXT | The symbol of the ERC20 token
+decimals: TEXT | The number of decimals the token uses. Use safe_cast for casting to NUMERIC or FLOAT64
+block_number: NUMBER | Block number where this token was created | eg=[6245977, 6248211]
+block_timestamp: NUMBER | Timestamp of the block where this token was created | eg=[1532523239000000, 1532553651000000]
+total_supply: TEXT | The total token supply. Use safe_cast for casting to NUMERIC or FLOAT64
+block_hash: TEXT | Hash of the block where this token was created | eg=["0x8b621fa3ed26005a446fed69395f16a3b982f556ec03e2b0608c2de7a91cba4f", "0x402274814d248a1867145d588229224c01bf545a0f3e492f22296edb389c6808"]
+
+## CRYPTO_ZILLIQA.DS_BLOCKS
+prev_hash: TEXT | NULL | eg=["7ee85216b0cf107ff5498793526af8ab116347e15db0ef25b314b514ec0dd488", "2468e68dd1454106cd3ff90224e580b48a3dc84e145a0874ff88ec0a6dda8e36"]
+signature: BINARY | NULL | eg=["bytearray(b'\\xe4Q9\\xeb}\\xb5\\x07\\xad@\\x04>\\xb8\\xdb]\\x00\\xeb}\\xb6\\xdf\\x9d\\xf7\\x0cPB\\xeb\\x8fv\\xef\\xaey\\xdb`A\\x07\\x91=\\x00\\x01{\\xd0\\x10\\x85\\xe3\\x7fE\\x13^u\\xe4\\x01\\x03\\xe8N\\x04\\x0c1\\x04\\xf7\\x9f\\x00\\x07\\x8d\\x03\\x0f~\\xc5\\xd3\\xa1@\\xf0_{\\xd3\\xbd\\xc1\\xf7\\x91<\\xd7\\x8d;\\x03}\\xbb\\x03\\x91:\\xdb\\xce\\xf8\\xdcQ8\\xd3\\xc1\\x01')", "bytearray(b'\\xf7_<\\x0b\\xde\\xb4\\xf01@\\xe3M\\x82\\xf3\\xce\\x02\\xe3^\\xf7\\x17~\\x85\\x07\\xad\\xb8\\x13`\\x01\\xf0\\x1e\\xf7\\xef\\x9e{\\xe01t\\xd8=\\xbd\\xd3~\\x01\\x14=\\x01\\xd0^\\x00\\xe8 \\xc0\\xe7\\x7f<\\xe7\\xadx\\xdf\\xcf\\x04\\x07\\xcfE\\x0f\\x8d\\x82\\xd0\\x11@\\x03]<\\x07\\x9ew\\xdf}\\xba\\xdf]\\x01\\xe0\\x0e:\\x17\\x9d\\xf6\\x03Ax\\x00-\\x05\\xd4@\\xfd')"]
+number: NUMBER | NULL | eg=[134, 1699]
+difficulty_ds: NUMBER | NULL | eg=[41, 148]
+ds_leader_pub_key: TEXT | NULL | eg=["0x027454687AF99FF90BD13884FE7B2C126357BEF9502D6625E87EAE4F6147C45B6F", "0x025D2930EE68E3EAF6F4948ADF005CFDA5A3D1D2D466577013A618511CAD268C61"]
+gas_price: NUMBER | NULL | eg=[1000000000, 2000000000]
+timestamp: NUMBER | NULL | eg=[1550318189000000, 1563055966000000]
+difficulty: NUMBER | NULL | eg=[32, 82]
+ds_leader_address: TEXT | NULL | eg=["zil103suk4xz95jmg9tfhludqezca33t073r0n3pte", "zil10d6ahe7ug2ycdxhskrhrga9ctnqhg40gjee82r"]
+
+## CRYPTO_ZILLIQA.EVENT_LOGS
+block_number: NUMBER | NULL | eg=[1292028, 1292323]
+index: NUMBER | NULL | eg=[1, 0]
+transaction_id: TEXT | NULL | eg=["af8827f3abf77159c8b4a5836854310cd5abea08e057dd3d6deaa0bef18a735d", "59affee306573f6918395b8bfb75f59c0d714a032dd21d0ff1e58b0a82a1b186"]
+block_timestamp: NUMBER | NULL | eg=[1626601281000000, 1626611915000000]
+event_name: TEXT | NULL | eg=["TransferSuccess", "IncreasedAllowance"]
+address: TEXT | NULL | eg=["zil12drvflckms6874ffuujcdxj75raavl4yfn4ssc", "zil14d6wwelssqumu6w9c6kaucz2r57z34cxuh96lf"]
+params: VARIANT | NULL | eg=[["{\"type\":\"ByStr20\",\"value\":\"0xba11eb7bcc0a02e947acf03cc651bfaf19c9ec00\",\"vname\":\"sender\"}","{\"type\":\"ByStr20\",\"value\":\"0xa5d3b90d17ff0dbe4d8caf30cad1ad2108074289\",\"vname\":\"recipient\"}","{\"type\":\"Uint128\",\"value\":\"235568293162207\",\"vname\":\"amount\"}"], ["{\"type\":\"ByStr20\",\"value\":\"0xba11eb7bcc0a02e947acf03cc651bfaf19c9ec00\",\"vname\":\"sender\"}","{\"type\":\"ByStr20\",\"value\":\"0x5abbab562630f415b0d0707634ba82a9029faf80\",\"vname\":\"recipient\"}","{\"type\":\"Uint128\",\"value\":\"696030103442616\",\"vname\":\"amount\"}"]]
+
+## CRYPTO_ZILLIQA.EXCEPTIONS
+transaction_id: TEXT | NULL | eg=["b950420f43241bdfa73f95bfd73e7cb90fa5239dad60aa85bd5aeb6f28bb9e32", "d703ddf86db9e870dc49dbc851f6ec1e8460174ce97a5ea101aebbb0ff47ce44"]
+block_timestamp: NUMBER | NULL | eg=[1640712045000000, 1640708226000000]
+block_number: NUMBER | NULL | eg=[1697555, 1697440]
+line: NUMBER | NULL | eg=[237, 1]
+index: NUMBER | NULL | eg=[0, 1]
+message: TEXT | NULL | eg=["Exception thrown", "Ran out of gas.\n"]
+
+## CRYPTO_ZILLIQA.TRANSACTIONS
+data: TEXT | NULL | eg=[{"_tag":"WithdrawStakeRewards","params":[{"vname":"ssnaddr","type":"ByStr20","value":"0xB83fC2C72c44B6B869C64384375C979Dc3f7cf05"}]}, {"_tag":"SwapExactTokensForTokens","params":[{"vname":"token0_address","type":"ByStr20","value":"0xa845c1034cd077bd8d32be0447239c7e4be6cb21"},{"vname":"token1_address","type":"ByStr20","value":"0x173ca6770aa56eb00511dac8e6e13b3d7f16a5a5"},{"vname":"token0_amount","type":"Uint128","value":"3107911954931743"},{"vname":"min_token1_amount","type":"Uint128","value":"398560201"},{"vname":"deadline_block","type":"BNum","value":"1235745"},{"vname":"recipient_address","type":"ByStr20","value":"0x3d460912273389640b46e2beec7ce4f801fdfdd6"}]}]
+version: NUMBER | Protocol version specified in block which contained this transaction | eg=[65537]
+sender: TEXT | NULL | eg=["zil1vqft8ddws0trfvnndm2rl4rc8ylhrd7x3pukf0", "zil184rqjy38xwykgz6xu2lwcl8ylqqlmlwk8xpatx"]
+gas_limit: NUMBER | NULL | eg=[15000, 5000]
+id: TEXT | NULL | eg=["0e1be9d0ef463a5a73a413daa2e52c494717f73437017d7f00d3e96d3e6bd25c", "1f8ed0062cda90810d5362c7f43b3a1bc5de6654ffee89084b0a991eec9ae426"]
+signature: BINARY | NULL | eg=["bytearray(b'\\xd3\\x1d\\xb6\\x0fq\\x01\\xdb\\xb0\\x01\\x00\\x11;\\xf0O5\\xdc\\x0e\\xb6\\x0c\\x1d\\xb4\\xd8\\x01;\\xdbO;\\x03n\\xfc\\x07\\xbe\\x83\\xdb\\x9eC\\x17\\xdfx\\xd0\\x10\\xc4\\xd7P=\\xe40\\xc1\\xd0AE\\xf4A\\x00\\xd8=}\\xe0/}\\x07q6\\xe3]@\\xef\\xc0\\xb6\\x0f}\\xc2\\xe8_;\\xd81}\\xebP\\xf9\\xdbN\\xfc\\xe00\\x05\\xe7\\xdd;\\xd3\\xbe\\x81\\x07N\\xbb\\x17')", "bytearray(b'\\xd3\\x10y\\x13q@\\x03\\x80C\\x0b\\xd0u\\xd3\\xa0\\xc4\\x10@E\\x10\\x11C\\xe4M\\xf4\\x0c>\\xfc\\x0c^\\xb8\\xdf\\xdd=\\x13\\xc1\\x03\\xe7aC\\xd7@\\xfc\\xf3\\xc0\\xf7\\x04\\r\\x83\\x13\\x8fy\\xdb@\\xc3\\xdbP\\x04\\x13^\\xc5\\x03\\xa0\\xfa\\xf7\\x9d\\x82\\xf4\\x11E\\x08Az\\x08M;\\xd4P\\x02\\x0b\\xc1E\\x03^\\xc2\\x07\\xd0\\xc3\\x0b\\x8fE\\xd3\\x90\\xf5\\xd8!B\\xf7')"]
+amount: NUMBER | NULL | eg=["0E-9"]
+accepted: BOOLEAN | NULL | eg=[false]
+block_timestamp: NUMBER | Timestamp of the block which contains this transaction | eg=[1623698578000000, 1624267038000000]
+epoch_num: NUMBER | NULL | eg=[1223518, 1235741]
+success: BOOLEAN | NULL | eg=[true]
+sender_pub_key: TEXT | NULL | eg=["0x02E718E9105D527FC5C61C6CA9AD7C25B24F96295D8F3E895073010612AAAD7B4D", "0x02FCC1A23A85D7360CFDF85B1C9D4849B7DBB1A797A9540395EC5DEE44F5CD6EB6"]
+gas_price: NUMBER | NULL | eg=[2000000000]
+code: TEXT | NULL
+block_number: NUMBER | Number of the block which contains this transaction | eg=[1223518, 1235741]
+cumulative_gas: NUMBER | NULL | eg=[3828, 4084]
+to_addr: TEXT | NULL | eg=["zil1v25at4s3eh9w34uqqhe3vdvfsvcwq6un3fupc2", "zil1hgg7k77vpgpwj3av7q7vv5dl4uvunmqqjzpv2w"]
+
+## CRYPTO_ZILLIQA.TRANSITIONS
+addr: TEXT | NULL | eg=["zil19f04rrynternymalqx6wnneyp7s82cc942xyk7", "zil1c8q5rrlpjs8rs73xd8smvf8esscs3uljykyy0d"]
+recipient: TEXT | NULL | eg=["zil1g899nklz2amfcgl3grh68pvq6ryr6n8q4typuq", "zil1l4khjax278mae63ywsv3l4uj8gg4fsxh34nnzh"]
+transaction_id: TEXT | NULL | eg=["f00eb0dcb417601b330e6808f261eec52cdc2676880398b3d88af9626c3cdd9b", "99d36f692be23e1628d2f4df1a620c42f8a33cc409ac018df579303d1885d56d"]
+accepted: BOOLEAN | NULL | eg=[false]
+tag: TEXT | NULL | eg=[""]
+block_number: NUMBER | NULL | eg=[2064100, 2063407]
+block_timestamp: NUMBER | NULL | eg=[1653325996000000, 1653301895000000]
+depth: NUMBER | NULL | eg=[0]
+params: VARIANT | NULL | eg=[[], ["{\"type\":\"Uint128\",\"value\":\"200\",\"vname\":\"code\"}"]]
+amount: NUMBER | NULL | eg=["25000000000000.000000000", "15382250000000000000.000000000"]
+index: NUMBER | NULL | eg=[0]
+
+## CRYPTO_ZILLIQA.TX_BLOCKS
+ds_block_number: NUMBER | NULL | eg=[22016]
+timestamp: NUMBER | NULL | eg=[1658115107000000, 1658115042000000]
+rewards: NUMBER | NULL | eg=[0]
+prev_block_hash: TEXT | NULL | eg=["d595f1fe92e67a091e5ebb1422ce64bcbc26ce021cb619e098a5d51a2f5a6d69", "42dfa6c6d983d5f0b9d7a1f0f5174e65eab59faced93a43e942832fed95459b6"]
+num_present_transactions: NUMBER | NULL | eg=[57, 72]
+version: NUMBER | NULL | eg=[1]
+header_signature: BINARY | NULL | eg=["bytearray(b'\\xe8\\x1d\\xb7\\x17\\xb0\\xbc\\x07~\\x81\\xe0^\\xc3\\xf7\\xce\\x03\\x08\\r5\\x0c@\\xbb\\xe4_v\\x140;\\xe7`\\xf9\\xd3\\xbe\\xba\\xebm\\x81\\xe0\\x11;\\xe3\\x9e\\x85\\x17\\xae\\xb5\\xefp\\xfb\\x0c>\\x04\\x00M\\xbc\\xf3\\x904\\x03\\xa0\\xb8\\xe8/:\\xd7]8\\xd3\\xc15\\xec\\x116\\x08-\\x81\\xf0O}\\xd7\\x90w\\xd8P\\xfd\\x08=\\x00\\xef\\xd16\\x04\\x1e\\xf4\\x03Q6')", "bytearray(b'\\x0c\\x0e:\\x10^\\xc4\\xdfP\\xfd\\xd40=\\xdf}\\xc5\\xe7\\x90\\xb6\\x00\\x11:\\x13\\x9d=\\xec]\\x82\\xdb\\x805\\x17M\\x04\\xe7\\xcdC\\x17\\xcfx\\x10\\x115\\xef\\xd0z\\x07\\xd1D\\xd8P\\xc1\\x14]\\xf9\\xd7o:\\xf7q6\\xe8\\x1f5\\x0b\\xc1:\\xf7\\x9e{\\xeb\\x8fv\\xd0Oz\\x03\\xde6\\x0f\\xb0:\\xd8\\r\\xba\\xf3\\xdf7\\x13P\\x04\\xf3M\\x00\\xf3]\\xc5')"]
+state_delta_hash: TEXT | NULL | eg=["d41806d5aafc605f67a5468f590ac25e66985c02d315fc51c9107fc7ac11949d", "0a94fd897dd910fa35dea501ab7c1303abaa889d43ba26a6ec17263602bb7590"]
+num_micro_blocks: NUMBER | NULL | eg=[4]
+tx_leader_address: TEXT | NULL | eg=["zil1qgyhrkp420r6a6twnr8jwguzazjhmyc7z257nx"]
+state_root_hash: TEXT | NULL | eg=["51600359d733fbc613d4de9cb453403e004f37fdee0ceb67c2ba6e37cef81664", "545b15c3782e711fad3073fd145be5cc6b9bf8a84e788dfc6e939456d232518c"]
+gas_limit: NUMBER | NULL | eg=[550000]
+tx_leader_pub_key: TEXT | NULL | eg=["0x02304ABF1E43F64B6AB36FF047FFCA3195575122D4239998FF84CEC2379A83AD74"]
+num_transactions: NUMBER | NULL | eg=[57, 72]
+number: NUMBER | NULL | eg=[2201509, 2201507]
+gas_used: NUMBER | NULL | eg=[4829, 5073]
+mb_info_hash: TEXT | NULL | eg=["8b0f565529cc0cfde70ae19c2543ce4cc88cd58cfa0803dfacbca3d37452eaf7", "d69b044d502714f1e305e3f10c0c507f1a220415e0f1bda7353be1b69ba83c96"]

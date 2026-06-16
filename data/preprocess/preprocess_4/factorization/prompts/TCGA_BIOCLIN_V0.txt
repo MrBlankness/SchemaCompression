@@ -1,0 +1,1054 @@
+[COMPONENTS]
+@C1
+access: TEXT | Data accessibility policy (open or controlled) | eg=["open"]
+associated_entities__entity_submitter_id: TEXT | Submitter id for associated entity(ies) | eg=["TCGA-25-1316-01A-01R-0456-07", "TCGA-04-1530-01A-02R-0504-07"]
+associated_entities__entity_type: TEXT | Associated entity type, eg   aliquot   or   case | eg=["aliquot"]
+created_datetime: TEXT | Timestamp of creation, eg 2016-10-27T21:58:12.297090-05:09
+data_category: TEXT | Category description of the underlying data, eg Clinical, Raw Sequencing Data, Simple Nucleotide Variation, Transcriptome Profiling  , etc | eg=["Gene expression"]
+data_format: TEXT | File format of the underlying data, eg BCR XML, BAM | eg=["TXT"]
+data_type: TEXT | Experimental source of the data type, eg Tissue slide image, RNA-Seq | eg=["Gene expression quantification"]
+dbName: TEXT | Referring to the default/main database at the GDC. In this table, this field is always legacy. | eg=["legacy"]
+experimental_strategy: TEXT | Experimental strategy used to generate data (where applicable) e.g. WXS, RNA-Seq | eg=["Gene expression array"]
+file_size: NUMBER | The size of the file measured in bytes | eg=[296300, 296721]
+md5sum: TEXT | Md5sum for GDC data file | eg=["df58a942fe8f58dc189befc9e39c9359", "a03f26c877398164c2bbcebe4578b900"]
+platform: TEXT | Platform used to generate this data, eg  Illumina  , or  Affymetrix SNP 6.9 | eg=["AgilentG4502A_07_3"]
+updated_datetime: TEXT | Timestamp of latest update, eg 2017-03-04T16:37:26.081298-06:00 | eg=["2017-03-05T18:37:35.422891-06:00", "2017-03-05T11:11:41.221167-06:00"]
+
+@C2
+associated_entities__case_gdc_id: TEXT | GDC case uuid for associated case(s) | eg=["58427bce-6b81-4083-aeda-25f59e292bbc", "42b3dfa3-152f-4ab7-ac9f-988c7f473bea"]
+associated_entities__entity_gdc_id: TEXT | GDC entity uuid for associated entity(ies) | eg=["a3e775b1-07ea-4f56-8026-0d8320817f8f", "1bcbe3ed-6b73-4eb2-bb0b-58d50344b6c8"]
+file_submitter_id: TEXT | Original submitter file id (eg CGHub analysis_id)
+file_type: TEXT | File Type  -- eg aligned_reads , simple_somatic_mutation , gene_expression , etc | eg=["file"]
+index_file_gdc_id: TEXT | Where available, GDC file uuid for index file
+index_file_name: TEXT | Where available, GDC file name for index file
+index_file_size: NUMBER | Where available, size of the index file in bytes
+
+@C3
+age_at_diagnosis: NUMBER | NULL
+anatomic_neoplasm_subdivision: TEXT | NULL
+bmi: FLOAT | NULL
+clinical_M: TEXT | NULL
+clinical_N: TEXT | NULL
+clinical_stage: TEXT | NULL
+clinical_T: TEXT | NULL
+colorectal_cancer: TEXT | NULL
+country: TEXT | NULL
+days_to_birth: NUMBER | NULL
+days_to_death: NUMBER | NULL
+days_to_initial_pathologic_diagnosis: NUMBER | NULL
+days_to_last_followup: NUMBER | NULL
+days_to_last_known_alive: NUMBER | NULL
+disease_code: TEXT | NULL | eg=["CESC", "OV"]
+ethnicity: TEXT | NULL
+gender: TEXT | NULL
+h_pylori_infection: TEXT | NULL
+histological_type: TEXT | NULL
+history_of_colon_polyps: TEXT | NULL
+history_of_neoadjuvant_treatment: TEXT | NULL
+hpv_calls: TEXT | NULL
+hpv_status: TEXT | NULL
+icd_10: TEXT | NULL
+icd_o_3_histology: TEXT | NULL
+icd_o_3_site: TEXT | NULL
+lymphatic_invasion: TEXT | NULL
+lymphnodes_examined: TEXT | NULL
+lymphovascular_invasion_present: TEXT | NULL
+menopause_status: TEXT | NULL
+mononucleotide_and_dinucleotide_marker_panel_analysis_status: TEXT | NULL
+neoplasm_histologic_grade: TEXT | NULL
+number_of_lymphnodes_examined: NUMBER | NULL
+other_dx: TEXT | NULL
+other_malignancy_anatomic_site: TEXT | NULL
+other_malignancy_histological_type: TEXT | NULL
+other_malignancy_type: TEXT | NULL
+pathologic_M: TEXT | NULL
+pathologic_N: TEXT | NULL
+pathologic_stage: TEXT | NULL
+pathologic_T: TEXT | NULL
+person_neoplasm_cancer_status: TEXT | NULL
+pregnancies: TEXT | NULL
+primary_neoplasm_melanoma_dx: TEXT | NULL
+primary_therapy_outcome_success: TEXT | NULL
+race: TEXT | NULL
+residual_tumor: TEXT | NULL
+stopped_smoking_year: NUMBER | NULL
+tobacco_smoking_history: NUMBER | NULL
+tss_code: TEXT | NULL
+tumor_tissue_site: TEXT | NULL
+tumor_type: TEXT | NULL
+venous_invasion: TEXT | NULL
+vital_status: TEXT | NULL
+year_of_tobacco_smoking_onset: NUMBER | NULL
+
+@C4
+center_code: TEXT | TCGA codes for the Professional Organization or Group (Center) which has submitted the data, more info: https://gdc.cancer.gov/resources-TCGA-users/TCGA-code-tables/center-codes | eg=["07"]
+center_name: TEXT | Center name, eg BCM, BI, WUGSC | eg=["University of North Carolina"]
+center_short_name: TEXT | Center abbreviation, eg WUSM | eg=["UNC"]
+center_type: TEXT | One of CGC, GSC, BCR, COM (or null) | eg=["CGCC"]
+file_tags: TEXT | Semicolon-delimited list of file tags, eg  coverage , or  hg19;nocnv  , etc
+metadata_file_id: TEXT | GDC file UUID for metadata (eg mage-tab) file | eg=["5b582479-42da-46e8-bc5b-bbcf4465ad17"]
+metadata_file_name: TEXT | Name of GDC metadata file | eg=["unc.edu_OV.AgilentG4502A_07_3.mage-tab.1.7.0.tar.gz"]
+metadata_file_size: TEXT | Size of metadata file
+metadata_file_type: TEXT | Type of metadata file, eg mage-tab | eg=["magetab"]
+
+@C5
+archive_gdc_id: TEXT | GDC archive UUID | eg=["16c2f144-e75e-4b6f-bd35-e1a8a4f299a3"]
+archive_revision: NUMBER | Archive revision number | eg=[5]
+archive_state: TEXT | Archive state | eg=["live"]
+archive_submitter_id: TEXT | Original archive submitter name, eg  nationwidechildrens.org_BRCA.bio.Level_1.56 | eg=["unc.edu_OV.AgilentG4502A_07_3.Level_3.1"]
+
+@C6
+associated_entities__case_id: TEXT | Associated Case ID | eg=["18d21132-a795-4551-83ba-66483de423a2", "378f7ea2-86b4-4072-80b8-e12d67193106"]
+associated_entities__entity_id: TEXT | Associated entity UUID | eg=["32da1e4a-e138-49a4-9a62-75500fd8eae9", "e6fb5537-3e0c-4d11-bdbc-01068b97a748"]
+cases__case_id: TEXT | Associated entity case UUID | eg=["18d21132-a795-4551-83ba-66483de423a2", "378f7ea2-86b4-4072-80b8-e12d67193106"]
+cases__project__dbgap_accession_number: TEXT | DbGaP accession number for the project
+cases__project__disease_type: TEXT | Project Disease Type | eg=["Ovarian Serous Cystadenocarcinoma"]
+cases__project__name: TEXT | Study name of the project | eg=["Ovarian Serous Cystadenocarcinoma"]
+cases__project__program__dbgap_accession_number: TEXT | DbGaP accession number for the program | eg=["phs000178"]
+cases__project__program__name: TEXT | Program Name | eg=["TCGA"]
+cases__project__project_id: TEXT | Program Short Name with Project Short Name | eg=["TCGA-OV"]
+index_files__file_id: TEXT | BAM or VCF index file GDC file UUID
+index_files__file_name: TEXT | BAM or VCF index file name
+index_files__file_size: NUMBER | BAM  or VCF index file size
+
+@C7
+project_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000186
+project_disease_type: TEXT | The type of disease studied by the project; e.g. Sarcoma,  Breast Invasive Carcinoma,Acute Lymphoblastic Leukemia, etc | eg=["Ovarian Serous Cystadenocarcinoma"]
+
+@C8
+analysis_input_file_gdc_ids: TEXT | GDC file UUIDs for input file(s)
+analysis_workflow_link: TEXT | Link to GDC workflow on github | eg=["https://github.com/NCI-GDC/dnacopy-tool"]
+analysis_workflow_type: TEXT | Workflow name eg  STAR 2-Pass | eg=["DNAcopy"]
+downstream_analyses__output_file_gdc_ids: TEXT | Semicolon-separated list of GDC file UUIDs
+
+@C9
+baseid: TEXT | UUID that all versions of the data (in other words, all GUIDs) point to | eg=["7021b430-d679-4942-b538-ecefc1c17e9b", "69e84944-537d-47d0-b963-a15d56130f95"]
+deletereason: TEXT | Reason for removal from the GDC | eg=["redacted"]
+md5: TEXT | 128-bit hash value expressed as a 32 digit hexadecimal number (in lower case) used as a file's digital fingerprint | eg=["1a1b6999c740fc3e4e74fb2d22757349", "05aebe2395789288452014c6aa76e663"]
+release: FLOAT | Associated GDC Release Number
+size: NUMBER | File size | eg=[65971825, 1814]
+url: TEXT | AWS file location | eg=["s3://s3-external-1.amazonaws.com/gdcbackup/f0fecb1a-ef4f-4479-82f7-552e7a15294a", "s3://s3-external-1.amazonaws.com/gdcbackup/5c640243-27ab-489e-9694-5e284db5587c"]
+version: TEXT | Data version | eg=["None"]
+
+@C10
+portion_barcode: TEXT | Original/submitter portion ID | eg=["TCGA-DK-A1A6-06A-11", "TCGA-E2-A15E-06A-11"]
+portion_gdc_id: TEXT | Original/submitter portion ID | eg=["5df8dcdf-6717-48b1-988d-5239a6f5bd69", "1716ea4f-0977-4fdd-a164-a3bde024fe96"]
+
+@C11
+aliquot_gdc_id: TEXT | Unique GDC identifier for this aliquot (corresponds to the aliquot_barcode), eg 7fbfdb3e-1fd2-4206-8d2e-7f68e4a15844  --  this can be used to access more information from the GDC data portal | eg=["140812fb-9641-43b9-b963-9a74d2566ce0", "1b11b644-f9d9-4ba5-9beb-ce054c0e0f86"]
+analyte_barcode: TEXT | Original/submitter analyte ID | eg=["TCGA-DK-A1A6-06A-11R", "TCGA-E2-A15E-06A-11D"]
+analyte_gdc_id: TEXT | Original/submitter analyte ID | eg=["9759dbc9-0ad8-4fc7-acdb-5435d6469b46", "ef0bd37a-84b5-4f72-82b8-24a48beac75a"]
+
+@C12
+id: TEXT | File UUID | eg=["f0fecb1a-ef4f-4479-82f7-552e7a15294a", "5c640243-27ab-489e-9694-5e284db5587c"]
+state: TEXT | File state -- either submitted or released | eg=["released"]
+type: TEXT | Description of the data, e.g. clinical_supplement, aligned_reads | eg=["legacy"]
+
+@C13
+slide_barcode: TEXT | Slide submitter ID | eg=["TCGA-E2-A15E-06Z-00-DX1", "TCGA-BH-A1ES-06A-01-TS1"]
+slide_gdc_id: TEXT | Slide GDC uuid | eg=["ccbe6e6a-aa62-403e-af75-1fa3ca34e31f", "88993bf7-05ab-4657-a625-c77592d6dc4b"]
+
+@C14
+downstream_analyses__workflow_link: TEXT | Name of GDC workflow, eg VarScan2 Annotation (if applicable, NULL where no information is available)
+downstream_analyses__workflow_type: TEXT | Name of GDC workflow, eg VarScan2 Annotation (if applicable, NULL where no information is available)
+
+@C15
+age_began_smoking_in_years: TEXT | NULL
+days_to_submitted_specimen_dx: TEXT | NULL
+gleason_score_combined: TEXT | NULL
+height: NUMBER | NULL
+new_tumor_event_after_initial_treatment: BOOLEAN | NULL
+number_of_lymphnodes_positive_by_he: TEXT | NULL
+number_pack_years_smoked: NUMBER | NULL
+psa_value: TEXT | NULL
+weight: NUMBER | NULL
+year_of_diagnosis: NUMBER | NULL
+
+@C16
+center__center_type: TEXT | Type classification of the center | eg=["CGCC"]
+center__code: NUMBER | TCGA codes for the Professional Organization or Group (Center) which has submitted the data, more info: https://gdc.cancer.gov/resources-TCGA-users/TCGA-code-tables/center-codes | eg=[7]
+center__name: TEXT | Center name, eg BCM, BI, WUGSC | eg=["University of North Carolina"]
+center__short_name: TEXT | Center abbreviation, eg WUSM | eg=["UNC"]
+metadata_files__file_id: TEXT | GDC file UUID for metadata (eg mage-tab) file | eg=["5b582479-42da-46e8-bc5b-bbcf4465ad17"]
+metadata_files__file_name: TEXT | Name of GDC metadata file | eg=["unc.edu_OV.AgilentG4502A_07_3.mage-tab.1.7.0.tar.gz"]
+metadata_files__file_size: TEXT | Size of metadata file
+metadata_files__type: TEXT | Type of metadata file, eg mage-tab | eg=["magetab"]
+tags: TEXT | Semicolon-delimited list of file tags, eg.  coverage, or  hg19; nocnv , etc.
+
+@C17
+sample_is_ffpe: TEXT | Whether a smaple is FFPE, either  False,  None ,  True, or null | eg=["False"]
+sample_preservation_method: TEXT | Sample Preservation Method, usually null or  FFPE, also Snap Frozen or Frozen
+
+@C18
+archive__archive_id: TEXT | GDC archive UUID | eg=["16c2f144-e75e-4b6f-bd35-e1a8a4f299a3"]
+archive__revision: NUMBER | Archive revision number | eg=[5]
+archive__state: TEXT | Archive state | eg=["live"]
+archive__submitter_id: TEXT | Original archive submitter name, eg  nationwidechildrens.org_BRCA.bio.Level_1.56 | eg=["unc.edu_OV.AgilentG4502A_07_3.Level_3.1"]
+
+@C19
+project__dbgap_accession_number: TEXT | Project dbGaP accession number | eg=["CCLE"]
+project__disease_type: TEXT | Project Disease Type | eg=["Lymphoid Neoplasm Diffuse Large B-cell Lymphoma", "Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma"]
+project__name: TEXT | Study name of the project | eg=["Lymphoid Neoplasm Diffuse Large B-cell Lymphoma", "Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma"]
+project__program__dbgap_accession_number: TEXT | DbGaP accession number for the program | eg=["CCLE"]
+project__program__name: TEXT | Program Name | eg=["CCLE"]
+project__project_id: TEXT | Program Short Name with Project Short Name | eg=["CCLE-DLBC", "CCLE-CESC"]
+
+@C20
+batch_number: NUMBER | NULL
+bcr: TEXT | NULL
+
+@C21
+analysis__input_files__file_id: TEXT | GDC file UUIDs for input file(s) | eg=["c590095d-1e85-433f-8eca-e07089f6cfc7", "59168ecc-bf43-42f9-afbe-a26c79ff81e0"]
+analysis__workflow_link: TEXT | Link to GDC workflow on github | eg=["https://github.com/NCI-GDC/gdc-dnaseq-cwl/blob/gdc-active-submission/workflows/mirnaseq/runner.cwl"]
+analysis__workflow_type: TEXT | Workflow name eg  STAR 2-Pass | eg=["BCGSC miRNA Profiling"]
+downstream_analyses__output_files__file_id: TEXT | Semicolon-separated list of GDC file UUIDs
+
+[TABLES]
+## GDC_METADATA.REL16_FILEDATA_LEGACY
+@use: [C1, C2, C4, C5, C7]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Ovarian Serous Cystadenocarcinoma"]
+file_name: TEXT | Name of file at the GDC | eg=["US82800149_251976010673_S01_GE2-v5_10_Apr08.txt_lmean.out.logratio.gene.tcga_level3.data.txt", "US82800149_251976010518_S01_GE2-v5_10_Apr08.txt_lmean.out.logratio.gene.tcga_level3.data.txt"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["f1aee12b-e36c-47e0-8b6a-b077751e01c4", "dfb6e350-5af1-4964-999d-d65bf3215182"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-OV"]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba3 | eg=["f1aee12b-e36c-47e0-8b6a-b077751e01c4", "dfb6e350-5af1-4964-999d-d65bf3215182"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+file_state: TEXT | File state -- either live or submitted | eg=["live"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["58427bce-6b81-4083-aeda-25f59e292bbc", "42b3dfa3-152f-4ab7-ac9f-988c7f473bea"]
+
+## GDC_METADATA.REL13_ALIQUOT2CASEIDMAP
+@use: [C10, C11]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["TCGA-BLCA", "TCGA-BRCA"]
+sample_type_id: NUMBER | Accompanying sample type id for the sample type | eg=[6]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-DK-A1A6-06A-11R-A42T-07", "TCGA-DK-A1A6-06A-11R-A466-07"]
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode eg 01,11,06, etc. | eg=["Metastatic"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["9c274536-3ca1-4f0e-93a8-1688074d862f", "0a2a3529-f645-4967-9a58-89ee20b8bb62"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["TCGA-DK-A1A6-06A", "TCGA-E2-A15E-06A"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["TCGA-DK-A1A6", "TCGA-E2-A15E"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["f7f74a2b-5299-424d-b9a7-2b313dc7823c", "28462438-fe47-4880-82d9-ee43d534d8a3"]
+
+## GDC_METADATA.REL13_SLIDE2CASEIDMAP
+@use: [C10, C13]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["TCGA-E2-A15E", "TCGA-BH-A1ES"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["TCGA-BRCA", "TCGA-CESC"]
+sample_type_id: NUMBER | Type of metadata file, eg mage-tab | eg=[6]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["0a84f440-20db-433e-8ac5-5a721eaf7db4", "9465c220-bf06-4cd1-8466-3477cc47ff6e"]
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. | eg=["Metastatic"]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["TCGA-E2-A15E-06Z", "TCGA-BH-A1ES-06A"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["0a2a3529-f645-4967-9a58-89ee20b8bb62", "51ccbf1b-7cae-44ba-991a-11eda8b8c404"]
+
+## GDC_METADATA.REL15_FILEDATA_LEGACY
+@use: [C1, C2, C4, C5, C7]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+file_name: TEXT | Name of file at the GDC | eg=["SEDUM_p_TCGA_Batch14_Expr_HT_HG-U133A_96-HTA_C08_458632.level3.data.txt", "SEDUM_p_TCGA_Batch14_Expr_HT_HG-U133A_96-HTA_D11_458724.level3.data.txt"]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-OV"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["f3cbb935-f711-4fa5-8893-8df35116c8e0", "178c640f-6b65-46d9-b5b9-e2d6b82a9dec"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["49d2c0cf-a3f3-4519-a755-0a5f769df2ea", "cd49126a-ec15-43fa-9e43-3f7460d43f2b"]
+file_state: TEXT | File state -- either live or submitted | eg=["live"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba1 | eg=["f3cbb935-f711-4fa5-8893-8df35116c8e0", "178c640f-6b65-46d9-b5b9-e2d6b82a9dec"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Ovarian Serous Cystadenocarcinoma"]
+
+## GDC_METADATA.GDC_SYNC_OBSOLETE_20190115
+@use: [C12, C9]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["[u'phs000178']", "[u'open']"]
+file_name: TEXT | Name of file at the GDC | eg=["0658.CEL", "README_DCC.txt"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["TCGA-GBM"]
+
+## GDC_METADATA.REL12_ALIQUOT2CASEIDMAP
+@use: [C10, C11]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-DK-A1A6-06A-11D-A42E-08", "TCGA-DK-A1A6-06A-11R-A42V-13"]
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. | eg=["Metastatic"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["f7f74a2b-5299-424d-b9a7-2b313dc7823c", "28462438-fe47-4880-82d9-ee43d534d8a3"]
+sample_type_id: NUMBER | Accompanying sample type ID for the sample type | eg=[6]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["TCGA-DK-A1A6-06A", "TCGA-E2-A15E-06A"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["9c274536-3ca1-4f0e-93a8-1688074d862f", "0a2a3529-f645-4967-9a58-89ee20b8bb62"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc | eg=["TCGA-BLCA", "TCGA-BRCA"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["TCGA-DK-A1A6", "TCGA-E2-A15E"]
+
+## GDC_METADATA.REL16_SLIDE2CASEIDMAP
+@use: [C10, C13]
+sample_type: NUMBER | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. | eg=[2]
+case_gdc_id: TEXT | GDC unique identifier | eg=["cee553c8-460d-436b-b55d-8f41624816cc", "0078b0c4-68a9-483b-9aab-61156d263213"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["TCGA-G4-6317", "TCGA-14-1034"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["TCGA-COAD", "TCGA-GBM"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["45c8544c-ec60-447e-91ee-62e41e72a82f", "afd6abee-dd83-4b1a-b66f-8fd50190287b"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+sample_type_name: TEXT | The longer name of the sample type; e.g. Primary Tumor, Recurrent Tumor, etc. | eg=["Recurrent Tumor"]
+sample_barcode: TEXT | Original/submitter sample id | eg=["TCGA-G4-6317-02A", "TCGA-14-1034-02B"]
+
+## GDC_METADATA.REL23_CASEDATA
+@use: [C7]
+active_file_count: NUMBER | Total number of files for this case in the active (default) GDC archive | eg=[20, 21]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc | eg=["TCGA-OV"]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["7f36eff2-aa69-4c4d-8101-8801c812a36b", "f88560c8-3475-47f2-9d48-4b8311bc1132"]
+legacy_file_count: NUMBER | Total number of files for this case in the GDC legacy archive | eg=[9, 41]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Ovarian Serous Cystadenocarcinoma"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["TCGA-13-0914", "TCGA-01-0628"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+
+## GDC_METADATA.REL21_SLIDE2CASEIDMAP
+@use: [C10, C13]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["BLGSP-71-06-00137-01A", "BLGSP-71-06-00277-01A"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["CGCI-BLGSP"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["0024c94c-88ff-49d9-8dc4-bf77f832d85e", "0196393b-aa14-432c-bfcc-1f858c14cd4f"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["CGCI"]
+sample_type_name: TEXT | The longer name of the sample type; eg. Primary Tumor, Recurrent Tumor, etc. | eg=["Primary Tumor"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["BLGSP-71-06-00137", "BLGSP-71-06-00277"]
+sample_type: NUMBER | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. | eg=[1]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["8b047221-0632-4d2c-916a-6f1762c12d8b", "abd90914-4456-466a-be11-171a4cb5a94e"]
+
+## GDC_METADATA.REL18_SLIDE2CASEIDMAP
+@use: [C10, C13]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["CGCI"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["CGCI-BLGSP"]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["BLGSP-71-06-00165-01A", "BLGSP-71-06-00001-01A"]
+sample_type: NUMBER | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. | eg=[1]
+sample_type_name: TEXT | The longer name of the sample type; eg. Primary Tumor, Recurrent Tumor, etc. | eg=["Primary Tumor"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["BLGSP-71-06-00165", "BLGSP-71-06-00001"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["c2b84c93-7bf8-43e2-8a42-3715f2c49c19", "a8d74f95-add8-44e3-ae9c-e35e8aea375b"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["06c07e2d-a04d-4099-a29f-948e40558dd1", "0ee808be-13bc-4d15-a519-e2b7e960e809"]
+
+## GDC_METADATA.REL18_FILEDATA_LEGACY
+@use: [C1, C2, C4, C5, C7]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+file_name: TEXT | Name of file at the GDC | eg=["TCGA-XU-A92O-01A-11R-A42W-13.hg19.mirbase20.isoform.quantification.txt", "TCGA-XU-A92R-01A-11R-A42W-13.hg19.mirbase20.isoform.quantification.txt"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["b1774c5c-7a6f-4bf6-8539-15a35f1457e6", "c7ff8f16-9b89-4efb-8c06-b866a8b26d7a"]
+file_state: TEXT | File state -- either live or submitted | eg=["live"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Thymoma"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["eeeb6f26-f840-4ea2-9a98-fb70e9deb16e", "56c2d1ab-8abf-4993-b294-f16ffef8b7d3"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-THYM"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba5 | eg=["eeeb6f26-f840-4ea2-9a98-fb70e9deb16e", "56c2d1ab-8abf-4993-b294-f16ffef8b7d3"]
+
+## GDC_METADATA.REL23_ALIQUOT2CASEIDMAP
+@use: [C10, C11, C17]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["TCGA-BH-A0BQ-11A", "TCGA-AC-A2FM-11B"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["b3bb8fd6-ee54-4813-b042-2bbe70115382", "b6b1dc9a-91f4-4b0a-afd5-62c9a90c0d5e"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-BH-A0BQ-11A-33D-A10Y-09", "TCGA-BH-A0BQ-11A-33D-A111-01"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["ced0af4b-e977-4399-b3bc-0a98b1c9817f", "028490aa-d6f3-4366-821a-7cb2c604eff1"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["TCGA-BH-A0BQ", "TCGA-AC-A2FM"]
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. | eg=["11"]
+sample_type_name: TEXT | The longer name of the sample type; eg. Primary Tumor, Recurrent Tumor, etc. | eg=["Solid Tissue Normal"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["TCGA-BRCA"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+
+## GDC_METADATA.REL21_GDCFILEID_TO_GCSURL
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba1 | eg=["aa313927-f5c6-40ea-b056-91003323b238", "3078a655-7ff7-45a2-b2df-ddbb4a62fdf3"]
+file_gdc_url: TEXT | GDC file location | eg=["gs://gdc-tcga-phs000178-open/aa313927-f5c6-40ea-b056-91003323b238/TOUSE_p_TCGAaffxB9_10a_N_GenomeWideSNP_6_A06_397054.hg18.seg.txt", "gs://gdc-tcga-phs000178-open/3078a655-7ff7-45a2-b2df-ddbb4a62fdf3/9283265162_R03C02_Red.idat"]
+
+## GDC_METADATA.REL19_SLIDE2CASEIDMAP
+@use: [C10, C13]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["CGCI"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["CGCI-BLGSP"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["8b047221-0632-4d2c-916a-6f1762c12d8b", "4259077c-94a0-4ac4-8f83-e6431ea42d8c"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["0024c94c-88ff-49d9-8dc4-bf77f832d85e", "0ceb3081-4c6f-4fd9-9535-5accddf76bc4"]
+sample_type_name: TEXT | The longer name of the sample type; eg. Primary Tumor, Recurrent Tumor, etc. | eg=["Primary Tumor"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["BLGSP-71-06-00137", "BLGSP-71-06-00178"]
+sample_type: NUMBER | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. | eg=[1]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["BLGSP-71-06-00137-01A", "BLGSP-71-06-00178-01A"]
+
+## GDC_METADATA.GDC_SYNC_LEGACY_20190115
+@use: [C12, C9]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["[u'phs000178']"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["TCGA-UCEC"]
+file_name: TEXT | Name of file at the GDC | eg=["UNCID_2209891.71679725-d65f-47d4-b851-e4467f9d3f62.110420_UNC6-RDR300211_00096_FC_634WMAAXX_2.tar.gz", "TCGA-A5-A1OK-01A-11R-A14L-13_mirna.bam"]
+
+## GDC_METADATA.REL12_FILEDATA_LEGACY
+@use: [C1, C12, C16, C18, C6]
+file_name: TEXT | Name of file at the GDC | eg=["US82800149_251976010697_S01_GE2-v5_10_Apr08.txt_lmean.out.logratio.gene.tcga_level3.data.txt", "US82800149_251976010376_S01_GE2-v5_10_Apr08.txt_lmean.out.logratio.gene.tcga_level3.data.txt"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+submitter_id: TEXT | This can be used to identify a corresponding entry in the submitter's records. The GDC requires that submitter_id be unique for each entity within a project: the tuple (combination) of [ project_id, submitter_id ] is a unique key.
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["ab58fb14-35e7-4abf-abb1-feb23dfcb8fd", "5f52ed3f-e48c-4c80-a85b-577ad99e9dbc"]
+
+## GDC_METADATA.REL16_CASEDATA
+@use: [C7]
+case_gdc_id: TEXT | GDC unique identifier | eg=["35818db5-87e9-4c42-9d4c-902bbfaa09ea", "066801c5-7723-473e-af4e-3e227d1a680c"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Foundation Medicine Adult Cancer Clinical Dataset (FM-AD)"]
+active_file_count: NUMBER | Total number of files for this case in the active (default) GDC archive | eg=[5]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["FM-AD"]
+legacy_file_count: NUMBER | Total number of files for this case in the GDC legacy archive | eg=[0]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["FM"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["AD2", "AD4"]
+
+## GDC_METADATA.REL19_FILEDATA_ACTIVE
+@use: [C1, C14, C2, C5, C7, C8]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Thyroid Carcinoma"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-THCA"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["63e8c48e-f01b-4a7f-87e2-30607a2c8f6c", "4d1aec67-c345-4721-8ee8-356b0dff009b"]
+file_name: TEXT | Name of file at the GDC | eg=["COAPT_p_TCGASNP_197_201_204_N_GenomeWideSNP_6_D04_1051372.nocnv_grch38.seg.v2.txt", "LOLLS_p_TCGASNP_223_225_N_GenomeWideSNP_6_C04_1151924.nocnv_grch38.seg.v2.txt"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["a9bdb8b7-2abe-4af1-8b05-6a7f5f5c0404", "cb2121d1-7f96-4503-9e6d-7adafa65d37d"]
+file_state: TEXT | File state -- either live or submitted | eg=["released"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba4 | eg=["a9bdb8b7-2abe-4af1-8b05-6a7f5f5c0404", "cb2121d1-7f96-4503-9e6d-7adafa65d37d"]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+
+## GDC_METADATA.REL17_CASEDATA
+@use: [C7]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["FM"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Foundation Medicine Adult Cancer Clinical Dataset (FM-AD)"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["35818db5-87e9-4c42-9d4c-902bbfaa09ea", "066801c5-7723-473e-af4e-3e227d1a680c"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc | eg=["FM-AD"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["AD2", "AD4"]
+legacy_file_count: NUMBER | Total number of files for this case in the GDC legacy archive | eg=[0]
+active_file_count: NUMBER | Total number of files for this case in the active (default) GDC archive | eg=[5]
+
+## GDC_METADATA.REL22_ALIQUOT2CASEIDMAP
+@use: [C10, C11, C17]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["f62006a0-500c-46dc-ab01-27550680494e", "9db89883-6f94-48f8-aefb-b0aaf6344924"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["TCGA-BH-A0B8", "TCGA-BH-A0DO"]
+sample_type_name: TEXT | The longer name of the sample type; eg. Primary Tumor, Recurrent Tumor, etc. | eg=["Solid Tissue Normal"]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["TCGA-BH-A0B8-11A", "TCGA-BH-A0DO-11A"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["TCGA-BRCA"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-BH-A0B8-11A-41D-A092-01", "TCGA-BH-A0B8-11A-41D-A093-05"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. | eg=["11"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["d3a75976-67d3-40fa-9f6f-cf2a3d7b773c", "d3d4d709-ab34-4617-aa8c-51a3d0a3efe6"]
+
+## GDC_METADATA.GDC_SYNC_ACTIVE_20190104
+@use: [C12, C9]
+project_id: TEXT | Id of the Project -- e.g. eg TCGA-BRCA, TARGET-AML, etc | eg=["FM-AD"]
+file_name: TEXT | Name of file at the GDC | eg=["bf8feaee-44b2-4033-b641-5472ce6841ae.vep.vcf.gz", "9baa5477-cf7f-4dbd-b127-ce5decc2a7d2.vep.vcf.gz"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["[u'phs001179']"]
+
+## GDC_METADATA.REL19_FILEDATA_LEGACY
+@use: [C1, C2, C4, C5, C7]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open", "phs000218;phs000467"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["702ef394-91ad-5f18-b50a-7d0d3e8349fa", "f9718b6b-aaa1-5543-93c7-6cf6d931a275"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Neuroblastoma", "Osteosarcoma"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["4f962f7b-1b8c-4f4c-bfa8-b9ee400c1cb8", "a4aed66b-03b5-4ddc-bb01-fb2ef716413b"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TARGET"]
+file_state: TEXT | File state -- either live or submitted | eg=["submitted"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba5 | eg=["4f962f7b-1b8c-4f4c-bfa8-b9ee400c1cb8", "a4aed66b-03b5-4ddc-bb01-fb2ef716413b"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TARGET-NBL", "TARGET-OS"]
+file_name: TEXT | Name of file at the GDC | eg=["NB2305_02.gene.fpkm.txt", "NB2222.exon.count.txt"]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000218"]
+
+## GDC_METADATA.REL15_ALIQUOT2CASEIDMAP
+@use: [C10, C11]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["TCGA-OR-A5LL-01A", "TCGA-OR-A5J7-01A"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["TCGA-OR-A5LL", "TCGA-OR-A5J7"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["0304b12d-7640-4150-a581-2eea2b1f2ad5", "075dbfd0-9cf4-4877-884f-ae858902c79e"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["c32a896a-bc08-455c-8e01-c75fae985a56", "945cc9b8-a732-484e-b423-9efbc556e3fd"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc | eg=["TCGA-ACC"]
+sample_type_name: TEXT | The longer name of the sample type; eg. Primary Tumor, Recurrent Tumor, etc. | eg=["Primary Tumor"]
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. | eg=["01"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["NA", "TCGA-OR-A5LL-01A-11D-A29H-01"]
+
+## GDC_METADATA.REL24_GDCFILEID_TO_GCSURL
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba1 | eg=["c64b38d5-8477-466f-af36-d76d98321e25", "736ecdd4-261d-4e07-a4cc-217d3228782d"]
+file_gdc_url: TEXT | GDC file location | eg=["gs://gdc-tcga-phs000178-controlled/c64b38d5-8477-466f-af36-d76d98321e25/bcgsc.ca.TCGA-BR-6453-01A-11R-1802-13.bcgsc.ca.v2.indel.vcf", "gs://gdc-tcga-phs000178-controlled/UVM/DNA/WXS/BI/ILLUMINA/C1760.TCGA-VD-AA8T-10A-01D-A39Z-08.3.bam"]
+
+## GDC_METADATA.GDC_SYNC_LEGACY_20190104
+@use: [C12, C9]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["[u'phs000178']"]
+file_name: TEXT | Name of file at the GDC | eg=["genome.wustl.edu.TCGA-KP-A3VZ.indel.4a86ae3d9ad04c69adc50fe4eb998c0a.vcf.gz", "SCAUR_p_TCGA_b94_SNP_N_GenomeWideSNP_6_D05_755238.birdseed.data.txt"]
+project_id: TEXT | Id of the Project -- e.g. eg TCGA-BRCA, TARGET-AML, etc | eg=["TCGA-UCEC"]
+
+## GDC_METADATA.REL14_ALIQUOT2CASEIDMAP
+@use: [C10, C11]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["TCGA-DK-A1A6-06A", "TCGA-E2-A15E-06A"]
+sample_type_name: TEXT | The longer name of the sample type; eg. Primary Tumor, Recurrent Tumor, etc. | eg=["Metastatic"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["TCGA-BLCA", "TCGA-BRCA"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["f7f74a2b-5299-424d-b9a7-2b313dc7823c", "28462438-fe47-4880-82d9-ee43d534d8a3"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["9c274536-3ca1-4f0e-93a8-1688074d862f", "0a2a3529-f645-4967-9a58-89ee20b8bb62"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["TCGA-DK-A1A6", "TCGA-E2-A15E"]
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. | eg=["06"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-DK-A1A6-06A-11D-A42E-08", "TCGA-DK-A1A6-06A-11R-A42T-07"]
+
+## GDC_METADATA.REL21_FILEDATA_ACTIVE
+@use: [C1, C14, C2, C5, C7, C8]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Ovarian Serous Cystadenocarcinoma"]
+file_name: TEXT | Name of file at the GDC | eg=["TCGA-25-2401-01A-01-BS1.8c7e8e52-32b5-4abc-831a-1e32c7780162.svs", "TCGA-23-1021-01B-01-BS1.43618d42-5e31-4911-b670-ee2d2773bda2.svs"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["3bc8a74f-49bd-46b6-a3a4-68ca838e83c6", "b923ac70-70ea-4a82-8466-46350c5803bf"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-OV"]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba4 | eg=["9cba585b-00f4-46cd-8513-0466fa99ec0e", "97e1f793-a47d-4244-b33e-c33f589709c3"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["9cba585b-00f4-46cd-8513-0466fa99ec0e", "97e1f793-a47d-4244-b33e-c33f589709c3"]
+file_state: TEXT | File state -- either live or submitted | eg=["released"]
+
+## GDC_METADATA.REL13_CASEDATA
+@use: [C19]
+active_file_count: NUMBER | Active Archive File Count | eg=[0]
+legacy_file_count: NUMBER | Total number of files for this case in the GDC legacy archive | eg=[1, 2]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["942851b0-b554-48f4-84f6-6826902e12d7", "aaa8da09-070c-4a31-a99e-720f1a0a964f"]
+submitter_id: TEXT | This can be used to identify a corresponding entry in the submitter's records. The GDC requires that submitter_id be unique for each entity within a project: the tuple (combination) of [ project_id, submitter_id ] is a unique key. | eg=["DB", "EN"]
+
+## GDC_METADATA.REL22_GDCFILEID_TO_GCSURL
+file_gdc_url: TEXT | GDC file location | eg=["gs://gdc-tcga-phs000178-open/4b734fdd-0b1a-40e2-ace0-6efb62b693b0/cfb44d18-d94b-4c4a-906a-6eeff5fa06e0_experiment.xml", "gs://gdc-tcga-phs000178-open/84a2f683-b46d-424b-a054-0986a3eeb8aa/99de33d6-d6d1-4a8b-8c1b-533003336d58_run.xml"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba1 | eg=["4b734fdd-0b1a-40e2-ace0-6efb62b693b0", "84a2f683-b46d-424b-a054-0986a3eeb8aa"]
+
+## GDC_METADATA.REL16_ALIQUOT2CASEIDMAP
+@use: [C10, C11, C17]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["a696305c-e8c6-40d3-aa4c-1738d0987885", "5365eef9-56ca-4e3f-a187-3316158c4a32"]
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. | eg=["01"]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["TCGA-BL-A13J-01B", "TCGA-BL-A0C8-01B"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["TCGA-BLCA"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["TCGA-BL-A13J", "TCGA-BL-A0C8"]
+sample_type_name: TEXT | The longer name of the sample type; eg. Primary Tumor, Recurrent Tumor, etc. | eg=["Primary Tumor"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["556fcbc8-172a-4af1-8822-ae036e8d68e8", "a6003b1c-56a9-430a-a5e2-b70af3f81bdb"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-BL-A13J-01B-04D-A271-08", "TCGA-BL-A13J-01B-04D-A46W-08"]
+
+## GDC_METADATA.REL13_FILEDATA_CURRENT
+@use: [C1, C12, C14, C21, C6]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+file_name: TEXT | Name of file at the GDC | eg=["67fa2b74-1d06-4b15-8bfe-a08e29431ce3.mirbase21.mirnas.quantification.txt", "7e731924-27d8-42ec-814e-266f9229aebe.mirbase21.mirnas.quantification.txt"]
+submitter_id: TEXT | This can be used to identify a corresponding entry in the submitter's records. The GDC requires that submitter_id be unique for each entity within a project: the tuple (combination) of [ project_id, submitter_id ] is a unique key. | eg=["mirna_swap_dr11_242_MirnaExpression8908fb3a-dbad-4da0-a610-fa0e75093934_profiling", "mirna_swap_dr11_243_MirnaExpression9118a29a-826d-4da4-b808-1ca85c38f8e4_profiling"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["72310fb0-edae-4b60-a79b-27f854c4d0bf", "c13558b8-58c6-4b0b-a8d0-af959e12f50e"]
+
+## GDC_METADATA.REL24_CASEDATA
+@use: [C7]
+case_gdc_id: TEXT | GDC unique identifier | eg=["78821fb5-0669-42c7-b62b-b61d6b7d7ac6", "f88560c8-3475-47f2-9d48-4b8311bc1132"]
+legacy_file_count: NUMBER | Total number of files for this case in the GDC legacy archive | eg=[9, 41]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+active_file_count: NUMBER | Total number of files for this case in the active (default) GDC archive | eg=[20, 21]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["TCGA-13-0922", "TCGA-01-0628"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Ovarian Serous Cystadenocarcinoma"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc | eg=["TCGA-OV"]
+
+## GDC_METADATA.REL19_ALIQUOT2CASEIDMAP
+@use: [C10, C11, C17]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["CGCI-BLGSP"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["0ee808be-13bc-4d15-a519-e2b7e960e809", "136a1fde-ecc8-43fe-b2f1-f3eee0bdc23f"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["888079d3-cf4e-47d3-8cdd-a424e5349050", "01f05d25-5039-445a-a378-2d62f46a8a66"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["CGCI"]
+sample_type_name: TEXT | The longer name of the sample type; eg. Primary Tumor, Recurrent Tumor, etc. | eg=["Primary Tumor"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["BLGSP-71-06-00001", "BLGSP-71-08-00036"]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["BLGSP-71-06-00001-01B", "BLGSP-71-08-00036-01B"]
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. | eg=["01"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["NA"]
+
+## GDC_METADATA.DLBC_AFFECTED_FILES
+case_submitter_id: TEXT | Associated TCGA case barcode | eg=["TCGA-FF-8062"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["fc5ffbd4-bd87-4400-9b7d-289c85104062", "f9d7590c-d02f-4d12-a682-199db214ebf4"]
+file_name: TEXT | Name of file at the GDC | eg=["fc5ffbd4-bd87-4400-9b7d-289c85104062.vcf", "f9d7590c-d02f-4d12-a682-199db214ebf4.vep.reheader.vcf.gz"]
+
+## GDC_METADATA.REL24_SLIDE2CASEIDMAP
+@use: [C10, C13]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["BLGSP-71-19-00106", "HCM-BROD-0047-C71"]
+sample_type_name: TEXT | The longer name of the sample type; eg. Primary Tumor, Recurrent Tumor, etc. | eg=["Recurrent Tumor"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["CGCI-BLGSP", "HCMI-CMDC"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["83c55904-ee5a-4b0a-8c12-ef7f41cdb71e", "d10aaf2a-7eb2-40f2-b3e4-bb9a38ed0d63"]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["BLGSP-71-19-00106-02A", "HCM-BROD-0047-C71-02A"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["CGCI", "HCMI"]
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. (OR NA) | eg=["02"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["b06f7bf0-45bb-4aca-8f22-72d8a4f73f99", "babbc3cb-14b7-4894-b91d-c160f4cb48e0"]
+
+## GDC_METADATA.REL22_FILEDATA_ACTIVE
+@use: [C1, C14, C2, C5, C7, C8]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Skin Cutaneous Melanoma"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+file_name: TEXT | Name of file at the GDC | eg=["21301a07-7e02-42a5-b35f-93a5fd4bcf80.vcf.gz", "f9479fd6-e385-4934-8fbe-76fe9e2a018d.vcf.gz"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba4 | eg=["21301a07-7e02-42a5-b35f-93a5fd4bcf80", "f9479fd6-e385-4934-8fbe-76fe9e2a018d"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["320a2dca-ee07-4d14-a7b8-178636636880", "ce28f65d-4ae8-4e63-815f-5b8d4389e092"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["phs000178"]
+file_state: TEXT | File state -- either live or submitted | eg=["released"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-SKCM"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["21301a07-7e02-42a5-b35f-93a5fd4bcf80", "f9479fd6-e385-4934-8fbe-76fe9e2a018d"]
+
+## GDC_METADATA.REL23_FILEDATA_LEGACY
+@use: [C1, C2, C4, C5, C7]
+case_gdc_id: TEXT | GDC unique identifier | eg=["b25b3379-df8f-4900-9bce-0f8df50f549b", "92960f76-0242-4a1c-bf7d-014c2f720219"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Ovarian Serous Cystadenocarcinoma"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+file_state: TEXT | File state -- either live or submitted | eg=["live"]
+file_name: TEXT | Name of file at the GDC | eg=["TARRE_p_MultiPlate_TCGA_SS_MA_Ref_HT_HG-U133A_96-HTA_E12_586158.level3.data.txt", "TARRE_p_MultiPlate_TCGA_SS_MA_Ref_HT_HG-U133A_96-HTA_E11_586156.level3.data.txt"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-OV"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba5 | eg=["5f7d6ab9-9f06-4686-b5c9-4e53c200eb12", "e1ebf9fb-0666-4803-955b-b25f9555bce3"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["5f7d6ab9-9f06-4686-b5c9-4e53c200eb12", "e1ebf9fb-0666-4803-955b-b25f9555bce3"]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+
+## GDC_METADATA.REL15_CASEDATA
+@use: [C7]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Foundation Medicine Adult Cancer Clinical Dataset (FM-AD)"]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["FM-AD"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["FM"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["AD1", "AD4"]
+legacy_file_count: NUMBER | Total number of files for this case in the GDC legacy archive | eg=[0]
+case_gdc_id: TEXT | GDC unique identifier | eg=["8e20b23c-1e5c-4edc-8263-ec3ec3abf482", "066801c5-7723-473e-af4e-3e227d1a680c"]
+current_file_count: NUMBER | Active file count for this case | eg=[5]
+
+## GDC_METADATA.REL12_FILEDATA_CURRENT
+@use: [C1, C12, C14, C18, C21, C6]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["cb7b9902-7dca-4cd3-a3df-1a2e02aa3b5c", "c8965607-ed7d-45a0-9bf4-4e71d143eaa7"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+file_state: TEXT | File state -- either live or submitted | eg=["submitted"]
+submitter_id: TEXT | This can be used to identify a corresponding entry in the submitter's records. The GDC requires that submitter_id be unique for each entity within a project: the tuple (combination) of [ project_id, submitter_id ] is a unique key. | eg=["TCGA-NA-A4R1-01A-01-TSA_slide_image", "TCGA-N6-A4VE-01A-01-TSA_slide_image"]
+file_name: TEXT | Name of file at the GDC | eg=["TCGA-NA-A4R1-01A-01-TSA.9BAF1086-26F3-44B8-B7FE-01942ECD2A55.svs", "TCGA-N6-A4VE-01A-01-TSA.3B8A92BB-8E23-4686-9001-48F5EB10CB51.svs"]
+
+## GDC_METADATA.REL19_CASEDATA
+@use: [C7]
+case_gdc_id: TEXT | GDC unique identifier | eg=["aaa8da09-070c-4a31-a99e-720f1a0a964f", "ae4dd9c2-ddba-4da5-a372-4cfdeed0859e"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["EN", "H4"]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["CCLE"]
+legacy_file_count: NUMBER | Total number of files for this case in the GDC legacy archive | eg=[1, 2]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["CCLE"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma", "Brain Lower Grade Glioma"]
+active_file_count: NUMBER | Total number of files for this case in the active (default) GDC archive | eg=[0]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc | eg=["CCLE-CESC", "CCLE-LGG"]
+
+## GDC_METADATA.REL14_CASEDATA
+@use: [C7]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["FM-AD"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Foundation Medicine Adult Cancer Clinical Dataset (FM-AD)"]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178
+legacy_file_count: NUMBER | Total number of files for this case in the GDC legacy archive | eg=[0]
+current_file_count: NUMBER | Total number of files for this case in the default/current GDC archive | eg=[5]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["AD2", "AD7"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["35818db5-87e9-4c42-9d4c-902bbfaa09ea", "a516e9b9-13a1-42fc-9385-bbd5964dd666"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["FM"]
+
+## GDC_METADATA.REL18_CASEDATA
+@use: [C7]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["FM"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Foundation Medicine Adult Cancer Clinical Dataset (FM-AD)"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["35818db5-87e9-4c42-9d4c-902bbfaa09ea", "066801c5-7723-473e-af4e-3e227d1a680c"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc | eg=["FM-AD"]
+legacy_file_count: NUMBER | Total number of files for this case in the GDC legacy archive | eg=[0]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178
+active_file_count: NUMBER | Total number of files for this case in the active (default) GDC archive | eg=[5]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["AD2", "AD4"]
+
+## GDC_METADATA.REL17_SLIDE2CASEIDMAP
+@use: [C10, C13]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["HCM-BROD-0012-C71", "HCM-CSHL-0061-C18"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["ef79477d-81d2-480b-a755-6b2fe7cccac1", "0ca75f2e-b1e8-4f74-acda-7e390d133064"]
+sample_type_name: TEXT | The longer name of the sample type; eg. Primary Tumor, Recurrent Tumor, etc. | eg=["Primary Tumor"]
+sample_type: NUMBER | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. | eg=[1]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["HCMI"]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["HCM-BROD-0012-C71-01A", "HCM-CSHL-0061-C18-01A"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["HCMI-CMDC"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["0f89e089-4a1d-4e66-8537-502a788cfe75", "118bf677-caed-4f7f-a837-dd966dce5ca7"]
+
+## GDC_METADATA.REL24_FILEDATA_ACTIVE
+@use: [C1, C14, C2, C5, C7, C8]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["MMRF"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["phs000748"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["1133db7d-6bbb-4c2a-8649-264b9d69e216", "1531b2df-74e5-4201-8848-7bbbb8384245"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba4 | eg=["133c552f-3a15-4f47-a4bc-7a57de329ae9", "52203d40-59ad-4fa7-bb0a-6d7a055294fb"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["133c552f-3a15-4f47-a4bc-7a57de329ae9", "52203d40-59ad-4fa7-bb0a-6d7a055294fb"]
+file_state: TEXT | File state -- either live or submitted | eg=["released"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Multiple Myeloma CoMMpass Study"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["MMRF-COMMPASS"]
+file_name: TEXT | Name of file at the GDC | eg=["90881b31-ff15-4c67-8b3d-3281454ba84b.rna_seq.transcriptome.gdc_realn.bam", "ed519c66-f506-4eaf-b1dc-d1f8f929f53b.rna_seq.transcriptome.gdc_realn.bam"]
+
+## GDC_METADATA.REL17_FILEDATA_LEGACY
+@use: [C1, C2, C4, C5, C7]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba5 | eg=["f01d6ff2-e73c-4bd7-91a7-ecd3e38f7432", "4c82263d-697a-4592-9316-6c9915990654"]
+file_name: TEXT | Name of file at the GDC | eg=["US82800149_251976010358_S01_GE2-v5_10_Apr08.txt_lmean.out.logratio.gene.tcga_level3.data.txt", "US82800149_251976010476_S01_GE2-v5_10_Apr08.txt_lmean.out.logratio.gene.tcga_level3.data.txt"]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Ovarian Serous Cystadenocarcinoma"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["f01d6ff2-e73c-4bd7-91a7-ecd3e38f7432", "4c82263d-697a-4592-9316-6c9915990654"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+file_state: TEXT | File state -- either live or submitted | eg=["live"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["d1eeaca3-52c0-4a0c-916a-fd64cec911d9", "9e18238f-ae85-4b75-ae87-d92da9731a40"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-OV"]
+
+## GDC_METADATA.REL14_GDCFILEID_TO_GCSURL_NEW
+file_gdc_url: TEXT | GDC file location | eg=["gs://gdc-tcga-phs000178-controlled/5fc7cad5-3c19-4566-9cfb-96e60ad4c7ce/TCGA-HT-A618_49fd71af-f8af-43dd-a5d6-caa20d4f82e4_193f9709-5167-4fb6-a1dd-b1c102d01e77.coverage.wig.txt.gz", "gs://gdc-tcga-phs000178-controlled/bcde0681-8327-404d-b5dc-f36a72ad254d/TCGA-KO-8409-11A-01D-2311-10_wgs_Illumina.bam.bai"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba1 | eg=["5fc7cad5-3c19-4566-9cfb-96e60ad4c7ce", "bcde0681-8327-404d-b5dc-f36a72ad254d"]
+
+## GDC_METADATA.REL21_FILEDATA_LEGACY
+@use: [C1, C2, C4, C5, C7]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+file_state: TEXT | File state -- either live or submitted | eg=["live"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba5 | eg=["3ad9b4bd-57bd-4105-9f7e-89895dcfb7c4", "05ed43ba-8a09-475e-a9e3-876d89a11e9f"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["3ad9b4bd-57bd-4105-9f7e-89895dcfb7c4", "05ed43ba-8a09-475e-a9e3-876d89a11e9f"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["09f8acfc-4d80-4005-9f40-7485309997f5", "a4f4c331-97a3-48c4-aa3e-27304c1eb611"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Thymoma"]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-THYM"]
+file_name: TEXT | Name of file at the GDC | eg=["TCGA-XU-AAY1-01A-11R-A42W-13.hg19.mirbase20.isoform.quantification.txt", "TCGA-XM-A8RE-01A-11R-A42W-13.isoform.quantification.txt"]
+
+## GDC_METADATA.REL18_FILEDATA_ACTIVE
+@use: [C1, C14, C2, C5, C7, C8]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-KICH"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Kidney Chromophobe"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["2fba0d19-1452-4494-abb7-8e451f51bcc2", "a435b68a-0574-4065-bcda-d7c6e75ccba3"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+file_name: TEXT | Name of file at the GDC | eg=["019eee85-e3af-43e1-98d6-6b81211777b0.FPKM-UQ.txt.gz", "96fd0f54-7ac3-4e83-8144-12e1e7ffdee8.htseq.counts.gz"]
+file_state: TEXT | File state -- either live or submitted | eg=["released"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["04e9a63a-d742-488c-8564-bf9d79aa2091", "0f3c4f8f-0766-46b0-81b4-18ca4f6ea20a"]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba4 | eg=["2fba0d19-1452-4494-abb7-8e451f51bcc2", "a435b68a-0574-4065-bcda-d7c6e75ccba3"]
+
+## GDC_METADATA.REL12_CASEDATA
+@use: [C19]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["2d8a70d2-56bf-4763-a2bf-ecb22fe2da3b", "a2d1f9e8-1db5-4594-b5ac-05db7457b221"]
+active_file_count: NUMBER | Active File Count for this case | eg=[5]
+legacy_file_count: NUMBER | Total number of files for this case in the GDC legacy archive | eg=[0]
+submitter_id: TEXT | This can be used to identify a corresponding entry in the submitter's records. The GDC requires that submitter_id be unique for each entity within a project: the tuple (combination) of [ project_id, submitter_id ] is a unique key. | eg=["AD10", "AD11"]
+
+## GDC_METADATA.PANCANATLAS_MANIFEST
+PCA_project_id: TEXT | One of 16 PanCancer Atlas projects, eg PANCAN-SQUAMOUS, MC3, PANCAN-DRIVER, etc | eg=["MC3"]
+gdc_id: TEXT | GDC file identifier | eg=["883e1558-8145-4f5a-a828-877afa4a66b3", "495bb9c0-9bf7-40a7-9099-4c87857d3096"]
+file_name: TEXT | Name of file at the GDC | eg=["GBM.tar.gz", "OV.tar.gz"]
+
+## GDC_METADATA.REL24_FILEDATA_LEGACY
+@use: [C1, C2, C4, C5, C7]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000218"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["53e602f5-16ea-5971-805d-229fd5b4299b", "61be6aec-4102-5a4d-8f9a-690b15bb08a8"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TARGET-AML", "TARGET-ALL-P2"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["phs000218;phs000465", "phs000218;phs000464"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba5 | eg=["a3bcdc70-e589-45b7-8822-e9a967a45fd1", "3c601eca-1cbc-4087-ae57-307d9e8da9ba"]
+file_state: TEXT | File state -- either live or submitted | eg=["submitted"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["a3bcdc70-e589-45b7-8822-e9a967a45fd1", "3c601eca-1cbc-4087-ae57-307d9e8da9ba"]
+file_name: TEXT | Name of file at the GDC | eg=["TARGET-20-PAMYAS-09A-03R.gene.quantification.txt", "TARGET-10-PANRDC-03A-01R.gene.quantification.txt"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TARGET"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Acute Myeloid Leukemia", "Acute Lymphoblastic Leukemia - Phase II"]
+
+## GDC_METADATA.REL16_FILEDATA_ACTIVE
+@use: [C1, C14, C2, C7, C8]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-BRCA"]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["e3bffebc-79c8-4cee-bad7-c7245a1ae50c", "856370c1-163c-4915-b71b-be8731c012e2"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba2 | eg=["e3bffebc-79c8-4cee-bad7-c7245a1ae50c", "856370c1-163c-4915-b71b-be8731c012e2"]
+file_state: TEXT | File state -- either live or submitted | eg=["released"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+file_name: TEXT | Name of file at the GDC | eg=["b4e7dda5-9ba5-4312-9593-4f9a3baaba2e.mirbase21.mirnas.quantification.txt", "33cd75d7-57c9-427a-bbee-4e009f29f318.mirbase21.mirnas.quantification.txt"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Breast Invasive Carcinoma"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["ba80db4e-d899-4da4-ae49-5263d98e1530", "182c4bdf-2c58-4303-b034-459da86b9d90"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+
+## GDC_METADATA.REL21_CASEDATA
+@use: [C7]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+active_file_count: NUMBER | Total number of files for this case in the active (default) GDC archive | eg=[20, 21]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc | eg=["TCGA-OV"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["TCGA-13-0922", "TCGA-01-0628"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["78821fb5-0669-42c7-b62b-b61d6b7d7ac6", "f88560c8-3475-47f2-9d48-4b8311bc1132"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+legacy_file_count: NUMBER | Total number of files for this case in the GDC legacy archive | eg=[9, 41]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Ovarian Serous Cystadenocarcinoma"]
+
+## GDC_METADATA.GDC_SYNC_ACTIVE_20190115
+@use: [C12, C9]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["TARGET-OS"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["[u'phs000468', u'phs000218']"]
+file_name: TEXT | Name of file at the GDC | eg=["5767cba9-a6b2-4815-9d48-8d95835e1567.gdc_liftover.vcf.gz", "13ee1d46-f478-4bfa-b7aa-281fc66ec463.gdc_liftover.vcf.gz"]
+
+## GDC_METADATA.REL17_ALIQUOT2CASEIDMAP
+@use: [C10, C11, C17]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["TCGA-BLCA"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["556fcbc8-172a-4af1-8822-ae036e8d68e8", "a6003b1c-56a9-430a-a5e2-b70af3f81bdb"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["a696305c-e8c6-40d3-aa4c-1738d0987885", "5365eef9-56ca-4e3f-a187-3316158c4a32"]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["TCGA-BL-A13J-01B", "TCGA-BL-A0C8-01B"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["TCGA-BL-A13J", "TCGA-BL-A0C8"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-BL-A13J-01B-04D-A46W-08", "TCGA-BL-A13J-01B-04D-A276-05"]
+sample_type_name: TEXT | The longer name of the sample type; eg. Primary Tumor, Recurrent Tumor, etc. | eg=["Primary Tumor"]
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. | eg=["01"]
+
+## GDC_METADATA.REL23_GDCFILEID_TO_GCSURL
+file_gdc_url: TEXT | NULL | eg=["gs://gdc-tcga-phs000178-controlled/4b16854d-5365-435b-b15f-348affd75f06/5424d8d265b0f85b4263a8ae7d4e7ccc_gdc_realn.bai", "gs://gdc-tcga-phs000178-open/8f53170a-fd76-4fdd-b693-e577795b08e6/genome.wustl.edu_clinical.TCGA-AB-2967.xml"]
+file_gdc_id: TEXT | NULL | eg=["4b16854d-5365-435b-b15f-348affd75f06", "8f53170a-fd76-4fdd-b693-e577795b08e6"]
+
+## GDC_METADATA.REL18_ALIQUOT2CASEIDMAP
+@use: [C10, C11, C17]
+sample_type_name: TEXT | The longer name of the sample type; eg. Primary Tumor, Recurrent Tumor, etc. | eg=["Slides", "FFPE Scrolls"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["CGCI-BLGSP", "TCGA-LUAD"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["CGCI", "TCGA"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["BLGSP-71-22-00347", "BLGSP-71-22-00339"]
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. | eg=["01"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["BLGSP-71-22-00347-01A-12E-A634-33", "BLGSP-71-22-00347-01A-12S-A633-33"]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["BLGSP-71-22-00347-01A", "BLGSP-71-22-00339-01A"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["54e96524-0c62-46b9-b945-d2787ba2ee1c", "63cef160-41f7-41f2-a507-cfaa1d3ed84d"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["7824ba74-2279-4833-9eb8-0db056a119e0", "2843599b-b36f-460b-8563-2e022974103f"]
+
+## GDC_METADATA.REL15_SLIDE2CASEIDMAP
+@use: [C10, C13]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["TCGA-G4-6317-02A", "TCGA-14-1034-02B"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["45c8544c-ec60-447e-91ee-62e41e72a82f", "afd6abee-dd83-4b1a-b66f-8fd50190287b"]
+sample_type: NUMBER | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. | eg=[2]
+case_gdc_id: TEXT | GDC unique identifier | eg=["cee553c8-460d-436b-b55d-8f41624816cc", "0078b0c4-68a9-483b-9aab-61156d263213"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["TCGA-G4-6317", "TCGA-14-1034"]
+sample_type_name: TEXT | The longer name of the sample type; e.g. Primary Tumor, Recurrent Tumor, etc. | eg=["Recurrent Tumor"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["TCGA-COAD", "TCGA-GBM"]
+
+## GDC_METADATA.REL14_FILEDATA_LEGACY
+@use: [C1, C2, C4, C5, C7]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["16a0c248-061b-4dbd-b284-bb4f57caf16e", "5dda104a-c452-4205-99da-782fa10b49ec"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-THYM"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba3 | eg=["16a0c248-061b-4dbd-b284-bb4f57caf16e", "5dda104a-c452-4205-99da-782fa10b49ec"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Thymoma"]
+file_name: TEXT | Name of file at the GDC | eg=["TCGA-ZC-AAAA-01A-11R-A42U-13.hg19.mirbase20.isoform.quantification.txt", "TCGA-ZB-A96H-01A-11R-A42U-13.isoform.quantification.txt"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["67ff20ba-1b56-45ae-9310-19dd74401e67", "bab3ce0b-d318-4791-aa17-d815ea23b62d"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+file_state: TEXT | File state -- either live or submitted | eg=["live"]
+
+## GDC_METADATA.REL12_GDCFILEID_TO_GCSURL
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba6 | eg=["f3d74bd1-d5a8-478f-9022-5cc09050e7d4", "f3d880dc-b027-4f80-b01e-af1f31e3f7fc"]
+file_gcs_url: TEXT | Google Cloud Storage (GCS) location ID. Example: gs://gdc-TCGA-phs000178-open/9c4b1b5c-b5cf-48f6-bf41-047ceb8c883c/TCGA-CR-7365-01A-01-TS1.811bb2b7-66e3-4694-891b-10b436ec300d.svs | eg=["gs://5aa919de-0aa0-43ec-9ec3-288481102b6d/tcga/KIRC/RNA/miRNA-Seq/BCCAGSC/ILLUMINA/TCGA-DV-5567-01A-01R-1540-13_mirna.bam", "gs://isb-tcga-phs000178-open/gdc/f3d880dc-b027-4f80-b01e-af1f31e3f7fc/unc.edu.dfe8bcb5-829d-4f70-8731-e3289383bc95.2334452.bt.exon_quantification.txt"]
+
+## GDC_METADATA.REL23_FILEDATA_ACTIVE
+@use: [C1, C14, C2, C5, C7, C8]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs001337"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["GENIE-DFCI"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["5e97d658-53a6-4c28-b415-04c874b639f5", "d6f3777d-f6a0-4321-90aa-bcc04614dcae"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["GENIE"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["AACR Project GENIE - Contributed by Dana-Farber Cancer Institute"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["473afbe0-ff01-4e0e-9617-5fb9b32b4313", "e23101cb-3c5a-4814-96cb-a7ce75396656"]
+file_state: TEXT | File state -- either live or submitted | eg=["released"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["phs001337"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba4 | eg=["473afbe0-ff01-4e0e-9617-5fb9b32b4313", "e23101cb-3c5a-4814-96cb-a7ce75396656"]
+file_name: TEXT | Name of file at the GDC | eg=["a2d72caf-c04d-45bc-95be-cf8db05c26db.genie.aliquot.copy_number_score.tsv", "da68dbce-e299-4fae-8721-9909530bb854.genie.aliquot.copy_number_score.tsv"]
+
+## GDC_METADATA.REL17_FILEDATA_ACTIVE
+@use: [C1, C14, C2, C5, C7, C8]
+file_state: TEXT | File state -- either live or submitted | eg=["released"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba4 | eg=["57600f8b-0532-436d-8b1a-4cd7a487644f", "bdfb5694-853a-4e2b-9cb8-188e9045bc24"]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+file_name: TEXT | Name of file at the GDC | eg=["f92ef89d-6640-4072-bd48-8a600a23f2c7.FPKM-UQ.txt.gz", "124a7367-b421-44e3-8bc5-ea83b2a23230.htseq.counts.gz"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["57600f8b-0532-436d-8b1a-4cd7a487644f", "bdfb5694-853a-4e2b-9cb8-188e9045bc24"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Thymoma"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-THYM"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["96e5c81e-8edb-4e6c-84fc-f127142f2835", "9b116a89-ba1a-4b7f-bcc6-2dcd950269ec"]
+
+## GDC_METADATA.REL23_SLIDE2CASEIDMAP
+@use: [C10, C13]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["BLGSP-71-19-00106", "HCM-BROD-0047-C71"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["b06f7bf0-45bb-4aca-8f22-72d8a4f73f99", "babbc3cb-14b7-4894-b91d-c160f4cb48e0"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["83c55904-ee5a-4b0a-8c12-ef7f41cdb71e", "d10aaf2a-7eb2-40f2-b3e4-bb9a38ed0d63"]
+sample_type_name: TEXT | The longer name of the sample type; eg. Primary Tumor, Recurrent Tumor, etc. | eg=["Recurrent Tumor"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["CGCI", "HCMI"]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["BLGSP-71-19-00106-02A", "HCM-BROD-0047-C71-02A"]
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. (OR NA) | eg=["02"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["CGCI-BLGSP", "HCMI-CMDC"]
+
+## GDC_METADATA.REL14_GDCFILEID_TO_GCSURL
+file_gcs_url: TEXT | Google Cloud Storage (GCS) location ID. Example: gs://gdc-TCGA-phs000178-open/9c4b1b5c-b5cf-48f6-bf41-047ceb8c883c/TCGA-CR-7365-01A-01-TS1.811bb2b7-66e3-4694-891b-10b436ec300d.svs | eg=["gs://62f2c827-93cc-4ca7-a90f-flattened/cfcfab71-d067-4b02-8a31-a98f064f8f9e/TCGA-EE-A3J4-10A-01D-A20D-08_TCGA-EE-A3J4-06A-11D-A20D-08.vcf", "gs://7008814a-277f-4fd4-aa61-flattened/8367e453-adc4-4d50-b8eb-49252785cbfb/8367e453-adc4-4d50-b8eb-49252785cbfb.vep.vcf.gz"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba2 | eg=["cfcfab71-d067-4b02-8a31-a98f064f8f9e", "8367e453-adc4-4d50-b8eb-49252785cbfb"]
+
+## GDC_METADATA.REL22_FILEDATA_LEGACY
+@use: [C1, C2, C4, C5, C7]
+case_gdc_id: TEXT | GDC unique identifier | eg=["18c3debb-08ea-4ca1-ade4-d577bcee4fa2", "a6885883-f1a2-48dd-8d72-0038319069a1"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba5 | eg=["5c7270f5-6e19-4c3d-b752-67f38eea3c23", "a43e426c-96f5-4753-a0e8-1e3bfb8f1de4"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-THYM"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["5c7270f5-6e19-4c3d-b752-67f38eea3c23", "a43e426c-96f5-4753-a0e8-1e3bfb8f1de4"]
+file_state: TEXT | File state -- either live or submitted | eg=["live"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Thymoma"]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+file_name: TEXT | Name of file at the GDC | eg=["TCGA-X7-A8M1-01A-11R-A42W-13.isoform.quantification.txt", "TCGA-X7-A8M6-01A-11R-A42W-13.isoform.quantification.txt"]
+
+## GDC_METADATA.REL12_SLIDE2CASEIDMAP
+@use: [C10, C13]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["TCGA-BLCA", "TCGA-BRCA"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["f7f74a2b-5299-424d-b9a7-2b313dc7823c", "28462438-fe47-4880-82d9-ee43d534d8a3"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["TCGA-DK-A1A6", "TCGA-E2-A15E"]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["TCGA-DK-A1A6-06A", "TCGA-E2-A15E-06A"]
+sample_type_id: NUMBER | Accompanying sample type id for the sample type | eg=[6]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["9c274536-3ca1-4f0e-93a8-1688074d862f", "0a2a3529-f645-4967-9a58-89ee20b8bb62"]
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode e.g. 01,11,06, etc. | eg=["Metastatic"]
+
+## GDC_METADATA.REL22_CASEDATA
+@use: [C7]
+active_file_count: NUMBER | Total number of files for this case in the active (default) GDC archive | eg=[20, 21]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc | eg=["TCGA-OV"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Ovarian Serous Cystadenocarcinoma"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["7f36eff2-aa69-4c4d-8101-8801c812a36b", "f88560c8-3475-47f2-9d48-4b8311bc1132"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+legacy_file_count: NUMBER | Total number of files for this case in the GDC legacy archive | eg=[9, 41]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["TCGA-13-0914", "TCGA-01-0628"]
+
+## GDC_METADATA.REL15_FILEDATA_CURRENT
+@use: [C1, C14, C2, C7, C8]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-LUSC"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["a2cd5b01-a1f6-46d0-9f05-9dc3df9019f7", "6f068c19-62a6-46ef-8c54-701fd19a6416"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba0 | eg=["840d5b04-9c5e-4b04-a365-9bf5e066eaf7", "5c340549-56a4-4fb9-a588-89636f6a5947"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["840d5b04-9c5e-4b04-a365-9bf5e066eaf7", "5c340549-56a4-4fb9-a588-89636f6a5947"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+file_state: TEXT | File state -- either live or submitted | eg=["released"]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+file_name: TEXT | Name of file at the GDC | eg=["ebd99236-9b00-4b25-980a-e4914f938f40.mirbase21.mirnas.quantification.txt", "52c8269a-d661-446f-9e8d-0f4093e23ff3.mirbase21.mirnas.quantification.txt"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Lung Squamous Cell Carcinoma"]
+
+## GDC_METADATA.REL22_SLIDE2CASEIDMAP
+@use: [C10, C13]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["CGCI-BLGSP", "HCMI-CMDC"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["CGCI", "HCMI"]
+sample_type_name: TEXT | The longer name of the sample type; eg. Primary Tumor, Recurrent Tumor, etc. | eg=["Recurrent Tumor"]
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. (OR NA) | eg=["02"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["BLGSP-71-19-00106", "HCM-BROD-0047-C71"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["83c55904-ee5a-4b0a-8c12-ef7f41cdb71e", "d10aaf2a-7eb2-40f2-b3e4-bb9a38ed0d63"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["b06f7bf0-45bb-4aca-8f22-72d8a4f73f99", "babbc3cb-14b7-4894-b91d-c160f4cb48e0"]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["BLGSP-71-19-00106-02A", "HCM-BROD-0047-C71-02A"]
+
+## GDC_METADATA.REL21_ALIQUOT2CASEIDMAP
+@use: [C10, C11, C17]
+case_gdc_id: TEXT | GDC unique identifier | eg=["0ee808be-13bc-4d15-a519-e2b7e960e809", "136a1fde-ecc8-43fe-b2f1-f3eee0bdc23f"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["CGCI-BLGSP"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["CGCI"]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["BLGSP-71-06-00001-01B", "BLGSP-71-08-00036-01B"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["888079d3-cf4e-47d3-8cdd-a424e5349050", "01f05d25-5039-445a-a378-2d62f46a8a66"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["NA"]
+sample_type_name: TEXT | The longer name of the sample type; eg. Primary Tumor, Recurrent Tumor, etc. | eg=["Primary Tumor"]
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. | eg=["01"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["BLGSP-71-06-00001", "BLGSP-71-08-00036"]
+
+## GDC_METADATA.REL14_SLIDE2CASEIDMAP
+@use: [C10, C13]
+sample_type: NUMBER | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. | eg=[2]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+sample_type_name: TEXT | The longer name of the sample type; eg. Primary Tumor, Recurrent Tumor, etc. | eg=["Recurrent Tumor"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["45c8544c-ec60-447e-91ee-62e41e72a82f", "afd6abee-dd83-4b1a-b66f-8fd50190287b"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["cee553c8-460d-436b-b55d-8f41624816cc", "0078b0c4-68a9-483b-9aab-61156d263213"]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["TCGA-G4-6317-02A", "TCGA-14-1034-02B"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc | eg=["TCGA-COAD", "TCGA-GBM"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["TCGA-G4-6317", "TCGA-14-1034"]
+
+## GDC_METADATA.REL24_ALIQUOT2CASEIDMAP
+@use: [C10, C11, C17]
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode eg. 01,11,06, etc. | eg=["11"]
+case_barcode: TEXT | Submitter identifier, eg HCC1954, TCGA-ZX-AA5X, etc | eg=["TCGA-BT-A20N", "TCGA-K4-A5RH"]
+sample_barcode: TEXT | Original/submitter sample ID | eg=["TCGA-BT-A20N-11A", "TCGA-K4-A5RH-11A"]
+project_id: TEXT | ID of the Project -- e.g. TCGA-BRCA, TARGET-AML, etc. | eg=["TCGA-BLCA"]
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01 | eg=["TCGA-BT-A20N-11A-11R-A14Y-07", "TCGA-BT-A20N-11A-11D-A14U-02"]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["753c9421-02be-4ecd-9f8e-5dbb4fe72c38", "0e189947-eab5-464c-a2ab-79adeb2e5466"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["ebedab7c-dd7c-448e-8324-78c86f13be8b", "eeca58fe-b5cb-4d13-a93f-a5a2ca00b6e2"]
+sample_type_name: TEXT | The longer name of the sample type; eg. Primary Tumor, Recurrent Tumor, etc. | eg=["Solid Tissue Normal"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+
+## GDC_METADATA.REL13_FILEDATA_LEGACY
+@use: [C1, C12, C16, C18, C6]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+submitter_id: TEXT | This can be used to identify a corresponding entry in the submitter's records. The GDC requires that submitter_id be unique for each entity within a project: the tuple (combination) of [ project_id, submitter_id ] is a unique key.
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["f654fd73-2297-4e6d-914f-1b5d75177020", "ee4f3036-f744-4d0f-bd2a-3a0e63893b28"]
+file_name: TEXT | Name of file at the GDC | eg=["BONES_p_TCGA_Batch8_9_RNA_HT_HG-U133A_96-HTA_E04_298054.level3.data.txt", "BONES_p_TCGA_Batch8_9_RNA_HT_HG-U133A_96-HTA_A11_297970.level3.data.txt"]
+
+## GDC_METADATA.REL14_FILEDATA_CURRENT
+@use: [C1, C14, C2, C7, C8]
+file_name: TEXT | Name of file at the GDC | eg=["1249114f-4d7a-4312-a043-c9fee58f5ab0.mirbase21.mirnas.quantification.txt", "f398cdd2-ccce-4818-a5ea-9048f22a6163.mirbase21.mirnas.quantification.txt"]
+file_state: TEXT | File state -- either live or submitted | eg=["released"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc. | eg=["TCGA-PRAD"]
+file_id: TEXT | GDC file identifier. This is a duplicate of file_gdc_id field found in some tables. | eg=["6ce26ee2-ad71-4b95-bb26-f08ae00e930b", "2187d78e-6724-496b-a469-c337304f084b"]
+case_gdc_id: TEXT | GDC unique identifier | eg=["06c9eb11-6018-4015-9fbe-b46886b2c3e0", "5dc7e186-7e01-4a54-8ae8-350dace2297b"]
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba4 | eg=["6ce26ee2-ad71-4b95-bb26-f08ae00e930b", "2187d78e-6724-496b-a469-c337304f084b"]
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+program_name: TEXT | Program name, eg TCGA or TARGET | eg=["TCGA"]
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179 | eg=["open"]
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Prostate Adenocarcinoma"]
+
+## GDC_METADATA.REL13_GDCFILEID_TO_GCSURL
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba5 | eg=["6d0b3f71-b4df-4596-8361-4968dc98c88c", "1afb7b26-6243-4967-9eaa-a4f60d3332ef"]
+file_gcs_url: TEXT | Google Cloud Storage (GCS) location ID. Example: gs://gdc-TCGA-phs000178-open/9c4b1b5c-b5cf-48f6-bf41-047ceb8c883c/TCGA-CR-7365-01A-01-TS1.811bb2b7-66e3-4694-891b-10b436ec300d.svs | eg=["gs://7008814a-277f-4fd4-aa61-flattened/6d0b3f71-b4df-4596-8361-4968dc98c88c/C345.TCGA-EU-5904-10A-01D-1669-08.6_gdc_realn.bai", "gs://isb-tcga-phs000178-open/gdc/1afb7b26-6243-4967-9eaa-a4f60d3332ef/TCGA-HT-7607-01Z-00-DX10.8C411A60-316A-469B-85D4-585A8C4DF4CE.svs"]
+
+## TCGA_BIOCLIN_V0.CLINICAL_V1_1
+@use: [C15, C20, C3]
+case_gdc_id: TEXT | NULL | eg=["8f978e47-9ee3-4770-8c7d-95b19b444d5b", "a56d2b48-375d-4193-91a9-f589c39523fb"]
+case_barcode: TEXT | NULL | eg=["TCGA-PN-A8M9", "TCGA-72-4240"]
+project_name: TEXT | NULL | eg=["Ovarian Serous Cystadenocarcinoma", "Lung Adenocarcinoma"]
+project_short_name: TEXT | NULL | eg=["TCGA-CESC", "TCGA-OV"]
+program_name: TEXT | NULL | eg=["TCGA"]
+
+## TCGA_BIOCLIN_V0.CLINICAL
+@use: [C20, C3]
+psa_value: FLOAT | A male participant's Prostrate-Specific Antigen (PSA) value
+number_pack_years_smoked: FLOAT | The number of packs smoked per day times the number of years smoked by the participant
+case_barcode: TEXT | TCGA patient/case barcode; e.g. TCGA-06-0119 | eg=["TCGA-01-0628", "TCGA-01-0630"]
+program_name: TEXT | Program Name, always TCGA (The Cancer Genome Atlas) in this table. | eg=["TCGA"]
+gleason_score_combined: NUMBER | The Gleason Score (ranging from 1 -5) is the grade of the aggressiveness of prostate cancer. The combined Gleason Score is the primary Gleason score  (for the largest area of the tumor) added to the secondary Gleason Score (for the next largest section of the tumor).
+days_to_submitted_specimen_dx: NUMBER | Numeric value to represent the day of the diagnosis for the submitted sample.
+new_tumor_event_after_initial_treatment: TEXT | Indicates whether a patient has had a new tumor event after initial treatment; Yes, No
+program_dbgap_accession_number: TEXT | Program dbGaP accession number, eg phs000178 | eg=["phs000178"]
+year_of_initial_pathologic_diagnosis: NUMBER | Four digit year of the initial pathologic diagnosis | eg=[NaN, 2003.0]
+age_began_smoking_in_years: NUMBER | Age, in years, that the participant began smoking
+project_name: TEXT | Project Name; frequently the same as or similar to the project disease type eg   Acute Lymphoblastic Leukemia - Phase II   or   Breast Invasive Carcinoma   etc | eg=["Ovarian Serous Cystadenocarcinoma", "Glioblastoma Multiforme"]
+case_gdc_id: TEXT | GDC unique identifer for this case; e.g. 7b4ce492-ff40-4bf1-b3e8-75ff83e8746d. This identifier can be used to find more information at the GDC Data Portal ( https://portal.gdc.cancer.gov/cases/7b4ce492-ff40-4bf1-b3e8-75ff83e8746d ) | eg=["f88560c8-3475-47f2-9d48-4b8311bc1132", "dc9b4616-e815-43c8-9ec4-720a32868541"]
+number_of_lymphnodes_positive_by_he: NUMBER | The number of lymph nodes involved with disease as determined by histological examination
+height: FLOAT | Height of participant in centimeters
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; e.g. TCGA-OV, etc. | eg=["TCGA-OV", "TCGA-GBM"]
+weight: FLOAT | Weight of participant in kilograms
+
+## TCGA_BIOCLIN_V0.ANNOTATIONS
+date_created: TEXT | Date on which this annotation was originally created; includes time-stamp and time-zone, eg 2011-03-14T18:00:42-04:00  --  dates range between March 2009 and June 2016 | eg=["2014-07-16T16:26:25-04:00", "2014-07-16T16:26:08-04:00"]
+case_barcode: TEXT | TCGA patient/case barcode; e.g. TCGA-06-0119 | eg=["TCGA-OR-A5JH", "TCGA-OR-A5JU"]
+entity_type: TEXT | Type of the entity that this annotation applies to; e.g. Shipped Portion, Aliquot, Patient (which has the same meaning as Case), Analyte, etc. | eg=["Patient"]
+notes: TEXT | Longer descriptive text about this annotation | eg=["Extension set. Only DNA from tumor  and normal shipped."]
+category: TEXT | Annotation category; one of a relatively short list of phrases from a controlled-vocabulary; e.g. Item is noncanonical, Item flagged DNU, Prior malignancy, etc. | eg=["Item is noncanonical"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; e.g. TCGA-OV, etc. | eg=["TCGA-ACC"]
+sample_barcode: TEXT | TCGA sample barcode; e.g. TCGA-06-0119-01A (note that this field will be null if the annotation applies at a higher level than sample)
+entity_barcode: TEXT | Barcode of the entity that this annotation applies to; often the same as the case barcode | eg=["TCGA-OR-A5JH", "TCGA-OR-A5JU"]
+aliquot_barcode: TEXT | TCGA aliquot barcode; e.g. TCGA-06-0119-01A-08D-0216-06 (note that this field will be null if the annotation applies at a higher level than aliquot)
+case_gdc_id: TEXT | GDC case identifier for the patient/case associated with this specific annotation | eg=["4f845fea-e823-47d6-89fb-36ee478a43b8", "cac8eaba-9e40-4048-b8cc-87574f048d91"]
+classification: TEXT | Annotation classification; e.g. Notification, CenterNotification, Observation, or Redaction | eg=["Notification"]
+date_edited: TEXT | Annotations were rarely edited, but if thery were (fewer than 10 out of over 6000 total annotations), this field indicates the date on which it was edited
+
+## TCGA_BIOCLIN_V0.BIOSPECIMEN
+@use: [C20]
+days_to_sample_procurement: FLOAT | The number of days from the date the patient was diagnosed to the date of the procedure that produced the sample. | eg=[0.0, NaN]
+max_percent_monocyte_infiltration: FLOAT | The maximum percentage of infiltration by monocytes in a sample or specimen | eg=[1.0, NaN]
+min_percent_necrosis: FLOAT | The minimum percentage of necrosis in a sample or specimen | eg=[0.0, 10.0]
+avg_percent_stromal_cells: FLOAT | The average percentage of stromal cells in a sample or specimen | eg=[15.0, 7.5]
+sample_type_name: TEXT | The longer name of the sample type; e.g. Primary Tumor, Recurrent Tumor, etc. | eg=["Primary solid Tumor", "Blood Derived Normal"]
+avg_percent_monocyte_infiltration: FLOAT | The average percentage of infiltration by monocyte in a sample or specimen | eg=[1.0, NaN]
+min_percent_neutrophil_infiltration: FLOAT | The minimum percentage of neutrophil infiltration in a sample or specimen | eg=[3.0, NaN]
+avg_percent_necrosis: FLOAT | The average percentage of necrosis in a sample or specimen | eg=[0.0, 17.5]
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal | eg=["c7da1402-2958-469e-9956-395c03833125", "a527355f-57e3-483b-8277-9a04e5c35951"]
+avg_percent_tumor_nuclei: FLOAT | The average percentage of tumor nuclei in a sample or specimen | eg=[85.0, NaN]
+days_to_collection: FLOAT | Time interval from the date of biospecimen collection to the date of initial pathologic diagnosis, represented as a calculated number of days. | eg=[1737.0, NaN]
+min_percent_tumor_nuclei: FLOAT | The minimum percentage of tumor nuclei in a sample or specimen | eg=[85.0, NaN]
+max_percent_stromal_cells: FLOAT | The maximum percentage of stromal cells in a sample or specimen | eg=[15.0, 10.0]
+avg_percent_tumor_cells: FLOAT | The average percentage of tumor cells in a sample or specimen | eg=[85.0, 77.5]
+max_percent_tumor_cells: FLOAT | The maximum percentage of tumor cells in a sample or specimen | eg=[85.0, 80.0]
+max_percent_tumor_nuclei: FLOAT | The maximum percentage of tumor nuclei in a sample or specimen | eg=[85.0, NaN]
+sample_barcode: TEXT | TCGA sample_barcode; e.g. TCGA-AB-2809-03A. | eg=["TCGA-DD-AAW0-01A", "TCGA-06-0412-01A"]
+min_percent_stromal_cells: FLOAT | The minimum percentage of stromal cells in a sample or specimen | eg=[15.0, 5.0]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; e.g. TCGA-OV, etc. | eg=["TCGA-LIHC", "TCGA-GBM"]
+program_name: TEXT | Program Name, always TCGA (The Cancer Genome Atlas) in this table. | eg=["TCGA"]
+avg_percent_neutrophil_infiltration: FLOAT | The average percentage of neutrophil infiltration in a sample or specimen | eg=[3.0, NaN]
+min_percent_monocyte_infiltration: FLOAT | The minimum percentage of infiltration by lymphocytes in a sample or specimen | eg=[1.0, NaN]
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode e.g. 01,11,06, etc. | eg=["01", "10"]
+min_percent_normal_cells: FLOAT | The minimum percentage of normal cells in a sample or specimen | eg=[0.0, NaN]
+num_slides: NUMBER | In some cases, portions of a sample were placed onto multiple slides -- generally not more than 2, but occasionally more. | eg=[1, 2]
+max_percent_neutrophil_infiltration: FLOAT | The maximum percentage of neutrophil infiltration in a sample or specimen | eg=[3.0, NaN]
+min_percent_tumor_cells: FLOAT | The minimum percentage of tumor cells in a sample or specimen | eg=[85.0, 75.0]
+is_ffpe: TEXT | Indicator to signify whether or not the tissue sample was fixed in formalin and embedded in paraffin (FFPE); almost always NO -- only a few (99) FFPE samples were included in the TCGA project | eg=["NO"]
+max_percent_normal_cells: FLOAT | The maximum percentage of normal cells in a sample or specimen | eg=[0.0, NaN]
+num_portions: NUMBER | In some cases, a sample was divided into multiple portions -- up to 6 portions, but for most samples the number is 1 (or even 0). | eg=[1]
+case_gdc_id: TEXT | GDC unique identifer for this case; e.g. 7b4ce492-ff40-4bf1-b3e8-75ff83e8746d. This identifier can be used to find more information at the GDC Data Portal ( https://portal.gdc.cancer.gov/cases/7b4ce492-ff40-4bf1-b3e8-75ff83e8746d ) | eg=["109436aa-a655-429b-8d3b-1a43385c9016", "98d3ae4b-1f14-4067-ac60-7eaace5007f2"]
+min_percent_lymphocyte_infiltration: FLOAT | The minimum percentage of infiltration by lymphocytes in a sample or specimen | eg=[2.0, NaN]
+max_percent_lymphocyte_infiltration: FLOAT | The maximum percentage of infiltration by lymphocytes in a sample or specimen | eg=[2.0, NaN]
+case_barcode: TEXT | TCGA patient/case barcode, eg TCGA-AB-2809 (the first 12 characters of the 16-character sample barcode) | eg=["TCGA-DD-AAW0", "TCGA-06-0412"]
+max_percent_necrosis: FLOAT | The maximum percentage of necrosis in a sample or specimen | eg=[0.0, 25.0]
+avg_percent_normal_cells: FLOAT | The average percentage of normal cells in a sample or specimen | eg=[0.0, NaN]
+avg_percent_lymphocyte_infiltration: FLOAT | The average percentage of infiltration by lymphocytes in a sample or specimen | eg=[2.0, NaN]
+
+## TCGA_BIOCLIN_V0.CLINICAL_V1
+@use: [C15, C20, C3]
+case_barcode: TEXT | TCGA patient/case barcode; e.g. TCGA-06-0119 | eg=["TCGA-2G-AALF", "TCGA-2G-AALG"]
+program_name: TEXT | Program Name, always TCGA (The Cancer Genome Atlas) in this table. | eg=["TCGA"]
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; e.g. TCGA-OV, etc. | eg=["TCGA-TGCT"]
+case_gdc_id: TEXT | GDC unique identifer for this case; e.g. 7b4ce492-ff40-4bf1-b3e8-75ff83e8746d. This identifier can be used to find more information at the GDC Data Portal ( https://portal.gdc.cancer.gov/cases/7b4ce492-ff40-4bf1-b3e8-75ff83e8746d ) | eg=["be64d20a-bcda-4623-912a-826e86f3225e", "6939263c-8dad-469c-8905-7063460e4ab3"]

@@ -1,0 +1,50 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: SCHOOL_SCHEDULING.STUDENT_SCHEDULES
+Columns: ClassStatus, ClassID, StudentID, Grade
+
+Table: SCHOOL_SCHEDULING.FACULTY_SUBJECTS
+Columns: SubjectID, ProficiencyRating, StaffID
+
+Table: SCHOOL_SCHEDULING.STUDENT_CLASS_STATUS
+Columns: ClassStatus, ClassStatusDescription
+
+Table: SCHOOL_SCHEDULING.MAJORS
+Columns: Major, MajorID
+
+Table: SCHOOL_SCHEDULING.STUDENTS
+Columns: StudLastName, StudAreaCode, StudMajor, StudentID, StudFirstName, StudState, StudStreetAddress, StudZipCode, StudGPA, StudCity, StudPhoneNumber
+
+Table: SCHOOL_SCHEDULING.FACULTY_CATEGORIES
+Columns: CategoryID, StaffID
+
+Table: SCHOOL_SCHEDULING.DEPARTMENTS
+Columns: DeptChair, DeptName, DepartmentID
+
+Table: SCHOOL_SCHEDULING.CLASSES
+Columns: SubjectID, TuesdaySchedule, Credits, ClassRoomID, StartDate, MondaySchedule, WednesdaySchedule, SaturdaySchedule, Duration, ClassID, FridaySchedule, ThursdaySchedule, StartTime
+
+Table: SCHOOL_SCHEDULING.STAFF
+Columns: StfAreaCode, StfPhoneNumber, StfZipCode, StfStreetAddress, StfFirstName, DateHired, Salary, StaffID, StfLastname, StfState, Position, StfCity
+
+Table: SCHOOL_SCHEDULING.SQLITE_SEQUENCE
+Columns: name, seq
+
+Table: SCHOOL_SCHEDULING.BUILDINGS
+Columns: NumberOfFloors, SiteParkingAvailable, BuildingName, BuildingCode, ElevatorAccess
+
+Table: SCHOOL_SCHEDULING.FACULTY_CLASSES
+Columns: StaffID, ClassID
+
+Table: SCHOOL_SCHEDULING.SUBJECTS
+Columns: SubjectDescription, SubjectID, SubjectCode, SubjectPreReq, CategoryID, SubjectName
+
+Table: SCHOOL_SCHEDULING.CLASS_ROOMS
+Columns: ClassRoomID, BuildingCode, PhoneAvailable
+
+Table: SCHOOL_SCHEDULING.FACULTY
+Columns: Title, StaffID, Status, Tenured
+
+Table: SCHOOL_SCHEDULING.CATEGORIES
+Columns: DepartmentID, CategoryID, CategoryDescription

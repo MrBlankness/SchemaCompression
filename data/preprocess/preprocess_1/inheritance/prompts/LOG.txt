@@ -1,0 +1,25 @@
+[TEMPLATES]
+Format: Tn|col1,col2|schema1.table1;schema2.table2
+T1|updated_at,price,name,product_id|LOG.MST_PRODUCTS_20161201;LOG.MST_PRODUCTS_20170101
+T13|url,session,stamp,action|LOG.READ_LOG
+T3|user_id,session,action,stamp|LOG.ACCESS_LOG
+
+[DERIVED]
+Format: Tm<Tp|col1,col2|schema1.table1;schema2.table2
+T14<T17|category,amount|LOG.ACTION_LOG;LOG.INVALID_ACTION_LOG
+T11<T3|ip|LOG.ACTION_LOG_WITH_IP
+T17<T3|products|LOG.DUP_ACTION_LOG
+T9<T13|user_agent,ip,products|LOG.ACTION_LOG_WITH_NOISE
+
+[STANDALONE]
+Format: schema.table|col1,col2
+LOG.ACTIVITY_LOG|action,session,option,search_type,path,stamp
+LOG.APP1_MST_USERS|email,name,user_id
+LOG.APP2_MST_USERS|user_id,phone,name
+LOG.FORM_ERROR_LOG|session,form,stamp,field,value,error_type
+LOG.FORM_LOG|status,action,session,path,stamp
+LOG.MST_CATEGORIES|id,stamp,name
+LOG.MST_USERS_WITH_CARD_NUMBER|card_number,user_id
+LOG.MST_USERS|register_date,withdraw_date,register_device,birth_date,user_id,sex
+LOG.PRODUCT_SALES|category_name,product_id,sales
+LOG.PURCHASE_LOG|stamp,amount,purchase_id,user_id

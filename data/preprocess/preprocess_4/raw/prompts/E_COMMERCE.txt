@@ -1,0 +1,92 @@
+[TABLES]
+## E_COMMERCE.PRODUCT_CATEGORY_NAME_TRANSLATION
+product_category_name: TEXT | NULL | eg=["informatica_acessorios", "moveis_decoracao"]
+product_category_name_english: TEXT | NULL | eg=["computers_accessories", "furniture_decor"]
+
+## E_COMMERCE.LEADS_QUALIFIED
+first_contact_date: TEXT | NULL | eg=["2018-02-01", "2018-03-22"]
+origin: TEXT | NULL | eg=["social", "organic_search"]
+landing_page_id: TEXT | NULL | eg=["88740e65d5d6b056e0cda098e1ea6313", "a7982125ff7aa3b2054c6e44f9d28522"]
+mql_id: TEXT | NULL | eg=["dac32acd4db4c29c230538b72f8dd87d", "b4bc852d233dfefc5131f593b538befa"]
+
+## E_COMMERCE.ORDER_REVIEWS
+review_comment_title: TEXT | NULL | eg=[""]
+review_answer_timestamp: TEXT | NULL | eg=["2018-01-18 21:46:59", "2018-03-11 03:05:13"]
+review_score: NUMBER | NULL | eg=[4, 5]
+order_id: TEXT | NULL | eg=["73fc7af87114b39712e6da79b0a377eb", "a548910a1c6147796b98fdf73dbeba33"]
+review_id: TEXT | NULL | eg=["7bc2406110b926393aa56f80a40eba40", "80e641a11e56f04c1ad469d5645fdfde"]
+review_creation_date: TEXT | NULL | eg=["2018-01-18 00:00:00", "2018-03-10 00:00:00"]
+review_comment_message: TEXT | NULL | eg=["", "Recebi bem antes do prazo estipulado."]
+
+## E_COMMERCE.PRODUCTS
+product_photos_qty: FLOAT | NULL | eg=[1.0, 4.0]
+product_description_lenght: FLOAT | NULL | eg=[250.0, 261.0]
+product_height_cm: FLOAT | NULL | eg=[9.0, 4.0]
+product_width_cm: FLOAT | NULL | eg=[15.0, 26.0]
+product_name_lenght: FLOAT | NULL | eg=[46.0, 27.0]
+product_id: TEXT | NULL | eg=["96bd76ec8810374ed1b65e291975717f", "cef67bcfe19066a932b7673e239eb23d"]
+product_weight_g: FLOAT | NULL | eg=[154.0, 371.0]
+product_length_cm: FLOAT | NULL | eg=[18.0, 26.0]
+product_category_name: TEXT | NULL | eg=["esporte_lazer", "bebes"]
+
+## E_COMMERCE.ORDERS
+order_delivered_customer_date: TEXT | NULL | eg=["2017-10-10 21:25:13", "2018-08-07 15:27:45"]
+order_status: TEXT | NULL | eg=["delivered"]
+order_id: TEXT | NULL | eg=["e481f51cbdc54678b7cc49136f2d6af7", "53cdb2fc8bc7dce0b6741e2150273451"]
+order_delivered_carrier_date: TEXT | NULL | eg=["2017-10-04 19:55:00", "2018-07-26 14:31:00"]
+order_purchase_timestamp: TEXT | NULL | eg=["2017-10-02 10:56:33", "2018-07-24 20:41:37"]
+order_estimated_delivery_date: TEXT | NULL | eg=["2017-10-18 00:00:00", "2018-08-13 00:00:00"]
+order_approved_at: TEXT | NULL | eg=["2017-10-02 11:07:15", "2018-07-26 03:24:27"]
+customer_id: TEXT | NULL | eg=["9ef432eb6251297304e76186b10a928d", "b0830fb4747a6c6d20dea0b8c802d7ef"]
+
+## E_COMMERCE.LEADS_CLOSED
+business_type: TEXT | NULL | eg=["reseller", "manufacturer"]
+has_gtin: FLOAT | NULL
+average_stock: TEXT | NULL | eg=[""]
+won_date: TEXT | NULL | eg=["2018-02-26 19:58:54", "2018-07-03 20:17:45"]
+lead_type: TEXT | NULL | eg=["online_medium", "industry"]
+lead_behaviour_profile: TEXT | NULL | eg=["cat", "wolf"]
+has_company: FLOAT | NULL
+declared_monthly_revenue: FLOAT | NULL | eg=[0.0]
+seller_id: TEXT | NULL | eg=["2c43fb513632d29b3b58df74816f1b06", "ed8cb7b190ceb6067227478e48cf8dde"]
+sr_id: TEXT | NULL | eg=["4ef15afb4b2723d8f3d81e51ec7afefe", "d3d1e91a157ea7f90548eef82f1955e3"]
+business_segment: TEXT | NULL | eg=["pet", "home_appliances"]
+sdr_id: TEXT | NULL | eg=["a8387c01a09e99ce014107505b92388c", "4b339f9567d060bcea4f5136b9f5949e"]
+mql_id: TEXT | NULL | eg=["5420aad7fec3549a85876ba1c529bd84", "ffe640179b554e295c167a2f6be528e0"]
+declared_product_catalog_size: FLOAT | NULL
+
+## E_COMMERCE.ORDER_PAYMENTS
+payment_sequential: NUMBER | NULL | eg=[1]
+payment_installments: NUMBER | NULL | eg=[8, 1]
+payment_value: FLOAT | NULL | eg=[99.33, 24.39]
+order_id: TEXT | NULL | eg=["b81ef226f3fe1789b1e8b2acac839d17", "a9810da82917af2d9aefd1278f1dcfa0"]
+payment_type: TEXT | NULL | eg=["credit_card"]
+
+## E_COMMERCE.CUSTOMERS
+customer_city: TEXT | NULL | eg=["mogi das cruzes", "timoteo"]
+customer_state: TEXT | NULL | eg=["SP", "MG"]
+customer_id: TEXT | NULL | eg=["b2b6027bc5c5109e529d4dc6358b12c3", "5e274e7a0c3809e14aba7ad5aae0d407"]
+customer_zip_code_prefix: NUMBER | NULL | eg=[8775, 35182]
+customer_unique_id: TEXT | NULL | eg=["259dac757896d24d7702b9acbbff3f3c", "57b2a98a409812fe9618067b6b8ebe4f"]
+
+## E_COMMERCE.GEOLOCATION
+geolocation_zip_code_prefix: NUMBER | NULL | eg=[47940, 47990]
+geolocation_city: TEXT | NULL | eg=["wanderley", "formosa do rio preto"]
+geolocation_lng: FLOAT | NULL | eg=[-43.89223348300082, -45.18667845319278]
+geolocation_state: TEXT | NULL | eg=["BA"]
+geolocation_lat: FLOAT | NULL | eg=[-12.118520396156198, -11.043509645586902]
+
+## E_COMMERCE.SELLERS
+seller_zip_code_prefix: NUMBER | NULL | eg=[13023, 13844]
+seller_state: TEXT | NULL | eg=["SP", "RJ"]
+seller_city: TEXT | NULL | eg=["campinas", "mogi guacu"]
+seller_id: TEXT | NULL | eg=["3442f8959a84dea7ee197c632cb2df15", "d1b65fc7debc3361ea86b5f14c68d2e2"]
+
+## E_COMMERCE.ORDER_ITEMS
+order_id: TEXT | NULL | eg=["00010242fe8c5a6d1ba2dd792cb16214", "00024acbcdf0a6daa1e931b038114c75"]
+price: FLOAT | NULL | eg=[58.9, 12.99]
+order_item_id: NUMBER | NULL | eg=[1]
+shipping_limit_date: TEXT | NULL | eg=["2017-09-19 09:45:35", "2018-08-15 10:10:18"]
+product_id: TEXT | NULL | eg=["4244733e06e7ecb4970a6e2683c13e61", "7634da152a4610f1595efa32f14722fc"]
+seller_id: TEXT | NULL | eg=["48436dade18ac8b2bce089ec2a041202", "9d7a1d34a5052409006425275ba1c2b4"]
+freight_value: FLOAT | NULL | eg=[13.29, 12.79]

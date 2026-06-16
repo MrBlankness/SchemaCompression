@@ -1,0 +1,41 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: DB_IMDB.M_CAST
+Columns: ID, PID, MID, index
+
+Table: DB_IMDB.M_PRODUCER
+Columns: MID, ID, PID, index
+
+Table: DB_IMDB.M_COUNTRY
+Columns: CID, index, MID, ID
+
+Table: DB_IMDB.M_DIRECTOR
+Columns: index, MID, ID, PID
+
+Table: DB_IMDB.GENRE
+Columns: index, GID, Name
+
+Table: DB_IMDB.MOVIE
+Columns: title, year, num_votes, MID, index, rating
+
+Table: DB_IMDB.LANGUAGE
+Columns: Name, index, LAID
+
+Table: DB_IMDB.M_LOCATION
+Columns: LID, index, MID, ID
+
+Table: DB_IMDB.LOCATION
+Columns: index, LID, Name
+
+Table: DB_IMDB.PERSON
+Columns: Gender, Name, PID, index
+
+Table: DB_IMDB.M_LANGUAGE
+Columns: LAID, index, ID, MID
+
+Table: DB_IMDB.M_GENRE
+Columns: MID, GID, index, ID
+
+Table: DB_IMDB.COUNTRY
+Columns: index, Name, CID

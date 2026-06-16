@@ -1,0 +1,87 @@
+[COMPONENTS]
+@C1
+CLASS: TEXT | NULL | eg=["secondary", "pedestrian"]
+GEO_CORDINATES: GEOGRAPHY | NULL | eg=[{"coordinates":[[5.964776,51.8788498],[5.9648094,51.8788738]],"type":"LineString"}, {"coordinates":[[5.9934859,53.3335805],[5.9936459,53.3327191]],"type":"LineString"}]
+ID: TEXT | NULL | eg=["w1088190033@2", "w954986711@1"]
+NAMES: VARIANT | NULL | eg=[{"local":"Langstraat"}, {}]
+ORIGINAL_SOURCE_TAGS: VARIANT | NULL | eg=[{"_relations":"[{\"_id\":\"r14486580@1\",\"_role\":\"from\",\"restriction\":\"no_u_turn\",\"type\":\"restriction\"}]","bicycle":"use_sidepath","foot":"use_sidepath","highway":"secondary","lanes":"1","maxspeed":"50","mofa":"use_sidepath","old_ref":"N839","oneway":"yes","priority_road":"designated","surface":"asphalt"}, {"highway":"footway"}]
+QUADKEY: TEXT | NULL | eg=["120203002033112", "120201202322223"]
+SUBCLASS: TEXT | NULL | eg=["secondary", "footway"]
+WIKIDATA: TEXT | NULL
+
+[TABLES]
+## NETHERLANDS.V_ROAD
+@use: [C1]
+REL_TIER_2_NETWORK: TEXT | NULL
+REL_TIER_3_SYMBOL: TEXT | NULL
+REL_TIER_2_LOCALIZED_TYPE: TEXT | NULL
+REL_TIER_3_NAME: TEXT | NULL
+MAXSPEED: TEXT | NULL | eg=["50", "30"]
+REL_TIER_2_ROUTE: TEXT | NULL
+REL_TIER_1_NAME: TEXT | NULL
+REL_TIER_3_TOLL: TEXT | NULL
+REL_TIER_1_LOCALIZED_TYPE: TEXT | NULL
+REL_TIER_3_WIKIDATA: TEXT | NULL
+IS_COVERED: TEXT | NULL
+REL_TIER_3_LOCALIZED_TYPE: TEXT | NULL
+LENGTH_M: TEXT | NULL | eg=["3.52", "96.37"]
+REL_TIER_3_ROUTE: TEXT | NULL
+SURFACE_AREA_SQ_M: TEXT | NULL
+IS_PEDESTRIAN: TEXT | NULL | eg=["true"]
+REL_TIER_2_REF: TEXT | NULL
+LANES: TEXT | NULL | eg=["1"]
+IS_BRIDGE: TEXT | NULL
+REL_TIER_3_TYPE: TEXT | NULL
+REL_TIER_3_ID: TEXT | NULL
+LEVEL: TEXT | NULL
+REL_TIER_3_NETWORK: TEXT | NULL
+REL_TIER_1_REF: TEXT | NULL
+REL_TIER_2_WIKIDATA: TEXT | NULL
+REL_TIER_2_TYPE: TEXT | NULL
+REL_TIER_3_REF: TEXT | NULL
+IS_ONEWAY: TEXT | NULL | eg=["true"]
+REL_TIER_1_TYPE: TEXT | NULL
+REL_TIER_1_NETWORK: TEXT | NULL
+IS_ABANDONED: TEXT | NULL
+LAYER: TEXT | NULL
+REL_TIER_1_WIKIDATA: TEXT | NULL
+REL_TIER_2_NAME: TEXT | NULL
+REL_TIER_1_ID: TEXT | NULL
+REL_TIER_1_ROUTE: TEXT | NULL
+REL_TIER_2_SYMBOL: TEXT | NULL
+IN_RELATION: TEXT | NULL | eg=["true"]
+SURFACE: TEXT | NULL | eg=["asphalt"]
+REL_TIER_1_SYMBOL: TEXT | NULL
+REL_TIER_2_ID: TEXT | NULL
+IS_TUNNEL: TEXT | NULL
+WIDTH: TEXT | NULL
+
+## NETHERLANDS.V_ADMINISTRATIVE
+@use: [C1]
+RECOGNIZED_BY: TEXT | NULL
+DISPUTED_NAME: TEXT | NULL
+BOUNDARY: TEXT | NULL | eg=["administrative"]
+DISPUTE_SOURCE: TEXT | NULL | eg=["BAG"]
+ADMIN_LEVEL: TEXT | NULL | eg=["10", "8"]
+CLAIMED_BY: TEXT | NULL
+DESIGNATION: TEXT | NULL
+DISPUTED_BY: TEXT | NULL
+CONTROLLED_BY: TEXT | NULL
+BORDER_TYPE: TEXT | NULL
+
+## NETHERLANDS.V_BUILDING
+@use: [C1]
+MIN_HEIGHT_M: TEXT | NULL
+BUILDING_LEVELS: TEXT | NULL
+SHOP: TEXT | NULL
+BUILDING: TEXT | NULL | eg=["yes", "house"]
+SURFACE_AREA_SQ_M: TEXT | NULL | eg=["6.4", "92.2"]
+LANDUSE: TEXT | NULL | eg=["residential:residential"]
+CONTAINS_ADDRESSES: TEXT | NULL | eg=[[{"addr:city":"Heerlen","addr:housenumber":"59","addr:postcode":"6414HE","addr:street":"Navolaan","node":2885689508}], [{"addr:city":"Hapert","addr:housenumber":"5","addr:postcode":"5527BE","addr:street":"Vestdijk","node":2827407991}]]
+HEIGHT_M: TEXT | NULL
+BUILDING_LOCATION: TEXT | NULL
+CONTAINS_ADDR_STREET: TEXT | NULL | eg=[["Navolaan"], ["Vestdijk"]]
+LAYER: TEXT | NULL
+TOURISM: TEXT | NULL
+AMENITY: TEXT | NULL
+CONTAINS_ADDR_POSTCODE: TEXT | NULL | eg=[["6414HE"], ["5527BE"]]

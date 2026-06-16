@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq083",
+  "question": "Can you calculate the daily change in the market value of USDC tokens (address `0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48`) for 2023, based on Ethereum transactions? The change should be computed from minting (input pattern `0x40c10f19%`) and burning (input pattern `0x42966c68%`) operations. For each transaction, minting should be positive and burning negative. Extract the relevant amount from the 'input' field as a hexadecimal, convert it to millions, express it in USD format. Group the results by date and order them in descending order.",
+  "db_id": "CRYPTO",
+  "source_document": "Total_Market_Value_Change.md",
+  "evidence": "Function: `IFMINT(input, 1, -1)` checks if transaction input starts with `0x40c10f19` (mint), returns 1 for mint, -1 for non-mint (burn). Formula: `CAST(CONCAT('0x', LTRIM(SUBSTRING(input, IFMINT(input, 75, 11), 64), '0')) AS FLOAT64) / 1000000` extracts hex from 'input' field (position 75 for mint, 11 for burn), removes leading zeros, converts to float, divides by 1,000,000 for USDC decimals. Format: `USD(...)` wraps sum to display as currency. Alias: `Δ Total Market Value` for net daily change. Group by date, order descending."
+}

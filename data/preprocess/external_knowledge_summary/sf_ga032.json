@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_ga032",
+  "question": "Can you generate the navigation flow for user with pseudo_id '1362228.4966015575' on January 28th 2021, showing only the page_view events? Please connect the page titles with '>>' between each step, convert product detail pages to 'PDP' and product listing pages to 'PLP' based on the URL structure, and merge adjacent identical pages so they only appear once in the sequence. I need to understand how this specific user navigated through our website on that day.",
+  "db_id": "GA4",
+  "source_document": "ga4_page_category.md",
+  "evidence": "Page classification: Product Listing Pages (PLPs) and Product Detail Pages (PDPs). PLP criteria: URL has ≥5 segments; 4th/5th segment contains no '+' sign; 4th/5th segment includes category names (Accessories, Apparel, Brands, Campus Collection, Drinkware, Electronics, Google Redesign, Lifestyle, Nest, New 2015 Logo, Notebooks Journals, Office, Shop by Brand, Small Goods, Stationery, Wearables). PDP criteria: URL has ≥5 segments; last segment contains '+' sign; 4th/5th segment includes same category names. Classification used for analyzing user behavior and navigation pathways."
+}

@@ -1,0 +1,12 @@
+[COMPONENTS]
+@C1:aperture_value,camera_datetime,datetime_repaired,detected_circle,equatorial_mount,exposure_time,height,image_bucket,image_datetime,image_type,is_mobile,lat,lon,make,model,state,storage_uri,totality,upload_session_id,uploaded_date,user,vision_labels,width
+
+[TABLES]
+Format: schema.table|components|columns
+ECLIPSE_MEGAMOVIE.PHOTOS_V_0_3|@C1|jpeg_storage_uri,id
+ECLIPSE_MEGAMOVIE.PHOTOS_V_0_1|@C1|id
+ECLIPSE_MEGAMOVIE.ASTROMETRY_INDEX_V_0_4||id,X,Y
+ECLIPSE_MEGAMOVIE.ASTROMETRY_RDLS_V_0_4||id,DEC,RA
+ECLIPSE_MEGAMOVIE.ASTROMETRY_MATCH_V_0_4||CRPIX,NINDEX,FIELDNAME,NVERIFIED,STARS,CD,FIELDOBJS,CODEERR,LOGODDS,NDISTRACT,NCONFLICT,QTRIED,WORSTLOGODDS,NAGREE,QUADXYZ,WCS_VALID,NFIELD,NMATCH,TIMEUSED,CENTERXYZ,CRVAL,RADIUS,QSCALEOK,QUAD,QUADPIX,PARITY,HEALPIX,HPNSIDE,DIMQUADS,id,QMATCHED,IDS,FIELDID,QPEERS,INDEXID,FIELDNUM
+ECLIPSE_MEGAMOVIE.ASTROMETRY_CORR_V_0_4||id,field_dec,field_x,BACKGROUND,index_y,index_ra,index_id,FLUX,field_id,field_y,index_x,match_weight,field_ra,index_dec
+ECLIPSE_MEGAMOVIE.PHOTOS_V_0_2|@C1|id

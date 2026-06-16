@@ -1,0 +1,46 @@
+[STANDALONE]
+## GITHUB_REPOS.LANGUAGES
+repo_name: TEXT | NULL
+language: VARIANT | NULL
+
+## GITHUB_REPOS.LICENSES
+repo_name: TEXT | NULL
+license: TEXT | NULL
+
+## GITHUB_REPOS.SAMPLE_COMMITS
+parent: VARIANT | NULL
+committer: VARIANT | NULL
+difference: VARIANT | NULL
+message: TEXT | NULL
+author: VARIANT | NULL
+difference_truncated: BOOLEAN | NULL
+subject: TEXT | NULL
+trailer: VARIANT | NULL
+encoding: TEXT | NULL
+commit: TEXT | NULL
+repo_name: TEXT | NULL
+tree: TEXT | NULL
+
+## GITHUB_REPOS.SAMPLE_CONTENTS
+size: NUMBER | NULL
+binary: BOOLEAN | NULL
+sample_symlink_target: TEXT | NULL
+copies: NUMBER | NULL
+sample_mode: NUMBER | NULL
+sample_path: TEXT | NULL
+content: TEXT | NULL
+sample_ref: TEXT | NULL
+id: TEXT | NULL
+sample_repo_name: TEXT | NULL
+
+## GITHUB_REPOS.SAMPLE_FILES
+symlink_target: TEXT | NULL
+id: TEXT | NULL
+mode: NUMBER | NULL
+path: TEXT | NULL
+repo_name: TEXT | NULL
+ref: TEXT | NULL
+
+## GITHUB_REPOS.SAMPLE_REPOS
+watch_count: NUMBER | NULL
+repo_name: TEXT | NULL

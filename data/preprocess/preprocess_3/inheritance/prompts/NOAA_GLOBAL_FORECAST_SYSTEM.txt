@@ -1,0 +1,72 @@
+[TEMPLATES]
+<T3>
+visible: BOOLEAN | NULL
+osm_timestamp: NUMBER | NULL
+id: NUMBER | NULL
+username: TEXT | NULL
+all_tags: VARIANT | NULL
+geometry: BINARY | NULL
+members: VARIANT | NULL
+changeset: NUMBER | NULL
+version: NUMBER | NULL
+@Tables: [GEO_OPENSTREETMAP.HISTORY_RELATIONS,GEO_OPENSTREETMAP.PLANET_RELATIONS]
+
+<T5>
+all_tags: VARIANT | NULL
+changeset: NUMBER | NULL
+longitude: NUMBER | NULL
+username: TEXT | NULL
+latitude: NUMBER | NULL
+id: NUMBER | NULL
+osm_timestamp: NUMBER | NULL
+geometry: BINARY | NULL
+visible: BOOLEAN | NULL
+version: NUMBER | NULL
+@Tables: [GEO_OPENSTREETMAP.HISTORY_NODES,GEO_OPENSTREETMAP.PLANET_NODES]
+
+<T7>
+geometry: BINARY | NULL
+osm_timestamp: NUMBER | NULL
+osm_way_id: NUMBER | NULL
+osm_id: NUMBER | NULL
+osm_version: NUMBER | NULL
+all_tags: VARIANT | NULL
+@Tables: [GEO_OPENSTREETMAP.PLANET_FEATURES_POINTS]
+
+[DERIVED]
+<T4> extends <T7>
+layer_code: NUMBER | NULL
+layer_class: TEXT | NULL
+layer_name: TEXT | NULL
+gdal_type: TEXT | NULL
+@Tables: [GEO_OPENSTREETMAP.HISTORY_LAYERS,GEO_OPENSTREETMAP.PLANET_LAYERS]
+
+<T6> extends <T7>
+feature_type: TEXT | NULL
+@Tables: [GEO_OPENSTREETMAP.PLANET_FEATURES]
+
+[STANDALONE]
+## GEO_OPENSTREETMAP.HISTORY_CHANGESETS
+osm_timestamp_min: NUMBER | Minimum timestamp of objects contained in this changeset.
+ways: VARIANT | Ways that are part of this way
+id: NUMBER | Changeset ID.
+osm_timestamp_max: NUMBER | Maximum timestamp of objects contained in this changeset.
+relations: VARIANT | Relations that are part of this way
+nodes: VARIANT | Nodes that are part of this way
+
+## GEO_OPENSTREETMAP.PLANET_WAYS
+geometry: BINARY | NULL
+version: NUMBER | NULL
+visible: BOOLEAN | NULL
+username: TEXT | NULL
+all_tags: VARIANT | NULL
+osm_timestamp: NUMBER | NULL
+nodes: VARIANT | NULL
+id: NUMBER | NULL
+changeset: NUMBER | NULL
+
+## NOAA_GLOBAL_FORECAST_SYSTEM.NOAA_GFS0P25
+creation_time: NUMBER | NULL
+geography: BINARY | NULL
+forecast: VARIANT | NULL
+geography_polygon: BINARY | NULL

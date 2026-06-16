@@ -1,0 +1,931 @@
+[TABLES]
+## NEW_YORK_TREES.TREE_SPECIES
+location_tolerances: TEXT | NULL
+comments: TEXT | NULL
+environmental_tolerances: TEXT | NULL
+tree_size: TEXT | NULL
+notes_suggested_cultivars: TEXT | NULL
+species_common_name: TEXT | NULL
+growth_rate: TEXT | NULL
+fall_color: TEXT | NULL
+form: TEXT | NULL
+species_scientific_name: TEXT | NULL
+
+## NEW_YORK_TREES.TREE_CENSUS_2015
+state: TEXT | All features given value 'New York'
+zip_city: TEXT | City as derived from zipcode. This is often (but not always) the same as borough.
+nta_name: TEXT | This is the NTA name corresponding to the neighborhood tabulation area from the 2010 US Census that the tree point falls into.
+address: TEXT | Nearest estimated address to tree
+trunk_wire: TEXT | Indicates the presence of a trunk problem caused by wires or rope wrapped around the trunk
+borocode: NUMBER | Code for borough in which tree point is located
+spc_common: TEXT | Common name for species, e.g. "red maple"
+zipcode: NUMBER | Five-digit zipcode in which tree is located
+root_grate: TEXT | Indicates the presence of a root problem caused by metal grates in tree bed
+longitude: FLOAT | Longitude of point, in decimal degrees
+health: TEXT | Indicates the user's perception of tree health.
+sidewalk: TEXT | Indicates whether one of the sidewalk flags immediately adjacent to the tree was damaged, cracked, or lifted. Not recorded for dead trees and stumps.
+x_sp: FLOAT | X coordinate, in state plane. Units are feet.
+latitude: FLOAT | Latitude of point, in decimal degrees
+user_type: TEXT | This field describes the category of user who collected this tree point's data.
+root_other: TEXT | Indicates the presence of other root problems
+stump_diam: NUMBER | Diameter of stump measured through the center, rounded to the nearest inch.
+st_senate: NUMBER | State Senate District in which tree point is located
+boro_ct: NUMBER | This is the boro_ct identifyer for the census tract that the tree point falls into.
+boroname: TEXT | Name of borough in which tree point is located
+root_stone: TEXT | Indicates the presence of a root problem caused by paving stones in tree bed
+cncldist: NUMBER | Council district in which tree point is located
+trnk_other: TEXT | Indicates the presence of other trunk problems
+brch_light: TEXT | Indicates the presence of a branch problem caused by lights (usually string lights) or wires in the branches
+brch_other: TEXT | Indicates the presence of other branch problems
+y_sp: FLOAT | Y coordinate, in state plane. Units are feet
+brch_shoe: TEXT | Indicates the presence of a branch problem caused by sneakers in the branches
+tree_id: NUMBER | Unique identification number for each tree point
+created_at: DATE | The date tree points were collected in the census software
+problems: TEXT | NULL
+status: TEXT | Indicates whether the tree is alive, standing dead, or a stump.
+nta: TEXT | This is the NTA Code corresponding to the neighborhood tabulation area from the 2010 US Census that the tree point falls into.
+curb_loc: TEXT | Location of tree bed in relationship to the curb; trees are either along the curb (OnCurb) or offset from the curb (OffsetFromCurb)
+spc_latin: TEXT | Scientific name for species, e.g. "Acer rubrum"
+cb_num: NUMBER | Community board in which tree point is located
+guards: TEXT | Indicates whether a guard is present, and if the user felt it was a helpful or harmful guard. Not recorded for dead trees and stumps
+block_id: NUMBER | Identifier linking each tree to the block in the blockface table/shapefile that it is mapped on.
+trnk_light: TEXT | Indicates the presence of a trunk problem caused by lighting installed on the tree
+steward: TEXT | Indicates the number of unique signs of stewardship observed for this tree. Not recorded for stumps or dead trees.
+st_assem: NUMBER | State Assembly District in which tree point is located
+tree_dbh: NUMBER | Diameter of the tree, measured at approximately 54" / 137cm above the ground.
+
+## NEW_YORK_TREES.TREE_CENSUS_2005
+spc_common: TEXT | The common name of the species.
+sidw_crack: BOOLEAN | Cracked sidewalk present
+location_1: TEXT | NULL
+spc_latin: TEXT | The scientific name of the species.
+horz_grate: BOOLEAN | Tree grates present
+wire_2nd: BOOLEAN | Indicates the presence of secondary wires
+boro_ct: NUMBER | This is the boro_ct identifier for the census tract that the tree point falls into.
+horz_plant: BOOLEAN | Plantings present
+zip_city: TEXT | City, as derived from the zipcode
+inf_lights: BOOLEAN | Tree lights present
+bin: NUMBER | NULL
+objectid: NUMBER | NULL
+inf_wires: BOOLEAN | Choking wires present
+census_tract: NUMBER | NULL
+horz_blck: BOOLEAN | Block pavers present
+boroname: TEXT | Borough tree is in, full text
+wire_prime: BOOLEAN | Indicates the presence of primary wires
+state: TEXT | NULL
+st_senate: NUMBER | State Senate District tree point is in.
+pit_type: TEXT | NULL
+tree_loc: TEXT | Establishes the location of the tree in relation to the address provided
+inf_other: BOOLEAN | Other infrastructure conflicts present
+nta_name: TEXT | Nta name for the neighborhood tabulation area the tree point is in
+vert_pgrd: BOOLEAN | Perimeter guard present
+x_sp: NUMBER | X field
+vert_other: BOOLEAN | Other Vertical Treatment Present
+tree_dbh: NUMBER | The diameter of the tree in whole inches, measured at breast height. (4.5 feet from the ground.)
+st_assem: NUMBER | State Assembly District tree point is in.
+soil_lvl: TEXT | NULL
+inf_shoes: BOOLEAN | Sneakers present
+cen_year: NUMBER | This is the year the tree was inventoried in. Data collection for the 2005 census spanned multiple seasons. Data is in YYYY format.
+wire_htap: BOOLEAN | Indicates the presence of house tap wires
+inf_guard: BOOLEAN | Choking guard or grate present
+inf_canopy: BOOLEAN | Canopy debris present
+cncldist: NUMBER | New York City Council District tree point is in.
+bbl: NUMBER | NULL
+y_sp: NUMBER | y field
+zipcode: TEXT | 2005 zipcode that the tree falls in.
+vert_wall: BOOLEAN | Walled tree well present
+cb_num: NUMBER | Community Board that the tree falls in.
+longitude: FLOAT | NULL
+trunk_dmg: TEXT | Describes specific damage or wounds found on the trunk
+wire_other: BOOLEAN | Indicates the presence of other wires
+nta: TEXT | nta code for the neighborhood tabulation area the tree point is in, from the 2010 census
+inf_outlet: BOOLEAN | Electrical outlet present
+latitude: FLOAT | NULL
+inf_paving: BOOLEAN | Close paving present
+address: TEXT | NULL
+status: TEXT | Excellent: full, well balanced crown and limb structure; leaves normal size color; no dead or broken branches; trunk solid; bark intact. Good: crown uneven or misshapen; some mechanical damage to bark or trunk; some signs of insects or disease; leaves somewhat below normal size and quantity; some dead or broken branches (less than half of the tree). Poor: large dead limbs with over one- half of the tree already dead or removed; large cavities; drastic deformities; leaves significantly below normal size and quantity; severe insect or disease damage. Dead: dead tree; leaves absent; twigs brittle. Shaft: all branches removed; trunk left standing; sprouts may or may not be evident. Stump: stump shorter than breast height; leaves entirely absent or present only on stump sprouts Empty pit: Pit contains exposed soil and no tree
+vert_tgrd: BOOLEAN | Tall guard present
+horz_other: BOOLEAN | Other horizontal treatment present
+objectid_1: NUMBER | NULL
+sidw_raise: BOOLEAN | Raised sidewalk present
+borocode: NUMBER | Borough tree is in, using a one-digit borough code: 1 – Manhattan, 2 – Bronx, 3 – Brooklyn, 4 – Queens, 5 – Staten Island
+
+## NEW_YORK_TREES.TREE_CENSUS_1995
+species: TEXT | Species of the tree using a four-letter code, comprised of the first two letters of the genus followed by the first two letters of the species.
+sidewalk_condition: TEXT | Whether the tree roots have lifted the adjacent sidewalk.
+segmentid: NUMBER | LION SegmentID geocoded to the address using Geosupport 11.4
+censustract_2010: TEXT | 2010 Census Tract geocoded to the address using Geosupport 11.4
+zip_original: NUMBER | The zip code originally geocoded to the address using LION 02A
+nta_2010: TEXT | Neighborhood Tabulation Area geocoded to the address using Geosupport 11.4
+site: TEXT | This field clarifies the position relative to the address for trees not located in the front of buildings.
+house_number: TEXT | Numerical portion of the address.
+spc_latin: TEXT | This is the latin/scientific name for the species of this tree.
+address: TEXT | Address of the tree.
+longitude: FLOAT | Longitude of point in decimal degrees as geocoded using LION 02A
+spc_common: TEXT | This is the common name for the species of this tree.
+wires: TEXT | Whether the tree is located under utility wires
+location: TEXT | NULL
+censusblock_2010: TEXT | 2010 Census Block geocoded to the address using Geosupport 11.4
+borough: TEXT | Borough where tree was recorded.
+zip_new: NUMBER | Zip Code geocoded to the address using Geosupport 11.4
+recordid: NUMBER | A unique identifier for each record in the table. Does not correspond to other datasets or identify the tree itself.
+status: TEXT | Overall tree condition.
+cb_new: NUMBER | Community Board geocoded to the address using Geosupport 11.4
+support_structure: TEXT | Whether the tree has support structures installed.
+y: FLOAT | Y coordinate of point in the NAD_1983_StatePlane_New_York_Long_Island_FIPS_3104_Feet coordinate system, geocoded using LION 02A
+diameter: NUMBER | Diameter of the tree as measured at approximately 4.5 feet from the ground.
+street: TEXT | Street where address for tree is located.
+cb_original: NUMBER | The community board originally geocoded to the address using LION 02A
+latitude: FLOAT | Latitude of point in decimal degrees as geocoded using LION 02A
+x: FLOAT | X coordinate of point in the NAD_1983_StatePlane_New_York_Long_Island_FIPS_3104_Feet coordinate system, geocoded using LION 02A
+
+## NEW_YORK_CITIBIKE.CITIBIKE_TRIPS
+start_station_longitude: FLOAT | Start Station Longitude
+customer_plan: TEXT | The name of the plan that determines the rate charged for the trip
+birth_year: NUMBER | Year of Birth
+end_station_name: TEXT | End Station Name
+usertype: TEXT | User Type (Customer = 24-hour pass or 7-day pass user, Subscriber = Annual Member)
+gender: TEXT | Gender (unknown, male, female)
+bikeid: NUMBER | Bike ID
+starttime: NUMBER | Start Time, in NYC local time.
+stoptime: NUMBER | Stop Time, in NYC local time.
+start_station_id: NUMBER | Start Station ID
+end_station_latitude: FLOAT | End Station Latitude
+end_station_longitude: FLOAT | End Station Longitude
+start_station_name: TEXT | Start Station Name
+start_station_latitude: FLOAT | Start Station Latitude
+tripduration: NUMBER | Trip Duration (in seconds)
+end_station_id: NUMBER | End Station ID
+
+## NEW_YORK_CITIBIKE.CITIBIKE_STATIONS
+latitude: FLOAT | The latitude of station. The field value must be a valid WGS 84 latitude in decimal degrees format.
+capacity: NUMBER | ANumber of total docking points installed at this station, both available and unavailable.
+rental_methods: TEXT | Array of enumerables containing the payment methods accepted at this station.
+is_renting: BOOLEAN | Is the station currently renting bikes?
+num_bikes_disabled: NUMBER | Number of disabled bikes at the station.
+station_id: TEXT | Unique identifier of a station.
+num_docks_available: NUMBER | Number of docks accepting bike returns.
+eightd_has_available_keys: BOOLEAN | NULL
+region_id: NUMBER | ID of the region where station is located.
+longitude: FLOAT | The longitude of station. The field value must be a valid WGS 84 latitude in decimal degrees format.
+eightd_has_key_dispenser: BOOLEAN | NULL
+num_bikes_available: NUMBER | Number of bikes available for rental.
+is_installed: BOOLEAN | Is the station currently on the street?
+name: TEXT | Public name of the station.
+short_name: TEXT | Short name or other type of identifier, as used by the data publisher.
+last_reported: NUMBER | Timestamp indicating the last time this station reported its status to the backend, in NYC local time.
+is_returning: BOOLEAN | Is the station accepting bike returns?
+num_docks_disabled: NUMBER | Number of empty but disabled dock points at the station.
+
+## NEW_YORK_SUBWAY.STATIONS
+station_id: TEXT | NULL
+station_geom: BINARY | NULL
+borough_name: TEXT | NULL
+structure: TEXT | NULL
+division: TEXT | NULL
+complex_id: TEXT | NULL
+north_direction_label: TEXT | NULL
+daytime_routes: TEXT | NULL
+station_name: TEXT | NULL
+line: TEXT | NULL
+gtfs_stop_id: TEXT | NULL
+south_direction_label: TEXT | NULL
+station_lon: FLOAT | NULL
+station_lat: FLOAT | NULL
+
+## NEW_YORK_SUBWAY.STOP_TIMES
+stop_sequence: TEXT | Identifies the order of the stops for a particular trip. The values for stop_sequence must increase throughout the trip but do not need to be consecutive.
+trip_id: TEXT | Identifies a trip. Multiple trips can have the same stop
+arrival_time: TEXT | Specifies the scheduled arrival time at a specific stop for a specific trip on a route.
+departure_time: TEXT | Specifies the scheduled departure time at a specific stop for a specific trip on a route.
+stop_id: TEXT | Identifies the serviced stop. Multiple routes can use the same stop.
+pickup_type: TEXT | NULL
+shape_dist_traveled: TEXT | NULL
+stop_headsign: TEXT | NULL
+dropoff_type: TEXT | "Indicates whether riders are dropped off at a stop as part of the normal schedule or whether a drop off at the stop isn't available. Available options:  -  regular -  none -  phone (indicates must phone agency to arrange drop off) -  driver (indicates must coordinate with driver to arrange drop off)"
+
+## NEW_YORK_SUBWAY.ROUTES
+route_long_name: TEXT | Contains the full name of a route. This name is generally more descriptive than the name from route_short_name and often includes the route's destination or stop.
+route_describe: TEXT | NULL
+route_type: TEXT | "Describes the type of transportation used on a route. The following are valid values for this field:  -  light_rail: Streetcar or light rail. Used for any light rail or street-level system within a metropolitan area. -  subway: Subway or metro. Used for any underground rail system within a metropolitan area. -  rail: Used for intercity or long-distance travel. -  bus: Used for short- and long-distance bus routes. -  ferry: Used for short- and long-distance boat service. -  cable_car: Used for street-level cable cars where the cable runs beneath the car. -  tram: Gondola or suspended cable car. Typically used for aerial cable cars where the car is suspended from the cable. -  funicular: Used for any rail system that moves on steep inclines with a cable traction system."
+route_short_name: TEXT | Contains the short name of a route. This is a short, abstract identifier like 32, 100X, or Green that riders use to identify a route, but which doesn't give any indication of what places the route serves.
+route_id: TEXT | Unique identifier for each route. A single route will have multiple trips
+
+## NEW_YORK_SUBWAY.TRIPS
+shape_id: TEXT | Unique identifier for the geospatial shape that describes the vehicle travel for a trip along individual points. Use to JOIN with the shapes available in the shapes table
+trip_headsign: TEXT | Contains the text that appears on signage that identifies the trip's destination to riders. Use this field to distinguish between different patterns of service on the same route.
+direction_id: TEXT | NULL
+route_id: TEXT | Unique identifier for each route. A single route will have multiple trips
+service_id: TEXT | NULL
+trip_id: TEXT | Unique identifier for each trip
+block_id: TEXT | Identifies the block to which the trip belongs. A block consists of a single trip or many sequential trips made with the same vehicle. The trips are grouped into a block by the use of a shared service day andblock_id. A block_id can include trips with different service days, which then makes distinct blocks. For more details, see: https://developers.google.com/transit/gtfs/reference/#example-showing-blocks-and-service-day
+
+## NEW_YORK_SUBWAY.STATION_COMPLEXES
+complex_name: TEXT | NULL
+complex_id: TEXT | NULL
+
+## NEW_YORK_SUBWAY.STATION_ENTRANCES
+station_lat: FLOAT | NULL
+vending: BOOLEAN | NULL
+route_2: TEXT | NULL
+exit_only: BOOLEAN | NULL
+north_south_street: TEXT | NULL
+route_8: TEXT | NULL
+free_crossover: BOOLEAN | NULL
+staff_hours: TEXT | NULL
+route_5: TEXT | NULL
+staff: TEXT | NULL
+station_name: TEXT | NULL
+route_9: TEXT | NULL
+route_10: TEXT | NULL
+route_11: TEXT | NULL
+entrance_type: TEXT | NULL
+entrance_lat: FLOAT | NULL
+station_lon: FLOAT | NULL
+entrance_lon: FLOAT | NULL
+line: TEXT | NULL
+corner: TEXT | NULL
+route_7: TEXT | NULL
+division: TEXT | NULL
+east_west_street: TEXT | NULL
+route_1: TEXT | NULL
+entry: BOOLEAN | NULL
+route_6: TEXT | NULL
+route_4: TEXT | NULL
+route_3: TEXT | NULL
+ada_compliant: BOOLEAN | NULL
+station_geom: BINARY | NULL
+ada_notes: TEXT | NULL
+entrance_geom: BINARY | NULL
+
+## NEW_YORK_SUBWAY.GEO_NYC_BOROUGH_BOUNDARIES
+borough_code: TEXT | NULL
+borough_geom: BINARY | NULL
+borough_len: FLOAT | NULL
+borough_area: FLOAT | NULL
+borough_name: TEXT | NULL
+
+## NEW_YORK_SUBWAY.SUBWAY_RIDERSHIP_2013_PRESENT
+station_name: TEXT | NULL
+ridership_2016: NUMBER | NULL
+change_2018_percent: FLOAT | NULL
+ridership_2017: NUMBER | NULL
+ridership_2013: NUMBER | NULL
+ridership_2018: NUMBER | NULL
+ridership_2015: NUMBER | NULL
+ridership_2014: NUMBER | NULL
+change_2018_raw: NUMBER | NULL
+routes: TEXT | NULL
+rank_ridership_2018: NUMBER | NULL
+
+## NEW_YORK_MV_COLLISIONS.NYPD_MV_COLLISIONS
+vehicle_type_code_3: TEXT | NULL
+on_street_name: TEXT | NULL
+number_of_pedestrians_killed: NUMBER | NULL
+number_of_persons_killed: NUMBER | NULL
+off_street_name: TEXT | NULL
+vehicle_type_code1: TEXT | NULL
+contributing_factor_vehicle_5: TEXT | NULL
+number_of_cyclist_killed: NUMBER | NULL
+timestamp: NUMBER | NULL
+number_of_motorist_killed: NUMBER | NULL
+cross_street_name: TEXT | NULL
+number_of_persons_injured: NUMBER | NULL
+vehicle_type_code_5: TEXT | NULL
+borough: TEXT | NULL
+contributing_factor_vehicle_3: TEXT | NULL
+contributing_factor_vehicle_4: TEXT | NULL
+number_of_cyclist_injured: NUMBER | NULL
+number_of_pedestrians_injured: NUMBER | NULL
+longitude: FLOAT | NULL
+vehicle_type_code_4: TEXT | NULL
+contributing_factor_vehicle_2: TEXT | NULL
+zip_code: NUMBER | NULL
+latitude: FLOAT | NULL
+vehicle_type_code2: TEXT | NULL
+number_of_motorist_injured: NUMBER | NULL
+unique_key: NUMBER | NULL
+location: TEXT | NULL
+contributing_factor_vehicle_1: TEXT | NULL
+
+## NEW_YORK_311._311_SERVICE_REQUESTS
+location_type: TEXT | NULL
+intersection_street_2: TEXT | NULL
+resolution_description: TEXT | NULL
+community_board: TEXT | NULL
+status: TEXT | Service request status. Duplicate statuses indicate that issue had previously been reported recently.
+park_facility_name: TEXT | NULL
+created_date: NUMBER | Date Service request was created.
+bridge_highway_segment: TEXT | NULL
+location: TEXT | Service request location latitude and longitude coordinates.
+latitude: FLOAT | Service request location latitude coordinate.
+landmark: TEXT | NULL
+incident_address: TEXT | Service location of Service request.
+vehicle_type: TEXT | NULL
+due_date: NUMBER | NULL
+taxi_company_borough: TEXT | NULL
+complaint_type: TEXT | NULL
+road_ramp: TEXT | NULL
+descriptor: TEXT | NULL
+street_name: TEXT | Parsed location information. Street name.
+agency: TEXT | NULL
+cross_street_2: TEXT | NULL
+resolution_action_updated_date: NUMBER | NULL
+open_data_channel_type: TEXT | NULL
+agency_name: TEXT | NULL
+x_coordinate: NUMBER | NULL
+closed_date: NUMBER | NULL
+incident_zip: TEXT | Parsed location information. Zip code.
+longitude: FLOAT | Service request location longitude coordinate.
+y_coordinate: NUMBER | NULL
+borough: TEXT | NULL
+unique_key: NUMBER | The service request tracking number.
+bridge_highway_name: TEXT | NULL
+city: TEXT | Parsed location information. City.
+intersection_street_1: TEXT | NULL
+bbl: NUMBER | NULL
+address_type: TEXT | NULL
+bridge_highway_direction: TEXT | NULL
+park_borough: TEXT | NULL
+cross_street_1: TEXT | NULL
+taxi_pickup_location: TEXT | NULL
+facility_type: TEXT | NULL
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2015
+airport_fee: NUMBER | NULL
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+data_file_month: NUMBER | Datafile timestamp month value
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+data_file_year: NUMBER | Datafile timestamp year value
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2016
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+data_file_year: NUMBER | Datafile timestamp year value
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+ehail_fee: NUMBER | NULL
+time_between_service: NUMBER | NULL
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+airport_fee: NUMBER | NULL
+distance_between_service: NUMBER | NULL
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+data_file_month: NUMBER | Datafile timestamp month value
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2014
+data_file_month: NUMBER | Datafile timestamp month value
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+time_between_service: NUMBER | NULL
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+airport_fee: NUMBER | NULL
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+data_file_year: NUMBER | Datafile timestamp year value
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+ehail_fee: NUMBER | NULL
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+distance_between_service: NUMBER | NULL
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2020
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+airport_fee: NUMBER | NULL
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+data_file_month: NUMBER | Datafile timestamp month value
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+data_file_year: NUMBER | Datafile timestamp year value
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2013
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+airport_fee: NUMBER | NULL
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+data_file_year: NUMBER | Datafile timestamp year value
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+data_file_month: NUMBER | Datafile timestamp month value
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2017
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+data_file_month: NUMBER | Datafile timestamp month value
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+distance_between_service: NUMBER | NULL
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+airport_fee: NUMBER | NULL
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+data_file_year: NUMBER | Datafile timestamp year value
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+ehail_fee: NUMBER | NULL
+time_between_service: NUMBER | NULL
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2021
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+data_file_month: NUMBER | Datafile timestamp month value
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+ehail_fee: NUMBER | NULL
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+data_file_year: NUMBER | Datafile timestamp year value
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+airport_fee: NUMBER | NULL
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+distance_between_service: NUMBER | NULL
+time_between_service: NUMBER | NULL
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2021
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+data_file_year: NUMBER | Datafile timestamp year value
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+airport_fee: NUMBER | NULL
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+data_file_month: NUMBER | Datafile timestamp month value
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2015
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+distance_between_service: NUMBER | NULL
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+airport_fee: NUMBER | NULL
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+data_file_month: NUMBER | Datafile timestamp month value
+ehail_fee: NUMBER | NULL
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+time_between_service: NUMBER | NULL
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+data_file_year: NUMBER | Datafile timestamp year value
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2018
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+data_file_year: NUMBER | Datafile timestamp year value
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+airport_fee: NUMBER | NULL
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+data_file_month: NUMBER | Datafile timestamp month value
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2019
+data_file_month: NUMBER | Datafile timestamp month value
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+airport_fee: NUMBER | NULL
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+data_file_year: NUMBER | Datafile timestamp year value
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2019
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+data_file_year: NUMBER | Datafile timestamp year value
+ehail_fee: NUMBER | NULL
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+data_file_month: NUMBER | Datafile timestamp month value
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+distance_between_service: NUMBER | NULL
+time_between_service: NUMBER | NULL
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+airport_fee: NUMBER | NULL
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2022
+data_file_year: NUMBER | Datafile timestamp year value
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+airport_fee: NUMBER | NULL
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+data_file_month: NUMBER | Datafile timestamp month value
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2016
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+airport_fee: NUMBER | NULL
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+data_file_month: NUMBER | Datafile timestamp month value
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+data_file_year: NUMBER | Datafile timestamp year value
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2022
+data_file_year: NUMBER | Datafile timestamp year value
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+time_between_service: NUMBER | NULL
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+ehail_fee: NUMBER | NULL
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+distance_between_service: NUMBER | NULL
+data_file_month: NUMBER | Datafile timestamp month value
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+airport_fee: NUMBER | NULL
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2018
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+distance_between_service: NUMBER | NULL
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+data_file_month: NUMBER | Datafile timestamp month value
+ehail_fee: NUMBER | NULL
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+time_between_service: NUMBER | NULL
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+airport_fee: NUMBER | NULL
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+data_file_year: NUMBER | Datafile timestamp year value
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2020
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+time_between_service: NUMBER | NULL
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+data_file_year: NUMBER | Datafile timestamp year value
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+data_file_month: NUMBER | Datafile timestamp month value
+ehail_fee: NUMBER | NULL
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+airport_fee: NUMBER | NULL
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+distance_between_service: NUMBER | NULL
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2011
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+data_file_year: NUMBER | Datafile timestamp year value
+airport_fee: NUMBER | NULL
+data_file_month: NUMBER | Datafile timestamp month value
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2017
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+data_file_month: NUMBER | Datafile timestamp month value
+data_file_year: NUMBER | Datafile timestamp year value
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+airport_fee: NUMBER | NULL
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+
+## NEW_YORK_TAXI_TRIPS.TLC_FHV_TRIPS_2015
+zone: TEXT | This is Pickup zone
+dispatching_base_num: TEXT | The TLC Base License Number of the base that dispatched the trip.
+location_id: NUMBER | The TLC taxi zone of the trip pick-up
+pickup_datetime: NUMBER | The date and time of the trip pick-up.
+service_zone: TEXT | This is Pickup service_zone
+borough: TEXT | This is Pickup borough
+
+## NEW_YORK_TAXI_TRIPS.TLC_FHV_TRIPS_2017
+pickup_datetime: NUMBER | The date and time of the trip pick-up.
+location_id: NUMBER | The TLC taxi zone of the trip pick-up
+dropoff_datetime: NUMBER | NULL
+dropoff_service_zone: TEXT | NULL
+dropoff_location_id: NUMBER | NULL
+dropoff_zone: TEXT | NULL
+service_zone: TEXT | This is Pickup service_zone
+zone: TEXT | This is Pickup zone
+borough: TEXT | This is Pickup borough
+dispatching_base_num: TEXT | The TLC Base License Number of the base that dispatched the trip.
+dropoff_borough: TEXT | NULL
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2012
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+data_file_year: NUMBER | Datafile timestamp year value
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+airport_fee: NUMBER | NULL
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+data_file_month: NUMBER | Datafile timestamp month value
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+
+## NEW_YORK_TAXI_TRIPS.TLC_FHV_TRIPS_2016
+service_zone: TEXT | This is Pickup service_zone
+borough: TEXT | This is Pickup borough
+dispatching_base_num: TEXT | The TLC Base License Number of the base that dispatched the trip.
+pickup_datetime: NUMBER | The date and time of the trip pick-up.
+location_id: NUMBER | The TLC taxi zone of the trip pick-up
+zone: TEXT | This is Pickup zone
+
+## NEW_YORK_TAXI_TRIPS.TLC_GREEN_TRIPS_2023
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+data_file_year: NUMBER | Datafile timestamp year value
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+distance_between_service: NUMBER | NULL
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+ehail_fee: NUMBER | NULL
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+time_between_service: NUMBER | NULL
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+trip_type: TEXT | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+data_file_month: NUMBER | Datafile timestamp month value
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2023
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+data_file_year: NUMBER | Datafile timestamp year value
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+data_file_month: NUMBER | Datafile timestamp month value
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+
+## NEW_YORK_TAXI_TRIPS.TLC_YELLOW_TRIPS_2014
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc.
+fare_amount: NUMBER | The time-and-distance fare calculated by the meter
+dropoff_location_id: TEXT | TLC Taxi Zone in which the taximeter was disengaged
+tip_amount: NUMBER | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+extra: NUMBER | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+total_amount: NUMBER | The total amount charged to passengers. Does not include cash tips.
+trip_distance: NUMBER | The elapsed trip distance in miles reported by the taximeter.
+data_file_year: NUMBER | Datafile timestamp year value
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+airport_fee: NUMBER | NULL
+tolls_amount: NUMBER | Total amount of all tolls paid in trip.
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+data_file_month: NUMBER | Datafile timestamp month value
+imp_surcharge: NUMBER | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+mta_tax: NUMBER | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+pickup_location_id: TEXT | TLC Taxi Zone in which the taximeter was engaged
+rate_code: TEXT | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+
+## NEW_YORK_TAXI_TRIPS.TAXI_ZONE_GEOM
+zone_name: TEXT | Full text name of the taxi zone
+borough: TEXT | Borough containing the taxi zone
+zone_id: TEXT | Unique ID number of each taxi zone. Corresponds with the pickup_location_id and dropoff_location_id in each of the trips tables
+zone_geom: BINARY | Geometric outline that defines the taxi zone suitable for GIS analysis.

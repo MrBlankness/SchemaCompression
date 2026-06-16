@@ -1,0 +1,14 @@
+[COMPONENTS]
+@C1
+gender: TEXT | Sex (M=male or F=female)
+name: TEXT | Given name of a person at birth
+number: NUMBER | Number of occurrences of the name
+state: TEXT | 2-digit state code
+year: NUMBER | 4-digit year of birth
+
+[TABLES]
+## USA_NAMES.USA_1910_CURRENT
+@use: [C1]
+
+## USA_NAMES.USA_1910_2013
+@use: [C1]

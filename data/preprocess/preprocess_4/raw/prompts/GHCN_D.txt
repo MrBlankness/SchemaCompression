@@ -1,0 +1,2673 @@
+[TABLES]
+## GHCN_D.GHCND_1852
+date: DATE | NULL | eg=["1852-11-03", "1852-05-13"]
+value: FLOAT | NULL | eg=[5.0, 8.0]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00047738"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+
+## GHCN_D.GHCND_2017
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["SNWD", "SNOW"]
+source_url: TEXT | Source | eg=["ftp://ftp.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2017.csv.gz"]
+etl_timestamp: NUMBER | Load time for this data row | eg=[1689799403864424]
+value: FLOAT | NULL | eg=[0.0, 100.0]
+time: TEXT | NULL | eg=["0730", "0800"]
+sflag: TEXT | NULL | eg=["7"]
+id: TEXT | NULL | eg=["USC00335939", "USC00455305"]
+date: DATE | NULL | eg=["2017-08-30"]
+
+## GHCN_D.GHCND_1878
+value: FLOAT | NULL | eg=[0.0]
+sflag: TEXT | NULL | eg=["0"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1878-05-15", "1878-02-23"]
+id: TEXT | NULL | eg=["USC00015555"]
+
+## GHCN_D.GHCND_1988
+element: TEXT | NULL | eg=["ACMH"]
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["USW00013741", "USW00024155"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1988-12-25", "1988-03-12"]
+
+## GHCN_D.GHCND_1930
+element: TEXT | NULL | eg=["DAPR"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 10.0]
+date: DATE | NULL | eg=["1930-07-28", "1930-06-23"]
+id: TEXT | NULL | eg=["ASN00009023", "ASN00010612"]
+
+## GHCN_D.GHCND_1916
+time: TEXT | NULL
+date: DATE | NULL | eg=["1916-03-29", "1916-06-17"]
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[107.0, 0.0]
+id: TEXT | NULL | eg=["AGE00135039"]
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1781
+element: TEXT | NULL | eg=["TMAX"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1781-12-05", "1781-02-06"]
+id: TEXT | NULL | eg=["EZE00100082"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0, -3.0]
+
+## GHCN_D.GHCND_1932
+element: TEXT | NULL | eg=["DAPR"]
+date: DATE | NULL | eg=["1932-10-08", "1932-07-18"]
+value: FLOAT | NULL | eg=[2.0, 4.0]
+sflag: TEXT | NULL | eg=["a"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00008164", "ASN00009023"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1962
+time: TEXT | NULL
+date: DATE | NULL | eg=["1962-01-03", "1962-01-14"]
+id: TEXT | NULL | eg=["USC00027876", "USC00029420"]
+element: TEXT | NULL | eg=["DAEV"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 3.0]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+
+## GHCN_D.GHCND_1883
+date: DATE | NULL | eg=["1883-04-02", "1883-08-21"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+element: TEXT | NULL | eg=["DAPR"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0]
+id: TEXT | NULL | eg=["ASN00018079", "ASN00019036"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_2013
+element: TEXT | NULL | eg=["AWDR"]
+date: DATE | NULL | eg=["2013-05-12", "2013-06-28"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["T"]
+id: TEXT | NULL | eg=["USS0005N04S", "USS0005N14S"]
+value: FLOAT | NULL | eg=[9.0, 136.0]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1867
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["0"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1867-11-11", "1867-12-31"]
+id: TEXT | NULL | eg=["USC00298072"]
+
+## GHCN_D.GHCND_1928
+date: DATE | NULL | eg=["1928-05-31", "1928-06-29"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAPR"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[31.0, 28.0]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00005052", "ASN00010670"]
+sflag: TEXT | NULL | eg=["a"]
+
+## GHCN_D.GHCND_1868
+time: TEXT | NULL
+date: DATE | NULL | eg=["1868-04-29", "1868-05-12"]
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["0"]
+id: TEXT | NULL | eg=["USC00298072"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1779
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[-2.0, -4.0]
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["TMAX"]
+date: DATE | NULL | eg=["1779-01-10", "1779-01-14"]
+id: TEXT | NULL | eg=["EZE00100082"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1853
+date: DATE | NULL | eg=["1853-04-20", "1853-02-26"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[13.0, 18.0]
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["USC00047738"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+
+## GHCN_D.GHCND_2012
+id: TEXT | NULL | eg=["USC00412485", "USC00418862"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL | eg=["0700"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["7"]
+date: DATE | NULL | eg=["2012-10-06", "2012-12-21"]
+element: TEXT | NULL | eg=["AWND", "EVAP"]
+
+## GHCN_D.GHCND_1982
+date: DATE | NULL | eg=["1982-04-14", "1982-12-06"]
+id: TEXT | NULL | eg=["USW00014739", "USW00023160"]
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+element: TEXT | NULL | eg=["ACMH"]
+
+## GHCN_D.GHCND_1857
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00047738"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+value: FLOAT | NULL | eg=[3.0, 5.0]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1857-02-03", "1857-01-08"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1904
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1904-05-31", "1904-06-30"]
+sflag: TEXT | NULL | eg=["a"]
+element: TEXT | NULL | eg=["DAPR"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[31.0, 30.0]
+id: TEXT | NULL | eg=["ASN00005052", "ASN00016039"]
+
+## GHCN_D.GHCND_1766
+element: TEXT | NULL | eg=["TMAX"]
+value: FLOAT | NULL | eg=[-4.0, 6.0]
+date: DATE | NULL | eg=["1766-01-26", "1766-01-20"]
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["ITE00100554"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1808
+value: FLOAT | NULL | eg=[0.0]
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1808-01-06", "1808-02-10"]
+
+## GHCN_D.GHCND_1941
+date: DATE | NULL | eg=["1941-07-28", "1941-06-02"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00009553", "ASN00016026"]
+element: TEXT | NULL | eg=["DAPR"]
+sflag: TEXT | NULL | eg=["a"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1831
+id: TEXT | NULL | eg=["EZE00100082"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1831-09-30", "1831-10-18"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1967
+element: TEXT | NULL | eg=["ACMH"]
+sflag: TEXT | NULL | eg=["X"]
+value: FLOAT | NULL | eg=[90.0, 100.0]
+date: DATE | NULL | eg=["1967-05-07", "1967-12-01"]
+id: TEXT | NULL | eg=["AQW00061705"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1894
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1894-10-30", "1894-10-07"]
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["AG000060590"]
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1842
+time: TEXT | NULL
+date: DATE | NULL | eg=["1842-09-09", "1842-09-15"]
+element: TEXT | NULL | eg=["MDPR", "PRCP"]
+value: FLOAT | NULL | eg=[208.0, 94.0]
+sflag: TEXT | NULL | eg=["C"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["CA006158350"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1780
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX"]
+date: DATE | NULL | eg=["1780-01-04", "1780-12-09"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+value: FLOAT | NULL | eg=[0.0, 4.0]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+
+## GHCN_D.GHCND_1877
+sflag: TEXT | NULL | eg=["0"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAPR", "MDPR"]
+date: DATE | NULL | eg=["1877-04-18", "1877-04-03"]
+value: FLOAT | NULL | eg=[3.0, 221.0]
+id: TEXT | NULL | eg=["USC00034251", "USC00015555"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1999
+time: TEXT | NULL
+element: TEXT | NULL | eg=["DAEV"]
+date: DATE | NULL | eg=["1999-10-27", "1999-07-12"]
+value: FLOAT | NULL | eg=[2.0, 3.0]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["VQC00670480", "USC00049694"]
+sflag: TEXT | NULL | eg=["0"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1838
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1838-05-04", "1838-10-13"]
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+
+## GHCN_D.GHCND_1954
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 4.0]
+element: TEXT | NULL | eg=["DAEV"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1954-03-25", "1954-07-06"]
+id: TEXT | NULL | eg=["USC00030764", "USC00035200"]
+sflag: TEXT | NULL | eg=["0"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1827
+date: DATE | NULL | eg=["1827-07-02", "1827-09-04"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1812
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["EZE00100082"]
+date: DATE | NULL | eg=["1812-01-06", "1812-05-05"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1811
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1811-09-06", "1811-01-06"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1966
+value: FLOAT | NULL | eg=[90.0, 70.0]
+date: DATE | NULL | eg=["1966-11-07", "1966-08-27"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["ACMH"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["AQW00061705", "AYM00089664"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+
+## GHCN_D.GHCND_1823
+date: DATE | NULL | eg=["1823-04-22", "1823-05-27"]
+id: TEXT | NULL | eg=["EZE00100082"]
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_2007
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[3.0, 4.0]
+id: TEXT | NULL | eg=["USC00512896", "USC00220039"]
+element: TEXT | NULL | eg=["DAPR"]
+sflag: TEXT | NULL | eg=["0"]
+date: DATE | NULL | eg=["2007-12-24", "2007-07-31"]
+
+## GHCN_D.GHCND_1775
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1775-01-18", "1775-04-14"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+value: FLOAT | NULL | eg=[5.0, 6.0]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1802
+date: DATE | NULL | eg=["1802-03-04", "1802-12-27"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["GM000010962"]
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1797
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1797-08-29", "1797-09-07"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["GM000010962"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1769
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[-3.0, 5.0]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1769-02-01", "1769-02-04"]
+id: TEXT | NULL | eg=["ITE00100554"]
+
+## GHCN_D.GHCND_1979
+date: DATE | NULL | eg=["1979-09-18", "1979-03-17"]
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["ACMH"]
+id: TEXT | NULL | eg=["USW00094910", "USW00013748"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1805
+id: TEXT | NULL | eg=["EZE00100082"]
+value: FLOAT | NULL | eg=[0.0]
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1805-06-30", "1805-01-06"]
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1931
+sflag: TEXT | NULL | eg=["a"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00008088", "ASN00009001"]
+element: TEXT | NULL | eg=["DAPR"]
+value: FLOAT | NULL | eg=[2.0]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1931-05-04", "1931-06-29"]
+
+## GHCN_D.GHCND_1935
+element: TEXT | NULL | eg=["DAPR"]
+sflag: TEXT | NULL | eg=["a"]
+value: FLOAT | NULL | eg=[2.0]
+id: TEXT | NULL | eg=["ASN00008098", "ASN00009007"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1935-07-29", "1935-09-22"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1786
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0, -2.0]
+date: DATE | NULL | eg=["1786-03-02", "1786-03-08"]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1790
+date: DATE | NULL | eg=["1790-02-11", "1790-01-18"]
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[-6.0, 10.0]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_STATIONS
+latitude: FLOAT | NULL | eg=[17.1333, 25.333]
+wmoid: NUMBER | NULL | eg=[NaN, 41196.0]
+state: TEXT | NULL
+gsn_flag: TEXT | NULL | eg=["GSN"]
+hcn_crn_flag: TEXT | NULL
+elevation: FLOAT | NULL | eg=[19.2, 34.0]
+name: TEXT | NULL | eg=["ST JOHNS", "SHARJAH INTER. AIRP"]
+etl_timestamp: NUMBER | NULL | eg=[1729302238782101]
+source_url: TEXT | NULL | eg=["ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/ghcnd-stations.txt"]
+id: TEXT | NULL | eg=["ACW00011647", "AE000041196"]
+longitude: FLOAT | NULL | eg=[-61.7833, 55.517]
+
+## GHCN_D.GHCND_1784
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["EZE00100082"]
+date: DATE | NULL | eg=["1784-04-03", "1784-01-19"]
+value: FLOAT | NULL | eg=[0.0, -2.0]
+element: TEXT | NULL | eg=["TMAX"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1829
+date: DATE | NULL | eg=["1829-02-21", "1829-04-27"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["E"]
+
+## GHCN_D.GHCND_1991
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PGTM"]
+sflag: TEXT | NULL | eg=["X"]
+id: TEXT | NULL | eg=["USC00244558", "USW00013723"]
+value: FLOAT | NULL | eg=[1019.0, 1526.0]
+date: DATE | NULL | eg=["1991-08-28", "1991-07-12"]
+
+## GHCN_D.GHCND_1910
+id: TEXT | NULL | eg=["AGE00135039"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1910-02-09", "1910-01-25"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0, 58.0]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1995
+element: TEXT | NULL | eg=["ACMH"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["USW00024023", "USW00003160"]
+sflag: TEXT | NULL | eg=["X"]
+date: DATE | NULL | eg=["1995-01-01", "1995-09-14"]
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1824
+date: DATE | NULL | eg=["1824-01-07", "1824-06-05"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1953
+value: FLOAT | NULL | eg=[0.0, 1.0]
+date: DATE | NULL | eg=["1953-08-18", "1953-07-28"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL | eg=["AG000060390"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1897
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["AG000060590"]
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1897-11-28", "1897-11-07"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1994
+time: TEXT | NULL
+element: TEXT | NULL | eg=["DAEV"]
+sflag: TEXT | NULL | eg=["0"]
+id: TEXT | NULL | eg=["USC00310375", "USC00144357"]
+date: DATE | NULL | eg=["1994-01-02", "1994-10-03"]
+value: FLOAT | NULL | eg=[2.0, 3.0]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_2004
+value: FLOAT | NULL | eg=[3.0, 4.0]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+date: DATE | NULL | eg=["2004-11-27", "2004-10-11"]
+element: TEXT | NULL | eg=["DAEV"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["USC00415721", "USC00189070"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1952
+id: TEXT | NULL | eg=["AG000060390"]
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0, 26.0]
+date: DATE | NULL | eg=["1952-07-28", "1952-06-25"]
+element: TEXT | NULL | eg=["PRCP", "TMAX"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1998
+id: TEXT | NULL | eg=["USC00290992", "USC00118740"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["DAEV"]
+date: DATE | NULL | eg=["1998-10-05", "1998-04-27"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[3.0, 2.0]
+
+## GHCN_D.GHCND_2002
+value: FLOAT | NULL | eg=[3.0, 2.0]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["USC00144357", "USC00245572"]
+element: TEXT | NULL | eg=["DAEV"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+date: DATE | NULL | eg=["2002-09-23", "2002-07-15"]
+
+## GHCN_D.GHCND_1997
+id: TEXT | NULL | eg=["USW00024225", "USW00013743"]
+sflag: TEXT | NULL | eg=["X"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1997-09-07", "1997-10-23"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["ACMH"]
+mflag: TEXT | NULL | eg=["O"]
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1822
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1822-09-07", "1822-09-22"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1833
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1833-06-02", "1833-06-25"]
+id: TEXT | NULL | eg=["EZE00100082"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1809
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+date: DATE | NULL | eg=["1809-06-30", "1809-08-09"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1942
+time: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00007004", "ASN00012247"]
+value: FLOAT | NULL | eg=[2.0, 31.0]
+element: TEXT | NULL | eg=["DAPR"]
+date: DATE | NULL | eg=["1942-03-23", "1942-05-31"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+
+## GHCN_D.GHCND_1957
+date: DATE | NULL | eg=["1957-11-06", "1957-09-03"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+mflag: TEXT | NULL | eg=["T"]
+id: TEXT | NULL | eg=["ACW00011647"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0, 71.0]
+
+## GHCN_D.GHCND_1903
+id: TEXT | NULL | eg=["ASN00016005", "ASN00016038"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL | eg=["1903-08-24", "1903-10-12"]
+value: FLOAT | NULL | eg=[2.0]
+sflag: TEXT | NULL | eg=["a"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1958
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1958-02-11", "1958-12-10"]
+sflag: TEXT | NULL | eg=["X"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0, 36.0]
+id: TEXT | NULL | eg=["ACW00011647"]
+mflag: TEXT | NULL | eg=["T"]
+
+## GHCN_D.GHCND_1918
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["AGE00147704", "AGE00147706"]
+date: DATE | NULL | eg=["1918-12-31", "1918-07-23"]
+sflag: TEXT | NULL | eg=["E", "I"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[30.0, 190.0]
+element: TEXT | NULL | eg=["PRCP", "TMAX"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1980
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["USW00023155", "USW00012916"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["ACMH"]
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1980-04-03", "1980-10-08"]
+sflag: TEXT | NULL | eg=["X"]
+
+## GHCN_D.GHCND_1768
+id: TEXT | NULL | eg=["ITE00100554"]
+date: DATE | NULL | eg=["1768-01-16", "1768-01-26"]
+value: FLOAT | NULL | eg=[-2.0, 3.0]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1914
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["AGE00135039"]
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1914-12-14", "1914-11-23"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1960
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0, 15.0]
+date: DATE | NULL | eg=["1960-09-27", "1960-03-29"]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["ACW00011647"]
+sflag: TEXT | NULL | eg=["X"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL | eg=["T"]
+
+## GHCN_D.GHCND_1965
+id: TEXT | NULL | eg=["AYM00089664"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+element: TEXT | NULL | eg=["ACMH"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[70.0, 60.0]
+date: DATE | NULL | eg=["1965-12-03", "1965-12-25"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1989
+sflag: TEXT | NULL | eg=["X"]
+date: DATE | NULL | eg=["1989-11-08", "1989-09-05"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["USW00023034", "USW00024127"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["ACMH"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1923
+date: DATE | NULL | eg=["1923-07-09", "1923-01-05"]
+sflag: TEXT | NULL | eg=["a"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["ASN00001017", "ASN00002000"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1874
+qflag: TEXT | NULL | eg=["X", "D"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E", "I"]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["UK000047811", "SF000847010"]
+date: DATE | NULL | eg=["1874-12-07", "1874-12-02"]
+value: FLOAT | NULL | eg=[-6660.0, 0.0]
+
+## GHCN_D.GHCND_2022
+time: TEXT | NULL | eg=["0630", "0700"]
+id: TEXT | NULL | eg=["US1CAMD0017", "US1ILWL0131"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["2022-11-21"]
+etl_timestamp: NUMBER | Load time for this data row | eg=[1703901068125096]
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["N"]
+element: TEXT | NULL | eg=["PRCP", "SNOW"]
+source_url: TEXT | Source | eg=["ftp://ftp.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2022.csv.gz"]
+
+## GHCN_D.GHCND_1970
+sflag: TEXT | NULL | eg=["X"]
+value: FLOAT | NULL | eg=[90.0, 100.0]
+date: DATE | NULL | eg=["1970-02-16", "1970-04-08"]
+element: TEXT | NULL | eg=["ACMH"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["AQW00061705"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1859
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["USC00047738"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[3.0, 8.0]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1859-11-03", "1859-01-28"]
+
+## GHCN_D.GHCND_1927
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[31.0, 2.0]
+id: TEXT | NULL | eg=["ASN00005052", "ASN00008071"]
+sflag: TEXT | NULL | eg=["a"]
+element: TEXT | NULL | eg=["DAPR"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1927-05-31", "1927-09-10"]
+
+## GHCN_D.GHCND_1844
+id: TEXT | NULL | eg=["CA006158350"]
+sflag: TEXT | NULL | eg=["C"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1844-04-05", "1844-04-21"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1905
+date: DATE | NULL | eg=["1905-12-29", "1905-06-05"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL | eg=["T"]
+id: TEXT | NULL | eg=["RQC00662634", "RQC00662801"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1843
+time: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL | eg=["T"]
+date: DATE | NULL | eg=["1843-06-27", "1843-06-12"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["CA006158350"]
+sflag: TEXT | NULL | eg=["C"]
+
+## GHCN_D.GHCND_1850
+value: FLOAT | NULL | eg=[13.0, 371.0]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+date: DATE | NULL | eg=["1850-11-20", "1850-11-25"]
+id: TEXT | NULL | eg=["USC00047738"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_2019
+id: TEXT | NULL | eg=["USC00113455", "USC00031935"]
+time: TEXT | NULL | eg=["0600", "0830"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["7"]
+etl_timestamp: NUMBER | Load time for this data row | eg=[1689801206234378]
+date: DATE | NULL | eg=["2019-01-24"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP", "SNWD"]
+source_url: TEXT | Source | eg=["ftp://ftp.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2019.csv.gz"]
+
+## GHCN_D.GHCND_2005
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+value: FLOAT | NULL | eg=[2.0, 3.0]
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["USC00519432", "USC00165065"]
+element: TEXT | NULL | eg=["DAPR"]
+date: DATE | NULL | eg=["2005-08-25", "2005-01-31"]
+
+## GHCN_D.GHCND_2018
+time: TEXT | NULL | eg=["0900", "0800"]
+id: TEXT | NULL | eg=["CQC00914080", "USC00340546"]
+value: FLOAT | NULL | eg=[283.0, 0.0]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+etl_timestamp: NUMBER | Load time for this data row | eg=[1689800315825849]
+source_url: TEXT | Source | eg=["ftp://ftp.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2018.csv.gz"]
+element: TEXT | NULL | eg=["TOBS", "SNOW"]
+date: DATE | NULL | eg=["2018-05-13"]
+sflag: TEXT | NULL | eg=["7"]
+
+## GHCN_D.GHCND_1986
+sflag: TEXT | NULL | eg=["X"]
+date: DATE | NULL | eg=["1986-10-12", "1986-03-24"]
+id: TEXT | NULL | eg=["USW00024229", "USW00093729"]
+element: TEXT | NULL | eg=["ACMH"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1925
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["AG000060590"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1925-05-07", "1925-06-08"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1801
+time: TEXT | NULL
+date: DATE | NULL | eg=["1801-04-05", "1801-04-09"]
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["GM000010962"]
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1830
+date: DATE | NULL | eg=["1830-01-18", "1830-02-10"]
+qflag: TEXT | NULL | eg=["O"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["ITE00100550", "EZE00100082"]
+value: FLOAT | NULL | eg=[1277.0, 0.0]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1764
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["ITE00100554"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+date: DATE | NULL | eg=["1764-01-17", "1764-01-24"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[20.0, 21.0]
+
+## GHCN_D.GHCND_1765
+time: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["ITE00100554"]
+date: DATE | NULL | eg=["1765-12-31", "1765-12-17"]
+value: FLOAT | NULL | eg=[4.0, 5.0]
+
+## GHCN_D.GHCND_1771
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["TMAX"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0, -2.0]
+id: TEXT | NULL | eg=["ITE00100554"]
+date: DATE | NULL | eg=["1771-01-10", "1771-02-13"]
+
+## GHCN_D.GHCND_1807
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1807-07-04", "1807-03-20"]
+id: TEXT | NULL | eg=["EZE00100082"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1804
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+date: DATE | NULL | eg=["1804-05-22", "1804-06-02"]
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1872
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL | eg=["2400"]
+sflag: TEXT | NULL | eg=["0"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[3.0, 5.0]
+id: TEXT | NULL | eg=["USW00024274"]
+date: DATE | NULL | eg=["1872-04-15", "1872-09-23"]
+
+## GHCN_D.GHCND_1880
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["USC00414122"]
+element: TEXT | NULL | eg=["SNWD"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1880-07-15", "1880-05-15"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+sflag: TEXT | NULL | eg=["0"]
+
+## GHCN_D.GHCND_1847
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1847-01-18", "1847-07-11"]
+value: FLOAT | NULL | eg=[0.0]
+sflag: TEXT | NULL | eg=["C"]
+id: TEXT | NULL | eg=["CA006158350"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1887
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["FRE00104937"]
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL | eg=["D"]
+value: FLOAT | NULL | eg=[9990.0]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1887-10-08", "1887-12-18"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1885
+id: TEXT | NULL | eg=["USC00034988"]
+qflag: TEXT | NULL | eg=["I"]
+date: DATE | NULL | eg=["1885-02-28", "1885-02-09"]
+value: FLOAT | NULL | eg=[0.0, -22.0]
+mflag: TEXT | NULL
+time: TEXT | NULL | eg=["0700"]
+sflag: TEXT | NULL | eg=["6"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1849
+date: DATE | NULL | eg=["1849-01-21", "1849-11-28"]
+mflag: TEXT | NULL | eg=["T"]
+sflag: TEXT | NULL | eg=["C"]
+id: TEXT | NULL | eg=["CA006158350"]
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1961
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[4.0, 3.0]
+date: DATE | NULL | eg=["1961-03-10", "1961-04-07"]
+element: TEXT | NULL | eg=["DAEV"]
+id: TEXT | NULL | eg=["USC00040398", "USC00041715"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+
+## GHCN_D.GHCND_1816
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["TMAX", "TMIN"]
+date: DATE | NULL | eg=["1816-11-12", "1816-11-11"]
+id: TEXT | NULL | eg=["ITE00100554"]
+qflag: TEXT | NULL | eg=["I"]
+value: FLOAT | NULL | eg=[56.0, 86.0]
+mflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1913
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00056186", "ASN00056193"]
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1913-08-18", "1913-11-21"]
+sflag: TEXT | NULL | eg=["a"]
+
+## GHCN_D.GHCND_1920
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1920-08-27", "1920-10-24"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["AGE00147704"]
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1858
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E", "F"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL | eg=["K", "I"]
+element: TEXT | NULL | eg=["PRCP", "TMAX"]
+date: DATE | NULL | eg=["1858-09-09", "1858-08-01"]
+id: TEXT | NULL | eg=["GM000010962", "USC00090430"]
+value: FLOAT | NULL | eg=[233.0, 28.0]
+
+## GHCN_D.GHCND_1772
+date: DATE | NULL | eg=["1772-01-08", "1772-01-06"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["ITE00100554"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[4.0, 5.0]
+sflag: TEXT | NULL | eg=["E"]
+
+## GHCN_D.GHCND_1845
+value: FLOAT | NULL | eg=[0.0]
+sflag: TEXT | NULL | eg=["C"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["CA006158350"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1845-08-04", "1845-09-07"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1934
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+value: FLOAT | NULL | eg=[2.0, 3.0]
+date: DATE | NULL | eg=["1934-07-08", "1934-07-02"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["ASN00007012", "ASN00010000"]
+
+## GHCN_D.GHCND_1839
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1839-01-29", "1839-03-29"]
+
+## GHCN_D.GHCND_1992
+element: TEXT | NULL | eg=["DAEV"]
+value: FLOAT | NULL | eg=[2.0, 3.0]
+time: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+date: DATE | NULL | eg=["1992-03-27", "1992-09-25"]
+id: TEXT | NULL | eg=["USC00049001", "USC00050834"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1854
+value: FLOAT | NULL | eg=[3.0, 5.0]
+sflag: TEXT | NULL | eg=["0"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1854-05-20", "1854-10-24"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00047738"]
+
+## GHCN_D.GHCND_1803
+element: TEXT | NULL | eg=["TMAX"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[-2.0, -3.0]
+date: DATE | NULL | eg=["1803-12-16", "1803-01-07"]
+id: TEXT | NULL | eg=["EZE00100082"]
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1972
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+value: FLOAT | NULL | eg=[60.0, 50.0]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["AQW00061705"]
+element: TEXT | NULL | eg=["ACMH"]
+date: DATE | NULL | eg=["1972-06-13", "1972-02-23"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1869
+date: DATE | NULL | eg=["1869-03-22", "1869-02-05"]
+id: TEXT | NULL | eg=["USC00288878"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["6"]
+element: TEXT | NULL | eg=["TMAX"]
+value: FLOAT | NULL | eg=[17.0, -22.0]
+mflag: TEXT | NULL
+qflag: TEXT | NULL | eg=["I"]
+
+## GHCN_D.GHCND_1899
+id: TEXT | NULL | eg=["RQC00662634", "RQC00662801"]
+mflag: TEXT | NULL | eg=["T"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL | eg=["1899-08-23", "1899-07-21"]
+sflag: TEXT | NULL | eg=["0"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1796
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1796-12-27", "1796-12-06"]
+value: FLOAT | NULL | eg=[-2.0, -3.0]
+element: TEXT | NULL | eg=["TMAX"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_2024
+value: FLOAT | NULL | eg=[3.0, 2.0]
+sflag: TEXT | NULL | eg=["N"]
+time: TEXT | NULL | eg=["0606", "0845"]
+element: TEXT | NULL | eg=["DAPR"]
+source_url: TEXT | Source | eg=["http://www.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2024.csv.gz"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["US1ILJK0018", "US1WAGH0056"]
+etl_timestamp: NUMBER | Load time for this data row | eg=[1729305565670643, 1729305580704649]
+date: DATE | NULL | eg=["2024-01-04", "2024-01-06"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1890
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL | eg=["X"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["AGE00135039"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1890-04-16", "1890-12-28"]
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[-30.0, 30.0]
+
+## GHCN_D.GHCND_1813
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1813-01-25", "1813-03-12"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_STATES
+etl_timestamp: NUMBER | Load time for this data row | eg=[1729302237648949]
+code: TEXT | NULL | eg=["AK", "AR"]
+name: TEXT | NULL | eg=["ALASKA", "ARKANSAS"]
+source_url: TEXT | Source | eg=["ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/ghcnd-states.txt"]
+
+## GHCN_D.GHCND_1840
+sflag: TEXT | NULL | eg=["F", "C"]
+mflag: TEXT | NULL | eg=["T"]
+date: DATE | NULL | eg=["1840-02-08", "1840-05-19"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["USC00361920", "CA006158350"]
+
+## GHCN_D.GHCND_1879
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+qflag: TEXT | NULL | eg=["I"]
+date: DATE | NULL | eg=["1879-02-21", "1879-01-13"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX", "TMIN"]
+value: FLOAT | NULL | eg=[-128.0, -50.0]
+id: TEXT | NULL | eg=["USC00301010", "USC00331662"]
+
+## GHCN_D.GHCND_1933
+qflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL | eg=["1933-10-02", "1933-05-31"]
+id: TEXT | NULL | eg=["ASN00008091", "ASN00012247"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+value: FLOAT | NULL | eg=[2.0, 31.0]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1818
+id: TEXT | NULL | eg=["EZE00100082"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1818-11-24", "1818-12-02"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+
+## GHCN_D.GHCND_1990
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1990-03-31", "1990-10-25"]
+id: TEXT | NULL | eg=["USW00003927", "USW00012926"]
+sflag: TEXT | NULL | eg=["X"]
+element: TEXT | NULL | eg=["SNOW"]
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1782
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["EZE00100082"]
+date: DATE | NULL | eg=["1782-11-21", "1782-12-31"]
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0, -3.0]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1964
+value: FLOAT | NULL | eg=[2.0]
+id: TEXT | NULL | eg=["RQC00662934", "USC00012245"]
+element: TEXT | NULL | eg=["DAEV"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1964-11-14", "1964-12-16"]
+
+## GHCN_D.GHCND_1949
+id: TEXT | NULL | eg=["CA006166416", "RSM00036034"]
+element: TEXT | NULL | eg=["TMIN"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1949-09-12", "1949-06-05"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[33.0]
+sflag: TEXT | NULL | eg=["C", "r"]
+
+## GHCN_D.GHCND_1901
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["E"]
+date: DATE | NULL | eg=["1901-12-11", "1901-01-30"]
+id: TEXT | NULL | eg=["AGE00135039"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1871
+sflag: TEXT | NULL | eg=["0"]
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1871-12-15", "1871-12-07"]
+id: TEXT | NULL | eg=["USW00024274"]
+time: TEXT | NULL | eg=["2400"]
+value: FLOAT | NULL | eg=[10.0, 13.0]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1783
+value: FLOAT | NULL | eg=[0.0, -3.0]
+element: TEXT | NULL | eg=["TMAX"]
+date: DATE | NULL | eg=["1783-03-04", "1783-01-05"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_2001
+element: TEXT | NULL | eg=["DAEV"]
+date: DATE | NULL | eg=["2001-07-15", "2001-08-06"]
+id: TEXT | NULL | eg=["USC00257110", "USC00422864"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+value: FLOAT | NULL | eg=[3.0, 4.0]
+
+## GHCN_D.GHCND_1785
+element: TEXT | NULL | eg=["TMAX"]
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+value: FLOAT | NULL | eg=[3.0, 4.0]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1785-12-19", "1785-01-23"]
+
+## GHCN_D.GHCND_1955
+sflag: TEXT | NULL | eg=["S"]
+mflag: TEXT | NULL | eg=["H"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["TAVG"]
+value: FLOAT | NULL | eg=[332.0, 325.0]
+id: TEXT | NULL | eg=["AE000041196"]
+date: DATE | NULL | eg=["1955-08-23", "1955-08-07"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_2000
+id: TEXT | NULL | eg=["RQC00662934", "USC00345713"]
+element: TEXT | NULL | eg=["DAEV"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["2000-07-13", "2000-04-24"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 3.0]
+
+## GHCN_D.GHCND_2020
+source_url: TEXT | Source | eg=["ftp://ftp.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2020.csv.gz"]
+id: TEXT | NULL | eg=["USC00031492", "USC00051441"]
+mflag: TEXT | NULL
+time: TEXT | NULL | eg=["0700", "0800"]
+element: TEXT | NULL | eg=["SNOW", "PRCP"]
+date: DATE | NULL | eg=["2020-06-19"]
+value: FLOAT | NULL | eg=[0.0, 183.0]
+qflag: TEXT | NULL
+etl_timestamp: NUMBER | Load time for this data row | eg=[1689802833669021]
+sflag: TEXT | NULL | eg=["7"]
+
+## GHCN_D.GHCND_1926
+element: TEXT | NULL | eg=["DAPR"]
+date: DATE | NULL | eg=["1926-08-23", "1926-10-21"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 3.0]
+qflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00008100", "ASN00009513"]
+sflag: TEXT | NULL | eg=["a"]
+
+## GHCN_D.GHCND_1975
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["CA001171393", "CA004015960"]
+time: TEXT | NULL | eg=["1700"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1975-11-19", "1975-03-22"]
+value: FLOAT | NULL | eg=[-61.0]
+sflag: TEXT | NULL | eg=["C", "0"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1837
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[196.0, 17.0]
+date: DATE | NULL | eg=["1837-09-04", "1837-10-08"]
+id: TEXT | NULL | eg=["EZE00100082"]
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1984
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["USW00093193", "USW00003820"]
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["ACMH"]
+sflag: TEXT | NULL | eg=["X"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1984-01-25", "1984-03-15"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1924
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["AG000060590"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1924-10-08", "1924-07-03"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1976
+date: DATE | NULL | eg=["1976-08-09", "1976-09-02"]
+value: FLOAT | NULL | eg=[373.0, 346.0]
+mflag: TEXT | NULL | eg=["H"]
+id: TEXT | NULL | eg=["AE000041196", "AF000040930"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["S", "I"]
+element: TEXT | NULL | eg=["TAVG", "TMIN"]
+
+## GHCN_D.GHCND_2014
+value: FLOAT | NULL | eg=[0.0, 13.0]
+date: DATE | NULL | eg=["2014-05-30", "2014-02-23"]
+element: TEXT | NULL | eg=["AWND"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["USC00058995", "USC00311975"]
+sflag: TEXT | NULL | eg=["7"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1888
+value: FLOAT | NULL | eg=[32.0, 304.0]
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL | eg=["X"]
+date: DATE | NULL | eg=["1888-02-05", "1888-05-01"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["AGE00135039"]
+sflag: TEXT | NULL | eg=["E"]
+
+## GHCN_D.GHCND_2015
+id: TEXT | NULL | eg=["USS0005N04S", "USS0005N16S"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["AWDR"]
+date: DATE | NULL | eg=["2015-03-30", "2015-03-15"]
+value: FLOAT | NULL | eg=[176.0, 143.0]
+sflag: TEXT | NULL | eg=["T"]
+
+## GHCN_D.GHCND_1861
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["USC00465224"]
+element: TEXT | NULL | eg=["SNOW"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["6"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1861-01-30", "1861-01-06"]
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1866
+sflag: TEXT | NULL | eg=["6"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0, 13.0]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1866-01-22", "1866-01-19"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["USC00288878"]
+
+## GHCN_D.GHCND_2016
+element: TEXT | NULL | eg=["TAVG", "TMAX"]
+sflag: TEXT | NULL | eg=["S"]
+mflag: TEXT | NULL | eg=["H"]
+date: DATE | NULL | eg=["2016-05-27", "2016-05-28"]
+id: TEXT | NULL | eg=["CHM00052713", "KZ000034398"]
+etl_timestamp: NUMBER | Load time for this data row | eg=[1672027772371627]
+source_url: TEXT | Source | eg=["ftp://ftp.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2016.csv.gz"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[88.0, 336.0]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_2021
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["W"]
+value: FLOAT | NULL | eg=[-172.0, -22.0]
+id: TEXT | NULL | eg=["USW00026510", "USW00013891"]
+date: DATE | NULL | eg=["2021-03-02", "2021-11-13"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+source_url: TEXT | Source | eg=["ftp://ftp.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2021.csv.gz"]
+etl_timestamp: NUMBER | Load time for this data row | eg=[1689803742385381, 1689804506493496]
+element: TEXT | NULL | eg=["ADPT"]
+
+## GHCN_D.GHCND_1919
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["ASN00017078", "ASN00017079"]
+date: DATE | NULL | eg=["1919-08-26", "1919-08-14"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1937
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 31.0]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+date: DATE | NULL | eg=["1937-06-21", "1937-08-09"]
+id: TEXT | NULL | eg=["ASN00008017", "ASN00009036"]
+element: TEXT | NULL | eg=["DAPR"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1943
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1943-05-26", "1943-08-16"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00008011", "ASN00009019"]
+value: FLOAT | NULL | eg=[2.0]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAPR"]
+sflag: TEXT | NULL | eg=["a"]
+
+## GHCN_D.GHCND_1907
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1907-07-17", "1907-03-18"]
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["RQC00660158", "RQC00662801"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1774
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["ITE00100554"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[-3.0, 4.0]
+date: DATE | NULL | eg=["1774-12-15", "1774-01-06"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1855
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00047738"]
+sflag: TEXT | NULL | eg=["0"]
+value: FLOAT | NULL | eg=[5.0, 25.0]
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1855-04-17", "1855-05-17"]
+
+## GHCN_D.GHCND_2010
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["USS0015E09S", "USS0021G17S"]
+element: TEXT | NULL | eg=["AWDR", "AWND"]
+date: DATE | NULL | eg=["2010-01-06", "2010-10-15"]
+sflag: TEXT | NULL | eg=["T", "W"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1940
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["ASN00010505", "ASN00016057"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL | eg=["1940-07-22", "1940-10-14"]
+value: FLOAT | NULL | eg=[2.0]
+sflag: TEXT | NULL | eg=["a"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1947
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1947-10-13", "1947-07-07"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 30.0]
+id: TEXT | NULL | eg=["ASN00008098", "ASN00010593"]
+sflag: TEXT | NULL | eg=["a"]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1814
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+date: DATE | NULL | eg=["1814-01-22", "1814-03-18"]
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1770
+date: DATE | NULL | eg=["1770-01-13", "1770-12-12"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX"]
+value: FLOAT | NULL | eg=[-2.0, -9.0]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["ITE00100554"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+
+## GHCN_D.GHCND_1945
+sflag: TEXT | NULL | eg=["a"]
+id: TEXT | NULL | eg=["ASN00008072", "ASN00008139"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1945-09-10", "1945-08-13"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1828
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1828-01-17", "1828-11-14"]
+id: TEXT | NULL | eg=["EZE00100082"]
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1865
+time: TEXT | NULL
+date: DATE | NULL | eg=["1865-11-03", "1865-12-28"]
+sflag: TEXT | NULL | eg=["6"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[8.0, 13.0]
+id: TEXT | NULL | eg=["USC00288878"]
+
+## GHCN_D.GHCND_1860
+mflag: TEXT | NULL | eg=["T"]
+sflag: TEXT | NULL | eg=["C"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["CA006158350"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1860-12-11", "1860-01-16"]
+
+## GHCN_D.GHCND_1902
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1902-01-11", "1902-05-21"]
+id: TEXT | NULL | eg=["AGE00135039"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1791
+time: TEXT | NULL
+date: DATE | NULL | eg=["1791-02-05", "1791-02-04"]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["EZE00100082"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[-3.0, 4.0]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+
+## GHCN_D.GHCND_1981
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1981-06-26", "1981-01-03"]
+element: TEXT | NULL | eg=["ACMH"]
+id: TEXT | NULL | eg=["USW00014933", "USW00014918"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1815
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1815-02-16", "1815-04-10"]
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["EZE00100082"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1794
+id: TEXT | NULL | eg=["EZE00100082"]
+value: FLOAT | NULL | eg=[0.0, 5.0]
+element: TEXT | NULL | eg=["TMAX"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+date: DATE | NULL | eg=["1794-01-05", "1794-12-15"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1959
+date: DATE | NULL | eg=["1959-01-26", "1959-12-03"]
+id: TEXT | NULL | eg=["ACW00011647"]
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP", "SNOW"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL | eg=["T"]
+sflag: TEXT | NULL | eg=["X"]
+
+## GHCN_D.GHCND_1870
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1870-04-24", "1870-07-29"]
+id: TEXT | NULL | eg=["USC00298072"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+
+## GHCN_D.GHCND_1787
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[-3.0, 4.0]
+id: TEXT | NULL | eg=["EZE00100082"]
+sflag: TEXT | NULL | eg=["E"]
+date: DATE | NULL | eg=["1787-01-20", "1787-01-21"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1911
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1911-11-25", "1911-10-25"]
+value: FLOAT | NULL | eg=[66.0]
+sflag: TEXT | NULL | eg=["a"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00073067", "ASN00086062"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1892
+date: DATE | NULL | eg=["1892-05-12", "1892-10-03"]
+id: TEXT | NULL | eg=["AG000060590"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[-30.0, 0.0]
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL | eg=["X"]
+
+## GHCN_D.GHCND_1834
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1834-10-28", "1834-02-09"]
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1898
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["AG000060590"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1898-10-09", "1898-05-12"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_2008
+element: TEXT | NULL | eg=["DAPR"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL | eg=["2008-03-24", "2008-02-25"]
+value: FLOAT | NULL | eg=[3.0, 2.0]
+sflag: TEXT | NULL | eg=["0"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["USC00512227", "USC00519738"]
+
+## GHCN_D.GHCND_1846
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1846-03-15", "1846-03-16"]
+sflag: TEXT | NULL | eg=["C"]
+element: TEXT | NULL | eg=["PRCP", "SNOW"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["CA006158350"]
+mflag: TEXT | NULL | eg=["T"]
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1978
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+element: TEXT | NULL | eg=["ACMH"]
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1978-05-06", "1978-05-02"]
+id: TEXT | NULL | eg=["USW00023237", "USW00014836"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1909
+id: TEXT | NULL | eg=["RQC00660158", "RQC00661300"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+date: DATE | NULL | eg=["1909-01-24", "1909-08-16"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1798
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1798-02-21", "1798-12-27"]
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["GM000010962"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1996
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["USW00014821", "USW00024225"]
+sflag: TEXT | NULL | eg=["X"]
+element: TEXT | NULL | eg=["ACMC", "ACMH"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL | eg=["1996-04-05", "1996-07-16"]
+mflag: TEXT | NULL | eg=["O"]
+
+## GHCN_D.GHCND_1922
+id: TEXT | NULL | eg=["AGE00135039"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+date: DATE | NULL | eg=["1922-10-31", "1922-12-14"]
+value: FLOAT | NULL | eg=[40.0, 0.0]
+mflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1939
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 31.0]
+id: TEXT | NULL | eg=["ASN00010035", "ASN00010515"]
+element: TEXT | NULL | eg=["DAPR"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+date: DATE | NULL | eg=["1939-07-31", "1939-06-26"]
+
+## GHCN_D.GHCND_1889
+id: TEXT | NULL | eg=["AGE00135039"]
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[60.0, 170.0]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL | eg=["1889-11-27", "1889-01-16"]
+
+## GHCN_D.GHCND_COUNTRIES
+source_url: TEXT | Source | eg=["ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/ghcnd-countries.txt"]
+name: TEXT | NULL | eg=["Antigua and Barbuda", "Afghanistan"]
+code: TEXT | NULL | eg=["AC", "AF"]
+etl_timestamp: NUMBER | Load time for this data row | eg=[1729302237836750]
+
+## GHCN_D.GHCND_1912
+value: FLOAT | NULL | eg=[2.0, 18.0]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAPR"]
+sflag: TEXT | NULL | eg=["a"]
+date: DATE | NULL | eg=["1912-05-06", "1912-07-22"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00008088", "ASN00009001"]
+
+## GHCN_D.GHCND_1806
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1806-02-07", "1806-02-13"]
+id: TEXT | NULL | eg=["EZE00100082"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1893
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1893-01-09", "1893-03-23"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["AG000060590"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1875
+sflag: TEXT | NULL | eg=["0"]
+id: TEXT | NULL | eg=["USC00034251"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1875-05-28", "1875-04-24"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAPR", "MDPR"]
+value: FLOAT | NULL | eg=[7.0, 16.0]
+
+## GHCN_D.GHCND_1863
+value: FLOAT | NULL | eg=[44.0, -2.0]
+id: TEXT | NULL | eg=["EIE00101859", "ITE00100554"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX", "TMIN"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1863-08-02", "1863-12-03"]
+sflag: TEXT | NULL | eg=["E", "F"]
+qflag: TEXT | NULL | eg=["O", "I"]
+
+## GHCN_D.GHCND_1841
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1841-05-16", "1841-09-30"]
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["C"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["CA006158350"]
+
+## GHCN_D.GHCND_1856
+date: DATE | NULL | eg=["1856-03-16", "1856-02-05"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[3.0, 5.0]
+id: TEXT | NULL | eg=["USC00047738"]
+sflag: TEXT | NULL | eg=["0"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1886
+time: TEXT | NULL
+date: DATE | NULL | eg=["1886-11-30", "1886-11-15"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[-67.0, 9990.0]
+sflag: TEXT | NULL | eg=["0", "E"]
+element: TEXT | NULL | eg=["TMIN", "TMAX"]
+id: TEXT | NULL | eg=["USC00431072", "FRE00104937"]
+qflag: TEXT | NULL | eg=["D"]
+
+## GHCN_D.GHCND_1969
+date: DATE | NULL | eg=["1969-04-06", "1969-11-11"]
+sflag: TEXT | NULL | eg=["X"]
+value: FLOAT | NULL | eg=[30.0, 90.0]
+id: TEXT | NULL | eg=["AQW00061705"]
+element: TEXT | NULL | eg=["ACMH"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_2003
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAEV"]
+date: DATE | NULL | eg=["2003-11-17", "2003-09-29"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+id: TEXT | NULL | eg=["USC00310375", "USC00414597"]
+value: FLOAT | NULL | eg=[3.0, 4.0]
+
+## GHCN_D.GHCND_1973
+time: TEXT | NULL
+date: DATE | NULL | eg=["1973-11-28", "1973-08-26"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["ACMH"]
+sflag: TEXT | NULL | eg=["X"]
+id: TEXT | NULL | eg=["USW00013968", "USW00013995"]
+
+## GHCN_D.GHCND_1864
+qflag: TEXT | NULL | eg=["I"]
+sflag: TEXT | NULL | eg=["E", "G"]
+value: FLOAT | NULL | eg=[17.0, 120.0]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX", "TMIN"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1864-12-24", "1864-02-19"]
+id: TEXT | NULL | eg=["EIE00101859", "AGE00135039"]
+
+## GHCN_D.GHCND_1792
+date: DATE | NULL | eg=["1792-04-08", "1792-08-04"]
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["GM000010962"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1825
+time: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1825-09-01", "1825-12-30"]
+
+## GHCN_D.GHCND_1851
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[3.0, 5.0]
+id: TEXT | NULL | eg=["USC00047738"]
+date: DATE | NULL | eg=["1851-05-03", "1851-10-02"]
+sflag: TEXT | NULL | eg=["0"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1895
+mflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL | eg=["1895-09-13", "1895-11-02"]
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["AG000060590"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_2023
+time: TEXT | NULL | eg=["0700"]
+id: TEXT | NULL | eg=["US1KSRS0040", "US1TXTG0005"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["SNOW", "SNWD"]
+sflag: TEXT | NULL | eg=["N", "7"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["2023-01-20", "2023-01-21"]
+source_url: TEXT | Source | eg=["http://www.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2023.csv.gz"]
+etl_timestamp: NUMBER | Load time for this data row | eg=[1729304722434001]
+value: FLOAT | NULL | eg=[0.0, 106.0]
+
+## GHCN_D.GHCND_1963
+date: DATE | NULL | eg=["1963-12-23", "1963-09-15"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+value: FLOAT | NULL | eg=[2.0]
+element: TEXT | NULL | eg=["DAEV"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["RQC00660152", "RQC00668306"]
+
+## GHCN_D.GHCND_1821
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1821-03-02", "1821-03-31"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_INVENTORY
+latitude: FLOAT | NULL | eg=[17.1167]
+source_url: TEXT | NULL | eg=["ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/ghcnd-inventory.txt"]
+longitude: FLOAT | NULL | eg=[-61.7833]
+etl_timestamp: NUMBER | NULL | eg=[1729302243944523]
+element: TEXT | NULL | eg=["TMAX", "PRCP"]
+firstyear: NUMBER | NULL | eg=[1949]
+lastyear: NUMBER | NULL | eg=[1949]
+id: TEXT | NULL | eg=["ACW00011604"]
+
+## GHCN_D.GHCND_1983
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1983-08-09", "1983-11-21"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["USW00023062", "USW00013722"]
+element: TEXT | NULL | eg=["ACMH"]
+
+## GHCN_D.GHCND_1881
+date: DATE | NULL | eg=["1881-07-11", "1881-06-13"]
+value: FLOAT | NULL | eg=[2.0]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAPR"]
+sflag: TEXT | NULL | eg=["a"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00018079", "ASN00019036"]
+
+## GHCN_D.GHCND_1977
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["ACMH"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1977-05-21", "1977-08-11"]
+id: TEXT | NULL | eg=["USW00014895", "USW00024143"]
+sflag: TEXT | NULL | eg=["X"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1944
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00010519", "ASN00012013"]
+date: DATE | NULL | eg=["1944-11-12", "1944-07-03"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+value: FLOAT | NULL | eg=[2.0]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1767
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[-3.0, -6.0]
+id: TEXT | NULL | eg=["ITE00100554"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+date: DATE | NULL | eg=["1767-01-01", "1767-01-05"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1789
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[-2.0, -4.0]
+date: DATE | NULL | eg=["1789-01-31", "1789-12-05"]
+
+## GHCN_D.GHCND_1906
+id: TEXT | NULL | eg=["ASN00049037"]
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1906-08-09", "1906-07-24"]
+sflag: TEXT | NULL | eg=["a"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1800
+id: TEXT | NULL | eg=["GM000010962"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1800-04-09", "1800-06-10"]
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1948
+id: TEXT | NULL | eg=["USW00013942", "USW00023064"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[-56.0, 72.0]
+time: TEXT | NULL | eg=["2400"]
+date: DATE | NULL | eg=["1948-01-31", "1948-12-17"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+element: TEXT | NULL | eg=["TMIN"]
+
+## GHCN_D.GHCND_1891
+time: TEXT | NULL
+date: DATE | NULL | eg=["1891-10-24", "1891-11-03"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["AGE00135039"]
+value: FLOAT | NULL | eg=[76.0, 85.0]
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL | eg=["X"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1876
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAPR", "MDPR"]
+id: TEXT | NULL | eg=["USC00034251", "USC00015555"]
+value: FLOAT | NULL | eg=[3.0, 5.0]
+date: DATE | NULL | eg=["1876-01-17", "1876-07-24"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1917
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["AGE00135039"]
+date: DATE | NULL | eg=["1917-04-02", "1917-04-26"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1836
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1836-07-03", "1836-05-04"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1915
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1915-09-22", "1915-12-11"]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["AGE00135039"]
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1810
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1810-01-13", "1810-02-21"]
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1820
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["EZE00100082"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1820-12-21", "1820-12-05"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_2009
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 3.0]
+element: TEXT | NULL | eg=["DAEV", "DAPR"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["USC00416104", "USC00513872"]
+date: DATE | NULL | eg=["2009-10-28", "2009-09-07"]
+
+## GHCN_D.GHCND_1778
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1778-02-14", "1778-02-13"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[-2.0, 5.0]
+
+## GHCN_D.GHCND_1776
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0, 5.0]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1776-01-10", "1776-01-08"]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1773
+value: FLOAT | NULL | eg=[5.0, 8.0]
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["ITE00100554"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1773-02-07", "1773-02-06"]
+element: TEXT | NULL | eg=["TMAX"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1921
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1921-10-28", "1921-05-25"]
+value: FLOAT | NULL | eg=[80.0, 0.0]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["AGE00147704"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+
+## GHCN_D.GHCND_1848
+date: DATE | NULL | eg=["1848-08-12", "1848-10-22"]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["CA006158350"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL | eg=["T"]
+sflag: TEXT | NULL | eg=["C"]
+
+## GHCN_D.GHCND_1763
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["ITE00100554"]
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[2.0, 4.0]
+qflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL | eg=["1763-01-14", "1763-01-30"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_2006
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 3.0]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["USC00511665", "USC00517437"]
+date: DATE | NULL | eg=["2006-05-08", "2006-05-22"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1950
+date: DATE | NULL | eg=["1950-12-28", "1950-07-16"]
+id: TEXT | NULL | eg=["AG000060390"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[32.0, 0.0]
+
+## GHCN_D.GHCND_1795
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["TMAX"]
+date: DATE | NULL | eg=["1795-01-08", "1795-02-20"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[6.0, -8.0]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1788
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+value: FLOAT | NULL | eg=[0.0, 2.0]
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1788-02-20", "1788-02-13"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1884
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1884-12-20", "1884-07-04"]
+id: TEXT | NULL | eg=["USC00034988"]
+sflag: TEXT | NULL | eg=["6"]
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL | eg=["0700"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1971
+id: TEXT | NULL | eg=["AG000060390"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1971-11-01", "1971-08-09"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1793
+value: FLOAT | NULL | eg=[-7.0, 9.0]
+date: DATE | NULL | eg=["1793-01-07", "1793-01-03"]
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["TMAX"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1985
+sflag: TEXT | NULL | eg=["X"]
+date: DATE | NULL | eg=["1985-03-25", "1985-01-10"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["USW00093862", "USW00023169"]
+element: TEXT | NULL | eg=["ACMH"]
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1968
+value: FLOAT | NULL | eg=[80.0, 100.0]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["ACMH"]
+sflag: TEXT | NULL | eg=["X"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1968-08-27", "1968-01-24"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["AQW00061705"]
+
+## GHCN_D.GHCND_1974
+date: DATE | NULL | eg=["1974-03-17", "1974-02-12"]
+value: FLOAT | NULL | eg=[80.0, 70.0]
+element: TEXT | NULL | eg=["ACMH"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+id: TEXT | NULL | eg=["AQW00061705"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1835
+id: TEXT | NULL | eg=["EZE00100082"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1835-06-26", "1835-01-04"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1873
+id: TEXT | NULL | eg=["USC00301010", "USC00331662"]
+value: FLOAT | NULL | eg=[-17.0, -22.0]
+element: TEXT | NULL | eg=["TMAX", "TMIN"]
+qflag: TEXT | NULL | eg=["I"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL | eg=["1873-12-28", "1873-02-12"]
+sflag: TEXT | NULL | eg=["0"]
+
+## GHCN_D.GHCND_1936
+date: DATE | NULL | eg=["1936-08-24", "1936-08-08"]
+element: TEXT | NULL | eg=["DAPR"]
+sflag: TEXT | NULL | eg=["a"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00009596", "ASN00009714"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 5.0]
+
+## GHCN_D.GHCND_1819
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1819-07-23", "1819-08-24"]
+
+## GHCN_D.GHCND_1900
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["AGE00135039"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1900-02-14", "1900-07-02"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1938
+element: TEXT | NULL | eg=["DAPR"]
+value: FLOAT | NULL | eg=[2.0, 4.0]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1938-07-26", "1938-07-18"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00008071", "ASN00009531"]
+
+## GHCN_D.GHCND_1799
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[-3.0, 5.0]
+date: DATE | NULL | eg=["1799-01-29", "1799-12-11"]
+id: TEXT | NULL | eg=["EZE00100082"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1777
+id: TEXT | NULL | eg=["EZE00100082"]
+date: DATE | NULL | eg=["1777-02-15", "1777-12-29"]
+element: TEXT | NULL | eg=["TMAX"]
+value: FLOAT | NULL | eg=[0.0, -2.0]
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1993
+id: TEXT | NULL | eg=["USW00094746", "USW00024127"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["WDFG"]
+value: FLOAT | NULL | eg=[360.0]
+date: DATE | NULL | eg=["1993-12-29", "1993-04-20"]
+mflag: TEXT | NULL | eg=["W"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+
+## GHCN_D.GHCND_1862
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1862-10-22", "1862-12-17"]
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["C"]
+id: TEXT | NULL | eg=["CA006158350"]
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL | eg=["T"]
+
+## GHCN_D.GHCND_1882
+id: TEXT | NULL | eg=["SF001192090"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL | eg=["D"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1882-05-22", "1882-01-19"]
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["I"]
+
+## GHCN_D.GHCND_2011
+id: TEXT | NULL | eg=["USC00102942", "USC00217107"]
+time: TEXT | NULL | eg=["0700"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["2011-11-27", "2011-06-06"]
+mflag: TEXT | NULL | eg=["T"]
+value: FLOAT | NULL | eg=[0.0]
+sflag: TEXT | NULL | eg=["7"]
+element: TEXT | NULL | eg=["EVAP", "MDPR"]
+
+## GHCN_D.GHCND_1929
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+id: TEXT | NULL | eg=["ASN00008039", "ASN00016033"]
+value: FLOAT | NULL | eg=[2.0]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAPR"]
+date: DATE | NULL | eg=["1929-06-03", "1929-12-26"]
+
+## GHCN_D.GHCND_1817
+value: FLOAT | NULL | eg=[200.0, 0.0]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["TMIN", "TMAX"]
+qflag: TEXT | NULL | eg=["I", "N"]
+id: TEXT | NULL | eg=["ITE00100554", "EZE00100082"]
+date: DATE | NULL | eg=["1817-06-15", "1817-12-21"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1896
+id: TEXT | NULL | eg=["AG000060590"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1896-08-20", "1896-07-11"]
+
+## GHCN_D.GHCND_1908
+date: DATE | NULL | eg=["1908-05-17", "1908-05-05"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["RQC00660158", "RQC00661300"]
+sflag: TEXT | NULL | eg=["0"]
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1946
+id: TEXT | NULL | eg=["ASN00008050", "ASN00009513"]
+element: TEXT | NULL | eg=["DAPR"]
+value: FLOAT | NULL | eg=[2.0, 7.0]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1946-08-12", "1946-07-22"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1987
+date: DATE | NULL | eg=["1987-08-11", "1987-10-29"]
+id: TEXT | NULL | eg=["USW00024225", "USC00080211"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["ACMH"]
+sflag: TEXT | NULL | eg=["X"]
+
+## GHCN_D.GHCND_1832
+element: TEXT | NULL | eg=["DAPR", "DWPR"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+id: TEXT | NULL | eg=["ASN00066046"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1832-05-11", "1832-02-02"]
+value: FLOAT | NULL | eg=[2.0, 1.0]
+
+## GHCN_D.GHCND_1826
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+date: DATE | NULL | eg=["1826-07-19", "1826-08-09"]
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1956
+value: FLOAT | NULL | eg=[280.0, 219.0]
+date: DATE | NULL | eg=["1956-03-17", "1956-12-11"]
+id: TEXT | NULL | eg=["AE000041196"]
+time: TEXT | NULL
+mflag: TEXT | NULL | eg=["H"]
+sflag: TEXT | NULL | eg=["S"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["TAVG"]
+
+## GHCN_D.GHCND_1951
+date: DATE | NULL | eg=["1951-12-26", "1951-12-09"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["AG000060390"]
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[88.0, 0.0]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]

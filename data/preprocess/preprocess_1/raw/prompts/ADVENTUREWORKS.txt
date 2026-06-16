@@ -1,0 +1,41 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: ADVENTUREWORKS.SALESPERSONQUOTAHISTORY
+Columns: ModifiedDate, rowguid, SalesQuota, BusinessEntityID, QuotaDate
+
+Table: ADVENTUREWORKS.PRODUCTMODELPRODUCTDESCRIPTIONCULTURE
+Columns: cultureid, productmodelid, productdescriptionid, modifieddate
+
+Table: ADVENTUREWORKS.PRODUCTDESCRIPTION
+Columns: modifieddate, productdescriptionid, rowguid, description
+
+Table: ADVENTUREWORKS.SALESORDERHEADER
+Columns: rowguid, STATUS, comment, customerid, currencyrateid, territoryid, totaldue, revisionnumber, salesorderid, purchaseordernumber, onlineorderflag, freight, accountnumber, duedate, shipmethodid, orderdate, creditcardid, billtoaddressid, creditcardapprovalcode, shiptoaddressid, taxamt, subtotal, modifieddate, shipdate, salespersonid
+
+Table: ADVENTUREWORKS.PRODUCTREVIEW
+Columns: productid, rating, emailaddress, reviewdate, modifieddate, reviewername, productreviewid, comments, modifeddate
+
+Table: ADVENTUREWORKS.PRODUCTCATEGORY
+Columns: productcategoryid, name, rowguid, modifieddate
+
+Table: ADVENTUREWORKS.SALESTERRITORY
+Columns: territoryid, salesytd, modifieddate, group, saleslastyear, countryregioncode, rowguid, name, costytd, costlastyear
+
+Table: ADVENTUREWORKS.CURRENCYRATE
+Columns: currencyrateid, tocurrencycode, endofdayrate, modifieddate, currencyratedate, fromcurrencycode, averagerate
+
+Table: ADVENTUREWORKS.PRODUCTSUBCATEGORY
+Columns: productsubcategoryid, name, modifieddate, rowguid, productcategoryid
+
+Table: ADVENTUREWORKS.SALESORDERDETAIL
+Columns: specialofferid, orderqty, salesorderid, unitpricediscount, salesorderdetailid, modifieddate, productid, unitprice, rowguid, carriertrackingnumber
+
+Table: ADVENTUREWORKS.SALESPERSON
+Columns: salesytd, salesquota, rowguid, saleslastyear, commissionpct, modifieddate, bonus, businessentityid, territoryid
+
+Table: ADVENTUREWORKS.PRODUCT
+Columns: safetystocklevel, productid, productline, sellstartdate, productmodelid, reorderpoint, rowguid, color, daystomanufacture, weightunitmeasurecode, discontinueddate, standardcost, makeflag, sizeunitmeasurecode, sellenddate, modifieddate, finishedgoodsflag, weight, productsubcategoryid, NAME, listprice, class, productnumber, size, style
+
+Table: ADVENTUREWORKS.COUNTRYREGIONCURRENCY
+Columns: modifieddate, countryregioncode, currencycode

@@ -1,0 +1,23 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: LIBRARIES_IO.VERSIONS
+Columns: number, project_name, created_timestamp, project_id, id, updated_timestamp, published_timestamp, platform
+
+Table: LIBRARIES_IO.REPOSITORY_DEPENDENCIES
+Columns: optional, id, git_branch, dependency_project_name, repository_name_with_owner, manifest_filepath, dependency_project_id, host_type, repository_id, manifest_platform, dependency_requirements, manifest_kind, dependency_kind
+
+Table: LIBRARIES_IO.REPOSITORIES
+Columns: size, security_threat_model_filename, contributors_count, fork_source_name_with_owner, contributing_guidelines_filename, display_name, last_synced_timestamp, security_audit_filename, updated_timestamp, uuid, readme_filename, description, stars_count, issues_enabled, code_of_conduct_filename, pull_requests_enabled, last_pushed_timestamp, name_with_owner, created_timestamp, license_filename, homepage_url, forks_count, id, mirror_url, default_branch, logo_url, watchers_count, sourcerank, open_issues_count, host_type, status, pages_enabled, an, wiki_enabled, changelog_filename, fork, keywords, language, license, scm_type
+
+Table: LIBRARIES_IO.PROJECTS
+Columns: updated_timestamp, dependent_projects_count, dependent_repositories_count, created_timestamp, status, repository_id, description, package_manager_id, keywords, latest_release_number, language, latest_release_publish_timestamp, repository_url, name, licenses, platform, sourcerank, last_synced_timestamp, homepage_url, id, versions_count
+
+Table: LIBRARIES_IO.TAGS
+Columns: repository_id, tag_name, tag_updated_timestamp, repository_name_with_owner, id, host_type, tag_published_timestamp, tag_git_sha, tag_created_timestamp
+
+Table: LIBRARIES_IO.PROJECTS_WITH_REPOSITORY_FIELDS
+Columns: repository_language, repository_readme_filename, repository_uuid, repository_url, repository_security_threat_model_filename, platform, dependent_repositories_count, repository_license, repository_default_branch, created_timestamp, dependent_projects_count, repository_sourcerank, repository_pull_requests_enabled, id, repository_issues_enabled, repository_last_pushed_timestamp, repository_mirror_url, bh, repository_contributing_guidelines_filename, latest_release_publish_timestamp, repository_id, repository_scm_type, language, repository_stars_count, repository_pages_enabled, licenses, repository_host_type, repository_keywords, keywords, status, repository_fork, repository_name_with_owner, latest_release_number, description, repository_updated_timestamp, versions_count, name, repository_created_timestamp, repository_contributors_count, package_manager_id, repository_security_audit_filename, repository_wiki_enabled, repository_open_issues_count, updated_timestamp, last_synced_timestamp, repository_last_synced_timestamp, repository_description, repository_status, repository_forks_count, repository_license_filename, repository_watchers_count, homepage_url, repository_size, repository_changelog_filename, sourcerank, repository_logo_url, repository_display_name, repository_homepage_url, repository_fork_source_name_with_owner, repository_code_of_conduct_filename
+
+Table: LIBRARIES_IO.DEPENDENCIES
+Columns: id, version_id, platform, version_number, dependency_platform, dependency_name, dependency_kind, project_name, dependency_project_id, optional_dependency, dependency_requirements, project_id

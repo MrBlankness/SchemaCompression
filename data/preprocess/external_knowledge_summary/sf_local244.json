@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_local244",
+  "question": "Calculate the duration of each track, classify them as short, medium, or long, output the minimum and maximum time for each kind (in minutes) and the total revenue for each category, group by the category.",
+  "db_id": "MUSIC",
+  "source_document": "music_length_type.md",
+  "evidence": "Short: Duration between the minimum value and the midpoint between the minimum and average values. Medium: Duration between the midpoint between the minimum and average values and the midpoint between the average and maximum values. Long: Duration between the midpoint between the average and maximum values and the maximum value."
+}

@@ -1,0 +1,90 @@
+[COMPONENTS]
+@C1
+Address: TEXT | NULL
+City: TEXT | NULL
+Country: TEXT | NULL
+Email: TEXT | NULL
+Fax: TEXT | NULL
+FirstName: TEXT | NULL
+LastName: TEXT | NULL
+Phone: TEXT | NULL
+PostalCode: TEXT | NULL
+State: TEXT | NULL
+
+[TABLES]
+## CHINOOK.PLAYLIST_TRACK
+PlaylistId: NUMBER | NULL
+TrackId: NUMBER | NULL
+
+## CHINOOK.EMPLOYEES
+@use: [C1]
+BirthDate: TEXT | NULL
+ReportsTo: FLOAT | NULL
+EmployeeId: NUMBER | NULL
+Title: TEXT | NULL
+HireDate: TEXT | NULL
+
+## CHINOOK.PLAYLISTS
+PlaylistId: NUMBER | NULL
+Name: TEXT | NULL
+
+## CHINOOK.ARTISTS
+ArtistId: NUMBER | NULL
+Name: TEXT | NULL
+
+## CHINOOK.CUSTOMERS
+@use: [C1]
+CustomerId: NUMBER | NULL
+Company: TEXT | NULL
+SupportRepId: NUMBER | NULL
+
+## CHINOOK.SQLITE_STAT1
+tbl: TEXT | NULL
+stat: TEXT | NULL
+idx: TEXT | NULL
+
+## CHINOOK.TRACKS
+TrackId: NUMBER | NULL
+GenreId: NUMBER | NULL
+AlbumId: NUMBER | NULL
+Composer: TEXT | NULL
+Name: TEXT | NULL
+Milliseconds: NUMBER | NULL
+MediaTypeId: NUMBER | NULL
+Bytes: NUMBER | NULL
+UnitPrice: FLOAT | NULL
+
+## CHINOOK.SQLITE_SEQUENCE
+seq: NUMBER | NULL
+name: TEXT | NULL
+
+## CHINOOK.GENRES
+Name: TEXT | NULL
+GenreId: NUMBER | NULL
+
+## CHINOOK.INVOICES
+InvoiceId: NUMBER | NULL
+BillingCountry: TEXT | NULL
+InvoiceDate: TEXT | NULL
+BillingAddress: TEXT | NULL
+Total: FLOAT | NULL
+CustomerId: NUMBER | NULL
+BillingState: TEXT | NULL
+BillingPostalCode: TEXT | NULL
+BillingCity: TEXT | NULL
+
+## CHINOOK.MEDIA_TYPES
+MediaTypeId: NUMBER | NULL
+Name: TEXT | NULL
+
+## CHINOOK.ALBUMS
+AlbumId: NUMBER | NULL
+Title: TEXT | NULL
+ArtistId: NUMBER | NULL
+
+## CHINOOK.INVOICE_ITEMS
+InvoiceId: NUMBER | NULL
+InvoiceLineId: NUMBER | NULL
+TrackId: NUMBER | NULL
+Quantity: NUMBER | NULL
+UnitPrice: FLOAT | NULL

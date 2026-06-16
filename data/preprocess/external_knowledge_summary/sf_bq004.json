@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq004",
+  "question": "In July 2017, among all visitors who bought any YouTube-related product, which distinct product—excluding those containing ‘YouTube’ in the product name—had the highest total quantity purchased?",
+  "db_id": "GA360",
+  "source_document": "google_analytics_sample.ga_sessions.md",
+  "evidence": "Table: ga_sessions_YYYYMMDD (daily) or ga_sessions_intraday_YYYYMMDD (intraday). Rows: each row corresponds to a session. Columns: hits.product (RECORD) - row and nested fields populated for each hit that contains Enhanced Ecommerce PRODUCT data. hits.product.productQuantity (INTEGER) - the quantity of the product purchased. hits.product.v2ProductName (STRING) - Product Name. hits.eCommerceAction.action_type (STRING) - Completed purchase = 6. Date filter: date column (STRING) in YYYYMMDD format for July 2017. Need to identify 'YouTube-related product' and exclude those with 'YouTube' in product name. Distinct product selection based on highest total quantity purchased."
+}

@@ -1,0 +1,943 @@
+[TABLES]
+## EPA_HISTORICAL_AIR_QUALITY.CO_DAILY_SUMMARY
+first_max_value: FLOAT | The highest value for the day.
+sample_duration: TEXT | The length of time that air passes through the monitoring device before it is analyzed (measured). So, it represents an averaging period in the atmosphere (for example, a 24-hour sample duration draws ambient air over a collection filter for 24 straight hours). For continuous monitors, it can represent an averaging time of many samples (for example, a 1-hour value may be the average of four one-minute samples collected during each quarter of the hour).
+city_name: TEXT | The name of the city where the monitoring site is located. This represents the legal incorporated boundaries of cities and not urban areas.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+event_type: TEXT | Indicates whether data measured during exceptional events are included in the summary. A wildfire is an example of an exceptional event; it is something that affects air quality, but the local agency has no control over. No Events means no events occurred. Events Included means events occurred and the data from them is included in the summary. Events Excluded means that events occurred but data form them is excluded from the summary. Concurred Events Excluded means that events occurred but only EPA concurred exclusions are removed from the summary. If an event occurred for the parameter in question, the data will have multiple records for each monitor.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+local_site_name: TEXT | The name of the site (if any) given by the State, local, or tribal air pollution control agency that operates it.
+observation_count: NUMBER | The number of observations (samples) taken during the day.
+method_code: NUMBER | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+site_num: TEXT | A unique number within the county identifying the site.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+observation_percent: FLOAT | The percent representing the number of observations taken with respect to the number scheduled to be taken during the day. This is only calculated for monitors where measurements are required (e.g., only certain parameters).
+first_max_hour: NUMBER | The hour (on a 24-hour clock) when the highest value for the day (the previous field) was taken.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+arithmetic_mean: FLOAT | The average (arithmetic mean) value for the day.
+state_name: TEXT | The name of the state where the monitoring site is located.
+address: TEXT | The approximate street address of the monitoring site.
+county_name: TEXT | The name of the county where the monitoring site is located.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+pollutant_standard: TEXT | A description of the ambient air quality standard rules used to aggregate statistics. (See description at beginning of document.)
+cbsa_name: TEXT | The name of the core bases statistical area (metropolitan area) where the monitoring site is located.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+aqi: NUMBER | The Air Quality Index for the day for the pollutant, if applicable.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+
+## EPA_HISTORICAL_AIR_QUALITY.PM25_NONFRM_DAILY_SUMMARY
+county_name: TEXT | The name of the county where the monitoring site is located.
+sample_duration: TEXT | The length of time that air passes through the monitoring device before it is analyzed (measured). So, it represents an averaging period in the atmosphere (for example, a 24-hour sample duration draws ambient air over a collection filter for 24 straight hours). For continuous monitors, it can represent an averaging time of many samples (for example, a 1-hour value may be the average of four one-minute samples collected during each quarter of the hour).
+observation_percent: FLOAT | The percent representing the number of observations taken with respect to the number scheduled to be taken during the day. This is only calculated for monitors where measurements are required (e.g., only certain parameters).
+site_num: TEXT | A unique number within the county identifying the site.
+aqi: NUMBER | The Air Quality Index for the day for the pollutant, if applicable.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+state_name: TEXT | The name of the state where the monitoring site is located.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+arithmetic_mean: FLOAT | The average (arithmetic mean) value for the day.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+city_name: TEXT | The name of the city where the monitoring site is located. This represents the legal incorporated boundaries of cities and not urban areas.
+local_site_name: TEXT | The name of the site (if any) given by the State, local, or tribal air pollution control agency that operates it.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+pollutant_standard: TEXT | A description of the ambient air quality standard rules used to aggregate statistics. (See description at beginning of document.)
+method_code: NUMBER | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+first_max_hour: NUMBER | The hour (on a 24-hour clock) when the highest value for the day (the previous field) was taken.
+observation_count: NUMBER | The number of observations (samples) taken during the day.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+address: TEXT | The approximate street address of the monitoring site.
+first_max_value: FLOAT | The highest value for the day.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+cbsa_name: TEXT | The name of the core bases statistical area (metropolitan area) where the monitoring site is located.
+event_type: TEXT | Indicates whether data measured during exceptional events are included in the summary. A wildfire is an example of an exceptional event; it is something that affects air quality, but the local agency has no control over. No Events means no events occurred. Events Included means events occurred and the data from them is included in the summary. Events Excluded means that events occurred but data form them is excluded from the summary. Concurred Events Excluded means that events occurred but only EPA concurred exclusions are removed from the summary. If an event occurred for the parameter in question, the data will have multiple records for each monitor.
+
+## EPA_HISTORICAL_AIR_QUALITY.TEMPERATURE_DAILY_SUMMARY
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+county_name: TEXT | The name of the county where the monitoring site is located.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+city_name: TEXT | The name of the city where the monitoring site is located. This represents the legal incorporated boundaries of cities and not urban areas.
+site_num: TEXT | A unique number within the county identifying the site.
+method_code: NUMBER | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+arithmetic_mean: FLOAT | The average (arithmetic mean) value for the day.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+cbsa_name: TEXT | The name of the core bases statistical area (metropolitan area) where the monitoring site is located.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+address: TEXT | The approximate street address of the monitoring site.
+sample_duration: TEXT | The length of time that air passes through the monitoring device before it is analyzed (measured). So, it represents an averaging period in the atmosphere (for example, a 24-hour sample duration draws ambient air over a collection filter for 24 straight hours). For continuous monitors, it can represent an averaging time of many samples (for example, a 1-hour value may be the average of four one-minute samples collected during each quarter of the hour).
+first_max_hour: NUMBER | The hour (on a 24-hour clock) when the highest value for the day (the previous field) was taken.
+observation_percent: FLOAT | The percent representing the number of observations taken with respect to the number scheduled to be taken during the day. This is only calculated for monitors where measurements are required (e.g., only certain parameters).
+aqi: NUMBER | The Air Quality Index for the day for the pollutant, if applicable.
+first_max_value: FLOAT | The highest value for the day.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+state_name: TEXT | The name of the state where the monitoring site is located.
+pollutant_standard: TEXT | A description of the ambient air quality standard rules used to aggregate statistics. (See description at beginning of document.)
+observation_count: NUMBER | The number of observations (samples) taken during the day.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+event_type: TEXT | Indicates whether data measured during exceptional events are included in the summary. A wildfire is an example of an exceptional event; it is something that affects air quality, but the local agency has no control over. No Events means no events occurred. Events Included means events occurred and the data from them is included in the summary. Events Excluded means that events occurred but data form them is excluded from the summary. Concurred Events Excluded means that events occurred but only EPA concurred exclusions are removed from the summary. If an event occurred for the parameter in question, the data will have multiple records for each monitor.
+local_site_name: TEXT | The name of the site (if any) given by the State, local, or tribal air pollution control agency that operates it.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+
+## EPA_HISTORICAL_AIR_QUALITY.NO2_HOURLY_SUMMARY
+site_num: TEXT | A unique number within the county identifying the site.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+time_local: TEXT | The time of day that sampling began on a 24-hour clock in Local Standard Time.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+uncertainty: FLOAT | The total measurement uncertainty associated with a reported measurement as indicated by the reporting agency.
+method_type: TEXT | An indication of whether the method used to collect the data is a federal reference method (FRM), equivalent to a federal reference method, an approved regional method, or none of the above (non-federal reference method).
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+sample_measurement: FLOAT | The measured value in the standard units of measure for the parameter.
+date_gmt: DATE | The calendar date of the sample in Greenwich Mean Time.
+county_name: TEXT | The name of the county where the monitoring site is located.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+qualifier: TEXT | Sample values may have qualifiers that indicate why they are missing or that they are out of the ordinary. Types of qualifiers are: null data, exceptional event, natural events, and quality assurance. The highest ranking qualifier, if any, is described in this field.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+method_code: TEXT | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+mdl: FLOAT | The Method Detection Limit. The minimum sample concentration detectable for the monitor and method. Note: if samples are reported below this level, they may have been replaced by 1/2 the MDL.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+state_name: TEXT | The name of the state where the monitoring site is located.
+time_gmt: TEXT | The time of day that sampling began on a 24-hour clock in Greenwich Mean Time.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+
+## EPA_HISTORICAL_AIR_QUALITY.HAP_DAILY_SUMMARY
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+aqi: NUMBER | The Air Quality Index for the day for the pollutant, if applicable.
+county_name: TEXT | The name of the county where the monitoring site is located.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+event_type: TEXT | Indicates whether data measured during exceptional events are included in the summary. A wildfire is an example of an exceptional event; it is something that affects air quality, but the local agency has no control over. No Events means no events occurred. Events Included means events occurred and the data from them is included in the summary. Events Excluded means that events occurred but data form them is excluded from the summary. Concurred Events Excluded means that events occurred but only EPA concurred exclusions are removed from the summary. If an event occurred for the parameter in question, the data will have multiple records for each monitor.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+cbsa_name: TEXT | The name of the core bases statistical area (metropolitan area) where the monitoring site is located.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+arithmetic_mean: FLOAT | The average (arithmetic mean) value for the day.
+first_max_hour: NUMBER | The hour (on a 24-hour clock) when the highest value for the day (the previous field) was taken.
+city_name: TEXT | The name of the city where the monitoring site is located. This represents the legal incorporated boundaries of cities and not urban areas.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+local_site_name: TEXT | The name of the site (if any) given by the State, local, or tribal air pollution control agency that operates it.
+site_num: TEXT | A unique number within the county identifying the site.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+observation_percent: FLOAT | The percent representing the number of observations taken with respect to the number scheduled to be taken during the day. This is only calculated for monitors where measurements are required (e.g., only certain parameters).
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+first_max_value: FLOAT | The highest value for the day.
+address: TEXT | The approximate street address of the monitoring site.
+observation_count: NUMBER | The number of observations (samples) taken during the day.
+method_code: NUMBER | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+sample_duration: TEXT | The length of time that air passes through the monitoring device before it is analyzed (measured). So, it represents an averaging period in the atmosphere (for example, a 24-hour sample duration draws ambient air over a collection filter for 24 straight hours). For continuous monitors, it can represent an averaging time of many samples (for example, a 1-hour value may be the average of four one-minute samples collected during each quarter of the hour).
+pollutant_standard: TEXT | A description of the ambient air quality standard rules used to aggregate statistics. (See description at beginning of document.)
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+state_name: TEXT | The name of the state where the monitoring site is located.
+
+## EPA_HISTORICAL_AIR_QUALITY.PM25_NONFRM_HOURLY_SUMMARY
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+county_name: TEXT | The name of the county where the monitoring site is located.
+time_gmt: TEXT | The time of day that sampling began on a 24-hour clock in Greenwich Mean Time.
+state_name: TEXT | The name of the state where the monitoring site is located.
+sample_measurement: FLOAT | The measured value in the standard units of measure for the parameter.
+site_num: TEXT | A unique number within the county identifying the site.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+method_type: TEXT | An indication of whether the method used to collect the data is a federal reference method (FRM), equivalent to a federal reference method, an approved regional method, or none of the above (non-federal reference method).
+time_local: TEXT | The time of day that sampling began on a 24-hour clock in Local Standard Time.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+qualifier: TEXT | Sample values may have qualifiers that indicate why they are missing or that they are out of the ordinary. Types of qualifiers are: null data, exceptional event, natural events, and quality assurance. The highest ranking qualifier, if any, is described in this field.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+uncertainty: FLOAT | The total measurement uncertainty associated with a reported measurement as indicated by the reporting agency.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+method_code: TEXT | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+mdl: FLOAT | The Method Detection Limit. The minimum sample concentration detectable for the monitor and method. Note: if samples are reported below this level, they may have been replaced by 1/2 the MDL.
+date_gmt: DATE | The calendar date of the sample in Greenwich Mean Time.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+
+## EPA_HISTORICAL_AIR_QUALITY.PRESSURE_DAILY_SUMMARY
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+county_name: TEXT | The name of the county where the monitoring site is located.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+site_num: TEXT | A unique number within the county identifying the site.
+first_max_hour: NUMBER | The hour (on a 24-hour clock) when the highest value for the day (the previous field) was taken.
+pollutant_standard: TEXT | A description of the ambient air quality standard rules used to aggregate statistics. (See description at beginning of document.)
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+aqi: NUMBER | The Air Quality Index for the day for the pollutant, if applicable.
+local_site_name: TEXT | The name of the site (if any) given by the State, local, or tribal air pollution control agency that operates it.
+event_type: TEXT | Indicates whether data measured during exceptional events are included in the summary. A wildfire is an example of an exceptional event; it is something that affects air quality, but the local agency has no control over. No Events means no events occurred. Events Included means events occurred and the data from them is included in the summary. Events Excluded means that events occurred but data form them is excluded from the summary. Concurred Events Excluded means that events occurred but only EPA concurred exclusions are removed from the summary. If an event occurred for the parameter in question, the data will have multiple records for each monitor.
+city_name: TEXT | The name of the city where the monitoring site is located. This represents the legal incorporated boundaries of cities and not urban areas.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+method_code: NUMBER | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+sample_duration: TEXT | The length of time that air passes through the monitoring device before it is analyzed (measured). So, it represents an averaging period in the atmosphere (for example, a 24-hour sample duration draws ambient air over a collection filter for 24 straight hours). For continuous monitors, it can represent an averaging time of many samples (for example, a 1-hour value may be the average of four one-minute samples collected during each quarter of the hour).
+cbsa_name: TEXT | The name of the core bases statistical area (metropolitan area) where the monitoring site is located.
+state_name: TEXT | The name of the state where the monitoring site is located.
+observation_count: NUMBER | The number of observations (samples) taken during the day.
+observation_percent: FLOAT | The percent representing the number of observations taken with respect to the number scheduled to be taken during the day. This is only calculated for monitors where measurements are required (e.g., only certain parameters).
+first_max_value: FLOAT | The highest value for the day.
+arithmetic_mean: FLOAT | The average (arithmetic mean) value for the day.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+address: TEXT | The approximate street address of the monitoring site.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+
+## EPA_HISTORICAL_AIR_QUALITY.NONOXNOY_DAILY_SUMMARY
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+city_name: TEXT | The name of the city where the monitoring site is located. This represents the legal incorporated boundaries of cities and not urban areas.
+state_name: TEXT | The name of the state where the monitoring site is located.
+address: TEXT | The approximate street address of the monitoring site.
+county_name: TEXT | The name of the county where the monitoring site is located.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+method_code: NUMBER | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+pollutant_standard: TEXT | A description of the ambient air quality standard rules used to aggregate statistics. (See description at beginning of document.)
+arithmetic_mean: FLOAT | The average (arithmetic mean) value for the day.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+aqi: NUMBER | The Air Quality Index for the day for the pollutant, if applicable.
+first_max_hour: NUMBER | The hour (on a 24-hour clock) when the highest value for the day (the previous field) was taken.
+observation_percent: FLOAT | The percent representing the number of observations taken with respect to the number scheduled to be taken during the day. This is only calculated for monitors where measurements are required (e.g., only certain parameters).
+local_site_name: TEXT | The name of the site (if any) given by the State, local, or tribal air pollution control agency that operates it.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+first_max_value: FLOAT | The highest value for the day.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+event_type: TEXT | Indicates whether data measured during exceptional events are included in the summary. A wildfire is an example of an exceptional event; it is something that affects air quality, but the local agency has no control over. No Events means no events occurred. Events Included means events occurred and the data from them is included in the summary. Events Excluded means that events occurred but data form them is excluded from the summary. Concurred Events Excluded means that events occurred but only EPA concurred exclusions are removed from the summary. If an event occurred for the parameter in question, the data will have multiple records for each monitor.
+sample_duration: TEXT | The length of time that air passes through the monitoring device before it is analyzed (measured). So, it represents an averaging period in the atmosphere (for example, a 24-hour sample duration draws ambient air over a collection filter for 24 straight hours). For continuous monitors, it can represent an averaging time of many samples (for example, a 1-hour value may be the average of four one-minute samples collected during each quarter of the hour).
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+cbsa_name: TEXT | The name of the core bases statistical area (metropolitan area) where the monitoring site is located.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+observation_count: NUMBER | The number of observations (samples) taken during the day.
+site_num: TEXT | A unique number within the county identifying the site.
+
+## EPA_HISTORICAL_AIR_QUALITY.O3_DAILY_SUMMARY
+site_num: TEXT | A unique number within the county identifying the site.
+county_name: TEXT | The name of the county where the monitoring site is located.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+method_code: NUMBER | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+local_site_name: TEXT | The name of the site (if any) given by the State, local, or tribal air pollution control agency that operates it.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+observation_count: NUMBER | The number of observations (samples) taken during the day.
+sample_duration: TEXT | The length of time that air passes through the monitoring device before it is analyzed (measured). So, it represents an averaging period in the atmosphere (for example, a 24-hour sample duration draws ambient air over a collection filter for 24 straight hours). For continuous monitors, it can represent an averaging time of many samples (for example, a 1-hour value may be the average of four one-minute samples collected during each quarter of the hour).
+state_name: TEXT | The name of the state where the monitoring site is located.
+arithmetic_mean: FLOAT | The average (arithmetic mean) value for the day.
+first_max_value: FLOAT | The highest value for the day.
+event_type: TEXT | Indicates whether data measured during exceptional events are included in the summary. A wildfire is an example of an exceptional event; it is something that affects air quality, but the local agency has no control over. No Events means no events occurred. Events Included means events occurred and the data from them is included in the summary. Events Excluded means that events occurred but data form them is excluded from the summary. Concurred Events Excluded means that events occurred but only EPA concurred exclusions are removed from the summary. If an event occurred for the parameter in question, the data will have multiple records for each monitor.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+address: TEXT | The approximate street address of the monitoring site.
+aqi: NUMBER | The Air Quality Index for the day for the pollutant, if applicable.
+observation_percent: FLOAT | The percent representing the number of observations taken with respect to the number scheduled to be taken during the day. This is only calculated for monitors where measurements are required (e.g., only certain parameters).
+cbsa_name: TEXT | The name of the core bases statistical area (metropolitan area) where the monitoring site is located.
+pollutant_standard: TEXT | A description of the ambient air quality standard rules used to aggregate statistics. (See description at beginning of document.)
+city_name: TEXT | The name of the city where the monitoring site is located. This represents the legal incorporated boundaries of cities and not urban areas.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+first_max_hour: NUMBER | The hour (on a 24-hour clock) when the highest value for the day (the previous field) was taken.
+
+## EPA_HISTORICAL_AIR_QUALITY.PM25_SPECIATION_HOURLY_SUMMARY
+mdl: FLOAT | The Method Detection Limit. The minimum sample concentration detectable for the monitor and method. Note: if samples are reported below this level, they may have been replaced by 1/2 the MDL.
+state_name: TEXT | The name of the state where the monitoring site is located.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+time_gmt: TEXT | The time of day that sampling began on a 24-hour clock in Greenwich Mean Time.
+qualifier: TEXT | Sample values may have qualifiers that indicate why they are missing or that they are out of the ordinary. Types of qualifiers are: null data, exceptional event, natural events, and quality assurance. The highest ranking qualifier, if any, is described in this field.
+method_code: TEXT | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+county_name: TEXT | The name of the county where the monitoring site is located.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+method_type: TEXT | An indication of whether the method used to collect the data is a federal reference method (FRM), equivalent to a federal reference method, an approved regional method, or none of the above (non-federal reference method).
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+sample_measurement: FLOAT | The measured value in the standard units of measure for the parameter.
+site_num: TEXT | A unique number within the county identifying the site.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+time_local: TEXT | The time of day that sampling began on a 24-hour clock in Local Standard Time.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+uncertainty: FLOAT | The total measurement uncertainty associated with a reported measurement as indicated by the reporting agency.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+date_gmt: DATE | The calendar date of the sample in Greenwich Mean Time.
+
+## EPA_HISTORICAL_AIR_QUALITY.RH_AND_DP_HOURLY_SUMMARY
+date_gmt: DATE | The calendar date of the sample in Greenwich Mean Time.
+time_local: TEXT | The time of day that sampling began on a 24-hour clock in Local Standard Time.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+uncertainty: FLOAT | The total measurement uncertainty associated with a reported measurement as indicated by the reporting agency.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+method_type: TEXT | An indication of whether the method used to collect the data is a federal reference method (FRM), equivalent to a federal reference method, an approved regional method, or none of the above (non-federal reference method).
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+method_code: TEXT | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+sample_measurement: FLOAT | The measured value in the standard units of measure for the parameter.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+mdl: FLOAT | The Method Detection Limit. The minimum sample concentration detectable for the monitor and method. Note: if samples are reported below this level, they may have been replaced by 1/2 the MDL.
+site_num: TEXT | A unique number within the county identifying the site.
+county_name: TEXT | The name of the county where the monitoring site is located.
+state_name: TEXT | The name of the state where the monitoring site is located.
+qualifier: TEXT | Sample values may have qualifiers that indicate why they are missing or that they are out of the ordinary. Types of qualifiers are: null data, exceptional event, natural events, and quality assurance. The highest ranking qualifier, if any, is described in this field.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+time_gmt: TEXT | The time of day that sampling began on a 24-hour clock in Greenwich Mean Time.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+
+## EPA_HISTORICAL_AIR_QUALITY.NO2_DAILY_SUMMARY
+observation_percent: FLOAT | The percent representing the number of observations taken with respect to the number scheduled to be taken during the day. This is only calculated for monitors where measurements are required (e.g., only certain parameters).
+site_num: TEXT | A unique number within the county identifying the site.
+state_name: TEXT | The name of the state where the monitoring site is located.
+observation_count: NUMBER | The number of observations (samples) taken during the day.
+aqi: NUMBER | The Air Quality Index for the day for the pollutant, if applicable.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+sample_duration: TEXT | The length of time that air passes through the monitoring device before it is analyzed (measured). So, it represents an averaging period in the atmosphere (for example, a 24-hour sample duration draws ambient air over a collection filter for 24 straight hours). For continuous monitors, it can represent an averaging time of many samples (for example, a 1-hour value may be the average of four one-minute samples collected during each quarter of the hour).
+pollutant_standard: TEXT | A description of the ambient air quality standard rules used to aggregate statistics. (See description at beginning of document.)
+event_type: TEXT | Indicates whether data measured during exceptional events are included in the summary. A wildfire is an example of an exceptional event; it is something that affects air quality, but the local agency has no control over. No Events means no events occurred. Events Included means events occurred and the data from them is included in the summary. Events Excluded means that events occurred but data form them is excluded from the summary. Concurred Events Excluded means that events occurred but only EPA concurred exclusions are removed from the summary. If an event occurred for the parameter in question, the data will have multiple records for each monitor.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+city_name: TEXT | The name of the city where the monitoring site is located. This represents the legal incorporated boundaries of cities and not urban areas.
+local_site_name: TEXT | The name of the site (if any) given by the State, local, or tribal air pollution control agency that operates it.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+first_max_value: FLOAT | The highest value for the day.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+cbsa_name: TEXT | The name of the core bases statistical area (metropolitan area) where the monitoring site is located.
+first_max_hour: NUMBER | The hour (on a 24-hour clock) when the highest value for the day (the previous field) was taken.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+address: TEXT | The approximate street address of the monitoring site.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+arithmetic_mean: FLOAT | The average (arithmetic mean) value for the day.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+county_name: TEXT | The name of the county where the monitoring site is located.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+method_code: NUMBER | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+
+## EPA_HISTORICAL_AIR_QUALITY.VOC_DAILY_SUMMARY
+city_name: TEXT | The name of the city where the monitoring site is located. This represents the legal incorporated boundaries of cities and not urban areas.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+aqi: NUMBER | The Air Quality Index for the day for the pollutant, if applicable.
+first_max_value: FLOAT | The highest value for the day.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+cbsa_name: TEXT | The name of the core bases statistical area (metropolitan area) where the monitoring site is located.
+observation_percent: FLOAT | The percent representing the number of observations taken with respect to the number scheduled to be taken during the day. This is only calculated for monitors where measurements are required (e.g., only certain parameters).
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+first_max_hour: NUMBER | The hour (on a 24-hour clock) when the highest value for the day (the previous field) was taken.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+site_num: TEXT | A unique number within the county identifying the site.
+observation_count: NUMBER | The number of observations (samples) taken during the day.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+local_site_name: TEXT | The name of the site (if any) given by the State, local, or tribal air pollution control agency that operates it.
+address: TEXT | The approximate street address of the monitoring site.
+method_code: NUMBER | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+state_name: TEXT | The name of the state where the monitoring site is located.
+event_type: TEXT | Indicates whether data measured during exceptional events are included in the summary. A wildfire is an example of an exceptional event; it is something that affects air quality, but the local agency has no control over. No Events means no events occurred. Events Included means events occurred and the data from them is included in the summary. Events Excluded means that events occurred but data form them is excluded from the summary. Concurred Events Excluded means that events occurred but only EPA concurred exclusions are removed from the summary. If an event occurred for the parameter in question, the data will have multiple records for each monitor.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+sample_duration: TEXT | The length of time that air passes through the monitoring device before it is analyzed (measured). So, it represents an averaging period in the atmosphere (for example, a 24-hour sample duration draws ambient air over a collection filter for 24 straight hours). For continuous monitors, it can represent an averaging time of many samples (for example, a 1-hour value may be the average of four one-minute samples collected during each quarter of the hour).
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+arithmetic_mean: FLOAT | The average (arithmetic mean) value for the day.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+pollutant_standard: TEXT | A description of the ambient air quality standard rules used to aggregate statistics. (See description at beginning of document.)
+county_name: TEXT | The name of the county where the monitoring site is located.
+
+## EPA_HISTORICAL_AIR_QUALITY.TEMPERATURE_HOURLY_SUMMARY
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+county_name: TEXT | The name of the county where the monitoring site is located.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+sample_measurement: FLOAT | The measured value in the standard units of measure for the parameter.
+site_num: TEXT | A unique number within the county identifying the site.
+method_type: TEXT | An indication of whether the method used to collect the data is a federal reference method (FRM), equivalent to a federal reference method, an approved regional method, or none of the above (non-federal reference method).
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+time_local: TEXT | The time of day that sampling began on a 24-hour clock in Local Standard Time.
+uncertainty: FLOAT | The total measurement uncertainty associated with a reported measurement as indicated by the reporting agency.
+time_gmt: TEXT | The time of day that sampling began on a 24-hour clock in Greenwich Mean Time.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+mdl: FLOAT | The Method Detection Limit. The minimum sample concentration detectable for the monitor and method. Note: if samples are reported below this level, they may have been replaced by 1/2 the MDL.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+state_name: TEXT | The name of the state where the monitoring site is located.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+method_code: TEXT | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+qualifier: TEXT | Sample values may have qualifiers that indicate why they are missing or that they are out of the ordinary. Types of qualifiers are: null data, exceptional event, natural events, and quality assurance. The highest ranking qualifier, if any, is described in this field.
+date_gmt: DATE | The calendar date of the sample in Greenwich Mean Time.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+
+## EPA_HISTORICAL_AIR_QUALITY.RH_AND_DP_DAILY_SUMMARY
+state_name: TEXT | The name of the state where the monitoring site is located.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+county_name: TEXT | The name of the county where the monitoring site is located.
+event_type: TEXT | Indicates whether data measured during exceptional events are included in the summary. A wildfire is an example of an exceptional event; it is something that affects air quality, but the local agency has no control over. No Events means no events occurred. Events Included means events occurred and the data from them is included in the summary. Events Excluded means that events occurred but data form them is excluded from the summary. Concurred Events Excluded means that events occurred but only EPA concurred exclusions are removed from the summary. If an event occurred for the parameter in question, the data will have multiple records for each monitor.
+site_num: TEXT | A unique number within the county identifying the site.
+pollutant_standard: TEXT | A description of the ambient air quality standard rules used to aggregate statistics. (See description at beginning of document.)
+first_max_hour: NUMBER | The hour (on a 24-hour clock) when the highest value for the day (the previous field) was taken.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+observation_count: NUMBER | The number of observations (samples) taken during the day.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+address: TEXT | The approximate street address of the monitoring site.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+local_site_name: TEXT | The name of the site (if any) given by the State, local, or tribal air pollution control agency that operates it.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+first_max_value: FLOAT | The highest value for the day.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+city_name: TEXT | The name of the city where the monitoring site is located. This represents the legal incorporated boundaries of cities and not urban areas.
+arithmetic_mean: FLOAT | The average (arithmetic mean) value for the day.
+aqi: NUMBER | The Air Quality Index for the day for the pollutant, if applicable.
+method_code: NUMBER | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+observation_percent: FLOAT | The percent representing the number of observations taken with respect to the number scheduled to be taken during the day. This is only calculated for monitors where measurements are required (e.g., only certain parameters).
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+cbsa_name: TEXT | The name of the core bases statistical area (metropolitan area) where the monitoring site is located.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+sample_duration: TEXT | The length of time that air passes through the monitoring device before it is analyzed (measured). So, it represents an averaging period in the atmosphere (for example, a 24-hour sample duration draws ambient air over a collection filter for 24 straight hours). For continuous monitors, it can represent an averaging time of many samples (for example, a 1-hour value may be the average of four one-minute samples collected during each quarter of the hour).
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+
+## EPA_HISTORICAL_AIR_QUALITY.HAP_HOURLY_SUMMARY
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+qualifier: TEXT | Sample values may have qualifiers that indicate why they are missing or that they are out of the ordinary. Types of qualifiers are: null data, exceptional event, natural events, and quality assurance. The highest ranking qualifier, if any, is described in this field.
+method_code: TEXT | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+county_name: TEXT | The name of the county where the monitoring site is located.
+time_local: TEXT | The time of day that sampling began on a 24-hour clock in Local Standard Time.
+site_num: TEXT | A unique number within the county identifying the site.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+uncertainty: FLOAT | The total measurement uncertainty associated with a reported measurement as indicated by the reporting agency.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+method_type: TEXT | An indication of whether the method used to collect the data is a federal reference method (FRM), equivalent to a federal reference method, an approved regional method, or none of the above (non-federal reference method).
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+state_name: TEXT | The name of the state where the monitoring site is located.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+date_gmt: DATE | The calendar date of the sample in Greenwich Mean Time.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+sample_measurement: FLOAT | The measured value in the standard units of measure for the parameter.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+mdl: FLOAT | The Method Detection Limit. The minimum sample concentration detectable for the monitor and method. Note: if samples are reported below this level, they may have been replaced by 1/2 the MDL.
+time_gmt: TEXT | The time of day that sampling began on a 24-hour clock in Greenwich Mean Time.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+
+## EPA_HISTORICAL_AIR_QUALITY.VOC_HOURLY_SUMMARY
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+sample_measurement: FLOAT | The measured value in the standard units of measure for the parameter.
+site_num: TEXT | A unique number within the county identifying the site.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+time_local: TEXT | The time of day that sampling began on a 24-hour clock in Local Standard Time.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+uncertainty: FLOAT | The total measurement uncertainty associated with a reported measurement as indicated by the reporting agency.
+date_gmt: DATE | The calendar date of the sample in Greenwich Mean Time.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+qualifier: TEXT | Sample values may have qualifiers that indicate why they are missing or that they are out of the ordinary. Types of qualifiers are: null data, exceptional event, natural events, and quality assurance. The highest ranking qualifier, if any, is described in this field.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+state_name: TEXT | The name of the state where the monitoring site is located.
+county_name: TEXT | The name of the county where the monitoring site is located.
+method_type: TEXT | An indication of whether the method used to collect the data is a federal reference method (FRM), equivalent to a federal reference method, an approved regional method, or none of the above (non-federal reference method).
+mdl: FLOAT | The Method Detection Limit. The minimum sample concentration detectable for the monitor and method. Note: if samples are reported below this level, they may have been replaced by 1/2 the MDL.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+time_gmt: TEXT | The time of day that sampling began on a 24-hour clock in Greenwich Mean Time.
+method_code: TEXT | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+
+## EPA_HISTORICAL_AIR_QUALITY.WIND_DAILY_SUMMARY
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+observation_count: NUMBER | The number of observations (samples) taken during the day.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+county_name: TEXT | The name of the county where the monitoring site is located.
+pollutant_standard: TEXT | A description of the ambient air quality standard rules used to aggregate statistics. (See description at beginning of document.)
+site_num: TEXT | A unique number within the county identifying the site.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+cbsa_name: TEXT | The name of the core bases statistical area (metropolitan area) where the monitoring site is located.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+method_code: NUMBER | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+sample_duration: TEXT | The length of time that air passes through the monitoring device before it is analyzed (measured). So, it represents an averaging period in the atmosphere (for example, a 24-hour sample duration draws ambient air over a collection filter for 24 straight hours). For continuous monitors, it can represent an averaging time of many samples (for example, a 1-hour value may be the average of four one-minute samples collected during each quarter of the hour).
+city_name: TEXT | The name of the city where the monitoring site is located. This represents the legal incorporated boundaries of cities and not urban areas.
+arithmetic_mean: FLOAT | The average (arithmetic mean) value for the day.
+address: TEXT | The approximate street address of the monitoring site.
+event_type: TEXT | Indicates whether data measured during exceptional events are included in the summary. A wildfire is an example of an exceptional event; it is something that affects air quality, but the local agency has no control over. No Events means no events occurred. Events Included means events occurred and the data from them is included in the summary. Events Excluded means that events occurred but data form them is excluded from the summary. Concurred Events Excluded means that events occurred but only EPA concurred exclusions are removed from the summary. If an event occurred for the parameter in question, the data will have multiple records for each monitor.
+local_site_name: TEXT | The name of the site (if any) given by the State, local, or tribal air pollution control agency that operates it.
+aqi: NUMBER | The Air Quality Index for the day for the pollutant, if applicable.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+observation_percent: FLOAT | The percent representing the number of observations taken with respect to the number scheduled to be taken during the day. This is only calculated for monitors where measurements are required (e.g., only certain parameters).
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+state_name: TEXT | The name of the state where the monitoring site is located.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+first_max_hour: NUMBER | The hour (on a 24-hour clock) when the highest value for the day (the previous field) was taken.
+first_max_value: FLOAT | The highest value for the day.
+
+## EPA_HISTORICAL_AIR_QUALITY.SO2_DAILY_SUMMARY
+site_num: TEXT | A unique number within the county identifying the site.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+first_max_hour: NUMBER | The hour (on a 24-hour clock) when the highest value for the day (the previous field) was taken.
+city_name: TEXT | The name of the city where the monitoring site is located. This represents the legal incorporated boundaries of cities and not urban areas.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+aqi: NUMBER | The Air Quality Index for the day for the pollutant, if applicable.
+county_name: TEXT | The name of the county where the monitoring site is located.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+observation_count: NUMBER | The number of observations (samples) taken during the day.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+address: TEXT | The approximate street address of the monitoring site.
+state_name: TEXT | The name of the state where the monitoring site is located.
+first_max_value: FLOAT | The highest value for the day.
+sample_duration: TEXT | The length of time that air passes through the monitoring device before it is analyzed (measured). So, it represents an averaging period in the atmosphere (for example, a 24-hour sample duration draws ambient air over a collection filter for 24 straight hours). For continuous monitors, it can represent an averaging time of many samples (for example, a 1-hour value may be the average of four one-minute samples collected during each quarter of the hour).
+arithmetic_mean: FLOAT | The average (arithmetic mean) value for the day.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+local_site_name: TEXT | The name of the site (if any) given by the State, local, or tribal air pollution control agency that operates it.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+method_code: NUMBER | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+observation_percent: FLOAT | The percent representing the number of observations taken with respect to the number scheduled to be taken during the day. This is only calculated for monitors where measurements are required (e.g., only certain parameters).
+pollutant_standard: TEXT | A description of the ambient air quality standard rules used to aggregate statistics. (See description at beginning of document.)
+cbsa_name: TEXT | The name of the core bases statistical area (metropolitan area) where the monitoring site is located.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+event_type: TEXT | Indicates whether data measured during exceptional events are included in the summary. A wildfire is an example of an exceptional event; it is something that affects air quality, but the local agency has no control over. No Events means no events occurred. Events Included means events occurred and the data from them is included in the summary. Events Excluded means that events occurred but data form them is excluded from the summary. Concurred Events Excluded means that events occurred but only EPA concurred exclusions are removed from the summary. If an event occurred for the parameter in question, the data will have multiple records for each monitor.
+
+## EPA_HISTORICAL_AIR_QUALITY.SO2_HOURLY_SUMMARY
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+sample_measurement: FLOAT | The measured value in the standard units of measure for the parameter.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+method_type: TEXT | An indication of whether the method used to collect the data is a federal reference method (FRM), equivalent to a federal reference method, an approved regional method, or none of the above (non-federal reference method).
+county_name: TEXT | The name of the county where the monitoring site is located.
+date_gmt: DATE | The calendar date of the sample in Greenwich Mean Time.
+uncertainty: FLOAT | The total measurement uncertainty associated with a reported measurement as indicated by the reporting agency.
+time_gmt: TEXT | The time of day that sampling began on a 24-hour clock in Greenwich Mean Time.
+site_num: TEXT | A unique number within the county identifying the site.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+time_local: TEXT | The time of day that sampling began on a 24-hour clock in Local Standard Time.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+state_name: TEXT | The name of the state where the monitoring site is located.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+method_code: TEXT | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+qualifier: TEXT | Sample values may have qualifiers that indicate why they are missing or that they are out of the ordinary. Types of qualifiers are: null data, exceptional event, natural events, and quality assurance. The highest ranking qualifier, if any, is described in this field.
+mdl: FLOAT | The Method Detection Limit. The minimum sample concentration detectable for the monitor and method. Note: if samples are reported below this level, they may have been replaced by 1/2 the MDL.
+
+## EPA_HISTORICAL_AIR_QUALITY.PM25_FRM_HOURLY_SUMMARY
+qualifier: TEXT | Sample values may have qualifiers that indicate why they are missing or that they are out of the ordinary. Types of qualifiers are: null data, exceptional event, natural events, and quality assurance. The highest ranking qualifier, if any, is described in this field.
+time_gmt: TEXT | The time of day that sampling began on a 24-hour clock in Greenwich Mean Time.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+method_type: TEXT | An indication of whether the method used to collect the data is a federal reference method (FRM), equivalent to a federal reference method, an approved regional method, or none of the above (non-federal reference method).
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+method_code: TEXT | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+site_num: TEXT | A unique number within the county identifying the site.
+uncertainty: FLOAT | The total measurement uncertainty associated with a reported measurement as indicated by the reporting agency.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+date_gmt: DATE | The calendar date of the sample in Greenwich Mean Time.
+time_local: TEXT | The time of day that sampling began on a 24-hour clock in Local Standard Time.
+sample_measurement: FLOAT | The measured value in the standard units of measure for the parameter.
+county_name: TEXT | The name of the county where the monitoring site is located.
+mdl: FLOAT | The Method Detection Limit. The minimum sample concentration detectable for the monitor and method. Note: if samples are reported below this level, they may have been replaced by 1/2 the MDL.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+state_name: TEXT | The name of the state where the monitoring site is located.
+
+## EPA_HISTORICAL_AIR_QUALITY.PM10_DAILY_SUMMARY
+city_name: TEXT | The name of the city where the monitoring site is located. This represents the legal incorporated boundaries of cities and not urban areas.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+local_site_name: TEXT | The name of the site (if any) given by the State, local, or tribal air pollution control agency that operates it.
+event_type: TEXT | Indicates whether data measured during exceptional events are included in the summary. A wildfire is an example of an exceptional event; it is something that affects air quality, but the local agency has no control over. No Events means no events occurred. Events Included means events occurred and the data from them is included in the summary. Events Excluded means that events occurred but data form them is excluded from the summary. Concurred Events Excluded means that events occurred but only EPA concurred exclusions are removed from the summary. If an event occurred for the parameter in question, the data will have multiple records for each monitor.
+first_max_value: FLOAT | The highest value for the day.
+site_num: TEXT | A unique number within the county identifying the site.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+address: TEXT | The approximate street address of the monitoring site.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+method_code: NUMBER | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+county_name: TEXT | The name of the county where the monitoring site is located.
+cbsa_name: TEXT | The name of the core bases statistical area (metropolitan area) where the monitoring site is located.
+observation_count: NUMBER | The number of observations (samples) taken during the day.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+state_name: TEXT | The name of the state where the monitoring site is located.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+aqi: NUMBER | The Air Quality Index for the day for the pollutant, if applicable.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+arithmetic_mean: FLOAT | The average (arithmetic mean) value for the day.
+pollutant_standard: TEXT | A description of the ambient air quality standard rules used to aggregate statistics. (See description at beginning of document.)
+sample_duration: TEXT | The length of time that air passes through the monitoring device before it is analyzed (measured). So, it represents an averaging period in the atmosphere (for example, a 24-hour sample duration draws ambient air over a collection filter for 24 straight hours). For continuous monitors, it can represent an averaging time of many samples (for example, a 1-hour value may be the average of four one-minute samples collected during each quarter of the hour).
+first_max_hour: NUMBER | The hour (on a 24-hour clock) when the highest value for the day (the previous field) was taken.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+observation_percent: FLOAT | The percent representing the number of observations taken with respect to the number scheduled to be taken during the day. This is only calculated for monitors where measurements are required (e.g., only certain parameters).
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+
+## EPA_HISTORICAL_AIR_QUALITY.WIND_HOURLY_SUMMARY
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+date_gmt: DATE | The calendar date of the sample in Greenwich Mean Time.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+qualifier: TEXT | Sample values may have qualifiers that indicate why they are missing or that they are out of the ordinary. Types of qualifiers are: null data, exceptional event, natural events, and quality assurance. The highest ranking qualifier, if any, is described in this field.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+mdl: FLOAT | The Method Detection Limit. The minimum sample concentration detectable for the monitor and method. Note: if samples are reported below this level, they may have been replaced by 1/2 the MDL.
+time_gmt: TEXT | The time of day that sampling began on a 24-hour clock in Greenwich Mean Time.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+county_name: TEXT | The name of the county where the monitoring site is located.
+method_type: TEXT | An indication of whether the method used to collect the data is a federal reference method (FRM), equivalent to a federal reference method, an approved regional method, or none of the above (non-federal reference method).
+sample_measurement: FLOAT | The measured value in the standard units of measure for the parameter.
+site_num: TEXT | A unique number within the county identifying the site.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+state_name: TEXT | The name of the state where the monitoring site is located.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+method_code: TEXT | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+time_local: TEXT | The time of day that sampling began on a 24-hour clock in Local Standard Time.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+uncertainty: FLOAT | The total measurement uncertainty associated with a reported measurement as indicated by the reporting agency.
+
+## EPA_HISTORICAL_AIR_QUALITY.PM25_SPECIATION_DAILY_SUMMARY
+method_code: NUMBER | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+state_name: TEXT | The name of the state where the monitoring site is located.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+sample_duration: TEXT | The length of time that air passes through the monitoring device before it is analyzed (measured). So, it represents an averaging period in the atmosphere (for example, a 24-hour sample duration draws ambient air over a collection filter for 24 straight hours). For continuous monitors, it can represent an averaging time of many samples (for example, a 1-hour value may be the average of four one-minute samples collected during each quarter of the hour).
+arithmetic_mean: FLOAT | The average (arithmetic mean) value for the day.
+site_num: TEXT | A unique number within the county identifying the site.
+first_max_hour: NUMBER | The hour (on a 24-hour clock) when the highest value for the day (the previous field) was taken.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+city_name: TEXT | The name of the city where the monitoring site is located. This represents the legal incorporated boundaries of cities and not urban areas.
+local_site_name: TEXT | The name of the site (if any) given by the State, local, or tribal air pollution control agency that operates it.
+cbsa_name: TEXT | The name of the core bases statistical area (metropolitan area) where the monitoring site is located.
+address: TEXT | The approximate street address of the monitoring site.
+pollutant_standard: TEXT | A description of the ambient air quality standard rules used to aggregate statistics. (See description at beginning of document.)
+event_type: TEXT | Indicates whether data measured during exceptional events are included in the summary. A wildfire is an example of an exceptional event; it is something that affects air quality, but the local agency has no control over. No Events means no events occurred. Events Included means events occurred and the data from them is included in the summary. Events Excluded means that events occurred but data form them is excluded from the summary. Concurred Events Excluded means that events occurred but only EPA concurred exclusions are removed from the summary. If an event occurred for the parameter in question, the data will have multiple records for each monitor.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+first_max_value: FLOAT | The highest value for the day.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+aqi: NUMBER | The Air Quality Index for the day for the pollutant, if applicable.
+observation_count: NUMBER | The number of observations (samples) taken during the day.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+county_name: TEXT | The name of the county where the monitoring site is located.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+observation_percent: FLOAT | The percent representing the number of observations taken with respect to the number scheduled to be taken during the day. This is only calculated for monitors where measurements are required (e.g., only certain parameters).
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+
+## EPA_HISTORICAL_AIR_QUALITY.O3_HOURLY_SUMMARY
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+method_type: TEXT | An indication of whether the method used to collect the data is a federal reference method (FRM), equivalent to a federal reference method, an approved regional method, or none of the above (non-federal reference method).
+method_code: TEXT | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+sample_measurement: FLOAT | The measured value in the standard units of measure for the parameter.
+uncertainty: FLOAT | The total measurement uncertainty associated with a reported measurement as indicated by the reporting agency.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+county_name: TEXT | The name of the county where the monitoring site is located.
+site_num: TEXT | A unique number within the county identifying the site.
+mdl: FLOAT | The Method Detection Limit. The minimum sample concentration detectable for the monitor and method. Note: if samples are reported below this level, they may have been replaced by 1/2 the MDL.
+qualifier: TEXT | Sample values may have qualifiers that indicate why they are missing or that they are out of the ordinary. Types of qualifiers are: null data, exceptional event, natural events, and quality assurance. The highest ranking qualifier, if any, is described in this field.
+time_local: TEXT | The time of day that sampling began on a 24-hour clock in Local Standard Time.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+state_name: TEXT | The name of the state where the monitoring site is located.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+date_gmt: DATE | The calendar date of the sample in Greenwich Mean Time.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+time_gmt: TEXT | The time of day that sampling began on a 24-hour clock in Greenwich Mean Time.
+
+## EPA_HISTORICAL_AIR_QUALITY.CO_HOURLY_SUMMARY
+qualifier: TEXT | Sample values may have qualifiers that indicate why they are missing or that they are out of the ordinary. Types of qualifiers are: null data, exceptional event, natural events, and quality assurance. The highest ranking qualifier, if any, is described in this field.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+site_num: TEXT | A unique number within the county identifying the site.
+method_type: TEXT | An indication of whether the method used to collect the data is a federal reference method (FRM), equivalent to a federal reference method, an approved regional method, or none of the above (non-federal reference method).
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+county_name: TEXT | The name of the county where the monitoring site is located.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+uncertainty: FLOAT | The total measurement uncertainty associated with a reported measurement as indicated by the reporting agency.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+time_local: TEXT | The time of day that sampling began on a 24-hour clock in Local Standard Time.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+date_gmt: DATE | The calendar date of the sample in Greenwich Mean Time.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+time_gmt: TEXT | The time of day that sampling began on a 24-hour clock in Greenwich Mean Time.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+sample_measurement: FLOAT | The measured value in the standard units of measure for the parameter.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+state_name: TEXT | The name of the state where the monitoring site is located.
+method_code: TEXT | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+mdl: FLOAT | The Method Detection Limit. The minimum sample concentration detectable for the monitor and method. Note: if samples are reported below this level, they may have been replaced by 1/2 the MDL.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+
+## EPA_HISTORICAL_AIR_QUALITY.PM10_HOURLY_SUMMARY
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+date_gmt: DATE | The calendar date of the sample in Greenwich Mean Time.
+site_num: TEXT | A unique number within the county identifying the site.
+method_type: TEXT | An indication of whether the method used to collect the data is a federal reference method (FRM), equivalent to a federal reference method, an approved regional method, or none of the above (non-federal reference method).
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+sample_measurement: FLOAT | The measured value in the standard units of measure for the parameter.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+county_name: TEXT | The name of the county where the monitoring site is located.
+mdl: FLOAT | The Method Detection Limit. The minimum sample concentration detectable for the monitor and method. Note: if samples are reported below this level, they may have been replaced by 1/2 the MDL.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+state_name: TEXT | The name of the state where the monitoring site is located.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+time_local: TEXT | The time of day that sampling began on a 24-hour clock in Local Standard Time.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+method_code: TEXT | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+uncertainty: FLOAT | The total measurement uncertainty associated with a reported measurement as indicated by the reporting agency.
+qualifier: TEXT | Sample values may have qualifiers that indicate why they are missing or that they are out of the ordinary. Types of qualifiers are: null data, exceptional event, natural events, and quality assurance. The highest ranking qualifier, if any, is described in this field.
+time_gmt: TEXT | The time of day that sampling began on a 24-hour clock in Greenwich Mean Time.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+
+## EPA_HISTORICAL_AIR_QUALITY.PM25_FRM_DAILY_SUMMARY
+state_name: TEXT | The name of the state where the monitoring site is located.
+cbsa_name: TEXT | The name of the core bases statistical area (metropolitan area) where the monitoring site is located.
+first_max_value: FLOAT | The highest value for the day.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+observation_percent: FLOAT | The percent representing the number of observations taken with respect to the number scheduled to be taken during the day. This is only calculated for monitors where measurements are required (e.g., only certain parameters).
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+local_site_name: TEXT | The name of the site (if any) given by the State, local, or tribal air pollution control agency that operates it.
+site_num: TEXT | A unique number within the county identifying the site.
+method_code: NUMBER | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+aqi: NUMBER | The Air Quality Index for the day for the pollutant, if applicable.
+address: TEXT | The approximate street address of the monitoring site.
+observation_count: NUMBER | The number of observations (samples) taken during the day.
+pollutant_standard: TEXT | A description of the ambient air quality standard rules used to aggregate statistics. (See description at beginning of document.)
+event_type: TEXT | Indicates whether data measured during exceptional events are included in the summary. A wildfire is an example of an exceptional event; it is something that affects air quality, but the local agency has no control over. No Events means no events occurred. Events Included means events occurred and the data from them is included in the summary. Events Excluded means that events occurred but data form them is excluded from the summary. Concurred Events Excluded means that events occurred but only EPA concurred exclusions are removed from the summary. If an event occurred for the parameter in question, the data will have multiple records for each monitor.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+county_name: TEXT | The name of the county where the monitoring site is located.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+first_max_hour: NUMBER | The hour (on a 24-hour clock) when the highest value for the day (the previous field) was taken.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+arithmetic_mean: FLOAT | The average (arithmetic mean) value for the day.
+city_name: TEXT | The name of the city where the monitoring site is located. This represents the legal incorporated boundaries of cities and not urban areas.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+sample_duration: TEXT | The length of time that air passes through the monitoring device before it is analyzed (measured). So, it represents an averaging period in the atmosphere (for example, a 24-hour sample duration draws ambient air over a collection filter for 24 straight hours). For continuous monitors, it can represent an averaging time of many samples (for example, a 1-hour value may be the average of four one-minute samples collected during each quarter of the hour).
+
+## EPA_HISTORICAL_AIR_QUALITY.PRESSURE_HOURLY_SUMMARY
+mdl: FLOAT | The Method Detection Limit. The minimum sample concentration detectable for the monitor and method. Note: if samples are reported below this level, they may have been replaced by 1/2 the MDL.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+uncertainty: FLOAT | The total measurement uncertainty associated with a reported measurement as indicated by the reporting agency.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+qualifier: TEXT | Sample values may have qualifiers that indicate why they are missing or that they are out of the ordinary. Types of qualifiers are: null data, exceptional event, natural events, and quality assurance. The highest ranking qualifier, if any, is described in this field.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+time_gmt: TEXT | The time of day that sampling began on a 24-hour clock in Greenwich Mean Time.
+site_num: TEXT | A unique number within the county identifying the site.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+county_name: TEXT | The name of the county where the monitoring site is located.
+sample_measurement: FLOAT | The measured value in the standard units of measure for the parameter.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+date_gmt: DATE | The calendar date of the sample in Greenwich Mean Time.
+method_code: TEXT | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+method_type: TEXT | An indication of whether the method used to collect the data is a federal reference method (FRM), equivalent to a federal reference method, an approved regional method, or none of the above (non-federal reference method).
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+time_local: TEXT | The time of day that sampling began on a 24-hour clock in Local Standard Time.
+state_name: TEXT | The name of the state where the monitoring site is located.
+
+## EPA_HISTORICAL_AIR_QUALITY.AIR_QUALITY_ANNUAL_SUMMARY
+observation_count: NUMBER | The number of observations (samples) taken during the year.
+num_obs_below_mdl: NUMBER | The number of samples reported during the year that were below the method detection limit (MDL) for the monitoring instrument. Sometimes these values are replaced by 1/2 the MDL in summary calculations.
+fifty_percentile: FLOAT | The value from this monitor for which 50 per cent of the rest of the measured values for the year are equal to or less than (i.e., the median).
+first_no_max_datetime: NUMBER | The date and time (on a 24-hour clock) when the first maximum non overlapping value for the year (the previous field) was taken.
+state_name: TEXT | The name of the state where the monitoring site is located.
+first_max_non_overlapping_value: FLOAT | For 8-hour CO averages, the highest value of the year.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+address: TEXT | The approximate street address of the monitoring site.
+valid_day_count: NUMBER | The number of days during the year where the daily monitoring criteria were met, if the calculation of the summaries is based on valid days.
+first_max_value: FLOAT | The highest value for the year.
+ten_percentile: FLOAT | The value from this monitor for which 10 per cent of the rest of the measured values for the year are equal to or less than.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+null_data_count: NUMBER | The count of scheduled samples when no data was collected and the reason for no data was reported.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+ninety_five_percentile: FLOAT | The value from this monitor for which 95 per cent of the rest of the measured values for the year are equal to or less than.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+fourth_max_value: FLOAT | The fourth highest value for the year.
+arithmetic_standard_dev: FLOAT | The standard deviation about the mean of the values for the year.
+second_max_non_overlapping_value: FLOAT | For 8-hour CO averages, the second highest value of the year that does not share any hours with the 8-hour period of the first max non overlapping value.
+first_max_datetime: NUMBER | The date and time (on a 24-hour clock) when the highest value for the year (the previous field) was taken.
+second_max_datetime: NUMBER | The date and time (on a 24-hour clock) when the second highest value for the year (the previous field) was taken.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+poc: NUMBER | This is the 'Parameter Occurrence Code' used to distinguish different instruments that measure the same parameter at the same site.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+site_num: TEXT | A unique number within the county identifying the site.
+seventy_five_percentile: FLOAT | The value from this monitor for which 75 per cent of the rest of the measured values for the year are equal to or less than.
+event_type: TEXT | Indicates whether data measured during exceptional events are included in the summary. A wildfire is an example of an exceptional event; it is something that affects air quality, but the local agency has no control over. No Events means no events occurred. Events Included means events occurred and the data from them is included in the summary. Events Excluded means that events occurred but data form them is excluded from the summary. Concurred Events Excluded means that events occurred but only EPA concurred exclusions are removed from the summary. If an event occurred for the parameter in question, the data will have multiple records for each monitor.
+certification_indicator: TEXT | An indication whether the completeness and accuracy of the information on the annual summary record has been certified by the submitter. Certified means the submitter has certified the data (due May 01 the year after collection). Certification not required means that the parameter does not require certification or the deadline has not yet passed. Uncertified (past due) means that certification is required but is overdue. Requested but not yet concurred means the submitter has completed the process, but EPA has not yet acted to certify the data. Requested but denied means the submitter has completed the process, but EPA has denied the request for cause. Was certified but data changed means the data was certified but data was replaced and the process has not been repeated.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+sample_duration: TEXT | The length of time that air passes through the monitoring device before it is analyzed (measured). So, it represents an averaging period in the atmosphere (for example, a 24-hour sample duration draws ambient air over a collection filter for 24 straight hours). For continuous monitors, it can represent an averaging time of many samples (for example, a 1-hour value may be the average of four one-minute samples collected during each quarter of the hour).
+local_site_name: TEXT | The name of the site (if any) given by the State, local, or tribal air pollution control agency that operates it.
+second_max_value: FLOAT | The second highest value for the year.
+city_name: TEXT | The name of the city where the monitoring site is located. This represents the legal incorporated boundaries of cities and not urban areas.
+primary_exceedance_count: NUMBER | The number of samples during the year that exceeded the primary air quality standard.
+cbsa_name: TEXT | The name of the core bases statistical area (metropolitan area) where the monitoring site is located.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+third_max_datetime: NUMBER | The date and time (on a 24-hour clock) when the third highest value for the year (the previous field) was taken.
+observation_percent: FLOAT | The percent representing the number of observations taken with respect to the number scheduled to be taken during the year. This is only calculated for monitors where measurements are required (e.g., only certain parameters).
+arithmetic_mean: FLOAT | The average (arithmetic mean) value for the year.
+completeness_indicator: TEXT | An indication of whether the regulatory data completeness criteria for valid summary data have been met by the monitor for the year. Y means yes, N means no or that there are no regulatory completeness criteria for the parameter.
+fourth_max_datetime: NUMBER | The date and time (on a 24-hour clock) when the fourth highest value for the year (the previous field) was taken.
+pollutant_standard: TEXT | A description of the ambient air quality standard rules used to aggregate statistics. (See description at beginning of document.)
+metric_used: TEXT | The base metric used in the calculation of the aggregate statistics presented in the remainder of the row. For example, if this is Daily Maximum, then the value in the Mean column is the mean of the daily maximums.
+required_day_count: NUMBER | The number of days during the year which the monitor was scheduled to take samples if measurements are required.
+ninety_eight_percentile: FLOAT | The value from this monitor for which 98 per cent of the rest of the measured values for the year are equal to or less than.
+third_max_value: FLOAT | The third highest value for the year.
+ninety_nine_percentile: FLOAT | The value from this monitor for which 99 per cent of the rest of the measured values for the year are equal to or less than.
+year: NUMBER | The year the annual summary data represents.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+county_name: TEXT | The name of the county where the monitoring site is located.
+ninety_percentile: FLOAT | The value from this monitor for which 90 per cent of the rest of the measured values for the year are equal to or less than.
+exceptional_data_count: NUMBER | The number of data points in the annual data set affected by exceptional air quality events (things outside the norm that affect air quality).
+secondary_exceedance_count: NUMBER | The number of samples during the year that exceeded the secondary air quality standard.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+second_no_max_datetime: NUMBER | The date and time (on a 24-hour clock) when the second maximum non overlapping value for the year (the previous field) was taken.
+
+## EPA_HISTORICAL_AIR_QUALITY.LEAD_DAILY_SUMMARY
+local_site_name: TEXT | The name of the site (if any) given by the State, local, or tribal air pollution control agency that operates it.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+aqi: NUMBER | The Air Quality Index for the day for the pollutant, if applicable.
+address: TEXT | The approximate street address of the monitoring site.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+method_code: NUMBER | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+observation_count: NUMBER | The number of observations (samples) taken during the day.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+pollutant_standard: TEXT | A description of the ambient air quality standard rules used to aggregate statistics. (See description at beginning of document.)
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.
+city_name: TEXT | The name of the city where the monitoring site is located. This represents the legal incorporated boundaries of cities and not urban areas.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+first_max_hour: NUMBER | The hour (on a 24-hour clock) when the highest value for the day (the previous field) was taken.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+sample_duration: TEXT | The length of time that air passes through the monitoring device before it is analyzed (measured). So, it represents an averaging period in the atmosphere (for example, a 24-hour sample duration draws ambient air over a collection filter for 24 straight hours). For continuous monitors, it can represent an averaging time of many samples (for example, a 1-hour value may be the average of four one-minute samples collected during each quarter of the hour).
+site_num: TEXT | A unique number within the county identifying the site.
+arithmetic_mean: FLOAT | The average (arithmetic mean) value for the day.
+event_type: TEXT | Indicates whether data measured during exceptional events are included in the summary. A wildfire is an example of an exceptional event; it is something that affects air quality, but the local agency has no control over. No Events means no events occurred. Events Included means events occurred and the data from them is included in the summary. Events Excluded means that events occurred but data form them is excluded from the summary. Concurred Events Excluded means that events occurred but only EPA concurred exclusions are removed from the summary. If an event occurred for the parameter in question, the data will have multiple records for each monitor.
+cbsa_name: TEXT | The name of the core bases statistical area (metropolitan area) where the monitoring site is located.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+state_name: TEXT | The name of the state where the monitoring site is located.
+first_max_value: FLOAT | The highest value for the day.
+county_name: TEXT | The name of the county where the monitoring site is located.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+observation_percent: FLOAT | The percent representing the number of observations taken with respect to the number scheduled to be taken during the day. This is only calculated for monitors where measurements are required (e.g., only certain parameters).
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+
+## EPA_HISTORICAL_AIR_QUALITY.NONOXNOY_HOURLY_SUMMARY
+mdl: FLOAT | The Method Detection Limit. The minimum sample concentration detectable for the monitor and method. Note: if samples are reported below this level, they may have been replaced by 1/2 the MDL.
+county_name: TEXT | The name of the county where the monitoring site is located.
+sample_measurement: FLOAT | The measured value in the standard units of measure for the parameter.
+date_gmt: DATE | The calendar date of the sample in Greenwich Mean Time.
+county_code: TEXT | The FIPS code of the county in which the monitor resides.
+date_of_last_change: DATE | The date the last time any numeric values in this record were updated in the AQS data system.
+parameter_name: TEXT | The name or description assigned in AQS to the parameter measured by the monitor. Parameters may be pollutants or non-pollutants.
+method_name: TEXT | A short description of the processes, equipment, and protocols used in gathering and measuring the sample.
+state_name: TEXT | The name of the state where the monitoring site is located.
+parameter_code: NUMBER | The AQS code corresponding to the parameter measured by the monitor.
+method_type: TEXT | An indication of whether the method used to collect the data is a federal reference method (FRM), equivalent to a federal reference method, an approved regional method, or none of the above (non-federal reference method).
+time_gmt: TEXT | The time of day that sampling began on a 24-hour clock in Greenwich Mean Time.
+longitude: FLOAT | The monitoring site’s angular distance east of the prime meridian measured in decimal degrees.
+latitude: FLOAT | The monitoring site’s angular distance north of the equator measured in decimal degrees.
+units_of_measure: TEXT | The unit of measure for the parameter. QAD always returns data in the standard units for the parameter. Submitters are allowed to report data in any unit and EPA converts to a standard unit so that we may use the data in calculations.
+time_local: TEXT | The time of day that sampling began on a 24-hour clock in Local Standard Time.
+method_code: TEXT | An internal system code indicating the method (processes, equipment, and protocols) used in gathering and measuring the sample. The method name is in the next column.
+date_local: DATE | The calendar date for the summary. All daily summaries are for the local standard day (midnight to midnight) at the monitor.
+uncertainty: FLOAT | The total measurement uncertainty associated with a reported measurement as indicated by the reporting agency.
+qualifier: TEXT | Sample values may have qualifiers that indicate why they are missing or that they are out of the ordinary. Types of qualifiers are: null data, exceptional event, natural events, and quality assurance. The highest ranking qualifier, if any, is described in this field.
+poc: NUMBER | This is the “Parameter Occurrence Code” used to distinguish different instruments that measure the same parameter at the same site.
+state_code: TEXT | The FIPS code of the state in which the monitor resides.
+site_num: TEXT | A unique number within the county identifying the site.
+datum: TEXT | The Datum associated with the Latitude and Longitude measures.

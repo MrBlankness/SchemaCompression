@@ -1,0 +1,35 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: USDA_NASS_AGRICULTURE.ANIMALS_PRODUCTS
+Columns: agg_level_desc, year, sector_desc, short_desc, location_desc, zip_5, watershed_code, freq_desc, statisticcat_desc, week_ending, unit_desc, state_name, source_desc, value, asd_desc, country_name, county_name, reference_period_desc, prodn_practice_desc, class_desc, state_alpha, state_ansi, state_fips_code, county_code, load_time, cv_percent, domaincat_desc, county_ansi, country_code, domain_desc, region_desc, util_practice_desc, watershed_desc, commodity_desc, group_desc, begin_code, end_code, congr_district_code, asd_code
+
+Table: USDA_NASS_AGRICULTURE.CENSUS2002
+Columns: unit_desc, util_practice_desc, zip_5, cv_percent, state_name, commodity_desc, watershed_code, load_time, end_code, state_fips_code, reference_period_desc, country_code, state_alpha, domaincat_desc, congr_district_code, short_desc, prodn_practice_desc, county_ansi, domain_desc, county_code, group_desc, watershed_desc, county_name, class_desc, region_desc, begin_code, asd_code, week_ending, source_desc, year, sector_desc, location_desc, agg_level_desc, freq_desc, asd_desc, country_name, value, state_ansi, statisticcat_desc
+
+Table: USDA_NASS_AGRICULTURE.ECONOMICS
+Columns: county_code, begin_code, county_ansi, watershed_code, cv_percent, prodn_practice_desc, country_name, util_practice_desc, short_desc, group_desc, congr_district_code, asd_code, end_code, agg_level_desc, country_code, asd_desc, load_time, sector_desc, reference_period_desc, year, domain_desc, unit_desc, zip_5, source_desc, watershed_desc, commodity_desc, state_alpha, county_name, freq_desc, week_ending, value, class_desc, region_desc, state_ansi, statisticcat_desc, state_name, domaincat_desc, location_desc, state_fips_code
+
+Table: USDA_NASS_AGRICULTURE.CENSUS2007
+Columns: country_name, agg_level_desc, state_alpha, year, source_desc, state_ansi, value, unit_desc, state_fips_code, zip_5, county_name, county_ansi, group_desc, statisticcat_desc, begin_code, asd_desc, sector_desc, class_desc, county_code, commodity_desc, region_desc, domain_desc, cv_percent, domaincat_desc, freq_desc, state_name, end_code, country_code, load_time, util_practice_desc, watershed_code, congr_district_code, asd_code, short_desc, watershed_desc, location_desc, reference_period_desc, week_ending, prodn_practice_desc
+
+Table: USDA_NASS_AGRICULTURE.CENSUS_2007
+Columns: county_name, state_ansi, end_code, value_suppression_code, country_code, state_alpha, year, begin_code, state_name, county_code, watershed_desc, asd_code, location_desc, group_desc, zip_5, region_desc, reference_period_desc, agg_level_desc, domaincat_desc, county_ansi, statisticcat_desc, source_desc, congr_district_code, watershed_code, state_fips_code, prodn_practice_desc, cv_suppression_code, util_practice_desc, sector_desc, class_desc, country_name, freq_desc, cv_percent, domain_desc, asd_desc, commodity_desc, load_time, value, unit_desc, week_ending, short_desc
+
+Table: USDA_NASS_AGRICULTURE.CENSUS_2002
+Columns: begin_code, end_code, sector_desc, domaincat_desc, county_ansi, group_desc, state_alpha, year, asd_code, state_fips_code, statisticcat_desc, short_desc, prodn_practice_desc, reference_period_desc, country_code, region_desc, class_desc, commodity_desc, cv_percent, week_ending, asd_desc, county_code, country_name, load_time, state_name, zip_5, source_desc, util_practice_desc, county_name, watershed_code, unit_desc, location_desc, cv_suppression_code, state_ansi, value, agg_level_desc, watershed_desc, congr_district_code, domain_desc, freq_desc, value_suppression_code
+
+Table: USDA_NASS_AGRICULTURE.CROPS
+Columns: group_desc, begin_code, commodity_desc, unit_desc, util_practice_desc, reference_period_desc, short_desc, state_fips_code, asd_code, class_desc, agg_level_desc, year, source_desc, county_name, domaincat_desc, country_name, county_code, state_name, watershed_code, region_desc, zip_5, cv_suppression_code, asd_desc, freq_desc, location_desc, country_code, domain_desc, county_ansi, value, state_ansi, congr_district_code, week_ending, sector_desc, state_alpha, value_suppression_code, end_code, statisticcat_desc, prodn_practice_desc, load_time, watershed_desc, cv_percent
+
+Table: USDA_NASS_AGRICULTURE.CENSUS2012
+Columns: country_code, asd_desc, freq_desc, unit_desc, begin_code, country_name, reference_period_desc, county_code, statisticcat_desc, end_code, state_name, location_desc, state_alpha, week_ending, sector_desc, group_desc, util_practice_desc, watershed_code, domaincat_desc, watershed_desc, asd_code, state_ansi, region_desc, county_ansi, cv_percent, load_time, prodn_practice_desc, zip_5, agg_level_desc, source_desc, value, county_name, congr_district_code, state_fips_code, year, short_desc, class_desc, commodity_desc, domain_desc
+
+Table: USDA_NASS_AGRICULTURE.CENSUS_2012
+Columns: load_time, group_desc, short_desc, value_suppression_code, agg_level_desc, commodity_desc, begin_code, sector_desc, watershed_desc, unit_desc, country_name, congr_district_code, region_desc, domain_desc, reference_period_desc, country_code, statisticcat_desc, class_desc, asd_desc, watershed_code, cv_suppression_code, util_practice_desc, week_ending, state_name, value, county_name, zip_5, year, domaincat_desc, location_desc, asd_code, source_desc, state_ansi, state_alpha, cv_percent, county_code, prodn_practice_desc, county_ansi, end_code, state_fips_code, freq_desc
+
+Table: USDA_NASS_AGRICULTURE.ENVIRONMENTAL
+Columns: sector_desc, domaincat_desc, state_name, commodity_desc, prodn_practice_desc, state_fips_code, watershed_code, load_time, source_desc, county_name, util_practice_desc, county_ansi, begin_code, zip_5, watershed_desc, week_ending, region_desc, county_code, short_desc, asd_code, reference_period_desc, class_desc, domain_desc, unit_desc, asd_desc, statisticcat_desc, country_code, country_name, agg_level_desc, group_desc, cv_percent, location_desc, congr_district_code, value, year, value_suppression_code, state_ansi, cv_suppression_code, end_code, state_alpha, freq_desc
+
+Table: USDA_NASS_AGRICULTURE.DEMOGRAPHICS
+Columns: week_ending, agg_level_desc, end_code, region_desc, zip_5, reference_period_desc, commodity_desc, location_desc, watershed_desc, group_desc, congr_district_code, value, county_ansi, unit_desc, freq_desc, sector_desc, prodn_practice_desc, asd_desc, load_time, cv_percent, state_alpha, util_practice_desc, domain_desc, watershed_code, year, statisticcat_desc, short_desc, class_desc, county_name, domaincat_desc, country_code, state_name, country_name, asd_code, begin_code, county_code, state_ansi, source_desc, state_fips_code

@@ -1,0 +1,958 @@
+[TABLES]
+## NPPES.HEALTHCARE_PROVIDER_TAXONOMY_CODE_SET_101
+code: TEXT | NULL | eg=["193200000X", "251T00000X"]
+classification: TEXT | NULL | eg=["Multi-Specialty", "PACE Provider Organization"]
+notes: TEXT | NULL | eg=["[7/1/2003: new]", "Source:  Centers for Medicare and Medicaid, PACE Fact Sheet http://www.cms.hhs.gov/PACE/Downloads/PACEFactSheet.pdf [7/1/2006: new]"]
+definition: TEXT | NULL | eg=["A business group of one or more individual practitioners, who practice with different areas of specialization.", "A PACE provider organization is a not-for-profit private or public entity that is primarily engaged in providing PACE services(unique capitated managed care benefits for the frail elderly which include comprehensive medical and social services).  The following characteristics also apply to a PACE organization.  It must:  have a governing board that includes community representation; be able to provide complete PACE services regardless of frequency or duration of services; have a physical site to provide adult day services; have a defined service area; have safeguards against conflict of interest; have demonstrated fiscal soundness and have a formal Participant Bill of Rights."]
+specialization: TEXT | NULL | eg=[""]
+grouping: TEXT | NULL | eg=["Group", "Agencies"]
+
+## NPPES.HEALTHCARE_PROVIDER_TAXONOMY_CODE_SET_090
+notes: TEXT | NULL | eg=["[7/1/2003: new]", "Source: Portions of IDEA Regulations Part B (34 CFR Part 300.18, Assistance to States for the Education of Children with Disabilities)  [1/1/2006: new]"]
+grouping: TEXT | NULL | eg=["Group", "Agencies"]
+code: TEXT | NULL | eg=["193200000X", "251300000X"]
+definition: TEXT | NULL | eg=["A business group of one or more individual practitioners, who practice with different areas of specialization.", "The term local education agency means a public board of education or other public authority legally constituted within a State to either provide administrative control or direction of, or perform a service function for public schools serving individuals ages 0 – 21 in a state, city, county, township, school district, or other political subdivision including a combination of school districts or counties recognized in a State as an administrative agency for its public schools.  An LEA may provide, or employ professional who provide, services to children included in the Individuals with Disabilities Education Act (IDEA), such services may include, but are not limited to, such medical services as physical, occupational, and speech therapy."]
+classification: TEXT | NULL | eg=["Multi-Specialty", "Local Education Agency (LEA)"]
+specialization: TEXT | NULL | eg=[""]
+
+## NPPES.HEALTHCARE_PROVIDER_TAXONOMY_CODE_SET_110
+classification: TEXT | NULL | eg=["Local Education Agency (LEA)", "Home Health"]
+grouping: TEXT | NULL | eg=["Agencies"]
+notes: TEXT | NULL | eg=["Source: Portions of IDEA Regulations Part B (34 CFR Part 300.18, Assistance to States for the Education of Children with Disabilities)  [1/1/2006: new]", "Source:  CFR42 Chapter IV Part 484,  http://www.access.gpo.gov/nara/cfr/waisidx_99/42cfr484_99.html [7/1/2007: definition added, source added]"]
+code: TEXT | NULL | eg=["251300000X", "251E00000X"]
+specialization: TEXT | NULL | eg=[""]
+definition: TEXT | NULL | eg=["The term local education agency means a public board of education or other public authority legally constituted within a State to either provide administrative control or direction of, or perform a service function for public schools serving individuals ages 0 – 21 in a state, city, county, township, school district, or other political subdivision including a combination of school districts or counties recognized in a State as an administrative agency for its public schools.  An LEA may provide, or employ professional who provide, services to children included in the Individuals with Disabilities Education Act (IDEA), such services may include, but are not limited to, such medical services as physical, occupational, and speech therapy.", "A public agency or private organization, or a subdivision of such an agency or organization, that is primarily engaged in providing skilled nursing services and other therapeutic services, such as physical therapy, speech-language pathology services, or occupational therapy, medical social services, and home health aide services. It has policies established by a professional group associated with the agency or organization (including at least one physician and one registered nurse) to govern the services and provides for supervision of such services by a physician or a registered nurse; maintains clinical records on all patients; is licensed in accordance with State or local law or is approved by the State or local licensing agency as meeting the licensing standards, where applicable; and meets other conditions found by the Secretary of Health and Human Services to be necessary for health and safety."]
+
+## NPPES.HEALTHCARE_PROVIDER_TAXONOMY_CODE_SET_160
+grouping: TEXT | NULL | eg=[""]
+classification: TEXT | NULL | eg=["Counselor", "Psychoanalyst"]
+specialization: TEXT | NULL | eg=["", "Health"]
+notes: TEXT | NULL | eg=["Sources: Abridged from definitions provided by the National Board of Certified Counselors and the American Association of Pastoral Counselors.", "Source:  Registry of Psychoanalysts published by the National Association for the Advancement of Psychoanalysis [1/1/2007: new; 7/1/2007: definition changed, source changed]"]
+definition: TEXT | NULL | eg=["A provider who is trained and educated in the performance of behavior health services through interpersonal communications and analysis. Training and education at the specialty level usually requires a master’s degree and clinical experience and supervision for licensure or certification.", "Psychoanalysis is a comprehensive, theoretical framework which, when applied to a treatment process, consists of an intensive verbal, therapeutic relationship between an analyst and an analysand which aims for symptom relief, emotional growth, and personal integration. The psychoanalytic treatment process includes, but is not limited to, the recognition of unconscious processes and conflicts; the significance of developmental influences; and the impact of resistances, defenses, transference and countertransference phenomena. Treatment is enhanced by an understanding developed in the analyst’s training and personal analysis of unconscious manifestations, such as dreams, slips of the tongue, fantasies and day dreams. Psychoanalytic technique varies in relation to theoretical orientation."]
+code: TEXT | NULL | eg=["101Y00000X", "102L00000X"]
+
+## NPPES.NPI_RAW
+provider_business_mailing_address_city_name: TEXT | NULL | eg=["MANKATO", "LITTLETON"]
+other_provider_identifier_state_14: TEXT | NULL | eg=["NY"]
+other_provider_identifier_19: TEXT | NULL
+other_provider_identifier_state_43: TEXT | NULL
+other_provider_identifier_type_code_17: TEXT | NULL
+other_provider_identifier_4: TEXT | NULL | eg=["140738", "4230078"]
+other_provider_identifier_issuer_50: TEXT | NULL
+other_provider_identifier_type_code_43: TEXT | NULL
+other_provider_identifier_type_code_23: TEXT | NULL
+healthcare_provider_taxonomy_code_5: TEXT | NULL
+other_provider_identifier_type_code_20: TEXT | NULL
+provider_license_number_state_code_7: TEXT | NULL
+other_provider_identifier_issuer_12: TEXT | NULL | eg=["EMPIRE STATE PLAN (NYS)"]
+other_provider_identifier_35: TEXT | NULL
+other_provider_identifier_issuer_8: TEXT | NULL | eg=["RR MEDICARE", "PHCS"]
+other_provider_identifier_issuer_43: TEXT | NULL
+other_provider_identifier_issuer_24: TEXT | NULL
+other_provider_identifier_type_code_26: TEXT | NULL
+other_provider_identifier_type_code_21: TEXT | NULL
+other_provider_identifier_type_code_8: TEXT | NULL | eg=["01"]
+other_provider_identifier_type_code_14: TEXT | NULL | eg=["01"]
+healthcare_provider_primary_taxonomy_switch_3: TEXT | NULL
+other_provider_identifier_type_code_34: TEXT | NULL
+other_provider_identifier_state_7: TEXT | NULL | eg=["MN", "NY"]
+other_provider_identifier_issuer_31: TEXT | NULL
+provider_middle_name: TEXT | NULL | eg=["R", "T"]
+other_provider_identifier_type_code_46: TEXT | NULL
+provider_business_mailing_address_fax_number: TEXT | NULL | eg=["3037590864", "8124523403"]
+other_provider_identifier_state_10: TEXT | NULL | eg=["NY"]
+other_provider_identifier_type_code_24: TEXT | NULL
+other_provider_identifier_issuer_1: TEXT | NULL | eg=["MEDICA", "RAILROAD MEDICARE"]
+other_provider_identifier_12: TEXT | NULL | eg=["133884168"]
+provider_other_credential_text: TEXT | NULL
+other_provider_identifier_issuer_4: TEXT | NULL | eg=["UCARE", "AETNA NON HMO"]
+other_provider_identifier_type_code_31: TEXT | NULL
+other_provider_identifier_37: TEXT | NULL
+healthcare_provider_taxonomy_code_10: TEXT | NULL
+other_provider_identifier_state_11: TEXT | NULL | eg=["NY"]
+provider_license_number_11: TEXT | NULL
+other_provider_identifier_issuer_48: TEXT | NULL
+other_provider_identifier_issuer_13: TEXT | NULL | eg=["GHI PPO"]
+other_provider_identifier_type_code_47: TEXT | NULL
+other_provider_identifier_38: TEXT | NULL
+other_provider_identifier_47: TEXT | NULL
+provider_license_number_state_code_5: TEXT | NULL
+other_provider_identifier_13: TEXT | NULL | eg=["0296879"]
+healthcare_provider_taxonomy_code_12: TEXT | NULL
+other_provider_identifier_state_12: TEXT | NULL | eg=["NY"]
+other_provider_identifier_state_16: TEXT | NULL | eg=["NY"]
+other_provider_identifier_type_code_42: TEXT | NULL
+provider_business_mailing_address_country_code_if_outside_us: TEXT | NULL | eg=["US"]
+healthcare_provider_primary_taxonomy_switch_9: TEXT | NULL
+other_provider_identifier_state_28: TEXT | NULL
+provider_license_number_2: TEXT | NULL | eg=["026970"]
+other_provider_identifier_type_code_12: TEXT | NULL | eg=["01"]
+healthcare_provider_taxonomy_code_15: TEXT | NULL
+healthcare_provider_taxonomy_group_12: TEXT | NULL
+provider_organization_name_legal_business_name: TEXT | NULL
+provider_license_number_10: TEXT | NULL
+other_provider_identifier_1: TEXT | NULL | eg=["0111781", "P00474729"]
+healthcare_provider_taxonomy_group_8: TEXT | NULL
+provider_first_line_business_mailing_address: TEXT | NULL | eg=["PO BOX 8674", "1241 W MINERAL AVE"]
+provider_license_number_4: TEXT | NULL
+other_provider_identifier_state_18: TEXT | NULL
+healthcare_provider_primary_taxonomy_switch_4: TEXT | NULL
+provider_business_mailing_address_postal_code: TEXT | NULL | eg=["560028674", "801205685"]
+provider_business_practice_location_address_city_name: TEXT | NULL | eg=["MANKATO", "COLORADO SPRINGS"]
+healthcare_provider_taxonomy_code_14: TEXT | NULL
+other_provider_identifier_issuer_21: TEXT | NULL
+other_provider_identifier_type_code_27: TEXT | NULL
+healthcare_provider_taxonomy_code_6: TEXT | NULL
+other_provider_identifier_type_code_45: TEXT | NULL
+other_provider_identifier_48: TEXT | NULL
+other_provider_identifier_23: TEXT | NULL
+healthcare_provider_primary_taxonomy_switch_11: TEXT | NULL
+provider_business_practice_location_address_postal_code: TEXT | NULL | eg=["560014841", "809076819"]
+other_provider_identifier_issuer_25: TEXT | NULL
+healthcare_provider_primary_taxonomy_switch_2: TEXT | NULL | eg=["N"]
+healthcare_provider_taxonomy_group_11: TEXT | NULL
+healthcare_provider_taxonomy_code_2: TEXT | NULL | eg=["207V00000X"]
+parent_organization_lbn: TEXT | NULL
+provider_license_number_state_code_14: TEXT | NULL
+other_provider_identifier_type_code_33: TEXT | NULL
+provider_business_practice_location_address_state_name: TEXT | NULL | eg=["MN", "CO"]
+other_provider_identifier_type_code_25: TEXT | NULL
+provider_license_number_14: TEXT | NULL
+other_provider_identifier_type_code_10: TEXT | NULL | eg=["01"]
+healthcare_provider_primary_taxonomy_switch_8: TEXT | NULL
+other_provider_identifier_state_30: TEXT | NULL
+other_provider_identifier_type_code_29: TEXT | NULL
+authorized_official_last_name: TEXT | NULL
+other_provider_identifier_state_25: TEXT | NULL
+provider_first_line_business_practice_location_address: TEXT | NULL | eg=["1809 ADAMS ST", "2222 N NEVADA AVE"]
+healthcare_provider_taxonomy_group_2: TEXT | NULL
+other_provider_identifier_type_code_6: TEXT | NULL | eg=["01"]
+other_provider_identifier_state_3: TEXT | NULL | eg=["MN", "NY"]
+healthcare_provider_primary_taxonomy_switch_7: TEXT | NULL
+authorized_official_telephone_number: TEXT | NULL
+provider_license_number_state_code_12: TEXT | NULL
+provider_license_number_state_code_10: TEXT | NULL
+provider_other_name_prefix_text: TEXT | NULL
+other_provider_identifier_state_36: TEXT | NULL
+provider_license_number_state_code_1: TEXT | NULL | eg=["MN", "CO"]
+other_provider_identifier_33: TEXT | NULL
+other_provider_identifier_36: TEXT | NULL
+provider_license_number_state_code_15: TEXT | NULL
+other_provider_identifier_issuer_29: TEXT | NULL
+other_provider_identifier_type_code_22: TEXT | NULL
+is_organization_subpart: TEXT | NULL
+other_provider_identifier_type_code_13: TEXT | NULL | eg=["01"]
+provider_enumeration_date: DATE | NULL | eg=["2006-01-10"]
+other_provider_identifier_state_5: TEXT | NULL | eg=["MN", "NY"]
+other_provider_identifier_issuer_30: TEXT | NULL
+other_provider_identifier_state_38: TEXT | NULL
+other_provider_identifier_issuer_3: TEXT | NULL | eg=["HEALTH PARTNERS", "HORIZON HEALTHCARE OF NY"]
+other_provider_identifier_type_code_35: TEXT | NULL
+other_provider_identifier_3: TEXT | NULL | eg=["HP33924", "133884168"]
+other_provider_identifier_44: TEXT | NULL
+other_provider_identifier_18: TEXT | NULL
+other_provider_identifier_issuer_18: TEXT | NULL
+provider_last_name_legal_name: TEXT | NULL | eg=["DUNGAN", "LAYTON"]
+other_provider_identifier_6: TEXT | NULL | eg=["1965888", "133884168"]
+other_provider_identifier_14: TEXT | NULL | eg=["3745935"]
+other_provider_identifier_state_8: TEXT | NULL | eg=["NY"]
+other_provider_identifier_45: TEXT | NULL
+other_provider_identifier_10: TEXT | NULL | eg=["100944"]
+other_provider_identifier_state_2: TEXT | NULL | eg=["MN", "CO"]
+other_provider_identifier_issuer_27: TEXT | NULL
+other_provider_identifier_issuer_22: TEXT | NULL
+healthcare_provider_primary_taxonomy_switch_12: TEXT | NULL
+other_provider_identifier_15: TEXT | NULL | eg=["3C7593"]
+entity_type_code: NUMBER | NULL | eg=[1.0, NaN]
+other_provider_identifier_issuer_15: TEXT | NULL | eg=["HEALTH NET"]
+provider_other_last_name_type_code: NUMBER | NULL
+other_provider_identifier_state_32: TEXT | NULL
+other_provider_identifier_type_code_1: TEXT | NULL | eg=["01", "05"]
+other_provider_identifier_issuer_49: TEXT | NULL
+other_provider_identifier_30: TEXT | NULL
+other_provider_identifier_state_6: TEXT | NULL | eg=["MN", "NY"]
+provider_license_number_state_code_9: TEXT | NULL
+provider_name_prefix_text: TEXT | NULL | eg=["DR."]
+provider_license_number_15: TEXT | NULL
+other_provider_identifier_type_code_7: TEXT | NULL | eg=["05", "01"]
+other_provider_identifier_state_4: TEXT | NULL | eg=["MN", "NY"]
+other_provider_identifier_issuer_38: TEXT | NULL
+provider_business_practice_location_address_telephone_number: TEXT | NULL | eg=["5076251811", "7194750299"]
+healthcare_provider_primary_taxonomy_switch_14: TEXT | NULL
+other_provider_identifier_11: TEXT | NULL | eg=["133884168"]
+other_provider_identifier_type_code_9: TEXT | NULL | eg=["01"]
+other_provider_identifier_7: TEXT | NULL | eg=["627645800", "133884168"]
+other_provider_identifier_state_37: TEXT | NULL
+other_provider_identifier_type_code_40: TEXT | NULL
+other_provider_identifier_type_code_15: TEXT | NULL | eg=["01"]
+provider_first_name: TEXT | NULL | eg=["JAMES", "CHRISTOPHER"]
+other_provider_identifier_state_23: TEXT | NULL
+other_provider_identifier_issuer_5: TEXT | NULL | eg=["BCBS", "CIGNA"]
+other_provider_identifier_issuer_32: TEXT | NULL
+other_provider_identifier_state_1: TEXT | NULL | eg=["MN", "CO"]
+authorized_official_title_or_position: TEXT | NULL
+other_provider_identifier_20: TEXT | NULL
+other_provider_identifier_state_26: TEXT | NULL
+other_provider_identifier_type_code_49: TEXT | NULL
+other_provider_identifier_issuer_7: TEXT | NULL | eg=["POMCO"]
+provider_other_name_suffix_text: TEXT | NULL
+provider_business_mailing_address_state_name: TEXT | NULL | eg=["MN", "CO"]
+replacement_npi: TEXT | NULL
+other_provider_identifier_2: TEXT | NULL | eg=["NA2951027672", "01349240"]
+other_provider_identifier_issuer_41: TEXT | NULL
+other_provider_identifier_24: TEXT | NULL
+other_provider_identifier_state_20: TEXT | NULL
+healthcare_provider_taxonomy_code_9: TEXT | NULL
+other_provider_identifier_state_21: TEXT | NULL
+other_provider_identifier_issuer_28: TEXT | NULL
+other_provider_identifier_issuer_19: TEXT | NULL
+provider_license_number_state_code_2: TEXT | NULL | eg=["CT"]
+provider_other_organization_name_type_code: NUMBER | NULL
+provider_other_first_name: TEXT | NULL
+provider_credential_text: TEXT | NULL | eg=["MD", "M.D."]
+other_provider_identifier_42: TEXT | NULL
+healthcare_provider_taxonomy_code_4: TEXT | NULL
+other_provider_identifier_type_code_11: TEXT | NULL | eg=["01"]
+other_provider_identifier_16: TEXT | NULL | eg=["PWP290"]
+other_provider_identifier_issuer_6: TEXT | NULL | eg=["AMERICAS PPO", "BEECH STREET"]
+other_provider_identifier_25: TEXT | NULL
+other_provider_identifier_type_code_18: TEXT | NULL
+other_provider_identifier_type_code_38: TEXT | NULL
+other_provider_identifier_21: TEXT | NULL
+other_provider_identifier_type_code_5: TEXT | NULL | eg=["01"]
+healthcare_provider_taxonomy_code_11: TEXT | NULL
+other_provider_identifier_state_44: TEXT | NULL
+healthcare_provider_taxonomy_code_7: TEXT | NULL
+healthcare_provider_taxonomy_group_10: TEXT | NULL
+healthcare_provider_taxonomy_group_3: TEXT | NULL
+provider_license_number_8: TEXT | NULL
+other_provider_identifier_5: TEXT | NULL | eg=["45D91DU", "6124279"]
+other_provider_identifier_state_40: TEXT | NULL
+other_provider_identifier_type_code_39: TEXT | NULL
+other_provider_identifier_type_code_50: TEXT | NULL
+other_provider_identifier_type_code_4: TEXT | NULL | eg=["01"]
+other_provider_identifier_28: TEXT | NULL
+other_provider_identifier_state_49: TEXT | NULL
+provider_license_number_1: TEXT | NULL | eg=["43640", "34925"]
+other_provider_identifier_issuer_35: TEXT | NULL
+other_provider_identifier_issuer_37: TEXT | NULL
+other_provider_identifier_issuer_16: TEXT | NULL | eg=["OXFORD"]
+provider_license_number_state_code_8: TEXT | NULL
+other_provider_identifier_31: TEXT | NULL
+other_provider_identifier_type_code_30: TEXT | NULL
+other_provider_identifier_17: TEXT | NULL
+provider_license_number_state_code_6: TEXT | NULL
+other_provider_identifier_issuer_33: TEXT | NULL
+other_provider_identifier_state_27: TEXT | NULL
+provider_other_middle_name: TEXT | NULL
+parent_organization_tin: TEXT | NULL
+provider_license_number_7: TEXT | NULL
+other_provider_identifier_state_22: TEXT | NULL
+other_provider_identifier_state_48: TEXT | NULL
+provider_license_number_state_code_11: TEXT | NULL
+other_provider_identifier_50: TEXT | NULL
+other_provider_identifier_issuer_11: TEXT | NULL | eg=["MULTIPLAN"]
+other_provider_identifier_32: TEXT | NULL
+other_provider_identifier_state_50: TEXT | NULL
+healthcare_provider_taxonomy_group_6: TEXT | NULL
+other_provider_identifier_issuer_47: TEXT | NULL
+other_provider_identifier_issuer_44: TEXT | NULL
+other_provider_identifier_type_code_48: TEXT | NULL
+provider_license_number_state_code_13: TEXT | NULL
+other_provider_identifier_49: TEXT | NULL
+authorized_official_name_prefix_text: TEXT | NULL
+provider_license_number_state_code_3: TEXT | NULL
+healthcare_provider_primary_taxonomy_switch_15: TEXT | NULL
+provider_license_number_state_code_4: TEXT | NULL
+provider_license_number_5: TEXT | NULL
+other_provider_identifier_issuer_36: TEXT | NULL
+other_provider_identifier_issuer_17: TEXT | NULL
+other_provider_identifier_state_46: TEXT | NULL
+other_provider_identifier_type_code_44: TEXT | NULL
+other_provider_identifier_type_code_41: TEXT | NULL
+provider_business_practice_location_address_country_code_if_outside_us: TEXT | NULL | eg=["US"]
+other_provider_identifier_state_35: TEXT | NULL
+healthcare_provider_taxonomy_group_5: TEXT | NULL
+other_provider_identifier_issuer_14: TEXT | NULL | eg=["AETNA HMO"]
+is_sole_proprietor: TEXT | NULL | eg=["N"]
+provider_license_number_3: TEXT | NULL
+other_provider_identifier_issuer_40: TEXT | NULL
+npi_deactivation_date: DATE | NULL | eg=["2015-02-10"]
+other_provider_identifier_40: TEXT | NULL
+provider_business_practice_location_address_fax_number: TEXT | NULL | eg=["7194750414", "8124523403"]
+other_provider_identifier_type_code_36: TEXT | NULL
+other_provider_identifier_issuer_10: TEXT | NULL | eg=["UNITED HEALTH CARE"]
+other_provider_identifier_issuer_46: TEXT | NULL
+other_provider_identifier_type_code_19: TEXT | NULL
+employer_identification_number_ein: TEXT | NULL
+other_provider_identifier_state_41: TEXT | NULL
+other_provider_identifier_state_15: TEXT | NULL | eg=["NY"]
+authorized_official_first_name: TEXT | NULL
+healthcare_provider_primary_taxonomy_switch_6: TEXT | NULL
+healthcare_provider_taxonomy_group_1: TEXT | NULL
+other_provider_identifier_state_39: TEXT | NULL
+other_provider_identifier_issuer_42: TEXT | NULL
+other_provider_identifier_issuer_34: TEXT | NULL
+other_provider_identifier_issuer_39: TEXT | NULL
+authorized_official_name_suffix_text: TEXT | NULL
+authorized_official_middle_name: TEXT | NULL
+other_provider_identifier_issuer_20: TEXT | NULL
+provider_other_last_name: TEXT | NULL
+healthcare_provider_taxonomy_code_8: TEXT | NULL
+other_provider_identifier_issuer_26: TEXT | NULL
+healthcare_provider_taxonomy_group_9: TEXT | NULL
+other_provider_identifier_22: TEXT | NULL
+other_provider_identifier_8: TEXT | NULL | eg=["930110343", "133884168"]
+healthcare_provider_taxonomy_code_13: TEXT | NULL
+other_provider_identifier_issuer_2: TEXT | NULL | eg=["PREFERRED ONE", "BLUE CROSS DELUXE"]
+other_provider_identifier_29: TEXT | NULL
+healthcare_provider_taxonomy_group_13: TEXT | NULL
+provider_second_line_business_mailing_address: TEXT | NULL | eg=["1230 E MAIN ST MANKATO CLINIC LTD", "SUITE 230"]
+other_provider_identifier_issuer_9: TEXT | NULL | eg=["CONNECTICARE"]
+other_provider_identifier_41: TEXT | NULL
+provider_business_mailing_address_telephone_number: TEXT | NULL | eg=["5076251811", "3037590854"]
+provider_license_number_13: TEXT | NULL
+other_provider_identifier_state_34: TEXT | NULL
+healthcare_provider_taxonomy_group_14: TEXT | NULL
+other_provider_identifier_state_47: TEXT | NULL
+healthcare_provider_taxonomy_code_3: TEXT | NULL
+certification_date: DATE | NULL | eg=["2020-07-10"]
+other_provider_identifier_state_9: TEXT | NULL | eg=["NY"]
+other_provider_identifier_state_42: TEXT | NULL
+npi_deactivation_reason_code: TEXT | NULL
+npi_reactivation_date: DATE | NULL
+provider_license_number_6: TEXT | NULL
+npi: TEXT | NULL | eg=["1831178870", "1134108137"]
+provider_second_line_business_practice_location_address: TEXT | NULL | eg=["MANKATO CLINIC AT ADAMS STREET", "SUITE 230"]
+other_provider_identifier_state_17: TEXT | NULL
+healthcare_provider_primary_taxonomy_switch_10: TEXT | NULL
+other_provider_identifier_state_31: TEXT | NULL
+provider_license_number_9: TEXT | NULL
+provider_gender_code: TEXT | NULL | eg=["M", "F"]
+provider_other_organization_name: TEXT | NULL
+provider_license_number_12: TEXT | NULL
+other_provider_identifier_state_13: TEXT | NULL | eg=["NY"]
+other_provider_identifier_state_29: TEXT | NULL
+healthcare_provider_taxonomy_group_4: TEXT | NULL
+authorized_official_credential_text: TEXT | NULL
+healthcare_provider_primary_taxonomy_switch_1: TEXT | NULL | eg=["Y"]
+other_provider_identifier_34: TEXT | NULL
+healthcare_provider_primary_taxonomy_switch_13: TEXT | NULL
+healthcare_provider_taxonomy_group_7: TEXT | NULL
+healthcare_provider_taxonomy_code_1: TEXT | NULL | eg=["207Q00000X", "207P00000X"]
+other_provider_identifier_43: TEXT | NULL
+other_provider_identifier_39: TEXT | NULL
+other_provider_identifier_state_33: TEXT | NULL
+other_provider_identifier_type_code_3: TEXT | NULL | eg=["01"]
+other_provider_identifier_27: TEXT | NULL
+healthcare_provider_taxonomy_group_15: TEXT | NULL
+other_provider_identifier_type_code_37: TEXT | NULL
+other_provider_identifier_state_19: TEXT | NULL
+other_provider_identifier_9: TEXT | NULL | eg=["000560"]
+other_provider_identifier_state_45: TEXT | NULL
+other_provider_identifier_issuer_45: TEXT | NULL
+other_provider_identifier_state_24: TEXT | NULL
+other_provider_identifier_type_code_16: TEXT | NULL | eg=["01"]
+other_provider_identifier_type_code_28: TEXT | NULL
+other_provider_identifier_type_code_32: TEXT | NULL
+other_provider_identifier_26: TEXT | NULL
+other_provider_identifier_issuer_23: TEXT | NULL
+last_update_date: DATE | NULL | eg=["2020-07-10", "2010-02-12"]
+provider_name_suffix_text: TEXT | NULL
+healthcare_provider_primary_taxonomy_switch_5: TEXT | NULL
+other_provider_identifier_46: TEXT | NULL
+other_provider_identifier_type_code_2: TEXT | NULL | eg=["01", "05"]
+
+## NPPES.HEALTHCARE_PROVIDER_TAXONOMY_CODE_SET_111
+grouping: TEXT | NULL | eg=["Group", "Agencies"]
+notes: TEXT | NULL | eg=["[7/1/2003: new]", "Source: Portions of IDEA Regulations Part B (34 CFR Part 300.18, Assistance to States for the Education of Children with Disabilities)  [1/1/2006: new]"]
+definition: TEXT | NULL | eg=["A business group of one or more individual practitioners, who practice with different areas of specialization.", "The term local education agency means a public board of education or other public authority legally constituted within a State to either provide administrative control or direction of, or perform a service function for public schools serving individuals ages 0 – 21 in a state, city, county, township, school district, or other political subdivision including a combination of school districts or counties recognized in a State as an administrative agency for its public schools.  An LEA may provide, or employ professional who provide, services to children included in the Individuals with Disabilities Education Act (IDEA), such services may include, but are not limited to, such medical services as physical, occupational, and speech therapy."]
+specialization: TEXT | NULL | eg=[""]
+classification: TEXT | NULL | eg=["Multi-Specialty", "Local Education Agency (LEA)"]
+code: TEXT | NULL | eg=["193200000X", "251300000X"]
+
+## NPPES.HEALTHCARE_PROVIDER_TAXONOMY_CODE_SET_120
+notes: TEXT | NULL | eg=["[7/1/2003: new]", "Source: Portions of IDEA Regulations Part B (34 CFR Part 300.18, Assistance to States for the Education of Children with Disabilities)  [1/1/2006: new]"]
+specialization: TEXT | NULL | eg=[""]
+classification: TEXT | NULL | eg=["Single Specialty", "Local Education Agency (LEA)"]
+grouping: TEXT | NULL | eg=["Group", "Agencies"]
+code: TEXT | NULL | eg=["193400000X", "251300000X"]
+definition: TEXT | NULL | eg=["A business group of one or more individual practitioners, all of who practice with the same area of specialization.", "The term local education agency means a public board of education or other public authority legally constituted within a State to either provide administrative control or direction of, or perform a service function for public schools serving individuals ages 0 – 21 in a state, city, county, township, school district, or other political subdivision including a combination of school districts or counties recognized in a State as an administrative agency for its public schools.  An LEA may provide, or employ professional who provide, services to children included in the Individuals with Disabilities Education Act (IDEA), such services may include, but are not limited to, such medical services as physical, occupational, and speech therapy."]
+
+## NPPES.HEALTHCARE_PROVIDER_TAXONOMY_CODE_SET_140
+classification: TEXT | NULL | eg=["Multi-Specialty", "Case Management"]
+specialization: TEXT | NULL | eg=[""]
+code: TEXT | NULL | eg=["193200000X", "251B00000X"]
+notes: TEXT | NULL | eg=["[7/1/2003: new]", "Source:  CMS State Medicaid Manual Section 4442.3 [7/1/2006: definition modified]"]
+grouping: TEXT | NULL | eg=["Group", "Agencies"]
+definition: TEXT | NULL | eg=["A business group of one or more individual practitioners, who practice with different areas of specialization.", "An organization that is responsible for providing case management services.  The agency provides services which assist an individual in gaining access to needed medical, social, educational, and/or other services.  Case management services may be used to locate, coordinate, and monitor necessary appropriate services.  It may be used to encourage the use of cost-effective medical care by referrals to appropriate providers and to discourage over utilization of costly services.  Case management may also serve to provide necessary coordination of non-medical services such as vocational rehabilitation, education, employment, when the services provided enable the individual to function at the highest level."]
+
+## NPPES.HEALTHCARE_PROVIDER_TAXONOMY_CODE_SET_170
+notes: TEXT | NULL | eg=["[7/1/2003: new]", "Source:  CMS State Medicaid Manual Section 4442.3 [7/1/2006: definition modified]"]
+specialization: TEXT | NULL | eg=[""]
+grouping: TEXT | NULL | eg=["Group", "Agencies"]
+code: TEXT | NULL | eg=["193400000X", "251B00000X"]
+definition: TEXT | NULL | eg=["A business group of one or more individual practitioners, all of who practice with the same area of specialization.", "An organization that is responsible for providing case management services.  The agency provides services which assist an individual in gaining access to needed medical, social, educational, and/or other services.  Case management services may be used to locate, coordinate, and monitor necessary appropriate services.  It may be used to encourage the use of cost-effective medical care by referrals to appropriate providers and to discourage over utilization of costly services.  Case management may also serve to provide necessary coordination of non-medical services such as vocational rehabilitation, education, employment, when the services provided enable the individual to function at the highest level."]
+classification: TEXT | NULL | eg=["Single Specialty", "Case Management"]
+
+## NPPES.HEALTHCARE_PROVIDER_TAXONOMY_CODE_SET_141
+notes: TEXT | NULL | eg=["Source: Portions of IDEA Regulations Part B (34 CFR Part 300.18, Assistance to States for the Education of Children with Disabilities)  [1/1/2006: new]", "Source:  CMS State Medicaid Manual Section 4442.3 [7/1/2006: definition modified]"]
+classification: TEXT | NULL | eg=["Local Education Agency (LEA)", "Case Management"]
+code: TEXT | NULL | eg=["251300000X", "251B00000X"]
+definition: TEXT | NULL | eg=["The term local education agency means a public board of education or other public authority legally constituted within a State to either provide administrative control or direction of, or perform a service function for public schools serving individuals ages 0 – 21 in a state, city, county, township, school district, or other political subdivision including a combination of school districts or counties recognized in a State as an administrative agency for its public schools.  An LEA may provide, or employ professional who provide, services to children included in the Individuals with Disabilities Education Act (IDEA), such services may include, but are not limited to, such medical services as physical, occupational, and speech therapy.", "An organization that is responsible for providing case management services.  The agency provides services which assist an individual in gaining access to needed medical, social, educational, and/or other services.  Case management services may be used to locate, coordinate, and monitor necessary appropriate services.  It may be used to encourage the use of cost-effective medical care by referrals to appropriate providers and to discourage over utilization of costly services.  Case management may also serve to provide necessary coordination of non-medical services such as vocational rehabilitation, education, employment, when the services provided enable the individual to function at the highest level."]
+specialization: TEXT | NULL | eg=[""]
+grouping: TEXT | NULL | eg=["Agencies", "Hospitals"]
+
+## NPPES.HEALTHCARE_PROVIDER_TAXONOMY_CODE_SET
+grouping: TEXT | NULL | eg=["Group", "Agencies"]
+notes: TEXT | NULL | eg=["[7/1/2003: new]", "Source: Portions of IDEA Regulations Part B (34 CFR Part 300.18, Assistance to States for the Education of Children with Disabilities)  [1/1/2006: new]"]
+specialization: TEXT | NULL
+definition: TEXT | NULL | eg=["A business group of one or more individual practitioners, who practice with different areas of specialization.", "A business group of one or more individual practitioners, all of who practice with the same area of specialization."]
+code: TEXT | NULL | eg=["193200000X", "193400000X"]
+classification: TEXT | NULL | eg=["Multi-Specialty", "Single Specialty"]
+
+## NPPES.HEALTHCARE_PROVIDER_TAXONOMY_CODE_SET_121
+notes: TEXT | NULL | eg=["[7/1/2003: new]", "Source:  CFR42 Chapter IV Part 484,  http://www.access.gpo.gov/nara/cfr/waisidx_99/42cfr484_99.html [7/1/2007: definition added, source added]"]
+classification: TEXT | NULL | eg=["Multi-Specialty", "Single Specialty"]
+specialization: TEXT | NULL | eg=[""]
+code: TEXT | NULL | eg=["193200000X", "193400000X"]
+definition: TEXT | NULL | eg=["A business group of one or more individual practitioners, who practice with different areas of specialization.", "A business group of one or more individual practitioners, all of who practice with the same area of specialization."]
+grouping: TEXT | NULL | eg=["Group", "Agencies"]
+
+## NPPES.NPI_OPTIMIZED
+other_provider_identifier_issuer_37: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_37: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_13_specialization: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_14_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_9_name: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_5_grouping: TEXT | NULL | eg=["", "Dental Providers"]
+provider_license_number_14: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_14_classification: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_1_notes: TEXT | NULL | eg=["Source: Academy of General Dentistry"]
+provider_license_number_state_code_7: TEXT | NULL | eg=[""]
+provider_second_line_business_mailing_address: TEXT | NULL | eg=["", "WUERZBURG DENTAL ACTIVITY CREDENTIAL OFFICE"]
+other_provider_identifier_37: TEXT | NULL | eg=[""]
+other_provider_identifier_state_1: TEXT | NULL | eg=["TN", "CO"]
+healthcare_provider_primary_taxonomy_switch_10_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_36: TEXT | NULL | eg=[""]
+other_provider_identifier_state_15: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_42: TEXT | NULL | eg=[""]
+authorized_official_telephone_number: TEXT | NULL | eg=[""]
+npi_reactivation_date: DATE | NULL
+other_provider_identifier_issuer_50: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_15_name: TEXT | NULL | eg=[""]
+provider_business_practice_location_address_postal_code: TEXT | NULL | eg=["379175567", "810012039"]
+provider_other_last_name: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_27: TEXT | NULL | eg=[""]
+provider_license_number_state_code_6: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_43_name: TEXT | NULL | eg=[""]
+other_provider_identifier_49: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_1: TEXT | NULL | eg=["Y"]
+other_provider_identifier_17: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_22: TEXT | NULL | eg=[""]
+other_provider_identifier_state_20: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_46: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_24: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_12_classification: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_26: TEXT | NULL | eg=[""]
+other_provider_identifier_state_33: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_2_name: TEXT | NULL | eg=["OTHER", ""]
+npi: TEXT | NULL | eg=["1295724979", "1033185871"]
+is_sole_proprietor: TEXT | NULL | eg=["X"]
+other_provider_identifier_state_18: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_8_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_25_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_22_name: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_group_11: TEXT | NULL | eg=[""]
+other_provider_identifier_35: TEXT | NULL | eg=[""]
+npi_deactivation_reason_code_name: TEXT | NULL | eg=[""]
+other_provider_identifier_9: TEXT | NULL | eg=[""]
+provider_license_number_state_code_12: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_5_specialization: TEXT | NULL | eg=["", "General Practice"]
+other_provider_identifier_21: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_13_definition: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_31_name: TEXT | NULL | eg=[""]
+other_provider_identifier_state_19: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_code_1: TEXT | NULL | eg=["1223G0001X"]
+other_provider_identifier_state_29: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_19: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_1: TEXT | NULL | eg=["05", ""]
+other_provider_identifier_type_code_23_name: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_11_grouping: TEXT | NULL | eg=[""]
+provider_business_practice_location_address_state_name: TEXT | NULL | eg=["TN", "CO"]
+employer_identification_number_ein: TEXT | NULL | eg=[""]
+authorized_official_name_prefix_text: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_49: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_14_definition: TEXT | NULL | eg=[""]
+provider_license_number_6: TEXT | NULL | eg=[""]
+other_provider_identifier_39: TEXT | NULL | eg=[""]
+provider_name_prefix_text: TEXT | NULL | eg=["DR.", ""]
+other_provider_identifier_type_code_41: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_12_grouping: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_32: TEXT | NULL | eg=[""]
+other_provider_identifier_state_42: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_code_2: TEXT | NULL | eg=["", "1223G0001X"]
+healthcare_provider_taxonomy_6_classification: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_1_grouping: TEXT | NULL | eg=["Dental Providers"]
+other_provider_identifier_type_code_14_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_20_name: TEXT | NULL | eg=[""]
+provider_other_organization_name_type_code: NUMBER | NULL
+provider_license_number_3: TEXT | NULL | eg=["", "DD2030"]
+other_provider_identifier_state_9: TEXT | NULL | eg=[""]
+other_provider_identifier_state_13: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_8: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_21: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_6: TEXT | NULL | eg=[""]
+other_provider_identifier_state_17: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_39_name: TEXT | NULL | eg=[""]
+provider_first_name: TEXT | NULL | eg=["ROGER", "MICHAEL"]
+healthcare_provider_taxonomy_6_definition: TEXT | NULL | eg=[""]
+other_provider_identifier_state_45: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_11: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_group_7: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_8_classification: TEXT | NULL | eg=[""]
+provider_business_practice_location_address_fax_number: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_1_classification: TEXT | NULL | eg=["Dentist"]
+other_provider_identifier_issuer_18: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_13: TEXT | NULL | eg=[""]
+provider_license_number_10: TEXT | NULL | eg=[""]
+provider_business_mailing_address_city_name: TEXT | NULL | eg=["KNOXVILLE", "PUEBLO"]
+other_provider_identifier_issuer_31: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_26_name: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_13_classification: TEXT | NULL | eg=[""]
+other_provider_identifier_26: TEXT | NULL | eg=[""]
+provider_license_number_11: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_14_grouping: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_2: TEXT | NULL | eg=["", "N"]
+provider_other_organization_name: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_15_notes: TEXT | NULL | eg=[""]
+provider_business_mailing_address_country_code_if_outside_us: TEXT | NULL | eg=["US"]
+entity_type_code: NUMBER | NULL | eg=[1]
+healthcare_provider_taxonomy_3_specialization: TEXT | NULL | eg=["", "General Practice"]
+other_provider_identifier_issuer_26: TEXT | NULL | eg=[""]
+other_provider_identifier_6: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_code_15: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_15: TEXT | NULL | eg=[""]
+other_provider_identifier_state_31: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_45: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_20: TEXT | NULL | eg=[""]
+replacement_npi: TEXT | NULL | eg=[""]
+provider_business_mailing_address_state_name_name: TEXT | NULL | eg=["TENNESSEE", "COLORADO"]
+other_provider_identifier_issuer_25: TEXT | NULL | eg=[""]
+other_provider_identifier_state_35: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_group_10: TEXT | NULL | eg=[""]
+other_provider_identifier_state_40: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_10: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_41_name: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_6_name: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_11: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_group_8: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_39: TEXT | NULL | eg=[""]
+other_provider_identifier_state_16: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_38: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_10_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_20: TEXT | NULL | eg=[""]
+other_provider_identifier_state_25: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_12: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_4_classification: TEXT | NULL | eg=["", "Dentist"]
+provider_other_name_suffix_text: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_14: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_code_12: TEXT | NULL | eg=[""]
+parent_organization_lbn: TEXT | NULL | eg=[""]
+provider_first_line_business_practice_location_address: TEXT | NULL | eg=["816 E OLDHAM AVE", "1022 LIBERTY LN"]
+other_provider_identifier_state_28: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_12_name: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_35: TEXT | NULL | eg=[""]
+other_provider_identifier_state_34: TEXT | NULL | eg=[""]
+other_provider_identifier_47: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_17_name: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_12_name: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_48: TEXT | NULL | eg=[""]
+is_sole_proprietor_name: TEXT | NULL | eg=["Not Answered"]
+other_provider_identifier_11: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_47: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_16: TEXT | NULL | eg=[""]
+other_provider_identifier_13: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_3_notes: TEXT | NULL | eg=["", "Source: Academy of General Dentistry"]
+healthcare_provider_taxonomy_4_grouping: TEXT | NULL | eg=["", "Dental Providers"]
+healthcare_provider_taxonomy_2_classification: TEXT | NULL | eg=["", "Dentist"]
+other_provider_identifier_48: TEXT | NULL | eg=[""]
+authorized_official_middle_name: TEXT | NULL | eg=[""]
+other_provider_identifier_1: TEXT | NULL | eg=["3217050004873", "2051332"]
+other_provider_identifier_state_36: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_30_name: TEXT | NULL | eg=[""]
+other_provider_identifier_2: TEXT | NULL | eg=["60236", ""]
+npi_deactivation_reason_code: TEXT | NULL | eg=[""]
+provider_other_name_prefix_text: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_8_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_13_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_32_name: TEXT | NULL | eg=[""]
+other_provider_identifier_state_39: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_code_6: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_5_definition: TEXT | NULL | eg=["", "A general dentist is the primary dental care provider for patients of all ages. The general dentist is responsible for the diagnosis, treatment, management and overall coordination of services related to patients' oral health needs."]
+provider_other_first_name: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_12_specialization: TEXT | NULL | eg=[""]
+provider_business_practice_location_address_city_name: TEXT | NULL | eg=["KNOXVILLE", "PUEBLO"]
+healthcare_provider_taxonomy_9_specialization: TEXT | NULL | eg=[""]
+provider_license_number_state_code_2: TEXT | NULL | eg=["", "KS"]
+healthcare_provider_taxonomy_10_grouping: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_14: TEXT | NULL | eg=[""]
+authorized_official_title_or_position: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_44_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_49: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_group_3: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_3: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_code_8: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_group_5: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_4: TEXT | NULL | eg=["", "N"]
+healthcare_provider_taxonomy_2_notes: TEXT | NULL | eg=["", "Source: Academy of General Dentistry"]
+healthcare_provider_primary_taxonomy_switch_9: TEXT | NULL | eg=[""]
+other_provider_identifier_state_50: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_42_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_37_name: TEXT | NULL | eg=[""]
+other_provider_identifier_50: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_5_notes: TEXT | NULL | eg=["", "Source: Academy of General Dentistry"]
+other_provider_identifier_state_11: TEXT | NULL | eg=[""]
+other_provider_identifier_state_2: TEXT | NULL | eg=["TN", ""]
+other_provider_identifier_issuer_28: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_28_name: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_11_classification: TEXT | NULL | eg=[""]
+other_provider_identifier_state_38: TEXT | NULL | eg=[""]
+other_provider_identifier_state_24: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_6_notes: TEXT | NULL | eg=[""]
+provider_business_mailing_address_state_name: TEXT | NULL | eg=["TN", "CO"]
+other_provider_identifier_state_30: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_33: TEXT | NULL | eg=[""]
+other_provider_identifier_state_43: TEXT | NULL | eg=[""]
+other_provider_identifier_25: TEXT | NULL | eg=[""]
+other_provider_identifier_7: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_11: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_group_13: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_7_notes: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_3_name: TEXT | NULL | eg=["", "No"]
+other_provider_identifier_3: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_38_name: TEXT | NULL | eg=[""]
+provider_license_number_state_code_10: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_3_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_45_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_7: TEXT | NULL | eg=[""]
+authorized_official_name_suffix_text: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_10: TEXT | NULL | eg=[""]
+other_provider_identifier_33: TEXT | NULL | eg=[""]
+other_provider_identifier_41: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_40_name: TEXT | NULL | eg=[""]
+provider_license_number_8: TEXT | NULL | eg=[""]
+other_provider_identifier_state_44: TEXT | NULL | eg=[""]
+other_provider_identifier_8: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_7: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_46_name: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_code_3: TEXT | NULL | eg=["", "1223G0001X"]
+other_provider_identifier_type_code_8: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_13_notes: TEXT | NULL | eg=[""]
+other_provider_identifier_34: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_7_definition: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_5_classification: TEXT | NULL | eg=["", "Dentist"]
+provider_other_middle_name: TEXT | NULL | eg=[""]
+provider_business_practice_location_address_state_name_name: TEXT | NULL | eg=["TENNESSEE", "COLORADO"]
+other_provider_identifier_issuer_9: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_19_name: TEXT | NULL | eg=[""]
+other_provider_identifier_state_12: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_1_specialization: TEXT | NULL | eg=["General Practice"]
+provider_license_number_5: TEXT | NULL | eg=["", "12010424A"]
+other_provider_identifier_type_code_22: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_44: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_9_grouping: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_42: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_15_definition: TEXT | NULL | eg=[""]
+provider_other_credential_text: TEXT | NULL | eg=[""]
+other_provider_identifier_12: TEXT | NULL | eg=[""]
+provider_license_number_state_code_11: TEXT | NULL | eg=[""]
+other_provider_identifier_state_48: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_5: TEXT | NULL | eg=["", "N"]
+healthcare_provider_taxonomy_15_grouping: TEXT | NULL | eg=[""]
+other_provider_identifier_5: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_5: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_13: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_14_notes: TEXT | NULL | eg=[""]
+provider_license_number_state_code_1: TEXT | NULL | eg=["TN", "CO"]
+healthcare_provider_taxonomy_8_notes: TEXT | NULL | eg=[""]
+provider_license_number_4: TEXT | NULL | eg=["", "5643"]
+healthcare_provider_taxonomy_group_2: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_15_classification: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_40: TEXT | NULL | eg=[""]
+npi_deactivation_date: DATE | NULL
+other_provider_identifier_type_code_21_name: TEXT | NULL | eg=[""]
+other_provider_identifier_36: TEXT | NULL | eg=[""]
+other_provider_identifier_15: TEXT | NULL | eg=[""]
+provider_enumeration_date: DATE | NULL | eg=["2005-10-17", "2006-02-23"]
+other_provider_identifier_type_code_19: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_9_name: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_38: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_28: TEXT | NULL | eg=[""]
+other_provider_identifier_31: TEXT | NULL | eg=[""]
+other_provider_identifier_27: TEXT | NULL | eg=[""]
+provider_license_number_13: TEXT | NULL | eg=[""]
+last_update_date: DATE | NULL | eg=["2007-07-08", "2007-07-09"]
+provider_first_line_business_mailing_address: TEXT | NULL | eg=["816 E OLDHAM AVE", "415 N GRAND AVE"]
+other_provider_identifier_19: TEXT | NULL | eg=[""]
+provider_license_number_state_code_5: TEXT | NULL | eg=["", "IN"]
+provider_business_practice_location_address_telephone_number: TEXT | NULL | eg=["8655231072", "7195455778"]
+other_provider_identifier_state_49: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_11_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_17: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_9: TEXT | NULL | eg=[""]
+other_provider_identifier_state_14: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_36: TEXT | NULL | eg=[""]
+other_provider_identifier_state_37: TEXT | NULL | eg=[""]
+other_provider_identifier_state_41: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_15_specialization: TEXT | NULL | eg=[""]
+provider_credential_text: TEXT | NULL | eg=["D.D.S.", ""]
+healthcare_provider_taxonomy_3_grouping: TEXT | NULL | eg=["", "Dental Providers"]
+other_provider_identifier_state_23: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_33_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_5: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_6: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_group_12: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_46: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_5_name: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_2_name: TEXT | NULL | eg=["", "No"]
+healthcare_provider_taxonomy_code_11: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_2_definition: TEXT | NULL | eg=["", "A general dentist is the primary dental care provider for patients of all ages. The general dentist is responsible for the diagnosis, treatment, management and overall coordination of services related to patients' oral health needs."]
+healthcare_provider_primary_taxonomy_switch_3: TEXT | NULL | eg=["", "N"]
+other_provider_identifier_issuer_15: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_15: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_13: TEXT | NULL | eg=[""]
+parent_organization_tin: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_32: TEXT | NULL | eg=[""]
+is_organization_subpart: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_1: TEXT | NULL | eg=[""]
+other_provider_identifier_40: TEXT | NULL | eg=[""]
+provider_business_mailing_address_country_code_if_outside_us_name: TEXT | NULL | eg=["UNITED STATES"]
+other_provider_identifier_type_code_30: TEXT | NULL | eg=[""]
+other_provider_identifier_16: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_6_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_27_name: TEXT | NULL | eg=[""]
+other_provider_identifier_state_6: TEXT | NULL | eg=[""]
+provider_business_mailing_address_fax_number: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_code_9: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_35: TEXT | NULL | eg=[""]
+other_provider_identifier_14: TEXT | NULL | eg=[""]
+other_provider_identifier_32: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_24: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_group_15: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_group_1: TEXT | NULL | eg=[""]
+other_provider_identifier_state_22: TEXT | NULL | eg=[""]
+other_provider_identifier_state_8: TEXT | NULL | eg=[""]
+other_provider_identifier_4: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_code_7: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_11_notes: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_10_classification: TEXT | NULL | eg=[""]
+other_provider_identifier_state_10: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_25: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_10: TEXT | NULL | eg=[""]
+other_provider_identifier_state_32: TEXT | NULL | eg=[""]
+other_provider_identifier_23: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_8_definition: TEXT | NULL | eg=[""]
+provider_other_last_name_type_code: NUMBER | NULL
+authorized_official_last_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_3: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_group_14: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_4: TEXT | NULL | eg=[""]
+authorized_official_credential_text: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_40: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_2: TEXT | NULL | eg=["BCBS", ""]
+other_provider_identifier_issuer_33: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_24_name: TEXT | NULL | eg=[""]
+other_provider_identifier_10: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_18: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_group_9: TEXT | NULL | eg=[""]
+provider_other_last_name_type_code_name: TEXT | NULL | eg=[""]
+provider_license_number_2: TEXT | NULL | eg=["", "60184"]
+other_provider_identifier_type_code_2: TEXT | NULL | eg=["01", ""]
+other_provider_identifier_type_code_34: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_16_name: TEXT | NULL | eg=[""]
+is_organization_subpart_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_34_name: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_4_specialization: TEXT | NULL | eg=["", "General Practice"]
+healthcare_provider_primary_taxonomy_switch_5_name: TEXT | NULL | eg=["", "No"]
+healthcare_provider_taxonomy_4_definition: TEXT | NULL | eg=["", "A general dentist is the primary dental care provider for patients of all ages. The general dentist is responsible for the diagnosis, treatment, management and overall coordination of services related to patients' oral health needs."]
+healthcare_provider_taxonomy_11_definition: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_7_specialization: TEXT | NULL | eg=[""]
+entity_type_code_name: TEXT | NULL | eg=["Individual"]
+healthcare_provider_taxonomy_4_notes: TEXT | NULL | eg=["", "Source: Academy of General Dentistry"]
+other_provider_identifier_45: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_16: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_11_specialization: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_27: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_code_5: TEXT | NULL | eg=["", "1223G0001X"]
+healthcare_provider_primary_taxonomy_switch_4_name: TEXT | NULL | eg=["", "No"]
+other_provider_identifier_type_code_23: TEXT | NULL | eg=[""]
+other_provider_identifier_20: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_2_grouping: TEXT | NULL | eg=["", "Dental Providers"]
+other_provider_identifier_type_code_29_name: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_10_specialization: TEXT | NULL | eg=[""]
+other_provider_identifier_state_47: TEXT | NULL | eg=[""]
+provider_other_organization_name_type_code_name: TEXT | NULL | eg=[""]
+provider_license_number_state_code_3: TEXT | NULL | eg=["", "NM"]
+provider_second_line_business_practice_location_address: TEXT | NULL | eg=["", "WUERZBURG DENTAL ACTIVITY CREDENTIAL OFFICE"]
+other_provider_identifier_type_code_1_name: TEXT | NULL | eg=["MEDICAID", ""]
+other_provider_identifier_type_code_21: TEXT | NULL | eg=[""]
+other_provider_identifier_28: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_4_name: TEXT | NULL | eg=[""]
+provider_gender_code: TEXT | NULL | eg=["M", "F"]
+other_provider_identifier_29: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_17: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_44: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_11_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_18_name: TEXT | NULL | eg=[""]
+other_provider_identifier_24: TEXT | NULL | eg=[""]
+provider_last_name_legal_name: TEXT | NULL | eg=["VAZQUEZ", "DEROSE"]
+other_provider_identifier_type_code_48_name: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_14_specialization: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_9_classification: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_45: TEXT | NULL | eg=[""]
+provider_license_number_state_code_13: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_9_definition: TEXT | NULL | eg=[""]
+provider_license_number_state_code_9: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_7_classification: TEXT | NULL | eg=[""]
+provider_gender_code_name: TEXT | NULL | eg=["Male", "Female"]
+other_provider_identifier_type_code_36_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_39: TEXT | NULL | eg=[""]
+provider_license_number_1: TEXT | NULL | eg=["2603", "DEN-5133"]
+other_provider_identifier_issuer_43: TEXT | NULL | eg=[""]
+other_provider_identifier_state_46: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_8_specialization: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_code_4: TEXT | NULL | eg=["", "1223G0001X"]
+provider_middle_name: TEXT | NULL | eg=["ABRAHAM", "ANTHONY"]
+healthcare_provider_taxonomy_12_notes: TEXT | NULL | eg=[""]
+provider_name_suffix_text: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_15_name: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_13_name: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_code_13: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_47: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_8: TEXT | NULL | eg=[""]
+provider_license_number_state_code_4: TEXT | NULL | eg=["", "OK"]
+healthcare_provider_taxonomy_13_grouping: TEXT | NULL | eg=[""]
+other_provider_identifier_30: TEXT | NULL | eg=[""]
+other_provider_identifier_state_26: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_50: TEXT | NULL | eg=[""]
+other_provider_identifier_44: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_7_name: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_code_14: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_47_name: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_41: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_10_definition: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_49_name: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_3_definition: TEXT | NULL | eg=["", "A general dentist is the primary dental care provider for patients of all ages. The general dentist is responsible for the diagnosis, treatment, management and overall coordination of services related to patients' oral health needs."]
+provider_business_practice_location_address_country_code_if_outside_us_name: TEXT | NULL | eg=["UNITED STATES"]
+other_provider_identifier_issuer_34: TEXT | NULL | eg=[""]
+provider_business_mailing_address_postal_code: TEXT | NULL | eg=["379175567", "810033111"]
+other_provider_identifier_22: TEXT | NULL | eg=[""]
+other_provider_identifier_43: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_43: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_6_grouping: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_10_notes: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_30: TEXT | NULL | eg=[""]
+other_provider_identifier_state_21: TEXT | NULL | eg=[""]
+provider_license_number_9: TEXT | NULL | eg=[""]
+provider_business_practice_location_address_country_code_if_outside_us: TEXT | NULL | eg=["US"]
+other_provider_identifier_issuer_14: TEXT | NULL | eg=[""]
+other_provider_identifier_state_7: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_3_classification: TEXT | NULL | eg=["", "Dentist"]
+healthcare_provider_taxonomy_12_definition: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_1_definition: TEXT | NULL | eg=["A general dentist is the primary dental care provider for patients of all ages. The general dentist is responsible for the diagnosis, treatment, management and overall coordination of services related to patients' oral health needs."]
+healthcare_provider_taxonomy_9_notes: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_code_10: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_7_name: TEXT | NULL | eg=[""]
+provider_license_number_7: TEXT | NULL | eg=[""]
+provider_license_number_12: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_7: TEXT | NULL | eg=[""]
+other_provider_identifier_state_5: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_8_grouping: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_group_6: TEXT | NULL | eg=[""]
+provider_license_number_15: TEXT | NULL | eg=[""]
+provider_license_number_state_code_14: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_2_specialization: TEXT | NULL | eg=["", "General Practice"]
+other_provider_identifier_issuer_4: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_31: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_29: TEXT | NULL | eg=[""]
+healthcare_provider_primary_taxonomy_switch_1_name: TEXT | NULL | eg=["Yes"]
+healthcare_provider_taxonomy_group_4: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_12: TEXT | NULL | eg=[""]
+other_provider_identifier_38: TEXT | NULL | eg=[""]
+other_provider_identifier_42: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_12: TEXT | NULL | eg=[""]
+provider_business_mailing_address_telephone_number: TEXT | NULL | eg=["8655231072", "7195463333"]
+other_provider_identifier_state_3: TEXT | NULL | eg=[""]
+provider_license_number_state_code_15: TEXT | NULL | eg=[""]
+provider_organization_name_legal_business_name: TEXT | NULL | eg=[""]
+other_provider_identifier_state_4: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_7_grouping: TEXT | NULL | eg=[""]
+authorized_official_first_name: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_50_name: TEXT | NULL | eg=[""]
+other_provider_identifier_state_27: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_35_name: TEXT | NULL | eg=[""]
+provider_license_number_state_code_8: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_29: TEXT | NULL | eg=[""]
+other_provider_identifier_46: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_6: TEXT | NULL | eg=[""]
+healthcare_provider_taxonomy_6_specialization: TEXT | NULL | eg=[""]
+other_provider_identifier_18: TEXT | NULL | eg=[""]
+other_provider_identifier_type_code_48: TEXT | NULL | eg=[""]
+other_provider_identifier_issuer_23: TEXT | NULL | eg=[""]
+
+## NPPES.HEALTHCARE_PROVIDER_TAXONOMY_CODE_SET_150
+grouping: TEXT | NULL | eg=["Agencies"]
+notes: TEXT | NULL | eg=["Source: Portions of IDEA Regulations Part B (34 CFR Part 300.18, Assistance to States for the Education of Children with Disabilities)  [1/1/2006: new]", "Source: National Uniform Claim Committee, 2008 [7/1/2008: modified definition]"]
+definition: TEXT | NULL | eg=["The term local education agency means a public board of education or other public authority legally constituted within a State to either provide administrative control or direction of, or perform a service function for public schools serving individuals ages 0 – 21 in a state, city, county, township, school district, or other political subdivision including a combination of school districts or counties recognized in a State as an administrative agency for its public schools.  An LEA may provide, or employ professional who provide, services to children included in the Individuals with Disabilities Education Act (IDEA), such services may include, but are not limited to, such medical services as physical, occupational, and speech therapy.", "A Nursing Care Agency is an entity that provides skilled nursing care through the services of a Registered Nurse (RN) or a Licensed Practical Nurse (LPN), by employees, contracted individuals, or via a registry, in a variety of settings. The agency may engage in providing private duty nursing and/or staffing services."]
+specialization: TEXT | NULL | eg=[""]
+classification: TEXT | NULL | eg=["Local Education Agency (LEA)", "Nursing Care"]
+code: TEXT | NULL | eg=["251300000X", "251J00000X"]
+
+## NPPES.HEALTHCARE_PROVIDER_TAXONOMY_CODE_SET_131
+classification: TEXT | NULL | eg=["Multi-Specialty", "Home Health"]
+grouping: TEXT | NULL | eg=["Group", "Agencies"]
+code: TEXT | NULL | eg=["193200000X", "251E00000X"]
+notes: TEXT | NULL | eg=["[7/1/2003: new]", "Source:  CFR42 Chapter IV Part 484,  http://www.access.gpo.gov/nara/cfr/waisidx_99/42cfr484_99.html [7/1/2007: definition added, source added]"]
+specialization: TEXT | NULL | eg=[""]
+definition: TEXT | NULL | eg=["A business group of one or more individual practitioners, who practice with different areas of specialization.", "A public agency or private organization, or a subdivision of such an agency or organization, that is primarily engaged in providing skilled nursing services and other therapeutic services, such as physical therapy, speech-language pathology services, or occupational therapy, medical social services, and home health aide services. It has policies established by a professional group associated with the agency or organization (including at least one physician and one registered nurse) to govern the services and provides for supervision of such services by a physician or a registered nurse; maintains clinical records on all patients; is licensed in accordance with State or local law or is approved by the State or local licensing agency as meeting the licensing standards, where applicable; and meets other conditions found by the Secretary of Health and Human Services to be necessary for health and safety."]
+
+## NPPES.HEALTHCARE_PROVIDER_TAXONOMY_CODE_SET_130
+specialization: TEXT | NULL | eg=[""]
+classification: TEXT | NULL | eg=["Multi-Specialty", "Single Specialty"]
+definition: TEXT | NULL | eg=["A business group of one or more individual practitioners, who practice with different areas of specialization.", "A business group of one or more individual practitioners, all of who practice with the same area of specialization."]
+notes: TEXT | NULL | eg=["[7/1/2003: new]", "Source:  CMS State Medicaid Manual Section 4442.3 [7/1/2006: definition modified]"]
+code: TEXT | NULL | eg=["193200000X", "193400000X"]
+grouping: TEXT | NULL | eg=["Group", "Agencies"]
+
+## NPPES.HEALTHCARE_PROVIDER_TAXONOMY_CODE_SET_091
+notes: TEXT | NULL | eg=["Source: Portions of IDEA Regulations Part B (34 CFR Part 300.18, Assistance to States for the Education of Children with Disabilities)  [1/1/2006: new]", "Source:  CMS State Medicaid Manual Section 4442.3 [7/1/2006: definition modified]"]
+definition: TEXT | NULL | eg=["The term local education agency means a public board of education or other public authority legally constituted within a State to either provide administrative control or direction of, or perform a service function for public schools serving individuals ages 0 – 21 in a state, city, county, township, school district, or other political subdivision including a combination of school districts or counties recognized in a State as an administrative agency for its public schools.  An LEA may provide, or employ professional who provide, services to children included in the Individuals with Disabilities Education Act (IDEA), such services may include, but are not limited to, such medical services as physical, occupational, and speech therapy.", "An organization that is responsible for providing case management services.  The agency provides services which assist an individual in gaining access to needed medical, social, educational, and/or other services.  Case management services may be used to locate, coordinate, and monitor necessary appropriate services.  It may be used to encourage the use of cost-effective medical care by referrals to appropriate providers and to discourage over utilization of costly services.  Case management may also serve to provide necessary coordination of non-medical services such as vocational rehabilitation, education, employment, when the services provided enable the individual to function at the highest level."]
+code: TEXT | NULL | eg=["251300000X", "251B00000X"]
+specialization: TEXT | NULL | eg=[""]
+grouping: TEXT | NULL | eg=["Agencies"]
+classification: TEXT | NULL | eg=["Local Education Agency (LEA)", "Case Management"]
+
+## NPPES.HEALTHCARE_PROVIDER_TAXONOMY_CODE_SET_161
+classification: TEXT | NULL | eg=["Psychologist", "Social Worker"]
+grouping: TEXT | NULL | eg=[""]
+notes: TEXT | NULL | eg=["Source:  National Register of Health Service Providers in Psychology website http://www.nationalregister.org/about_NR.html [7/1/2006: modified title, added definition]", "Source:  Louisiana Academy of Medical Psychologists Note:  Some states issue licenses under Medical Psychologist. [1/1/2007: new]"]
+code: TEXT | NULL | eg=["103TH0100X", "103TP0016X"]
+specialization: TEXT | NULL | eg=["Health Service", "Prescribing (Medical)"]
+definition: TEXT | NULL | eg=["A psychologist, certified/licensed at the independent practice level in his/her state, who is duly trained and experienced in the delivery of direct, preventative, assessment, and therapeutic intervention services to individuals whose growth, adjustment, or functioning is actually impaired or is demonstrably at high risk of impairment (1974).", "Those licensed psychologists who have completed specialized, post-doctoral training in psychopharmacology, passed a national proficiency examination in psychopharmacology, and who are authorized by state statute to prescribe medications, in accordance with their state law and state licensing authority, for the evaluation, diagnosis, management and treatment of mental, nervous, emotional, behavioral, and related disorders."]
+
+## NPPES.HEALTHCARE_PROVIDER_TAXONOMY_CODE_SET_151
+code: TEXT | NULL | eg=["193400000X", "251J00000X"]
+classification: TEXT | NULL | eg=["Single Specialty", "Nursing Care"]
+notes: TEXT | NULL | eg=["[7/1/2003: new]", "Source: National Uniform Claim Committee, 2008 [7/1/2008: modified definition]"]
+specialization: TEXT | NULL | eg=[""]
+definition: TEXT | NULL | eg=["A business group of one or more individual practitioners, all of who practice with the same area of specialization.", "A Nursing Care Agency is an entity that provides skilled nursing care through the services of a Registered Nurse (RN) or a Licensed Practical Nurse (LPN), by employees, contracted individuals, or via a registry, in a variety of settings. The agency may engage in providing private duty nursing and/or staffing services."]
+grouping: TEXT | NULL | eg=["Group", "Agencies"]
+
+## NPPES.HEALTHCARE_PROVIDER_TAXONOMY_CODE_SET_100
+definition: TEXT | NULL | eg=["A public agency or private organization, or a subdivision of such an agency or organization, that is primarily engaged in providing skilled nursing services and other therapeutic services, such as physical therapy, speech-language pathology services, or occupational therapy, medical social services, and home health aide services. It has policies established by a professional group associated with the agency or organization (including at least one physician and one registered nurse) to govern the services and provides for supervision of such services by a physician or a registered nurse; maintains clinical records on all patients; is licensed in accordance with State or local law or is approved by the State or local licensing agency as meeting the licensing standards, where applicable; and meets other conditions found by the Secretary of Health and Human Services to be necessary for health and safety.", "A Nursing Care Agency is an entity that provides skilled nursing care through the services of a Registered Nurse (RN) or a Licensed Practical Nurse (LPN), by employees, contracted individuals, or via a registry, in a variety of settings. The agency may engage in providing private duty nursing and/or staffing services."]
+notes: TEXT | NULL | eg=["Source:  CFR42 Chapter IV Part 484,  http://www.access.gpo.gov/nara/cfr/waisidx_99/42cfr484_99.html [7/1/2007: definition added, source added]", "Source: National Uniform Claim Committee, 2008 [7/1/2008: modified definition]"]
+grouping: TEXT | NULL | eg=["Agencies"]
+classification: TEXT | NULL | eg=["Home Health", "Nursing Care"]
+specialization: TEXT | NULL | eg=[""]
+code: TEXT | NULL | eg=["251E00000X", "251J00000X"]

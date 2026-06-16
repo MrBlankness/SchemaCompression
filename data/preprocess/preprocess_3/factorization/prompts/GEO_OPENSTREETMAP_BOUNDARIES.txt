@@ -1,0 +1,260 @@
+[COMPONENTS]
+@C1
+all_tags: VARIANT | NULL
+geometry: BINARY | NULL
+osm_timestamp: NUMBER | NULL
+
+@C2
+area_land_meters: NUMBER | NULL
+area_water_meters: NUMBER | NULL
+int_point_lat: FLOAT | NULL
+int_point_lon: FLOAT | NULL
+
+@C3
+changeset: NUMBER | NULL
+username: TEXT | NULL
+version: NUMBER | NULL
+visible: BOOLEAN | NULL
+
+@C4
+area_land_meters: FLOAT | NULL
+area_water_meters: FLOAT | NULL
+internal_point_geom: BINARY | NULL
+
+@C5
+osm_id: NUMBER | NULL
+osm_version: NUMBER | NULL
+osm_way_id: NUMBER | NULL
+
+@C6
+congress_session: TEXT | NULL
+district_fips_code: TEXT | NULL
+district_geom: BINARY | NULL
+functional_status: BOOLEAN | NULL
+
+@C7
+gdal_type: TEXT | NULL
+layer_class: TEXT | NULL
+layer_code: NUMBER | NULL
+layer_name: TEXT | NULL
+
+@C8
+internal_point_lat: FLOAT | NULL
+internal_point_lon: FLOAT | NULL
+
+[TABLES]
+## GEO_US_BOUNDARIES.ADJACENT_STATES
+state: TEXT | NULL
+neighbors_fips_code: VARIANT | NULL
+state_fips_code: TEXT | NULL
+state_name: TEXT | NULL
+neighbors_state: VARIANT | NULL
+
+## GEO_US_BOUNDARIES.METROPOLITAN_DIVISIONS
+@use: [C4]
+name: TEXT | NULL
+csa_code: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+internal_point_latitude: FLOAT | NULL
+geo_id: TEXT | NULL
+internal_point_longitude: FLOAT | NULL
+lsad_code: TEXT | NULL
+metdiv_geom: BINARY | NULL
+cbsa_code: TEXT | NULL
+metdiv_code: TEXT | NULL
+lsad_name: TEXT | NULL
+
+## GEO_US_BOUNDARIES.CBSA
+@use: [C4]
+cbsa_fips_code: TEXT | NULL
+name: TEXT | NULL
+cbsa_geom: BINARY | NULL
+csa_geo_id: TEXT | NULL
+lsad_code: TEXT | NULL
+msa_indicator: TEXT | NULL
+lsad_name: TEXT | NULL
+internal_point_longitude: FLOAT | NULL
+internal_point_latitude: FLOAT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+geo_id: TEXT | NULL
+
+## GEO_US_BOUNDARIES.CONGRESS_DISTRICT_116
+@use: [C2, C6]
+lsad_name: TEXT | NULL
+lsad_code: TEXT | NULL
+state_fips_code: TEXT | NULL
+geo_id: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+int_point_geom: BINARY | NULL
+
+## GEO_US_BOUNDARIES.CSA
+@use: [C4, C8]
+geo_id: TEXT | NULL
+lsad_name: TEXT | NULL
+msa_lsad_code: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+name: TEXT | NULL
+csa_geom: BINARY | NULL
+csa_code: TEXT | NULL
+
+## GEO_US_BOUNDARIES.NATIONAL_OUTLINE
+aff_geo_id: TEXT | NULL
+us_outline_geom: BINARY | NULL
+name: TEXT | NULL
+geo_id: TEXT | NULL
+
+## GEO_US_BOUNDARIES.RAILWAYS
+railway_geom: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+geo_id: NUMBER | NULL
+full_name: TEXT | NULL
+
+## GEO_US_BOUNDARIES.COUNTIES
+@use: [C2]
+cbsa_fips_code: TEXT | NULL
+county_gnis_code: TEXT | NULL
+lsad_code: TEXT | NULL
+fips_class_code: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+county_geom: BINARY | NULL
+geo_id: TEXT | NULL
+lsad_name: TEXT | NULL
+int_point_geom: BINARY | NULL
+county_fips_code: TEXT | NULL
+functional_status: TEXT | NULL
+csa_fips_code: TEXT | NULL
+state_fips_code: TEXT | NULL
+county_name: TEXT | NULL
+met_div_fips_code: TEXT | NULL
+
+## GEO_US_BOUNDARIES.NWS_FORECAST_REGIONS
+fe_area: TEXT | NULL
+name: TEXT | NULL
+cwa: TEXT | NULL
+shape_geometry: BINARY | NULL
+shortname: TEXT | NULL
+lon: FLOAT | NULL
+state_zone: TEXT | NULL
+state: TEXT | NULL
+zone: TEXT | NULL
+time_zone: TEXT | NULL
+lat: FLOAT | NULL
+
+## GEO_US_BOUNDARIES.ZIP_CODES
+@use: [C4, C8]
+zip_code: TEXT | NULL
+fips_class_code: TEXT | NULL
+state_code: TEXT | NULL
+zip_code_geom: BINARY | NULL
+state_fips_code: TEXT | NULL
+county: TEXT | NULL
+functional_status: TEXT | NULL
+state_name: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+city: TEXT | NULL
+
+## GEO_US_BOUNDARIES.COASTLINE
+coastline_geom: BINARY | NULL
+name: TEXT | NULL
+
+## GEO_US_BOUNDARIES.CONGRESS_DISTRICT_115
+@use: [C2, C6]
+mtfcc_feature_class_code: TEXT | NULL
+geo_id: TEXT | NULL
+lsad_code: TEXT | NULL
+int_point_geom: BINARY | NULL
+state_fips_code: TEXT | NULL
+lsad_name: TEXT | NULL
+
+## GEO_US_BOUNDARIES.STATES
+@use: [C2]
+state_fips_code: TEXT | NULL
+division_code: TEXT | NULL
+functional_status: TEXT | NULL
+int_point_geom: BINARY | NULL
+state_gnis_code: TEXT | NULL
+geo_id: TEXT | NULL
+state: TEXT | NULL
+region_code: TEXT | NULL
+state_name: TEXT | NULL
+state_geom: BINARY | NULL
+mtfcc_feature_class_code: TEXT | NULL
+lsad_code: TEXT | NULL
+
+## GEO_US_BOUNDARIES.ADJACENT_COUNTIES
+neighbors_fips_code: VARIANT | NULL
+county_fips_code: TEXT | NULL
+neighbors: VARIANT | NULL
+neighbors_state: VARIANT | NULL
+state: TEXT | NULL
+county: TEXT | NULL
+
+## GEO_US_BOUNDARIES.URBAN_AREAS
+@use: [C4, C8]
+urban_area_geom: BINARY | NULL
+geo_id: TEXT | NULL
+name: TEXT | NULL
+functional_status: TEXT | NULL
+urban_area_code: TEXT | NULL
+area_lsad_code: TEXT | NULL
+lsad_name: TEXT | NULL
+type: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+
+## GEO_US_BOUNDARIES.CNECTA
+@use: [C2]
+lsad: TEXT | NULL
+geo_id: TEXT | NULL
+mtfcc_feature_class_code: TEXT | NULL
+cnecta_geom: BINARY | NULL
+name_lsad: TEXT | NULL
+name: TEXT | NULL
+cnecta_fips_code: TEXT | NULL
+
+## GEO_OPENSTREETMAP.HISTORY_CHANGESETS
+osm_timestamp_min: NUMBER | Minimum timestamp of objects contained in this changeset.
+ways: VARIANT | Ways that are part of this way
+id: NUMBER | Changeset ID.
+osm_timestamp_max: NUMBER | Maximum timestamp of objects contained in this changeset.
+relations: VARIANT | Relations that are part of this way
+nodes: VARIANT | Nodes that are part of this way
+
+## GEO_OPENSTREETMAP.PLANET_RELATIONS
+@use: [C1, C3]
+id: NUMBER | NULL
+members: VARIANT | NULL
+
+## GEO_OPENSTREETMAP.HISTORY_RELATIONS
+@use: [C1, C3]
+members: VARIANT | NULL
+id: NUMBER | NULL
+
+## GEO_OPENSTREETMAP.PLANET_LAYERS
+@use: [C1, C5, C7]
+
+## GEO_OPENSTREETMAP.HISTORY_NODES
+@use: [C1, C3]
+longitude: NUMBER | NULL
+latitude: NUMBER | NULL
+id: NUMBER | NULL
+
+## GEO_OPENSTREETMAP.PLANET_FEATURES
+@use: [C1, C5]
+feature_type: TEXT | NULL
+
+## GEO_OPENSTREETMAP.PLANET_FEATURES_POINTS
+@use: [C1, C5]
+
+## GEO_OPENSTREETMAP.HISTORY_LAYERS
+@use: [C1, C5, C7]
+
+## GEO_OPENSTREETMAP.PLANET_NODES
+@use: [C1, C3]
+latitude: NUMBER | NULL
+longitude: NUMBER | NULL
+id: NUMBER | NULL
+
+## GEO_OPENSTREETMAP.PLANET_WAYS
+@use: [C1, C3]
+nodes: VARIANT | NULL
+id: NUMBER | NULL

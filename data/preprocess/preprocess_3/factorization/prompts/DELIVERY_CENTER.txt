@@ -1,0 +1,74 @@
+[COMPONENTS]
+[TABLES]
+## DELIVERY_CENTER.DRIVERS
+driver_modal: TEXT | NULL
+driver_type: TEXT | NULL
+driver_id: NUMBER | NULL
+
+## DELIVERY_CENTER.ORDERS
+order_metric_collected_time: FLOAT | NULL
+order_metric_walking_time: FLOAT | NULL
+order_moment_finished: TEXT | NULL
+order_moment_collected: TEXT | NULL
+order_created_minute: NUMBER | NULL
+order_metric_production_time: FLOAT | NULL
+order_status: TEXT | NULL
+order_metric_cycle_time: FLOAT | NULL
+order_moment_delivering: TEXT | NULL
+store_id: NUMBER | NULL
+order_id: NUMBER | NULL
+order_created_year: NUMBER | NULL
+order_delivery_fee: FLOAT | NULL
+payment_order_id: NUMBER | NULL
+order_moment_accepted: TEXT | NULL
+order_moment_ready: TEXT | NULL
+channel_id: NUMBER | NULL
+order_moment_delivered: TEXT | NULL
+order_created_hour: NUMBER | NULL
+order_delivery_cost: FLOAT | NULL
+order_moment_created: TEXT | NULL
+order_created_month: NUMBER | NULL
+order_metric_transit_time: FLOAT | NULL
+order_created_day: NUMBER | NULL
+delivery_order_id: NUMBER | NULL
+order_moment_in_expedition: TEXT | NULL
+order_amount: FLOAT | NULL
+order_metric_expediton_speed_time: FLOAT | NULL
+order_metric_paused_time: FLOAT | NULL
+
+## DELIVERY_CENTER.STORES
+store_id: NUMBER | NULL
+store_segment: TEXT | NULL
+store_name: TEXT | NULL
+store_latitude: FLOAT | NULL
+store_longitude: FLOAT | NULL
+store_plan_price: FLOAT | NULL
+hub_id: NUMBER | NULL
+
+## DELIVERY_CENTER.DELIVERIES
+delivery_order_id: NUMBER | NULL
+delivery_distance_meters: FLOAT | NULL
+delivery_id: NUMBER | NULL
+driver_id: FLOAT | NULL
+delivery_status: TEXT | NULL
+
+## DELIVERY_CENTER.CHANNELS
+channel_name: TEXT | NULL
+channel_id: NUMBER | NULL
+channel_type: TEXT | NULL
+
+## DELIVERY_CENTER.HUBS
+hub_latitude: FLOAT | NULL
+hub_state: TEXT | NULL
+hub_id: NUMBER | NULL
+hub_city: TEXT | NULL
+hub_longitude: FLOAT | NULL
+hub_name: TEXT | NULL
+
+## DELIVERY_CENTER.PAYMENTS
+payment_fee: FLOAT | NULL
+payment_order_id: NUMBER | NULL
+payment_amount: FLOAT | NULL
+payment_status: TEXT | NULL
+payment_id: NUMBER | NULL
+payment_method: TEXT | NULL

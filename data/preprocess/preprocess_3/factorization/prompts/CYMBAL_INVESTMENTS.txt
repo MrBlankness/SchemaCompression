@@ -1,0 +1,17 @@
+[COMPONENTS]
+[TABLES]
+## CYMBAL_INVESTMENTS.TRADE_CAPTURE_REPORT
+TransactTime: NUMBER | Time the transaction occured
+StrikePrice: FLOAT | Price at which the CFD closed
+MaturityDate: NUMBER | Date of contract expiry
+Sides: VARIANT | NULL
+TradeDate: DATE | Date trade was executed
+CFICode: TEXT | Financial instrument classification code
+SenderCompID: TEXT | Assigned value used to identify firm sending message.
+SendingTime: NUMBER | Time the message was sent
+TradeReportID: TEXT | ID of this trade report
+LastPx: FLOAT | Price at which the CFD was entered
+TargetCompID: TEXT | Assigned value used to identify firm receiving message.
+OrderID: TEXT | Order identifier
+Symbol: TEXT | Trading symbol of the asset
+Quantity: NUMBER | Overall/total quantity (e.g. number of shares)

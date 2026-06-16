@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq212",
+  "question": "For United States utility patents under the B2 classification granted between June and September of 2022, identify the most frequent 4-digit IPC code for each patent. Then, list the publication numbers and IPC4 codes of patents where this code appears 10 or more times.",
+  "db_id": "PATENTS",
+  "source_document": "patents_info.md",
+  "evidence": "Key concepts: 1) 'ipc' field has subfield 'first' (boolean) indicating main IPC code, but not every publication has a designated main IPC code. 2) To handle missing main codes, select the most frequent 4-digit IPC code per publication. Example SQL: SELECT t1.publication_number, SUBSTR(ipc_u.code, 0, 4) as ipc4, COUNT(SUBSTR(ipc_u.code, 0, 4)) as ipc4_count FROM `patents-public-data.patents.publications` t1, UNNEST(ipc) AS ipc_u GROUP BY t1.publication_number, ipc4. Requirements: Filter for US utility patents (B2 classification) granted between June and September 2022, then for each patent identify the most frequent ipc4, and list only those where this code appears ≥10 times."
+}

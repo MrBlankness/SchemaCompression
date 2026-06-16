@@ -1,0 +1,106 @@
+[TABLES]
+## GEO_OPENSTREETMAP.HISTORY_CHANGESETS
+osm_timestamp_min: NUMBER | Minimum timestamp of objects contained in this changeset. | eg=[1429167998, 1306424582]
+ways: VARIANT | Ways that are part of this way | eg=[[]]
+id: NUMBER | Changeset ID. | eg=[30256461, 8254690]
+osm_timestamp_max: NUMBER | Maximum timestamp of objects contained in this changeset. | eg=[1429167998, 1306424582]
+relations: VARIANT | Relations that are part of this way | eg=[[2787405], [1573819]]
+nodes: VARIANT | Nodes that are part of this way | eg=[[], [171513871]]
+
+## GEO_OPENSTREETMAP.PLANET_RELATIONS
+visible: BOOLEAN | NULL | eg=[true]
+osm_timestamp: NUMBER | NULL | eg=[1502475117000000, 1587502152000000]
+id: NUMBER | NULL | eg=[7463946, 11022461]
+username: TEXT | NULL | eg=["Aurimas Fišeras", "UPegasus"]
+all_tags: VARIANT | NULL | eg=[[{"key":"landuse","value":"forest"},{"key":"type","value":"multipolygon"}]]
+geometry: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00>\\x00\\x00\\x00W$&\\xa8\\xe1\\xd58@[~;\\xe4\\xc1&L@\\xe9\\xdcH4\\xdc\\xd58@\\xb59\\xcem\\xc2&L@l\\xc6X\\\\\\xd2\\xd58@\\xde\\xe6\\x8d\\x93\\xc2&L@\\'\\xf9\\x11\\xbfb\\xd58@4\\xc4\\x0c\\xe8\\xe0&L@b\\xe3\\xb0\\xeab\\xd58@\\xce\\xb0\\xac\\x8f\\xe2&L@\\xea\\x0b|\\xa0p\\xd58@\\xd3b\\xf00\\xed&L@Ec\\xed\\xefl\\xd58@r\\\\|\\xc0\\xf2&L@\\x07\\x8c?\\x9bf\\xd58@N\\xaes\\x1d\\xf4&L@\\xc7L\\xfd\\x17c\\xd58@\\x12\\xdey=\\xf3&L@\\x93S\\xe0\\tb\\xd58@\\xa3\\x90dV\\xef&L@]&ydb\\xd58@\\xb5IEc\\xed&L@\\xf2/892\\xd58@\\xbb<Br\\xd7&L@\\xa9\\x12eo)\\xd58@1\\x9a:4\\xd1&L@\\t\\xbfy\\x16)\\xd58@\\xd3\\xa3\\xa9\\x9e\\xcc&L@R\\x10\\x97w0\\xd58@\\x9b\\xf9\\xc4\\xf0\\xc7&L@\\xcbWn\\x0e|\\xd58@\\xd2\\xe4b\\x0c\\xac&L@P\\xe1c\\x0b\\x9c\\xd58@\\x8e.\\xdb\\xf3\\xa1&L@\\tz^\\xe0\\xa8\\xd58@\\xd2\\xf5\\x8ed\\xa0&L@\\xfa`\\x19\\x1b\\xba\\xd58@\\x1a\\xbc\\xf9W\\xa0&L@M\\\\}+\\xc8\\xd58@\\xf0\\x0e:2\\xa0&L@\\x01\\xd4\\x1e@\\xd0\\xd58@\\x15\\x1f\\x9f\\x90\\x9d&L@l\\xc6X\\\\\\xd2\\xd58@\\x16\\xe3W\\x07\\x9b&L@\\xc1\\x94\\xdc\\xbc\\xcc\\xd58@AT\\xd0\\xa3\\x98&L@I;$k\\xc3\\xd58@`14\\xe8\\x95&L@\\x96l\\x86e}\\xd68@\\xad\\x7f|\\xae[&L@\\xd1\\xee\\x90b\\x80\\xd6...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x1e\\x00\\x00\\x00\\xe1\\\\\\x1e\\xc6\\xff.:@\\xee\\x1f\\xb0\\x17\\xaf\\x0bH@\\xbb\\x14\\xb2N\\xf0.:@\\xdc\\x10\\xe35\\xaf\\x0bH@+\\x0eVR\\xdd.:@\\xca\\xe7p\\x08\\xb0\\x0bH@dB\\'\\xdf\\xc7.:@\\xfe\\x92\\x9e3\\xb3\\x0bH@\\xca\\xf5\\xa5m\\xb2.:@\\xfb\\xdc\\x1a\"\\xb8\\x0bH@\\x03\\xc2\\xe2\\xcb\\x9f.:@\\n6d\\xf2\\xbc\\x0bH@\\xe5\\xbf\\x9b\\xc9\\x92.:@\\xf7\\xd8\\xa7-\\xbf\\x0bH@\\xc7\\x89\\n0\\x87.:@\\xf7\\x0c\\xf2\\xc4\\xbd\\x0bH@\\\\\\xcb\\x1a\\xab\\x83.:@\\xc4G\\x1fN\\xbb\\x0bH@\\x92\\xc47\\xb9\\x84.:@\\xa2\\xc5cP\\xb7\\x0bH@O\\xe6\\x1f}\\x93.:@\\xb7\\xa4Y\\x8f\\xb1\\x0bH@\\xab\\xf3^k\\xa5.:@\\xb8\\x0c\\xee\\xbd\\xae\\x0bH@\\x13\\xdf.\\xa0\\xbc.:@\\x97\\x8a2\\xc0\\xaa\\x0bH@\\x8a\"\\xff\\'\\xda.:@\\xaci(\\xff\\xa4\\x0bH@\\xbbH\\xfc\\xe5\\xee.:@\\xaeS\\xf6\\xa7\\x9e\\x0bH@\\xa4\\x85pq\\xf9.:@\\xc3\\xe4\\xfc\\x03\\x9b\\x0bH@\\x81Hu\\xf0\\x02/:@\\xb0\\xa1\\xe5\\x8a\\x9c\\x0bH@,F\\xa7\\xf8\\t/:@\\xc1|h\\xd5\\x9d\\x0bH@tcz\\xc2\\x12/:@\\xe5\\x9a\\x02\\x99\\x9d\\x0bH@\\'\\xa7\\xd1?\\x1c/:@\\xb0\\xbb\\x8a\\xd6\\x9b\\x0bH@P\\xef=\\xb7+/:@\\xe6\\x02\\x97\\xc7\\x9a\\x0bH@\\xaa\\xfc|\\xa5=/:@\\xb0\\xbb\\x8a\\xd6\\x9b\\x0bH@q\\xc8\\xab\\x18S/:@\\..."]
+members: VARIANT | NULL | eg=[[{"id":514874852,"role":"outer","type":"w"},{"id":514874853,"role":"outer","type":"w"}], [{"id":794546848,"role":"outer","type":"w"},{"id":794546849,"role":"outer","type":"w"}]]
+version: NUMBER | NULL | eg=[1]
+changeset: NUMBER | NULL | eg=[51041273, 83900996]
+
+## GEO_OPENSTREETMAP.HISTORY_RELATIONS
+username: TEXT | NULL | eg=["Stylez995", "tkoval83"]
+members: VARIANT | NULL | eg=[[{"id":3474923242,"role":"stop","type":"n"},{"id":340277699,"role":"platform","type":"w"},{"id":2195652482,"role":"stop","type":"n"},{"id":340277697,"role":"platform","type":"w"},{"id":1965658359,"role":"stop","type":"n"},{"id":340277700,"role":"platform","type":"w"},{"id":3124508814,"role":"stop","type":"n"},{"id":363992436,"role":"platform","type":"w"},{"id":3682835401,"role":"stop","type":"n"},{"id":237581846,"role":"platform","type":"w"},{"id":8044420082,"role":"stop","type":"n"},{"id":363988644,"role":"platform","type":"w"},{"id":3680942433,"role":"stop","type":"n"},{"id":3680942481,"role":"platform","type":"n"},{"id":3680942431,"role":"stop","type":"n"},{"id":363988645,"role":"platform","type":"w"},{"id":3680942435,"role":"stop","type":"n"},{"id":363988643,"role":"platform","type":"w"},{"id":3682744118,"role":"stop","type":"n"},{"id":364216049,"role":"platform","type":"w"},{"id":42261150,"role":"stop","type":"n"},{"id":364216048,"role":"platform","type":"w"},{"id":3682753418,"...]
+osm_timestamp: NUMBER | NULL | eg=[1603643356000000, 1601566295000000]
+id: NUMBER | NULL | eg=[5426265, 10760608]
+visible: BOOLEAN | NULL | eg=[true]
+version: NUMBER | NULL | eg=[11, 405]
+geometry: BINARY | NULL | eg=["bytearray(b'\\x01\\x05\\x00\\x00\\x00\\x05\\x00\\x00\\x00\\x01\\x02\\x00\\x00\\x00\\x05\\x00\\x00\\x00\\xcd\\xde\\x08A\\xfd\\x91%@\\x8d5\\xb7\\x9d\\x11\\xf9M@\\xe0\"\\x9c\\xbb\\x02\\x92%@\\xb7\\xee\\xe6\\xa9\\x0e\\xf9M@g\\xb6\\xf2\\x92\\xff\\x91%@R\\xb3\\xac\\xa0\\x0e\\xf9M@\\xa3\\xb3\\x82\\x95\\xf9\\x91%@\\x96?\\x95\\x89\\x11\\xf9M@\\xcd\\xde\\x08A\\xfd\\x91%@\\x8d5\\xb7\\x9d\\x11\\xf9M@\\x01\\x02\\x00\\x00\\x00\\x05\\x00\\x00\\x00\\'\\xc2\\x86\\xa7W\\x8e%@\\xcd\\x12S\\xd8\\xfb\\xf8M@\\x16X\\x11\\x7f^\\x8e%@\\x02&\\x152\\xfc\\xf8M@\\xbbd\\xc1if\\x8e%@79\\xd7\\x8b\\xfc\\xf8M@\\x83LT\\xca\\xc6\\x8e%@=\\x04Dw\\xff\\xf8M@\\xbdO\\xfa\\xe7\\x0e\\x8f%@\\x1dA\\x85~\\x01\\xf9M@\\x01\\x02\\x00\\x00\\x00\\x05\\x00\\x00\\x00\\xce@\\x1bo\\xe1\\x8f%@\\xfb\\xcdz\\xe7\\x06\\xf9M@\\xdb\\xf9E\\t\\xfa\\x8f%@\\xf4\\x80\\xd4\\x81\\x07\\xf9M@\\xb6-Y\\x9a\\x06\\x90%@\\x08S\\x96\\xdd\\x07\\xf9M@\\x0f\\xed\\x08LL\\x90%@;Ut\\xda\\t\\xf9M@\\xc7\\x15r\\x00X\\x90%@\\xb2)\\xb21\\n\\xf9M@\\x01\\x02\\x00\\x00\\x00\\x07\\x00\\x00\\x00\\xf8\\x95\\xbd[\\x0f\\x91%@)Hlw\\x0f\\xf9M@p\\x01h\\x94.\\x91%@\\x85\\x92$c\\x10\\xf9M@\\x10y\\xcb\\xd5\\x8f\\x91%@\\x7f%\\xa1>\\x13\\xf9M@m\\x04\\x98\\xe8\\xe2\\x91%@\\x19\\xf8\\x9b\\x9a\\x15\\x...", "bytearray(b'\\x01\\x05\\x00\\x00\\x00\\xaa\\x00\\x00\\x00\\x01\\x02\\x00\\x00\\x00\\x03\\x00\\x00\\x00\\x94\\xf7q4Gr>@\\xe3\\xa8\\xdcD-:I@\\xe1g\\\\8\\x10r>@\\xec\\xce$\\xfb1:I@5\\x96\\xfa\\xc3\\xe0q>@r0\\xf6\\xb95:I@\\x01\\x02\\x00\\x00\\x00\\x02\\x00\\x00\\x00l\\x81\\x98\\xdf\\xc4o>@\\x85\\x01K\\xaeb:I@\\xd2\\xd0\\xf53\\xabo>@\\x98\\xf0:\\xd1d:I@\\x01\\x02\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x14\\xe1\\xcb\\xe9W_>@>DY\\xaem:I@E\\xd2\\x7f \\x8a]>@o-IT^:I@\\x01\\x02\\x00\\x00\\x00\\x03\\x00\\x00\\x00+\\xe5\\xc6>\\x12:>@\\xcf\\xb8p $9I@bt@\\x12\\xf69>@^1\\xd9.#9I@\\xff\\xa6\\xd2\\xaa\\xf19>@\\x1eBK\\r#9I@\\x01\\x02\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\xde,\\x14\\x9f\\xf1m=@\\x9cs\\xf0Lh0I@\\xa9\\xf1\\x99\\xec\\x9fi=@\\x83T\\xe5\\xd6\\xff/I@\\x01\\x02\\x00\\x00\\x00\\x08\\x00\\x00\\x00s\\xa0,!\\xc4\\xee<@D\\xb9~\\x0b\\xfc%I@\\xceM@\\xb8\\xa7\\xee<@b+\\r\\xa1\\xef%I@\\xc0]\\xac^4\\xee<@p\\x9f\\xb0\\x1f\\xbd%I@\\x15\\x9c\\xb0\\xb3\\xd7\\xed<@\\x18\\x9f\\x13\\x8c\\x94%I@eM\\xd16\\xa3\\xed<@Y\\x96T\\x12~%I@*q\\x1d\\xe3\\x8a\\xed<@\\x06-$`t%I@\\x18 \\x87wo\\xed<@\\xc8\\x05\\xc2\\xa9j%I@^\\x0e\\x05}3\\xed<@\\x19\\xe6\\xba\\xdfW%I@\\x01\\x02\\x00\\x00\\x00\\n\\x00\\x00\\x00|\\xb2\\x18+ \\x..."]
+all_tags: VARIANT | NULL | eg=[[{"key":"to","value":"Solemskogen"},{"key":"ref","value":"56"},{"key":"from","value":"Tamburveien"},{"key":"line","value":"bus"},{"key":"type","value":"route"},{"key":"route","value":"bus"},{"key":"colour","value":"#0072BC"},{"key":"network","value":"Ruter"},{"key":"operator","value":"Norgesbuss"},{"key":"public_transport:version","value":"2"}]]
+changeset: NUMBER | NULL | eg=[93021604, 91835145]
+
+## GEO_OPENSTREETMAP.PLANET_LAYERS
+layer_code: NUMBER | NULL | eg=[1500]
+osm_id: NUMBER | NULL
+osm_timestamp: NUMBER | NULL | eg=[1286621389000000, 1334665988000000]
+osm_way_id: NUMBER | NULL | eg=[80820903, 159980615]
+layer_class: TEXT | NULL | eg=["building"]
+all_tags: VARIANT | NULL | eg=[[{"key":"building","value":"yes"},{"key":"source","value":"extraction vectorielle v1 cadastre-dgi-fr source : Direction Générale des Impôts - Cadas. Mise à jour : 2010"},{"key":"wall","value":"no"}], [{"key":"building","value":"yes"},{"key":"source","value":"cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2012"},{"key":"wall","value":"no"}]]
+layer_name: TEXT | NULL | eg=["building"]
+geometry: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x06\\x00\\x00\\x00\\xa5\\xa8\\x8e\\xb0\\x03\\xb2\\x03@\\xae\\xdf\\x02\\xbf\\xfceH@<\\x1e\\xe9\\xc2\\xfe\\xb1\\x03@\\rrr\\x1a\\xfdeH@\\xf7\\xe7\\xa2!\\xe3\\xb1\\x03@\\xfc|J\\x84\\xfceH@Z\\xb5\\x10\\x89\\xe7\\xb1\\x03@H\\xec\\x7f%\\xfceH@\\x80\\xdd\\x9fA\\xf9\\xb1\\x03@%\\xfc\\xf7\\x85\\xfceH@\\xa5\\xa8\\x8e\\xb0\\x03\\xb2\\x03@\\xae\\xdf\\x02\\xbf\\xfceH@')", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x06\\x00\\x00\\x00\\x89\\x8e\\xe4\\xf2\\x1f\"\\x1b@\\x06\\xf0\\x16HP\\xc6E@\\xbf3\\xda\\xaa$\"\\x1b@+\\xfaC3O\\xc6E@Qf\\x83L2\"\\x1b@\\x90\\xbf\\xb4\\xa8O\\xc6E@\\x1e\\xc1\\x8d\\x94-\"\\x1b@=1\\xeb\\xc5P\\xc6E@]\\xc3\\x0c\\x8d\\'\"\\x1b@\\x89\\xce2\\x8bP\\xc6E@\\x89\\x8e\\xe4\\xf2\\x1f\"\\x1b@\\x06\\xf0\\x16HP\\xc6E@')"]
+gdal_type: TEXT | NULL | eg=["multipolygons"]
+osm_version: NUMBER | NULL | eg=[1]
+
+## GEO_OPENSTREETMAP.HISTORY_NODES
+all_tags: VARIANT | NULL | eg=[[]]
+changeset: NUMBER | NULL | eg=[21119993, 13957937]
+longitude: NUMBER | NULL | eg=["3.342431700", "3.566249000"]
+username: TEXT | NULL | eg=["lodde1949"]
+latitude: NUMBER | NULL | eg=["50.747601900", "50.807488600"]
+id: NUMBER | NULL | eg=[2719410933, 2024704316]
+osm_timestamp: NUMBER | NULL | eg=[1394901096000000, 1353500660000000]
+geometry: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xd4\\xe8\\xc4\\xd4L\\xbd\\n@\\xb8vGk\\xb1_I@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00A$C\\x8e\\xad\\x87\\x0c@GrT\\xc9[gI@')"]
+visible: BOOLEAN | NULL | eg=[true]
+version: NUMBER | NULL | eg=[1]
+
+## GEO_OPENSTREETMAP.PLANET_FEATURES
+geometry: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x17\\x00\\x00\\x00\\\\2}e\\x94\\xdeI@\\xd1\\xb4\\xc4\\xcahX@@\\x12/O\\xe7\\x8a\\xdeI@\\xff\\t\\x89\\x0fGX@@\\x04JT\\xb9\\x9a\\xdeI@\\xb5\\x83\\x11\\xfb\\x04X@@\\x8c\\x8c\\xc4\\xba\\xa7\\xdeI@\\xe1\\xdbO!\\xb2W@@\\xc9\\xee\\xb8\\x97\\xea\\xdeI@\\xbc\\x9c\\x12\\x10\\x93W@@\\x1c\\x04\\xc2\\xf3\\xf7\\xdeI@i|\\x15\\xcf\\x8fW@@\\xab\\x1e\\xd5U&\\xdfI@\\xd8u\\xb9\\xd2|W@@\\xd4\\xf3n,(\\xdfI@\\x1f\\xf4lV}W@@+hZbe\\xdfI@\\x9b\\xf8\\xb4\\xd4\\x8bW@@:\\xe9}\\xe3k\\xdfI@\\x88\\x06\\x18L\\xb2W@@\\x82j(Z^\\xdfI@\\xc6\\x8a\\x1aL\\xc3W@@\\xb1\\xe1DO%\\xdfI@\\xbf\\xa5R\\xa2\\xdbW@@>\\xc3\\x8a\\t \\xdfI@\\x9a\\xb5\\x14\\x90\\xf6W@@L\\x05p\\x0e2\\xdfI@\\xf5td\\x9b\\nX@@\\x94lu9%\\xdfI@\\x891D\\xa9\\x18X@@K\\x83\\xec\\x06\\x1b\\xdfI@\\xf6\\xf4l\\xb16X@@\\xcew\\xf0\\x13\\x07\\xdfI@\\xac6\\xff\\xaf:X@@\\x12\\x18F\\xd5\\n\\xdfI@s\\xb2y\\xc1LX@@h\\x00o\\x81\\x04\\xdfI@\\\\\\x03[%XX@@\\x16\\xd1\\xc0\\xd9\\xf7\\xdeI@E\\xe4\\xaahbX@@\\xfd=\\xc2z\\xed\\xdeI@@6$IkX@@\\xb5\\xef\\x9b\\x0c\\xd8\\xdeI@\\x9c\\x18\\x92\\x93\\x89X@@\\\\2}e\\x94\\xdeI@\\xd1\\xb4\\xc4\\xcahX@@')", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x0b\\x00\\x00\\x00O\\xc2L\\xdb\\xbfB\\x0f\\xc0\\x16s!\\xa0\\x0c\\xeaK@A\\x96\\xaaY\\x0cC\\x0f\\xc0\\xccL\\x1fp\\x13\\xeaK@6\\xca\\x9f\\x14RC\\x0f\\xc0\\xbd\\x9a\\xf2\\xd7\\x1a\\xeaK@\\x96\\xa9\\xee6\\x14C\\x0f\\xc0Eg\\x99E(\\xeaK@N\\x10\\xd0\\xd8\\xf2E\\x0f\\xc0p\\xb6o\\xa4\"\\xeaK@\\xbc2\\x14\\x1c\\x03G\\x0f\\xc0O\\xa4E\\xc7\\x1f\\xeaK@\\xde\\x01C\\xfb\\xfdG\\x0f\\xc0\\xa4\\xf6\\xc7 \\x1c\\xeaK@v|\\xb48cH\\x0f\\xc0\\xba_\\xf4\\xcb\\x16\\xeaK@\\xfbsv\\xd7~G\\x0f\\xc0\\xab\\xf8u\\x96\\x0f\\xeaK@\\xdd\\xca\\x12\\x9deF\\x0f\\xc0{=N\\x87\\x04\\xeaK@O\\xc2L\\xdb\\xbfB\\x0f\\xc0\\x16s!\\xa0\\x0c\\xeaK@')"]
+osm_timestamp: NUMBER | NULL | eg=[1598016026000000, 1421329134000000]
+all_tags: VARIANT | NULL | eg=[[{"key":"landuse","value":"residential"},{"key":"name","value":"شهرک امام زمان"}], [{"key":"landuse","value":"farmyard"},{"key":"name","value":"South Landridge Farm"}]]
+feature_type: TEXT | NULL | eg=["multipolygons"]
+osm_version: NUMBER | NULL | eg=[1]
+osm_id: NUMBER | NULL
+osm_way_id: NUMBER | NULL | eg=[839339694, 322227974]
+
+## GEO_OPENSTREETMAP.PLANET_FEATURES_POINTS
+geometry: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xef\\xa6\\xa5\\x03\\xa3\\x9a4@\\xfc\\xb4@q\\xb6^C@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xb6\\xb5\\x85\\xe7\\xa5\\x9a4@\\\\23\\xd8y^C@')"]
+osm_timestamp: NUMBER | NULL | eg=[1608386913000000, 1515821683000000]
+osm_way_id: NUMBER | NULL
+osm_id: NUMBER | NULL | eg=[8242788622, 8242788645]
+osm_version: NUMBER | NULL | eg=[1]
+all_tags: VARIANT | NULL | eg=[[{"key":"id","value":"1"}], [{"key":"MCC","value":"286"},{"key":"communication:microwave","value":"yes"},{"key":"communication:mobile_phone","value":"gsm;umts"},{"key":"man_made","value":"mast"},{"key":"source","value":"DigitalGlobe"},{"key":"tower:type","value":"communication"}]]
+
+## GEO_OPENSTREETMAP.HISTORY_LAYERS
+osm_id: NUMBER | NULL | eg=[295106180, 295106194]
+layer_name: TEXT | NULL | eg=["building"]
+all_tags: VARIANT | NULL | eg=[[{"key":"building","value":"house"},{"key":"addr:city","value":"Rawa Mazowiecka"},{"key":"addr:street","value":"Aleksandrówka"},{"key":"source:addr","value":"mrawamazowiecka.e-mapa.net"},{"key":"addr:postcode","value":"96-200"},{"key":"addr:city:simc","value":"0977077"},{"key":"addr:housenumber","value":"11"},{"key":"addr:street:sym_ul","value":"00228"}], [{"key":"building","value":"house"},{"key":"addr:city","value":"Rawa Mazowiecka"},{"key":"addr:street","value":"Aleksandrówka"},{"key":"source:addr","value":"mrawamazowiecka.e-mapa.net"},{"key":"addr:postcode","value":"96-200"},{"key":"addr:city:simc","value":"0977077"},{"key":"addr:housenumber","value":"1A"},{"key":"addr:street:sym_ul","value":"00228"}]]
+osm_way_id: NUMBER | NULL | eg=[295106180, 295106194]
+geometry: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x05\\x00\\x00\\x00S\\x94K\\xe3\\x17F4@U\\x84\\xe5\\x19E\\xe2I@i\\xa7\\x8b\\xb9\\x10F4@\\xa7\\xd0/\\x00C\\xe2I@\\xacO\\xdel\\x18F4@\\xba\\xd1\\xc7|@\\xe2I@\\x97<\\x9e\\x96\\x1fF4@\\xfbDT\\x97B\\xe2I@S\\x94K\\xe3\\x17F4@U\\x84\\xe5\\x19E\\xe2I@')", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\n\\x00\\x00\\x00\\xfd\\xe8\\x8a\\x08\\xb5E4@\\xf3\\x18\\x8a\\xe0$\\xe2I@+\\xfc\\x19\\xde\\xacE4@6p\\xac0\"\\xe2I@\\xf0\\x12\\xf7\\xb3\\xb3E4@O.|3 \\xe2I@\\xbfvz\\xef\\xb9E4@B\\xa8\\x9c@\"\\xe2I@\\xf7,\\xcf\\x83\\xbbE4@\\xa6\\x87\\xb2\\x01\"\\xe2I@\\xc7\\xbc\\x9fd\\xbcE4@\\xcb]\\x95U\"\\xe2I@\\x12\\xb1\\x1c|\\xbcE4@\\x8f\\xb5u&#\\xe2I@\\x0f\\xe5f\\x13\\xbbE4@w\\xcf\\xcbr#\\xe2I@t\\x82\\xfd\\xd7\\xb9E4@\\x1c\\xcc\\x81y#\\xe2I@\\xfd\\xe8\\x8a\\x08\\xb5E4@\\xf3\\x18\\x8a\\xe0$\\xe2I@')"]
+gdal_type: TEXT | NULL
+layer_code: NUMBER | NULL | eg=[1500]
+osm_timestamp: NUMBER | NULL | eg=[1492347889000000, 1492347962000000]
+osm_version: NUMBER | NULL | eg=[2]
+layer_class: TEXT | NULL | eg=["building"]
+
+## GEO_OPENSTREETMAP.PLANET_NODES
+all_tags: VARIANT | NULL | eg=[[]]
+osm_timestamp: NUMBER | NULL | eg=[1623005376000000, 1492951085000000]
+changeset: NUMBER | NULL | eg=[105929128, 48059152]
+visible: BOOLEAN | NULL | eg=[true]
+latitude: NUMBER | NULL | eg=["49.438724700", "-20.688499500"]
+geometry: BINARY | NULL
+username: TEXT | NULL | eg=["tschettervictor", "twesigyegabriel"]
+version: NUMBER | NULL | eg=[1]
+id: NUMBER | NULL | eg=[8809595840, 4811433843]
+longitude: NUMBER | NULL | eg=["-113.443301100", "28.986649100"]
+
+## GEO_OPENSTREETMAP.PLANET_WAYS
+geometry: BINARY | NULL | eg=["bytearray(b\"\\x01\\x02\\x00\\x00\\x00\\x0b\\x00\\x00\\x00o\\xdc\\x18\\xf1\\xd3 ^\\xc0\\xedf\\xa1\\xf8\\x8c\\xb6A@\\xfaA]\\xa4\\xd0 ^\\xc0~\\xee\\xbam\\x95\\xb6A@\\'\\x07\\xfd\\x96\\xca ^\\xc07y\\x80\\xdd\\x9f\\xb6A@8$Z\\x97\\xbf ^\\xc0\\x17N-\\xb6\\xa4\\xb6A@qC\\x8c\\xd7\\xbc ^\\xc0c}\\xa8\\xd9\\xa8\\xb6A@/Ie\\x8a\\xb9 ^\\xc0\\xff\\xb2{\\xf2\\xb0\\xb6A@\\xcex[\\xe9\\xb5 ^\\xc0\\\\g\\x8d\\x8b\\xb4\\xb6A@d\\xbakd\\xb2 ^\\xc0\\xbb\\xf9\\xfc\\xe6\\xb4\\xb6A@U0t6\\xae ^\\xc0\\x7f\\xf5\\xb8o\\xb5\\xb6A@cL\\xfa{\\xa9 ^\\xc0\\x1f\\xe7G\\r\\xb7\\xb6A@\\x9a\\xab\\xe69\\xa2 ^\\xc0\\xd74J\\xf2\\xb7\\xb6A@\")", "bytearray(b'\\x01\\x02\\x00\\x00\\x00m\\x00\\x00\\x00g\\x11@ \\x86\\xeb]\\xc0\\xff\\x9e\\x0e\\x1a\\xb0\\x99A@E\\x9a\\x1dN\\x85\\xeb]\\xc0\\x1c\\xb2\\x81t\\xb1\\x99A@\\xc21\\xcb\\x9e\\x84\\xeb]\\xc0\\xb0\\x992&\\xb3\\x99A@#\\xfe\\xbc\\x04\\x82\\xeb]\\xc0O\\xadc\\x01\\xb8\\x99A@\\xca\\xb8\\xf3\\x0e\\x81\\xeb]\\xc0\\x00\\xf0>}\\xba\\x99A@\\xa7A\\xd1<\\x80\\xeb]\\xc0\\xee\\x08LL\\xbc\\x99A@Z\\xa7%\\xb1\\x7f\\xeb]\\xc0\\x14H?\\xd0\\xc0\\x99A@\\xe3\\xbb\\xdeG\\x7f\\xeb]\\xc0n1\\xe4}\\xc1\\x99A@\\xc6\\xf0\"]}\\xeb]\\xc0 t\\xbf\\xf9\\xc3\\x99A@U\\xb1B\\xdb{\\xeb]\\xc0\\xd2\\x8e\\xc0\\xc4\\xc4\\x99A@\\x0f\\xac\\xf4$z\\xeb]\\xc0\\xee\\xa13\\x1f\\xc6\\x99A@W\\x8c\\x04dy\\xeb]\\xc0G\\xd3\\x8f<\\xc6\\x99A@\\xbe)\\x9b(x\\xeb]\\xc0\\x82\\x89\\xe4\\xd0\\xc7\\x99A@#\\xc71\\xedv\\xeb]\\xc04\\\\.,\\xc9\\x99A@6\\xf0\\xa3\\x1av\\xeb]\\xc0R\\xff\\x0ff\\xc9\\x99A@\\r\\xa8\\xdc\\xe9s\\xeb]\\xc0\\x97\\x01\\xc2\\xe2\\xcb\\x99A@O\\xb7G\\xcaq\\xeb]\\xc0\\x0e\\xfe\\xd9\\xea\\xcd\\x99A@\\r\\x83\\x9erq\\xeb]\\xc0ID\\x9d^\\xce\\x99A@\\x98\\x97W\\tq\\xeb]\\xc0JD\\x9d^\\xce\\x99A@\\x92\\xc6\\xb2\\xaao\\xeb]\\xc0\\x1a\\xba\\xc8\\xf3\\xcf\\x99A@\\xf8\\'\\x02\\xe6k\\xeb]\\xc0\\x06\\x8b\\x1eS\\xd2\\x99A@v\\xd6\\xb8Hk\\xeb]\\xc0\\xc..."]
+version: NUMBER | NULL | eg=[2, 3]
+visible: BOOLEAN | NULL | eg=[true]
+username: TEXT | NULL | eg=["jumbanho"]
+all_tags: VARIANT | NULL | eg=[[{"key":"gnis:fcode","value":"46003"},{"key":"gnis:ftype","value":"StreamRiver"},{"key":"intermittent","value":"yes"},{"key":"nhd:com_id","value":"37346853"},{"key":"nhd:fdate","value":"Thu Mar 28 00:00:00 PST 2002"},{"key":"nhd:reach_code","value":"18060005017843"},{"key":"source","value":"NHD"},{"key":"waterway","value":"stream"}], [{"key":"gnis:fcode","value":"46003"},{"key":"gnis:ftype","value":"StreamRiver"},{"key":"intermittent","value":"yes"},{"key":"nhd:com_id","value":"146070088"},{"key":"nhd:fdate","value":"Wed Jun 02 00:00:00 PDT 2010"},{"key":"nhd:reach_code","value":"18030003021991"},{"key":"source","value":"NHD"},{"key":"waterway","value":"stream"}]]
+osm_timestamp: NUMBER | NULL | eg=[1327342614000000, 1327337045000000]
+nodes: VARIANT | NULL | eg=[[{"id":866315580},{"id":866469140},{"id":867906160},{"id":866405284},{"id":866497492},{"id":866302007},{"id":866449818},{"id":867897625},{"id":867903637},{"id":866402859},{"id":866540640}]]
+id: NUMBER | NULL | eg=[73165139, 75218666]
+changeset: NUMBER | NULL | eg=[10475054]

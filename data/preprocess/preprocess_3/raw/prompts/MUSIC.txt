@@ -1,0 +1,86 @@
+[TABLES]
+## MUSIC.TRACK
+MediaTypeId: NUMBER | NULL
+GenreId: NUMBER | NULL
+Composer: TEXT | NULL
+Milliseconds: NUMBER | NULL
+UnitPrice: FLOAT | NULL
+Bytes: NUMBER | NULL
+Name: TEXT | NULL
+TrackId: NUMBER | NULL
+AlbumId: NUMBER | NULL
+
+## MUSIC.GENRE
+GenreId: NUMBER | NULL
+Name: TEXT | NULL
+
+## MUSIC.PLAYLISTTRACK
+TrackId: NUMBER | NULL
+PlaylistId: NUMBER | NULL
+
+## MUSIC.INVOICE
+BillingCountry: TEXT | NULL
+CustomerId: NUMBER | NULL
+Total: FLOAT | NULL
+InvoiceId: NUMBER | NULL
+BillingAddress: TEXT | NULL
+InvoiceDate: TEXT | NULL
+BillingCity: TEXT | NULL
+BillingState: TEXT | NULL
+BillingPostalCode: TEXT | NULL
+
+## MUSIC.CUSTOMER
+Country: TEXT | NULL
+PostalCode: TEXT | NULL
+City: TEXT | NULL
+SupportRepId: NUMBER | NULL
+Phone: TEXT | NULL
+Fax: TEXT | NULL
+LastName: TEXT | NULL
+Address: TEXT | NULL
+FirstName: TEXT | NULL
+Email: TEXT | NULL
+State: TEXT | NULL
+CustomerId: NUMBER | NULL
+Company: TEXT | NULL
+
+## MUSIC.INVOICELINE
+InvoiceLineId: NUMBER | NULL
+TrackId: NUMBER | NULL
+InvoiceId: NUMBER | NULL
+Quantity: NUMBER | NULL
+UnitPrice: FLOAT | NULL
+
+## MUSIC.MEDIATYPE
+Name: TEXT | NULL
+MediaTypeId: NUMBER | NULL
+
+## MUSIC.PLAYLIST
+Name: TEXT | NULL
+PlaylistId: NUMBER | NULL
+
+## MUSIC.ALBUM
+AlbumId: NUMBER | NULL
+Title: TEXT | NULL
+ArtistId: NUMBER | NULL
+
+## MUSIC.EMPLOYEE
+PostalCode: TEXT | NULL
+ReportsTo: FLOAT | NULL
+BirthDate: TEXT | NULL
+Fax: TEXT | NULL
+Country: TEXT | NULL
+Phone: TEXT | NULL
+Address: TEXT | NULL
+LastName: TEXT | NULL
+HireDate: TEXT | NULL
+Email: TEXT | NULL
+EmployeeId: NUMBER | NULL
+State: TEXT | NULL
+Title: TEXT | NULL
+FirstName: TEXT | NULL
+City: TEXT | NULL
+
+## MUSIC.ARTIST
+ArtistId: NUMBER | NULL
+Name: TEXT | NULL

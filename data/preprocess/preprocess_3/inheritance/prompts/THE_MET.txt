@@ -1,0 +1,67 @@
+[STANDALONE]
+## THE_MET.IMAGES
+title: TEXT | NULL
+public_caption: TEXT | NULL
+caption: TEXT | NULL
+is_oasc: BOOLEAN | NULL
+gcs_url: TEXT | NULL
+object_id: NUMBER | NULL
+original_image_url: TEXT | NULL
+
+## THE_MET.OBJECTS
+subregion: TEXT | NULL
+department: TEXT | NULL
+is_public_domain: BOOLEAN | NULL
+link_resource: TEXT | NULL
+locus: TEXT | NULL
+county: TEXT | NULL
+object_id: NUMBER | NULL
+artist_display_bio: TEXT | NULL
+culture: TEXT | NULL
+artist_alpha_sort: TEXT | NULL
+country: TEXT | NULL
+region: TEXT | NULL
+credit_line: TEXT | NULL
+title: TEXT | NULL
+dimensions: TEXT | NULL
+dynasty: TEXT | NULL
+object_begin_date: NUMBER | NULL
+city: TEXT | NULL
+state: TEXT | NULL
+medium: TEXT | NULL
+artist_begin_date: TEXT | NULL
+artist_display_name: TEXT | NULL
+artist_suffix: TEXT | NULL
+object_number: TEXT | NULL
+repository: TEXT | NULL
+artist_prefix: TEXT | NULL
+is_highlight: BOOLEAN | NULL
+object_name: TEXT | NULL
+object_date: TEXT | NULL
+object_end_date: NUMBER | NULL
+locale: TEXT | NULL
+rights_and_reproduction: TEXT | NULL
+portfolio: TEXT | NULL
+geography_type: TEXT | NULL
+excavation: TEXT | NULL
+classification: TEXT | NULL
+river: TEXT | NULL
+artist_end_date: TEXT | NULL
+artist_role: TEXT | NULL
+artist_nationality: TEXT | NULL
+reign: TEXT | NULL
+period: TEXT | NULL
+metadata_date: NUMBER | NULL
+
+## THE_MET.VISION_API_DATA
+fullTextAnnotation: TEXT | NULL
+logoAnnotations: VARIANT | NULL
+object_id: NUMBER | NULL
+imagePropertiesAnnotation: VARIANT | NULL
+webDetection: VARIANT | NULL
+textAnnotations: VARIANT | NULL
+labelAnnotations: VARIANT | NULL
+faceAnnotations: VARIANT | NULL
+safeSearchAnnotation: TEXT | NULL
+cropHintsAnnotation: VARIANT | NULL
+landmarkAnnotations: VARIANT | NULL

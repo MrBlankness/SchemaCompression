@@ -1,0 +1,479 @@
+[COMPONENTS]
+@C1
+caddress_1: TEXT | NULL | eg=["20283 STATE ROAD 7", "1526 SPRUCE STREET"]
+caddress_2: TEXT | NULL | eg=["STE. 300", "STE. 302"]
+caddress_3: TEXT | NULL | eg=["BOCA RATON, FL 33498", "BOULDER, CO 80302"]
+caddress_4: TEXT | NULL
+cname: TEXT | NULL | eg=["CUENOT, FORSYTHE & KIM, LLC", "DUFT BORNSEN & FETTIG LLP"]
+convey_text: TEXT | NULL | eg=["ASSIGNMENT OF ASSIGNORS INTEREST (SEE DOCUMENT FOR DETAILS)."]
+file_id: TEXT | NULL | eg=["14"]
+frame_no: TEXT | NULL | eg=["627", "780"]
+last_update_dt: TEXT | NULL | eg=["2016-12-27", "2016-11-08"]
+page_count: TEXT | NULL | eg=["14", "5"]
+purge_in: TEXT | NULL | eg=["N"]
+record_dt: TEXT | NULL | eg=["2014-03-27", "2013-10-31"]
+reel_no: TEXT | NULL | eg=["32542", "31521"]
+
+@C2
+AccordedFilingDate: TEXT | NULL
+Documents: VARIANT | NULL
+FilingDate: TEXT | NULL
+InstitutionDecisionDate: TEXT | NULL
+InventorName: TEXT | NULL
+LastModifiedDatetime: TEXT | NULL
+PatentNumber: TEXT | NULL
+PatentOwnerName: TEXT | NULL
+PetitionerPartyName: TEXT | NULL
+ProsecutionStatus: TEXT | NULL
+TrialNumber: TEXT | NULL
+
+@C3
+case_name: TEXT | NULL | eg=["Cirone v. Sinclair & Rush", "Palestrant, et al v. O'Brien, et al"]
+court_name: TEXT | NULL | eg=["Arizona District Court"]
+date_closed: TEXT | NULL | eg=["05/14/2002", "12/11/2002"]
+pacer_id: TEXT | NULL | eg=["13699", "23753"]
+
+@C4
+assigned_to: TEXT | NULL | eg=["Judge Miranda M. Du", "Judge Philip M. Pro"]
+case_cause: TEXT | NULL | eg=["15:1126 Patent Infringement", "35:271 Patent Infringement"]
+date_last_filed: TEXT | NULL
+demand: TEXT | NULL | eg=["Plaintiff", "Both"]
+jurisdictional_basis: TEXT | NULL | eg=["Federal Question"]
+jury_demand: TEXT | NULL
+lead_case: TEXT | NULL
+referred_to: TEXT | NULL | eg=["Magistrate Judge William G. Cobb", "Magistrate Judge Valerie P. Cooke"]
+related_case: TEXT | NULL | eg=["3:13-cv-00177-RCJ-WGC", "Federal Circuit, 15-01966"]
+settlement: TEXT | NULL
+
+@C5
+pat_clm_ct: TEXT | NULL | eg=["3", "1"]
+pat_dep_clm_ct: TEXT | NULL | eg=["20"]
+pat_dep_wrd_avg: TEXT | NULL | eg=["29.25", "39.45"]
+pat_dep_wrd_ct: TEXT | NULL | eg=["585", "789"]
+pat_dep_wrd_min: TEXT | NULL | eg=["19"]
+pat_wrd_avg: TEXT | NULL | eg=["188", "154.6667"]
+pat_wrd_ct: TEXT | NULL | eg=["564", "464"]
+pat_wrd_min: TEXT | NULL | eg=["159", "136"]
+
+@C6
+pub_clm_ct: TEXT | NULL | eg=["9", "2"]
+pub_dep_clm_ct: TEXT | NULL | eg=["27"]
+pub_dep_wrd_avg: TEXT | NULL | eg=["33.18518", "54.37037"]
+pub_dep_wrd_ct: TEXT | NULL | eg=["896", "1468"]
+pub_dep_wrd_min: TEXT | NULL | eg=["15"]
+pub_wrd_avg: TEXT | NULL | eg=["116", "101"]
+pub_wrd_ct: TEXT | NULL | eg=["1044", "202"]
+pub_wrd_min: TEXT | NULL | eg=["95", "91"]
+
+@C7
+appno_country: TEXT | NULL | eg=["US"]
+appno_date: TEXT | NULL
+grant_country: TEXT | NULL | eg=["US"]
+grant_date: TEXT | NULL
+lang: TEXT | NULL
+pgpub_country: TEXT | NULL
+pgpub_date: TEXT | NULL
+title: TEXT | NULL
+
+@C8
+name: TEXT | NULL | eg=["Jack Sutton", "Peters Jewelers"]
+party_row_count: TEXT | NULL | eg=["186960", "187912"]
+party_type: TEXT | NULL
+
+@C9
+ee_address_1: TEXT | NULL
+ee_address_2: TEXT | NULL | eg=["NO. 1760, HIGASHIMATANO-CHO, TOTSUKA-KU", "NO. 2, TAKARA-CHO, KANAGAWA-KU"]
+ee_city: TEXT | NULL | eg=["YOKOHAMA-CITY, KANAGAWA-PREFECTURE", "YOKOHAMA CITY"]
+ee_country: TEXT | NULL | eg=["JAPAN"]
+ee_name: TEXT | NULL | eg=["JIDOSHA DENKI KOGYO KABUSHIKI KAISHA", "NISSAN MOTOR CO., LTD."]
+ee_postcode: TEXT | NULL
+ee_state: TEXT | NULL
+
+@C10
+claim_no: TEXT | NULL | eg=["22"]
+ind_flg: TEXT | NULL | eg=["0"]
+
+@C11
+attachment: TEXT | NULL
+doc_count: TEXT | NULL | eg=["46"]
+doc_number: TEXT | NULL | eg=["10"]
+long_description: TEXT | NULL | eg=["Declaration of Joseph Rego by defendant Sunrize Staging Inc, defendant Sunrize Building, defendant Lou Luly re motion to dismiss the complaint [8-1] (axr) (Entered: 11/03/2004)", "Joint STIPULATION to Continue hearing date from July 28, 2008 to July 21, 2008 Re: Memorandum in Support of Motion, 7 , MOTION to Dismiss for Lack of Jurisdiction over Subject Matter 6 filed by Defendants Dynascan Technology Inc, Dynascan Technology Corp. (Attachments: # 1 Proposed Order)(Huang, Peter) (Entered: 06/17/2008)"]
+short_description: TEXT | NULL
+upload_date: TEXT | NULL
+
+@C12
+char_ct: TEXT | NULL | eg=["248", "236"]
+cns_ct: TEXT | NULL | eg=["0", "1"]
+or_ct: TEXT | NULL | eg=["0", "1"]
+sf_ct: TEXT | NULL | eg=["0"]
+word_ct: TEXT | NULL | eg=["39"]
+
+@C13
+claim_txt: TEXT | NULL | eg=["25. The method according to claim 1, wherein the evaluation of the state of the combustion is performed for each individual cylinder of the internal combustion engine.", "21. The apparatus according to claim 20, wherein each multichannel signal evaluation device is connected with a database in which sample signals of flame light signals with assigned particle emissions are stored."]
+dependencies: TEXT | NULL | eg=["1", "20"]
+
+@C14
+admin_appl_id_for_grant: TEXT | NULL
+admin_pat_no_for_appno: TEXT | NULL
+error: TEXT | NULL | eg=["none"]
+
+@C15
+ack_dt: TEXT | NULL
+exec_dt: TEXT | NULL | eg=["2010-04-16", "2010-04-15"]
+or_name: TEXT | NULL | eg=["BROOKS, RICHARD VALENTINE", "LE, QUI V., MR."]
+
+@C16
+attorney_row_count: TEXT | NULL | eg=["1157", "35285"]
+contactinfo: TEXT | NULL | eg=["(See above for address)", "Hopgood, Calimafde, Kalil, Blaustein & Judlowe; 60 East 42nd Street; New York, NY 10165; (212) 986-2480"]
+position: TEXT | NULL | eg=["TERMINATED: 09/30/1997; LEAD ATTORNEY; ATTORNEY TO BE NOTICED", "TERMINATED: 03/02/1992; LEAD ATTORNEY; ATTORNEY TO BE NOTICED"]
+
+[TABLES]
+## USPTO_OCE_CLAIMS.PATENT_CLAIMS_STATS_2014
+@use: [C10, C12]
+appl_id: TEXT | NULL | eg=["08389241", "08900780"]
+pat_no: TEXT | NULL | eg=["5630497", "5896221"]
+
+## USPTO_OCE_CLAIMS.PATENT_CLAIMS_FULLTEXT_2014
+@use: [C10, C13]
+pat_no: TEXT | NULL | eg=["8775049"]
+appl_id: TEXT | NULL | eg=["13306241"]
+
+## USPTO_OCE_CLAIMS.PATENT_CLAIMS_STATS
+@use: [C10, C12]
+appl_id: TEXT | NULL | eg=["10049596", "09196536"]
+pat_no: TEXT | NULL | eg=["6725168", "6189617"]
+
+## USPTO_OCE_CLAIMS.MATCH
+pat_no: TEXT | NULL | eg=[""]
+pub_no: TEXT | NULL | eg=["20110139645", "20110139646"]
+publication_number: TEXT | NULL | eg=["US-2011139645-A1", "US-2011139646-A1"]
+
+## USPTO_OCE_CLAIMS.PATENT_DOCUMENT_STATS_2014
+@use: [C5]
+pat_no: TEXT | NULL | eg=["8514856", "8624634"]
+appl_id: TEXT | NULL | eg=["12822551", "13551650"]
+
+## USPTO_OCE_CLAIMS.PATENT_CLAIMS_FULLTEXT
+@use: [C10, C13]
+pat_no: TEXT | NULL | eg=["8775049"]
+appl_id: TEXT | NULL | eg=["13306241"]
+
+## USPTO_OCE_CLAIMS.PATENT_DOCUMENT_STATS
+@use: [C5]
+appl_id: TEXT | NULL | eg=["11559573"]
+pat_no: TEXT | NULL | eg=["8305646", "3946637"]
+
+## USPTO_OCE_CLAIMS.PGPUB_CLAIMS_FULLTEXT
+@use: [C10, C13]
+appl_id: TEXT | NULL | eg=["12165303"]
+pub_no: TEXT | NULL | eg=["20090324148"]
+
+## USPTO_OCE_CLAIMS.PGPUB_CLAIMS_FULLTEXT_2014
+@use: [C10, C13]
+appl_id: TEXT | NULL | eg=["13187504"]
+pub_no: TEXT | NULL | eg=["20120021108"]
+
+## USPTO_OCE_CLAIMS.PGPUB_DOCUMENT_STATS_2014
+@use: [C6]
+pub_no: TEXT | NULL | eg=["20110289856", "20120029445"]
+appl_id: TEXT | NULL | eg=["13205419", "13252998"]
+
+## USPTO_OCE_CLAIMS.MATCH_2014
+publication_number: TEXT | NULL | eg=["US-2002134230-A1", "US-2002134232-A1"]
+pat_no: TEXT | NULL | eg=[""]
+pub_no: TEXT | NULL | eg=["20020134230", "20020134232"]
+
+## USPTO_OCE_CLAIMS.PGPUB_DOCUMENT_STATS
+@use: [C6]
+pub_no: TEXT | NULL | eg=["20030031369", "20020079610"]
+appl_id: TEXT | NULL | eg=["09834587", "09920701"]
+
+## USPTO_OCE_ASSIGNMENT.MATCH_2016
+pgpub_doc_num: TEXT | NULL | eg=["20140007888", "20140007891"]
+publication_number: TEXT | NULL | eg=["US-2014007888-A1", "US-2014007891-A1"]
+grant_doc_num: TEXT | NULL | eg=[""]
+
+## USPTO_OCE_ASSIGNMENT.MATCH
+grant_doc_num: TEXT | NULL | eg=[""]
+publication_number: TEXT | NULL | eg=["US-2014007891-A1", "US-2014007893-A1"]
+pgpub_doc_num: TEXT | NULL | eg=["20140007891", "20140007893"]
+
+## USPTO_OCE_ASSIGNMENT.DOCUMENTID_ADMIN_2016
+@use: [C14]
+appno_doc_num: TEXT | NULL | eg=["14683510", "14683835"]
+rf_id: TEXT | NULL | eg=["353810928", "395500045"]
+grant_doc_num: TEXT | NULL
+
+## USPTO_OCE_ASSIGNMENT.DOCUMENTID
+@use: [C7]
+rf_id: TEXT | NULL | eg=["42510868", "42660035"]
+grant_doc_num: TEXT | NULL | eg=["3677049", "3944419"]
+pgpub_doc_num: TEXT | NULL
+appno_doc_num: TEXT | NULL | eg=["04862751", "05545682"]
+
+## USPTO_OCE_ASSIGNMENT.ASSIGNMENT_2016
+@use: [C1]
+rf_id: TEXT | NULL | eg=["325420627", "315210780"]
+
+## USPTO_OCE_ASSIGNMENT.ASSIGNOR_2016
+@use: [C15]
+rf_id: TEXT | NULL | eg=["242980306", "242980939"]
+
+## USPTO_OCE_ASSIGNMENT.ASSIGNMENT
+@use: [C1]
+rf_id: TEXT | NULL | eg=["332310802", "311870928"]
+
+## USPTO_OCE_ASSIGNMENT.ASSIGNMENT_CONVEYANCE
+employer_assign: TEXT | NULL | eg=["1"]
+rf_id: TEXT | NULL | eg=["305160114", "305160304"]
+convey_ty: TEXT | NULL | eg=["assignment"]
+
+## USPTO_OCE_ASSIGNMENT.ASSIGNOR
+@use: [C15]
+rf_id: TEXT | NULL | eg=["241500929", "241520616"]
+
+## USPTO_OCE_ASSIGNMENT.ASSIGNEE_2016
+@use: [C9]
+rf_id: TEXT | NULL | eg=["85010106", "85050362"]
+
+## USPTO_OCE_ASSIGNMENT.DOCUMENTID_2016
+@use: [C7]
+grant_doc_num: TEXT | NULL | eg=["3771466", "4028950"]
+appno_doc_num: TEXT | NULL | eg=["05652908", "05233453"]
+rf_id: TEXT | NULL | eg=["68770475", "69340865"]
+pgpub_doc_num: TEXT | NULL
+
+## USPTO_OCE_ASSIGNMENT.DOCUMENTID_ADMIN
+@use: [C14]
+appno_doc_num: TEXT | NULL | eg=["11367061", "11367484"]
+grant_doc_num: TEXT | NULL
+rf_id: TEXT | NULL | eg=["190470666", "176390534"]
+
+## USPTO_OCE_ASSIGNMENT.ASSIGNEE
+@use: [C9]
+rf_id: TEXT | NULL | eg=["56250756", "56280778"]
+
+## USPTO_OCE_ASSIGNMENT.ASSIGNMENT_CONVEYANCE_2016
+rf_id: TEXT | NULL | eg=["305130929", "305140893"]
+employer_assign: TEXT | NULL | eg=["1"]
+convey_ty: TEXT | NULL | eg=["assignment"]
+
+## USPTO_OCE_CANCER.MATCH
+publication_number: TEXT | NULL | eg=["US-1151536-A", "US-1500985-A"]
+Patent_or_Publication_ID: TEXT | NULL | eg=["US 1151536 A", "US 1500985 A"]
+
+## USPTO_OCE_CANCER.PUBLICATIONS
+Other_and_Preclassification: TEXT | NULL | eg=["0"]
+Drugs_and_Chemistry: TEXT | NULL | eg=["1"]
+NIH_Federal_Grant_Number: TEXT | NULL
+FDA_Ingredient: TEXT | NULL
+Radiation_Measurement: TEXT | NULL | eg=["0"]
+TBD: TEXT | NULL
+Grant_or_Publication_Date: TEXT | NULL | eg=["20060406", "20080821"]
+FDA_Application_Number: TEXT | NULL
+Application_Number: TEXT | Patent application number (DOCDB compatible), eg: 'US-87124404-A'. This may not always be set. | eg=["11/228833", "11/925922"]
+DNA_RNA_or_Protein_Sequence: TEXT | NULL | eg=["0", "1"]
+Patent_or_Publication_ID: TEXT | NULL | eg=["US 20060074105 A1", "US 20080200484 A1"]
+Food_and_Nutrition: TEXT | NULL | eg=["0"]
+FDA_Applicant: TEXT | NULL
+FDA_Drug_Trade_Name: TEXT | NULL
+Patent_Title: TEXT | NULL | eg=["Substituted quinoline and quinazoline inhibitors of quinone reductase 2", "Pharmaceutical Compositions Comprising A Multifunctional Phosphodiesterase Inhibitor and An Adenosine Uptake Inhibitor"]
+USPC_Current_Cross_Reference: TEXT | NULL | eg=["546/159", "514/262.1; 514/312"]
+USPC_Current_Original: TEXT | NULL | eg=["514/313", "514/263.31"]
+CPC_Inventive: TEXT | NULL | eg=["C07D215/18; C07D215/233; C07D215/36; C07D215/40; C07D215/42; C07D215/44; C07D215/60; C07D239/94; C07D401/12", "A61K31/4709; A61K31/4745; A61K31/519; A61K31/522; A61K45/06; A61K31/4709; A61K31/4745; A61K31/519; A61K31/522"]
+Diagnostic_and_Surgical_Devices: TEXT | NULL | eg=["0", "1"]
+Data_Science: TEXT | NULL | eg=["0"]
+Cells_and_Enzymes: TEXT | NULL | eg=["0"]
+IPC_Primary: TEXT | NULL | eg=["A61K31/4709"]
+Model_Systems_and_Animals: TEXT | NULL | eg=["0"]
+Family_ID: TEXT | Family ID (simple family). Grouping on family ID will return all publications associated with a simple patent family (all publications share the same priority claims). | eg=["35559420", "26992976"]
+NIH_Grant_Recipient_Organization: TEXT | NULL
+CPC_Additional: TEXT | NULL | eg=["A61K2300/00; A61K2300/00; A61K2300/00; A61K2300/00", "G01N2500/04"]
+FDA_Approval_Date: TEXT | NULL
+Filing_Date: TEXT | Is this text truncated? | eg=["20050916", "20071027"]
+IPC_Secondary: TEXT | NULL | eg=["C07D215/38; C07D401/02", "A61K31/519; A61K31/522; A61P9/00"]
+
+## PATENTS.DISCLOSURES_13
+serial_cleaned: TEXT | NULL | eg=[""]
+sso: TEXT | NULL | eg=["ANSI"]
+disclosure_event: TEXT | NULL | eg=["DE0001", "DE0003"]
+reciprocity: TEXT | NULL | eg=["0"]
+patent_owner_harmonized: TEXT | NULL | eg=["3M", "Addison Fischer"]
+family_id: TEXT | NULL | eg=["22549751", "23170520"]
+record_id: TEXT | NULL | eg=["REC00002", "REC00005"]
+blanket_scope: TEXT | NULL | eg=["", "X3.250 INCITS 250;NCITS"]
+copyright: TEXT | NULL | eg=[""]
+standard: TEXT | NULL | eg=["X3.55;X3.56", "X3.55;X3.56;X3.72;X3.116;X3.127;X3.136"]
+licensing_commitment: TEXT | NULL | eg=["FRAND", "Specific Terms"]
+committee_project: TEXT | NULL | eg=[""]
+sc_name: TEXT | NULL | eg=[""]
+blanket_type: TEXT | NULL | eg=["0", "2"]
+pub_cleaned: TEXT | NULL | eg=["US3692255", "US3861619"]
+third_party: TEXT | NULL | eg=["0"]
+wg_name: TEXT | NULL | eg=[""]
+patent_owner_unharmonized: TEXT | NULL | eg=["3M", "Addison Fischer"]
+date: NUMBER | NULL | eg=[19751124, 19890711]
+tc_name: TEXT | NULL | eg=[""]
+
+## PATENTS.CPC_DEFINITION
+status: TEXT | NULL | eg=["published"]
+precedenceLimitingReferences: VARIANT | NULL | eg=[[]]
+rules: VARIANT | NULL | eg=[[]]
+childGroups: VARIANT | NULL | eg=[[]]
+scopeLimitingReferences: VARIANT | NULL | eg=[[]]
+level: FLOAT | NULL | eg=[9.0]
+titlePart: VARIANT | NULL | eg=[["Swine"], ["Murine"]]
+definition: VARIANT | NULL | eg=[[]]
+residualReferences: VARIANT | NULL | eg=[[]]
+breakdownCode: BOOLEAN | NULL | eg=[true]
+limitingReferences: VARIANT | NULL | eg=[[]]
+glossary: VARIANT | NULL | eg=[[]]
+applicationReferences: VARIANT | NULL | eg=[[]]
+notAllocatable: BOOLEAN | NULL | eg=[false]
+dateRevised: FLOAT | NULL | eg=[20130101.0]
+titleFull: TEXT | NULL | eg=["Swine", "Murine"]
+informativeReferences: VARIANT | NULL | eg=[[]]
+symbol: TEXT | NULL | eg=["A01K2227/108", "A01K2227/105"]
+synonyms: VARIANT | NULL | eg=[[]]
+children: VARIANT | NULL | eg=[[]]
+parents: VARIANT | NULL | eg=[["A01K2227/10","A01K2227/00","A01K","A01","A"], ["A01K2227/70","A01K2227/00","A01K","A01","A"]]
+ipcConcordant: TEXT | NULL | eg=["CPCONLY"]
+
+## PATENTS.PUBLICATIONS
+examiner: VARIANT | Is this text truncated? | eg=[[]]
+fterm: VARIANT | For US publications only, the description in HTML, limited to the first 9 megabytes | eg=[[]]
+application_number_formatted: TEXT | Application number, formatted to the patent office format where possible. | eg=["AT96104644T", "AT96119677T"]
+application_number: TEXT | Patent application number (DOCDB compatible), eg: 'US-87124404-A'. This may not always be set. | eg=["AT-96104644-T", "AT-96119677-T"]
+grant_date: NUMBER | For US publications only, the claims in plain text | eg=[19970515, 20011115]
+cpc: VARIANT | Two-letter language code for this text | eg=[[{"code":"B08B15/04","first":true,"inventive":true,"tree":[]},{"code":"B23Q11/0046","first":false,"inventive":true,"tree":[]}], [{"code":"C08J9/22","first":true,"inventive":true,"tree":[]},{"code":"B29B13/065","first":false,"inventive":true,"tree":[]},{"code":"B29K2025/00","first":false,"inventive":false,"tree":[]},{"code":"C08J2325/04","first":false,"inventive":false,"tree":[]},{"code":"F26B17/101","first":false,"inventive":true,"tree":[]},{"code":"F26B17/1416","first":false,"inventive":true,"tree":[]}]]
+locarno: VARIANT | Localized text | eg=[[]]
+description_localized_html: VARIANT | Localized text | eg=[[]]
+publication_date: NUMBER | Two-letter language code for this text | eg=[19970515, 20011115]
+kind_code: TEXT | Kind code, indicating application, grant, search report, correction, etc. These are different for each country. | eg=["T1"]
+spif_publication_number: TEXT | SPIF standard (spif.group) publication number, after 2000 | eg=[""]
+ipc: VARIANT | Localized text | eg=[[{"code":"B08B15/04","first":false,"inventive":true,"tree":[]},{"code":"B23Q11/00","first":false,"inventive":true,"tree":[]}], [{"code":"B29B13/06","first":false,"inventive":true,"tree":[]},{"code":"C08J9/22","first":false,"inventive":true,"tree":[]},{"code":"C08L25/04","first":false,"inventive":true,"tree":[]},{"code":"F26B17/10","first":false,"inventive":true,"tree":[]},{"code":"F26B17/14","first":false,"inventive":true,"tree":[]}]]
+pct_number: TEXT | PCT number for this application if it was part of a PCT filing, eg: 'PCT/EP2008/062623'. | eg=[""]
+filing_date: NUMBER | Is this text truncated? | eg=[19960323, 19961209]
+entity_status: TEXT | The filing date. | eg=[""]
+abstract_localized: VARIANT | Localized text | eg=[[{"language":"en","text":"The milling tool (4) has a hollow working head into which are drawn the chippings (20) and dust, preferably from elastic material such as plastic or wood. The suction duct is a tube (2) fixed rigidly wrt. the tool and passing through the drive head (1) of the machine. This enables the suction hose (15) to be fitted with a minimum of complexity eg. no rotating seals required. An alternate solution has the driving shaft inside the fixed duct to provide extraction over the working area of the tool. In this design the extract hose is attached to a side arm at the upper end of the duct near the machine.","truncated":false}]]
+description_localized: VARIANT | The publication abstracts in different languages | eg=[[]]
+assignee: VARIANT | Localized text | eg=[["Bornemann Werkzeugtechnik Gmbh"], ["Buna Sow Leuna Olefinverb Gmbh"]]
+citation: VARIANT | Two-letter language code for this text | eg=[[]]
+fi: VARIANT | Is this text truncated? | eg=[[]]
+inventor_harmonized: VARIANT | For US publications only, the claims in HTML | eg=[[{"country_code":"DE","name":"BORNEMANN HERMANN"}], [{"country_code":"DE","name":"HAMANN BERND DR"},{"country_code":"DE","name":"BAGERITZ HANS"},{"country_code":"DE","name":"KLODT ROLF-DIETER DR"},{"country_code":"DE","name":"BOGER JUERGEN"},{"country_code":"DE","name":"WINZHEIMER BODO"},{"country_code":"DE","name":"LEHMANN REINHARD"}]]
+claims_localized_html: VARIANT | Is this text truncated? | eg=[[]]
+inventor: VARIANT | Is this text truncated? | eg=[["BORNEMANN, HERMANN"], ["HAMANN, BERND, DR.","BAGERITZ, HANS","KLODT, ROLF-DIETER, DR.","BOGER, JUERGEN","WINZHEIMER, BODO","LEHMANN, REINHARD"]]
+claims_localized: VARIANT | Two-letter language code for this text | eg=[[]]
+application_kind: TEXT | High-level kind of the application: A=patent; U=utility; P=provision; W= PCT; F=design; T=translation. | eg=["T"]
+priority_date: NUMBER | Localized text | eg=[19950403, 19951227]
+title_localized: VARIANT | The publication titles in different languages | eg=[[{"language":"de","text":"Einrichtung zum absaugen von mittels eines hohlfräswerkzeuges abgetragener späne","truncated":false}], [{"language":"de","text":"Verfahren zur trocknung und konditionierung von expandierbaren styrolpolymerisaten und vorrichtung zur durchfürung des verfahrens","truncated":false}]]
+assignee_harmonized: VARIANT | Two-letter language code for this text | eg=[[{"country_code":"DE","name":"BORNEMANN WERKZEUGTECHNIK GMBH"}], [{"country_code":"DE","name":"BUNA SOW LEUNA OLEFINVERB GMBH"}]]
+priority_claim: VARIANT | Two-letter language code for this text | eg=[[{"application_number":"DE-19512401-A","category":"","filing_date":19950403,"npl_text":"","publication_number":"","type":""}], [{"application_number":"DE-19548515-A","category":"","filing_date":19951227,"npl_text":"","publication_number":"","type":""}]]
+art_unit: TEXT | The grant date, or 0 if not granted. | eg=[""]
+child: VARIANT | The publication date. | eg=[[]]
+spif_application_number: TEXT | SPIF standard (spif.group) application number, after 2000 | eg=[""]
+uspc: VARIANT | For US publications only, the description in plain text, limited to the first 9 megabytes | eg=[[]]
+family_id: TEXT | Family ID (simple family). Grouping on family ID will return all publications associated with a simple patent family (all publications share the same priority claims). | eg=["7758635", "7781268"]
+parent: VARIANT | Is this text truncated? | eg=[[]]
+publication_number: TEXT | Patent publication number (DOCDB compatible), eg: 'US-7650331-B1' | eg=["AT-E152950-T1", "AT-E208695-T1"]
+country_code: TEXT | Country code, eg: 'US', 'EP', etc | eg=["AT"]
+
+## USPTO_OCE_OFFICE_ACTIONS.MATCH_APP
+application_number: TEXT | NULL
+app_id: TEXT | NULL | eg=["13249599", "12103971"]
+
+## USPTO_OCE_OFFICE_ACTIONS.OFFICE_ACTIONS
+rejection_dp: TEXT | NULL | eg=["0", "1"]
+closing_missing: TEXT | NULL | eg=["0"]
+rejection_103: TEXT | NULL | eg=["0"]
+fp_missing: TEXT | NULL | eg=["1", "0"]
+allowed_claims: TEXT | NULL | eg=["0"]
+rejection_112: TEXT | NULL | eg=["1", "0"]
+app_id: TEXT | NULL | eg=["13759138", "13375148"]
+cite103_eq1: TEXT | NULL | eg=["0"]
+header_missing: TEXT | NULL | eg=["0", "1"]
+cite103_max: TEXT | NULL | eg=["0"]
+art_unit: TEXT | NULL | eg=["1612", "1615"]
+rejection_fp_mismatch: TEXT | NULL | eg=["0"]
+uspc_class: TEXT | NULL | eg=["424"]
+rejection_101: TEXT | NULL | eg=["0"]
+cite103_gt3: TEXT | NULL | eg=["0"]
+uspc_subclass: TEXT | NULL | eg=["400000", "049000"]
+ifw_number: TEXT | NULL | eg=["HJZTZNLTPXXIFW4", "HPE42TOCPXXIFW4"]
+signature_type: TEXT | NULL | eg=["1", "0"]
+rejection_102: TEXT | NULL | eg=["1", "0"]
+cite102_gt1: TEXT | NULL | eg=["1", "0"]
+objection: TEXT | NULL | eg=["0", "1"]
+mail_dt: TEXT | NULL | eg=["2013-08-05", "2013-12-23"]
+document_cd: TEXT | NULL | eg=["CTFR", "CTNF"]
+
+## USPTO_PTAB.TRIALS
+@use: [C2]
+publication_number: TEXT | NULL
+ApplicationNumber: TEXT | NULL
+
+## USPTO_PTAB.MATCH_201710
+application_number: TEXT | NULL | eg=["US-20541988-A", "US-58639190-A"]
+ApplicationNumber: TEXT | NULL | eg=["07205419", "07586391"]
+
+## USPTO_PTAB.TRIALS_201710
+@use: [C2]
+ApplicationNumber: TEXT | NULL | eg=["14034206", "09486648"]
+
+## USPTO_OCE_LITIGATION.DOCUMENTS
+@use: [C11]
+date_filed: TEXT | NULL | eg=["2004-11-02", "2008-06-17"]
+case_row_id: TEXT | NULL | eg=["53000", "72857"]
+case_number: TEXT | NULL | eg=["3:04-cv-02001-JMA", "8:08-cv-00483-CJC-RNB"]
+
+## USPTO_OCE_LITIGATION.NAMES_2015
+@use: [C8]
+name_row_count: TEXT | NULL | eg=["234351", "235648"]
+case_row_id: TEXT | NULL | eg=["35376", "35523"]
+case_number: TEXT | NULL | eg=["2:05-cv-06445", "2:06-cv-00053"]
+
+## USPTO_OCE_LITIGATION.PACER_CASES
+@use: [C3]
+court_code: TEXT | NULL | eg=["azd"]
+date_filed: TEXT | NULL | eg=["2001-09-28", "2002-10-07"]
+case_number: TEXT | NULL | eg=["2:2001-cv-01857", "2:2002-cv-01970"]
+
+## USPTO_OCE_LITIGATION.ATTORNEYS_2015
+@use: [C16, C8]
+case_row_id: TEXT | NULL | eg=["171", "3284"]
+case_number: TEXT | NULL | eg=["0:96-cv-06366-WDF", "1:91-cv-02222-KMO"]
+
+## USPTO_OCE_LITIGATION.PACER_CASES_2015
+@use: [C3]
+court_code: TEXT | NULL | eg=["azd"]
+case_number: TEXT | NULL | eg=["2:2001-cv-01273", "2:1993-cv-01071"]
+date_filed: TEXT | NULL | eg=["2001-07-09", "1993-06-04"]
+
+## USPTO_OCE_LITIGATION.ATTORNEYS
+@use: [C16, C8]
+case_number: TEXT | NULL | eg=["1:01-cv-00100", "1:01-cv-00401"]
+case_row_id: TEXT | NULL | eg=["8895", "9024"]
+
+## USPTO_OCE_LITIGATION.DOCUMENTS_2015
+@use: [C11]
+case_number: TEXT | NULL | eg=["1:96-cv-04436", "1:96-cv-11090-PBS"]
+date_filed: TEXT | NULL | eg=["1996-12-19", "1996-11-14"]
+case_row_id: TEXT | NULL | eg=["5842", "5975"]
+
+## USPTO_OCE_LITIGATION.CASES_2015
+@use: [C3, C4]
+date_filed: TEXT | NULL
+case_row_id: TEXT | NULL | eg=["57008", "56478"]
+case_number: TEXT | NULL | eg=["3:13-cv-00176-MMD-WGC", "3:12-cv-00652-MMD-WGC"]
+
+## USPTO_OCE_LITIGATION.NAMES
+@use: [C8]
+case_number: TEXT | NULL | eg=["2:05-cv-06445", "2:06-cv-00053"]
+name_row_count: TEXT | NULL | eg=["234352", "235650"]
+case_row_id: TEXT | NULL | eg=["35376", "35523"]
+
+## USPTO_OCE_LITIGATION.CASES
+@use: [C3, C4]
+case_number: TEXT | NULL | eg=["7:94-cv-00063-AAM", "3:13-cv-00176-MMD-WGC"]
+case_row_id: TEXT | NULL | eg=["70943", "57008"]
+date_filed: TEXT | NULL

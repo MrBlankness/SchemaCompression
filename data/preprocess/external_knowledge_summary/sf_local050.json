@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_local050",
+  "question": "What is the median of the average monthly projected sales in USD for France in 2021, calculated by using the monthly sales data from 2019 and 2020 (filtered by promo_total_id=1 and channel_total_id=1), applying the growth rate from 2019 to 2020 to project 2021, converting to USD based on the currency table, and then determining the monthly averages before finding their median?",
+  "db_id": "COMPLEX_ORACLE",
+  "source_document": "projection_calculation.md",
+  "evidence": "Projection formula for 2021: (((Sales in 2020 - Sales in 2019) / Sales in 2019) * Sales in 2020) + Sales in 2020. For other years (not 2021): Use the average sales value calculated for each month. Currency conversion: Convert projected sales to USD using monthly conversion rates, multiply by conversion rates, default rate=1 if unavailable. Calculate monthly averages in USD for 2021, round to two decimal places. Data scope: sales data for products sold in France, including sales amounts each month for years 2019, 2020, and 2021."
+}

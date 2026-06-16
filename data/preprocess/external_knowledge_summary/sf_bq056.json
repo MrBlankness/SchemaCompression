@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq056",
+  "question": "How many different pairs of roads classified as motorway, trunk, primary, secondary, or residential in California overlap each other without sharing nodes and do not have a bridge tag, where these roads are tagged with 'highway', analyzed through planet ways",
+  "db_id": "GEO_OPENSTREETMAP_BOUNDARIES",
+  "source_document": "functions_st_intersects.md",
+  "evidence": "Function: ST_INTERSECTS - Returns TRUE if two GEOGRAPHY/GEOMETRY objects intersect (share any portion of space). Usage: ST_INTERSECTS(<geography_expression_1>, <geography_expression_2>) or ST_INTERSECTS(<geometry_expression_1>, <geometry_expression_2>). Returns BOOLEAN. For GEOMETRY objects, error if input objects have different SRIDs. Example: SELECT ST_INTERSECTS(TO_GEOGRAPHY('POLYGON((0 0, 2 0, 2 2, 0 2, 0 0))'), TO_GEOGRAPHY('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))')) returns True."
+}

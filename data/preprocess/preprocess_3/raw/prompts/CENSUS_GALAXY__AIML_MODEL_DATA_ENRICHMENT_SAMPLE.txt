@@ -1,0 +1,73 @@
+[TABLES]
+## PUBLIC.Fact_StateBenchmark_ACS2021
+MetricID: TEXT | A unique identifier for a specific metric or measurement within the American Community Survey or census data.
+TotalStatePopulation: NUMBER | Total State or territory population using MetricID = “B01003_001E”, known as “Total Population” in each Census hierarchy. This is to be used as a GroupBy or Aggregate column.
+StateBenchmarkValue: FLOAT | The Int value for the MetricID and StateAbbrev relationship. This could be aggregates or estimates of people, pets, household, etc. Refer to the Dim_CensusMetrics table for the meaning of each value. All values have been rolled up correctly according to the Census hierarchy in the Dim_CensusGeography table.
+TotalUSPopulation: NUMBER | Total United States population using MetricID = “B01003_001E”, known as “Total Population” in each Census hierarchy. This is to be used as a GroupBy or Aggregate column.
+StateFIPS: TEXT | The Federal Information Processing Standard (FIPS) code that represents the state where the block group is located.
+StateAbbrev: TEXT | The two-letter state abbreviation for each U.S. State and territory.
+
+## PUBLIC.Dim_CensusGeography
+StateAbbrev: TEXT | The abbreviated form or code representing the state where the block group is located.
+BlockGroupCode: TEXT | A code that uniquely identifies the block group within a census tract.
+BlockGroupPolygon: TEXT | The geometric representation of the block group as a polygon, defined by its boundary coordinates.
+StateCountyTractID: TEXT | A unique identifier combining the state, county, and tract codes to represent the block group's location.
+TractCode: TEXT | A code that identifies the census tract to which the block group belongs.
+AmtLand: NUMBER | The amount of land area covered by the block group.
+StateName: TEXT | The name of the state where the block group is located.
+BlockGroupCentroidLon: TEXT | The longitude coordinate of the block group's centroid.
+BlockGroupName: TEXT | The name or label assigned to the block group.
+MTFCC: TEXT | The MAF/TIGER Feature Class Code, which categorizes the geographic feature represented by the block group.
+CountyName: TEXT | The name of the county where the block group is situated.
+GeographyYear: TEXT | The year associated with the geographical data of the block group.
+AmtWater: NUMBER | The amount of water area (such as lakes, rivers, or oceans) within the boundaries of the block group.
+BlockGroupCentroidLat: TEXT | The latitude coordinate of the block group's centroid, which represents the central point of the block group.
+StateFIPS: TEXT | The Federal Information Processing Standard (FIPS) code that represents the state where the block group is located.
+BlockGroupCentroidPoints: TEXT | The precise point location (latitude and longitude) of the block group's centroid.
+FuncStat: TEXT | The functional status of the block group, indicating its statistical purpose.
+BlockGroupID: TEXT | A unique identifier for a specific block group within a geographic area.
+CountyFIPS: TEXT | The FIPS code that identifies the county where the block group is situated.
+
+## PUBLIC.Xref_ZipToTract_Residential
+FromZipCode: TEXT | The U.S. Postal Service Zip Code that relates to the StateCountyTractID based on the ratio of residents in that geographical region. Many Tracts can overlap parts of Zip Codes, and many Zip Codes can overlap parts of Tracts.
+ToStateCountyTractID: TEXT | A unique identifier compound key that uses StateFIPS, CountyFIPS, and Tract for a specific within a geographic area. This field (and table) is for rolling metrics and values from the Zip Code to the Census block group or Tract level.
+ResidentialMappingRatioZT: NUMBER | The ratios of residents in each Zip Code that are made up by that connected Tract. “ZT” as the suffix designates the direction of the data , Zip Code to Tract (usually larger polygons into smaller ones).
+
+## PUBLIC.Fact_CensusValues_ACS2021_ByZip
+CensusValueByZip: NUMBER | The Int value for the MetricID and ZipCode relationship. This could be aggregates or estimates of people, pets, household, etc. Refer to the Dim_CensusMetrics table for the meaning of each value. All values have been rolled up correctly according to the ratios in the Xref_TractToZip_Residential table.
+MetricID: TEXT | A unique identifier for a specific metric or measurement within the American Community Survey or census data.
+ZipCode: TEXT | A unique Zip Code for a geographic area.
+
+## PUBLIC.LU_GeographyExpanded
+ZipCode: TEXT | The U.S. Postal Service Zip Code
+ZipCodeCentroidPoint: TEXT | The precise point location (latitude and longitude) of the Zip Code's centroid.
+ZipCodePolygon: TEXT | The geometric representation of the Zip Code as a polygon, defined by its boundary coordinates. This may be null for “Unique” and “PO Box” Zip Codes, as they may just have a single point. Those types can be referenced in ZipCodeType field.
+PreferredStateAbbrev: TEXT | The abbreviated form or code representing the state where the Zip/City is located.
+ZipCodeCentroidLon: TEXT | The longitude coordinate of the Zip Code's centroid.
+ZipCodeType: TEXT | The category of Zip Code, according to the U.S. Postal Service
+PreferredCityStateAbbrev: TEXT | The concatenated form of PreferredCity and PreferredStateAbbrev with a comma.
+PreferredCity: TEXT | The city name most commonly used by the U.S. Census and Postal Service for each zip code. Different agencies and organizations will use different iterations of the same city based on their use and source of data.
+ZipCodeCentroidLat: TEXT | The latitude coordinate of the Zip Code's centroid, which represents the central point of the Zip Code.
+PreferredStateName: TEXT | The state name associated with the PreferredCity. While there is almost never a case where a city could have a different “preferred state”, we kept the naming convention to differentiate Zip/City associated states from BlockGroup associated states, as they have different sources.
+
+## PUBLIC.Dim_CensusMetrics
+MetricCategory: TEXT | The category or classification to which the metric belongs, grouping related metrics together.
+Type: TEXT | The type or nature of the metric, indicating the kind of data it represents, such as population, housing, education, employment, etc.
+Descriptor2: TEXT | Additional descriptive attribute or feature associated with the metric, providing more specific details.
+MetricTableDesc: TEXT | A description or label for the table or dataset in the American Community Survey or census data where the metric is stored.
+MetricTableID: TEXT | A unique identifier for the table or dataset in the American Community Survey or census data where the metric is stored.
+MetricID: TEXT | A unique identifier for a specific metric or measurement within the American Community Survey or census data.
+Descriptor1: TEXT | A descriptive attribute or feature associated with the metric, providing additional information or context.
+Descriptor3: TEXT | Another descriptive attribute or feature associated with the metric, providing further insights or details.
+MetricGroup: TEXT | The product grouping decided by No Fret Data, connected to the rollout and roadmap of Census Galaxy.
+UnitMeasureType: TEXT | The type of data stored in the CensusValue for each MetricID. It’s important to look at this field when grouping and summing values up or down geographic levels, as some are raw counts and others are averages or medians.
+
+## PUBLIC.Xref_TractToZip_Residential
+FromStateCountyTractID: TEXT | A unique identifier compound key that uses StateFIPS, CountyFIPS, and Tract for a specific within a geographic area. This field (and table) is for rolling metrics and values from the Census block group or Tract level to Zip Code.
+ToZipCode: TEXT | The U.S. Postal Service Zip Code that relates to the StateCountyTractID based on the ratio of residents in that geographical region. Many Tracts can overlap parts of Zip Codes, and many Zip Codes can overlap parts of Tracts.
+ResidentialMappingRatioTZ: NUMBER | The ratios of residents in each Tract that are made up by that connected Zip Code. “TZ” as the suffix designates the direction of the data , Tract to Zip Code (usually smaller polygons into larger ones).
+
+## PUBLIC.Fact_CensusValues_ACS2021
+CensusValue: FLOAT | The Int value for the MetricID and BlockGroupID relationship. This could be aggregates or estimates of people, pets, household, etc. Refer to the Dim_CensusMetrics table for the meaning of each value.
+BlockGroupID: TEXT | A unique identifier for a specific block group within a geographic area.
+MetricID: TEXT | A unique identifier for a specific metric or measurement within the American Community Survey or census data.

@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq429",
+  "question": "Which are the top five states with the greatest average difference in median income between 2015 and 2018 at the ZIP code level, and what is the corresponding average number of vulnerable employees across wholesale trade, natural resources and construction, arts and entertainment, information, and retail trade industries in 2017 according to the ACS Five-Year Estimates and ZIP code boundaries data?",
+  "db_id": "CENSUS_BUREAU_ACS_2",
+  "source_document": "avg_vulnerable_weights.md",
+  "evidence": "Variables for vulnerable population calculation: wholesale_trade, natural_resources_construction, arts_entertainment_recreation, information, retail. Vulnerability weights: wholesale_trade=0.38423645320197042, natural_resources_construction=0.48071410777129553, arts_entertainment_recreation=0.89455676291236841, information=0.31315240083507306, retail=0.51. Calculation method: average vulnerable population across industries based on employment and vulnerability weights."
+}

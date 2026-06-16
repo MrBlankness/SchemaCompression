@@ -1,0 +1,185 @@
+[COMPONENTS]
+@C1
+actor: VARIANT | NULL
+created_at: NUMBER | NULL
+org: VARIANT | NULL
+other: TEXT | NULL
+payload: TEXT | NULL
+public: BOOLEAN | NULL
+repo: VARIANT | NULL
+type: TEXT | NULL
+
+[TABLES]
+## GITHUB_REPOS.LANGUAGES
+repo_name: TEXT | NULL
+language: VARIANT | NULL
+
+## GITHUB_REPOS.LICENSES
+repo_name: TEXT | NULL
+license: TEXT | NULL
+
+## GITHUB_REPOS.SAMPLE_REPOS
+watch_count: NUMBER | NULL
+repo_name: TEXT | NULL
+
+## GITHUB_REPOS.SAMPLE_CONTENTS
+size: NUMBER | NULL
+binary: BOOLEAN | NULL
+sample_symlink_target: TEXT | NULL
+copies: NUMBER | NULL
+sample_mode: NUMBER | NULL
+sample_path: TEXT | NULL
+content: TEXT | NULL
+sample_ref: TEXT | NULL
+sample_repo_name: TEXT | NULL
+id: TEXT | NULL
+
+## GITHUB_REPOS.SAMPLE_FILES
+symlink_target: TEXT | NULL
+id: TEXT | NULL
+mode: NUMBER | NULL
+path: TEXT | NULL
+ref: TEXT | NULL
+repo_name: TEXT | NULL
+
+## GITHUB_REPOS.SAMPLE_COMMITS
+parent: VARIANT | NULL
+committer: VARIANT | NULL
+difference: VARIANT | NULL
+message: TEXT | NULL
+author: VARIANT | NULL
+difference_truncated: BOOLEAN | NULL
+subject: TEXT | NULL
+trailer: VARIANT | NULL
+encoding: TEXT | NULL
+commit: TEXT | NULL
+repo_name: TEXT | NULL
+tree: TEXT | NULL
+
+## DAY._20230118
+@use: [C1]
+id: TEXT | NULL
+
+## DAY._20140302
+@use: [C1]
+id: TEXT | NULL
+
+## DAY._20121228
+@use: [C1]
+id: TEXT | NULL
+
+## DAY._20110731
+@use: [C1]
+id: TEXT | NULL
+
+## DAY._20170416
+@use: [C1]
+id: TEXT | NULL
+
+## DAY._20181201
+@use: [C1]
+id: TEXT | NULL
+
+## DAY._20171026
+@use: [C1]
+id: TEXT | NULL
+
+## DAY._20210612
+@use: [C1]
+id: TEXT | NULL
+
+## DAY._20170508
+@use: [C1]
+id: TEXT | NULL
+
+## DAY._20180116
+@use: [C1]
+id: TEXT | NULL
+
+## DAY._20191129
+@use: [C1]
+id: TEXT | NULL
+
+## YEAR._2020
+@use: [C1]
+id: TEXT | NULL
+
+## YEAR._2013
+@use: [C1]
+id: TEXT | NULL
+
+## YEAR._2019
+@use: [C1]
+id: TEXT | NULL
+
+## YEAR._2011
+@use: [C1]
+id: TEXT | NULL
+
+## YEAR._2012
+@use: [C1]
+id: TEXT | NULL
+
+## YEAR._2023
+@use: [C1]
+id: TEXT | NULL
+
+## YEAR._2017
+@use: [C1]
+id: TEXT | NULL
+
+## YEAR._2015
+@use: [C1]
+id: TEXT | NULL
+
+## YEAR._2016
+@use: [C1]
+id: TEXT | NULL
+
+## YEAR._2018
+@use: [C1]
+id: TEXT | NULL
+
+## MONTH._202406
+@use: [C1]
+id: TEXT | NULL
+
+## MONTH._201706
+@use: [C1]
+id: TEXT | NULL
+
+## MONTH._201601
+@use: [C1]
+id: TEXT | NULL
+
+## MONTH._201904
+@use: [C1]
+id: TEXT | NULL
+
+## MONTH._202008
+@use: [C1]
+id: TEXT | NULL
+
+## MONTH._201211
+@use: [C1]
+id: TEXT | NULL
+
+## MONTH._201307
+@use: [C1]
+id: TEXT | NULL
+
+## MONTH._202204
+@use: [C1]
+id: TEXT | NULL
+
+## MONTH._201409
+@use: [C1]
+id: TEXT | NULL
+
+## MONTH._201110
+@use: [C1]
+id: TEXT | NULL
+
+## MONTH._202312
+@use: [C1]
+id: TEXT | NULL

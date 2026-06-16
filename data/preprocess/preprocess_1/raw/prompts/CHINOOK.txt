@@ -1,0 +1,41 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: CHINOOK.PLAYLIST_TRACK
+Columns: PlaylistId, TrackId
+
+Table: CHINOOK.EMPLOYEES
+Columns: BirthDate, PostalCode, Country, ReportsTo, FirstName, State, Address, Phone, City, LastName, Email, EmployeeId, Title, HireDate, Fax
+
+Table: CHINOOK.PLAYLISTS
+Columns: PlaylistId, Name
+
+Table: CHINOOK.ARTISTS
+Columns: ArtistId, Name
+
+Table: CHINOOK.CUSTOMERS
+Columns: Fax, Country, FirstName, State, CustomerId, Email, City, Phone, Company, SupportRepId, LastName, Address, PostalCode
+
+Table: CHINOOK.SQLITE_STAT1
+Columns: tbl, stat, idx
+
+Table: CHINOOK.TRACKS
+Columns: TrackId, GenreId, AlbumId, Composer, Name, Milliseconds, MediaTypeId, Bytes, UnitPrice
+
+Table: CHINOOK.SQLITE_SEQUENCE
+Columns: seq, name
+
+Table: CHINOOK.GENRES
+Columns: Name, GenreId
+
+Table: CHINOOK.INVOICES
+Columns: InvoiceId, BillingCountry, InvoiceDate, BillingAddress, Total, CustomerId, BillingState, BillingPostalCode, BillingCity
+
+Table: CHINOOK.MEDIA_TYPES
+Columns: MediaTypeId, Name
+
+Table: CHINOOK.ALBUMS
+Columns: AlbumId, Title, ArtistId
+
+Table: CHINOOK.INVOICE_ITEMS
+Columns: InvoiceId, InvoiceLineId, TrackId, Quantity, UnitPrice

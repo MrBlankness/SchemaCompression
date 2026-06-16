@@ -1,0 +1,29 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: ELECTRONIC_SALES.PRODUCT_CATEGORY_NAME_TRANSLATION
+Columns: index, product_category_name_english, product_category_name
+
+Table: ELECTRONIC_SALES.ORDER_REVIEWS
+Columns: review_comment_message, review_comment_title, review_creation_date, index, review_id, order_id, review_answer_timestamp, review_score
+
+Table: ELECTRONIC_SALES.PRODUCTS
+Columns: product_name_lenght, product_length_cm, product_description_lenght, product_width_cm, product_weight_g, product_photos_qty, product_category_name, index, product_id, product_height_cm
+
+Table: ELECTRONIC_SALES.ORDERS
+Columns: customer_id, order_approved_at, order_purchase_timestamp, order_delivered_carrier_date, order_id, order_delivered_customer_date, order_status, index, order_estimated_delivery_date
+
+Table: ELECTRONIC_SALES.ORDER_PAYMENTS
+Columns: payment_sequential, payment_installments, index, payment_value, order_id, payment_type
+
+Table: ELECTRONIC_SALES.CUSTOMERS
+Columns: index, customer_state, customer_unique_id, customer_zip_code_prefix, customer_id, customer_city
+
+Table: ELECTRONIC_SALES.GEOLOCATION
+Columns: geolocation_city, geolocation_lat, geolocation_lng, geolocation_zip_code_prefix, index, geolocation_state
+
+Table: ELECTRONIC_SALES.SELLERS
+Columns: seller_zip_code_prefix, seller_id, seller_city, seller_state, index
+
+Table: ELECTRONIC_SALES.ORDER_ITEMS
+Columns: order_id, index, freight_value, seller_id, price, order_item_id, shipping_limit_date, product_id

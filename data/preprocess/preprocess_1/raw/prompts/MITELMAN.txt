@@ -1,0 +1,59 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: PROD.CYTOGENINV
+Columns: Tissue, KaryLong, KaryShort, RefNo, CaseOrder, Clones, InvNo, KaryLength, InvDate, CaseNo
+
+Table: PROD.RECURRENTNUMDATA
+Columns: Chromosome, Topo, Abnormality, ChrOrder, Morph, TotalCases
+
+Table: PROD.MOLBIOLCLINASSOC
+Columns: GeneShort, GeneLength, RefNo, Topo, KaryShort, MolClin, KaryLength, InvNo, Immunology, Morph, GeneLong, KaryLong
+
+Table: PROD.CYTOCONVERTEDLOG
+Columns: InvNo, CaseNo, RefNo, Clone, Message, Type
+
+Table: PROD.KARYABNORM
+Columns: CaseNo, InvNo, CloneNo, OrderNo, RefNo, Abnormality
+
+Table: PROD.CYTOGENINVVALID
+Columns: CaseNo, Reason, InvNo, KaryLong, KaryShort, CytoConvInput, RefNo, Message, KaryLength
+
+Table: PROD.KARYBREAK
+Columns: InvNo, CloneNo, RefNo, CaseNo, OrderNo, Breakpoint
+
+Table: PROD.KARYCLONE
+Columns: CloneLength, CaseNo, ChromoMin, CloneLong, CloneShort, InvNo, RefNo, CloneNo, ChromoMax, Sole
+
+Table: PROD.REFERENCE
+Columns: Journal, AuthorsLength, Flag, Abbreviation, Year, Pubmed, TitleLength, AuthorsLong, Text, AuthorsShort, TitleLong, RefNo, Volume, TitleShort
+
+Table: PROD.AUTHORREFERENCE
+Columns: Refno, NameOrder, Name
+
+Table: PROD.MOLCLINGENE
+Columns: Prefix, InvNo, MolClin, Gene, OrderNo, RefNo, Suffix
+
+Table: PROD.KODER
+Columns: Flagga1, Kortnamn, Benamning, Flagga4, Inregdatum, GiltigTill, KodTyp, Aktiv, Intern, Kod, Notering, Flagga2, Flagga3, GiltigFran
+
+Table: PROD.KARYBIT
+Columns: CloneNo, RefNo, Bit, CaseNo, OrderNo, InvNo
+
+Table: PROD.MOLCLINBREAK
+Columns: RefNo, MolClin, Breakpoint, InvNo, OrderNo
+
+Table: PROD.RECURRENTDATA
+Columns: TotalCases, Chromosome, Arm, Type, Band, Topo, Abnormality, Morph, Gene, ChrOrder
+
+Table: PROD.CYTOGEN
+Columns: RefNo, PrevTreat, SpecObs, PatientID, PatientName, PrevTopo, Immunology, Race, Morph, Age, SpecMorph, CaseNo, Topo, Sex, Country, Series, HerDis, CaseOrder, PrevMorph, Origin, SpecHerDis, PrevTum
+
+Table: PROD.MOLCLINABNORM
+Columns: InvNo, OrderNo, RefNo, Abnormality, MolClin
+
+Table: PROD.CYTOCONVERTED
+Columns: Clone, Type, End, CellsPresent, CaseNo, InvNo, ChrOrd, RefNo, Chr, Start
+
+Table: PROD.CYTOBANDS_HG38
+Columns: cytoband_name, hg38_stop, hg38_start, chromosome

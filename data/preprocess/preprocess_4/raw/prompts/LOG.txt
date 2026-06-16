@@ -1,0 +1,126 @@
+[TABLES]
+## LOG.MST_PRODUCTS_20170101
+updated_at: TEXT | NULL | eg=["2016-11-03 19:00:00", "2016-11-03 21:00:00"]
+price: NUMBER | NULL | eg=[4000, 3000]
+name: TEXT | NULL | eg=["AAB", "BBD"]
+product_id: TEXT | NULL | eg=["A002", "B002"]
+
+## LOG.PURCHASE_LOG
+stamp: TEXT | NULL | eg=["2017-02-10 10:00:00", "2017-02-12 10:00:00"]
+amount: NUMBER | NULL | eg=[500, 200]
+purchase_id: NUMBER | NULL | eg=[10002, 10003]
+user_id: TEXT | NULL | eg=["U001"]
+
+## LOG.ACCESS_LOG
+user_id: TEXT | NULL | eg=["U001", "U002"]
+session: TEXT | NULL | eg=["98900e", "1cf768"]
+action: TEXT | NULL | eg=["view"]
+stamp: TEXT | NULL | eg=["2016-01-02 20:00:00", "2016-01-04 23:00:00"]
+
+## LOG.ACTIVITY_LOG
+action: TEXT | NULL | eg=["view"]
+session: TEXT | NULL | eg=["989004ea", "47db0370"]
+option: TEXT | NULL | eg=["search", "detail"]
+search_type: TEXT | NULL | eg=["Area-L-with-Job", "Area-S"]
+path: TEXT | NULL | eg=["/search_list/", "/detail/"]
+stamp: TEXT | NULL | eg=["2017-01-09 12:18:43"]
+
+## LOG.MST_PRODUCTS_20161201
+name: TEXT | NULL | eg=["AAA", "BBB"]
+price: NUMBER | NULL | eg=[3000, 5000]
+updated_at: TEXT | NULL | eg=["2016-11-03 18:00:00", "2016-11-03 20:00:00"]
+product_id: TEXT | NULL | eg=["A001", "B001"]
+
+## LOG.APP2_MST_USERS
+user_id: TEXT | NULL | eg=["U001"]
+phone: TEXT | NULL | eg=["080-xxxx-xxxx"]
+name: TEXT | NULL | eg=["Ito"]
+
+## LOG.MST_USERS_WITH_CARD_NUMBER
+card_number: TEXT | NULL | eg=["1234-xxxx-xxxx-xxxx", ""]
+user_id: TEXT | NULL | eg=["U001", "U002"]
+
+## LOG.FORM_ERROR_LOG
+session: TEXT | NULL | eg=["00700be4", "01061716"]
+form: TEXT | NULL | eg=["cart", "regist"]
+stamp: TEXT | NULL | eg=["2016-12-30 00:56:08", "2016-12-30 00:56:09"]
+field: TEXT | NULL | eg=["email", "kana"]
+value: TEXT | NULL | eg=["xxx---.co.jp", "xxx@---cojp"]
+error_type: TEXT | NULL | eg=["format_error", "not_kana"]
+
+## LOG.FORM_LOG
+status: TEXT | NULL | eg=["", "error"]
+action: TEXT | NULL | eg=["view"]
+session: TEXT | NULL | eg=["647219c7", "9b5f320f"]
+path: TEXT | NULL | eg=["/regist/input", "/cart/input"]
+stamp: TEXT | NULL | eg=["2016-12-30 00:56:08", "2016-12-30 00:57:56"]
+
+## LOG.ACTION_LOG_WITH_NOISE
+user_agent: TEXT | NULL
+session: TEXT | NULL
+ip: TEXT | NULL
+url: TEXT | NULL
+products: TEXT | NULL
+stamp: TEXT | NULL
+action: TEXT | NULL
+
+## LOG.APP1_MST_USERS
+email: TEXT | NULL
+name: TEXT | NULL
+user_id: TEXT | NULL
+
+## LOG.ACTION_LOG_WITH_IP
+ip: TEXT | NULL | eg=["216.58.220.238", "98.139.183.24"]
+user_id: TEXT | NULL | eg=["U001", "U002"]
+stamp: TEXT | NULL | eg=["2016-11-03 18:00:00", "2016-11-03 19:00:00"]
+action: TEXT | NULL | eg=["view"]
+session: TEXT | NULL | eg=["0CVKaz", "1QceiB"]
+
+## LOG.MST_CATEGORIES
+id: NUMBER | NULL | eg=[2, 4]
+stamp: TEXT | NULL | eg=["2016-01-01 10:00:00"]
+name: TEXT | NULL | eg=["mens_fashion", "game"]
+
+## LOG.READ_LOG
+url: TEXT | NULL | eg=["http://www.example.com/article?id=news731", "http://www.example.com/article?id=it605"]
+session: TEXT | NULL | eg=["df6eb25d", "77d477cc"]
+stamp: TEXT | NULL | eg=["2016-12-29 21:45:47", "2016-12-29 21:46:13"]
+action: TEXT | NULL | eg=["view", "read-60%"]
+
+## LOG.INVALID_ACTION_LOG
+stamp: TEXT | NULL | eg=["2016-11-03 18:10:00", "2016-11-03 18:00:00"]
+session: TEXT | NULL | eg=["0CVKaz", "1QceiB"]
+action: TEXT | NULL | eg=["purchase", "favorite"]
+user_id: TEXT | NULL | eg=["U001", "U002"]
+category: TEXT | NULL | eg=["drama", "action"]
+products: TEXT | NULL | eg=["D001,D002", "D001"]
+amount: FLOAT | NULL | eg=[2000.0, NaN]
+
+## LOG.MST_USERS
+register_date: TEXT | NULL | eg=["2016-10-01", "2016-10-05"]
+withdraw_date: TEXT | NULL | eg=["2016-10-10", ""]
+register_device: TEXT | NULL | eg=["sp", "pc"]
+birth_date: TEXT | NULL | eg=["1953-06-12", "1965-01-06"]
+user_id: TEXT | NULL | eg=["U002", "U003"]
+sex: TEXT | NULL | eg=["F", "M"]
+
+## LOG.ACTION_LOG
+stamp: TEXT | NULL | eg=["2016-11-03 18:10:00", "2016-11-03 18:00:00"]
+action: TEXT | NULL | eg=["purchase", "view"]
+amount: FLOAT | NULL | eg=[2000.0, NaN]
+user_id: TEXT | NULL | eg=["U001"]
+category: TEXT | NULL | eg=["drama", ""]
+session: TEXT | NULL | eg=["989004ea"]
+products: TEXT | NULL | eg=["D001,D002", ""]
+
+## LOG.PRODUCT_SALES
+category_name: TEXT | NULL | eg=["dvd", "cd"]
+product_id: TEXT | NULL | eg=["D001", "D002"]
+sales: NUMBER | NULL | eg=[50000, 20000]
+
+## LOG.DUP_ACTION_LOG
+products: TEXT | NULL | eg=["D002", "D001"]
+session: TEXT | NULL | eg=["47db0370", "fe05e1d8"]
+stamp: TEXT | NULL | eg=["2016-11-03 19:00:00", "2016-11-03 21:00:00"]
+action: TEXT | NULL | eg=["click"]
+user_id: TEXT | NULL | eg=["U002", "U004"]

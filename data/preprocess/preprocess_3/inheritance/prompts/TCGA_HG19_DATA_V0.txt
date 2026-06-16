@@ -1,0 +1,244 @@
+[TEMPLATES]
+<T1>
+beta_value: FLOAT | Normalized DNA methylation beta value (between 0 and 1, where 0 indicates completely un-methylated and 1 indicates fully methylated)
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details
+probe_id: TEXT | Unique probe identifier (eg cg04676771) from the Illumina Human Methylation array -- please refer to the annotation table (isb-cgc:platform_reference.methylation_annotation) for more details about any particular probe
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc.
+platform: TEXT | Platform used to generate this data -- either HumanMethylation450 or HumanMethylation27
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A
+@Tables: [TCGA_HG19_DATA_V0.DNA_METHYLATION,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR1,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR10,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR11,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR12,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR13,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR14,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR15,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR16,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR17,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR18,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR19,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR2,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR20,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR21,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR22,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR3,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR4,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR5,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR6,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR7,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR8,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHR9,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHRX,TCGA_HG19_DATA_V0.DNA_METHYLATION_CHRY]
+
+<T8>
+case_gdc_id: TEXT | GDC unique identifier for this case (corresponds to the case_barcode), eg 6d10d4ee-6331-4bba-93bc-a7b64cc0b22a  --  this can be used to access more information from the GDC data portal like this:   https://portal.gdc.cancer.gov/cases/6d10d4ee-6331-4bba-93bc-a7b64cc0b22a
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01
+aliquot_gdc_id: TEXT | Unique GDC identifier for this aliquot (corresponds to the aliquot_barcode), eg 7fbfdb3e-1fd2-4206-8d2e-7f68e4a15844  --  this can be used to access more information from the GDC data portal
+read_count: NUMBER | Number of reads that were mapped to this mirna_id
+cross_mapped: TEXT | A short isomiR read may map exactly to mature strands whose sequences are similar but not identical, when the read sequence does not capture the bases that distinguish these miRNAs (e.g. hsa-mir-30a at 6q13 and hsa-mir-30e at 1p34.2, which differ at position 18). We report such a <line_feed> read as cross-mapped, and we increment the read count for each MIMAT that it mapped to. Either Y or N -- fewer than 2% are Y
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba17
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc.
+reads_per_million_miRNA_mapped: FLOAT | Read count normalized by total reads mapped divided by 1 million
+mirna_id: TEXT | One of 1870 unique miRNA ids (aka symbols) contained in this table, eg hsa-mir-21  --  relevant reference information can be found in the isb-cgc:genome_reference dataset in the tables miRBase_v20 and miRBase_v20_hsa_gff3
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries
+@Tables: [TCGA_HG19_DATA_V0.MIRNASEQ_EXPRESSION]
+
+[DERIVED]
+<T3> extends <T8>
+strand: TEXT | Either + or - to denote whether read mapped to the sense (+) or anti-sense (-) strand
+mirna_accession: TEXT | One of 2459 unique mature miRNA accession id (eg MIMAT0000062) -- note that this can also be null, in the event that this read does not map to a mature portion of the miRNA
+end_pos: NUMBER | 1-based end chromosome position of isoform
+mirna_transcript: TEXT | Indicates the type of transcript -- either mature, precursor, unannotated, or stemloop  (if this value is not mature, then the mirna_accession field will be null)
+chromosome: TEXT | Chromosome, possible values: chr1-22, and chrX
+start_pos: NUMBER | 1-based start chromosome position of isoform
+@Tables: [TCGA_HG19_DATA_V0.MIRNASEQ_ISOFORM_EXPRESSION]
+
+[STANDALONE]
+## TCGA_HG19_DATA_V0.COPY_NUMBER_SEGMENT_MASKED
+start_pos: NUMBER | 1-based start chromosome position of CN segment start-position
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc.
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries
+platform: TEXT | Platform used to generate these data (Genome_Wide_SNP_6 for this data)
+chromosome: TEXT | Chromosome, possible values: chr1-22, and chrX
+segment_mean: FLOAT | Mean CN value for this segment -- the value is base2 log(CN/2), centered at 0
+num_probes: NUMBER | Number of probes in the SNP array used to infer this CN segment
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01
+end_pos: NUMBER | 1-based end chromosome position of CN segment end- position
+
+## TCGA_HG19_DATA_V0.PROTEIN_EXPRESSION
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01
+phospho: TEXT | If the antibody targets a phosphorylated protein, this field will contain that information, eg pS473  --  otherwise this field will be null
+protein_base_name: TEXT | Protein name e.g. AR, MAPK
+gene_name: TEXT | Gene name e.g. eg TTN, DDR1, etc
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries
+protein_expression: FLOAT | Expression level of protein as measured by reverse-phase protein arrays. https://bioinformatics.mdanderson.org/public-software/tcpa/
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details
+protein_name: TEXT | Protein symbol with phosphorylation status, eg ACC_pS79
+antibody_source: TEXT | Animal of origin for the antibody M (Mouse), R (Rabbit), G (Goat)
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc.
+validation_status: TEXT | Validation status of antibody by correlation of RPPA data with Western blot: V, E, C. For more information: https://bioinformatics.mdanderson.org/public-software/mclp/
+
+## TCGA_HG19_DATA_V0.RNASEQ_GENE_EXPRESSION_UNC_RSEM
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details
+normalized_count: FLOAT | Normalized gene expression from original rsem.genes.normalized_results file
+platform: TEXT | Platform used to generate data; either IlluminaHiSeq (for close to 93% of samples) or IlluminaGA
+gene_id: NUMBER | The gene symbol. In this table, gene symbol is gene namee.g. ENSG00000251562
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc.
+aliquot_barcode: TEXT | Original TCGA aliquot barcode, eg TCGA-12-1089-01A-01D-0517-01
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A
+HGNC_gene_symbol: TEXT | HUGO Gene Nomenclature Committee gene symbol, based on gene_id in original data file, eg AMY1A. Null if no gene symbol could be found (see documentation for additional details regarding ETL) http://isb-cancer-genomics-cloud.readthedocs.io/en/latest/sections/data/data2/ETL_mRNAexpression.html
+original_gene_symbol: TEXT | Gene symbol from the original data file, differs if the approved gene symbol has since changed, eg C11orf17 became AKIP1
+
+## TCGA_HG19_DATA_V0.SOMATIC_MUTATION_DCC
+Validation_Method: TEXT | The assay platforms used for the validation call
+HGNC_UniProt_ID_Supplied_By_UniProt: TEXT | UniProt ID
+HGNC_Locus_Group: TEXT | HGNC Locus Group
+Normal_Validation_Allele1: TEXT | Secondary data from orthogonal technology. Matched normal genotyping (validation) for allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases (cleared in somatic MAF)
+Protein_Change: TEXT | Changes an amino acid to another amino acid e.g. p.G464V
+COSMIC_Total_Alterations_In_Gene: NUMBER | Total Alteration in Gene
+GO_Cellular_Component: TEXT | GO Cellular Component. For more information: http://geneontology.org/docs/ontology-documentation/
+OREGANNO_ID: TEXT | Open Regulatory Annotation Database Id. Example: OREG0026204, OREG0023259
+Ref_Context: TEXT | Reference allele per VCF specs, and its five flanking base pairs
+sample_barcode_tumor: TEXT | TCGA sample barcode for the tumor, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries
+Variant_Classification: TEXT | Translational effect of variant allele
+UniProt_Region: TEXT | UniProt Region
+Normal_Validation_Allele2: TEXT | Secondary data from orthogonal technology. Matched normal genotyping (validation) for allele 2 (cleared in somatic MAF)
+Entrez_Gene_Id: NUMBER | Entrez gene ID (an integer). 0 is used for regions that do not correspond to a gene region or Ensembl ID
+GENCODE_Transcript_Name: TEXT | Transcript Name from GENCODE
+sample_barcode_normal: TEXT | TCGA sample barcode for the normal control, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries
+DbSNP_Val_Status: TEXT | DbSNP validation status is reported as a semicolon-separated list of statuses. The union of all rs-IDs is taken when there are multiple
+cDNA_Change: TEXT | CDNA change. Examples: c.3236G>A,c.143_147delCTGCC, c.4417_4418insCAA
+Sequencer: TEXT | Instrument used to produce primary sequence data
+Normal_Seq_Allele1: TEXT | Primary data genotype. Matched normal sequencing allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases (cleared in somatic MAF)
+HGNC_Accession_Numbers: TEXT | HGNC Accession Numbers
+Tumor_Validation_Allele1: TEXT | Secondary data from orthogonal technology. Tumor genotyping (validation) for allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases
+Start_Position: NUMBER | Lowest numeric position of the reported variant on the genomic reference sequence. Mutation start coordinate
+SwissProt_Entry_Id: TEXT | SwissProt Entry ID
+Secondary_Variant_Classification: TEXT | Secondary Variant Classification
+GENCODE_Transcript_Type: TEXT | Transcript Type from GENCODE, for more information: https://www.gencodegenes.org/pages/biotypes.html
+Center: TEXT | One or more genome sequencing center reporting the variant
+UniProt_AApos: NUMBER | UniProt AA position
+Tumor_Validation_Allele2: TEXT | Secondary data from orthogonal technology. Tumor genotyping (validation) for allele 2
+SwissProt_Acc_Id: TEXT | SwissProt Accesssion ID
+HGNC_Ensembl_ID_Supplied_By_Ensembl: TEXT | Ensembl ID
+DrugBank: TEXT | Associated Drug Bank Names and IDs
+aliquot_barcode_normal: TEXT | TCGA aliquot barcode for the normal control, eg TCGA-12-1089-01A-01D-0517-01
+GO_Molecular_Function: TEXT | GO Molecular Function, for more information: http://geneontology.org/docs/ontology-documentation/
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc.
+Chromosome: TEXT | Chromosome, possible values: chr1-22, and chrX
+End_Position: NUMBER | End position, in 1-based integer coordinates
+Tumor_Seq_Allele2: TEXT | Primary data genotype for tumor sequencing (discovery) allele 2. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases
+Refseq_Prot_Id: TEXT | RefSeq Protein ID e.g. NP_000134.2
+GC_Content: FLOAT | Percent GC content
+HGNC_UCSC_ID_Supplied_By_UCSC: TEXT | UCSC ID
+GENCODE_Transcript_Status: TEXT | Transcript Status from GENCODE
+GO_Biological_Process: TEXT | GO Biological Process, for more information: http://geneontology.org/docs/ontology-documentation/
+Mutation_Status: TEXT | An assessment of the mutation as somatic, germline, LOH, post transcriptional modification, unknown, or none. The values allowed in this field are constrained by the value in the Validation_Status field
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details
+HGNC_OMIM_ID_Supplied_By_NCBI: TEXT | OMIM ID
+Transcript_Strand: TEXT | DNA strand (1 or -1) on which the transcript/feature lies
+Transcript_Exon: NUMBER | Transcript Exon
+HGNC_Locus_Type: TEXT | HGNC Locus Type
+Transcript_Position: TEXT | Transcript Position
+HGNC_RefSeq_Supplied_By_NCBI: TEXT | RefSeq ID
+HGNC_HGNC_ID: NUMBER | HGNC ID
+aliquot_barcode_tumor: TEXT | TCGA aliquot barcode for the tumor, eg TCGA-12-1089-01A-01D-0517-01
+Variant_Type: TEXT | Type of mutation. TNP (tri-nucleotide polymorphism) is analogous to DNP (di-nucleotide polymorphism) but for three consecutive nucleotides. ONP (oligo-nucleotide polymorphism) is analogous to TNP but for consecutive runs of four or more (SNP, DNP, TNP, ONP, INS, DEL, or Consolidated)
+CCLE_ONCOMAP_Total_Mutations_In_Gene: NUMBER | Total number of mutations in genes in CCLE Oncomap data
+Hugo_Symbol: TEXT | HUGO symbol for the gene (HUGO symbols are always in all caps). Unknown is used for regions that do not correspond to a gene
+HGNC_CCDS_IDs: TEXT | HGNC CCDS IDs
+Reference_Allele: TEXT | The plus strand reference allele at this position. Includes the deleted sequence for a deletion or - for an insertion
+DNARepairGenes_Role: TEXT | DNA Repair Genes Role
+NCBI_Build: TEXT | The reference genome used for the alignment (GRCh37)
+Gene_Type: TEXT | Gene type. eg protein_coding, lincRNA, etc
+Normal_Seq_Allele2: TEXT | Matched normal sequencing allele 2
+Genome_Change: TEXT | Location and Base Genome Change
+Tumor_Seq_Allele1: TEXT | Primary data genotype for tumor sequencing (discovery) allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases
+Sequence_Source: TEXT | Molecular assay type used to produce the analytes used for sequencing. Allowed values are a subset of the SRA 1.5 library_strategy field values. This subset matches those used at CGHub
+Annotation_Transcript: TEXT | Ensembl Annotation Transcript ID (e.g. ENST00000366560.3)
+DbSNP_RS: TEXT | dbSNP reference SNP number, eg rs121913500 -- may be a comma-delimited list, or may be null
+
+## TCGA_HG19_DATA_V0.SOMATIC_MUTATION_MC3
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc.
+n_alt_count: NUMBER | Read depth supporting the variant allele in normal BAM (cleared in somatic MAF)
+Exon_Number: TEXT | Exon number (out of total number)
+Hugo_Symbol: TEXT | HUGO symbol for the gene (HUGO symbols are always in all caps). Unknown is used for regions that do not correspond to a gene
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details
+STRAND: NUMBER | DNA strand (1 or -1) on which the transcript/feature lies
+sample_barcode_normal: TEXT | TCGA sample barcode for the normal control, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries
+Tumor_Seq_Allele1: TEXT | Primary data genotype for tumor sequencing (discovery) allele 1. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases
+NCBI_Build: TEXT | The reference genome used for the alignment (GRCh37)
+Consequence: TEXT | Consequence type of this variant; sequence ontology terms
+HGNC_ID: NUMBER | Gene identifier from the HUGO Gene Nomenclature Committee if applicable
+VARIANT_CLASS: TEXT | Sequence Ontology variant class
+SYMBOL: TEXT | Eg TP53, LRP1B, etc (same as Hugo_Symbol field except blank instead of Unknown
+IMPACT: TEXT | Impact modifier for the consequence type
+dbSNP_RS: TEXT | Rs-IDs from the dbSNP database, novel if not found in any database used, or null if there is no dbSNP record, but it is found in other databases
+EAS_MAF: TEXT | Non-reference allele and frequency of existing variant in 1000 Genomes combined East Asian population
+HGVSp: TEXT | Protein sequence of the variant in HGVS recommended format. p.= signifies no change in the protein
+AFR_MAF: TEXT | Non-reference allele and frequency of existing variant in 1000 Genomes combined African population
+n_ref_count: NUMBER | Read depth supporting the reference allele in normal BAM (cleared in somatic MAF)
+FILTER: TEXT | Copied from input VCF. This includes filters implemented directly by the variant caller and other external software used in the DNA-Seq pipeline
+HGVSc: TEXT | Coding sequence of the variant in HGVS recommended format
+CLIN_SIG: TEXT | Clinical significance of variant from dbSNP
+CDS_position: TEXT | Relative position of base pair in coding sequence. A - symbol is displayed as the numerator if the variant does not appear in coding sequence
+Amino_acids: TEXT | Amino acid substitution caused by the mutation, only given if the variation affects the protein-coding sequence
+Codons: TEXT | Alternative codons with the variant base in upper case
+HGVS_OFFSET: NUMBER | Indicates by how many bases the HGVS notations for this variant have been shifted
+EA_MAF: TEXT | Non-reference allele and frequency of existing variant in NHLBI-ESP European American population
+ENSP: TEXT | Ensembl protein identifier of the affected transcript
+t_ref_count: NUMBER | Read depth supporting the reference allele in tumor BAM
+CONTEXT: TEXT | Reference allele per VCF specs, and its five flanking base pairs
+GMAF: TEXT | Non-reference allele and frequency of existing variant in 1000 Genomes
+t_depth: NUMBER | Read depth across this locus in tumor BAM
+PUBMED: TEXT | Pubmed ID(s) of publications that cite existing variant
+n_depth: NUMBER | Read depth across this locus in normal BAM
+AA_MAF: TEXT | Non-reference allele and frequency of existing variant in NHLBI-ESP African American population
+Feature_type: TEXT | Type of feature. Currently one of Transcript, RegulatoryFeature, MotifFeature (or blank)
+COSMIC: TEXT | Overlapping COSMIC variants
+Transcript_ID: TEXT | Ensembl ID of the transcript affected by the variant
+BIOTYPE: TEXT | Biotype of transcript
+DBVS: TEXT | |-delimited list eg byCluster|by1000G
+NCALLERS: NUMBER | Number of callers: a value between 2 and 8 (most common is 5)
+End_Position: NUMBER | End position, in 1-based integer coordinates
+Chromosome: TEXT | Chromosome, possible values: 1, X, etc (ie does not include chr prefix)
+aliquot_barcode_normal: TEXT | TCGA aliquot barcode for the normal control, eg TCGA-12-1089-01A-01D-0517-01
+AMR_MAF: TEXT | Non-reference allele and frequency of existing variant in 1000 Genomes combined American population
+DISTANCE: NUMBER | Shortest distance from the variant to transcript
+Feature: TEXT | Stable Ensembl ID of feature (transcript, regulatory, motif)
+cDNA_position: TEXT | Relative position of base pair in the cDNA sequence as a fraction. A - symbol is displayed as the numerator if the variant does not appear in cDNA
+SAS_MAF: TEXT | Non-reference allele and frequency of existing variant in 1000 Genomes combined South Asian population
+t_alt_count: NUMBER | Read depth supporting the variant allele in tumor BAM
+CCDS: TEXT | CCDS identifier for this transcript, where applicable
+TREMBL: TEXT | UniProtKB/TrEMBL identifier of protein product
+UNIPARC: TEXT | UniParc identifier of protein product
+PHENO: TEXT | Indicates if existing variant is associated with a phenotype, disease or trait (0, 1, or null)
+PolyPhen: TEXT | PolyPhen prediction and/or score
+SYMBOL_SOURCE: TEXT | The source of the gene symbol, usually HGNC, rarely blank, other sources include Uniprot_gn, EntrezGene, etc
+Start_Position: NUMBER | Lowest numeric position of the reported variant on the genomic reference sequence. Mutation start coordinate
+SWISSPROT: TEXT | UniProtKB/Swiss-Prot accession
+CALLERS: TEXT | |-delimited list of mutation caller(s) that agreed on this particular call, always in alphabetical order: muse, mutect, somaticsniper, varscan
+Existing_variation: TEXT | Known identifier of existing variation
+DOMAINS: TEXT | Source and identifier of any overlapping protein domains
+Tumor_Seq_Allele2: TEXT | Primary data genotype for tumor sequencing (discovery) allele 2. A - symbol for a deletion represents a variant. A - symbol for an insertion represents wild-type allele. Novel inserted sequence for insertion does not include flanking reference bases
+Variant_Classification: TEXT | Translational effect of variant allele
+aliquot_barcode_tumor: TEXT | TCGA aliquot barcode for the tumor, eg TCGA-12-1089-01A-01D-0517-01
+HGVSp_Short: TEXT | Same as the HGVSp column, but using 1-letter amino-acid codes
+EXON: TEXT | Exon number (out of total number)
+Variant_Type: TEXT | Type of mutation. TNP (tri-nucleotide polymorphism) is analogous to DNP (di-nucleotide polymorphism) but for three consecutive nucleotides. ONP (oligo-nucleotide polymorphism) is analogous to TNP but for consecutive runs of four or more (SNP, DNP, TNP, ONP, INS, DEL, or Consolidated)
+CANONICAL: TEXT | A flag (YES) indicating that the VEP-based canonical transcript, the longest translation, was used for this gene, if not, the value is null
+Reference_Allele: TEXT | The plus strand reference allele at this position. Includes the deleted sequence for a deletion or - for an insertion
+EUR_MAF: TEXT | Non-reference allele and frequency of existing variant in 1000 Genomes combined European population
+all_effects: TEXT | A semicolon delimited list of all possible variant effects, sorted by priority ([Symbol,Consequence,HGVSp_Short,Transcript_ID,RefSeq,HGVSc,Impact,Canonical,Sift,PolyPhen,Strand])
+Gene: TEXT | The gene symbol. In this table, gene symbol is simulated data e.g. ENSG00000251562
+ASN_MAF: TEXT | Non-reference allele and frequency of existing variant in 1000 Genomes combined Asian population
+INTRON: TEXT | Intron number (out of total number)
+SIFT: TEXT | SIFT prediction and/or score, with both given as prediction (score)
+Protein_position: TEXT | Relative position of affected amino acid in protein. A - symbol is displayed as the numerator if the variant does not appear in coding sequence
+sample_barcode_tumor: TEXT | TCGA sample barcode for the tumor, eg TCGA-12-1089-01A. One sample may have multiple sets of CN segmentations corresponding to multiple aliquots; use GROUP BY appropriately in queries
+SOMATIC: TEXT | Somatic status of each ID reported under Existing_variation (0, 1, or null)
+
+## TCGA_HG19_DATA_V0.TCGA_METADATA_DATA_HG19_R14
+type: TEXT | Description of the data, eg. clinical_supplement, aligned_reads
+case_gdc_id: TEXT | GDC unique identifier for this case (corresponds to the case_barcode), eg 6d10d4ee-6331-4bba-93bc-a7b64cc0b22a  --  this can be used to access more information from the GDC data portal like this:   https://portal.gdc.cancer.gov/cases/6d10d4ee-6331-4bba-93bc-a7b64cc0b22a
+experimental_strategy: TEXT | Experimental strategy used to generate data (where applicable) e.g. WXS, RNA-Seq
+disease_code: TEXT | A code representing the type of cancer. Values can be found at https://gdc.cancer.gov/resources-TCGA-users/TCGA-code-tables/TCGA-study-abbreviations; eg. OV, GBM, LUAD
+index_file_id: TEXT | BAM  or VCF index file GDC file UUID
+access: TEXT | Data accessibility policy (open or controlled)
+data_category: TEXT | Category description of the underlying data, eg Clinical, Raw Sequencing Data, Simple Nucleotide Variation, Transcriptome Profiling  , etc
+index_file_size: NUMBER | Where available, size of the index file in bytes
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal
+file_gdc_id: TEXT | Unique GDC identifier for this file (corresponds to the file_barcode)  --  this can be used to access more information from the GDC data portal like this: https://portal.gdc.cancer.gov/files/c21b332c-06c6-4403-9032-f91c8f407ba19
+data_format: TEXT | File format of the underlying data, eg BCR XML, BAM
+data_type: TEXT | Experimental source of the data type, eg Tissue slide image, RNA-Seq
+platform: TEXT | Platform used to generate data; either IlluminaHiSeq (for close to 93% of samples) or IlluminaGA
+file_size: NUMBER | The size of the file measured in bytes
+case_barcode: TEXT | Original TCGA case barcode, eg TCGA-12-1089  --  note that each case typically has a primary-tumor sample and a matched-normal (blood or adjacent tissue) sample; please refer to the TCGA Biospecimen table for more details
+program_name: TEXT | Program Name, always TCGA (The Cancer Genome Atlas) in this table.
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; eg. TCGA-OV, etc.
+acl: TEXT | Access Control List -- if access is controlled, this field contains the dbGaP accession, eg phs000179
+index_file_name_key: TEXT | GDC path to original vcf or bam index file
+sample_barcode: TEXT | Original TCGA sample barcode, eg TCGA-12-1089-01A  --  note that one sample may have multiple aliquots and therefore multiple sets of CN segmentations; so be sure to use GROUP BY appropriately in your queries
+file_name_key: TEXT | GDC path to original bam or vcf file

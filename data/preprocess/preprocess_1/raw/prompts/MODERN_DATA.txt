@@ -1,0 +1,53 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: MODERN_DATA.PIZZA_RECIPES
+Columns: toppings, pizza_id
+
+Table: MODERN_DATA.PIZZA_CUSTOMER_ORDERS
+Columns: order_id, customer_id, exclusions, pizza_id, extras, order_time
+
+Table: MODERN_DATA.PIZZA_RUNNER_ORDERS
+Columns: distance, runner_id, pickup_time, order_id, cancellation, duration
+
+Table: MODERN_DATA.INCOME_TREES
+Columns: zipcode, Margin_of_Error_Total, Estimate_Mean_income, Estimate_Total, Estimate_Median_income, Margin_of_Error_Mean_income, Margin_of_Error_Median_income
+
+Table: MODERN_DATA.PIZZA_RUNNERS
+Columns: runner_id, registration_date
+
+Table: MODERN_DATA.TREES
+Columns: state, latitude, tree_id, status, spc_common, nta_name, zipcode, stump_diam, longitude, borocode, health, boroname, tree_dbh, address, spc_latin, idx
+
+Table: MODERN_DATA.PIZZA_CLEAN_RUNNER_ORDERS
+Columns: pickup_time, duration, distance, runner_id, cancellation, order_id
+
+Table: MODERN_DATA.COMPANIES_FUNDING
+Columns: company_id, funding, select_investors, valuation
+
+Table: MODERN_DATA.PIZZA_GET_EXCLUSIONS
+Columns: row_id, total_exclusions, exclusions, order_id
+
+Table: MODERN_DATA.PIZZA_CLEAN_CUSTOMER_ORDERS
+Columns: customer_id, exclusions, order_time, extras, pizza_id, order_id
+
+Table: MODERN_DATA.WORD_LIST
+Columns: words
+
+Table: MODERN_DATA.PIZZA_GET_EXTRAS
+Columns: row_id, extras_count, order_id, extras
+
+Table: MODERN_DATA.COMPANIES_DATES
+Columns: year_founded, date_joined, company_id
+
+Table: MODERN_DATA.PIZZA_NAMES
+Columns: pizza_id, pizza_name
+
+Table: MODERN_DATA.STATISTICS
+Columns: total_deaths, date, state, total_cases
+
+Table: MODERN_DATA.PIZZA_TOPPINGS
+Columns: topping_name, topping_id
+
+Table: MODERN_DATA.COMPANIES_INDUSTRIES
+Columns: industry, company_id

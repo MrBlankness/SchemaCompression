@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq460",
+  "question": "Please process the articles from the 'nature' dataset by first tokenizing the body text into words and removing stopwords. For each remaining word, retrieve its word vector from the glove_vectors table and its frequency from the word_frequencies table, then divide each word vector by the 0.4th power of the word's frequency to weight it. Sum the weighted vectors to obtain an aggregate vector for each article, normalize this aggregate vector to unit length, and then compute the cosine similarity scores between these normalized vectors. Finally, return the IDs, dates, titles, and cosine similarity scores of the top 10 articles most similar to the article with the ID '8a78ef2d-d5f7-4d2d-9b47-5adb25cbd373'.",
+  "db_id": "WORD_VECTORS_US",
+  "source_document": "tokenize_func.md",
+  "evidence": "Function tokenise_no_stop: removes common stopwords from text string and tokenizes remaining content into array of words. SQL definition provided for Snowflake SQL. Example shows array aggregation of words extracted via regex, filtering out stopwords list. User question requires: tokenize body text, remove stopwords, get word vectors from glove_vectors table, get frequencies from word_frequencies table, divide vectors by frequency^0.4, sum weighted vectors per article, normalize to unit length, compute cosine similarity between normalized vectors, return top 10 similar to article ID '8a78ef2d-d5f7-4d2d-9b47-5adb25cbd373' with IDs, dates, titles, scores."
+}

@@ -1,0 +1,398 @@
+[TABLES]
+## GITHUB_REPOS.LANGUAGES
+repo_name: TEXT | NULL
+language: VARIANT | NULL
+
+## GITHUB_REPOS.LICENSES
+repo_name: TEXT | NULL
+license: TEXT | NULL
+
+## GITHUB_REPOS.SAMPLE_REPOS
+watch_count: NUMBER | NULL
+repo_name: TEXT | NULL
+
+## GITHUB_REPOS.SAMPLE_CONTENTS
+size: NUMBER | NULL
+binary: BOOLEAN | NULL
+sample_symlink_target: TEXT | NULL
+copies: NUMBER | NULL
+sample_mode: NUMBER | NULL
+sample_path: TEXT | NULL
+content: TEXT | NULL
+sample_ref: TEXT | NULL
+sample_repo_name: TEXT | NULL
+id: TEXT | NULL
+
+## GITHUB_REPOS.SAMPLE_FILES
+symlink_target: TEXT | NULL
+id: TEXT | NULL
+mode: NUMBER | NULL
+path: TEXT | NULL
+ref: TEXT | NULL
+repo_name: TEXT | NULL
+
+## GITHUB_REPOS.SAMPLE_COMMITS
+parent: VARIANT | NULL
+committer: VARIANT | NULL
+difference: VARIANT | NULL
+message: TEXT | NULL
+author: VARIANT | NULL
+difference_truncated: BOOLEAN | NULL
+subject: TEXT | NULL
+trailer: VARIANT | NULL
+encoding: TEXT | NULL
+commit: TEXT | NULL
+repo_name: TEXT | NULL
+tree: TEXT | NULL
+
+## DAY._20230118
+other: TEXT | NULL
+public: BOOLEAN | NULL
+payload: TEXT | NULL
+org: VARIANT | NULL
+id: TEXT | NULL
+type: TEXT | NULL
+actor: VARIANT | NULL
+created_at: NUMBER | NULL
+repo: VARIANT | NULL
+
+## DAY._20140302
+other: TEXT | NULL
+public: BOOLEAN | NULL
+type: TEXT | NULL
+repo: VARIANT | NULL
+id: TEXT | NULL
+created_at: NUMBER | NULL
+org: VARIANT | NULL
+payload: TEXT | NULL
+actor: VARIANT | NULL
+
+## DAY._20121228
+type: TEXT | NULL
+actor: VARIANT | NULL
+repo: VARIANT | NULL
+created_at: NUMBER | NULL
+public: BOOLEAN | NULL
+id: TEXT | NULL
+other: TEXT | NULL
+org: VARIANT | NULL
+payload: TEXT | NULL
+
+## DAY._20110731
+public: BOOLEAN | NULL
+actor: VARIANT | NULL
+created_at: NUMBER | NULL
+type: TEXT | NULL
+repo: VARIANT | NULL
+payload: TEXT | NULL
+id: TEXT | NULL
+other: TEXT | NULL
+org: VARIANT | NULL
+
+## DAY._20170416
+org: VARIANT | NULL
+id: TEXT | NULL
+repo: VARIANT | NULL
+type: TEXT | NULL
+other: TEXT | NULL
+created_at: NUMBER | NULL
+payload: TEXT | NULL
+public: BOOLEAN | NULL
+actor: VARIANT | NULL
+
+## DAY._20181201
+repo: VARIANT | NULL
+created_at: NUMBER | NULL
+public: BOOLEAN | NULL
+type: TEXT | NULL
+payload: TEXT | NULL
+id: TEXT | NULL
+actor: VARIANT | NULL
+other: TEXT | NULL
+org: VARIANT | NULL
+
+## DAY._20171026
+other: TEXT | NULL
+public: BOOLEAN | NULL
+type: TEXT | NULL
+created_at: NUMBER | NULL
+actor: VARIANT | NULL
+id: TEXT | NULL
+org: VARIANT | NULL
+repo: VARIANT | NULL
+payload: TEXT | NULL
+
+## DAY._20210612
+created_at: NUMBER | NULL
+type: TEXT | NULL
+actor: VARIANT | NULL
+payload: TEXT | NULL
+repo: VARIANT | NULL
+other: TEXT | NULL
+public: BOOLEAN | NULL
+id: TEXT | NULL
+org: VARIANT | NULL
+
+## DAY._20170508
+payload: TEXT | NULL
+org: VARIANT | NULL
+repo: VARIANT | NULL
+id: TEXT | NULL
+actor: VARIANT | NULL
+other: TEXT | NULL
+created_at: NUMBER | NULL
+public: BOOLEAN | NULL
+type: TEXT | NULL
+
+## DAY._20180116
+type: TEXT | NULL
+id: TEXT | NULL
+actor: VARIANT | NULL
+created_at: NUMBER | NULL
+payload: TEXT | NULL
+public: BOOLEAN | NULL
+other: TEXT | NULL
+org: VARIANT | NULL
+repo: VARIANT | NULL
+
+## DAY._20191129
+repo: VARIANT | NULL
+id: TEXT | NULL
+org: VARIANT | NULL
+payload: TEXT | NULL
+other: TEXT | NULL
+public: BOOLEAN | NULL
+created_at: NUMBER | NULL
+actor: VARIANT | NULL
+type: TEXT | NULL
+
+## YEAR._2020
+actor: VARIANT | NULL
+org: VARIANT | NULL
+type: TEXT | NULL
+id: TEXT | NULL
+other: TEXT | NULL
+created_at: NUMBER | NULL
+repo: VARIANT | NULL
+public: BOOLEAN | NULL
+payload: TEXT | NULL
+
+## YEAR._2013
+org: VARIANT | NULL
+type: TEXT | NULL
+repo: VARIANT | NULL
+public: BOOLEAN | NULL
+other: TEXT | NULL
+created_at: NUMBER | NULL
+payload: TEXT | NULL
+actor: VARIANT | NULL
+id: TEXT | NULL
+
+## YEAR._2019
+actor: VARIANT | NULL
+repo: VARIANT | NULL
+created_at: NUMBER | NULL
+type: TEXT | NULL
+org: VARIANT | NULL
+payload: TEXT | NULL
+other: TEXT | NULL
+public: BOOLEAN | NULL
+id: TEXT | NULL
+
+## YEAR._2011
+id: TEXT | NULL
+type: TEXT | NULL
+org: VARIANT | NULL
+actor: VARIANT | NULL
+payload: TEXT | NULL
+created_at: NUMBER | NULL
+repo: VARIANT | NULL
+other: TEXT | NULL
+public: BOOLEAN | NULL
+
+## YEAR._2012
+payload: TEXT | NULL
+org: VARIANT | NULL
+created_at: NUMBER | NULL
+type: TEXT | NULL
+id: TEXT | NULL
+other: TEXT | NULL
+public: BOOLEAN | NULL
+repo: VARIANT | NULL
+actor: VARIANT | NULL
+
+## YEAR._2023
+org: VARIANT | NULL
+id: TEXT | NULL
+repo: VARIANT | NULL
+payload: TEXT | NULL
+type: TEXT | NULL
+other: TEXT | NULL
+created_at: NUMBER | NULL
+actor: VARIANT | NULL
+public: BOOLEAN | NULL
+
+## YEAR._2017
+type: TEXT | NULL
+created_at: NUMBER | NULL
+id: TEXT | NULL
+public: BOOLEAN | NULL
+payload: TEXT | NULL
+other: TEXT | NULL
+actor: VARIANT | NULL
+org: VARIANT | NULL
+repo: VARIANT | NULL
+
+## YEAR._2015
+other: TEXT | NULL
+payload: TEXT | NULL
+type: TEXT | NULL
+created_at: NUMBER | NULL
+repo: VARIANT | NULL
+org: VARIANT | NULL
+id: TEXT | NULL
+actor: VARIANT | NULL
+public: BOOLEAN | NULL
+
+## YEAR._2016
+repo: VARIANT | NULL
+id: TEXT | NULL
+org: VARIANT | NULL
+other: TEXT | NULL
+created_at: NUMBER | NULL
+type: TEXT | NULL
+payload: TEXT | NULL
+actor: VARIANT | NULL
+public: BOOLEAN | NULL
+
+## YEAR._2018
+public: BOOLEAN | NULL
+id: TEXT | NULL
+type: TEXT | NULL
+payload: TEXT | NULL
+actor: VARIANT | NULL
+repo: VARIANT | NULL
+other: TEXT | NULL
+org: VARIANT | NULL
+created_at: NUMBER | NULL
+
+## MONTH._202406
+payload: TEXT | NULL
+actor: VARIANT | NULL
+type: TEXT | NULL
+other: TEXT | NULL
+id: TEXT | NULL
+public: BOOLEAN | NULL
+created_at: NUMBER | NULL
+repo: VARIANT | NULL
+org: VARIANT | NULL
+
+## MONTH._201706
+created_at: NUMBER | NULL
+type: TEXT | NULL
+actor: VARIANT | NULL
+public: BOOLEAN | NULL
+payload: TEXT | NULL
+repo: VARIANT | NULL
+id: TEXT | NULL
+other: TEXT | NULL
+org: VARIANT | NULL
+
+## MONTH._201601
+payload: TEXT | NULL
+type: TEXT | NULL
+org: VARIANT | NULL
+other: TEXT | NULL
+actor: VARIANT | NULL
+created_at: NUMBER | NULL
+public: BOOLEAN | NULL
+repo: VARIANT | NULL
+id: TEXT | NULL
+
+## MONTH._201904
+payload: TEXT | NULL
+id: TEXT | NULL
+public: BOOLEAN | NULL
+org: VARIANT | NULL
+other: TEXT | NULL
+type: TEXT | NULL
+actor: VARIANT | NULL
+created_at: NUMBER | NULL
+repo: VARIANT | NULL
+
+## MONTH._202008
+org: VARIANT | NULL
+public: BOOLEAN | NULL
+payload: TEXT | NULL
+type: TEXT | NULL
+actor: VARIANT | NULL
+id: TEXT | NULL
+other: TEXT | NULL
+repo: VARIANT | NULL
+created_at: NUMBER | NULL
+
+## MONTH._201211
+created_at: NUMBER | NULL
+repo: VARIANT | NULL
+other: TEXT | NULL
+public: BOOLEAN | NULL
+type: TEXT | NULL
+id: TEXT | NULL
+payload: TEXT | NULL
+actor: VARIANT | NULL
+org: VARIANT | NULL
+
+## MONTH._201307
+other: TEXT | NULL
+repo: VARIANT | NULL
+actor: VARIANT | NULL
+type: TEXT | NULL
+org: VARIANT | NULL
+payload: TEXT | NULL
+id: TEXT | NULL
+public: BOOLEAN | NULL
+created_at: NUMBER | NULL
+
+## MONTH._202204
+created_at: NUMBER | NULL
+repo: VARIANT | NULL
+actor: VARIANT | NULL
+type: TEXT | NULL
+payload: TEXT | NULL
+other: TEXT | NULL
+public: BOOLEAN | NULL
+org: VARIANT | NULL
+id: TEXT | NULL
+
+## MONTH._201409
+repo: VARIANT | NULL
+id: TEXT | NULL
+type: TEXT | NULL
+other: TEXT | NULL
+org: VARIANT | NULL
+payload: TEXT | NULL
+public: BOOLEAN | NULL
+actor: VARIANT | NULL
+created_at: NUMBER | NULL
+
+## MONTH._201110
+id: TEXT | NULL
+type: TEXT | NULL
+org: VARIANT | NULL
+other: TEXT | NULL
+repo: VARIANT | NULL
+created_at: NUMBER | NULL
+actor: VARIANT | NULL
+payload: TEXT | NULL
+public: BOOLEAN | NULL
+
+## MONTH._202312
+repo: VARIANT | NULL
+id: TEXT | NULL
+other: TEXT | NULL
+public: BOOLEAN | NULL
+created_at: NUMBER | NULL
+org: VARIANT | NULL
+payload: TEXT | NULL
+type: TEXT | NULL
+actor: VARIANT | NULL

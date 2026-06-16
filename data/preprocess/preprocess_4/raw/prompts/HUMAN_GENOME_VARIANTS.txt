@@ -1,0 +1,219 @@
+[TABLES]
+## HUMAN_GENOME_VARIANTS._1000_GENOMES_PHASE_3_VARIANTS_20150220
+quality: FLOAT | Total number of alternate alleles in called genotypes | eg=[100.0]
+NS: NUMBER | Copy number likelihoods with no frequency prior | eg=[2504]
+end_position: NUMBER | End position (0-based). Corresponds to the first base after the last base in the reference allele. | eg=[4063479, 4046567]
+EX_TARGET: BOOLEAN | Per-sample genotype filter
+alternate_bases: VARIANT | One record for each alternate base (if any). | eg=[[{"AC":3,"AF":0.000599042,"AFR_AF":0.0008,"AMR_AF":0.0,"EAS_AF":0.0,"EUR_AF":0.0,"SAS_AF":0.002,"alt":"TA"}], [{"AC":4,"AF":0.000798722,"AFR_AF":0.003,"AMR_AF":0.0,"EAS_AF":0.0,"EUR_AF":0.0,"SAS_AF":0.0,"alt":"A"}]]
+SVLEN: VARIANT | Genotype of the call. "-1" is used in cases where the genotype is not called. | eg=[[]]
+reference_bases: TEXT | Reference bases. | eg=["T", "AT"]
+TSD: TEXT | Copy number genotype for imprecise events
+reference_name: TEXT | Reference name. | eg=["17"]
+start_position: NUMBER | Start position (0-based). Corresponds to the first base of the string of reference bases. | eg=[4063478, 4046565]
+call: VARIANT | Allele frequency in the EAS populations calculated from AC and AN, in the range (0,1) | eg=[[{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[0,0],"name":"HG00096","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[0,0],"name":"HG00097","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[0,0],"name":"HG00099","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[0,0],"name":"HG00100","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[0,0],"name":"HG00101","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[0,0],"name":"HG00102","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[0,0],"name":"HG00103","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[0,0],"name":"HG00105","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[0,0],"name":"HG00106","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[0,0],"name":"HG00107","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[0,0],"name":"HG00108","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[0,0],"name":"H...]
+SVTYPE: TEXT | Phaseset of the call (if any). "*" is used in cases where the genotype is phased, but no phase set ("PS" in FORMAT) was specified.
+AN: NUMBER | Copy number likelihoods | eg=[5008]
+DP: NUMBER | Copy number genotype quality for imprecise events | eg=[21891, 16529]
+MC: VARIANT | Variant names (e.g. RefSNP ID). | eg=[[]]
+CIEND: VARIANT | Allele frequency in the EUR populations calculated from AC and AN, in the range (0,1) | eg=[[]]
+MULTI_ALLELIC: BOOLEAN | Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification
+CS: TEXT | Allele frequency in the AMR populations calculated from AC and AN, in the range (0,1)
+IMPRECISE: BOOLEAN | Allele frequency in the SAS populations calculated from AC and AN, in the range (0,1)
+MEINFO: VARIANT | Phred-scaled quality score (-10log10 prob(call is wrong)). Higher values imply better quality. | eg=[[]]
+OLD_VARIANT: TEXT | Confidence interval around END for imprecise variants
+VT: VARIANT | Genotype Quality | eg=[["INDEL"], ["SNP"]]
+AA: TEXT | Genotype likelihoods | eg=["a|A|AA|insertion", "T|T|-|deletion"]
+MEND: NUMBER | List of failed filters (if any) or "PASS" indicating the variant has passed all filters.
+MSTART: NUMBER | Name of the call.
+filter: VARIANT | Estimated allele frequency in the range (0,1) | eg=[["PASS"]]
+names: VARIANT | Alternate base. | eg=[["rs549755648"], ["rs535347866"]]
+partition_date_please_ignore: DATE | Confidence interval around POS for imprecise variants | eg=["2015-02-20"]
+MLEN: NUMBER | One record for each call.
+CIPOS: VARIANT | Allele frequency in the AFR populations calculated from AC and AN, in the range (0,1) | eg=[[]]
+
+## HUMAN_GENOME_VARIANTS._1000_GENOMES_PHASE_3_OPTIMIZED_SCHEMA_VARIANTS_20150220
+MLEN: NUMBER | List of failed filters (if any) or "PASS" indicating the variant has passed all filters.
+names: VARIANT | Alternate base. | eg=[["rs139431804"], ["rs141104324"]]
+CIPOS: VARIANT | Allele frequency in the EUR populations calculated from AC and AN, in the range (0,1) | eg=[[]]
+end_position: NUMBER | End position (0-based). Corresponds to the first base after the last base in the reference allele. | eg=[49019253, 49193014]
+start_position: NUMBER | Start position (0-based). Corresponds to the first base of the string of reference bases. | eg=[49019252, 49193012]
+no_call: VARIANT | Total read depth; only low coverage data were counted towards the DP, exome data were not used | eg=[[]]
+AA: TEXT | Estimated length of mitochondrial insert | eg=["A|A|AA|insertion", "aaa|AAA|AA|deletion"]
+MEINFO: VARIANT | Variant names (e.g. RefSNP ID). | eg=[[]]
+MSTART: NUMBER | Confidence interval around END for imprecise variants
+reference_bases: TEXT | Reference bases. | eg=["T", "GA"]
+DP: NUMBER | Mitochondrial end coordinate of inserted sequence | eg=[16527, 16193]
+partition_date_please_ignore: DATE | Number of samples with data | eg=["2015-02-20"]
+quality: FLOAT | Total number of alternate alleles in called genotypes | eg=[100.0]
+CS: TEXT | Allele frequency in the AFR populations calculated from AC and AN, in the range (0,1)
+filter: VARIANT | Estimated allele frequency in the range (0,1) | eg=[["PASS"]]
+hom_ref_call: VARIANT | Total number of alleles in called genotypes | eg=[["HG00101","HG00113","HG00114","HG00116","HG00120","HG00127","HG00130","HG00131","HG00132","HG00133","HG00136","HG00137","HG00138","HG00140","HG00142","HG00145","HG00148","HG00150","HG00151","HG00155","HG00157","HG00171","HG00176","HG00178","HG00180","HG00185","HG00186","HG00233","HG00234","HG00239","HG00240","HG00242","HG00254","HG00255","HG00256","HG00257","HG00259","HG00261","HG00263","HG00265","HG00266","HG00268","HG00269","HG00272","HG00273","HG00275","HG00276","HG00278","HG00282","HG00306","HG00309","HG00310","HG00315","HG00320","HG00324","HG00325","HG00327","HG00329","HG00330","HG00331","HG00332","HG00339","HG00341","HG00343","HG00346","HG00349","HG00350","HG00351","HG00353","HG00355","HG00357","HG00360","HG00361","HG00364","HG00365","HG00366","HG00368","HG00369","HG00373","HG00376","HG00378","HG00380","HG00382","HG00403","HG00404","HG00406","HG00407","HG00410","HG00419","HG00422","HG00436","HG00442","HG00443","HG00446","HG00448","HG00449","HG00452","HG00472","HG00473","HG004...]
+IMPRECISE: BOOLEAN | Allele frequency in the AMR populations calculated from AC and AN, in the range (0,1)
+VT: VARIANT | Mitochondrial start coordinate of inserted sequence | eg=[["INDEL"]]
+MEND: NUMBER | Phred-scaled quality score (-10log10 prob(call is wrong)). Higher values imply better quality.
+alternate_bases: VARIANT | One record for each alternate base (if any). | eg=[[{"AC":1378,"AF":0.27516,"AFR_AF":0.351,"AMR_AF":0.2406,"EAS_AF":0.2073,"EUR_AF":0.3101,"SAS_AF":0.2311,"alt":"TA"}], [{"AC":319,"AF":0.0636981,"AFR_AF":0.0318,"AMR_AF":0.0908,"EAS_AF":0.001,"EUR_AF":0.1541,"SAS_AF":0.0593,"alt":"G"}]]
+NS: NUMBER | Merged calls. | eg=[2504]
+MULTI_ALLELIC: BOOLEAN | Type of structural variant
+OLD_VARIANT: TEXT | Precise Target Site Duplication for bases, if unknown, value will be NULL
+TSD: TEXT | Imprecise structural variation
+reference_name: TEXT | Reference name. | eg=["17", "15"]
+AN: NUMBER | Mobile element info of the form NAME,START,END<POLARITY; If there is only 5' OR 3' support for this call, will be NULL NULL for START and END | eg=[5008]
+SVTYPE: TEXT | Source call set.
+EX_TARGET: BOOLEAN | SV length. It is only calculated for structural variation MEIs. For other types of SVs; one may calculate the SV length by INFO:END-START+1, or by finding the difference between lengthes of REF and ALT alleles
+call: VARIANT | Ancestral Allele. Format: AA|REF|ALT|IndelType. AA: Ancestral allele, REF:Reference Allele, ALT:Alternate Allele, IndelType:Type of Indel (REF, ALT and IndelType are only defined for indels) | eg=[[{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[1,0],"name":"HG00096","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[1,0],"name":"HG00097","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[1,0],"name":"HG00099","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[0,1],"name":"HG00100","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[0,1],"name":"HG00102","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[1,0],"name":"HG00103","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[1,0],"name":"HG00105","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[0,1],"name":"HG00106","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[1,0],"name":"HG00107","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[0,1],"name":"HG00108","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[1,0],"name":"HG00109","phaseset":"*"},{"CNL":[],"CNP":[],"GP":[],"PL":[],"genotype":[0,1],"name":"H...]
+MC: VARIANT | Allele frequency in the SAS populations calculated from AC and AN, in the range (0,1) | eg=[[]]
+CIEND: VARIANT | Allele frequency in the EAS populations calculated from AC and AN, in the range (0,1) | eg=[[]]
+SVLEN: VARIANT | Confidence interval around POS for imprecise variants | eg=[[]]
+
+## HUMAN_GENOME_VARIANTS.SIMONS_GENOME_DIVERSITY_PROJECT_SAMPLE_ATTRIBUTES
+illumina_id: TEXT | NULL | eg=["LP6005443-DNA_B10", "LP6005592-DNA_E01"]
+ena_checklist: TEXT | NULL | eg=["ERC000011"]
+id_from_vcf: TEXT | NULL | eg=["LP6005443-DNA_B10", "LP6005592-DNA_E01"]
+region: TEXT | NULL | eg=["WestEurasia", "America"]
+ena_last_update: DATE | NULL
+latitude: FLOAT | NULL | eg=[35.6, 33.3]
+era_id: TEXT | NULL | eg=["SAMEA3302612", "SAMEA3302705"]
+ena_spot_count: NUMBER | NULL | eg=[699656393, 725700624]
+country: TEXT | NULL | eg=["Iran", "Iraq"]
+sex: TEXT | NULL | eg=["male"]
+longitude: FLOAT | NULL | eg=[51.5, 44.4]
+ena_first_public: DATE | NULL
+town: TEXT | NULL | eg=["migrants_collected_in_Kuwait"]
+ena_base_count: NUMBER | NULL | eg=[139931278600, 145140124800]
+dna_source: TEXT | NULL | eg=["Genomic from blood", "Genomic from cell lines"]
+population: TEXT | NULL | eg=["Iranian", "Iraqi_Jew"]
+
+## HUMAN_GENOME_VARIANTS._1000_GENOMES_PEDIGREE
+Maternal_ID: TEXT | NULL | eg=["HG02282", "HG01989"]
+Other_Comments: TEXT | NULL | eg=["0"]
+Relationship: TEXT | NULL | eg=["child"]
+Family_ID: TEXT | NULL | eg=["BB24", "BB11"]
+Individual_ID: TEXT | NULL | eg=["HG02321", "HG01960"]
+Paternal_ID: TEXT | NULL | eg=["HG02281", "HG01988"]
+Siblings: TEXT | NULL | eg=["0"]
+Second_Order: TEXT | NULL | eg=["0"]
+Third_Order: TEXT | NULL | eg=["0"]
+Gender: NUMBER | NULL | eg=[2, 1]
+Population: TEXT | NULL | eg=["ACB"]
+Phenotype: NUMBER | NULL | eg=[0]
+
+## HUMAN_GENOME_VARIANTS.PLATINUM_GENOMES_DEEPVARIANT_VARIANTS_20180823
+names: VARIANT | Alternate base. | eg=[[]]
+alternate_bases: VARIANT | One record for each alternate base (if any). | eg=[[{"alt":"<*>"}]]
+start_position: NUMBER | Start position (0-based). Corresponds to the first base of the string of reference bases. | eg=[39004530, 37869301]
+reference_name: TEXT | Reference name. | eg=["chr21"]
+end_position: NUMBER | End position (0-based). Corresponds to the first base after the last base in the reference allele. | eg=[39004542, 37869303]
+partition_date_please_ignore: DATE | One record for each call. | eg=["2018-08-23"]
+filter: VARIANT | Phred-scaled quality score (-10log10 prob(call is wrong)). Higher values imply better quality. | eg=[[]]
+reference_bases: TEXT | Reference bases. | eg=["A", "C"]
+call: VARIANT | List of failed filters (if any) or "PASS" indicating the variant has passed all filters. | eg=[[{"AD":[],"GL":[],"GQ":48,"MIN_DP":47,"PL":[0,171,1709],"VAF":[],"filter":[],"genotype":[0,0],"name":"NA12877","quality":0.0}], [{"AD":[],"GL":[],"GQ":15,"MIN_DP":5,"PL":[0,15,149],"VAF":[],"filter":[],"genotype":[0,0],"name":"NA12877","quality":0.0}]]
+quality: FLOAT | Variant names (e.g. RefSNP ID). | eg=[0.0]
+
+## HUMAN_GENOME_VARIANTS.SIMONS_GENOME_DIVERSITY_PROJECT_SAMPLE_VARIANTS
+RPA: VARIANT | Counts of each base | eg=[[]]
+DB: BOOLEAN | List of failed filters (if any) or "PASS" indicating the variant has passed all filters. | eg=[true]
+DS: BOOLEAN | Name of the call.
+MQRankSum: FLOAT | Phred-scaled quality score (-10log10 prob(call is wrong)). Higher values imply better quality.
+Note: this field has been copied from QUAL field from individual VCF files. | eg=[NaN, 0.736]
+QD: FLOAT | Total number of alleles in called genotypes | eg=[0.65, 4.38]
+ReadPosRankSum: FLOAT | dbSNP Membership | eg=[NaN, 0.736]
+names: VARIANT | Alternate base. | eg=[[], ["rs4551768"]]
+start_position: NUMBER | Start position (0-based). Corresponds to the first base of the string of reference bases. | eg=[21853285, 21826940]
+filter: VARIANT | Allele Frequency, for each ALT allele, in the same order as listed | eg=[[]]
+reference_name: TEXT | Reference name. | eg=["11"]
+STR: BOOLEAN | Approximate read depth; some reads may have been filtered
+BaseQRankSum: FLOAT | Phred-scaled quality score (-10log10 prob(call is wrong)). Higher values imply better quality. | eg=[NaN, 0.736]
+HaplotypeScore: FLOAT | Approximate read depth (reads with MQ=255 or with bad mates are filtered) | eg=[38.6603, 23.1962]
+RU: TEXT | Z-score from Wilcoxon rank sum test of Alt Vs. Ref base qualities
+call: VARIANT | Maximum likelihood expectation (MLE) for the allele counts (not necessarily the same as the AC), for each ALT allele, in the same order as listed | eg=[[{"AD":[0,1],"DP":1,"FL":"9","GQ":3,"PL":[36,3,0],"genotype":[1,1],"name":"LP6005519-DNA_B06","quality":37.77},{"AD":[0,1],"DP":1,"FL":"4","GQ":3,"PL":[37,3,0],"genotype":[1,1],"name":"LP6005441-DNA_H03","quality":38.77},{"AD":[0,1],"DP":1,"FL":"5","GQ":3,"PL":[25,3,0],"genotype":[1,1],"name":"LP6005443-DNA_G01","quality":26.78}]]
+alternate_bases: VARIANT | One record for each alternate base (if any). | eg=[[{"AC":2,"AF":1.0,"MLEAC":2,"MLEAF":1.0,"alt":"T"}]]
+BaseCounts: VARIANT | Variant names (e.g. RefSNP ID). | eg=[[0,0,0,1]]
+partition_date_please_ignore: DATE | Were any of the samples downsampled? | eg=["2018-05-23"]
+end_position: NUMBER | End position (0-based). Corresponds to the first base after the last base in the reference allele. | eg=[21853286, 21826941]
+reference_bases: TEXT | Reference bases. | eg=["C", "A"]
+MQ0: NUMBER | filter level in range 0-9 or no value (non-integer: N,?) with zero being least reliable; to threshold at FL=n, use all levels n-9 | eg=[0]
+quality: FLOAT | Allele count in genotypes, for each ALT allele, in the same order as listed | eg=[38.77, 626.12]
+Dels: FLOAT | Genotype of the call. "-1" is used in cases where the genotype is not called. | eg=[0.98, 0.9]
+DP: NUMBER | One record for each call. | eg=[41, 10]
+GC: FLOAT | Allelic depths for the ref and alt alleles in the order listed | eg=[32.67, 27.18]
+AN: NUMBER | Maximum likelihood expectation (MLE) for the allele frequency (not necessarily the same as the AF), for each ALT allele, in the same order as listed | eg=[2]
+InbreedingCoeff: FLOAT | Genotype Quality
+MQ: FLOAT | Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification | eg=[60.0, 56.46]
+FS: FLOAT | Phaseset of the call (if any). "*" is used in cases where the genotype is phased, but no phase set ("PS" in FORMAT) was specified. | eg=[0.0]
+
+## HUMAN_GENOME_VARIANTS._1000_GENOMES_SAMPLE_INFO
+In_Exon_Targetted_Pilot: BOOLEAN | The Sample is in the exon targetted pilot experiment
+Has_Sequence_in_Phase1: BOOLEAN | Has sequence low coverage sequence in the 20101123.sequence.index file or exome sequence in the 20110522 sequence index file
+LC_Indel_Ratio: FLOAT | Both Indel ratios are the ratio of insertions to deletions found in that sample using a quick test (based on samtools). If the ratio is higher than 5 the sample is withdrawn. | eg=[0.84, 1.01]
+LC_Passed_QC: BOOLEAN | These are binary flags showing if the sample passed QC, All samples which have passed QC have bam files. Only samples which have both exome and low coverage data are found under ftp/data and listed in the standard alignment index. The small number of other samples are found in ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/phase3_EX_or_LC_only_alignment/ | eg=[true]
+VerifyBam_E_Omni_Free: FLOAT | Value from UMich's VerifyBamID BAM QC program http://genome.sph.umich.edu/wiki/VerifyBamID.  The Free measures use a statistical model based on the haplotypes discovered by the chip. The Chip measure considers the genotypes available for that individual from that chip. We use greater than 3% as a cut off for our our low coverage samples and greater than 3.5% for our exome samples. | eg=[0.00522, 0.00449]
+Gender: TEXT | Gender | eg=["male", "female"]
+DNA_Source_from_Coriell: TEXT | This was the annotated DNA Source from Coriell | eg=["LCL", "Blood"]
+Non_Paternity: TEXT | sample ids for annotated non paternal relationships | eg=[""]
+VerifyBam_E_Affy_Free: FLOAT | Value from UMich's VerifyBamID BAM QC program http://genome.sph.umich.edu/wiki/VerifyBamID.  The Free measures use a statistical model based on the haplotypes discovered by the chip. The Chip measure considers the genotypes available for that individual from that chip. We use greater than 3% as a cut off for our our low coverage samples and greater than 3.5% for our exome samples. | eg=[0.00498, 0.00537]
+In_Low_Coverage_Pilot: BOOLEAN | The sample is in the low coverage pilot experiment
+Has_Affy_6_0_Genotypes: BOOLEAN | Affy 6.0 Genotypes in  ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/working/20121128_corriel_p3_sample_genotypes/ | eg=[true]
+Total_LC_Sequence: FLOAT | The total amount of low coverage sequence available | eg=[22020106300.0, 37758142798.0]
+LC_Non_Duplicated_Aligned_Coverage: FLOAT | The non duplicated aligned coverage for the low coverage sequence data.  This was calculated using the ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/alignment_indices/20130502.low_coverage.alignment.index.bas.gz file, the (mapped bases - duplicated bases) was summed for each sample and divided by 2.75GB and rounded to 2dp | eg=[7.49, 11.33]
+Main_project_LC_Centers: TEXT | low coverage sequencing centers for final sequencing round | eg=["BGI", "BI"]
+In_Final_Phase_Variant_Calling: BOOLEAN | Any sample which has both LC and E QC passed bams is in the final analysis set | eg=[true]
+Sample: TEXT | Sample ID | eg=["HG03603", "HG03115"]
+VerifyBam_LC_Omni_Chip: FLOAT | Value from UMich's VerifyBamID BAM QC program http://genome.sph.umich.edu/wiki/VerifyBamID.  The Free measures use a statistical model based on the haplotypes discovered by the chip. The Chip measure considers the genotypes available for that individual from that chip. We use greater than 3% as a cut off for our our low coverage samples and greater than 3.5% for our exome samples.
+Population_Description: TEXT | Description of Population | eg=["Bengali in Bangladesh", "Esan in Nigeria"]
+HC_Pilot_Centers: TEXT | high coverage sequencing centers | eg=[""]
+X_Targets_Covered_to_20x_or_greater: FLOAT | The percentage of targets covered to 20x or greater as calculated by the picard function CalculateHsMetrics using these targets ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/exome_pull_down_targets_phases1_and_2/20120518.consensus.annotation.bed | eg=[0.95337, 0.91693]
+Phase1_LC_Platform: TEXT | phase1 low coverage sequencing platforms | eg=[""]
+Has_Axiom_Genotypes: BOOLEAN | Axiom Genotypes in ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/working/20110210_Affymetrix_Axiom/Affymetrix_Axiom_DB_2010_v4_b37.vcf.gz
+ET_Pilot_Centers: TEXT | exon targetted sequencing centers, | eg=[""]
+In_High_Coverage_Pilot: BOOLEAN | The sample is in the high coverage pilot
+ET_Pilot_Platforms: TEXT | exon targetted sequencing platforms, | eg=[""]
+Relationship: TEXT | Relationship to other members of the family | eg=["father", "mother"]
+Super_Population: TEXT | From ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/20131219.superpopulations.tsv | eg=["SAS", "AFR"]
+Third_Order: TEXT | sample ids for any third order cryptic relations. As mentioned above, this analysis was not as widely run as the other relatedness analyses and as such there may still be unannotated third order relations in the set | eg=["", "HG03271"]
+Population: TEXT | 3 letter population code | eg=["BEB", "ESN"]
+Main_Project_E_Platform: TEXT | Exome sequencing platform for the final sequencing round | eg=["ILLUMINA"]
+Siblings: TEXT | sample ids for any siblings | eg=[""]
+Has_phase1_chrY_Deletions: BOOLEAN | The sample is genotyepd in the chrY phase1 deletions
+Half_Siblings: TEXT | sample ids for any half siblings | eg=[""]
+Grandparents: TEXT | sample ids for any grand parents | eg=[""]
+VerifyBam_E_Affy_Chip: FLOAT | Value from UMich's VerifyBamID BAM QC program http://genome.sph.umich.edu/wiki/VerifyBamID.  The Free measures use a statistical model based on the haplotypes discovered by the chip. The Chip measure considers the genotypes available for that individual from that chip. We use greater than 3% as a cut off for our our low coverage samples and greater than 3.5% for our exome samples. | eg=[0.0049, 0.00556]
+Main_Project_E_Centers: TEXT | Exome sequencing centers for the final sequencing round | eg=["BGI", "BI"]
+HC_Pilot_Platforms: TEXT | high coverage sequencing platforms | eg=[""]
+Has_Exome_LOF_Genotypes: BOOLEAN | ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/working/20121009_broad_exome_chip/ALL.wgs.broad_exome_lof_indel_v2.20121009.snps_and_indels.snpchip.genotypes.vcf.gz
+Total_Exome_Sequence: FLOAT | The total amount of exome sequence available | eg=[17579371700.0, 9154926408.0]
+VerifyBam_LC_Affy_Free: FLOAT | Value from UMich's VerifyBamID BAM QC program http://genome.sph.umich.edu/wiki/VerifyBamID.  The Free measures use a statistical model based on the haplotypes discovered by the chip. The Chip measure considers the genotypes available for that individual from that chip. We use greater than 3% as a cut off for our our low coverage samples and greater than 3.5% for our exome samples. | eg=[0.00019, 0.00347]
+VerifyBam_LC_Omni_Free: FLOAT | Value from UMich's VerifyBamID BAM QC program http://genome.sph.umich.edu/wiki/VerifyBamID.  The Free measures use a statistical model based on the haplotypes discovered by the chip. The Chip measure considers the genotypes available for that individual from that chip. We use greater than 3% as a cut off for our our low coverage samples and greater than 3.5% for our exome samples. | eg=[0.00038, 0.00226]
+Has_Omni_Genotypes: BOOLEAN | Omni Genotypes in ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/working/20120131_omni_genotypes_and_intensities/Omni25_genotypes_2141_samples.b37.vcf.gz
+Has_phase1_chrMT_SNPs: BOOLEAN | The sample is genotyped in the phase1 chrMT snps
+Phase1_E_Platform: TEXT | phase1 exome sequencing platforms | eg=[""]
+LC_Pilot_Centers: TEXT | low coverage pilot sequencing centers | eg=[""]
+Super_Population_Description: TEXT | From ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/20131219.superpopulations.tsv | eg=["South Asian", "African"]
+Avuncular: TEXT | sample ids for any avuncular relationships | eg=[""]
+E_Indel_Ratio: FLOAT | Both Indel ratios are the ratio of insertions to deletions found in that sample using a quick test (based on samtools). If the ratio is higher than 5 the sample is withdrawn. | eg=[0.92, 1.01]
+Unexpected_Parent_Child: TEXT | sample id for unexpected parent child relationships | eg=[""]
+E_Passed_QC: BOOLEAN | These are binary flags showing if the sample passed QC, All samples which have passed QC have bam files. Only samples which have both exome and low coverage data are found under ftp/data and listed in the standard alignment index. The small number of other samples are found in ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/phase3_EX_or_LC_only_alignment/ | eg=[true]
+Has_Phase1_chrY_SNPS: BOOLEAN | The sample is genotyped in the chrY phase1 snp set
+Family_ID: TEXT | Family ID | eg=["BD10", "NG31"]
+EBV_Coverage: FLOAT | This was calculated by looking at the alignment of the data to NC_007605 in the low coverage bam files and using that to calculate coverage | eg=[172.1, 158.11]
+In_Phase1_Integrated_Variant_Set: BOOLEAN | The sample is genotyped in the phase1 integrated call set on autosomes and chrX
+LC_Pilot_Platforms: TEXT | low coverage pilot sequencing platforms | eg=[""]
+Main_project_LC_platform: TEXT | low coverage sequencing platform for final sequencing round | eg=["ILLUMINA"]
+VerifyBam_LC_Affy_Chip: FLOAT | Value from UMich's VerifyBamID BAM QC program http://genome.sph.umich.edu/wiki/VerifyBamID.  The Free measures use a statistical model based on the haplotypes discovered by the chip. The Chip measure considers the genotypes available for that individual from that chip. We use greater than 3% as a cut off for our our low coverage samples and greater than 3.5% for our exome samples. | eg=[0.00058, 0.00374]
+Has_Sequence_from_Blood_in_Index: BOOLEAN | In the later stages of the project some populations has multiple study ids, one to indicate sequencing from blood. This data for each sample has not been treated independently in the alignment process but when there is both LCL and Blood sourced data they are both together in single bams
+Phase1_LC_Centers: TEXT | phase1 low coverage sequencing centers | eg=[""]
+VerifyBam_E_Omni_Chip: FLOAT | Value from UMich's VerifyBamID BAM QC program http://genome.sph.umich.edu/wiki/VerifyBamID.  The Free measures use a statistical model based on the haplotypes discovered by the chip. The Chip measure considers the genotypes available for that individual from that chip. We use greater than 3% as a cut off for our our low coverage samples and greater than 3.5% for our exome samples.
+Phase1_E_Centers: TEXT | phase1 exome sequencing centers | eg=[""]
+Unknown_Second_Order: TEXT | sample ids for any unknown second order relations | eg=[""]
+
+## HUMAN_GENOME_VARIANTS.SIMONS_GENOME_DIVERSITY_PROJECT_SAMPLE_METADATA
+SGDP_ID: TEXT | NULL | eg=["S_Esan-2", "S_Mandenka-2"]
+Coverage: NUMBER | NULL | eg=[39, 37]
+Panel: TEXT | NULL | eg=["C", "B"]
+Gender: TEXT | NULL | eg=["F", "M"]
+HetRateAuto: FLOAT | NULL | eg=[0.00096, 0.001]
+Region: TEXT | NULL | eg=["Africa"]
+Longitude: FLOAT | NULL | eg=[6.0, -12.0]
+Population_ID: TEXT | NULL | eg=["Esan", "Mandenka"]
+Latitude: FLOAT | NULL | eg=[6.5, 12.0]
+Country: TEXT | NULL | eg=["Nigeria", "Senegal"]
+Contributor: TEXT | NULL | eg=["1KG", "Howard Cann"]

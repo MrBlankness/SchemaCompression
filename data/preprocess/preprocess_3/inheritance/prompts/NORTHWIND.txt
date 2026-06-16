@@ -1,0 +1,125 @@
+[STANDALONE]
+## NORTHWIND.CATEGORIES
+categoryid: NUMBER | NULL
+categoryname: TEXT | NULL
+description: TEXT | NULL
+picture: TEXT | NULL
+
+## NORTHWIND.CUSTOMERCUSTOMERDEMO
+customertypeid: TEXT | NULL
+customerid: TEXT | NULL
+
+## NORTHWIND.CUSTOMERDEMOGRAPHICS
+customerdesc: TEXT | NULL
+customertypeid: TEXT | NULL
+
+## NORTHWIND.CUSTOMERGROUPTHRESHOLD
+groupname: TEXT | NULL
+rangetop: FLOAT | NULL
+rangebottom: NUMBER | NULL
+
+## NORTHWIND.CUSTOMERS
+fax: TEXT | NULL
+customerid: TEXT | NULL
+address: TEXT | NULL
+contacttitle: TEXT | NULL
+region: TEXT | NULL
+phone: TEXT | NULL
+country: TEXT | NULL
+city: TEXT | NULL
+postalcode: TEXT | NULL
+companyname: TEXT | NULL
+contactname: TEXT | NULL
+
+## NORTHWIND.EMPLOYEES
+extension: TEXT | NULL
+birthdate: TEXT | NULL
+lastname: TEXT | NULL
+firstname: TEXT | NULL
+photo: TEXT | NULL
+postalcode: TEXT | NULL
+titleofcourtesy: TEXT | NULL
+city: TEXT | NULL
+country: TEXT | NULL
+notes: TEXT | NULL
+title: TEXT | NULL
+hiredate: TEXT | NULL
+photopath: TEXT | NULL
+homephone: TEXT | NULL
+reportsto: FLOAT | NULL
+address: TEXT | NULL
+region: TEXT | NULL
+employeeid: NUMBER | NULL
+
+## NORTHWIND.EMPLOYEETERRITORIES
+territoryid: TEXT | NULL
+employeeid: NUMBER | NULL
+
+## NORTHWIND.ORDERS
+requireddate: TEXT | NULL
+customerid: TEXT | NULL
+shippostalcode: TEXT | NULL
+shipaddress: TEXT | NULL
+shipregion: TEXT | NULL
+employeeid: NUMBER | NULL
+shipcountry: TEXT | NULL
+orderid: NUMBER | NULL
+shippeddate: TEXT | NULL
+shipvia: NUMBER | NULL
+freight: FLOAT | NULL
+orderdate: TEXT | NULL
+shipcity: TEXT | NULL
+shipname: TEXT | NULL
+
+## NORTHWIND.ORDER_DETAILS
+discount: FLOAT | NULL
+orderid: NUMBER | NULL
+unitprice: FLOAT | NULL
+quantity: NUMBER | NULL
+productid: NUMBER | NULL
+
+## NORTHWIND.PRODUCTS
+productname: TEXT | NULL
+productid: NUMBER | NULL
+discontinued: NUMBER | NULL
+unitprice: FLOAT | NULL
+reorderlevel: NUMBER | NULL
+unitsinstock: NUMBER | NULL
+unitsonorder: NUMBER | NULL
+supplierid: NUMBER | NULL
+quantityperunit: TEXT | NULL
+categoryid: NUMBER | NULL
+
+## NORTHWIND.REGION
+regiondescription: TEXT | NULL
+regionid: NUMBER | NULL
+
+## NORTHWIND.SHIPPERS
+companyname: TEXT | NULL
+phone: TEXT | NULL
+shipperid: NUMBER | NULL
+
+## NORTHWIND.SUPPLIERS
+contactname: TEXT | NULL
+postalcode: TEXT | NULL
+city: TEXT | NULL
+country: TEXT | NULL
+region: TEXT | NULL
+homepage: TEXT | NULL
+address: TEXT | NULL
+supplierid: NUMBER | NULL
+contacttitle: TEXT | NULL
+companyname: TEXT | NULL
+fax: TEXT | NULL
+phone: TEXT | NULL
+
+## NORTHWIND.TERRITORIES
+territorydescription: TEXT | NULL
+territoryid: TEXT | NULL
+regionid: NUMBER | NULL
+
+## NORTHWIND.USSTATES
+stateregion: TEXT | NULL
+statename: TEXT | NULL
+stateabbr: TEXT | NULL
+stateid: NUMBER | NULL

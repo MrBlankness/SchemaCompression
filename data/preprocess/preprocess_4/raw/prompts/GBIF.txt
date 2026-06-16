@@ -1,0 +1,52 @@
+[TABLES]
+## GBIF.OCCURRENCES
+collectioncode: TEXT | NULL | eg=["BFLportal04coll"]
+scientificname: TEXT | NULL | eg=["Alnus glutinosa (L.) Gaertn.", "Nardus stricta L."]
+day: NUMBER | NULL | eg=[3, 31]
+taxonrank: TEXT | NULL | eg=["SPECIES"]
+kingdom: TEXT | NULL | eg=["Plantae"]
+decimallongitude: FLOAT | NULL | eg=[12.96, 12.87]
+dateidentified: NUMBER | NULL
+rightsholder: TEXT | NULL
+specieskey: NUMBER | NULL | eg=[2876213, 2702717]
+year: NUMBER | NULL | eg=[2002, 2001]
+countrycode: TEXT | NULL | eg=["DE"]
+institutioncode: TEXT | NULL | eg=["LfU"]
+occurrencestatus: TEXT | NULL | eg=["PRESENT"]
+coordinateprecision: FLOAT | NULL
+recordnumber: TEXT | NULL
+infraspecificepithet: TEXT | NULL
+lastinterpreted: NUMBER | NULL | eg=[1706180617986000, 1706180633010000]
+month: NUMBER | NULL | eg=[7, 10]
+datasetkey: TEXT | NULL | eg=["8ea4250e-0ff0-44f8-812e-bffc3b9ba2a4"]
+decimallatitude: FLOAT | NULL | eg=[48.97, 48.92]
+catalognumber: TEXT | NULL | eg=["7640280 / 24005515", "7640297 / 23511819"]
+license: TEXT | NULL | eg=["CC_BY_4_0"]
+stateprovince: TEXT | NULL
+recordedby: VARIANT | NULL | eg=[{"array":[]}]
+elevation: FLOAT | NULL
+verbatimscientificnameauthorship: TEXT | NULL
+typestatus: VARIANT | NULL | eg=[{"array":[]}]
+occurrenceid: TEXT | NULL | eg=["http://id.snsb.info/bfl/collection_bayernflora/7640280/24005515", "http://id.snsb.info/bfl/collection_bayernflora/7640297/23511819"]
+identifiedby: VARIANT | NULL | eg=[{"array":[]}]
+publishingorgkey: TEXT | NULL | eg=["0674aea0-a7e1-11d8-9534-b8a03c50a862"]
+mediatype: VARIANT | NULL | eg=[{"array":[]}]
+establishmentmeans: TEXT | NULL
+basisofrecord: TEXT | NULL | eg=["HUMAN_OBSERVATION"]
+eventdate: NUMBER | NULL | eg=[1025654400000000, 1004486400000000]
+genus: TEXT | NULL | eg=["Alnus", "Nardus"]
+coordinateuncertaintyinmeters: FLOAT | NULL
+class: TEXT | NULL | eg=["Magnoliopsida", "Liliopsida"]
+taxonkey: NUMBER | NULL | eg=[2876213, 2702717]
+elevationaccuracy: FLOAT | NULL
+locality: TEXT | NULL | eg=["Steinbach südlich Mockhäusl", "Borstgrasrasen beim \"Leistschneider\" westlich Grandsberg"]
+family: TEXT | NULL | eg=["Betulaceae", "Poaceae"]
+depthaccuracy: FLOAT | NULL
+order: TEXT | NULL | eg=["Fagales", "Poales"]
+depth: FLOAT | NULL
+phylum: TEXT | NULL | eg=["Tracheophyta"]
+individualcount: NUMBER | NULL
+species: TEXT | NULL | eg=["Alnus glutinosa", "Nardus stricta"]
+verbatimscientificname: TEXT | NULL | eg=["Alnus glutinosa (L.) Gaertn.", "Nardus stricta L."]
+issue: VARIANT | NULL | eg=[{"array":[{"array_element":"CONTINENT_DERIVED_FROM_COORDINATES"}]}]
+gbifid: TEXT | NULL | eg=["1923067893", "1921112395"]

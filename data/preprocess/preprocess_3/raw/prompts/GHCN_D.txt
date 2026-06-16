@@ -1,0 +1,2673 @@
+[TABLES]
+## GHCN_D.GHCND_1852
+date: DATE | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_2017
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+source_url: TEXT | Source
+etl_timestamp: NUMBER | Load time for this data row
+value: FLOAT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1878
+value: FLOAT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1988
+element: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1930
+element: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1916
+time: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1781
+element: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1932
+element: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1962
+time: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1883
+date: DATE | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_2013
+element: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1867
+value: FLOAT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1928
+date: DATE | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1868
+time: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1779
+mflag: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1853
+date: DATE | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_2012
+id: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1982
+date: DATE | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1857
+element: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1904
+qflag: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1766
+element: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1808
+value: FLOAT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1941
+date: DATE | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1831
+id: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1967
+element: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1894
+value: FLOAT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1842
+time: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1780
+mflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1877
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1999
+time: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1838
+qflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1954
+time: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1827
+date: DATE | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1812
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1811
+sflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1966
+value: FLOAT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1823
+date: DATE | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_2007
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1775
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1802
+date: DATE | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1797
+value: FLOAT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1769
+mflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1979
+date: DATE | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1805
+id: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1931
+sflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1935
+element: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1786
+sflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1790
+date: DATE | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_STATIONS
+latitude: FLOAT | NULL
+wmoid: NUMBER | NULL
+state: TEXT | NULL
+gsn_flag: TEXT | NULL
+hcn_crn_flag: TEXT | NULL
+elevation: FLOAT | NULL
+name: TEXT | NULL
+etl_timestamp: NUMBER | NULL
+source_url: TEXT | NULL
+id: TEXT | NULL
+longitude: FLOAT | NULL
+
+## GHCN_D.GHCND_1784
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1829
+date: DATE | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1991
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1910
+id: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1995
+element: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1824
+date: DATE | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1953
+value: FLOAT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1897
+mflag: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1994
+time: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_2004
+value: FLOAT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1952
+id: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1998
+id: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_2002
+value: FLOAT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1997
+id: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1822
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1833
+value: FLOAT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1809
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1942
+time: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1957
+date: DATE | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1903
+id: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1958
+qflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1918
+qflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1980
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1768
+id: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1914
+sflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1960
+time: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1965
+id: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1989
+sflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1923
+date: DATE | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1874
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_2022
+time: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+etl_timestamp: NUMBER | Load time for this data row
+value: FLOAT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+source_url: TEXT | Source
+
+## GHCN_D.GHCND_1970
+sflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1859
+mflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1927
+time: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1844
+id: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1905
+date: DATE | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1843
+time: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1850
+value: FLOAT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2019
+id: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+etl_timestamp: NUMBER | Load time for this data row
+date: DATE | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+source_url: TEXT | Source
+
+## GHCN_D.GHCND_2005
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_2018
+time: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+etl_timestamp: NUMBER | Load time for this data row
+source_url: TEXT | Source
+element: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1986
+sflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1925
+sflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1801
+time: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1830
+date: DATE | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1764
+element: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1765
+time: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1771
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1807
+sflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1804
+value: FLOAT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1872
+element: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1880
+mflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1847
+mflag: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1887
+element: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1885
+id: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1849
+date: DATE | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1961
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1816
+sflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1913
+element: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1920
+mflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1858
+time: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1772
+date: DATE | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1845
+value: FLOAT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1934
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1839
+element: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1992
+element: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1854
+value: FLOAT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1803
+element: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1972
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1869
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1899
+id: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1796
+sflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_2024
+value: FLOAT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+source_url: TEXT | Source
+mflag: TEXT | NULL
+id: TEXT | NULL
+etl_timestamp: NUMBER | Load time for this data row
+date: DATE | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1890
+element: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1813
+value: FLOAT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_STATES
+etl_timestamp: NUMBER | Load time for this data row
+code: TEXT | NULL
+name: TEXT | NULL
+source_url: TEXT | Source
+
+## GHCN_D.GHCND_1840
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1879
+time: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1933
+qflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1818
+id: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1990
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1782
+element: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1964
+value: FLOAT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1949
+id: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1901
+time: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1871
+sflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1783
+value: FLOAT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2001
+element: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1785
+element: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1955
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_2000
+id: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_2020
+source_url: TEXT | Source
+id: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+etl_timestamp: NUMBER | Load time for this data row
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1926
+element: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1975
+element: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1837
+qflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1984
+mflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1924
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1976
+date: DATE | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2014
+value: FLOAT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1888
+value: FLOAT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_2015
+id: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1861
+qflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1866
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2016
+element: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+etl_timestamp: NUMBER | Load time for this data row
+source_url: TEXT | Source
+time: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_2021
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+source_url: TEXT | Source
+etl_timestamp: NUMBER | Load time for this data row
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1919
+value: FLOAT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1937
+qflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1943
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1907
+time: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1774
+element: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1855
+element: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_2010
+value: FLOAT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1940
+element: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1947
+mflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1814
+element: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1770
+date: DATE | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1945
+sflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1828
+element: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1865
+time: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1860
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1902
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1791
+time: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1981
+value: FLOAT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1815
+time: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1794
+id: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1959
+date: DATE | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1870
+qflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1787
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1911
+element: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1892
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1834
+qflag: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1898
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_2008
+element: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1846
+qflag: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1978
+time: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1909
+id: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1798
+mflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1996
+value: FLOAT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1922
+id: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1939
+qflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1889
+id: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_COUNTRIES
+source_url: TEXT | Source
+name: TEXT | NULL
+code: TEXT | NULL
+etl_timestamp: NUMBER | Load time for this data row
+
+## GHCN_D.GHCND_1912
+value: FLOAT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1806
+value: FLOAT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1893
+time: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1875
+sflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1863
+value: FLOAT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1841
+time: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1856
+date: DATE | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1886
+time: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1969
+date: DATE | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_2003
+mflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1973
+time: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1864
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1792
+date: DATE | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1825
+time: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1851
+qflag: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1895
+mflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2023
+time: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+source_url: TEXT | Source
+etl_timestamp: NUMBER | Load time for this data row
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1963
+date: DATE | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1821
+sflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_INVENTORY
+latitude: FLOAT | NULL
+source_url: TEXT | NULL
+longitude: FLOAT | NULL
+etl_timestamp: NUMBER | NULL
+element: TEXT | NULL
+firstyear: NUMBER | NULL
+lastyear: NUMBER | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1983
+value: FLOAT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1881
+date: DATE | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1977
+value: FLOAT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1944
+qflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1767
+time: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1789
+qflag: TEXT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1906
+id: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1800
+id: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1948
+id: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1891
+time: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1876
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1917
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1836
+element: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1915
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1810
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1820
+sflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2009
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1778
+id: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1776
+qflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1773
+value: FLOAT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1921
+element: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1848
+date: DATE | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1763
+mflag: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2006
+time: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1950
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1795
+sflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1788
+id: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1884
+value: FLOAT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1971
+id: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1793
+value: FLOAT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1985
+sflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1968
+value: FLOAT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1974
+date: DATE | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1835
+id: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1873
+id: TEXT | NULL
+value: FLOAT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1936
+date: DATE | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1819
+element: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1900
+element: TEXT | NULL
+value: FLOAT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1938
+element: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1799
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1777
+id: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1993
+id: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1862
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1882
+id: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+date: DATE | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_2011
+id: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1929
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1817
+value: FLOAT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1896
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+
+## GHCN_D.GHCND_1908
+date: DATE | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL
+id: TEXT | NULL
+sflag: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1946
+id: TEXT | NULL
+element: TEXT | NULL
+value: FLOAT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1987
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+sflag: TEXT | NULL
+
+## GHCN_D.GHCND_1832
+element: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL
+id: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL
+value: FLOAT | NULL
+
+## GHCN_D.GHCND_1826
+element: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL
+date: DATE | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1956
+value: FLOAT | NULL
+date: DATE | NULL
+id: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1951
+date: DATE | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL
+element: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL

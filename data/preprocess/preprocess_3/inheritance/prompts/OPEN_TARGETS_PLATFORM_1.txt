@@ -1,0 +1,361 @@
+[TEMPLATES]
+<T2>
+diseaseId: TEXT | NULL
+targetId: TEXT | NULL
+evidenceCount: NUMBER | NULL
+score: FLOAT | NULL
+@Tables: [PLATFORM.ASSOCIATIONBYOVERALLDIRECT,PLATFORM.ASSOCIATIONBYOVERALLINDIRECT]
+
+[DERIVED]
+<T1> extends <T5>
+datasourceId: TEXT | NULL
+@Tables: [PLATFORM.ASSOCIATIONBYDATASOURCEDIRECT,PLATFORM.ASSOCIATIONBYDATASOURCEINDIRECT]
+
+<T5> extends <T2>
+datatypeId: TEXT | NULL
+@Tables: [PLATFORM.ASSOCIATIONBYDATATYPEDIRECT,PLATFORM.ASSOCIATIONBYDATATYPEINDIRECT]
+
+[STANDALONE]
+## PLATFORM.BASELINEEXPRESSION
+id: TEXT | NULL
+tissues: VARIANT | NULL
+
+## PLATFORM.DISEASES
+directLocationIds: VARIANT | NULL
+obsoleteTerms: VARIANT | NULL
+name: TEXT | NULL
+description: TEXT | NULL
+children: VARIANT | NULL
+id: TEXT | NULL
+ancestors: VARIANT | NULL
+code: TEXT | NULL
+indirectLocationIds: VARIANT | NULL
+ontology: VARIANT | NULL
+parents: VARIANT | NULL
+therapeuticAreas: VARIANT | NULL
+descendants: VARIANT | NULL
+synonyms: VARIANT | NULL
+dbXRefs: VARIANT | NULL
+
+## PLATFORM.DISEASETOPHENOTYPE
+disease: TEXT | NULL
+phenotype: TEXT | NULL
+evidence: VARIANT | NULL
+
+## PLATFORM.DRUGWARNINGS
+references: VARIANT | NULL
+efo_term: TEXT | NULL
+efo_id: TEXT | NULL
+toxicityClass: TEXT | NULL
+description: TEXT | NULL
+chemblIds: VARIANT | NULL
+efo_id_for_warning_class: TEXT | NULL
+year: NUMBER | NULL
+id: NUMBER | NULL
+country: TEXT | NULL
+warningType: TEXT | NULL
+
+## PLATFORM.EVIDENCE
+reactionId: TEXT | NULL
+statisticalTestTail: TEXT | NULL
+mutatedSamples: VARIANT | NULL
+id: TEXT | NULL
+contrast: TEXT | NULL
+geneticBackground: TEXT | NULL
+clinicalStatus: TEXT | NULL
+publicationYear: NUMBER | NULL
+projectId: TEXT | NULL
+textMiningSentences: VARIANT | NULL
+sourceId: TEXT | NULL
+allelicRequirements: VARIANT | NULL
+variantAminoacidDescriptions: VARIANT | NULL
+targetFromSource: TEXT | NULL
+significantDriverMethods: VARIANT | NULL
+variantHgvsId: TEXT | NULL
+studyCases: NUMBER | NULL
+diseaseModelAssociatedModelPhenotypes: VARIANT | NULL
+studyOverview: TEXT | NULL
+cohortPhenotypes: VARIANT | NULL
+oddsRatio: FLOAT | NULL
+diseaseFromSource: TEXT | NULL
+pathways: VARIANT | NULL
+releaseVersion: TEXT | NULL
+ancestryId: TEXT | NULL
+literature: VARIANT | NULL
+targetId: TEXT | NULL
+biosamplesFromSource: VARIANT | NULL
+variantFunctionalConsequenceFromQtlId: TEXT | NULL
+biologicalModelId: TEXT | NULL
+oddsRatioConfidenceIntervalUpper: FLOAT | NULL
+diseaseFromSourceId: TEXT | NULL
+pmcIds: VARIANT | NULL
+reactionName: TEXT | NULL
+variantRsId: TEXT | NULL
+pValueExponent: NUMBER | NULL
+targetFromSourceId: TEXT | NULL
+sex: VARIANT | NULL
+ancestry: TEXT | NULL
+betaConfidenceIntervalUpper: FLOAT | NULL
+oddsRatioConfidenceIntervalLower: FLOAT | NULL
+biomarkers: VARIANT | NULL
+studyStopReason: TEXT | NULL
+crisprScreenLibrary: TEXT | NULL
+log2FoldChangePercentileRank: NUMBER | NULL
+cohortDescription: TEXT | NULL
+targetInModel: TEXT | NULL
+datasourceId: TEXT | NULL
+studyId: TEXT | NULL
+confidence: TEXT | NULL
+clinicalSignificances: VARIANT | NULL
+resourceScore: FLOAT | NULL
+alleleOrigins: VARIANT | NULL
+diseaseId: TEXT | NULL
+diseaseCellLines: VARIANT | NULL
+diseaseModelAssociatedHumanPhenotypes: VARIANT | NULL
+drugId: TEXT | NULL
+directionOnTrait: TEXT | NULL
+cohortId: TEXT | NULL
+studyStopReasonCategories: VARIANT | NULL
+statisticalMethod: TEXT | NULL
+biomarkerName: TEXT | NULL
+targetInModelMgiId: TEXT | NULL
+statisticalMethodOverview: TEXT | NULL
+score: FLOAT | NULL
+cohortShortName: TEXT | NULL
+_corrupt_record: TEXT | NULL
+studyCasesWithQualifyingVariants: NUMBER | NULL
+studySampleSize: NUMBER | NULL
+log2FoldChangeValue: FLOAT | NULL
+datatypeId: TEXT | NULL
+diseaseFromSourceMappedId: TEXT | NULL
+biologicalModelAllelicComposition: TEXT | NULL
+variantFunctionalConsequenceId: TEXT | NULL
+beta: FLOAT | NULL
+studyStartDate: TEXT | NULL
+clinicalPhase: FLOAT | NULL
+variantId: TEXT | NULL
+targetInModelEnsemblId: TEXT | NULL
+cellType: TEXT | NULL
+biologicalModelGeneticBackground: TEXT | NULL
+betaConfidenceIntervalLower: FLOAT | NULL
+variantEffect: TEXT | NULL
+releaseDate: TEXT | NULL
+urls: VARIANT | NULL
+targetModulation: TEXT | NULL
+pValueMantissa: FLOAT | NULL
+publicationFirstAuthor: TEXT | NULL
+drugFromSource: TEXT | NULL
+drugResponse: TEXT | NULL
+
+## PLATFORM.GO
+name: TEXT | NULL
+id: TEXT | NULL
+
+## PLATFORM.HPO
+parents: VARIANT | NULL
+description: TEXT | NULL
+name: TEXT | NULL
+dbXRefs: VARIANT | NULL
+obsolete_terms: VARIANT | NULL
+namespace: VARIANT | NULL
+id: TEXT | NULL
+
+## PLATFORM.INDICATION
+indicationCount: NUMBER | NULL
+id: TEXT | NULL
+approvedIndications: VARIANT | NULL
+indications: VARIANT | NULL
+
+## PLATFORM.INTERACTION
+intBBiologicalRole: TEXT | NULL
+intABiologicalRole: TEXT | NULL
+count: NUMBER | NULL
+speciesA: VARIANT | NULL
+targetA: TEXT | NULL
+targetB: TEXT | NULL
+intB: TEXT | NULL
+speciesB: VARIANT | NULL
+scoring: FLOAT | NULL
+sourceDatabase: TEXT | NULL
+intA: TEXT | NULL
+
+## PLATFORM.INTERACTIONEVIDENCE
+targetA: TEXT | NULL
+interactionIdentifier: TEXT | NULL
+hostOrganismTaxId: NUMBER | NULL
+pubmedId: TEXT | NULL
+interactionDetectionMethodShortName: TEXT | NULL
+interactionDetectionMethodMiIdentifier: TEXT | NULL
+expansionMethodMiIdentifier: TEXT | NULL
+targetB: TEXT | NULL
+intABiologicalRole: TEXT | NULL
+speciesA: VARIANT | NULL
+participantDetectionMethodA: VARIANT | NULL
+speciesB: VARIANT | NULL
+hostOrganismScientificName: TEXT | NULL
+intB: TEXT | NULL
+intASource: TEXT | NULL
+interactionScore: FLOAT | NULL
+intBSource: TEXT | NULL
+interactionTypeMiIdentifier: TEXT | NULL
+evidenceScore: FLOAT | NULL
+interactionTypeShortName: TEXT | NULL
+expansionMethodShortName: TEXT | NULL
+interactionResources: VARIANT | NULL
+intA: TEXT | NULL
+hostOrganismTissue: VARIANT | NULL
+participantDetectionMethodB: VARIANT | NULL
+intBBiologicalRole: TEXT | NULL
+
+## PLATFORM.KNOWNDRUGSAGGREGATED
+prefName: TEXT | NULL
+status: TEXT | NULL
+mechanismOfAction: TEXT | NULL
+urls: VARIANT | NULL
+targetId: TEXT | NULL
+ancestors: VARIANT | NULL
+tradeNames: VARIANT | NULL
+diseaseId: TEXT | NULL
+synonyms: VARIANT | NULL
+label: TEXT | NULL
+drugId: TEXT | NULL
+phase: FLOAT | NULL
+targetName: TEXT | NULL
+approvedSymbol: TEXT | NULL
+approvedName: TEXT | NULL
+drugType: TEXT | NULL
+targetClass: VARIANT | NULL
+
+## PLATFORM.MECHANISMOFACTION
+targetType: TEXT | NULL
+chemblIds: VARIANT | NULL
+actionType: TEXT | NULL
+references: VARIANT | NULL
+mechanismOfAction: TEXT | NULL
+targetName: TEXT | NULL
+targets: VARIANT | NULL
+
+## PLATFORM.MOLECULE
+name: TEXT | NULL
+yearOfFirstApproval: NUMBER | NULL
+linkedTargets: VARIANT | NULL
+parentId: TEXT | NULL
+linkedDiseases: VARIANT | NULL
+blackBoxWarning: BOOLEAN | NULL
+canonicalSmiles: TEXT | NULL
+hasBeenWithdrawn: BOOLEAN | NULL
+description: TEXT | NULL
+maximumClinicalTrialPhase: FLOAT | NULL
+isApproved: BOOLEAN | NULL
+crossReferences: VARIANT | NULL
+inchiKey: TEXT | NULL
+id: TEXT | NULL
+childChemblIds: VARIANT | NULL
+tradeNames: VARIANT | NULL
+synonyms: VARIANT | NULL
+drugType: TEXT | NULL
+
+## PLATFORM.MOUSEPHENOTYPES
+targetFromSourceId: TEXT | NULL
+biologicalModels: VARIANT | NULL
+modelPhenotypeLabel: TEXT | NULL
+modelPhenotypeClasses: VARIANT | NULL
+targetInModelMgiId: TEXT | NULL
+targetInModelEnsemblId: TEXT | NULL
+modelPhenotypeId: TEXT | NULL
+targetInModel: TEXT | NULL
+
+## PLATFORM.OT_RELEASE
+release: TEXT | NULL
+
+## PLATFORM.PHARMACOGENOMICS
+studyId: TEXT | NULL
+haplotypeId: TEXT | NULL
+isDirectTarget: BOOLEAN | NULL
+genotypeId: TEXT | NULL
+evidenceLevel: TEXT | NULL
+datasourceId: TEXT | NULL
+targetFromSourceId: TEXT | NULL
+drugs: VARIANT | NULL
+phenotypeFromSourceId: TEXT | NULL
+literature: VARIANT | NULL
+directionality: TEXT | NULL
+genotype: TEXT | NULL
+datasourceVersion: TEXT | NULL
+genotypeAnnotationText: TEXT | NULL
+haplotypeFromSourceId: TEXT | NULL
+variantFunctionalConsequenceId: TEXT | NULL
+variantRsId: TEXT | NULL
+phenotypeText: TEXT | NULL
+datatypeId: TEXT | NULL
+pgxCategory: TEXT | NULL
+
+## PLATFORM.REACTOME
+id: TEXT | NULL
+descendants: VARIANT | NULL
+children: VARIANT | NULL
+label: TEXT | NULL
+ancestors: VARIANT | NULL
+parents: VARIANT | NULL
+path: VARIANT | NULL
+
+## PLATFORM.SIGNIFICANTADVERSEDRUGREACTIONS
+count: NUMBER | NULL
+llr: FLOAT | NULL
+event: TEXT | NULL
+meddraCode: TEXT | NULL
+critval: FLOAT | NULL
+chembl_id: TEXT | NULL
+
+## PLATFORM.TARGETESSENTIALITY
+id: TEXT | NULL
+geneEssentiality: VARIANT | NULL
+
+## PLATFORM.TARGETPRIORITISATION
+hasLigand: NUMBER | NULL
+maxClinicalTrialPhase: FLOAT | NULL
+hasHighQualityChemicalProbes: NUMBER | NULL
+mouseKOScore: FLOAT | NULL
+geneticConstraint: FLOAT | NULL
+hasSafetyEvent: NUMBER | NULL
+isInMembrane: NUMBER | NULL
+isSecreted: NUMBER | NULL
+mouseOrthologMaxIdentityPercentage: FLOAT | NULL
+isCancerDriverGene: NUMBER | NULL
+hasSmallMoleculeBinder: NUMBER | NULL
+paralogMaxIdentityPercentage: FLOAT | NULL
+hasTEP: NUMBER | NULL
+hasPocket: NUMBER | NULL
+tissueDistribution: FLOAT | NULL
+targetId: TEXT | NULL
+tissueSpecificity: FLOAT | NULL
+
+## PLATFORM.TARGETS
+pathways: VARIANT | NULL
+genomicLocation: VARIANT | NULL
+safetyLiabilities: VARIANT | NULL
+alternativeGenes: VARIANT | NULL
+subcellularLocations: VARIANT | NULL
+symbolSynonyms: VARIANT | NULL
+homologues: VARIANT | NULL
+nameSynonyms: VARIANT | NULL
+hallmarks: VARIANT | NULL
+canonicalTranscript: VARIANT | NULL
+obsoleteSymbols: VARIANT | NULL
+chemicalProbes: VARIANT | NULL
+proteinIds: VARIANT | NULL
+dbXrefs: VARIANT | NULL
+approvedSymbol: TEXT | NULL
+synonyms: VARIANT | NULL
+constraint: VARIANT | NULL
+tractability: VARIANT | NULL
+targetClass: VARIANT | NULL
+transcriptIds: VARIANT | NULL
+functionDescriptions: VARIANT | NULL
+biotype: TEXT | NULL
+canonicalExons: VARIANT | NULL
+id: TEXT | NULL
+approvedName: TEXT | NULL
+go: VARIANT | NULL
+obsoleteNames: VARIANT | NULL
+tep: VARIANT | NULL

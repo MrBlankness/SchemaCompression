@@ -1,0 +1,103 @@
+[COMPONENTS]
+[TABLES]
+## ENTERTAINMENTAGENCY.ZTBLWEEKS
+WeekStart: TEXT | NULL | eg=["2017-01-15", "2017-01-22"]
+WeekEnd: TEXT | NULL | eg=["2017-01-21", "2017-01-28"]
+
+## ENTERTAINMENTAGENCY.ZTBLSKIPLABELS
+LabelCount: NUMBER | NULL | eg=[2, 6]
+
+## ENTERTAINMENTAGENCY.MUSICAL_PREFERENCES
+CustomerID: NUMBER | NULL | eg=[10001, 10002]
+StyleID: NUMBER | NULL | eg=[10, 3]
+PreferenceSeq: NUMBER | NULL | eg=[2, 1]
+
+## ENTERTAINMENTAGENCY.ENTERTAINER_STYLES
+EntertainerID: NUMBER | NULL | eg=[1001, 1002]
+StyleStrength: NUMBER | NULL | eg=[2, 3]
+StyleID: NUMBER | NULL | eg=[10, 21]
+
+## ENTERTAINMENTAGENCY.CUSTOMERS
+CustStreetAddress: TEXT | NULL | eg=["908 W. Capital Way", "12330 Kingman Drive"]
+CustState: TEXT | NULL | eg=["WA"]
+CustZipCode: TEXT | NULL | eg=["98413", "98033"]
+CustPhoneNumber: TEXT | NULL | eg=["555-2496", "555-2721"]
+CustLastName: TEXT | NULL | eg=["Waldal", "Ehrlich"]
+CustomerID: NUMBER | NULL | eg=[10002, 10010]
+CustFirstName: TEXT | NULL | eg=["Deb", "Zachary"]
+CustCity: TEXT | NULL | eg=["Tacoma", "Kirkland"]
+
+## ENTERTAINMENTAGENCY.ENTERTAINERS
+EntStreetAddress: TEXT | NULL | eg=["4110 Old Redmond Rd.", "13920 S.E. 40th Street"]
+EntZipCode: TEXT | NULL | eg=["98052", "98009"]
+EntEMailAddress: TEXT | NULL | eg=["carolp@cptrio.com", ""]
+EntState: TEXT | NULL | eg=["WA"]
+EntWebPage: TEXT | NULL | eg=["www.cptrio.com", ""]
+EntStageName: TEXT | NULL | eg=["Carol Peacock Trio", "Jim Glynn"]
+EntertainerID: NUMBER | NULL | eg=[1001, 1004]
+DateEntered: TEXT | NULL | eg=["1997-05-24", "1996-04-01"]
+EntSSN: TEXT | NULL | eg=["888-90-1121", "888-26-1025"]
+EntCity: TEXT | NULL | eg=["Redmond", "Bellevue"]
+EntPhoneNumber: TEXT | NULL | eg=["555-2691", "555-2531"]
+
+## ENTERTAINMENTAGENCY.ENTERTAINER_MEMBERS
+MemberID: NUMBER | NULL | eg=[107, 118]
+Status: NUMBER | NULL | eg=[1, 2]
+EntertainerID: NUMBER | NULL | eg=[1001, 1003]
+
+## ENTERTAINMENTAGENCY.ZTBLMONTHS
+YearNumber: NUMBER | NULL | eg=[2017]
+July: NUMBER | NULL | eg=[0, 1]
+December: NUMBER | NULL | eg=[0]
+April: NUMBER | NULL | eg=[0]
+October: NUMBER | NULL | eg=[0]
+February: NUMBER | NULL | eg=[0]
+September: NUMBER | NULL | eg=[0, 1]
+November: NUMBER | NULL | eg=[0, 1]
+January: NUMBER | NULL | eg=[0]
+August: NUMBER | NULL | eg=[0, 1]
+May: NUMBER | NULL | eg=[0]
+March: NUMBER | NULL | eg=[0]
+June: NUMBER | NULL | eg=[1, 0]
+MonthYear: TEXT | NULL | eg=["June 2017", "July 2017"]
+MonthEnd: TEXT | NULL | eg=["2017-06-30", "2017-07-31"]
+MonthStart: TEXT | NULL | eg=["2017-06-01", "2017-07-01"]
+MonthNumber: NUMBER | NULL | eg=[6, 7]
+
+## ENTERTAINMENTAGENCY.MEMBERS
+MbrLastName: TEXT | NULL | eg=["Hamilton", "Sergienko"]
+Gender: TEXT | NULL | eg=["M", "F"]
+MbrPhoneNumber: TEXT | NULL | eg=["555-2701", "555-2526"]
+MbrFirstName: TEXT | NULL | eg=["David", "Mariya"]
+MemberID: NUMBER | NULL | eg=[101, 106]
+
+## ENTERTAINMENTAGENCY.MUSICAL_STYLES
+StyleID: NUMBER | NULL | eg=[2, 3]
+StyleName: TEXT | NULL | eg=["50's Music", "60's Music"]
+
+## ENTERTAINMENTAGENCY.ENGAGEMENTS
+CustomerID: NUMBER | NULL | eg=[10006, 10001]
+StartTime: TEXT | NULL | eg=["13:00:00", "20:00:00"]
+EndDate: TEXT | NULL | eg=["2017-09-06", "2017-09-16"]
+ContractPrice: NUMBER | NULL | eg=[200, 590]
+EntertainerID: NUMBER | NULL | eg=[1004, 1005]
+StartDate: TEXT | NULL | eg=["2017-09-02", "2017-09-11"]
+StopTime: TEXT | NULL | eg=["15:00:00", "00:00:00"]
+EngagementNumber: NUMBER | NULL | eg=[2, 3]
+AgentID: NUMBER | NULL | eg=[4, 3]
+
+## ENTERTAINMENTAGENCY.AGENTS
+AgentID: NUMBER | NULL | eg=[1, 2]
+Salary: NUMBER | NULL | eg=[35000, 27000]
+AgtPhoneNumber: TEXT | NULL | eg=["555-2681", "555-2666"]
+DateHired: TEXT | NULL | eg=["1997-05-15", "1998-02-05"]
+AgtLastName: TEXT | NULL | eg=["Thompson", "Bishop"]
+AgtCity: TEXT | NULL | eg=["Redmond", "Seattle"]
+AgtState: TEXT | NULL | eg=["WA"]
+CommissionRate: FLOAT | NULL | eg=[0.04, 0.055]
+AgtFirstName: TEXT | NULL | eg=["William", "Scott"]
+AgtStreetAddress: TEXT | NULL | eg=["122 Spring River Drive", "66 Spring Valley Drive"]
+AgtZipCode: TEXT | NULL | eg=["98053", "98125"]
+
+## ENTERTAINMENTAGENCY.ZTBLDAYS
+DateField: TEXT | NULL | eg=["2017-01-01", "2017-01-04"]

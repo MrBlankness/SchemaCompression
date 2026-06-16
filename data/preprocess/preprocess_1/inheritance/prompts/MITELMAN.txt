@@ -1,0 +1,27 @@
+[TEMPLATES]
+Format: Tn|col1,col2|schema1.table1;schema2.table2
+T2|Chromosome,Topo,Abnormality,ChrOrder,Morph,TotalCases|PROD.RECURRENTNUMDATA
+
+[DERIVED]
+Format: Tm<Tp|col1,col2|schema1.table1;schema2.table2
+T15<T2|Arm,Type,Band,Gene|PROD.RECURRENTDATA
+
+[STANDALONE]
+Format: schema.table|col1,col2
+PROD.AUTHORREFERENCE|Refno,NameOrder,Name
+PROD.CYTOBANDS_HG38|cytoband_name,hg38_stop,hg38_start,chromosome
+PROD.CYTOCONVERTEDLOG|InvNo,CaseNo,RefNo,Clone,Message,Type
+PROD.CYTOCONVERTED|Clone,Type,End,CellsPresent,CaseNo,InvNo,ChrOrd,RefNo,Chr,Start
+PROD.CYTOGENINVVALID|CaseNo,Reason,InvNo,KaryLong,KaryShort,CytoConvInput,RefNo,Message,KaryLength
+PROD.CYTOGENINV|Tissue,KaryLong,KaryShort,RefNo,CaseOrder,Clones,InvNo,KaryLength,InvDate,CaseNo
+PROD.CYTOGEN|RefNo,PrevTreat,SpecObs,PatientID,PatientName,PrevTopo,Immunology,Race,Morph,Age,SpecMorph,CaseNo,Topo,Sex,Country,Series,HerDis,CaseOrder,PrevMorph,Origin,SpecHerDis,PrevTum
+PROD.KARYABNORM|CaseNo,InvNo,CloneNo,OrderNo,RefNo,Abnormality
+PROD.KARYBIT|CloneNo,RefNo,Bit,CaseNo,OrderNo,InvNo
+PROD.KARYBREAK|InvNo,CloneNo,RefNo,CaseNo,OrderNo,Breakpoint
+PROD.KARYCLONE|CloneLength,CaseNo,ChromoMin,CloneLong,CloneShort,InvNo,RefNo,CloneNo,ChromoMax,Sole
+PROD.KODER|Flagga1,Kortnamn,Benamning,Flagga4,Inregdatum,GiltigTill,KodTyp,Aktiv,Intern,Kod,Notering,Flagga2,Flagga3,GiltigFran
+PROD.MOLBIOLCLINASSOC|GeneShort,GeneLength,RefNo,Topo,KaryShort,MolClin,KaryLength,InvNo,Immunology,Morph,GeneLong,KaryLong
+PROD.MOLCLINABNORM|InvNo,OrderNo,RefNo,Abnormality,MolClin
+PROD.MOLCLINBREAK|RefNo,MolClin,Breakpoint,InvNo,OrderNo
+PROD.MOLCLINGENE|Prefix,InvNo,MolClin,Gene,OrderNo,RefNo,Suffix
+PROD.REFERENCE|Journal,AuthorsLength,Flag,Abbreviation,Year,Pubmed,TitleLength,AuthorsLong,Text,AuthorsShort,TitleLong,RefNo,Volume,TitleShort

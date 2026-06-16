@@ -1,0 +1,82 @@
+[TABLES]
+## BRAZILIAN_E_COMMERCE.PRODUCT_CATEGORY_NAME_TRANSLATION
+product_category_name: TEXT | NULL | eg=["beleza_saude", "automotivo"]
+product_category_name_english: TEXT | NULL | eg=["health_beauty", "auto"]
+
+## BRAZILIAN_E_COMMERCE.OLIST_CUSTOMERS
+customer_city: TEXT | NULL | eg=["franca", "mogi das cruzes"]
+customer_zip_code_prefix: NUMBER | NULL | eg=[14409, 8775]
+customer_unique_id: TEXT | NULL | eg=["861eff4711a542e4b93843c6dd7febb0", "259dac757896d24d7702b9acbbff3f3c"]
+customer_state: TEXT | NULL | eg=["SP", "SC"]
+customer_id: TEXT | NULL | eg=["06b8999e2fba1a1fbc88172c00ba8bc7", "b2b6027bc5c5109e529d4dc6358b12c3"]
+
+## BRAZILIAN_E_COMMERCE.OLIST_ORDERS
+order_id: TEXT | NULL | eg=["e481f51cbdc54678b7cc49136f2d6af7", "47770eb9100c2d0c44946d9cf07ec65d"]
+order_delivered_carrier_date: TEXT | NULL | eg=["2017-10-04 19:55:00", "2018-08-08 13:50:00"]
+order_purchase_timestamp: TEXT | NULL | eg=["2017-10-02 10:56:33", "2018-08-08 08:38:49"]
+order_approved_at: TEXT | NULL | eg=["2017-10-02 11:07:15", "2018-08-08 08:55:23"]
+order_estimated_delivery_date: TEXT | NULL | eg=["2017-10-18 00:00:00", "2018-09-04 00:00:00"]
+order_status: TEXT | NULL | eg=["delivered"]
+order_delivered_customer_date: TEXT | NULL | eg=["2017-10-10 21:25:13", "2018-08-17 18:06:29"]
+customer_id: TEXT | NULL | eg=["9ef432eb6251297304e76186b10a928d", "41ce2a54c0b03bf3443c3d931a367089"]
+
+## BRAZILIAN_E_COMMERCE.OLIST_GEOLOCATION
+geolocation_lng: FLOAT | NULL | eg=[-45.18794771542618, -43.89223348300082]
+geolocation_zip_code_prefix: NUMBER | NULL | eg=[47990, 47940]
+geolocation_city: TEXT | NULL | eg=["formosa do rio preto", "wanderley"]
+geolocation_lat: FLOAT | NULL | eg=[-11.0449613458862, -12.118520396156198]
+geolocation_state: TEXT | NULL | eg=["BA"]
+
+## BRAZILIAN_E_COMMERCE.OLIST_PRODUCTS
+product_name_lenght: FLOAT | NULL | eg=[40.0, 56.0]
+product_width_cm: FLOAT | NULL | eg=[14.0, 44.0]
+product_category_name: TEXT | NULL | eg=["perfumaria", "cool_stuff"]
+product_weight_g: FLOAT | NULL | eg=[225.0, 18350.0]
+product_length_cm: FLOAT | NULL | eg=[16.0, 70.0]
+product_photos_qty: FLOAT | NULL | eg=[1.0, 4.0]
+product_description_lenght: FLOAT | NULL | eg=[287.0, 1272.0]
+product_id: TEXT | NULL | eg=["1e9e8ef04dbcff4541ed26657ea517e5", "732bd381ad09e530fe0a5f457d81becb"]
+product_height_cm: FLOAT | NULL | eg=[10.0, 24.0]
+
+## BRAZILIAN_E_COMMERCE.OLIST_SELLERS
+seller_id: TEXT | NULL | eg=["3442f8959a84dea7ee197c632cb2df15", "ce3ad9de960102d0677a81f5d0bb7b2d"]
+seller_state: TEXT | NULL | eg=["SP", "RJ"]
+seller_zip_code_prefix: NUMBER | NULL | eg=[13023, 20031]
+seller_city: TEXT | NULL | eg=["campinas", "rio de janeiro"]
+
+## BRAZILIAN_E_COMMERCE.OLIST_ORDER_PAYMENTS
+payment_installments: NUMBER | NULL | eg=[1, 8]
+order_id: TEXT | NULL | eg=["a9810da82917af2d9aefd1278f1dcfa0", "25e8ea4e93396b6fa0d3dd708e76c1bd"]
+payment_value: FLOAT | NULL | eg=[24.39, 65.71]
+payment_sequential: NUMBER | NULL | eg=[1]
+payment_type: TEXT | NULL | eg=["credit_card"]
+
+## BRAZILIAN_E_COMMERCE.OLIST_PRODUCTS_DATASET
+product_name_lenght: FLOAT | NULL | eg=[44.0, 46.0]
+product_category_name: TEXT | NULL | eg=["artes", "esporte_lazer"]
+product_length_cm: FLOAT | NULL | eg=[30.0, 18.0]
+product_height_cm: FLOAT | NULL | eg=[18.0, 9.0]
+product_photos_qty: FLOAT | NULL | eg=[1.0, 4.0]
+product_description_lenght: FLOAT | NULL | eg=[276.0, 250.0]
+product_width_cm: FLOAT | NULL | eg=[20.0, 15.0]
+product_id: TEXT | NULL | eg=["3aa071139cb16b67ca9e5dea641aaa2f", "96bd76ec8810374ed1b65e291975717f"]
+index: NUMBER | NULL | eg=[1, 2]
+product_weight_g: FLOAT | NULL | eg=[1000.0, 154.0]
+
+## BRAZILIAN_E_COMMERCE.OLIST_ORDER_REVIEWS
+review_answer_timestamp: TEXT | NULL | eg=["2018-03-11 03:05:13", "2017-04-21 22:02:06"]
+order_id: TEXT | NULL | eg=["a548910a1c6147796b98fdf73dbeba33", "658677c97b385a9be170737859d3511b"]
+review_comment_title: TEXT | NULL | eg=[""]
+review_comment_message: TEXT | NULL | eg=["", "Recebi bem antes do prazo estipulado."]
+review_creation_date: TEXT | NULL | eg=["2018-03-10 00:00:00", "2017-04-21 00:00:00"]
+review_id: TEXT | NULL | eg=["80e641a11e56f04c1ad469d5645fdfde", "e64fb393e7b32834bb789ff8bb30750e"]
+review_score: NUMBER | NULL | eg=[5, 1]
+
+## BRAZILIAN_E_COMMERCE.OLIST_ORDER_ITEMS
+seller_id: TEXT | NULL | eg=["dd7ddc04e1b6c2c614352b383efe2d36", "df560393f3a51e74553ab94004ba5c87"]
+price: FLOAT | NULL | eg=[239.9, 199.9]
+order_item_id: NUMBER | NULL | eg=[1]
+shipping_limit_date: TEXT | NULL | eg=["2017-05-03 11:05:13", "2017-02-13 13:57:51"]
+order_id: TEXT | NULL | eg=["00018f77f2f0320c557190d7a144bdd3", "00042b26cf59d7ce69dfabb4e55b4fd9"]
+product_id: TEXT | NULL | eg=["e5f2d52b802189ee658865ca93d83a8f", "ac6c3623068f30de03045865e4e10089"]
+freight_value: FLOAT | NULL | eg=[19.93, 18.14]

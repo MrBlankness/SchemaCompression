@@ -1,0 +1,80 @@
+[COMPONENTS]
+[TABLES]
+## ELECTRONIC_SALES.PRODUCT_CATEGORY_NAME_TRANSLATION
+index: NUMBER | NULL
+product_category_name_english: TEXT | NULL
+product_category_name: TEXT | NULL
+
+## ELECTRONIC_SALES.ORDER_REVIEWS
+review_comment_message: TEXT | NULL
+review_comment_title: TEXT | NULL
+review_creation_date: TEXT | NULL
+index: NUMBER | NULL
+review_id: TEXT | NULL
+order_id: TEXT | NULL
+review_answer_timestamp: TEXT | NULL
+review_score: NUMBER | NULL
+
+## ELECTRONIC_SALES.PRODUCTS
+product_name_lenght: FLOAT | NULL
+product_length_cm: FLOAT | NULL
+product_description_lenght: FLOAT | NULL
+product_width_cm: FLOAT | NULL
+product_weight_g: FLOAT | NULL
+product_photos_qty: FLOAT | NULL
+product_category_name: TEXT | NULL
+index: NUMBER | NULL
+product_id: TEXT | NULL
+product_height_cm: FLOAT | NULL
+
+## ELECTRONIC_SALES.ORDERS
+customer_id: TEXT | NULL
+order_approved_at: TEXT | NULL
+order_purchase_timestamp: TEXT | NULL
+order_delivered_carrier_date: TEXT | NULL
+order_id: TEXT | NULL
+order_delivered_customer_date: TEXT | NULL
+order_status: TEXT | NULL
+index: NUMBER | NULL
+order_estimated_delivery_date: TEXT | NULL
+
+## ELECTRONIC_SALES.ORDER_PAYMENTS
+payment_sequential: NUMBER | NULL
+payment_installments: NUMBER | NULL
+index: NUMBER | NULL
+payment_value: FLOAT | NULL
+order_id: TEXT | NULL
+payment_type: TEXT | NULL
+
+## ELECTRONIC_SALES.CUSTOMERS
+index: NUMBER | NULL
+customer_state: TEXT | NULL
+customer_unique_id: TEXT | NULL
+customer_zip_code_prefix: NUMBER | NULL
+customer_id: TEXT | NULL
+customer_city: TEXT | NULL
+
+## ELECTRONIC_SALES.GEOLOCATION
+geolocation_city: TEXT | NULL
+geolocation_lat: FLOAT | NULL
+geolocation_lng: FLOAT | NULL
+geolocation_zip_code_prefix: NUMBER | NULL
+index: NUMBER | NULL
+geolocation_state: TEXT | NULL
+
+## ELECTRONIC_SALES.SELLERS
+seller_zip_code_prefix: NUMBER | NULL
+seller_id: TEXT | NULL
+seller_city: TEXT | NULL
+seller_state: TEXT | NULL
+index: NUMBER | NULL
+
+## ELECTRONIC_SALES.ORDER_ITEMS
+order_id: TEXT | NULL
+index: NUMBER | NULL
+freight_value: FLOAT | NULL
+seller_id: TEXT | NULL
+price: FLOAT | NULL
+order_item_id: NUMBER | NULL
+shipping_limit_date: TEXT | NULL
+product_id: TEXT | NULL

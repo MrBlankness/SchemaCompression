@@ -1,0 +1,18 @@
+[COMPONENTS]
+@C1:Address,City,Country,Email,Fax,FirstName,LastName,Phone,PostalCode,State
+
+[TABLES]
+Format: schema.table|components|columns
+CHINOOK.PLAYLIST_TRACK||PlaylistId,TrackId
+CHINOOK.EMPLOYEES|@C1|BirthDate,ReportsTo,EmployeeId,Title,HireDate
+CHINOOK.PLAYLISTS||PlaylistId,Name
+CHINOOK.ARTISTS||ArtistId,Name
+CHINOOK.CUSTOMERS|@C1|CustomerId,Company,SupportRepId
+CHINOOK.SQLITE_STAT1||tbl,stat,idx
+CHINOOK.TRACKS||TrackId,GenreId,AlbumId,Composer,Name,Milliseconds,MediaTypeId,Bytes,UnitPrice
+CHINOOK.SQLITE_SEQUENCE||seq,name
+CHINOOK.GENRES||Name,GenreId
+CHINOOK.INVOICES||InvoiceId,BillingCountry,InvoiceDate,BillingAddress,Total,CustomerId,BillingState,BillingPostalCode,BillingCity
+CHINOOK.MEDIA_TYPES||MediaTypeId,Name
+CHINOOK.ALBUMS||AlbumId,Title,ArtistId
+CHINOOK.INVOICE_ITEMS||InvoiceId,InvoiceLineId,TrackId,Quantity,UnitPrice

@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq358",
+  "question": "Can you tell me which bike trip in New York City on July 15, 2015, started and ended in ZIP Code areas with the highest average temperature for that day, as recorded by the Central Park weather station (WBAN '94728')? If there's more than one trip that meets these criteria, I'd like to know about the one that starts in the smallest ZIP Code and ends in the largest ZIP Code. Please return the starting and ending ZIP Codes of this trip.",
+  "db_id": "NEW_YORK_CITIBIKE_1",
+  "source_document": "functions_st_within.md",
+  "evidence": "ST_WITHIN function: Returns true if the first geospatial object is fully contained by the second geospatial object. Syntax: ST_WITHIN(<geography_expression_1>, <geography_expression_2>) or ST_WITHIN(<geometry_expression_1>, <geometry_expression_2>). Arguments must be GEOGRAPHY or GEOMETRY objects (not GeometryCollection or FeatureCollection). Returns BOOLEAN. Example: SELECT ST_WITHIN(g1, g2) FROM geospatial_table_01;"
+}

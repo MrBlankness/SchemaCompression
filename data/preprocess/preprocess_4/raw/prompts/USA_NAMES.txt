@@ -1,0 +1,14 @@
+[TABLES]
+## USA_NAMES.USA_1910_CURRENT
+number: NUMBER | Number of occurrences of the name | eg=[16, 15]
+name: TEXT | Given name of a person at birth | eg=["Kevin", "Nelson"]
+gender: TEXT | Sex (M=male or F=female) | eg=["M"]
+state: TEXT | 2-digit state code | eg=["MA"]
+year: NUMBER | 4-digit year of birth | eg=[1934]
+
+## USA_NAMES.USA_1910_2013
+gender: TEXT | Sex (M=male or F=female) | eg=["F"]
+state: TEXT | 2-digit state code | eg=["AL", "AR"]
+number: NUMBER | Number of occurrences of the name | eg=[875, 39]
+year: NUMBER | 4-digit year of birth | eg=[1910]
+name: TEXT | Given name of a person at birth | eg=["Mary", "Vera"]

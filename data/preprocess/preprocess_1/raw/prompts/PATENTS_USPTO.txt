@@ -1,0 +1,140 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: USPTO_OCE_CLAIMS.PATENT_CLAIMS_STATS_2014
+Columns: sf_ct, or_ct, char_ct, cns_ct, ind_flg, word_ct, appl_id, claim_no, pat_no
+
+Table: USPTO_OCE_CLAIMS.PATENT_CLAIMS_FULLTEXT_2014
+Columns: pat_no, claim_no, dependencies, claim_txt, appl_id, ind_flg
+
+Table: USPTO_OCE_CLAIMS.PATENT_CLAIMS_STATS
+Columns: or_ct, appl_id, claim_no, sf_ct, char_ct, ind_flg, cns_ct, word_ct, pat_no
+
+Table: USPTO_OCE_CLAIMS.MATCH
+Columns: pat_no, pub_no, publication_number
+
+Table: USPTO_OCE_CLAIMS.PATENT_DOCUMENT_STATS_2014
+Columns: pat_wrd_min, pat_dep_clm_ct, pat_wrd_ct, pat_no, appl_id, pat_clm_ct, pat_wrd_avg, pat_dep_wrd_ct, pat_dep_wrd_min, pat_dep_wrd_avg
+
+Table: USPTO_OCE_CLAIMS.PATENT_CLAIMS_FULLTEXT
+Columns: ind_flg, pat_no, claim_txt, dependencies, claim_no, appl_id
+
+Table: USPTO_OCE_CLAIMS.PATENT_DOCUMENT_STATS
+Columns: pat_dep_clm_ct, pat_clm_ct, pat_wrd_ct, appl_id, pat_wrd_avg, pat_dep_wrd_min, pat_dep_wrd_ct, pat_dep_wrd_avg, pat_no, pat_wrd_min
+
+Table: USPTO_OCE_CLAIMS.PGPUB_CLAIMS_FULLTEXT
+Columns: dependencies, ind_flg, appl_id, pub_no, claim_no, claim_txt
+
+Table: USPTO_OCE_CLAIMS.PGPUB_CLAIMS_FULLTEXT_2014
+Columns: claim_txt, ind_flg, claim_no, appl_id, pub_no, dependencies
+
+Table: USPTO_OCE_CLAIMS.PGPUB_DOCUMENT_STATS_2014
+Columns: pub_dep_wrd_ct, pub_no, pub_dep_clm_ct, pub_wrd_min, pub_dep_wrd_min, appl_id, pub_wrd_ct, pub_dep_wrd_avg, pub_clm_ct, pub_wrd_avg
+
+Table: USPTO_OCE_CLAIMS.MATCH_2014
+Columns: publication_number, pat_no, pub_no
+
+Table: USPTO_OCE_CLAIMS.PGPUB_DOCUMENT_STATS
+Columns: pub_wrd_min, pub_no, pub_dep_wrd_min, pub_wrd_avg, pub_dep_clm_ct, appl_id, pub_dep_wrd_ct, pub_wrd_ct, pub_clm_ct, pub_dep_wrd_avg
+
+Table: USPTO_OCE_ASSIGNMENT.MATCH_2016
+Columns: pgpub_doc_num, publication_number, grant_doc_num
+
+Table: USPTO_OCE_ASSIGNMENT.MATCH
+Columns: grant_doc_num, publication_number, pgpub_doc_num
+
+Table: USPTO_OCE_ASSIGNMENT.DOCUMENTID_ADMIN_2016
+Columns: admin_pat_no_for_appno, appno_doc_num, admin_appl_id_for_grant, error, rf_id, grant_doc_num
+
+Table: USPTO_OCE_ASSIGNMENT.DOCUMENTID
+Columns: lang, rf_id, grant_country, appno_date, grant_doc_num, pgpub_doc_num, title, pgpub_date, appno_doc_num, pgpub_country, appno_country, grant_date
+
+Table: USPTO_OCE_ASSIGNMENT.ASSIGNMENT_2016
+Columns: purge_in, record_dt, caddress_3, frame_no, caddress_4, caddress_1, cname, convey_text, caddress_2, rf_id, file_id, last_update_dt, reel_no, page_count
+
+Table: USPTO_OCE_ASSIGNMENT.ASSIGNOR_2016
+Columns: rf_id, or_name, exec_dt, ack_dt
+
+Table: USPTO_OCE_ASSIGNMENT.ASSIGNMENT
+Columns: convey_text, caddress_2, reel_no, caddress_3, last_update_dt, file_id, record_dt, page_count, rf_id, caddress_4, caddress_1, purge_in, frame_no, cname
+
+Table: USPTO_OCE_ASSIGNMENT.ASSIGNMENT_CONVEYANCE
+Columns: employer_assign, rf_id, convey_ty
+
+Table: USPTO_OCE_ASSIGNMENT.ASSIGNOR
+Columns: or_name, rf_id, ack_dt, exec_dt
+
+Table: USPTO_OCE_ASSIGNMENT.ASSIGNEE_2016
+Columns: ee_name, ee_country, ee_address_1, ee_city, ee_postcode, ee_address_2, rf_id, ee_state
+
+Table: USPTO_OCE_ASSIGNMENT.DOCUMENTID_2016
+Columns: grant_doc_num, pgpub_country, grant_country, title, appno_doc_num, rf_id, grant_date, pgpub_date, lang, pgpub_doc_num, appno_date, appno_country
+
+Table: USPTO_OCE_ASSIGNMENT.DOCUMENTID_ADMIN
+Columns: appno_doc_num, admin_appl_id_for_grant, admin_pat_no_for_appno, error, grant_doc_num, rf_id
+
+Table: USPTO_OCE_ASSIGNMENT.ASSIGNEE
+Columns: ee_country, ee_address_2, ee_city, ee_name, ee_address_1, ee_postcode, ee_state, rf_id
+
+Table: USPTO_OCE_ASSIGNMENT.ASSIGNMENT_CONVEYANCE_2016
+Columns: rf_id, employer_assign, convey_ty
+
+Table: USPTO_OCE_CANCER.MATCH
+Columns: publication_number, Patent_or_Publication_ID
+
+Table: USPTO_OCE_CANCER.PUBLICATIONS
+Columns: Other_and_Preclassification, Drugs_and_Chemistry, NIH_Federal_Grant_Number, FDA_Ingredient, Radiation_Measurement, TBD, Grant_or_Publication_Date, FDA_Application_Number, Application_Number, DNA_RNA_or_Protein_Sequence, Patent_or_Publication_ID, Food_and_Nutrition, FDA_Applicant, FDA_Drug_Trade_Name, Patent_Title, USPC_Current_Cross_Reference, USPC_Current_Original, CPC_Inventive, Diagnostic_and_Surgical_Devices, Data_Science, Cells_and_Enzymes, IPC_Primary, Model_Systems_and_Animals, Family_ID, NIH_Grant_Recipient_Organization, CPC_Additional, FDA_Approval_Date, Filing_Date, IPC_Secondary
+
+Table: PATENTS.DISCLOSURES_13
+Columns: serial_cleaned, sso, disclosure_event, reciprocity, patent_owner_harmonized, family_id, record_id, blanket_scope, copyright, standard, licensing_commitment, committee_project, sc_name, blanket_type, pub_cleaned, third_party, wg_name, patent_owner_unharmonized, date, tc_name
+
+Table: PATENTS.CPC_DEFINITION
+Columns: status, precedenceLimitingReferences, rules, childGroups, scopeLimitingReferences, level, titlePart, definition, residualReferences, breakdownCode, limitingReferences, glossary, applicationReferences, notAllocatable, dateRevised, titleFull, informativeReferences, symbol, synonyms, children, parents, ipcConcordant
+
+Table: PATENTS.PUBLICATIONS
+Columns: examiner, fterm, application_number_formatted, application_number, grant_date, cpc, locarno, description_localized_html, publication_date, kind_code, spif_publication_number, ipc, pct_number, filing_date, entity_status, abstract_localized, description_localized, assignee, citation, fi, inventor_harmonized, claims_localized_html, inventor, claims_localized, application_kind, priority_date, title_localized, assignee_harmonized, priority_claim, art_unit, child, spif_application_number, uspc, family_id, parent, publication_number, country_code
+
+Table: USPTO_OCE_OFFICE_ACTIONS.MATCH_APP
+Columns: application_number, app_id
+
+Table: USPTO_OCE_OFFICE_ACTIONS.OFFICE_ACTIONS
+Columns: rejection_dp, closing_missing, rejection_103, fp_missing, allowed_claims, rejection_112, app_id, cite103_eq1, header_missing, cite103_max, art_unit, rejection_fp_mismatch, uspc_class, rejection_101, cite103_gt3, uspc_subclass, ifw_number, signature_type, rejection_102, cite102_gt1, objection, mail_dt, document_cd
+
+Table: USPTO_PTAB.TRIALS
+Columns: PatentOwnerName, FilingDate, LastModifiedDatetime, publication_number, InventorName, ApplicationNumber, TrialNumber, AccordedFilingDate, ProsecutionStatus, PatentNumber, Documents, PetitionerPartyName, InstitutionDecisionDate
+
+Table: USPTO_PTAB.MATCH_201710
+Columns: application_number, ApplicationNumber
+
+Table: USPTO_PTAB.TRIALS_201710
+Columns: InventorName, ProsecutionStatus, Documents, InstitutionDecisionDate, AccordedFilingDate, LastModifiedDatetime, TrialNumber, PetitionerPartyName, PatentNumber, PatentOwnerName, FilingDate, ApplicationNumber
+
+Table: USPTO_OCE_LITIGATION.DOCUMENTS
+Columns: long_description, date_filed, case_row_id, case_number, attachment, doc_number, doc_count, short_description, upload_date
+
+Table: USPTO_OCE_LITIGATION.NAMES_2015
+Columns: name_row_count, case_row_id, name, party_row_count, party_type, case_number
+
+Table: USPTO_OCE_LITIGATION.PACER_CASES
+Columns: date_closed, court_name, court_code, date_filed, pacer_id, case_number, case_name
+
+Table: USPTO_OCE_LITIGATION.ATTORNEYS_2015
+Columns: name, position, party_type, attorney_row_count, case_row_id, party_row_count, contactinfo, case_number
+
+Table: USPTO_OCE_LITIGATION.PACER_CASES_2015
+Columns: court_code, case_number, date_filed, case_name, pacer_id, date_closed, court_name
+
+Table: USPTO_OCE_LITIGATION.ATTORNEYS
+Columns: party_type, contactinfo, case_number, name, party_row_count, case_row_id, attorney_row_count, position
+
+Table: USPTO_OCE_LITIGATION.DOCUMENTS_2015
+Columns: doc_count, upload_date, case_number, short_description, doc_number, attachment, date_filed, case_row_id, long_description
+
+Table: USPTO_OCE_LITIGATION.CASES_2015
+Columns: assigned_to, pacer_id, date_last_filed, date_filed, related_case, jurisdictional_basis, settlement, demand, jury_demand, date_closed, case_row_id, case_number, case_cause, referred_to, lead_case, case_name, court_name
+
+Table: USPTO_OCE_LITIGATION.NAMES
+Columns: party_row_count, name, party_type, case_number, name_row_count, case_row_id
+
+Table: USPTO_OCE_LITIGATION.CASES
+Columns: date_closed, jurisdictional_basis, case_number, case_row_id, pacer_id, referred_to, date_filed, court_name, assigned_to, related_case, demand, case_cause, lead_case, settlement, jury_demand, case_name, date_last_filed

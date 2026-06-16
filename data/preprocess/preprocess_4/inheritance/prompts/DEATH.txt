@@ -1,0 +1,70 @@
+[TEMPLATES]
+<T1>
+Code: NUMBER | NULL | eg=[4, 5]
+Description: TEXT | NULL | eg=["2 days", "3 days"]
+@Tables: [DEATH.ACTIVITYCODE,DEATH.AGERECODE12,DEATH.AGERECODE27,DEATH.AGERECODE52,DEATH.AGETYPE,DEATH.BRIDGEDRACEFLAG,DEATH.DAYOFWEEKOFDEATH,DEATH.EDUCATION1989REVISION,DEATH.EDUCATION2003REVISION,DEATH.EDUCATIONREPORTINGFLAG,DEATH.HISPANICORIGIN,DEATH.HISPANICORIGINRACERECODE,DEATH.INFANTAGERECODE22,DEATH.MANNEROFDEATH,DEATH.PLACEOFDEATHANDDECEDENTSSTATUS,DEATH.PLACEOFINJURY,DEATH.RACE,DEATH.RACEIMPUTATIONFLAG,DEATH.RACERECODE3,DEATH.RACERECODE5,DEATH.RESIDENTSTATUS]
+
+<T2>
+Description: TEXT | NULL | eg=["Cremation", "Other"]
+Code: TEXT | NULL | eg=["C", "O"]
+@Tables: [DEATH.ICD10CODE,DEATH.MARITALSTATUS,DEATH.METHODOFDISPOSITION]
+
+[STANDALONE]
+## DEATH.DEATHRECORDS
+ResidentStatus: NUMBER | NULL | eg=[1, 3]
+AgeRecode27: NUMBER | NULL | eg=[3, 2]
+PlaceOfDeathAndDecedentsStatus: NUMBER | NULL | eg=[1, 2]
+CurrentDataYear: NUMBER | NULL | eg=[2014]
+Education2003Revision: NUMBER | NULL | eg=[1, 9]
+Icd10Code: TEXT | NULL | eg=["J22", "P77"]
+ActivityCode: NUMBER | NULL | eg=[99]
+Education1989Revision: NUMBER | NULL | eg=[0]
+EducationReportingFlag: NUMBER | NULL | eg=[1]
+PlaceOfInjury: NUMBER | NULL | eg=[99]
+NumberOfEntityAxisConditions: NUMBER | NULL | eg=[1, 2]
+CauseRecode358: NUMBER | NULL | eg=[260, 364]
+InjuryAtWork: TEXT | NULL | eg=["U"]
+CauseRecode39: NUMBER | NULL | eg=[37, 33]
+AgeRecode12: NUMBER | NULL | eg=[2, 1]
+AgeSubstitutionFlag: NUMBER | NULL | eg=[0]
+HispanicOriginRaceRecode: NUMBER | NULL | eg=[6, 7]
+Id: NUMBER | NULL | eg=[1281964, 1771786]
+DayOfWeekOfDeath: NUMBER | NULL | eg=[6, 1]
+MonthOfDeath: NUMBER | NULL | eg=[5, 3]
+RaceRecode5: NUMBER | NULL | eg=[1, 2]
+MaritalStatus: TEXT | NULL | eg=["S"]
+AgeType: NUMBER | NULL | eg=[1, 2]
+Autopsy: TEXT | NULL | eg=["Y", "N"]
+RaceRecode3: NUMBER | NULL | eg=[1, 3]
+CauseRecode113: NUMBER | NULL | eg=[81, 108]
+HispanicOrigin: NUMBER | NULL | eg=[100]
+Age: NUMBER | NULL | eg=[1]
+InfantAgeRecode22: NUMBER | NULL | eg=[0, 12]
+MannerOfDeath: NUMBER | NULL | eg=[7]
+InfantCauseRecode130: NUMBER | NULL | eg=[0, 115]
+Race: NUMBER | NULL | eg=[1, 2]
+NumberOfRecordAxisConditions: NUMBER | NULL | eg=[1, 2]
+AgeRecode52: NUMBER | NULL | eg=[23, 12]
+Sex: TEXT | NULL | eg=["F", "M"]
+RaceImputationFlag: NUMBER | NULL | eg=[0]
+MethodOfDisposition: TEXT | NULL | eg=["B", "C"]
+BridgedRaceFlag: NUMBER | NULL | eg=[0]
+
+## DEATH.ENTITYAXISCONDITIONS
+Line: FLOAT | NULL | eg=[2.0]
+DeathRecordId: NUMBER | NULL | eg=[717162, 717283]
+Sequence: NUMBER | NULL | eg=[1]
+Icd10Code: TEXT | NULL | eg=["R688"]
+Id: NUMBER | NULL | eg=[2201459, 2201817]
+Part: NUMBER | NULL | eg=[1]
+
+## DEATH.RECORDAXISCONDITIONS
+DeathRecordId: NUMBER | NULL | eg=[1738256, 557544]
+Icd10Code: TEXT | NULL | eg=["A38", "A86"]
+Id: NUMBER | NULL | eg=[4987350, 1673817]
+
+## DEATH.TEMP_DEATHS
+Age: NUMBER | NULL
+death_count: NUMBER | NULL
+Icd10Code: TEXT | NULL
+Race: NUMBER | NULL

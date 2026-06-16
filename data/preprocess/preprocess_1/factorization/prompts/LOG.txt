@@ -1,0 +1,23 @@
+[COMPONENTS]
+
+[TABLES]
+Format: schema.table|components|columns
+LOG.MST_PRODUCTS_20170101||updated_at,price,name,product_id
+LOG.PURCHASE_LOG||stamp,amount,purchase_id,user_id
+LOG.ACCESS_LOG||user_id,session,action,stamp
+LOG.ACTIVITY_LOG||action,session,option,search_type,path,stamp
+LOG.MST_PRODUCTS_20161201||name,price,updated_at,product_id
+LOG.APP2_MST_USERS||user_id,phone,name
+LOG.MST_USERS_WITH_CARD_NUMBER||card_number,user_id
+LOG.FORM_ERROR_LOG||session,form,stamp,field,value,error_type
+LOG.FORM_LOG||status,action,session,path,stamp
+LOG.ACTION_LOG_WITH_NOISE||user_agent,session,ip,url,products,stamp,action
+LOG.APP1_MST_USERS||email,name,user_id
+LOG.ACTION_LOG_WITH_IP||ip,user_id,stamp,action,session
+LOG.MST_CATEGORIES||id,stamp,name
+LOG.READ_LOG||url,session,stamp,action
+LOG.INVALID_ACTION_LOG||stamp,session,action,user_id,category,products,amount
+LOG.MST_USERS||register_date,withdraw_date,register_device,birth_date,user_id,sex
+LOG.ACTION_LOG||stamp,action,amount,user_id,category,session,products
+LOG.PRODUCT_SALES||category_name,product_id,sales
+LOG.DUP_ACTION_LOG||products,session,stamp,action,user_id

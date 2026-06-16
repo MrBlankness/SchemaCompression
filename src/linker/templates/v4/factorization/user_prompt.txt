@@ -1,0 +1,28 @@
+
+[COMPRESSED SCHEMA]
+{context}
+
+[USER QUESTION]
+{question}
+
+[INSTRUCTIONS]
+Provide explicit step-by-step reasoning for schema decompression and linking.
+Keep THOUGHT concise; avoid enumerating expanded schema/component details.
+Prioritize recall first; improve precision only after required intent coverage is satisfied.
+
+[OUTPUT]
+Return exactly:
+THOUGHT:
+<your concise reasoning>
+
+FINAL_JSON:
+<JSON list of schema.table.column>
+
+[EXAMPLE OUTPUT]
+THOUGHT:
+1) Candidate tables: analytics.orders, analytics.customers.
+2) Expand only needed component references for unresolved filter/join/select needs.
+3) Keep only columns needed for filters, joins, and selected attributes.
+
+FINAL_JSON:
+["analytics.orders.customer_id", "analytics.orders.order_date", "analytics.customers.customer_name"]

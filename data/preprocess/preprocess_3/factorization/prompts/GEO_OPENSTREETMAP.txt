@@ -1,0 +1,71 @@
+[COMPONENTS]
+@C1
+all_tags: VARIANT | NULL
+geometry: BINARY | NULL
+osm_timestamp: NUMBER | NULL
+
+@C2
+changeset: NUMBER | NULL
+username: TEXT | NULL
+version: NUMBER | NULL
+visible: BOOLEAN | NULL
+
+@C3
+osm_id: NUMBER | NULL
+osm_version: NUMBER | NULL
+osm_way_id: NUMBER | NULL
+
+@C4
+gdal_type: TEXT | NULL
+layer_class: TEXT | NULL
+layer_code: NUMBER | NULL
+layer_name: TEXT | NULL
+
+[TABLES]
+## GEO_OPENSTREETMAP.HISTORY_CHANGESETS
+osm_timestamp_min: NUMBER | Minimum timestamp of objects contained in this changeset.
+ways: VARIANT | Ways that are part of this way
+id: NUMBER | Changeset ID.
+osm_timestamp_max: NUMBER | Maximum timestamp of objects contained in this changeset.
+relations: VARIANT | Relations that are part of this way
+nodes: VARIANT | Nodes that are part of this way
+
+## GEO_OPENSTREETMAP.PLANET_RELATIONS
+@use: [C1, C2]
+id: NUMBER | NULL
+members: VARIANT | NULL
+
+## GEO_OPENSTREETMAP.HISTORY_RELATIONS
+@use: [C1, C2]
+members: VARIANT | NULL
+id: NUMBER | NULL
+
+## GEO_OPENSTREETMAP.PLANET_LAYERS
+@use: [C1, C3, C4]
+
+## GEO_OPENSTREETMAP.HISTORY_NODES
+@use: [C1, C2]
+longitude: NUMBER | NULL
+latitude: NUMBER | NULL
+id: NUMBER | NULL
+
+## GEO_OPENSTREETMAP.PLANET_FEATURES
+@use: [C1, C3]
+feature_type: TEXT | NULL
+
+## GEO_OPENSTREETMAP.PLANET_FEATURES_POINTS
+@use: [C1, C3]
+
+## GEO_OPENSTREETMAP.HISTORY_LAYERS
+@use: [C1, C3, C4]
+
+## GEO_OPENSTREETMAP.PLANET_NODES
+@use: [C1, C2]
+latitude: NUMBER | NULL
+id: NUMBER | NULL
+longitude: NUMBER | NULL
+
+## GEO_OPENSTREETMAP.PLANET_WAYS
+@use: [C1, C2]
+nodes: VARIANT | NULL
+id: NUMBER | NULL

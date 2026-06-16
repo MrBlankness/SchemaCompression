@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq137",
+  "question": "Please find all zip code areas located within 10 kilometers of the coordinates (-122.3321, 47.6062) by joining the 2010 census population data (summing only male and female populations with no age constraints) and the zip code area information, and return each area’s polygon, land and water area in meters, latitude and longitude, state code, state name, city, county, and total population.",
+  "db_id": "CENSUS_BUREAU_USA",
+  "source_document": "functions_st_dwithin.md",
+  "evidence": "Function: ST_DWITHIN(<geography_expression_1>, <geography_expression_2>, <distance_in_meters>) returns BOOLEAN. Determines if minimum geodesic distance between two GEOGRAPHY objects is within specified meters. Example: SELECT ST_DWITHIN(ST_MAKEPOINT(0, 0), ST_MAKEPOINT(1, 0), 150000) returns True. Distance parameter is in meters (REAL type)."
+}

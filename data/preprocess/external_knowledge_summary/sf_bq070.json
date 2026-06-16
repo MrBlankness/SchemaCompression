@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq070",
+  "question": "Could you provide a clean, structured dataset from dicom_all table that only includes SM images marked as VOLUME from the TCGA-LUAD and TCGA-LUSC collections, excluding any slides with compression type “other,” where the specimen preparation step explicitly has “Embedding medium” set to “Tissue freezing medium,” and ensuring that the tissue type is only “normal” or “tumor” and the cancer subtype is reported accordingly?",
+  "db_id": "IDC",
+  "source_document": "dicom_dataset_selection.md",
+  "evidence": "Filters: collection_id IN ('TCGA-LUAD', 'TCGA-LUSC'), compression IN ('jpeg', 'jpeg2000'), image_type = 'VOLUME', embedding_medium = 'Tissue freezing medium', tissue_type_code IN ('17621005', '86049000'). Required columns: digital_slide_id, case_id, physical_slide_id, patient_id, collection_id, instance_id, gcs_url, width, height, pixel_spacing, compression, tissue_type, cancer_subtype. Sorting: instance_id ASC. Tissue type mapping: '17621005' = 'normal', '86049000' = 'tumor'. Cancer subtype mapping: 'TCGA-LUAD' = 'luad', 'TCGA-LUSC' = 'lscc'."
+}

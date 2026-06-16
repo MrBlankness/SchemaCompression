@@ -1,0 +1,1679 @@
+[COMPONENTS]
+@C1
+date: DATE | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL
+
+@C2
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged.
+dropoff_latitude: FLOAT | Latitude where the meter was disengaged
+dropoff_longitude: FLOAT | Longitude where the meter was disengaged.
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges.
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed trips at the flag drop. The improvement surcharge began being levied in 2015.
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+pickup_latitude: FLOAT | Latitude where the meter was engaged
+pickup_longitude: FLOAT | Longitude where the meter was engaged.
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka “store and forward,” because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+tip_amount: FLOAT | Tip amount – This field is automatically populated for credit card tips. Cash tips are not included.
+tolls_amount: FLOAT | Total amount of all tolls paid in trip.
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter.
+vendor_id: TEXT | A code indicating the TPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc
+
+@C3
+etl_timestamp: NUMBER | Load time for this data row
+source_url: TEXT | Source
+
+@C4
+distance_between_service: FLOAT | NULL
+ehail_fee: FLOAT | NULL
+payment_type: NUMBER | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+time_between_service: NUMBER | NULL
+trip_type: NUMBER | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+
+@C5
+boro_ct: NUMBER | This is the boro_ct identifyer for the census tract that the tree point falls into.
+borocode: NUMBER | Code for borough in which tree point is located
+boroname: TEXT | Name of borough in which tree point is located
+cb_num: NUMBER | Community board in which tree point is located
+cncldist: NUMBER | Council district in which tree point is located
+nta: TEXT | This is the NTA Code corresponding to the neighborhood tabulation area from the 2010 US Census that the tree point falls into.
+nta_name: TEXT | This is the NTA name corresponding to the neighborhood tabulation area from the 2010 US Census that the tree point falls into.
+st_assem: NUMBER | State Assembly District in which tree point is located
+st_senate: NUMBER | State Senate District in which tree point is located
+tree_dbh: NUMBER | Diameter of the tree, measured at approximately 54" / 137cm above the ground.
+zip_city: TEXT | City as derived from zipcode. This is often (but not always) the same as borough.
+zipcode: NUMBER | Five-digit zipcode in which tree is located
+
+@C6
+latitude: FLOAT | NULL
+longitude: FLOAT | NULL
+
+@C7
+dispatching_base_num: TEXT | The TLC Base License Number of the base that dispatched the trip.
+location_id: NUMBER | The TLC taxi zone of the trip pick-up
+service_zone: TEXT | This is Pickup service_zone
+zone: TEXT | This is Pickup zone
+
+@C8
+spc_common: TEXT | Common name for species, e.g. "red maple"
+spc_latin: TEXT | Scientific name for species, e.g. "Acer rubrum"
+
+[TABLES]
+## GHCN_D.GHCND_1852
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2017
+@use: [C1, C3]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1878
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1988
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1930
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1916
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1781
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1932
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1962
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1883
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2013
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1867
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1928
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1868
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1779
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1853
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2012
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1982
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1857
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1904
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1766
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1808
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1941
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1831
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1967
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1894
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1842
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1780
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1877
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1999
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1838
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1954
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1827
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1812
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1811
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1966
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1823
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2007
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1775
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1802
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1797
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1769
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1979
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1805
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1931
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1935
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1786
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1790
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_STATIONS
+@use: [C3, C6]
+wmoid: NUMBER | NULL
+state: TEXT | NULL
+gsn_flag: TEXT | NULL
+hcn_crn_flag: TEXT | NULL
+elevation: FLOAT | NULL
+name: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1784
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1829
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1991
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1910
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1995
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1824
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1953
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1897
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1994
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2004
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1952
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1998
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2002
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1997
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1822
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1833
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1809
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1942
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1957
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1903
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1958
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1918
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1980
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1768
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1914
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1960
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1965
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1989
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1923
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1874
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2022
+@use: [C1, C3]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1970
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1859
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1927
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1844
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1905
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1843
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1850
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2019
+@use: [C1, C3]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2005
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2018
+@use: [C1, C3]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1986
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1925
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1801
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1830
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1764
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1765
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1771
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1807
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1804
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1872
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1880
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1847
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1887
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1885
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1849
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1961
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1816
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1913
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1920
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1858
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1772
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1845
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1934
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1839
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1992
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1854
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1803
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1972
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1869
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1899
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1796
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2024
+@use: [C1, C3]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1890
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1813
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_STATES
+@use: [C3]
+code: TEXT | NULL
+name: TEXT | NULL
+
+## GHCN_D.GHCND_1840
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1879
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1933
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1818
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1990
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1782
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1964
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1949
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1901
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1871
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1783
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2001
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1785
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1955
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2000
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2020
+@use: [C1, C3]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1926
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1975
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1837
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1984
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1924
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1976
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2014
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1888
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2015
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1861
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1866
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2016
+@use: [C1, C3]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2021
+@use: [C1, C3]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1919
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1937
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1943
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1907
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1774
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1855
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2010
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1940
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1947
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1814
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1770
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1945
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1828
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1865
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1860
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1902
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1791
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1981
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1815
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1794
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1959
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1870
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1787
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1911
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1892
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1834
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1898
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_2008
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1846
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1978
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1909
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1798
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1996
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1922
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1939
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1889
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_COUNTRIES
+@use: [C3]
+name: TEXT | NULL
+code: TEXT | NULL
+
+## GHCN_D.GHCND_1912
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1806
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1893
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1875
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1863
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1841
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1856
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1886
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1969
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2003
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1973
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1864
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1792
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1825
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1851
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1895
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2023
+@use: [C1, C3]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1963
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1821
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_INVENTORY
+@use: [C3, C6]
+firstyear: NUMBER | NULL
+element: TEXT | NULL
+lastyear: NUMBER | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1983
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1881
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1977
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1944
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1767
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1789
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1906
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1800
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1948
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1891
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1876
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1917
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1836
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1915
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1810
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1820
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2009
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1778
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1776
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1773
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1921
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1848
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1763
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2006
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1950
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1795
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1788
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1884
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1971
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1793
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1985
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1968
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1974
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1835
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1873
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1936
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1819
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1900
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1938
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1799
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1777
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1993
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1862
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1882
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_2011
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1929
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1817
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1896
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1908
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1946
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1987
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1832
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1826
+@use: [C1]
+element: TEXT | NULL
+id: TEXT | NULL
+
+## GHCN_D.GHCND_1956
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## GHCN_D.GHCND_1951
+@use: [C1]
+id: TEXT | NULL
+element: TEXT | NULL
+
+## NEW_YORK.CITIBIKE_TRIPS
+start_station_name: TEXT | Start Station Name
+start_station_id: NUMBER | Start Station ID
+gender: TEXT | Gender (unknown, male, female)
+tripduration: NUMBER | Trip Duration (in seconds)
+end_station_name: TEXT | End Station Name
+stoptime: NUMBER | Stop Time, in NYC local time.
+start_station_latitude: FLOAT | Start Station Latitude
+usertype: TEXT | User Type (Customer = 24-hour pass or 7-day pass user, Subscriber = Annual Member)
+end_station_id: NUMBER | End Station ID
+birth_year: NUMBER | Year of Birth
+starttime: NUMBER | Start Time, in NYC local time.
+end_station_longitude: FLOAT | End Station Longitude
+start_station_longitude: FLOAT | Start Station Longitude
+end_station_latitude: FLOAT | End Station Latitude
+bikeid: NUMBER | Bike ID
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2009
+@use: [C2]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+pickup_datetime: NUMBER | The date and time when the meter was engaged.
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2015
+@use: [C2]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+
+## NEW_YORK.TLC_GREEN_TRIPS_2016
+@use: [C2, C4]
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+
+## NEW_YORK.TLC_GREEN_TRIPS_2014
+@use: [C2, C4]
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+
+## NEW_YORK.NYPD_MV_COLLISIONS
+@use: [C6]
+borough: TEXT | NULL
+number_of_pedestrians_killed: NUMBER | NULL
+number_of_motorist_injured: NUMBER | NULL
+number_of_pedestrians_injured: NUMBER | NULL
+cross_street_name: TEXT | NULL
+contributing_factor_vehicle_5: TEXT | NULL
+contributing_factor_vehicle_4: TEXT | NULL
+number_of_cyclist_injured: NUMBER | NULL
+vehicle_type_code2: TEXT | NULL
+location: TEXT | NULL
+contributing_factor_vehicle_2: TEXT | NULL
+number_of_cyclist_killed: NUMBER | NULL
+number_of_persons_killed: NUMBER | NULL
+vehicle_type_code_4: TEXT | NULL
+vehicle_type_code_3: TEXT | NULL
+vehicle_type_code1: TEXT | NULL
+unique_key: NUMBER | NULL
+zip_code: NUMBER | NULL
+vehicle_type_code_5: TEXT | NULL
+contributing_factor_vehicle_1: TEXT | NULL
+timestamp: NUMBER | NULL
+on_street_name: TEXT | NULL
+number_of_persons_injured: NUMBER | NULL
+number_of_motorist_killed: NUMBER | NULL
+off_street_name: TEXT | NULL
+contributing_factor_vehicle_3: TEXT | NULL
+
+## NEW_YORK.TREE_SPECIES
+species_common_name: TEXT | NULL
+form: TEXT | NULL
+tree_size: TEXT | NULL
+growth_rate: TEXT | NULL
+location_tolerances: TEXT | NULL
+fall_color: TEXT | NULL
+environmental_tolerances: TEXT | NULL
+species_scientific_name: TEXT | NULL
+comments: TEXT | NULL
+notes_suggested_cultivars: TEXT | NULL
+
+## NEW_YORK.TREE_CENSUS_2015
+@use: [C5, C6, C8]
+health: TEXT | Indicates the user's perception of tree health.
+root_other: TEXT | Indicates the presence of other root problems
+problems: TEXT | NULL
+y_sp: FLOAT | Y coordinate, in state plane. Units are feet
+trunk_wire: TEXT | Indicates the presence of a trunk problem caused by wires or rope wrapped around the trunk
+tree_id: NUMBER | Unique identification number for each tree point
+stump_diam: NUMBER | Diameter of stump measured through the center, rounded to the nearest inch.
+x_sp: FLOAT | X coordinate, in state plane. Units are feet.
+block_id: NUMBER | Identifier linking each tree to the block in the blockface table/shapefile that it is mapped on.
+state: TEXT | All features given value 'New York'
+brch_other: TEXT | Indicates the presence of other branch problems
+user_type: TEXT | This field describes the category of user who collected this tree point's data.
+address: TEXT | Nearest estimated address to tree
+trnk_light: TEXT | Indicates the presence of a trunk problem caused by lighting installed on the tree
+root_grate: TEXT | Indicates the presence of a root problem caused by metal grates in tree bed
+brch_shoe: TEXT | Indicates the presence of a branch problem caused by sneakers in the branches
+status: TEXT | Indicates whether the tree is alive, standing dead, or a stump.
+guards: TEXT | Indicates whether a guard is present, and if the user felt it was a helpful or harmful guard. Not recorded for dead trees and stumps
+steward: TEXT | Indicates the number of unique signs of stewardship observed for this tree. Not recorded for stumps or dead trees.
+root_stone: TEXT | Indicates the presence of a root problem caused by paving stones in tree bed
+sidewalk: TEXT | Indicates whether one of the sidewalk flags immediately adjacent to the tree was damaged, cracked, or lifted. Not recorded for dead trees and stumps.
+created_at: DATE | The date tree points were collected in the census software
+curb_loc: TEXT | Location of tree bed in relationship to the curb; trees are either along the curb (OnCurb) or offset from the curb (OffsetFromCurb)
+brch_light: TEXT | Indicates the presence of a branch problem caused by lights (usually string lights) or wires in the branches
+trnk_other: TEXT | Indicates the presence of other trunk problems
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2010
+@use: [C2]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+pickup_datetime: NUMBER | The date and time when the meter was engaged.
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2013
+@use: [C2]
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+
+## NEW_YORK.TREE_CENSUS_2005
+@use: [C5, C8]
+sidw_raise: TEXT | Raised sidewalk present
+location_1: TEXT | NULL
+wire_other: TEXT | Indicates the presence of other wires
+pit_type: TEXT | NULL
+wire_2nd: TEXT | Indicates the presence of secondary wires
+vert_wall: TEXT | Walled tree well present
+inf_wires: TEXT | Choking wires present
+inf_paving: TEXT | Close paving present
+inf_lights: TEXT | Tree lights present
+inf_guard: TEXT | Choking guard or grate present
+status: TEXT | Excellent: full, well balanced crown and limb structure; leaves normal size color; no dead or broken branches; trunk solid; bark intact. Good: crown uneven or misshapen; some mechanical damage to bark or trunk; some signs of insects or disease; leaves somewhat below normal size and quantity; some dead or broken branches (less than half of the tree). Poor: large dead limbs with over one- half of the tree already dead or removed; large cavities; drastic deformities; leaves significantly below normal size and quantity; severe insect or disease damage. Dead: dead tree; leaves absent; twigs brittle. Shaft: all branches removed; trunk left standing; sprouts may or may not be evident. Stump: stump shorter than breast height; leaves entirely absent or present only on stump sprouts Empty pit: Pit contains exposed soil and no tree
+vert_other: TEXT | Other Vertical Treatment Present
+sidw_crack: TEXT | Cracked sidewalk present
+soil_lvl: TEXT | NULL
+horz_other: TEXT | Other horizontal treatment present
+vert_tgrd: TEXT | Tall guard present
+inf_other: TEXT | Other infrastructure conflicts present
+inf_canopy: TEXT | Canopy debris present
+horz_plant: TEXT | Plantings present
+objectid: NUMBER | NULL
+tree_loc: TEXT | Establishes the location of the tree in relation to the address provided
+trunk_dmg: TEXT | Describes specific damage or wounds found on the trunk
+wire_prime: TEXT | Indicates the presence of primary wires
+objectid_1: NUMBER | NULL
+x_sp: NUMBER | X field
+inf_shoes: TEXT | Sneakers present
+vert_pgrd: TEXT | Perimeter guard present
+wire_htap: TEXT | Indicates the presence of house tap wires
+y_sp: NUMBER | y field
+horz_grate: TEXT | Tree grates present
+inf_outlet: TEXT | Electrical outlet present
+horz_blck: TEXT | Block pavers present
+cen_year: NUMBER | This is the year the tree was inventoried in. Data collection for the 2005 census spanned multiple seasons. Data is in YYYY format.
+
+## NEW_YORK._311_SERVICE_REQUESTS
+@use: [C6]
+agency: TEXT | NULL
+park_facility_name: TEXT | NULL
+location_type: TEXT | NULL
+cross_street_1: TEXT | NULL
+facility_type: TEXT | NULL
+bridge_highway_segment: TEXT | NULL
+due_date: NUMBER | NULL
+taxi_pickup_location: TEXT | NULL
+city: TEXT | Parsed location information. City.
+bbl: NUMBER | NULL
+incident_address: TEXT | Service location of Service request.
+x_coordinate: NUMBER | NULL
+bridge_highway_direction: TEXT | NULL
+created_date: NUMBER | Date Service request was created.
+closed_date: NUMBER | NULL
+location: TEXT | Service request location latitude and longitude coordinates.
+resolution_action_updated_date: NUMBER | NULL
+bridge_highway_name: TEXT | NULL
+open_data_channel_type: TEXT | NULL
+road_ramp: TEXT | NULL
+taxi_company_borough: TEXT | NULL
+resolution_description: TEXT | NULL
+borough: TEXT | NULL
+vehicle_type: TEXT | NULL
+agency_name: TEXT | NULL
+complaint_type: TEXT | NULL
+status: TEXT | Service request status. Duplicate statuses indicate that issue had previously been reported recently.
+cross_street_2: TEXT | NULL
+y_coordinate: NUMBER | NULL
+incident_zip: TEXT | Parsed location information. Zip code.
+community_board: TEXT | NULL
+landmark: TEXT | NULL
+descriptor: TEXT | NULL
+intersection_street_2: TEXT | NULL
+intersection_street_1: TEXT | NULL
+street_name: TEXT | Parsed location information. Street name.
+unique_key: NUMBER | The service request tracking number.
+park_borough: TEXT | NULL
+address_type: TEXT | NULL
+
+## NEW_YORK.TLC_GREEN_TRIPS_2015
+@use: [C2, C4]
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+
+## NEW_YORK.TREE_CENSUS_1995
+@use: [C6, C8]
+recordid: NUMBER | A unique identifier for each record in the table. Does not correspond to other datasets or identify the tree itself.
+censustract_2010: TEXT | 2010 Census Tract geocoded to the address using Geosupport 11.4
+zip_new: NUMBER | Zip Code geocoded to the address using Geosupport 11.4
+borough: TEXT | Borough where tree was recorded.
+diameter: NUMBER | Diameter of the tree as measured at approximately 4.5 feet from the ground.
+house_number: TEXT | Numerical portion of the address.
+sidewalk_condition: TEXT | Whether the tree roots have lifted the adjacent sidewalk.
+street: TEXT | Street where address for tree is located.
+nta_2010: TEXT | Neighborhood Tabulation Area geocoded to the address using Geosupport 11.4
+segmentid: NUMBER | LION SegmentID geocoded to the address using Geosupport 11.4
+censusblock_2010: TEXT | 2010 Census Block geocoded to the address using Geosupport 11.4
+species: TEXT | Species of the tree using a four-letter code, comprised of the first two letters of the genus followed by the first two letters of the species.
+cb_original: NUMBER | The community board originally geocoded to the address using LION 02A
+zip_original: NUMBER | The zip code originally geocoded to the address using LION 02A
+y: FLOAT | Y coordinate of point in the NAD_1983_StatePlane_New_York_Long_Island_FIPS_3104_Feet coordinate system, geocoded using LION 02A
+x: FLOAT | X coordinate of point in the NAD_1983_StatePlane_New_York_Long_Island_FIPS_3104_Feet coordinate system, geocoded using LION 02A
+location: TEXT | NULL
+status: TEXT | Overall tree condition.
+address: TEXT | Address of the tree.
+site: TEXT | This field clarifies the position relative to the address for trees not located in the front of buildings.
+support_structure: TEXT | Whether the tree has support structures installed.
+cb_new: NUMBER | Community Board geocoded to the address using Geosupport 11.4
+wires: TEXT | Whether the tree is located under utility wires
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2016
+@use: [C2]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+
+## NEW_YORK.CITIBIKE_STATIONS
+@use: [C6]
+eightd_has_available_keys: BOOLEAN | NULL
+num_docks_available: NUMBER | Number of docks accepting bike returns.
+is_installed: BOOLEAN | Is the station currently on the street?
+name: TEXT | Public name of the station.
+num_bikes_available: NUMBER | Number of bikes available for rental.
+region_id: NUMBER | ID of the region where station is located.
+is_renting: BOOLEAN | Is the station currently renting bikes?
+station_id: TEXT | Unique identifier of a station.
+num_bikes_disabled: NUMBER | Number of disabled bikes at the station.
+num_docks_disabled: NUMBER | Number of empty but disabled dock points at the station.
+short_name: TEXT | Short name or other type of identifier, as used by the data publisher.
+last_reported: NUMBER | Timestamp indicating the last time this station reported its status to the backend, in NYC local time.
+rental_methods: TEXT | Array of enumerables containing the payment methods accepted at this station.
+capacity: NUMBER | ANumber of total docking points installed at this station, both available and unavailable.
+eightd_has_key_dispenser: BOOLEAN | NULL
+is_returning: BOOLEAN | Is the station accepting bike returns?
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2011
+@use: [C2]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+
+## NEW_YORK.TLC_GREEN_TRIPS_2013
+@use: [C2, C4]
+pickup_datetime: NUMBER | The date and time when the meter was engaged.
+
+## NEW_YORK.TLC_FHV_TRIPS_2015
+@use: [C7]
+pickup_datetime: NUMBER | The date and time of the trip pick-up.
+borough: TEXT | This is Pickup borough
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2012
+@use: [C2]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+
+## NEW_YORK.TLC_FHV_TRIPS_2016
+@use: [C7]
+borough: TEXT | This is Pickup borough
+pickup_datetime: NUMBER | The date and time of the trip pick-up.
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2014
+@use: [C2]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+pickup_datetime: NUMBER | The date and time when the meter was engaged

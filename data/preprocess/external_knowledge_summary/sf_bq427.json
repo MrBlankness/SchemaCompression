@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq427",
+  "question": "Could you determine, for each shot type, the average x and y coordinates (adjusted to ensure consistency regarding the left or right basket), the average number of shot attempts, and the average number of successful shots, considering only shots taken before March 15, 2018, excluding those with null shot types or coordinates, ensuring the shots are on the correct side of the court based on the team's basket.",
+  "db_id": "NCAA_BASKETBALL",
+  "source_document": "basketball.md",
+  "evidence": "Key concepts: 'X and Y Coordinates Calculation' for adjusting coordinates based on event_coord_x and event_coord_y. Formulas: X = event_coord_x if < 564, else 1128 - event_coord_x; Y = 600 - event_coord_y if event_coord_x < 564, else event_coord_y. This ensures 'shots are on the correct side of the court based on the team's basket' by standardizing to one basket perspective. Filter conditions: exclude null shot types or coordinates, shots before March 15, 2018. Metrics needed: average adjusted x and y coordinates, average shot attempts, average successful shots, grouped by shot type."
+}

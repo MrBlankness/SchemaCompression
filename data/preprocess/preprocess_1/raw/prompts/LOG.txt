@@ -1,0 +1,59 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: LOG.MST_PRODUCTS_20170101
+Columns: updated_at, price, name, product_id
+
+Table: LOG.PURCHASE_LOG
+Columns: stamp, amount, purchase_id, user_id
+
+Table: LOG.ACCESS_LOG
+Columns: user_id, session, action, stamp
+
+Table: LOG.ACTIVITY_LOG
+Columns: action, session, option, search_type, path, stamp
+
+Table: LOG.MST_PRODUCTS_20161201
+Columns: name, price, updated_at, product_id
+
+Table: LOG.APP2_MST_USERS
+Columns: user_id, phone, name
+
+Table: LOG.MST_USERS_WITH_CARD_NUMBER
+Columns: card_number, user_id
+
+Table: LOG.FORM_ERROR_LOG
+Columns: session, form, stamp, field, value, error_type
+
+Table: LOG.FORM_LOG
+Columns: status, action, session, path, stamp
+
+Table: LOG.ACTION_LOG_WITH_NOISE
+Columns: user_agent, session, ip, url, products, stamp, action
+
+Table: LOG.APP1_MST_USERS
+Columns: email, name, user_id
+
+Table: LOG.ACTION_LOG_WITH_IP
+Columns: ip, user_id, stamp, action, session
+
+Table: LOG.MST_CATEGORIES
+Columns: id, stamp, name
+
+Table: LOG.READ_LOG
+Columns: url, session, stamp, action
+
+Table: LOG.INVALID_ACTION_LOG
+Columns: stamp, session, action, user_id, category, products, amount
+
+Table: LOG.MST_USERS
+Columns: register_date, withdraw_date, register_device, birth_date, user_id, sex
+
+Table: LOG.ACTION_LOG
+Columns: stamp, action, amount, user_id, category, session, products
+
+Table: LOG.PRODUCT_SALES
+Columns: category_name, product_id, sales
+
+Table: LOG.DUP_ACTION_LOG
+Columns: products, session, stamp, action, user_id

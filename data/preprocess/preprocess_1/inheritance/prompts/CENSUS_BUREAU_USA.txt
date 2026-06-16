@@ -1,0 +1,18 @@
+[TEMPLATES]
+Format: Tn|col1,col2|schema1.table1;schema2.table2
+T13|gender,population,geo_id,minimum_age,maximum_age,zipcode|CENSUS_BUREAU_USA.POPULATION_BY_ZIP_2000;CENSUS_BUREAU_USA.POPULATION_BY_ZIP_2010
+
+[STANDALONE]
+Format: schema.table|col1,col2
+UTILITY_US.COUNTRY_CODE_ISO|alpha_3_code,alpha_2_code,sub_continent_name,continent_code,cctlds,fips_code,numeric_code,country_name,continent_name,stanag_code
+UTILITY_US.DATE_GREG|quarter,date_slash,week_iso,year_first_day,dow_mon06,half,quarter_first_day,month_first_day,dow_sun06,day_abbr,date_str,week_sun,month_abbr,year_iso,day,dow_mon17,dow_sun17,date_dash,week_mon,date_int,half_first_day,month,date,year
+UTILITY_US.NUM_999999|num
+UTILITY_US.TIME|time,second,hour,is_pm,hour_ampm,second_in_day,minute
+UTILITY_US.US_BORDER_AREA|aff_geo_id,geo_id,us_border_geom,name
+UTILITY_US.US_CITIES_AREA|area_water_meters,area_land_meters,lsad_code,lsad_name,int_point_lon,area_type,urban_area_code,functional_status,feature_class_code,int_point_lat,geo_code,name,city_geom
+UTILITY_US.US_COASTLINE_AREA|name,coastline_geom
+UTILITY_US.US_COUNTY_AREA|legal_area_code,county_geom,area_water_meters,county_name,aff_geo_code,area_land_meters,county_fips_code,county_gnis_code,geo_id,state_fips_code
+UTILITY_US.US_CSA_AREA|aff_geo_code,name,csa_code,geo_code,lsad_code,area_water_meters,area_land_meters,csa_geom
+UTILITY_US.US_MSA_AREA|msa_geom,csa_code,int_point_lat,name,msa_code,int_point_lon,area_water_meters,status_indicator,area_land_meters,lsad_code,lsad_name,feature_class_code,geo_code
+UTILITY_US.US_STATES_AREA|functional_status_code,feature_class_code,state_fips_code,region_code,internal_point_lon,state_gnis_code,legal_area_code,internal_point_lat,division_code,state_abbreviation,state_geo_id,area_water_meters,state_geom,state_name,area_land_meters
+UTILITY_US.ZIPCODE_AREA|area_land_miles,latitude,zipcode_geom,city,zipcode,longitude,state_fips,area_water_miles,area_land_meters,state_code,area_water_meters,county,state_name

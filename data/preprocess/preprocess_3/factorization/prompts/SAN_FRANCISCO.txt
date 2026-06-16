@@ -1,0 +1,134 @@
+[COMPONENTS]
+@C1
+latitude: FLOAT | Latitude
+longitude: FLOAT | Longitude
+
+[TABLES]
+## SAN_FRANCISCO.BIKESHARE_STATUS
+station_id: NUMBER | Station ID number
+bikes_available: NUMBER | Number of available bikes
+time: NUMBER | Date and time, PST
+docks_available: NUMBER | Number of available docks
+
+## SAN_FRANCISCO.BIKESHARE_STATIONS
+@use: [C1]
+dockcount: NUMBER | Number of total docks at station
+landmark: TEXT | City (San Francisco, Redwood City, Palo Alto, Mountain View, San Jose)
+installation_date: DATE | Original date that station was installed. If station was moved, it is noted below.
+station_id: NUMBER | Station ID number
+name: TEXT | Name of station
+
+## SAN_FRANCISCO._311_SERVICE_REQUESTS
+@use: [C1]
+resolution_action_updated_date: NUMBER | NULL
+closed_date: NUMBER | NULL
+unique_key: NUMBER | The service request tracking number.
+created_date: NUMBER | Date Service request was created.
+supervisor_district: NUMBER | NULL
+category: TEXT | NULL
+status_notes: TEXT | NULL
+media_url: TEXT | NULL
+agency_name: TEXT | NULL
+location: TEXT | Service request location latitude and longitude coordinates.
+neighborhood: TEXT | NULL
+source: TEXT | Contact method Service request was received from. Mass entry requests are submitted by dept. in groups after work is completed.
+complaint_type: TEXT | NULL
+incident_address: TEXT | Service location of Service request.
+status: TEXT | Service request status. Duplicate statuses indicate that issue had previously been reported recently.
+descriptor: TEXT | NULL
+police_district: TEXT | NULL
+
+## SAN_FRANCISCO.SFFD_SERVICE_CALLS
+@use: [C1]
+address: TEXT | Address of midblock point associated with incident (obfuscated address to protect caller privacy)
+final_priority: NUMBER | Final call priority (Code 2: Non-Emergency or Code 3:Emergency).
+call_date: DATE | Date the call is received at the 911 Dispatch Center. Used for reporting purposes.
+fire_prevention_district: TEXT | Bureau of Fire Prevention District associated with this address
+unit_type: TEXT | Unit type
+original_priority: TEXT | Initial call priority (Code 2: Non-Emergency or Code 3:Emergency).
+neighborhood_district: TEXT | Neighborhood District associated with this address, boundaries available here: https://data.sfgov.org/d/p5b7-5n3h
+response_timestamp: NUMBER | Date and time this unit acknowledges the dispatch and records that the unit is en route to the location of the call.
+available_timestamp: NUMBER | Date and time this unit is not longer assigned to this call and it is available for another dispatch.
+battalion: TEXT | Emergency Response District (There are 9 Fire Emergency Response Districts)
+als_unit: BOOLEAN | Does this unit includes ALS (Advance Life Support) resources? Is there a paramedic in this unit?
+priority: TEXT | Call priority (Code 2: Non-Emergency or Code 3:Emergency).
+hospital_timestamp: NUMBER | If this unit is an ambulance, date and time the unit arrives to the hospital.
+received_timestamp: NUMBER | Date and time of call is received at the 911 Dispatch Center.
+zipcode_of_incident: TEXT | Zipcode of incident
+incident_number: NUMBER | A unique 8-digit number assigned by DEM to this Fire incident.
+call_number: NUMBER | A unique 9-digit number assigned by the 911 Dispatch Center (DEM) to this call. These number are used for both Police and Fire calls.
+supervisor_district: TEXT | Supervisor District associated with this address
+call_type_group: TEXT | Call types are divided into four main groups: Fire, Alarm, Potential Life Threatening and Non Life Threatening.
+call_type: TEXT | Type of call the incident falls into. See the list below.
+box: TEXT | Fire box associated with the address of the incident. A box is the smallest area used to divide the City. Each box is associated with a unique unit dispatch order. The City is divided into more than 2,400 boxes.
+unit_sequence_in_call_dispatch: NUMBER | A number that indicates the order this unit was assigned to this call
+number_of_alarms: NUMBER | Number of alarms associated with the incident. This is a number between 1 and 5.
+entry_timestamp: NUMBER | Date and time the 911 operator submits the entry of the initical call information into the CAD system
+city: TEXT | City of incident
+station_area: TEXT | Fire Station First Response Area associated with the address of the incident
+transport_timestamp: NUMBER | If this unit is an ambulance, date and time the unit begins the transport unit arrives to hospital
+row_id: TEXT | Unique identifier used for managing data updates. It is the concatenation of Call Number and Unit ID separated by a dash
+watch_date: DATE | Watch date when the call is received. Watch date starts at 0800 each morning and ends at 0800 the next day.
+call_final_disposition: TEXT | Disposition of the call (Code). For example TH2: Transport to Hospital - Code 2, FIR: Resolved by Fire Department
+dispatch_timestamp: NUMBER | Date and time the 911 operator dispatches this unit to the call.
+on_scene_timestamp: NUMBER | Date and time the unit records arriving to the location of the incident
+unit_id: TEXT | Unit Identifier. For example E01 for Engine 1 or T01 for Truck 1.
+location: TEXT | Latitude and longitude of address obfuscated either to the midblock, intersection or call box
+
+## SAN_FRANCISCO.BIKESHARE_TRIPS
+start_station_name: TEXT | Station name for start station
+trip_id: NUMBER | Numeric ID of bike trip
+subscriber_type: TEXT | Type of the Subscriber
+end_date: NUMBER | NULL
+bike_number: NUMBER | NULL
+end_station_id: NUMBER | Numeric reference for end station
+start_station_id: NUMBER | Numeric reference for start station
+zip_code: TEXT | NULL
+duration_sec: NUMBER | NULL
+start_date: NUMBER | NULL
+end_station_name: TEXT | Station name for end station
+
+## SAN_FRANCISCO.STREET_TREES
+@use: [C1]
+dbh: TEXT | depth height
+plant_date: NUMBER | Date tree was planted
+species: TEXT | Species of tree
+plot_size: TEXT | dimension of tree plot
+x_coordinate: FLOAT | CA State Plane III
+y_coordinate: FLOAT | CA State Plane III
+plant_type: TEXT | Landscaping or Tree
+site_info: TEXT | Description of location of tree
+site_order: NUMBER | Order of tree at address where multiple trees are at same address. Trees are ordered in ascending address order
+care_taker: TEXT | Agency or person that is primary caregiver to tree. Owner of Tree
+permit_notes: TEXT | Tree permit number reference
+location: TEXT | Location formatted for mapping
+tree_id: NUMBER | Unique ID for Tree
+address: TEXT | Address of Tree
+legal_status: TEXT | Legal staus: Permitted or DPW maintained
+care_assistant: TEXT | Agency or person that is secondary caregiver to tree
+
+## SAN_FRANCISCO.FILM_LOCATIONS
+actor_3: TEXT | NULL
+locations: TEXT | NULL
+fun_facts: TEXT | NULL
+director: TEXT | NULL
+title: TEXT | NULL
+actor_1: TEXT | NULL
+distributor: TEXT | NULL
+production_company: TEXT | NULL
+actor_2: TEXT | NULL
+writer: TEXT | NULL
+release_year: NUMBER | NULL
+
+## SAN_FRANCISCO.SFPD_INCIDENTS
+@use: [C1]
+pdid: NUMBER | Unique Identifier for use in update and insert operations
+timestamp: NUMBER | NULL
+pddistrict: TEXT | Police Department district
+dayofweek: TEXT | NULL
+unique_key: NUMBER | The unique incident number for this accident
+resolution: TEXT | Whether there was an arrest, citation, booking, etc.
+location: TEXT | Latitude/Longitude
+descript: TEXT | NULL
+address: TEXT | NULL
+category: TEXT | NULL

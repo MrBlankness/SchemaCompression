@@ -1,0 +1,73 @@
+[TABLES]
+## DELIVERY_CENTER.DRIVERS
+driver_modal: TEXT | NULL | eg=["MOTOBOY", "BIKER"]
+driver_type: TEXT | NULL | eg=["LOGISTIC OPERATOR", "FREELANCE"]
+driver_id: NUMBER | NULL | eg=[133, 138]
+
+## DELIVERY_CENTER.ORDERS
+order_metric_collected_time: FLOAT | NULL | eg=[1.5, 4.07]
+order_metric_walking_time: FLOAT | NULL | eg=[2.53, 7.5]
+order_moment_finished: TEXT | NULL | eg=["4/23/2021 6:32:38 PM", "4/23/2021 5:32:02 PM"]
+order_moment_collected: TEXT | NULL | eg=["4/23/2021 5:36:46 PM", "4/23/2021 5:11:16 PM"]
+order_created_minute: NUMBER | NULL | eg=[51]
+order_metric_production_time: FLOAT | NULL | eg=[44.1, 15.6]
+order_status: TEXT | NULL | eg=["FINISHED", "CANCELED"]
+order_metric_cycle_time: FLOAT | NULL | eg=[101.45, 40.43]
+order_moment_delivering: TEXT | NULL | eg=["4/23/2021 5:53:36 PM", "4/23/2021 5:22:20 PM"]
+store_id: NUMBER | NULL | eg=[1101, 1641]
+order_id: NUMBER | NULL | eg=[92076281, 92076409]
+order_created_year: NUMBER | NULL | eg=[2021]
+order_delivery_fee: FLOAT | NULL | eg=[14.9, 0.0]
+payment_order_id: NUMBER | NULL | eg=[92076281, 92076409]
+order_moment_accepted: TEXT | NULL | eg=["4/23/2021 4:51:28 PM", "4/23/2021 4:51:36 PM"]
+order_moment_ready: TEXT | NULL | eg=["4/23/2021 5:35:16 PM", "4/23/2021 5:07:11 PM"]
+channel_id: NUMBER | NULL | eg=[46, 1]
+order_moment_delivered: TEXT | NULL | eg=[""]
+order_created_hour: NUMBER | NULL | eg=[16]
+order_delivery_cost: FLOAT | NULL | eg=[3.77, 5.84]
+order_moment_created: TEXT | NULL | eg=["4/23/2021 4:51:10 PM", "4/23/2021 4:51:36 PM"]
+order_created_month: NUMBER | NULL | eg=[4]
+order_metric_transit_time: FLOAT | NULL | eg=[39.03, 9.68]
+order_created_day: NUMBER | NULL | eg=[23]
+delivery_order_id: NUMBER | NULL | eg=[92076281, 92076409]
+order_moment_in_expedition: TEXT | NULL | eg=["4/23/2021 5:37:48 PM", "4/23/2021 5:14:41 PM"]
+order_amount: FLOAT | NULL | eg=[78.2, 279.97]
+order_metric_expediton_speed_time: FLOAT | NULL | eg=[18.33, 15.15]
+order_metric_paused_time: FLOAT | NULL | eg=[15.8, 7.65]
+
+## DELIVERY_CENTER.STORES
+store_id: NUMBER | NULL | eg=[3, 54]
+store_segment: TEXT | NULL | eg=["FOOD"]
+store_name: TEXT | NULL | eg=["CUMIURI", "VUZPI PAZZIS "]
+store_latitude: FLOAT | NULL | eg=[NaN, -22.921475]
+store_longitude: FLOAT | NULL | eg=[NaN, -43.234822]
+store_plan_price: FLOAT | NULL | eg=[0.0, 49.0]
+hub_id: NUMBER | NULL | eg=[2, 8]
+
+## DELIVERY_CENTER.DELIVERIES
+delivery_order_id: NUMBER | NULL | eg=[68413340, 68414309]
+delivery_distance_meters: FLOAT | NULL | eg=[5199.0, 410.0]
+delivery_id: NUMBER | NULL | eg=[2174658, 2174660]
+driver_id: FLOAT | NULL | eg=[8378.0, 2473.0]
+delivery_status: TEXT | NULL | eg=["DELIVERED", "CANCELLED"]
+
+## DELIVERY_CENTER.CHANNELS
+channel_name: TEXT | NULL | eg=["PHONE PLACE", "WHATS PLACE"]
+channel_id: NUMBER | NULL | eg=[2, 3]
+channel_type: TEXT | NULL | eg=["OWN CHANNEL"]
+
+## DELIVERY_CENTER.HUBS
+hub_latitude: FLOAT | NULL | eg=[-30.0474148, -30.0374149]
+hub_state: TEXT | NULL | eg=["RS", "RJ"]
+hub_id: NUMBER | NULL | eg=[2, 3]
+hub_city: TEXT | NULL | eg=["PORTO ALEGRE", "RIO DE JANEIRO"]
+hub_longitude: FLOAT | NULL | eg=[-51.21351, -51.20352]
+hub_name: TEXT | NULL | eg=["BLUE SHOPPING", "GREEN SHOPPING"]
+
+## DELIVERY_CENTER.PAYMENTS
+payment_fee: FLOAT | NULL | eg=[0.0, 7.9]
+payment_order_id: NUMBER | NULL | eg=[68410055, 68413340]
+payment_amount: FLOAT | NULL | eg=[118.44, 394.81]
+payment_status: TEXT | NULL | eg=["PAID"]
+payment_id: NUMBER | NULL | eg=[4427917, 4427918]
+payment_method: TEXT | NULL | eg=["VOUCHER", "ONLINE"]

@@ -1,0 +1,116 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: ORACLE_SQL.WEB_PAGES
+Columns: app_id, page_no, friendly_url
+
+Table: ORACLE_SQL.GENDER_DIM
+Columns: name, letter
+
+Table: ORACLE_SQL.WEB_DEVICES
+Columns: phone, day, tablet, pc
+
+Table: ORACLE_SQL.CUSTOMER_REVIEWS
+Columns: customer_id, review_list
+
+Table: ORACLE_SQL.PACKAGING_RELATIONS
+Columns: qty, packaging_id, contains_id
+
+Table: ORACLE_SQL.PRODUCT_MINIMUMS
+Columns: qty_purchase, qty_minimum, product_id
+
+Table: ORACLE_SQL.EMPLOYEES
+Columns: id, title, name, supervisor_id
+
+Table: ORACLE_SQL.PRODUCT_ALCOHOL
+Columns: abv, product_id, sales_volume
+
+Table: ORACLE_SQL.WEB_APPS
+Columns: id, name
+
+Table: ORACLE_SQL.PRODUCTS
+Columns: id, group_id, name
+
+Table: ORACLE_SQL.PRODUCT_GROUPS
+Columns: id, name
+
+Table: ORACLE_SQL.CUSTOMER_FAVORITES
+Columns: customer_id, favorite_list
+
+Table: ORACLE_SQL.ORDERS
+Columns: delivery, id, ordered, customer_id
+
+Table: ORACLE_SQL.BREWERIES
+Columns: id, name
+
+Table: ORACLE_SQL.EMP_HIRE_PERIODS
+Columns: end_, start_, title, emp_id
+
+Table: ORACLE_SQL.ID_NAME_TYPE
+Columns: name, id
+
+Table: ORACLE_SQL.MONTHLY_BUDGET
+Columns: mth, product_id, qty
+
+Table: ORACLE_SQL.ORDERLINES
+Columns: order_id, qty, product_id, amount, id
+
+Table: ORACLE_SQL.PICKING_LINE
+Columns: picklist_id, qty, product_id, line_no, order_id, location_id
+
+Table: ORACLE_SQL.CUSTOMERS
+Columns: name, id
+
+Table: ORACLE_SQL.ID_NAME_COLL_TYPE
+Columns: collection_id
+
+Table: ORACLE_SQL.INVENTORY
+Columns: location_id, product_id, purchase_id, id, qty
+
+Table: ORACLE_SQL.PICKING_LOG
+Columns: log_time, pickline_no, picklist_id, activity, location_id
+
+Table: ORACLE_SQL.MONTHLY_SALES
+Columns: mth, product_id, qty
+
+Table: ORACLE_SQL.STOCK
+Columns: company, symbol
+
+Table: ORACLE_SQL.PURCHASES
+Columns: product_id, purchased, cost, id, qty, brewery_id
+
+Table: ORACLE_SQL.WEB_PAGE_VISITS
+Columns: client_ip, page_no, app_id, visit_time
+
+Table: ORACLE_SQL.FAVORITE_COLL_TYPE
+Columns: id
+
+Table: ORACLE_SQL.TICKER
+Columns: price, symbol, day
+
+Table: ORACLE_SQL.SERVER_HEARTBEAT
+Columns: beat_time, server
+
+Table: ORACLE_SQL.PACKAGING
+Columns: name, id
+
+Table: ORACLE_SQL.WEB_DEMOGRAPHICS
+Columns: f_tw_qty, f_fb_qty, m_tw_cnt, m_tw_qty, f_fb_cnt, f_tw_cnt, m_fb_qty, day, m_fb_cnt
+
+Table: ORACLE_SQL.WEB_COUNTER_HIST
+Columns: day, app_id, page_no, counter
+
+Table: ORACLE_SQL.ID_NAME_COLL_ENTRIES
+Columns: collection_id, name, id
+
+Table: ORACLE_SQL.LOCATIONS
+Columns: position, warehouse, aisle, id
+
+Table: ORACLE_SQL.CONWAY_GEN_ZERO
+Columns: x, alive, y
+
+Table: ORACLE_SQL.PICKING_LIST
+Columns: created, id, picker_emp_id
+
+Table: ORACLE_SQL.CHANNELS_DIM
+Columns: name, id, shortcut

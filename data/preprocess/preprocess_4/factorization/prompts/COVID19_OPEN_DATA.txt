@@ -1,0 +1,721 @@
+[COMPONENTS]
+@C1
+date: DATE | NULL | eg=["2021-06-03", "2021-09-01"]
+latitude: FLOAT | NULL | eg=[36.693018, 38.852612]
+longitude: FLOAT | NULL | eg=[-77.53809, -77.304377]
+
+[TABLES]
+## COVID19_OPEN_DATA.COVID19_OPEN_DATA
+@use: [C1]
+cancel_public_events: NUMBER | NULL
+area_rural_sq_km: TEXT | NULL
+cumulative_hospitalized_patients_female: NUMBER | NULL
+age_bin_9: TEXT | NULL
+search_trends_paresthesia: FLOAT | NULL | eg=[NaN, 1.91]
+openstreetmap_id: NUMBER | NULL | eg=[207036, 9396951]
+population_age_70_79: NUMBER | NULL | eg=[426, 1429]
+mobility_parks: TEXT | NULL
+search_trends_stroke: FLOAT | NULL | eg=[NaN, 1.91]
+diabetes_prevalence: FLOAT | NULL
+cumulative_hospitalized_patients_age_3: NUMBER | NULL
+search_trends_myocardial_infarction: FLOAT | NULL | eg=[NaN, 1.91]
+new_persons_fully_vaccinated_janssen: NUMBER | NULL
+new_confirmed_female: NUMBER | NULL
+wikidata_id: TEXT | NULL | eg=["Q177678", "Q501785"]
+search_trends_hypoxemia: FLOAT | NULL
+search_trends_cataract: FLOAT | NULL
+age_bin_4: TEXT | NULL
+search_trends_scar: FLOAT | NULL | eg=[NaN, 2.04]
+search_trends_subdural_hematoma: FLOAT | NULL
+new_intensive_care_patients_age_9: NUMBER | NULL
+search_trends_angular_cheilitis: FLOAT | NULL
+workplace_closing: NUMBER | NULL
+new_deceased_age_9: NUMBER | NULL
+search_trends_swollen_feet: FLOAT | NULL
+population: NUMBER | NULL | eg=[5467, 23435]
+public_information_campaigns: NUMBER | NULL
+age_bin_0: TEXT | NULL
+search_trends_allergic_conjunctivitis: FLOAT | NULL
+age_bin_8: TEXT | NULL
+new_intensive_care_patients_age_4: NUMBER | NULL
+search_trends_hypersomnia: FLOAT | NULL
+cumulative_tested_age_3: NUMBER | NULL
+search_trends_fatigue: FLOAT | NULL | eg=[NaN, 4.96]
+physicians_per_1000: FLOAT | NULL
+hospital_beds_per_1000: FLOAT | NULL
+search_trends_manic_disorder: FLOAT | NULL
+cumulative_confirmed_age_6: NUMBER | NULL
+cumulative_deceased_age_5: NUMBER | NULL
+new_recovered: NUMBER | NULL
+search_trends_type_2_diabetes: FLOAT | NULL | eg=[NaN, 4.58]
+search_trends_coma: FLOAT | NULL
+search_trends_colitis: FLOAT | NULL
+search_trends_burning_mouth_syndrome: FLOAT | NULL
+search_trends_braxton_hicks_contractions: FLOAT | NULL
+cumulative_deceased_age_3: NUMBER | NULL
+cumulative_deceased_age_1: NUMBER | NULL
+search_trends_tenderness: FLOAT | NULL
+search_trends_wart: FLOAT | NULL
+search_trends_boil: FLOAT | NULL
+search_trends_rhinitis: FLOAT | NULL
+new_persons_fully_vaccinated_pfizer: NUMBER | NULL
+cumulative_intensive_care_patients_age_1: NUMBER | NULL
+search_trends_cataplexy: FLOAT | NULL
+place_id: TEXT | NULL | eg=["ChIJVZD4VRbesYkR07ECXNoFp6c", "ChIJzZFLOZZOtokRQIZEhecmIwc"]
+cumulative_vaccine_doses_administered: NUMBER | NULL
+search_trends_granuloma: FLOAT | NULL
+search_trends_astigmatism: FLOAT | NULL
+search_trends_chills: FLOAT | NULL
+search_trends_bells_palsy: FLOAT | NULL
+search_trends_stuttering: FLOAT | NULL
+new_intensive_care_patients_age_6: NUMBER | NULL
+search_trends_bruxism: FLOAT | NULL
+search_trends_osteoporosis: FLOAT | NULL
+new_intensive_care_patients_female: NUMBER | NULL
+search_trends_cluster_headache: FLOAT | NULL
+search_trends_heart_arrhythmia: FLOAT | NULL | eg=[NaN, 2.52]
+datacommons_id: TEXT | NULL | eg=["geoId/51595", "geoId/51600"]
+cumulative_tested_age_8: NUMBER | NULL
+search_trends_delayed_onset_muscle_soreness: FLOAT | NULL
+search_trends_prediabetes: FLOAT | NULL
+cumulative_recovered_age_0: NUMBER | NULL
+search_trends_shortness_of_breath: FLOAT | NULL
+search_trends_desquamation: FLOAT | NULL
+search_trends_attention_deficit_hyperactivity_disorder: FLOAT | NULL | eg=[NaN, 4.83]
+search_trends_eye_pain: FLOAT | NULL
+search_trends_hyperglycemia: FLOAT | NULL
+search_trends_hypogonadism: FLOAT | NULL
+search_trends_implantation_bleeding: FLOAT | NULL
+search_trends_otitis_media: FLOAT | NULL
+search_trends_dysautonomia: FLOAT | NULL
+search_trends_syncope: FLOAT | NULL
+search_trends_acne: FLOAT | NULL | eg=[NaN, 10.18]
+search_trends_water_retention: FLOAT | NULL
+search_trends_indigestion: FLOAT | NULL
+locality_name: TEXT | NULL
+restrictions_on_gatherings: NUMBER | NULL
+search_trends_hypertriglyceridemia: FLOAT | NULL
+search_trends_otitis: FLOAT | NULL
+search_trends_swelling: FLOAT | NULL | eg=[NaN, 3.82]
+cumulative_recovered_age_8: NUMBER | NULL
+search_trends_gastroesophageal_reflux_disease: FLOAT | NULL | eg=[NaN, 4.2]
+search_trends_constipation: FLOAT | NULL | eg=[NaN, 3.18]
+new_vaccine_doses_administered_janssen: NUMBER | NULL
+search_trends_palpitations: FLOAT | NULL
+search_trends_facial_swelling: FLOAT | NULL
+search_trends_nosebleed: FLOAT | NULL
+age_bin_7: TEXT | NULL
+cumulative_deceased_male: NUMBER | NULL
+search_trends_ear_pain: FLOAT | NULL
+search_trends_rumination: FLOAT | NULL
+new_intensive_care_patients_age_2: NUMBER | NULL
+new_deceased_male: NUMBER | NULL
+cumulative_confirmed_female: NUMBER | NULL
+search_trends_breakthrough_bleeding: FLOAT | NULL
+search_trends_hepatotoxicity: FLOAT | NULL
+age_bin_3: TEXT | NULL
+search_trends_underweight: FLOAT | NULL
+new_ventilator_patients: NUMBER | NULL
+search_trends_anosmia: FLOAT | NULL
+search_trends_apnea: FLOAT | NULL
+search_trends_cheilitis: FLOAT | NULL
+search_trends_nasal_polyp: FLOAT | NULL
+search_trends_confusion: FLOAT | NULL
+search_trends_low_grade_fever: FLOAT | NULL
+search_trends_hepatic_encephalopathy: FLOAT | NULL
+cumulative_hospitalized_patients_male: NUMBER | NULL
+investment_in_vaccines: NUMBER | NULL
+search_trends_fibrocystic_breast_changes: FLOAT | NULL
+search_trends_asthma: FLOAT | NULL | eg=[NaN, 1.91]
+search_trends_facial_nerve_paralysis: FLOAT | NULL
+search_trends_skin_tag: FLOAT | NULL
+new_tested_age_6: NUMBER | NULL
+search_trends_dysmenorrhea: FLOAT | NULL
+population_male: NUMBER | NULL | eg=[2489, 11542]
+search_trends_hiccup: FLOAT | NULL
+search_trends_kidney_failure: FLOAT | NULL
+search_trends_dysgeusia: FLOAT | NULL
+search_trends_burning_chest_pain: FLOAT | NULL
+search_trends_epiphora: FLOAT | NULL
+cumulative_recovered_age_9: NUMBER | NULL
+search_trends_knee_pain: FLOAT | NULL
+search_trends_neutropenia: FLOAT | NULL
+cumulative_tested_female: NUMBER | NULL
+cumulative_deceased_age_2: NUMBER | NULL
+new_confirmed_age_2: NUMBER | NULL
+search_trends_autoimmune_disease: FLOAT | NULL | eg=[NaN, 2.16]
+search_trends_heart_murmur: FLOAT | NULL
+search_trends_testicular_pain: FLOAT | NULL
+nurses_per_1000: FLOAT | NULL
+search_trends_food_intolerance: FLOAT | NULL
+new_deceased_age_6: NUMBER | NULL
+out_of_pocket_health_expenditure_usd: FLOAT | NULL
+cumulative_vaccine_doses_administered_pfizer: NUMBER | NULL
+search_trends_food_craving: FLOAT | NULL
+search_trends_encephalitis: FLOAT | NULL
+search_trends_erythema_chronicum_migrans: FLOAT | NULL
+search_trends_sexual_dysfunction: FLOAT | NULL
+search_trends_biliary_colic: FLOAT | NULL
+search_trends_male_infertility: FLOAT | NULL
+search_trends_low_back_pain: FLOAT | NULL | eg=[NaN, 2.42]
+search_trends_fibrillation: FLOAT | NULL
+search_trends_diarrhea: FLOAT | NULL | eg=[NaN, 4.33]
+search_trends_crepitus: FLOAT | NULL
+facial_coverings: NUMBER | NULL
+search_trends_nocturnal_enuresis: FLOAT | NULL
+search_trends_conjunctivitis: FLOAT | NULL
+search_trends_blurred_vision: FLOAT | NULL
+age_bin_6: TEXT | NULL
+cumulative_persons_vaccinated: NUMBER | NULL
+new_vaccine_doses_administered: NUMBER | NULL
+search_trends_pulmonary_edema: FLOAT | NULL
+search_trends_swollen_lymph_nodes: FLOAT | NULL
+search_trends_bunion: FLOAT | NULL
+search_trends_self_harm: FLOAT | NULL
+search_trends_blepharospasm: FLOAT | NULL
+search_trends_melasma: FLOAT | NULL
+search_trends_postural_orthostatic_tachycardia_syndrome: FLOAT | NULL
+search_trends_thyroid_nodule: FLOAT | NULL
+cumulative_intensive_care_patients_age_2: NUMBER | NULL
+search_trends_anemia: FLOAT | NULL | eg=[NaN, 2.93]
+search_trends_dysuria: FLOAT | NULL
+search_trends_visual_acuity: FLOAT | NULL
+search_trends_diabetes: FLOAT | NULL | eg=[NaN, 6.49]
+search_trends_vertigo: FLOAT | NULL
+cumulative_recovered_age_5: NUMBER | NULL
+population_age_00_09: NUMBER | NULL | eg=[770, 3112]
+search_trends_xerostomia: FLOAT | NULL
+search_trends_erectile_dysfunction: FLOAT | NULL | eg=[NaN, 3.28]
+population_female: NUMBER | NULL | eg=[2978, 11893]
+population_largest_city: TEXT | NULL
+search_trends_mydriasis: FLOAT | NULL
+search_trends_pruritus_ani: FLOAT | NULL
+search_trends_eczema: FLOAT | NULL
+search_trends_dysphagia: FLOAT | NULL
+human_development_index: FLOAT | NULL
+search_trends_morning_sickness: FLOAT | NULL
+new_deceased_age_1: NUMBER | NULL
+search_trends_pleurisy: FLOAT | NULL
+search_trends_polyneuropathy: FLOAT | NULL
+subregion2_name: TEXT | NULL | eg=["Emporia", "Fairfax"]
+cumulative_intensive_care_patients: NUMBER | NULL
+restrictions_on_internal_movement: NUMBER | NULL
+search_trends_rheum: FLOAT | NULL
+new_recovered_age_3: NUMBER | NULL
+search_trends_hypothyroidism: FLOAT | NULL | eg=[NaN, 2.04]
+cumulative_intensive_care_patients_age_0: NUMBER | NULL
+new_intensive_care_patients_age_3: NUMBER | NULL
+search_trends_leg_cramps: FLOAT | NULL
+search_trends_gingivitis: FLOAT | NULL
+search_trends_gastroparesis: FLOAT | NULL
+new_tested_age_8: NUMBER | NULL
+snowfall_mm: FLOAT | NULL
+search_trends_pulmonary_hypertension: FLOAT | NULL
+cumulative_recovered_age_1: NUMBER | NULL
+new_confirmed_age_3: NUMBER | NULL
+current_ventilator_patients: NUMBER | NULL
+search_trends_actinic_keratosis: FLOAT | NULL
+search_trends_peripheral_neuropathy: FLOAT | NULL
+search_trends_pneumonia: FLOAT | NULL
+new_hospitalized_patients_age_4: NUMBER | NULL
+search_trends_goitre: FLOAT | NULL
+search_trends_wheeze: FLOAT | NULL
+new_recovered_age_4: NUMBER | NULL
+search_trends_tumor: FLOAT | NULL
+search_trends_amenorrhea: FLOAT | NULL
+cumulative_persons_fully_vaccinated_janssen: NUMBER | NULL
+population_age_10_19: NUMBER | NULL | eg=[737, 2512]
+search_trends_malabsorption: FLOAT | NULL
+search_trends_hyperthyroidism: FLOAT | NULL
+cumulative_vaccine_doses_administered_janssen: NUMBER | NULL
+search_trends_compulsive_behavior: FLOAT | NULL
+cumulative_ventilator_patients: NUMBER | NULL
+search_trends_neck_pain: FLOAT | NULL
+cumulative_intensive_care_patients_age_6: NUMBER | NULL
+search_trends_pyelonephritis: FLOAT | NULL
+search_trends_eye_strain: FLOAT | NULL
+search_trends_amnesia: FLOAT | NULL
+new_recovered_age_7: NUMBER | NULL
+new_intensive_care_patients_age_8: NUMBER | NULL
+new_confirmed_age_8: NUMBER | NULL
+cumulative_recovered_age_4: NUMBER | NULL
+search_trends_mouth_ulcer: FLOAT | NULL
+search_trends_hypomania: FLOAT | NULL
+search_trends_ageusia: FLOAT | NULL
+new_confirmed_age_9: NUMBER | NULL
+new_confirmed: NUMBER | NULL | eg=[0.0, 2.0]
+new_intensive_care_patients: NUMBER | NULL
+search_trends_middle_back_pain: FLOAT | NULL
+search_trends_renal_colic: FLOAT | NULL
+new_hospitalized_patients_male: NUMBER | NULL
+vaccination_policy: NUMBER | NULL
+new_tested_age_0: NUMBER | NULL
+search_trends_rectal_prolapse: FLOAT | NULL
+population_urban: NUMBER | NULL
+cumulative_confirmed_age_1: NUMBER | NULL
+search_trends_stretch_marks: FLOAT | NULL
+search_trends_grandiosity: FLOAT | NULL
+search_trends_genital_wart: FLOAT | NULL
+cumulative_hospitalized_patients_age_8: NUMBER | NULL
+cumulative_hospitalized_patients_age_6: NUMBER | NULL
+search_trends_psychosis: FLOAT | NULL | eg=[NaN, 2.48]
+search_trends_hypokalemia: FLOAT | NULL
+search_trends_weight_gain: FLOAT | NULL | eg=[NaN, 3.44]
+new_deceased_age_4: NUMBER | NULL
+search_trends_rhinorrhea: FLOAT | NULL
+search_trends_cramp: FLOAT | NULL | eg=[NaN, 2.54]
+search_trends_frequent_urination: FLOAT | NULL
+new_confirmed_age_5: NUMBER | NULL
+new_recovered_age_9: NUMBER | NULL
+mobility_residential: TEXT | NULL | eg=["10", "18"]
+new_hospitalized_patients_age_0: NUMBER | NULL
+cumulative_intensive_care_patients_age_3: NUMBER | NULL
+country_code: TEXT | NULL | eg=["US"]
+new_tested: TEXT | NULL
+cumulative_recovered: NUMBER | NULL
+search_trends_blood_in_stool: FLOAT | NULL
+search_trends_intermenstrual_bleeding: FLOAT | NULL
+search_trends_petechia: FLOAT | NULL
+search_trends_anal_fissure: FLOAT | NULL
+search_trends_otitis_externa: FLOAT | NULL
+search_trends_cough: FLOAT | NULL | eg=[NaN, 7.51]
+search_trends_osteopenia: FLOAT | NULL
+subregion1_name: TEXT | NULL | eg=["Virginia"]
+search_trends_bacterial_vaginosis: FLOAT | NULL
+search_trends_urinary_incontinence: FLOAT | NULL
+search_trends_tonsillitis: FLOAT | NULL
+search_trends_asphyxia: FLOAT | NULL
+search_trends_mood_disorder: FLOAT | NULL
+search_trends_depression: FLOAT | NULL | eg=[NaN, 4.58]
+search_trends_weakness: FLOAT | NULL
+stay_at_home_requirements: NUMBER | NULL
+search_trends_cirrhosis: FLOAT | NULL
+new_tested_age_5: NUMBER | NULL
+search_trends_gingival_recession: FLOAT | NULL
+new_recovered_female: NUMBER | NULL
+population_age_80_and_older: NUMBER | NULL | eg=[356, 917]
+search_trends_shallow_breathing: FLOAT | NULL
+search_trends_bleeding_on_probing: FLOAT | NULL
+search_trends_lactose_intolerance: FLOAT | NULL
+search_trends_back_pain: FLOAT | NULL | eg=[NaN, 4.83]
+health_expenditure_usd: FLOAT | NULL
+new_deceased_age_8: NUMBER | NULL
+cumulative_deceased_age_0: NUMBER | NULL
+search_trends_excessive_daytime_sleepiness: FLOAT | NULL
+search_trends_polyuria: FLOAT | NULL
+search_trends_pleural_effusion: FLOAT | NULL
+search_trends_binge_eating: FLOAT | NULL
+subregion1_code: TEXT | NULL | eg=["VA"]
+search_trends_hypermobility: FLOAT | NULL
+search_trends_rectal_pain: FLOAT | NULL
+search_trends_nausea: FLOAT | NULL | eg=[NaN, 2.04]
+search_trends_tachypnea: FLOAT | NULL
+cumulative_tested_age_9: NUMBER | NULL
+search_trends_muscle_atrophy: FLOAT | NULL
+search_trends_globus_pharyngis: FLOAT | NULL
+search_trends_fatty_liver_disease: FLOAT | NULL
+search_trends_bowel_obstruction: FLOAT | NULL
+subregion2_code: TEXT | NULL | eg=["51595", "51600"]
+cumulative_confirmed_age_5: NUMBER | NULL
+mobility_retail_and_recreation: TEXT | NULL | eg=["-34", "-10"]
+new_confirmed_age_6: NUMBER | NULL
+search_trends_chorea: FLOAT | NULL
+search_trends_dystonia: FLOAT | NULL
+search_trends_skin_ulcer: FLOAT | NULL | eg=[NaN, 1.59]
+new_hospitalized_patients_age_7: NUMBER | NULL
+new_tested_age_3: NUMBER | NULL
+search_trends_sensitivity_to_sound: FLOAT | NULL
+search_trends_inflammation: FLOAT | NULL | eg=[NaN, 5.98]
+search_trends_itch: FLOAT | NULL | eg=[NaN, 6.87]
+search_trends_bone_fracture: FLOAT | NULL | eg=[NaN, 2.67]
+search_trends_irregular_menstruation: FLOAT | NULL
+search_trends_dentin_hypersensitivity: FLOAT | NULL
+pollution_mortality_rate: TEXT | NULL
+dew_point: FLOAT | NULL | eg=[20.583333, 23.361111]
+search_trends_inflammatory_bowel_disease: FLOAT | NULL
+search_trends_sleep_disorder: FLOAT | NULL | eg=[NaN, 2.16]
+gdp_usd: NUMBER | NULL
+new_recovered_male: NUMBER | NULL
+search_trends_sleep_apnea: FLOAT | NULL
+cumulative_persons_fully_vaccinated_moderna: NUMBER | NULL
+cumulative_tested_age_0: NUMBER | NULL
+search_trends_pericarditis: FLOAT | NULL
+cumulative_intensive_care_patients_female: NUMBER | NULL
+new_tested_age_9: NUMBER | NULL
+cumulative_deceased_age_9: NUMBER | NULL
+search_trends_spasticity: FLOAT | NULL
+new_tested_age_7: NUMBER | NULL
+cumulative_recovered_male: NUMBER | NULL
+cumulative_hospitalized_patients_age_9: NUMBER | NULL
+income_support: NUMBER | NULL
+search_trends_sleep_deprivation: FLOAT | NULL
+new_hospitalized_patients_age_6: NUMBER | NULL
+cumulative_confirmed_male: NUMBER | NULL
+population_density: FLOAT | NULL
+search_trends_iron_deficiency: FLOAT | NULL
+search_trends_vaginal_bleeding: FLOAT | NULL
+cumulative_deceased_age_6: NUMBER | NULL
+cumulative_intensive_care_patients_male: NUMBER | NULL
+international_support: NUMBER | NULL
+search_trends_hip_pain: FLOAT | NULL
+search_trends_viral_pneumonia: FLOAT | NULL
+cumulative_confirmed_age_3: NUMBER | NULL
+maximum_temperature_celsius: FLOAT | NULL | eg=[26.933333, 31.322222]
+search_trends_alcoholism: FLOAT | NULL | eg=[NaN, 2.29]
+adult_male_mortality_rate: TEXT | NULL
+search_trends_cyanosis: FLOAT | NULL
+search_trends_epidermoid_cyst: FLOAT | NULL
+search_trends_skin_rash: FLOAT | NULL | eg=[NaN, 5.09]
+search_trends_jaundice: FLOAT | NULL
+stringency_index: FLOAT | NULL
+cumulative_recovered_age_7: NUMBER | NULL
+search_trends_hypoglycemia: FLOAT | NULL
+search_trends_unconsciousness: FLOAT | NULL
+search_trends_canker_sore: FLOAT | NULL
+search_trends_stomach_rumble: FLOAT | NULL
+new_hospitalized_patients_age_9: NUMBER | NULL
+search_trends_compulsive_hoarding: FLOAT | NULL
+search_trends_asperger_syndrome: FLOAT | NULL
+cumulative_hospitalized_patients_age_4: NUMBER | NULL
+cumulative_tested_age_5: NUMBER | NULL
+search_trends_polycythemia: FLOAT | NULL
+search_trends_gout: FLOAT | NULL
+search_trends_meningitis: FLOAT | NULL
+search_trends_myalgia: FLOAT | NULL
+search_trends_shyness: FLOAT | NULL
+mobility_transit_stations: TEXT | NULL | eg=["45", "31"]
+search_trends_seborrheic_dermatitis: FLOAT | NULL
+search_trends_flatulence: FLOAT | NULL | eg=[NaN, 2.04]
+search_trends_bone_tumor: FLOAT | NULL
+new_confirmed_age_1: NUMBER | NULL
+search_trends_skin_condition: FLOAT | NULL | eg=[NaN, 3.94]
+search_trends_anaphylaxis: FLOAT | NULL
+search_trends_periorbital_puffiness: FLOAT | NULL
+search_trends_allergy: FLOAT | NULL | eg=[NaN, 16.29]
+search_trends_insulin_resistance: FLOAT | NULL
+population_age_40_49: NUMBER | NULL | eg=[594, 3064]
+search_trends_tremor: FLOAT | NULL
+population_age_50_59: NUMBER | NULL | eg=[686, 3334]
+cumulative_recovered_age_2: NUMBER | NULL
+search_trends_hypercapnia: FLOAT | NULL
+search_trends_hepatitis: FLOAT | NULL
+search_trends_urinary_urgency: FLOAT | NULL
+cumulative_tested_age_6: NUMBER | NULL
+search_trends_bruise: FLOAT | NULL | eg=[NaN, 3.44]
+cumulative_confirmed_age_9: NUMBER | NULL
+search_trends_sharp_pain: FLOAT | NULL
+new_vaccine_doses_administered_pfizer: NUMBER | NULL
+search_trends_chest_pain: FLOAT | NULL
+contact_tracing: NUMBER | NULL
+search_trends_uterine_contraction: FLOAT | NULL
+search_trends_proteinuria: FLOAT | NULL
+cumulative_deceased_female: NUMBER | NULL
+search_trends_crackles: FLOAT | NULL
+search_trends_nystagmus: FLOAT | NULL
+search_trends_papule: FLOAT | NULL
+search_trends_polydipsia: FLOAT | NULL
+new_hospitalized_patients_female: NUMBER | NULL
+cumulative_persons_fully_vaccinated_pfizer: NUMBER | NULL
+search_trends_paranoia: FLOAT | NULL
+new_intensive_care_patients_age_1: NUMBER | NULL
+search_trends_pus: FLOAT | NULL
+testing_policy: NUMBER | NULL
+area_urban_sq_km: TEXT | NULL
+new_recovered_age_0: NUMBER | NULL
+search_trends_burn: FLOAT | NULL | eg=[NaN, 3.56]
+search_trends_photopsia: FLOAT | NULL
+new_intensive_care_patients_age_5: NUMBER | NULL
+search_trends_splenomegaly: FLOAT | NULL
+search_trends_aphonia: FLOAT | NULL
+search_trends_ventricular_fibrillation: FLOAT | NULL
+search_trends_vasculitis: FLOAT | NULL
+search_trends_throat_irritation: FLOAT | NULL
+search_trends_congenital_heart_defect: FLOAT | NULL
+new_vaccine_doses_administered_moderna: NUMBER | NULL
+search_trends_mitral_insufficiency: FLOAT | NULL
+search_trends_pancreatitis: FLOAT | NULL
+search_trends_depersonalization: FLOAT | NULL
+search_trends_focal_seizure: FLOAT | NULL
+search_trends_podalgia: FLOAT | NULL
+comorbidity_mortality_rate: TEXT | NULL
+search_trends_dementia: FLOAT | NULL | eg=[NaN, 2.67]
+search_trends_hemoptysis: FLOAT | NULL
+location_key: TEXT | NULL | eg=["US_VA_51595", "US_VA_51600"]
+search_trends_guilt: FLOAT | NULL
+cumulative_hospitalized_patients_age_7: NUMBER | NULL
+search_trends_dizziness: FLOAT | NULL | eg=[NaN, 1.49]
+search_trends_sore_throat: FLOAT | NULL | eg=[NaN, 1.52]
+search_trends_vomiting: FLOAT | NULL | eg=[NaN, 2.16]
+new_hospitalized_patients_age_2: NUMBER | NULL
+search_trends_aphasia: FLOAT | NULL
+search_trends_edema: FLOAT | NULL
+search_trends_dysphoria: FLOAT | NULL
+cumulative_hospitalized_patients_age_1: NUMBER | NULL
+new_deceased_age_7: NUMBER | NULL
+search_trends_tic: FLOAT | NULL
+new_recovered_age_8: NUMBER | NULL
+new_deceased_age_5: NUMBER | NULL
+new_persons_fully_vaccinated_moderna: NUMBER | NULL
+search_trends_intracranial_pressure: FLOAT | NULL
+search_trends_tachycardia: FLOAT | NULL
+search_trends_photodermatitis: FLOAT | NULL
+search_trends_sputum: FLOAT | NULL
+search_trends_hematuria: FLOAT | NULL
+search_trends_folate_deficiency: FLOAT | NULL
+locality_code: TEXT | NULL
+search_trends_atheroma: FLOAT | NULL
+search_trends_bleeding: FLOAT | NULL | eg=[NaN, 4.83]
+search_trends_hypochondriasis: FLOAT | NULL
+emergency_investment_in_healthcare: NUMBER | NULL
+search_trends_amblyopia: FLOAT | NULL
+search_trends_acute_bronchitis: FLOAT | NULL
+debt_relief: NUMBER | NULL
+new_deceased_age_3: NUMBER | NULL
+search_trends_lymphedema: FLOAT | NULL
+new_tested_age_2: NUMBER | NULL
+mobility_workplaces: TEXT | NULL | eg=["-7", "-10"]
+search_trends_hyperlipidemia: FLOAT | NULL
+area_sq_km: NUMBER | NULL | eg=[18, 16]
+search_trends_mood_swing: FLOAT | NULL
+cumulative_hospitalized_patients_age_5: NUMBER | NULL
+new_intensive_care_patients_age_0: NUMBER | NULL
+search_trends_blushing: FLOAT | NULL
+new_tested_age_4: NUMBER | NULL
+cumulative_intensive_care_patients_age_5: NUMBER | NULL
+cumulative_vaccine_doses_administered_moderna: NUMBER | NULL
+search_trends_fasciculation: FLOAT | NULL
+cumulative_recovered_age_3: NUMBER | NULL
+population_rural: NUMBER | NULL
+public_transport_closing: NUMBER | NULL
+search_trends_fever: FLOAT | NULL | eg=[NaN, 4.2]
+search_trends_abdominal_pain: FLOAT | NULL | eg=[NaN, 1.78]
+cumulative_confirmed_age_4: NUMBER | NULL
+search_trends_arthralgia: FLOAT | NULL
+search_trends_strabismus: FLOAT | NULL
+new_recovered_age_2: NUMBER | NULL
+human_capital_index: TEXT | NULL
+age_bin_5: TEXT | NULL
+search_trends_hemorrhoids: FLOAT | NULL
+cumulative_hospitalized_patients_age_2: NUMBER | NULL
+search_trends_poor_posture: FLOAT | NULL
+new_intensive_care_patients_male: NUMBER | NULL
+search_trends_major_depressive_disorder: FLOAT | NULL | eg=[NaN, 4.07]
+search_trends_generalized_anxiety_disorder: FLOAT | NULL
+cumulative_confirmed_age_0: NUMBER | NULL
+search_trends_breast_pain: FLOAT | NULL
+country_name: TEXT | NULL | eg=["United States of America"]
+search_trends_chancre: FLOAT | NULL
+new_recovered_age_6: NUMBER | NULL
+gdp_per_capita_usd: NUMBER | NULL
+search_trends_varicose_veins: FLOAT | NULL
+cumulative_persons_fully_vaccinated: NUMBER | NULL | eg=[0.0, 61.0]
+search_trends_neonatal_jaundice: FLOAT | NULL
+search_trends_suicidal_ideation: FLOAT | NULL
+cumulative_tested_age_2: NUMBER | NULL
+cumulative_intensive_care_patients_age_7: NUMBER | NULL
+population_age_30_39: NUMBER | NULL | eg=[604, 3233]
+search_trends_balance_disorder: FLOAT | NULL
+search_trends_nasal_congestion: FLOAT | NULL
+search_trends_purpura: FLOAT | NULL
+search_trends_angioedema: FLOAT | NULL
+new_deceased_female: NUMBER | NULL
+cumulative_tested_male: NUMBER | NULL
+search_trends_perspiration: FLOAT | NULL | eg=[NaN, 2.04]
+search_trends_hyperventilation: FLOAT | NULL
+search_trends_hair_loss: FLOAT | NULL | eg=[NaN, 4.2]
+search_trends_bloating: FLOAT | NULL | eg=[NaN, 2.04]
+new_recovered_age_5: NUMBER | NULL
+search_trends_insomnia: FLOAT | NULL | eg=[NaN, 3.05]
+search_trends_fecal_incontinence: FLOAT | NULL
+location_geometry: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x7f\\x13\\n\\x11pbS\\xc0\\t\\xc5V\\xd0\\xb4XB@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xe5)\\xab\\xe9zSS\\xc0\\xae\\x16\\xd8c\"mC@')"]
+average_temperature_celsius: FLOAT | NULL | eg=[21.416667, 25.288889]
+new_tested_age_1: NUMBER | NULL
+search_trends_headache: FLOAT | NULL | eg=[NaN, 3.82]
+search_trends_hypercholesterolemia: FLOAT | NULL
+search_trends_auditory_hallucination: FLOAT | NULL
+search_trends_yawn: FLOAT | NULL
+search_trends_halitosis: FLOAT | NULL
+new_tested_female: NUMBER | NULL
+new_hospitalized_patients_age_1: NUMBER | NULL
+cumulative_recovered_female: NUMBER | NULL
+search_trends_hydrocephalus: FLOAT | NULL
+search_trends_hypoxia: FLOAT | NULL
+new_confirmed_age_4: NUMBER | NULL
+relative_humidity: FLOAT | NULL | eg=[95.041442, 89.187538]
+search_trends_vaginal_discharge: FLOAT | NULL | eg=[NaN, 1.96]
+search_trends_dry_eye_syndrome: FLOAT | NULL
+search_trends_lightheadedness: FLOAT | NULL
+search_trends_dandruff: FLOAT | NULL
+population_clustered: TEXT | NULL
+search_trends_anxiety: FLOAT | NULL | eg=[NaN, 5.72]
+search_trends_epilepsy: FLOAT | NULL
+search_trends_stridor: FLOAT | NULL
+new_confirmed_age_0: NUMBER | NULL
+cumulative_recovered_age_6: NUMBER | NULL
+cumulative_intensive_care_patients_age_8: NUMBER | NULL
+search_trends_hyponatremia: FLOAT | NULL
+search_trends_vaginitis: FLOAT | NULL
+search_trends_muscle_weakness: FLOAT | NULL
+cumulative_deceased: NUMBER | NULL | eg=[42.0, NaN]
+search_trends_scoliosis: FLOAT | NULL
+search_trends_hypotension: FLOAT | NULL
+search_trends_hyperemesis_gravidarum: FLOAT | NULL
+search_trends_xeroderma: FLOAT | NULL | eg=[NaN, 3.44]
+cumulative_confirmed_age_7: NUMBER | NULL
+cumulative_intensive_care_patients_age_9: NUMBER | NULL
+search_trends_convulsion: FLOAT | NULL
+search_trends_myoclonus: FLOAT | NULL
+search_trends_fibromyalgia: FLOAT | NULL
+new_hospitalized_patients_age_8: NUMBER | NULL
+population_age_60_69: NUMBER | NULL | eg=[624, 2532]
+infant_mortality_rate: FLOAT | NULL
+search_trends_nodule: FLOAT | NULL
+search_trends_menorrhagia: FLOAT | NULL
+search_trends_avoidant_personality_disorder: FLOAT | NULL
+search_trends_trichoptilosis: FLOAT | NULL
+search_trends_esophagitis: FLOAT | NULL
+new_deceased_age_2: NUMBER | NULL
+search_trends_night_terror: FLOAT | NULL
+search_trends_arthritis: FLOAT | NULL | eg=[NaN, 3.82]
+search_trends_beaus_lines: FLOAT | NULL
+rainfall_mm: FLOAT | NULL | eg=[13.9065, 0.41275]
+search_trends_cleft_lip_and_cleft_palate: FLOAT | NULL
+search_trends_candidiasis: FLOAT | NULL | eg=[NaN, 2.04]
+search_trends_thrombocytopenia: FLOAT | NULL
+search_trends_common_cold: FLOAT | NULL | eg=[NaN, 8.4]
+search_trends_hypocalcaemia: FLOAT | NULL
+iso_3166_1_alpha_2: TEXT | NULL | eg=["US"]
+search_trends_ventricular_tachycardia: FLOAT | NULL
+search_trends_clouding_of_consciousness: FLOAT | NULL
+new_persons_fully_vaccinated: NUMBER | NULL | eg=[0.0, 9.0]
+search_trends_chronic_pain: FLOAT | NULL
+search_trends_hyperpigmentation: FLOAT | NULL
+search_trends_hypertension: FLOAT | NULL | eg=[NaN, 5.85]
+search_trends_melena: FLOAT | NULL
+search_trends_toothache: FLOAT | NULL
+search_trends_red_eye: FLOAT | NULL
+search_trends_hypercalcaemia: FLOAT | NULL
+search_trends_urethritis: FLOAT | NULL
+search_trends_ingrown_hair: FLOAT | NULL
+search_trends_tinnitus: FLOAT | NULL
+cumulative_deceased_age_4: NUMBER | NULL
+search_trends_hay_fever: FLOAT | NULL | eg=[NaN, 4.07]
+search_trends_hemolysis: FLOAT | NULL
+search_trends_round_ligament_pain: FLOAT | NULL
+search_trends_sinusitis: FLOAT | NULL | eg=[NaN, 2.24]
+search_trends_orthostatic_hypotension: FLOAT | NULL
+age_bin_1: TEXT | NULL
+mobility_grocery_and_pharmacy: TEXT | NULL | eg=["-9", "10"]
+search_trends_milium: FLOAT | NULL
+search_trends_encephalopathy: FLOAT | NULL
+search_trends_photophobia: FLOAT | NULL
+search_trends_adrenal_crisis: FLOAT | NULL
+search_trends_post_nasal_drip: FLOAT | NULL
+search_trends_hyperkalemia: FLOAT | NULL
+search_trends_restless_legs_syndrome: FLOAT | NULL
+aggregation_level: NUMBER | NULL | eg=[2]
+new_deceased_age_0: NUMBER | NULL
+search_trends_phlegm: FLOAT | NULL
+new_confirmed_male: NUMBER | NULL
+search_trends_neuralgia: FLOAT | NULL
+minimum_temperature_celsius: FLOAT | NULL | eg=[15.472222, 20.388889]
+search_trends_pain: FLOAT | NULL | eg=[25.42, 29.25]
+search_trends_heartburn: FLOAT | NULL | eg=[NaN, 3.69]
+search_trends_hematochezia: FLOAT | NULL
+search_trends_ascites: FLOAT | NULL
+search_trends_night_sweats: FLOAT | NULL
+search_trends_kidney_stone: FLOAT | NULL
+adult_female_mortality_rate: TEXT | NULL
+search_trends_radiculopathy: FLOAT | NULL
+search_trends_angina_pectoris: FLOAT | NULL
+search_trends_cardiac_arrest: FLOAT | NULL
+current_intensive_care_patients: NUMBER | NULL
+new_persons_vaccinated: NUMBER | NULL
+school_closing: NUMBER | NULL
+search_trends_neck_mass: FLOAT | NULL
+search_trends_croup: FLOAT | NULL
+search_trends_floater: FLOAT | NULL
+search_trends_erythema: FLOAT | NULL
+search_trends_hypertrophy: FLOAT | NULL
+cumulative_confirmed: NUMBER | NULL | eg=[674.0, 760.0]
+cumulative_confirmed_age_8: NUMBER | NULL
+cumulative_intensive_care_patients_age_4: NUMBER | NULL
+search_trends_upper_respiratory_tract_infection: FLOAT | NULL
+new_intensive_care_patients_age_7: NUMBER | NULL
+search_trends_hyperthermia: FLOAT | NULL
+new_hospitalized_patients_age_5: NUMBER | NULL
+age_bin_2: TEXT | NULL
+search_trends_ataxia: FLOAT | NULL
+cumulative_hospitalized_patients: NUMBER | NULL
+search_trends_nerve_injury: FLOAT | NULL
+cumulative_tested_age_7: NUMBER | NULL
+new_recovered_age_1: NUMBER | NULL
+search_trends_impulsivity: FLOAT | NULL
+search_trends_laryngitis: FLOAT | NULL
+search_trends_osteophyte: FLOAT | NULL
+new_hospitalized_patients: NUMBER | NULL
+search_trends_hives: FLOAT | NULL
+search_trends_snoring: FLOAT | NULL
+search_trends_abdominal_obesity: FLOAT | NULL | eg=[NaN, 2.04]
+search_trends_urinary_tract_infection: FLOAT | NULL | eg=[NaN, 3.56]
+search_trends_hyperhidrosis: FLOAT | NULL
+elevation_m: NUMBER | NULL | eg=[39, 95]
+cumulative_deceased_age_8: NUMBER | NULL
+search_trends_telangiectasia: FLOAT | NULL
+search_trends_shivering: FLOAT | NULL
+iso_3166_1_alpha_3: TEXT | NULL | eg=["USA"]
+search_trends_oral_candidiasis: FLOAT | NULL
+fiscal_measures: NUMBER | NULL
+search_trends_periodontal_disease: FLOAT | NULL
+cumulative_deceased_age_7: NUMBER | NULL
+search_trends_infection: FLOAT | NULL | eg=[16.65, 21.7]
+life_expectancy: TEXT | NULL | eg=["71.35", "82.6"]
+search_trends_dermatitis: FLOAT | NULL | eg=[NaN, 2.67]
+search_trends_dyspareunia: FLOAT | NULL
+search_trends_hot_flash: FLOAT | NULL
+international_travel_controls: NUMBER | NULL
+search_trends_leukorrhea: FLOAT | NULL
+search_trends_kyphosis: FLOAT | NULL
+cumulative_tested_age_4: NUMBER | NULL
+search_trends_impetigo: FLOAT | NULL
+search_trends_bradycardia: FLOAT | NULL
+cumulative_confirmed_age_2: NUMBER | NULL
+search_trends_pelvic_inflammatory_disease: FLOAT | NULL
+new_confirmed_age_7: NUMBER | NULL
+new_tested_male: NUMBER | NULL
+search_trends_rosacea: FLOAT | NULL
+search_trends_ptosis: FLOAT | NULL
+search_trends_developmental_disability: FLOAT | NULL
+search_trends_bronchitis: FLOAT | NULL
+population_age_20_29: NUMBER | NULL | eg=[670, 3302]
+cumulative_tested: NUMBER | NULL
+search_trends_migraine: FLOAT | NULL | eg=[NaN, 3.31]
+search_trends_carpal_tunnel_syndrome: FLOAT | NULL
+search_trends_hematoma: FLOAT | NULL
+smoking_prevalence: FLOAT | NULL
+new_hospitalized_patients_age_3: NUMBER | NULL
+search_trends_panic_attack: FLOAT | NULL
+search_trends_sciatica: FLOAT | NULL
+cumulative_tested_age_1: NUMBER | NULL
+search_trends_onychorrhexis: FLOAT | NULL
+search_trends_diabetic_ketoacidosis: FLOAT | NULL
+search_trends_motion_sickness: FLOAT | NULL
+search_trends_lesion: FLOAT | NULL
+new_deceased: NUMBER | NULL | eg=[0.0, NaN]
+search_trends_obesity: FLOAT | NULL | eg=[NaN, 5.85]
+cumulative_hospitalized_patients_age_0: NUMBER | NULL
+current_hospitalized_patients: NUMBER | NULL
+
+## COVID19_OPEN_DATA.COMPATIBILITY_VIEW
+@use: [C1]
+country_region: TEXT | NULL | eg=["Czech Republic", "France"]
+confirmed: NUMBER | NULL | eg=[146.0, NaN]
+deaths: NUMBER | NULL | eg=[2.0, NaN]
+location_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x01\\xfa}\\xff\\xe6u1@i\\x1e\\xc0\"\\xbf\\x88H@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00W\\x94\\x12\\x82UU\\t@\\xbc\\xd6\\xde\\xa7\\xaa*G@')"]
+admin_2: TEXT | NULL | eg=["Uherské Hradiště District", "Allier"]
+active: NUMBER | NULL | eg=[1.0, NaN]
+sub_region1_name: TEXT | NULL | eg=["Zlin Region", "Auvergne-Rhône-Alpes"]
+recovered: NUMBER | NULL | eg=[143.0, NaN]
+combined_key: TEXT | NULL | eg=["CZ_72_722", "FR_ARA_03"]
+province_state: TEXT | NULL | eg=["Zlin Region", "Auvergne-Rhône-Alpes"]
+fips: TEXT | NULL | eg=["722", "03"]

@@ -1,0 +1,1679 @@
+[COMPONENTS]
+@C1
+date: DATE | NULL | eg=["1852-11-03", "1852-11-15"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[5.0, 13.0]
+
+@C2
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged. | eg=[1243977073000000, 1232565999000000]
+dropoff_latitude: FLOAT | Latitude where the meter was disengaged | eg=[40.764722, 40.725362]
+dropoff_longitude: FLOAT | Longitude where the meter was disengaged. | eg=[-73.960164, -74.003522]
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges. | eg=[0.0]
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter | eg=[10.5, 12.7]
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed trips at the flag drop. The improvement surcharge began being levied in 2015.
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1, 2]
+pickup_latitude: FLOAT | Latitude where the meter was engaged | eg=[40.751129, 40.761732]
+pickup_longitude: FLOAT | Longitude where the meter was engaged. | eg=[-73.994176, -73.982435]
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka “store and forward,” because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["0", ""]
+tip_amount: FLOAT | Tip amount – This field is automatically populated for credit card tips. Cash tips are not included. | eg=[2.2, 0.0]
+tolls_amount: FLOAT | Total amount of all tolls paid in trip. | eg=[0.0]
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips | eg=[12.7]
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter. | eg=[2.9, 3.0]
+vendor_id: TEXT | A code indicating the TPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc | eg=["CMT"]
+
+@C3
+etl_timestamp: NUMBER | Load time for this data row | eg=[1689799403864424]
+source_url: TEXT | Source | eg=["ftp://ftp.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2017.csv.gz"]
+
+@C4
+distance_between_service: FLOAT | NULL
+ehail_fee: FLOAT | NULL
+payment_type: NUMBER | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+time_between_service: NUMBER | NULL
+trip_type: NUMBER | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+
+@C5
+boro_ct: NUMBER | This is the boro_ct identifyer for the census tract that the tree point falls into. | eg=[4121500]
+borocode: NUMBER | Code for borough in which tree point is located | eg=[4]
+boroname: TEXT | Name of borough in which tree point is located | eg=["Queens"]
+cb_num: NUMBER | Community board in which tree point is located | eg=[407]
+cncldist: NUMBER | Council district in which tree point is located | eg=[20]
+nta: TEXT | This is the NTA Code corresponding to the neighborhood tabulation area from the 2010 US Census that the tree point falls into. | eg=["QN62"]
+nta_name: TEXT | This is the NTA name corresponding to the neighborhood tabulation area from the 2010 US Census that the tree point falls into. | eg=["Queensboro Hill"]
+st_assem: NUMBER | State Assembly District in which tree point is located | eg=[25]
+st_senate: NUMBER | State Senate District in which tree point is located | eg=[16]
+tree_dbh: NUMBER | Diameter of the tree, measured at approximately 54" / 137cm above the ground. | eg=[22, 6]
+zip_city: TEXT | City as derived from zipcode. This is often (but not always) the same as borough. | eg=["Flushing"]
+zipcode: NUMBER | Five-digit zipcode in which tree is located | eg=[11355]
+
+@C6
+latitude: FLOAT | NULL | eg=[17.1333, 25.333]
+longitude: FLOAT | NULL | eg=[-61.7833, 55.517]
+
+@C7
+dispatching_base_num: TEXT | The TLC Base License Number of the base that dispatched the trip. | eg=["B00001"]
+location_id: NUMBER | The TLC taxi zone of the trip pick-up
+service_zone: TEXT | This is Pickup service_zone | eg=[""]
+zone: TEXT | This is Pickup zone | eg=[""]
+
+@C8
+spc_common: TEXT | Common name for species, e.g. "red maple" | eg=["American linden", "Callery pear"]
+spc_latin: TEXT | Scientific name for species, e.g. "Acer rubrum" | eg=["Tilia americana", "Pyrus calleryana"]
+
+[TABLES]
+## GHCN_D.GHCND_1852
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00047738"]
+
+## GHCN_D.GHCND_2017
+@use: [C1, C3]
+element: TEXT | NULL | eg=["SNWD", "TOBS"]
+id: TEXT | NULL | eg=["USC00099506", "USC00143665"]
+
+## GHCN_D.GHCND_1878
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00015555"]
+
+## GHCN_D.GHCND_1988
+@use: [C1]
+element: TEXT | NULL | eg=["ACMH"]
+id: TEXT | NULL | eg=["USW00013880", "USW00013995"]
+
+## GHCN_D.GHCND_1930
+@use: [C1]
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["ASN00009023", "ASN00010505"]
+
+## GHCN_D.GHCND_1916
+@use: [C1]
+id: TEXT | NULL | eg=["AGE00135039"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1781
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1932
+@use: [C1]
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["ASN00008002", "ASN00009030"]
+
+## GHCN_D.GHCND_1962
+@use: [C1]
+id: TEXT | NULL | eg=["USC00025924", "USC00027876"]
+element: TEXT | NULL | eg=["DAEV"]
+
+## GHCN_D.GHCND_1883
+@use: [C1]
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["ASN00018079", "ASN00019036"]
+
+## GHCN_D.GHCND_2013
+@use: [C1]
+element: TEXT | NULL | eg=["AWDR"]
+id: TEXT | NULL | eg=["USS0005N04S", "USS0005N14S"]
+
+## GHCN_D.GHCND_1867
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00298072"]
+
+## GHCN_D.GHCND_1928
+@use: [C1]
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["ASN00009596", "ASN00010020"]
+
+## GHCN_D.GHCND_1868
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00298072"]
+
+## GHCN_D.GHCND_1779
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1853
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00047738"]
+
+## GHCN_D.GHCND_2012
+@use: [C1]
+id: TEXT | NULL | eg=["USC00300364", "USC00274556"]
+element: TEXT | NULL | eg=["AWND", "EVAP"]
+
+## GHCN_D.GHCND_1982
+@use: [C1]
+id: TEXT | NULL | eg=["USW00013970", "USW00023009"]
+element: TEXT | NULL | eg=["ACMH"]
+
+## GHCN_D.GHCND_1857
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00047738"]
+
+## GHCN_D.GHCND_1904
+@use: [C1]
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["ASN00015088", "ASN00016000"]
+
+## GHCN_D.GHCND_1766
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["ITE00100554"]
+
+## GHCN_D.GHCND_1808
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1941
+@use: [C1]
+id: TEXT | NULL | eg=["ASN00008094", "ASN00016024"]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1831
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1967
+@use: [C1]
+element: TEXT | NULL | eg=["ACMH"]
+id: TEXT | NULL | eg=["AQW00061705", "AYM00089664"]
+
+## GHCN_D.GHCND_1894
+@use: [C1]
+id: TEXT | NULL | eg=["AG000060590"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1842
+@use: [C1]
+element: TEXT | NULL | eg=["MDPR"]
+id: TEXT | NULL | eg=["CA006158350"]
+
+## GHCN_D.GHCND_1780
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1877
+@use: [C1]
+element: TEXT | NULL | eg=["MDPR", "PRCP"]
+id: TEXT | NULL | eg=["USC00034251", "USC00015555"]
+
+## GHCN_D.GHCND_1999
+@use: [C1]
+element: TEXT | NULL | eg=["DAEV"]
+id: TEXT | NULL | eg=["USC00144357", "USC00348501"]
+
+## GHCN_D.GHCND_1838
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1954
+@use: [C1]
+element: TEXT | NULL | eg=["DAEV"]
+id: TEXT | NULL | eg=["USC00030764", "USC00035200"]
+
+## GHCN_D.GHCND_1827
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1812
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1811
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1966
+@use: [C1]
+element: TEXT | NULL | eg=["ACMH"]
+id: TEXT | NULL | eg=["AQW00061705"]
+
+## GHCN_D.GHCND_1823
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_2007
+@use: [C1]
+id: TEXT | NULL | eg=["USC00391851", "USC00518964"]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1775
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1802
+@use: [C1]
+id: TEXT | NULL | eg=["GM000010962"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1797
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["GM000010962"]
+
+## GHCN_D.GHCND_1769
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["ITE00100554"]
+
+## GHCN_D.GHCND_1979
+@use: [C1]
+element: TEXT | NULL | eg=["ACMH"]
+id: TEXT | NULL | eg=["USW00013962", "USW00014840"]
+
+## GHCN_D.GHCND_1805
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1931
+@use: [C1]
+id: TEXT | NULL | eg=["ASN00008088", "ASN00009001"]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1935
+@use: [C1]
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["ASN00009030", "ASN00009055"]
+
+## GHCN_D.GHCND_1786
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1790
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_STATIONS
+@use: [C3, C6]
+wmoid: NUMBER | NULL | eg=[NaN, 41196.0]
+state: TEXT | NULL
+gsn_flag: TEXT | NULL | eg=["GSN"]
+hcn_crn_flag: TEXT | NULL
+elevation: FLOAT | NULL | eg=[19.2, 34.0]
+name: TEXT | NULL | eg=["ST JOHNS", "SHARJAH INTER. AIRP"]
+id: TEXT | NULL | eg=["ACW00011647", "AE000041196"]
+
+## GHCN_D.GHCND_1784
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1829
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1991
+@use: [C1]
+element: TEXT | NULL | eg=["PGTM"]
+id: TEXT | NULL | eg=["IOW00070701", "USW00024156"]
+
+## GHCN_D.GHCND_1910
+@use: [C1]
+id: TEXT | NULL | eg=["AGE00135039"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1995
+@use: [C1]
+element: TEXT | NULL | eg=["SNWD"]
+id: TEXT | NULL | eg=["CA004015020", "CA008300447"]
+
+## GHCN_D.GHCND_1824
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1953
+@use: [C1]
+id: TEXT | NULL | eg=["AG000060390"]
+element: TEXT | NULL | eg=["PRCP", "TMAX"]
+
+## GHCN_D.GHCND_1897
+@use: [C1]
+id: TEXT | NULL | eg=["AG000060590"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1994
+@use: [C1]
+element: TEXT | NULL | eg=["DAEV"]
+id: TEXT | NULL | eg=["USC00143100", "USC00296061"]
+
+## GHCN_D.GHCND_2004
+@use: [C1]
+element: TEXT | NULL | eg=["DAEV"]
+id: TEXT | NULL | eg=["USC00252741", "USC00413686"]
+
+## GHCN_D.GHCND_1952
+@use: [C1]
+id: TEXT | NULL | eg=["AG000060390"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1998
+@use: [C1]
+id: TEXT | NULL | eg=["USW00023188", "USW00023009"]
+element: TEXT | NULL | eg=["WSF2"]
+
+## GHCN_D.GHCND_2002
+@use: [C1]
+id: TEXT | NULL | eg=["USC00380764", "USC00419417"]
+element: TEXT | NULL | eg=["DAEV"]
+
+## GHCN_D.GHCND_1997
+@use: [C1]
+id: TEXT | NULL | eg=["CA003060237", "CA006136606"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1822
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1833
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1809
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1942
+@use: [C1]
+id: TEXT | NULL | eg=["ASN00006037", "ASN00009557"]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1957
+@use: [C1]
+id: TEXT | NULL | eg=["ACW00011647"]
+element: TEXT | NULL | eg=["PRCP", "SNOW"]
+
+## GHCN_D.GHCND_1903
+@use: [C1]
+id: TEXT | NULL | eg=["ASN00015083", "ASN00016005"]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1958
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["ACW00011647"]
+
+## GHCN_D.GHCND_1918
+@use: [C1]
+id: TEXT | NULL | eg=["AJ000037850"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1980
+@use: [C1]
+id: TEXT | NULL | eg=["USW00094847", "USW00013891"]
+element: TEXT | NULL | eg=["ACMH"]
+
+## GHCN_D.GHCND_1768
+@use: [C1]
+id: TEXT | NULL | eg=["ITE00100554"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1914
+@use: [C1]
+id: TEXT | NULL | eg=["AGE00135039"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1960
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["ACW00011647"]
+
+## GHCN_D.GHCND_1965
+@use: [C1]
+id: TEXT | NULL | eg=["AYM00089664", "AYW00057701"]
+element: TEXT | NULL | eg=["ACMH"]
+
+## GHCN_D.GHCND_1989
+@use: [C1]
+id: TEXT | NULL | eg=["USW00094240", "USW00013722"]
+element: TEXT | NULL | eg=["ACMH"]
+
+## GHCN_D.GHCND_1923
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["ASN00009719", "ASN00009722"]
+
+## GHCN_D.GHCND_1874
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["SF000847010"]
+
+## GHCN_D.GHCND_2022
+@use: [C1, C3]
+id: TEXT | NULL | eg=["US1CASJ0015", "US1COCS0031"]
+element: TEXT | NULL | eg=["SNOW", "SNWD"]
+
+## GHCN_D.GHCND_1970
+@use: [C1]
+element: TEXT | NULL | eg=["ACMH"]
+id: TEXT | NULL | eg=["AQW00061705"]
+
+## GHCN_D.GHCND_1859
+@use: [C1]
+id: TEXT | NULL | eg=["USC00047738"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1927
+@use: [C1]
+id: TEXT | NULL | eg=["ASN00005052", "ASN00009030"]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1844
+@use: [C1]
+id: TEXT | NULL | eg=["CA006158350"]
+element: TEXT | NULL | eg=["MDPR", "PRCP"]
+
+## GHCN_D.GHCND_1905
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["ASN00051099", "ASN00056032"]
+
+## GHCN_D.GHCND_1843
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["CA006158350"]
+
+## GHCN_D.GHCND_1850
+@use: [C1]
+id: TEXT | NULL | eg=["USC00047738"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_2019
+@use: [C1, C3]
+id: TEXT | NULL | eg=["USC00116642", "USC00114400"]
+element: TEXT | NULL | eg=["PRCP", "TMIN"]
+
+## GHCN_D.GHCND_2005
+@use: [C1]
+id: TEXT | NULL | eg=["USC00210852", "USC00513911"]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_2018
+@use: [C1, C3]
+id: TEXT | NULL | eg=["USC00046174", "USC00346931"]
+element: TEXT | NULL | eg=["TMAX", "SN32"]
+
+## GHCN_D.GHCND_1986
+@use: [C1]
+id: TEXT | NULL | eg=["USW00014935", "USW00013966"]
+element: TEXT | NULL | eg=["ACMH"]
+
+## GHCN_D.GHCND_1925
+@use: [C1]
+id: TEXT | NULL | eg=["AG000060590"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1801
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["GM000010962"]
+
+## GHCN_D.GHCND_1830
+@use: [C1]
+id: TEXT | NULL | eg=["ITE00100550", "EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1764
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["ITE00100554"]
+
+## GHCN_D.GHCND_1765
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["ITE00100554"]
+
+## GHCN_D.GHCND_1771
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["ITE00100554"]
+
+## GHCN_D.GHCND_1807
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1804
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1872
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USW00024274"]
+
+## GHCN_D.GHCND_1880
+@use: [C1]
+id: TEXT | NULL | eg=["USC00314938", "USC00242778"]
+element: TEXT | NULL | eg=["SNWD"]
+
+## GHCN_D.GHCND_1847
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["CA006158350"]
+
+## GHCN_D.GHCND_1887
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["FRE00104937"]
+
+## GHCN_D.GHCND_1885
+@use: [C1]
+id: TEXT | NULL | eg=["USC00034988"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1849
+@use: [C1]
+id: TEXT | NULL | eg=["CA006158350"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1961
+@use: [C1]
+element: TEXT | NULL | eg=["DAEV"]
+id: TEXT | NULL | eg=["USC00041715", "USC00046144"]
+
+## GHCN_D.GHCND_1816
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX", "TMIN"]
+id: TEXT | NULL | eg=["ITE00100554", "ITE00100550"]
+
+## GHCN_D.GHCND_1913
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["ASN00056159", "ASN00056186"]
+
+## GHCN_D.GHCND_1920
+@use: [C1]
+id: TEXT | NULL | eg=["AGE00147704"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1858
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP", "TMIN"]
+id: TEXT | NULL | eg=["GM000010962", "ITE00100554"]
+
+## GHCN_D.GHCND_1772
+@use: [C1]
+id: TEXT | NULL | eg=["ITE00100554"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1845
+@use: [C1]
+id: TEXT | NULL | eg=["CA006158350"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1934
+@use: [C1]
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["ASN00007002", "ASN00007012"]
+
+## GHCN_D.GHCND_1839
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1992
+@use: [C1]
+element: TEXT | NULL | eg=["DAEV"]
+id: TEXT | NULL | eg=["VQC00670480", "USC00050834"]
+
+## GHCN_D.GHCND_1854
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00047738"]
+
+## GHCN_D.GHCND_1803
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1972
+@use: [C1]
+id: TEXT | NULL | eg=["AQW00061705"]
+element: TEXT | NULL | eg=["ACMH"]
+
+## GHCN_D.GHCND_1869
+@use: [C1]
+id: TEXT | NULL | eg=["USC00288878"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1899
+@use: [C1]
+id: TEXT | NULL | eg=["RQC00662634"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1796
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_2024
+@use: [C1, C3]
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["US1OHER0059", "US1TXBXR253"]
+
+## GHCN_D.GHCND_1890
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["AGE00135039"]
+
+## GHCN_D.GHCND_1813
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_STATES
+@use: [C3]
+code: TEXT | NULL | eg=["AB", "AL"]
+name: TEXT | NULL | eg=["ALBERTA", "ALABAMA"]
+
+## GHCN_D.GHCND_1840
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP", "SNOW"]
+id: TEXT | NULL | eg=["CA006158350"]
+
+## GHCN_D.GHCND_1879
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX", "TMIN"]
+id: TEXT | NULL | eg=["USC00338366", "USC00314055"]
+
+## GHCN_D.GHCND_1933
+@use: [C1]
+id: TEXT | NULL | eg=["ASN00008012", "ASN00009001"]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1818
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1990
+@use: [C1]
+id: TEXT | NULL | eg=["USC00344812", "USC00043672"]
+element: TEXT | NULL | eg=["DAEV", "DAPR"]
+
+## GHCN_D.GHCND_1782
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1964
+@use: [C1]
+id: TEXT | NULL | eg=["RQC00668306", "USC00022439"]
+element: TEXT | NULL | eg=["DAEV"]
+
+## GHCN_D.GHCND_1949
+@use: [C1]
+id: TEXT | NULL | eg=["USC00238777", "USC00052759"]
+element: TEXT | NULL | eg=["TMIN", "TOBS"]
+
+## GHCN_D.GHCND_1901
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["AGE00135039"]
+
+## GHCN_D.GHCND_1871
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USW00024274"]
+
+## GHCN_D.GHCND_1783
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_2001
+@use: [C1]
+element: TEXT | NULL | eg=["DAEV"]
+id: TEXT | NULL | eg=["USC00049694", "USC00252741"]
+
+## GHCN_D.GHCND_1785
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1955
+@use: [C1]
+element: TEXT | NULL | eg=["TAVG", "TMAX"]
+id: TEXT | NULL | eg=["AE000041196"]
+
+## GHCN_D.GHCND_2000
+@use: [C1]
+id: TEXT | NULL | eg=["USC00145852", "USC00352867"]
+element: TEXT | NULL | eg=["DAEV"]
+
+## GHCN_D.GHCND_2020
+@use: [C1, C3]
+id: TEXT | NULL | eg=["USC00051977", "USC00105177"]
+element: TEXT | NULL | eg=["TMAX", "TMIN"]
+
+## GHCN_D.GHCND_1926
+@use: [C1]
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["ASN00008100", "ASN00009632"]
+
+## GHCN_D.GHCND_1975
+@use: [C1]
+element: TEXT | NULL | eg=["ACMH"]
+id: TEXT | NULL | eg=["USW00094849", "USW00013739"]
+
+## GHCN_D.GHCND_1837
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1984
+@use: [C1]
+id: TEXT | NULL | eg=["USW00094910", "USW00013883"]
+element: TEXT | NULL | eg=["ACMH"]
+
+## GHCN_D.GHCND_1924
+@use: [C1]
+id: TEXT | NULL | eg=["AG000060590"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1976
+@use: [C1]
+id: TEXT | NULL | eg=["AF000040930", "AFM00040938"]
+element: TEXT | NULL | eg=["TAVG"]
+
+## GHCN_D.GHCND_2014
+@use: [C1]
+element: TEXT | NULL | eg=["AWDR"]
+id: TEXT | NULL | eg=["USS0005N04S"]
+
+## GHCN_D.GHCND_1888
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["AGE00135039"]
+
+## GHCN_D.GHCND_2015
+@use: [C1]
+id: TEXT | NULL | eg=["USS0005N04S", "USS0005N16S"]
+element: TEXT | NULL | eg=["AWDR"]
+
+## GHCN_D.GHCND_1861
+@use: [C1]
+id: TEXT | NULL | eg=["USC00465224"]
+element: TEXT | NULL | eg=["SNOW"]
+
+## GHCN_D.GHCND_1866
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00288878"]
+
+## GHCN_D.GHCND_2016
+@use: [C1, C3]
+element: TEXT | NULL | eg=["TMAX", "TAVG"]
+id: TEXT | NULL | eg=["ARM00087784", "AYM00089314"]
+
+## GHCN_D.GHCND_2021
+@use: [C1, C3]
+id: TEXT | NULL | eg=["USW00013884", "USW00013870"]
+element: TEXT | NULL | eg=["ADPT"]
+
+## GHCN_D.GHCND_1919
+@use: [C1]
+id: TEXT | NULL | eg=["RQC00660158", "RQC00662801"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1937
+@use: [C1]
+id: TEXT | NULL | eg=["ASN00007056", "ASN00009001"]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1943
+@use: [C1]
+id: TEXT | NULL | eg=["ASN00012247", "ASN00016021"]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1907
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["RQC00662634", "RQC00664702"]
+
+## GHCN_D.GHCND_1774
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["ITE00100554"]
+
+## GHCN_D.GHCND_1855
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00047738"]
+
+## GHCN_D.GHCND_2010
+@use: [C1]
+element: TEXT | NULL | eg=["AWND"]
+id: TEXT | NULL | eg=["USW00024152", "USS0015N10S"]
+
+## GHCN_D.GHCND_1940
+@use: [C1]
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["ASN00008044", "ASN00009504"]
+
+## GHCN_D.GHCND_1947
+@use: [C1]
+id: TEXT | NULL | eg=["ASN00008037", "ASN00010583"]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1814
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1770
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["ITE00100554"]
+
+## GHCN_D.GHCND_1945
+@use: [C1]
+id: TEXT | NULL | eg=["ASN00008071", "ASN00008088"]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1828
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1865
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00288878"]
+
+## GHCN_D.GHCND_1860
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["CA006158350"]
+
+## GHCN_D.GHCND_1902
+@use: [C1]
+id: TEXT | NULL | eg=["AGE00135039"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1791
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1981
+@use: [C1]
+element: TEXT | NULL | eg=["ACMH"]
+id: TEXT | NULL | eg=["USW00013723", "USW00023009"]
+
+## GHCN_D.GHCND_1815
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1794
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1959
+@use: [C1]
+id: TEXT | NULL | eg=["ACW00011647"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1870
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00298072"]
+
+## GHCN_D.GHCND_1787
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1911
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["ASN00085214", "ASN00086061"]
+
+## GHCN_D.GHCND_1892
+@use: [C1]
+id: TEXT | NULL | eg=["AG000060590"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1834
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1898
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["AG000060590"]
+
+## GHCN_D.GHCND_2008
+@use: [C1]
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["USC00153929", "USC00510140"]
+
+## GHCN_D.GHCND_1846
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP", "SNOW"]
+id: TEXT | NULL | eg=["CA006158350"]
+
+## GHCN_D.GHCND_1978
+@use: [C1]
+element: TEXT | NULL | eg=["ACMH"]
+id: TEXT | NULL | eg=["USW00024144", "USW00013893"]
+
+## GHCN_D.GHCND_1909
+@use: [C1]
+id: TEXT | NULL | eg=["RQC00660158", "RQC00661300"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1798
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["GM000010962"]
+
+## GHCN_D.GHCND_1996
+@use: [C1]
+id: TEXT | NULL | eg=["USC00091657", "USC00311515"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1922
+@use: [C1]
+id: TEXT | NULL | eg=["AGE00135039"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1939
+@use: [C1]
+id: TEXT | NULL | eg=["ASN00008041", "ASN00008221"]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1889
+@use: [C1]
+id: TEXT | NULL | eg=["AGE00135039"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_COUNTRIES
+@use: [C3]
+name: TEXT | NULL | eg=["Antigua and Barbuda", "United Arab Emirates"]
+code: TEXT | NULL | eg=["AC", "AE"]
+
+## GHCN_D.GHCND_1912
+@use: [C1]
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["ASN00009023", "ASN00010019"]
+
+## GHCN_D.GHCND_1806
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1893
+@use: [C1]
+id: TEXT | NULL | eg=["AG000060590"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1875
+@use: [C1]
+id: TEXT | NULL | eg=["USC00034251", "USC00015555"]
+element: TEXT | NULL | eg=["DAPR", "PRCP"]
+
+## GHCN_D.GHCND_1863
+@use: [C1]
+id: TEXT | NULL | eg=["AGE00135039", "ITE00100554"]
+element: TEXT | NULL | eg=["TMAX", "TMIN"]
+
+## GHCN_D.GHCND_1841
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["CA006158350"]
+
+## GHCN_D.GHCND_1856
+@use: [C1]
+id: TEXT | NULL | eg=["USC00047738"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1886
+@use: [C1]
+element: TEXT | NULL | eg=["TMIN", "TMAX"]
+id: TEXT | NULL | eg=["USC00431072", "AGE00147712"]
+
+## GHCN_D.GHCND_1969
+@use: [C1]
+id: TEXT | NULL | eg=["AQW00061705"]
+element: TEXT | NULL | eg=["ACMH"]
+
+## GHCN_D.GHCND_2003
+@use: [C1]
+element: TEXT | NULL | eg=["DAEV"]
+id: TEXT | NULL | eg=["USC00020632", "RQC00668306"]
+
+## GHCN_D.GHCND_1973
+@use: [C1]
+element: TEXT | NULL | eg=["ACMH"]
+id: TEXT | NULL | eg=["USW00093193", "USW00023169"]
+
+## GHCN_D.GHCND_1864
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX", "TMIN"]
+id: TEXT | NULL | eg=["EIE00101859", "USC00189674"]
+
+## GHCN_D.GHCND_1792
+@use: [C1]
+id: TEXT | NULL | eg=["GM000010962"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1825
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1851
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00047738"]
+
+## GHCN_D.GHCND_1895
+@use: [C1]
+id: TEXT | NULL | eg=["AG000060590"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_2023
+@use: [C1, C3]
+id: TEXT | NULL | eg=["US1FLLN0060", "US1SDLW0001"]
+element: TEXT | NULL | eg=["PRCP", "SNOW"]
+
+## GHCN_D.GHCND_1963
+@use: [C1]
+element: TEXT | NULL | eg=["DAEV"]
+id: TEXT | NULL | eg=["RQC00660152", "USC00025924"]
+
+## GHCN_D.GHCND_1821
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_INVENTORY
+@use: [C3, C6]
+firstyear: NUMBER | NULL | eg=[1949, 1961]
+element: TEXT | NULL | eg=["PRCP", "SNOW"]
+lastyear: NUMBER | NULL | eg=[1949, 1961]
+id: TEXT | NULL | eg=["ACW00011604", "ACW00011647"]
+
+## GHCN_D.GHCND_1983
+@use: [C1]
+id: TEXT | NULL | eg=["USW00013957", "USW00023034"]
+element: TEXT | NULL | eg=["ACMH"]
+
+## GHCN_D.GHCND_1881
+@use: [C1]
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["ASN00018079", "ASN00019036"]
+
+## GHCN_D.GHCND_1977
+@use: [C1]
+element: TEXT | NULL | eg=["ACMH"]
+id: TEXT | NULL | eg=["USW00025501", "USW00013895"]
+
+## GHCN_D.GHCND_1944
+@use: [C1]
+id: TEXT | NULL | eg=["ASN00016028", "ASN00016037"]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1767
+@use: [C1]
+id: TEXT | NULL | eg=["ITE00100554"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1789
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1906
+@use: [C1]
+id: TEXT | NULL | eg=["ASN00055049"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1800
+@use: [C1]
+id: TEXT | NULL | eg=["GM000010962"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1948
+@use: [C1]
+id: TEXT | NULL | eg=["USC00475484", "USC00391392"]
+element: TEXT | NULL | eg=["TMIN"]
+
+## GHCN_D.GHCND_1891
+@use: [C1]
+id: TEXT | NULL | eg=["AGE00135039"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1876
+@use: [C1]
+element: TEXT | NULL | eg=["DAPR", "MDPR"]
+id: TEXT | NULL | eg=["USC00034251", "USC00015555"]
+
+## GHCN_D.GHCND_1917
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["AGE00135039"]
+
+## GHCN_D.GHCND_1836
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1915
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["AGE00135039"]
+
+## GHCN_D.GHCND_1810
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1820
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_2009
+@use: [C1]
+element: TEXT | NULL | eg=["DAEV", "DAPR"]
+id: TEXT | NULL | eg=["USC00083209", "USC00436391"]
+
+## GHCN_D.GHCND_1778
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1776
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1773
+@use: [C1]
+id: TEXT | NULL | eg=["ITE00100554"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1921
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["AGE00147704"]
+
+## GHCN_D.GHCND_1848
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["CA006158350"]
+
+## GHCN_D.GHCND_1763
+@use: [C1]
+id: TEXT | NULL | eg=["ITE00100554"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_2006
+@use: [C1]
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["USC00517566", "USC00518738"]
+
+## GHCN_D.GHCND_1950
+@use: [C1]
+id: TEXT | NULL | eg=["AG000060390"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1795
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1788
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1884
+@use: [C1]
+id: TEXT | NULL | eg=["USC00034988"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1971
+@use: [C1]
+id: TEXT | NULL | eg=["AG000060390"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1793
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1985
+@use: [C1]
+id: TEXT | NULL | eg=["USW00023023", "USW00013966"]
+element: TEXT | NULL | eg=["ACMH"]
+
+## GHCN_D.GHCND_1968
+@use: [C1]
+element: TEXT | NULL | eg=["ACMH"]
+id: TEXT | NULL | eg=["AQW00061705", "AYM00089664"]
+
+## GHCN_D.GHCND_1974
+@use: [C1]
+element: TEXT | NULL | eg=["ACMH"]
+id: TEXT | NULL | eg=["AQW00061705"]
+
+## GHCN_D.GHCND_1835
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1873
+@use: [C1]
+id: TEXT | NULL | eg=["USC00331662"]
+element: TEXT | NULL | eg=["TMAX", "TMIN"]
+
+## GHCN_D.GHCND_1936
+@use: [C1]
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["ASN00009504", "ASN00009508"]
+
+## GHCN_D.GHCND_1819
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1900
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["AGE00135039"]
+
+## GHCN_D.GHCND_1938
+@use: [C1]
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["ASN00009001", "ASN00009714"]
+
+## GHCN_D.GHCND_1799
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1777
+@use: [C1]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1993
+@use: [C1]
+id: TEXT | NULL | eg=["USC00296061", "USC00050834"]
+element: TEXT | NULL | eg=["DAEV"]
+
+## GHCN_D.GHCND_1862
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["CA006158350"]
+
+## GHCN_D.GHCND_1882
+@use: [C1]
+id: TEXT | NULL | eg=["SF001192090"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_2011
+@use: [C1]
+id: TEXT | NULL | eg=["USC00412114", "USC00058995"]
+element: TEXT | NULL | eg=["AWND"]
+
+## GHCN_D.GHCND_1929
+@use: [C1]
+id: TEXT | NULL | eg=["ASN00010670", "ASN00012247"]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1817
+@use: [C1]
+element: TEXT | NULL | eg=["TMAX", "TMIN"]
+id: TEXT | NULL | eg=["ITE00100554", "ITE00100550"]
+
+## GHCN_D.GHCND_1896
+@use: [C1]
+id: TEXT | NULL | eg=["AG000060590"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1908
+@use: [C1]
+element: TEXT | NULL | eg=["MDPR", "PRCP"]
+id: TEXT | NULL | eg=["USC00134389", "RQC00662634"]
+
+## GHCN_D.GHCND_1946
+@use: [C1]
+id: TEXT | NULL | eg=["ASN00009007", "ASN00010536"]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1987
+@use: [C1]
+id: TEXT | NULL | eg=["USW00012912", "USW00003947"]
+element: TEXT | NULL | eg=["ACMH"]
+
+## GHCN_D.GHCND_1832
+@use: [C1]
+element: TEXT | NULL | eg=["MDPR", "PRCP"]
+id: TEXT | NULL | eg=["ASN00066046"]
+
+## GHCN_D.GHCND_1826
+@use: [C1]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1956
+@use: [C1]
+id: TEXT | NULL | eg=["AE000041196"]
+element: TEXT | NULL | eg=["TAVG"]
+
+## GHCN_D.GHCND_1951
+@use: [C1]
+id: TEXT | NULL | eg=["AG000060390"]
+element: TEXT | NULL | eg=["PRCP", "TMAX"]
+
+## NEW_YORK.CITIBIKE_TRIPS
+start_station_name: TEXT | Start Station Name | eg=["E 6 St & Avenue D"]
+start_station_id: NUMBER | Start Station ID | eg=[411]
+gender: TEXT | Gender (unknown, male, female) | eg=["female", "male"]
+tripduration: NUMBER | Trip Duration (in seconds) | eg=[1354, 641]
+end_station_name: TEXT | End Station Name | eg=["Market St & Cherry St"]
+stoptime: NUMBER | Stop Time, in NYC local time. | eg=[1440706878000000, 1415225823000000]
+start_station_latitude: FLOAT | Start Station Latitude | eg=[40.72228087]
+usertype: TEXT | User Type (Customer = 24-hour pass or 7-day pass user, Subscriber = Annual Member) | eg=["Subscriber", "Customer"]
+end_station_id: NUMBER | End Station ID | eg=[408]
+birth_year: NUMBER | Year of Birth | eg=[1984.0, 1978.0]
+starttime: NUMBER | Start Time, in NYC local time. | eg=[1440705524000000, 1415225182000000]
+end_station_longitude: FLOAT | End Station Longitude | eg=[-73.99400398]
+start_station_longitude: FLOAT | Start Station Longitude | eg=[-73.97668709]
+end_station_latitude: FLOAT | End Station Latitude | eg=[40.71076228]
+bikeid: NUMBER | Bike ID | eg=[23311, 20590]
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2009
+@use: [C2]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["Credit", "Cash"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged. | eg=[1243976117000000, 1232564941000000]
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2015
+@use: [C2]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["2", "1"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1433972235000000, 1434572832000000]
+
+## NEW_YORK.TLC_GREEN_TRIPS_2016
+@use: [C2, C4]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1458201180000000, 1464729645000000]
+
+## NEW_YORK.TLC_GREEN_TRIPS_2014
+@use: [C2, C4]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1415920755000000, 1415309962000000]
+
+## NEW_YORK.NYPD_MV_COLLISIONS
+@use: [C6]
+borough: TEXT | NULL | eg=["BROOKLYN"]
+number_of_pedestrians_killed: NUMBER | NULL | eg=[0]
+number_of_motorist_injured: NUMBER | NULL | eg=[0]
+number_of_pedestrians_injured: NUMBER | NULL | eg=[0]
+cross_street_name: TEXT | NULL | eg=["FRANKLIN AVENUE", "MYRTLE AVENUE"]
+contributing_factor_vehicle_5: TEXT | NULL | eg=[""]
+contributing_factor_vehicle_4: TEXT | NULL | eg=[""]
+number_of_cyclist_injured: NUMBER | NULL | eg=[0]
+vehicle_type_code2: TEXT | NULL | eg=["SPORT UTILITY / STATION WAGON"]
+location: TEXT | NULL | eg=["(40.692778, -73.9576793)", "(40.693341, -73.9668817)"]
+contributing_factor_vehicle_2: TEXT | NULL | eg=["Unspecified"]
+number_of_cyclist_killed: NUMBER | NULL | eg=[0]
+number_of_persons_killed: NUMBER | NULL | eg=[0]
+vehicle_type_code_4: TEXT | NULL | eg=[""]
+vehicle_type_code_3: TEXT | NULL | eg=[""]
+vehicle_type_code1: TEXT | NULL | eg=["SPORT UTILITY / STATION WAGON", "LARGE COM VEH(6 OR MORE TIRES)"]
+unique_key: NUMBER | NULL | eg=[181067, 3404838]
+zip_code: NUMBER | NULL | eg=[11205]
+vehicle_type_code_5: TEXT | NULL | eg=[""]
+contributing_factor_vehicle_1: TEXT | NULL | eg=["Unspecified", "Oversized Vehicle"]
+timestamp: NUMBER | NULL | eg=[1368792900000000, 1457876400000000]
+on_street_name: TEXT | NULL | eg=["WILLOUGHBY AVENUE", "WASHINGTON AVENUE"]
+number_of_persons_injured: NUMBER | NULL | eg=[0]
+number_of_motorist_killed: NUMBER | NULL | eg=[0]
+off_street_name: TEXT | NULL | eg=[""]
+contributing_factor_vehicle_3: TEXT | NULL | eg=[""]
+
+## NEW_YORK.TREE_SPECIES
+species_common_name: TEXT | NULL | eg=["Smoke Tree", "European Birdcherry"]
+form: TEXT | NULL | eg=["Rounded"]
+tree_size: TEXT | NULL | eg=["Small (Mature Height < 25 ft)", "Intermediate (Mature Height 25-35 ft)"]
+growth_rate: TEXT | NULL | eg=["Slow"]
+location_tolerances: TEXT | NULL | eg=["Small Tree Pit (<3 ft)", "Median Tree, Small Tree Pit (<3 ft)"]
+fall_color: TEXT | NULL | eg=["Red/Bronze", "Yellow/Bronze"]
+environmental_tolerances: TEXT | NULL | eg=["none", "Salt and Drought Tolerant"]
+species_scientific_name: TEXT | NULL | eg=["Cotinus sp.", "Prunus padus"]
+comments: TEXT | NULL | eg=[""]
+notes_suggested_cultivars: TEXT | NULL | eg=["'Royal Purple' or 'Grace'", "One of the First Trees to Leaf Out in the Spring"]
+
+## NEW_YORK.TREE_CENSUS_2015
+@use: [C5, C6, C8]
+health: TEXT | Indicates the user's perception of tree health. | eg=["Fair", "Good"]
+root_other: TEXT | Indicates the presence of other root problems | eg=["No"]
+problems: TEXT | NULL | eg=["None"]
+y_sp: FLOAT | Y coordinate, in state plane. Units are feet | eg=[208826.3262, 209471.9164]
+trunk_wire: TEXT | Indicates the presence of a trunk problem caused by wires or rope wrapped around the trunk | eg=["No"]
+tree_id: NUMBER | Unique identification number for each tree point | eg=[333724, 338614]
+stump_diam: NUMBER | Diameter of stump measured through the center, rounded to the nearest inch. | eg=[0]
+x_sp: FLOAT | X coordinate, in state plane. Units are feet. | eg=[1036530.017, 1035948.008]
+block_id: NUMBER | Identifier linking each tree to the block in the blockface table/shapefile that it is mapped on. | eg=[310728, 310867]
+state: TEXT | All features given value 'New York' | eg=["New York"]
+brch_other: TEXT | Indicates the presence of other branch problems | eg=["No"]
+user_type: TEXT | This field describes the category of user who collected this tree point's data. | eg=["NYC Parks Staff"]
+address: TEXT | Nearest estimated address to tree | eg=["59-030 157 STREET", "154-029 58 ROAD"]
+trnk_light: TEXT | Indicates the presence of a trunk problem caused by lighting installed on the tree | eg=["No"]
+root_grate: TEXT | Indicates the presence of a root problem caused by metal grates in tree bed | eg=["No"]
+brch_shoe: TEXT | Indicates the presence of a branch problem caused by sneakers in the branches | eg=["No"]
+status: TEXT | Indicates whether the tree is alive, standing dead, or a stump. | eg=["Alive"]
+guards: TEXT | Indicates whether a guard is present, and if the user felt it was a helpful or harmful guard. Not recorded for dead trees and stumps | eg=["None"]
+steward: TEXT | Indicates the number of unique signs of stewardship observed for this tree. Not recorded for stumps or dead trees. | eg=["None"]
+root_stone: TEXT | Indicates the presence of a root problem caused by paving stones in tree bed | eg=["No"]
+sidewalk: TEXT | Indicates whether one of the sidewalk flags immediately adjacent to the tree was damaged, cracked, or lifted. Not recorded for dead trees and stumps. | eg=["NoDamage", "Damage"]
+created_at: DATE | The date tree points were collected in the census software | eg=["2015-10-15", "2015-10-16"]
+curb_loc: TEXT | Location of tree bed in relationship to the curb; trees are either along the curb (OnCurb) or offset from the curb (OffsetFromCurb) | eg=["OnCurb"]
+brch_light: TEXT | Indicates the presence of a branch problem caused by lights (usually string lights) or wires in the branches | eg=["No"]
+trnk_other: TEXT | Indicates the presence of other trunk problems | eg=["No"]
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2010
+@use: [C2]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["Cre"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged. | eg=[1275136107000000, 1276083205000000]
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2013
+@use: [C2]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1386896940000000, 1366858800000000]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["CRD"]
+
+## NEW_YORK.TREE_CENSUS_2005
+@use: [C5, C8]
+sidw_raise: TEXT | Raised sidewalk present | eg=["Yes", "No"]
+location_1: TEXT | NULL | eg=["(0, 0)"]
+wire_other: TEXT | Indicates the presence of other wires | eg=["No"]
+pit_type: TEXT | NULL | eg=["Lawn"]
+wire_2nd: TEXT | Indicates the presence of secondary wires | eg=["No"]
+vert_wall: TEXT | Walled tree well present | eg=["No"]
+inf_wires: TEXT | Choking wires present | eg=["No"]
+inf_paving: TEXT | Close paving present | eg=["No"]
+inf_lights: TEXT | Tree lights present | eg=["No"]
+inf_guard: TEXT | Choking guard or grate present | eg=["No"]
+status: TEXT | Excellent: full, well balanced crown and limb structure; leaves normal size color; no dead or broken branches; trunk solid; bark intact. Good: crown uneven or misshapen; some mechanical damage to bark or trunk; some signs of insects or disease; leaves somewhat below normal size and quantity; some dead or broken branches (less than half of the tree). Poor: large dead limbs with over one- half of the tree already dead or removed; large cavities; drastic deformities; leaves significantly below normal size and quantity; severe insect or disease damage. Dead: dead tree; leaves absent; twigs brittle. Shaft: all branches removed; trunk left standing; sprouts may or may not be evident. Stump: stump shorter than breast height; leaves entirely absent or present only on stump sprouts Empty pit: Pit contains exposed soil and no tree | eg=["Good", "Excellent"]
+vert_other: TEXT | Other Vertical Treatment Present | eg=["No"]
+sidw_crack: TEXT | Cracked sidewalk present | eg=["No"]
+soil_lvl: TEXT | NULL | eg=["Level"]
+horz_other: TEXT | Other horizontal treatment present | eg=["No"]
+vert_tgrd: TEXT | Tall guard present | eg=["No"]
+inf_other: TEXT | Other infrastructure conflicts present | eg=["No"]
+inf_canopy: TEXT | Canopy debris present | eg=["No"]
+horz_plant: TEXT | Plantings present | eg=["No"]
+objectid: NUMBER | NULL | eg=[1090640, 1099282]
+tree_loc: TEXT | Establishes the location of the tree in relation to the address provided | eg=["Assigned", "Front"]
+trunk_dmg: TEXT | Describes specific damage or wounds found on the trunk | eg=["None"]
+wire_prime: TEXT | Indicates the presence of primary wires | eg=["No"]
+objectid_1: NUMBER | NULL | eg=[498267, 506909]
+x_sp: NUMBER | X field | eg=[0]
+inf_shoes: TEXT | Sneakers present | eg=["No"]
+vert_pgrd: TEXT | Perimeter guard present | eg=["No", "Yes"]
+wire_htap: TEXT | Indicates the presence of house tap wires | eg=["No"]
+y_sp: NUMBER | y field | eg=[0]
+horz_grate: TEXT | Tree grates present | eg=["No"]
+inf_outlet: TEXT | Electrical outlet present | eg=["No"]
+horz_blck: TEXT | Block pavers present | eg=["No"]
+cen_year: NUMBER | This is the year the tree was inventoried in. Data collection for the 2005 census spanned multiple seasons. Data is in YYYY format. | eg=[0]
+
+## NEW_YORK._311_SERVICE_REQUESTS
+@use: [C6]
+agency: TEXT | NULL | eg=["DOT"]
+park_facility_name: TEXT | NULL | eg=["Unspecified"]
+location_type: TEXT | NULL
+cross_street_1: TEXT | NULL | eg=["234 ST", "148 DR"]
+facility_type: TEXT | NULL
+bridge_highway_segment: TEXT | NULL
+due_date: NUMBER | NULL
+taxi_pickup_location: TEXT | NULL
+city: TEXT | Parsed location information. City. | eg=["Rosedale"]
+bbl: NUMBER | NULL | eg=[NaN, 4136880103.0]
+incident_address: TEXT | Service location of Service request. | eg=["133 RD", "148-34 HOOK CREEK BOULEVARD"]
+x_coordinate: NUMBER | NULL | eg=[1058569, 1057575]
+bridge_highway_direction: TEXT | NULL
+created_date: NUMBER | Date Service request was created. | eg=[1525259280000000, 1525374180000000]
+closed_date: NUMBER | NULL | eg=[1525259280000000, 1525426680000000]
+location: TEXT | Service request location latitude and longitude coordinates. | eg=["(40.680632928324805, -73.73204951489956)", "(40.67527795434052, -73.73565453060336)"]
+resolution_action_updated_date: NUMBER | NULL | eg=[1525172880000000, 1525426680000000]
+bridge_highway_name: TEXT | NULL
+open_data_channel_type: TEXT | NULL | eg=["UNKNOWN"]
+road_ramp: TEXT | NULL
+taxi_company_borough: TEXT | NULL
+resolution_description: TEXT | NULL | eg=["Service Request status for this request is available on the Department of Transportationâ€™s website. Please click the â€œLearn Moreâ€  link below.", "Service Request status for this request is available on the Department of Transportation's website. Please click the \"Learn More\" link below."]
+borough: TEXT | NULL | eg=["QUEENS"]
+vehicle_type: TEXT | NULL
+agency_name: TEXT | NULL | eg=["Department of Transportation"]
+complaint_type: TEXT | NULL | eg=["Street Light Condition"]
+status: TEXT | Service request status. Duplicate statuses indicate that issue had previously been reported recently. | eg=["Closed"]
+cross_street_2: TEXT | NULL | eg=["UNNAMED ST", "148 RD"]
+y_coordinate: NUMBER | NULL | eg=[187363, 185409]
+incident_zip: TEXT | Parsed location information. Zip code. | eg=["11422"]
+community_board: TEXT | NULL | eg=["13 QUEENS"]
+landmark: TEXT | NULL
+descriptor: TEXT | NULL | eg=["Street Light Out"]
+intersection_street_2: TEXT | NULL | eg=["235 STREET", "234 STREET"]
+intersection_street_1: TEXT | NULL | eg=["129 AVENUE", "133 ROAD"]
+street_name: TEXT | Parsed location information. Street name. | eg=["133 RD", "HOOK CREEK BOULEVARD"]
+unique_key: NUMBER | The service request tracking number. | eg=[39084862, 39096478]
+park_borough: TEXT | NULL | eg=["QUEENS"]
+address_type: TEXT | NULL | eg=["INTERSECTION", "ADDRESS"]
+
+## NEW_YORK.TLC_GREEN_TRIPS_2015
+@use: [C2, C4]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1431644282000000, 1434833444000000]
+
+## NEW_YORK.TREE_CENSUS_1995
+@use: [C6, C8]
+recordid: NUMBER | A unique identifier for each record in the table. Does not correspond to other datasets or identify the tree itself. | eg=[3219, 32662]
+censustract_2010: TEXT | 2010 Census Tract geocoded to the address using Geosupport 11.4
+zip_new: NUMBER | Zip Code geocoded to the address using Geosupport 11.4 | eg=[0]
+borough: TEXT | Borough where tree was recorded. | eg=["Manhattan"]
+diameter: NUMBER | Diameter of the tree as measured at approximately 4.5 feet from the ground. | eg=[7, 6]
+house_number: TEXT | Numerical portion of the address. | eg=["767.0"]
+sidewalk_condition: TEXT | Whether the tree roots have lifted the adjacent sidewalk. | eg=["Good"]
+street: TEXT | Street where address for tree is located. | eg=["WASHINGTON SQ W", "1 AV"]
+nta_2010: TEXT | Neighborhood Tabulation Area geocoded to the address using Geosupport 11.4 | eg=["Unknown"]
+segmentid: NUMBER | LION SegmentID geocoded to the address using Geosupport 11.4 | eg=[0]
+censusblock_2010: TEXT | 2010 Census Block geocoded to the address using Geosupport 11.4
+species: TEXT | Species of the tree using a four-letter code, comprised of the first two letters of the genus followed by the first two letters of the species. | eg=["QUPA", "QUPH"]
+cb_original: NUMBER | The community board originally geocoded to the address using LION 02A | eg=[0]
+zip_original: NUMBER | The zip code originally geocoded to the address using LION 02A | eg=[0]
+y: FLOAT | Y coordinate of point in the NAD_1983_StatePlane_New_York_Long_Island_FIPS_3104_Feet coordinate system, geocoded using LION 02A | eg=[1.0]
+x: FLOAT | X coordinate of point in the NAD_1983_StatePlane_New_York_Long_Island_FIPS_3104_Feet coordinate system, geocoded using LION 02A | eg=[1.0]
+location: TEXT | NULL | eg=["(1.0, 1.0)"]
+status: TEXT | Overall tree condition. | eg=["Good", "Excellent"]
+address: TEXT | Address of the tree. | eg=["53-054 WASHINGTON SQ W", "870/860 1 AV"]
+site: TEXT | This field clarifies the position relative to the address for trees not located in the front of buildings. | eg=["Across", "Front"]
+support_structure: TEXT | Whether the tree has support structures installed. | eg=["None"]
+cb_new: NUMBER | Community Board geocoded to the address using Geosupport 11.4 | eg=[0]
+wires: TEXT | Whether the tree is located under utility wires | eg=["None"]
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2016
+@use: [C2]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["1"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1457699499000000, 1479474492000000]
+
+## NEW_YORK.CITIBIKE_STATIONS
+@use: [C6]
+eightd_has_available_keys: BOOLEAN | NULL | eg=[false]
+num_docks_available: NUMBER | Number of docks accepting bike returns. | eg=[0]
+is_installed: BOOLEAN | Is the station currently on the street? | eg=[true, false]
+name: TEXT | Public name of the station. | eg=["W 47 St & 10 Ave", "Amsterdam Ave & W 82 St"]
+num_bikes_available: NUMBER | Number of bikes available for rental. | eg=[0]
+region_id: NUMBER | ID of the region where station is located. | eg=[71]
+is_renting: BOOLEAN | Is the station currently renting bikes? | eg=[true, false]
+station_id: TEXT | Unique identifier of a station. | eg=["495", "3171"]
+num_bikes_disabled: NUMBER | Number of disabled bikes at the station. | eg=[0]
+num_docks_disabled: NUMBER | Number of empty but disabled dock points at the station. | eg=[0]
+short_name: TEXT | Short name or other type of identifier, as used by the data publisher. | eg=["6824.07", "7360.10"]
+last_reported: NUMBER | Timestamp indicating the last time this station reported its status to the backend, in NYC local time. | eg=[86400000000]
+rental_methods: TEXT | Array of enumerables containing the payment methods accepted at this station. | eg=["KEY, CREDITCARD"]
+capacity: NUMBER | ANumber of total docking points installed at this station, both available and unavailable. | eg=[0]
+eightd_has_key_dispenser: BOOLEAN | NULL | eg=[false]
+is_returning: BOOLEAN | Is the station accepting bike returns? | eg=[true, false]
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2011
+@use: [C2]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["CRD"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1323951368000000, 1322913705000000]
+
+## NEW_YORK.TLC_GREEN_TRIPS_2013
+@use: [C2, C4]
+pickup_datetime: NUMBER | The date and time when the meter was engaged. | eg=[1388058260000000, 1387736770000000]
+
+## NEW_YORK.TLC_FHV_TRIPS_2015
+@use: [C7]
+pickup_datetime: NUMBER | The date and time of the trip pick-up. | eg=[1440513000000000, 1442313540000000]
+borough: TEXT | This is Pickup borough | eg=[""]
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2012
+@use: [C2]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["CSH"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1337710080000000, 1327607220000000]
+
+## NEW_YORK.TLC_FHV_TRIPS_2016
+@use: [C7]
+borough: TEXT | This is Pickup borough | eg=["Brooklyn"]
+pickup_datetime: NUMBER | The date and time of the trip pick-up. | eg=[1475264289000000, 1482282001000000]
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2014
+@use: [C2]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["CSH"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1404826920000000, 1407311535000000]

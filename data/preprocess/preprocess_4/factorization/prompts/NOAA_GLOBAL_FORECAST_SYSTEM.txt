@@ -1,0 +1,77 @@
+[COMPONENTS]
+@C1
+all_tags: VARIANT | NULL | eg=[[{"key":"landuse","value":"forest"},{"key":"type","value":"multipolygon"}]]
+geometry: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x14\\x00\\x00\\x00yh\\x0e\\xff\\x9f\\x993@\\xa8W%\\xec6{E@\\xb3l\\x9c\\x03\\xba\\x993@\\x0cv\\xc3\\xb6E{E@\\x08; d\\xb4\\x993@\\x91\\xf7\\xbb\\xc1a{E@QX\\xf3-\\xbd\\x993@\\xa1\\x0b\\x8f\\xa2s{E@\\xdaLtL\\xcc\\x993@\\x8ex\\rU\\x8c{E@sj\\xc2QM\\x9a3@\\x05S\\xcd\\xac\\xa5{E@\\x86\\xe5\\xcf\\xb7\\x05\\x993@\\xfc\\xb8G\\x80\\xe4{E@\\x9a\\x9a_(\\xbb\\x983@\\xe3V\\x9c\\xc5\\xe6{E@D\\x98\\x910\\xc2\\x983@\\xa9\\x83ae\\xd9{E@\\x9d)\\xcf\\x17\\xd6\\x983@\\xe1\\xa5\\x8a\\x98\\xc8{E@D\\x98\\x910\\xc2\\x983@f\\x0c\\x18\\xc9\\xc3{E@\\xf5_\\xe7\\xa6\\xcd\\x983@\\xebody\\xb2{E@\\x89\\xe6K\\xb9\\x0c\\x993@=\\xeb\\xbfs\\x94{E@b\\x06tp\\xfa\\x983@\\xe0[G\\x0b\\x86{E@?\\xc5q\\xe0\\xd5\\x983@3\\x85s\\xb2y{E@\\xb9\\xdc`\\xa8\\xc3\\x983@4\\xc4\\xb1.n{E@|\\xe8\\xcc\\x87\\xb1\\x983@\\x15\\xbc2\\xb9b{E@\\x14\\xde/\\xb0\\xd8\\x983@\\x9em$\\xbf4{E@\\x8a\\x89\\xbc\\x9b]\\x993@|\\xfc\\x94\\x19%{E@yh\\x0e\\xff\\x9f\\x993@\\xa8W%\\xec6{E@\\x14\\x00\\x00\\x00 d\\xb4\\xe9c\\x993@|\\x8cM\\x86>{E@\\x80@\\x0c\\x194\\x993@\\xcb\\x8f\\xae\\x88P{E@\\x081\\x86(\\x15\\x993@\\xccpM\\xcbY{E@\\x06\\xfd;\\x91\\x16\\x993@P~A\\xc1{{E@\\x02\\xf6\\xd1\\xa9+\\x993...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x0f\\x00\\x00\\x00l^z\\xa0\\xba^/@b\\x82\\xbf\\x04\\x13)I@\\xc6v\\xads\\xc2^/@\\xca\\x1d\\x91J\\x0c)I@?@\\xf7\\xe5\\xcc^/@9\\x90?b\\x05)I@\\x98\\x18p;\\xd9^/@\"\\xdb\\x9e\\xc5\\xf7(I@\\xe2s\\x82\\x91\\xf2^/@\\x82\\xd5\\xa2O\\xf5(I@\\x1c\\r\\x85t\\x1d_/@\\xc1~>\\x80\\xfb(I@\\xc9o\\xd1\\xc9R_/@L\\xa5D\\xb7\\x03)I@r\\xd8\"\\x0e~_/@\\x12\\xd0\\x8ee\\x0b)I@\\xbd\\xf3z\\xe6\\x9b_/@\\xa9.\\x85\\xac\\x13)I@\\xf8\\x05\\xf4\\xc2\\x9d_/@\\xaci\\x83\\xb8\\x17)I@\\xe4\\xa7qo~_/@\\x0c\\x9b\\x12Z )I@\\x13\\x8b)\\xa2p_/@TG\\xd8\\x01!)I@$\\xf8\\x95\\xbd[_/@Ov3\\xa3\\x1f)I@\\x82=\\x81\\x0b\\r_/@Z\\x15<\\xe0\\x15)I@l^z\\xa0\\xba^/@b\\x82\\xbf\\x04\\x13)I@\\x0b\\x00\\x00\\x00\\xb4/42#_/@\\r-\\xfc*\\n)I@K`\\xce\\xc7\\x10_/@\\x10\\x14\\xd3\\xe0\\x11)I@W\"\\xf5C\\x11_/@y\\xaa\\xe8\\xb4\\x13)I@\\x18\\xd8\\xbe\\xdb\\x17_/@C\\xbf\\x00\\x0c\\x15)I@\\xc4\\xcf\\x7f\\x0f^_/@\\xf9B\\x12\\x07\\x1a)I@\\xeb4\\xd2Ry_/@\\x1c\\xd1=\\xeb\\x1a)I@\\xad\\x97\\xf0\\x95\\x8a_/@\\x16\\x8a\\xcf\\xf8\\x19)I@\\x9d8oR\\x87_/@\\xa1yJ\\x18\\x17)I@}\\xf1\\xea\\xc1I_/@\\xfbyS\\x91\\n)I@\\xe1\\x9cl^0_/@gJ\\xebo\\t)I@\\xb4/42#_/@\\r-\\xfc*\\n)I@')"]
+osm_timestamp: NUMBER | NULL | eg=[1489931734000000, 1490194127000000]
+
+@C2
+changeset: NUMBER | NULL | eg=[46983106, 47070434]
+username: TEXT | NULL | eg=["sebastic", "nebulon42"]
+version: NUMBER | NULL | eg=[2, 3]
+visible: BOOLEAN | NULL | eg=[true]
+
+@C3
+osm_id: NUMBER | NULL
+osm_version: NUMBER | NULL | eg=[1, 2]
+osm_way_id: NUMBER | NULL | eg=[365713935, 159980615]
+
+@C4
+gdal_type: TEXT | NULL | eg=["multipolygons"]
+layer_class: TEXT | NULL | eg=["building"]
+layer_code: NUMBER | NULL | eg=[1500]
+layer_name: TEXT | NULL | eg=["building"]
+
+[TABLES]
+## NOAA_GLOBAL_FORECAST_SYSTEM.NOAA_GFS0P25
+creation_time: NUMBER | NULL | eg=[1571508000000000, 1573495200000000]
+geography: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x90b\\xc0\\x00\\x00\\x00\\x00\\x00\\x00\\x18@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00@I\\xc0\\x00\\x00\\x00\\x00\\x00\\xc0T@')"]
+forecast: VARIANT | NULL | eg=[[{"hours":0,"precipitable_water_entire_atmosphere":50.79999923706055,"relative_humidity_2m_above_ground":79.30000305175781,"specific_humidity_2m_above_ground":0.0175199992954731,"temperature_2m_above_ground":26.98879394531252,"time":1571508000000000,"u_component_of_wind_10m_above_ground":-1.752395033836365,"v_component_of_wind_10m_above_ground":6.58172082901001},{"downward_shortwave_radiation_flux":560.0,"hours":1,"precipitable_water_entire_atmosphere":49.40000152587891,"relative_humidity_2m_above_ground":79.0,"specific_humidity_2m_above_ground":0.01740000024437904,"temperature_2m_above_ground":26.94405517578127,"time":1571511600000000,"total_cloud_cover_entire_atmosphere":100.0,"total_precipitation_surface":0.0,"u_component_of_wind_10m_above_ground":-1.586940884590149,"v_component_of_wind_10m_above_ground":6.491093635559082},{"downward_shortwave_radiation_flux":680.0,"hours":2,"precipitable_water_entire_atmosphere":48.90000152587891,"relative_humidity_2m_above_ground":78.8000030517...]
+geography_polygon: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x05\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8cb\\xc0\\x00\\x00\\x00\\x00\\x00\\x80\\x17@\\x00\\x00\\x00\\x00\\x00\\x8cb\\xc0\\x00\\x00\\x00\\x00\\x00\\x80\\x18@\\x00\\x00\\x00\\x00\\x00\\x94b\\xc0\\x00\\x00\\x00\\x00\\x00\\x80\\x18@\\x00\\x00\\x00\\x00\\x00\\x94b\\xc0\\x00\\x00\\x00\\x00\\x00\\x80\\x17@\\x00\\x00\\x00\\x00\\x00\\x8cb\\xc0\\x00\\x00\\x00\\x00\\x00\\x80\\x17@')", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x05\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x000I\\xc0\\x00\\x00\\x00\\x00\\x00\\xb8T@\\xff\\xff\\xff\\xff\\xff/I\\xc0\\x01\\x00\\x00\\x00\\x00\\xc8T@\\x00\\x00\\x00\\x00\\x00PI\\xc0\\x01\\x00\\x00\\x00\\x00\\xc8T@\\x01\\x00\\x00\\x00\\x00PI\\xc0\\x00\\x00\\x00\\x00\\x00\\xb8T@\\x00\\x00\\x00\\x00\\x000I\\xc0\\x00\\x00\\x00\\x00\\x00\\xb8T@')"]
+
+## GEO_OPENSTREETMAP.HISTORY_CHANGESETS
+osm_timestamp_min: NUMBER | Minimum timestamp of objects contained in this changeset. | eg=[1542200268, 1440147654]
+ways: VARIANT | Ways that are part of this way | eg=[[]]
+id: NUMBER | Changeset ID. | eg=[64482521, 33478518]
+osm_timestamp_max: NUMBER | Maximum timestamp of objects contained in this changeset. | eg=[1542200268, 1440147654]
+relations: VARIANT | Relations that are part of this way | eg=[[8935454], [3921610]]
+nodes: VARIANT | Nodes that are part of this way | eg=[[]]
+
+## GEO_OPENSTREETMAP.PLANET_RELATIONS
+@use: [C1, C2]
+id: NUMBER | NULL | eg=[5875507, 1538055]
+members: VARIANT | NULL | eg=[[{"id":391979876,"role":"outer","type":"w"},{"id":391979836,"role":"inner","type":"w"}], [{"id":108253196,"role":"outer","type":"w"},{"id":82769043,"role":"inner","type":"w"}]]
+
+## GEO_OPENSTREETMAP.HISTORY_RELATIONS
+@use: [C1, C2]
+members: VARIANT | NULL | eg=[[{"id":778708628,"role":"stop_entry_only","type":"n"},{"id":538966273,"role":"platform","type":"w"},{"id":3429385180,"role":"stop","type":"n"},{"id":659993053,"role":"platform","type":"n"},{"id":2968693414,"role":"stop","type":"n"},{"id":3431284360,"role":"platform","type":"n"},{"id":2968693415,"role":"stop","type":"n"},{"id":3431460916,"role":"platform","type":"n"},{"id":5214265831,"role":"stop","type":"n"},{"id":3302668133,"role":"platform","type":"n"},{"id":3431357947,"role":"stop","type":"n"},{"id":1675761836,"role":"platform","type":"n"},{"id":3431357949,"role":"stop","type":"n"},{"id":3431357953,"role":"stop","type":"n"},{"id":3431357955,"role":"stop","type":"n"},{"id":2973030460,"role":"platform","type":"n"},{"id":3431357951,"role":"stop","type":"n"},{"id":2973030458,"role":"platform","type":"n"},{"id":3431460909,"role":"stop","type":"n"},{"id":2962596189,"role":"platform","type":"n"},{"id":577094026,"role":"stop","type":"n"},{"id":1548446269,"role":"platform","type":"n"},{"i...]
+id: NUMBER | NULL | eg=[4754869, 5426265]
+
+## GEO_OPENSTREETMAP.PLANET_LAYERS
+@use: [C1, C3, C4]
+
+## GEO_OPENSTREETMAP.HISTORY_NODES
+@use: [C1, C2]
+longitude: NUMBER | NULL | eg=["-40.827739300", "-40.797456900"]
+latitude: NUMBER | NULL | eg=["-19.825717100", "-19.516939100"]
+id: NUMBER | NULL | eg=[6927901233, 6793200361]
+
+## GEO_OPENSTREETMAP.PLANET_FEATURES
+@use: [C1, C3]
+feature_type: TEXT | NULL | eg=["multipolygons", "points"]
+
+## GEO_OPENSTREETMAP.PLANET_FEATURES_POINTS
+@use: [C1, C3]
+
+## GEO_OPENSTREETMAP.HISTORY_LAYERS
+@use: [C1, C3, C4]
+
+## GEO_OPENSTREETMAP.PLANET_NODES
+@use: [C1, C2]
+latitude: NUMBER | NULL | eg=["49.346380400", "49.016692700"]
+id: NUMBER | NULL | eg=[8269794421, 8308404811]
+longitude: NUMBER | NULL | eg=["44.812493500", "41.145878500"]
+
+## GEO_OPENSTREETMAP.PLANET_WAYS
+@use: [C1, C2]
+nodes: VARIANT | NULL | eg=[[{"id":866315580},{"id":866469140},{"id":867906160},{"id":866405284},{"id":866497492},{"id":866302007},{"id":866449818},{"id":867897625},{"id":867903637},{"id":866402859},{"id":866540640}]]
+id: NUMBER | NULL | eg=[73165139, 75218666]

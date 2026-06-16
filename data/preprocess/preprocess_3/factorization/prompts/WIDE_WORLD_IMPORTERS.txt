@@ -1,0 +1,401 @@
+[COMPONENTS]
+@C1
+ValidFrom: NUMBER | NULL
+ValidTo: NUMBER | NULL
+
+@C2
+DeliveryAddressLine1: TEXT | NULL
+DeliveryAddressLine2: TEXT | NULL
+DeliveryCityID: NUMBER | NULL
+DeliveryPostalCode: NUMBER | NULL
+PostalAddressLine1: TEXT | NULL
+PostalAddressLine2: TEXT | NULL
+PostalCityID: NUMBER | NULL
+PostalPostalCode: NUMBER | NULL
+
+@C3
+AmountExcludingTax: FLOAT | NULL
+FinalizationDate: TEXT | NULL
+IsFinalized: NUMBER | NULL
+OutstandingBalance: FLOAT | NULL
+TransactionAmount: FLOAT | NULL
+
+@C4
+DeliveryLocation: FLOAT | NULL
+PaymentDays: NUMBER | NULL
+PrimaryContactPersonID: NUMBER | NULL
+WebsiteURL: TEXT | NULL
+
+@C5
+FaxNumber: TEXT | NULL
+PhoneNumber: TEXT | NULL
+
+@C6
+TaxRate: FLOAT | NULL
+UnitPrice: FLOAT | NULL
+
+@C7
+Comments: TEXT | NULL
+ExpectedDeliveryDate: DATE | NULL
+OrderDate: DATE | NULL
+
+@C8
+CustomerPurchaseOrderNumber: NUMBER | NULL
+DeliveryInstructions: TEXT | NULL
+SalespersonPersonID: NUMBER | NULL
+
+[TABLES]
+## WIDE_WORLD_IMPORTERS.WAREHOUSE_STOCKITEMHOLDINGS
+BinLocation: TEXT | NULL
+LastEditedBy: NUMBER | NULL
+LastStocktakeQuantity: NUMBER | NULL
+TargetStockLevel: NUMBER | NULL
+LastEditedWhen: NUMBER | NULL
+StockItemID: NUMBER | NULL
+ReorderLevel: NUMBER | NULL
+QuantityOnHand: NUMBER | NULL
+LastCostPrice: FLOAT | NULL
+
+## WIDE_WORLD_IMPORTERS.PURCHASING_SUPPLIERTRANSACTIONS
+@use: [C3]
+PaymentMethodID: NUMBER | NULL
+SupplierInvoiceNumber: TEXT | NULL
+TaxAmount: FLOAT | NULL
+LastEditedBy: NUMBER | NULL
+SupplierID: NUMBER | NULL
+LastEditedWhen: NUMBER | NULL
+PurchaseOrderID: TEXT | NULL
+TransactionTypeID: NUMBER | NULL
+TransactionDate: DATE | NULL
+SupplierTransactionID: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.APPLICATION_TRANSACTIONTYPES
+@use: [C1]
+TransactionTypeName: TEXT | NULL
+TransactionTypeID: NUMBER | NULL
+LastEditedBy: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.SALES_CUSTOMERCATEGORIES
+@use: [C1]
+CustomerCategoryID: NUMBER | NULL
+CustomerCategoryName: TEXT | NULL
+LastEditedBy: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.SALES_CUSTOMERS
+@use: [C1, C2, C4, C5]
+LastEditedBy: NUMBER | NULL
+BillToCustomerID: NUMBER | NULL
+DeliveryRun: TEXT | NULL
+IsOnCreditHold: NUMBER | NULL
+CustomerCategoryID: NUMBER | NULL
+AlternateContactPersonID: TEXT | NULL
+AccountOpenedDate: DATE | NULL
+StandardDiscountPercentage: FLOAT | NULL
+RunPosition: TEXT | NULL
+CreditLimit: TEXT | NULL
+IsStatementSent: NUMBER | NULL
+CustomerID: NUMBER | NULL
+CustomerName: TEXT | NULL
+DeliveryMethodID: NUMBER | NULL
+BuyingGroupID: TEXT | NULL
+
+## WIDE_WORLD_IMPORTERS.PURCHASING_SUPPLIERCATEGORIES
+@use: [C1]
+SupplierCategoryName: TEXT | NULL
+SupplierCategoryID: NUMBER | NULL
+LastEditedBy: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.SALES_INVOICELINES
+@use: [C6]
+LineProfit: FLOAT | NULL
+InvoiceLineID: NUMBER | NULL
+StockItemID: NUMBER | NULL
+Quantity: NUMBER | NULL
+Description: TEXT | NULL
+TaxAmount: FLOAT | NULL
+ExtendedPrice: FLOAT | NULL
+LastEditedWhen: NUMBER | NULL
+InvoiceID: NUMBER | NULL
+LastEditedBy: NUMBER | NULL
+PackageTypeID: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.WAREHOUSE_COLORS
+@use: [C1]
+ColorName: TEXT | NULL
+ColorID: NUMBER | NULL
+LastEditedBy: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.WAREHOUSE_STOCKITEMS
+@use: [C1, C6]
+CustomFields: TEXT | NULL
+Brand: TEXT | NULL
+LastEditedBy: NUMBER | NULL
+StockItemName: TEXT | NULL
+Photo: TEXT | NULL
+OuterPackageID: NUMBER | NULL
+UnitPackageID: NUMBER | NULL
+RecommendedRetailPrice: FLOAT | NULL
+InternalComments: TEXT | NULL
+Tags: TEXT | NULL
+Barcode: TEXT | NULL
+LeadTimeDays: NUMBER | NULL
+MarketingComments: TEXT | NULL
+QuantityPerOuter: NUMBER | NULL
+StockItemID: NUMBER | NULL
+Size: TEXT | NULL
+TypicalWeightPerUnit: FLOAT | NULL
+ColorID: TEXT | NULL
+IsChillerStock: NUMBER | NULL
+SearchDetails: TEXT | NULL
+SupplierID: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.WAREHOUSE_STOCKGROUPS
+@use: [C1]
+StockGroupName: TEXT | NULL
+StockGroupID: NUMBER | NULL
+LastEditedBy: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.PURCHASING_PURCHASEORDER
+@use: [C7]
+SupplierReference: TEXT | NULL
+DeliveryMethodID: NUMBER | NULL
+PurchaseOrderID: NUMBER | NULL
+ContactPersonID: NUMBER | NULL
+LastEditedBy: NUMBER | NULL
+SupplierID: NUMBER | NULL
+IsOrderFinalized: NUMBER | NULL
+InternalComments: TEXT | NULL
+LastEditedWhen: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.PURCHASING_SUPPLIERS
+@use: [C1, C2, C4, C5]
+BankInternationalCode: NUMBER | NULL
+InternalComments: TEXT | NULL
+BankAccountCode: NUMBER | NULL
+SupplierID: NUMBER | NULL
+LastEditedBy: NUMBER | NULL
+SupplierReference: TEXT | NULL
+SupplierCategoryID: NUMBER | NULL
+DeliveryMethodID: TEXT | NULL
+BankAccountName: TEXT | NULL
+BankAccountNumber: NUMBER | NULL
+SupplierName: TEXT | NULL
+AlternateContactPersonID: NUMBER | NULL
+BankAccountBranch: TEXT | NULL
+
+## WIDE_WORLD_IMPORTERS.SALES_BUYINGGROUPS
+@use: [C1]
+BuyingGroupName: TEXT | NULL
+LastEditedBy: NUMBER | NULL
+BuyingGroupID: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.SALES_SPECIALDEALS
+DealDescription: TEXT | NULL
+DiscountAmount: TEXT | NULL
+DiscountPercentage: FLOAT | NULL
+CustomerID: TEXT | NULL
+LastEditedBy: NUMBER | NULL
+CustomerCategoryID: TEXT | NULL
+BuyingGroupID: NUMBER | NULL
+UnitPrice: TEXT | NULL
+StockItemID: TEXT | NULL
+StockGroupID: NUMBER | NULL
+StartDate: DATE | NULL
+EndDate: DATE | NULL
+SpecialDealID: NUMBER | NULL
+LastEditedWhen: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.APPLICATION_STATEPROVINCES
+@use: [C1]
+CountryID: NUMBER | NULL
+StateProvinceName: TEXT | NULL
+SalesTerritory: TEXT | NULL
+StateProvinceID: NUMBER | NULL
+LatestRecordedPopulation: NUMBER | NULL
+LastEditedBy: NUMBER | NULL
+Border: BINARY | NULL
+StateProvinceCode: TEXT | NULL
+
+## WIDE_WORLD_IMPORTERS.APPLICATION_SYSTEMPARAMETERS
+@use: [C2]
+DeliveryLocation: TEXT | NULL
+SystemParameterID: NUMBER | NULL
+ApplicationSettings: TEXT | NULL
+LastEditedBy: NUMBER | NULL
+LastEditedWhen: TEXT | NULL
+
+## WIDE_WORLD_IMPORTERS.SALES_ORDERS
+@use: [C7, C8]
+OrderID: NUMBER | NULL
+CustomerID: NUMBER | NULL
+LastEditedWhen: NUMBER | NULL
+PickingCompletedWhen: TEXT | NULL
+PickedByPersonID: TEXT | NULL
+LastEditedBy: NUMBER | NULL
+InternalComments: TEXT | NULL
+IsUndersupplyBackordered: NUMBER | NULL
+ContactPersonID: NUMBER | NULL
+BackorderOrderID: TEXT | NULL
+
+## WIDE_WORLD_IMPORTERS.APPLICATION_COUNTRIES
+@use: [C1]
+FormalName: TEXT | NULL
+CountryName: TEXT | NULL
+Region: TEXT | NULL
+LatestRecordedPopulation: NUMBER | NULL
+CountryID: NUMBER | NULL
+CountryType: TEXT | NULL
+Continent: TEXT | NULL
+Border: FLOAT | NULL
+LastEditedBy: NUMBER | NULL
+Subregion: TEXT | NULL
+IsoAlpha3Code: TEXT | NULL
+IsoNumericCode: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.WAREHOUSE_STOCKITEMTRANSACTIONS
+InvoiceID: FLOAT | NULL
+CustomerID: FLOAT | NULL
+TransactionTypeID: NUMBER | NULL
+StockItemTransactionID: NUMBER | NULL
+StockItemID: NUMBER | NULL
+LastEditedBy: NUMBER | NULL
+TransactionOccurredWhen: TEXT | NULL
+PurchaseOrderID: FLOAT | NULL
+SupplierID: FLOAT | NULL
+LastEditedWhen: TEXT | NULL
+Quantity: FLOAT | NULL
+
+## WIDE_WORLD_IMPORTERS.WAREHOUSE_VEHICLETEMPERATURES
+VehicleRegistration: TEXT | NULL
+CompressedSensorData: TEXT | NULL
+RecordedWhen: NUMBER | NULL
+IsCompressed: NUMBER | NULL
+ChillerSensorNumber: NUMBER | NULL
+VehicleTemperatureID: NUMBER | NULL
+Temperature: FLOAT | NULL
+FullSensorData: TEXT | NULL
+
+## WIDE_WORLD_IMPORTERS.APPLICATION_CITIES
+@use: [C1]
+LastEditedBy: NUMBER | NULL
+CityName: TEXT | NULL
+LatestRecordedPopulation: TEXT | NULL
+Location: FLOAT | NULL
+CityID: NUMBER | NULL
+StateProvinceID: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.SALES_CUSTOMERTRANSACTIONS
+@use: [C3]
+LastEditedBy: NUMBER | NULL
+PaymentMethodID: FLOAT | NULL
+TransactionTypeID: NUMBER | NULL
+CustomerID: NUMBER | NULL
+TaxAmount: FLOAT | NULL
+TransactionDate: TEXT | NULL
+InvoiceID: FLOAT | NULL
+LastEditedWhen: TEXT | NULL
+CustomerTransactionID: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.WAREHOUSE_PACKAGETYPES
+@use: [C1]
+PackageTypeID: NUMBER | NULL
+PackageTypeName: TEXT | NULL
+LastEditedBy: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.APPLICATION_DELIVERYMETHODS
+@use: [C1]
+DeliveryMethodName: TEXT | NULL
+DeliveryMethodID: NUMBER | NULL
+LastEditedBy: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.SALES_ORDERLINES
+@use: [C6]
+StockItemID: NUMBER | NULL
+PickedQuantity: NUMBER | NULL
+PackageTypeID: NUMBER | NULL
+PickingCompletedWhen: TEXT | NULL
+LastEditedWhen: NUMBER | NULL
+OrderLineID: NUMBER | NULL
+OrderID: NUMBER | NULL
+Description: TEXT | NULL
+Quantity: NUMBER | NULL
+LastEditedBy: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.SALES_INVOICES
+@use: [C8]
+RunPosition: FLOAT | NULL
+LastEditedWhen: TEXT | NULL
+ConfirmedReceivedBy: TEXT | NULL
+ContactPersonID: NUMBER | NULL
+IsCreditNote: NUMBER | NULL
+TotalChillerItems: NUMBER | NULL
+DeliveryRun: FLOAT | NULL
+DeliveryMethodID: NUMBER | NULL
+InternalComments: FLOAT | NULL
+BillToCustomerID: NUMBER | NULL
+CustomerID: NUMBER | NULL
+Comments: FLOAT | NULL
+PackedByPersonID: NUMBER | NULL
+TotalDryItems: NUMBER | NULL
+AccountsPersonID: NUMBER | NULL
+InvoiceDate: TEXT | NULL
+CreditNoteReason: FLOAT | NULL
+ReturnedDeliveryData: TEXT | NULL
+InvoiceID: NUMBER | NULL
+OrderID: NUMBER | NULL
+LastEditedBy: NUMBER | NULL
+ConfirmedDeliveryTime: TEXT | NULL
+
+## WIDE_WORLD_IMPORTERS.PURCHASING_PURCHASEORDERLINES
+StockItemID: NUMBER | NULL
+ExpectedUnitPricePerOuter: FLOAT | NULL
+LastEditedWhen: NUMBER | NULL
+Description: TEXT | NULL
+IsOrderLineFinalized: NUMBER | NULL
+LastReceiptDate: TEXT | NULL
+OrderedOuters: NUMBER | NULL
+ReceivedOuters: NUMBER | NULL
+PackageTypeID: NUMBER | NULL
+PurchaseOrderID: NUMBER | NULL
+LastEditedBy: NUMBER | NULL
+PurchaseOrderLineID: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.WAREHOUSE_STOCKITEMSTOCKGROUPS
+StockItemID: NUMBER | NULL
+StockItemStockGroupID: NUMBER | NULL
+StockGroupID: NUMBER | NULL
+LastEditedWhen: NUMBER | NULL
+LastEditedBy: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.WAREHOUSE_COLDROOMTEMPERATURES
+@use: [C1]
+ColdRoomTemperatureID: NUMBER | NULL
+Temperature: FLOAT | NULL
+RecordedWhen: NUMBER | NULL
+ColdRoomSensorNumber: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.APPLICATION_PEOPLE
+@use: [C1, C5]
+LogonName: TEXT | NULL
+IsSystemUser: NUMBER | NULL
+HashedPassword: TEXT | NULL
+FullName: TEXT | NULL
+EmailAddress: TEXT | NULL
+Photo: TEXT | NULL
+UserPreferences: TEXT | NULL
+PersonID: NUMBER | NULL
+LastEditedBy: NUMBER | NULL
+PreferredName: TEXT | NULL
+IsExternalLogonProvider: NUMBER | NULL
+SearchName: TEXT | NULL
+OtherLanguages: TEXT | NULL
+IsSalesperson: NUMBER | NULL
+IsEmployee: NUMBER | NULL
+CustomFields: TEXT | NULL
+IsPermittedToLogon: NUMBER | NULL
+
+## WIDE_WORLD_IMPORTERS.APPLICATION_PAYMENTMETHODS
+@use: [C1]
+PaymentMethodName: TEXT | NULL
+PaymentMethodID: NUMBER | NULL
+LastEditedBy: NUMBER | NULL

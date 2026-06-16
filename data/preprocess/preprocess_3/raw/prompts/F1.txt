@@ -1,0 +1,289 @@
+[TABLES]
+## F1.SEASONS
+url: TEXT | NULL
+year: NUMBER | NULL
+
+## F1.DRIVER_STANDINGS
+race_id: NUMBER | NULL
+driver_id: NUMBER | NULL
+points: FLOAT | NULL
+position_text: TEXT | NULL
+wins: NUMBER | NULL
+position: NUMBER | NULL
+driver_standings_id: NUMBER | NULL
+
+## F1.RESULTS
+result_id: NUMBER | NULL
+laps: NUMBER | NULL
+milliseconds: FLOAT | NULL
+fastest_lap: FLOAT | NULL
+position: FLOAT | NULL
+race_id: NUMBER | NULL
+driver_id: NUMBER | NULL
+rank: FLOAT | NULL
+status_id: NUMBER | NULL
+points: FLOAT | NULL
+constructor_id: NUMBER | NULL
+position_order: NUMBER | NULL
+fastest_lap_time: TEXT | NULL
+time: TEXT | NULL
+grid: NUMBER | NULL
+position_text: TEXT | NULL
+fastest_lap_speed: TEXT | NULL
+number: FLOAT | NULL
+
+## F1.QUALIFYING
+qualify_id: NUMBER | NULL
+driver_id: NUMBER | NULL
+position: NUMBER | NULL
+q1: TEXT | NULL
+q3: TEXT | NULL
+race_id: NUMBER | NULL
+q2: TEXT | NULL
+number: NUMBER | NULL
+constructor_id: NUMBER | NULL
+
+## F1.CIRCUITS_EXT
+alt: NUMBER | NULL
+circuit_id: NUMBER | NULL
+name: TEXT | NULL
+lat: FLOAT | NULL
+country: TEXT | NULL
+last_race_year: NUMBER | NULL
+circuit_ref: TEXT | NULL
+location: TEXT | NULL
+url: TEXT | NULL
+number_of_races: NUMBER | NULL
+lng: FLOAT | NULL
+
+## F1.DRIVERS
+number: FLOAT | NULL
+forename: TEXT | NULL
+url: TEXT | NULL
+code: TEXT | NULL
+full_name: TEXT | NULL
+driver_ref: TEXT | NULL
+driver_id: NUMBER | NULL
+dob: TEXT | NULL
+surname: TEXT | NULL
+nationality: TEXT | NULL
+
+## F1.TDR_OVERRIDES
+team_driver_rank: NUMBER | NULL
+constructor_ref: TEXT | NULL
+driver_ref: TEXT | NULL
+year: NUMBER | NULL
+
+## F1.CIRCUITS
+circuit_ref: TEXT | NULL
+lng: FLOAT | NULL
+url: TEXT | NULL
+circuit_id: NUMBER | NULL
+lat: FLOAT | NULL
+name: TEXT | NULL
+alt: NUMBER | NULL
+country: TEXT | NULL
+location: TEXT | NULL
+
+## F1.LAP_TIME_STATS
+race_id: NUMBER | NULL
+stdev_seconds: FLOAT | NULL
+avg_milliseconds: FLOAT | NULL
+stdev_milliseconds: FLOAT | NULL
+avg_seconds: FLOAT | NULL
+driver_id: NUMBER | NULL
+
+## F1.CONSTRUCTOR_RESULTS
+constructor_results_id: NUMBER | NULL
+race_id: NUMBER | NULL
+status: TEXT | NULL
+points: FLOAT | NULL
+constructor_id: NUMBER | NULL
+
+## F1.SHORT_GRAND_PRIX_NAMES
+short_name: TEXT | NULL
+full_name: TEXT | NULL
+
+## F1.SPRINT_RESULTS
+race_id: NUMBER | NULL
+number: NUMBER | NULL
+constructor_id: NUMBER | NULL
+result_id: NUMBER | NULL
+fastest_lap_speed: TEXT | NULL
+laps: NUMBER | NULL
+fastest_lap: FLOAT | NULL
+position: FLOAT | NULL
+position_order: NUMBER | NULL
+fastest_lap_time: TEXT | NULL
+grid: NUMBER | NULL
+milliseconds: FLOAT | NULL
+points: FLOAT | NULL
+position_text: TEXT | NULL
+time: TEXT | NULL
+driver_id: NUMBER | NULL
+status_id: NUMBER | NULL
+
+## F1.RACES
+fp1_date: TEXT | NULL
+fp2_date: TEXT | NULL
+quali_date: TEXT | NULL
+sprint_time: TEXT | NULL
+url: TEXT | NULL
+fp3_date: TEXT | NULL
+race_id: NUMBER | NULL
+time: TEXT | NULL
+sprint_date: TEXT | NULL
+date: TEXT | NULL
+circuit_id: NUMBER | NULL
+quali_time: TEXT | NULL
+fp3_time: TEXT | NULL
+fp1_time: TEXT | NULL
+year: NUMBER | NULL
+name: TEXT | NULL
+round: NUMBER | NULL
+fp2_time: TEXT | NULL
+
+## F1.DRIVER_STANDINGS_EXT
+position: NUMBER | NULL
+wins: NUMBER | NULL
+driver_standings_id: NUMBER | NULL
+points: FLOAT | NULL
+driver_id: NUMBER | NULL
+race_id: NUMBER | NULL
+position_text: TEXT | NULL
+
+## F1.LIVERIES
+start_year: NUMBER | NULL
+constructor_ref: TEXT | NULL
+end_year: FLOAT | NULL
+primary_hex_code: TEXT | NULL
+
+## F1.LAP_TIMES_EXT
+lap: NUMBER | NULL
+running_milliseconds: NUMBER | NULL
+milliseconds: NUMBER | NULL
+race_id: NUMBER | NULL
+seconds: FLOAT | NULL
+driver_id: NUMBER | NULL
+position: NUMBER | NULL
+time: TEXT | NULL
+
+## F1.RACES_EXT
+quali_date: TEXT | NULL
+max_points: NUMBER | NULL
+fp1_time: TEXT | NULL
+year: NUMBER | NULL
+circuit_id: NUMBER | NULL
+sprint_date: TEXT | NULL
+fp1_date: TEXT | NULL
+date: TEXT | NULL
+fp3_date: TEXT | NULL
+race_id: NUMBER | NULL
+fp2_time: TEXT | NULL
+round: NUMBER | NULL
+name: TEXT | NULL
+time: TEXT | NULL
+short_name: TEXT | NULL
+sprint_time: TEXT | NULL
+has_sprint: NUMBER | NULL
+fp3_time: TEXT | NULL
+is_pit_data_available: NUMBER | NULL
+url: TEXT | NULL
+fp2_date: TEXT | NULL
+quali_time: TEXT | NULL
+
+## F1.PIT_STOPS
+seconds: FLOAT | NULL
+time: TEXT | NULL
+duration: TEXT | NULL
+race_id: NUMBER | NULL
+milliseconds: NUMBER | NULL
+driver_id: NUMBER | NULL
+lap: NUMBER | NULL
+stop: NUMBER | NULL
+
+## F1.DRIVERS_EXT
+dob: TEXT | NULL
+url: TEXT | NULL
+nationality: TEXT | NULL
+forename: TEXT | NULL
+full_name: TEXT | NULL
+surname: TEXT | NULL
+code: TEXT | NULL
+number: FLOAT | NULL
+driver_ref: TEXT | NULL
+driver_id: NUMBER | NULL
+
+## F1.TEAM_DRIVER_RANKS
+driver_id: NUMBER | NULL
+year: NUMBER | NULL
+driver_ref: TEXT | NULL
+constructor_id: NUMBER | NULL
+constructor_ref: TEXT | NULL
+team_driver_rank: NUMBER | NULL
+
+## F1.DRIVES
+last_round: NUMBER | NULL
+is_first_drive_of_season: NUMBER | NULL
+drive_id: NUMBER | NULL
+year: NUMBER | NULL
+constructor_id: NUMBER | NULL
+is_final_drive_of_season: NUMBER | NULL
+first_round: NUMBER | NULL
+driver_id: NUMBER | NULL
+
+## F1.CONSTRUCTORS_EXT
+constructor_id: NUMBER | NULL
+nationality: TEXT | NULL
+url: TEXT | NULL
+name: TEXT | NULL
+short_name: TEXT | NULL
+constructor_ref: TEXT | NULL
+
+## F1.STATUS
+status_id: NUMBER | NULL
+status: TEXT | NULL
+
+## F1.CONSTRUCTORS
+constructor_id: NUMBER | NULL
+name: TEXT | NULL
+url: TEXT | NULL
+nationality: TEXT | NULL
+constructor_ref: TEXT | NULL
+
+## F1.CONSTRUCTOR_STANDINGS
+wins: NUMBER | NULL
+constructor_standings_id: NUMBER | NULL
+position: NUMBER | NULL
+race_id: NUMBER | NULL
+points: FLOAT | NULL
+position_text: TEXT | NULL
+constructor_id: NUMBER | NULL
+
+## F1.LAP_TIMES
+position: NUMBER | NULL
+time: TEXT | NULL
+race_id: NUMBER | NULL
+driver_id: NUMBER | NULL
+lap: NUMBER | NULL
+milliseconds: NUMBER | NULL
+seconds: FLOAT | NULL
+
+## F1.SHORT_CONSTRUCTOR_NAMES
+short_name: TEXT | NULL
+constructor_ref: TEXT | NULL
+
+## F1.RETIREMENTS
+retirement_type: TEXT | NULL
+lap: NUMBER | NULL
+driver_id: NUMBER | NULL
+status_id: NUMBER | NULL
+position_order: NUMBER | NULL
+race_id: NUMBER | NULL
+
+## F1.LAP_POSITIONS
+race_id: NUMBER | NULL
+lap: NUMBER | NULL
+lap_type: TEXT | NULL
+position: NUMBER | NULL
+driver_id: NUMBER | NULL

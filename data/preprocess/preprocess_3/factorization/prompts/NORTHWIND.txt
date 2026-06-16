@@ -1,0 +1,119 @@
+[COMPONENTS]
+@C1
+address: TEXT | NULL
+city: TEXT | NULL
+country: TEXT | NULL
+postalcode: TEXT | NULL
+region: TEXT | NULL
+
+@C2
+companyname: TEXT | NULL
+phone: TEXT | NULL
+
+@C3
+contactname: TEXT | NULL
+contacttitle: TEXT | NULL
+fax: TEXT | NULL
+
+[TABLES]
+## NORTHWIND.USSTATES
+stateregion: TEXT | NULL
+statename: TEXT | NULL
+stateabbr: TEXT | NULL
+stateid: NUMBER | NULL
+
+## NORTHWIND.ORDER_DETAILS
+discount: FLOAT | NULL
+orderid: NUMBER | NULL
+unitprice: FLOAT | NULL
+quantity: NUMBER | NULL
+productid: NUMBER | NULL
+
+## NORTHWIND.SHIPPERS
+@use: [C2]
+shipperid: NUMBER | NULL
+
+## NORTHWIND.CUSTOMERGROUPTHRESHOLD
+groupname: TEXT | NULL
+rangetop: FLOAT | NULL
+rangebottom: NUMBER | NULL
+
+## NORTHWIND.EMPLOYEES
+@use: [C1]
+extension: TEXT | NULL
+birthdate: TEXT | NULL
+lastname: TEXT | NULL
+firstname: TEXT | NULL
+photo: TEXT | NULL
+titleofcourtesy: TEXT | NULL
+notes: TEXT | NULL
+title: TEXT | NULL
+hiredate: TEXT | NULL
+photopath: TEXT | NULL
+homephone: TEXT | NULL
+reportsto: FLOAT | NULL
+employeeid: NUMBER | NULL
+
+## NORTHWIND.PRODUCTS
+productname: TEXT | NULL
+productid: NUMBER | NULL
+discontinued: NUMBER | NULL
+unitprice: FLOAT | NULL
+reorderlevel: NUMBER | NULL
+unitsinstock: NUMBER | NULL
+unitsonorder: NUMBER | NULL
+supplierid: NUMBER | NULL
+quantityperunit: TEXT | NULL
+categoryid: NUMBER | NULL
+
+## NORTHWIND.ORDERS
+requireddate: TEXT | NULL
+customerid: TEXT | NULL
+shippostalcode: TEXT | NULL
+shipaddress: TEXT | NULL
+shipregion: TEXT | NULL
+employeeid: NUMBER | NULL
+shipcountry: TEXT | NULL
+orderid: NUMBER | NULL
+shippeddate: TEXT | NULL
+shipvia: NUMBER | NULL
+freight: FLOAT | NULL
+orderdate: TEXT | NULL
+shipcity: TEXT | NULL
+shipname: TEXT | NULL
+
+## NORTHWIND.REGION
+regiondescription: TEXT | NULL
+regionid: NUMBER | NULL
+
+## NORTHWIND.CUSTOMERS
+@use: [C1, C2, C3]
+customerid: TEXT | NULL
+
+## NORTHWIND.CUSTOMERCUSTOMERDEMO
+customertypeid: TEXT | NULL
+customerid: TEXT | NULL
+
+## NORTHWIND.SUPPLIERS
+@use: [C1, C2, C3]
+homepage: TEXT | NULL
+supplierid: NUMBER | NULL
+
+## NORTHWIND.TERRITORIES
+territorydescription: TEXT | NULL
+territoryid: TEXT | NULL
+regionid: NUMBER | NULL
+
+## NORTHWIND.CUSTOMERDEMOGRAPHICS
+customerdesc: TEXT | NULL
+customertypeid: TEXT | NULL
+
+## NORTHWIND.CATEGORIES
+categoryid: NUMBER | NULL
+categoryname: TEXT | NULL
+description: TEXT | NULL
+picture: TEXT | NULL
+
+## NORTHWIND.EMPLOYEETERRITORIES
+territoryid: TEXT | NULL
+employeeid: NUMBER | NULL

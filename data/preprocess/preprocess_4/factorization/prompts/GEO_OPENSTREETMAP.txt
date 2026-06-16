@@ -1,0 +1,71 @@
+[COMPONENTS]
+@C1
+all_tags: VARIANT | NULL | eg=[[{"key":"landuse","value":"forest"},{"key":"type","value":"multipolygon"}]]
+geometry: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00>\\x00\\x00\\x00W$&\\xa8\\xe1\\xd58@[~;\\xe4\\xc1&L@\\xe9\\xdcH4\\xdc\\xd58@\\xb59\\xcem\\xc2&L@l\\xc6X\\\\\\xd2\\xd58@\\xde\\xe6\\x8d\\x93\\xc2&L@\\'\\xf9\\x11\\xbfb\\xd58@4\\xc4\\x0c\\xe8\\xe0&L@b\\xe3\\xb0\\xeab\\xd58@\\xce\\xb0\\xac\\x8f\\xe2&L@\\xea\\x0b|\\xa0p\\xd58@\\xd3b\\xf00\\xed&L@Ec\\xed\\xefl\\xd58@r\\\\|\\xc0\\xf2&L@\\x07\\x8c?\\x9bf\\xd58@N\\xaes\\x1d\\xf4&L@\\xc7L\\xfd\\x17c\\xd58@\\x12\\xdey=\\xf3&L@\\x93S\\xe0\\tb\\xd58@\\xa3\\x90dV\\xef&L@]&ydb\\xd58@\\xb5IEc\\xed&L@\\xf2/892\\xd58@\\xbb<Br\\xd7&L@\\xa9\\x12eo)\\xd58@1\\x9a:4\\xd1&L@\\t\\xbfy\\x16)\\xd58@\\xd3\\xa3\\xa9\\x9e\\xcc&L@R\\x10\\x97w0\\xd58@\\x9b\\xf9\\xc4\\xf0\\xc7&L@\\xcbWn\\x0e|\\xd58@\\xd2\\xe4b\\x0c\\xac&L@P\\xe1c\\x0b\\x9c\\xd58@\\x8e.\\xdb\\xf3\\xa1&L@\\tz^\\xe0\\xa8\\xd58@\\xd2\\xf5\\x8ed\\xa0&L@\\xfa`\\x19\\x1b\\xba\\xd58@\\x1a\\xbc\\xf9W\\xa0&L@M\\\\}+\\xc8\\xd58@\\xf0\\x0e:2\\xa0&L@\\x01\\xd4\\x1e@\\xd0\\xd58@\\x15\\x1f\\x9f\\x90\\x9d&L@l\\xc6X\\\\\\xd2\\xd58@\\x16\\xe3W\\x07\\x9b&L@\\xc1\\x94\\xdc\\xbc\\xcc\\xd58@AT\\xd0\\xa3\\x98&L@I;$k\\xc3\\xd58@`14\\xe8\\x95&L@\\x96l\\x86e}\\xd68@\\xad\\x7f|\\xae[&L@\\xd1\\xee\\x90b\\x80\\xd6...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x1e\\x00\\x00\\x00\\xe1\\\\\\x1e\\xc6\\xff.:@\\xee\\x1f\\xb0\\x17\\xaf\\x0bH@\\xbb\\x14\\xb2N\\xf0.:@\\xdc\\x10\\xe35\\xaf\\x0bH@+\\x0eVR\\xdd.:@\\xca\\xe7p\\x08\\xb0\\x0bH@dB\\'\\xdf\\xc7.:@\\xfe\\x92\\x9e3\\xb3\\x0bH@\\xca\\xf5\\xa5m\\xb2.:@\\xfb\\xdc\\x1a\"\\xb8\\x0bH@\\x03\\xc2\\xe2\\xcb\\x9f.:@\\n6d\\xf2\\xbc\\x0bH@\\xe5\\xbf\\x9b\\xc9\\x92.:@\\xf7\\xd8\\xa7-\\xbf\\x0bH@\\xc7\\x89\\n0\\x87.:@\\xf7\\x0c\\xf2\\xc4\\xbd\\x0bH@\\\\\\xcb\\x1a\\xab\\x83.:@\\xc4G\\x1fN\\xbb\\x0bH@\\x92\\xc47\\xb9\\x84.:@\\xa2\\xc5cP\\xb7\\x0bH@O\\xe6\\x1f}\\x93.:@\\xb7\\xa4Y\\x8f\\xb1\\x0bH@\\xab\\xf3^k\\xa5.:@\\xb8\\x0c\\xee\\xbd\\xae\\x0bH@\\x13\\xdf.\\xa0\\xbc.:@\\x97\\x8a2\\xc0\\xaa\\x0bH@\\x8a\"\\xff\\'\\xda.:@\\xaci(\\xff\\xa4\\x0bH@\\xbbH\\xfc\\xe5\\xee.:@\\xaeS\\xf6\\xa7\\x9e\\x0bH@\\xa4\\x85pq\\xf9.:@\\xc3\\xe4\\xfc\\x03\\x9b\\x0bH@\\x81Hu\\xf0\\x02/:@\\xb0\\xa1\\xe5\\x8a\\x9c\\x0bH@,F\\xa7\\xf8\\t/:@\\xc1|h\\xd5\\x9d\\x0bH@tcz\\xc2\\x12/:@\\xe5\\x9a\\x02\\x99\\x9d\\x0bH@\\'\\xa7\\xd1?\\x1c/:@\\xb0\\xbb\\x8a\\xd6\\x9b\\x0bH@P\\xef=\\xb7+/:@\\xe6\\x02\\x97\\xc7\\x9a\\x0bH@\\xaa\\xfc|\\xa5=/:@\\xb0\\xbb\\x8a\\xd6\\x9b\\x0bH@q\\xc8\\xab\\x18S/:@\\..."]
+osm_timestamp: NUMBER | NULL | eg=[1502475117000000, 1587502152000000]
+
+@C2
+changeset: NUMBER | NULL | eg=[51041273, 83900996]
+username: TEXT | NULL | eg=["Aurimas Fišeras", "UPegasus"]
+version: NUMBER | NULL | eg=[1]
+visible: BOOLEAN | NULL | eg=[true]
+
+@C3
+osm_id: NUMBER | NULL
+osm_version: NUMBER | NULL | eg=[1]
+osm_way_id: NUMBER | NULL | eg=[80820903, 159980615]
+
+@C4
+gdal_type: TEXT | NULL | eg=["multipolygons"]
+layer_class: TEXT | NULL | eg=["building"]
+layer_code: NUMBER | NULL | eg=[1500]
+layer_name: TEXT | NULL | eg=["building"]
+
+[TABLES]
+## GEO_OPENSTREETMAP.HISTORY_CHANGESETS
+osm_timestamp_min: NUMBER | Minimum timestamp of objects contained in this changeset. | eg=[1429167998, 1306424582]
+ways: VARIANT | Ways that are part of this way | eg=[[]]
+id: NUMBER | Changeset ID. | eg=[30256461, 8254690]
+osm_timestamp_max: NUMBER | Maximum timestamp of objects contained in this changeset. | eg=[1429167998, 1306424582]
+relations: VARIANT | Relations that are part of this way | eg=[[2787405], [1573819]]
+nodes: VARIANT | Nodes that are part of this way | eg=[[], [171513871]]
+
+## GEO_OPENSTREETMAP.PLANET_RELATIONS
+@use: [C1, C2]
+id: NUMBER | NULL | eg=[7463946, 11022461]
+members: VARIANT | NULL | eg=[[{"id":514874852,"role":"outer","type":"w"},{"id":514874853,"role":"outer","type":"w"}], [{"id":794546848,"role":"outer","type":"w"},{"id":794546849,"role":"outer","type":"w"}]]
+
+## GEO_OPENSTREETMAP.HISTORY_RELATIONS
+@use: [C1, C2]
+members: VARIANT | NULL | eg=[[{"id":3474923242,"role":"stop","type":"n"},{"id":340277699,"role":"platform","type":"w"},{"id":2195652482,"role":"stop","type":"n"},{"id":340277697,"role":"platform","type":"w"},{"id":1965658359,"role":"stop","type":"n"},{"id":340277700,"role":"platform","type":"w"},{"id":3124508814,"role":"stop","type":"n"},{"id":363992436,"role":"platform","type":"w"},{"id":3682835401,"role":"stop","type":"n"},{"id":237581846,"role":"platform","type":"w"},{"id":8044420082,"role":"stop","type":"n"},{"id":363988644,"role":"platform","type":"w"},{"id":3680942433,"role":"stop","type":"n"},{"id":3680942481,"role":"platform","type":"n"},{"id":3680942431,"role":"stop","type":"n"},{"id":363988645,"role":"platform","type":"w"},{"id":3680942435,"role":"stop","type":"n"},{"id":363988643,"role":"platform","type":"w"},{"id":3682744118,"role":"stop","type":"n"},{"id":364216049,"role":"platform","type":"w"},{"id":42261150,"role":"stop","type":"n"},{"id":364216048,"role":"platform","type":"w"},{"id":3682753418,"...]
+id: NUMBER | NULL | eg=[5426265, 10760608]
+
+## GEO_OPENSTREETMAP.PLANET_LAYERS
+@use: [C1, C3, C4]
+
+## GEO_OPENSTREETMAP.HISTORY_NODES
+@use: [C1, C2]
+longitude: NUMBER | NULL | eg=["3.342431700", "3.566249000"]
+latitude: NUMBER | NULL | eg=["50.747601900", "50.807488600"]
+id: NUMBER | NULL | eg=[2719410933, 2024704316]
+
+## GEO_OPENSTREETMAP.PLANET_FEATURES
+@use: [C1, C3]
+feature_type: TEXT | NULL | eg=["multipolygons"]
+
+## GEO_OPENSTREETMAP.PLANET_FEATURES_POINTS
+@use: [C1, C3]
+
+## GEO_OPENSTREETMAP.HISTORY_LAYERS
+@use: [C1, C3, C4]
+
+## GEO_OPENSTREETMAP.PLANET_NODES
+@use: [C1, C2]
+latitude: NUMBER | NULL | eg=["49.438724700", "-20.688499500"]
+id: NUMBER | NULL | eg=[8809595840, 4811433843]
+longitude: NUMBER | NULL | eg=["-113.443301100", "28.986649100"]
+
+## GEO_OPENSTREETMAP.PLANET_WAYS
+@use: [C1, C2]
+nodes: VARIANT | NULL | eg=[[{"id":866315580},{"id":866469140},{"id":867906160},{"id":866405284},{"id":866497492},{"id":866302007},{"id":866449818},{"id":867897625},{"id":867903637},{"id":866402859},{"id":866540640}]]
+id: NUMBER | NULL | eg=[73165139, 75218666]

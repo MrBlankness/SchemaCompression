@@ -1,0 +1,15 @@
+[STANDALONE]
+Format: schema.table|col1,col2
+CHINOOK.ALBUMS|AlbumId,Title,ArtistId
+CHINOOK.ARTISTS|ArtistId,Name
+CHINOOK.CUSTOMERS|Fax,Country,FirstName,State,CustomerId,Email,City,Phone,Company,SupportRepId,LastName,Address,PostalCode
+CHINOOK.EMPLOYEES|BirthDate,PostalCode,Country,ReportsTo,FirstName,State,Address,Phone,City,LastName,Email,EmployeeId,Title,HireDate,Fax
+CHINOOK.GENRES|Name,GenreId
+CHINOOK.INVOICES|InvoiceId,BillingCountry,InvoiceDate,BillingAddress,Total,CustomerId,BillingState,BillingPostalCode,BillingCity
+CHINOOK.INVOICE_ITEMS|InvoiceId,InvoiceLineId,TrackId,Quantity,UnitPrice
+CHINOOK.MEDIA_TYPES|MediaTypeId,Name
+CHINOOK.PLAYLISTS|PlaylistId,Name
+CHINOOK.PLAYLIST_TRACK|PlaylistId,TrackId
+CHINOOK.SQLITE_SEQUENCE|seq,name
+CHINOOK.SQLITE_STAT1|tbl,stat,idx
+CHINOOK.TRACKS|TrackId,GenreId,AlbumId,Composer,Name,Milliseconds,MediaTypeId,Bytes,UnitPrice

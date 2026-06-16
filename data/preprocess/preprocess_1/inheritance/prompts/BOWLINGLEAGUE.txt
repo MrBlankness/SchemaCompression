@@ -1,0 +1,14 @@
+[STANDALONE]
+Format: schema.table|col1,col2
+BOWLINGLEAGUE.BOWLERS|BowlerState,BowlerPhoneNumber,BowlerGamesBowled,BowlerCity,BowlerID,BowlerFirstName,BowlerCurrentHcp,BowlerAddress,TeamID,BowlerLastName,BowlerMiddleInit,BowlerZip,BowlerTotalPins,BowlerCurrentAverage
+BOWLINGLEAGUE.BOWLER_SCORES_ARCHIVE|BowlerID,WonGame,GameNumber,HandiCapScore,RawScore,MatchID
+BOWLINGLEAGUE.BOWLER_SCORES|HandiCapScore,BowlerID,MatchID,RawScore,GameNumber,WonGame
+BOWLINGLEAGUE.MATCH_GAMES_ARCHIVE|GameNumber,WinningTeamID,MatchID
+BOWLINGLEAGUE.MATCH_GAMES|MatchID,WinningTeamID,GameNumber
+BOWLINGLEAGUE.SQLITE_SEQUENCE|seq,name
+BOWLINGLEAGUE.TEAMS|TeamName,TeamID,CaptainID
+BOWLINGLEAGUE.TOURNAMENTS_ARCHIVE|TourneyLocation,TourneyDate,TourneyID
+BOWLINGLEAGUE.TOURNAMENTS|TourneyDate,TourneyLocation,TourneyID
+BOWLINGLEAGUE.TOURNEY_MATCHES_ARCHIVE|EvenLaneTeamID,MatchID,TourneyID,OddLaneTeamID,Lanes
+BOWLINGLEAGUE.TOURNEY_MATCHES|OddLaneTeamID,Lanes,TourneyID,EvenLaneTeamID,MatchID
+BOWLINGLEAGUE.WAZIPS|State,ZIP,City

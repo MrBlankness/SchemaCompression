@@ -1,0 +1,163 @@
+[TABLES]
+## CITY_LEGISLATION.CITIES_CURRENCIES
+currency_code: TEXT | NULL
+country_code_2: TEXT | NULL
+currency_id: NUMBER | NULL
+currency_name: TEXT | NULL
+
+## CITY_LEGISLATION.ALIEN_DATA
+occupation: TEXT | NULL
+age: NUMBER | NULL
+type: TEXT | NULL
+gender: TEXT | NULL
+country: TEXT | NULL
+email: TEXT | NULL
+current_location: TEXT | NULL
+first_name: TEXT | NULL
+feeding_frequency: TEXT | NULL
+state: TEXT | NULL
+favorite_food: TEXT | NULL
+last_name: TEXT | NULL
+id: NUMBER | NULL
+us_region: TEXT | NULL
+birth_year: NUMBER | NULL
+aggressive: NUMBER | NULL
+
+## CITY_LEGISLATION.ALIENS_LOCATION
+country: TEXT | NULL
+occupation: TEXT | NULL
+current_location: TEXT | NULL
+loc_id: NUMBER | NULL
+state: TEXT | NULL
+
+## CITY_LEGISLATION.CITIES
+capital: NUMBER | NULL
+insert_date: TEXT | NULL
+city_id: NUMBER | NULL
+country_code_2: TEXT | NULL
+city_name: TEXT | NULL
+longitude: FLOAT | NULL
+latitude: FLOAT | NULL
+population: FLOAT | NULL
+
+## CITY_LEGISLATION.CITIES_LANGUAGES
+language_id: NUMBER | NULL
+language: TEXT | NULL
+country_code_2: TEXT | NULL
+
+## CITY_LEGISLATION.SKILLS_JOB_DIM
+skill_id: NUMBER | NULL
+job_id: NUMBER | NULL
+
+## CITY_LEGISLATION.LEGISLATORS_TERMS
+rss_url: TEXT | NULL
+term_start: TEXT | NULL
+term_end: TEXT | NULL
+phone: TEXT | NULL
+term_number: NUMBER | NULL
+party: TEXT | NULL
+id_bioguide: TEXT | NULL
+contact_form: TEXT | NULL
+term_id: TEXT | NULL
+district: FLOAT | NULL
+fax: TEXT | NULL
+state_rank: TEXT | NULL
+state: TEXT | NULL
+class: FLOAT | NULL
+address: TEXT | NULL
+caucus: TEXT | NULL
+office: TEXT | NULL
+url: TEXT | NULL
+how: TEXT | NULL
+term_type: TEXT | NULL
+
+## CITY_LEGISLATION.CITIES_COUNTRIES
+country_name: TEXT | NULL
+intermediate_region: TEXT | NULL
+country_id: NUMBER | NULL
+sub_region: TEXT | NULL
+country_code_2: TEXT | NULL
+created_on: TEXT | NULL
+region: TEXT | NULL
+country_code_3: TEXT | NULL
+
+## CITY_LEGISLATION.JOB_POSTINGS_FACT
+job_schedule_type: TEXT | NULL
+job_location: TEXT | NULL
+job_posted_date: TEXT | NULL
+job_title_short: TEXT | NULL
+job_work_from_home: NUMBER | NULL
+job_id: NUMBER | NULL
+salary_hour_avg: FLOAT | NULL
+salary_year_avg: FLOAT | NULL
+company_id: NUMBER | NULL
+job_title: TEXT | NULL
+job_health_insurance: NUMBER | NULL
+search_location: TEXT | NULL
+salary_rate: TEXT | NULL
+job_no_degree_mention: NUMBER | NULL
+job_country: TEXT | NULL
+job_via: TEXT | NULL
+
+## CITY_LEGISLATION.ALIENS_DETAILS
+detail_id: NUMBER | NULL
+favorite_food: TEXT | NULL
+feeding_frequency: TEXT | NULL
+aggressive: NUMBER | NULL
+
+## CITY_LEGISLATION.ALIENS
+email: TEXT | NULL
+first_name: TEXT | NULL
+gender: TEXT | NULL
+birth_year: NUMBER | NULL
+id: NUMBER | NULL
+type: TEXT | NULL
+last_name: TEXT | NULL
+
+## CITY_LEGISLATION.LEGISLATORS
+id_google_entity_id: TEXT | NULL
+birthday: TEXT | NULL
+id_fec_0: TEXT | NULL
+id_opensecrets: TEXT | NULL
+other_names_end: TEXT | NULL
+id_house_history: FLOAT | NULL
+other_names_middle: TEXT | NULL
+nickname: TEXT | NULL
+id_thomas: FLOAT | NULL
+id_cspan: FLOAT | NULL
+gender: TEXT | NULL
+id_wikipedia: TEXT | NULL
+first_name: TEXT | NULL
+id_bioguide_previous_0: TEXT | NULL
+id_fec_2: TEXT | NULL
+other_names_last: TEXT | NULL
+id_bioguide: TEXT | NULL
+last_name: TEXT | NULL
+id_govtrack: NUMBER | NULL
+id_icpsr: FLOAT | NULL
+id_lis: TEXT | NULL
+full_name: TEXT | NULL
+id_fec_1: TEXT | NULL
+id_wikidata: TEXT | NULL
+middle_name: TEXT | NULL
+id_house_history_alternate: FLOAT | NULL
+id_ballotpedia: TEXT | NULL
+suffix: TEXT | NULL
+id_votesmart: FLOAT | NULL
+
+## CITY_LEGISLATION.LEGISLATION_DATE_DIM
+month_name: TEXT | NULL
+day_of_month: NUMBER | NULL
+date: TEXT | NULL
+
+## CITY_LEGISLATION.JOB_COMPANY
+name: TEXT | NULL
+thumbnail: TEXT | NULL
+link_google: TEXT | NULL
+company_id: NUMBER | NULL
+link: TEXT | NULL
+
+## CITY_LEGISLATION.SKILLS_DIM
+type: TEXT | NULL
+skills: TEXT | NULL
+skill_id: NUMBER | NULL

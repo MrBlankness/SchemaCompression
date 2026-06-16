@@ -1,0 +1,21 @@
+[TEMPLATES]
+Format: Tn|col1,col2|schema1.table1;schema2.table2
+T6|productcategoryid,name,rowguid,modifieddate|ADVENTUREWORKS.PRODUCTCATEGORY
+
+[DERIVED]
+Format: Tm<Tp|col1,col2|schema1.table1;schema2.table2
+T9<T6|productsubcategoryid|ADVENTUREWORKS.PRODUCTSUBCATEGORY
+
+[STANDALONE]
+Format: schema.table|col1,col2
+ADVENTUREWORKS.COUNTRYREGIONCURRENCY|modifieddate,countryregioncode,currencycode
+ADVENTUREWORKS.CURRENCYRATE|currencyrateid,tocurrencycode,endofdayrate,modifieddate,currencyratedate,fromcurrencycode,averagerate
+ADVENTUREWORKS.PRODUCTDESCRIPTION|modifieddate,productdescriptionid,rowguid,description
+ADVENTUREWORKS.PRODUCTMODELPRODUCTDESCRIPTIONCULTURE|cultureid,productmodelid,productdescriptionid,modifieddate
+ADVENTUREWORKS.PRODUCTREVIEW|productid,rating,emailaddress,reviewdate,modifieddate,reviewername,productreviewid,comments,modifeddate
+ADVENTUREWORKS.PRODUCT|safetystocklevel,productid,productline,sellstartdate,productmodelid,reorderpoint,rowguid,color,daystomanufacture,weightunitmeasurecode,discontinueddate,standardcost,makeflag,sizeunitmeasurecode,sellenddate,modifieddate,finishedgoodsflag,weight,productsubcategoryid,NAME,listprice,class,productnumber,size,style
+ADVENTUREWORKS.SALESORDERDETAIL|specialofferid,orderqty,salesorderid,unitpricediscount,salesorderdetailid,modifieddate,productid,unitprice,rowguid,carriertrackingnumber
+ADVENTUREWORKS.SALESORDERHEADER|rowguid,STATUS,comment,customerid,currencyrateid,territoryid,totaldue,revisionnumber,salesorderid,purchaseordernumber,onlineorderflag,freight,accountnumber,duedate,shipmethodid,orderdate,creditcardid,billtoaddressid,creditcardapprovalcode,shiptoaddressid,taxamt,subtotal,modifieddate,shipdate,salespersonid
+ADVENTUREWORKS.SALESPERSONQUOTAHISTORY|ModifiedDate,rowguid,SalesQuota,BusinessEntityID,QuotaDate
+ADVENTUREWORKS.SALESPERSON|salesytd,salesquota,rowguid,saleslastyear,commissionpct,modifieddate,bonus,businessentityid,territoryid
+ADVENTUREWORKS.SALESTERRITORY|territoryid,salesytd,modifieddate,group,saleslastyear,countryregioncode,rowguid,name,costytd,costlastyear

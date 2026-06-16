@@ -1,0 +1,81 @@
+[COMPONENTS]
+@C1
+all_tags: VARIANT | NULL | eg=[[{"key":"natural","value":"wetland"},{"key":"type","value":"multipolygon"},{"key":"wetland","value":"bog"}]]
+geometry: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x03\\x00\\x00\\x00/\\x00\\x00\\x003\\xf3.(\\x1d\\xea @\\xcdLz)\\x86qM@\\xc3\\xe2&Y=\\xea @/S\\xee\\x99\\x80qM@I\\x86w\\x14B\\xea @\\xd6\\x89&\\xab}qM@\\x8d$A\\xb8\\x02\\xea @\\x7f\\xb4\\xee\\xd5}qM@\\x87d\\x12?\\x10\\xea @\".\\xef`zqM@\\x8b\\xaf\\xd1\\xcdY\\xea @A\\xc9\\xd3\\xa8vqM@\\xdd\\xc7\\x1b\\xaas\\xea @YY\\x91\\x87tqM@\\x94U\"\\x9a\\x8a\\xea @\\xdd)xerqM@\\x00w4i\\xae\\xea @\\xab\\x84\\x82\\xadmqM@A\\x17\\x1eE\\xe7\\xea @`3eLfqM@v\\x01\\xe5\\xa5Q\\xeb @,:H>eqM@`o\\xac\\xd5h\\xeb @\\x8b<I\\xbafqM@\\xd9\\xe8A\\xe6o\\xeb @u}0:jqM@W\\xf06\\xcaU\\xeb @\\xa6\\x998\\x03mqM@&\\\\#\\xdd*\\xeb @\\xd3\\x11e\\x14pqM@\\x00\\x9c(S\\x16\\xeb @y~\\xac;qqM@\\x1c\\x1fw[3\\xeb @\\xf8R\\x1d\\x17zqM@#\\x11uz9\\xeb @\\xa9b*\\xfd\\x84qM@*{\\x01\\xacD\\xeb @\\x14i\\xd1\\xf1\\x87qM@\\xb6h\\x01\\xdaV\\xeb @\\x91\\xe6\\xd9\\xf6\\x87qM@\\x0e^`\\xfbn\\xeb @\\xbc\\xcd\\x1b\\'\\x85qM@\\xbe\\xc0\\xacP\\xa4\\xeb @\\x7f\\xc9\\xd7\\xaf\\x85qM@T\\xa1\\xcb\\xe5P\\xec @\\x02k0h|qM@\\xa16\\xaa\\xd3\\x81\\xec @\\xb1\\x0e\\xec\\x9dvqM@id\\xebt{\\xec @\\\\\\x7f\\xa6\\xb9pqM@\\x03\\x8d\\x88\\x18e\\xec @|n\\xb2WiqM@h<\\x11\\xc4y\\xec @y\\xa3ElfqM@4\\xa3\\x1f\\r\\...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00^\\x00\\x00\\x00`\\x82\\t\\x92-a%@\\x97b\\xfdU6\\xf6N@\\xbd\\x0c\\xb5\\\\\\xec`%@@\\xf6\\xd5\\xb0:\\xf6N@\\x0b\\xa1\\x83.\\xe1`%@d\\x84\\x01\\x95;\\xf6N@E\\xbe\\xf0\\xef\\xd8`%@K\\xb2\\xc4\\xb9<\\xf6N@\\x91*\\xe5\\x10\\xcc`%@\\xc1f%R?\\xf6N@W\\xdb\\xa8\\xa9\\xc0`%@\\xbc\\xff\\xd9\\xa0@\\xf6N@\\xbaFp\\xc8\\xab`%@C\\x11\\xf7\\xfd@\\xf6N@\\xcb8W\\xde\\x9f`%@\\x9d\\xb8\\x1c\\xaf@\\xf6N@@H`\\xbd\\x9b`%@\\x03V\\xb3s?\\xf6N@]\\xa9\\xc2\\xfa\\x9a`%@\\x93\\xa6A\\xd1<\\xf6N@\"\\x9fF\\x10\\x9d`%@\\xdc*-\\xc8;\\xf6N@\\x19\\x9f]\\x19\\xaf`%@\\xe3\\xb1U88\\xf6N@?\\xa2\\t\\x14\\xb1`%@1\\xb1\\xf9\\xb86\\xf6N@\"\\xa9;\\x05\\xaf`%@\\t\\xb4\\x8513\\xf6N@\\xc6PN\\xb4\\xab`%@o\\xdbRb2\\xf6N@\\xc5{\\x1fX\\x9f`%@\\xa4\\xf4L/1\\xf6N@\\xe8\\xffUG\\x8e`%@\\xe1\\x9cl^0\\xf6N@r\\x84\\xb1*g`%@\\xbe\\xb2\\x1c2/\\xf6N@\\x8f\\xb3D\\xc2R`%@\\xe8y\\x81\\xa3.\\xf6N@\\x1f\\x12\\xbe\\xf77`%@\\x12\\x89\\x9d\\x84-\\xf6N@te\\xab&\\xe3_%@\\x1c\\xe8\\xebC(\\xf6N@q\\x13\\xff\\xc1\\xd1_%@\\x93\\x94O\\xea&\\xf6N@\\xd2F\\tU\\xc5_%@\\xff6\\xd5\\xa4%\\xf6N@\\xb3\\x10x\\xbb\\xb9_%@\\xb3\\x15\\x8f\\xe6#\\xf6N@\\x0f\\xbc\\x10a\\xb2_%@\\xd7\\xdd<\\xd5!\\xf6N@<g\\x0b\\x0..."]
+osm_timestamp: NUMBER | NULL | eg=[1581117816000000, 1538174385000000]
+
+@C2
+changeset: NUMBER | NULL | eg=[80711931, 63024511]
+username: TEXT | NULL | eg=["Marius Geitle_import", "Reitstoen_import"]
+version: NUMBER | NULL | eg=[1, 2]
+visible: BOOLEAN | NULL | eg=[true]
+
+@C3
+osm_id: NUMBER | NULL
+osm_version: NUMBER | NULL | eg=[1, 2]
+osm_way_id: NUMBER | NULL | eg=[80820903, 159980615]
+
+@C4
+gdal_type: TEXT | NULL | eg=["multipolygons"]
+layer_class: TEXT | NULL | eg=["building"]
+layer_code: NUMBER | NULL | eg=[1500]
+layer_name: TEXT | NULL | eg=["building"]
+
+[TABLES]
+## WORLDPOP.POPULATION_GRID_1KM
+alpha_3_code: TEXT | NULL | eg=["GIB"]
+last_updated: DATE | NULL | eg=["2018-01-01", "2005-01-01"]
+longitude_centroid: FLOAT | NULL | eg=[-5.347083296988231]
+latitude_centroid: FLOAT | NULL | eg=[36.120416721983034]
+geo_id: TEXT | NULL | eg=["wpeykjqrd2ev"]
+population: FLOAT | NULL | eg=[1650.8153076171875, 1161.977783203125]
+country_name: TEXT | NULL | eg=["Gibraltar"]
+geog: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x05\\x00\\x00\\x00W\\x88\\t\\x12\\xaeg\\x15\\xc0\\x19K(H\\xe1\\x0eB@h\\x92\\x81\\x89%_\\x15\\xc0\\x19K(H\\xe1\\x0eB@h\\x92\\x81\\x89%_\\x15\\xc0\\xd6I9Y\\xf2\\x0fB@V\\x88\\t\\x12\\xaeg\\x15\\xc0\\xd7I9Y\\xf2\\x0fB@W\\x88\\t\\x12\\xaeg\\x15\\xc0\\x19K(H\\xe1\\x0eB@')"]
+
+## GEO_OPENSTREETMAP.HISTORY_CHANGESETS
+osm_timestamp_min: NUMBER | Minimum timestamp of objects contained in this changeset. | eg=[1340735868, 1553873017]
+ways: VARIANT | Ways that are part of this way | eg=[[24012734,24013188,32787862,122430881,122445966,129713279,34883701,169141542,169141543,169141536,169141544,169141541,169141540,169141537,169141538,169141539,111561168,150543888,150543890,142813428,142812626,122190124,122176895,122190125,25787631], [680367916,666869508]]
+id: NUMBER | Changeset ID. | eg=[12029340, 68669151]
+osm_timestamp_max: NUMBER | Maximum timestamp of objects contained in this changeset. | eg=[1340735870, 1553873017]
+relations: VARIANT | Relations that are part of this way | eg=[[]]
+nodes: VARIANT | Nodes that are part of this way | eg=[[1270750198,1270750190,977802739,279326703,1803085216,1803085218,1803085222,1803085223,1803085224,1803085225,1803085226,1803085227,1803085229,1803085231,1803085232,1803085237,1803085238,1803085239,1803085240,1803085241,1803085242,1803085243,1803085244,1803085246,1803085247,1803085249,1803085251,1803085252,1803085255,1803085256,1803085257,1803085258,1634427172,1562905956,1332837556,1332837557,1327877593,409099522,409099523,389654981,369393547,1366128065], [6370504911,6370504912,6370504913,6370504914,6370504915,6370504916,6370504917,6370504918,6370504919,6370504920,6370504921,6370504922,6370504923,6370504924,6370504925,6370504926,6370504927,6370504928,6370504929,6116849903,6116849904,6116849905,6116849906,6243935682,6243935683,6243935684,6243937785,6243937786,6243937787,6243937788,6243937789,6243937790,6243937791,6243937792,6243937793,6243937794,6243937795,6243937796,6243937797,6243937798,6243937799,6243937800]]
+
+## GEO_OPENSTREETMAP.PLANET_RELATIONS
+@use: [C1, C2]
+id: NUMBER | NULL | eg=[10690020, 8754016]
+members: VARIANT | NULL | eg=[[{"id":770759858,"role":"outer","type":"w"},{"id":770407551,"role":"inner","type":"w"},{"id":770407528,"role":"inner","type":"w"}], [{"id":627858735,"role":"outer","type":"w"},{"id":628915282,"role":"outer","type":"w"}]]
+
+## GEO_OPENSTREETMAP.HISTORY_RELATIONS
+@use: [C1, C2]
+members: VARIANT | NULL | eg=[[{"id":4025962078,"role":"stop","type":"n"},{"id":2781144802,"role":"forward_stop","type":"n"},{"id":1843860388,"role":"stop","type":"n"},{"id":4020137343,"role":"stop","type":"n"},{"id":4022911771,"role":"stop","type":"n"},{"id":3839518929,"role":"stop","type":"n"},{"id":4020137344,"role":"stop","type":"n"},{"id":4025962072,"role":"stop","type":"n"},{"id":4025083261,"role":"stop","type":"n"},{"id":4032336056,"role":"stop","type":"n"},{"id":4029732480,"role":"stop","type":"n"},{"id":4021927560,"role":"stop","type":"n"},{"id":4020137348,"role":"stop","type":"n"},{"id":300311935,"role":"stop","type":"n"},{"id":1617880845,"role":"stop","type":"n"},{"id":418216025,"role":"stop","type":"n"},{"id":938204194,"role":"stop","type":"n"},{"id":4032336060,"role":"forward_stop","type":"n"},{"id":3783616259,"role":"stop","type":"n"},{"id":4020137347,"role":"stop","type":"n"},{"id":4020137349,"role":"stop","type":"n"},{"id":1639090916,"role":"stop","type":"n"},{"id":3783594367,"role":"stop","type"...]
+id: NUMBER | NULL | eg=[2348169, 10760608]
+
+## GEO_OPENSTREETMAP.PLANET_LAYERS
+@use: [C1, C3, C4]
+
+## GEO_OPENSTREETMAP.HISTORY_NODES
+@use: [C1, C2]
+longitude: NUMBER | NULL | eg=["-40.892892400", "-40.963735700"]
+latitude: NUMBER | NULL | eg=["-19.787685100", "-19.771802700"]
+id: NUMBER | NULL | eg=[6927827940, 5949962528]
+
+## GEO_OPENSTREETMAP.PLANET_FEATURES
+@use: [C1, C3]
+feature_type: TEXT | NULL | eg=["multipolygons"]
+
+## GEO_OPENSTREETMAP.PLANET_FEATURES_POINTS
+@use: [C1, C3]
+
+## GEO_OPENSTREETMAP.HISTORY_LAYERS
+@use: [C1, C3, C4]
+
+## GEO_OPENSTREETMAP.PLANET_NODES
+@use: [C1, C2]
+latitude: NUMBER | NULL | eg=["4.890477200", "7.011165500"]
+longitude: NUMBER | NULL | eg=["13.863136700", "13.025633100"]
+id: NUMBER | NULL | eg=[7567379700, 7195756138]
+
+## GEO_OPENSTREETMAP.PLANET_WAYS
+@use: [C1, C2]
+nodes: VARIANT | NULL | eg=[[{"id":866315580},{"id":866469140},{"id":867906160},{"id":866405284},{"id":866497492},{"id":866302007},{"id":866449818},{"id":867897625},{"id":867903637},{"id":866402859},{"id":866540640}]]
+id: NUMBER | NULL | eg=[73165139, 75218666]

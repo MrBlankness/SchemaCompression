@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_ga028",
+  "question": "Please perform a 7-day retention analysis for users who first session start the app during the week starting on July 2, 2018. For each week from Week 0 (the week of their first session) to Week 4, provide the total number of new users in Week 0 and the number of retained users for each subsequent week. Ensuring that you only count events up to October 2, 2018, and group dates by Monday-based weeks",
+  "db_id": "FIREBASE",
+  "source_document": "retention_rate.md",
+  "evidence": "Table: `firebase-public-project.analytics_153293282.events_*`. Retention measures how often users return. N-Day retention: users returning over successive periods (N=7 days). Example: User A cohort day 0, returns day 5 and 15 → retained week 1 (1–7 days) and week 3 (15–21 days), not week 2 (8–14 days). Count users with first session start week of July 2, 2018 as Week 0 cohort. For Weeks 1-4, count retained users if they return within each 7-day period after Week 0. Only include events up to October 2, 2018. Group dates by Monday-based weeks."
+}

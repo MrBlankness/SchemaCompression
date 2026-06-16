@@ -1,0 +1,957 @@
+[TEMPLATES]
+<T4>
+value: FLOAT | NULL
+indicator_name: TEXT | NULL
+country_code: TEXT | NULL
+indicator_code: TEXT | NULL
+country_name: TEXT | NULL
+year: NUMBER | NULL
+@Tables: [WORLD_BANK_HEALTH_POPULATION.HEALTH_NUTRITION_POPULATION,WORLD_BANK_INTL_DEBT.INTERNATIONAL_DEBT,WORLD_BANK_INTL_EDUCATION.INTERNATIONAL_EDUCATION,WORLD_BANK_WDI.INDICATORS_DATA]
+
+<T5>
+description: TEXT | NULL
+country_code: TEXT | NULL
+series_code: TEXT | NULL
+@Tables: [WORLD_BANK_HEALTH_POPULATION.COUNTRY_SERIES_DEFINITIONS,WORLD_BANK_INTL_DEBT.COUNTRY_SERIES_DEFINITIONS,WORLD_BANK_INTL_EDUCATION.COUNTRY_SERIES_DEFINITIONS,WORLD_BANK_WDI.COUNTRY_SERIES_DEFINITIONS]
+
+<T3>
+series_code: TEXT | NULL
+year: NUMBER | NULL
+description: TEXT | NULL
+@Tables: [WORLD_BANK_HEALTH_POPULATION.SERIES_TIMES,WORLD_BANK_INTL_DEBT.SERIES_TIMES,WORLD_BANK_WDI.SERIES_TIME]
+
+<T6>
+periodicity: TEXT | Applies to series recurring at regular intervals. Most of the time this term denotes that interval of recurrence.
+unit_of_measure: TEXT | A quantity used as a standard of measurement. Example: Units of time are second minute hour day week month year and decade.
+topic: TEXT | The matter dealt with in the context discourse or subject related to the series.
+source: TEXT | A place person or organization from which the series comes or can be obtained.
+series_code: TEXT | A number or a sequence of related statistical units arranged or occurring in temporal spatial or other order or succession. WDI carries mostly time series.
+aggregation_method: TEXT | Aggregation methods are types of calculations used to group attribute values into a metric for each dimension value. For example for each region one may retrieve the total value of country entries (the sum of the series value for countries belonging to the region).
+related_indicators: TEXT | In general indicator that are of interest and related to the specific series.
+general_comments: TEXT | Other notes regarding the series which do not appear in Development relevance or Limitations or exceptions
+long_definition: TEXT | Extended statement of the exact meaning of a series.
+other_notes: TEXT | A brief record of facts topics or thoughts written down and used to contextualize the series definition values and other characteristics.
+notes_from_original_source: TEXT | A brief record of facts topics or thoughts written down and used to contextualize the series definition values and other characteristics.
+statistical_concept_and_methodology: TEXT | The abstract idea general statistical notions or a system of methods used to generate the series.
+other_web_links: TEXT | Internet addresses of related pages tools or knowledge bases.
+short_definition: TEXT | Short statement of the exact meaning of a series.
+limitations_and_exceptions: TEXT | A limiting rule or circumstance that applies to usage of the series such as the scope of the survey collecting the data or missing years and countries.  It should also note when data are imputed or estimated
+license_type: TEXT | Explains the rights conferred and restrictions imposed by the owner to the users of a series
+related_source_links: TEXT | Internet address of related source page tool or knowledge base.
+indicator_name: TEXT | Given name of a series.
+base_period: TEXT | Base period is the period of time for which data is used as the base of an index number or other ratio have been collected. This period is frequently one of a year but it may be as short as one day or as long as the average of a group of years.
+development_relevance: TEXT | The relevance of a series refers to how the indicator’s data may be used to monitor particular aspects of development goals and programs for example the Sustainable Development Goals. The indicator may conclusively measure progress towards a particular objective or may act as a proxy or interpretation of a development aim.
+@Tables: [WORLD_BANK_INTL_DEBT.SERIES_SUMMARY,WORLD_BANK_INTL_EDUCATION.SERIES_SUMMARY,WORLD_BANK_WDI.SERIES_SUMMARY]
+
+<T2>
+latest_population_census: TEXT | Latest population census shows the most recent year in which a census was conducted and in which at least preliminary results have been released. The preliminary results from the very recent censuses could be reflected in timely revisions if basic data are available such as population by age and sex as well as the detailed definition of counting coverage and completeness.
+table_name: TEXT | Country name the country's name as approved by the relevant body (Italy is used as an example): conventional short form (Republic of Italy).
+system_of_national_accounts: TEXT | System of National Accounts identifies whether a country uses the 1968 1993 or 2008 System of National Accounts (SNA). The 2008 SNA is an update of the 1993 SNA and retains its basic theoretical framework.
+imf_data_dissemination_standard: TEXT | IMF data dissemination standard shows the countries that subscribe to the IMF’s Special Data Dissemination Standard (S) or Enhanced General Data Dissemination System (e-GDDS). S refers to countries that subscribe to the SDDS and have posted data on the Dissemination Standards Bulletin Board at http://dsbb.imf.org. S+ countries must observe additional coverage periodicity and timeliness requirements. e-G refers to countries that subscribe to the e-GDDS.
+source_of_most_recent_income_and_expenditure_data: TEXT | Source of most recent income and expenditure data shows household surveys that collect income and expenditure data. Names and detailed information on household surveys can be found on the website of the International Household Survey Network (www.surveynetwork.org). Core Welfare Indicator Questionnaire Surveys (CWIQ) developed by the World Bank measure changes in key social indicators for different population groups—specifically indicators of access utilization and satisfaction with core social and economic services. Expenditure survey/budget surveys (ES/BS) collect detailed information on household consumption as well as on general demographic social and economic characteristics. Integrated household surveys (IHS) collect detailed information on a wide variety of topics including health education economic activities housing and utilities.
+wb_2_code: TEXT | World Bank 2 digit code value of the country.
+short_name: TEXT | Country name the country's official name as approved by the relevant body (Italy is used as an example): conventional short form (Italy).
+latest_trade_data: NUMBER | Latest trade data show the most recent year for which structure of merchandise trade data from the United Nations Statistics Division’s Commodity Trade (Comtrade) database are available.
+balance_of_payments_manual_in_use: TEXT | Balance of Payments Manual in use refers to the classification system used to compile and report data on balance of payments. 6 refers to the 6th edition of the IMF’s Balance of Payments Manual (2009).
+other_groups: TEXT | Other types of grouping approved by the WDI team.
+ppp_survey_year: TEXT | Purchasing power parity (PPP) survey year is the latest available survey year for the International Comparison Program’s estimates of PPPs.
+income_group: TEXT | World Bank income group to which a country belongs after the country classification is completed every year.
+latest_agricultural_census: TEXT | Latest agricultural census shows the most recent year in which an agricultural census was conducted or planned to be conducted as reported to the Food and Agriculture Organization.
+government_accounting_concept: TEXT | Government finance accounting concept is the accounting basis for reporting central government financial data. For most countries government finance data have been consolidated (C) into one set of accounts capturing all central government fiscal activities. Budgetary central government accounts (B) exclude some central government units.
+latest_household_survey: TEXT | Latest demographic education or health household survey indicates the household surveys used to compile the demographic education and health data. Detailed information on each survey is provided through the following links:  AIDS Indicator Survey Demographic and Health Survey Health Issues Survey and Malaria Indicator Survey - www.dhsprogram.com; Living Standards Measurement Study -  www.worldbank.org/lsms; Multiple Indicator Cluster Survey - http://mics.unicef.org; Reproductive Health Survey -  www.cdc.gov/reproductivehealth; World Health Survey is available at - www.who.int/healthinfo/survey/en.
+vital_registration_complete: TEXT | Vital registration complete identifies countries that report at least 90 percent complete registries of vital (birth and death) statistics to the United Nations Statistics Division and are reported in its Population and Vital Statistics Reports. Countries with complete vital statistics registries may have more accurate and more timely demographic indicators than other countries.
+national_accounts_reference_year: TEXT | Reference year is the year in which the local currency constant price series of a country is valued. The reference year is usually the same as the base year used to report the constant price series. However when the constant price data are chain linked the base year is changed annually so the data are rescaled to a specific reference year to provide a consistent time series. When the country has not rescaled following a change in base year World Bank staff rescale the data to maintain a longer historical series. To allow for cross-country comparison and data aggregation constant price data reported in World Development Indicators are rescaled to a common reference year (2010) and currency (U.S. dollars).
+alternative_conversion_factor: TEXT | Alternative conversion factor identifies the countries and years for which a World Bank–estimated conversion factor has been used in place of the official exchange rate (line rf in the International Monetary Fund’s [IMF] International Financial Statistics). See later in Sources and methods for further discussion of alternative conversion factors.
+two_alpha_code: TEXT | ISO-2 digit alpha code value of the country. Re: www.iso.org
+national_accounts_base_year: TEXT | Base year is the base or pricing period used for constant price calculations in the country’s national accounts. Price indexes derived from national accounts aggregates such as the implicit deflator for gross domestic product (GDP) express the price level relative to base year prices.
+long_name: TEXT | Country name the country's name as approved by the relevant body (Italy is used as an example): conventional long form (Republic of Italy).
+latest_industrial_data: NUMBER | Latest industrial data show the most recent year for which manufacturing value added data at the three-digit level of the International Standard Industrial Classification (revision 2 or 3) are available in the United Nations Industrial Development Organization database.
+external_debt_reporting_status: TEXT | External debt shows debt reporting status for 2016 data. A indicates that data are as reported P that data are based on reported or collected information but include an element of staff estimation and E that data are World Bank staff estimates.
+special_notes: TEXT | Country special notes for data and metadata users.
+currency_unit: TEXT | Currency unit (such as the dollar euro peso rupee) issued as a coin or banknote a standard unit of value and a unit of account.
+system_of_trade: TEXT | System of trade refers to the United Nations general trade system (G) or special trade system (S). Under the general trade system goods entering directly for domestic consumption and goods entered into customs storage are recorded as imports at arrival. Under the special trade system goods are recorded as imports when declared for domestic consumption whether at time of entry or on withdrawal from customs storage.
+lending_category: TEXT | World Bank lending category to which a country belongs after the operational guidelines are completed every year.
+sna_price_valuation: TEXT | SNA price valuation shows whether value added in the national accounts is reported at basic prices (B) or producer prices (P). Producer prices include taxes paid by producers and thus tend to overstate the actual value added in production. However value added can be higher at basic prices than at producer prices in countries with high agricultural subsidies.
+region: TEXT | World Bank region to which a country belongs.
+country_code: TEXT | A short alphabetic or numeric geographical code representing a specific country or area. In April 2016 WDI has adopted the three digit ISO code to identify countries in its databases.
+@Tables: [WORLD_BANK_HEALTH_POPULATION.COUNTRY_SUMMARY]
+
+[DERIVED]
+<T10> extends <T2>
+latest_water_withdrawal_data: TEXT | NULL
+@Tables: [WORLD_BANK_INTL_DEBT.COUNTRY_SUMMARY]
+
+<T12> extends <T5>
+year: TEXT | NULL
+@Tables: [WORLD_BANK_WDI.FOOTNOTES]
+
+[STANDALONE]
+## COVID19_OPEN_DATA.COMPATIBILITY_VIEW
+country_region: TEXT | NULL
+confirmed: NUMBER | NULL
+deaths: NUMBER | NULL
+location_geom: BINARY | NULL
+date: DATE | NULL
+longitude: FLOAT | NULL
+admin_2: TEXT | NULL
+active: NUMBER | NULL
+sub_region1_name: TEXT | NULL
+recovered: NUMBER | NULL
+combined_key: TEXT | NULL
+province_state: TEXT | NULL
+fips: TEXT | NULL
+latitude: FLOAT | NULL
+
+## COVID19_OPEN_DATA.COVID19_OPEN_DATA
+diabetes_prevalence: FLOAT | NULL
+search_trends_paresthesia: FLOAT | NULL
+new_confirmed_female: NUMBER | NULL
+search_trends_scar: FLOAT | NULL
+new_intensive_care_patients_age_9: NUMBER | NULL
+population_age_70_79: NUMBER | NULL
+area_rural_sq_km: TEXT | NULL
+search_trends_subdural_hematoma: FLOAT | NULL
+cumulative_hospitalized_patients_female: NUMBER | NULL
+new_persons_fully_vaccinated_janssen: NUMBER | NULL
+age_bin_4: TEXT | NULL
+search_trends_hypoxemia: FLOAT | NULL
+wikidata_id: TEXT | NULL
+openstreetmap_id: NUMBER | NULL
+cumulative_hospitalized_patients_age_3: NUMBER | NULL
+search_trends_stroke: FLOAT | NULL
+cancel_public_events: NUMBER | NULL
+search_trends_cataract: FLOAT | NULL
+mobility_parks: TEXT | NULL
+age_bin_9: TEXT | NULL
+search_trends_myocardial_infarction: FLOAT | NULL
+age_bin_0: TEXT | NULL
+search_trends_allergic_conjunctivitis: FLOAT | NULL
+hospital_beds_per_1000: FLOAT | NULL
+search_trends_braxton_hicks_contractions: FLOAT | NULL
+public_information_campaigns: NUMBER | NULL
+search_trends_hypersomnia: FLOAT | NULL
+search_trends_type_2_diabetes: FLOAT | NULL
+search_trends_burning_mouth_syndrome: FLOAT | NULL
+population: NUMBER | NULL
+new_intensive_care_patients_age_4: NUMBER | NULL
+search_trends_angular_cheilitis: FLOAT | NULL
+new_deceased_age_9: NUMBER | NULL
+cumulative_deceased_age_5: NUMBER | NULL
+search_trends_swollen_feet: FLOAT | NULL
+search_trends_colitis: FLOAT | NULL
+physicians_per_1000: FLOAT | NULL
+cumulative_deceased_age_3: NUMBER | NULL
+workplace_closing: NUMBER | NULL
+search_trends_fatigue: FLOAT | NULL
+search_trends_manic_disorder: FLOAT | NULL
+search_trends_coma: FLOAT | NULL
+cumulative_confirmed_age_6: NUMBER | NULL
+cumulative_tested_age_3: NUMBER | NULL
+age_bin_8: TEXT | NULL
+new_recovered: NUMBER | NULL
+search_trends_bruxism: FLOAT | NULL
+new_intensive_care_patients_age_6: NUMBER | NULL
+new_persons_fully_vaccinated_pfizer: NUMBER | NULL
+search_trends_tenderness: FLOAT | NULL
+search_trends_rhinitis: FLOAT | NULL
+search_trends_boil: FLOAT | NULL
+search_trends_granuloma: FLOAT | NULL
+search_trends_chills: FLOAT | NULL
+search_trends_astigmatism: FLOAT | NULL
+search_trends_osteoporosis: FLOAT | NULL
+search_trends_cataplexy: FLOAT | NULL
+search_trends_stuttering: FLOAT | NULL
+search_trends_wart: FLOAT | NULL
+cumulative_vaccine_doses_administered: NUMBER | NULL
+cumulative_intensive_care_patients_age_1: NUMBER | NULL
+cumulative_deceased_age_1: NUMBER | NULL
+place_id: TEXT | NULL
+search_trends_bells_palsy: FLOAT | NULL
+search_trends_shortness_of_breath: FLOAT | NULL
+cumulative_recovered_age_0: NUMBER | NULL
+locality_name: TEXT | NULL
+datacommons_id: TEXT | NULL
+cumulative_tested_age_8: NUMBER | NULL
+search_trends_dysautonomia: FLOAT | NULL
+search_trends_eye_pain: FLOAT | NULL
+search_trends_prediabetes: FLOAT | NULL
+search_trends_desquamation: FLOAT | NULL
+search_trends_implantation_bleeding: FLOAT | NULL
+search_trends_syncope: FLOAT | NULL
+search_trends_attention_deficit_hyperactivity_disorder: FLOAT | NULL
+search_trends_cluster_headache: FLOAT | NULL
+search_trends_heart_arrhythmia: FLOAT | NULL
+search_trends_water_retention: FLOAT | NULL
+search_trends_hypogonadism: FLOAT | NULL
+search_trends_delayed_onset_muscle_soreness: FLOAT | NULL
+new_intensive_care_patients_female: NUMBER | NULL
+search_trends_indigestion: FLOAT | NULL
+search_trends_otitis_media: FLOAT | NULL
+restrictions_on_gatherings: NUMBER | NULL
+search_trends_hyperglycemia: FLOAT | NULL
+search_trends_acne: FLOAT | NULL
+search_trends_breakthrough_bleeding: FLOAT | NULL
+search_trends_hypertriglyceridemia: FLOAT | NULL
+new_intensive_care_patients_age_2: NUMBER | NULL
+search_trends_rumination: FLOAT | NULL
+search_trends_hepatic_encephalopathy: FLOAT | NULL
+new_deceased_male: NUMBER | NULL
+search_trends_confusion: FLOAT | NULL
+new_ventilator_patients: NUMBER | NULL
+new_vaccine_doses_administered_janssen: NUMBER | NULL
+search_trends_otitis: FLOAT | NULL
+search_trends_anosmia: FLOAT | NULL
+cumulative_deceased_male: NUMBER | NULL
+cumulative_hospitalized_patients_male: NUMBER | NULL
+search_trends_underweight: FLOAT | NULL
+search_trends_facial_swelling: FLOAT | NULL
+search_trends_nasal_polyp: FLOAT | NULL
+cumulative_recovered_age_8: NUMBER | NULL
+search_trends_swelling: FLOAT | NULL
+search_trends_cheilitis: FLOAT | NULL
+search_trends_hepatotoxicity: FLOAT | NULL
+search_trends_apnea: FLOAT | NULL
+age_bin_7: TEXT | NULL
+search_trends_palpitations: FLOAT | NULL
+search_trends_nosebleed: FLOAT | NULL
+search_trends_gastroesophageal_reflux_disease: FLOAT | NULL
+cumulative_confirmed_female: NUMBER | NULL
+search_trends_low_grade_fever: FLOAT | NULL
+age_bin_3: TEXT | NULL
+longitude: FLOAT | NULL
+search_trends_constipation: FLOAT | NULL
+search_trends_ear_pain: FLOAT | NULL
+population_male: NUMBER | NULL
+new_confirmed_age_2: NUMBER | NULL
+cumulative_deceased_age_2: NUMBER | NULL
+search_trends_facial_nerve_paralysis: FLOAT | NULL
+search_trends_kidney_failure: FLOAT | NULL
+search_trends_heart_murmur: FLOAT | NULL
+cumulative_recovered_age_9: NUMBER | NULL
+search_trends_skin_tag: FLOAT | NULL
+cumulative_tested_female: NUMBER | NULL
+search_trends_asthma: FLOAT | NULL
+search_trends_hiccup: FLOAT | NULL
+search_trends_neutropenia: FLOAT | NULL
+search_trends_burning_chest_pain: FLOAT | NULL
+search_trends_epiphora: FLOAT | NULL
+search_trends_fibrocystic_breast_changes: FLOAT | NULL
+search_trends_dysgeusia: FLOAT | NULL
+new_tested_age_6: NUMBER | NULL
+search_trends_dysmenorrhea: FLOAT | NULL
+search_trends_knee_pain: FLOAT | NULL
+search_trends_autoimmune_disease: FLOAT | NULL
+investment_in_vaccines: NUMBER | NULL
+search_trends_encephalitis: FLOAT | NULL
+search_trends_low_back_pain: FLOAT | NULL
+search_trends_blurred_vision: FLOAT | NULL
+search_trends_diarrhea: FLOAT | NULL
+age_bin_6: TEXT | NULL
+search_trends_food_intolerance: FLOAT | NULL
+facial_coverings: NUMBER | NULL
+search_trends_male_infertility: FLOAT | NULL
+search_trends_sexual_dysfunction: FLOAT | NULL
+search_trends_erythema_chronicum_migrans: FLOAT | NULL
+search_trends_testicular_pain: FLOAT | NULL
+new_deceased_age_6: NUMBER | NULL
+search_trends_nocturnal_enuresis: FLOAT | NULL
+nurses_per_1000: FLOAT | NULL
+search_trends_food_craving: FLOAT | NULL
+search_trends_conjunctivitis: FLOAT | NULL
+search_trends_biliary_colic: FLOAT | NULL
+cumulative_vaccine_doses_administered_pfizer: NUMBER | NULL
+out_of_pocket_health_expenditure_usd: FLOAT | NULL
+search_trends_crepitus: FLOAT | NULL
+search_trends_fibrillation: FLOAT | NULL
+cumulative_intensive_care_patients_age_2: NUMBER | NULL
+search_trends_pruritus_ani: FLOAT | NULL
+search_trends_dysuria: FLOAT | NULL
+search_trends_bunion: FLOAT | NULL
+cumulative_recovered_age_5: NUMBER | NULL
+search_trends_self_harm: FLOAT | NULL
+cumulative_persons_vaccinated: NUMBER | NULL
+search_trends_thyroid_nodule: FLOAT | NULL
+search_trends_diabetes: FLOAT | NULL
+search_trends_vertigo: FLOAT | NULL
+search_trends_visual_acuity: FLOAT | NULL
+search_trends_melasma: FLOAT | NULL
+population_age_00_09: NUMBER | NULL
+search_trends_xerostomia: FLOAT | NULL
+population_female: NUMBER | NULL
+search_trends_swollen_lymph_nodes: FLOAT | NULL
+search_trends_anemia: FLOAT | NULL
+new_vaccine_doses_administered: NUMBER | NULL
+search_trends_blepharospasm: FLOAT | NULL
+search_trends_erectile_dysfunction: FLOAT | NULL
+search_trends_pulmonary_edema: FLOAT | NULL
+search_trends_mydriasis: FLOAT | NULL
+search_trends_postural_orthostatic_tachycardia_syndrome: FLOAT | NULL
+population_largest_city: TEXT | NULL
+search_trends_dysphagia: FLOAT | NULL
+search_trends_gingivitis: FLOAT | NULL
+new_intensive_care_patients_age_3: NUMBER | NULL
+new_deceased_age_1: NUMBER | NULL
+search_trends_leg_cramps: FLOAT | NULL
+search_trends_eczema: FLOAT | NULL
+cumulative_intensive_care_patients: NUMBER | NULL
+human_development_index: FLOAT | NULL
+cumulative_intensive_care_patients_age_0: NUMBER | NULL
+search_trends_polyneuropathy: FLOAT | NULL
+subregion2_name: TEXT | NULL
+restrictions_on_internal_movement: NUMBER | NULL
+new_recovered_age_3: NUMBER | NULL
+search_trends_morning_sickness: FLOAT | NULL
+search_trends_rheum: FLOAT | NULL
+search_trends_pleurisy: FLOAT | NULL
+search_trends_hypothyroidism: FLOAT | NULL
+cumulative_recovered_age_1: NUMBER | NULL
+snowfall_mm: FLOAT | NULL
+search_trends_wheeze: FLOAT | NULL
+new_confirmed_age_3: NUMBER | NULL
+search_trends_pneumonia: FLOAT | NULL
+new_hospitalized_patients_age_4: NUMBER | NULL
+search_trends_actinic_keratosis: FLOAT | NULL
+current_ventilator_patients: NUMBER | NULL
+search_trends_goitre: FLOAT | NULL
+new_tested_age_8: NUMBER | NULL
+search_trends_gastroparesis: FLOAT | NULL
+search_trends_peripheral_neuropathy: FLOAT | NULL
+search_trends_pulmonary_hypertension: FLOAT | NULL
+new_recovered_age_4: NUMBER | NULL
+cumulative_persons_fully_vaccinated_janssen: NUMBER | NULL
+new_recovered_age_7: NUMBER | NULL
+cumulative_ventilator_patients: NUMBER | NULL
+search_trends_tumor: FLOAT | NULL
+search_trends_malabsorption: FLOAT | NULL
+new_intensive_care_patients_age_8: NUMBER | NULL
+search_trends_eye_strain: FLOAT | NULL
+search_trends_mouth_ulcer: FLOAT | NULL
+population_age_10_19: NUMBER | NULL
+search_trends_hyperthyroidism: FLOAT | NULL
+search_trends_neck_pain: FLOAT | NULL
+search_trends_compulsive_behavior: FLOAT | NULL
+search_trends_pyelonephritis: FLOAT | NULL
+cumulative_vaccine_doses_administered_janssen: NUMBER | NULL
+search_trends_amenorrhea: FLOAT | NULL
+cumulative_recovered_age_4: NUMBER | NULL
+search_trends_amnesia: FLOAT | NULL
+cumulative_intensive_care_patients_age_6: NUMBER | NULL
+new_confirmed_age_8: NUMBER | NULL
+new_intensive_care_patients: NUMBER | NULL
+search_trends_genital_wart: FLOAT | NULL
+cumulative_hospitalized_patients_age_6: NUMBER | NULL
+search_trends_hypomania: FLOAT | NULL
+cumulative_hospitalized_patients_age_8: NUMBER | NULL
+search_trends_hypokalemia: FLOAT | NULL
+search_trends_middle_back_pain: FLOAT | NULL
+search_trends_ageusia: FLOAT | NULL
+new_confirmed_age_9: NUMBER | NULL
+new_confirmed: NUMBER | NULL
+new_deceased_age_4: NUMBER | NULL
+search_trends_renal_colic: FLOAT | NULL
+new_hospitalized_patients_male: NUMBER | NULL
+cumulative_confirmed_age_1: NUMBER | NULL
+search_trends_rhinorrhea: FLOAT | NULL
+new_tested_age_0: NUMBER | NULL
+search_trends_stretch_marks: FLOAT | NULL
+search_trends_grandiosity: FLOAT | NULL
+search_trends_rectal_prolapse: FLOAT | NULL
+search_trends_psychosis: FLOAT | NULL
+search_trends_cramp: FLOAT | NULL
+search_trends_frequent_urination: FLOAT | NULL
+search_trends_weight_gain: FLOAT | NULL
+population_urban: NUMBER | NULL
+vaccination_policy: NUMBER | NULL
+search_trends_intermenstrual_bleeding: FLOAT | NULL
+new_tested: TEXT | NULL
+cumulative_intensive_care_patients_age_3: NUMBER | NULL
+new_confirmed_age_5: NUMBER | NULL
+subregion1_name: TEXT | NULL
+search_trends_blood_in_stool: FLOAT | NULL
+new_recovered_age_9: NUMBER | NULL
+search_trends_anal_fissure: FLOAT | NULL
+search_trends_osteopenia: FLOAT | NULL
+search_trends_petechia: FLOAT | NULL
+search_trends_otitis_externa: FLOAT | NULL
+mobility_residential: TEXT | NULL
+country_code: TEXT | NULL
+search_trends_cough: FLOAT | NULL
+search_trends_urinary_incontinence: FLOAT | NULL
+new_hospitalized_patients_age_0: NUMBER | NULL
+cumulative_recovered: NUMBER | NULL
+latitude: FLOAT | NULL
+search_trends_bacterial_vaginosis: FLOAT | NULL
+search_trends_tonsillitis: FLOAT | NULL
+search_trends_hypermobility: FLOAT | NULL
+new_recovered_female: NUMBER | NULL
+cumulative_deceased_age_0: NUMBER | NULL
+search_trends_pleural_effusion: FLOAT | NULL
+new_deceased_age_8: NUMBER | NULL
+search_trends_back_pain: FLOAT | NULL
+search_trends_shallow_breathing: FLOAT | NULL
+search_trends_weakness: FLOAT | NULL
+search_trends_mood_disorder: FLOAT | NULL
+search_trends_excessive_daytime_sleepiness: FLOAT | NULL
+stay_at_home_requirements: NUMBER | NULL
+search_trends_depression: FLOAT | NULL
+population_age_80_and_older: NUMBER | NULL
+health_expenditure_usd: FLOAT | NULL
+search_trends_bleeding_on_probing: FLOAT | NULL
+search_trends_polyuria: FLOAT | NULL
+search_trends_asphyxia: FLOAT | NULL
+search_trends_cirrhosis: FLOAT | NULL
+subregion1_code: TEXT | NULL
+search_trends_binge_eating: FLOAT | NULL
+new_tested_age_5: NUMBER | NULL
+search_trends_gingival_recession: FLOAT | NULL
+search_trends_lactose_intolerance: FLOAT | NULL
+mobility_retail_and_recreation: TEXT | NULL
+search_trends_sensitivity_to_sound: FLOAT | NULL
+search_trends_inflammation: FLOAT | NULL
+search_trends_bone_fracture: FLOAT | NULL
+search_trends_dystonia: FLOAT | NULL
+search_trends_chorea: FLOAT | NULL
+search_trends_itch: FLOAT | NULL
+cumulative_confirmed_age_5: NUMBER | NULL
+search_trends_tachypnea: FLOAT | NULL
+new_tested_age_3: NUMBER | NULL
+new_hospitalized_patients_age_7: NUMBER | NULL
+search_trends_muscle_atrophy: FLOAT | NULL
+search_trends_rectal_pain: FLOAT | NULL
+subregion2_code: TEXT | NULL
+search_trends_globus_pharyngis: FLOAT | NULL
+search_trends_bowel_obstruction: FLOAT | NULL
+search_trends_skin_ulcer: FLOAT | NULL
+cumulative_tested_age_9: NUMBER | NULL
+new_confirmed_age_6: NUMBER | NULL
+search_trends_nausea: FLOAT | NULL
+search_trends_fatty_liver_disease: FLOAT | NULL
+gdp_usd: NUMBER | NULL
+cumulative_persons_fully_vaccinated_moderna: NUMBER | NULL
+cumulative_intensive_care_patients_female: NUMBER | NULL
+new_tested_age_9: NUMBER | NULL
+search_trends_pericarditis: FLOAT | NULL
+search_trends_spasticity: FLOAT | NULL
+search_trends_sleep_disorder: FLOAT | NULL
+cumulative_deceased_age_9: NUMBER | NULL
+search_trends_inflammatory_bowel_disease: FLOAT | NULL
+search_trends_irregular_menstruation: FLOAT | NULL
+dew_point: FLOAT | NULL
+pollution_mortality_rate: TEXT | NULL
+search_trends_sleep_apnea: FLOAT | NULL
+search_trends_dentin_hypersensitivity: FLOAT | NULL
+new_recovered_male: NUMBER | NULL
+cumulative_tested_age_0: NUMBER | NULL
+new_tested_age_7: NUMBER | NULL
+adult_male_mortality_rate: TEXT | NULL
+search_trends_canker_sore: FLOAT | NULL
+search_trends_unconsciousness: FLOAT | NULL
+new_hospitalized_patients_age_6: NUMBER | NULL
+new_hospitalized_patients_age_9: NUMBER | NULL
+search_trends_jaundice: FLOAT | NULL
+cumulative_intensive_care_patients_male: NUMBER | NULL
+search_trends_epidermoid_cyst: FLOAT | NULL
+search_trends_hip_pain: FLOAT | NULL
+search_trends_sleep_deprivation: FLOAT | NULL
+international_support: NUMBER | NULL
+search_trends_hypoglycemia: FLOAT | NULL
+population_density: FLOAT | NULL
+cumulative_recovered_age_7: NUMBER | NULL
+cumulative_confirmed_male: NUMBER | NULL
+search_trends_iron_deficiency: FLOAT | NULL
+search_trends_stomach_rumble: FLOAT | NULL
+maximum_temperature_celsius: FLOAT | NULL
+cumulative_hospitalized_patients_age_9: NUMBER | NULL
+search_trends_vaginal_bleeding: FLOAT | NULL
+search_trends_viral_pneumonia: FLOAT | NULL
+cumulative_recovered_male: NUMBER | NULL
+search_trends_alcoholism: FLOAT | NULL
+cumulative_confirmed_age_3: NUMBER | NULL
+income_support: NUMBER | NULL
+cumulative_deceased_age_6: NUMBER | NULL
+stringency_index: FLOAT | NULL
+search_trends_cyanosis: FLOAT | NULL
+search_trends_skin_rash: FLOAT | NULL
+search_trends_hypercapnia: FLOAT | NULL
+search_trends_seborrheic_dermatitis: FLOAT | NULL
+population_age_50_59: NUMBER | NULL
+search_trends_periorbital_puffiness: FLOAT | NULL
+mobility_transit_stations: TEXT | NULL
+search_trends_shyness: FLOAT | NULL
+search_trends_skin_condition: FLOAT | NULL
+population_age_40_49: NUMBER | NULL
+search_trends_compulsive_hoarding: FLOAT | NULL
+search_trends_asperger_syndrome: FLOAT | NULL
+search_trends_allergy: FLOAT | NULL
+search_trends_insulin_resistance: FLOAT | NULL
+search_trends_tremor: FLOAT | NULL
+search_trends_gout: FLOAT | NULL
+search_trends_anaphylaxis: FLOAT | NULL
+new_confirmed_age_1: NUMBER | NULL
+search_trends_flatulence: FLOAT | NULL
+cumulative_recovered_age_2: NUMBER | NULL
+cumulative_hospitalized_patients_age_4: NUMBER | NULL
+cumulative_tested_age_5: NUMBER | NULL
+search_trends_meningitis: FLOAT | NULL
+search_trends_polycythemia: FLOAT | NULL
+search_trends_myalgia: FLOAT | NULL
+search_trends_bone_tumor: FLOAT | NULL
+contact_tracing: NUMBER | NULL
+new_intensive_care_patients_age_1: NUMBER | NULL
+new_hospitalized_patients_female: NUMBER | NULL
+search_trends_pus: FLOAT | NULL
+search_trends_proteinuria: FLOAT | NULL
+new_vaccine_doses_administered_pfizer: NUMBER | NULL
+search_trends_urinary_urgency: FLOAT | NULL
+cumulative_tested_age_6: NUMBER | NULL
+search_trends_nystagmus: FLOAT | NULL
+search_trends_hepatitis: FLOAT | NULL
+search_trends_papule: FLOAT | NULL
+search_trends_sharp_pain: FLOAT | NULL
+search_trends_bruise: FLOAT | NULL
+cumulative_persons_fully_vaccinated_pfizer: NUMBER | NULL
+search_trends_uterine_contraction: FLOAT | NULL
+testing_policy: NUMBER | NULL
+search_trends_paranoia: FLOAT | NULL
+cumulative_confirmed_age_9: NUMBER | NULL
+search_trends_crackles: FLOAT | NULL
+search_trends_polydipsia: FLOAT | NULL
+cumulative_deceased_female: NUMBER | NULL
+search_trends_chest_pain: FLOAT | NULL
+search_trends_throat_irritation: FLOAT | NULL
+search_trends_splenomegaly: FLOAT | NULL
+new_intensive_care_patients_age_5: NUMBER | NULL
+search_trends_pancreatitis: FLOAT | NULL
+search_trends_podalgia: FLOAT | NULL
+new_recovered_age_0: NUMBER | NULL
+search_trends_vasculitis: FLOAT | NULL
+search_trends_aphonia: FLOAT | NULL
+search_trends_photopsia: FLOAT | NULL
+area_urban_sq_km: TEXT | NULL
+search_trends_congenital_heart_defect: FLOAT | NULL
+search_trends_mitral_insufficiency: FLOAT | NULL
+search_trends_ventricular_fibrillation: FLOAT | NULL
+new_vaccine_doses_administered_moderna: NUMBER | NULL
+search_trends_depersonalization: FLOAT | NULL
+comorbidity_mortality_rate: TEXT | NULL
+search_trends_focal_seizure: FLOAT | NULL
+search_trends_burn: FLOAT | NULL
+locality_code: TEXT | NULL
+search_trends_photodermatitis: FLOAT | NULL
+cumulative_hospitalized_patients_age_1: NUMBER | NULL
+search_trends_aphasia: FLOAT | NULL
+new_persons_fully_vaccinated_moderna: NUMBER | NULL
+search_trends_sputum: FLOAT | NULL
+location_key: TEXT | NULL
+search_trends_dysphoria: FLOAT | NULL
+new_recovered_age_8: NUMBER | NULL
+search_trends_edema: FLOAT | NULL
+search_trends_hemoptysis: FLOAT | NULL
+search_trends_tachycardia: FLOAT | NULL
+new_deceased_age_7: NUMBER | NULL
+search_trends_intracranial_pressure: FLOAT | NULL
+search_trends_tic: FLOAT | NULL
+search_trends_dementia: FLOAT | NULL
+cumulative_hospitalized_patients_age_7: NUMBER | NULL
+search_trends_dizziness: FLOAT | NULL
+search_trends_hematuria: FLOAT | NULL
+new_hospitalized_patients_age_2: NUMBER | NULL
+search_trends_folate_deficiency: FLOAT | NULL
+search_trends_vomiting: FLOAT | NULL
+search_trends_sore_throat: FLOAT | NULL
+new_deceased_age_5: NUMBER | NULL
+search_trends_guilt: FLOAT | NULL
+search_trends_hypochondriasis: FLOAT | NULL
+cumulative_hospitalized_patients_age_5: NUMBER | NULL
+emergency_investment_in_healthcare: NUMBER | NULL
+new_tested_age_2: NUMBER | NULL
+area_sq_km: NUMBER | NULL
+debt_relief: NUMBER | NULL
+search_trends_amblyopia: FLOAT | NULL
+search_trends_mood_swing: FLOAT | NULL
+search_trends_lymphedema: FLOAT | NULL
+search_trends_acute_bronchitis: FLOAT | NULL
+new_deceased_age_3: NUMBER | NULL
+search_trends_blushing: FLOAT | NULL
+search_trends_atheroma: FLOAT | NULL
+search_trends_hyperlipidemia: FLOAT | NULL
+search_trends_bleeding: FLOAT | NULL
+new_intensive_care_patients_age_0: NUMBER | NULL
+new_tested_age_4: NUMBER | NULL
+mobility_workplaces: TEXT | NULL
+population_rural: NUMBER | NULL
+cumulative_confirmed_age_4: NUMBER | NULL
+search_trends_strabismus: FLOAT | NULL
+public_transport_closing: NUMBER | NULL
+search_trends_fasciculation: FLOAT | NULL
+cumulative_recovered_age_3: NUMBER | NULL
+search_trends_abdominal_pain: FLOAT | NULL
+new_recovered_age_2: NUMBER | NULL
+search_trends_arthralgia: FLOAT | NULL
+search_trends_fever: FLOAT | NULL
+cumulative_vaccine_doses_administered_moderna: NUMBER | NULL
+cumulative_intensive_care_patients_age_5: NUMBER | NULL
+age_bin_5: TEXT | NULL
+search_trends_breast_pain: FLOAT | NULL
+new_intensive_care_patients_male: NUMBER | NULL
+search_trends_balance_disorder: FLOAT | NULL
+search_trends_neonatal_jaundice: FLOAT | NULL
+population_age_30_39: NUMBER | NULL
+search_trends_nasal_congestion: FLOAT | NULL
+search_trends_generalized_anxiety_disorder: FLOAT | NULL
+new_deceased_female: NUMBER | NULL
+search_trends_suicidal_ideation: FLOAT | NULL
+cumulative_intensive_care_patients_age_7: NUMBER | NULL
+search_trends_purpura: FLOAT | NULL
+search_trends_poor_posture: FLOAT | NULL
+cumulative_hospitalized_patients_age_2: NUMBER | NULL
+cumulative_tested_male: NUMBER | NULL
+human_capital_index: TEXT | NULL
+search_trends_hemorrhoids: FLOAT | NULL
+search_trends_chancre: FLOAT | NULL
+cumulative_confirmed_age_0: NUMBER | NULL
+search_trends_angioedema: FLOAT | NULL
+search_trends_major_depressive_disorder: FLOAT | NULL
+cumulative_persons_fully_vaccinated: NUMBER | NULL
+new_recovered_age_6: NUMBER | NULL
+search_trends_varicose_veins: FLOAT | NULL
+country_name: TEXT | NULL
+cumulative_tested_age_2: NUMBER | NULL
+gdp_per_capita_usd: NUMBER | NULL
+search_trends_dry_eye_syndrome: FLOAT | NULL
+search_trends_perspiration: FLOAT | NULL
+new_tested_female: NUMBER | NULL
+population_clustered: TEXT | NULL
+search_trends_yawn: FLOAT | NULL
+search_trends_anxiety: FLOAT | NULL
+new_hospitalized_patients_age_1: NUMBER | NULL
+average_temperature_celsius: FLOAT | NULL
+search_trends_hydrocephalus: FLOAT | NULL
+search_trends_lightheadedness: FLOAT | NULL
+search_trends_insomnia: FLOAT | NULL
+search_trends_hyperventilation: FLOAT | NULL
+cumulative_recovered_female: NUMBER | NULL
+search_trends_stridor: FLOAT | NULL
+search_trends_hypoxia: FLOAT | NULL
+new_confirmed_age_4: NUMBER | NULL
+search_trends_hair_loss: FLOAT | NULL
+location_geometry: BINARY | NULL
+relative_humidity: FLOAT | NULL
+search_trends_epilepsy: FLOAT | NULL
+search_trends_dandruff: FLOAT | NULL
+search_trends_fecal_incontinence: FLOAT | NULL
+search_trends_headache: FLOAT | NULL
+search_trends_bloating: FLOAT | NULL
+search_trends_vaginal_discharge: FLOAT | NULL
+new_recovered_age_5: NUMBER | NULL
+search_trends_halitosis: FLOAT | NULL
+new_tested_age_1: NUMBER | NULL
+search_trends_auditory_hallucination: FLOAT | NULL
+search_trends_hypercholesterolemia: FLOAT | NULL
+search_trends_myoclonus: FLOAT | NULL
+cumulative_recovered_age_6: NUMBER | NULL
+cumulative_confirmed_age_7: NUMBER | NULL
+cumulative_intensive_care_patients_age_9: NUMBER | NULL
+search_trends_hypotension: FLOAT | NULL
+cumulative_deceased: NUMBER | NULL
+search_trends_convulsion: FLOAT | NULL
+cumulative_intensive_care_patients_age_8: NUMBER | NULL
+search_trends_vaginitis: FLOAT | NULL
+search_trends_nodule: FLOAT | NULL
+new_hospitalized_patients_age_8: NUMBER | NULL
+search_trends_fibromyalgia: FLOAT | NULL
+infant_mortality_rate: FLOAT | NULL
+search_trends_hyponatremia: FLOAT | NULL
+population_age_60_69: NUMBER | NULL
+search_trends_muscle_weakness: FLOAT | NULL
+search_trends_scoliosis: FLOAT | NULL
+search_trends_hyperemesis_gravidarum: FLOAT | NULL
+new_confirmed_age_0: NUMBER | NULL
+search_trends_xeroderma: FLOAT | NULL
+search_trends_common_cold: FLOAT | NULL
+search_trends_night_terror: FLOAT | NULL
+search_trends_hypocalcaemia: FLOAT | NULL
+search_trends_esophagitis: FLOAT | NULL
+iso_3166_1_alpha_2: TEXT | NULL
+search_trends_ventricular_tachycardia: FLOAT | NULL
+search_trends_candidiasis: FLOAT | NULL
+new_deceased_age_2: NUMBER | NULL
+search_trends_trichoptilosis: FLOAT | NULL
+search_trends_clouding_of_consciousness: FLOAT | NULL
+search_trends_beaus_lines: FLOAT | NULL
+rainfall_mm: FLOAT | NULL
+search_trends_avoidant_personality_disorder: FLOAT | NULL
+search_trends_arthritis: FLOAT | NULL
+search_trends_menorrhagia: FLOAT | NULL
+search_trends_cleft_lip_and_cleft_palate: FLOAT | NULL
+new_persons_fully_vaccinated: NUMBER | NULL
+search_trends_thrombocytopenia: FLOAT | NULL
+search_trends_sinusitis: FLOAT | NULL
+search_trends_hypercalcaemia: FLOAT | NULL
+search_trends_milium: FLOAT | NULL
+minimum_temperature_celsius: FLOAT | NULL
+search_trends_ingrown_hair: FLOAT | NULL
+aggregation_level: NUMBER | NULL
+search_trends_chronic_pain: FLOAT | NULL
+search_trends_phlegm: FLOAT | NULL
+search_trends_toothache: FLOAT | NULL
+search_trends_hyperkalemia: FLOAT | NULL
+search_trends_round_ligament_pain: FLOAT | NULL
+cumulative_deceased_age_4: NUMBER | NULL
+search_trends_restless_legs_syndrome: FLOAT | NULL
+mobility_grocery_and_pharmacy: TEXT | NULL
+search_trends_adrenal_crisis: FLOAT | NULL
+search_trends_encephalopathy: FLOAT | NULL
+search_trends_tinnitus: FLOAT | NULL
+search_trends_post_nasal_drip: FLOAT | NULL
+search_trends_neuralgia: FLOAT | NULL
+search_trends_urethritis: FLOAT | NULL
+new_deceased_age_0: NUMBER | NULL
+search_trends_hyperpigmentation: FLOAT | NULL
+search_trends_hemolysis: FLOAT | NULL
+new_confirmed_male: NUMBER | NULL
+search_trends_photophobia: FLOAT | NULL
+search_trends_orthostatic_hypotension: FLOAT | NULL
+search_trends_melena: FLOAT | NULL
+search_trends_red_eye: FLOAT | NULL
+search_trends_hypertension: FLOAT | NULL
+age_bin_1: TEXT | NULL
+search_trends_hay_fever: FLOAT | NULL
+search_trends_kidney_stone: FLOAT | NULL
+search_trends_night_sweats: FLOAT | NULL
+search_trends_hematochezia: FLOAT | NULL
+search_trends_croup: FLOAT | NULL
+new_persons_vaccinated: NUMBER | NULL
+search_trends_hypertrophy: FLOAT | NULL
+cumulative_confirmed_age_8: NUMBER | NULL
+search_trends_neck_mass: FLOAT | NULL
+new_intensive_care_patients_age_7: NUMBER | NULL
+cumulative_confirmed: NUMBER | NULL
+search_trends_heartburn: FLOAT | NULL
+cumulative_intensive_care_patients_age_4: NUMBER | NULL
+search_trends_upper_respiratory_tract_infection: FLOAT | NULL
+search_trends_pain: FLOAT | NULL
+search_trends_radiculopathy: FLOAT | NULL
+age_bin_2: TEXT | NULL
+search_trends_floater: FLOAT | NULL
+search_trends_cardiac_arrest: FLOAT | NULL
+new_hospitalized_patients_age_5: NUMBER | NULL
+search_trends_erythema: FLOAT | NULL
+adult_female_mortality_rate: TEXT | NULL
+current_intensive_care_patients: NUMBER | NULL
+search_trends_angina_pectoris: FLOAT | NULL
+school_closing: NUMBER | NULL
+search_trends_ascites: FLOAT | NULL
+search_trends_hyperthermia: FLOAT | NULL
+search_trends_osteophyte: FLOAT | NULL
+search_trends_hives: FLOAT | NULL
+search_trends_impulsivity: FLOAT | NULL
+search_trends_abdominal_obesity: FLOAT | NULL
+cumulative_hospitalized_patients: NUMBER | NULL
+search_trends_urinary_tract_infection: FLOAT | NULL
+cumulative_tested_age_7: NUMBER | NULL
+new_hospitalized_patients: NUMBER | NULL
+search_trends_telangiectasia: FLOAT | NULL
+search_trends_shivering: FLOAT | NULL
+elevation_m: NUMBER | NULL
+search_trends_ataxia: FLOAT | NULL
+iso_3166_1_alpha_3: TEXT | NULL
+date: DATE | NULL
+search_trends_laryngitis: FLOAT | NULL
+search_trends_snoring: FLOAT | NULL
+search_trends_hyperhidrosis: FLOAT | NULL
+search_trends_nerve_injury: FLOAT | NULL
+cumulative_deceased_age_8: NUMBER | NULL
+new_recovered_age_1: NUMBER | NULL
+new_tested_male: NUMBER | NULL
+life_expectancy: TEXT | NULL
+search_trends_ptosis: FLOAT | NULL
+cumulative_deceased_age_7: NUMBER | NULL
+search_trends_bradycardia: FLOAT | NULL
+cumulative_tested_age_4: NUMBER | NULL
+search_trends_rosacea: FLOAT | NULL
+search_trends_pelvic_inflammatory_disease: FLOAT | NULL
+search_trends_developmental_disability: FLOAT | NULL
+search_trends_oral_candidiasis: FLOAT | NULL
+search_trends_periodontal_disease: FLOAT | NULL
+search_trends_dermatitis: FLOAT | NULL
+fiscal_measures: NUMBER | NULL
+search_trends_leukorrhea: FLOAT | NULL
+search_trends_hot_flash: FLOAT | NULL
+search_trends_kyphosis: FLOAT | NULL
+search_trends_dyspareunia: FLOAT | NULL
+cumulative_confirmed_age_2: NUMBER | NULL
+search_trends_infection: FLOAT | NULL
+search_trends_impetigo: FLOAT | NULL
+international_travel_controls: NUMBER | NULL
+new_confirmed_age_7: NUMBER | NULL
+search_trends_onychorrhexis: FLOAT | NULL
+new_deceased: NUMBER | NULL
+cumulative_tested_age_1: NUMBER | NULL
+search_trends_carpal_tunnel_syndrome: FLOAT | NULL
+search_trends_motion_sickness: FLOAT | NULL
+search_trends_sciatica: FLOAT | NULL
+new_hospitalized_patients_age_3: NUMBER | NULL
+search_trends_hematoma: FLOAT | NULL
+search_trends_bronchitis: FLOAT | NULL
+population_age_20_29: NUMBER | NULL
+current_hospitalized_patients: NUMBER | NULL
+cumulative_tested: NUMBER | NULL
+search_trends_migraine: FLOAT | NULL
+search_trends_panic_attack: FLOAT | NULL
+search_trends_diabetic_ketoacidosis: FLOAT | NULL
+smoking_prevalence: FLOAT | NULL
+search_trends_obesity: FLOAT | NULL
+cumulative_hospitalized_patients_age_0: NUMBER | NULL
+search_trends_lesion: FLOAT | NULL
+
+## WORLD_BANK_GLOBAL_POPULATION.POPULATION_BY_COUNTRY
+year_1996: NUMBER | NULL
+year_1988: NUMBER | NULL
+year_2014: NUMBER | NULL
+year_2003: NUMBER | NULL
+year_2004: NUMBER | NULL
+year_1963: NUMBER | NULL
+year_1989: NUMBER | NULL
+year_2019: NUMBER | NULL
+year_1997: NUMBER | NULL
+year_2001: NUMBER | NULL
+year_1970: NUMBER | NULL
+year_1967: NUMBER | NULL
+year_1961: NUMBER | NULL
+year_2006: NUMBER | NULL
+year_2008: NUMBER | NULL
+year_1975: NUMBER | NULL
+year_1984: NUMBER | NULL
+year_2007: NUMBER | NULL
+year_1969: NUMBER | NULL
+year_1960: NUMBER | NULL
+year_1978: NUMBER | NULL
+year_2009: NUMBER | NULL
+year_1991: NUMBER | NULL
+year_1965: NUMBER | NULL
+year_1973: NUMBER | NULL
+year_2011: NUMBER | NULL
+year_1994: NUMBER | NULL
+year_1990: NUMBER | NULL
+year_2017: NUMBER | NULL
+year_2000: NUMBER | NULL
+year_1979: NUMBER | NULL
+year_1980: NUMBER | NULL
+year_1966: NUMBER | NULL
+year_1985: NUMBER | NULL
+year_1982: NUMBER | NULL
+year_2018: NUMBER | NULL
+year_1964: NUMBER | NULL
+year_1976: NUMBER | NULL
+year_1968: NUMBER | NULL
+year_1998: NUMBER | NULL
+year_1983: NUMBER | NULL
+year_1993: NUMBER | NULL
+year_1981: NUMBER | NULL
+year_1986: NUMBER | NULL
+year_2013: NUMBER | NULL
+year_1995: NUMBER | NULL
+year_2015: NUMBER | NULL
+year_2012: NUMBER | NULL
+country: TEXT | NULL
+year_2016: NUMBER | NULL
+year_1977: NUMBER | NULL
+year_1962: NUMBER | NULL
+year_2005: NUMBER | NULL
+year_1971: NUMBER | NULL
+year_1999: NUMBER | NULL
+year_2002: NUMBER | NULL
+year_2010: NUMBER | NULL
+year_1987: NUMBER | NULL
+country_code: TEXT | NULL
+year_1974: NUMBER | NULL
+year_1972: NUMBER | NULL
+year_1992: NUMBER | NULL
+
+## WORLD_BANK_HEALTH_POPULATION.SERIES_SUMMARY
+related_indicators: TEXT | In general indicator that are of interest and related to the specific series.
+base_period: NUMBER | Base period is the period of time for which data is used as the base of an index number or other ratio have been collected. This period is frequently one of a year but it may be as short as one day or as long as the average of a group of years.
+series_code: TEXT | A number or a sequence of related statistical units arranged or occurring in temporal spatial or other order or succession. WDI carries mostly time series.
+other_notes: TEXT | A brief record of facts topics or thoughts written down and used to contextualize the series definition values and other characteristics.
+aggregation_method: TEXT | Aggregation methods are types of calculations used to group attribute values into a metric for each dimension value. For example for each region one may retrieve the total value of country entries (the sum of the series value for countries belonging to the region).
+unit_of_measure: TEXT | A quantity used as a standard of measurement. Example: Units of time are second minute hour day week month year and decade.
+periodicity: TEXT | Applies to series recurring at regular intervals. Most of the time this term denotes that interval of recurrence.
+general_comments: TEXT | Other notes regarding the series which do not appear in Development relevance or Limitations or exceptions
+topic: TEXT | The matter dealt with in the context discourse or subject related to the series.
+short_definition: TEXT | Short statement of the exact meaning of a series.
+long_definition: TEXT | Extended statement of the exact meaning of a series.
+source: TEXT | A place person or organization from which the series comes or can be obtained.
+indicator_name: TEXT | Given name of a series.
+limitations_and_exceptions: TEXT | A limiting rule or circumstance that applies to usage of the series such as the scope of the survey collecting the data or missing years and countries.  It should also note when data are imputed or estimated
+notes_from_original_source: TEXT | A brief record of facts topics or thoughts written down and used to contextualize the series definition values and other characteristics.
+development_relevance: TEXT | The relevance of a series refers to how the indicator’s data may be used to monitor particular aspects of development goals and programs for example the Sustainable Development Goals. The indicator may conclusively measure progress towards a particular objective or may act as a proxy or interpretation of a development aim.
+related_source_links: TEXT | Internet address of related source page tool or knowledge base.
+license_type: TEXT | Explains the rights conferred and restrictions imposed by the owner to the users of a series
+statistical_concept_and_methodology: TEXT | The abstract idea general statistical notions or a system of methods used to generate the series.
+other_web_links: TEXT | Internet addresses of related pages tools or knowledge bases.
+
+## WORLD_BANK_INTL_EDUCATION.COUNTRY_SUMMARY
+other_groups: TEXT | Other types of grouping approved by the WDI team.
+national_accounts_reference_year: TEXT | Reference year is the year in which the local currency constant price series of a country is valued. The reference year is usually the same as the base year used to report the constant price series. However when the constant price data are chain linked the base year is changed annually so the data are rescaled to a specific reference year to provide a consistent time series. When the country has not rescaled following a change in base year World Bank staff rescale the data to maintain a longer historical series. To allow for cross-country comparison and data aggregation constant price data reported in World Development Indicators are rescaled to a common reference year (2010) and currency (U.S. dollars).
+latest_population_census: TEXT | Latest population census shows the most recent year in which a census was conducted and in which at least preliminary results have been released. The preliminary results from the very recent censuses could be reflected in timely revisions if basic data are available such as population by age and sex as well as the detailed definition of counting coverage and completeness.
+system_of_national_accounts: TEXT | System of National Accounts identifies whether a country uses the 1968 1993 or 2008 System of National Accounts (SNA). The 2008 SNA is an update of the 1993 SNA and retains its basic theoretical framework.
+national_accounts_base_year: TEXT | Base year is the base or pricing period used for constant price calculations in the country’s national accounts. Price indexes derived from national accounts aggregates such as the implicit deflator for gross domestic product (GDP) express the price level relative to base year prices.
+income_group: TEXT | World Bank income group to which a country belongs after the country classification is completed every year.
+latest_agricultural_census: TEXT | Latest agricultural census shows the most recent year in which an agricultural census was conducted or planned to be conducted as reported to the Food and Agriculture Organization.
+region: TEXT | World Bank region to which a country belongs.
+external_debt_reporting_status: TEXT | External debt shows debt reporting status for 2016 data. A indicates that data are as reported P that data are based on reported or collected information but include an element of staff estimation and E that data are World Bank staff estimates.
+short_name: TEXT | Country name the country's official name as approved by the relevant body (Italy is used as an example): conventional short form (Italy).
+vital_registration_complete: TEXT | Vital registration complete identifies countries that report at least 90 percent complete registries of vital (birth and death) statistics to the United Nations Statistics Division and are reported in its Population and Vital Statistics Reports. Countries with complete vital statistics registries may have more accurate and more timely demographic indicators than other countries.
+system_of_trade: TEXT | System of trade refers to the United Nations general trade system (G) or special trade system (S). Under the general trade system goods entering directly for domestic consumption and goods entered into customs storage are recorded as imports at arrival. Under the special trade system goods are recorded as imports when declared for domestic consumption whether at time of entry or on withdrawal from customs storage.
+latest_industrial_data: NUMBER | Latest industrial data show the most recent year for which manufacturing value added data at the three-digit level of the International Standard Industrial Classification (revision 2 or 3) are available in the United Nations Industrial Development Organization database.
+wb_two_code: TEXT | NULL
+latest_water_withdrawal_data: TEXT | NULL
+government_accounting_concept: TEXT | Government finance accounting concept is the accounting basis for reporting central government financial data. For most countries government finance data have been consolidated (C) into one set of accounts capturing all central government fiscal activities. Budgetary central government accounts (B) exclude some central government units.
+latest_household_survey: TEXT | Latest demographic education or health household survey indicates the household surveys used to compile the demographic education and health data. Detailed information on each survey is provided through the following links:  AIDS Indicator Survey Demographic and Health Survey Health Issues Survey and Malaria Indicator Survey - www.dhsprogram.com; Living Standards Measurement Study -  www.worldbank.org/lsms; Multiple Indicator Cluster Survey - http://mics.unicef.org; Reproductive Health Survey -  www.cdc.gov/reproductivehealth; World Health Survey is available at - www.who.int/healthinfo/survey/en.
+two_alpha_code: TEXT | ISO-2 digit alpha code value of the country. Re: www.iso.org
+source_of_most_recent_income_and_expenditure_data: TEXT | Source of most recent income and expenditure data shows household surveys that collect income and expenditure data. Names and detailed information on household surveys can be found on the website of the International Household Survey Network (www.surveynetwork.org). Core Welfare Indicator Questionnaire Surveys (CWIQ) developed by the World Bank measure changes in key social indicators for different population groups—specifically indicators of access utilization and satisfaction with core social and economic services. Expenditure survey/budget surveys (ES/BS) collect detailed information on household consumption as well as on general demographic social and economic characteristics. Integrated household surveys (IHS) collect detailed information on a wide variety of topics including health education economic activities housing and utilities.
+ppp_survey_year: TEXT | Purchasing power parity (PPP) survey year is the latest available survey year for the International Comparison Program’s estimates of PPPs.
+latest_trade_data: NUMBER | Latest trade data show the most recent year for which structure of merchandise trade data from the United Nations Statistics Division’s Commodity Trade (Comtrade) database are available.
+balance_of_payments_manual_in_use: TEXT | Balance of Payments Manual in use refers to the classification system used to compile and report data on balance of payments. 6 refers to the 6th edition of the IMF’s Balance of Payments Manual (2009).
+alternative_conversion_factor: TEXT | Alternative conversion factor identifies the countries and years for which a World Bank–estimated conversion factor has been used in place of the official exchange rate (line rf in the International Monetary Fund’s [IMF] International Financial Statistics). See later in Sources and methods for further discussion of alternative conversion factors.
+lending_category: TEXT | World Bank lending category to which a country belongs after the operational guidelines are completed every year.
+currency_unit: TEXT | Currency unit (such as the dollar euro peso rupee) issued as a coin or banknote a standard unit of value and a unit of account.
+table_name: TEXT | Country name the country's name as approved by the relevant body (Italy is used as an example): conventional short form (Republic of Italy).
+long_name: TEXT | Country name the country's name as approved by the relevant body (Italy is used as an example): conventional long form (Republic of Italy).
+country_code: TEXT | A short alphabetic or numeric geographical code representing a specific country or area. In April 2016 WDI has adopted the three digit ISO code to identify countries in its databases.
+sna_price_valuation: TEXT | SNA price valuation shows whether value added in the national accounts is reported at basic prices (B) or producer prices (P). Producer prices include taxes paid by producers and thus tend to overstate the actual value added in production. However value added can be higher at basic prices than at producer prices in countries with high agricultural subsidies.
+special_notes: TEXT | Country special notes for data and metadata users.
+imf_data_dissemination_standard: TEXT | IMF data dissemination standard shows the countries that subscribe to the IMF’s Special Data Dissemination Standard (S) or Enhanced General Data Dissemination System (e-GDDS). S refers to countries that subscribe to the SDDS and have posted data on the Dissemination Standards Bulletin Board at http://dsbb.imf.org. S+ countries must observe additional coverage periodicity and timeliness requirements. e-G refers to countries that subscribe to the e-GDDS.
+
+## WORLD_BANK_WDI.COUNTRY_SUMMARY
+latest_agricultural_census: TEXT | Latest agricultural census shows the most recent year in which an agricultural census was conducted or planned to be conducted as reported to the Food and Agriculture Organization.
+external_debt_reporting_status: TEXT | External debt shows debt reporting status for 2016 data. A indicates that data are as reported P that data are based on reported or collected information but include an element of staff estimation and E that data are World Bank staff estimates.
+wb_2_code: TEXT | World Bank 2 digit code value of the country.
+source_of_most_recent_income_and_expenditure_data: TEXT | Source of most recent income and expenditure data shows household surveys that collect income and expenditure data. Names and detailed information on household surveys can be found on the website of the International Household Survey Network (www.surveynetwork.org). Core Welfare Indicator Questionnaire Surveys (CWIQ) developed by the World Bank measure changes in key social indicators for different population groups—specifically indicators of access utilization and satisfaction with core social and economic services. Expenditure survey/budget surveys (ES/BS) collect detailed information on household consumption as well as on general demographic social and economic characteristics. Integrated household surveys (IHS) collect detailed information on a wide variety of topics including health education economic activities housing and utilities.
+vital_registration_complete: TEXT | Vital registration complete identifies countries that report at least 90 percent complete registries of vital (birth and death) statistics to the United Nations Statistics Division and are reported in its Population and Vital Statistics Reports. Countries with complete vital statistics registries may have more accurate and more timely demographic indicators than other countries.
+imf_data_dissemination_standard: TEXT | IMF data dissemination standard shows the countries that subscribe to the IMF’s Special Data Dissemination Standard (S) or Enhanced General Data Dissemination System (e-GDDS). S refers to countries that subscribe to the SDDS and have posted data on the Dissemination Standards Bulletin Board at http://dsbb.imf.org. S+ countries must observe additional coverage periodicity and timeliness requirements. e-G refers to countries that subscribe to the e-GDDS.
+latest_household_survey: TEXT | Latest demographic education or health household survey indicates the household surveys used to compile the demographic education and health data. Detailed information on each survey is provided through the following links:  AIDS Indicator Survey Demographic and Health Survey Health Issues Survey and Malaria Indicator Survey - www.dhsprogram.com; Living Standards Measurement Study -  www.worldbank.org/lsms; Multiple Indicator Cluster Survey - http://mics.unicef.org; Reproductive Health Survey -  www.cdc.gov/reproductivehealth; World Health Survey is available at - www.who.int/healthinfo/survey/en.
+balance_of_payments_manual_in_use: TEXT | Balance of Payments Manual in use refers to the classification system used to compile and report data on balance of payments. 6 refers to the 6th edition of the IMF’s Balance of Payments Manual (2009).
+region: TEXT | World Bank region to which a country belongs.
+currency_unit: TEXT | Currency unit (such as the dollar euro peso rupee) issued as a coin or banknote a standard unit of value and a unit of account.
+latest_population_census: TEXT | Latest population census shows the most recent year in which a census was conducted and in which at least preliminary results have been released. The preliminary results from the very recent censuses could be reflected in timely revisions if basic data are available such as population by age and sex as well as the detailed definition of counting coverage and completeness.
+country_code: TEXT | A short alphabetic or numeric geographical code representing a specific country or area. In April 2016 WDI has adopted the three digit ISO code to identify countries in its databases.
+sna_price_valuation: TEXT | SNA price valuation shows whether value added in the national accounts is reported at basic prices (B) or producer prices (P). Producer prices include taxes paid by producers and thus tend to overstate the actual value added in production. However value added can be higher at basic prices than at producer prices in countries with high agricultural subsidies.
+long_name: TEXT | Country name the country's name as approved by the relevant body (Italy is used as an example): conventional long form (Republic of Italy).
+income_group: TEXT | World Bank income group to which a country belongs after the country classification is completed every year.
+latest_industrial_data: TEXT | Latest industrial data show the most recent year for which manufacturing value added data at the three-digit level of the International Standard Industrial Classification (revision 2 or 3) are available in the United Nations Industrial Development Organization database.
+government_accounting_concept: TEXT | Government finance accounting concept is the accounting basis for reporting central government financial data. For most countries government finance data have been consolidated (C) into one set of accounts capturing all central government fiscal activities. Budgetary central government accounts (B) exclude some central government units.
+special_notes: TEXT | Country special notes for data and metadata users.
+two_alpha_code: TEXT | ISO-2 digit alpha code value of the country. Re: www.iso.org
+other_groups: TEXT | Other types of grouping approved by the WDI team.
+system_of_national_accounts: TEXT | System of National Accounts identifies whether a country uses the 1968 1993 or 2008 System of National Accounts (SNA). The 2008 SNA is an update of the 1993 SNA and retains its basic theoretical framework.
+ppp_survey_year: TEXT | Purchasing power parity (PPP) survey year is the latest available survey year for the International Comparison Program’s estimates of PPPs.
+national_accounts_reference_year: TEXT | Reference year is the year in which the local currency constant price series of a country is valued. The reference year is usually the same as the base year used to report the constant price series. However when the constant price data are chain linked the base year is changed annually so the data are rescaled to a specific reference year to provide a consistent time series. When the country has not rescaled following a change in base year World Bank staff rescale the data to maintain a longer historical series. To allow for cross-country comparison and data aggregation constant price data reported in World Development Indicators are rescaled to a common reference year (2010) and currency (U.S. dollars).
+short_name: TEXT | Country name the country's official name as approved by the relevant body (Italy is used as an example): conventional short form (Italy).
+table_name: TEXT | Country name the country's name as approved by the relevant body (Italy is used as an example): conventional short form (Republic of Italy).
+latest_trade_data: TEXT | Latest trade data show the most recent year for which structure of merchandise trade data from the United Nations Statistics Division’s Commodity Trade (Comtrade) database are available.
+system_of_trade: TEXT | System of trade refers to the United Nations general trade system (G) or special trade system (S). Under the general trade system goods entering directly for domestic consumption and goods entered into customs storage are recorded as imports at arrival. Under the special trade system goods are recorded as imports when declared for domestic consumption whether at time of entry or on withdrawal from customs storage.
+lending_category: TEXT | World Bank lending category to which a country belongs after the operational guidelines are completed every year.
+national_accounts_base_year: TEXT | Base year is the base or pricing period used for constant price calculations in the country’s national accounts. Price indexes derived from national accounts aggregates such as the implicit deflator for gross domestic product (GDP) express the price level relative to base year prices.
+alternative_conversion_factor: TEXT | Alternative conversion factor identifies the countries and years for which a World Bank–estimated conversion factor has been used in place of the official exchange rate (line rf in the International Monetary Fund’s [IMF] International Financial Statistics). See later in Sources and methods for further discussion of alternative conversion factors.

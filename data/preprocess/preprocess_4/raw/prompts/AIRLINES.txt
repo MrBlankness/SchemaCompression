@@ -1,0 +1,51 @@
+[TABLES]
+## AIRLINES.BOARDING_PASSES
+flight_id: NUMBER | NULL | eg=[30625]
+ticket_no: TEXT | NULL | eg=["0005435212386", "0005435212357"]
+seat_no: TEXT | NULL | eg=["3G", "11A"]
+boarding_no: NUMBER | NULL | eg=[2, 5]
+
+## AIRLINES.AIRPORTS_DATA
+airport_code: TEXT | NULL | eg=["YKS", "VVO"]
+coordinates: TEXT | NULL | eg=["(129.77099609375,62.0932998657226562)", "(132.147994995117188,43.3989982604980469)"]
+airport_name: TEXT | NULL | eg=[{"en":"Yakutsk Airport","ru":"Якутск"}, {"en":"Vladivostok International Airport","ru":"Владивосток"}]
+timezone: TEXT | NULL | eg=["Asia/Yakutsk", "Asia/Vladivostok"]
+city: TEXT | NULL | eg=[{"en":"Yakutsk","ru":"Якутск"}, {"en":"Vladivostok","ru":"Владивосток"}]
+
+## AIRLINES.TICKETS
+ticket_no: TEXT | NULL | eg=["0005432000988", "0005432000989"]
+passenger_id: TEXT | NULL | eg=["8499 420203", "1011 752484"]
+book_ref: TEXT | NULL | eg=["06B046", "E170C3"]
+
+## AIRLINES.AIRCRAFTS_DATA
+range: NUMBER | NULL | eg=[11100, 3000]
+aircraft_code: TEXT | NULL | eg=["773", "SU9"]
+model: TEXT | NULL | eg=[{"en":"Boeing 777-300","ru":"Боинг 777-300"}, {"en":"Sukhoi Superjet-100","ru":"Сухой Суперджет-100"}]
+
+## AIRLINES.FLIGHTS
+aircraft_code: TEXT | NULL | eg=["763", "CR2"]
+actual_departure: TEXT | NULL | eg=["\\N"]
+departure_airport: TEXT | NULL | eg=["SVO", "LED"]
+scheduled_departure: TEXT | NULL | eg=["2017-09-12 09:50:00+03", "2017-09-10 15:00:00+03"]
+flight_id: NUMBER | NULL | eg=[5502, 7784]
+scheduled_arrival: TEXT | NULL | eg=["2017-09-12 11:20:00+03", "2017-09-10 17:30:00+03"]
+actual_arrival: TEXT | NULL | eg=["\\N"]
+arrival_airport: TEXT | NULL | eg=["UFA", "KRO"]
+status: TEXT | NULL | eg=["Scheduled"]
+flight_no: TEXT | NULL | eg=["PG0529", "PG0667"]
+
+## AIRLINES.BOOKINGS
+book_date: TEXT | NULL | eg=["2017-07-14 09:02:00+03", "2017-08-15 14:27:00+03"]
+total_amount: NUMBER | NULL | eg=[37900, 18100]
+book_ref: TEXT | NULL | eg=["000012", "000068"]
+
+## AIRLINES.SEATS
+seat_no: TEXT | NULL | eg=["2A", "2F"]
+fare_conditions: TEXT | NULL | eg=["Business"]
+aircraft_code: TEXT | NULL | eg=["319"]
+
+## AIRLINES.TICKET_FLIGHTS
+amount: NUMBER | NULL | eg=[42100, 23900]
+ticket_no: TEXT | NULL | eg=["0005435212351", "0005435212381"]
+flight_id: NUMBER | NULL | eg=[30625]
+fare_conditions: TEXT | NULL | eg=["Business", "Comfort"]

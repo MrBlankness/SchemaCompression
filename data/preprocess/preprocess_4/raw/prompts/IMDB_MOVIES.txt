@@ -1,0 +1,52 @@
+[TABLES]
+## IMDB_MOVIES.ROLE_MAPPING
+category: TEXT | NULL | eg=["actor", "actress"]
+name_id: TEXT | NULL | eg=["nm0178509", "nm0000991"]
+movie_id: TEXT | NULL | eg=["tt0038733", "tt0060908"]
+
+## IMDB_MOVIES.GENRE
+genre: TEXT | NULL | eg=["Fantasy", "Drama"]
+movie_id: TEXT | NULL | eg=["tt0012494", "tt0060908"]
+
+## IMDB_MOVIES.RATINGS
+movie_id: TEXT | NULL | eg=["tt0060908", "tt0069049"]
+median_rating: FLOAT | NULL | eg=[8.0, 7.0]
+total_votes: NUMBER | NULL | eg=[3392, 5014]
+avg_rating: FLOAT | NULL | eg=[7.5, 6.9]
+
+## IMDB_MOVIES.ERD
+column: TEXT | NULL | eg=["title", "date_published"]
+Unnamed: 2: TEXT | NULL | eg=[""]
+Unnamed: 3: TEXT | NULL | eg=[""]
+Unnamed: 8: TEXT | NULL | eg=[""]
+Unnamed: 7: TEXT | NULL | eg=[""]
+table: TEXT | NULL | eg=["movie"]
+Unnamed: 12: TEXT | NULL | eg=["* movie_id", "total_votes"]
+Unnamed: 4: TEXT | NULL | eg=[""]
+Unnamed: 11: TEXT | NULL | eg=[""]
+Unnamed: 10: TEXT | NULL | eg=[""]
+Unnamed: 5: TEXT | NULL | eg=[""]
+Unnamed: 6: TEXT | NULL | eg=[""]
+Unnamed: 9: TEXT | NULL | eg=["* movie_id", ""]
+
+## IMDB_MOVIES.MOVIES
+languages: TEXT | NULL | eg=["German", "English"]
+id: TEXT | NULL | eg=["tt0012494", "tt0361953"]
+date_published: TEXT | NULL | eg=["2017-06-09 00:00:00", "2017-10-16 00:00:00"]
+worlwide_gross_income: TEXT | NULL | eg=["$ 12156", ""]
+production_company: TEXT | NULL | eg=["Decla-Bioscop AG", "Bert Williams Motion Pictures and Distributor"]
+duration: NUMBER | NULL | eg=[97, 81]
+year: NUMBER | NULL | eg=[2017]
+country: TEXT | NULL | eg=["Germany", "USA"]
+title: TEXT | NULL | eg=["Der müde Tod", "The Nest of the Cuckoo Birds"]
+
+## IMDB_MOVIES.DIRECTOR_MAPPING
+name_id: TEXT | NULL | eg=["nm0003836", "nm0696247"]
+movie_id: TEXT | NULL | eg=["tt0038733", "tt0060908"]
+
+## IMDB_MOVIES.NAMES
+known_for_movies: TEXT | NULL | eg=["", "tt4555426"]
+height: FLOAT | NULL | eg=[174.0, 183.0]
+name: TEXT | NULL | eg=["Lauren Bacall", "Gary Oldman"]
+date_of_birth: TEXT | NULL | eg=["1924-09-16", "1958-03-21"]
+id: TEXT | NULL | eg=["nm0000002", "nm0000198"]

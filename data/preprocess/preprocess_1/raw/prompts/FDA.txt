@@ -1,0 +1,251 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: FDA_FOOD.FOOD_EVENTS
+Columns: products_role, products_industry_name, date_created, outcomes, consumer_age_unit, reactions, products_industry_code, consumer_gender, products_brand_name, consumer_age, report_number, date_started
+
+Table: FDA_FOOD.FOOD_ENFORCEMENT
+Columns: initial_firm_notification, code_info, product_description, product_type, reason_for_recall, event_id, recall_initiation_date, center_classification_date, status, more_code_info, recalling_firm, address_2, distribution_pattern, city, termination_date, postal_code, address_1, country, state, product_quantity, report_date, voluntary_mandated, recall_number, classification
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_06
+Columns: mtfcc_feature_class_code, internal_point_lat, internal_point_lon, internal_point_geom, state_fips_code, geo_id, lsad_name, area_water_meters, county_fips_code, functional_status, blockgroup_geom, area_land_meters, blockgroup_ce, tract_ce
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_21
+Columns: lsad_name, area_water_meters, geo_id, area_land_meters, county_fips_code, internal_point_geom, functional_status, internal_point_lon, blockgroup_ce, internal_point_lat, tract_ce, state_fips_code, mtfcc_feature_class_code, blockgroup_geom
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_60
+Columns: lsad_name, blockgroup_geom, mtfcc_feature_class_code, county_fips_code, area_water_meters, tract_ce, area_land_meters, internal_point_lat, blockgroup_ce, state_fips_code, internal_point_geom, geo_id, functional_status, internal_point_lon
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_16
+Columns: area_water_meters, functional_status, blockgroup_geom, mtfcc_feature_class_code, county_fips_code, area_land_meters, geo_id, internal_point_lat, blockgroup_ce, internal_point_geom, internal_point_lon, tract_ce, lsad_name, state_fips_code
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_17
+Columns: tract_ce, internal_point_lon, blockgroup_ce, geo_id, state_fips_code, area_water_meters, blockgroup_geom, internal_point_lat, mtfcc_feature_class_code, area_land_meters, lsad_name, functional_status, internal_point_geom, county_fips_code
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_25
+Columns: internal_point_lat, state_fips_code, internal_point_geom, blockgroup_ce, tract_ce, blockgroup_geom, county_fips_code, internal_point_lon, functional_status, mtfcc_feature_class_code, area_water_meters, area_land_meters, geo_id, lsad_name
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_37
+Columns: internal_point_geom, mtfcc_feature_class_code, geo_id, internal_point_lon, tract_ce, internal_point_lat, county_fips_code, functional_status, blockgroup_ce, area_water_meters, blockgroup_geom, area_land_meters, lsad_name, state_fips_code
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_20
+Columns: geo_id, blockgroup_ce, internal_point_lat, state_fips_code, county_fips_code, mtfcc_feature_class_code, internal_point_geom, functional_status, area_land_meters, tract_ce, area_water_meters, lsad_name, blockgroup_geom, internal_point_lon
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_31
+Columns: internal_point_lat, state_fips_code, area_water_meters, functional_status, lsad_name, tract_ce, internal_point_geom, blockgroup_ce, geo_id, mtfcc_feature_class_code, internal_point_lon, county_fips_code, area_land_meters, blockgroup_geom
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_18
+Columns: blockgroup_geom, geo_id, state_fips_code, internal_point_lat, internal_point_geom, lsad_name, area_land_meters, mtfcc_feature_class_code, internal_point_lon, county_fips_code, blockgroup_ce, functional_status, tract_ce, area_water_meters
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_04
+Columns: lsad_name, internal_point_geom, functional_status, internal_point_lat, blockgroup_ce, geo_id, blockgroup_geom, county_fips_code, mtfcc_feature_class_code, area_water_meters, state_fips_code, area_land_meters, tract_ce, internal_point_lon
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_44
+Columns: area_land_meters, state_fips_code, internal_point_geom, geo_id, functional_status, lsad_name, mtfcc_feature_class_code, tract_ce, blockgroup_ce, county_fips_code, area_water_meters, internal_point_lat, internal_point_lon, blockgroup_geom
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_26
+Columns: lsad_name, blockgroup_geom, geo_id, internal_point_geom, functional_status, area_land_meters, area_water_meters, internal_point_lon, internal_point_lat, state_fips_code, mtfcc_feature_class_code, tract_ce, blockgroup_ce, county_fips_code
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_38
+Columns: area_land_meters, state_fips_code, mtfcc_feature_class_code, functional_status, tract_ce, area_water_meters, internal_point_lon, geo_id, internal_point_lat, internal_point_geom, blockgroup_ce, blockgroup_geom, county_fips_code, lsad_name
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_23
+Columns: internal_point_lat, tract_ce, area_water_meters, state_fips_code, functional_status, internal_point_geom, lsad_name, internal_point_lon, area_land_meters, geo_id, mtfcc_feature_class_code, blockgroup_geom, county_fips_code, blockgroup_ce
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_30
+Columns: county_fips_code, blockgroup_ce, tract_ce, lsad_name, geo_id, internal_point_lat, mtfcc_feature_class_code, state_fips_code, blockgroup_geom, area_land_meters, internal_point_lon, functional_status, internal_point_geom, area_water_meters
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_27
+Columns: area_land_meters, state_fips_code, internal_point_lat, functional_status, blockgroup_geom, county_fips_code, mtfcc_feature_class_code, internal_point_geom, area_water_meters, tract_ce, blockgroup_ce, geo_id, lsad_name, internal_point_lon
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_66
+Columns: mtfcc_feature_class_code, internal_point_lon, functional_status, state_fips_code, blockgroup_ce, tract_ce, area_land_meters, county_fips_code, area_water_meters, lsad_name, internal_point_lat, internal_point_geom, geo_id, blockgroup_geom
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_35
+Columns: blockgroup_geom, area_land_meters, internal_point_lon, geo_id, functional_status, tract_ce, lsad_name, county_fips_code, area_water_meters, blockgroup_ce, mtfcc_feature_class_code, internal_point_lat, internal_point_geom, state_fips_code
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_47
+Columns: mtfcc_feature_class_code, internal_point_geom, lsad_name, tract_ce, internal_point_lon, geo_id, blockgroup_geom, internal_point_lat, area_water_meters, blockgroup_ce, functional_status, area_land_meters, state_fips_code, county_fips_code
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_09
+Columns: area_land_meters, blockgroup_geom, internal_point_lat, mtfcc_feature_class_code, functional_status, county_fips_code, internal_point_geom, tract_ce, blockgroup_ce, lsad_name, internal_point_lon, state_fips_code, geo_id, area_water_meters
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_41
+Columns: functional_status, area_water_meters, county_fips_code, mtfcc_feature_class_code, blockgroup_ce, area_land_meters, geo_id, lsad_name, internal_point_lat, internal_point_geom, blockgroup_geom, tract_ce, state_fips_code, internal_point_lon
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_34
+Columns: mtfcc_feature_class_code, blockgroup_geom, county_fips_code, internal_point_lon, blockgroup_ce, area_water_meters, internal_point_lat, geo_id, internal_point_geom, area_land_meters, tract_ce, functional_status, state_fips_code, lsad_name
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_45
+Columns: state_fips_code, internal_point_geom, functional_status, internal_point_lon, county_fips_code, blockgroup_ce, mtfcc_feature_class_code, tract_ce, lsad_name, blockgroup_geom, geo_id, internal_point_lat, area_water_meters, area_land_meters
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_15
+Columns: county_fips_code, area_water_meters, geo_id, internal_point_geom, internal_point_lat, lsad_name, mtfcc_feature_class_code, state_fips_code, tract_ce, blockgroup_geom, functional_status, blockgroup_ce, internal_point_lon, area_land_meters
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_55
+Columns: county_fips_code, lsad_name, internal_point_lat, mtfcc_feature_class_code, functional_status, internal_point_geom, geo_id, tract_ce, area_land_meters, blockgroup_geom, area_water_meters, state_fips_code, internal_point_lon, blockgroup_ce
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_39
+Columns: mtfcc_feature_class_code, internal_point_geom, geo_id, county_fips_code, lsad_name, blockgroup_ce, blockgroup_geom, internal_point_lat, functional_status, area_water_meters, state_fips_code, tract_ce, internal_point_lon, area_land_meters
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_53
+Columns: internal_point_lon, blockgroup_ce, area_water_meters, county_fips_code, mtfcc_feature_class_code, internal_point_lat, tract_ce, geo_id, internal_point_geom, state_fips_code, area_land_meters, blockgroup_geom, functional_status, lsad_name
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_01
+Columns: mtfcc_feature_class_code, lsad_name, geo_id, functional_status, state_fips_code, internal_point_lat, internal_point_lon, tract_ce, area_water_meters, blockgroup_ce, area_land_meters, county_fips_code, internal_point_geom, blockgroup_geom
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_54
+Columns: internal_point_lat, area_water_meters, mtfcc_feature_class_code, blockgroup_geom, functional_status, internal_point_lon, state_fips_code, geo_id, lsad_name, internal_point_geom, blockgroup_ce, county_fips_code, area_land_meters, tract_ce
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_42
+Columns: functional_status, state_fips_code, mtfcc_feature_class_code, geo_id, county_fips_code, area_land_meters, internal_point_lon, internal_point_lat, lsad_name, tract_ce, blockgroup_geom, blockgroup_ce, area_water_meters, internal_point_geom
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_24
+Columns: internal_point_lat, geo_id, internal_point_geom, functional_status, tract_ce, blockgroup_geom, area_land_meters, blockgroup_ce, county_fips_code, lsad_name, internal_point_lon, state_fips_code, area_water_meters, mtfcc_feature_class_code
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_36
+Columns: internal_point_lat, area_land_meters, state_fips_code, county_fips_code, lsad_name, area_water_meters, internal_point_lon, mtfcc_feature_class_code, internal_point_geom, functional_status, geo_id, blockgroup_geom, blockgroup_ce, tract_ce
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_78
+Columns: area_water_meters, functional_status, internal_point_geom, blockgroup_geom, geo_id, county_fips_code, internal_point_lon, state_fips_code, blockgroup_ce, lsad_name, area_land_meters, internal_point_lat, tract_ce, mtfcc_feature_class_code
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_10
+Columns: county_fips_code, tract_ce, mtfcc_feature_class_code, internal_point_geom, internal_point_lon, area_water_meters, blockgroup_ce, state_fips_code, lsad_name, internal_point_lat, area_land_meters, blockgroup_geom, geo_id, functional_status
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_33
+Columns: lsad_name, internal_point_geom, internal_point_lat, tract_ce, area_land_meters, functional_status, geo_id, blockgroup_geom, county_fips_code, state_fips_code, blockgroup_ce, internal_point_lon, mtfcc_feature_class_code, area_water_meters
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_08
+Columns: tract_ce, functional_status, geo_id, lsad_name, area_land_meters, blockgroup_ce, internal_point_lat, blockgroup_geom, internal_point_lon, state_fips_code, county_fips_code, mtfcc_feature_class_code, internal_point_geom, area_water_meters
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_29
+Columns: internal_point_lat, geo_id, internal_point_geom, tract_ce, blockgroup_geom, blockgroup_ce, internal_point_lon, mtfcc_feature_class_code, area_water_meters, area_land_meters, county_fips_code, state_fips_code, functional_status, lsad_name
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_51
+Columns: blockgroup_geom, county_fips_code, area_water_meters, lsad_name, internal_point_lon, internal_point_lat, mtfcc_feature_class_code, area_land_meters, tract_ce, state_fips_code, internal_point_geom, blockgroup_ce, functional_status, geo_id
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_02
+Columns: area_land_meters, state_fips_code, internal_point_lat, functional_status, tract_ce, blockgroup_ce, lsad_name, blockgroup_geom, internal_point_lon, mtfcc_feature_class_code, county_fips_code, internal_point_geom, area_water_meters, geo_id
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_40
+Columns: geo_id, internal_point_geom, internal_point_lat, mtfcc_feature_class_code, functional_status, blockgroup_geom, area_water_meters, internal_point_lon, tract_ce, lsad_name, area_land_meters, state_fips_code, county_fips_code, blockgroup_ce
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_69
+Columns: tract_ce, area_land_meters, mtfcc_feature_class_code, area_water_meters, blockgroup_ce, blockgroup_geom, internal_point_lat, lsad_name, internal_point_lon, geo_id, county_fips_code, internal_point_geom, state_fips_code, functional_status
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_46
+Columns: functional_status, area_land_meters, state_fips_code, geo_id, blockgroup_geom, internal_point_lon, internal_point_lat, area_water_meters, internal_point_geom, lsad_name, county_fips_code, tract_ce, blockgroup_ce, mtfcc_feature_class_code
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_28
+Columns: blockgroup_ce, internal_point_lon, internal_point_geom, mtfcc_feature_class_code, geo_id, county_fips_code, area_land_meters, internal_point_lat, lsad_name, area_water_meters, state_fips_code, functional_status, blockgroup_geom, tract_ce
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_50
+Columns: county_fips_code, lsad_name, tract_ce, internal_point_lon, internal_point_lat, geo_id, internal_point_geom, area_land_meters, mtfcc_feature_class_code, state_fips_code, blockgroup_ce, area_water_meters, blockgroup_geom, functional_status
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_72
+Columns: geo_id, area_land_meters, area_water_meters, state_fips_code, lsad_name, blockgroup_geom, internal_point_lat, internal_point_lon, mtfcc_feature_class_code, tract_ce, blockgroup_ce, functional_status, county_fips_code, internal_point_geom
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_12
+Columns: internal_point_lat, area_land_meters, functional_status, state_fips_code, geo_id, county_fips_code, blockgroup_geom, mtfcc_feature_class_code, internal_point_lon, tract_ce, lsad_name, blockgroup_ce, area_water_meters, internal_point_geom
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_22
+Columns: state_fips_code, tract_ce, lsad_name, area_water_meters, blockgroup_ce, geo_id, area_land_meters, blockgroup_geom, functional_status, internal_point_lat, county_fips_code, internal_point_geom, internal_point_lon, mtfcc_feature_class_code
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_19
+Columns: lsad_name, county_fips_code, area_land_meters, internal_point_geom, mtfcc_feature_class_code, geo_id, functional_status, blockgroup_geom, tract_ce, area_water_meters, state_fips_code, internal_point_lon, blockgroup_ce, internal_point_lat
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_11
+Columns: blockgroup_geom, county_fips_code, blockgroup_ce, internal_point_lat, tract_ce, internal_point_lon, state_fips_code, internal_point_geom, geo_id, mtfcc_feature_class_code, area_land_meters, lsad_name, functional_status, area_water_meters
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_13
+Columns: geo_id, internal_point_lon, county_fips_code, area_water_meters, lsad_name, mtfcc_feature_class_code, internal_point_lat, state_fips_code, blockgroup_ce, tract_ce, functional_status, internal_point_geom, area_land_meters, blockgroup_geom
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_56
+Columns: lsad_name, area_land_meters, state_fips_code, blockgroup_geom, internal_point_geom, tract_ce, internal_point_lon, internal_point_lat, mtfcc_feature_class_code, county_fips_code, functional_status, blockgroup_ce, geo_id, area_water_meters
+
+Table: GEO_CENSUS_BLOCKGROUPS.US_BLOCKGROUPS_NATIONAL
+Columns: geo_id, internal_point_lon, state_fips_code, county_name, tract_ce, area_water_meters, internal_point_geom, county_fips_code, mtfcc_feature_class_code, blockgroup_ce, internal_point_lat, blockgroup_geom, state_name, area_land_meters, lsad_name, functional_status
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_48
+Columns: mtfcc_feature_class_code, area_water_meters, internal_point_lon, state_fips_code, geo_id, lsad_name, internal_point_lat, area_land_meters, internal_point_geom, county_fips_code, tract_ce, blockgroup_ce, blockgroup_geom, functional_status
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_49
+Columns: blockgroup_ce, blockgroup_geom, area_water_meters, geo_id, state_fips_code, functional_status, lsad_name, county_fips_code, internal_point_lat, area_land_meters, internal_point_lon, internal_point_geom, tract_ce, mtfcc_feature_class_code
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_32
+Columns: internal_point_lon, county_fips_code, tract_ce, area_water_meters, blockgroup_ce, internal_point_geom, internal_point_lat, state_fips_code, lsad_name, functional_status, blockgroup_geom, mtfcc_feature_class_code, area_land_meters, geo_id
+
+Table: GEO_CENSUS_BLOCKGROUPS.BLOCKGROUPS_05
+Columns: area_land_meters, lsad_name, blockgroup_ce, state_fips_code, mtfcc_feature_class_code, county_fips_code, internal_point_lon, internal_point_lat, functional_status, tract_ce, blockgroup_geom, area_water_meters, geo_id, internal_point_geom
+
+Table: GEO_US_BOUNDARIES.ADJACENT_STATES
+Columns: state, neighbors_fips_code, state_fips_code, state_name, neighbors_state
+
+Table: GEO_US_BOUNDARIES.METROPOLITAN_DIVISIONS
+Columns: area_land_meters, name, csa_code, internal_point_geom, mtfcc_feature_class_code, internal_point_latitude, geo_id, area_water_meters, metdiv_geom, lsad_code, internal_point_longitude, cbsa_code, metdiv_code, lsad_name
+
+Table: GEO_US_BOUNDARIES.CBSA
+Columns: area_water_meters, cbsa_fips_code, name, cbsa_geom, csa_geo_id, lsad_code, msa_indicator, area_land_meters, internal_point_geom, lsad_name, internal_point_longitude, internal_point_latitude, mtfcc_feature_class_code, geo_id
+
+Table: GEO_US_BOUNDARIES.CONGRESS_DISTRICT_116
+Columns: lsad_name, congress_session, lsad_code, int_point_lon, district_geom, state_fips_code, geo_id, mtfcc_feature_class_code, area_water_meters, int_point_lat, district_fips_code, int_point_geom, area_land_meters, functional_status
+
+Table: GEO_US_BOUNDARIES.CSA
+Columns: internal_point_lon, internal_point_geom, geo_id, internal_point_lat, area_water_meters, lsad_name, area_land_meters, msa_lsad_code, mtfcc_feature_class_code, name, csa_geom, csa_code
+
+Table: GEO_US_BOUNDARIES.NATIONAL_OUTLINE
+Columns: aff_geo_id, us_outline_geom, name, geo_id
+
+Table: GEO_US_BOUNDARIES.RAILWAYS
+Columns: railway_geom, geo_id, mtfcc_feature_class_code, full_name
+
+Table: GEO_US_BOUNDARIES.COUNTIES
+Columns: cbsa_fips_code, county_gnis_code, lsad_code, mtfcc_feature_class_code, fips_class_code, int_point_lon, county_geom, geo_id, lsad_name, int_point_geom, area_water_meters, county_fips_code, functional_status, area_land_meters, state_fips_code, csa_fips_code, met_div_fips_code, county_name, int_point_lat
+
+Table: GEO_US_BOUNDARIES.NWS_FORECAST_REGIONS
+Columns: fe_area, name, cwa, shape_geometry, shortname, lon, state_zone, state, zone, time_zone, lat
+
+Table: GEO_US_BOUNDARIES.ZIP_CODES
+Columns: area_land_meters, internal_point_lat, zip_code, zip_code_geom, fips_class_code, area_water_meters, state_code, state_fips_code, county, functional_status, state_name, internal_point_geom, mtfcc_feature_class_code, city, internal_point_lon
+
+Table: GEO_US_BOUNDARIES.COASTLINE
+Columns: coastline_geom, name
+
+Table: GEO_US_BOUNDARIES.CONGRESS_DISTRICT_115
+Columns: congress_session, district_geom, functional_status, mtfcc_feature_class_code, geo_id, lsad_code, area_water_meters, int_point_geom, state_fips_code, lsad_name, area_land_meters, district_fips_code, int_point_lat, int_point_lon
+
+Table: GEO_US_BOUNDARIES.STATES
+Columns: state_fips_code, division_code, area_water_meters, int_point_lon, functional_status, int_point_geom, geo_id, state_gnis_code, state, region_code, area_land_meters, state_name, int_point_lat, state_geom, mtfcc_feature_class_code, lsad_code
+
+Table: GEO_US_BOUNDARIES.ADJACENT_COUNTIES
+Columns: neighbors_fips_code, county_fips_code, neighbors, neighbors_state, state, county
+
+Table: GEO_US_BOUNDARIES.URBAN_AREAS
+Columns: internal_point_geom, internal_point_lat, internal_point_lon, urban_area_geom, geo_id, name, functional_status, urban_area_code, area_lsad_code, lsad_name, type, mtfcc_feature_class_code, area_land_meters, area_water_meters
+
+Table: GEO_US_BOUNDARIES.CNECTA
+Columns: lsad, geo_id, mtfcc_feature_class_code, cnecta_geom, int_point_lat, int_point_lon, area_water_meters, name_lsad, name, cnecta_fips_code, area_land_meters
+
+Table: FDIC_BANKS.INSTITUTIONS
+Columns: fdic_supervisory_region, trade_name_2, change_code_12, change_code_10, fdic_insured, ag_lending_flag, total_assets, csa_indicator, change_code_13, total_deposits, fed_reserve_unique_id, cbsa_micro_flag, denovo_institute, cbsa_fips_code, parent_fdic_cert, total_domestic_deposits, fed_reserve_district_id, docket, office_count_foreign, chartering_agency, roe_quarterly, quarterly_net_income, trade_name_5, city, fdic_geo_region, end_effective_date, state_name, rssd_id, report_date, office_count_domestic, trade_name_4, cfpb_supervisory_flag, office_count_us_territories, state_chartered, institution_name, holding_company_flag, primary_specialization, regulator, return_on_assets, fdic_certificate_number, change_code_1, change_code_5, run_date, county_fips_code, ownership_type, net_income, deposit_insurance_fund_member, category_code, trade_name_3, active, credit_card_institution, cbsa_division_name, trade_name_1, zip_code, offices_count, cbsa_division_fips_code, trust_powers_status, law_sasser, roa_pretax, high_holder_city, cbsa_division_flag, deposit_insurance_date, change_code_9, fdic_supervisory_region_code, last_updated, effective_date, fed_reserve_district, fdic_id, top_holder, csa_fips_code, federal_charter, cfpb_supervisory_start_date, trade_name_6, conservatorship, csa_name, insured_commercial_bank, change_code_4, occ_district, return_on_equity, saif_insured, change_code_14, secondary_insurance_fund, roa_quarterly, county_name, ffiec_call_report_filer, change_code_3, equity_capital, subchap_s_indicator, holding_company_state, occ_charter, iba, change_code_11, oakar_institute, change_code_2, address, fdic_field_office, reporting_period_end_date, inactive_flag, sasser_institute, change_code_8, cbsa_metro_flag, cbsa_name, established_date, change_code_15, new_cert_number, insurance_fund_membership, state_fips_code, ots_region, last_structural_change, asset_concentration_hierarchy, row_pretax_quarterly, parent_parcert, cfpb_supervisory_end_date, qbp_region, change_code_6, state, bank_charter_class, ultimate_cert_number, insured_savings_institute, change_code_7, bank_insurance_fund_member
+
+Table: FDIC_BANKS.LOCATIONS
+Columns: date_established, cbsa_metro_name, cbsa_division_name, cbsa_division_flag, cbsa_metro_flag, branch_county, cbsa_fips_code, fdic_certificate_number, cbsa_micro_flag, institution_class, zip_code, service_type, institution_name, county_fips_code, csa_fips_code, state, cbsa_division_fips_code, cbsa_name, csa_name, branch_fdic_uninum, main_office, branch_name, branch_address, csa_flag, cbsa_metro_fips_code, fdic_uninum, state_name, branch_city, branch_number, last_updated
+
+Table: CENSUS_UTILITY.MTFCC_FEATURE_CLASS_CODES
+Columns: superclass, description, point, feature_class_code, feature_class, areal, linear
+
+Table: CENSUS_UTILITY.FIPS_CODES_STATES
+Columns: state_name, state_gnisid, state_fips_code, state_postal_abbreviation
+
+Table: CENSUS_UTILITY.FUNCTIONAL_STATUS_CODES
+Columns: code_description, associated_geographic_entity, functional_status_code
+
+Table: CENSUS_UTILITY.FIPS_CODES_ALL
+Columns: county_subdivision_fips_code, place_fips_code, summary_level_name, state_fips_code, area_name, county_fips_code, consolidated_city_fips_code, summary_level
+
+Table: CENSUS_UTILITY.LSAD_CODES
+Columns: associated_geographic_entities, lsad_code, lsad_description
+
+Table: CENSUS_UTILITY.FIPS_CLASS_CODE
+Columns: fips_class_code, code_description

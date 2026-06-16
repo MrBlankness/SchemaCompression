@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq432",
+  "question": "Please provide the food events data where both \\\"date_created\\\" and \\\"date_started\\\" are between January 1 and January 31, 2015, apply the following data cleansing steps: split reactions and outcomes fields into arrays by commas, handle special numeric patterns in the products_brand_name field (where a digit is followed by comma and another digit) by preserving those numeric patterns while replacing other \", \" with \" -- \", replace \", \" with \" -- \" in products_industry_code, products_role, and products_industry_name fields, and calculate industry_code_length and brand_name_length as the array lengths after splitting. ",
+  "db_id": "FDA",
+  "source_document": "Food_Event_Cleansing_Logic.md",
+  "evidence": "Key operations: 1) Split reactions/outcomes into arrays by commas. 2) Handle products_brand_name: replace \", \" with \" -- \" except in numeric patterns (digit, comma, digit). 3) Replace \", \" with \" -- \" in products_industry_code, products_industry_role, products_industry_name. 4) Calculate industry_code_length/brand_name_length as array lengths after transformation. Date filter: date_created and date_started between 2015-01-01 and 2015-01-31."
+}

@@ -1,0 +1,35 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: WORLDPOP.POPULATION_GRID_1KM
+Columns: alpha_3_code, last_updated, longitude_centroid, latitude_centroid, geo_id, population, country_name, geog
+
+Table: GEO_OPENSTREETMAP.HISTORY_CHANGESETS
+Columns: osm_timestamp_min, ways, id, osm_timestamp_max, relations, nodes
+
+Table: GEO_OPENSTREETMAP.PLANET_RELATIONS
+Columns: visible, osm_timestamp, id, username, all_tags, geometry, members, changeset, version
+
+Table: GEO_OPENSTREETMAP.HISTORY_RELATIONS
+Columns: username, members, osm_timestamp, id, visible, version, geometry, all_tags, changeset
+
+Table: GEO_OPENSTREETMAP.PLANET_LAYERS
+Columns: layer_code, osm_id, osm_timestamp, osm_way_id, layer_class, all_tags, layer_name, geometry, gdal_type, osm_version
+
+Table: GEO_OPENSTREETMAP.HISTORY_NODES
+Columns: all_tags, changeset, longitude, username, latitude, id, osm_timestamp, geometry, visible, version
+
+Table: GEO_OPENSTREETMAP.PLANET_FEATURES
+Columns: geometry, osm_timestamp, all_tags, feature_type, osm_version, osm_id, osm_way_id
+
+Table: GEO_OPENSTREETMAP.PLANET_FEATURES_POINTS
+Columns: geometry, osm_timestamp, osm_way_id, osm_id, osm_version, all_tags
+
+Table: GEO_OPENSTREETMAP.HISTORY_LAYERS
+Columns: layer_name, osm_id, all_tags, osm_way_id, geometry, gdal_type, layer_code, osm_timestamp, osm_version, layer_class
+
+Table: GEO_OPENSTREETMAP.PLANET_NODES
+Columns: all_tags, osm_timestamp, changeset, visible, latitude, geometry, username, version, longitude, id
+
+Table: GEO_OPENSTREETMAP.PLANET_WAYS
+Columns: version, geometry, username, visible, all_tags, osm_timestamp, nodes, id, changeset

@@ -1,0 +1,144 @@
+[STANDALONE]
+## BANK_SALES_TRADING.BITCOIN_MEMBERS
+first_name: TEXT | NULL
+member_id: TEXT | NULL
+region: TEXT | NULL
+
+## BANK_SALES_TRADING.BITCOIN_PRICES
+low: FLOAT | NULL
+change: TEXT | NULL
+price: FLOAT | NULL
+open: FLOAT | NULL
+volume: TEXT | NULL
+high: FLOAT | NULL
+market_date: TEXT | NULL
+ticker: TEXT | NULL
+
+## BANK_SALES_TRADING.BITCOIN_TRANSACTIONS
+quantity: FLOAT | NULL
+member_id: TEXT | NULL
+txn_id: NUMBER | NULL
+ticker: TEXT | NULL
+txn_type: TEXT | NULL
+percentage_fee: FLOAT | NULL
+txn_time: TEXT | NULL
+txn_date: TEXT | NULL
+
+## BANK_SALES_TRADING.CLEANED_WEEKLY_SALES
+platform: TEXT | NULL
+month_number: NUMBER | NULL
+age_band: TEXT | NULL
+calendar_year: NUMBER | NULL
+customer_type: TEXT | NULL
+region: TEXT | NULL
+demographic: TEXT | NULL
+week_number: NUMBER | NULL
+transactions: NUMBER | NULL
+avg_transaction: FLOAT | NULL
+segment: TEXT | NULL
+week_date: TEXT | NULL
+sales: NUMBER | NULL
+week_date_formatted: TEXT | NULL
+
+## BANK_SALES_TRADING.CUSTOMER_NODES
+region_id: NUMBER | NULL
+start_date: TEXT | NULL
+end_date: TEXT | NULL
+customer_id: NUMBER | NULL
+node_id: NUMBER | NULL
+
+## BANK_SALES_TRADING.CUSTOMER_REGIONS
+region_id: NUMBER | NULL
+region_name: TEXT | NULL
+
+## BANK_SALES_TRADING.CUSTOMER_TRANSACTIONS
+customer_id: NUMBER | NULL
+txn_date: TEXT | NULL
+txn_amount: NUMBER | NULL
+txn_type: TEXT | NULL
+
+## BANK_SALES_TRADING.INTEREST_MAP
+interest_summary: TEXT | NULL
+id: NUMBER | NULL
+interest_name: TEXT | NULL
+last_modified: TEXT | NULL
+created_at: TEXT | NULL
+
+## BANK_SALES_TRADING.INTEREST_METRICS
+ranking: NUMBER | NULL
+percentile_ranking: FLOAT | NULL
+month_year: TEXT | NULL
+interest_id: FLOAT | NULL
+composition: FLOAT | NULL
+_month: FLOAT | NULL
+index_value: FLOAT | NULL
+_year: FLOAT | NULL
+
+## BANK_SALES_TRADING.SHOPPING_CART_CAMPAIGN_IDENTIFIER
+start_date: TEXT | NULL
+campaign_id: NUMBER | NULL
+campaign_name: TEXT | NULL
+end_date: TEXT | NULL
+products: TEXT | NULL
+
+## BANK_SALES_TRADING.SHOPPING_CART_EVENTS
+page_id: NUMBER | NULL
+event_type: NUMBER | NULL
+cookie_id: TEXT | NULL
+event_time: TEXT | NULL
+visit_id: TEXT | NULL
+sequence_number: NUMBER | NULL
+
+## BANK_SALES_TRADING.SHOPPING_CART_EVENT_IDENTIFIER
+event_name: TEXT | NULL
+event_type: NUMBER | NULL
+
+## BANK_SALES_TRADING.SHOPPING_CART_PAGE_HIERARCHY
+page_id: NUMBER | NULL
+product_id: FLOAT | NULL
+page_name: TEXT | NULL
+product_category: TEXT | NULL
+
+## BANK_SALES_TRADING.SHOPPING_CART_USERS
+user_id: NUMBER | NULL
+cookie_id: TEXT | NULL
+start_date: TEXT | NULL
+
+## BANK_SALES_TRADING.VEG_CAT
+category_code: NUMBER | NULL
+item_code: NUMBER | NULL
+category_name: TEXT | NULL
+item_name: TEXT | NULL
+index: NUMBER | NULL
+
+## BANK_SALES_TRADING.VEG_LOSS_RATE_DF
+item_name: TEXT | NULL
+item_code: NUMBER | NULL
+index: NUMBER | NULL
+loss_rate_%: FLOAT | NULL
+
+## BANK_SALES_TRADING.VEG_TXN_DF
+txn_date: TEXT | NULL
+qty_sold(kg): FLOAT | NULL
+sale/return: TEXT | NULL
+txn_time: TEXT | NULL
+unit_selling_px_rmb/kg: FLOAT | NULL
+index: NUMBER | NULL
+discount(%): NUMBER | NULL
+item_code: NUMBER | NULL
+day_of_week: TEXT | NULL
+
+## BANK_SALES_TRADING.VEG_WHSLE_DF
+index: NUMBER | NULL
+whsle_px_rmb-kg: FLOAT | NULL
+whsle_date: TEXT | NULL
+item_code: NUMBER | NULL
+
+## BANK_SALES_TRADING.WEEKLY_SALES
+region: TEXT | NULL
+week_date: TEXT | NULL
+segment: TEXT | NULL
+customer_type: TEXT | NULL
+sales: NUMBER | NULL
+platform: TEXT | NULL
+transactions: NUMBER | NULL

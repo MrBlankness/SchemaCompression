@@ -1,0 +1,501 @@
+[COMPONENTS]
+@C1
+app_info: VARIANT | NULL
+device: VARIANT | NULL
+event_date: TEXT | NULL
+event_name: TEXT | NULL
+event_params: VARIANT | NULL
+event_previous_timestamp: NUMBER | NULL
+event_timestamp: NUMBER | NULL
+geo: VARIANT | NULL
+platform: TEXT | NULL
+stream_id: TEXT | NULL
+traffic_source: VARIANT | NULL
+user_first_touch_timestamp: NUMBER | NULL
+user_id: TEXT | NULL
+user_ltv: VARIANT | NULL
+user_properties: VARIANT | NULL
+user_pseudo_id: TEXT | NULL
+
+@C2
+event_bundle_sequence_id: NUMBER | NULL
+event_server_timestamp_offset: NUMBER | NULL
+
+[TABLES]
+## ANALYTICS_153293282.EVENTS_20180720
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180823
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180627
+@use: [C1]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180707
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180831
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+event_dimensions: VARIANT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180922
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180921
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+event_dimensions: VARIANT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180705
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180807
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180813
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180623
+@use: [C1]
+
+## ANALYTICS_153293282.EVENTS_20180615
+@use: [C1]
+
+## ANALYTICS_153293282.EVENTS_20180721
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180726
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180917
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180714
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180919
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180711
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20181001
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+event_dimensions: VARIANT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180908
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+event_dimensions: VARIANT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180911
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180727
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180703
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180920
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180620
+@use: [C1]
+
+## ANALYTICS_153293282.EVENTS_20180625
+@use: [C1]
+
+## ANALYTICS_153293282.EVENTS_20180801
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180913
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+event_dimensions: VARIANT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180909
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180715
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180618
+@use: [C1]
+
+## ANALYTICS_153293282.EVENTS_20180728
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180802
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180819
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180724
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180904
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+event_dimensions: VARIANT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180616
+@use: [C1]
+
+## ANALYTICS_153293282.EVENTS_20180901
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+event_dimensions: VARIANT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180812
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180804
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20181003
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180905
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+event_dimensions: VARIANT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180912
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20181002
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180713
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180827
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180621
+@use: [C1]
+
+## ANALYTICS_153293282.EVENTS_20180906
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180821
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180808
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180805
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180915
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180924
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+event_dimensions: VARIANT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180613
+@use: [C1]
+
+## ANALYTICS_153293282.EVENTS_20180902
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+event_dimensions: VARIANT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180914
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180709
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180617
+@use: [C1]
+
+## ANALYTICS_153293282.EVENTS_20180930
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180630
+@use: [C1]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180731
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180717
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180710
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180704
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180730
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180925
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+event_dimensions: VARIANT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180622
+@use: [C1]
+
+## ANALYTICS_153293282.EVENTS_20180910
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+event_dimensions: VARIANT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180719
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180619
+@use: [C1]
+
+## ANALYTICS_153293282.EVENTS_20180818
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180825
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180926
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+event_dimensions: VARIANT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180923
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180722
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180830
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180816
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180706
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180712
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180614
+@use: [C1]
+
+## ANALYTICS_153293282.EVENTS_20180626
+@use: [C1]
+
+## ANALYTICS_153293282.EVENTS_20180811
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180927
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+event_dimensions: VARIANT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180708
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180725
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180916
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180820
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180829
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+event_dimensions: VARIANT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180803
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180806
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180824
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180624
+@use: [C1]
+
+## ANALYTICS_153293282.EVENTS_20180628
+@use: [C1]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180928
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180612
+@use: [C1]
+
+## ANALYTICS_153293282.EVENTS_20180629
+@use: [C1]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180701
+@use: [C1]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180907
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+event_dimensions: VARIANT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180918
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180903
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+event_dimensions: VARIANT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180810
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180822
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180817
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180718
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180723
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180702
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180929
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180814
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180729
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180828
+@use: [C1, C2]
+event_dimensions: VARIANT | NULL
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180826
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180815
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180809
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL
+
+## ANALYTICS_153293282.EVENTS_20180716
+@use: [C1, C2]
+event_value_in_usd: FLOAT | NULL

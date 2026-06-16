@@ -1,0 +1,109 @@
+[STANDALONE]
+## SCHOOL_SCHEDULING.BUILDINGS
+NumberOfFloors: NUMBER | NULL
+SiteParkingAvailable: NUMBER | NULL
+BuildingName: TEXT | NULL
+BuildingCode: TEXT | NULL
+ElevatorAccess: NUMBER | NULL
+
+## SCHOOL_SCHEDULING.CATEGORIES
+DepartmentID: NUMBER | NULL
+CategoryID: TEXT | NULL
+CategoryDescription: TEXT | NULL
+
+## SCHOOL_SCHEDULING.CLASSES
+SubjectID: NUMBER | NULL
+TuesdaySchedule: NUMBER | NULL
+Credits: NUMBER | NULL
+ClassRoomID: NUMBER | NULL
+StartDate: TEXT | NULL
+MondaySchedule: NUMBER | NULL
+WednesdaySchedule: NUMBER | NULL
+SaturdaySchedule: NUMBER | NULL
+Duration: NUMBER | NULL
+ClassID: NUMBER | NULL
+FridaySchedule: NUMBER | NULL
+ThursdaySchedule: NUMBER | NULL
+StartTime: TEXT | NULL
+
+## SCHOOL_SCHEDULING.CLASS_ROOMS
+ClassRoomID: NUMBER | NULL
+BuildingCode: TEXT | NULL
+PhoneAvailable: NUMBER | NULL
+
+## SCHOOL_SCHEDULING.DEPARTMENTS
+DeptChair: NUMBER | NULL
+DeptName: TEXT | NULL
+DepartmentID: NUMBER | NULL
+
+## SCHOOL_SCHEDULING.FACULTY
+Title: TEXT | NULL
+StaffID: NUMBER | NULL
+Status: TEXT | NULL
+Tenured: NUMBER | NULL
+
+## SCHOOL_SCHEDULING.FACULTY_CATEGORIES
+CategoryID: TEXT | NULL
+StaffID: NUMBER | NULL
+
+## SCHOOL_SCHEDULING.FACULTY_CLASSES
+StaffID: NUMBER | NULL
+ClassID: NUMBER | NULL
+
+## SCHOOL_SCHEDULING.FACULTY_SUBJECTS
+SubjectID: NUMBER | NULL
+ProficiencyRating: FLOAT | NULL
+StaffID: NUMBER | NULL
+
+## SCHOOL_SCHEDULING.MAJORS
+Major: TEXT | NULL
+MajorID: NUMBER | NULL
+
+## SCHOOL_SCHEDULING.SQLITE_SEQUENCE
+name: TEXT | NULL
+seq: NUMBER | NULL
+
+## SCHOOL_SCHEDULING.STAFF
+StfAreaCode: TEXT | NULL
+StfPhoneNumber: TEXT | NULL
+StfZipCode: TEXT | NULL
+StfStreetAddress: TEXT | NULL
+StfFirstName: TEXT | NULL
+DateHired: TEXT | NULL
+Salary: FLOAT | NULL
+StaffID: NUMBER | NULL
+StfLastname: TEXT | NULL
+StfState: TEXT | NULL
+Position: TEXT | NULL
+StfCity: TEXT | NULL
+
+## SCHOOL_SCHEDULING.STUDENTS
+StudLastName: TEXT | NULL
+StudAreaCode: TEXT | NULL
+StudMajor: FLOAT | NULL
+StudentID: NUMBER | NULL
+StudFirstName: TEXT | NULL
+StudState: TEXT | NULL
+StudStreetAddress: TEXT | NULL
+StudZipCode: TEXT | NULL
+StudGPA: FLOAT | NULL
+StudCity: TEXT | NULL
+StudPhoneNumber: TEXT | NULL
+
+## SCHOOL_SCHEDULING.STUDENT_CLASS_STATUS
+ClassStatus: NUMBER | NULL
+ClassStatusDescription: TEXT | NULL
+
+## SCHOOL_SCHEDULING.STUDENT_SCHEDULES
+ClassStatus: NUMBER | NULL
+ClassID: NUMBER | NULL
+StudentID: NUMBER | NULL
+Grade: FLOAT | NULL
+
+## SCHOOL_SCHEDULING.SUBJECTS
+SubjectDescription: TEXT | NULL
+SubjectID: NUMBER | NULL
+SubjectCode: TEXT | NULL
+SubjectPreReq: TEXT | NULL
+CategoryID: TEXT | NULL
+SubjectName: TEXT | NULL

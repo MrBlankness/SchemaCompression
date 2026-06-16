@@ -1,0 +1,1183 @@
+[COMPONENTS]
+@C1
+atmospheric_conditions_1: NUMBER | NULL | eg=[1, 10]
+atmospheric_conditions_1_name: TEXT | NULL | eg=["Clear", "Cloudy"]
+atmospheric_conditions_2: NUMBER | NULL | eg=[0]
+atmospheric_conditions_2_name: TEXT | NULL | eg=["No Additional Atmospheric Conditions"]
+city: NUMBER | NULL | eg=[0]
+day_of_week: NUMBER | NULL | eg=[5, 3]
+functional_system: NUMBER | NULL | eg=[1]
+hour_of_arrival_at_scene: NUMBER | NULL | eg=[10, 21]
+hour_of_ems_arrival_at_hospital: NUMBER | NULL | eg=[88, 99]
+hour_of_notification: NUMBER | NULL | eg=[99, 21]
+land_use: NUMBER | NULL | eg=[1, 2]
+latitude: FLOAT | NULL | eg=[31.15400556, 33.59160556]
+light_condition: NUMBER | NULL | eg=[1, 2]
+light_condition_name: TEXT | NULL | eg=["Daylight", "Dark - Not Lighted"]
+longitude: FLOAT | NULL | eg=[-87.38691944, -86.13405833]
+milepoint: NUMBER | NULL | eg=[637, 1675]
+minute_of_arrival_at_scene: NUMBER | NULL | eg=[10, 31]
+minute_of_ems_arrival_at_hospital: NUMBER | NULL | eg=[88, 99]
+minute_of_notification: NUMBER | NULL | eg=[99, 25]
+national_highway_system: NUMBER | NULL | eg=[1]
+number_of_drunk_drivers: NUMBER | NULL | eg=[1, 0]
+number_of_fatalities: NUMBER | NULL | eg=[1, 2]
+number_of_forms_submitted_for_persons_in_motor_vehicles: NUMBER | NULL | eg=[2, 30]
+number_of_forms_submitted_for_persons_not_in_motor_vehicles: NUMBER | NULL | eg=[0]
+number_of_parked_working_vehicles: NUMBER | NULL | eg=[0]
+number_of_persons_in_motor_vehicles_in_transport_mvit: NUMBER | NULL | eg=[2, 30]
+number_of_persons_not_in_motor_vehicles_in_transport_mvit: NUMBER | NULL | eg=[0]
+number_of_vehicle_forms_submitted_all: NUMBER | NULL | eg=[1, 2]
+ownership: NUMBER | NULL | eg=[1]
+ownership_name: TEXT | NULL | eg=["State Highway Agency"]
+rail_grade_crossing_identifier: TEXT | NULL | eg=["0000000"]
+relation_to_junction_specific_location: NUMBER | NULL | eg=[1, 5]
+relation_to_junction_specific_location_name: TEXT | NULL | eg=["Non-Junction", "Entrance/Exit Ramp Related"]
+relation_to_trafficway: NUMBER | NULL | eg=[4, 3]
+relation_to_trafficway_name: TEXT | NULL | eg=["On Roadside", "On Median"]
+route_signing: NUMBER | NULL | eg=[1]
+route_signing_name: TEXT | NULL | eg=["Interstate"]
+special_jurisdiction: NUMBER | NULL | eg=[0, 3]
+special_jurisdiction_name: TEXT | NULL | eg=["No Special Jurisdiction", "Indian Reservation"]
+trafficway_identifier: TEXT | NULL | eg=["I-65", "I-20"]
+trafficway_identifier_2: TEXT | NULL
+year_of_crash: NUMBER | NULL | eg=[2018]
+
+@C2
+cargo_body_type: NUMBER | NULL | eg=[22, 0]
+fatalities_in_vehicle: NUMBER | NULL | eg=[3, 0]
+hazardous_material_class_number: NUMBER | NULL | eg=[0]
+hazardous_material_identification_number: NUMBER | NULL | eg=[0]
+mcid_identification_number: TEXT | NULL | eg=["90018", "000000000"]
+mcid_issuing_authority: NUMBER | NULL | eg=[6, 0]
+most_harmful_event: NUMBER | NULL | eg=[12, 8]
+number_of_occupants: NUMBER | NULL | eg=[6, 1]
+registered_vehicle_owner: NUMBER | NULL | eg=[3, 9]
+registered_vehicle_owner_name: TEXT | NULL | eg=["Vehicle Registered as Business/Company/Government Vehicle", "Unknown"]
+registration_state: NUMBER | NULL | eg=[6, 99]
+registration_state_name: TEXT | NULL | eg=["California", "Unknown"]
+underride_override: NUMBER | NULL | eg=[0]
+vehicle_configuration: NUMBER | NULL | eg=[20, 0]
+vehicle_identification_number_vin: TEXT | NULL | eg=["2B5WB35Z61K5", "999999999999"]
+vehicle_model: NUMBER | NULL | eg=[461, 999]
+vehicle_model_year: NUMBER | NULL | eg=[2001, 9999]
+vin_character_1: TEXT | NULL | eg=["2", "9"]
+vin_character_10: TEXT | NULL | eg=["1", "9"]
+vin_character_11: TEXT | NULL | eg=["K", "9"]
+vin_character_12: TEXT | NULL | eg=["5", "9"]
+vin_character_2: TEXT | NULL | eg=["B", "9"]
+vin_character_3: TEXT | NULL | eg=["5", "9"]
+vin_character_4: TEXT | NULL | eg=["W", "9"]
+vin_character_5: TEXT | NULL | eg=["B", "9"]
+vin_character_6: TEXT | NULL | eg=["3", "9"]
+vin_character_7: TEXT | NULL | eg=["5", "9"]
+vin_character_8: TEXT | NULL | eg=["Z", "9"]
+vin_character_9: TEXT | NULL | eg=["6", "9"]
+
+@C3
+bus_use: NUMBER | NULL | eg=[0]
+bus_use_name: TEXT | NULL | eg=["Not a Bus"]
+day_of_crash_name: TEXT | NULL | eg=["16", "24"]
+emergency_motor_vehicle_use: NUMBER | NULL | eg=[0]
+emergency_motor_vehicle_use_name: TEXT | NULL | eg=["Not Applicable"]
+extent_of_damage: NUMBER | NULL | eg=[2, 6]
+extent_of_damage_name: TEXT | NULL | eg=["Minor Damage", "Disabling Damage"]
+fire_occurrence: NUMBER | NULL | eg=[0]
+fire_occurrence_name: TEXT | NULL | eg=["No or Not Reported"]
+hazardous_material_class_number_name: TEXT | NULL | eg=["Not Applicable"]
+hazardous_material_identification_number_name: TEXT | NULL | eg=["Not Applicable"]
+hazardous_material_involvement: NUMBER | NULL | eg=[1]
+hazardous_material_involvement_name: TEXT | NULL | eg=["No"]
+hazardous_material_placard_name: TEXT | NULL | eg=["Not Applicable"]
+hit_and_run: NUMBER | NULL | eg=[0]
+hit_and_run_name: TEXT | NULL | eg=["No"]
+make_model_combined: TEXT | NULL | eg=["Chevrolet Camaro", "Ford Mustang/Mustang II"]
+mcid_identification_number_name: TEXT | NULL | eg=["Not Applicable"]
+most_harmful_event_name: TEXT | NULL | eg=["Motor Vehicle In-Transport"]
+motor_carrier_identification_number_name: TEXT | NULL | eg=["Not Applicable"]
+number_of_occupants_name: TEXT | NULL | eg=["None", "01"]
+ptrlr1vin: TEXT | NULL | eg=["777777777777", "888888888888"]
+ptrlr1vinname: TEXT | NULL | eg=["No Trailing Units", "Not Reported"]
+ptrlr2vin: TEXT | NULL | eg=["777777777777"]
+ptrlr2vinname: TEXT | NULL | eg=["No Trailing Units"]
+ptrlr3vin: TEXT | NULL | eg=["777777777777"]
+ptrlr3vinname: TEXT | NULL | eg=["No Trailing Units"]
+release_of_hazardous_material_from_the_cargo_compartment: NUMBER | NULL | eg=[0]
+release_of_hazardous_material_from_the_cargo_compartment_name: TEXT | NULL | eg=["Not Applicable"]
+unit_type: NUMBER | NULL | eg=[3, 2]
+unit_type_name: TEXT | NULL | eg=["Motor Vehicle Not In-Transport Outside the Trafficway", "Motor Vehicle Not In-Transport Within the Trafficway"]
+vehicle_identification_number_vin_name: TEXT | NULL | eg=["124378N33011", "1FAFP45X24F1"]
+vehicle_model_year_name: TEXT | NULL | eg=["1968", "2004"]
+vehicle_removal: NUMBER | NULL | eg=[5, 2]
+vehicle_removal_name: TEXT | NULL | eg=["Not Towed", "Towed Due to Disabling Damage"]
+vehicle_trailing: NUMBER | NULL | eg=[0, 1]
+vehicle_trailing_name: TEXT | NULL | eg=["No Trailing Units", "One Trailing Unit"]
+
+@C4
+consecutive_number: NUMBER | NULL | eg=[10059, 10141]
+state_number: NUMBER | NULL | eg=[1, 2]
+
+@C5
+day_of_crash: NUMBER | NULL | eg=[31, 23]
+first_harmful_event: NUMBER | NULL | eg=[1]
+first_harmful_event_name: TEXT | NULL | eg=["Rollover/Overturn"]
+hour_of_crash: NUMBER | NULL | eg=[9, 21]
+manner_of_collision: NUMBER | NULL | eg=[0]
+minute_of_crash: NUMBER | NULL | eg=[43, 23]
+month_of_crash: NUMBER | NULL | eg=[5, 10]
+number_of_motor_vehicles_in_transport_mvit: NUMBER | NULL | eg=[1, 2]
+
+@C6
+bicyclist_initial_direction_of_travel: TEXT | NULL | eg=["1"]
+bicyclist_position: TEXT | NULL | eg=["1"]
+crash_group_bicycle: NUMBER | NULL | eg=[220, 230]
+crash_group_bicycle_name: TEXT | NULL | eg=["Bicyclist Left Turn / Merge", "Motorist Overtaking Bicyclist"]
+crash_group_pedestrian: NUMBER | NULL | eg=[0]
+crash_group_pedestrian_name: TEXT | NULL | eg=["Not a Pedestrian"]
+crash_location_bicycle: TEXT | NULL | eg=["3"]
+crash_location_pedestrian: TEXT | NULL | eg=["7"]
+crash_type_bicycle: NUMBER | NULL | eg=[221, 231]
+crash_type_bicycle_name: TEXT | NULL | eg=["Bicyclist Left Turn - Same Direction", "Motorist Overtaking - Undetected Bicyclist"]
+crash_type_pedestrian: NUMBER | NULL | eg=[0]
+crash_type_pedestrian_name: TEXT | NULL | eg=["Not a Pedestrian"]
+intersection_leg: TEXT | NULL | eg=["7"]
+marked_crosswalk_present: TEXT | NULL | eg=["0"]
+motorist_initial_direction_of_travel: TEXT | NULL | eg=["7"]
+motorist_maneuver: TEXT | NULL | eg=["7"]
+pedestrian_initial_direction_of_travel: TEXT | NULL | eg=["7"]
+pedestrian_position: TEXT | NULL | eg=["77"]
+pedestrian_scenario: TEXT | NULL | eg=["7"]
+pedestrian_scenario_name: TEXT | NULL | eg=["Not a Pedestrian"]
+school_zone: TEXT | NULL | eg=["0"]
+sidewalk_present: TEXT | NULL | eg=["1", "0"]
+
+@C7
+axle_type_front_axle: TEXT | NULL | eg=[""]
+axle_type_front_axle_code: TEXT | NULL | eg=[""]
+axle_type_rear_axle: TEXT | NULL | eg=[""]
+axle_type_rear_axle_code: TEXT | NULL | eg=[""]
+base_price: TEXT | NULL | eg=["0", "7899"]
+battery_type: TEXT | NULL | eg=[""]
+battery_type_code: TEXT | NULL | eg=[""]
+battery_voltage: TEXT | NULL | eg=[""]
+bed_length: TEXT | NULL | eg=[""]
+bed_length_code: TEXT | NULL | eg=[""]
+block_type: TEXT | NULL | eg=[""]
+body_style: TEXT | NULL | eg=["TRADITIONAL", "ATV"]
+body_style_code: TEXT | NULL | eg=["TR", "AT"]
+brake_type: TEXT | NULL | eg=[""]
+brake_type_code: TEXT | NULL | eg=[""]
+brakes_abs_code: TEXT | NULL | eg=[""]
+brakes_abs_description: TEXT | NULL | eg=[""]
+cab_configuration: TEXT | NULL | eg=[""]
+cab_configuration_code: TEXT | NULL | eg=[""]
+carburetion_types: TEXT | NULL | eg=[""]
+carburetion_types_code: TEXT | NULL | eg=[""]
+country_sold: TEXT | NULL | eg=[""]
+country_sold_code: TEXT | NULL | eg=[""]
+cycle_count: NUMBER | NULL | eg=[4]
+cylinder_count_code: TEXT | NULL | eg=["2", "1"]
+daytime_running_lights_1: TEXT | NULL | eg=[""]
+daytime_running_lights_2: TEXT | NULL | eg=[""]
+displacement_cc: NUMBER | NULL | eg=[803, 499]
+displacement_cid: NUMBER | NULL | eg=[0]
+displacement_liters: FLOAT | NULL
+distance_between_axles_for_base_model: FLOAT | NULL
+distance_between_axles_for_particular_series: TEXT | NULL | eg=[""]
+drive_type_1: TEXT | NULL | eg=[""]
+drive_type_2: TEXT | NULL | eg=[""]
+duty_type: TEXT | NULL | eg=[""]
+duty_type_code: TEXT | NULL | eg=[""]
+engine_code: TEXT | NULL | eg=["5AM", ""]
+engine_manufacture: TEXT | NULL | eg=[""]
+engine_manufacture_code: TEXT | NULL | eg=[""]
+engine_model: TEXT | NULL | eg=[""]
+front_tire: NUMBER | NULL
+front_tire_pressure: NUMBER | NULL | eg=[0]
+front_tire_size: TEXT | NULL | eg=[""]
+front_tire_size_code: TEXT | NULL | eg=[""]
+fuel: TEXT | NULL | eg=[""]
+fuel_code: TEXT | NULL | eg=[""]
+gross_vehicle_weights_range: TEXT | NULL | eg=[""]
+gross_vehicle_weights_range_code: NUMBER | NULL
+head_configuration_1: TEXT | NULL | eg=[""]
+head_configuration_2: TEXT | NULL | eg=[""]
+is_incomplete: TEXT | NULL | eg=["N"]
+make_name: TEXT | NULL | eg=["DUCATI", "POLARIS"]
+marketing_year: NUMBER | NULL | eg=[2016, 2007]
+model_code: TEXT | NULL | eg=["SCRAMBLER", "X2"]
+motorcycles_body_style: TEXT | NULL | eg=["On - Highway", "Off - Highway"]
+motorcycles_body_style_code: TEXT | NULL | eg=["ON", "OFF"]
+num_of_barrels: TEXT | NULL | eg=[""]
+num_of_doors: NUMBER | NULL | eg=[0]
+num_of_wheels_by_power_train: NUMBER | NULL | eg=[0]
+number_of_wheels: NUMBER | NULL | eg=[0]
+origin: TEXT | NULL | eg=["Import", "Domestic"]
+origin_code: TEXT | NULL | eg=["I", "D"]
+plant_city: TEXT | NULL | eg=["RAYONG", "ROSEAU"]
+plant_code: TEXT | NULL | eg=["T", "A"]
+plant_country: TEXT | NULL | eg=["Thailand", "United States"]
+plant_country_code: TEXT | NULL | eg=["THA", "USA"]
+plant_state: TEXT | NULL | eg=["", "MINNESOTA"]
+plant_state_code: TEXT | NULL | eg=["", "MN"]
+rear_tire: NUMBER | NULL
+rear_tire_pressure: NUMBER | NULL | eg=[0]
+rear_tire_size: TEXT | NULL | eg=[""]
+rear_tire_size_code: TEXT | NULL | eg=[""]
+restraint_type: TEXT | NULL | eg=[""]
+restraint_type_code: TEXT | NULL | eg=[""]
+security_type: TEXT | NULL | eg=[""]
+security_type_code: TEXT | NULL | eg=[""]
+standard_segmentation: TEXT | NULL | eg=[""]
+standard_segmentation_code: TEXT | NULL | eg=[""]
+supercharge_flag: TEXT | NULL | eg=[""]
+supercharge_flag_description: TEXT | NULL | eg=[""]
+tonnage_rating: TEXT | NULL | eg=[""]
+total_battery_power: TEXT | NULL | eg=[""]
+turbocharger_flag: TEXT | NULL | eg=[""]
+turbocharger_flag_description: TEXT | NULL | eg=[""]
+type_of_fuel: TEXT | NULL | eg=[""]
+type_of_fuel_code: TEXT | NULL | eg=[""]
+valves_per_cylinder: NUMBER | NULL | eg=[0]
+valves_total: NUMBER | NULL | eg=[0]
+variable_valve_timing_flag: TEXT | NULL | eg=[""]
+vehicle_make: TEXT | NULL | eg=["DUCA", "POLS"]
+vehicle_manufacturer_code: TEXT | NULL | eg=["C129", "C180"]
+vehicle_manufacturer_name: TEXT | NULL | eg=["Ducati", "Polaris"]
+vehicle_trim: TEXT | NULL | eg=["800", "500 EFI"]
+vehicle_trim_1: TEXT | NULL | eg=[""]
+vehicle_trim_2: TEXT | NULL | eg=[""]
+vehicle_trim_3: TEXT | NULL | eg=[""]
+vehicle_trim_4: TEXT | NULL | eg=[""]
+vehicle_type: TEXT | NULL | eg=["Motorcycle"]
+vehicle_type_code: TEXT | NULL | eg=["M"]
+
+@C8
+city_name: TEXT | NULL | eg=["NOT APPLICABLE"]
+county_name: TEXT | NULL | eg=["ESCAMBIA (53)", "TALLADEGA (121)"]
+day_name: TEXT | NULL | eg=["31", "23"]
+day_of_week_name: TEXT | NULL | eg=["Thursday", "Tuesday"]
+hour_of_arrival_at_scene_name: TEXT | NULL | eg=["10:00am-10:59am", "9:00pm-9:59pm"]
+hour_of_ems_arrival_at_hospital_name: TEXT | NULL | eg=["Not Applicable (Not Transported)", "Unknown"]
+hour_of_notification_name: TEXT | NULL | eg=["Unknown", "9:00pm-9:59pm"]
+latitude_name: TEXT | NULL | eg=["31.15400556", "33.59160556"]
+longitude_name: TEXT | NULL | eg=["-87.38691944", "-86.13405833"]
+milepoint_name: TEXT | NULL | eg=["637", "1675"]
+minute_of_arrival_at_scene_name: TEXT | NULL | eg=["10", "31"]
+minute_of_ems_arrival_at_hospital_name: TEXT | NULL | eg=["Not Applicable (Not Transported)", "Unknown EMS Hospital Arrival Time"]
+minute_of_notification_name: TEXT | NULL | eg=["Unknown", "25"]
+national_highway_system_name: TEXT | NULL | eg=["This section IS ON the NHS"]
+rail_grade_crossing_identifier_name: TEXT | NULL | eg=["Not Applicable"]
+relation_to_junction_within_interchange_area: NUMBER | NULL | eg=[0, 1]
+relation_to_junction_within_interchange_area_name: TEXT | NULL | eg=["No", "Yes"]
+type_of_intersection: NUMBER | NULL | eg=[1]
+type_of_intersection_name: TEXT | NULL | eg=["Not an Intersection"]
+work_zone: NUMBER | NULL | eg=[0, 1]
+work_zone_name: TEXT | NULL | eg=["None", "Construction"]
+
+@C9
+area_of_impact_other_vehicle_name: TEXT | NULL | eg=["Not a Motor Vehicle"]
+area_of_impact_this_vehicle: NUMBER | NULL | eg=[0]
+area_of_impact_this_vehicle_name: TEXT | NULL | eg=["Non-Collision"]
+event_number: NUMBER | NULL | eg=[14, 10]
+vehicle_number_other_vehicle: NUMBER | NULL | eg=[9999]
+vehicle_number_this_vehicle: NUMBER | NULL | eg=[7, 1]
+
+@C10
+air_bag_deployed: NUMBER | NULL | eg=[20]
+air_bag_deployed_name: TEXT | NULL | eg=["Not Deployed"]
+alcohol_test_status1: TEXT | NULL | eg=["Test Given"]
+alcohol_test_status2: TEXT | NULL | eg=["Blood Test"]
+alcohol_test_status3: TEXT | NULL | eg=["194", "227"]
+alcohol_test_status3_name: TEXT | NULL | eg=["Actual Value of BAC Test"]
+day_of_death: NUMBER | NULL | eg=[21, 28]
+death_time: NUMBER | NULL | eg=[1850, 1500]
+died_at_scene_en_route: TEXT | NULL | eg=["Died at Scene"]
+drug_test_status: TEXT | NULL | eg=["Test Given"]
+drug_test_type1: TEXT | NULL | eg=["Both Blood and Urine Tests", "Urine Test"]
+drug_test_type2: TEXT | NULL | eg=["Both Blood and Urine Tests", "Urine Test"]
+drug_test_type3: TEXT | NULL | eg=["Test Not Given", "Both Blood and Urine Tests"]
+drug_test_type4: NUMBER | NULL | eg=[402, 401]
+drug_test_type4_name: TEXT | NULL | eg=["Stimulant*", "Cannabinoid*"]
+drug_test_type5: NUMBER | NULL | eg=[605, 996]
+drug_test_type5_name: TEXT | NULL | eg=["Cannabinoid*", "Other Drugs"]
+drug_test_type6: NUMBER | NULL | eg=[0, 600]
+drug_test_type6_name: TEXT | NULL | eg=["Not Tested for Drugs", "Cannabinoid*"]
+ejection: NUMBER | NULL | eg=[0]
+ejection_name: TEXT | NULL | eg=["Not Ejected"]
+ejection_path: NUMBER | NULL | eg=[0]
+ejection_path_name: TEXT | NULL | eg=["Ejection Path Not Applicable"]
+extrication: TEXT | NULL | eg=["Extricated", "Not Extricated/Not Applicable"]
+fatal_injury_at_work: TEXT | NULL | eg=["No (The Injury Was Not At Work)", "Yes (The Injury Was At Work)"]
+functional_system: TEXT | NULL | eg=["5", "7"]
+hispanic_origin: NUMBER | NULL | eg=[7, 6]
+hispanic_origin_name: TEXT | NULL | eg=["Non-Hispanic", "Hispanic, Origin Not Specified or Other Origin"]
+hour_of_death: NUMBER | NULL | eg=[18, 15]
+indication_of_misuse_of_restraint_system_helmet: TEXT | NULL | eg=["No"]
+injury_severity: NUMBER | NULL | eg=[4]
+injury_severity_name: TEXT | NULL | eg=["Fatal Injury (K)"]
+lag_hours: NUMBER | NULL | eg=[0]
+lag_minutes: NUMBER | NULL | eg=[5, 0]
+land_use: TEXT | NULL | eg=["1"]
+method_of_alcohol_determination_by_police: TEXT | NULL | eg=["Not Reported", "Evidential Test (Breath, Blood, Urine)"]
+method_of_drug_determination_by_police: TEXT | NULL | eg=["Not Reported", "Other"]
+minute_of_death: NUMBER | NULL | eg=[50, 0]
+month_of_death: NUMBER | NULL | eg=[12, 9]
+non_motorist_location_at_time_of_crash: NUMBER | NULL | eg=[0]
+non_motorist_location_at_time_of_crash_name: TEXT | NULL | eg=["Occupant of a Motor Vehicle (Includes Railway Train Occupants\nSince 2006)"]
+number_of_motor_vehicle_striking_non_motorist: NUMBER | NULL | eg=[0]
+police_reported_alcohol_involvement: TEXT | NULL | eg=["No (Alcohol Not Involved)", "Yes (Alcohol Involved)"]
+police_reported_drug_involvement: TEXT | NULL | eg=["No (Drugs Not Involved)", "Not Reported"]
+race: NUMBER | NULL | eg=[97, 1]
+race_name: TEXT | NULL | eg=["Multiple Races (Individual Races Not Specified; ex., “Mixed”, Since 2000)", "White"]
+related_factors_person_level1: NUMBER | NULL | eg=[0]
+related_factors_person_level2: NUMBER | NULL | eg=[0]
+related_factors_person_level3: NUMBER | NULL | eg=[0]
+restraint_system_helmet_use: NUMBER | NULL | eg=[7, 3]
+restraint_system_helmet_use_name: TEXT | NULL | eg=["None Used", "Lap and Shoulder Belt Used"]
+seating_position: NUMBER | NULL | eg=[11]
+seating_position_name: TEXT | NULL | eg=["Front Seat – Left Side (Driver's Side)"]
+transported_to_first_treatment_facility: NUMBER | NULL | eg=[0]
+transported_to_first_treatment_facility_name: TEXT | NULL | eg=["Not Transported"]
+year_of_death: NUMBER | NULL | eg=[2016]
+
+@C11
+body_type: NUMBER | NULL | eg=[21, 99]
+body_type_name: TEXT | NULL | eg=["Large Van – Includes Van-Based Buses", "Unknown Body Type"]
+initial_contact_point: NUMBER | NULL | eg=[61, 99]
+special_use: NUMBER | NULL | eg=[3, 99]
+special_use_name: TEXT | NULL | eg=["Vehicle Used as Other Bus", "Unknown"]
+vehicle_make: NUMBER | NULL | eg=[7, 99]
+vehicle_make_name: TEXT | NULL | eg=["Dodge", "Unknown Make"]
+
+@C12
+attempted_avoidance_maneuver: NUMBER | NULL | eg=[99, 0]
+attempted_avoidance_maneuver_name: TEXT | NULL | eg=["Unknown", "No Driver Present/Unknown if Driver Present"]
+commercial_motor_vehicle_license_status: NUMBER | NULL | eg=[6, 97]
+compliance_with_cdl_endorsements: TEXT | NULL | eg=["Endorsement(s) Required, Complied With", "No Driver Present/Unknown if Driver Present"]
+compliance_with_license_restrictions: NUMBER | NULL | eg=[1, 7]
+crash_type: NUMBER | NULL | eg=[89, 15]
+crash_type_name: TEXT | NULL | eg=["INTERSECTING PATHS (VEHICLE DAMAGE), CONFIGURATION L: STRAIGHT PATHS, Struck on the Left", "SINGLE DRIVER, CONFIGURATION C: FORWARD IMPACT, Specifics Other"]
+critical_event_precrash: NUMBER | NULL | eg=[17, 99]
+critical_event_precrash_name: TEXT | NULL | eg=["Crossing Over (Passing Through) Intersection", "Unknown"]
+driver_drinking: TEXT | NULL | eg=["No Drinking"]
+driver_height: NUMBER | NULL | eg=[72, 998]
+driver_presence: TEXT | NULL | eg=["Yes", "Unknown"]
+driver_weight: NUMBER | NULL | eg=[190, 997]
+drivers_license_state: NUMBER | NULL | eg=[6, 0]
+drivers_zip_code: NUMBER | NULL | eg=[93657, 99997]
+gross_vehicle_weight_rating: TEXT | NULL | eg=["10,000 lbs or Less", "Not Applicable"]
+jackknife: TEXT | NULL | eg=["Not an Articulated Vehicle"]
+license_compliance_with_class_of_vehicle: TEXT | NULL | eg=["Valid License for This Class Vehicle", "No Driver Present/Unknown if Driver Present"]
+location_of_rollover: TEXT | NULL | eg=["No Rollover"]
+month_of_first_crash_suspension_or_conviction: NUMBER | NULL | eg=[4, 98]
+month_of_last_crash_suspension_or_conviction: NUMBER | NULL | eg=[4, 98]
+motor_carrier_identification_number_mcid: TEXT | NULL | eg=["0690018", "00000000000"]
+non_cdl_license_status: NUMBER | NULL | eg=[6, 7]
+non_cdl_license_type: TEXT | NULL | eg=["Full Driver License", "No Driver Present/Unknown if Driver Present"]
+pre_event_movement_prior_to_recognition_of_critical_event: NUMBER | NULL | eg=[1, 0]
+pre_impact_location: NUMBER | NULL | eg=[1, 0]
+pre_impact_stability: TEXT | NULL | eg=["Tracking", "No Driver Present/Unknown if Driver Present"]
+previous_dwi_convictions: NUMBER | NULL | eg=[0, 998]
+previous_other_moving_violation_convictions: NUMBER | NULL | eg=[0, 998]
+previous_recorded_crashes: NUMBER | NULL | eg=[0, 998]
+previous_recorded_suspensions_and_revocations: NUMBER | NULL | eg=[0, 998]
+previous_speeding_convictions: NUMBER | NULL | eg=[1, 998]
+related_factors_driver_level_1: NUMBER | NULL | eg=[38, 0]
+related_factors_driver_level_2: NUMBER | NULL | eg=[0, 58]
+related_factors_driver_level_3: NUMBER | NULL | eg=[0]
+related_factors_driver_level_4: NUMBER | NULL | eg=[0]
+related_factors_vehicle_level_1: NUMBER | NULL | eg=[0, 99]
+related_factors_vehicle_level_2: NUMBER | NULL | eg=[0, 99]
+roadway_alignment: TEXT | NULL | eg=["Straight"]
+roadway_grade: TEXT | NULL | eg=["Not Reported", "Level"]
+roadway_surface_condition: NUMBER | NULL | eg=[1, 2]
+roadway_surface_condition_name: TEXT | NULL | eg=["Dry", "Wet"]
+roadway_surface_type: TEXT | NULL | eg=["Blacktop, Bituminous, or Asphalt", "Concrete"]
+speed_limit: NUMBER | NULL | eg=[55, 25]
+speeding_related: TEXT | NULL | eg=["No", "No Driver Present/Unknown if Driver Present"]
+total_lanes_in_roadway: NUMBER | NULL | eg=[2, 5]
+traffic_control_device: NUMBER | NULL | eg=[20, 2]
+traffic_control_device_functioning: TEXT | NULL | eg=["Device Functioning Properly", "No Controls"]
+trafficway_description: TEXT | NULL | eg=["Two-Way, Not Divided", "Two-Way, Divided, Positive Median Barrier"]
+travel_speed: NUMBER | NULL | eg=[998, 999]
+year_of_first_crash_suspension_or_conviction: NUMBER | NULL | eg=[2014, 9998]
+year_of_last_crash_suspension_or_conviction: NUMBER | NULL | eg=[2014, 9998]
+
+@C13
+age_name: TEXT | NULL | eg=["61 Years", "49 Years"]
+bicyclist_initial_direction_of_travel_name: TEXT | NULL | eg=["With Traffic"]
+bicyclist_position_name: TEXT | NULL | eg=["Travel Lane"]
+crash_location_bicycle_name: TEXT | NULL | eg=["Not At Intersection"]
+crash_location_pedestrian_name: TEXT | NULL | eg=["Not a Pedestrian"]
+intersection_leg_name: TEXT | NULL | eg=["Not a Pedestrian"]
+marked_crosswalk_present_name: TEXT | NULL | eg=["None Noted"]
+motorist_initial_direction_of_travel_name: TEXT | NULL | eg=["Not a Pedestrian"]
+motorist_maneuver_name: TEXT | NULL | eg=["Not a Pedestrian"]
+pedestrian_initial_direction_of_travel_name: TEXT | NULL | eg=["Not a Pedestrian"]
+pedestrian_position_name: TEXT | NULL | eg=["Not a Pedestrian"]
+school_zone_name: TEXT | NULL | eg=["None Noted"]
+sex_name: TEXT | NULL | eg=["Male", "Female"]
+sidewalk_present_name: TEXT | NULL | eg=["Yes", "None Noted"]
+
+@C14
+nm_helmet: TEXT | NULL | eg=["1"]
+nm_helmet_name: TEXT | NULL | eg=["No"]
+nm_light: TEXT | NULL | eg=["1"]
+nm_light_name: TEXT | NULL | eg=["No"]
+nm_othpre: TEXT | NULL | eg=["1"]
+nm_othpre_name: TEXT | NULL | eg=["No"]
+nm_othpro: TEXT | NULL | eg=["2", "1"]
+nm_othpro_name: TEXT | NULL | eg=["Yes", "No"]
+nm_propad: TEXT | NULL | eg=["1"]
+nm_propad_name: TEXT | NULL | eg=["No"]
+nm_refclo: TEXT | NULL | eg=["1"]
+nm_refclo_name: TEXT | NULL | eg=["No"]
+
+@C15
+atmospheric_conditions: NUMBER | NULL | eg=[1, 10]
+atmospheric_conditions_name: TEXT | NULL | eg=["Clear", "Cloudy"]
+related_factors_crash_level_1: NUMBER | NULL | eg=[0]
+related_factors_crash_level_1_name: TEXT | NULL | eg=["None"]
+related_factors_crash_level_2: NUMBER | NULL | eg=[0]
+related_factors_crash_level_2_name: TEXT | NULL | eg=["None"]
+related_factors_crash_level_3: NUMBER | NULL | eg=[0]
+related_factors_crash_level_3_name: TEXT | NULL | eg=["None"]
+
+@C16
+age: NUMBER | NULL | eg=[61, 49]
+person_type: NUMBER | NULL | eg=[6]
+person_type_name: TEXT | NULL | eg=["Bicyclist"]
+sex: TEXT | NULL | eg=["1", "2"]
+
+@C17
+sequence_of_events: NUMBER | NULL | eg=[1]
+sequence_of_events_name: TEXT | NULL | eg=["Rollover/Overturn"]
+
+@C18
+hour_of_crash_name: TEXT | NULL | eg=["9:00am-9:59am", "9:00pm-9:59pm"]
+minute_of_crash_name: TEXT | NULL | eg=["43", "23"]
+month_of_crash_name: TEXT | NULL | eg=["May", "October"]
+
+@C19
+county: NUMBER | NULL | eg=[53, 121]
+functional_system_name: TEXT | NULL | eg=["Interstate"]
+land_use_name: TEXT | NULL | eg=["Rural", "Urban"]
+
+@C20
+cargo_body_type_name: TEXT | NULL | eg=["Bus", "Not Applicable"]
+hazardous_material_placard: NUMBER | NULL | eg=[0]
+vehicle_configuration_name: TEXT | NULL | eg=["Bus/Large Van (Seats for 9-15 Occupants, Including Driver)", "Not Applicable"]
+
+@C21
+emergency_motor_vehicle_use: TEXT | NULL | eg=["Not Applicable", "Unknown"]
+fire_occurrence: TEXT | NULL | eg=["No or Not Reported"]
+make_model_combined: NUMBER | NULL | eg=[7461, 99999]
+vehicle_trailing: TEXT | NULL | eg=["No Trailing Unit", "Unknown"]
+
+@C22
+bus_use: TEXT | NULL | eg=["Unknown"]
+extent_of_damage: TEXT | NULL | eg=["Disabling Damage", "Unknown"]
+hazardous_material_involvement: TEXT | NULL | eg=["No"]
+hit_and_run: TEXT | NULL | eg=["No", "Yes"]
+release_of_hazardous_material_from_the_cargo_compartment: TEXT | NULL | eg=["Not Applicable"]
+unit_type: TEXT | NULL | eg=["Motor Vehicle in Transport (Inside or Outside the Trafficway)"]
+vehicle_removal: TEXT | NULL | eg=["Towed Due to Disabling Damage", "Not Towed"]
+
+@C23
+mcid_issuing_authority_name: TEXT | NULL | eg=["Not Applicable"]
+motor_carrier_identification_number: TEXT | NULL | eg=["00000000000"]
+underride_override_name: TEXT | NULL | eg=["No Underride or Override Noted"]
+
+@C24
+gross_vehicle_weight_rating: NUMBER | NULL | eg=[0]
+related_factors_vehicle_level1: NUMBER | NULL | eg=[0]
+related_factors_vehicle_level2: NUMBER | NULL | eg=[0]
+
+@C25
+gross_vehicle_weight_rating_name: TEXT | NULL | eg=["Not Applicable"]
+related_factors_vehicle_level1_name: TEXT | NULL | eg=["None"]
+related_factors_vehicle_level2_name: TEXT | NULL | eg=["None"]
+
+@C26
+contributing_circumstances_motor_vehicle: NUMBER | NULL | eg=[0]
+contributing_circumstances_motor_vehicle_name: TEXT | NULL | eg=["None"]
+
+@C27
+non_motorist_action_circumstances: NUMBER | NULL | eg=[1]
+non_motorist_action_circumstances_name: TEXT | NULL | eg=["Going To or From School (K-12)"]
+
+@C28
+violations_charged: TEXT | NULL | eg=["0"]
+violations_charged_name: TEXT | NULL | eg=["None"]
+
+@C29
+condition_impairment_at_time_of_crash_driver: NUMBER | NULL | eg=[0]
+condition_impairment_at_time_of_crash_driver_name: TEXT | NULL | eg=["None/Apparently Normal"]
+
+@C30
+driver_maneuvered_to_avoid: NUMBER | NULL | eg=[0]
+driver_maneuvered_to_avoid_name: TEXT | NULL | eg=["Driver Did Not Maneuver To Avoid"]
+
+@C31
+area_of_Impact_associated_with_the_event: NUMBER | NULL | eg=[0]
+area_of_Impact_associated_with_the_event_name: TEXT | NULL | eg=["Non-Collision"]
+
+@C32
+non_motorist_contributing_circumstances: NUMBER | NULL | eg=[5]
+non_motorist_contributing_circumstances_name: TEXT | NULL | eg=["Entering/Exiting Parked or Stopped Vehicle"]
+
+@C33
+drivers_vision_obscured_by: NUMBER | NULL | eg=[0]
+drivers_vision_obscured_by_name: TEXT | NULL | eg=["No Obstruction Noted"]
+
+@C34
+condition_impairment_at_time_of_crash_non_motorist: NUMBER | NULL | eg=[0]
+condition_impairment_at_time_of_crash_non_motorist_name: TEXT | NULL | eg=["None/Apparently Normal"]
+
+@C35
+driver_distracted_by: NUMBER | NULL | eg=[96]
+driver_distracted_by_name: TEXT | NULL | eg=["Not Reported"]
+
+@C36
+damaged_areas: NUMBER | NULL | eg=[15]
+damaged_areas_name: TEXT | NULL | eg=["No Damage"]
+
+@C37
+school_bus_related: NUMBER | NULL | eg=[0, 1]
+school_bus_related_name: TEXT | NULL | eg=["No", "Yes"]
+
+@C38
+relation_to_junction_within_interchange_area: TEXT | NULL | eg=["No", "Yes"]
+type_of_intersection: TEXT | NULL | eg=["Not an Intersection"]
+work_zone: TEXT | NULL | eg=["None"]
+
+[TABLES]
+## NHTSA_TRAFFIC_FATALITIES.FACTOR_2018
+@use: [C26, C4]
+state_name: TEXT | NULL | eg=["Alabama", "Alaska"]
+vehicle_number: NUMBER | NULL | eg=[5, 6]
+
+## NHTSA_TRAFFIC_FATALITIES.PBTYPE_2018
+@use: [C13, C16, C4, C6]
+person_number: NUMBER | NULL | eg=[1]
+vehicle_number: NUMBER | NULL | eg=[0]
+state_name: TEXT | NULL | eg=["Alabama"]
+
+## NHTSA_TRAFFIC_FATALITIES.NMPRIOR_2018
+@use: [C27, C4]
+state_name: TEXT | NULL | eg=["Arizona", "Georgia"]
+person_number: NUMBER | NULL | eg=[1, 2]
+vehicle_number: NUMBER | NULL | eg=[0]
+
+## NHTSA_TRAFFIC_FATALITIES.VIOLATN_2019
+@use: [C28, C4]
+state_name: TEXT | NULL | eg=["Alabama", "Arizona"]
+vehicle_number: NUMBER | NULL | eg=[5, 6]
+
+## NHTSA_TRAFFIC_FATALITIES.VEVENT_2019
+@use: [C17, C4, C9]
+state_name: TEXT | NULL | eg=["Arkansas", "California"]
+vehicle_number: NUMBER | NULL | eg=[7, 1]
+vehicle_number_other_vehicle_name: TEXT | NULL | eg=["Not a Motor Vehicle"]
+area_of_impact_other_vehicle: NUMBER | NULL | eg=[77]
+vehicle_event_number: TEXT | NULL | eg=["3", "10"]
+
+## NHTSA_TRAFFIC_FATALITIES.DRIMPAIR_2020
+@use: [C29, C4]
+state_name: TEXT | NULL | eg=["Alabama", "Arizona"]
+vehicle_number: NUMBER | NULL | eg=[5, 6]
+
+## NHTSA_TRAFFIC_FATALITIES.FACTOR_2015
+@use: [C26, C4]
+state_name: TEXT | NULL | eg=["Alabama"]
+vehicle_number: NUMBER | NULL | eg=[5, 7]
+
+## NHTSA_TRAFFIC_FATALITIES.CEVENT_2018
+@use: [C17, C4, C9]
+area_of_impact_other_vehicle: TEXT | NULL | eg=["77", "13"]
+state_name: TEXT | NULL | eg=["Texas", "Alabama"]
+vehicle_number_other_vehicle_name: TEXT | NULL | eg=["Not a Motor Vehicle", "2"]
+
+## NHTSA_TRAFFIC_FATALITIES.ACCIDENT_2018
+@use: [C1, C15, C18, C19, C37, C4, C5, C8]
+state_name: TEXT | NULL | eg=["Alabama", "Arizona"]
+timestamp_of_crash: NUMBER | NULL | eg=[1527759780000000, 1540329780000000]
+manner_of_collision_name: TEXT | NULL | eg=["Not a Collision with Motor Vehicle In-Transport"]
+
+## NHTSA_TRAFFIC_FATALITIES.ACCIDENT_2017
+@use: [C1, C15, C18, C19, C37, C4, C5, C8]
+timestamp_of_crash: NUMBER | NULL | eg=[1512283800000000, 1490793300000000]
+state_name: TEXT | NULL | eg=["Alabama", "California"]
+manner_of_collision_name: TEXT | NULL | eg=["Not a Collision with Motor Vehicle In-Transport"]
+
+## NHTSA_TRAFFIC_FATALITIES.DRIMPAIR_2015
+@use: [C29, C4]
+vehicle_number: NUMBER | NULL | eg=[5, 16]
+
+## NHTSA_TRAFFIC_FATALITIES.MANEUVER_2016
+@use: [C30, C4]
+vehicle_number: NUMBER | NULL | eg=[5, 7]
+
+## NHTSA_TRAFFIC_FATALITIES.VIOLATN_2015
+@use: [C28, C4]
+vehicle_number: NUMBER | NULL | eg=[5, 6]
+
+## NHTSA_TRAFFIC_FATALITIES.DRIMPAIR_2016
+@use: [C29, C4]
+vehicle_number: NUMBER | NULL | eg=[5, 7]
+
+## NHTSA_TRAFFIC_FATALITIES.VSOE_2015
+@use: [C17, C31, C4]
+vehicle_event_number: NUMBER | NULL | eg=[10, 9]
+vehicle_number: NUMBER | NULL | eg=[1]
+
+## NHTSA_TRAFFIC_FATALITIES.ACCIDENT_2015
+@use: [C1, C15, C19, C38, C4, C5]
+school_bus_related: TEXT | NULL | eg=["No"]
+timestamp_of_crash: NUMBER | NULL | eg=[1432744800000000, 1447784220000000]
+manner_of_collision_name: TEXT | NULL | eg=["Front-to-Rear", "Sideswipe – Same Direction"]
+state_name: TEXT | NULL | eg=["Texas", "Oregon"]
+
+## NHTSA_TRAFFIC_FATALITIES.VEVENT_2016
+@use: [C17, C4, C9]
+vehicle_event_number: NUMBER | NULL | eg=[6, 1]
+vehicle_number: NUMBER | NULL | eg=[6, 2]
+area_of_impact_other_vehicle: NUMBER | NULL | eg=[13]
+
+## NHTSA_TRAFFIC_FATALITIES.NMCRASH_2015
+@use: [C32, C4]
+person_number: NUMBER | NULL | eg=[1]
+vehicle_number: NUMBER | NULL | eg=[0]
+
+## NHTSA_TRAFFIC_FATALITIES.VEHICLE_2016
+@use: [C11, C12, C2, C20, C21, C22, C4, C5]
+timestamp_of_crash: NUMBER | NULL | eg=[1454400720000000, 1455917580000000]
+rollover: TEXT | NULL | eg=["No Rollover"]
+vehicle_number: NUMBER | NULL | eg=[1, 2]
+
+## NHTSA_TRAFFIC_FATALITIES.FACTOR_2019
+@use: [C26, C4]
+state_name: TEXT | NULL | eg=["Arizona"]
+vehicle_number: NUMBER | NULL | eg=[6, 7]
+
+## NHTSA_TRAFFIC_FATALITIES.VISION_2019
+@use: [C33, C4]
+state_name: TEXT | NULL | eg=["Alabama", "Arizona"]
+vehicle_number: NUMBER | NULL | eg=[5, 7]
+
+## NHTSA_TRAFFIC_FATALITIES.NMIMPAIR_2017
+@use: [C34, C4]
+state_name: TEXT | NULL | eg=["Arizona", "California"]
+vehicle_number: NUMBER | NULL | eg=[0]
+person_number: NUMBER | NULL | eg=[4, 5]
+
+## NHTSA_TRAFFIC_FATALITIES.PBTYPE_2016
+@use: [C16, C4, C6]
+person_number: NUMBER | NULL | eg=[1]
+vehicle_number: NUMBER | NULL | eg=[0]
+
+## NHTSA_TRAFFIC_FATALITIES.ACCIDENT_2020
+@use: [C1, C18, C19, C4, C5, C8]
+timestamp_of_crash: NUMBER | NULL | eg=[1583353680000000, 1595026560000000]
+state_name: TEXT | NULL | eg=["Arizona", "Florida"]
+manner_of_collision_name: TEXT | NULL | eg=["The First Harmful Event was Not a Collision with a Motor Vehicle in Transport"]
+
+## NHTSA_TRAFFIC_FATALITIES.VINDECODE_2016
+@use: [C4, C7]
+vehicle_number: NUMBER | NULL | eg=[1, 2]
+shipping_weight: NUMBER | NULL | eg=[0, 798]
+
+## NHTSA_TRAFFIC_FATALITIES.VSOE_2016
+@use: [C17, C31, C4]
+vehicle_event_number: NUMBER | NULL | eg=[1, 2]
+vehicle_number: NUMBER | NULL | eg=[1, 5]
+
+## NHTSA_TRAFFIC_FATALITIES.NMCRASH_2020
+@use: [C32, C4]
+person_number: NUMBER | NULL | eg=[1, 2]
+vehicle_number: NUMBER | NULL | eg=[0]
+state_name: TEXT | NULL | eg=["Alabama"]
+
+## NHTSA_TRAFFIC_FATALITIES.PERSON_2016
+@use: [C10, C11, C16, C19, C21, C4, C5]
+initial_contact_point_name: TEXT | NULL | eg=["Clock points", "Non-Collision"]
+person_number: NUMBER | NULL | eg=[1]
+timestamp_of_crash: NUMBER | NULL | eg=[1482345900000000, 1475074800000000]
+rollover: TEXT | NULL | eg=["Rollover, Tripped by Object/Vehicle", "Rollover, Untripped"]
+vehicle_number: NUMBER | NULL | eg=[1]
+manner_of_collision_name: TEXT | NULL | eg=["Not Collision with Motor Vehicle in Transport (Not Necessarily in Transport for\n2005-2009)"]
+school_bus_related: TEXT | NULL | eg=["No"]
+
+## NHTSA_TRAFFIC_FATALITIES.NMPRIOR_2015
+@use: [C27, C4]
+vehicle_number: NUMBER | NULL | eg=[0]
+person_number: NUMBER | NULL | eg=[1, 2]
+state_name: TEXT | NULL | eg=["Georgia", "Kansas"]
+
+## NHTSA_TRAFFIC_FATALITIES.SAFETYEQ_2018
+@use: [C14, C4]
+person_number: NUMBER | NULL | eg=[1]
+state_name: TEXT | NULL | eg=["South Carolina", "Alabama"]
+vehicle_number: NUMBER | NULL | eg=[0]
+
+## NHTSA_TRAFFIC_FATALITIES.NMIMPAIR_2015
+@use: [C34, C4]
+vehicle_number: NUMBER | NULL | eg=[0]
+person_number: NUMBER | NULL | eg=[5, 6]
+
+## NHTSA_TRAFFIC_FATALITIES.VEVENT_2018
+@use: [C17, C4, C9]
+area_of_impact_other_vehicle: NUMBER | NULL | eg=[77]
+vehicle_number: NUMBER | NULL | eg=[1, 7]
+state_name: TEXT | NULL | eg=["Alabama", "Arkansas"]
+vehicle_number_other_vehicle_name: TEXT | NULL | eg=["Not a Motor Vehicle"]
+vehicle_event_number: TEXT | NULL | eg=["10", "7"]
+
+## NHTSA_TRAFFIC_FATALITIES.PBTYPE_2017
+@use: [C13, C16, C4, C6]
+person_number: NUMBER | NULL | eg=[1]
+vehicle_number: NUMBER | NULL | eg=[0]
+state_name: TEXT | NULL | eg=["Alabama", "Arizona"]
+
+## NHTSA_TRAFFIC_FATALITIES.VEHICLE_2015
+@use: [C11, C12, C2, C20, C21, C22, C4, C5]
+timestamp_of_crash: NUMBER | NULL | eg=[1441302360000000, 1426115880000000]
+rollover: TEXT | NULL | eg=["No Rollover", "Rollover, Untripped"]
+vehicle_number: NUMBER | NULL | eg=[1]
+
+## NHTSA_TRAFFIC_FATALITIES.PARKWORK_2020
+@use: [C11, C18, C2, C20, C23, C3, C4, C5]
+pvpicbodyclassname: TEXT | NULL | eg=["Convertible/Cabriolet", "Coupe"]
+pgvwr_to: TEXT | NULL | eg=["11"]
+pgvwr_from: TEXT | NULL | eg=["11"]
+pvpicbodyclass: TEXT | NULL | eg=["1", "3"]
+pvpicmake: TEXT | NULL | eg=["467", "460"]
+pgvwr_toname: TEXT | NULL | eg=["Class 1: 6,000 lbs. or less (2,722 kg or less)"]
+pvpicmodel: TEXT | NULL | eg=["1829", "1781"]
+ptrlr2gvwrname: TEXT | NULL | eg=["No Trailing Units"]
+pgvwr_fromname: TEXT | NULL | eg=["Class 1: 6,000 lbs. or less (2,722 kg or less)"]
+ptrlr1gvwr: TEXT | NULL | eg=["77", "98"]
+vehicle_number: NUMBER | NULL | eg=[3, 1]
+pvpicmodelname: TEXT | NULL | eg=["Camaro", "Mustang"]
+picfinalbodyname: TEXT | NULL | eg=["Not Applicable"]
+ptrlr2gvwr: TEXT | NULL | eg=["77"]
+ptrlr1gvwrname: TEXT | NULL | eg=["No Trailing Units", "Not Reported"]
+picfinalbody: TEXT | NULL | eg=["0"]
+pvpicmakename: TEXT | NULL | eg=["Chevrolet", "Ford"]
+ptrlr3gvwrname: TEXT | NULL | eg=["No Trailing Units"]
+manner_of_collision_name: TEXT | NULL | eg=["The First Harmful Event was Not a Collision with a Motor Vehicle in Transport"]
+ptrlr3gvwr: TEXT | NULL | eg=["77"]
+initial_contact_point_name: TEXT | NULL | eg=["12 Clock Point", "6 Clock Point"]
+state_name: TEXT | NULL | eg=["Utah", "Tennessee"]
+
+## NHTSA_TRAFFIC_FATALITIES.DISTRACT_2019
+@use: [C35, C4]
+vehicle_number: NUMBER | NULL | eg=[5, 6]
+state_name: TEXT | NULL | eg=["Alabama", "California"]
+
+## NHTSA_TRAFFIC_FATALITIES.ACCIDENT_2019
+@use: [C1, C15, C18, C19, C37, C4, C5, C8]
+manner_of_collision_name: TEXT | NULL | eg=["The First Harmful Event was Not a Collision with a Motor Vehicle in Transport"]
+state_name: TEXT | NULL | eg=["Alabama", "Arizona"]
+timestamp_of_crash: NUMBER | NULL | eg=[1559436900000000, 1565188500000000]
+
+## NHTSA_TRAFFIC_FATALITIES.CEVENT_2017
+@use: [C17, C4, C9]
+area_of_impact_other_vehicle: TEXT | NULL | eg=["77"]
+state_name: TEXT | NULL | eg=["Alabama"]
+vehicle_number_other_vehicle_name: TEXT | NULL | eg=["Not a Motor Vehicle"]
+
+## NHTSA_TRAFFIC_FATALITIES.VSOE_2017
+@use: [C17, C31, C4]
+vehicle_number: NUMBER | NULL | eg=[1]
+state_name: TEXT | NULL | eg=["Alabama"]
+vehicle_event_number: NUMBER | NULL | eg=[2, 7]
+
+## NHTSA_TRAFFIC_FATALITIES.DISTRACT_2018
+@use: [C35, C4]
+vehicle_number: NUMBER | NULL | eg=[5, 6]
+state_name: TEXT | NULL | eg=["Alabama", "California"]
+
+## NHTSA_TRAFFIC_FATALITIES.PERSON_2015
+@use: [C10, C11, C16, C19, C21, C4, C5]
+school_bus_related: TEXT | This data element identifies if a school bus, or motor vehicle functioning as a school bus, is related to the crash. 0 No 1 Yes -- Not Reported | eg=["No"]
+timestamp_of_crash: NUMBER | This data element records the date and time on which the crash occurred. | eg=[1449969060000000, 1432635480000000]
+person_number: NUMBER | This data element is the consecutive number assigned to each person in the case (i.e., each occupant, pedestrian, or non-motorists involved in the crash). This data element appears on each person level data file and is used in conjunction with the ST_CASE data element (and sometimes the VEH_NO data element) to merge information from person level data files. 001-999 Assigned Person Number | eg=[1]
+vehicle_number: NUMBER | This data element is the consecutive number assigned to each vehicle in the case. This data element appears on each vehicle level data file and is used in conjunction with the ST_CASE data element to merge information from vehicle level data files. 000-999 Assigned Number of Motor Vehicle | eg=[1]
+initial_contact_point_name: TEXT | This data element identifies the area on this vehicle that produced the first instance of injury to non-motorists or occupants of this vehicle, or that resulted in the first instance of damage to other property or to this vehicle. | eg=["Clock points", "Non-Collision"]
+manner_of_collision_name: TEXT | This data element describes the orientation of two motor vehicles in-transport when they are involved in the “First Harmful Event” of a collision crash. If the “First Harmful Event” is not a collision between two motor vehicles in-transport it is classified as such. | eg=["Not Collision with Motor Vehicle in Transport (Not Necessarily in Transport for\n2005-2009)", "Angle"]
+rollover: TEXT | This data element identifies this vehicle’s involvement in a rollover or overturn during the crash. Rollover is defined as any vehicle rotation of 90 degrees or more about any true longitudinal or lateral axis. Rollover can occur at any time during the crash. 0 No Rollover -- First Event 1 Rollover, Tripped by Object/Vehicle -- Subsequent Event 2 Rollover, Untripped 9 Rollover, Unknown Type | eg=["Rollover, Tripped by Object/Vehicle", "No Rollover"]
+
+## NHTSA_TRAFFIC_FATALITIES.DAMAGE_2018
+@use: [C36, C4]
+vehicle_number: NUMBER | NULL | eg=[6, 5]
+state_name: TEXT | NULL | eg=["Alabama", "Arkansas"]
+
+## NHTSA_TRAFFIC_FATALITIES.VISION_2018
+@use: [C33, C4]
+state_name: TEXT | NULL | eg=["Alabama", "Alaska"]
+vehicle_number: NUMBER | NULL | eg=[5, 6]
+
+## NHTSA_TRAFFIC_FATALITIES.CEVENT_2016
+@use: [C17, C4, C9]
+area_of_impact_other_vehicle: NUMBER | NULL | eg=[8, 13]
+
+## NHTSA_TRAFFIC_FATALITIES.PARKWORK_2015
+@use: [C11, C2, C21, C22, C23, C24, C4, C5]
+vehicle_number: NUMBER | NULL | eg=[5, 3]
+hazardous_material_placard: TEXT | NULL | eg=["Not Applicable"]
+manner_of_collision_name: TEXT | NULL | eg=["Angle"]
+
+## NHTSA_TRAFFIC_FATALITIES.DAMAGE_2016
+@use: [C36, C4]
+state_name: TEXT | NULL | eg=["Alabama", "Arizona"]
+vehicle_number: NUMBER | This data element is the consecutive number assigned to each vehicle in the case. This data element appears on each vehicle level data file and is used in conjunction with the ST_CASE data element to merge information from vehicle level data files. 000-999 Assigned Number of Motor Vehicle | eg=[5, 8]
+
+## NHTSA_TRAFFIC_FATALITIES.MANEUVER_2020
+@use: [C30, C4]
+vehicle_number: NUMBER | NULL | eg=[5, 6]
+state_name: TEXT | NULL | eg=["California", "Alabama"]
+
+## NHTSA_TRAFFIC_FATALITIES.VIOLATN_2020
+@use: [C28, C4]
+vehicle_number: NUMBER | NULL | eg=[5, 6]
+state_name: TEXT | NULL | eg=["Alabama"]
+
+## NHTSA_TRAFFIC_FATALITIES.DISTRACT_2017
+@use: [C35, C4]
+state_name: TEXT | NULL | eg=["California", "Georgia"]
+vehicle_number: NUMBER | NULL | eg=[5, 6]
+
+## NHTSA_TRAFFIC_FATALITIES.NMPRIOR_2019
+@use: [C27, C4]
+state_name: TEXT | NULL | eg=["Colorado", "Florida"]
+vehicle_number: NUMBER | NULL | eg=[0]
+person_number: NUMBER | NULL | eg=[1]
+
+## NHTSA_TRAFFIC_FATALITIES.VIOLATN_2017
+@use: [C28, C4]
+state_name: TEXT | NULL | eg=["Alabama", "Arizona"]
+vehicle_number: NUMBER | NULL | eg=[5, 6]
+
+## NHTSA_TRAFFIC_FATALITIES.VISION_2017
+@use: [C33, C4]
+vehicle_number: NUMBER | NULL | eg=[5, 9]
+state_name: TEXT | NULL | eg=["Arizona"]
+
+## NHTSA_TRAFFIC_FATALITIES.VEVENT_2020
+@use: [C17, C4, C9]
+area_of_impact_other_vehicle: NUMBER | NULL | eg=[77]
+vehicle_event_number: TEXT | NULL | eg=["2", "12"]
+vehicle_number_other_vehicle_name: TEXT | NULL | eg=["Not a Motor Vehicle"]
+vehicle_number: NUMBER | NULL | eg=[3, 1]
+state_name: TEXT | NULL | eg=["Arkansas", "California"]
+
+## NHTSA_TRAFFIC_FATALITIES.VEVENT_2017
+@use: [C17, C4, C9]
+vehicle_number_other_vehicle_name: TEXT | NULL | eg=["Not a Motor Vehicle"]
+vehicle_event_number: TEXT | NULL | eg=["8", "4"]
+state_name: TEXT | NULL | eg=["Arkansas", "California"]
+vehicle_number: NUMBER | NULL | eg=[2, 4]
+area_of_impact_other_vehicle: NUMBER | NULL | eg=[77]
+
+## NHTSA_TRAFFIC_FATALITIES.PBTYPE_2020
+@use: [C13, C16, C4, C6]
+person_number: NUMBER | NULL | eg=[1]
+state_name: TEXT | NULL | eg=["Alabama"]
+vehicle_number: NUMBER | NULL | eg=[0]
+
+## NHTSA_TRAFFIC_FATALITIES.DAMAGE_2017
+@use: [C36, C4]
+vehicle_number: NUMBER | NULL | eg=[9, 11]
+state_name: TEXT | NULL | eg=["Arizona", "California"]
+
+## NHTSA_TRAFFIC_FATALITIES.CEVENT_2020
+@use: [C17, C4, C9]
+state_name: TEXT | NULL | eg=["Florida", "Kansas"]
+area_of_impact_other_vehicle: TEXT | NULL | eg=["77"]
+vehicle_number_other_vehicle_name: TEXT | NULL | eg=["Not a Motor Vehicle"]
+
+## NHTSA_TRAFFIC_FATALITIES.VIOLATN_2016
+@use: [C28, C4]
+vehicle_number: NUMBER | NULL | eg=[5, 6]
+state_name: TEXT | NULL | eg=["Alabama", "Alaska"]
+
+## NHTSA_TRAFFIC_FATALITIES.NMIMPAIR_2016
+@use: [C34, C4]
+vehicle_number: NUMBER | NULL | eg=[0]
+person_number: NUMBER | NULL | eg=[4, 5]
+
+## NHTSA_TRAFFIC_FATALITIES.CEVENT_2019
+@use: [C17, C4, C9]
+area_of_impact_other_vehicle: TEXT | NULL | eg=["77"]
+state_name: TEXT | NULL | eg=["Alabama"]
+vehicle_number_other_vehicle_name: TEXT | NULL | eg=["Not a Motor Vehicle"]
+
+## NHTSA_TRAFFIC_FATALITIES.NMCRASH_2017
+@use: [C32, C4]
+person_number: NUMBER | NULL | eg=[2, 3]
+state_name: TEXT | NULL | eg=["Alabama"]
+vehicle_number: NUMBER | NULL | eg=[0]
+
+## NHTSA_TRAFFIC_FATALITIES.PBTYPE_2015
+@use: [C16, C4, C6]
+vehicle_number: NUMBER | NULL | eg=[0]
+person_number: NUMBER | NULL | eg=[1, 2]
+
+## NHTSA_TRAFFIC_FATALITIES.PBTYPE_2019
+@use: [C13, C16, C4, C6]
+person_number: NUMBER | NULL | eg=[1, 2]
+state_name: TEXT | NULL | eg=["Alabama"]
+vehicle_number: NUMBER | NULL | eg=[0]
+
+## NHTSA_TRAFFIC_FATALITIES.SAFETYEQ_2016
+@use: [C4]
+person_number: NUMBER | NULL | eg=[5, 6]
+vehicle_number: NUMBER | NULL | eg=[0]
+non_motorist_safety_equipment_use: TEXT | NULL | eg=["None Used"]
+
+## NHTSA_TRAFFIC_FATALITIES.PARKWORK_2018
+@use: [C11, C18, C2, C20, C23, C24, C25, C3, C4, C5]
+initial_contact_point_name: TEXT | NULL | eg=["6 Clock Point", "12 Clock Point"]
+state_name: TEXT | NULL | eg=["Connecticut", "New York"]
+make_model_combined_name: TEXT | NULL | eg=["Jeep / Kaiser-Jeep / Willys- Jeep YJ series/Wrangler", "Jeep / Kaiser-Jeep / Willys- Jeep Cherokee (1984-on) (For Grand Cherokee for 2014 on use 02-422.)"]
+vehicle_number: NUMBER | NULL | eg=[2, 3]
+manner_of_collision_name: TEXT | NULL | eg=["Not a Collision with Motor Vehicle In-Transport", "Front-to-Front"]
+
+## NHTSA_TRAFFIC_FATALITIES.NMIMPAIR_2019
+@use: [C34, C4]
+person_number: NUMBER | NULL | eg=[4, 5]
+state_name: TEXT | NULL | eg=["Alabama", "California"]
+vehicle_number: NUMBER | NULL | eg=[0]
+
+## NHTSA_TRAFFIC_FATALITIES.PARKWORK_2016
+@use: [C11, C18, C2, C20, C23, C24, C25, C3, C4, C5]
+vehicle_number: NUMBER | NULL | eg=[2, 4]
+manner_of_collision_name: TEXT | NULL | eg=["Not a Collision with Motor Vehicle In-Transport"]
+initial_contact_point_name: TEXT | NULL | eg=["Left", "Right"]
+state_name: TEXT | NULL | eg=["California", "Kentucky"]
+
+## NHTSA_TRAFFIC_FATALITIES.SAFETYEQ_2015
+@use: [C4]
+person_number: NUMBER | NULL | eg=[5, 1]
+non_motorist_safety_equipment_use: TEXT | NULL | eg=["Helmet"]
+vehicle_number: NUMBER | NULL | eg=[0]
+
+## NHTSA_TRAFFIC_FATALITIES.VISION_2020
+@use: [C33, C4]
+state_name: TEXT | NULL | eg=["Alabama", "Arizona"]
+vehicle_number: NUMBER | NULL | eg=[5, 7]
+
+## NHTSA_TRAFFIC_FATALITIES.MANEUVER_2019
+@use: [C30, C4]
+vehicle_number: NUMBER | NULL | eg=[5, 6]
+state_name: TEXT | NULL | eg=["Alabama", "Arizona"]
+
+## NHTSA_TRAFFIC_FATALITIES.NMCRASH_2018
+@use: [C32, C4]
+person_number: NUMBER | NULL | eg=[1]
+vehicle_number: NUMBER | NULL | eg=[0]
+state_name: TEXT | NULL | eg=["Alabama"]
+
+## NHTSA_TRAFFIC_FATALITIES.FACTOR_2017
+@use: [C26, C4]
+vehicle_number: NUMBER | NULL | eg=[7, 5]
+state_name: TEXT | NULL | eg=["Arizona"]
+
+## NHTSA_TRAFFIC_FATALITIES.VISION_2016
+@use: [C33, C4]
+vehicle_number: NUMBER | NULL | eg=[1]
+
+## NHTSA_TRAFFIC_FATALITIES.NMIMPAIR_2018
+@use: [C34, C4]
+state_name: TEXT | NULL | eg=["Massachusetts", "New York"]
+vehicle_number: NUMBER | NULL | eg=[0]
+person_number: NUMBER | NULL | eg=[5, 6]
+
+## NHTSA_TRAFFIC_FATALITIES.CEVENT_2015
+@use: [C17, C4, C9]
+area_of_impact_other_vehicle: NUMBER | NULL | eg=[9, 7]
+
+## NHTSA_TRAFFIC_FATALITIES.SAFETYEQ_2020
+@use: [C14, C4]
+person_number: NUMBER | NULL | eg=[1]
+vehicle_number: NUMBER | NULL | eg=[0]
+state_name: TEXT | NULL | eg=["Alabama"]
+
+## NHTSA_TRAFFIC_FATALITIES.NMPRIOR_2017
+@use: [C27, C4]
+person_number: NUMBER | NULL | eg=[1]
+state_name: TEXT | NULL | eg=["Arizona", "Arkansas"]
+vehicle_number: NUMBER | NULL | eg=[0]
+
+## NHTSA_TRAFFIC_FATALITIES.PARKWORK_2019
+@use: [C11, C18, C2, C20, C23, C24, C25, C3, C4, C5]
+vehicle_number: NUMBER | NULL | eg=[2, 4]
+initial_contact_point_name: TEXT | NULL | eg=["Top", "Left"]
+state_name: TEXT | NULL | eg=["Michigan", "California"]
+manner_of_collision_name: TEXT | NULL | eg=["The First Harmful Event was Not a Collision with a Motor Vehicle in Transport", "Angle"]
+
+## NHTSA_TRAFFIC_FATALITIES.DRIMPAIR_2018
+@use: [C29, C4]
+vehicle_number: NUMBER | NULL | eg=[5]
+state_name: TEXT | NULL | eg=["Alabama", "Alaska"]
+
+## NHTSA_TRAFFIC_FATALITIES.FACTOR_2020
+@use: [C26, C4]
+vehicle_number: NUMBER | NULL | eg=[5, 6]
+state_name: TEXT | NULL | eg=["Alabama"]
+
+## NHTSA_TRAFFIC_FATALITIES.NMCRASH_2016
+@use: [C32, C4]
+state_name: TEXT | NULL | eg=["Alabama"]
+vehicle_number: NUMBER | This data element is the consecutive number assigned to each vehicle in the case. This data element appears on each vehicle level data file and is used in conjunction with the ST_CASE data element to merge information from vehicle level data files. 000-999 Assigned Number of Motor Vehicle | eg=[0]
+person_number: NUMBER | This data element is the consecutive number assigned to each person in the case (i.e., each occupant, pedestrian, or non-motorists involved in the crash). This data element appears on each person level data file and is used in conjunction with the ST_CASE data element (and sometimes the VEH_NO data element) to merge information from person level data files. 001-999 Assigned Person Number | eg=[1]
+
+## NHTSA_TRAFFIC_FATALITIES.NMCRASH_2019
+@use: [C32, C4]
+vehicle_number: NUMBER | NULL | eg=[0]
+state_name: TEXT | NULL | eg=["Alabama"]
+person_number: NUMBER | NULL | eg=[1, 2]
+
+## NHTSA_TRAFFIC_FATALITIES.DRIMPAIR_2019
+@use: [C29, C4]
+vehicle_number: NUMBER | NULL | eg=[5]
+state_name: TEXT | NULL | eg=["Arizona", "Arkansas"]
+
+## NHTSA_TRAFFIC_FATALITIES.DAMAGE_2015
+@use: [C36, C4]
+vehicle_number: NUMBER | NULL | eg=[5, 7]
+state_name: TEXT | NULL | eg=["Alabama", "Arizona"]
+
+## NHTSA_TRAFFIC_FATALITIES.MANEUVER_2017
+@use: [C30, C4]
+vehicle_number: NUMBER | NULL | eg=[7, 5]
+state_name: TEXT | NULL | eg=["Arizona"]
+
+## NHTSA_TRAFFIC_FATALITIES.DISTRACT_2015
+@use: [C35, C4]
+vehicle_number: NUMBER | NULL | eg=[5, 19]
+
+## NHTSA_TRAFFIC_FATALITIES.SAFETYEQ_2017
+@use: [C14, C4]
+vehicle_number: NUMBER | NULL | eg=[0]
+person_number: NUMBER | NULL | eg=[1]
+state_name: TEXT | NULL | eg=["Alabama"]
+
+## NHTSA_TRAFFIC_FATALITIES.VISION_2015
+@use: [C33, C4]
+state_name: TEXT | NULL | eg=["Alabama"]
+vehicle_number: NUMBER | NULL | eg=[5, 7]
+
+## NHTSA_TRAFFIC_FATALITIES.SAFETYEQ_2019
+@use: [C14, C4]
+state_name: TEXT | NULL | eg=["Alabama"]
+person_number: NUMBER | NULL | eg=[1]
+vehicle_number: NUMBER | NULL | eg=[0]
+
+## NHTSA_TRAFFIC_FATALITIES.DRIMPAIR_2017
+@use: [C29, C4]
+state_name: TEXT | NULL | eg=["Arizona"]
+vehicle_number: NUMBER | NULL | eg=[6, 7]
+
+## NHTSA_TRAFFIC_FATALITIES.DAMAGE_2019
+@use: [C36, C4]
+vehicle_number: NUMBER | NULL | eg=[7, 5]
+state_name: TEXT | NULL | eg=["Arizona", "Arkansas"]
+
+## NHTSA_TRAFFIC_FATALITIES.VSOE_2019
+@use: [C17, C31, C4]
+vehicle_number: NUMBER | NULL | eg=[1]
+vehicle_event_number: NUMBER | NULL | eg=[3, 5]
+state_name: TEXT | NULL | eg=["Alabama"]
+
+## NHTSA_TRAFFIC_FATALITIES.MANEUVER_2018
+@use: [C30, C4]
+vehicle_number: NUMBER | NULL | eg=[5, 6]
+state_name: TEXT | NULL | eg=["Alabama", "Arizona"]
+
+## NHTSA_TRAFFIC_FATALITIES.DAMAGE_2020
+@use: [C36, C4]
+vehicle_number: NUMBER | NULL | eg=[6, 5]
+state_name: TEXT | NULL | eg=["Alabama", "Arkansas"]
+
+## NHTSA_TRAFFIC_FATALITIES.DISTRACT_2016
+@use: [C35, C4]
+state_name: TEXT | NULL | eg=["Alabama", "Alaska"]
+vehicle_number: NUMBER | NULL | eg=[5, 6]
+
+## NHTSA_TRAFFIC_FATALITIES.FACTOR_2016
+@use: [C26, C4]
+state_name: TEXT | NULL | eg=["Alabama", "Arizona"]
+vehicle_number: NUMBER | This data element is the consecutive number assigned to each vehicle in the case. This data element appears on each vehicle level data file and is used in conjunction with the ST_CASE data element to merge information from vehicle level data files. 000-999 Assigned Number of Motor Vehicle | eg=[6, 5]
+
+## NHTSA_TRAFFIC_FATALITIES.VINDECODE_2015
+@use: [C4, C7]
+vehicle_number: NUMBER | NULL | eg=[1, 2]
+shipping_weight: TEXT | NULL
+state_name: TEXT | NULL | eg=["Alabama"]
+
+## NHTSA_TRAFFIC_FATALITIES.VSOE_2020
+@use: [C17, C31, C4]
+vehicle_event_number: NUMBER | NULL | eg=[4, 3]
+state_name: TEXT | NULL | eg=["Alabama"]
+vehicle_number: NUMBER | NULL | eg=[1, 2]
+
+## NHTSA_TRAFFIC_FATALITIES.VIOLATN_2018
+@use: [C28, C4]
+vehicle_number: NUMBER | NULL | eg=[5]
+state_name: TEXT | NULL | eg=["Alabama", "Arizona"]
+
+## NHTSA_TRAFFIC_FATALITIES.NMIMPAIR_2020
+@use: [C34, C4]
+person_number: NUMBER | NULL | eg=[4, 5]
+vehicle_number: NUMBER | NULL | eg=[0]
+state_name: TEXT | NULL | eg=["Arizona", "Arkansas"]
+
+## NHTSA_TRAFFIC_FATALITIES.NMPRIOR_2016
+@use: [C27, C4]
+vehicle_number: NUMBER | NULL | eg=[0]
+person_number: NUMBER | NULL | eg=[1, 2]
+
+## NHTSA_TRAFFIC_FATALITIES.DISTRACT_2020
+@use: [C35, C4]
+state_name: TEXT | NULL | eg=["Arizona", "Arkansas"]
+vehicle_number: NUMBER | NULL | eg=[6, 7]
+
+## NHTSA_TRAFFIC_FATALITIES.ACCIDENT_2016
+@use: [C1, C15, C19, C38, C4, C5]
+timestamp_of_crash: NUMBER | This data element records the date and time on which the crash occurred. | eg=[1452954600000000, 1453470600000000]
+state_name: TEXT | This data element identifies the state in which the crash occurred. The codes are from the General Services Administration’s (GSA) publication of worldwide Geographic Location Codes (GLC). | eg=["Maryland", "North Carolina"]
+school_bus_related: TEXT | This data element identifies if a school bus, or motor vehicle functioning as a school bus, is related to the crash. 0 No 1 Yes -- Not Reported | eg=["No"]
+manner_of_collision_name: TEXT | This data element describes the orientation of two motor vehicles in-transport when they are involved in the “First Harmful Event” of a collision crash. If the “First Harmful Event” is not a collision between two motor vehicles in-transport it is classified as such. | eg=["Not Collision with Motor Vehicle in Transport (Not Necessarily in Transport for\n2005-2009)"]
+
+## NHTSA_TRAFFIC_FATALITIES.NMPRIOR_2020
+@use: [C27, C4]
+person_number: NUMBER | NULL | eg=[1, 2]
+state_name: TEXT | NULL | eg=["Michigan", "Wisconsin"]
+vehicle_number: NUMBER | NULL | eg=[0]
+
+## NHTSA_TRAFFIC_FATALITIES.VEVENT_2015
+@use: [C17, C4, C9]
+vehicle_event_number: NUMBER | NULL | eg=[1, 6]
+vehicle_number: NUMBER | NULL | eg=[1]
+area_of_impact_other_vehicle: NUMBER | NULL | eg=[77, 3]
+
+## NHTSA_TRAFFIC_FATALITIES.PARKWORK_2017
+@use: [C11, C18, C2, C20, C23, C24, C25, C3, C4, C5]
+state_name: TEXT | NULL | eg=["Ohio", "Washington"]
+vehicle_number: NUMBER | NULL | eg=[2, 4]
+manner_of_collision_name: TEXT | NULL | eg=["Not a Collision with Motor Vehicle In-Transport", "Front-to-Front"]
+initial_contact_point_name: TEXT | NULL | eg=["3 Clock Point", "12 Clock Point"]
+
+## NHTSA_TRAFFIC_FATALITIES.MANEUVER_2015
+@use: [C30, C4]
+state_name: TEXT | NULL | eg=["Alabama"]
+vehicle_number: NUMBER | NULL | eg=[6, 5]
+
+## NHTSA_TRAFFIC_FATALITIES.VSOE_2018
+@use: [C17, C31, C4]
+vehicle_event_number: NUMBER | NULL | eg=[1, 2]
+vehicle_number: NUMBER | NULL | eg=[1]
+state_name: TEXT | NULL | eg=["Florida", "North Carolina"]

@@ -1,0 +1,445 @@
+[TEMPLATES]
+<T18>
+FREQUENCY: TEXT | Frequency of aggregations.
+MEASUREMENT_TYPE: TEXT | Description of the unit field that provides additional context on how the unit is measured (e.g., Percent Change over Previous Period).
+MEASURE: TEXT | Quantifiable attribute or subject; description of what is being recorded.
+UNIT: TEXT | Unit of measurement for the reported value.
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable.
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table.
+@Tables: [CYBERSYN.FDIC_SUMMARY_OF_DEPOSITS_ATTRIBUTES,CYBERSYN.INTERNATIONAL_MONETARY_FUND_ATTRIBUTES]
+
+<T37>
+GEO_ID: TEXT | A unique identifier for a place, joinable to the geography_index/relationships tables
+VALUE: FLOAT | Value of the metric
+VARIABLE: TEXT | A unique identifier for a variable joinable to the attributes table
+VARIABLE_NAME: TEXT | Human-readable name for a variable
+DATE: DATE | Date associated with the value, which is set to the last day of the reporting period
+@Tables: [CYBERSYN.BUREAU_OF_LABOR_STATISTICS_EMPLOYMENT_TIMESERIES,CYBERSYN.BUREAU_OF_LABOR_STATISTICS_PRICE_TIMESERIES]
+
+<T2>
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable.
+FREQUENCY: TEXT | Frequency of aggregations.
+REPORT: TEXT | Name of the New York Fed report that the data pertains to.
+UNIT: TEXT | Unit of measurement for the reported value.
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table.
+MEASURE: TEXT | Quantifiable attribute or subject; description of what is being recorded.
+@Tables: [CYBERSYN.NEWYORKFED_CONSUMER_ATTRIBUTES]
+
+[DERIVED]
+<T1> extends <T37>
+UNIT: TEXT | Unit of measure for the value, such as dollars, percent, or ratio
+@Tables: [CYBERSYN.CYBERSYN_FINANCIAL_ECONOMIC_INDICATORS_TIMESERIES,CYBERSYN.FHFA_MORTGAGE_PERFORMANCE_TIMESERIES,CYBERSYN.FINANCIAL_FRED_TIMESERIES,CYBERSYN.INTERNATIONAL_MONETARY_FUND_TIMESERIES,CYBERSYN.NEWYORKFED_CONSUMER_TIMESERIES,CYBERSYN.OECD_TIMESERIES]
+
+<T15> extends <T1>
+VALUE_COMMENT: TEXT | Comment on the source, measurement, or definition of the value.
+@Tables: [CYBERSYN.EUROPEAN_CENTRAL_BANK_TIMESERIES]
+
+<T25> extends <T18>
+SEASONALLY_ADJUSTED: TEXT | Indicates whether the value is seasonally adjusted.
+@Tables: [CYBERSYN.OECD_ATTRIBUTES]
+
+<T29> extends <T25>
+RELEASE_SOURCE: TEXT | Source where the variable is originally collected or published.
+FRED_SERIES_ID: TEXT | Unique identifier for the variable from the FRED database. Visualize the timeseries by inputing this into https://fred.stlouisfed.org/series/{fred_series_id}.
+RELEASE_NAME: TEXT | The individual report or collection of data in which the data was released.
+INDUSTRY: TEXT | Industry or sub-industry of the time series.
+@Tables: [CYBERSYN.CYBERSYN_FINANCIAL_ECONOMIC_INDICATORS_ATTRIBUTES]
+
+<T36> extends <T2>
+INDUSTRY: TEXT | Industry or sub-industry of the time series
+SEASONALLY_ADJUSTED: BOOLEAN | Boolean variable denoting if value is seasonally adjusted
+ESTABLISHMENT_SIZE: TEXT | Size of the establishment for the provided variable
+@Tables: [CYBERSYN.BUREAU_OF_LABOR_STATISTICS_EMPLOYMENT_ATTRIBUTES]
+
+<T41> extends <T1>
+COUNTERPARTY_GEO_ID: TEXT | A unique identifier for a country or country group, joinable to the GEOGRAPHY_INDEX table, representing the counterparty geography for the variable.
+@Tables: [CYBERSYN.BANK_FOR_INTERNATIONAL_SETTLEMENTS_TIMESERIES]
+
+<T42> extends <T18>
+COUNTERPARTY_GEO_NAME: TEXT | Country or country group, representing the counterparty geography for the variable.
+GEO_NAME: TEXT | Country or country group, representing the primary geography for the variable.
+SOURCE: TEXT | Source where the variable is published.
+SERIES_ID: TEXT | Unique identifier for a variable series (i.e., data flow) from the Bank for International Settlements (BIS).
+@Tables: [CYBERSYN.BANK_FOR_INTERNATIONAL_SETTLEMENTS_ATTRIBUTES]
+
+<T5> extends <T25>
+ITEM_DESCRIPTION: TEXT | The item category referenced as part of the harmonized index of consumer prices.
+GEO_COVERAGE: TEXT | Determines whether the variable relates to part or all of a country (e.g., Whole country, Large cities, National excluding capital city).
+SOURCE: TEXT | Source where the variable is originally collected or published.
+@Tables: [CYBERSYN.EUROPEAN_CENTRAL_BANK_ATTRIBUTES]
+
+<T8> extends <T1>
+SUPPRESSED: BOOLEAN | Boolean indicating whether the value has been suppressed in the underlying data for privacy purposes. Suppressed values appear as NULL
+@Tables: [CYBERSYN.FHFA_UNIFORM_APPRAISAL_TIMESERIES]
+
+[STANDALONE]
+## CYBERSYN.BUREAU_OF_LABOR_STATISTICS_PRICE_ATTRIBUTES
+SEASONALLY_ADJUSTED: BOOLEAN | Boolean variable denoting if value is seasonally adjusted
+PRODUCT: TEXT | Consumer product being measured
+UNIT: TEXT | Unit of measure for the value
+FREQUENCY: TEXT | Frequency of the variable measurement
+BASE_TYPE: TEXT | Base type utilized for CPI measurement, standard or alternative
+VARIABLE_NAME: TEXT | Human-readable name for a variable
+REPORT: TEXT | BLS dataset the time series originates from
+VARIABLE: TEXT | A unique identifier for a variable joinable to the timeseries table
+
+## CYBERSYN.COMPANY_INDEX
+PRIMARY_EXCHANGE_NAME: TEXT | The exchange name for the primary trading venue of a security.
+PRIMARY_TICKER: TEXT | The ticker for the primary trading venue of a security. If a security trades on multiple exchanges or has numerous tickers, an attempt is made to select the ticker from the home market.
+ENTITY_LEVEL: TEXT | Describes the type or level of the entity for additional convenience. Currently, all entities are corporate entities and are denoted as 'Corporate'.
+PERMID_COMPANY_ID: TEXT | Permanent Identifier, which is a identifier provided by Refinitiv (via PermID) to provide a way to uniquely identify a company.
+LEI: ARRAY | Legal Entity Identifier, a unique identifier from GLEIF that identifies legal entities that engage in financial transactions.
+COMPANY_ID: TEXT | Unique identifier assigned by Cybersyn to each company.
+EIN: TEXT | Employer Identification Number, a unique identification number that is assigned to a business by the IRS.
+PRIMARY_EXCHANGE_CODE: TEXT | The exchange code for the primary trading venue of a security.
+GLOBAL_TICKERS: ARRAY | An array of ticker symbols under which the security may be traded globally on all exchanges.
+COMPANY_NAME: TEXT | The name of the company.
+CIK: TEXT | Central Index Key, a unique identifier for corporations registered with the United States Securities and Exchange Commission (SEC).
+
+## CYBERSYN.COMPANY_RELATIONSHIPS
+COMPANY_NAME: TEXT | The name of the company.
+RELATIONSHIP_TYPE: TEXT | Specifies the kind of relationship between the company and the related company. The value is 'Parent' when the company is the parent of the related company and 'Subsidiary' when the company is a subsidiary of the related company.
+RELATIONSHIP_START_DATE: DATE | The beginning of a company being associated with the related company. In cases where the start date is unknown, NULL is assigned.
+RELATIONSHIP_END_DATE: DATE | The ending of the relationship being valid for the company and the related company. In cases where a relationship is currently valid, an end date of NULL is assigned.
+COMPANY_ID: TEXT | Unique identifier assigned by Cybersyn to each company. Joinable to the COMPANY_INDEX table.
+ENTITY_LEVEL: TEXT | Describes the type or level of the entity for additional convenience. Currently, all entities are corporate entities and are denoted as 'Corporate'.
+RELATED_COMPANY_ID: TEXT | Unique identifier assigned by Cybersyn to the related company. Joinable to the COMPANY_INDEX table.
+RELATED_ENTITY_LEVEL: TEXT | Describes the type or level of the related entity for additional convenience. Currently, all entities are corporate entities and are denoted as 'Corporate'.
+RELATED_COMPANY_NAME: TEXT | The name of the related company.
+
+## CYBERSYN.COMPANY_SECURITY_RELATIONSHIPS
+SECURITY_ID: TEXT | Unique identifier for a particular security.
+SECURITY_NAME: TEXT | Name of the security.
+SECURITY_ID_TYPE: TEXT | The type of ID that is provided in the SECURITY_ID column. Examples of different ID types include OpenFIGI FIGI ID, OpenFIGI Share Class ID, PermID Security ID, and others.
+COMPANY_ID: TEXT | Unique identifier assigned by Cybersyn to each company.
+COMPANY_NAME: TEXT | The name of the company.
+
+## CYBERSYN.CYBERSYN_DATA_CATALOG
+DATA_SOURCE: ARRAY | Source of the data.
+LICENSE_URL: ARRAY | Array of URLs that provide the licensing for the data sources in this table.
+LISTING_NAME: ARRAY | Human-readable name of listing(s) associated with table.
+CREATED_DATE: DATE | Date for the table's addition to the Snowflake Marketplace.
+TABLE_NAME_PROPER: TEXT | Human-readable table name.
+LAST_UPDATED_TIMESTAMP: TIMESTAMP_TZ | Timestamp for the table's last update or modification.
+TABLE_TYPE: TEXT | Cybersyn table type as part of the unified schema.
+DESCRIPTION: TEXT | Details on the source of the data, the table, and what is included in the table.
+SELECT_RELATED_TABLES: ARRAY | Array of tables that you can join based on the entity and variable relationships; not an exhaustive list.
+DOCUMENTATION_URL: TEXT | URL of the documentation associated with the table.
+SHORT_DESCRIPTION: TEXT | Summarized details on the source of the data, the table, and what is included in the table.
+DATA_SOURCE_URL: ARRAY | Array of URLs that provide the overview of each of the data sources in this table.
+ENTITIES: ARRAY | Array of entities that are included in the table.
+LISTING_URL: ARRAY | URLs of listing(s) associated with table.
+TABLE_NAME: TEXT | Machine-readable table name.
+
+## CYBERSYN.FDIC_BRANCH_LOCATIONS_INDEX
+FDIC_REGIONAL_OFFICE: TEXT | Name of the FDIC Regional Office that services the institution.
+FDIC_INSTITUTION_CERTIFICATE_NUMBER: TEXT | Unique number assigned by the FDIC used to identify institutions and for for the issuance of insurance certificates.
+HOLDING_COMPANY_TYPE: TEXT | Identifies the type of holding company associated with the branch.
+LONGITUDE: FLOAT | Longitude of the branch's physical location.
+LATITUDE: FLOAT | Latitude of the branch's physical location.
+INSTITUTION_PRIMARY_REGULATORY_AGENCY: TEXT | Primary regulatory agency of the institution.
+GEO_ID_CBSA: TEXT | Geographic ID representing the core-based statistical area where the branch is physically located. Can be joined to the GEOGRAPHY_INDEX table.
+CHARTER_TYPE: TEXT | Identifies whether an institution is federally or state chartered.
+GEO_ID_STATE: TEXT | Geographic ID representing the state where the branch is physically located. Can be joined to the GEOGRAPHY_INDEX table.
+BRANCH_NAME: TEXT | Name of the branch (e.g., Magnolia Branch).
+CITY: TEXT | City at which the branch is physically located.
+RSSDHCR: TEXT | Unique number assigned by the Federal Reserve Board (FRB) to the regulatory bank holding company of the institution.
+GEO_ID_COUNTY: TEXT | Geographic ID representing the county where the branch is physically located. Can be joined to the GEOGRAPHY_INDEX table.
+GEO_ID_METRO_DIV: TEXT | Geographic ID representing the metropolitan division where the branch is physically located. Can be joined to the GEOGRAPHY_INDEX table.
+BRANCH_TYPE: TEXT | Description of the branch's main function (e.g., Full Service Brick and Mortar Office).
+RSSDID: TEXT | Unique number assigned by the Federal Reserve Board (FRB) to the institution.
+ACQUIRED_DATE: DATE | Date that a branch was last acquired by another institution.
+GEO_ID_ZIP: TEXT | Geographic ID representing the zip code where the branch is physically located. Can be joined to the GEOGRAPHY_INDEX table.
+ADDRESS: TEXT | Street address at which the branch is physically located.
+ESTABLISHED_DATE: DATE | Date on which the branch began operations.
+COMPTROLLER_DISTRICT: TEXT | Name of the Comptroller of the Currency district in which the institution is located.
+FEDERAL_RESERVE_DISTRICT: TEXT | Name of the Federal Reserve District where the institution is located.
+INSTITUTION_PRIMARY_INSURER: TEXT | Primary insurer, insurance agent, or insurance status of an institution.
+HOLDING_COMPANY_NAME: TEXT | Name of the holding company for the institution (e.g., JPMorgan Chase & Co.).
+INSTITUTION_CHARTER_AGENCY: TEXT | The chartering agency of the institution that granted the license or charter for the institution to operate and regulates and supervises the financial and operational activities of that institution.
+MAIN_OFFICE_FLAG: NUMBER | Flag identifying the main office for the institution.
+OTS_ID: TEXT | Unique identification number assigned to institutions chartered by the Office of the Thrift Supervision (OTS) or that become members of the Federal Home Loan System.
+BRANCH_NUMBER: TEXT | The branch's corresponding office number.
+FDIC_INSTITUTION_ID: TEXT | Unique FDIC ID of the institution that owns the branch. It is a unique number, sequentially added to the FDIC database for both banks and branches. This ID is updated with every merger or purchase of branches to reflect the most current owner.
+INSTITUTION_CATEGORY: TEXT | Type of financial institution defined by its charter type, ownership structure, regulatory oversight, and other characteristics.
+INSTITUTION_NAME: TEXT | Legal name of the FDIC Insured Institution (e.g., JPMorgan Chase Bank, National Association).
+FDIC_BRANCH_ID: TEXT | Unique FDIC ID for each bank branch. The branch ID for the Headquarters branch is the same as the branch ID for the entire bank or savings institution.
+INSTITUTION_PRIMARY_ASSET_SPECIALIZATION: TEXT | Description of a mutually exclusive industry classification grouping which indicates the institution's primary asset specialization.
+INSTITUTION_MINORITY_DEPOSITORY_STATUS: TEXT | Description of the regulatory status of the financial institution associated with the location.
+FDIC_CLASSIFICATION_CODE: TEXT | A classification code assigned by the FDIC based on the institution's charter type (commercial bank or savings institution), charter agent (state or federal), Federal Reserve membership status (Fed member, Fed nonmember) and its primary federal regulator (state chartered institutions are subject to both federal and state supervision).
+
+## CYBERSYN.FDIC_SUMMARY_OF_DEPOSITS_TIMESERIES
+VALUE: NUMBER | Value reported for the variable.
+DATE: DATE | Date associated with the value.
+FDIC_INSTITUTION_ID: TEXT | Unique FDIC ID of the institution that owns the branch. It is a unique number, sequentially added to the FDIC database for both banks and branches. This ID is updated with every merger or purchase of branches to reflect the most current owner.
+UNIT: TEXT | Unit in which the measure is recorded (e.g., USD YTD).
+VARIABLE: TEXT | Unique FDIC identifier for tracked financial data.
+FDIC_BRANCH_ID: TEXT | FDIC's unique number for the bank or savings institution assigned by the FDIC in order to identify and track. The branch ID for the Headquarters branch is the same as the branch ID for the entire bank or savings institution.
+VARIABLE_NAME: TEXT | Human-readable description of the financial data variables tracked by the FDIC.
+
+## CYBERSYN.FHFA_HOUSE_PRICE_ATTRIBUTES
+PROPERTY_CLASSIFICATION: TEXT | House Price Index classification (traditional, distress-free, non-metro)
+SEASONALLY_ADJUSTED: BOOLEAN | Boolean field indicating if a series is seasonally adjusted
+VARIABLE_NAME: TEXT | Human-readable description for the variable
+INDEX_TYPE: TEXT | Type of House Price Index measured in the index (all-transactions, purchase-only, expanded-data)
+VARIABLE: TEXT | A unique identifier for a variable joinable to the timeseries table for filtering
+FREQUENCY: TEXT | Frequency of the variable measurement (e.g., Daily, Monthly, Quarterly)
+UNIT: TEXT | Unit of measure for the variable:  (e.g., Index)
+
+## CYBERSYN.FHFA_HOUSE_PRICE_TIMESERIES
+VALUE: NUMBER | The reported numeric value for the variable and date
+UNIT: TEXT | Unit of measure for the variable (e.g., Index)
+DATE: DATE | Date associated with the value
+VARIABLE: TEXT | A unique identifier for a variable joinable to the attributes table for filtering
+GEO_ID: TEXT | A unique geographic identifier joinable to the geography_index/relationships tables
+VARIABLE_NAME: TEXT | Human-readable description for the variable
+
+## CYBERSYN.FHFA_MORTGAGE_PERFORMANCE_ATTRIBUTES
+UNIT: TEXT | Unit of measure for the variable:  (e.g., Percent)
+VARIABLE_GROUP: TEXT | Overall variable grouping for the timeseries (e.g., Percent in Forbearance, Percent 30 or 60 Days Past Due Date, etc.)
+FREQUENCY: TEXT | Frequency of aggregations (e.g. Annual).
+VARIABLE: TEXT | A unique identifier for a variable joinable to the timeseries table for filtering
+MARKET: TEXT | Market segment (e.g., Overall Market, Enterprise, Government, etc.)
+VARIABLE_NAME: TEXT | Human-readable description for the variable
+
+## CYBERSYN.FHFA_UNIFORM_APPRAISAL_ATTRIBUTES
+VARIABLE_GROUP: TEXT | Overall variable grouping for the timeseries (e.g., Median Appraised Value, Count of Appraisals, etc.)
+VARIABLE_NAME: TEXT | Human-readable description for the variable
+CATEGORY: TEXT | Actual category corresponding to the characteristic type. Notes important features of home (e.g. No Central Air, built between 1970 to 1979, etc.)
+CHARACTERISTIC: TEXT | Characteristic for category grouping based on home features (e.g., Central Air, Type of Foundation, etc)
+UNIT: TEXT | Unit of measure for the variable: (e.g., Count, Percent, Ratio, USD)
+APPRAISAL_PURPOSE: TEXT | Reason for appraisal request (e.g., Purchase, Refinance, Purchase & Refinance)
+FREQUENCY: TEXT | Frequency of aggregations (e.g. Annual).
+VARIABLE: TEXT | A unique identifier for a variable joinable to the timeseries table for filtering
+
+## CYBERSYN.FINANCIAL_BRANCH_ENTITIES
+CATEGORY: TEXT | Category of the entity for a given RSSD. Branch or bank
+ID_COUNTRY: TEXT | Unique identifier of the country where the entity is located
+IS_ACTIVE: BOOLEAN | Status of the branch to determine active or closed
+ZIP_CODE: TEXT | Zip code the entity is physically located in
+END_DATE: DATE | Last date for which the branch was open. NULL if still active
+STATE_ABBREVIATION: TEXT | Abbreviation of the state the entity is physically located in
+ID_COUNTY: TEXT | Unique identifier of the county where the entity is located
+CITY: TEXT | City the entity is physically located in
+ADDRESS_LINE2: TEXT | Second line of the physical address at the street level
+NAME_PARENT: TEXT | Name of the parent bank
+ID_ZIP: TEXT | Unique identifier of the zip code where the entity is located
+ADDRESS: TEXT | First line of the physical address at the street level
+BRANCH_NAME: TEXT | Name of the banking branch
+START_DATE: DATE | First date for which the branch was open
+ID_RSSD: NUMBER | A unique identifier assigned by the Federal Reserve for the financial institution
+ID_RSSD_PARENT: NUMBER | Unique identifier for the head office of the entity if the entity is a branch
+ID_STATE: TEXT | Unique identifier of the state where the entity is located
+
+## CYBERSYN.FINANCIAL_CFPB_COMPLAINT
+DATE_SENT_TO_COMPANY: DATE | Date the CFPB sent the complaint to the company
+TIMELY_RESPONSE: BOOLEAN | Indicates whether the company gave a timely response
+SUBMITTED_VIA: TEXT | How the complaint was submitted
+ZIP_CODE: TEXT | mailing zip code provided by the consumer
+SUB_ISSUE: TEXT | type of sub-issue identified by the consumer in the complaint.  The categorical sub-issues available for selection have evolved over time
+ID_STATE: TEXT | a unique identifier of the mailing state provided by the consumer
+DATE_RECEIVED: DATE | Date the CFPB received the complaint
+COMPANY_PUBLIC_RESPONSE: TEXT | The optional, public-facing response to a consumer complaint chosen by the company from a list
+CONSUMER_COMPLAINT_NARRATIVE: TEXT | The consumer-submitted description of the complaint, with PII scrubbed by the CFPB.  Consumers must opt-in and can opt out at any time
+STATE: TEXT | mailing state provided by the consumer
+ID_ZIP: TEXT | a unique identifier of the mailing zip code provided by the consumer
+COMPANY: TEXT | Company identified by the consumer in the complaint.
+SUB_PRODUCT: TEXT | type of sub-product identified by the consumer in the complaint.  Sub-product categories were consolidated by the CFPB in 2017
+ISSUE: TEXT | type of issue identified by the consumer in the complaint.  The categorical issues available for selection have evolved over time
+COMPANY_RESPONSE_TO_CONSUMER: TEXT | Company explanation of how the issue was closed, selected from a list
+CONSUMER_DISPUTED: TEXT | Whether the consumer disputed the company response.  After April 24, 2017 the Bureau discontinued this option and this field is marked N/A
+CONSUMER_CONSENT_PROVIDED: TEXT | Identifies consumer consent in publishing their complaint narrative
+PRODUCT: TEXT | type of product identified by the consumer in the complaint.  Product categories were consolidated by the CFPB in 2017
+TAGS: TEXT | Categorical data supporting easier searching of complaints submitted by or on behalf of consumers, includes "Older American" and "Servicemember"
+
+## CYBERSYN.FINANCIAL_FRED_ATTRIBUTES
+MEASUREMENT_METHOD: TEXT | Type of percent change measurement
+UNIT: TEXT | Unit of measure for the value (e.g., USD, Percent, or ratio)
+SEASONALLY_ADJUSTED: BOOLEAN | Boolean variable denoting if value is seasonally adjusted
+VARIABLE_GROUP: TEXT | Description of what is being measured
+FREQUENCY: TEXT | Frequency of the variable measurement (e.g., Daily, Monthly, or Quarterly)
+RELEASE_NAME: TEXT | The individual report or collection of data in which the data was released. Sample reports include the Consumer Price Index release from the Bureau of Labor Statistics and the G.5 Foreign Exchange Rates release from the Federal Reserve.
+VARIABLE: TEXT | a unique identifier for a variable joinable to the time series table
+VARIABLE_NAME: TEXT | English name for the variable
+RELEASE_SOURCE: TEXT | The original attribution of the data from which Fred aggregates.
+
+## CYBERSYN.FINANCIAL_FRED_VARIABLE_SERIES_ID_CROSSWALK
+SERIES_ID: TEXT | Series identifier from the FRED database. The combination of the geo_id and variable are needed together to identify a unique series_id
+GEO_ID: TEXT | Unique identifier for a place joinable to the timeseries table.
+VARIABLE: TEXT | Unique identifier joinable to the attributes and timeseries tables.
+
+## CYBERSYN.FINANCIAL_INSTITUTION_ATTRIBUTES
+UNIT: TEXT | Unit of measure for the value, examples (e.g., percentage, USD)
+DEFINITION: TEXT | Detailed description of the variable including calculation where applicable
+VARIABLE: TEXT | Unique identifier for a variable joinable to the timeseries table
+VARIABLE_NAME: TEXT | Human-readable name for the variable
+FREQUENCY: TEXT | Measurement period (e.g., Annual, Quarterly)
+
+## CYBERSYN.FINANCIAL_INSTITUTION_ENTITIES
+ADDRESS: TEXT | Stree-level address of the bank
+STATE_ABBREVIATION: TEXT | State of the bank
+NAME: TEXT | Name of the bank
+ID_COUNTRY: TEXT | A unique geographic identifier for the country where the bank is located
+NAICS_CODE: TEXT | NAICS code of the primary activity conducted by an entity.
+ID_STATE: TEXT | A unique geographic identifier for the state where the bank is located
+ID_ZIP: TEXT | A unique geographic identifier for the zip code where the bank is located
+FEDERAL_REGULATOR: TEXT | The abbreviation for the banking regulator (OCC, FED, FDIC)
+LEGAL_ENTITY_IDENTIFIER: TEXT | Code to identify a legally distinct entity that engages in a financial transaction. Issued by approved local operating units around the world in conjunction with the Global LEI Foundation.
+FDIC_CERT: NUMBER | A unique identifier for the financial institution assigned by the FDIC
+SPECIALIZATION_GROUP: TEXT | Specialization Group from FDIC, defined as Asset Concentration Hierarchy (e.g., Agricultural Specialization)
+ZIP_CODE: TEXT | Zip code of the bank
+REASON_FOR_ENTITY_TERMINATION: NUMBER | The circumstances under which an entity ceased to exist or an indicator that an entity failed but remained open.
+ID_COUNTY: TEXT | A unique geographic identifier for the county where the bank is located
+START_DATE: TIMESTAMP_NTZ | First date for which the bank was open
+EMPLOYER_IDENTIFICATION_NUMBER: TEXT | Employer identification number (EIN), a number assigned to a business by the Internal Revenue Service, effective 2008-12-31.
+INSURER: TEXT | Indicates whether an institution is insured under the Deposit Insurance Fund (DIF).
+CHARTERING_AUTHORITY: TEXT | The level of the chartering agency of the institution (State, Federal)
+MAJORITY_OWNED_BY_MINORITY_OR_WOMEN: TEXT | Indicates whether the entity is more than 50% owned by one or more minorities or women with identification of the minority. If the ownership is by a woman who is also a member of a minority, the item is coded as minority. Not all codes provided by the FFIEC data were mapped in the reference data
+END_DATE: TIMESTAMP_NTZ | Last date for which the bank was open. NULL if still active
+ENTITY_TYPE: TEXT | The institution grouping for the bank (National Bank, Non-member Bank, etc.)
+IS_ACTIVE: BOOLEAN | Status of the bank to determine active or closed
+THRIFT_ID: TEXT | A unique identifier for the financial institution assigned by the Office of Thrift Supervision, last 5 characters only
+ID_RSSD: NUMBER | A unique identifier assigned by the Federal Reserve for the financial institution
+CITY: TEXT | City of the bank
+CATEGORY: TEXT | Category for the entity
+CHARTER_TYPE: TEXT | The particular charter assigned to the bank (Industrial Bank, Commercial Bank, etc.)
+INTERNATIONAL_BANKING_FACILITY: BOOLEAN | Indicates whether an entity has an International Banking Facility.
+URL: TEXT | Link to the bank website
+OCC_ID: NUMBER | A unique identifier for the financial institution assigned by the Office of the Comptroller of the Currency
+
+## CYBERSYN.FINANCIAL_INSTITUTION_EVENTS
+NAME_SUCCESSOR: TEXT | Name of successor entity
+TRANSFORMATION_TYPE: TEXT | Description of transformation
+CATEGORY_SUCCESSOR: TEXT | High-level category of successor entity legal structure
+CATEGORY_PREDECESSOR: TEXT | High-level category of predecessor entity legal structure
+NAME_PREDECESSOR: TEXT | Name of predecessor entity
+MERGER_ACCOUNTING_METHOD_UTILIZED: TEXT | Accounting method used in resolving a non-failure merger
+ACTIVE_SUCCESSOR: BOOLEAN | Flag to indicate if successor is active
+ID_RSSD_PREDECESSOR: NUMBER | Unique identifier for predecessor entity joinable to entities table
+TRANSACTION_DATE: DATE | Date of transaction
+ID_RSSD_SUCCESSOR: NUMBER | Unique identifier for successor entity joinable to entities table
+ACTIVE_PREDECESSOR: BOOLEAN | Flag to indicate if predecessor is active
+
+## CYBERSYN.FINANCIAL_INSTITUTION_HIERARCHY
+CATEGORY_PARENT: TEXT | High-level category of successor entity legal structure (e.g., Bank Holding Company)
+CATEGORY_OFFSPRING: TEXT | High-level category of successor entity legal structure (e.g., Branch, Bank)
+NAME_OFFSPRING: TEXT | Name of offspring entity
+ID_RSSD_PARENT: NUMBER | Unique identifier for parent entity. Joinable to entities table
+RELATIONSHIP_TERMINATED: BOOLEAN | Indication if the relationship is still current
+PERCENT_CONTROL_OF_OFFSPRING: NUMBER | Parent percentage of controlling interest in the offspring
+ACTIVE_OFFSPRING: BOOLEAN | Flag to indicate if offspring is active
+PARENT_CONTROLS_OFFSPRING: BOOLEAN | Indication if the parent has direct control over the offspring
+ID_RSSD_OFFSPRING: NUMBER | Unique identifier for offspring entity. Joinable to entities table
+ACTIVE_PARENT: BOOLEAN | Flag to indicate if parent is active
+NAME_PARENT: TEXT | Name of parent entity
+RELATIONSHIP_LEVEL: TEXT | Description of the type of relationship between the two entities
+
+## CYBERSYN.FINANCIAL_INSTITUTION_TIMESERIES
+VARIABLE: TEXT | Unique identifier for a variable joinable to the timeseries table
+ID_RSSD: TEXT | A unique identifier assigned by the Federal Reserve for the financial institution
+VALUE: NUMBER | Numeric value for the given data point
+DATE: DATE | Date associated with the value
+VARIABLE_NAME: TEXT | Human-readable name for the variable
+UNIT: TEXT | Unit of measure for the value, examples (e.g., percentage, USD)
+
+## CYBERSYN.FX_RATES_TIMESERIES
+BASE_CURRENCY_NAME: TEXT | Long name of base currency
+VARIABLE: TEXT | A unique identifier for the currency pair
+QUOTE_CURRENCY_NAME: TEXT | Long name of quote currency
+VALUE: FLOAT | Price for the base currency in terms of the quote currency
+VARIABLE_NAME: TEXT | A human-readable unique identifier for the currency pair
+BASE_CURRENCY_ID: TEXT | ISO 4217 currency code for the base currency
+DATE: DATE | Date for the foreign exchange spot rate
+QUOTE_CURRENCY_ID: TEXT | ISO 4217 currency code for the quote currency
+
+## CYBERSYN.GEOGRAPHY_HIERARCHY
+GEO_ID: TEXT | GEO_ID from GEOGRAPHY_INDEX table for the child geography
+PARENT_GEO_ID: TEXT | GEO_ID from GEOGRAPHY_INDEX table for the parent geography
+
+## CYBERSYN.GEOGRAPHY_INDEX
+LEVEL: TEXT | Geographic level or hierarchy (e.g., Country, State, County, City, Continent, CountrySubRegion, etc.)
+ISO_ALPHA2: TEXT | 2 letter country code from International Organization for Standardization
+GEO_ID: TEXT | A unique identifier for a place (a nation, state, zip-code, etc.)
+ISO_3166_2_CODE: TEXT | Full ISO-3166 code
+ISO_NUMERIC_CODE: TEXT | Numeric code from International Organization for Standardization
+ISO_ALPHA3: TEXT | 3 letter country code from International Organization for Standardization
+GEO_NAME: TEXT | Full name of the place
+ISO_NAME: TEXT | Country name from International Organization for Standardization
+
+## CYBERSYN.GEOGRAPHY_OVERLAPS
+GEO_ID: TEXT | GEO_ID from GEOGRAPHY_INDEX table
+OVERLAPS_WITH: TEXT | GEO_ID from GEOGRAPHY_INDEX table
+
+## CYBERSYN.GEOGRAPHY_RELATIONSHIPS
+RELATED_GEO_NAME: TEXT | Name of the place related to GEO_NAME. This is a place that overlaps or is contained within the primary geo (e.g., city within a state)
+RELATED_LEVEL: TEXT | Geographic level or hierarchy of the related place (e.g., Country, State, County, City, Continent, CountrySubRegion, etc.)
+RELATIONSHIP_TYPE: TEXT | Relationship between the two places. Contains means the RELATED_GEO_ID is fully contained within the GEO_ID (e.g., relationship of state to a city) while Overlaps indicates the GEO_ID is a subpart of the RELATED_GEO_ID (e.g., relationship of city to a state)
+RELATED_GEO_ID: TEXT | A unique identifier for the related place joinable to the GEOGRAPHY_INDEX table
+GEO_ID: TEXT | A unique identifier for a place joinable to the GEOGRAPHY_INDEX table
+GEO_NAME: TEXT | Full name of the place
+LEVEL: TEXT | Geographic level or hierarchy (e.g., Country, State, County, City, Continent, CountrySubRegion, etc.)
+
+## CYBERSYN.OPENFIGI_SECURITY_INDEX
+PRIMARY_TICKER: TEXT | The ticker for the primary trading venue of a security. If a security trades on multiple exchanges or has numerous tickers, an attempt is made to select the ticker from the home market.
+EXCHANGE_CODES: ARRAY | Codes representing the exchanges where the security is traded. An empty array means that exchange information is not available.
+ASSET_CLASS: TEXT | Broad-based class of the asset, such as 'Equity', 'Muni', etc.
+SECURITY_TYPE: ARRAY | The type of security, such as "Common Stock" for equities. Securities can fall into multiple categories such as when a company has both tradable shares of Common Stock and an ADR.
+TOP_LEVEL_OPENFIGI_ID_TYPE: TEXT | The highest level of the OpenFIGI ID in the hierarchy for the security held. The hierarchy follows the order "share class FIGI" (global) > "composite FIGI" (country-level) > "FIGI" (exchange-level). For example, if the highest level of ID (recorded in TOP_LEVEL_OPENFIGI_ID) is the composite FIGI, then this will be equal to 'openfigi_composite_id'.
+SECURITY_SUBTYPE: ARRAY | Sub-type of the security, providing further classification. Like SECURITY_TYPE, securities can also have multiple subtypes.
+SECURITY_NAME: TEXT | Name of the security.
+OPENFIGI_FIGI_ID: ARRAY | Array of the FIGI (Financial Instrument Global Identifier) ID(s) for the security. In cases where there is a share class FIGI (global ID) or composite FIGI (country-level ID) because a security trades across multiple countries or exchanges, there may be multiple FIGI IDs associated with a single security.
+OPENFIGI_COMPOSITE_ID: ARRAY | Array of the country-level composite FIGI ID(s) for the security. In cases where there is a share class FIGI (global ID) and the security is tradable in more than one country there may be multiple composite IDs associated with a single security.
+OPENFIGI_SHARE_CLASS_ID: ARRAY | The global share class FIGI ID(s) for the security. This is meant to be the most broad classification in the FIGI classification hierarchy.
+TOP_LEVEL_OPENFIGI_ID: TEXT | OpenFIGI ID of the highest, most widely encompassing level for a particular security. The hierarchy follows the order "share class FIGI" (global) > "composite FIGI" (country-level) > "FIGI" (exchange-level).
+GLOBAL_TICKERS: ARRAY | An array of ticker symbols under which the security may be traded globally on all exchanges.
+
+## CYBERSYN.PERMID_SECURITY_INDEX
+ASSET_CLASS: TEXT | Broad-based class of the asset, such as 'Ordinary Shares', 'Depositary Receipts', etc.
+EXCHANGE_CODE: ARRAY | An array of codes representing the exchanges where the security is traded. An empty array means that exchange information is not available.
+PRIMARY_TICKER: TEXT | The ticker for the primary trading venue of a security. If a security trades on multiple exchanges or has numerous tickers, an attempt is made to select the ticker from the home market.
+SECURITY_NAME: TEXT | Name of the security.
+PRIMARY_EXCHANGE_CODE: TEXT | The exchange code for the primary trading venue of a security.
+SECURITY_STATUS: TEXT | Status of the security, i.e. 'Active' or 'Inactive'. An active security is a security that has active quotes and an inactive security has no active quotes. This status changes over time.
+GLOBAL_TICKERS: ARRAY | An array of ticker symbols under which the security may be traded globally on all exchanges.
+PERMID_SECURITY_ID: TEXT | PermID for the security.
+PRIMARY_EXCHANGE_NAME: TEXT | The exchange name for the primary trading venue of a security.
+PERMID_QUOTE_ID: ARRAY | An array of PermIDs for the quotes for each exchange where the security is traded. An empty array means that quote information is not available.
+
+## CYBERSYN.PUBLIC_HOLIDAY_CALENDAR
+SUBDIVISION: TEXT | State, province, or other underlying geography that is specific to the holiday
+HOLIDAY_NAME: TEXT | Name of the Holiday
+ISO_ALPHA2: TEXT | 2 letter country code from International Organization for Standardization
+IS_FINANCIAL: BOOLEAN | Boolean denoting a stock market closure for the given region
+DATE: DATE | Date associated with the event
+GEO_ID: TEXT | GEO_ID from GEOGRAPHY_INDEX table
+
+## CYBERSYN.STOCK_PRICE_TIMESERIES
+PRIMARY_EXCHANGE_NAME: TEXT | The exchange name for the primary trading venue of a security.
+ASSET_CLASS: TEXT | Type of security.
+VALUE: FLOAT | Value reported for the variable.
+PRIMARY_EXCHANGE_CODE: TEXT | The exchange code for the primary trading venue of a security.
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table.
+DATE: DATE | Date associated with the value.
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable.
+TICKER: TEXT | Alphanumeric code that represents a specific publicly traded security on the NASDAQ exchange.
+
+## CYBERSYN.US_ECONOMIC_CENSUS_ATTRIBUTES
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable.
+CREDIT_CARD_SERVICES_INCOME: TEXT | Specific source of credit card products or services income category (e.g., from cardholder fees, interest, merchant fees).
+MEASURE: TEXT | Quantifiable attribute or subject; description of what is being recorded.
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table.
+NAICS_CODE: TEXT | Industry classification according to North American Industry Classification System.
+FREQUENCY: TEXT | Frequency of aggregations.
+PRODUCT_SERVICES_LINE: TEXT | Related product or service.
+TAX_STATUS: TEXT | Establishment's tax status (e.g., exempt from or subject to federal income tax).
+NAICS_DESCRIPTION: TEXT | Description of Industry classification according to North American Industry Classification System.
+UNIT: TEXT | Unit of measurement for the reported value.
+OPERATION_TYPE: TEXT | Type of operation run by the establishment (e.g., Merchant wholesalers; Manufacturer's sales branches and offices).
+
+## CYBERSYN.US_ECONOMIC_CENSUS_TIMESERIES
+VARIABLE: TEXT | Unique identifier for a variable, joinable to the timeseries table.
+UNIT: TEXT | Unit of measurement for the reported value.
+DATE: TEXT | Date associated with the value.
+VALUE: FLOAT | Value reported for the variable.
+VARIABLE_NAME: TEXT | Human-readable unique name for the variable.
+GEO_ID: TEXT | A unique identifier for a place. Joinable to other geography tables including GEOGRAPHY_INDEX, GEOGRAPHY_RELATIONSHIPS, and GEOGRAPHY_CHARACTERISTICS.

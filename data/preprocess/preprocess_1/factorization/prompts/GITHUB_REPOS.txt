@@ -1,0 +1,10 @@
+[COMPONENTS]
+
+[TABLES]
+Format: schema.table|components|columns
+GITHUB_REPOS.LANGUAGES||repo_name,language
+GITHUB_REPOS.LICENSES||repo_name,license
+GITHUB_REPOS.SAMPLE_REPOS||watch_count,repo_name
+GITHUB_REPOS.SAMPLE_CONTENTS||size,binary,sample_symlink_target,copies,sample_mode,sample_path,content,sample_ref,id,sample_repo_name
+GITHUB_REPOS.SAMPLE_FILES||symlink_target,id,mode,path,repo_name,ref
+GITHUB_REPOS.SAMPLE_COMMITS||parent,committer,difference,message,author,difference_truncated,subject,trailer,encoding,commit,repo_name,tree

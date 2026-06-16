@@ -1,0 +1,54 @@
+[TABLES]
+## STACKING.EDA
+feature: TEXT | NULL
+version: NUMBER | NULL
+drop_correlation: NUMBER | NULL
+name: TEXT | NULL
+target: NUMBER | NULL
+range: TEXT | NULL
+type: TEXT | NULL
+drop_user: NUMBER | NULL
+
+## STACKING.SOLUTION
+version: NUMBER | NULL
+test_size: FLOAT | NULL
+nb_model: NUMBER | NULL
+resampling: NUMBER | NULL
+correlation: FLOAT | NULL
+score: FLOAT | NULL
+nb_feature: NUMBER | NULL
+name: TEXT | NULL
+
+## STACKING.MODEL_IMPORTANCE
+version: NUMBER | NULL
+model: TEXT | NULL
+step: NUMBER | NULL
+name: TEXT | NULL
+importance: FLOAT | NULL
+
+## STACKING.MODEL_SCORE
+name: TEXT | NULL
+test_score: FLOAT | NULL
+step: NUMBER | NULL
+version: NUMBER | NULL
+model: TEXT | NULL
+train_score: FLOAT | NULL
+
+## STACKING.MODEL
+name: TEXT | NULL
+L1_model: TEXT | NULL
+version: NUMBER | NULL
+step: NUMBER | NULL
+
+## STACKING.PROBLEM
+target: TEXT | NULL
+path: TEXT | NULL
+name: TEXT | NULL
+type: TEXT | NULL
+
+## STACKING.FEATURE_IMPORTANCE
+feature: TEXT | NULL
+importance: FLOAT | NULL
+step: NUMBER | NULL
+version: NUMBER | NULL
+name: TEXT | NULL

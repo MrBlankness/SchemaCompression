@@ -1,0 +1,16 @@
+[TEMPLATES]
+Format: Tn|col1,col2|schema1.table1;schema2.table2
+T1|ID,PID,MID,index|DB_IMDB.M_CAST;DB_IMDB.M_DIRECTOR;DB_IMDB.M_PRODUCER
+
+[STANDALONE]
+Format: schema.table|col1,col2
+DB_IMDB.COUNTRY|index,Name,CID
+DB_IMDB.GENRE|index,GID,Name
+DB_IMDB.LANGUAGE|Name,index,LAID
+DB_IMDB.LOCATION|index,LID,Name
+DB_IMDB.MOVIE|title,year,num_votes,MID,index,rating
+DB_IMDB.M_COUNTRY|CID,index,MID,ID
+DB_IMDB.M_GENRE|MID,GID,index,ID
+DB_IMDB.M_LANGUAGE|LAID,index,ID,MID
+DB_IMDB.M_LOCATION|LID,index,MID,ID
+DB_IMDB.PERSON|Gender,Name,PID,index

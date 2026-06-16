@@ -1,0 +1,109 @@
+[TABLES]
+## SCHOOL_SCHEDULING.STUDENT_SCHEDULES
+ClassStatus: NUMBER | NULL | eg=[2, 1]
+ClassID: NUMBER | NULL | eg=[1000, 1168]
+StudentID: NUMBER | NULL | eg=[1001, 1002]
+Grade: FLOAT | NULL | eg=[99.83, 70.0]
+
+## SCHOOL_SCHEDULING.FACULTY_SUBJECTS
+SubjectID: NUMBER | NULL | eg=[16, 34]
+ProficiencyRating: FLOAT | NULL | eg=[10.0, 9.0]
+StaffID: NUMBER | NULL | eg=[98005, 98007]
+
+## SCHOOL_SCHEDULING.STUDENT_CLASS_STATUS
+ClassStatus: NUMBER | NULL | eg=[1, 2]
+ClassStatusDescription: TEXT | NULL | eg=["Enrolled", "Completed"]
+
+## SCHOOL_SCHEDULING.MAJORS
+Major: TEXT | NULL | eg=["General Studies", "English"]
+MajorID: NUMBER | NULL | eg=[1, 2]
+
+## SCHOOL_SCHEDULING.STUDENTS
+StudLastName: TEXT | NULL | eg=["Patterson", "Stadick"]
+StudAreaCode: TEXT | NULL | eg=["210", "760"]
+StudMajor: FLOAT | NULL | eg=[1.0, 3.0]
+StudentID: NUMBER | NULL | eg=[1001, 1003]
+StudFirstName: TEXT | NULL | eg=["Kerry", "Betsy"]
+StudState: TEXT | NULL | eg=["TX", "CA"]
+StudStreetAddress: TEXT | NULL | eg=["9877 Hacienda Drive", "611 Alpine Drive"]
+StudZipCode: TEXT | NULL | eg=["78284", "92263"]
+StudGPA: FLOAT | NULL | eg=[74.465, 85.235]
+StudCity: TEXT | NULL | eg=["San Antonio", "Palm Springs"]
+StudPhoneNumber: TEXT | NULL | eg=["555-2706", "555-2696"]
+
+## SCHOOL_SCHEDULING.FACULTY_CATEGORIES
+CategoryID: TEXT | NULL | eg=["ENG", "MUS"]
+StaffID: NUMBER | NULL | eg=[98005, 98007]
+
+## SCHOOL_SCHEDULING.DEPARTMENTS
+DeptChair: NUMBER | NULL | eg=[98010, 98005]
+DeptName: TEXT | NULL | eg=["Sciences", "Humanities"]
+DepartmentID: NUMBER | NULL | eg=[2, 3]
+
+## SCHOOL_SCHEDULING.CLASSES
+SubjectID: NUMBER | NULL | eg=[11, 12]
+TuesdaySchedule: NUMBER | NULL | eg=[1, 0]
+Credits: NUMBER | NULL | eg=[5, 4]
+ClassRoomID: NUMBER | NULL | eg=[1231, 1619]
+StartDate: TEXT | NULL | eg=["2017-09-12", "2017-09-11"]
+MondaySchedule: NUMBER | NULL | eg=[0, 1]
+WednesdaySchedule: NUMBER | NULL | eg=[1, 0]
+SaturdaySchedule: NUMBER | NULL | eg=[1, 0]
+Duration: NUMBER | NULL | eg=[50, 110]
+ClassID: NUMBER | NULL | eg=[1000, 1002]
+FridaySchedule: NUMBER | NULL | eg=[1, 0]
+ThursdaySchedule: NUMBER | NULL | eg=[1, 0]
+StartTime: TEXT | NULL | eg=["10:00:00", "15:30:00"]
+
+## SCHOOL_SCHEDULING.STAFF
+StfAreaCode: TEXT | NULL | eg=["253", "510"]
+StfPhoneNumber: TEXT | NULL | eg=["555-2676", "555-2596"]
+StfZipCode: TEXT | NULL | eg=["98002", "94538"]
+StfStreetAddress: TEXT | NULL | eg=["Route 2, Box 203B", "30301 - 166th Ave. N.E."]
+StfFirstName: TEXT | NULL | eg=["Gary", "Jeffrey"]
+DateHired: TEXT | NULL | eg=["1985-01-21", "1983-10-06"]
+Salary: FLOAT | NULL | eg=[53000.0, 52000.0]
+StaffID: NUMBER | NULL | eg=[98007, 98010]
+StfLastname: TEXT | NULL | eg=["Hallmark", "Smith"]
+StfState: TEXT | NULL | eg=["WA", "CA"]
+Position: TEXT | NULL | eg=["Faculty", "Registrar"]
+StfCity: TEXT | NULL | eg=["Auburn", "Fremont"]
+
+## SCHOOL_SCHEDULING.SQLITE_SEQUENCE
+name: TEXT | NULL | eg=["Staff", "Departments"]
+seq: NUMBER | NULL | eg=[98064, 5]
+
+## SCHOOL_SCHEDULING.BUILDINGS
+NumberOfFloors: NUMBER | NULL | eg=[3]
+SiteParkingAvailable: NUMBER | NULL | eg=[1]
+BuildingName: TEXT | NULL | eg=["Arts and Sciences", "Instructional Building"]
+BuildingCode: TEXT | NULL | eg=["AS", "IB"]
+ElevatorAccess: NUMBER | NULL | eg=[1]
+
+## SCHOOL_SCHEDULING.FACULTY_CLASSES
+StaffID: NUMBER | NULL | eg=[98019, 98028]
+ClassID: NUMBER | NULL | eg=[1004, 1020]
+
+## SCHOOL_SCHEDULING.SUBJECTS
+SubjectDescription: TEXT | NULL | eg=["Introduces basic accounting concepts, principles and prodcedures for recording business transactions and developing financial accounting reports. Excel spreadsheet component.", "Analysis of accounting data as part of the managerial process of planning, decision making and control. Concentrates on economic decision making in enterprises. Includes computerized element. Prereq: ACC 220 or instructor permission."]
+SubjectID: NUMBER | NULL | eg=[1, 3]
+SubjectCode: TEXT | NULL | eg=["ACC 210", "ACC 230"]
+SubjectPreReq: TEXT | NULL | eg=["", "ACC 220"]
+CategoryID: TEXT | NULL | eg=["ACC", "BUS"]
+SubjectName: TEXT | NULL | eg=["Financial Accounting Fundamentals I", "Fundamentals of Managerial Accounting"]
+
+## SCHOOL_SCHEDULING.CLASS_ROOMS
+ClassRoomID: NUMBER | NULL | eg=[1131, 1514]
+BuildingCode: TEXT | NULL | eg=["LB", "AS"]
+PhoneAvailable: NUMBER | NULL | eg=[1, 0]
+
+## SCHOOL_SCHEDULING.FACULTY
+Title: TEXT | NULL | eg=["Professor", "Instructor"]
+StaffID: NUMBER | NULL | eg=[98005, 98007]
+Status: TEXT | NULL | eg=["Full Time", "On Leave"]
+Tenured: NUMBER | NULL | eg=[1]
+
+## SCHOOL_SCHEDULING.CATEGORIES
+DepartmentID: NUMBER | NULL | eg=[2, 1]
+CategoryID: TEXT | NULL | eg=["BIO", "BUS"]
+CategoryDescription: TEXT | NULL | eg=["Biology", "Business"]

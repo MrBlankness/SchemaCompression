@@ -1,0 +1,20 @@
+[STANDALONE]
+Format: schema.table|col1,col2
+EDUCATION_BUSINESS.HARDWARE_DIM_CUSTOMER|region,channel,market,customer_code,sub_zone,platform,customer
+EDUCATION_BUSINESS.HARDWARE_DIM_PRODUCT|product,division,category,product_code,segment,variant
+EDUCATION_BUSINESS.HARDWARE_FACT_GROSS_PRICE|fiscal_year,product_code,gross_price
+EDUCATION_BUSINESS.HARDWARE_FACT_MANUFACTURING_COST|product_code,manufacturing_cost,cost_year
+EDUCATION_BUSINESS.HARDWARE_FACT_PRE_INVOICE_DEDUCTIONS|pre_invoice_discount_pct,customer_code,fiscal_year
+EDUCATION_BUSINESS.HARDWARE_FACT_SALES_MONTHLY|date,customer_code,sold_quantity,product_code,fiscal_year
+EDUCATION_BUSINESS.SALARYDATASET|Salary,CompanyName,SalariesReported,Location,index,JobTitle
+EDUCATION_BUSINESS.STAFFHOURS|EventDate,EventType,StaffMember,EventTime
+EDUCATION_BUSINESS.UNIVERSITY_COURSE|CourseNo,CrsDesc,CrsUnits
+EDUCATION_BUSINESS.UNIVERSITY_ENROLLMENT|EnrGrade,StdNo,OfferNo
+EDUCATION_BUSINESS.UNIVERSITY_FACULTY|FacFirstName,FacRank,FacCity,FacSalary,FacState,FacDept,FacHireDate,FacLastName,FacSupervisor,FacNo,FacZipCode
+EDUCATION_BUSINESS.UNIVERSITY_OFFERING|OffYear,OfferNo,OffTerm,CourseNo,OffLocation,FacNo,OffTime,OffDays
+EDUCATION_BUSINESS.UNIVERSITY_STUDENT|StdClass,StdMajor,StdCity,StdFirstName,StdGPA,StdState,StdNo,StdLastName,StdZip
+EDUCATION_BUSINESS.WEB_ACCOUNTS|sales_rep_id,primary_poc,website,id,lat,name,long
+EDUCATION_BUSINESS.WEB_EVENTS|id,channel,account_id,occurred_at
+EDUCATION_BUSINESS.WEB_ORDERS|poster_amt_usd,standard_qty,occurred_at,gloss_qty,poster_qty,standard_amt_usd,total,id,gloss_amt_usd,account_id,total_amt_usd
+EDUCATION_BUSINESS.WEB_REGION|id,name
+EDUCATION_BUSINESS.WEB_SALES_REPS|id,name,region_id

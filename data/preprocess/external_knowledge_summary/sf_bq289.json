@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq289",
+  "question": "Can you find the shortest distance between any two amenities (either a library, place of worship, or community center) located within Philadelphia, analyzed through pennsylvania table and planet features points?",
+  "db_id": "GEO_OPENSTREETMAP_CENSUS_PLACES",
+  "source_document": "functions_st_contains.md",
+  "evidence": "ST_CONTAINS returns TRUE if a GEOGRAPHY or GEOMETRY object is completely inside another. Usage notes: For GEOMETRY objects, the function reports an error if the two input GEOMETRY objects have different SRIDs. Examples: ST_CONTAINS(poly, poly_inside) returns True; ST_CONTAINS(poly, line_on_boundary) returns False."
+}

@@ -1,0 +1,17 @@
+[COMPONENTS]
+
+[TABLES]
+Format: schema.table|components|columns
+DB_IMDB.M_CAST||ID,PID,MID,index
+DB_IMDB.M_PRODUCER||MID,ID,PID,index
+DB_IMDB.M_COUNTRY||CID,index,MID,ID
+DB_IMDB.M_DIRECTOR||index,MID,ID,PID
+DB_IMDB.GENRE||index,GID,Name
+DB_IMDB.MOVIE||title,year,num_votes,MID,index,rating
+DB_IMDB.LANGUAGE||Name,index,LAID
+DB_IMDB.M_LOCATION||LID,index,MID,ID
+DB_IMDB.LOCATION||index,LID,Name
+DB_IMDB.PERSON||Gender,Name,PID,index
+DB_IMDB.M_LANGUAGE||LAID,index,ID,MID
+DB_IMDB.M_GENRE||MID,GID,index,ID
+DB_IMDB.COUNTRY||index,Name,CID

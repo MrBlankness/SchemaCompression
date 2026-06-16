@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq213",
+  "question": "What is the most common 4-digit IPC code among US B2 utility patents granted from June to August in 2022?",
+  "db_id": "PATENTS",
+  "source_document": "patents_info.md",
+  "evidence": "IPC Codes: Handling Main IPC Code Selection - each patent publication can be associated with multiple IPC codes. Not every publication has a designated main IPC code. To determine the most relevant IPC code, focus on the most frequently occurring 4-digit IPC code. Example SQL: SELECT t1.publication_number, SUBSTR(ipc_u.code, 0, 4) as ipc4, COUNT(SUBSTR(ipc_u.code, 0, 4)) as ipc4_count FROM `patents-public-data.patents.publications` t1, UNNEST(ipc) AS ipc_u GROUP BY t1.publication_number, ipc4. Table: `patents-public-data.patents.publications` with field `ipc` containing subfield `first` (boolean) indicating main IPC code."
+}

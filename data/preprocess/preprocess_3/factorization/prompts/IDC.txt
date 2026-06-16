@@ -1,0 +1,1218 @@
+[COMPONENTS]
+@C1
+AccessionNumber: TEXT | NULL
+AcquisitionComments: TEXT | NULL
+AcquisitionContextSequence: VARIANT | NULL
+AcquisitionContrast: TEXT | NULL
+AcquisitionDate: DATE | NULL
+AcquisitionDateTime: NUMBER | NULL
+AcquisitionDeviceProcessingCode: TEXT | NULL
+AcquisitionDeviceProcessingDescription: TEXT | NULL
+AcquisitionDuration: FLOAT | NULL
+AcquisitionMatrix: VARIANT | NULL
+AcquisitionNumber: TEXT | NULL
+AcquisitionsInSeries: TEXT | NULL
+AcquisitionStartCondition: TEXT | NULL
+AcquisitionStartConditionData: TEXT | NULL
+AcquisitionTerminationCondition: TEXT | NULL
+AcquisitionTerminationConditionData: TEXT | NULL
+AcquisitionTime: TIME | NULL
+AcquisitionTimeSynchronized: TEXT | NULL
+AcquisitionType: TEXT | NULL
+ActualFrameDuration: TEXT | NULL
+AdmittingDate: DATE | NULL
+AdmittingDiagnosesCodeSequence: VARIANT | NULL
+AdmittingDiagnosesDescription: VARIANT | NULL
+AdmittingTime: TIME | NULL
+AdvancedBlendingSequence: VARIANT | NULL
+Allergies: VARIANT | NULL
+AnatomicalOrientationType: TEXT | NULL
+AnatomicRegionSequence: VARIANT | NULL
+AngioFlag: TEXT | NULL
+AngularPosition: TEXT | NULL
+AnnotationDisplayFormatID: TEXT | NULL
+AnodeTargetMaterial: TEXT | NULL
+ApplicableSafetyStandardAgency: TEXT | NULL
+ApprovalStatus: TEXT | NULL
+AttenuationCorrectionMethod: TEXT | NULL
+AveragePulseWidth: TEXT | NULL
+AxialAcceptance: TEXT | NULL
+AxialMash: VARIANT | NULL
+B1rms: FLOAT | NULL
+BeamSequence: VARIANT | NULL
+BeatRejectionFlag: TEXT | NULL
+BitsAllocated: NUMBER | NULL
+BitsStored: NUMBER | NULL
+BlendingDisplaySequence: VARIANT | NULL
+BlobStorageSize: NUMBER | NULL
+BloodSignalNulling: TEXT | NULL
+BluePaletteColorLookupTableDescriptor: VARIANT | NULL
+BodyPartThickness: TEXT | NULL
+BoneThermalIndex: TEXT | NULL
+BorderDensity: TEXT | NULL
+BreastImplantPresent: TEXT | NULL
+BulkMotionCompensationTechnique: TEXT | NULL
+BurnedInAnnotation: TEXT | NULL
+CalciumScoringMassFactorDevice: VARIANT | NULL
+CalibrationImage: TEXT | NULL
+CardiacBeatRejectionTechnique: TEXT | NULL
+CardiacFramingType: TEXT | NULL
+CardiacNumberOfImages: TEXT | NULL
+CardiacSignalSource: TEXT | NULL
+CardiacSynchronizationTechnique: TEXT | NULL
+CassetteOrientation: TEXT | NULL
+CassetteSize: TEXT | NULL
+CenterOfCircularShutter: VARIANT | NULL
+ChemicalShiftReference: VARIANT | NULL
+CineRate: TEXT | NULL
+ClinicalTrialCoordinatingCenterName: TEXT | NULL
+ClinicalTrialProtocolID: TEXT | NULL
+ClinicalTrialProtocolName: TEXT | NULL
+ClinicalTrialSeriesID: TEXT | NULL
+ClinicalTrialSiteID: TEXT | NULL
+ClinicalTrialSiteName: TEXT | NULL
+ClinicalTrialSponsorName: TEXT | NULL
+ClinicalTrialSubjectID: TEXT | NULL
+ClinicalTrialSubjectReadingID: TEXT | NULL
+ClinicalTrialTimePointDescription: TEXT | NULL
+ClinicalTrialTimePointID: TEXT | NULL
+CodeValue: TEXT | NULL
+CodingSchemeDesignator: TEXT | NULL
+CodingSchemeIdentificationSequence: VARIANT | NULL
+CodingSchemeUID: TEXT | NULL
+CoincidenceWindowWidth: TEXT | NULL
+CollimatorGridName: TEXT | NULL
+CollimatorLeftVerticalEdge: TEXT | NULL
+CollimatorLowerHorizontalEdge: TEXT | NULL
+CollimatorRightVerticalEdge: TEXT | NULL
+CollimatorShape: VARIANT | NULL
+CollimatorType: TEXT | NULL
+CollimatorUpperHorizontalEdge: TEXT | NULL
+Columns: NUMBER | NULL
+CommentsOnRadiationDose: TEXT | NULL
+CommentsOnThePerformedProcedureStep: TEXT | NULL
+CompletionFlag: TEXT | NULL
+ComplexImageComponent: TEXT | NULL
+CompressionCode: TEXT | NULL
+CompressionForce: TEXT | NULL
+ConcatenationUID: TEXT | NULL
+ConceptNameCodeSequence: VARIANT | NULL
+ConfidentialityCode: TEXT | NULL
+ContainerIdentifier: TEXT | NULL
+ContainerTypeCodeSequence: VARIANT | NULL
+ContentCreatorName: VARIANT | NULL
+ContentDate: DATE | NULL
+ContentDescription: TEXT | NULL
+ContentLabel: TEXT | NULL
+ContentQualification: TEXT | NULL
+ContentTemplateSequence: VARIANT | NULL
+ContentTime: TIME | NULL
+ContextGroupExtensionCreatorUID: TEXT | NULL
+ContextGroupIdentificationSequence: VARIANT | NULL
+ContextIdentifier: TEXT | NULL
+ContinuityOfContent: TEXT | NULL
+ContrastBolusAgent: TEXT | NULL
+ContrastBolusIngredient: TEXT | NULL
+ContrastBolusIngredientConcentration: TEXT | NULL
+ContrastBolusRoute: TEXT | NULL
+ContrastBolusStartTime: TIME | NULL
+ContrastBolusStopTime: TIME | NULL
+ContrastBolusTotalDose: TEXT | NULL
+ContrastBolusVolume: TEXT | NULL
+ContrastFlowDuration: VARIANT | NULL
+ContrastFlowRate: VARIANT | NULL
+ContributingEquipmentSequence: VARIANT | NULL
+ContributingSourcesSequence: VARIANT | NULL
+ConversionType: TEXT | NULL
+ConvolutionKernel: VARIANT | NULL
+CorrectedImage: VARIANT | NULL
+CountRate: TEXT | NULL
+CountsAccumulated: TEXT | NULL
+CountsSource: TEXT | NULL
+CoverageOfKSpace: TEXT | NULL
+CreatorVersionUID: TEXT | NULL
+CTAdditionalXRaySourceSequence: VARIANT | NULL
+CTDIPhantomTypeCodeSequence: VARIANT | NULL
+CTDIvol: FLOAT | NULL
+CTExposureSequence: VARIANT | NULL
+CurrentRequestedProcedureEvidenceSequence: VARIANT | NULL
+CurveDate: DATE | NULL
+CurveDimensions: VARIANT | NULL
+DataCollectionCenterPatient: VARIANT | NULL
+DataCollectionDiameter: TEXT | NULL
+DataPointColumns: NUMBER | NULL
+DataPointRows: NUMBER | NULL
+DataSetSubtype: TEXT | NULL
+DataSetType: NUMBER | NULL
+DataValueRepresentation: VARIANT | NULL
+DateOfLastCalibration: VARIANT | NULL
+DateOfLastDetectorCalibration: DATE | NULL
+DateOfSecondaryCapture: DATE | NULL
+DateTime: NUMBER | NULL
+dBdt: TEXT | NULL
+DeadTimeFactor: TEXT | NULL
+DecayCorrection: TEXT | NULL
+DecayFactor: TEXT | NULL
+Decoupling: TEXT | NULL
+DeidentificationMethod: VARIANT | NULL
+DeidentificationMethodCodeSequence: VARIANT | NULL
+DerivationCodeSequence: VARIANT | NULL
+DerivationDescription: TEXT | NULL
+DerivationImageSequence: VARIANT | NULL
+DetectorActiveDimensions: VARIANT | NULL
+DetectorActiveShape: TEXT | NULL
+DetectorActiveTime: TEXT | NULL
+DetectorBinning: VARIANT | NULL
+DetectorConditionsNominalFlag: TEXT | NULL
+DetectorConfiguration: TEXT | NULL
+DetectorDescription: TEXT | NULL
+DetectorElementPhysicalSize: VARIANT | NULL
+DetectorElementSpacing: VARIANT | NULL
+DetectorID: TEXT | NULL
+DetectorInformationSequence: VARIANT | NULL
+DetectorLinesOfResponseUsed: TEXT | NULL
+DetectorManufacturerModelName: TEXT | NULL
+DetectorManufacturerName: TEXT | NULL
+DetectorMode: TEXT | NULL
+DetectorSecondaryAngle: TEXT | NULL
+DetectorTemperature: TEXT | NULL
+DetectorTimeSinceLastExposure: TEXT | NULL
+DetectorType: TEXT | NULL
+DetectorVector: VARIANT | NULL
+DeviationIndex: TEXT | NULL
+DeviceSerialNumber: TEXT | NULL
+DeviceUID: TEXT | NULL
+DiffusionBValue: FLOAT | NULL
+DiffusionBValueXX: FLOAT | NULL
+DiffusionBValueXY: FLOAT | NULL
+DiffusionBValueXZ: FLOAT | NULL
+DiffusionBValueYY: FLOAT | NULL
+DiffusionBValueYZ: FLOAT | NULL
+DiffusionBValueZZ: FLOAT | NULL
+DiffusionDirectionality: TEXT | NULL
+DiffusionGradientOrientation: VARIANT | NULL
+DigitalImageFormatAcquired: TEXT | NULL
+DigitalSignatureUID: TEXT | NULL
+DimensionIndexSequence: VARIANT | NULL
+DimensionIndexValues: VARIANT | NULL
+DimensionOrganizationSequence: VARIANT | NULL
+DimensionOrganizationType: TEXT | NULL
+DimensionOrganizationUID: TEXT | NULL
+DischargeTime: TIME | NULL
+DisplayedAreaSelectionSequence: VARIANT | NULL
+DistanceSourceToDetector: TEXT | NULL
+DistanceSourceToEntrance: TEXT | NULL
+DistanceSourceToPatient: TEXT | NULL
+DoseCalibrationFactor: TEXT | NULL
+DoseComment: TEXT | NULL
+DoseGridScaling: TEXT | NULL
+DoseReferenceSequence: VARIANT | NULL
+DoseReferenceUID: TEXT | NULL
+DoseSummationType: TEXT | NULL
+DoseType: TEXT | NULL
+DoseUnits: TEXT | NULL
+DroppedTags: VARIANT | NULL
+EchoNumbers: VARIANT | NULL
+EchoPlanarPulseSequence: TEXT | NULL
+EchoPulseSequence: TEXT | NULL
+EchoTime: TEXT | NULL
+EchoTrainLength: TEXT | NULL
+EffectiveDuration: TEXT | NULL
+EffectiveEchoTime: FLOAT | NULL
+EncapsulatedDocumentLength: NUMBER | NULL
+EnergyWeightingFactor: FLOAT | NULL
+EnergyWindowInformationSequence: VARIANT | NULL
+EnergyWindowRangeSequence: VARIANT | NULL
+EnergyWindowVector: VARIANT | NULL
+EntranceDose: NUMBER | NULL
+EntranceDoseInmGy: TEXT | NULL
+EstimatedDoseSaving: FLOAT | NULL
+EstimatedRadiographicMagnificationFactor: TEXT | NULL
+ExposedArea: VARIANT | NULL
+Exposure: TEXT | NULL
+ExposureControlMode: TEXT | NULL
+ExposureControlModeDescription: TEXT | NULL
+ExposureDoseSequence: VARIANT | NULL
+ExposureIndex: TEXT | NULL
+ExposureInmAs: FLOAT | NULL
+ExposureInuAs: TEXT | NULL
+ExposureModulationType: VARIANT | NULL
+ExposuresOnDetectorSinceLastCalibration: TEXT | NULL
+ExposuresOnDetectorSinceManufactured: TEXT | NULL
+ExposuresOnPlate: NUMBER | NULL
+ExposureStatus: TEXT | NULL
+ExposureTime: TEXT | NULL
+ExposureTimeInms: FLOAT | NULL
+ExposureTimeInuS: TEXT | NULL
+ExtendedDepthOfField: TEXT | NULL
+FailedSOPInstanceUIDList: VARIANT | NULL
+FiducialUID: TEXT | NULL
+FieldOfViewDimensions: VARIANT | NULL
+FieldOfViewHorizontalFlip: TEXT | NULL
+FieldOfViewOrigin: VARIANT | NULL
+FieldOfViewRotation: TEXT | NULL
+FieldOfViewShape: TEXT | NULL
+FillerOrderNumberImagingServiceRequest: TEXT | NULL
+FilmOrientation: TEXT | NULL
+FilterMaterial: VARIANT | NULL
+FilterThicknessMaximum: VARIANT | NULL
+FilterThicknessMinimum: VARIANT | NULL
+FilterType: TEXT | NULL
+FlipAngle: TEXT | NULL
+FlowCompensationDirection: TEXT | NULL
+FluoroscopyFlag: TEXT | NULL
+FNumber: TEXT | NULL
+FocalLength: TEXT | NULL
+FocalSpots: VARIANT | NULL
+FocusMethod: TEXT | NULL
+FractionGroupSequence: VARIANT | NULL
+FrameAcquisitionDateTime: NUMBER | NULL
+FrameAcquisitionDuration: FLOAT | NULL
+FrameComments: TEXT | NULL
+FrameDelay: TEXT | NULL
+FrameIncrementPointer: VARIANT | NULL
+FrameLaterality: TEXT | NULL
+FrameOfInterestDescription: VARIANT | NULL
+FrameReferenceDateTime: NUMBER | NULL
+FrameReferenceTime: TEXT | NULL
+FrameTime: TEXT | NULL
+FrameType: VARIANT | NULL
+FrequencyCorrection: TEXT | NULL
+GantryAngle: TEXT | NULL
+GantryDetectorSlew: TEXT | NULL
+GantryDetectorTilt: TEXT | NULL
+GantryID: TEXT | NULL
+GeneratorPower: TEXT | NULL
+GeometryOfKSpaceTraversal: TEXT | NULL
+GradientEchoTrainLength: NUMBER | NULL
+GradientOutput: FLOAT | NULL
+GradientOutputType: TEXT | NULL
+GraphicLayerSequence: VARIANT | NULL
+GreenPaletteColorLookupTableDescriptor: VARIANT | NULL
+Grid: VARIANT | NULL
+GridAspectRatio: VARIANT | NULL
+GridFocalDistance: TEXT | NULL
+GridFrameOffsetVector: VARIANT | NULL
+HalfValueLayer: TEXT | NULL
+HeartRate: TEXT | NULL
+HighBit: NUMBER | NULL
+HighRRValue: TEXT | NULL
+HistogramSequence: VARIANT | NULL
+IconImageSequence: VARIANT | NULL
+ImageAndFluoroscopyAreaDoseProduct: TEXT | NULL
+ImageBoxPosition: NUMBER | NULL
+ImageComments: TEXT | NULL
+ImageDimensions: NUMBER | NULL
+ImageDisplayFormat: TEXT | NULL
+ImagedNucleus: TEXT | NULL
+ImagedVolumeDepth: FLOAT | NULL
+ImagedVolumeHeight: FLOAT | NULL
+ImagedVolumeWidth: FLOAT | NULL
+ImageFormat: TEXT | NULL
+ImageFrameOrigin: VARIANT | NULL
+ImageGeometryType: TEXT | NULL
+ImageID: TEXT | NULL
+ImageIndex: NUMBER | NULL
+ImageLaterality: TEXT | NULL
+ImageLocation: NUMBER | NULL
+ImageOrientation: VARIANT | NULL
+ImageOrientationPatient: VARIANT | NULL
+ImageOrientationSlide: VARIANT | NULL
+ImagePosition: VARIANT | NULL
+ImagePositionPatient: VARIANT | NULL
+ImageRotation: NUMBER | NULL
+ImagerPixelSpacing: VARIANT | NULL
+ImagesInAcquisition: TEXT | NULL
+ImagesInSeries: TEXT | NULL
+ImageType: VARIANT | NULL
+ImagingFrequency: TEXT | NULL
+ImagingServiceRequestComments: TEXT | NULL
+ImplementationClassUID: TEXT | NULL
+ImplementationVersionName: TEXT | NULL
+InPlanePhaseEncodingDirection: TEXT | NULL
+InStackPositionNumber: NUMBER | NULL
+InstanceCreationDate: DATE | NULL
+InstanceCreationTime: TIME | NULL
+InstanceCreatorUID: TEXT | NULL
+InstanceNumber: TEXT | NULL
+InstitutionAddress: TEXT | NULL
+InstitutionalDepartmentName: TEXT | NULL
+InstitutionName: TEXT | NULL
+IntensifierSize: TEXT | NULL
+InterpretationStatusID: TEXT | NULL
+InterpretationTypeID: TEXT | NULL
+IntervalsAcquired: TEXT | NULL
+IntervalsRejected: TEXT | NULL
+InterventionDrugInformationSequence: VARIANT | NULL
+InversionRecovery: TEXT | NULL
+InversionTime: TEXT | NULL
+InversionTimes: VARIANT | NULL
+IrradiationEventUID: VARIANT | NULL
+IssueDateOfImagingServiceRequest: DATE | NULL
+IssuerOfAccessionNumberSequence: VARIANT | NULL
+IssuerOfPatientID: TEXT | NULL
+IssuerOfPatientIDQualifiersSequence: VARIANT | NULL
+IssueTimeOfImagingServiceRequest: TIME | NULL
+ItemNumber: TEXT | NULL
+KSpaceFiltering: TEXT | NULL
+KVP: TEXT | NULL
+LargePaletteColorLookupTableUID: TEXT | NULL
+LargestImagePixelValue: NUMBER | NULL
+LargestPixelValueInSeries: NUMBER | NULL
+LargestValidPixelValue: NUMBER | NULL
+LastUpdated: NUMBER | NULL
+Laterality: TEXT | NULL
+LengthToEnd: NUMBER | NULL
+LensMake: TEXT | NULL
+LensModel: TEXT | NULL
+LensSpecification: VARIANT | NULL
+LongitudinalTemporalEventType: TEXT | NULL
+LongitudinalTemporalInformationModified: TEXT | NULL
+LongitudinalTemporalOffsetFromEvent: FLOAT | NULL
+LossyImageCompression: TEXT | NULL
+LossyImageCompressionMethod: VARIANT | NULL
+LossyImageCompressionRatio: VARIANT | NULL
+LossyImageCompressionRetired: TEXT | NULL
+LowRRValue: TEXT | NULL
+LUTExplanation: TEXT | NULL
+LUTLabel: TEXT | NULL
+MagneticFieldStrength: TEXT | NULL
+MagnetizationTransfer: TEXT | NULL
+ManipulatedImage: VARIANT | NULL
+MappingResourceIdentificationSequence: VARIANT | NULL
+MaximumFractionalValue: NUMBER | NULL
+MechanicalIndex: TEXT | NULL
+MediaStorageSOPClassUID: TEXT | NULL
+MediaStorageSOPInstanceUID: TEXT | NULL
+MedicalAlerts: VARIANT | NULL
+MetaboliteMapDescription: TEXT | NULL
+MIMETypeOfEncapsulatedDocument: TEXT | NULL
+ModalitiesInStudy: VARIANT | NULL
+MRAcquisitionFrequencyEncodingSteps: NUMBER | NULL
+MRAcquisitionPhaseEncodingStepsInPlane: NUMBER | NULL
+MRAcquisitionPhaseEncodingStepsOutOfPlane: NUMBER | NULL
+MRAcquisitionType: TEXT | NULL
+MultiCoilDefinitionSequence: VARIANT | NULL
+MultiCoilElementName: TEXT | NULL
+MultiPlanarExcitation: TEXT | NULL
+MultipleSpinEcho: TEXT | NULL
+NominalInterval: TEXT | NULL
+NominalPercentageOfCardiacPhase: FLOAT | NULL
+NominalRespiratoryTriggerDelayTime: FLOAT | NULL
+NominalScannedPixelSpacing: VARIANT | NULL
+NumberOfAverages: TEXT | NULL
+NumberOfDetectors: NUMBER | NULL
+NumberOfEnergyWindows: NUMBER | NULL
+NumberOfFrames: TEXT | NULL
+NumberOfFramesInOverlay: VARIANT | NULL
+NumberOfKSpaceTrajectories: NUMBER | NULL
+NumberOfOpticalPaths: NUMBER | NULL
+NumberOfPhaseEncodingSteps: TEXT | NULL
+NumberOfPhases: NUMBER | NULL
+NumberOfPoints: VARIANT | NULL
+NumberOfRotations: NUMBER | NULL
+NumberOfRRIntervals: NUMBER | NULL
+NumberOfSeriesRelatedInstances: TEXT | NULL
+NumberOfSlices: NUMBER | NULL
+NumberOfStudyRelatedInstances: TEXT | NULL
+NumberOfStudyRelatedSeries: TEXT | NULL
+NumberOfTemporalPositions: TEXT | NULL
+NumberOfTimeSlices: NUMBER | NULL
+NumberOfTimeSlots: NUMBER | NULL
+NumberOfTomosynthesisSourceImages: TEXT | NULL
+ObservationDateTime: NUMBER | NULL
+OperatorsName: VARIANT | NULL
+OpticalPathSequence: VARIANT | NULL
+OrganDose: TEXT | NULL
+OrganExposed: TEXT | NULL
+OriginalImageIdentification: VARIANT | NULL
+OriginalImageIdentificationNomenclature: VARIANT | NULL
+OriginalSpecializedSOPClassUID: TEXT | NULL
+OtherElements: VARIANT | NULL
+OtherPatientIDs: VARIANT | NULL
+OverlayBitPosition: VARIANT | NULL
+OverlayBitsAllocated: VARIANT | NULL
+OverlayColumns: VARIANT | NULL
+OverlayDate: DATE | NULL
+OverlayDescription: VARIANT | NULL
+OverlayOrigin: VARIANT | NULL
+OverlayRows: VARIANT | NULL
+OverlayType: VARIANT | NULL
+OversamplingPhase: TEXT | NULL
+PaddleDescription: TEXT | NULL
+PaletteColorLookupTableUID: TEXT | NULL
+ParallelAcquisition: TEXT | NULL
+ParallelAcquisitionTechnique: TEXT | NULL
+ParallelReductionFactorInPlane: FLOAT | NULL
+ParallelReductionFactorOutOfPlane: FLOAT | NULL
+ParallelReductionFactorSecondInPlane: FLOAT | NULL
+PartialFourier: TEXT | NULL
+PartialFourierDirection: TEXT | NULL
+PartialView: TEXT | NULL
+PatientAddress: TEXT | NULL
+PatientBirthDate: DATE | NULL
+PatientBirthTime: TIME | NULL
+PatientBreedCodeSequence: VARIANT | NULL
+PatientBreedDescription: TEXT | NULL
+PatientGantryRelationshipCodeSequence: VARIANT | NULL
+PatientIdentityRemoved: TEXT | NULL
+PatientName: VARIANT | NULL
+PatientOrientation: VARIANT | NULL
+PatientOrientationCodeSequence: VARIANT | NULL
+PatientOrientationModifierCodeSequence: VARIANT | NULL
+PatientPosition: TEXT | NULL
+PatientSetupNumber: TEXT | NULL
+PatientSetupSequence: VARIANT | NULL
+PatientSexNeutered: TEXT | NULL
+PatientSpeciesCodeSequence: VARIANT | NULL
+PatientSpeciesDescription: TEXT | NULL
+PatientState: TEXT | NULL
+PatientSupportAngle: TEXT | NULL
+PatientTelephoneNumbers: VARIANT | NULL
+PercentPhaseFieldOfView: TEXT | NULL
+PercentSampling: TEXT | NULL
+PerformedProcedureCodeSequence: VARIANT | NULL
+PerformedProcedureStepDescription: TEXT | NULL
+PerformedProcedureStepEndDate: DATE | NULL
+PerformedProcedureStepEndTime: TIME | NULL
+PerformedProcedureStepID: TEXT | NULL
+PerformedProcedureStepStartDate: DATE | NULL
+PerformedProcedureStepStartTime: TIME | NULL
+PerformedProtocolCodeSequence: VARIANT | NULL
+PerformedStationAETitle: TEXT | NULL
+PerformedStationName: TEXT | NULL
+PerformingPhysicianName: VARIANT | NULL
+PerFrameFunctionalGroupsSequence: VARIANT | NULL
+PersonName: VARIANT | NULL
+PhaseContrast: TEXT | NULL
+PhaseInformationSequence: VARIANT | NULL
+PhaseVector: VARIANT | NULL
+PhotometricInterpretation: TEXT | NULL
+PixelAspectRatio: VARIANT | NULL
+PixelBandwidth: TEXT | NULL
+PixelIntensityRelationship: TEXT | NULL
+PixelIntensityRelationshipSign: NUMBER | NULL
+PixelPaddingRangeLimit: NUMBER | NULL
+PixelPaddingValue: NUMBER | NULL
+PixelPresentation: TEXT | NULL
+PixelRepresentation: NUMBER | NULL
+PixelSpacing: VARIANT | NULL
+PixelSpacingCalibrationDescription: TEXT | NULL
+PixelSpacingCalibrationType: TEXT | NULL
+PlanarConfiguration: NUMBER | NULL
+Planes: NUMBER | NULL
+PlateID: TEXT | NULL
+PlateType: TEXT | NULL
+PositionerMotion: TEXT | NULL
+PositionerPrimaryAngle: TEXT | NULL
+PositionerPrimaryAngleDirection: TEXT | NULL
+PositionerSecondaryAngle: TEXT | NULL
+PositionerType: TEXT | NULL
+PositionReferenceIndicator: TEXT | NULL
+PostprocessingFunction: TEXT | NULL
+PredecessorDocumentsSequence: VARIANT | NULL
+PreferredPlaybackSequencing: NUMBER | NULL
+PreliminaryFlag: TEXT | NULL
+PresentationCreationDate: DATE | NULL
+PresentationCreationTime: TIME | NULL
+PresentationIntentType: TEXT | NULL
+PresentationLUTShape: TEXT | NULL
+PrimaryPromptsCountsAccumulated: TEXT | NULL
+ProcedureCodeSequence: VARIANT | NULL
+ProcessingFunction: TEXT | NULL
+ProtocolName: TEXT | NULL
+PulseSequenceName: TEXT | NULL
+PVCRejection: TEXT | NULL
+QuadratureReceiveCoil: TEXT | NULL
+QualityControlImage: TEXT | NULL
+QualityControlSubject: TEXT | NULL
+RadiationMode: TEXT | NULL
+RadiationSetting: TEXT | NULL
+RadionuclideTotalDose: TEXT | NULL
+Radiopharmaceutical: TEXT | NULL
+RadiopharmaceuticalInformationSequence: VARIANT | NULL
+RadiopharmaceuticalStartTime: TIME | NULL
+RadiopharmaceuticalVolume: TEXT | NULL
+RadiusOfCircularShutter: TEXT | NULL
+RandomsCorrectionMethod: TEXT | NULL
+RealWorldValueMappingSequence: VARIANT | NULL
+ReasonForRequestedProcedureCodeSequence: VARIANT | NULL
+ReasonForTheImagingServiceRequest: TEXT | NULL
+ReasonForTheRequestedProcedure: TEXT | NULL
+ReceiveCoilName: TEXT | NULL
+ReceiveCoilType: TEXT | NULL
+RecognitionCode: TEXT | NULL
+RecognizableVisualFeatures: TEXT | NULL
+RecommendedAbsentPixelCIELabValue: VARIANT | NULL
+RecommendedDisplayFrameRate: TEXT | NULL
+ReconstructionDiameter: TEXT | NULL
+ReconstructionMethod: TEXT | NULL
+ReconstructionTargetCenterPatient: VARIANT | NULL
+RectificationType: TEXT | NULL
+RectilinearPhaseEncodeReordering: TEXT | NULL
+RedPaletteColorLookupTableDescriptor: VARIANT | NULL
+ReferencedFileID: VARIANT | NULL
+ReferencedFrameOfReferenceSequence: VARIANT | NULL
+ReferencedFrameOfReferenceUID: TEXT | NULL
+ReferencedGeneralPurposeScheduledProcedureStepTransactionUID: TEXT | NULL
+ReferencedImageEvidenceSequence: VARIANT | NULL
+ReferencedImageRealWorldValueMappingSequence: VARIANT | NULL
+ReferencedImageSequence: VARIANT | NULL
+ReferencedPatientSequence: VARIANT | NULL
+ReferencedPerformedProcedureStepSequence: VARIANT | NULL
+ReferencedRawDataSequence: VARIANT | NULL
+ReferencedRequestSequence: VARIANT | NULL
+ReferencedRTPlanSequence: VARIANT | NULL
+ReferencedSeriesSequence: VARIANT | NULL
+ReferencedSOPClassUID: TEXT | NULL
+ReferencedSOPInstanceUID: TEXT | NULL
+ReferencedSOPInstanceUIDInFile: TEXT | NULL
+ReferencedStructureSetSequence: VARIANT | NULL
+ReferencedStudySequence: VARIANT | NULL
+ReferringPhysicianAddress: TEXT | NULL
+ReferringPhysicianName: VARIANT | NULL
+ReferringPhysicianTelephoneNumbers: VARIANT | NULL
+RegistrationSequence: VARIANT | NULL
+RelatedFrameOfReferenceUID: TEXT | NULL
+RelatedSeriesSequence: VARIANT | NULL
+RelativeOpacity: FLOAT | NULL
+RelativeXRayExposure: TEXT | NULL
+RepetitionTime: TEXT | NULL
+RepresentativeFrameNumber: NUMBER | NULL
+ReprojectionMethod: TEXT | NULL
+RequestAttributesSequence: VARIANT | NULL
+RequestedContrastAgent: TEXT | NULL
+RequestedProcedureCodeSequence: VARIANT | NULL
+RequestedProcedureDescription: TEXT | NULL
+RequestedProcedureID: TEXT | NULL
+RequestedProcedurePriority: TEXT | NULL
+RescaleIntercept: TEXT | NULL
+RescaleSlope: TEXT | NULL
+RescaleType: TEXT | NULL
+RespiratoryIntervalTime: FLOAT | NULL
+RespiratoryMotionCompensationTechnique: TEXT | NULL
+RespiratorySignalSource: TEXT | NULL
+RespiratoryTriggerDelayThreshold: FLOAT | NULL
+ResponsibleOrganization: TEXT | NULL
+RetrieveAETitle: VARIANT | NULL
+RevolutionTime: FLOAT | NULL
+RFEchoTrainLength: NUMBER | NULL
+ROIContourSequence: VARIANT | NULL
+RotationDirection: TEXT | NULL
+RotationInformationSequence: VARIANT | NULL
+RouteOfAdmissions: TEXT | NULL
+Rows: NUMBER | NULL
+RTPlanDate: DATE | NULL
+RTPlanDescription: TEXT | NULL
+RTPlanGeometry: TEXT | NULL
+RTPlanLabel: TEXT | NULL
+RTPlanName: TEXT | NULL
+RTROIObservationsSequence: VARIANT | NULL
+SAR: TEXT | NULL
+SaturationRecovery: TEXT | NULL
+ScanArc: TEXT | NULL
+ScanLength: TEXT | NULL
+ScanningSequence: VARIANT | NULL
+ScanOptions: VARIANT | NULL
+ScanProgressionDirection: TEXT | NULL
+ScanVelocity: TEXT | NULL
+ScatterCorrectionMethod: TEXT | NULL
+ScatterFractionFactor: TEXT | NULL
+ScheduledProcedureStepDescription: TEXT | NULL
+ScheduledProcedureStepEndDate: DATE | NULL
+ScheduledProcedureStepEndTime: TIME | NULL
+ScheduledProcedureStepID: TEXT | NULL
+ScheduledProcedureStepSequence: VARIANT | NULL
+ScheduledProcedureStepStartDate: DATE | NULL
+ScheduledProcedureStepStartTime: TIME | NULL
+ScheduledProtocolCodeSequence: VARIANT | NULL
+ScheduledStationName: VARIANT | NULL
+ScheduledStudyLocation: TEXT | NULL
+ScheduledStudyLocationAETitle: VARIANT | NULL
+ScheduledStudyStartDate: DATE | NULL
+ScheduledStudyStartTime: TIME | NULL
+SecondaryCaptureDeviceID: TEXT | NULL
+SecondaryCaptureDeviceManufacturer: TEXT | NULL
+SecondaryCaptureDeviceManufacturerModelName: TEXT | NULL
+SecondaryCaptureDeviceSoftwareVersions: VARIANT | NULL
+SecondaryCountsAccumulated: VARIANT | NULL
+SecondaryCountsType: VARIANT | NULL
+SegmentationFractionalType: TEXT | NULL
+SegmentationType: TEXT | NULL
+SegmentedKSpaceTraversal: TEXT | NULL
+SegmentSequence: VARIANT | NULL
+SegmentsOverlap: TEXT | NULL
+Sensitivity: TEXT | NULL
+SequenceName: TEXT | NULL
+SequenceOfUltrasoundRegions: VARIANT | NULL
+SequenceVariant: VARIANT | NULL
+SeriesTime: TIME | NULL
+SeriesType: VARIANT | NULL
+SharedFunctionalGroupsSequence: VARIANT | NULL
+ShutterLeftVerticalEdge: TEXT | NULL
+ShutterLowerHorizontalEdge: TEXT | NULL
+ShutterPresentationValue: NUMBER | NULL
+ShutterRightVerticalEdge: TEXT | NULL
+ShutterShape: VARIANT | NULL
+ShutterUpperHorizontalEdge: TEXT | NULL
+SingleCollimationWidth: FLOAT | NULL
+SkipBeats: TEXT | NULL
+SliceLocation: TEXT | NULL
+SliceSensitivityFactor: TEXT | NULL
+SliceThickness: TEXT | NULL
+SliceVector: VARIANT | NULL
+SmallestImagePixelValue: NUMBER | NULL
+SmallestPixelValueInSeries: NUMBER | NULL
+SmallestValidPixelValue: NUMBER | NULL
+SoftcopyVOILUTSequence: VARIANT | NULL
+SoftTissueThermalIndex: TEXT | NULL
+SoftwareVersions: VARIANT | NULL
+SourceApplicationEntityTitle: TEXT | NULL
+SourceImageSequence: VARIANT | NULL
+SourceIrradiationEventSequence: VARIANT | NULL
+SourcePatientGroupIdentificationSequence: VARIANT | NULL
+SpacingBetweenSlices: TEXT | NULL
+SpatialPresaturation: TEXT | NULL
+SpatialResolution: TEXT | NULL
+SpecialNeeds: TEXT | NULL
+SpecificAbsorptionRateDefinition: TEXT | NULL
+SpecificAbsorptionRateValue: FLOAT | NULL
+SpecificCharacterSet: VARIANT | NULL
+SpecimenDescriptionSequence: VARIANT | NULL
+SpecimenLabelInImage: TEXT | NULL
+SpectrallySelectedExcitation: TEXT | NULL
+SpectrallySelectedSuppression: TEXT | NULL
+SpiralPitchFactor: FLOAT | NULL
+Spoiling: TEXT | NULL
+StackID: TEXT | NULL
+StartTrim: TEXT | NULL
+StationName: TEXT | NULL
+SteadyStatePulseSequence: TEXT | NULL
+StopTrim: TEXT | NULL
+StorageClass: TEXT | NULL
+StorageMediaFileSetUID: TEXT | NULL
+StrainCodeSequence: VARIANT | NULL
+StrainDescription: TEXT | NULL
+StrainNomenclature: TEXT | NULL
+StructureSetDate: DATE | NULL
+StructureSetLabel: TEXT | NULL
+StructureSetName: TEXT | NULL
+StructureSetROISequence: VARIANT | NULL
+StructureSetTime: TIME | NULL
+StudiesContainingOtherReferencedInstancesSequence: VARIANT | NULL
+StudyArrivalDate: DATE | NULL
+StudyArrivalTime: TIME | NULL
+StudyComments: TEXT | NULL
+StudyCompletionDate: DATE | NULL
+StudyCompletionTime: TIME | NULL
+StudyID: TEXT | NULL
+StudyPriorityID: TEXT | NULL
+StudyReadDate: DATE | NULL
+StudyReadTime: TIME | NULL
+StudyStatusID: TEXT | NULL
+StudyTime: TIME | NULL
+SynchronizationFrameOfReferenceUID: TEXT | NULL
+SynchronizationTrigger: TEXT | NULL
+T2Preparation: TEXT | NULL
+TableFeedPerRotation: FLOAT | NULL
+TableHeight: TEXT | NULL
+TablePosition: FLOAT | NULL
+TableSpeed: FLOAT | NULL
+TableTopLateralPosition: TEXT | NULL
+TableTopLongitudinalPosition: TEXT | NULL
+TableTopPitchAngle: FLOAT | NULL
+TableTopRollAngle: FLOAT | NULL
+TableTraverse: TEXT | NULL
+Tag_00091110: VARIANT | NULL
+Tag_00291032: VARIANT | NULL
+Tag_00291140: VARIANT | NULL
+Tag_00551012: VARIANT | NULL
+Tag_00551022: VARIANT | NULL
+Tag_01171010: VARIANT | NULL
+Tag_01171020: VARIANT | NULL
+Tag_01171022: VARIANT | NULL
+Tag_01171024: VARIANT | NULL
+Tag_011710B0: VARIANT | NULL
+Tag_01191180: VARIANT | NULL
+Tag_01F31001: VARIANT | NULL
+Tag_01F31011: VARIANT | NULL
+Tag_2001105F: VARIANT | NULL
+Tag_20019000: VARIANT | NULL
+Tag_20051080: VARIANT | NULL
+Tag_20051084: VARIANT | NULL
+Tag_20051085: VARIANT | NULL
+Tag_20051132: VARIANT | NULL
+Tag_20051402: VARIANT | NULL
+Tag_2005140E: VARIANT | NULL
+Tag_2005140F: VARIANT | NULL
+TagAngleFirstAxis: FLOAT | NULL
+Tagging: TEXT | NULL
+TagSpacingFirstDimension: FLOAT | NULL
+TagThickness: FLOAT | NULL
+TargetExposureIndex: TEXT | NULL
+TemplateExtensionCreatorUID: TEXT | NULL
+TemplateExtensionOrganizationUID: TEXT | NULL
+TemporalPositionIdentifier: TEXT | NULL
+TemporalPositionIndex: NUMBER | NULL
+TemporalResolution: TEXT | NULL
+TimeOfFlightContrast: TEXT | NULL
+TimeOfLastCalibration: VARIANT | NULL
+TimeOfLastDetectorCalibration: TIME | NULL
+TimeOfSecondaryCapture: TIME | NULL
+TimeSliceVector: VARIANT | NULL
+TimezoneOffsetFromUTC: TEXT | NULL
+TissueHeterogeneityCorrection: VARIANT | NULL
+TomoAngle: TEXT | NULL
+TomoClass: TEXT | NULL
+TomoLayerHeight: TEXT | NULL
+TomoTime: TEXT | NULL
+TomoType: TEXT | NULL
+TotalCollimationWidth: FLOAT | NULL
+TotalNumberOfExposures: NUMBER | NULL
+TotalPixelMatrixColumns: NUMBER | NULL
+TotalPixelMatrixFocalPlanes: NUMBER | NULL
+TotalPixelMatrixOriginSequence: VARIANT | NULL
+TotalPixelMatrixRows: NUMBER | NULL
+TransactionUID: TEXT | NULL
+TransducerData: VARIANT | NULL
+TransducerType: TEXT | NULL
+TransferSyntaxUID: TEXT | NULL
+TransmitCoilName: TEXT | NULL
+TransmitCoilType: TEXT | NULL
+TransverseMash: TEXT | NULL
+TriggerSourceOrType: TEXT | NULL
+TriggerTime: TEXT | NULL
+TriggerWindow: TEXT | NULL
+Trim: TEXT | NULL
+TubeAngle: FLOAT | NULL
+Type: TEXT | NULL
+TypeOfData: VARIANT | NULL
+TypeOfDetectorMotion: TEXT | NULL
+TypeOfPatientID: TEXT | NULL
+UID: TEXT | NULL
+UltrasoundColorDataPresent: NUMBER | NULL
+Units: TEXT | NULL
+ValueType: TEXT | NULL
+VariableFlipAngleFlag: TEXT | NULL
+VelocityEncodingDirection: VARIANT | NULL
+VelocityEncodingMinimumValue: FLOAT | NULL
+VerificationFlag: TEXT | NULL
+VerifyingObserverName: VARIANT | NULL
+VerifyingObserverSequence: VARIANT | NULL
+VerticesOfThePolygonalCollimator: VARIANT | NULL
+VerticesOfThePolygonalShutter: VARIANT | NULL
+VideoImageFormatAcquired: TEXT | NULL
+ViewCodeSequence: VARIANT | NULL
+ViewModifierCodeSequence: VARIANT | NULL
+ViewPosition: TEXT | NULL
+VOILUTFunction: TEXT | NULL
+VOILUTSequence: VARIANT | NULL
+VolumeBasedCalculationTechnique: TEXT | NULL
+VolumetricProperties: TEXT | NULL
+WaterReferencedPhaseCorrection: TEXT | NULL
+WholeBodyTechnique: VARIANT | NULL
+WindowCenter: VARIANT | NULL
+WindowCenterWidthExplanation: VARIANT | NULL
+WindowWidth: VARIANT | NULL
+XFocusCenter: VARIANT | NULL
+XRay3DAcquisitionSequence: VARIANT | NULL
+XRay3DReconstructionSequence: VARIANT | NULL
+XRayTubeCurrent: TEXT | NULL
+XRayTubeCurrentInmA: FLOAT | NULL
+XRayTubeCurrentInuA: TEXT | NULL
+YFocusCenter: VARIANT | NULL
+ZoomCenter: VARIANT | NULL
+ZoomFactor: VARIANT | NULL
+
+@C2
+AdditionalPatientHistory: TEXT | NULL
+EthnicGroup: TEXT | NULL
+LastMenstrualDate: DATE | NULL
+Manufacturer: TEXT | NULL
+ManufacturerModelName: TEXT | NULL
+Occupation: TEXT | NULL
+PatientAge: TEXT | NULL
+PatientComments: TEXT | NULL
+PatientSex: TEXT | NULL
+PatientSize: TEXT | NULL
+PatientWeight: TEXT | NULL
+PregnancyStatus: NUMBER | NULL
+ReasonForStudy: TEXT | NULL
+RequestedProcedureComments: TEXT | NULL
+SamplesPerPixel: NUMBER | NULL
+SeriesDate: DATE | NULL
+SeriesNumber: TEXT | NULL
+SmokingStatus: TEXT | NULL
+SOPClassUID: TEXT | NULL
+StudyDate: DATE | NULL
+StudyDescription: TEXT | NULL
+
+@C3
+collection_hash: TEXT | md5 hash of the of this version of the collection containing this instance
+collection_init_idc_version: NUMBER | The IDC version in which the collection containing this instance first appeared
+collection_revised_idc_version: NUMBER | The IDC version in which this version of the collection containing this instance first appeared
+collection_timestamp: NUMBER | Date when the current version of the collection containing this instance was revised
+idc_case_id: TEXT | IDC assigned UUID4 id of this version of the case/patient containing this instance
+instance_hash: TEXT | md5 hash of the data in the this version of this instance
+instance_init_idc_version: NUMBER | The IDC version in which this instance first appeared
+instance_revised_idc_version: NUMBER | The IDC version in which this instance first appeared
+patient_hash: TEXT | md5 hash of this version of the patient/case containing this instance
+patient_init_idc_version: NUMBER | The IDC version in which the patient/case containing this instance first appeared
+patient_revised_idc_version: NUMBER | The IDC version in which this version of the patient/case containing this instance first appeared
+series_aws_url: TEXT | URL of the Amazon Web Services (AWS) folder of the series containing the current version of this instance
+series_gcs_url: TEXT | URL of the Google Cloud Storage (GCS) folder of the series containing the current version of this instance
+series_hash: TEXT | md5 hash of the data in the this version of the series containing this instance
+series_init_idc_version: NUMBER | The IDC version in which the series containing this instance first appeared
+series_revised_idc_version: NUMBER | The IDC version in which this version of the series containing this instance first appeared
+study_hash: TEXT | md5 hash of the data in the this version of the study containing this instance
+study_init_idc_version: NUMBER | The IDC version in which the study containing this instance first appeared
+study_revised_idc_version: NUMBER | The IDC version in which this version of the study containing this instance first appeared
+
+@C4
+finding: VARIANT | NULL
+findingSite: VARIANT | NULL
+measurementGroup_number: NUMBER | Measurement group number corresponding to the measurement groups within the TID 1500 report, starting from 0.
+segmentationInstanceUID: TEXT | SOPInstanceUID of the segmentation object defining the region of interest corresponding to the measurement.
+segmentationSegmentNumber: VARIANT | SegmentNumber of the segment within the segmentation object referenced by segmentationInstanceUID defining the region of interest corresponding to the measurement.
+sourceSegmentedSeriesUID: TEXT | SeriesInstanceUID corresponding to the image series over which the measurement was done.
+trackingIdentifier: TEXT | Value of the TID 1500 Measurement group row corresponding to the concept "Tracking Identifier" (e.g., row 2 in TID 1411)
+trackingUniqueIdentifier: TEXT | Value of the TID 1500 Measurement group row corresponding to the concept "Tracking Unique Identifier" (e.g., row 3 in TID 1411)
+
+@C5
+aws_url: TEXT | NULL
+gcs_url: TEXT | NULL
+source_DOI: TEXT | NULL
+
+@C6
+batch_number: NUMBER | The BCR Batch Code; see https://gdc.cancer.gov/resources-TCGA-users/TCGA-code-tables/bcr-batch-codes for explanation of the codes
+bcr: TEXT | Biospecimen Core Resource; e.g. Nationwide Children's Hospital, Washington University
+case_barcode: TEXT | TCGA patient/case barcode, eg TCGA-AB-2809 (the first 12 characters of the 16-character sample barcode)
+case_gdc_id: TEXT | GDC unique identifer for this case; e.g. 7b4ce492-ff40-4bf1-b3e8-75ff83e8746d. This identifier can be used to find more information at the GDC Data Portal ( https://portal.gdc.cancer.gov/cases/7b4ce492-ff40-4bf1-b3e8-75ff83e8746d )
+program_name: TEXT | Program Name, always TCGA (The Cancer Genome Atlas) in this table.
+project_short_name: TEXT | Project name abbreviation; the program name appended with a project name abbreviation; e.g. TCGA-OV, etc.
+
+@C7
+access: TEXT | NULL
+license_short_name: TEXT | NULL
+
+@C8
+collection_name: TEXT | Collection name as used externally by IDC webapp
+idc_webapp_collection_id: TEXT | NULL
+tcia_api_collection_id: TEXT | NULL
+
+@C9
+crdc_instance_uuid: TEXT | NULL
+crdc_series_uuid: TEXT | NULL
+crdc_study_uuid: TEXT | NULL
+
+@C10
+aws_bucket: TEXT | NULL
+gcs_bucket: TEXT | NULL
+instance_size: NUMBER | NULL
+
+@C11
+license_long_name: TEXT | Long name of license of this analysis result
+license_url: TEXT | URL of license of this analysis result
+
+@C12
+Description: TEXT | URL of license of this analysis result
+DOI: TEXT | Long name of license of this analysis result
+Subjects: NUMBER | Number of subjects in collection
+Updated: DATE | Date of ost recent update
+
+@C13
+max_TotalPixelMatrixColumns: NUMBER | NULL
+max_TotalPixelMatrixRows: NUMBER | NULL
+ObjectiveLensPower: NUMBER | NULL
+
+[TABLES]
+## IDC_V17.ORIGINAL_COLLECTIONS_METADATA
+@use: [C12, C8]
+CancerType: TEXT | Description of collection (HTML format)
+Access: VARIANT | Limited or Public
+ImageTypes: TEXT | Enumeration of image type/modality
+tcia_wiki_collection_id: TEXT | NULL
+Status: TEXT | Collection status: Ongoing or Complete
+Species: TEXT | Species of collection subjects
+Location: TEXT | DEPRECATED: Duplicate of source_doi
+URL: TEXT | Short name of license of this analysis result
+SupportingData: TEXT | Type(s) of addional available data
+licenses: VARIANT | NULL
+collection_id: TEXT | Collection ID as used internally by IDC webapp
+Program: TEXT | Program to which this collection belongs
+
+## IDC_V17.DICOM_METADATA
+@use: [C1, C2]
+SeriesInstanceUID: TEXT | NULL
+SeriesDescription: TEXT | NULL
+Location: TEXT | NULL
+FrameOfReferenceUID: TEXT | NULL
+SOPInstanceUID: TEXT | NULL
+Modality: TEXT | NULL
+BodyPartExamined: TEXT | NULL
+StudyInstanceUID: TEXT | NULL
+PatientID: TEXT | NULL
+ContentSequence: VARIANT | NULL
+
+## IDC_V17.SEGMENTATIONS
+SeriesInstanceUID: TEXT | NULL
+StudyInstanceUID: TEXT | NULL
+TrackingUID: TEXT | NULL
+PatientID: TEXT | NULL
+SegmentedPropertyCategory: VARIANT | NULL
+SegmentAlgorithmType: TEXT | NULL
+SegmentNumber: NUMBER | NULL
+SegmentedPropertyType: VARIANT | NULL
+SegmentAlgorithmName: TEXT | NULL
+SOPInstanceUID: TEXT | NULL
+AnatomicRegion: VARIANT | NULL
+segmented_SeriesInstanceUID: TEXT | NULL
+TrackingID: TEXT | NULL
+FrameOfReferenceUID: TEXT | NULL
+viewer_url: TEXT | NULL
+AnatomicRegionModifier: VARIANT | NULL
+
+## IDC_V17.VERSION_METADATA
+version_hash: TEXT | MD5 hash of hashes of collections in this version
+version_timestamp: TEXT | Version creation timestamp
+idc_version: NUMBER | IDC version number
+
+## IDC_V17.QUALITATIVE_MEASUREMENTS
+@use: [C4]
+SOPInstanceUID: TEXT | NULL
+PatientID: TEXT | NULL
+Quantity: VARIANT | Value of the concept code corresponding to TID 1500 Measurement group row where VT is CODE.
+Value: VARIANT | NULL
+
+## IDC_V17.DICOM_PIVOT
+@use: [C10, C13, C2, C5, C7, C9]
+Program: TEXT | NULL
+BodyPartExamined: TEXT | NULL
+Modality: TEXT | NULL
+min_PixelSpacing: FLOAT | NULL
+tcia_species: TEXT | NULL
+Surface_area_of_mesh: NUMBER | NULL
+Malignancy: TEXT | NULL
+illuminationType: TEXT | NULL
+Diameter: NUMBER | NULL
+SeriesDescription: TEXT | NULL
+SOPInstanceUID: TEXT | NULL
+SegmentedPropertyTypeCodeSequence: TEXT | NULL
+Margin: TEXT | NULL
+collection_id: TEXT | NULL
+Internal_structure: TEXT | NULL
+Sphericity: TEXT | NULL
+FrameOfReferenceUID: TEXT | NULL
+MedicalAlerts: TEXT | NULL
+SliceThickness: FLOAT | NULL
+SeriesInstanceUID: TEXT | NULL
+Apparent_Diffusion_Coefficient: NUMBER | NULL
+SegmentedPropertyCategoryCodeSequence: TEXT | NULL
+Calcification: TEXT | NULL
+Sphericity_quant: NUMBER | NULL
+StudyInstanceUID: TEXT | NULL
+CancerType: TEXT | NULL
+Subtlety_score: TEXT | NULL
+tcia_tumorLocation: TEXT | NULL
+SegmentAlgorithmType: TEXT | NULL
+ImageType: TEXT | NULL
+Volume: NUMBER | NULL
+Volume_of_Mesh: NUMBER | NULL
+analysis_results_id: TEXT | NULL
+Allergies: TEXT | NULL
+PatientID: TEXT | NULL
+SegmentNumber: NUMBER | NULL
+Lobular_Pattern: TEXT | NULL
+Spiculation: TEXT | NULL
+primaryAnatomicStructure: TEXT | NULL
+Texture: TEXT | NULL
+AnatomicRegionSequence: TEXT | NULL
+
+## IDC_V17.ANALYSIS_RESULTS_METADATA
+@use: [C11, C12, C7]
+CancerType: TEXT | DEPRECATED: Duplicate of CancerTypes
+AnalysisArtifacts: TEXT | Types of analysis artifacts produced
+Collections: TEXT | collection_names of original data collections analyzed
+ID: TEXT | Results ID
+Title: TEXT | Descriptive title
+AnalysisArtifactsonTCIA: TEXT | DEPRECATED: Duplicate of AnalysisArtifacts
+Location: TEXT | DEPRECATED: Duplicate of PrimarySiteLocations
+
+## IDC_V17.MEASUREMENT_GROUPS
+@use: [C4]
+SOPInstanceUID: TEXT | NULL
+SeriesDescription: TEXT | NULL
+PatientID: TEXT | NULL
+contentSequence: VARIANT | NULL
+
+## IDC_V17.MUTABLE_METADATA
+@use: [C11, C5, C7, C9]
+source_url: TEXT | The URL of a wiki page that describes the original collection or analysis result that includes this instance
+
+## IDC_V17.DICOM_ALL
+@use: [C1, C10, C11, C2, C3, C5, C7, C8, C9]
+Location: TEXT | NULL
+PatientID: TEXT | Patient ID assigned by submitter of this data
+ContentSequence: VARIANT | NULL
+collection_tumorLocation: TEXT | Source assigned tumor location of the collection containing this instance. Duplicate of tcia_tumorLocation
+tcia_cancerType: TEXT | DEPRECATED: Duplicate of collection_cancerType
+Modality: TEXT | NULL
+tcia_species: TEXT | DEPRECATED: Duplicate of collection_species
+SeriesDescription: TEXT | NULL
+SOPInstanceUID: TEXT | NULL
+collection_id: TEXT | The ID of the collection containing this instance as expected by the IDC web app and API. Duplicate of the idc_webapp_collection_id column.
+collection_cancerType: TEXT | Source assigned cancer type of the collection containing this instance. Duplicate of tcia_cancerType.
+FrameOfReferenceUID: TEXT | NULL
+StudyInstanceUID: TEXT | NULL
+tcia_tumorLocation: TEXT | DEPRECATED: Duplicate of collection_tumorLocation
+Source_URL: TEXT | The URL of a page that describes the original collection or analysis result that include this instance
+SeriesInstanceUID: TEXT | NULL
+BodyPartExamined: TEXT | NULL
+collection_species: TEXT | Source assigned species of the collection containing this instance. Duplicate of tcia_species.
+
+## IDC_V17.TCGA_BIOSPECIMEN_REL9
+@use: [C6]
+min_percent_lymphocyte_infiltration: FLOAT | The minimum percentage of infiltration by lymphocytes in a sample or specimen
+avg_percent_tumor_cells: FLOAT | The average percentage of tumor cells in a sample or specimen
+min_percent_stromal_cells: FLOAT | The minimum percentage of stromal cells in a sample or specimen
+sample_gdc_id: TEXT | Unique GDC identifier for this sample (corresponds to the sample_barcode), eg a1ec9279-c1a6-4e58-97ed-9ec1f36187c5  --  this can be used to access more information from the GDC data portal
+days_to_collection: FLOAT | Time interval from the date of biospecimen collection to the date of initial pathologic diagnosis, represented as a calculated number of days.
+avg_percent_stromal_cells: FLOAT | The average percentage of stromal cells in a sample or specimen
+avg_percent_tumor_nuclei: FLOAT | The average percentage of tumor nuclei in a sample or specimen
+max_percent_stromal_cells: FLOAT | The maximum percentage of stromal cells in a sample or specimen
+num_portions: NUMBER | In some cases, a sample was divided into multiple portions -- up to 6 portions, but for most samples the number is 1 (or even 0).
+min_percent_neutrophil_infiltration: FLOAT | The minimum percentage of neutrophil infiltration in a sample or specimen
+max_percent_tumor_nuclei: FLOAT | The maximum percentage of tumor nuclei in a sample or specimen
+min_percent_tumor_cells: FLOAT | The minimum percentage of tumor cells in a sample or specimen
+sample_type: TEXT | Two-digit sample_type code which forms part of the sample barcode e.g. 01,11,06, etc.
+avg_percent_monocyte_infiltration: FLOAT | The average percentage of infiltration by monocyte in a sample or specimen
+avg_percent_neutrophil_infiltration: FLOAT | The average percentage of neutrophil infiltration in a sample or specimen
+min_percent_necrosis: FLOAT | The minimum percentage of necrosis in a sample or specimen
+max_percent_necrosis: FLOAT | The maximum percentage of necrosis in a sample or specimen
+num_slides: NUMBER | In some cases, portions of a sample were placed onto multiple slides -- generally not more than 2, but occasionally more.
+sample_barcode: TEXT | TCGA sample_barcode; e.g. TCGA-AB-2809-03A.
+max_percent_tumor_cells: FLOAT | The maximum percentage of tumor cells in a sample or specimen
+avg_percent_necrosis: FLOAT | The average percentage of necrosis in a sample or specimen
+max_percent_monocyte_infiltration: FLOAT | The maximum percentage of infiltration by monocytes in a sample or specimen
+avg_percent_normal_cells: FLOAT | The average percentage of normal cells in a sample or specimen
+sample_type_name: TEXT | The longer name of the sample type; e.g. Primary Tumor, Recurrent Tumor, etc.
+min_percent_normal_cells: FLOAT | The minimum percentage of normal cells in a sample or specimen
+min_percent_tumor_nuclei: FLOAT | The minimum percentage of tumor nuclei in a sample or specimen
+avg_percent_lymphocyte_infiltration: FLOAT | The average percentage of infiltration by lymphocytes in a sample or specimen
+max_percent_lymphocyte_infiltration: FLOAT | The maximum percentage of infiltration by lymphocytes in a sample or specimen
+is_ffpe: TEXT | Indicator to signify whether or not the tissue sample was fixed in formalin and embedded in paraffin (FFPE); almost always NO -- only a few (99) FFPE samples were included in the TCGA project
+max_percent_normal_cells: FLOAT | The maximum percentage of normal cells in a sample or specimen
+days_to_sample_procurement: FLOAT | The number of days from the date the patient was diagnosed to the date of the procedure that produced the sample.
+max_percent_neutrophil_infiltration: FLOAT | The maximum percentage of neutrophil infiltration in a sample or specimen
+min_percent_monocyte_infiltration: FLOAT | The minimum percentage of infiltration by lymphocytes in a sample or specimen
+
+## IDC_V17.QUANTITATIVE_MEASUREMENTS
+@use: [C4]
+Units: VARIANT | Value corresponding to the concept "Derivation" for the measurement within SR TID 1500 document (e.g., row 8 in TID 1419)
+Value: NUMBER | NULL
+SeriesDescription: TEXT | NULL
+derivationModifier: VARIANT | NULL
+Quantity: VARIANT | Value of the concept code corresponding to TID 1500 Measurement group row where VT is NUM.
+SOPInstanceUID: TEXT | NULL
+PatientID: TEXT | NULL
+
+## IDC_V17.AUXILIARY_METADATA
+@use: [C10, C11, C3, C5, C7, C8]
+series_instances: NUMBER | Number of instances in the version of the study containing this instance
+SOPInstanceUID: TEXT | DICOM instance containing this instance version
+collection_id: TEXT | Collection ID as used internally by IDC webapp and accepted by the IDC API
+StudyInstanceUID: TEXT | DICOM study containing this instance
+study_final_idc_version: NUMBER | The IDC version in which this version of the study containing this instance last appeared. If 0, thise is the current version.
+instance_final_idc_version: NUMBER | The IDC version in which this instance last appeared. If 0, thise is the current version.
+source_url: TEXT | The URL of a wiki page that describes the original collection or analysis result that includes this instance
+instance_uuid: TEXT | UUID of this version of this instance
+series_final_idc_version: NUMBER | The IDC version in which this version of the series containing this instance last appeared. If 0, thise is the current version.
+study_instances: NUMBER | Number of instances in the version of the study containing this instance
+series_uuid: TEXT | UUID of this version of the series containing this instance
+submitter_case_id: TEXT | Patient ID assigned by submitter of this data
+SeriesInstanceUID: TEXT | DICOM series containing this instance
+study_uuid: TEXT | UUID of this version of the study containing this instance
+
+## IDC_V17.DICOM_METADATA_CURATED
+BodyPartExamined: TEXT | Curated value of BodyPartExamined following the manually created mapping. For the mapping details, please refer to the query referenced in the series description.
+SOPInstanceUID: TEXT | DICOM SOPInstanceUID
+SliceThickness: FLOAT | Cast of Slice_Thickness to FLOAT64
+
+## IDC_V17.DICOM_METADATA_CURATED_SERIES_LEVEL
+@use: [C13]
+SeriesInstanceUID: TEXT | DICOM SeriesInstanceUID
+Modality: TEXT | DICOM Modality
+primaryAnatomicStructure_code_designator_value_str: TEXT | Concatenated values of `CodingSchemeDesignator` and `CodeValue` separated by `:` from SpecimenDescriptionSequence[0] > PrimaryAnatomicStructureSequence[0] (applicable in SM).
+illuminationType_code_designator_value_str: TEXT | Concatenated values of `CodingSchemeDesignator` and `CodeValue` separated by `:` from OpticalPathSequence[0].IlluminationTypeCodeSequence[0] (applicable in SM).
+illuminationType_CodeMeaning: TEXT | `CodeMeaning` from OpticalPathSequence[0].IlluminationTypeCodeSequence[0] (applicable in SM).
+min_PixelSpacing_2sf: FLOAT | Minimum value of the first component of pixel spacing across all instances in the series. Contains first non-null value between first component of the top-level PixelSpacing attribute and the one in SharedFunctionalGroupSequence[0] > PixelMeasuresSequence[0]. Rounded to two significant figures.
+primaryAnatomicStructure_CodeMeaning: TEXT | `CodeMeaning` from SpecimenDescriptionSequence[0] > PrimaryAnatomicStructureSequence[0] (applicable in SM).
+
+## IDC_V17.TCGA_CLINICAL_REL9
+@use: [C6]
+primary_neoplasm_melanoma_dx: TEXT | NULL
+clinical_M: TEXT | NULL
+days_to_death: NUMBER | NULL
+menopause_status: TEXT | NULL
+other_dx: TEXT | NULL
+weight: NUMBER | NULL
+other_malignancy_anatomic_site: TEXT | NULL
+days_to_initial_pathologic_diagnosis: NUMBER | NULL
+primary_therapy_outcome_success: TEXT | NULL
+other_malignancy_histological_type: TEXT | NULL
+pathologic_T: TEXT | NULL
+new_tumor_event_after_initial_treatment: BOOLEAN | NULL
+clinical_T: TEXT | NULL
+days_to_last_followup: NUMBER | NULL
+pathologic_N: TEXT | NULL
+icd_10: TEXT | NULL
+project_name: TEXT | NULL
+age_at_diagnosis: NUMBER | NULL
+number_of_lymphnodes_examined: NUMBER | NULL
+country: TEXT | NULL
+anatomic_neoplasm_subdivision: TEXT | NULL
+history_of_colon_polyps: TEXT | NULL
+mononucleotide_and_dinucleotide_marker_panel_analysis_status: TEXT | NULL
+lymphnodes_examined: TEXT | NULL
+icd_o_3_histology: TEXT | NULL
+number_of_lymphnodes_positive_by_he: TEXT | NULL
+days_to_submitted_specimen_dx: TEXT | NULL
+pathologic_stage: TEXT | NULL
+h_pylori_infection: TEXT | NULL
+other_malignancy_type: TEXT | NULL
+year_of_tobacco_smoking_onset: NUMBER | NULL
+histological_type: TEXT | NULL
+pregnancies: TEXT | NULL
+ethnicity: TEXT | NULL
+race: TEXT | NULL
+year_of_diagnosis: NUMBER | NULL
+residual_tumor: TEXT | NULL
+vital_status: TEXT | NULL
+tumor_type: TEXT | NULL
+days_to_last_known_alive: NUMBER | NULL
+neoplasm_histologic_grade: TEXT | NULL
+history_of_neoadjuvant_treatment: TEXT | NULL
+clinical_N: TEXT | NULL
+gender: TEXT | NULL
+disease_code: TEXT | NULL
+tumor_tissue_site: TEXT | NULL
+icd_o_3_site: TEXT | NULL
+venous_invasion: TEXT | NULL
+gleason_score_combined: TEXT | NULL
+days_to_birth: NUMBER | NULL
+height: NUMBER | NULL
+bmi: FLOAT | NULL
+stopped_smoking_year: NUMBER | NULL
+hpv_calls: TEXT | NULL
+lymphatic_invasion: TEXT | NULL
+clinical_stage: TEXT | NULL
+psa_value: TEXT | NULL
+tss_code: TEXT | NULL
+colorectal_cancer: TEXT | NULL
+tobacco_smoking_history: NUMBER | NULL
+lymphovascular_invasion_present: TEXT | NULL
+pathologic_M: TEXT | NULL
+age_began_smoking_in_years: TEXT | NULL
+hpv_status: TEXT | NULL
+number_pack_years_smoked: NUMBER | NULL
+person_neoplasm_cancer_status: TEXT | NULL

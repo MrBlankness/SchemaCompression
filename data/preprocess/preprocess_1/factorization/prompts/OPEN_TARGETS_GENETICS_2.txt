@@ -1,0 +1,25 @@
+[COMPONENTS]
+@C1:ancestry_initial,ancestry_replication,has_sumstats,n_initial,n_replication,num_assoc_loci,pmid,pub_author,pub_date,pub_journal,pub_title,source,trait_category,trait_efos,trait_reported
+@C2:AFR_1000G_prop,AMR_1000G_prop,beta_ci_lower,beta_ci_upper,direction,EAS_1000G_prop,EUR_1000G_prop,log10_ABF,odds_ratio,oddsr_ci_lower,oddsr_ci_upper,overall_r2,posterior_prob,pval_exponent,pval_mantissa,SAS_1000G_prop
+@C3:d,distance_score,distance_score_q,feature,fpred_labels,fpred_max_label,fpred_max_score,fpred_scores,interval_score,interval_score_q,qtl_beta,qtl_pval,qtl_score,qtl_score_q,qtl_se,source_id
+@C4:lead_alt,lead_chrom,lead_pos,lead_ref,tag_alt,tag_chrom,tag_pos,tag_ref
+@C5:alt,chrom,pos,ref
+@C6:eaf,info,is_cc,n_total,se
+@C7:beta,pval
+@C8:alt_allele,chr_id,position,ref_allele
+
+[TABLES]
+Format: schema.table|components|columns
+OPEN_TARGETS_GENETICS.SA_MOLECULAR_TRAIT|@C5,@C6,@C7|mac_cases,type_id,n_cases,phenotype_id,mac,gene_id,bio_feature,study_id,num_tests
+OPEN_TARGETS_GENETICS.VARIANTS|@C8|gene_id_any,gene_id_prot_coding,chr_id_b37,af,position_b37,most_severe_consequence,gene_id_prot_coding_distance,gene_id_any_distance,rs_id,cadd
+OPEN_TARGETS_GENETICS.VARIANT_DISEASE|@C1,@C2,@C4,@C7|study_id,pics_95perc_credset,n_cases
+OPEN_TARGETS_GENETICS.STUDIES|@C1|study_id,n_cases
+OPEN_TARGETS_GENETICS.GENES||exons,biotype,description,chr,gene_id,start,end,fwdstrand,gene_name,tss
+OPEN_TARGETS_GENETICS.STUDIES_OVERLAP||B_ref,A_study_id,B_study_id,B_alt,B_distinct,A_chrom,AB_overlap,A_distinct,A_alt,B_chrom,B_pos,A_ref,A_pos
+OPEN_TARGETS_GENETICS.SA_GWAS|@C5,@C6,@C7|mac_cases,study_id,mac,type_id,n_cases
+OPEN_TARGETS_GENETICS.OT_RELEASE||release
+OPEN_TARGETS_GENETICS.VARIANT_DISEASE_COLOC||left_type,coloc_n_vars,right_chrom,right_alt,left_pos,right_bio_feature,coloc_h2,coloc_h0,right_ref,is_flipped,left_var_right_study_beta,coloc_h3,left_ref,left_var_right_study_se,left_var_right_isCC,coloc_log2_h4_h3,left_var_right_study_pval,right_phenotype,left_chrom,right_study,right_gene_id,right_type,right_pos,coloc_h4_h3,coloc_h4,coloc_h1,left_alt,left_study
+OPEN_TARGETS_GENETICS.VARIANT_DISEASE_CREDSET|@C4|lead_variant_id,study_id,multisignal_method,tag_se,tag_pval_cond,bio_feature,is95_credset,tag_variant_id,tag_pval,tag_se_cond,tag_beta,tag_beta_cond,postprob_cumsum,is99_credset,phenotype_id,type,gene_id,logABF,postprob
+OPEN_TARGETS_GENETICS.VARIANT_GENE|@C3,@C8|gene_id,type_id
+OPEN_TARGETS_GENETICS.LOCUS2GENE|@C5|y_proba_logi_pathogenicity,y_proba_logi_molecularQTL,y_proba_dist_foot,y_proba_logo_molecularQTL,training_gs,training_clf,y_proba_logo_interaction,gene_id,y_proba_logi_interaction,y_proba_logo_pathogenicity,training_fold,study_id,y_proba_logi_distance,y_proba_logo_distance,y_proba_full_model,y_proba_dist_tss
+OPEN_TARGETS_GENETICS.DISEASE_VARIANT_GENE|@C1,@C2,@C3,@C4,@C7|n_cases,study_id,type_id,gene_id

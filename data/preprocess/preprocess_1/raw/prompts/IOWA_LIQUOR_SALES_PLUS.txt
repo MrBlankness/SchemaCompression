@@ -1,0 +1,11 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: IOWA_LIQUOR_SALES.SALES
+Columns: vendor_name, item_number, bottle_volume_ml, address, city, invoice_and_item_number, state_bottle_cost, state_bottle_retail, vendor_number, pack, category_name, store_name, item_description, store_location, zip_code, sale_dollars, county_number, county, volume_sold_liters, store_number, bottles_sold, category, volume_sold_gallons, date
+
+Table: CENSUS_BUREAU_USA.POPULATION_BY_ZIP_2010
+Columns: gender, population, geo_id, minimum_age, maximum_age, zipcode
+
+Table: CENSUS_BUREAU_USA.POPULATION_BY_ZIP_2000
+Columns: minimum_age, gender, population, geo_id, zipcode, maximum_age

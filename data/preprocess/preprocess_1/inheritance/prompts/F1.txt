@@ -1,0 +1,35 @@
+[TEMPLATES]
+Format: Tn|col1,col2|schema1.table1;schema2.table2
+T2|race_id,driver_id,points,position_text,wins,position,driver_standings_id|F1.DRIVER_STANDINGS;F1.DRIVER_STANDINGS_EXT
+T6|number,forename,url,code,full_name,driver_ref,driver_id,dob,surname,nationality|F1.DRIVERS;F1.DRIVERS_EXT
+T13|fp1_date,fp2_date,quali_date,sprint_time,url,fp3_date,race_id,time,sprint_date,date,circuit_id,quali_time,fp3_time,fp1_time,year,name,round,fp2_time|F1.RACES
+T22|constructor_id,name,url,nationality,constructor_ref|F1.CONSTRUCTORS
+T24|position,time,race_id,driver_id,lap,milliseconds,seconds|F1.LAP_TIMES
+T7|team_driver_rank,constructor_ref,driver_ref,year|F1.TDR_OVERRIDES
+T8|circuit_ref,lng,url,circuit_id,lat,name,alt,country,location|F1.CIRCUITS
+
+[DERIVED]
+Format: Tm<Tp|col1,col2|schema1.table1;schema2.table2
+T15<T24|running_milliseconds|F1.LAP_TIMES_EXT
+T16<T13|max_points,short_name,has_sprint,is_pit_data_available|F1.RACES_EXT
+T18<T7|driver_id,constructor_id|F1.TEAM_DRIVER_RANKS
+T20<T22|short_name|F1.CONSTRUCTORS_EXT
+T5<T8|last_race_year,number_of_races|F1.CIRCUITS_EXT
+
+[STANDALONE]
+Format: schema.table|col1,col2
+F1.CONSTRUCTOR_RESULTS|constructor_results_id,race_id,status,points,constructor_id
+F1.CONSTRUCTOR_STANDINGS|wins,constructor_standings_id,position,race_id,points,position_text,constructor_id
+F1.DRIVES|last_round,is_first_drive_of_season,drive_id,year,constructor_id,is_final_drive_of_season,first_round,driver_id
+F1.LAP_POSITIONS|race_id,lap,lap_type,position,driver_id
+F1.LAP_TIME_STATS|race_id,stdev_seconds,avg_milliseconds,stdev_milliseconds,avg_seconds,driver_id
+F1.LIVERIES|start_year,constructor_ref,end_year,primary_hex_code
+F1.PIT_STOPS|seconds,time,duration,race_id,milliseconds,driver_id,lap,stop
+F1.QUALIFYING|qualify_id,driver_id,position,q1,q3,race_id,q2,number,constructor_id
+F1.RESULTS|result_id,laps,milliseconds,fastest_lap,position,race_id,driver_id,rank,status_id,points,constructor_id,position_order,fastest_lap_time,time,grid,position_text,fastest_lap_speed,number
+F1.RETIREMENTS|retirement_type,lap,driver_id,status_id,position_order,race_id
+F1.SEASONS|url,year
+F1.SHORT_CONSTRUCTOR_NAMES|short_name,constructor_ref
+F1.SHORT_GRAND_PRIX_NAMES|short_name,full_name
+F1.SPRINT_RESULTS|race_id,number,constructor_id,result_id,fastest_lap_speed,laps,fastest_lap,position,position_order,fastest_lap_time,grid,milliseconds,points,position_text,time,driver_id,status_id
+F1.STATUS|status_id,status

@@ -1,0 +1,26 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: PUBLIC.Fact_StateBenchmark_ACS2021
+Columns: MetricID, TotalStatePopulation, StateBenchmarkValue, TotalUSPopulation, StateFIPS, StateAbbrev
+
+Table: PUBLIC.Dim_CensusGeography
+Columns: StateAbbrev, BlockGroupCode, BlockGroupPolygon, StateCountyTractID, TractCode, AmtLand, StateName, BlockGroupCentroidLon, BlockGroupName, MTFCC, CountyName, GeographyYear, AmtWater, BlockGroupCentroidLat, StateFIPS, BlockGroupCentroidPoints, FuncStat, BlockGroupID, CountyFIPS
+
+Table: PUBLIC.Xref_ZipToTract_Residential
+Columns: FromZipCode, ToStateCountyTractID, ResidentialMappingRatioZT
+
+Table: PUBLIC.Fact_CensusValues_ACS2021_ByZip
+Columns: CensusValueByZip, MetricID, ZipCode
+
+Table: PUBLIC.LU_GeographyExpanded
+Columns: ZipCode, ZipCodeCentroidPoint, ZipCodePolygon, PreferredStateAbbrev, ZipCodeCentroidLon, ZipCodeType, PreferredCityStateAbbrev, PreferredCity, ZipCodeCentroidLat, PreferredStateName
+
+Table: PUBLIC.Dim_CensusMetrics
+Columns: MetricCategory, Type, Descriptor2, MetricTableDesc, MetricTableID, MetricID, Descriptor1, Descriptor3, MetricGroup, UnitMeasureType
+
+Table: PUBLIC.Xref_TractToZip_Residential
+Columns: FromStateCountyTractID, ToZipCode, ResidentialMappingRatioTZ
+
+Table: PUBLIC.Fact_CensusValues_ACS2021
+Columns: CensusValue, BlockGroupID, MetricID

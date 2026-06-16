@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq157",
+  "question": "Please compute the T-score to determine the statistical difference in the expression of the DRG2 gene between LGG patients with and without TP53 mutation: for each patient, calculate the average of log10(normalized_count + 1) of DRG2 expression across all their samples, using only samples present in the `MC3_MAF_V5_one_per_tumor_sample` table for the LGG study; identify patients with TP53 mutations from this table where `Hugo_Symbol` is 'TP53' and `FILTER` is 'PASS'; then perform a T-test comparing the mean averaged log-transformed DRG2 expression between patients with and without TP53 mutation.",
+  "db_id": "PANCANCER_ATLAS_1",
+  "source_document": "Regulome_Explorer_T_test_for_numerical_and_binary_data.md",
+  "evidence": "Key concepts: T-score formula for unequal variances: T = (mean_yes - mean_no) / sqrt(var_yes/N_yes + var_no/N_no). Data sources: Gene expression from 'Filtered.EBpp_AdjustPANCAN_IlluminaHiSeq_RNASeqV2_genExp_filtered' table, somatic mutation from 'pancancer-atlas.Filtered.MC3_MAF_V5_one_per_tumor_sample' table. Mutation filtering: FILTER = 'PASS'. Gene expression calculation: average gene expression of tumor samples per participant. Implementation approach: Compute sums S_y=Σg_i and Q_y=Σg_i² for mutation group, then derive means and variances. Example query structure shown for computing T-score with thresholds. Important: Only use samples present in MC3_MAF_V5_one_per_tumor_sample table."
+}

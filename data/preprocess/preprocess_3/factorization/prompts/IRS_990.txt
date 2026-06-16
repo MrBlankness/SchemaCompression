@@ -1,0 +1,609 @@
+[COMPONENTS]
+@C1
+accntingfees: NUMBER | Accounting fees
+accntspayableend: NUMBER | Accounts payable and accrued expenses -- eoy
+accntsrcvblend: NUMBER | Accounts receivable -- eoy
+actonbehalfcd: TEXT | On behalf of issuer?
+advrtpromo: NUMBER | Advertising and promotion
+awarexcessbnftcd: TEXT | Prior excess benefit transaction?
+benifitsmembrs: NUMBER | Benefits paid to or for members
+capitalstktrstend: NUMBER | Retained earnings -- eoy
+ceaseoperationscd: TEXT | Terminated?
+compltschocd: TEXT | Schedule O completed?
+compnsatnandothr: NUMBER | Compensation of disqualified persons
+conduct5percentcd: TEXT | Activities conducted thru partnership?
+converconventmtng: NUMBER | Conferences, conventions, meetings
+crcounselingqstncd: TEXT | Credit counseling?
+currfrmrcvblend: NUMBER | Receivables from officers, directors, etc. -- eoy
+deferedrevnuend: NUMBER | Deferred revenue -- eoy
+deprcatndepletn: NUMBER | Depreciation, depletion, amortization
+dirbusnreltdcd: TEXT | Business relationship with organization?
+distribtodonorcd: TEXT | Distribution to donor?
+dnradvisedfundscd: TEXT | Donor advised funds?
+engageexcessbnftcd: TEXT | Excess benefit transaction?
+escrwaccntliabend: NUMBER | Escrow account liability -- eoy
+excbushldngscd: TEXT | Excess business holdings?
+exprstmntcd: TEXT | Non-deduct. disclosure?
+f1096cnt: NUMBER | Number forms transmitted with 1096
+f8282cnt: NUMBER | Number of 8282s filed
+feesforsrvcinvstmgmt: NUMBER | Investment management feed
+feesforsrvclobby: NUMBER | Lobbying fees
+feesforsrvcmgmt: NUMBER | Management fees
+feesforsrvcothr: NUMBER | Other fees
+filedf1098ccd: TEXT | Form 1098-C filed?
+filedf720cd: TEXT | Filed Form 720 for tanning
+filedf8282cd: TEXT | Form 8282 property disposed of?
+filedf8886tcd: TEXT | Form 8886-T filed?
+filedf8899cd: TEXT | Form 8899 filed?
+filedlieuf1041cd: TEXT | Form 990 in lieu of 1041?
+filerqrdrtnscd: TEXT | Employment tax returns filed?
+fmlybusnreltdcd: TEXT | Business relationship thru family member?
+fndsrcvdcd: TEXT | Funds to pay premiums?
+frgnacctcd: TEXT | Foreign financial account?
+frgnaggragrntscd: TEXT | More than $5000 to individuals Part IX, line 3?
+frgngrntscd: TEXT | More than $5000 to organizations Part IX, line 3?
+frgnofficecd: TEXT | Foreign office?
+frgnrevexpnscd: TEXT | Foreign activities, etc?
+fw2gcnt: NUMBER | Number W-2Gs included in 1a
+grantoofficercd: TEXT | Grant to related person?
+grnsttoindiv: NUMBER | Grants to individuals in the US
+grntspayableend: NUMBER | Grants payable -- eoy
+grntstofrgngovt: NUMBER | Grants to orgs and individuals outside the US
+grntstogovt: NUMBER | Grants to governments/orgs in the US
+hldassetsintermpermcd: TEXT | Term or permanent endowments?
+hospaudfinstmtcd: TEXT | Hospital audited financial statement included?
+inclinfinstmtcd: TEXT | Included in consolidated financial statements?
+infotech: NUMBER | Information technology
+insurance: NUMBER | Insurance
+intangibleassetsend: NUMBER | Intangible assets -- eoy
+intincntrlcd: TEXT | Related organization a controlled entity?
+invntriesalesend: NUMBER | Inventories for sale or use -- eoy
+invstmntsend: NUMBER | Investments in publicly traded securities -- eoy
+invstmntsothrend: NUMBER | Investments in other securities -- eoy
+invstmntsprgmend: NUMBER | Program-related investments -- eoy
+invstproceedscd: TEXT | Investment income?
+lbbyingactvtscd: TEXT | Lobbying activities?
+legalfees: NUMBER | Legal fees
+lndbldgsequipend: NUMBER | Land, buildings, & equipment (net) -- eoy
+loantofficercd: TEXT | Loan to officer or DQP?
+maintescrwaccntcd: TEXT | Escrow account?
+maintwrkofartcd: TEXT | Collections of art?
+miscrev11acd: NUMBER | Other revenue code 11a
+miscrev11bcd: NUMBER | Other revenue code 11b
+miscrev11ccd: NUMBER | Other revenue code 11c
+miscrevtot11b: NUMBER | Other revenue amount 11b
+miscrevtot11c: NUMBER | Other revenue amount 11c
+miscrevtot11d: NUMBER | Other revenue amount 11d
+miscrevtota: NUMBER | Other revenue amount 11a
+nocontractor100kcnt: NUMBER | Number of contractors greater than $100K
+noemplyeesw3cnt: NUMBER | Number of employees
+noindiv100kcnt: NUMBER | Number individuals greater than $100K
+nonintcashend: NUMBER | Cash -- non-interest bearing -- eoy
+notesloansrcvblend: NUMBER | Notes and loans receivables -- eoy
+notfydnrvalcd: TEXT | Quid pro quo disclosure?
+occupancy: NUMBER | Occupancy
+officexpns: NUMBER | Office expenses
+operatehosptlcd: TEXT | Hospital?
+operateschools170cd: TEXT | School?
+orgtrnsfrcd: TEXT | Any transfers to exempt non-charitable org?
+othrassetsend: NUMBER | Other assets -- eoy
+othremplyeebenef: NUMBER | Other employee benefits
+othrexpnsa: NUMBER | Other expenses 24a
+othrexpnsb: NUMBER | Other expenses 24b
+othrexpnsc: NUMBER | Other expenses 24c
+othrexpnsd: NUMBER | Other expenses 24d
+othrexpnse: NUMBER | Other expenses 24e
+othrexpnsf: NUMBER | Other expenses 24f
+othrliabend: NUMBER | Other liabilities -- eoy
+ownsepentcd: TEXT | Disregarded entity?
+paidinsurplusend: NUMBER | Permanently restricted net assets -- eoy
+paybletoffcrsend: NUMBER | Payables to officers, directors, etc. -- eoy
+pensionplancontrb: NUMBER | Pension plan contributions
+permrstrctnetasstsend: NUMBER | Permanently restricted net assets -- eoy
+pldgegrntrcvblend: NUMBER | Pledges and grants receivable -- eoy
+politicalactvtscd: TEXT | Political activities?
+premiumspaidcd: TEXT | Premiums paid?
+prepaidexpnsend: NUMBER | Prepaid expenses or deferred charges -- eoy
+prgmservcode2acd: NUMBER | Program service revenue code 2a
+prgmservcode2bcd: NUMBER | Program service revenue code 2b
+prgmservcode2ccd: NUMBER | Program service revenue code 2c
+prgmservcode2dcd: NUMBER | Program service revenue code 2d
+prgmservcode2ecd: NUMBER | Program service revenue code 2e
+providegoodscd: TEXT | Quid pro quo contributions?
+prptyintrcvdcd: TEXT | Conservation easements?
+prtynotifyorgcd: TEXT | Taxable party notification?
+pymtoaffiliates: NUMBER | Payments to affiliates
+qualhlthonhnd: NUMBER | Qualified health plan reserves on hand
+qualhlthplncd: TEXT | Qualified health plan in multiple states
+qualhlthreqmntn: NUMBER | Qualified health plan reserves required
+rcvbldisqualend: NUMBER | Receivables from disqualified persons -- eoy
+rcvdpdtngcd: TEXT | Payments for indoor tanning
+recvartcd: TEXT | Deductible contributions of art, etc?
+recvnoncashcd: TEXT | Deductible non-cash contributions?
+reltdorgcd: TEXT | Related entity?
+royaltsexpns: NUMBER | Royalties
+rptgrntstogovtcd: TEXT | Grants to organizations?
+rptgrntstoindvcd: TEXT | Grants to individuals?
+rptincfnndrsngcd: TEXT | Fundraising activities?
+rptincgamingcd: TEXT | Gaming?
+rptinvstothsecd: TEXT | Investments in other securities reported?
+rptinvstprgrelcd: TEXT | Program related investments reported?
+rptlndbldgeqptcd: TEXT | Land buildings and equipment reported?
+rptothasstcd: TEXT | Other assets reported?
+rptothliabcd: TEXT | Other liabilities reported?
+rptprofndrsngfeescd: TEXT | Professional fundraising?
+rptyestocompnstncd: TEXT | Schedule J required?
+s4966distribcd: TEXT | Taxable distributions?
+s501c3or4947a1cd: TEXT | Described in 501(c)(3)?
+schdbind: TEXT | Schedule B required?
+sellorexchcd: TEXT | Partial liquidation?
+sepcnsldtfinstmtcd: TEXT | Separate consolidated financial statement
+sepindaudfinstmtcd: TEXT | Separate audited financial statement
+servasofficercd: TEXT | Officer, etc. of entity with business relationship?
+solicitcntrbcd: TEXT | Non-deductible contributions?
+subjto6033cd: TEXT | Subject to proxy tax?
+svngstempinvend: NUMBER | Savings and temporary cash investments -- eoy
+temprstrctnetasstsend: NUMBER | Temporarily restricted net assets -- eoy
+totcomprelatede: NUMBER | Reportable compensation from related orgs
+totestcompf: NUMBER | Other compensation
+totnetliabastend: NUMBER | Total Liabilities + Net Assets -- eoy
+totreprtabled: NUMBER | Reportable compensation from organization
+totrev2acola: NUMBER | Program service revenue amount 2a
+totrev2bcola: NUMBER | Program service revenue amount 2b
+totrev2ccola: NUMBER | Program service revenue amount 2c
+totrev2dcola: NUMBER | Program service revenue amount 2d
+totrev2ecola: NUMBER | Program service revenue amount 2e
+totrev2fcola: NUMBER | Program service revenue amount 2f
+travel: NUMBER | Travel
+travelofpublicoffcl: NUMBER | Travel/entertainment expenses to public officials
+txexmptbndcd: TEXT | Tax exempt bonds?
+txexmptint: NUMBER | Tax exempt interest in lieu of 1041
+unrstrctnetasstsend: NUMBER | Unrestricted net assets -- eoy
+wthldngrulescd: TEXT | Compliance with backup witholding?
+
+@C2
+adjnetinc: NUMBER | Adjusted net income
+adjnetinccola: NUMBER | Adjusted net income column a
+adjnetinccolb: NUMBER | Adjusted net income column b
+adjnetinccolc: NUMBER | Adjusted net income column c
+adjnetinccold: NUMBER | Adjusted net income column d
+adjnetinctot: NUMBER | Adjusted net income total
+agremkpaycd: TEXT | Agree to make pay?
+brwlndmnycd: TEXT | Borrow lend money?
+claimstatcd: TEXT | Claiming status?
+cmpmininvstret: NUMBER | Minimum investment return
+compofficers: NUMBER | Compensation of officers
+contractncd: TEXT | Contraction?
+contrpdpbks: NUMBER | Contributions gifts grants paid
+costsold: NUMBER | Cost-of-goods-sold
+crelamt: NUMBER | Credit elect amount
+dirindirintcd: TEXT | Direct indirect interest?
+distribamt: NUMBER | Distributable amount
+dividndsamt: NUMBER | NULL
+endwmntscola: NUMBER | Endowments column a
+endwmntscolb: NUMBER | Endowments column b
+endwmntscolc: NUMBER | Endowments column c
+endwmntscold: NUMBER | Endowments column d
+endwmntstot: NUMBER | Endowments total
+eostatus: TEXT | EO Status Code
+erronbkupwthld: NUMBER | Erroneous backup withholding credit amount
+estpnlty: NUMBER | Estimated tax penalty
+esttaxcr: NUMBER | Estimated tax credit
+excesshldcd: TEXT | Excess business holdings?
+excessrcpts: NUMBER | Net income less deficit
+fairmrktvalamt: NUMBER | Total assets – e-o-y fair market valu
+fairmrktvaleoy: NUMBER | Total assets – e-o-y fair market value
+furngoodscd: TEXT | Furnished goods?
+grntindivcd: TEXT | Grant individual?
+grscontrgifts: NUMBER | Contributions received
+grsinvstinca: NUMBER | Gross investment income column a
+grsinvstincb: NUMBER | Gross investment income column b
+grsinvstincc: NUMBER | Gross investment income column c
+grsinvstincd: NUMBER | Gross investment income column d
+grsinvstinctot: NUMBER | Gross investment income total
+grsprofitbus: NUMBER | Gross profit
+grsrents: NUMBER | Gross rents
+infleg: TEXT | Influence legislation?
+intrstrvnue: NUMBER | Interest revenue
+invstcorpbnd: NUMBER | Investments in corporate bonds– e-o-y book value
+invstcorpstk: NUMBER | Investments in corporate stock – e-o-y book value
+invstexcisetx: NUMBER | Excise tax on net investment income
+invstgovtoblig: NUMBER | Investments in U.S. & state government obligations – e-o-y book value
+invstjexmptcd: TEXT | Jeopardizing investments?
+mrtgloans: NUMBER | Investments mortgage loans – e-o-y book value
+mrtgnotespay: NUMBER | Mortgage loans payable – e-o-y book value
+nchrtygrntcd: TEXT | Non-charity grant?
+netinvstinc: NUMBER | Net investment income
+nreligiouscd: TEXT | Non-religious?
+operatingcd: TEXT | Operating foundation code
+otherincamt: NUMBER | Other income
+othrcashamt: NUMBER | Cash non-interest-bearing – e-o-y book value
+othrinvstend: NUMBER | Other investments – e-o-y book value
+paidcmpncd: TEXT | Paid compensation?
+propexchcd: TEXT | Property exchange?
+propgndacd: TEXT | Propaganda?
+pubsuprtcola: NUMBER | Public support column a
+pubsuprtcolb: NUMBER | Public support column b
+pubsuprtcolc: NUMBER | Public support column c
+pubsuprtcold: NUMBER | Public support column d
+pubsuprttot: NUMBER | Public support total
+qlfyasseta: NUMBER | Qualifying assets column a
+qlfyassetb: NUMBER | Qualifying assets column b
+qlfyassetc: NUMBER | Qualifying assets column c
+qlfyassetd: NUMBER | Qualifying assets column d
+qlfyassettot: NUMBER | Qualifying assets total
+qlfydistriba: NUMBER | Qualifying distributions column a
+qlfydistribb: NUMBER | Qualifying distributions column b
+qlfydistribc: NUMBER | Qualifying distributions column c
+qlfydistribd: NUMBER | Qualifying distributions column d
+qlfydistribtot: NUMBER | Qualifying distributions total
+sec4940notxcd: TEXT | Section 4940 – no tax
+sec4940redtxcd: TEXT | Section 4940 – 1 % tax
+sect511tx: NUMBER | Section 511 tax
+subcd: TEXT | Subsection code
+subtitleatx: NUMBER | Subtitle A tax
+tax_prd: TEXT | Tax period (YYYYMM format)
+tax_yr: NUMBER | SOI Year
+tfairmrktunuse: NUMBER | Fair market value of assets not used for charitable purposes
+tfundnworth: NUMBER | Total fund net worth – e-o-y book value
+topradmnexpnsa: NUMBER | Total operating and administrative expenses column a
+topradmnexpnsb: NUMBER | Total operating and administrative expenses column b
+topradmnexpnsd: NUMBER | Total operating and administrative expenses column d
+totaxpyr: NUMBER | Total excise tax
+totexcapgn: NUMBER | Net gain – sales of assets
+totexcapls: NUMBER | Net loss – sales of assets
+totexpnsadjnet: NUMBER | Total expenses adjusted net income
+totexpnsexempt: NUMBER | Total expenses – exempt purpose
+totexpnsnetinc: NUMBER | Total expenses net investment income
+totexpnspbks: NUMBER | Total expenses
+totinvstsec: NUMBER | Total investments in securities – e-o-y book value
+totrcptnetinc: NUMBER | Total receipts net investment income
+totrcptperbks: NUMBER | Total revenue
+totsuprtcola: NUMBER | Total support column a
+totsuprtcolb: NUMBER | Total support column b
+totsuprtcolc: NUMBER | Total support column c
+totsuprtcold: NUMBER | Total support column d
+totsuprttot: NUMBER | Total support total
+trcptadjnetinc: NUMBER | Total receipts adjusted net income
+trnsothasstscd: TEXT | Transfer other assets to noncharitable exempt organization?
+txpaidf2758: NUMBER | Tax paid with Form 2758 (filing extension)
+txwithldsrc: NUMBER | Tax withheld at source
+undistribincyr: NUMBER | Undistributed income
+undistrinccd: TEXT | Undistributed income?
+valassetscola: NUMBER | Value assets column a
+valassetscolb: NUMBER | Value assets column b
+valassetscolc: NUMBER | Value assets column c
+valassetscold: NUMBER | Value assets column d
+valassetstot: NUMBER | Value assets total
+
+@C3
+compnsatncurrofcr: NUMBER | Compensation of current officers, directors, etc
+cstbasisecur: NUMBER | Sales expense -- Securities
+cstbasisothr: NUMBER | Sales expense -- Other assets
+gnlsecur: NUMBER | Net gain from sales -- Securities
+gnlsothr: NUMBER | Net gain from sales -- Other assets
+grsalesecur: NUMBER | Gross sales -- Securities
+grsalesinvent: NUMBER | Gross sales of inventory
+grsalesothr: NUMBER | Gross sales -- Other assets
+grsincfndrsng: NUMBER | Gross fundraising
+grsincmembers: NUMBER | Gross income from members
+grsincother: NUMBER | Gross income from other sources
+grsrcptspublicuse: NUMBER | Gross receipts amount
+grsrntsprsnl: NUMBER | Gross rents -- Personal property
+grsrntsreal: NUMBER | Gross rents -- Real estate
+initiationfees: NUMBER | Initiation fees amount
+invstmntinc: NUMBER | Investment income
+lesscstofgoods: NUMBER | Cost of goods sold (inventory)
+lessdirfndrsng: NUMBER | Fundraising expenses
+lessdirgaming: NUMBER | Gaming expenses
+miscrevtot11e: NUMBER | Other revenue
+netgnls: NUMBER | Sales of assets
+netincgaming: NUMBER | Gaming income
+netincsales: NUMBER | Income from sales of inventory
+netrntlinc: NUMBER | Net rental income
+othrsalwages: NUMBER | Other salaries and wages
+payrolltx: NUMBER | Payroll taxes
+profndraising: NUMBER | Professional fundraising fees
+retainedearnend: NUMBER | Paid-in or capital surplus -- eoy
+rntlexpnsprsnl: NUMBER | Rental expense -- Personal property
+rntlexpnsreal: NUMBER | Rental expense -- Real estate
+rntlincprsnl: NUMBER | Net rent -- Personal property
+rntlincreal: NUMBER | Net rent -- Real estate
+royaltsinc: NUMBER | Royalties
+secrdmrtgsend: NUMBER | Secured mortgages and notes payable -- eoy
+totcntrbgfts: NUMBER | Total contributions
+totfuncexpns: NUMBER | Total functional expenses
+totnetassetend: NUMBER | Total Net Assets -- eoy
+totprgmrevnue: NUMBER | Program service revenue
+totrevenue: NUMBER | Total revenue
+txexmptbndsend: NUMBER | Tax-exempt bond liabilities -- eoy
+txexmptbndsproceeds: NUMBER | Tax-exempt bond proceeds
+unrelbusinccd: TEXT | Unrelated business income?
+unsecurednotesend: NUMBER | Unsecured mortgages and notes payable -- eoy
+
+@C4
+exceeds1pct509: NUMBER | Amount support exceeds total (509)
+exceeds2pct170: NUMBER | Amount support exceeds total (170)
+grsinc509: NUMBER | Gross income from interest etc (509)
+grsrcptsactivities509: NUMBER | Gross receipts from related activities (509)
+netincunrelatd509: NUMBER | Net income from UBI not in 10b (509)
+netincunreltd170: NUMBER | Net UBI (170)
+nonpfrea: NUMBER | Reason for non-PF status
+othrinc170: NUMBER | Other income (170)
+othrinc509: NUMBER | Other income (509)
+prohibtdtxshltrcd: TEXT | Party to a prohibited tax shelter transaction?
+pubsupplesspct170: NUMBER | Public support (170)
+pubsupplesub509: NUMBER | Public support (509)
+pubsuppsubtot170: NUMBER | Public support subtotal (170)
+pubsuppsubtot509: NUMBER | Public support subtotal (509)
+rcvdfrmdisqualsub509: NUMBER | Amounts from disqualified persons (509)
+samepubsuppsubtot170: NUMBER | Public support from line 4 (170)
+samepubsuppsubtot509: NUMBER | Public support from line 6 (509)
+subseccd: NUMBER | Subsection code
+subtotpub509: NUMBER | Public support subtotal (509)
+tax_pd: NUMBER | Tax period
+totnooforgscnt: NUMBER | Number of organizations supported
+totsupp170: NUMBER | Total support (170)
+totsupport: NUMBER | Sum of amounts of support
+unreltxincls511tx509: NUMBER | Net UBI (509)
+
+@C5
+accountingfees: NUMBER | Accounting fees
+actnotpr: TEXT | Activities not previously reported?
+applyprovind: TEXT | Not applying section 4942(a)(2) provisions?
+chgnprvrptcd: TEXT | Changes not previously reported?
+cntrbtrstxyrcd: TEXT | Substantial contributors?
+depreciationamt: NUMBER | Depreciation and depletion
+dvdndsintd: NUMBER | Dividends and interest from securities (excluded)
+dvdndsinte: NUMBER | Dividends and interest from securities (exempt)
+exceptactsind: TEXT | Acts fail to qualify under section 53.4941(d)-3?
+excptransind: TEXT | Transactions fail to qualify under section 53.4945?
+filedlf1041ind: TEXT | Comply with public inspection?
+furnishcpycd: TEXT | Furnished copy to Attorney General?
+grntapprvfut: NUMBER | Grants approved for future payment
+grsslspramt: NUMBER | Gross sales price for assets
+intonsvngsd: NUMBER | Interest on savings and temporary cash investments (excluded)
+intonsvngse: NUMBER | Interest on savings and temporary cash investments (exempt)
+ipubelectcd: TEXT | Influence public election?
+legalfeesamt: NUMBER | Legal fees
+loansguarcd: TEXT | Loans or other guarantees?
+membershpduesd: NUMBER | Membership dues and assessments (excluded)
+membershpduese: NUMBER | Membership dues and assessments (exempt)
+occupancyamt: NUMBER | Occupancy
+orgcmplypubcd: TEXT | Comply with public inspection?
+othrassetseoy: NUMBER | Other assets – e-o-y book value
+othrliabltseoy: NUMBER | Other liabilities – e-o-y book value
+overpay: NUMBER | Overpayment
+pensplemplbenf: NUMBER | Pension plans employee benefits
+perfservicescd: TEXT | Performance of services or membership or fundraising solicitations?
+prchsasstscd: TEXT | Purchase of assets from noncharitable exempt organization?
+prevjexmptcd: TEXT | Prior year jeopardizing investments?
+printingpubl: NUMBER | Printing and publications
+prioractvcd: TEXT | Engage in acts in prior year?
+progsrvcacold: NUMBER | Program service revenue line 1a (excluded)
+progsrvcacole: NUMBER | Program service revenue line 1a (exempt)
+progsrvcbcold: NUMBER | Program service revenue line 1b (excluded)
+progsrvcbcole: NUMBER | Program service revenue line 1b (exempt)
+progsrvcccold: NUMBER | Program service revenue line 1c (excluded)
+progsrvcccole: NUMBER | Program service revenue line 1c (exempt)
+progsrvcdcold: NUMBER | Program service revenue line 1d (excluded)
+progsrvcdcole: NUMBER | Program service revenue line 1d (exempt)
+progsrvcecold: NUMBER | Program service revenue line 1e (excluded)
+progsrvcecole: NUMBER | Program service revenue line 1e (exempt)
+progsrvcfcold: NUMBER | Program service revenue line 1f (excluded)
+progsrvcfcole: NUMBER | Program service revenue line 1f (exempt)
+progsrvcgcold: NUMBER | Program service revenue--fees and contracts from government line 1g (excluded)
+progsrvcgcole: NUMBER | Program service revenue--fees and contracts from government line 1g (exempt)
+pyprsnlbnftind: TEXT | Pay premiums on personal benefit contract?
+reimbrsmntscd: TEXT | Reimbursements arrangements?
+rentlsfacltscd: TEXT | Rental of facilities or other assets?
+rfprsnlbnftind: TEXT | Receive funds to pay premiums on personal benefit contract?
+salesasstscd: TEXT | Sale of assets to noncharitable exempt organization?
+schedbind: TEXT | Schedule B indicator
+sharngasstscd: TEXT | Sharing of facilities equipment mailing lists other assets or paid employees?
+taxdue: NUMBER | Tax due
+totexcapgnls: NUMBER | Capital gain net income
+transfercd: TEXT | Transfer?
+travlconfmtngs: NUMBER | Travel conferences and meetings
+trnsfrcashcd: TEXT | Transfer cash to noncharitable exempt organization?
+valncharitassets: NUMBER | Net value of noncharitable-use assets
+
+@C6
+basisalesexpnsothr: NUMBER | Cost or other basis and sales expenses
+costgoodsold: NUMBER | Less: cost of goods sold
+direxpns: NUMBER | Special events direct expenses
+duesassesmnts: NUMBER | Membership dues and assessments
+gnsaleofastothr: NUMBER | Gain or (loss) from sale of assets
+grsalesminusret: NUMBER | Gross sales of inventory
+grsamtsalesastothr: NUMBER | Gross amount from sale of assets
+grsprft: NUMBER | Gross profit (or loss) from sales of inventory
+grspublicrcpts: NUMBER | Gross receipts for public use of club facilities
+grsrevnuefndrsng: NUMBER | Special events gross revenue
+initiationfee: NUMBER | Initiation fees and capital contributions
+othrchgsnetassetfnd: NUMBER | Other changes in net assets
+othrevnue: NUMBER | Other revenue - total
+othrinvstinc: NUMBER | Investment income
+prgmservrev: NUMBER | Program service revenue
+totcntrbs: NUMBER | Contributions, gifts, grants, etc received
+totexcessyr: NUMBER | Excess or deficit
+totexpns: NUMBER | Total expenses
+totnetassetsend: NUMBER | Total net worth e-o-y
+totrevnue: NUMBER | Total revenue
+unrelbusincd: TEXT | UBI over $1,000?
+
+@C7
+grsinc170: NUMBER | Gross income from interest etc (170)
+grsincgaming: NUMBER | Gross income from gaming
+netincfndrsng: NUMBER | Special events net income (or loss)
+srvcsval170: NUMBER | Services or facilities furnished by gov (170)
+srvcsval509: NUMBER | Services or facilities furnished by gov (509)
+subtotsuppinc509: NUMBER | Subtotal total support (509)
+totgftgrntrcvd509: NUMBER | Gifts grants membership fees received (509)
+totsupp509: NUMBER | Total support (509)
+txrevnuelevied170: NUMBER | Tax revenues levied (170)
+txrevnuelevied509: NUMBER | Tax revenues levied (509)
+
+@C8
+actvtynotprevrptcd: TEXT | Activity not previously reported?
+chngsinorgcd: TEXT | Significant changes to governing docs?
+contractioncd: TEXT | Liquidation, dissolution, termination, or contraction
+filedf1120polcd: TEXT | File Form 1120-POL?
+loanstoofficers: NUMBER | Amount of loans to/from officers
+loanstoofficerscd: TEXT | Loans to/from officers, directors or trustees?
+networthend: NUMBER | Net assets EOY
+politicalexpend: NUMBER | Direct or indirect political expenditures
+s4958excessbenefcd: TEXT | Section 4958 excess benefit transactions?
+
+@C9
+gftgrntsrcvd170: NUMBER | Gifts grants membership fees received (170)
+grsrcptsadmissn509: NUMBER | Receipts from admissions merchandise etc (509)
+grsrcptsrelated170: NUMBER | Gross receipts from related activities (170)
+
+@C10
+totassetsend: NUMBER | Total assets e-o-y
+totliabend: NUMBER | Total liabilities e-o-y
+
+@C11
+nonpfrea: TEXT | Reason for non-PF status
+subseccd: TEXT | Subsection code
+tax_pd: TEXT | Tax period
+
+[TABLES]
+## IRS_990.IRS_990_EZ_2013
+@use: [C10, C4, C6, C7, C8, C9]
+ein: TEXT | Employer Identification Number
+filedf990tcd: TEXT | Organization Filed 990T
+
+## IRS_990.IRS_990_PF_2015
+@use: [C10, C2, C5]
+filedf990tcd: TEXT | Filed 990-T?
+interestamt: NUMBER | Interest
+distribdafcd: TEXT | Distribution to donor advised fund with advisory privileges?
+elf: TEXT | E-file indicator
+ein: TEXT | Employer Identification Number
+
+## IRS_990.IRS_990_EZ_2015
+@use: [C10, C4, C6, C7, C8, C9]
+elf: TEXT | E-file indicator
+ein: TEXT | Employer Identification Number
+filedf990tcd: TEXT | Organization Filed 990T
+
+## IRS_990.IRS_990_EZ_2014
+@use: [C10, C4, C6, C7, C8, C9]
+ein: TEXT | Employer Identification Number
+filedf990tcd: TEXT | Organization Filed 990T
+
+## IRS_990.IRS_990_EZ_2016
+@use: [C10, C4, C6, C7, C8, C9]
+filedf990tcd: TEXT | Organization Filed 990T
+elf: TEXT | E-file indicator
+ein: TEXT | Employer Identification Number
+
+## IRS_990.IRS_990_EZ_2012
+@use: [C10, C11, C6, C7]
+grsrcptsrelatd170: NUMBER | Gross receipts from related activities (170)
+gftgrntrcvd170: NUMBER | Gifts grants membership fees received (170)
+grsrcptsadmiss509: NUMBER | Receipts from admissions merchandise etc (509)
+ein: TEXT | Employer Identification Number
+
+## IRS_990.IRS_990_EZ_2017
+@use: [C10, C4, C6, C7, C8, C9]
+elf: TEXT | E-file indicator
+ein: TEXT | Employer Identification Number
+filedf990tcd: TEXT | Organization Filed 990T
+
+## IRS_990.IRS_990_EIN
+street: TEXT | Street Address
+acct_pd: NUMBER | Accounting Period
+deductibility: NUMBER | Deductibility Code
+revenue_amt: NUMBER | Form 990 Revenue Amount (includes negative sign if amount is negative)
+state: TEXT | State
+classification: NUMBER | Classification Code(s)
+asset_cd: NUMBER | Asset Code
+pf_filing_req_cd: NUMBER | PF Filing Requirement Code
+affiliation: NUMBER | Affiliation Code
+ein: TEXT | Employer Identification Number (EIN)
+sort_name: TEXT | Sort Name (Secondary Name Line)
+filing_req_cd: NUMBER | Filing Requirement Code
+asset_amt: NUMBER | Asset Amount
+tax_period: NUMBER | Tax Period
+ico: TEXT | In Care of Name
+income_cd: NUMBER | Income Code
+status: NUMBER | Exempt Organization Status Code
+organization: NUMBER | Organization Code
+subsection: NUMBER | Subsection Code
+name: TEXT | Primary Name of Organization
+activity: NUMBER | Activity Codes
+income_amt: NUMBER | Income Amount (includes negative sign if amount is negative)
+group: NUMBER | Group Exemption Number
+zip: TEXT | Zip Code
+city: TEXT | City
+foundation: NUMBER | Foundation Code
+ruling: NUMBER | Ruling Date
+ntee_cd: TEXT | National Taxonomy of Exempt Entities (NTEE) Code
+
+## IRS_990.IRS_990_PF_2014
+@use: [C10, C2, C5]
+acqdrindrintcd: TEXT | Distribution to donor advised fund with advisory privileges?
+interestamt: NUMBER | Interest
+ein: TEXT | Employer Identification Number
+filedf990tcd: TEXT | Filed 990-T?
+
+## IRS_990.IRS_990_2013
+@use: [C1, C10, C3, C4, C7, C9]
+filedf990tcd: TEXT | Form 990-T filed?
+interestamt: NUMBER | Interest expense
+ein: TEXT | Employer Identification Number
+
+## IRS_990.IRS_990_PF_2016
+@use: [C10, C2, C5]
+distribdafcd: TEXT | Distribution to donor advised fund with advisory privileges?
+ein: TEXT | Employer Identification Number
+filedf990tcd: TEXT | Filed 990-T?
+elf: TEXT | E-file indicator
+interestamt: NUMBER | Interest
+
+## IRS_990.IRS_990_PF_2013
+@use: [C10, C2, C5]
+interestamt: NUMBER | Interest
+acqdrindrintcd: TEXT | Acquire interest in applicable insurance contract question
+filedf990tcd: TEXT | Filed 990-T question
+ein: TEXT | Employer Identification Number
+
+## IRS_990.IRS_990_2012
+@use: [C10, C11, C3, C7, C9]
+ein: TEXT | Employer Identification Number
+
+## IRS_990.IRS_990_2014
+@use: [C1, C10, C3, C4, C7, C9]
+interestamt: NUMBER | NULL
+filedf990tcd: TEXT | NULL
+ein: TEXT | NULL
+
+## IRS_990.IRS_990_2016
+@use: [C1, C10, C3, C4, C7, C9]
+ein: TEXT | NULL
+filedf990tcd: TEXT | NULL
+interestamt: NUMBER | NULL
+elf: TEXT | NULL
+
+## IRS_990.IRS_990_2015
+@use: [C1, C10, C3, C4, C7, C9]
+ein: TEXT | NULL
+interestamt: NUMBER | NULL
+filedf990tcd: TEXT | NULL
+elf: TEXT | NULL
+
+## IRS_990.IRS_990_2017
+@use: [C1, C10, C3, C4, C7, C9]
+ein: TEXT | NULL
+filedf990tcd: TEXT | NULL
+elf: TEXT | NULL
+interestamt: NUMBER | NULL
+
+## IRS_990.IRS_990_PF_2012
+@use: [C10, C2]
+transinccd: TEXT | Income code
+ein: TEXT | Employer Identification Number
+balduopt: NUMBER | Balance due or overpayment
+assetcdgen: TEXT | Asset code

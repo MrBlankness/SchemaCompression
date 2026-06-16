@@ -1,0 +1,18 @@
+[STANDALONE]
+Format: schema.table|col1,col2
+SCHOOL_SCHEDULING.BUILDINGS|NumberOfFloors,SiteParkingAvailable,BuildingName,BuildingCode,ElevatorAccess
+SCHOOL_SCHEDULING.CATEGORIES|DepartmentID,CategoryID,CategoryDescription
+SCHOOL_SCHEDULING.CLASSES|SubjectID,TuesdaySchedule,Credits,ClassRoomID,StartDate,MondaySchedule,WednesdaySchedule,SaturdaySchedule,Duration,ClassID,FridaySchedule,ThursdaySchedule,StartTime
+SCHOOL_SCHEDULING.CLASS_ROOMS|ClassRoomID,BuildingCode,PhoneAvailable
+SCHOOL_SCHEDULING.DEPARTMENTS|DeptChair,DeptName,DepartmentID
+SCHOOL_SCHEDULING.FACULTY_CATEGORIES|CategoryID,StaffID
+SCHOOL_SCHEDULING.FACULTY_CLASSES|StaffID,ClassID
+SCHOOL_SCHEDULING.FACULTY_SUBJECTS|SubjectID,ProficiencyRating,StaffID
+SCHOOL_SCHEDULING.FACULTY|Title,StaffID,Status,Tenured
+SCHOOL_SCHEDULING.MAJORS|Major,MajorID
+SCHOOL_SCHEDULING.SQLITE_SEQUENCE|name,seq
+SCHOOL_SCHEDULING.STAFF|StfAreaCode,StfPhoneNumber,StfZipCode,StfStreetAddress,StfFirstName,DateHired,Salary,StaffID,StfLastname,StfState,Position,StfCity
+SCHOOL_SCHEDULING.STUDENTS|StudLastName,StudAreaCode,StudMajor,StudentID,StudFirstName,StudState,StudStreetAddress,StudZipCode,StudGPA,StudCity,StudPhoneNumber
+SCHOOL_SCHEDULING.STUDENT_CLASS_STATUS|ClassStatus,ClassStatusDescription
+SCHOOL_SCHEDULING.STUDENT_SCHEDULES|ClassStatus,ClassID,StudentID,Grade
+SCHOOL_SCHEDULING.SUBJECTS|SubjectDescription,SubjectID,SubjectCode,SubjectPreReq,CategoryID,SubjectName

@@ -1,0 +1,119 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: CRYPTO_DASH.BLOCKS
+Columns: merkle_root, timestamp_month, version, hash, timestamp, size, weight, transaction_count, number, bits, nonce, stripped_size, coinbase_param
+
+Table: CRYPTO_DASH.OUTPUTS
+Columns: value, block_timestamp, type, script_asm, block_hash, addresses, index, required_signatures, transaction_hash, block_number, script_hex
+
+Table: CRYPTO_DASH.TRANSACTIONS
+Columns: input_count, inputs, block_timestamp_month, block_number, output_count, fee, hash, version, size, input_value, is_coinbase, lock_time, outputs, output_value, block_timestamp, block_hash, virtual_size
+
+Table: CRYPTO_DASH.INPUTS
+Columns: spent_output_index, sequence, block_timestamp, script_hex, value, spent_transaction_hash, block_hash, index, block_number, required_signatures, transaction_hash, addresses, type, script_asm
+
+Table: CRYPTO_BAND.BLOCK_EVENTS
+Columns: block_height, block_timestamp, event_type, block_timestamp_truncated, attributes, block_event_type
+
+Table: CRYPTO_BAND.BLOCKS
+Columns: signatures, block_hash, proposer_address, block_timestamp, block_height, consensus_hash, last_results_hash, data_hash, last_commit_hash, block_timestamp_truncated, evidence_hash, app_hash, validators_hash, next_validators_hash
+
+Table: CRYPTO_BAND.ERRORS
+Columns: tableRow, errors
+
+Table: CRYPTO_BAND.MESSAGES
+Columns: oracle_CreateOracleScript, cosmos_sdk_MsgVerifyInvariant, cosmos_sdk_MsgMultiSend, oracle_Report, cosmos_sdk_MsgUndelegate, cosmos_sdk_MsgSubmitProposal, cosmos_sdk_MsgVote, cosmos_sdk_MsgUnjail, block_timestamp, cosmos_sdk_MsgSend, cosmos_sdk_MsgModifyWithdrawAddress, cosmos_sdk_MsgDelegate, oracle_Request, cosmos_sdk_MsgWithdrawValidatorCommission, message_type, block_height, cosmos_sdk_MsgEditValidator, cosmos_sdk_MsgCreateValidator, cosmos_sdk_MsgFundCommunityPool, oracle_RemoveReporter, cosmos_sdk_MsgDeposit, cosmos_sdk_MsgWithdrawDelegationReward, cosmos_sdk_MsgBeginRedelegate, oracle_EditDataSource, oracle_CreateDataSource, cosmos_sdk_MsgSubmitEvidence, oracle_Activate, block_timestamp_truncated, txhash, oracle_EditOracleScript, oracle_AddReporter
+
+Table: CRYPTO_BAND.TRANSACTIONS
+Columns: gas_used, sender, block_timestamp_truncated, gas_wanted, memo, txhash, block_height, fee, transaction_type, block_timestamp
+
+Table: CRYPTO_BAND.ORACLE_REQUESTS
+Columns: reports, block_timestamp_truncated, oracle_request_id, request, block_height, oracle_script, decoded_result, block_timestamp, result
+
+Table: CRYPTO_BAND.LOGS
+Columns: msg_index, events, log_index, txhash, block_timestamp, block_height, log, block_timestamp_truncated
+
+Table: CRYPTO_ETHEREUM.BLOCKS
+Columns: difficulty, timestamp, extra_data, parent_hash, total_difficulty, excess_blob_gas, blob_gas_used, transactions_root, number, base_fee_per_gas, gas_limit, transaction_count, logs_bloom, state_root, gas_used, hash, miner, withdrawals, size, withdrawals_root, nonce, receipts_root, sha3_uncles
+
+Table: CRYPTO_ETHEREUM.CONTRACTS
+Columns: block_number, block_timestamp, block_hash, address, is_erc20, bytecode, is_erc721, function_sighashes
+
+Table: CRYPTO_ETHEREUM.TRACES
+Columns: error, block_hash, subtraces, transaction_index, block_number, trace_address, transaction_hash, status, value, block_timestamp, reward_type, to_address, gas, trace_type, gas_used, output, input, call_type, trace_id, from_address
+
+Table: CRYPTO_ETHEREUM.TRANSACTIONS
+Columns: block_timestamp, receipt_blob_gas_price, receipt_gas_used, receipt_root, transaction_type, gas, receipt_status, max_fee_per_gas, gas_price, value, receipt_effective_gas_price, to_address, receipt_cumulative_gas_used, block_hash, transaction_index, max_fee_per_blob_gas, blob_versioned_hashes, nonce, hash, input, receipt_contract_address, receipt_blob_gas_used, block_number, max_priority_fee_per_gas, from_address
+
+Table: CRYPTO_ETHEREUM.LOGS
+Columns: transaction_index, address, block_number, data, topics, transaction_hash, log_index, block_timestamp, block_hash
+
+Table: CRYPTO_ETHEREUM.TOKEN_TRANSFERS
+Columns: value, transaction_hash, to_address, from_address, block_hash, log_index, block_number, token_address, block_timestamp
+
+Table: CRYPTO_ZILLIQA.EXCEPTIONS
+Columns: transaction_id, block_timestamp, block_number, line, index, message
+
+Table: CRYPTO_ZILLIQA.TRANSACTIONS
+Columns: data, version, sender, gas_limit, id, signature, amount, accepted, block_timestamp, epoch_num, success, sender_pub_key, gas_price, code, block_number, cumulative_gas, to_addr
+
+Table: CRYPTO_ZILLIQA.TX_BLOCKS
+Columns: ds_block_number, timestamp, rewards, prev_block_hash, num_present_transactions, version, header_signature, state_delta_hash, num_micro_blocks, tx_leader_address, state_root_hash, gas_limit, tx_leader_pub_key, num_transactions, number, gas_used, mb_info_hash
+
+Table: CRYPTO_ZILLIQA.DS_BLOCKS
+Columns: prev_hash, signature, number, difficulty_ds, ds_leader_pub_key, gas_price, timestamp, difficulty, ds_leader_address
+
+Table: CRYPTO_ZILLIQA.TRANSITIONS
+Columns: addr, recipient, transaction_id, accepted, tag, block_number, block_timestamp, depth, params, amount, index
+
+Table: CRYPTO_ZILLIQA.EVENT_LOGS
+Columns: block_number, index, transaction_id, block_timestamp, event_name, address, params
+
+Table: CRYPTO_ETHEREUM_CLASSIC.BALANCES
+Columns: eth_balance, address
+
+Table: CRYPTO_ETHEREUM_CLASSIC.BLOCKS
+Columns: state_root, extra_data, sha3_uncles, difficulty, receipts_root, gas_limit, total_difficulty, parent_hash, transaction_count, nonce, miner, logs_bloom, number, hash, gas_used, timestamp, size, transactions_root
+
+Table: CRYPTO_ETHEREUM_CLASSIC.CONTRACTS
+Columns: address, is_erc20, function_sighashes, bytecode, is_erc721, block_timestamp, block_hash, block_number
+
+Table: CRYPTO_ETHEREUM_CLASSIC.TRACES
+Columns: status, transaction_index, call_type, block_hash, gas, gas_used, block_timestamp, reward_type, output, transaction_hash, trace_address, block_number, from_address, subtraces, error, trace_id, value, input, to_address, trace_type
+
+Table: CRYPTO_ETHEREUM_CLASSIC.TRANSACTIONS
+Columns: hash, value, receipt_gas_used, to_address, transaction_index, input, block_number, block_hash, block_timestamp, gas_price, receipt_cumulative_gas_used, gas, from_address, receipt_status, nonce, receipt_root, receipt_contract_address
+
+Table: CRYPTO_ETHEREUM_CLASSIC.TOKENS
+Columns: name, address, symbol, decimals, block_number, block_timestamp, total_supply, block_hash
+
+Table: CRYPTO_ETHEREUM_CLASSIC.LOGS
+Columns: log_index, transaction_hash, data, topics, block_hash, address, transaction_index, block_timestamp, block_number
+
+Table: CRYPTO_ETHEREUM_CLASSIC.TOKEN_TRANSFERS
+Columns: block_hash, value, token_address, block_timestamp, log_index, from_address, to_address, block_number, transaction_hash
+
+Table: CRYPTO_BITCOIN_CASH.BLOCKS
+Columns: timestamp, version, merkle_root, stripped_size, hash, size, weight, transaction_count, nonce, number, timestamp_month, coinbase_param, bits
+
+Table: CRYPTO_BITCOIN_CASH.OUTPUTS
+Columns: block_timestamp, block_number, index, type, value, required_signatures, script_asm, script_hex, block_hash, addresses, transaction_hash
+
+Table: CRYPTO_BITCOIN_CASH.TRANSACTIONS
+Columns: block_number, output_count, outputs, is_coinbase, block_hash, block_timestamp, fee, version, virtual_size, size, input_count, inputs, block_timestamp_month, output_value, hash, input_value, lock_time
+
+Table: CRYPTO_BITCOIN_CASH.INPUTS
+Columns: value, block_number, type, sequence, addresses, transaction_hash, block_timestamp, script_asm, spent_transaction_hash, spent_output_index, required_signatures, block_hash, script_hex, index
+
+Table: CRYPTO_BITCOIN.BLOCKS
+Columns: number, transaction_count, timestamp_month, coinbase_param, merkle_root, nonce, stripped_size, bits, size, weight, version, timestamp, hash
+
+Table: CRYPTO_BITCOIN.OUTPUTS
+Columns: block_timestamp, block_number, script_asm, addresses, transaction_hash, block_hash, index, value, type, script_hex, required_signatures
+
+Table: CRYPTO_BITCOIN.TRANSACTIONS
+Columns: block_timestamp_month, virtual_size, outputs, lock_time, block_timestamp, is_coinbase, input_value, hash, output_count, size, output_value, block_number, version, input_count, inputs, fee, block_hash
+
+Table: CRYPTO_BITCOIN.INPUTS
+Columns: block_timestamp, script_asm, value, transaction_hash, spent_transaction_hash, index, addresses, spent_output_index, type, script_hex, block_number, block_hash, required_signatures, sequence

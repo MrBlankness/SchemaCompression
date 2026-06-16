@@ -1,0 +1,17 @@
+[COMPONENTS]
+[TABLES]
+## HACKER_NEWS.FULL
+by: TEXT | The username of the item's author.
+id: NUMBER | The item's unique id.
+score: NUMBER | Story score
+deleted: BOOLEAN | Is deleted?
+descendants: NUMBER | Number of story or poll descendants
+title: TEXT | Story title
+time: NUMBER | Unix time
+text: TEXT | Story or comment text
+type: TEXT | type of details (comment comment_ranking poll story job pollopt)
+timestamp: NUMBER | Timestamp for the unix time
+parent: NUMBER | Parent comment ID
+ranking: NUMBER | Comment ranking
+url: TEXT | Story url
+dead: BOOLEAN | Is dead?

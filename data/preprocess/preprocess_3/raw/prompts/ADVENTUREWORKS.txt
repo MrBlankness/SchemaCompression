@@ -1,0 +1,146 @@
+[TABLES]
+## ADVENTUREWORKS.SALESPERSONQUOTAHISTORY
+ModifiedDate: TEXT | NULL
+rowguid: TEXT | NULL
+SalesQuota: FLOAT | NULL
+BusinessEntityID: NUMBER | NULL
+QuotaDate: TEXT | NULL
+
+## ADVENTUREWORKS.PRODUCTMODELPRODUCTDESCRIPTIONCULTURE
+cultureid: TEXT | NULL
+productmodelid: NUMBER | NULL
+productdescriptionid: NUMBER | NULL
+modifieddate: TEXT | NULL
+
+## ADVENTUREWORKS.PRODUCTDESCRIPTION
+modifieddate: TEXT | NULL
+productdescriptionid: NUMBER | NULL
+rowguid: TEXT | NULL
+description: TEXT | NULL
+
+## ADVENTUREWORKS.SALESORDERHEADER
+rowguid: TEXT | NULL
+STATUS: TEXT | NULL
+comment: TEXT | NULL
+customerid: NUMBER | NULL
+currencyrateid: TEXT | NULL
+territoryid: NUMBER | NULL
+totaldue: FLOAT | NULL
+revisionnumber: NUMBER | NULL
+salesorderid: NUMBER | NULL
+purchaseordernumber: TEXT | NULL
+onlineorderflag: TEXT | NULL
+freight: FLOAT | NULL
+accountnumber: TEXT | NULL
+duedate: TEXT | NULL
+shipmethodid: NUMBER | NULL
+orderdate: TEXT | NULL
+creditcardid: TEXT | NULL
+billtoaddressid: NUMBER | NULL
+creditcardapprovalcode: TEXT | NULL
+shiptoaddressid: NUMBER | NULL
+taxamt: FLOAT | NULL
+subtotal: FLOAT | NULL
+modifieddate: TEXT | NULL
+shipdate: TEXT | NULL
+salespersonid: TEXT | NULL
+
+## ADVENTUREWORKS.PRODUCTREVIEW
+productid: NUMBER | NULL
+rating: NUMBER | NULL
+emailaddress: TEXT | NULL
+reviewdate: TEXT | NULL
+modifieddate: TEXT | NULL
+reviewername: TEXT | NULL
+productreviewid: NUMBER | NULL
+comments: TEXT | NULL
+modifeddate: TEXT | NULL
+
+## ADVENTUREWORKS.PRODUCTCATEGORY
+productcategoryid: NUMBER | NULL
+name: TEXT | NULL
+rowguid: TEXT | NULL
+modifieddate: TEXT | NULL
+
+## ADVENTUREWORKS.SALESTERRITORY
+territoryid: NUMBER | NULL
+salesytd: FLOAT | NULL
+modifieddate: TEXT | NULL
+group: TEXT | NULL
+saleslastyear: FLOAT | NULL
+countryregioncode: TEXT | NULL
+rowguid: TEXT | NULL
+name: TEXT | NULL
+costytd: FLOAT | NULL
+costlastyear: FLOAT | NULL
+
+## ADVENTUREWORKS.CURRENCYRATE
+currencyrateid: NUMBER | NULL
+tocurrencycode: TEXT | NULL
+endofdayrate: FLOAT | NULL
+modifieddate: TEXT | NULL
+currencyratedate: TEXT | NULL
+fromcurrencycode: TEXT | NULL
+averagerate: FLOAT | NULL
+
+## ADVENTUREWORKS.PRODUCTSUBCATEGORY
+productsubcategoryid: NUMBER | NULL
+name: TEXT | NULL
+modifieddate: TEXT | NULL
+rowguid: TEXT | NULL
+productcategoryid: NUMBER | NULL
+
+## ADVENTUREWORKS.SALESORDERDETAIL
+specialofferid: NUMBER | NULL
+orderqty: NUMBER | NULL
+salesorderid: NUMBER | NULL
+unitpricediscount: FLOAT | NULL
+salesorderdetailid: NUMBER | NULL
+modifieddate: TEXT | NULL
+productid: NUMBER | NULL
+unitprice: FLOAT | NULL
+rowguid: TEXT | NULL
+carriertrackingnumber: TEXT | NULL
+
+## ADVENTUREWORKS.SALESPERSON
+salesytd: FLOAT | NULL
+salesquota: TEXT | NULL
+rowguid: TEXT | NULL
+saleslastyear: FLOAT | NULL
+commissionpct: FLOAT | NULL
+modifieddate: TEXT | NULL
+bonus: NUMBER | NULL
+businessentityid: NUMBER | NULL
+territoryid: TEXT | NULL
+
+## ADVENTUREWORKS.PRODUCT
+safetystocklevel: NUMBER | NULL
+productid: NUMBER | NULL
+productline: TEXT | NULL
+sellstartdate: TEXT | NULL
+productmodelid: TEXT | NULL
+reorderpoint: NUMBER | NULL
+rowguid: TEXT | NULL
+color: TEXT | NULL
+daystomanufacture: NUMBER | NULL
+weightunitmeasurecode: TEXT | NULL
+discontinueddate: TEXT | NULL
+standardcost: FLOAT | NULL
+makeflag: TEXT | NULL
+sizeunitmeasurecode: TEXT | NULL
+sellenddate: TEXT | NULL
+modifieddate: TEXT | NULL
+finishedgoodsflag: TEXT | NULL
+weight: TEXT | NULL
+productsubcategoryid: TEXT | NULL
+NAME: TEXT | NULL
+listprice: FLOAT | NULL
+class: TEXT | NULL
+productnumber: TEXT | NULL
+size: TEXT | NULL
+style: TEXT | NULL
+
+## ADVENTUREWORKS.COUNTRYREGIONCURRENCY
+modifieddate: TEXT | NULL
+countryregioncode: TEXT | NULL
+currencycode: TEXT | NULL

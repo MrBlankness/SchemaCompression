@@ -1,0 +1,330 @@
+[COMPONENTS]
+@C1
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged.
+dropoff_latitude: FLOAT | Latitude where the meter was disengaged
+dropoff_longitude: FLOAT | Longitude where the meter was disengaged.
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges.
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed trips at the flag drop. The improvement surcharge began being levied in 2015.
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+pickup_latitude: FLOAT | Latitude where the meter was engaged
+pickup_longitude: FLOAT | Longitude where the meter was engaged.
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka “store and forward,” because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip
+tip_amount: FLOAT | Tip amount – This field is automatically populated for credit card tips. Cash tips are not included.
+tolls_amount: FLOAT | Total amount of all tolls paid in trip.
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter.
+vendor_id: TEXT | A code indicating the TPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc
+
+@C2
+distance_between_service: FLOAT | NULL
+ehail_fee: FLOAT | NULL
+payment_type: NUMBER | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+time_between_service: NUMBER | NULL
+trip_type: NUMBER | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+
+@C3
+boro_ct: NUMBER | This is the boro_ct identifyer for the census tract that the tree point falls into.
+borocode: NUMBER | Code for borough in which tree point is located
+boroname: TEXT | Name of borough in which tree point is located
+cb_num: NUMBER | Community board in which tree point is located
+cncldist: NUMBER | Council district in which tree point is located
+nta: TEXT | This is the NTA Code corresponding to the neighborhood tabulation area from the 2010 US Census that the tree point falls into.
+nta_name: TEXT | This is the NTA name corresponding to the neighborhood tabulation area from the 2010 US Census that the tree point falls into.
+st_assem: NUMBER | State Assembly District in which tree point is located
+st_senate: NUMBER | State Senate District in which tree point is located
+tree_dbh: NUMBER | Diameter of the tree, measured at approximately 54" / 137cm above the ground.
+zip_city: TEXT | City as derived from zipcode. This is often (but not always) the same as borough.
+zipcode: NUMBER | Five-digit zipcode in which tree is located
+
+@C4
+latitude: FLOAT | NULL
+longitude: FLOAT | NULL
+
+@C5
+dispatching_base_num: TEXT | The TLC Base License Number of the base that dispatched the trip.
+location_id: NUMBER | The TLC taxi zone of the trip pick-up
+service_zone: TEXT | This is Pickup service_zone
+zone: TEXT | This is Pickup zone
+
+@C6
+spc_common: TEXT | Common name for species, e.g. "red maple"
+spc_latin: TEXT | Scientific name for species, e.g. "Acer rubrum"
+
+[TABLES]
+## NEW_YORK.CITIBIKE_TRIPS
+start_station_name: TEXT | Start Station Name
+start_station_id: NUMBER | Start Station ID
+gender: TEXT | Gender (unknown, male, female)
+tripduration: NUMBER | Trip Duration (in seconds)
+end_station_name: TEXT | End Station Name
+stoptime: NUMBER | Stop Time, in NYC local time.
+start_station_latitude: FLOAT | Start Station Latitude
+usertype: TEXT | User Type (Customer = 24-hour pass or 7-day pass user, Subscriber = Annual Member)
+end_station_id: NUMBER | End Station ID
+birth_year: NUMBER | Year of Birth
+starttime: NUMBER | Start Time, in NYC local time.
+start_station_longitude: FLOAT | Start Station Longitude
+end_station_longitude: FLOAT | End Station Longitude
+end_station_latitude: FLOAT | End Station Latitude
+bikeid: NUMBER | Bike ID
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2009
+@use: [C1]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+pickup_datetime: NUMBER | The date and time when the meter was engaged.
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2015
+@use: [C1]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+
+## NEW_YORK.TLC_GREEN_TRIPS_2016
+@use: [C1, C2]
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+
+## NEW_YORK.TLC_GREEN_TRIPS_2014
+@use: [C1, C2]
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+
+## NEW_YORK.NYPD_MV_COLLISIONS
+@use: [C4]
+number_of_pedestrians_killed: NUMBER | NULL
+borough: TEXT | NULL
+number_of_motorist_injured: NUMBER | NULL
+number_of_pedestrians_injured: NUMBER | NULL
+cross_street_name: TEXT | NULL
+contributing_factor_vehicle_5: TEXT | NULL
+number_of_cyclist_injured: NUMBER | NULL
+contributing_factor_vehicle_4: TEXT | NULL
+vehicle_type_code2: TEXT | NULL
+contributing_factor_vehicle_2: TEXT | NULL
+location: TEXT | NULL
+number_of_persons_killed: NUMBER | NULL
+number_of_cyclist_killed: NUMBER | NULL
+vehicle_type_code_4: TEXT | NULL
+vehicle_type_code_3: TEXT | NULL
+vehicle_type_code1: TEXT | NULL
+unique_key: NUMBER | NULL
+zip_code: NUMBER | NULL
+vehicle_type_code_5: TEXT | NULL
+timestamp: NUMBER | NULL
+contributing_factor_vehicle_1: TEXT | NULL
+on_street_name: TEXT | NULL
+number_of_persons_injured: NUMBER | NULL
+number_of_motorist_killed: NUMBER | NULL
+off_street_name: TEXT | NULL
+contributing_factor_vehicle_3: TEXT | NULL
+
+## NEW_YORK.TREE_SPECIES
+species_common_name: TEXT | NULL
+form: TEXT | NULL
+tree_size: TEXT | NULL
+growth_rate: TEXT | NULL
+location_tolerances: TEXT | NULL
+fall_color: TEXT | NULL
+environmental_tolerances: TEXT | NULL
+species_scientific_name: TEXT | NULL
+comments: TEXT | NULL
+notes_suggested_cultivars: TEXT | NULL
+
+## NEW_YORK.TREE_CENSUS_2015
+@use: [C3, C4, C6]
+health: TEXT | Indicates the user's perception of tree health.
+root_other: TEXT | Indicates the presence of other root problems
+problems: TEXT | NULL
+y_sp: FLOAT | Y coordinate, in state plane. Units are feet
+trunk_wire: TEXT | Indicates the presence of a trunk problem caused by wires or rope wrapped around the trunk
+tree_id: NUMBER | Unique identification number for each tree point
+stump_diam: NUMBER | Diameter of stump measured through the center, rounded to the nearest inch.
+x_sp: FLOAT | X coordinate, in state plane. Units are feet.
+block_id: NUMBER | Identifier linking each tree to the block in the blockface table/shapefile that it is mapped on.
+brch_other: TEXT | Indicates the presence of other branch problems
+state: TEXT | All features given value 'New York'
+user_type: TEXT | This field describes the category of user who collected this tree point's data.
+trnk_light: TEXT | Indicates the presence of a trunk problem caused by lighting installed on the tree
+address: TEXT | Nearest estimated address to tree
+root_grate: TEXT | Indicates the presence of a root problem caused by metal grates in tree bed
+brch_shoe: TEXT | Indicates the presence of a branch problem caused by sneakers in the branches
+status: TEXT | Indicates whether the tree is alive, standing dead, or a stump.
+guards: TEXT | Indicates whether a guard is present, and if the user felt it was a helpful or harmful guard. Not recorded for dead trees and stumps
+steward: TEXT | Indicates the number of unique signs of stewardship observed for this tree. Not recorded for stumps or dead trees.
+sidewalk: TEXT | Indicates whether one of the sidewalk flags immediately adjacent to the tree was damaged, cracked, or lifted. Not recorded for dead trees and stumps.
+root_stone: TEXT | Indicates the presence of a root problem caused by paving stones in tree bed
+created_at: DATE | The date tree points were collected in the census software
+curb_loc: TEXT | Location of tree bed in relationship to the curb; trees are either along the curb (OnCurb) or offset from the curb (OffsetFromCurb)
+trnk_other: TEXT | Indicates the presence of other trunk problems
+brch_light: TEXT | Indicates the presence of a branch problem caused by lights (usually string lights) or wires in the branches
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2010
+@use: [C1]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+pickup_datetime: NUMBER | The date and time when the meter was engaged.
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2013
+@use: [C1]
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+
+## NEW_YORK.TREE_CENSUS_2005
+@use: [C3, C6]
+sidw_raise: TEXT | Raised sidewalk present
+location_1: TEXT | NULL
+wire_other: TEXT | Indicates the presence of other wires
+pit_type: TEXT | NULL
+vert_wall: TEXT | Walled tree well present
+wire_2nd: TEXT | Indicates the presence of secondary wires
+inf_wires: TEXT | Choking wires present
+inf_paving: TEXT | Close paving present
+inf_guard: TEXT | Choking guard or grate present
+status: TEXT | Excellent: full, well balanced crown and limb structure; leaves normal size color; no dead or broken branches; trunk solid; bark intact. Good: crown uneven or misshapen; some mechanical damage to bark or trunk; some signs of insects or disease; leaves somewhat below normal size and quantity; some dead or broken branches (less than half of the tree). Poor: large dead limbs with over one- half of the tree already dead or removed; large cavities; drastic deformities; leaves significantly below normal size and quantity; severe insect or disease damage. Dead: dead tree; leaves absent; twigs brittle. Shaft: all branches removed; trunk left standing; sprouts may or may not be evident. Stump: stump shorter than breast height; leaves entirely absent or present only on stump sprouts Empty pit: Pit contains exposed soil and no tree
+inf_lights: TEXT | Tree lights present
+vert_other: TEXT | Other Vertical Treatment Present
+sidw_crack: TEXT | Cracked sidewalk present
+soil_lvl: TEXT | NULL
+vert_tgrd: TEXT | Tall guard present
+horz_other: TEXT | Other horizontal treatment present
+inf_canopy: TEXT | Canopy debris present
+inf_other: TEXT | Other infrastructure conflicts present
+horz_plant: TEXT | Plantings present
+objectid: NUMBER | NULL
+tree_loc: TEXT | Establishes the location of the tree in relation to the address provided
+trunk_dmg: TEXT | Describes specific damage or wounds found on the trunk
+wire_prime: TEXT | Indicates the presence of primary wires
+inf_shoes: TEXT | Sneakers present
+x_sp: NUMBER | X field
+objectid_1: NUMBER | NULL
+vert_pgrd: TEXT | Perimeter guard present
+wire_htap: TEXT | Indicates the presence of house tap wires
+y_sp: NUMBER | y field
+horz_grate: TEXT | Tree grates present
+horz_blck: TEXT | Block pavers present
+inf_outlet: TEXT | Electrical outlet present
+cen_year: NUMBER | This is the year the tree was inventoried in. Data collection for the 2005 census spanned multiple seasons. Data is in YYYY format.
+
+## NEW_YORK._311_SERVICE_REQUESTS
+@use: [C4]
+agency: TEXT | NULL
+park_facility_name: TEXT | NULL
+location_type: TEXT | NULL
+cross_street_1: TEXT | NULL
+facility_type: TEXT | NULL
+due_date: NUMBER | NULL
+bridge_highway_segment: TEXT | NULL
+taxi_pickup_location: TEXT | NULL
+city: TEXT | Parsed location information. City.
+bbl: NUMBER | NULL
+incident_address: TEXT | Service location of Service request.
+x_coordinate: NUMBER | NULL
+bridge_highway_direction: TEXT | NULL
+created_date: NUMBER | Date Service request was created.
+closed_date: NUMBER | NULL
+location: TEXT | Service request location latitude and longitude coordinates.
+resolution_action_updated_date: NUMBER | NULL
+bridge_highway_name: TEXT | NULL
+open_data_channel_type: TEXT | NULL
+taxi_company_borough: TEXT | NULL
+road_ramp: TEXT | NULL
+borough: TEXT | NULL
+resolution_description: TEXT | NULL
+vehicle_type: TEXT | NULL
+agency_name: TEXT | NULL
+complaint_type: TEXT | NULL
+status: TEXT | Service request status. Duplicate statuses indicate that issue had previously been reported recently.
+y_coordinate: NUMBER | NULL
+cross_street_2: TEXT | NULL
+community_board: TEXT | NULL
+incident_zip: TEXT | Parsed location information. Zip code.
+descriptor: TEXT | NULL
+landmark: TEXT | NULL
+intersection_street_2: TEXT | NULL
+intersection_street_1: TEXT | NULL
+park_borough: TEXT | NULL
+street_name: TEXT | Parsed location information. Street name.
+unique_key: NUMBER | The service request tracking number.
+address_type: TEXT | NULL
+
+## NEW_YORK.TLC_GREEN_TRIPS_2015
+@use: [C1, C2]
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+
+## NEW_YORK.TREE_CENSUS_1995
+@use: [C4, C6]
+censustract_2010: TEXT | 2010 Census Tract geocoded to the address using Geosupport 11.4
+recordid: NUMBER | A unique identifier for each record in the table. Does not correspond to other datasets or identify the tree itself.
+zip_new: NUMBER | Zip Code geocoded to the address using Geosupport 11.4
+borough: TEXT | Borough where tree was recorded.
+diameter: NUMBER | Diameter of the tree as measured at approximately 4.5 feet from the ground.
+sidewalk_condition: TEXT | Whether the tree roots have lifted the adjacent sidewalk.
+house_number: TEXT | Numerical portion of the address.
+street: TEXT | Street where address for tree is located.
+nta_2010: TEXT | Neighborhood Tabulation Area geocoded to the address using Geosupport 11.4
+segmentid: NUMBER | LION SegmentID geocoded to the address using Geosupport 11.4
+censusblock_2010: TEXT | 2010 Census Block geocoded to the address using Geosupport 11.4
+species: TEXT | Species of the tree using a four-letter code, comprised of the first two letters of the genus followed by the first two letters of the species.
+cb_original: NUMBER | The community board originally geocoded to the address using LION 02A
+zip_original: NUMBER | The zip code originally geocoded to the address using LION 02A
+y: FLOAT | Y coordinate of point in the NAD_1983_StatePlane_New_York_Long_Island_FIPS_3104_Feet coordinate system, geocoded using LION 02A
+location: TEXT | NULL
+x: FLOAT | X coordinate of point in the NAD_1983_StatePlane_New_York_Long_Island_FIPS_3104_Feet coordinate system, geocoded using LION 02A
+status: TEXT | Overall tree condition.
+address: TEXT | Address of the tree.
+site: TEXT | This field clarifies the position relative to the address for trees not located in the front of buildings.
+support_structure: TEXT | Whether the tree has support structures installed.
+cb_new: NUMBER | Community Board geocoded to the address using Geosupport 11.4
+wires: TEXT | Whether the tree is located under utility wires
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2016
+@use: [C1]
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+
+## NEW_YORK.CITIBIKE_STATIONS
+@use: [C4]
+eightd_has_available_keys: BOOLEAN | NULL
+num_docks_available: NUMBER | Number of docks accepting bike returns.
+is_installed: BOOLEAN | Is the station currently on the street?
+name: TEXT | Public name of the station.
+num_bikes_available: NUMBER | Number of bikes available for rental.
+region_id: NUMBER | ID of the region where station is located.
+is_renting: BOOLEAN | Is the station currently renting bikes?
+station_id: TEXT | Unique identifier of a station.
+num_bikes_disabled: NUMBER | Number of disabled bikes at the station.
+num_docks_disabled: NUMBER | Number of empty but disabled dock points at the station.
+short_name: TEXT | Short name or other type of identifier, as used by the data publisher.
+last_reported: NUMBER | Timestamp indicating the last time this station reported its status to the backend, in NYC local time.
+rental_methods: TEXT | Array of enumerables containing the payment methods accepted at this station.
+capacity: NUMBER | ANumber of total docking points installed at this station, both available and unavailable.
+eightd_has_key_dispenser: BOOLEAN | NULL
+is_returning: BOOLEAN | Is the station accepting bike returns?
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2011
+@use: [C1]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+
+## NEW_YORK.TLC_GREEN_TRIPS_2013
+@use: [C1, C2]
+pickup_datetime: NUMBER | The date and time when the meter was engaged.
+
+## NEW_YORK.TLC_FHV_TRIPS_2015
+@use: [C5]
+pickup_datetime: NUMBER | The date and time of the trip pick-up.
+borough: TEXT | This is Pickup borough
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2012
+@use: [C1]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+pickup_datetime: NUMBER | The date and time when the meter was engaged
+
+## NEW_YORK.TLC_FHV_TRIPS_2016
+@use: [C5]
+borough: TEXT | This is Pickup borough
+pickup_datetime: NUMBER | The date and time of the trip pick-up.
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2014
+@use: [C1]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+pickup_datetime: NUMBER | The date and time when the meter was engaged

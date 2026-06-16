@@ -1,0 +1,3200 @@
+[TABLES]
+## GHCN_D.GHCND_1852
+date: DATE | NULL | eg=["1852-11-03", "1852-11-15"]
+value: FLOAT | NULL | eg=[5.0, 13.0]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00047738"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+
+## GHCN_D.GHCND_2017
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["SNWD", "TOBS"]
+source_url: TEXT | Source | eg=["ftp://ftp.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2017.csv.gz"]
+etl_timestamp: NUMBER | Load time for this data row | eg=[1689799403864424]
+value: FLOAT | NULL | eg=[0.0, 122.0]
+time: TEXT | NULL | eg=["0700", "2400"]
+sflag: TEXT | NULL | eg=["7"]
+id: TEXT | NULL | eg=["USC00099506", "USC00143665"]
+date: DATE | NULL | eg=["2017-08-30"]
+
+## GHCN_D.GHCND_1878
+value: FLOAT | NULL | eg=[0.0]
+sflag: TEXT | NULL | eg=["0"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1878-05-15", "1878-01-22"]
+id: TEXT | NULL | eg=["USC00015555"]
+
+## GHCN_D.GHCND_1988
+element: TEXT | NULL | eg=["ACMH"]
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["USW00013880", "USW00013995"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1988-10-11", "1988-04-13"]
+
+## GHCN_D.GHCND_1930
+element: TEXT | NULL | eg=["DAPR"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0]
+date: DATE | NULL | eg=["1930-08-18", "1930-07-07"]
+id: TEXT | NULL | eg=["ASN00009023", "ASN00010505"]
+
+## GHCN_D.GHCND_1916
+time: TEXT | NULL
+date: DATE | NULL | eg=["1916-02-26", "1916-06-27"]
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["AGE00135039"]
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1781
+element: TEXT | NULL | eg=["TMAX"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1781-12-05", "1781-01-06"]
+id: TEXT | NULL | eg=["EZE00100082"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0, -3.0]
+
+## GHCN_D.GHCND_1932
+element: TEXT | NULL | eg=["DAPR"]
+date: DATE | NULL | eg=["1932-05-30", "1932-10-24"]
+value: FLOAT | NULL | eg=[2.0]
+sflag: TEXT | NULL | eg=["a"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00008002", "ASN00009030"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1962
+time: TEXT | NULL
+date: DATE | NULL | eg=["1962-09-07", "1962-07-30"]
+id: TEXT | NULL | eg=["USC00025924", "USC00027876"]
+element: TEXT | NULL | eg=["DAEV"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 3.0]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+
+## GHCN_D.GHCND_1883
+date: DATE | NULL | eg=["1883-11-26", "1883-05-28"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+element: TEXT | NULL | eg=["DAPR"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0]
+id: TEXT | NULL | eg=["ASN00018079", "ASN00019036"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_2013
+element: TEXT | NULL | eg=["AWDR"]
+date: DATE | NULL | eg=["2013-05-12", "2013-10-07"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["T"]
+id: TEXT | NULL | eg=["USS0005N04S", "USS0005N14S"]
+value: FLOAT | NULL | eg=[9.0, 149.0]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1867
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["0"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1867-11-11", "1867-12-12"]
+id: TEXT | NULL | eg=["USC00298072"]
+
+## GHCN_D.GHCND_1928
+date: DATE | NULL | eg=["1928-06-04", "1928-03-29"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAPR"]
+value: FLOAT | NULL | eg=[2.0, 30.0]
+mflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00009596", "ASN00010020"]
+sflag: TEXT | NULL | eg=["a"]
+
+## GHCN_D.GHCND_1868
+time: TEXT | NULL
+date: DATE | NULL | eg=["1868-05-12", "1868-10-23"]
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["0"]
+id: TEXT | NULL | eg=["USC00298072"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1779
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[-4.0, 5.0]
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["TMAX"]
+date: DATE | NULL | eg=["1779-01-14", "1779-01-15"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1853
+date: DATE | NULL | eg=["1853-04-20", "1853-11-27"]
+value: FLOAT | NULL | eg=[13.0, 18.0]
+qflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00047738"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+
+## GHCN_D.GHCND_2012
+id: TEXT | NULL | eg=["USC00300364", "USC00274556"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL | eg=["0830"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["7"]
+date: DATE | NULL | eg=["2012-08-27", "2012-09-29"]
+element: TEXT | NULL | eg=["AWND", "EVAP"]
+
+## GHCN_D.GHCND_1982
+date: DATE | NULL | eg=["1982-11-07", "1982-01-26"]
+id: TEXT | NULL | eg=["USW00013970", "USW00023009"]
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+element: TEXT | NULL | eg=["ACMH"]
+
+## GHCN_D.GHCND_1857
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00047738"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+value: FLOAT | NULL | eg=[3.0, 5.0]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1857-02-03", "1857-01-08"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1904
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1904-12-16", "1904-06-28"]
+sflag: TEXT | NULL | eg=["a"]
+element: TEXT | NULL | eg=["DAPR"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0]
+id: TEXT | NULL | eg=["ASN00015088", "ASN00016000"]
+
+## GHCN_D.GHCND_1766
+element: TEXT | NULL | eg=["TMAX"]
+value: FLOAT | NULL | eg=[3.0, 6.0]
+date: DATE | NULL | eg=["1766-01-06", "1766-01-05"]
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["ITE00100554"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1808
+value: FLOAT | NULL | eg=[0.0]
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1808-01-06", "1808-02-10"]
+
+## GHCN_D.GHCND_1941
+date: DATE | NULL | eg=["1941-04-28", "1941-09-08"]
+value: FLOAT | NULL | eg=[2.0, 3.0]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00008094", "ASN00016024"]
+element: TEXT | NULL | eg=["DAPR"]
+sflag: TEXT | NULL | eg=["a"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1831
+id: TEXT | NULL | eg=["EZE00100082"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1831-06-29", "1831-10-15"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1967
+element: TEXT | NULL | eg=["ACMH"]
+sflag: TEXT | NULL | eg=["X"]
+value: FLOAT | NULL | eg=[30.0, 70.0]
+date: DATE | NULL | eg=["1967-08-17", "1967-07-26"]
+id: TEXT | NULL | eg=["AQW00061705", "AYM00089664"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1894
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1894-09-10", "1894-04-06"]
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["AG000060590"]
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1842
+time: TEXT | NULL
+date: DATE | NULL | eg=["1842-09-09", "1842-09-04"]
+element: TEXT | NULL | eg=["MDPR"]
+value: FLOAT | NULL | eg=[208.0, 323.0]
+sflag: TEXT | NULL | eg=["C"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["CA006158350"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1780
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX"]
+date: DATE | NULL | eg=["1780-12-23", "1780-02-25"]
+id: TEXT | NULL | eg=["EZE00100082"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 4.0]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+
+## GHCN_D.GHCND_1877
+sflag: TEXT | NULL | eg=["0"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["MDPR", "PRCP"]
+date: DATE | NULL | eg=["1877-04-18", "1877-04-03"]
+value: FLOAT | NULL | eg=[1298.0, 221.0]
+id: TEXT | NULL | eg=["USC00034251", "USC00015555"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1999
+time: TEXT | NULL
+element: TEXT | NULL | eg=["DAEV"]
+date: DATE | NULL | eg=["1999-10-04", "1999-06-14"]
+value: FLOAT | NULL | eg=[3.0, 2.0]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["USC00144357", "USC00348501"]
+sflag: TEXT | NULL | eg=["0"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1838
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1838-03-08", "1838-05-04"]
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+
+## GHCN_D.GHCND_1954
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 3.0]
+element: TEXT | NULL | eg=["DAEV"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1954-03-25", "1954-11-15"]
+id: TEXT | NULL | eg=["USC00030764", "USC00035200"]
+sflag: TEXT | NULL | eg=["0"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1827
+date: DATE | NULL | eg=["1827-06-29", "1827-09-04"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+
+## GHCN_D.GHCND_1812
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["EZE00100082"]
+date: DATE | NULL | eg=["1812-09-05", "1812-11-09"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1811
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1811-06-30", "1811-09-06"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1966
+value: FLOAT | NULL | eg=[100.0, 60.0]
+date: DATE | NULL | eg=["1966-10-26", "1966-08-30"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["ACMH"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL | eg=["AQW00061705"]
+sflag: TEXT | NULL | eg=["X"]
+
+## GHCN_D.GHCND_1823
+date: DATE | NULL | eg=["1823-04-22", "1823-05-02"]
+id: TEXT | NULL | eg=["EZE00100082"]
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_2007
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 3.0]
+id: TEXT | NULL | eg=["USC00391851", "USC00518964"]
+element: TEXT | NULL | eg=["DAPR"]
+sflag: TEXT | NULL | eg=["0"]
+date: DATE | NULL | eg=["2007-02-25", "2007-05-07"]
+
+## GHCN_D.GHCND_1775
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1775-04-14", "1775-01-03"]
+id: TEXT | NULL | eg=["EZE00100082"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[6.0, 8.0]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1802
+date: DATE | NULL | eg=["1802-03-04", "1802-12-27"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["GM000010962"]
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1797
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1797-02-21", "1797-03-04"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["GM000010962"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1769
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[-3.0, 5.0]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1769-02-01", "1769-02-04"]
+id: TEXT | NULL | eg=["ITE00100554"]
+
+## GHCN_D.GHCND_1979
+date: DATE | NULL | eg=["1979-06-13", "1979-09-18"]
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["ACMH"]
+id: TEXT | NULL | eg=["USW00013962", "USW00014840"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1805
+id: TEXT | NULL | eg=["EZE00100082"]
+value: FLOAT | NULL | eg=[0.0]
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1805-10-03", "1805-01-06"]
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1931
+sflag: TEXT | NULL | eg=["a"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00008088", "ASN00009001"]
+element: TEXT | NULL | eg=["DAPR"]
+value: FLOAT | NULL | eg=[2.0, 3.0]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1931-05-04", "1931-06-29"]
+
+## GHCN_D.GHCND_1935
+element: TEXT | NULL | eg=["DAPR"]
+sflag: TEXT | NULL | eg=["a"]
+id: TEXT | NULL | eg=["ASN00009030", "ASN00009055"]
+value: FLOAT | NULL | eg=[2.0]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1935-07-29", "1935-07-15"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1786
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[-2.0, -3.0]
+date: DATE | NULL | eg=["1786-01-24", "1786-11-16"]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1790
+date: DATE | NULL | eg=["1790-01-22", "1790-12-29"]
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0, 10.0]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_STATIONS
+latitude: FLOAT | NULL | eg=[17.1333, 25.333]
+wmoid: NUMBER | NULL | eg=[NaN, 41196.0]
+state: TEXT | NULL
+gsn_flag: TEXT | NULL | eg=["GSN"]
+hcn_crn_flag: TEXT | NULL
+elevation: FLOAT | NULL | eg=[19.2, 34.0]
+name: TEXT | NULL | eg=["ST JOHNS", "SHARJAH INTER. AIRP"]
+etl_timestamp: NUMBER | NULL | eg=[1729302238782101]
+source_url: TEXT | NULL | eg=["ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/ghcnd-stations.txt"]
+id: TEXT | NULL | eg=["ACW00011647", "AE000041196"]
+longitude: FLOAT | NULL | eg=[-61.7833, 55.517]
+
+## GHCN_D.GHCND_1784
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["EZE00100082"]
+date: DATE | NULL | eg=["1784-01-19", "1784-03-02"]
+value: FLOAT | NULL | eg=[-2.0, 6.0]
+element: TEXT | NULL | eg=["TMAX"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1829
+date: DATE | NULL | eg=["1829-10-18", "1829-12-19"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["E"]
+
+## GHCN_D.GHCND_1991
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PGTM"]
+sflag: TEXT | NULL | eg=["X"]
+id: TEXT | NULL | eg=["IOW00070701", "USW00024156"]
+value: FLOAT | NULL | eg=[1410.0, 2308.0]
+date: DATE | NULL | eg=["1991-06-26", "1991-09-06"]
+
+## GHCN_D.GHCND_1910
+id: TEXT | NULL | eg=["AGE00135039"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL | eg=["1910-07-22", "1910-12-28"]
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0, 14.0]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1995
+element: TEXT | NULL | eg=["SNWD"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["CA004015020", "CA008300447"]
+sflag: TEXT | NULL | eg=["C"]
+date: DATE | NULL | eg=["1995-11-17", "1995-01-25"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[110.0]
+
+## GHCN_D.GHCND_1824
+date: DATE | NULL | eg=["1824-02-08", "1824-05-10"]
+id: TEXT | NULL | eg=["EZE00100082"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1953
+value: FLOAT | NULL | eg=[97.0, 0.0]
+date: DATE | NULL | eg=["1953-02-16", "1953-08-06"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL | eg=["AG000060390"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP", "TMAX"]
+
+## GHCN_D.GHCND_1897
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["AG000060590"]
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1897-01-18", "1897-11-12"]
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1994
+time: TEXT | NULL
+element: TEXT | NULL | eg=["DAEV"]
+sflag: TEXT | NULL | eg=["0"]
+id: TEXT | NULL | eg=["USC00143100", "USC00296061"]
+date: DATE | NULL | eg=["1994-04-25", "1994-10-24"]
+value: FLOAT | NULL | eg=[3.0, 2.0]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_2004
+value: FLOAT | NULL | eg=[3.0, 2.0]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+date: DATE | NULL | eg=["2004-05-10", "2004-11-17"]
+element: TEXT | NULL | eg=["DAEV"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["USC00252741", "USC00413686"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1952
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["AG000060390"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[40.0, 0.0]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1952-09-20", "1952-02-17"]
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1998
+id: TEXT | NULL | eg=["USW00023188", "USW00023009"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["WSF2"]
+date: DATE | NULL | eg=["1998-01-09", "1998-05-12"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[89.0, 125.0]
+
+## GHCN_D.GHCND_2002
+value: FLOAT | NULL | eg=[3.0, 7.0]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["USC00380764", "USC00419417"]
+element: TEXT | NULL | eg=["DAEV"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+date: DATE | NULL | eg=["2002-04-08", "2002-08-19"]
+
+## GHCN_D.GHCND_1997
+id: TEXT | NULL | eg=["CA003060237", "CA006136606"]
+sflag: TEXT | NULL | eg=["C", "0"]
+date: DATE | NULL | eg=["1997-03-02", "1997-12-24"]
+qflag: TEXT | NULL
+time: TEXT | NULL | eg=["0700", "0800"]
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[86.0]
+
+## GHCN_D.GHCND_1822
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1822-03-29", "1822-02-14"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1833
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1833-05-19", "1833-06-25"]
+id: TEXT | NULL | eg=["EZE00100082"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1809
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+date: DATE | NULL | eg=["1809-06-30", "1809-09-06"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1942
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0]
+id: TEXT | NULL | eg=["ASN00006037", "ASN00009557"]
+element: TEXT | NULL | eg=["DAPR"]
+date: DATE | NULL | eg=["1942-01-29", "1942-03-16"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+
+## GHCN_D.GHCND_1957
+date: DATE | NULL | eg=["1957-12-01", "1957-10-26"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["ACW00011647"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP", "SNOW"]
+value: FLOAT | NULL | eg=[10.0, 0.0]
+
+## GHCN_D.GHCND_1903
+id: TEXT | NULL | eg=["ASN00015083", "ASN00016005"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL | eg=["1903-12-14", "1903-08-24"]
+value: FLOAT | NULL | eg=[2.0]
+sflag: TEXT | NULL | eg=["a"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1958
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1958-04-24", "1958-04-19"]
+sflag: TEXT | NULL | eg=["X"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0, 13.0]
+id: TEXT | NULL | eg=["ACW00011647"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1918
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["AJ000037850"]
+date: DATE | NULL | eg=["1918-02-25", "1918-04-17"]
+sflag: TEXT | NULL | eg=["I"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0, 107.0]
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1980
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["USW00094847", "USW00013891"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["ACMH"]
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1980-04-05", "1980-03-22"]
+sflag: TEXT | NULL | eg=["X"]
+
+## GHCN_D.GHCND_1768
+id: TEXT | NULL | eg=["ITE00100554"]
+date: DATE | NULL | eg=["1768-01-16", "1768-01-26"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[-2.0, 3.0]
+element: TEXT | NULL | eg=["TMAX"]
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1914
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["AGE00135039"]
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1914-12-13", "1914-07-21"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1960
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[36.0, 91.0]
+date: DATE | NULL | eg=["1960-05-18", "1960-05-30"]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["ACW00011647"]
+sflag: TEXT | NULL | eg=["X"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1965
+id: TEXT | NULL | eg=["AYM00089664", "AYW00057701"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+element: TEXT | NULL | eg=["ACMH"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[90.0, 100.0]
+date: DATE | NULL | eg=["1965-10-23", "1965-12-01"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1989
+sflag: TEXT | NULL | eg=["X"]
+date: DATE | NULL | eg=["1989-04-29", "1989-02-12"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["USW00094240", "USW00013722"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["ACMH"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1923
+date: DATE | NULL | eg=["1923-03-08", "1923-10-19"]
+sflag: TEXT | NULL | eg=["a"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00009719", "ASN00009722"]
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1874
+qflag: TEXT | NULL | eg=["D"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["I"]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["SF000847010"]
+date: DATE | NULL | eg=["1874-07-19", "1874-08-19"]
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_2022
+time: TEXT | NULL | eg=["0800", "0700"]
+id: TEXT | NULL | eg=["US1CASJ0015", "US1COCS0031"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["2022-11-21"]
+etl_timestamp: NUMBER | Load time for this data row | eg=[1703901068125096]
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["N", "7"]
+element: TEXT | NULL | eg=["SNOW", "SNWD"]
+source_url: TEXT | Source | eg=["ftp://ftp.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2022.csv.gz"]
+
+## GHCN_D.GHCND_1970
+sflag: TEXT | NULL | eg=["X"]
+value: FLOAT | NULL | eg=[100.0, 90.0]
+date: DATE | NULL | eg=["1970-02-23", "1970-03-21"]
+element: TEXT | NULL | eg=["ACMH"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["AQW00061705"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1859
+mflag: TEXT | NULL | eg=["P"]
+id: TEXT | NULL | eg=["USC00047738"]
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[76.0, 305.0]
+sflag: TEXT | NULL | eg=["0"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1859-12-25", "1859-12-26"]
+
+## GHCN_D.GHCND_1927
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[30.0, 2.0]
+id: TEXT | NULL | eg=["ASN00005052", "ASN00009030"]
+sflag: TEXT | NULL | eg=["a"]
+element: TEXT | NULL | eg=["DAPR"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1927-06-30", "1927-05-09"]
+
+## GHCN_D.GHCND_1844
+id: TEXT | NULL | eg=["CA006158350"]
+sflag: TEXT | NULL | eg=["C"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1844-06-19", "1844-04-29"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[262.0, 0.0]
+element: TEXT | NULL | eg=["MDPR", "PRCP"]
+
+## GHCN_D.GHCND_1905
+date: DATE | NULL | eg=["1905-11-30", "1905-06-29"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[10.0]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00051099", "ASN00056032"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1843
+time: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1843-05-14", "1843-05-25"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["CA006158350"]
+sflag: TEXT | NULL | eg=["C"]
+
+## GHCN_D.GHCND_1850
+value: FLOAT | NULL | eg=[3.0, 5.0]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1850-11-13", "1850-12-18"]
+sflag: TEXT | NULL | eg=["0"]
+id: TEXT | NULL | eg=["USC00047738"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_2019
+id: TEXT | NULL | eg=["USC00116642", "USC00114400"]
+qflag: TEXT | NULL
+time: TEXT | NULL | eg=["0700", "0800"]
+sflag: TEXT | NULL | eg=["7"]
+etl_timestamp: NUMBER | Load time for this data row | eg=[1689801206234378]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["2019-01-24"]
+value: FLOAT | NULL | eg=[0.0, -72.0]
+element: TEXT | NULL | eg=["PRCP", "TMIN"]
+source_url: TEXT | Source | eg=["ftp://ftp.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2019.csv.gz"]
+
+## GHCN_D.GHCND_2005
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+value: FLOAT | NULL | eg=[2.0, 3.0]
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["USC00210852", "USC00513911"]
+element: TEXT | NULL | eg=["DAPR"]
+date: DATE | NULL | eg=["2005-10-05", "2005-04-18"]
+
+## GHCN_D.GHCND_2018
+id: TEXT | NULL | eg=["USC00046174", "USC00346931"]
+time: TEXT | NULL | eg=["0800", "2400"]
+value: FLOAT | NULL | eg=[261.0, 228.0]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+etl_timestamp: NUMBER | Load time for this data row | eg=[1689800315825849]
+source_url: TEXT | Source | eg=["ftp://ftp.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2018.csv.gz"]
+element: TEXT | NULL | eg=["TMAX", "SN32"]
+date: DATE | NULL | eg=["2018-05-13"]
+sflag: TEXT | NULL | eg=["7"]
+
+## GHCN_D.GHCND_1986
+sflag: TEXT | NULL | eg=["X"]
+date: DATE | NULL | eg=["1986-12-29", "1986-10-15"]
+id: TEXT | NULL | eg=["USW00014935", "USW00013966"]
+element: TEXT | NULL | eg=["ACMH"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1925
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["AG000060590"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1925-06-10", "1925-10-07"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1801
+time: TEXT | NULL
+date: DATE | NULL | eg=["1801-04-05", "1801-06-10"]
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["GM000010962"]
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1830
+date: DATE | NULL | eg=["1830-01-18", "1830-02-10"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL | eg=["O"]
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["ITE00100550", "EZE00100082"]
+value: FLOAT | NULL | eg=[1277.0, 0.0]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1764
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["ITE00100554"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+date: DATE | NULL | eg=["1764-01-24", "1764-01-10"]
+value: FLOAT | NULL | eg=[21.0, 25.0]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1765
+time: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["ITE00100554"]
+date: DATE | NULL | eg=["1765-12-31", "1765-12-20"]
+value: FLOAT | NULL | eg=[4.0, 7.0]
+
+## GHCN_D.GHCND_1771
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[-2.0, 12.0]
+id: TEXT | NULL | eg=["ITE00100554"]
+date: DATE | NULL | eg=["1771-02-13", "1771-02-12"]
+
+## GHCN_D.GHCND_1807
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1807-07-21", "1807-03-20"]
+id: TEXT | NULL | eg=["EZE00100082"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1804
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+date: DATE | NULL | eg=["1804-05-22", "1804-08-21"]
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1872
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL | eg=["2400"]
+sflag: TEXT | NULL | eg=["0"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[3.0]
+id: TEXT | NULL | eg=["USW00024274"]
+date: DATE | NULL | eg=["1872-02-28", "1872-04-15"]
+
+## GHCN_D.GHCND_1880
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["USC00314938", "USC00242778"]
+element: TEXT | NULL | eg=["SNWD"]
+qflag: TEXT | NULL | eg=["G"]
+date: DATE | NULL | eg=["1880-02-02", "1880-06-21"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[889.0, 0.0]
+sflag: TEXT | NULL | eg=["6", "0"]
+
+## GHCN_D.GHCND_1847
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1847-01-06", "1847-07-12"]
+value: FLOAT | NULL | eg=[0.0]
+sflag: TEXT | NULL | eg=["C"]
+id: TEXT | NULL | eg=["CA006158350"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1887
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["FRE00104937"]
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL | eg=["D"]
+value: FLOAT | NULL | eg=[9990.0]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1887-10-04", "1887-10-08"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1885
+id: TEXT | NULL | eg=["USC00034988"]
+qflag: TEXT | NULL | eg=["I"]
+date: DATE | NULL | eg=["1885-02-28", "1885-02-09"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0, -22.0]
+time: TEXT | NULL | eg=["0700"]
+sflag: TEXT | NULL | eg=["6"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1849
+date: DATE | NULL | eg=["1849-01-21", "1849-06-28"]
+mflag: TEXT | NULL | eg=["T"]
+sflag: TEXT | NULL | eg=["C"]
+id: TEXT | NULL | eg=["CA006158350"]
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1961
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 3.0]
+date: DATE | NULL | eg=["1961-02-03", "1961-11-06"]
+element: TEXT | NULL | eg=["DAEV"]
+id: TEXT | NULL | eg=["USC00041715", "USC00046144"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+
+## GHCN_D.GHCND_1816
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["TMAX", "TMIN"]
+date: DATE | NULL | eg=["1816-11-12", "1816-06-07"]
+id: TEXT | NULL | eg=["ITE00100554", "ITE00100550"]
+qflag: TEXT | NULL | eg=["I"]
+value: FLOAT | NULL | eg=[56.0, 138.0]
+mflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1913
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00056159", "ASN00056186"]
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1913-06-03", "1913-05-05"]
+sflag: TEXT | NULL | eg=["a"]
+
+## GHCN_D.GHCND_1920
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1920-06-12", "1920-05-17"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["AGE00147704"]
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0, 420.0]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1858
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E", "F"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL | eg=["K", "I"]
+element: TEXT | NULL | eg=["PRCP", "TMIN"]
+date: DATE | NULL | eg=["1858-09-09", "1858-08-23"]
+id: TEXT | NULL | eg=["GM000010962", "ITE00100554"]
+value: FLOAT | NULL | eg=[233.0, -1.0]
+
+## GHCN_D.GHCND_1772
+date: DATE | NULL | eg=["1772-01-10", "1772-01-14"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["ITE00100554"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[5.0, 17.0]
+
+## GHCN_D.GHCND_1845
+value: FLOAT | NULL | eg=[0.0]
+sflag: TEXT | NULL | eg=["C"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["CA006158350"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1845-05-15", "1845-06-01"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1934
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+value: FLOAT | NULL | eg=[2.0, 5.0]
+date: DATE | NULL | eg=["1934-04-04", "1934-04-08"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["ASN00007002", "ASN00007012"]
+
+## GHCN_D.GHCND_1839
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1839-01-29", "1839-04-23"]
+
+## GHCN_D.GHCND_1992
+element: TEXT | NULL | eg=["DAEV"]
+value: FLOAT | NULL | eg=[5.0, 4.0]
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1992-11-25", "1992-09-08"]
+sflag: TEXT | NULL | eg=["0"]
+id: TEXT | NULL | eg=["VQC00670480", "USC00050834"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1854
+value: FLOAT | NULL | eg=[3.0, 5.0]
+sflag: TEXT | NULL | eg=["0"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1854-05-11", "1854-04-22"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00047738"]
+
+## GHCN_D.GHCND_1803
+element: TEXT | NULL | eg=["TMAX"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[-3.0, 6.0]
+date: DATE | NULL | eg=["1803-01-07", "1803-12-22"]
+id: TEXT | NULL | eg=["EZE00100082"]
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1972
+sflag: TEXT | NULL | eg=["X"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[50.0, 100.0]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["AQW00061705"]
+element: TEXT | NULL | eg=["ACMH"]
+date: DATE | NULL | eg=["1972-03-31", "1972-02-14"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1869
+date: DATE | NULL | eg=["1869-02-02", "1869-03-22"]
+id: TEXT | NULL | eg=["USC00288878"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["6"]
+element: TEXT | NULL | eg=["TMAX"]
+value: FLOAT | NULL | eg=[0.0, 17.0]
+mflag: TEXT | NULL
+qflag: TEXT | NULL | eg=["I"]
+
+## GHCN_D.GHCND_1899
+id: TEXT | NULL | eg=["RQC00662634"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+date: DATE | NULL | eg=["1899-08-26", "1899-08-23"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1796
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1796-12-05", "1796-12-01"]
+value: FLOAT | NULL | eg=[0.0, 5.0]
+element: TEXT | NULL | eg=["TMAX"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_2024
+value: FLOAT | NULL | eg=[3.0, 2.0]
+sflag: TEXT | NULL | eg=["N"]
+time: TEXT | NULL | eg=["1300", "1804"]
+element: TEXT | NULL | eg=["DAPR"]
+source_url: TEXT | Source | eg=["http://www.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2024.csv.gz"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["US1OHER0059", "US1TXBXR253"]
+etl_timestamp: NUMBER | Load time for this data row | eg=[1729305565670643, 1729305580704649]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["2024-01-02", "2024-01-05"]
+
+## GHCN_D.GHCND_1890
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL | eg=["X"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["AGE00135039"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1890-12-27", "1890-11-29"]
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[-30.0, 78.0]
+
+## GHCN_D.GHCND_1813
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1813-01-25", "1813-03-12"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_STATES
+etl_timestamp: NUMBER | Load time for this data row | eg=[1729302237648949]
+code: TEXT | NULL | eg=["AB", "AL"]
+name: TEXT | NULL | eg=["ALBERTA", "ALABAMA"]
+source_url: TEXT | Source | eg=["ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/ghcnd-states.txt"]
+
+## GHCN_D.GHCND_1840
+sflag: TEXT | NULL | eg=["C"]
+mflag: TEXT | NULL | eg=["T"]
+date: DATE | NULL | eg=["1840-10-30", "1840-10-24"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP", "SNOW"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["CA006158350"]
+
+## GHCN_D.GHCND_1879
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["0", "6"]
+qflag: TEXT | NULL | eg=["I", "G"]
+date: DATE | NULL | eg=["1879-09-24", "1879-09-23"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX", "TMIN"]
+value: FLOAT | NULL | eg=[111.0, 122.0]
+id: TEXT | NULL | eg=["USC00338366", "USC00314055"]
+
+## GHCN_D.GHCND_1933
+qflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00008012", "ASN00009001"]
+date: DATE | NULL | eg=["1933-06-05", "1933-07-10"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+value: FLOAT | NULL | eg=[2.0, 3.0]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1818
+id: TEXT | NULL | eg=["EZE00100082"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1818-05-30", "1818-09-02"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+
+## GHCN_D.GHCND_1990
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1990-11-13", "1990-02-16"]
+id: TEXT | NULL | eg=["USC00344812", "USC00043672"]
+sflag: TEXT | NULL | eg=["0"]
+element: TEXT | NULL | eg=["DAEV", "DAPR"]
+value: FLOAT | NULL | eg=[4.0, 2.0]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1782
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["EZE00100082"]
+date: DATE | NULL | eg=["1782-11-21", "1782-12-14"]
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0, -3.0]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1964
+value: FLOAT | NULL | eg=[2.0, 3.0]
+id: TEXT | NULL | eg=["RQC00668306", "USC00022439"]
+element: TEXT | NULL | eg=["DAEV"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1964-05-18", "1964-12-27"]
+
+## GHCN_D.GHCND_1949
+id: TEXT | NULL | eg=["USC00238777", "USC00052759"]
+element: TEXT | NULL | eg=["TMIN", "TOBS"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1949-09-02", "1949-04-27"]
+time: TEXT | NULL | eg=["1600"]
+value: FLOAT | NULL | eg=[33.0]
+sflag: TEXT | NULL | eg=["0"]
+
+## GHCN_D.GHCND_1901
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["E"]
+date: DATE | NULL | eg=["1901-01-30", "1901-11-04"]
+id: TEXT | NULL | eg=["AGE00135039"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1871
+sflag: TEXT | NULL | eg=["0"]
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1871-12-26", "1871-12-03"]
+id: TEXT | NULL | eg=["USW00024274"]
+time: TEXT | NULL | eg=["2400"]
+value: FLOAT | NULL | eg=[3.0, 10.0]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1783
+value: FLOAT | NULL | eg=[0.0, 3.0]
+element: TEXT | NULL | eg=["TMAX"]
+date: DATE | NULL | eg=["1783-01-25", "1783-12-13"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_2001
+element: TEXT | NULL | eg=["DAEV"]
+date: DATE | NULL | eg=["2001-10-22", "2001-08-27"]
+id: TEXT | NULL | eg=["USC00049694", "USC00252741"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+value: FLOAT | NULL | eg=[2.0, 3.0]
+
+## GHCN_D.GHCND_1785
+element: TEXT | NULL | eg=["TMAX"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0, -6.0]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1785-03-19", "1785-02-15"]
+
+## GHCN_D.GHCND_1955
+sflag: TEXT | NULL | eg=["S", "I"]
+mflag: TEXT | NULL | eg=["H"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["TAVG", "TMAX"]
+value: FLOAT | NULL | eg=[318.0, 201.0]
+id: TEXT | NULL | eg=["AE000041196"]
+date: DATE | NULL | eg=["1955-09-14", "1955-02-16"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_2000
+id: TEXT | NULL | eg=["USC00145852", "USC00352867"]
+element: TEXT | NULL | eg=["DAEV"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["2000-09-29", "2000-05-08"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[4.0, 3.0]
+
+## GHCN_D.GHCND_2020
+source_url: TEXT | Source | eg=["ftp://ftp.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2020.csv.gz"]
+id: TEXT | NULL | eg=["USC00051977", "USC00105177"]
+mflag: TEXT | NULL
+time: TEXT | NULL | eg=["0800", "0700"]
+element: TEXT | NULL | eg=["TMAX", "TMIN"]
+value: FLOAT | NULL | eg=[167.0, -6.0]
+date: DATE | NULL | eg=["2020-06-19"]
+qflag: TEXT | NULL
+etl_timestamp: NUMBER | Load time for this data row | eg=[1689802833669021]
+sflag: TEXT | NULL | eg=["7"]
+
+## GHCN_D.GHCND_1926
+element: TEXT | NULL | eg=["DAPR"]
+date: DATE | NULL | eg=["1926-07-12", "1926-08-23"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0]
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+id: TEXT | NULL | eg=["ASN00008100", "ASN00009632"]
+
+## GHCN_D.GHCND_1975
+element: TEXT | NULL | eg=["ACMH"]
+id: TEXT | NULL | eg=["USW00094849", "USW00013739"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1975-04-06", "1975-09-29"]
+sflag: TEXT | NULL | eg=["X"]
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1837
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[54.0, 77.0]
+date: DATE | NULL | eg=["1837-05-25", "1837-08-12"]
+id: TEXT | NULL | eg=["EZE00100082"]
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1984
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["USW00094910", "USW00013883"]
+value: FLOAT | NULL | eg=[0.0]
+sflag: TEXT | NULL | eg=["X"]
+element: TEXT | NULL | eg=["ACMH"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1984-03-25", "1984-08-07"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1924
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["AG000060590"]
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1924-06-05", "1924-07-02"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1976
+date: DATE | NULL | eg=["1976-08-22", "1976-07-29"]
+value: FLOAT | NULL | eg=[90.0, 308.0]
+mflag: TEXT | NULL | eg=["H"]
+id: TEXT | NULL | eg=["AF000040930", "AFM00040938"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["S"]
+element: TEXT | NULL | eg=["TAVG"]
+
+## GHCN_D.GHCND_2014
+value: FLOAT | NULL | eg=[176.0, 100.0]
+date: DATE | NULL | eg=["2014-11-07", "2014-09-20"]
+element: TEXT | NULL | eg=["AWDR"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["USS0005N04S"]
+sflag: TEXT | NULL | eg=["T"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1888
+value: FLOAT | NULL | eg=[124.0, 34.0]
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL | eg=["X"]
+date: DATE | NULL | eg=["1888-12-23", "1888-12-02"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["AGE00135039"]
+sflag: TEXT | NULL | eg=["E"]
+
+## GHCN_D.GHCND_2015
+id: TEXT | NULL | eg=["USS0005N04S", "USS0005N16S"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["AWDR"]
+date: DATE | NULL | eg=["2015-04-04", "2015-03-14"]
+value: FLOAT | NULL | eg=[232.0, 160.0]
+sflag: TEXT | NULL | eg=["T"]
+
+## GHCN_D.GHCND_1861
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["USC00465224"]
+element: TEXT | NULL | eg=["SNOW"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["6"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1861-01-03", "1861-01-27"]
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1866
+sflag: TEXT | NULL | eg=["6"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0, 8.0]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1866-01-22", "1866-03-27"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["USC00288878"]
+
+## GHCN_D.GHCND_2016
+element: TEXT | NULL | eg=["TMAX", "TAVG"]
+sflag: TEXT | NULL | eg=["S"]
+date: DATE | NULL | eg=["2016-06-01"]
+mflag: TEXT | NULL | eg=["H", "B"]
+id: TEXT | NULL | eg=["ARM00087784", "AYM00089314"]
+etl_timestamp: NUMBER | Load time for this data row | eg=[1672027772371627]
+source_url: TEXT | Source | eg=["ftp://ftp.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2016.csv.gz"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[114.0, -250.0]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_2021
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["W"]
+value: FLOAT | NULL | eg=[94.0, 11.0]
+id: TEXT | NULL | eg=["USW00013884", "USW00013870"]
+date: DATE | NULL | eg=["2021-03-02", "2021-11-13"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+source_url: TEXT | Source | eg=["ftp://ftp.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2021.csv.gz"]
+etl_timestamp: NUMBER | Load time for this data row | eg=[1689803742385381, 1689804506493496]
+element: TEXT | NULL | eg=["ADPT"]
+
+## GHCN_D.GHCND_1919
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["RQC00660158", "RQC00662801"]
+date: DATE | NULL | eg=["1919-10-14", "1919-07-14"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1937
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 31.0]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+date: DATE | NULL | eg=["1937-05-18", "1937-12-06"]
+id: TEXT | NULL | eg=["ASN00007056", "ASN00009001"]
+element: TEXT | NULL | eg=["DAPR"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1943
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1943-03-31", "1943-05-31"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00012247", "ASN00016021"]
+value: FLOAT | NULL | eg=[31.0, 2.0]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAPR"]
+sflag: TEXT | NULL | eg=["a"]
+
+## GHCN_D.GHCND_1907
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1907-01-09", "1907-04-29"]
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["RQC00662634", "RQC00664702"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1774
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["ITE00100554"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[-3.0, -4.0]
+date: DATE | NULL | eg=["1774-12-15", "1774-01-04"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1855
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["USC00047738"]
+sflag: TEXT | NULL | eg=["0"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[5.0, 30.0]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1855-04-17", "1855-04-28"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_2010
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["AWND"]
+id: TEXT | NULL | eg=["USW00024152", "USS0015N10S"]
+date: DATE | NULL | eg=["2010-12-28", "2010-01-09"]
+sflag: TEXT | NULL | eg=["W", "T"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1940
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["ASN00008044", "ASN00009504"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL | eg=["1940-06-17", "1940-06-30"]
+value: FLOAT | NULL | eg=[2.0, 30.0]
+sflag: TEXT | NULL | eg=["a"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1947
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1947-07-07", "1947-10-20"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0]
+id: TEXT | NULL | eg=["ASN00008037", "ASN00010583"]
+sflag: TEXT | NULL | eg=["a"]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1814
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+date: DATE | NULL | eg=["1814-03-18", "1814-04-29"]
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1770
+date: DATE | NULL | eg=["1770-01-17", "1770-01-13"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX"]
+value: FLOAT | NULL | eg=[2.0, -2.0]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["ITE00100554"]
+sflag: TEXT | NULL | eg=["E"]
+
+## GHCN_D.GHCND_1945
+sflag: TEXT | NULL | eg=["a"]
+id: TEXT | NULL | eg=["ASN00008071", "ASN00008088"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1945-05-22", "1945-09-10"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 31.0]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1828
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1828-06-07", "1828-08-02"]
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["EZE00100082"]
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1865
+time: TEXT | NULL
+date: DATE | NULL | eg=["1865-11-03", "1865-10-19"]
+sflag: TEXT | NULL | eg=["6"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[8.0, 20.0]
+id: TEXT | NULL | eg=["USC00288878"]
+
+## GHCN_D.GHCND_1860
+mflag: TEXT | NULL | eg=["T"]
+sflag: TEXT | NULL | eg=["C"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["CA006158350"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1860-10-13", "1860-08-07"]
+
+## GHCN_D.GHCND_1902
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1902-01-03", "1902-03-02"]
+id: TEXT | NULL | eg=["AGE00135039"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1791
+time: TEXT | NULL
+date: DATE | NULL | eg=["1791-02-05", "1791-11-09"]
+element: TEXT | NULL | eg=["TMAX"]
+id: TEXT | NULL | eg=["EZE00100082"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[-3.0, -4.0]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+
+## GHCN_D.GHCND_1981
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1981-10-19", "1981-04-19"]
+element: TEXT | NULL | eg=["ACMH"]
+id: TEXT | NULL | eg=["USW00013723", "USW00023009"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1815
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1815-02-16", "1815-08-21"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["EZE00100082"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1794
+id: TEXT | NULL | eg=["EZE00100082"]
+value: FLOAT | NULL | eg=[5.0, -6.0]
+element: TEXT | NULL | eg=["TMAX"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+date: DATE | NULL | eg=["1794-12-17", "1794-12-29"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1959
+id: TEXT | NULL | eg=["ACW00011647"]
+date: DATE | NULL | eg=["1959-11-13", "1959-05-01"]
+value: FLOAT | NULL | eg=[0.0, 25.0]
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL | eg=["T"]
+sflag: TEXT | NULL | eg=["X"]
+
+## GHCN_D.GHCND_1870
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1870-01-16", "1870-04-24"]
+id: TEXT | NULL | eg=["USC00298072"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+
+## GHCN_D.GHCND_1787
+mflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 3.0]
+id: TEXT | NULL | eg=["EZE00100082"]
+sflag: TEXT | NULL | eg=["E"]
+date: DATE | NULL | eg=["1787-01-30", "1787-01-04"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1911
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1911-12-12", "1911-12-20"]
+value: FLOAT | NULL | eg=[66.0]
+sflag: TEXT | NULL | eg=["a"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00085214", "ASN00086061"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1892
+date: DATE | NULL | eg=["1892-05-10", "1892-10-13"]
+id: TEXT | NULL | eg=["AG000060590"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[-30.0, 190.0]
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL | eg=["X"]
+
+## GHCN_D.GHCND_1834
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1834-08-12", "1834-08-20"]
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1898
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["AG000060590"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1898-01-29", "1898-08-18"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_2008
+element: TEXT | NULL | eg=["DAPR"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL | eg=["2008-04-03", "2008-09-08"]
+value: FLOAT | NULL | eg=[2.0, 3.0]
+sflag: TEXT | NULL | eg=["0"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["USC00153929", "USC00510140"]
+
+## GHCN_D.GHCND_1846
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["C"]
+date: DATE | NULL | eg=["1846-03-15", "1846-05-26"]
+element: TEXT | NULL | eg=["PRCP", "SNOW"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["CA006158350"]
+mflag: TEXT | NULL | eg=["T"]
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1978
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+element: TEXT | NULL | eg=["ACMH"]
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1978-10-05", "1978-12-21"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["USW00024144", "USW00013893"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1909
+id: TEXT | NULL | eg=["RQC00660158", "RQC00661300"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1909-09-10", "1909-11-14"]
+
+## GHCN_D.GHCND_1798
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1798-03-04", "1798-06-25"]
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["GM000010962"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1996
+value: FLOAT | NULL | eg=[132.0]
+id: TEXT | NULL | eg=["USC00091657", "USC00311515"]
+sflag: TEXT | NULL | eg=["0", "C"]
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+time: TEXT | NULL | eg=["0700", "0800"]
+date: DATE | NULL | eg=["1996-08-30", "1996-04-27"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1922
+id: TEXT | NULL | eg=["AGE00135039"]
+date: DATE | NULL | eg=["1922-08-10", "1922-08-05"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1939
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 4.0]
+id: TEXT | NULL | eg=["ASN00008041", "ASN00008221"]
+element: TEXT | NULL | eg=["DAPR"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+date: DATE | NULL | eg=["1939-06-27", "1939-06-08"]
+
+## GHCN_D.GHCND_1889
+id: TEXT | NULL | eg=["AGE00135039"]
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[66.0, 157.0]
+mflag: TEXT | NULL
+qflag: TEXT | NULL | eg=["X"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1889-04-18", "1889-11-28"]
+
+## GHCN_D.GHCND_COUNTRIES
+source_url: TEXT | Source | eg=["ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/ghcnd-countries.txt"]
+name: TEXT | NULL | eg=["Antigua and Barbuda", "United Arab Emirates"]
+code: TEXT | NULL | eg=["AC", "AE"]
+etl_timestamp: NUMBER | Load time for this data row | eg=[1729302237836750]
+
+## GHCN_D.GHCND_1912
+value: FLOAT | NULL | eg=[2.0]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAPR"]
+sflag: TEXT | NULL | eg=["a"]
+date: DATE | NULL | eg=["1912-10-21", "1912-09-02"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00009023", "ASN00010019"]
+
+## GHCN_D.GHCND_1806
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1806-08-16", "1806-06-22"]
+id: TEXT | NULL | eg=["EZE00100082"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1893
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1893-01-31", "1893-06-29"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["AG000060590"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1875
+sflag: TEXT | NULL | eg=["0"]
+id: TEXT | NULL | eg=["USC00034251", "USC00015555"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1875-05-28", "1875-02-28"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[7.0, 28.0]
+element: TEXT | NULL | eg=["DAPR", "PRCP"]
+
+## GHCN_D.GHCND_1863
+value: FLOAT | NULL | eg=[100.0, 115.0]
+id: TEXT | NULL | eg=["AGE00135039", "ITE00100554"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1863-02-18", "1863-02-17"]
+element: TEXT | NULL | eg=["TMAX", "TMIN"]
+sflag: TEXT | NULL | eg=["E", "F"]
+qflag: TEXT | NULL | eg=["I", "X"]
+
+## GHCN_D.GHCND_1841
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1841-05-16", "1841-09-09"]
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["C"]
+id: TEXT | NULL | eg=["CA006158350"]
+
+## GHCN_D.GHCND_1856
+date: DATE | NULL | eg=["1856-03-16", "1856-02-05"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[3.0, 5.0]
+id: TEXT | NULL | eg=["USC00047738"]
+sflag: TEXT | NULL | eg=["0"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1886
+time: TEXT | NULL
+date: DATE | NULL | eg=["1886-11-30", "1886-12-31"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[-67.0, 170.0]
+sflag: TEXT | NULL | eg=["0", "E"]
+element: TEXT | NULL | eg=["TMIN", "TMAX"]
+id: TEXT | NULL | eg=["USC00431072", "AGE00147712"]
+qflag: TEXT | NULL | eg=["D"]
+
+## GHCN_D.GHCND_1969
+date: DATE | NULL | eg=["1969-07-03", "1969-10-29"]
+sflag: TEXT | NULL | eg=["X"]
+value: FLOAT | NULL | eg=[100.0, 80.0]
+id: TEXT | NULL | eg=["AQW00061705"]
+element: TEXT | NULL | eg=["ACMH"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_2003
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAEV"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["2003-08-04", "2003-07-31"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+id: TEXT | NULL | eg=["USC00020632", "RQC00668306"]
+value: FLOAT | NULL | eg=[4.0, 2.0]
+
+## GHCN_D.GHCND_1973
+time: TEXT | NULL
+date: DATE | NULL | eg=["1973-08-22", "1973-12-08"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["ACMH"]
+sflag: TEXT | NULL | eg=["X"]
+id: TEXT | NULL | eg=["USW00093193", "USW00023169"]
+
+## GHCN_D.GHCND_1864
+qflag: TEXT | NULL | eg=["I"]
+sflag: TEXT | NULL | eg=["E", "F"]
+value: FLOAT | NULL | eg=[17.0, 94.0]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX", "TMIN"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1864-12-24", "1864-08-11"]
+id: TEXT | NULL | eg=["EIE00101859", "USC00189674"]
+
+## GHCN_D.GHCND_1792
+date: DATE | NULL | eg=["1792-04-08", "1792-09-13"]
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["GM000010962"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1825
+time: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1825-02-12", "1825-07-15"]
+
+## GHCN_D.GHCND_1851
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[3.0, 8.0]
+id: TEXT | NULL | eg=["USC00047738"]
+sflag: TEXT | NULL | eg=["0"]
+date: DATE | NULL | eg=["1851-05-10", "1851-05-02"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1895
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1895-11-01", "1895-11-25"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["AG000060590"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_2023
+time: TEXT | NULL | eg=["0700", "0630"]
+id: TEXT | NULL | eg=["US1FLLN0060", "US1SDLW0001"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP", "SNOW"]
+sflag: TEXT | NULL | eg=["N", "7"]
+qflag: TEXT | NULL
+source_url: TEXT | Source | eg=["http://www.ncei.noaa.gov/pub/data/ghcn/daily/by_year/2023.csv.gz"]
+date: DATE | NULL | eg=["2023-01-20"]
+etl_timestamp: NUMBER | Load time for this data row | eg=[1729304722434001]
+value: FLOAT | NULL | eg=[0.0, 94.0]
+
+## GHCN_D.GHCND_1963
+date: DATE | NULL | eg=["1963-04-08", "1963-11-25"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+value: FLOAT | NULL | eg=[2.0, 3.0]
+element: TEXT | NULL | eg=["DAEV"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["RQC00660152", "USC00025924"]
+
+## GHCN_D.GHCND_1821
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1821-03-31", "1821-10-19"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_INVENTORY
+latitude: FLOAT | NULL | eg=[17.1167, 17.1333]
+source_url: TEXT | NULL | eg=["ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/ghcnd-inventory.txt"]
+longitude: FLOAT | NULL | eg=[-61.7833]
+etl_timestamp: NUMBER | NULL | eg=[1729302243944523]
+firstyear: NUMBER | NULL | eg=[1949, 1961]
+element: TEXT | NULL | eg=["PRCP", "SNOW"]
+lastyear: NUMBER | NULL | eg=[1949, 1961]
+id: TEXT | NULL | eg=["ACW00011604", "ACW00011647"]
+
+## GHCN_D.GHCND_1983
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1983-03-10", "1983-12-04"]
+time: TEXT | NULL
+id: TEXT | NULL | eg=["USW00013957", "USW00023034"]
+element: TEXT | NULL | eg=["ACMH"]
+
+## GHCN_D.GHCND_1881
+value: FLOAT | NULL | eg=[2.0]
+date: DATE | NULL | eg=["1881-08-15", "1881-07-11"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAPR"]
+sflag: TEXT | NULL | eg=["a"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00018079", "ASN00019036"]
+
+## GHCN_D.GHCND_1977
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["ACMH"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1977-12-18", "1977-11-11"]
+id: TEXT | NULL | eg=["USW00025501", "USW00013895"]
+sflag: TEXT | NULL | eg=["X"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1944
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00016028", "ASN00016037"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1944-07-03", "1944-09-25"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+value: FLOAT | NULL | eg=[2.0]
+element: TEXT | NULL | eg=["DAPR"]
+
+## GHCN_D.GHCND_1767
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[-5.0, 6.0]
+id: TEXT | NULL | eg=["ITE00100554"]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+date: DATE | NULL | eg=["1767-12-27", "1767-12-06"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1789
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, -2.0]
+date: DATE | NULL | eg=["1789-03-09", "1789-03-10"]
+
+## GHCN_D.GHCND_1906
+id: TEXT | NULL | eg=["ASN00055049"]
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1906-03-28", "1906-11-06"]
+sflag: TEXT | NULL | eg=["a"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1800
+id: TEXT | NULL | eg=["GM000010962"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+date: DATE | NULL | eg=["1800-04-09", "1800-07-12"]
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1948
+id: TEXT | NULL | eg=["USC00475484", "USC00391392"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[211.0]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1948-09-06", "1948-07-06"]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+element: TEXT | NULL | eg=["TMIN"]
+
+## GHCN_D.GHCND_1891
+time: TEXT | NULL
+date: DATE | NULL | eg=["1891-01-12", "1891-01-06"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["AGE00135039"]
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[120.0, 24.0]
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1876
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAPR", "MDPR"]
+id: TEXT | NULL | eg=["USC00034251", "USC00015555"]
+value: FLOAT | NULL | eg=[3.0, 5.0]
+date: DATE | NULL | eg=["1876-01-17", "1876-10-19"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1917
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["AGE00135039"]
+date: DATE | NULL | eg=["1917-09-27", "1917-04-04"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0, 47.0]
+
+## GHCN_D.GHCND_1836
+element: TEXT | NULL | eg=["PRCP"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1836-01-05", "1836-01-13"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1915
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1915-02-11", "1915-12-31"]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["AGE00135039"]
+value: FLOAT | NULL | eg=[4.0, 0.0]
+mflag: TEXT | NULL
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1810
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1810-09-07", "1810-11-04"]
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[0.0]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1820
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["EZE00100082"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1820-05-18", "1820-12-21"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_2009
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[3.0, 5.0]
+element: TEXT | NULL | eg=["DAEV", "DAPR"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["USC00083209", "USC00436391"]
+date: DATE | NULL | eg=["2009-04-13", "2009-06-08"]
+
+## GHCN_D.GHCND_1778
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1778-01-03", "1778-02-21"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[2.0, 5.0]
+
+## GHCN_D.GHCND_1776
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0, -3.0]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1776-01-10", "1776-12-12"]
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_1773
+value: FLOAT | NULL | eg=[8.0, 18.0]
+sflag: TEXT | NULL | eg=["E"]
+id: TEXT | NULL | eg=["ITE00100554"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1773-02-06", "1773-01-04"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1921
+date: DATE | NULL | eg=["1921-02-03", "1921-08-20"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["AGE00147704"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+
+## GHCN_D.GHCND_1848
+date: DATE | NULL | eg=["1848-12-03", "1848-08-12"]
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["CA006158350"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL
+mflag: TEXT | NULL | eg=["T"]
+sflag: TEXT | NULL | eg=["C"]
+
+## GHCN_D.GHCND_1763
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["ITE00100554"]
+sflag: TEXT | NULL | eg=["E"]
+value: FLOAT | NULL | eg=[2.0, -4.0]
+qflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL | eg=["1763-01-14", "1763-01-04"]
+element: TEXT | NULL | eg=["TMAX"]
+
+## GHCN_D.GHCND_2006
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 3.0]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+element: TEXT | NULL | eg=["DAPR"]
+id: TEXT | NULL | eg=["USC00517566", "USC00518738"]
+date: DATE | NULL | eg=["2006-04-14", "2006-03-13"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1950
+date: DATE | NULL | eg=["1950-09-18", "1950-03-04"]
+id: TEXT | NULL | eg=["AG000060390"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0, 8.0]
+
+## GHCN_D.GHCND_1795
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["TMAX"]
+date: DATE | NULL | eg=["1795-12-13", "1795-02-15"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[10.0, 13.0]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1788
+id: TEXT | NULL | eg=["EZE00100082"]
+element: TEXT | NULL | eg=["TMAX"]
+value: FLOAT | NULL | eg=[0.0, 2.0]
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1788-02-20", "1788-02-13"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1884
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1884-04-12", "1884-12-20"]
+sflag: TEXT | NULL | eg=["6"]
+id: TEXT | NULL | eg=["USC00034988"]
+element: TEXT | NULL | eg=["PRCP"]
+time: TEXT | NULL | eg=["0700"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1971
+id: TEXT | NULL | eg=["AG000060390"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1971-01-08", "1971-10-30"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0, 32.0]
+sflag: TEXT | NULL | eg=["E"]
+element: TEXT | NULL | eg=["PRCP"]
+
+## GHCN_D.GHCND_1793
+value: FLOAT | NULL | eg=[6.0, 9.0]
+sflag: TEXT | NULL | eg=["E"]
+date: DATE | NULL | eg=["1793-03-27", "1793-01-03"]
+element: TEXT | NULL | eg=["TMAX"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+
+## GHCN_D.GHCND_1985
+sflag: TEXT | NULL | eg=["X"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1985-10-30", "1985-07-07"]
+id: TEXT | NULL | eg=["USW00023023", "USW00013966"]
+element: TEXT | NULL | eg=["ACMH"]
+value: FLOAT | NULL | eg=[0.0]
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1968
+value: FLOAT | NULL | eg=[100.0, 70.0]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["ACMH"]
+sflag: TEXT | NULL | eg=["X"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1968-10-23", "1968-09-15"]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["AQW00061705", "AYM00089664"]
+
+## GHCN_D.GHCND_1974
+date: DATE | NULL | eg=["1974-12-11", "1974-12-10"]
+value: FLOAT | NULL | eg=[100.0, 80.0]
+element: TEXT | NULL | eg=["ACMH"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["X"]
+id: TEXT | NULL | eg=["AQW00061705"]
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1835
+id: TEXT | NULL | eg=["EZE00100082"]
+time: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1835-07-08", "1835-12-15"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1873
+id: TEXT | NULL | eg=["USC00331662"]
+value: FLOAT | NULL | eg=[22.0, 39.0]
+element: TEXT | NULL | eg=["TMAX", "TMIN"]
+qflag: TEXT | NULL | eg=["I"]
+mflag: TEXT | NULL
+time: TEXT | NULL
+date: DATE | NULL | eg=["1873-12-01", "1873-03-16"]
+sflag: TEXT | NULL | eg=["0"]
+
+## GHCN_D.GHCND_1936
+date: DATE | NULL | eg=["1936-07-27", "1936-07-16"]
+element: TEXT | NULL | eg=["DAPR"]
+sflag: TEXT | NULL | eg=["a"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00009504", "ASN00009508"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[2.0, 30.0]
+
+## GHCN_D.GHCND_1819
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["EZE00100082"]
+qflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1819-02-22", "1819-07-23"]
+
+## GHCN_D.GHCND_1900
+element: TEXT | NULL | eg=["PRCP"]
+id: TEXT | NULL | eg=["AGE00135039"]
+value: FLOAT | NULL | eg=[0.0, 50.0]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1900-03-29", "1900-12-05"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1938
+element: TEXT | NULL | eg=["DAPR"]
+value: FLOAT | NULL | eg=[2.0, 30.0]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1938-08-22", "1938-06-30"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["ASN00009001", "ASN00009714"]
+
+## GHCN_D.GHCND_1799
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["TMAX"]
+time: TEXT | NULL
+date: DATE | NULL | eg=["1799-12-15", "1799-12-01"]
+value: FLOAT | NULL | eg=[-3.0, -5.0]
+id: TEXT | NULL | eg=["EZE00100082"]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1777
+id: TEXT | NULL | eg=["EZE00100082"]
+date: DATE | NULL | eg=["1777-02-15", "1777-01-21"]
+element: TEXT | NULL | eg=["TMAX"]
+value: FLOAT | NULL | eg=[0.0, -3.0]
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+
+## GHCN_D.GHCND_1993
+id: TEXT | NULL | eg=["USC00296061", "USC00050834"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[3.0]
+element: TEXT | NULL | eg=["DAEV"]
+date: DATE | NULL | eg=["1993-06-07", "1993-06-28"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["0"]
+
+## GHCN_D.GHCND_1862
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1862-10-22", "1862-10-30"]
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["C"]
+id: TEXT | NULL | eg=["CA006158350"]
+mflag: TEXT | NULL | eg=["T"]
+value: FLOAT | NULL | eg=[0.0]
+
+## GHCN_D.GHCND_1882
+id: TEXT | NULL | eg=["SF001192090"]
+mflag: TEXT | NULL
+qflag: TEXT | NULL | eg=["D"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+date: DATE | NULL | eg=["1882-01-19", "1882-01-09"]
+element: TEXT | NULL | eg=["PRCP"]
+sflag: TEXT | NULL | eg=["I"]
+
+## GHCN_D.GHCND_2011
+id: TEXT | NULL | eg=["USC00412114", "USC00058995"]
+time: TEXT | NULL
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["2011-09-27", "2011-07-10"]
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+sflag: TEXT | NULL | eg=["7"]
+element: TEXT | NULL | eg=["AWND"]
+
+## GHCN_D.GHCND_1929
+qflag: TEXT | NULL
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+id: TEXT | NULL | eg=["ASN00010670", "ASN00012247"]
+value: FLOAT | NULL | eg=[15.0, 30.0]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["DAPR"]
+date: DATE | NULL | eg=["1929-02-15", "1929-06-30"]
+
+## GHCN_D.GHCND_1817
+value: FLOAT | NULL | eg=[188.0, 138.0]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+qflag: TEXT | NULL | eg=["I", "N"]
+element: TEXT | NULL | eg=["TMAX", "TMIN"]
+id: TEXT | NULL | eg=["ITE00100554", "ITE00100550"]
+date: DATE | NULL | eg=["1817-06-16", "1817-10-04"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1896
+id: TEXT | NULL | eg=["AG000060590"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+mflag: TEXT | NULL
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1896-09-30", "1896-06-15"]
+
+## GHCN_D.GHCND_1908
+date: DATE | NULL | eg=["1908-05-31", "1908-05-06"]
+qflag: TEXT | NULL
+time: TEXT | NULL
+element: TEXT | NULL | eg=["MDPR", "PRCP"]
+id: TEXT | NULL | eg=["USC00134389", "RQC00662634"]
+sflag: TEXT | NULL | eg=["0"]
+value: FLOAT | NULL | eg=[0.0]
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1946
+id: TEXT | NULL | eg=["ASN00009007", "ASN00010536"]
+element: TEXT | NULL | eg=["DAPR"]
+value: FLOAT | NULL | eg=[2.0]
+mflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+qflag: TEXT | NULL
+date: DATE | NULL | eg=["1946-07-22", "1946-08-05"]
+time: TEXT | NULL
+
+## GHCN_D.GHCND_1987
+date: DATE | NULL | eg=["1987-10-05", "1987-10-27"]
+id: TEXT | NULL | eg=["USW00012912", "USW00003947"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["ACMH"]
+sflag: TEXT | NULL | eg=["X"]
+
+## GHCN_D.GHCND_1832
+element: TEXT | NULL | eg=["MDPR", "PRCP"]
+time: TEXT | NULL
+sflag: TEXT | NULL | eg=["a"]
+id: TEXT | NULL | eg=["ASN00066046"]
+qflag: TEXT | NULL
+mflag: TEXT | NULL
+date: DATE | NULL | eg=["1832-05-11", "1832-02-02"]
+value: FLOAT | NULL | eg=[381.0, 0.0]
+
+## GHCN_D.GHCND_1826
+element: TEXT | NULL | eg=["PRCP"]
+value: FLOAT | NULL | eg=[0.0]
+qflag: TEXT | NULL
+id: TEXT | NULL | eg=["EZE00100082"]
+date: DATE | NULL | eg=["1826-07-13", "1826-07-19"]
+sflag: TEXT | NULL | eg=["E"]
+time: TEXT | NULL
+mflag: TEXT | NULL
+
+## GHCN_D.GHCND_1956
+value: FLOAT | NULL | eg=[274.0, 224.0]
+date: DATE | NULL | eg=["1956-03-09", "1956-11-29"]
+id: TEXT | NULL | eg=["AE000041196"]
+time: TEXT | NULL
+mflag: TEXT | NULL | eg=["H"]
+sflag: TEXT | NULL | eg=["S"]
+qflag: TEXT | NULL
+element: TEXT | NULL | eg=["TAVG"]
+
+## GHCN_D.GHCND_1951
+date: DATE | NULL | eg=["1951-09-06", "1951-07-06"]
+mflag: TEXT | NULL
+id: TEXT | NULL | eg=["AG000060390"]
+element: TEXT | NULL | eg=["PRCP", "TMAX"]
+time: TEXT | NULL
+value: FLOAT | NULL | eg=[0.0, 5.0]
+qflag: TEXT | NULL
+sflag: TEXT | NULL | eg=["E"]
+
+## NEW_YORK.CITIBIKE_TRIPS
+start_station_name: TEXT | Start Station Name | eg=["E 6 St & Avenue D"]
+start_station_id: NUMBER | Start Station ID | eg=[411]
+gender: TEXT | Gender (unknown, male, female) | eg=["female", "male"]
+tripduration: NUMBER | Trip Duration (in seconds) | eg=[1354, 641]
+end_station_name: TEXT | End Station Name | eg=["Market St & Cherry St"]
+stoptime: NUMBER | Stop Time, in NYC local time. | eg=[1440706878000000, 1415225823000000]
+start_station_latitude: FLOAT | Start Station Latitude | eg=[40.72228087]
+usertype: TEXT | User Type (Customer = 24-hour pass or 7-day pass user, Subscriber = Annual Member) | eg=["Subscriber", "Customer"]
+end_station_id: NUMBER | End Station ID | eg=[408]
+birth_year: NUMBER | Year of Birth | eg=[1984.0, 1978.0]
+starttime: NUMBER | Start Time, in NYC local time. | eg=[1440705524000000, 1415225182000000]
+end_station_longitude: FLOAT | End Station Longitude | eg=[-73.99400398]
+start_station_longitude: FLOAT | Start Station Longitude | eg=[-73.97668709]
+end_station_latitude: FLOAT | End Station Latitude | eg=[40.71076228]
+bikeid: NUMBER | Bike ID | eg=[23311, 20590]
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2009
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter | eg=[10.5, 12.7]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged. | eg=[1243977073000000, 1232565999000000]
+tolls_amount: FLOAT | Total amount of all tolls paid in trip. | eg=[0.0]
+pickup_latitude: FLOAT | Latitude where the meter was engaged | eg=[40.751129, 40.761732]
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips | eg=[12.7]
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed trips at the flag drop. The improvement surcharge began being levied in 2015.
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1, 2]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["Credit", "Cash"]
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter. | eg=[2.9, 3.0]
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges. | eg=[0.0]
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride
+tip_amount: FLOAT | Tip amount – This field is automatically populated for credit card tips. Cash tips are not included. | eg=[2.2, 0.0]
+pickup_longitude: FLOAT | Longitude where the meter was engaged. | eg=[-73.994176, -73.982435]
+dropoff_latitude: FLOAT | Latitude where the meter was disengaged | eg=[40.764722, 40.725362]
+pickup_datetime: NUMBER | The date and time when the meter was engaged. | eg=[1243976117000000, 1232564941000000]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka “store and forward,” because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["0", ""]
+dropoff_longitude: FLOAT | Longitude where the meter was disengaged. | eg=[-73.960164, -74.003522]
+vendor_id: TEXT | A code indicating the TPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc | eg=["CMT"]
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2015
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1, 2]
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=[NaN, 1.0]
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=[0.5]
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=[0.5]
+dropoff_latitude: FLOAT | NULL | eg=[40.76344680786133, 40.795162200927734]
+tip_amount: FLOAT | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=[0.0]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["2", "1"]
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=[0.3]
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips. | eg=[31.8]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1433973843000000, 1434574995000000]
+tolls_amount: FLOAT | Total amount of all tolls paid in trip. | eg=[0.0]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["2", "1"]
+dropoff_longitude: FLOAT | NULL | eg=[-73.98143005371094, -73.9671401977539]
+pickup_longitude: FLOAT | NULL | eg=[-73.86290740966797, -74.01133728027344]
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter | eg=[30.5]
+pickup_latitude: FLOAT | NULL | eg=[40.768760681152344, 40.709251403808594]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1433972235000000, 1434572832000000]
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter. | eg=[9.71, 7.32]
+
+## NEW_YORK.TLC_GREEN_TRIPS_2016
+tip_amount: FLOAT | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included.
+time_between_service: NUMBER | NULL
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=[0.3, 0.0]
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter
+payment_type: NUMBER | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value.
+trip_type: NUMBER | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+dropoff_longitude: FLOAT | NULL | eg=[0.0, -73.89234924316406]
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips.
+tolls_amount: FLOAT | Total amount of all tolls paid in trip.
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges
+pickup_longitude: FLOAT | NULL | eg=[0.0]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1458201180000000, 1464729645000000]
+distance_between_service: FLOAT | NULL
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=[""]
+ehail_fee: FLOAT | NULL
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=[1, 5]
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter.
+dropoff_latitude: FLOAT | NULL | eg=[0.0, 40.82773971557617]
+pickup_latitude: FLOAT | NULL | eg=[0.0]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["1", "2"]
+
+## NEW_YORK.TLC_GREEN_TRIPS_2014
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=[0.5]
+tip_amount: FLOAT | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=[2.0, 2.5]
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips. | eg=[16.0]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1415920755000000, 1415309962000000]
+trip_type: NUMBER | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch | eg=[1]
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=[0.5, 0.0]
+pickup_longitude: FLOAT | NULL | eg=[-73.95641326904297, -73.95781707763672]
+payment_type: NUMBER | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=[1]
+distance_between_service: FLOAT | NULL
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter | eg=[13.0]
+ehail_fee: FLOAT | NULL
+dropoff_latitude: FLOAT | NULL | eg=[40.69638442993164, 40.63241195678711]
+tolls_amount: FLOAT | Total amount of all tolls paid in trip. | eg=[0.0]
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter. | eg=[3.95, 2.93]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1]
+dropoff_longitude: FLOAT | NULL | eg=[-73.99249267578125, -73.94766998291016]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["2", "1"]
+pickup_latitude: FLOAT | NULL | eg=[40.71884536743164, 40.6710090637207]
+time_between_service: NUMBER | NULL
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1415921360000000, 1415310898000000]
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=[1]
+
+## NEW_YORK.NYPD_MV_COLLISIONS
+borough: TEXT | NULL | eg=["BROOKLYN"]
+number_of_pedestrians_killed: NUMBER | NULL | eg=[0]
+number_of_motorist_injured: NUMBER | NULL | eg=[0]
+number_of_pedestrians_injured: NUMBER | NULL | eg=[0]
+cross_street_name: TEXT | NULL | eg=["FRANKLIN AVENUE", "MYRTLE AVENUE"]
+contributing_factor_vehicle_5: TEXT | NULL | eg=[""]
+contributing_factor_vehicle_4: TEXT | NULL | eg=[""]
+number_of_cyclist_injured: NUMBER | NULL | eg=[0]
+vehicle_type_code2: TEXT | NULL | eg=["SPORT UTILITY / STATION WAGON"]
+location: TEXT | NULL | eg=["(40.692778, -73.9576793)", "(40.693341, -73.9668817)"]
+contributing_factor_vehicle_2: TEXT | NULL | eg=["Unspecified"]
+number_of_cyclist_killed: NUMBER | NULL | eg=[0]
+number_of_persons_killed: NUMBER | NULL | eg=[0]
+vehicle_type_code_4: TEXT | NULL | eg=[""]
+latitude: FLOAT | NULL | eg=[40.692778, 40.693341]
+vehicle_type_code_3: TEXT | NULL | eg=[""]
+vehicle_type_code1: TEXT | NULL | eg=["SPORT UTILITY / STATION WAGON", "LARGE COM VEH(6 OR MORE TIRES)"]
+unique_key: NUMBER | NULL | eg=[181067, 3404838]
+zip_code: NUMBER | NULL | eg=[11205]
+vehicle_type_code_5: TEXT | NULL | eg=[""]
+contributing_factor_vehicle_1: TEXT | NULL | eg=["Unspecified", "Oversized Vehicle"]
+timestamp: NUMBER | NULL | eg=[1368792900000000, 1457876400000000]
+on_street_name: TEXT | NULL | eg=["WILLOUGHBY AVENUE", "WASHINGTON AVENUE"]
+number_of_persons_injured: NUMBER | NULL | eg=[0]
+longitude: FLOAT | NULL | eg=[-73.9576793, -73.9668817]
+number_of_motorist_killed: NUMBER | NULL | eg=[0]
+off_street_name: TEXT | NULL | eg=[""]
+contributing_factor_vehicle_3: TEXT | NULL | eg=[""]
+
+## NEW_YORK.TREE_SPECIES
+species_common_name: TEXT | NULL | eg=["Smoke Tree", "European Birdcherry"]
+form: TEXT | NULL | eg=["Rounded"]
+tree_size: TEXT | NULL | eg=["Small (Mature Height < 25 ft)", "Intermediate (Mature Height 25-35 ft)"]
+growth_rate: TEXT | NULL | eg=["Slow"]
+location_tolerances: TEXT | NULL | eg=["Small Tree Pit (<3 ft)", "Median Tree, Small Tree Pit (<3 ft)"]
+fall_color: TEXT | NULL | eg=["Red/Bronze", "Yellow/Bronze"]
+environmental_tolerances: TEXT | NULL | eg=["none", "Salt and Drought Tolerant"]
+species_scientific_name: TEXT | NULL | eg=["Cotinus sp.", "Prunus padus"]
+comments: TEXT | NULL | eg=[""]
+notes_suggested_cultivars: TEXT | NULL | eg=["'Royal Purple' or 'Grace'", "One of the First Trees to Leaf Out in the Spring"]
+
+## NEW_YORK.TREE_CENSUS_2015
+boro_ct: NUMBER | This is the boro_ct identifyer for the census tract that the tree point falls into. | eg=[4121500]
+health: TEXT | Indicates the user's perception of tree health. | eg=["Fair", "Good"]
+st_assem: NUMBER | State Assembly District in which tree point is located | eg=[25]
+boroname: TEXT | Name of borough in which tree point is located | eg=["Queens"]
+st_senate: NUMBER | State Senate District in which tree point is located | eg=[16]
+root_other: TEXT | Indicates the presence of other root problems | eg=["No"]
+problems: TEXT | NULL | eg=["None"]
+y_sp: FLOAT | Y coordinate, in state plane. Units are feet | eg=[208826.3262, 209471.9164]
+borocode: NUMBER | Code for borough in which tree point is located | eg=[4]
+longitude: FLOAT | Longitude of point, in decimal degrees | eg=[-73.81134213, -73.8134374]
+trunk_wire: TEXT | Indicates the presence of a trunk problem caused by wires or rope wrapped around the trunk | eg=["No"]
+nta_name: TEXT | This is the NTA name corresponding to the neighborhood tabulation area from the 2010 US Census that the tree point falls into. | eg=["Queensboro Hill"]
+tree_id: NUMBER | Unique identification number for each tree point | eg=[333724, 338614]
+stump_diam: NUMBER | Diameter of stump measured through the center, rounded to the nearest inch. | eg=[0]
+x_sp: FLOAT | X coordinate, in state plane. Units are feet. | eg=[1036530.017, 1035948.008]
+block_id: NUMBER | Identifier linking each tree to the block in the blockface table/shapefile that it is mapped on. | eg=[310728, 310867]
+state: TEXT | All features given value 'New York' | eg=["New York"]
+brch_other: TEXT | Indicates the presence of other branch problems | eg=["No"]
+zip_city: TEXT | City as derived from zipcode. This is often (but not always) the same as borough. | eg=["Flushing"]
+cncldist: NUMBER | Council district in which tree point is located | eg=[20]
+cb_num: NUMBER | Community board in which tree point is located | eg=[407]
+user_type: TEXT | This field describes the category of user who collected this tree point's data. | eg=["NYC Parks Staff"]
+address: TEXT | Nearest estimated address to tree | eg=["59-030 157 STREET", "154-029 58 ROAD"]
+trnk_light: TEXT | Indicates the presence of a trunk problem caused by lighting installed on the tree | eg=["No"]
+zipcode: NUMBER | Five-digit zipcode in which tree is located | eg=[11355]
+spc_common: TEXT | Common name for species, e.g. "red maple" | eg=["American linden", "Callery pear"]
+root_grate: TEXT | Indicates the presence of a root problem caused by metal grates in tree bed | eg=["No"]
+brch_shoe: TEXT | Indicates the presence of a branch problem caused by sneakers in the branches | eg=["No"]
+nta: TEXT | This is the NTA Code corresponding to the neighborhood tabulation area from the 2010 US Census that the tree point falls into. | eg=["QN62"]
+spc_latin: TEXT | Scientific name for species, e.g. "Acer rubrum" | eg=["Tilia americana", "Pyrus calleryana"]
+status: TEXT | Indicates whether the tree is alive, standing dead, or a stump. | eg=["Alive"]
+guards: TEXT | Indicates whether a guard is present, and if the user felt it was a helpful or harmful guard. Not recorded for dead trees and stumps | eg=["None"]
+steward: TEXT | Indicates the number of unique signs of stewardship observed for this tree. Not recorded for stumps or dead trees. | eg=["None"]
+root_stone: TEXT | Indicates the presence of a root problem caused by paving stones in tree bed | eg=["No"]
+sidewalk: TEXT | Indicates whether one of the sidewalk flags immediately adjacent to the tree was damaged, cracked, or lifted. Not recorded for dead trees and stumps. | eg=["NoDamage", "Damage"]
+created_at: DATE | The date tree points were collected in the census software | eg=["2015-10-15", "2015-10-16"]
+curb_loc: TEXT | Location of tree bed in relationship to the curb; trees are either along the curb (OnCurb) or offset from the curb (OffsetFromCurb) | eg=["OnCurb"]
+latitude: FLOAT | Latitude of point, in decimal degrees | eg=[40.73970209, 40.74147749]
+tree_dbh: NUMBER | Diameter of the tree, measured at approximately 54" / 137cm above the ground. | eg=[22, 6]
+brch_light: TEXT | Indicates the presence of a branch problem caused by lights (usually string lights) or wires in the branches | eg=["No"]
+trnk_other: TEXT | Indicates the presence of other trunk problems | eg=["No"]
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2010
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter. | eg=[5.7]
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=[1]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["Cre"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged. | eg=[1275136107000000, 1276083205000000]
+tip_amount: FLOAT | Tip amount – This field is automatically populated for credit card tips. Cash tips are not included. | eg=[1.24]
+dropoff_latitude: FLOAT | Latitude where the meter was disengaged. | eg=[40.75094, 40.793461]
+tolls_amount: FLOAT | Total amount of all tolls paid in trip. | eg=[0.0]
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges. | eg=[0.0]
+dropoff_longitude: FLOAT | Longitude where the meter was disengaged. | eg=[-74.005576, -73.966576]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged. | eg=[1275136389000000, 1276083540000000]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka “store and forward,” because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["0"]
+vendor_id: TEXT | A code indicating the TPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc | eg=["CMT"]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value | eg=[1]
+pickup_longitude: FLOAT | Longitude where the meter was engaged. | eg=[-73.98725, -73.974229]
+pickup_latitude: FLOAT | Latitude where the meter was engaged | eg=[40.765882, 40.783651]
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips | eg=[7.44]
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed trips at the flag drop. The improvement surcharge began being levied in 2015.
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter. | eg=[1.7, 1.1]
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use. | eg=[0.5]
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2013
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=[1]
+dropoff_longitude: FLOAT | NULL | eg=[-73.98854, -73.989762]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1386896940000000, 1366858800000000]
+pickup_longitude: FLOAT | NULL | eg=[-73.973355, -74.010437]
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips. | eg=[15.5]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1, 5]
+tolls_amount: FLOAT | Total amount of all tolls paid in trip. | eg=[0.0]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["CRD"]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1386897660000000, 1366859580000000]
+pickup_latitude: FLOAT | NULL | eg=[40.75453, 40.714225]
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=[0.5]
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["VTS"]
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=[0.5]
+dropoff_latitude: FLOAT | NULL | eg=[40.71954, 40.6905]
+tip_amount: FLOAT | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=[2.5]
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter. | eg=[2.98, 3.12]
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter | eg=[12.0]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=[""]
+
+## NEW_YORK.TREE_CENSUS_2005
+sidw_raise: TEXT | Raised sidewalk present | eg=["Yes", "No"]
+location_1: TEXT | NULL | eg=["(0, 0)"]
+wire_other: TEXT | Indicates the presence of other wires | eg=["No"]
+pit_type: TEXT | NULL | eg=["Lawn"]
+spc_common: TEXT | The common name of the species. | eg=["OAK, PIN", "LONDON PLANETREE"]
+wire_2nd: TEXT | Indicates the presence of secondary wires | eg=["No"]
+vert_wall: TEXT | Walled tree well present | eg=["No"]
+spc_latin: TEXT | The scientific name of the species. | eg=["QUERCUS PALUSTRIS", "PLATANUS ACERIFOLIA"]
+borocode: NUMBER | Borough tree is in, using a one-digit borough code: 1 – Manhattan, 2 – Bronx, 3 – Brooklyn, 4 – Queens, 5 – Staten Island | eg=[5]
+zip_city: TEXT | City, as derived from the zipcode | eg=[""]
+cb_num: NUMBER | Community Board that the tree falls in. | eg=[0]
+nta_name: TEXT | Nta name for the neighborhood tabulation area the tree point is in | eg=[""]
+inf_wires: TEXT | Choking wires present | eg=["No"]
+inf_paving: TEXT | Close paving present | eg=["No"]
+inf_lights: TEXT | Tree lights present | eg=["No"]
+inf_guard: TEXT | Choking guard or grate present | eg=["No"]
+status: TEXT | Excellent: full, well balanced crown and limb structure; leaves normal size color; no dead or broken branches; trunk solid; bark intact. Good: crown uneven or misshapen; some mechanical damage to bark or trunk; some signs of insects or disease; leaves somewhat below normal size and quantity; some dead or broken branches (less than half of the tree). Poor: large dead limbs with over one- half of the tree already dead or removed; large cavities; drastic deformities; leaves significantly below normal size and quantity; severe insect or disease damage. Dead: dead tree; leaves absent; twigs brittle. Shaft: all branches removed; trunk left standing; sprouts may or may not be evident. Stump: stump shorter than breast height; leaves entirely absent or present only on stump sprouts Empty pit: Pit contains exposed soil and no tree | eg=["Good", "Excellent"]
+vert_other: TEXT | Other Vertical Treatment Present | eg=["No"]
+sidw_crack: TEXT | Cracked sidewalk present | eg=["No"]
+nta: TEXT | nta code for the neighborhood tabulation area the tree point is in, from the 2010 census | eg=[""]
+st_assem: NUMBER | State Assembly District tree point is in. | eg=[0]
+soil_lvl: TEXT | NULL | eg=["Level"]
+st_senate: NUMBER | State Senate District tree point is in. | eg=[0]
+boro_ct: NUMBER | This is the boro_ct identifier for the census tract that the tree point falls into.
+horz_other: TEXT | Other horizontal treatment present | eg=["No"]
+vert_tgrd: TEXT | Tall guard present | eg=["No"]
+inf_other: TEXT | Other infrastructure conflicts present | eg=["No"]
+inf_canopy: TEXT | Canopy debris present | eg=["No"]
+horz_plant: TEXT | Plantings present | eg=["No"]
+objectid: NUMBER | NULL | eg=[1090640, 1099282]
+tree_loc: TEXT | Establishes the location of the tree in relation to the address provided | eg=["Assigned", "Front"]
+cncldist: NUMBER | New York City Council District tree point is in. | eg=[0]
+trunk_dmg: TEXT | Describes specific damage or wounds found on the trunk | eg=["None"]
+wire_prime: TEXT | Indicates the presence of primary wires | eg=["No"]
+objectid_1: NUMBER | NULL | eg=[498267, 506909]
+x_sp: NUMBER | X field | eg=[0]
+inf_shoes: TEXT | Sneakers present | eg=["No"]
+vert_pgrd: TEXT | Perimeter guard present | eg=["No", "Yes"]
+tree_dbh: NUMBER | The diameter of the tree in whole inches, measured at breast height. (4.5 feet from the ground.) | eg=[12, 13]
+wire_htap: TEXT | Indicates the presence of house tap wires | eg=["No"]
+y_sp: NUMBER | y field | eg=[0]
+horz_grate: TEXT | Tree grates present | eg=["No"]
+zipcode: NUMBER | 2005 zipcode that the tree falls in. | eg=[0]
+boroname: TEXT | Borough tree is in, full text | eg=["5"]
+inf_outlet: TEXT | Electrical outlet present | eg=["No"]
+horz_blck: TEXT | Block pavers present | eg=["No"]
+cen_year: NUMBER | This is the year the tree was inventoried in. Data collection for the 2005 census spanned multiple seasons. Data is in YYYY format. | eg=[0]
+
+## NEW_YORK._311_SERVICE_REQUESTS
+agency: TEXT | NULL | eg=["DOT"]
+park_facility_name: TEXT | NULL | eg=["Unspecified"]
+location_type: TEXT | NULL
+cross_street_1: TEXT | NULL | eg=["234 ST", "148 DR"]
+facility_type: TEXT | NULL
+bridge_highway_segment: TEXT | NULL
+due_date: NUMBER | NULL
+taxi_pickup_location: TEXT | NULL
+latitude: FLOAT | Service request location latitude coordinate. | eg=[40.680632928324805, 40.67527795434052]
+city: TEXT | Parsed location information. City. | eg=["Rosedale"]
+bbl: NUMBER | NULL | eg=[NaN, 4136880103.0]
+incident_address: TEXT | Service location of Service request. | eg=["133 RD", "148-34 HOOK CREEK BOULEVARD"]
+x_coordinate: NUMBER | NULL | eg=[1058569, 1057575]
+bridge_highway_direction: TEXT | NULL
+created_date: NUMBER | Date Service request was created. | eg=[1525259280000000, 1525374180000000]
+closed_date: NUMBER | NULL | eg=[1525259280000000, 1525426680000000]
+longitude: FLOAT | Service request location longitude coordinate. | eg=[-73.73204951489956, -73.73565453060336]
+location: TEXT | Service request location latitude and longitude coordinates. | eg=["(40.680632928324805, -73.73204951489956)", "(40.67527795434052, -73.73565453060336)"]
+resolution_action_updated_date: NUMBER | NULL | eg=[1525172880000000, 1525426680000000]
+bridge_highway_name: TEXT | NULL
+open_data_channel_type: TEXT | NULL | eg=["UNKNOWN"]
+road_ramp: TEXT | NULL
+taxi_company_borough: TEXT | NULL
+resolution_description: TEXT | NULL | eg=["Service Request status for this request is available on the Department of Transportationâ€™s website. Please click the â€œLearn Moreâ€  link below.", "Service Request status for this request is available on the Department of Transportation's website. Please click the \"Learn More\" link below."]
+borough: TEXT | NULL | eg=["QUEENS"]
+vehicle_type: TEXT | NULL
+agency_name: TEXT | NULL | eg=["Department of Transportation"]
+complaint_type: TEXT | NULL | eg=["Street Light Condition"]
+status: TEXT | Service request status. Duplicate statuses indicate that issue had previously been reported recently. | eg=["Closed"]
+cross_street_2: TEXT | NULL | eg=["UNNAMED ST", "148 RD"]
+y_coordinate: NUMBER | NULL | eg=[187363, 185409]
+incident_zip: TEXT | Parsed location information. Zip code. | eg=["11422"]
+community_board: TEXT | NULL | eg=["13 QUEENS"]
+landmark: TEXT | NULL
+descriptor: TEXT | NULL | eg=["Street Light Out"]
+intersection_street_2: TEXT | NULL | eg=["235 STREET", "234 STREET"]
+intersection_street_1: TEXT | NULL | eg=["129 AVENUE", "133 ROAD"]
+street_name: TEXT | Parsed location information. Street name. | eg=["133 RD", "HOOK CREEK BOULEVARD"]
+unique_key: NUMBER | The service request tracking number. | eg=[39084862, 39096478]
+park_borough: TEXT | NULL | eg=["QUEENS"]
+address_type: TEXT | NULL | eg=["INTERSECTION", "ADDRESS"]
+
+## NEW_YORK.TLC_GREEN_TRIPS_2015
+dropoff_longitude: FLOAT | NULL | eg=[-74.01742553710938, -73.95700073242188]
+tolls_amount: FLOAT | Total amount of all tolls paid in trip. | eg=[0.0]
+trip_type: NUMBER | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch | eg=[1]
+pickup_latitude: FLOAT | NULL | eg=[40.67670822143555, 40.66673278808594]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1, 3]
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter | eg=[12.5]
+tip_amount: FLOAT | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=[3.45]
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips. | eg=[17.25]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter. | eg=[3.1, 2.95]
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=[0.5]
+time_between_service: NUMBER | NULL
+ehail_fee: FLOAT | NULL
+distance_between_service: FLOAT | NULL
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1431645036000000, 1434834316000000]
+dropoff_latitude: FLOAT | NULL | eg=[40.64300537109375, 40.67332077026367]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["2"]
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=[1]
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=[0.5]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1431644282000000, 1434833444000000]
+pickup_longitude: FLOAT | NULL | eg=[-74.00469207763672, -73.98167419433594]
+payment_type: NUMBER | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=[1]
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=[0.3]
+
+## NEW_YORK.TREE_CENSUS_1995
+recordid: NUMBER | A unique identifier for each record in the table. Does not correspond to other datasets or identify the tree itself. | eg=[3219, 32662]
+censustract_2010: TEXT | 2010 Census Tract geocoded to the address using Geosupport 11.4
+zip_new: NUMBER | Zip Code geocoded to the address using Geosupport 11.4 | eg=[0]
+longitude: FLOAT | Longitude of point in decimal degrees as geocoded using LION 02A | eg=[1.0]
+borough: TEXT | Borough where tree was recorded. | eg=["Manhattan"]
+diameter: NUMBER | Diameter of the tree as measured at approximately 4.5 feet from the ground. | eg=[7, 6]
+house_number: TEXT | Numerical portion of the address. | eg=["767.0"]
+spc_latin: TEXT | This is the latin/scientific name for the species of this tree. | eg=["QUERCUS PALUSTRIS", "QUERCUS PHELLOS"]
+sidewalk_condition: TEXT | Whether the tree roots have lifted the adjacent sidewalk. | eg=["Good"]
+street: TEXT | Street where address for tree is located. | eg=["WASHINGTON SQ W", "1 AV"]
+nta_2010: TEXT | Neighborhood Tabulation Area geocoded to the address using Geosupport 11.4 | eg=["Unknown"]
+segmentid: NUMBER | LION SegmentID geocoded to the address using Geosupport 11.4 | eg=[0]
+censusblock_2010: TEXT | 2010 Census Block geocoded to the address using Geosupport 11.4
+latitude: FLOAT | Latitude of point in decimal degrees as geocoded using LION 02A | eg=[1.0]
+species: TEXT | Species of the tree using a four-letter code, comprised of the first two letters of the genus followed by the first two letters of the species. | eg=["QUPA", "QUPH"]
+cb_original: NUMBER | The community board originally geocoded to the address using LION 02A | eg=[0]
+zip_original: NUMBER | The zip code originally geocoded to the address using LION 02A | eg=[0]
+y: FLOAT | Y coordinate of point in the NAD_1983_StatePlane_New_York_Long_Island_FIPS_3104_Feet coordinate system, geocoded using LION 02A | eg=[1.0]
+x: FLOAT | X coordinate of point in the NAD_1983_StatePlane_New_York_Long_Island_FIPS_3104_Feet coordinate system, geocoded using LION 02A | eg=[1.0]
+location: TEXT | NULL | eg=["(1.0, 1.0)"]
+spc_common: TEXT | This is the common name for the species of this tree. | eg=["OAK, PIN", "OAK, WILLOW"]
+status: TEXT | Overall tree condition. | eg=["Good", "Excellent"]
+address: TEXT | Address of the tree. | eg=["53-054 WASHINGTON SQ W", "870/860 1 AV"]
+site: TEXT | This field clarifies the position relative to the address for trees not located in the front of buildings. | eg=["Across", "Front"]
+support_structure: TEXT | Whether the tree has support structures installed. | eg=["None"]
+cb_new: NUMBER | Community Board geocoded to the address using Geosupport 11.4 | eg=[0]
+wires: TEXT | Whether the tree is located under utility wires | eg=["None"]
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2016
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=[1]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["2"]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015. | eg=[0.3]
+dropoff_latitude: FLOAT | NULL | eg=[40.75617980957031, NaN]
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter | eg=[10.0]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[6, 2]
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter. | eg=[1.19, 1.11]
+tip_amount: FLOAT | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=[3.24]
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=[0.5]
+pickup_latitude: FLOAT | NULL | eg=[40.741939544677734, NaN]
+dropoff_longitude: FLOAT | NULL | eg=[-73.9735107421875, NaN]
+pickup_longitude: FLOAT | NULL | eg=[-73.98101043701172, NaN]
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips. | eg=[14.04]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["1"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1457699499000000, 1479474492000000]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1457700356000000, 1479475368000000]
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=[0.0]
+tolls_amount: FLOAT | Total amount of all tolls paid in trip. | eg=[0.0]
+
+## NEW_YORK.CITIBIKE_STATIONS
+eightd_has_available_keys: BOOLEAN | NULL | eg=[false]
+num_docks_available: NUMBER | Number of docks accepting bike returns. | eg=[0]
+is_installed: BOOLEAN | Is the station currently on the street? | eg=[true, false]
+latitude: FLOAT | The latitude of station. The field value must be a valid WGS 84 latitude in decimal degrees format. | eg=[40.76269882, 40.78524672]
+name: TEXT | Public name of the station. | eg=["W 47 St & 10 Ave", "Amsterdam Ave & W 82 St"]
+num_bikes_available: NUMBER | Number of bikes available for rental. | eg=[0]
+region_id: NUMBER | ID of the region where station is located. | eg=[71]
+is_renting: BOOLEAN | Is the station currently renting bikes? | eg=[true, false]
+station_id: TEXT | Unique identifier of a station. | eg=["495", "3171"]
+num_bikes_disabled: NUMBER | Number of disabled bikes at the station. | eg=[0]
+num_docks_disabled: NUMBER | Number of empty but disabled dock points at the station. | eg=[0]
+short_name: TEXT | Short name or other type of identifier, as used by the data publisher. | eg=["6824.07", "7360.10"]
+last_reported: NUMBER | Timestamp indicating the last time this station reported its status to the backend, in NYC local time. | eg=[86400000000]
+rental_methods: TEXT | Array of enumerables containing the payment methods accepted at this station. | eg=["KEY, CREDITCARD"]
+longitude: FLOAT | The longitude of station. The field value must be a valid WGS 84 latitude in decimal degrees format. | eg=[-73.99301222, -73.97667321]
+capacity: NUMBER | ANumber of total docking points installed at this station, both available and unavailable. | eg=[0]
+eightd_has_key_dispenser: BOOLEAN | NULL | eg=[false]
+is_returning: BOOLEAN | Is the station accepting bike returns? | eg=[true, false]
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2011
+tip_amount: FLOAT | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=[1.86]
+pickup_latitude: FLOAT | NULL | eg=[40.748759, 40.774357]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["CRD"]
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips. | eg=[8.06]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1323951368000000, 1322913705000000]
+dropoff_latitude: FLOAT | NULL | eg=[40.746492, 40.787647]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[2, 1]
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter. | eg=[0.7, 1.2]
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=[0.0]
+tolls_amount: FLOAT | Total amount of all tolls paid in trip. | eg=[0.0]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1323951782000000, 1322914054000000]
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+dropoff_longitude: FLOAT | NULL | eg=[-73.995239, -73.953003]
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=[1]
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=[0.5]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["CMT"]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+pickup_longitude: FLOAT | NULL | eg=[-74.006926, -73.951255]
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter | eg=[5.7]
+
+## NEW_YORK.TLC_GREEN_TRIPS_2013
+ehail_fee: FLOAT | NULL
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use. | eg=[0.5]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged. | eg=[1388059481000000, 1387737623000000]
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=[0.0, 1.0]
+tip_amount: FLOAT | Tip amount – This field is automatically populated for credit card tips. Cash tips are not included. | eg=[4.0, 1.0]
+dropoff_latitude: FLOAT | Latitude where the meter was timed off. | eg=[40.75471878051758, 40.71205520629883]
+pickup_datetime: NUMBER | The date and time when the meter was engaged. | eg=[1388058260000000, 1387736770000000]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value | eg=[2]
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips | eg=[20.5]
+time_between_service: NUMBER | NULL
+pickup_longitude: FLOAT | Longitude where the meter was engaged. | eg=[-73.88536071777344, -73.95791625976562]
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter | eg=[16.0, 19.0]
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+payment_type: NUMBER | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=[1, 2]
+distance_between_service: FLOAT | NULL
+dropoff_longitude: FLOAT | Longitude where the meter was timed off | eg=[-73.9438705444336, -73.96617126464844]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["1", "2"]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka “store and forward,” because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["N"]
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter | eg=[3.5, 4.74]
+tolls_amount: FLOAT | Total amount of all tolls paid in trip | eg=[0.0]
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=[1]
+trip_type: NUMBER | A code indicating whether the trip was a street-hail or a dispatch that is automatically assigned based on the metered rate in use but can be altered by the driver. 1= Street-hail 2= Dispatch
+pickup_latitude: FLOAT | Latitude where the meter was engaged. | eg=[40.74585723876953, 40.74412155151367]
+
+## NEW_YORK.TLC_FHV_TRIPS_2015
+pickup_datetime: NUMBER | The date and time of the trip pick-up. | eg=[1440513000000000, 1442313540000000]
+zone: TEXT | This is Pickup zone | eg=[""]
+borough: TEXT | This is Pickup borough | eg=[""]
+service_zone: TEXT | This is Pickup service_zone | eg=[""]
+location_id: NUMBER | The TLC taxi zone of the trip pick-up
+dispatching_base_num: TEXT | The TLC Base License Number of the base that dispatched the trip. | eg=["B00001"]
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2012
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["VTS", "CMT"]
+dropoff_longitude: FLOAT | NULL | eg=[-73.953727, -73.978965]
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["CSH"]
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter. | eg=[1.02, 0.7]
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+tip_amount: FLOAT | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=[0.0]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["", "N"]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1337710380000000, 1327607580000000]
+pickup_latitude: FLOAT | NULL | eg=[40.795068, 40.762705]
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=[1]
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=[0.5]
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips. | eg=[6.8]
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter | eg=[5.3]
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=[1.0]
+dropoff_latitude: FLOAT | NULL | eg=[40.787843, 40.763035]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1, 2]
+pickup_longitude: FLOAT | NULL | eg=[-73.96227, -73.98711]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1337710080000000, 1327607220000000]
+tolls_amount: FLOAT | Total amount of all tolls paid in trip. | eg=[0.0]
+
+## NEW_YORK.TLC_FHV_TRIPS_2016
+location_id: NUMBER | The TLC taxi zone of the trip pick-up | eg=[89]
+service_zone: TEXT | This is Pickup service_zone | eg=["Boro Zone"]
+dispatching_base_num: TEXT | The TLC Base License Number of the base that dispatched the trip. | eg=["B02395"]
+borough: TEXT | This is Pickup borough | eg=["Brooklyn"]
+pickup_datetime: NUMBER | The date and time of the trip pick-up. | eg=[1475264289000000, 1482282001000000]
+zone: TEXT | This is Pickup zone | eg=["Flatbush/Ditmas Park"]
+
+## NEW_YORK.TLC_YELLOW_TRIPS_2014
+pickup_latitude: FLOAT | NULL | eg=[40.758382, 40.744632]
+store_and_fwd_flag: TEXT | This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip | eg=["", "N"]
+imp_surcharge: FLOAT | $0.30 improvement surcharge assessed on hailed trips at the flag drop. The improvement surcharge began being levied in 2015.
+payment_type: TEXT | A numeric code signifying how the passenger paid for the trip. 1= Credit card 2= Cash 3= No charge 4= Dispute 5= Unknown 6= Voided trip | eg=["CSH"]
+pickup_datetime: NUMBER | The date and time when the meter was engaged | eg=[1404826920000000, 1407311535000000]
+extra: FLOAT | Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges | eg=[0.0]
+trip_distance: FLOAT | The elapsed trip distance in miles reported by the taximeter. | eg=[0.0, 0.17]
+dropoff_datetime: NUMBER | The date and time when the meter was disengaged | eg=[1404826920000000, 1407311559000000]
+mta_tax: FLOAT | $0.50 MTA tax that is automatically triggered based on the metered rate in use | eg=[0.0, 0.5]
+vendor_id: TEXT | A code indicating the LPEP provider that provided the record. 1= Creative Mobile Technologies, LLC; 2= VeriFone Inc. | eg=["VTS", "CMT"]
+fare_amount: FLOAT | The time-and-distance fare calculated by the meter | eg=[2.5]
+tip_amount: FLOAT | Tip amount. This field is automatically populated for credit card tips. Cash tips are not included. | eg=[0.0]
+rate_code: NUMBER | The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride | eg=[1]
+tolls_amount: FLOAT | Total amount of all tolls paid in trip. | eg=[0.0]
+total_amount: FLOAT | The total amount charged to passengers. Does not include cash tips. | eg=[2.5, 3.0]
+pickup_longitude: FLOAT | NULL | eg=[-73.937838, -73.949339]
+passenger_count: NUMBER | The number of passengers in the vehicle. This is a driver-entered value. | eg=[1, 6]
+dropoff_latitude: FLOAT | NULL | eg=[40.758385, 40.744632]
+dropoff_longitude: FLOAT | NULL | eg=[-73.93782, -73.949339]

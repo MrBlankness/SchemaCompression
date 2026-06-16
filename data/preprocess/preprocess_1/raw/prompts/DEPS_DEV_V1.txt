@@ -1,0 +1,32 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: DEPS_DEV_V1.DEPENDENCYGRAPHEDGES
+Columns: System, Requirement, SnapshotAt, Name, Version, From, To
+
+Table: DEPS_DEV_V1.ADVISORIES
+Columns: ReferenceURLs, CVSS3Score, Packages, Aliases, SnapshotAt, Severity, GitHubSeverity, SourceID, Description, SourceURL, Disclosed, Source, Title
+
+Table: DEPS_DEV_V1.PACKAGEVERSIONTOPROJECT
+Columns: SnapshotAt, System, RelationType, ProjectType, ProjectName, Name, RelationProvenance, Version
+
+Table: DEPS_DEV_V1.DEPENDENTS
+Columns: Name, SnapshotAt, MinimumDepth, System, DependentIsHighestReleaseWithResolution, Dependent, Version
+
+Table: DEPS_DEV_V1.PROJECTS
+Columns: StarsCount, ForksCount, Type, Homepage, OpenIssuesCount, SnapshotAt, Licenses, Description, OSSFuzz, Name
+
+Table: DEPS_DEV_V1.NUGETREQUIREMENTS
+Columns: DependencyGroups, Version, Name, SnapshotAt
+
+Table: DEPS_DEV_V1.SNAPSHOTS
+Columns: Time
+
+Table: DEPS_DEV_V1.PACKAGEVERSIONS
+Columns: DependenciesProcessed, Hashes, Links, Purl, SLSAProvenance, Registries, Name, DependencyError, Version, UpstreamIdentifiers, Advisories, Licenses, VersionInfo, UpstreamPublishedAt, System, SnapshotAt
+
+Table: DEPS_DEV_V1.PACKAGEVERSIONHASHES
+Columns: System, HashType, SnapshotAt, Name, Version, Hash
+
+Table: DEPS_DEV_V1.DEPENDENCIES
+Columns: Version, System, Name, SnapshotAt, Dependency, MinimumDepth

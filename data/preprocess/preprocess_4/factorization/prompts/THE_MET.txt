@@ -1,0 +1,68 @@
+[COMPONENTS]
+[TABLES]
+## THE_MET.VISION_API_DATA
+fullTextAnnotation: TEXT | NULL
+logoAnnotations: VARIANT | NULL | eg=[[]]
+object_id: NUMBER | NULL | eg=[463536, 386444]
+imagePropertiesAnnotation: VARIANT | NULL | eg=[{"dominantColors":{"colors":[{"color":{"blue":94,"green":117,"red":126},"pixelFraction":0.1120538711547852,"score":0.3024803996086121},{"color":{"blue":63,"green":85,"red":94},"pixelFraction":0.05319865420460701,"score":0.284270703792572},{"color":{"blue":33,"green":53,"red":61},"pixelFraction":0.02094276063144207,"score":0.1559623628854752},{"color":{"blue":128,"green":152,"red":160},"pixelFraction":0.1045791208744049,"score":0.134588286280632},{"color":{"blue":111,"green":121,"red":127},"pixelFraction":0.2988552153110504,"score":0.03620557859539986},{"color":{"blue":10,"green":29,"red":36},"pixelFraction":0.004040404222905636,"score":0.02643710002303123},{"color":{"blue":78,"green":86,"red":91},"pixelFraction":0.004511784296482801,"score":0.01675348356366158},{"color":{"blue":138,"green":147,"red":153},"pixelFraction":0.3536027073860168,"score":0.01165966037660837},{"color":{"blue":4,"green":16,"red":22},"pixelFraction":0.001683501643128693,"score":0.01102029345929623},{"color":{"...]
+webDetection: VARIANT | NULL | eg=[{"fullMatchingImages":[{"score":0,"url":"https://s-media-cache-ak0.pinimg.com/originals/e3/23/a5/e323a5114ddee5ad2ce2abe7391cc25e.jpg"},{"score":0,"url":"https://pbs.twimg.com/media/C9VpzeWVwAQfAeG.jpg"},{"score":0,"url":"https://s-media-cache-ak0.pinimg.com/736x/e3/23/a5/e323a5114ddee5ad2ce2abe7391cc25e.jpg"},{"score":0,"url":"https://s-media-cache-ak0.pinimg.com/236x/e3/23/a5/e323a5114ddee5ad2ce2abe7391cc25e.jpg"},{"score":0,"url":"https://s-media-cache-ak0.pinimg.com/736x/2d/2b/ca/2d2bca4d075395574e2fde951aac2bc1.jpg"}],"pagesWithMatchingImages":[{"score":0,"url":"https://enameabbey.wordpress.com/2016/10/"},{"score":0,"url":"https://enameabbey.wordpress.com/"},{"score":0,"url":"https://twitter.com/christian8pics?lang=en"},{"score":0,"url":"https://www.pinterest.com/lenkaklukov/sakr%C3%A1ln%C3%AD-p%C5%99edm%C4%9Bty-r%C5%AFzn%C3%A9/"},{"score":0,"url":"https://www.pinterest.com/haidamak/church-art/"}],"partialMatchingImages":[{"score":0,"url":"https://enameabbey.files.wordpress.com...]
+textAnnotations: VARIANT | NULL | eg=[[]]
+labelAnnotations: VARIANT | NULL | eg=[[{"confidence":0,"description":"sculpture","locale":"","locations":[],"mid":"/m/06msq","properties":[],"score":0.9000455141067505,"topicality":0},{"confidence":0,"description":"stone carving","locale":"","locations":[],"mid":"/m/02wtjj","properties":[],"score":0.8961418867111206,"topicality":0},{"confidence":0,"description":"carving","locale":"","locations":[],"mid":"/m/0jwzhtg","properties":[],"score":0.7856401801109314,"topicality":0},{"confidence":0,"description":"art","locale":"","locations":[],"mid":"/m/0jjw","properties":[],"score":0.7282863259315491,"topicality":0},{"confidence":0,"description":"relief","locale":"","locations":[],"mid":"/m/02nnps","properties":[],"score":0.6691354513168335,"topicality":0}]]
+faceAnnotations: VARIANT | NULL | eg=[[{"angerLikelihood":"VERY_UNLIKELY","blurredLikelihood":"VERY_UNLIKELY","boundingPoly":{"vertices":[{"x":763,"y":562},{"x":840,"y":562},{"x":840,"y":651},{"x":763,"y":651}]},"detectionConfidence":0.5398232340812683,"fdBoundingPoly":{"vertices":[{"x":760,"y":578},{"x":837,"y":578},{"x":837,"y":654},{"x":760,"y":654}]},"headwearLikelihood":"VERY_UNLIKELY","joyLikelihood":"VERY_UNLIKELY","landmarkingConfidence":0.3977358043193817,"landmarks":[{"position":{"x":797.5830078125,"y":604.4678344726562,"z":0.0002296188176842406},"type":"LEFT_EYE"},{"position":{"x":820.9047241210938,"y":602.2859497070312,"z":9.738119125366211},"type":"RIGHT_EYE"},{"position":{"x":790.4669189453125,"y":599.845947265625,"z":-1.020922064781189},"type":"LEFT_OF_LEFT_EYEBROW"},{"position":{"x":805.6428833007812,"y":598.57666015625,"z":-1.766249418258667},"type":"RIGHT_OF_LEFT_EYEBROW"},{"position":{"x":815.9426879882812,"y":597.486328125,"z":2.646151781082153},"type":"LEFT_OF_RIGHT_EYEBROW"},{"position":{"x":825.85...]
+safeSearchAnnotation: TEXT | NULL
+cropHintsAnnotation: VARIANT | NULL | eg=[{"cropHints":[{"boundingPoly":{"vertices":[{"x":0,"y":0},{"x":2158,"y":0},{"x":2158,"y":2871},{"x":0,"y":2871}]},"confidence":1.0,"importanceFraction":0.3700000047683716}]}, {"cropHints":[{"boundingPoly":{"vertices":[{"x":0,"y":0},{"x":2843,"y":0},{"x":2843,"y":3734},{"x":0,"y":3734}]},"confidence":1.0,"importanceFraction":0.3799999952316284}]}]
+landmarkAnnotations: VARIANT | NULL | eg=[[]]
+
+## THE_MET.OBJECTS
+subregion: TEXT | NULL
+department: TEXT | NULL | eg=["Asian Art"]
+is_public_domain: BOOLEAN | NULL | eg=[true]
+link_resource: TEXT | NULL | eg=["http://www.metmuseum.org/art/collection/search/38009", "http://www.metmuseum.org/art/collection/search/37988"]
+locus: TEXT | NULL
+county: TEXT | NULL
+object_id: NUMBER | NULL | eg=[38009, 37988]
+artist_display_bio: TEXT | NULL | eg=["active ca. 1735–78", "Indian, active 1799–ca. 1826"]
+culture: TEXT | NULL | eg=["India (Himachal Pradesh, Jasrota)", "India (Punjab Hills, Guler)"]
+artist_alpha_sort: TEXT | NULL | eg=["Nainsukh", "Chokha"]
+country: TEXT | NULL
+region: TEXT | NULL
+credit_line: TEXT | NULL | eg=["Rogers Fund, 1994", "Gift of Cynthia Hazen Polsky, 1987"]
+title: TEXT | NULL
+dimensions: TEXT | NULL | eg=["Overall: 7 3/4 x 6 1/8 in. (19.7 x 15.6 cm)", "9 15/16 x 13 15/16 in. (25.2 x 35.4 cm)"]
+dynasty: TEXT | NULL
+object_begin_date: NUMBER | NULL | eg=[1735, 1780]
+city: TEXT | NULL
+state: TEXT | NULL
+medium: TEXT | NULL | eg=["Ink, opaque watercolor, and gold on paper", "Ink and opaque watercolor on paper"]
+artist_begin_date: TEXT | NULL | eg=["1725", "1799"]
+artist_display_name: TEXT | NULL | eg=["Nainsukh", "Chokha"]
+artist_suffix: TEXT | NULL
+object_number: TEXT | NULL | eg=["1994.377", "1987.424.13"]
+repository: TEXT | NULL | eg=["Metropolitan Museum of Art, New York, NY"]
+artist_prefix: TEXT | NULL | eg=["Attributed to", "Workshop active in the generation after"]
+is_highlight: BOOLEAN | NULL | eg=[false]
+object_name: TEXT | NULL | eg=["Painting", "Folio"]
+object_date: TEXT | NULL | eg=["ca. 1745–50", "ca. 1790"]
+object_end_date: NUMBER | NULL | eg=[1760, 1800]
+locale: TEXT | NULL
+rights_and_reproduction: TEXT | NULL
+portfolio: TEXT | NULL
+geography_type: TEXT | NULL
+excavation: TEXT | NULL
+classification: TEXT | NULL | eg=["Paintings"]
+river: TEXT | NULL
+artist_end_date: TEXT | NULL | eg=["1778", "1826"]
+artist_role: TEXT | NULL | eg=["Artist"]
+artist_nationality: TEXT | NULL | eg=["Indian"]
+reign: TEXT | NULL
+period: TEXT | NULL
+metadata_date: NUMBER | NULL | eg=[1486368016000000]
+
+## THE_MET.IMAGES
+title: TEXT | NULL
+public_caption: TEXT | NULL | eg=["Fig. 8. X-radiograph of The Met, 61.101.1", "Fig. 5. Ferdinand Hodler, sketch for \"The Dream of the Shepherd,\" ca. 1895, carnet inv. 1958-176/10.12 (right side) © Musée d’art et d’histoire, Ville de Genève"]
+caption: TEXT | NULL
+is_oasc: BOOLEAN | NULL | eg=[false]
+gcs_url: TEXT | NULL | eg=["gs://gcs-public-data--met/435868/8.jpg", "gs://gcs-public-data--met/634108/5.jpg"]
+object_id: NUMBER | NULL | eg=[435868, 634108]
+original_image_url: TEXT | NULL | eg=["http://images.metmuseum.org/CRDImages/ep/original/CP x-ray.jpg", "http://images.metmuseum.org/CRDImages/ep/original/Hodler 1.jpg"]

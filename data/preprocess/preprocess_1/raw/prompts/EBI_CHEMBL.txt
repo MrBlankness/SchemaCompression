@@ -1,0 +1,2357 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS_26
+Columns: biocomp_id, molregno, component_id
+
+Table: EBI_CHEMBL.HRAC_CLASSIFICATION_24
+Columns: level2_description, hrac_class_id, level1_description, active_ingredient, level1, level3, level2, hrac_code
+
+Table: EBI_CHEMBL.CHEMBL_ID_LOOKUP_29
+Columns: status, last_active, chembl_id, entity_type, entity_id
+
+Table: EBI_CHEMBL.MECHANISM_REFS_29
+Columns: mec_id, ref_url, ref_id, ref_type, mecref_id
+
+Table: EBI_CHEMBL.BINDING_SITES_28
+Columns: tid, site_id, site_name
+
+Table: EBI_CHEMBL.PROTEIN_CLASSIFICATION_24
+Columns: parent_id, pref_name, short_name, class_level, protein_class_id, protein_class_desc, definition
+
+Table: EBI_CHEMBL.MECHANISM_REFS_30
+Columns: mec_id, ref_type, mecref_id, ref_url, ref_id
+
+Table: EBI_CHEMBL.CHEMBL_ID_LOOKUP_30
+Columns: chembl_id, entity_id, status, entity_type, last_active
+
+Table: EBI_CHEMBL.LIGAND_EFF_30
+Columns: le, activity_id, lle, bei, sei
+
+Table: EBI_CHEMBL.ACTION_TYPE_26
+Columns: action_type, parent_type, description
+
+Table: EBI_CHEMBL.BIOASSAY_ONTOLOGY_27
+Columns: label, bao_id
+
+Table: EBI_CHEMBL.ACTION_TYPE_30
+Columns: parent_type, action_type, description
+
+Table: EBI_CHEMBL.COMPONENT_DOMAINS_33
+Columns: domain_id, start_position, end_position, component_id, compd_id
+
+Table: EBI_CHEMBL.TARGET_DICTIONARY_29
+Columns: organism, species_group_flag, target_type, pref_name, tax_id, chembl_id, tid
+
+Table: EBI_CHEMBL.METABOLISM_REFS_30
+Columns: metref_id, ref_type, ref_id, met_id, ref_url
+
+Table: EBI_CHEMBL.COMPONENT_SEQUENCES_28
+Columns: tax_id, description, accession, component_type, component_id, sequence, sequence_md5sum, db_source, organism, db_version
+
+Table: EBI_CHEMBL.MOLECULE_HIERARCHY_23
+Columns: active_molregno, molregno, parent_molregno
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURES_23
+Columns: molregno, standard_inchi, canonical_smiles, molfile, standard_inchi_key
+
+Table: EBI_CHEMBL.SITE_COMPONENTS_24
+Columns: site_residues, component_id, site_id, sitecomp_id, domain_id
+
+Table: EBI_CHEMBL.INDICATION_REFS_27
+Columns: ref_type, ref_id, ref_url, indref_id, drugind_id
+
+Table: EBI_CHEMBL.VARIANT_SEQUENCES_25
+Columns: sequence, version, accession, variant_id, organism, isoform, mutation
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERTS_26
+Columns: alert_id, smarts, alert_set_id, alert_name
+
+Table: EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS_23
+Columns: syn_type, protclasssyn_id, protein_class_id, protein_class_synonym
+
+Table: EBI_CHEMBL.SOURCE
+Columns: src_short_name, src_description, src_id
+
+Table: EBI_CHEMBL.PRODUCT_PATENTS_33
+Columns: patent_no, patent_expire_date, submission_date, product_id, delist_flag, prod_pat_id, drug_product_flag, drug_substance_flag, patent_use_code
+
+Table: EBI_CHEMBL.ASSAY_CLASSIFICATION_30
+Columns: class_type, l2, l3, assay_class_id, l1, source
+
+Table: EBI_CHEMBL.METABOLISM_30
+Columns: metabolite_record_id, organism, drug_record_id, met_comment, enzyme_tid, enzyme_name, tax_id, met_id, met_conversion, pathway_id, substrate_record_id, pathway_key
+
+Table: EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS_25
+Columns: biocomp_id, component_id, molregno
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURES
+Columns: molregno, canonical_smiles, standard_inchi_key, standard_inchi, molfile
+
+Table: EBI_CHEMBL.CHEMBL_RELEASE
+Columns: chembl_release, creation_date, chembl_release_id
+
+Table: EBI_CHEMBL.MOLECULE_DICTIONARY_27
+Columns: chirality, oral, structure_type, therapeutic_flag, withdrawn_reason, withdrawn_country, molecule_type, first_in_class, usan_stem, usan_stem_definition, max_phase, availability_type, topical, inorganic_flag, usan_substem, indication_class, pref_name, molregno, withdrawn_year, chembl_id, parenteral, withdrawn_flag, withdrawn_class, dosed_ingredient, prodrug, black_box_warning, usan_year, first_approval, chebi_par_id, natural_product, polymer_flag
+
+Table: EBI_CHEMBL.DATA_VALIDITY_LOOKUP_33
+Columns: description, data_validity_comment
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS_23
+Columns: alert_id, molregno, cpd_str_alert_id
+
+Table: EBI_CHEMBL.CURATION_LOOKUP_33
+Columns: curated_by, description
+
+Table: EBI_CHEMBL.ACTIVITY_SUPP
+Columns: as_id, type, standard_relation, standard_text_value, units, standard_type, value, rgid, standard_value, relation, smid, standard_units, comments, text_value
+
+Table: EBI_CHEMBL.DRUG_MECHANISM_24
+Columns: site_id, tid, action_type, mechanism_comment, selectivity_comment, mechanism_of_action, disease_efficacy, molecular_mechanism, molregno, mec_id, binding_site_comment, direct_interaction, record_id
+
+Table: EBI_CHEMBL.COMPOUND_RECORDS
+Columns: molregno, src_compound_id, cidx, compound_key, doc_id, record_id, compound_name, src_id
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERTS_33
+Columns: alert_id, alert_name, alert_set_id, smarts
+
+Table: EBI_CHEMBL.VERSION_24
+Columns: comments, name, creation_date
+
+Table: EBI_CHEMBL.USAN_STEMS_29
+Columns: subgroup, stem_class, usan_stem_id, who_extra, major_class, annotation, stem
+
+Table: EBI_CHEMBL.CURATION_LOOKUP_30
+Columns: curated_by, description
+
+Table: EBI_CHEMBL.INDICATION_REFS
+Columns: ref_id, ref_type, indref_id, ref_url, drugind_id
+
+Table: EBI_CHEMBL.DOMAINS_30
+Columns: domain_description, domain_id, domain_name, source_domain_id, domain_type
+
+Table: EBI_CHEMBL.ACTIVITY_SUPP_25
+Columns: smid, relation, standard_relation, comments, as_id, standard_text_value, type, standard_type, value, standard_value, units, standard_units, rgid, text_value
+
+Table: EBI_CHEMBL.PRODUCT_PATENTS_28
+Columns: prod_pat_id, patent_use_code, delist_flag, product_id, drug_substance_flag, patent_expire_date, drug_product_flag, submission_date, patent_no
+
+Table: EBI_CHEMBL.CHEMBL_ID_LOOKUP_24
+Columns: status, chembl_id, entity_id, entity_type
+
+Table: EBI_CHEMBL.MOLECULE_HIERARCHY_33
+Columns: active_molregno, molregno, parent_molregno
+
+Table: EBI_CHEMBL.SQLITE_STAT1_26
+Columns: stat, idx, tbl
+
+Table: EBI_CHEMBL.METABOLISM_REFS
+Columns: ref_url, ref_id, ref_type, metref_id, met_id
+
+Table: EBI_CHEMBL.DRUG_WARNING_33
+Columns: warning_country, record_id, efo_id, warning_type, warning_class, warning_year, warning_description, efo_term, molregno, warning_id, efo_id_for_warning_class
+
+Table: EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS_30
+Columns: syn_type, protclasssyn_id, protein_class_synonym, protein_class_id
+
+Table: EBI_CHEMBL.FORMULATIONS_23
+Columns: record_id, formulation_id, molregno, product_id, ingredient, strength
+
+Table: EBI_CHEMBL.DOCS_28
+Columns: pubmed_id, src_id, authors, doc_id, doi, title, year, doc_type, abstract, journal, patent_id, volume, chembl_id, first_page, issue, last_page, ridx
+
+Table: EBI_CHEMBL.COMPONENT_CLASS_30
+Columns: component_id, protein_class_id, comp_class_id
+
+Table: EBI_CHEMBL.COMPONENT_DOMAINS_24
+Columns: start_position, compd_id, component_id, domain_id, end_position
+
+Table: EBI_CHEMBL.ACTIVITY_PROPERTIES_24
+Columns: comments, standard_units, relation, standard_text_value, type, activity_id, units, standard_value, standard_relation, result_flag, text_value, ap_id, standard_type, value
+
+Table: EBI_CHEMBL.ACTION_TYPE_24
+Columns: parent_type, action_type, description
+
+Table: EBI_CHEMBL.MECHANISM_REFS_23
+Columns: mecref_id, mec_id, ref_url, ref_type, ref_id
+
+Table: EBI_CHEMBL.MOLECULE_DICTIONARY_33
+Columns: natural_product, first_approval, chemical_probe, pref_name, availability_type, prodrug, structure_type, therapeutic_flag, oral, chebi_par_id, black_box_warning, molecule_type, parenteral, usan_stem, usan_stem_definition, molregno, dosed_ingredient, polymer_flag, usan_year, chirality, usan_substem, topical, first_in_class, inorganic_flag, indication_class, max_phase, chembl_id, withdrawn_flag
+
+Table: EBI_CHEMBL.RELATIONSHIP_TYPE_30
+Columns: relationship_type, relationship_desc
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURES_26
+Columns: canonical_smiles, molregno, molfile, standard_inchi_key, standard_inchi
+
+Table: EBI_CHEMBL.TARGET_TYPE_25
+Columns: target_desc, parent_type, target_type
+
+Table: EBI_CHEMBL.BIO_COMPONENT_SEQUENCES_26
+Columns: description, component_type, sequence, component_id, sequence_md5sum, organism, tax_id
+
+Table: EBI_CHEMBL.DEFINED_DAILY_DOSE
+Columns: ddd_value, ddd_id, ddd_admr, ddd_units, ddd_comment, atc_code
+
+Table: EBI_CHEMBL.PREDICTED_BINDING_DOMAINS_30
+Columns: predbind_id, site_id, confidence, prediction_method, activity_id
+
+Table: EBI_CHEMBL.VARIANT_SEQUENCES_28
+Columns: isoform, tax_id, variant_id, accession, sequence, version, organism, mutation
+
+Table: EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION_30
+Columns: frac_class_id, molregno, mol_frac_id
+
+Table: EBI_CHEMBL.WARNING_REFS
+Columns: warning_id, warnref_id, ref_url, ref_type, ref_id
+
+Table: EBI_CHEMBL.LIGAND_EFF_24
+Columns: lle, bei, sei, le, activity_id
+
+Table: EBI_CHEMBL.FRAC_CLASSIFICATION_23
+Columns: level1, level2, level2_description, level5, level4_description, level1_description, level3, frac_code, level3_description, level4, frac_class_id, active_ingredient
+
+Table: EBI_CHEMBL.IRAC_CLASSIFICATION_30
+Columns: level2_description, irac_code, irac_class_id, level2, level4, level1, level3, active_ingredient, level3_description, level1_description
+
+Table: EBI_CHEMBL.VERSION_27
+Columns: name, creation_date, comments
+
+Table: EBI_CHEMBL.METABOLISM_REFS_23
+Columns: met_id, ref_url, ref_type, metref_id, ref_id
+
+Table: EBI_CHEMBL.DOMAINS_33
+Columns: source_domain_id, domain_description, domain_type, domain_id, domain_name
+
+Table: EBI_CHEMBL.SQLITE_STAT1_33
+Columns: idx, stat, tbl
+
+Table: EBI_CHEMBL.ACTION_TYPE_27
+Columns: parent_type, description, action_type
+
+Table: EBI_CHEMBL.METABOLISM_24
+Columns: pathway_id, met_conversion, metabolite_record_id, organism, met_id, substrate_record_id, enzyme_tid, met_comment, pathway_key, drug_record_id, enzyme_name, tax_id
+
+Table: EBI_CHEMBL.SQLITE_STAT1_25
+Columns: idx, stat, tbl
+
+Table: EBI_CHEMBL.ACTIVITY_STDS_LOOKUP_26
+Columns: definition, standard_type, normal_range_min, standard_units, normal_range_max, std_act_id
+
+Table: EBI_CHEMBL.PRODUCT_PATENTS_27
+Columns: product_id, submission_date, prod_pat_id, delist_flag, drug_product_flag, drug_substance_flag, patent_use_code, patent_no, patent_expire_date
+
+Table: EBI_CHEMBL.RELATIONSHIP_TYPE_27
+Columns: relationship_type, relationship_desc
+
+Table: EBI_CHEMBL.DOMAINS_26
+Columns: source_domain_id, domain_type, domain_description, domain_name, domain_id
+
+Table: EBI_CHEMBL.DATA_VALIDITY_LOOKUP_23
+Columns: description, data_validity_comment
+
+Table: EBI_CHEMBL.METABOLISM_33
+Columns: pathway_key, met_comment, substrate_record_id, met_id, metabolite_record_id, drug_record_id, pathway_id, met_conversion, enzyme_tid, organism, tax_id, enzyme_name
+
+Table: EBI_CHEMBL.ORGANISM_CLASS_30
+Columns: l1, oc_id, l2, l3, tax_id
+
+Table: EBI_CHEMBL.TARGET_COMPONENTS_29
+Columns: tid, component_id, targcomp_id, homologue
+
+Table: EBI_CHEMBL.RESEARCH_STEM_26
+Columns: research_stem, res_stem_id
+
+Table: EBI_CHEMBL.FRAC_CLASSIFICATION_27
+Columns: level2, frac_class_id, active_ingredient, level4_description, level3_description, level5, level4, frac_code, level1_description, level1, level3, level2_description
+
+Table: EBI_CHEMBL.ORGANISM_CLASS_29
+Columns: oc_id, l3, l1, tax_id, l2
+
+Table: EBI_CHEMBL.CURATION_LOOKUP_25
+Columns: description, curated_by
+
+Table: EBI_CHEMBL.BIO_COMPONENT_SEQUENCES_27
+Columns: component_id, sequence_md5sum, sequence, component_type, organism, tax_id, description
+
+Table: EBI_CHEMBL.COMPOUND_PROPERTIES_28
+Columns: mw_monoisotopic, cx_most_bpka, ro3_pass, alogp, hbd, full_molformula, heavy_atoms, rtb, hba_lipinski, psa, cx_most_apka, full_mwt, num_lipinski_ro5_violations, cx_logp, hba, molecular_species, aromatic_rings, molregno, num_ro5_violations, cx_logd, hbd_lipinski, mw_freebase, qed_weighted
+
+Table: EBI_CHEMBL.CURATION_LOOKUP_24
+Columns: description, curated_by
+
+Table: EBI_CHEMBL.VARIANT_SEQUENCES_33
+Columns: tax_id, mutation, organism, isoform, variant_id, version, accession, sequence
+
+Table: EBI_CHEMBL.PRODUCTS_29
+Columns: route, applicant_full_name, innovator_company, black_box_warning, nda_type, product_id, parenteral, trade_name, oral, approval_date, ad_type, topical, dosage_form
+
+Table: EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS_30
+Columns: molregno, component_id, biocomp_id
+
+Table: EBI_CHEMBL.BIO_COMPONENT_SEQUENCES_24
+Columns: sequence, organism, component_type, sequence_md5sum, description, component_id, tax_id
+
+Table: EBI_CHEMBL.COMPOUND_RECORDS_26
+Columns: record_id, doc_id, compound_key, molregno, src_id, cidx, src_compound_id, compound_name
+
+Table: EBI_CHEMBL.DOCS_26
+Columns: year, chembl_id, src_id, journal, patent_id, doc_type, abstract, last_page, doi, volume, pubmed_id, authors, title, ridx, doc_id, issue, first_page
+
+Table: EBI_CHEMBL.PARAMETER_TYPE_23
+Columns: description, parameter_type
+
+Table: EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS_33
+Columns: biocomp_id, molregno, component_id
+
+Table: EBI_CHEMBL.TARGET_DICTIONARY
+Columns: species_group_flag, tid, organism, tax_id, pref_name, chembl_id, target_type
+
+Table: EBI_CHEMBL.BIOTHERAPEUTICS_33
+Columns: molregno, description, helm_notation
+
+Table: EBI_CHEMBL.TARGET_RELATIONS_26
+Columns: targrel_id, tid, related_tid, relationship
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERTS
+Columns: alert_set_id, alert_id, alert_name, smarts
+
+Table: EBI_CHEMBL.FORMULATIONS_29
+Columns: formulation_id, record_id, product_id, molregno, strength, ingredient
+
+Table: EBI_CHEMBL.ASSAY_CLASS_MAP_27
+Columns: assay_id, assay_class_id, ass_cls_map_id
+
+Table: EBI_CHEMBL.DRUG_MECHANISM_26
+Columns: action_type, mechanism_of_action, selectivity_comment, record_id, disease_efficacy, site_id, mechanism_comment, binding_site_comment, molregno, direct_interaction, mec_id, tid, molecular_mechanism
+
+Table: EBI_CHEMBL.INDICATION_REFS_30
+Columns: drugind_id, ref_type, ref_id, indref_id, ref_url
+
+Table: EBI_CHEMBL.TARGET_RELATIONS_30
+Columns: tid, related_tid, relationship, targrel_id
+
+Table: EBI_CHEMBL.ACTIVITY_SMID_24
+Columns: smid
+
+Table: EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION_27
+Columns: frac_class_id, mol_frac_id, molregno
+
+Table: EBI_CHEMBL.PROTEIN_FAMILY_CLASSIFICATION_29
+Columns: protein_class_desc, l3, l1, protein_class_id, l6, l5, l8, l7, l4, l2
+
+Table: EBI_CHEMBL.PROTEIN_CLASSIFICATION_26
+Columns: short_name, definition, protein_class_id, class_level, parent_id, pref_name, protein_class_desc
+
+Table: EBI_CHEMBL.TARGET_COMPONENTS
+Columns: component_id, targcomp_id, tid, homologue
+
+Table: EBI_CHEMBL.ACTIVITIES_25
+Columns: type, bao_endpoint, activity_id, qudt_units, pchembl_value, standard_type, standard_text_value, standard_relation, uo_units, src_id, activity_comment, standard_flag, molregno, units, potential_duplicate, text_value, record_id, relation, doc_id, toid, standard_units, value, data_validity_comment, assay_id, standard_upper_value, standard_value, upper_value
+
+Table: EBI_CHEMBL.COMPONENT_SYNONYMS_25
+Columns: component_synonym, syn_type, compsyn_id, component_id
+
+Table: EBI_CHEMBL.ASSAY_CLASSIFICATION_26
+Columns: bao_id, class_type, l1, l3, source, l2, assay_class_id
+
+Table: EBI_CHEMBL.RESEARCH_COMPANIES_33
+Columns: co_stem_id, previous_company, country, res_stem_id, company
+
+Table: EBI_CHEMBL.RELATIONSHIP_TYPE_28
+Columns: relationship_type, relationship_desc
+
+Table: EBI_CHEMBL.BINDING_SITES_27
+Columns: site_name, site_id, tid
+
+Table: EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP_29
+Columns: target_mapping, confidence_score, description
+
+Table: EBI_CHEMBL.MOLECULE_HIERARCHY_27
+Columns: active_molregno, molregno, parent_molregno
+
+Table: EBI_CHEMBL.ACTIVITY_STDS_LOOKUP_30
+Columns: standard_units, definition, normal_range_min, standard_type, normal_range_max, std_act_id
+
+Table: EBI_CHEMBL.HRAC_CLASSIFICATION_25
+Columns: active_ingredient, level2_description, hrac_code, hrac_class_id, level2, level1_description, level1, level3
+
+Table: EBI_CHEMBL.ASSAY_TYPE
+Columns: assay_type, assay_desc
+
+Table: EBI_CHEMBL.LIGAND_EFF_33
+Columns: activity_id, le, lle, bei, sei
+
+Table: EBI_CHEMBL.GO_CLASSIFICATION_28
+Columns: class_level, parent_go_id, aspect, go_id, path, pref_name
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS_29
+Columns: cpd_str_alert_id, alert_id, molregno
+
+Table: EBI_CHEMBL.INDICATION_REFS_26
+Columns: ref_type, ref_url, drugind_id, ref_id, indref_id
+
+Table: EBI_CHEMBL.SITE_COMPONENTS_33
+Columns: site_residues, domain_id, sitecomp_id, component_id, site_id
+
+Table: EBI_CHEMBL.METABOLISM_27
+Columns: enzyme_name, met_conversion, substrate_record_id, drug_record_id, enzyme_tid, organism, pathway_id, met_id, metabolite_record_id, pathway_key, tax_id, met_comment
+
+Table: EBI_CHEMBL.SITE_COMPONENTS_28
+Columns: site_residues, component_id, domain_id, sitecomp_id, site_id
+
+Table: EBI_CHEMBL.MOLECULE_DICTIONARY_24
+Columns: molregno, usan_substem, max_phase, withdrawn_year, structure_type, natural_product, withdrawn_country, inorganic_flag, topical, black_box_warning, usan_year, pref_name, usan_stem_definition, first_approval, withdrawn_class, chembl_id, indication_class, oral, dosed_ingredient, first_in_class, usan_stem, chebi_par_id, polymer_flag, molecule_type, chirality, prodrug, availability_type, withdrawn_reason, parenteral, therapeutic_flag, withdrawn_flag
+
+Table: EBI_CHEMBL.ASSAY_CLASSIFICATION_33
+Columns: l3, class_type, assay_class_id, l2, source, l1
+
+Table: EBI_CHEMBL.TARGET_DICTIONARY_25
+Columns: species_group_flag, tid, target_type, pref_name, chembl_id, organism, tax_id
+
+Table: EBI_CHEMBL.COMPONENT_GO
+Columns: go_id, comp_go_id, component_id
+
+Table: EBI_CHEMBL.VARIANT_SEQUENCES_27
+Columns: version, organism, accession, variant_id, tax_id, mutation, sequence, isoform
+
+Table: EBI_CHEMBL.VERSION_23
+Columns: comments, creation_date, name
+
+Table: EBI_CHEMBL.ACTIVITIES_26
+Columns: value, standard_units, data_validity_comment, potential_duplicate, pchembl_value, bao_endpoint, doc_id, record_id, standard_value, standard_relation, activity_comment, text_value, molregno, relation, upper_value, units, standard_text_value, src_id, toid, assay_id, standard_type, standard_flag, standard_upper_value, uo_units, type, qudt_units, activity_id
+
+Table: EBI_CHEMBL.COMPOUND_PROPERTIES_24
+Columns: full_mwt, hbd, acd_most_bpka, acd_most_apka, hba, hba_lipinski, molregno, molecular_species, acd_logp, mw_freebase, qed_weighted, hbd_lipinski, num_ro5_violations, aromatic_rings, mw_monoisotopic, acd_logd, num_lipinski_ro5_violations, ro3_pass, full_molformula, alogp, rtb, psa, heavy_atoms
+
+Table: EBI_CHEMBL.TARGET_RELATIONS_28
+Columns: related_tid, relationship, tid, targrel_id
+
+Table: EBI_CHEMBL.BIO_COMPONENT_SEQUENCES_33
+Columns: component_id, sequence, organism, sequence_md5sum, description, tax_id, component_type
+
+Table: EBI_CHEMBL.FORMULATIONS
+Columns: ingredient, formulation_id, strength, record_id, molregno, product_id
+
+Table: EBI_CHEMBL.ACTIVITY_PROPERTIES_26
+Columns: units, text_value, standard_type, standard_value, standard_text_value, standard_units, ap_id, value, standard_relation, activity_id, comments, result_flag, type, relation
+
+Table: EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION_25
+Columns: mol_hrac_id, molregno, hrac_class_id
+
+Table: EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION_25
+Columns: frac_class_id, molregno, mol_frac_id
+
+Table: EBI_CHEMBL.FORMULATIONS_25
+Columns: record_id, formulation_id, product_id, strength, ingredient, molregno
+
+Table: EBI_CHEMBL.ASSAY_PARAMETERS_33
+Columns: text_value, value, standard_text_value, comments, standard_type, assay_param_id, relation, type, standard_units, units, assay_id, standard_value, standard_relation
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURES_33
+Columns: standard_inchi_key, canonical_smiles, standard_inchi, molfile, molregno
+
+Table: EBI_CHEMBL.COMPONENT_CLASS_24
+Columns: comp_class_id, protein_class_id, component_id
+
+Table: EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS_24
+Columns: biocomp_id, component_id, molregno
+
+Table: EBI_CHEMBL.DEFINED_DAILY_DOSE_29
+Columns: ddd_comment, ddd_admr, ddd_value, ddd_id, atc_code, ddd_units
+
+Table: EBI_CHEMBL.ASSAY_PARAMETERS_27
+Columns: relation, comments, units, standard_text_value, assay_param_id, assay_id, standard_units, standard_relation, standard_type, value, standard_value, type, text_value
+
+Table: EBI_CHEMBL.PREDICTED_BINDING_DOMAINS_23
+Columns: prediction_method, activity_id, confidence, predbind_id, site_id
+
+Table: EBI_CHEMBL.TARGET_RELATIONS_25
+Columns: relationship, tid, targrel_id, related_tid
+
+Table: EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION_24
+Columns: mol_hrac_id, hrac_class_id, molregno
+
+Table: EBI_CHEMBL.TARGET_COMPONENTS_30
+Columns: tid, homologue, component_id, targcomp_id
+
+Table: EBI_CHEMBL.SITE_COMPONENTS_27
+Columns: domain_id, site_residues, site_id, component_id, sitecomp_id
+
+Table: EBI_CHEMBL.COMPONENT_GO_33
+Columns: comp_go_id, go_id, component_id
+
+Table: EBI_CHEMBL.DOMAINS_25
+Columns: domain_description, domain_id, domain_type, source_domain_id, domain_name
+
+Table: EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS_26
+Columns: protein_class_id, syn_type, protclasssyn_id, protein_class_synonym
+
+Table: EBI_CHEMBL.FORMULATIONS_30
+Columns: record_id, molregno, formulation_id, strength, product_id, ingredient
+
+Table: EBI_CHEMBL.PRODUCTS
+Columns: approval_date, topical, applicant_full_name, dosage_form, parenteral, route, ad_type, trade_name, nda_type, product_id, innovator_company, black_box_warning, oral
+
+Table: EBI_CHEMBL.DEFINED_DAILY_DOSE_23
+Columns: ddd_comment, atc_code, ddd_units, ddd_id, ddd_admr, ddd_value
+
+Table: EBI_CHEMBL.RESEARCH_COMPANIES_25
+Columns: previous_company, res_stem_id, co_stem_id, country, company
+
+Table: EBI_CHEMBL.ACTIVITY_SMID_26
+Columns: smid
+
+Table: EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS_24
+Columns: protclasssyn_id, syn_type, protein_class_synonym, protein_class_id
+
+Table: EBI_CHEMBL.MATCH_24
+Columns: patent_no, publication_number
+
+Table: EBI_CHEMBL.RESEARCH_STEM_24
+Columns: research_stem, res_stem_id
+
+Table: EBI_CHEMBL.PRODUCTS_30
+Columns: parenteral, oral, black_box_warning, trade_name, dosage_form, topical, nda_type, route, product_id, ad_type, applicant_full_name, approval_date, innovator_company
+
+Table: EBI_CHEMBL.ACTIVITY_STDS_LOOKUP_25
+Columns: normal_range_min, standard_type, std_act_id, normal_range_max, standard_units, definition
+
+Table: EBI_CHEMBL.COMPONENT_CLASS_25
+Columns: comp_class_id, protein_class_id, component_id
+
+Table: EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP_25
+Columns: confidence_score, target_mapping, description
+
+Table: EBI_CHEMBL.BIOTHERAPEUTICS_26
+Columns: helm_notation, molregno, description
+
+Table: EBI_CHEMBL.ACTIVITY_SUPP_MAP_28
+Columns: activity_id, smid, actsm_id
+
+Table: EBI_CHEMBL.COMPONENT_CLASS_27
+Columns: comp_class_id, protein_class_id, component_id
+
+Table: EBI_CHEMBL.COMPONENT_SYNONYMS_27
+Columns: component_id, syn_type, compsyn_id, component_synonym
+
+Table: EBI_CHEMBL.MOLECULE_HIERARCHY_26
+Columns: parent_molregno, molregno, active_molregno
+
+Table: EBI_CHEMBL.DRUG_WARNING_29
+Columns: warning_country, warning_description, warning_type, molregno, record_id, warning_class, warning_id, warning_year
+
+Table: EBI_CHEMBL.WARNING_REFS_28
+Columns: ref_type, ref_url, warning_id, warnref_id, ref_id
+
+Table: EBI_CHEMBL.COMPONENT_DOMAINS_30
+Columns: start_position, domain_id, component_id, compd_id, end_position
+
+Table: EBI_CHEMBL.DOMAINS
+Columns: domain_name, domain_type, source_domain_id, domain_description, domain_id
+
+Table: EBI_CHEMBL.ACTIVITY_SUPP_26
+Columns: text_value, value, rgid, smid, standard_units, units, comments, standard_value, standard_type, type, as_id, standard_relation, relation, standard_text_value
+
+Table: EBI_CHEMBL.COMPONENT_SYNONYMS_26
+Columns: syn_type, compsyn_id, component_synonym, component_id
+
+Table: EBI_CHEMBL.ACTIVITY_STDS_LOOKUP_29
+Columns: standard_type, normal_range_max, normal_range_min, definition, std_act_id, standard_units
+
+Table: EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP_33
+Columns: confidence_score, target_mapping, description
+
+Table: EBI_CHEMBL.DRUG_MECHANISM_25
+Columns: record_id, site_id, tid, disease_efficacy, molecular_mechanism, mechanism_comment, binding_site_comment, mechanism_of_action, selectivity_comment, action_type, direct_interaction, mec_id, molregno
+
+Table: EBI_CHEMBL.BIOTHERAPEUTICS_30
+Columns: description, helm_notation, molregno
+
+Table: EBI_CHEMBL.COMPONENT_SEQUENCES_26
+Columns: sequence_md5sum, tax_id, component_id, db_version, accession, description, sequence, organism, db_source, component_type
+
+Table: EBI_CHEMBL.LIGAND_EFF_29
+Columns: lle, activity_id, bei, le, sei
+
+Table: EBI_CHEMBL.RESEARCH_STEM_28
+Columns: research_stem, res_stem_id
+
+Table: EBI_CHEMBL.DRUG_INDICATION_25
+Columns: efo_term, efo_id, max_phase_for_ind, mesh_heading, mesh_id, drugind_id, molregno, record_id
+
+Table: EBI_CHEMBL.ASSAYS_25
+Columns: src_id, bao_format, relationship_type, assay_tax_id, confidence_score, doc_id, assay_strain, assay_cell_type, assay_subcellular_fraction, variant_id, description, tissue_id, assay_tissue, assay_test_type, assay_organism, assay_category, curated_by, assay_id, aidx, assay_type, tid, src_assay_id, cell_id, chembl_id
+
+Table: EBI_CHEMBL.ACTIVITIES_27
+Columns: units, data_validity_comment, upper_value, standard_type, bao_endpoint, relation, toid, activity_comment, uo_units, standard_upper_value, potential_duplicate, standard_flag, standard_text_value, activity_id, qudt_units, src_id, molregno, standard_value, doc_id, value, type, text_value, record_id, pchembl_value, assay_id, standard_units, standard_relation
+
+Table: EBI_CHEMBL.PRODUCT_PATENTS_26
+Columns: drug_substance_flag, submission_date, delist_flag, prod_pat_id, patent_no, product_id, drug_product_flag, patent_use_code, patent_expire_date
+
+Table: EBI_CHEMBL.ASSAY_TYPE_33
+Columns: assay_type, assay_desc
+
+Table: EBI_CHEMBL.ACTIVITY_SMID_33
+Columns: smid
+
+Table: EBI_CHEMBL.ASSAY_CLASS_MAP_26
+Columns: ass_cls_map_id, assay_id, assay_class_id
+
+Table: EBI_CHEMBL.PRODUCT_PATENTS_30
+Columns: submission_date, prod_pat_id, product_id, drug_product_flag, drug_substance_flag, delist_flag, patent_no, patent_use_code, patent_expire_date
+
+Table: EBI_CHEMBL.DEFINED_DAILY_DOSE_27
+Columns: ddd_id, ddd_value, ddd_units, ddd_admr, atc_code, ddd_comment
+
+Table: EBI_CHEMBL.HRAC_CLASSIFICATION_27
+Columns: level3, hrac_class_id, level2, hrac_code, active_ingredient, level2_description, level1_description, level1
+
+Table: EBI_CHEMBL.BINDING_SITES_24
+Columns: tid, site_name, site_id
+
+Table: EBI_CHEMBL.ATC_CLASSIFICATION_24
+Columns: level1, level4, level1_description, who_name, level3_description, level2_description, level5, level2, level3, level4_description
+
+Table: EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION_24
+Columns: mol_irac_id, molregno, irac_class_id
+
+Table: EBI_CHEMBL.PRODUCTS_26
+Columns: route, black_box_warning, ad_type, nda_type, innovator_company, product_id, oral, applicant_full_name, topical, approval_date, dosage_form, trade_name, parenteral
+
+Table: EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION_33
+Columns: mol_atc_id, molregno, level5
+
+Table: EBI_CHEMBL.TARGET_COMPONENTS_23
+Columns: homologue, tid, targcomp_id, component_id
+
+Table: EBI_CHEMBL.ACTIVITY_PROPERTIES_28
+Columns: standard_relation, value, relation, units, standard_text_value, activity_id, ap_id, standard_type, type, text_value, comments, result_flag, standard_units, standard_value
+
+Table: EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP_24
+Columns: target_mapping, confidence_score, description
+
+Table: EBI_CHEMBL.PRODUCT_PATENTS_23
+Columns: delist_flag, patent_expire_date, patent_no, drug_substance_flag, patent_use_code, prod_pat_id, product_id, drug_product_flag
+
+Table: EBI_CHEMBL.ACTION_TYPE_29
+Columns: action_type, parent_type, description
+
+Table: EBI_CHEMBL.PROTEIN_FAMILY_CLASSIFICATION_24
+Columns: l3, protein_class_desc, l1, protein_class_id, l5, l2, l6, l8, l7, l4
+
+Table: EBI_CHEMBL.TARGET_COMPONENTS_28
+Columns: tid, homologue, component_id, targcomp_id
+
+Table: EBI_CHEMBL.COMPONENT_GO_25
+Columns: comp_go_id, component_id, go_id
+
+Table: EBI_CHEMBL.WARNING_REFS_29
+Columns: ref_url, ref_id, warnref_id, warning_id, ref_type
+
+Table: EBI_CHEMBL.CHEMBL_ID_LOOKUP_23
+Columns: chembl_id, entity_id, entity_type, status
+
+Table: EBI_CHEMBL.COMPONENT_GO_26
+Columns: go_id, comp_go_id, component_id
+
+Table: EBI_CHEMBL.TARGET_DICTIONARY_26
+Columns: species_group_flag, tax_id, target_type, pref_name, organism, tid, chembl_id
+
+Table: EBI_CHEMBL.BIOASSAY_ONTOLOGY_30
+Columns: label, bao_id
+
+Table: EBI_CHEMBL.RELATIONSHIP_TYPE_23
+Columns: relationship_desc, relationship_type
+
+Table: EBI_CHEMBL.IRAC_CLASSIFICATION_25
+Columns: irac_class_id, level1_description, level2_description, level3_description, level4, active_ingredient, level3, irac_code, level1, level2
+
+Table: EBI_CHEMBL.FORMULATIONS_26
+Columns: molregno, product_id, record_id, strength, formulation_id, ingredient
+
+Table: EBI_CHEMBL.WARNING_REFS_30
+Columns: ref_id, ref_type, warnref_id, ref_url, warning_id
+
+Table: EBI_CHEMBL.TARGET_RELATIONS_27
+Columns: relationship, tid, related_tid, targrel_id
+
+Table: EBI_CHEMBL.MOLECULE_SYNONYMS_28
+Columns: res_stem_id, synonyms, molsyn_id, syn_type, molregno
+
+Table: EBI_CHEMBL.DATA_VALIDITY_LOOKUP_26
+Columns: description, data_validity_comment
+
+Table: EBI_CHEMBL.FRAC_CLASSIFICATION_26
+Columns: level2, frac_class_id, level3_description, level5, level2_description, level1, level4, level4_description, frac_code, active_ingredient, level3, level1_description
+
+Table: EBI_CHEMBL.ORGANISM_CLASS_23
+Columns: l1, l3, tax_id, l2, oc_id
+
+Table: EBI_CHEMBL.BIO_COMPONENT_SEQUENCES_25
+Columns: component_id, tax_id, organism, component_type, sequence_md5sum, sequence, description
+
+Table: EBI_CHEMBL.MOLECULE_DICTIONARY_26
+Columns: availability_type, molregno, topical, usan_stem, usan_year, withdrawn_flag, parenteral, dosed_ingredient, first_in_class, natural_product, pref_name, oral, first_approval, max_phase, withdrawn_country, usan_stem_definition, chembl_id, indication_class, withdrawn_year, withdrawn_class, polymer_flag, chirality, prodrug, molecule_type, structure_type, chebi_par_id, inorganic_flag, therapeutic_flag, withdrawn_reason, usan_substem, black_box_warning
+
+Table: EBI_CHEMBL.MECHANISM_REFS
+Columns: mecref_id, mec_id, ref_type, ref_url, ref_id
+
+Table: EBI_CHEMBL.DOMAINS_24
+Columns: domain_name, domain_type, source_domain_id, domain_id, domain_description
+
+Table: EBI_CHEMBL.SQLITE_STAT1_28
+Columns: tbl, stat, idx
+
+Table: EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP_27
+Columns: target_mapping, description, confidence_score
+
+Table: EBI_CHEMBL.USAN_STEMS
+Columns: stem, major_class, stem_class, usan_stem_id, annotation, subgroup
+
+Table: EBI_CHEMBL.BINDING_SITES_29
+Columns: site_name, site_id, tid
+
+Table: EBI_CHEMBL.PATENT_USE_CODES_29
+Columns: definition, patent_use_code
+
+Table: EBI_CHEMBL.PROTEIN_CLASSIFICATION_33
+Columns: parent_id, protein_class_desc, pref_name, definition, short_name, class_level, protein_class_id
+
+Table: EBI_CHEMBL.FRAC_CLASSIFICATION_33
+Columns: frac_class_id, level4, level1, active_ingredient, level3_description, frac_code, level2_description, level2, level4_description, level3, level1_description, level5
+
+Table: EBI_CHEMBL.CHEMBL_ID_LOOKUP_27
+Columns: entity_type, entity_id, status, chembl_id
+
+Table: EBI_CHEMBL.ASSAY_PARAMETERS_30
+Columns: text_value, value, standard_text_value, assay_id, standard_units, standard_relation, relation, standard_type, comments, units, type, assay_param_id, standard_value
+
+Table: EBI_CHEMBL.WARNING_REFS_33
+Columns: ref_id, warning_id, warnref_id, ref_url, ref_type
+
+Table: EBI_CHEMBL.TARGET_TYPE_24
+Columns: target_desc, target_type, parent_type
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURES_24
+Columns: molfile, molregno, standard_inchi_key, standard_inchi, canonical_smiles
+
+Table: EBI_CHEMBL.MOLECULE_HIERARCHY_28
+Columns: active_molregno, molregno, parent_molregno
+
+Table: EBI_CHEMBL.SQLITE_STAT1_29
+Columns: idx, tbl, stat
+
+Table: EBI_CHEMBL.FORMULATIONS_33
+Columns: record_id, molregno, ingredient, formulation_id, product_id, strength
+
+Table: EBI_CHEMBL.IRAC_CLASSIFICATION_23
+Columns: level1, level2_description, level4, irac_class_id, level1_description, irac_code, level3_description, level2, level3, active_ingredient
+
+Table: EBI_CHEMBL.RELATIONSHIP_TYPE_24
+Columns: relationship_type, relationship_desc
+
+Table: EBI_CHEMBL.PATENT_USE_CODES_24
+Columns: definition, patent_use_code
+
+Table: EBI_CHEMBL.BIOTHERAPEUTICS_23
+Columns: helm_notation, molregno, description
+
+Table: EBI_CHEMBL.IRAC_CLASSIFICATION_27
+Columns: level3_description, level2_description, irac_class_id, level3, level1_description, active_ingredient, level1, level2, irac_code, level4
+
+Table: EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS
+Columns: protein_class_synonym, protclasssyn_id, protein_class_id, syn_type
+
+Table: EBI_CHEMBL.DATA_VALIDITY_LOOKUP_30
+Columns: data_validity_comment, description
+
+Table: EBI_CHEMBL.RESEARCH_COMPANIES_24
+Columns: co_stem_id, company, country, previous_company, res_stem_id
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERTS_29
+Columns: smarts, alert_id, alert_name, alert_set_id
+
+Table: EBI_CHEMBL.TISSUE_DICTIONARY_29
+Columns: efo_id, pref_name, tissue_id, bto_id, chembl_id, caloha_id, uberon_id
+
+Table: EBI_CHEMBL.DRUG_WARNING_28
+Columns: warning_year, warning_id, molregno, warning_type, record_id, warning_description, warning_country, warning_class
+
+Table: EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION_25
+Columns: molregno, mol_atc_id, level5
+
+Table: EBI_CHEMBL.CHEMBL_ID_LOOKUP_28
+Columns: entity_type, chembl_id, status, entity_id
+
+Table: EBI_CHEMBL.COMPOUND_RECORDS_33
+Columns: compound_key, record_id, src_compound_id, src_id, cidx, molregno, doc_id, compound_name
+
+Table: EBI_CHEMBL.BIO_COMPONENT_SEQUENCES_23
+Columns: description, component_id, sequence, tax_id, organism, component_type, sequence_md5sum
+
+Table: EBI_CHEMBL.BIOTHERAPEUTICS_28
+Columns: description, helm_notation, molregno
+
+Table: EBI_CHEMBL.TARGET_COMPONENTS_33
+Columns: component_id, tid, targcomp_id, homologue
+
+Table: EBI_CHEMBL.COMPONENT_DOMAINS_27
+Columns: start_position, component_id, end_position, compd_id, domain_id
+
+Table: EBI_CHEMBL.ASSAY_TYPE_24
+Columns: assay_type, assay_desc
+
+Table: EBI_CHEMBL.COMPOUND_PROPERTIES
+Columns: alogp, aromatic_rings, mw_freebase, hbd, psa, cx_logd, hba, hbd_lipinski, molecular_species, full_molformula, hba_lipinski, np_likeness_score, heavy_atoms, cx_most_apka, num_ro5_violations, molregno, mw_monoisotopic, cx_most_bpka, full_mwt, rtb, qed_weighted, num_lipinski_ro5_violations, cx_logp, ro3_pass
+
+Table: EBI_CHEMBL.ACTIVITY_SMID_27
+Columns: smid
+
+Table: EBI_CHEMBL.ACTIVITY_SUPP_MAP_25
+Columns: smid, activity_id, actsm_id
+
+Table: EBI_CHEMBL.BINDING_SITES_26
+Columns: site_id, tid, site_name
+
+Table: EBI_CHEMBL.DRUG_MECHANISM_33
+Columns: disease_efficacy, selectivity_comment, molregno, action_type, record_id, variant_id, site_id, binding_site_comment, molecular_mechanism, tid, mec_id, mechanism_comment, direct_interaction, mechanism_of_action
+
+Table: EBI_CHEMBL.USAN_STEMS_27
+Columns: stem, stem_class, major_class, subgroup, usan_stem_id, who_extra, annotation
+
+Table: EBI_CHEMBL.INDICATION_REFS_24
+Columns: ref_id, ref_type, ref_url, drugind_id, indref_id
+
+Table: EBI_CHEMBL.CURATION_LOOKUP_27
+Columns: description, curated_by
+
+Table: EBI_CHEMBL.BIO_COMPONENT_SEQUENCES_29
+Columns: tax_id, component_id, organism, component_type, sequence_md5sum, sequence, description
+
+Table: EBI_CHEMBL.USAN_STEMS_26
+Columns: annotation, subgroup, usan_stem_id, who_extra, stem, major_class, stem_class
+
+Table: EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION_24
+Columns: molregno, mol_atc_id, level5
+
+Table: EBI_CHEMBL.ASSAY_CLASS_MAP_29
+Columns: ass_cls_map_id, assay_class_id, assay_id
+
+Table: EBI_CHEMBL.BIOASSAY_ONTOLOGY_26
+Columns: label, bao_id
+
+Table: EBI_CHEMBL.COMPOUND_PROPERTIES_23
+Columns: num_ro5_violations, ro3_pass, full_mwt, psa, acd_most_apka, full_molformula, aromatic_rings, mw_monoisotopic, molecular_species, num_lipinski_ro5_violations, rtb, alogp, hba, num_alerts, acd_logp, molregno, acd_logd, mw_freebase, hbd_lipinski, hbd, hba_lipinski, acd_most_bpka, qed_weighted, heavy_atoms
+
+Table: EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION
+Columns: mol_irac_id, irac_class_id, molregno
+
+Table: EBI_CHEMBL.FRAC_CLASSIFICATION_24
+Columns: level4_description, level3_description, level2_description, level4, frac_class_id, level1, level3, level5, frac_code, level1_description, active_ingredient, level2
+
+Table: EBI_CHEMBL.TARGET_TYPE_26
+Columns: target_desc, parent_type, target_type
+
+Table: EBI_CHEMBL.MOLECULE_SYNONYMS_26
+Columns: syn_type, molregno, synonyms, molsyn_id, res_stem_id
+
+Table: EBI_CHEMBL.USAN_STEMS_30
+Columns: major_class, usan_stem_id, stem, subgroup, annotation, stem_class, who_extra
+
+Table: EBI_CHEMBL.RESEARCH_STEM_27
+Columns: research_stem, res_stem_id
+
+Table: EBI_CHEMBL.COMPONENT_SEQUENCES_25
+Columns: sequence_md5sum, sequence, description, component_type, accession, component_id, tax_id, organism, db_version, db_source
+
+Table: EBI_CHEMBL.ACTIVITIES
+Columns: standard_type, standard_units, units, toid, standard_flag, value, standard_value, standard_relation, bao_endpoint, src_id, qudt_units, standard_text_value, data_validity_comment, pchembl_value, record_id, doc_id, standard_upper_value, action_type, assay_id, uo_units, activity_id, potential_duplicate, molregno, type, text_value, activity_comment, upper_value, relation
+
+Table: EBI_CHEMBL.GO_CLASSIFICATION_30
+Columns: pref_name, path, class_level, parent_go_id, go_id, aspect
+
+Table: EBI_CHEMBL.ASSAYS_26
+Columns: assay_type, job_id, mc_organism, tid, assay_cell_type, assay_subcellular_fraction, aidx, updated_on, confidence_score, updated_by, mc_target_accession, src_assay_id, ridx, assay_organism, curation_comment, src_id, bao_format, tid_fixed, variant_id, mc_target_name, curated_by, assay_tax_id, cell_id, assay_test_type, tissue_id, log_id, mc_target_type, assay_tissue, assay_category, assay_source, doc_id, assay_strain, relationship_type, activity_count, chembl_id, orig_description, mc_tax_id, assay_id, description
+
+Table: EBI_CHEMBL.SQLITE_STAT1_23
+Columns: tbl, idx, stat
+
+Table: EBI_CHEMBL.VERSION_29
+Columns: name, comments, creation_date
+
+Table: EBI_CHEMBL.COMPONENT_CLASS_28
+Columns: comp_class_id, protein_class_id, component_id
+
+Table: EBI_CHEMBL.METABOLISM
+Columns: met_id, enzyme_name, pathway_key, enzyme_tid, drug_record_id, tax_id, met_comment, pathway_id, metabolite_record_id, substrate_record_id, organism, met_conversion
+
+Table: EBI_CHEMBL.TISSUE_DICTIONARY_28
+Columns: pref_name, downgraded, uberon_id, chembl_id, bto_id, efo_id, caloha_id, tissue_id
+
+Table: EBI_CHEMBL.COMPOUND_RECORDS_30
+Columns: src_compound_id, molregno, compound_key, cidx, record_id, compound_name, doc_id, src_id
+
+Table: EBI_CHEMBL.ASSAY_PARAMETERS
+Columns: standard_relation, standard_units, comments, text_value, value, assay_id, units, relation, standard_type, type, standard_text_value, assay_param_id, standard_value
+
+Table: EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION_30
+Columns: hrac_class_id, molregno, mol_hrac_id
+
+Table: EBI_CHEMBL.RESEARCH_COMPANIES_23
+Columns: res_stem_id, company, co_stem_id, country, previous_company
+
+Table: EBI_CHEMBL.ASSAY_CLASSIFICATION_28
+Columns: l3, l2, l1, class_type, assay_class_id, source
+
+Table: EBI_CHEMBL.VARIANT_SEQUENCES_29
+Columns: organism, variant_id, version, mutation, tax_id, isoform, accession, sequence
+
+Table: EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION_23
+Columns: molregno, mol_hrac_id, hrac_class_id
+
+Table: EBI_CHEMBL.PROTEIN_CLASSIFICATION_30
+Columns: pref_name, short_name, protein_class_id, parent_id, protein_class_desc, definition, class_level
+
+Table: EBI_CHEMBL.BIOTHERAPEUTICS_25
+Columns: description, helm_notation, molregno
+
+Table: EBI_CHEMBL.TARGET_RELATIONS
+Columns: tid, related_tid, relationship, targrel_id
+
+Table: EBI_CHEMBL.ACTIVITY_SUPP_29
+Columns: standard_value, units, relation, standard_relation, standard_units, as_id, rgid, standard_text_value, value, type, standard_type, smid, text_value, comments
+
+Table: EBI_CHEMBL.VERSION_33
+Columns: creation_date, name, comments
+
+Table: EBI_CHEMBL.CHEMBL_ID_LOOKUP_33
+Columns: entity_type, entity_id, status, chembl_id, last_active
+
+Table: EBI_CHEMBL.BIOTHERAPEUTICS_29
+Columns: description, helm_notation, molregno
+
+Table: EBI_CHEMBL.CELL_DICTIONARY_24
+Columns: cell_source_organism, cellosaurus_id, cl_lincs_id, cell_id, efo_id, cell_source_tax_id, cell_source_tissue, cell_description, chembl_id, clo_id, cell_name
+
+Table: EBI_CHEMBL.COMPOUND_RECORDS_25
+Columns: compound_name, cidx, compound_key, molregno, record_id, src_id, src_compound_id, doc_id
+
+Table: EBI_CHEMBL.ASSAYS_33
+Columns: assay_strain, assay_cell_type, assay_tissue, assay_id, assay_subcellular_fraction, chembl_id, confidence_score, assay_test_type, src_assay_id, assay_category, assay_organism, assay_type, aidx, tid, variant_id, description, src_id, cell_id, curated_by, tissue_id, doc_id, bao_format, assay_tax_id, relationship_type
+
+Table: EBI_CHEMBL.ACTION_TYPE
+Columns: parent_type, description, action_type
+
+Table: EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION
+Columns: mol_frac_id, molregno, frac_class_id
+
+Table: EBI_CHEMBL.TISSUE_DICTIONARY_33
+Columns: caloha_id, chembl_id, pref_name, bto_id, efo_id, uberon_id, tissue_id
+
+Table: EBI_CHEMBL.BINDING_SITES
+Columns: site_id, tid, site_name
+
+Table: EBI_CHEMBL.LIGAND_EFF
+Columns: sei, le, bei, activity_id, lle
+
+Table: EBI_CHEMBL.IRAC_CLASSIFICATION
+Columns: level1, level3_description, irac_code, irac_class_id, level2, active_ingredient, level1_description, level4, level3, level2_description
+
+Table: EBI_CHEMBL.COMPONENT_SEQUENCES_23
+Columns: sequence_md5sum, tax_id, component_type, db_source, db_version, description, accession, organism, component_id, sequence
+
+Table: EBI_CHEMBL.ASSAYS
+Columns: bao_format, relationship_type, curated_by, assay_type, assay_strain, variant_id, src_assay_id, assay_tissue, tid, confidence_score, assay_category, assay_subcellular_fraction, tissue_id, chembl_id, assay_test_type, assay_cell_type, doc_id, assay_id, assay_organism, assay_tax_id, description, aidx, cell_id, src_id
+
+Table: EBI_CHEMBL.CURATION_LOOKUP
+Columns: description, curated_by
+
+Table: EBI_CHEMBL.BINDING_SITES_33
+Columns: site_name, site_id, tid
+
+Table: EBI_CHEMBL.COMPOUND_RECORDS_27
+Columns: cidx, molregno, src_id, compound_name, compound_key, src_compound_id, doc_id, record_id
+
+Table: EBI_CHEMBL.ACTIVITY_SUPP_30
+Columns: smid, value, as_id, standard_text_value, standard_relation, standard_value, comments, standard_units, text_value, type, units, rgid, relation, standard_type
+
+Table: EBI_CHEMBL.COMPONENT_GO_23
+Columns: go_id, component_id, comp_go_id
+
+Table: EBI_CHEMBL.COMPONENT_DOMAINS_29
+Columns: compd_id, component_id, start_position, domain_id, end_position
+
+Table: EBI_CHEMBL.ASSAY_PARAMETERS_28
+Columns: units, standard_value, assay_id, text_value, standard_units, relation, assay_param_id, comments, standard_type, standard_text_value, value, type, standard_relation
+
+Table: EBI_CHEMBL.ACTIVITY_PROPERTIES_29
+Columns: comments, standard_text_value, ap_id, relation, activity_id, value, units, standard_type, standard_relation, standard_value, result_flag, standard_units, type, text_value
+
+Table: EBI_CHEMBL.DEFINED_DAILY_DOSE_24
+Columns: ddd_comment, ddd_id, ddd_admr, ddd_value, ddd_units, atc_code
+
+Table: EBI_CHEMBL.TARGET_COMPONENTS_26
+Columns: tid, homologue, component_id, targcomp_id
+
+Table: EBI_CHEMBL.DOCS_27
+Columns: issue, doc_type, abstract, first_page, pubmed_id, patent_id, journal, title, doc_id, volume, src_id, authors, doi, year, chembl_id, last_page, ridx
+
+Table: EBI_CHEMBL.SQLITE_STAT1
+Columns: tbl, idx, stat
+
+Table: EBI_CHEMBL.DRUG_INDICATION_33
+Columns: record_id, drugind_id, max_phase_for_ind, molregno, mesh_heading, efo_id, efo_term, mesh_id
+
+Table: EBI_CHEMBL.BIOASSAY_ONTOLOGY_33
+Columns: label, bao_id
+
+Table: EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION_27
+Columns: mol_hrac_id, hrac_class_id, molregno
+
+Table: EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION
+Columns: molregno, mol_hrac_id, hrac_class_id
+
+Table: EBI_CHEMBL.DOCS_33
+Columns: volume, title, first_page, journal, abstract, issue, chembl_id, doc_type, ridx, chembl_release_id, doc_id, last_page, src_id, doi, pubmed_id, patent_id, year, authors
+
+Table: EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION_27
+Columns: mol_irac_id, molregno, irac_class_id
+
+Table: EBI_CHEMBL.ACTIVITIES_28
+Columns: uo_units, data_validity_comment, standard_flag, molregno, standard_value, standard_units, qudt_units, activity_comment, doc_id, text_value, bao_endpoint, standard_type, assay_id, standard_upper_value, standard_text_value, relation, value, type, potential_duplicate, activity_id, standard_relation, record_id, toid, pchembl_value, src_id, upper_value, units
+
+Table: EBI_CHEMBL.METABOLISM_28
+Columns: drug_record_id, organism, pathway_key, met_conversion, substrate_record_id, met_id, met_comment, pathway_id, tax_id, enzyme_tid, metabolite_record_id, enzyme_name
+
+Table: EBI_CHEMBL.TARGET_RELATIONS_24
+Columns: related_tid, tid, relationship, targrel_id
+
+Table: EBI_CHEMBL.MOLECULE_SYNONYMS
+Columns: molregno, res_stem_id, syn_type, molsyn_id, synonyms
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURES_27
+Columns: standard_inchi, molfile, molregno, standard_inchi_key, canonical_smiles
+
+Table: EBI_CHEMBL.ASSAY_PARAMETERS_23
+Columns: assay_param_id, parameter_type, parameter_value, assay_id
+
+Table: EBI_CHEMBL.DRUG_INDICATION_29
+Columns: efo_term, mesh_id, drugind_id, efo_id, molregno, max_phase_for_ind, mesh_heading, record_id
+
+Table: EBI_CHEMBL.TISSUE_DICTIONARY_25
+Columns: efo_id, pref_name, caloha_id, bto_id, tissue_id, chembl_id, uberon_id
+
+Table: EBI_CHEMBL.COMPONENT_SEQUENCES_30
+Columns: organism, sequence_md5sum, description, tax_id, sequence, accession, component_type, component_id, db_version, db_source
+
+Table: EBI_CHEMBL.ORGANISM_CLASS_33
+Columns: l3, oc_id, l2, tax_id, l1
+
+Table: EBI_CHEMBL.CELL_DICTIONARY_25
+Columns: chembl_id, cell_id, cell_name, cell_source_tissue, cellosaurus_id, cell_source_organism, clo_id, cell_description, cl_lincs_id, efo_id, cell_source_tax_id
+
+Table: EBI_CHEMBL.RESEARCH_COMPANIES_27
+Columns: co_stem_id, company, previous_company, res_stem_id, country
+
+Table: EBI_CHEMBL.COMPOUND_PROPERTIES_27
+Columns: mw_freebase, num_ro5_violations, hba_lipinski, hba, ro3_pass, heavy_atoms, hbd, aromatic_rings, mw_monoisotopic, hbd_lipinski, cx_logd, cx_logp, rtb, molregno, psa, full_molformula, qed_weighted, alogp, full_mwt, cx_most_apka, molecular_species, num_lipinski_ro5_violations, cx_most_bpka
+
+Table: EBI_CHEMBL.ASSAY_PARAMETERS_25
+Columns: units, text_value, assay_id, standard_value, standard_text_value, standard_relation, assay_param_id, type, value, relation, standard_units, comments, standard_type
+
+Table: EBI_CHEMBL.ACTIVITY_PROPERTIES_33
+Columns: units, standard_relation, standard_type, type, comments, standard_value, value, relation, result_flag, activity_id, text_value, standard_units, ap_id, standard_text_value
+
+Table: EBI_CHEMBL.ACTIVITIES_23
+Columns: standard_type, standard_value, molregno, published_relation, published_value, published_type, assay_id, published_units, standard_flag, uo_units, activity_id, pchembl_value, activity_comment, standard_units, bao_endpoint, standard_relation, doc_id, data_validity_comment, potential_duplicate, qudt_units, record_id
+
+Table: EBI_CHEMBL.COMPONENT_GO_29
+Columns: component_id, go_id, comp_go_id
+
+Table: EBI_CHEMBL.BIO_COMPONENT_SEQUENCES
+Columns: component_type, sequence, description, tax_id, sequence_md5sum, organism, component_id
+
+Table: EBI_CHEMBL.DOCS_25
+Columns: first_page, volume, patent_id, issue, pubmed_id, doc_id, chembl_id, abstract, doc_type, authors, doi, last_page, ridx, title, src_id, year, journal
+
+Table: EBI_CHEMBL.ACTIVITY_PROPERTIES_25
+Columns: text_value, standard_value, ap_id, relation, comments, standard_units, standard_text_value, result_flag, activity_id, units, value, standard_type, standard_relation, type
+
+Table: EBI_CHEMBL.BIOASSAY_ONTOLOGY
+Columns: bao_id, label
+
+Table: EBI_CHEMBL.MOLECULE_DICTIONARY_25
+Columns: prodrug, max_phase, therapeutic_flag, chirality, polymer_flag, indication_class, withdrawn_flag, dosed_ingredient, usan_substem, withdrawn_country, structure_type, oral, molregno, pref_name, withdrawn_class, first_in_class, inorganic_flag, withdrawn_year, usan_stem, availability_type, usan_year, withdrawn_reason, first_approval, chembl_id, parenteral, molecule_type, topical, natural_product, black_box_warning, chebi_par_id, usan_stem_definition
+
+Table: EBI_CHEMBL.VARIANT_SEQUENCES_23
+Columns: sequence, mutation, organism, version, isoform, variant_id, accession
+
+Table: EBI_CHEMBL.BIOTHERAPEUTICS_24
+Columns: molregno, helm_notation, description
+
+Table: EBI_CHEMBL.FORMULATIONS_28
+Columns: product_id, formulation_id, ingredient, strength, record_id, molregno
+
+Table: EBI_CHEMBL.TARGET_TYPE_27
+Columns: target_desc, target_type, parent_type
+
+Table: EBI_CHEMBL.DRUG_MECHANISM_29
+Columns: action_type, record_id, mechanism_comment, molregno, molecular_mechanism, variant_id, binding_site_comment, tid, mechanism_of_action, site_id, disease_efficacy, mec_id, selectivity_comment, direct_interaction
+
+Table: EBI_CHEMBL.MOLECULE_DICTIONARY
+Columns: indication_class, max_phase, usan_stem, parenteral, structure_type, chebi_par_id, black_box_warning, oral, pref_name, molecule_type, chirality, therapeutic_flag, usan_substem, prodrug, availability_type, usan_year, withdrawn_flag, first_approval, dosed_ingredient, inorganic_flag, natural_product, usan_stem_definition, topical, first_in_class, chemical_probe, chembl_id, polymer_flag, molregno
+
+Table: EBI_CHEMBL.CHEMBL_ID_LOOKUP_26
+Columns: status, chembl_id, entity_type, entity_id
+
+Table: EBI_CHEMBL.DRUG_MECHANISM
+Columns: selectivity_comment, mechanism_of_action, binding_site_comment, molregno, disease_efficacy, site_id, record_id, direct_interaction, mec_id, mechanism_comment, variant_id, action_type, tid, molecular_mechanism
+
+Table: EBI_CHEMBL.ASSAY_PARAMETERS_29
+Columns: text_value, standard_units, assay_param_id, relation, standard_value, comments, units, standard_relation, standard_type, value, type, assay_id, standard_text_value
+
+Table: EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP_26
+Columns: confidence_score, description, target_mapping
+
+Table: EBI_CHEMBL.COMPONENT_SYNONYMS_23
+Columns: compsyn_id, component_synonym, component_id, syn_type
+
+Table: EBI_CHEMBL.DATA_VALIDITY_LOOKUP_29
+Columns: data_validity_comment, description
+
+Table: EBI_CHEMBL.ASSAY_PARAMETERS_26
+Columns: assay_param_id, type, relation, assay_id, comments, text_value, standard_value, value, standard_units, standard_text_value, units, standard_relation, standard_type
+
+Table: EBI_CHEMBL.ASSAY_CLASSIFICATION_29
+Columns: l1, assay_class_id, class_type, source, l2, l3
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERT_SETS
+Columns: priority, alert_set_id, set_name
+
+Table: EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION_23
+Columns: mol_irac_id, molregno, irac_class_id
+
+Table: EBI_CHEMBL.PRODUCTS_28
+Columns: applicant_full_name, topical, black_box_warning, parenteral, nda_type, innovator_company, oral, trade_name, ad_type, dosage_form, route, product_id, approval_date
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERT_SETS_24
+Columns: set_name, alert_set_id, priority
+
+Table: EBI_CHEMBL.DATA_VALIDITY_LOOKUP_25
+Columns: data_validity_comment, description
+
+Table: EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION
+Columns: level5, mol_atc_id, molregno
+
+Table: EBI_CHEMBL.MOLECULE_SYNONYMS_30
+Columns: synonyms, molregno, syn_type, res_stem_id, molsyn_id
+
+Table: EBI_CHEMBL.ACTIVITIES_29
+Columns: value, type, toid, data_validity_comment, relation, activity_id, assay_id, standard_units, upper_value, standard_flag, qudt_units, pchembl_value, doc_id, potential_duplicate, activity_comment, standard_upper_value, bao_endpoint, units, standard_value, uo_units, standard_text_value, text_value, src_id, molregno, standard_relation, standard_type, record_id
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURES_25
+Columns: standard_inchi_key, canonical_smiles, standard_inchi, molregno, molfile
+
+Table: EBI_CHEMBL.HRAC_CLASSIFICATION_33
+Columns: active_ingredient, level1_description, level3, level2_description, hrac_class_id, level1, level2, hrac_code
+
+Table: EBI_CHEMBL.MOLECULE_DICTIONARY_28
+Columns: chirality, molregno, first_approval, polymer_flag, withdrawn_class, inorganic_flag, indication_class, withdrawn_flag, first_in_class, max_phase, dosed_ingredient, usan_year, usan_stem_definition, withdrawn_country, chebi_par_id, chembl_id, withdrawn_reason, availability_type, parenteral, black_box_warning, topical, pref_name, oral, usan_substem, therapeutic_flag, withdrawn_year, natural_product, molecule_type, usan_stem, prodrug, structure_type
+
+Table: EBI_CHEMBL.ASSAY_TYPE_29
+Columns: assay_type, assay_desc
+
+Table: EBI_CHEMBL.METABOLISM_REFS_24
+Columns: ref_type, ref_id, ref_url, metref_id, met_id
+
+Table: EBI_CHEMBL.PROTEIN_FAMILY_CLASSIFICATION_23
+Columns: protein_class_desc, l1, l5, l2, l8, l6, l3, protein_class_id, l7, l4
+
+Table: EBI_CHEMBL.METABOLISM_25
+Columns: met_conversion, substrate_record_id, met_id, metabolite_record_id, organism, enzyme_name, enzyme_tid, drug_record_id, met_comment, pathway_key, tax_id, pathway_id
+
+Table: EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION_33
+Columns: molregno, frac_class_id, mol_frac_id
+
+Table: EBI_CHEMBL.PATENT_USE_CODES
+Columns: patent_use_code, definition
+
+Table: EBI_CHEMBL.DRUG_MECHANISM_28
+Columns: variant_id, selectivity_comment, molregno, mechanism_comment, disease_efficacy, binding_site_comment, action_type, site_id, mec_id, molecular_mechanism, mechanism_of_action, direct_interaction, tid, record_id
+
+Table: EBI_CHEMBL.TARGET_TYPE_28
+Columns: target_desc, target_type, parent_type
+
+Table: EBI_CHEMBL.CHEMBL_ID_LOOKUP
+Columns: last_active, entity_type, status, entity_id, chembl_id
+
+Table: EBI_CHEMBL.COMPONENT_CLASS_33
+Columns: component_id, protein_class_id, comp_class_id
+
+Table: EBI_CHEMBL.USAN_STEMS_23
+Columns: annotation, stem_class, subgroup, usan_stem_id, who_extra, stem, major_class
+
+Table: EBI_CHEMBL.RESEARCH_COMPANIES_28
+Columns: res_stem_id, company, co_stem_id, country, previous_company
+
+Table: EBI_CHEMBL.BIOTHERAPEUTICS
+Columns: helm_notation, molregno, description
+
+Table: EBI_CHEMBL.PREDICTED_BINDING_DOMAINS_33
+Columns: prediction_method, activity_id, site_id, predbind_id, confidence
+
+Table: EBI_CHEMBL.SITE_COMPONENTS_23
+Columns: sitecomp_id, component_id, site_residues, domain_id, site_id
+
+Table: EBI_CHEMBL.BIOASSAY_ONTOLOGY_29
+Columns: bao_id, label
+
+Table: EBI_CHEMBL.TARGET_COMPONENTS_25
+Columns: tid, component_id, homologue, targcomp_id
+
+Table: EBI_CHEMBL.DRUG_INDICATION_23
+Columns: record_id, mesh_heading, mesh_id, efo_id, molregno, drugind_id, efo_term, max_phase_for_ind
+
+Table: EBI_CHEMBL.DATA_VALIDITY_LOOKUP_28
+Columns: description, data_validity_comment
+
+Table: EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION_26
+Columns: mol_hrac_id, hrac_class_id, molregno
+
+Table: EBI_CHEMBL.TARGET_TYPE
+Columns: target_desc, parent_type, target_type
+
+Table: EBI_CHEMBL.PREDICTED_BINDING_DOMAINS_27
+Columns: predbind_id, prediction_method, confidence, activity_id, site_id
+
+Table: EBI_CHEMBL.DRUG_INDICATION_28
+Columns: mesh_id, record_id, molregno, max_phase_for_ind, drugind_id, mesh_heading, efo_term, efo_id
+
+Table: EBI_CHEMBL.ORGANISM_CLASS_26
+Columns: l3, tax_id, oc_id, l1, l2
+
+Table: EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION_24
+Columns: mol_frac_id, molregno, frac_class_id
+
+Table: EBI_CHEMBL.CELL_DICTIONARY_30
+Columns: cell_description, cell_id, cell_source_tax_id, cellosaurus_id, cell_source_tissue, chembl_id, cell_ontology_id, cell_name, efo_id, cl_lincs_id, clo_id, cell_source_organism
+
+Table: EBI_CHEMBL.RESEARCH_STEM_23
+Columns: res_stem_id, research_stem
+
+Table: EBI_CHEMBL.ACTIVITY_PROPERTIES_27
+Columns: units, ap_id, standard_type, standard_value, value, relation, result_flag, standard_relation, standard_text_value, type, comments, standard_units, activity_id, text_value
+
+Table: EBI_CHEMBL.PRODUCTS_25
+Columns: parenteral, nda_type, product_id, applicant_full_name, route, black_box_warning, innovator_company, dosage_form, ad_type, oral, trade_name, approval_date, topical
+
+Table: EBI_CHEMBL.DOMAINS_28
+Columns: domain_description, domain_name, domain_type, source_domain_id, domain_id
+
+Table: EBI_CHEMBL.MOLECULE_DICTIONARY_29
+Columns: chirality, withdrawn_year, pref_name, usan_stem, withdrawn_country, polymer_flag, prodrug, usan_substem, first_in_class, usan_stem_definition, inorganic_flag, dosed_ingredient, usan_year, withdrawn_reason, topical, black_box_warning, availability_type, parenteral, withdrawn_class, structure_type, oral, chebi_par_id, molecule_type, molregno, indication_class, first_approval, therapeutic_flag, withdrawn_flag, natural_product, chembl_id, max_phase
+
+Table: EBI_CHEMBL.PROTEIN_CLASSIFICATION_27
+Columns: protein_class_desc, class_level, definition, short_name, pref_name, parent_id, protein_class_id
+
+Table: EBI_CHEMBL.ASSAYS_28
+Columns: assay_category, description, assay_type, relationship_type, tid, variant_id, doc_id, assay_organism, src_assay_id, curated_by, confidence_score, assay_tissue, assay_id, tissue_id, assay_strain, src_id, assay_cell_type, assay_tax_id, assay_test_type, aidx, cell_id, chembl_id, bao_format, assay_subcellular_fraction
+
+Table: EBI_CHEMBL.ACTIVITY_STDS_LOOKUP
+Columns: std_act_id, standard_units, definition, normal_range_max, standard_type, normal_range_min
+
+Table: EBI_CHEMBL.RELATIONSHIP_TYPE_33
+Columns: relationship_desc, relationship_type
+
+Table: EBI_CHEMBL.IRAC_CLASSIFICATION_33
+Columns: level1, irac_code, level4, level1_description, active_ingredient, level3_description, level2, irac_class_id, level2_description, level3
+
+Table: EBI_CHEMBL.COMPOUND_RECORDS_28
+Columns: doc_id, compound_name, compound_key, record_id, src_compound_id, molregno, src_id, cidx
+
+Table: EBI_CHEMBL.CHEMBL_ID_LOOKUP_25
+Columns: chembl_id, status, entity_type, entity_id
+
+Table: EBI_CHEMBL.RELATIONSHIP_TYPE_29
+Columns: relationship_desc, relationship_type
+
+Table: EBI_CHEMBL.PROTEIN_FAMILY_CLASSIFICATION_28
+Columns: protein_class_desc, l4, l5, l7, l2, l8, l3, l6, protein_class_id, l1
+
+Table: EBI_CHEMBL.ASSAYS_27
+Columns: updated_by, curation_comment, bao_format, confidence_score, updated_on, mc_organism, mc_tax_id, orig_description, log_id, tissue_id, activity_count, assay_tissue, chembl_id, src_assay_id, mc_target_name, assay_organism, assay_test_type, assay_strain, relationship_type, variant_id, cell_id, tid, curated_by, src_id, tid_fixed, assay_type, mc_target_accession, assay_source, aidx, assay_id, description, mc_target_type, assay_tax_id, assay_category, doc_id, job_id, assay_cell_type, assay_subcellular_fraction, ridx
+
+Table: EBI_CHEMBL.ACTION_TYPE_28
+Columns: action_type, description, parent_type
+
+Table: EBI_CHEMBL.ASSAY_TYPE_27
+Columns: assay_desc, assay_type
+
+Table: EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION_30
+Columns: level5, molregno, mol_atc_id
+
+Table: EBI_CHEMBL.TARGET_RELATIONS_33
+Columns: targrel_id, relationship, tid, related_tid
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERTS_30
+Columns: alert_name, alert_set_id, smarts, alert_id
+
+Table: EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS
+Columns: component_id, molregno, biocomp_id
+
+Table: EBI_CHEMBL.SOURCE_26
+Columns: src_description, src_short_name, src_id
+
+Table: EBI_CHEMBL.FRAC_CLASSIFICATION_29
+Columns: active_ingredient, frac_class_id, frac_code, level1_description, level2_description, level4_description, level5, level4, level3, level3_description, level1, level2
+
+Table: EBI_CHEMBL.GO_CLASSIFICATION_26
+Columns: path, aspect, class_level, parent_go_id, go_id, pref_name
+
+Table: EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS_27
+Columns: molregno, biocomp_id, component_id
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS_25
+Columns: molregno, alert_id, cpd_str_alert_id
+
+Table: EBI_CHEMBL.MOLECULE_SYNONYMS_23
+Columns: syn_type, molsyn_id, synonyms, molregno, res_stem_id
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURES_28
+Columns: canonical_smiles, standard_inchi, standard_inchi_key, molfile, molregno
+
+Table: EBI_CHEMBL.PREDICTED_BINDING_DOMAINS_28
+Columns: confidence, site_id, predbind_id, activity_id, prediction_method
+
+Table: EBI_CHEMBL.PRODUCT_PATENTS_29
+Columns: patent_no, product_id, delist_flag, submission_date, drug_substance_flag, patent_expire_date, patent_use_code, drug_product_flag, prod_pat_id
+
+Table: EBI_CHEMBL.PATENT_USE_CODES_30
+Columns: patent_use_code, definition
+
+Table: EBI_CHEMBL.RESEARCH_STEM_29
+Columns: res_stem_id, research_stem
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS_33
+Columns: cpd_str_alert_id, alert_id, molregno
+
+Table: EBI_CHEMBL.SOURCE_25
+Columns: src_id, src_short_name, src_description
+
+Table: EBI_CHEMBL.CELL_DICTIONARY_27
+Columns: cell_source_organism, cell_ontology_id, cl_lincs_id, cell_id, chembl_id, cell_description, cell_name, clo_id, efo_id, cell_source_tax_id, cellosaurus_id, cell_source_tissue
+
+Table: EBI_CHEMBL.IRAC_CLASSIFICATION_28
+Columns: level3, level2, level2_description, irac_code, level1_description, irac_class_id, level4, active_ingredient, level3_description, level1
+
+Table: EBI_CHEMBL.PREDICTED_BINDING_DOMAINS
+Columns: confidence, site_id, activity_id, predbind_id, prediction_method
+
+Table: EBI_CHEMBL.ASSAY_TYPE_25
+Columns: assay_type, assay_desc
+
+Table: EBI_CHEMBL.CURATION_LOOKUP_29
+Columns: curated_by, description
+
+Table: EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP_28
+Columns: description, target_mapping, confidence_score
+
+Table: EBI_CHEMBL.DEFINED_DAILY_DOSE_30
+Columns: atc_code, ddd_admr, ddd_value, ddd_id, ddd_comment, ddd_units
+
+Table: EBI_CHEMBL.ACTIVITY_SUPP_27
+Columns: text_value, units, smid, relation, type, as_id, value, standard_relation, rgid, standard_type, standard_text_value, standard_value, comments, standard_units
+
+Table: EBI_CHEMBL.TARGET_DICTIONARY_30
+Columns: tax_id, chembl_id, tid, species_group_flag, pref_name, organism, target_type
+
+Table: EBI_CHEMBL.VERSION
+Columns: creation_date, name, comments
+
+Table: EBI_CHEMBL.PATENT_USE_CODES_28
+Columns: patent_use_code, definition
+
+Table: EBI_CHEMBL.BIOASSAY_ONTOLOGY_23
+Columns: label, bao_id
+
+Table: EBI_CHEMBL.BINDING_SITES_23
+Columns: site_id, tid, site_name
+
+Table: EBI_CHEMBL.MOLECULE_SYNONYMS_29
+Columns: molregno, res_stem_id, syn_type, synonyms, molsyn_id
+
+Table: EBI_CHEMBL.DRUG_INDICATION_30
+Columns: efo_term, max_phase_for_ind, record_id, molregno, mesh_id, drugind_id, mesh_heading, efo_id
+
+Table: EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION_33
+Columns: mol_irac_id, irac_class_id, molregno
+
+Table: EBI_CHEMBL.ACTIVITY_SUPP_24
+Columns: units, value, as_id, standard_value, type, relation, standard_text_value, text_value, standard_units, rgid, standard_type, smid, comments, standard_relation
+
+Table: EBI_CHEMBL.VARIANT_SEQUENCES_26
+Columns: variant_id, accession, tax_id, version, organism, isoform, mutation, sequence
+
+Table: EBI_CHEMBL.BIO_COMPONENT_SEQUENCES_28
+Columns: sequence, organism, component_type, description, component_id, sequence_md5sum, tax_id
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERT_SETS_30
+Columns: alert_set_id, set_name, priority
+
+Table: EBI_CHEMBL.PROTEIN_CLASSIFICATION
+Columns: protein_class_desc, protein_class_id, parent_id, definition, pref_name, short_name, class_level
+
+Table: EBI_CHEMBL.VERSION_28
+Columns: comments, creation_date, name
+
+Table: EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS_25
+Columns: protclasssyn_id, protein_class_id, protein_class_synonym, syn_type
+
+Table: EBI_CHEMBL.COMPONENT_SYNONYMS_33
+Columns: compsyn_id, component_synonym, component_id, syn_type
+
+Table: EBI_CHEMBL.MECHANISM_REFS_28
+Columns: mec_id, ref_id, mecref_id, ref_url, ref_type
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERTS_24
+Columns: smarts, alert_set_id, alert_name, alert_id
+
+Table: EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP_23
+Columns: target_mapping, description, confidence_score
+
+Table: EBI_CHEMBL.PREDICTED_BINDING_DOMAINS_29
+Columns: site_id, predbind_id, confidence, prediction_method, activity_id
+
+Table: EBI_CHEMBL.ACTIVITY_STDS_LOOKUP_23
+Columns: normal_range_min, standard_type, normal_range_max, definition, standard_units, std_act_id
+
+Table: EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS_28
+Columns: syn_type, protclasssyn_id, protein_class_synonym, protein_class_id
+
+Table: EBI_CHEMBL.ASSAY_CLASSIFICATION_27
+Columns: l2, assay_class_id, source, bao_id, l1, l3, class_type
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERT_SETS_26
+Columns: set_name, priority, alert_set_id
+
+Table: EBI_CHEMBL.COMPONENT_GO_30
+Columns: component_id, go_id, comp_go_id
+
+Table: EBI_CHEMBL.ACTION_TYPE_33
+Columns: parent_type, description, action_type
+
+Table: EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP_30
+Columns: target_mapping, description, confidence_score
+
+Table: EBI_CHEMBL.PRODUCT_PATENTS
+Columns: delist_flag, drug_substance_flag, product_id, patent_use_code, drug_product_flag, patent_no, prod_pat_id, patent_expire_date, submission_date
+
+Table: EBI_CHEMBL.CELL_DICTIONARY_26
+Columns: cellosaurus_id, efo_id, cell_ontology_id, cell_description, cell_source_organism, cell_name, cell_source_tissue, chembl_id, cell_source_tax_id, cl_lincs_id, clo_id, cell_id
+
+Table: EBI_CHEMBL.DEFINED_DAILY_DOSE_26
+Columns: atc_code, ddd_id, ddd_comment, ddd_admr, ddd_units, ddd_value
+
+Table: EBI_CHEMBL.LIGAND_EFF_23
+Columns: bei, lle, le, sei, activity_id
+
+Table: EBI_CHEMBL.MOLECULE_SYNONYMS_27
+Columns: synonyms, res_stem_id, molregno, molsyn_id, syn_type
+
+Table: EBI_CHEMBL.PREDICTED_BINDING_DOMAINS_24
+Columns: activity_id, predbind_id, prediction_method, confidence, site_id
+
+Table: EBI_CHEMBL.USAN_STEMS_28
+Columns: major_class, subgroup, who_extra, stem, stem_class, usan_stem_id, annotation
+
+Table: EBI_CHEMBL.TISSUE_DICTIONARY_30
+Columns: uberon_id, bto_id, chembl_id, efo_id, pref_name, caloha_id, tissue_id
+
+Table: EBI_CHEMBL.MECHANISM_REFS_24
+Columns: ref_id, mecref_id, mec_id, ref_type, ref_url
+
+Table: EBI_CHEMBL.TARGET_DICTIONARY_27
+Columns: target_type, organism, tid, species_group_flag, pref_name, tax_id, chembl_id
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS_28
+Columns: alert_id, molregno, cpd_str_alert_id
+
+Table: EBI_CHEMBL.IRAC_CLASSIFICATION_29
+Columns: level2_description, active_ingredient, irac_code, level2, level3_description, level3, level1_description, irac_class_id, level4, level1
+
+Table: EBI_CHEMBL.ACTIVITY_SMID
+Columns: smid
+
+Table: EBI_CHEMBL.COMPOUND_PROPERTIES_26
+Columns: mw_monoisotopic, cx_most_apka, molregno, num_lipinski_ro5_violations, full_mwt, hba_lipinski, molecular_species, heavy_atoms, hba, cx_logd, alogp, cx_logp, mw_freebase, psa, num_ro5_violations, full_molformula, rtb, hbd, hbd_lipinski, ro3_pass, qed_weighted, aromatic_rings, cx_most_bpka
+
+Table: EBI_CHEMBL.ACTIVITY_SUPP_MAP_30
+Columns: smid, activity_id, actsm_id
+
+Table: EBI_CHEMBL.HRAC_CLASSIFICATION_30
+Columns: level2, level3, level1_description, active_ingredient, level1, hrac_class_id, hrac_code, level2_description
+
+Table: EBI_CHEMBL.DOCS_23
+Columns: patent_id, chembl_id, year, volume, doc_id, title, authors, pubmed_id, issue, abstract, journal, first_page, doc_type, doi, last_page
+
+Table: EBI_CHEMBL.COMPOUND_PROPERTIES_30
+Columns: molecular_species, ro3_pass, psa, hba_lipinski, heavy_atoms, num_lipinski_ro5_violations, full_mwt, hbd, cx_most_apka, cx_logp, alogp, num_ro5_violations, full_molformula, rtb, hbd_lipinski, cx_most_bpka, aromatic_rings, mw_freebase, qed_weighted, hba, mw_monoisotopic, cx_logd, molregno
+
+Table: EBI_CHEMBL.ATC_CLASSIFICATION_29
+Columns: level1, level4_description, level1_description, level5, level3, level3_description, level2, who_name, level4, level2_description
+
+Table: EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION_29
+Columns: mol_irac_id, molregno, irac_class_id
+
+Table: EBI_CHEMBL.SOURCE_30
+Columns: src_id, src_short_name, src_description
+
+Table: EBI_CHEMBL.BIOASSAY_ONTOLOGY_28
+Columns: bao_id, label
+
+Table: EBI_CHEMBL.ACTIVITY_SUPP_MAP_24
+Columns: activity_id, smid
+
+Table: EBI_CHEMBL.SOURCE_27
+Columns: src_description, src_id, src_short_name
+
+Table: EBI_CHEMBL.COMPONENT_DOMAINS
+Columns: component_id, end_position, compd_id, domain_id, start_position
+
+Table: EBI_CHEMBL.COMPONENT_DOMAINS_26
+Columns: start_position, end_position, domain_id, component_id, compd_id
+
+Table: EBI_CHEMBL.FRAC_CLASSIFICATION_25
+Columns: level5, frac_class_id, active_ingredient, level3_description, level2, level2_description, level4, level1, level3, level1_description, level4_description, frac_code
+
+Table: EBI_CHEMBL.USAN_STEMS_33
+Columns: major_class, stem_class, usan_stem_id, annotation, subgroup, stem
+
+Table: EBI_CHEMBL.GO_CLASSIFICATION_29
+Columns: aspect, go_id, pref_name, class_level, parent_go_id, path
+
+Table: EBI_CHEMBL.DOCS_24
+Columns: chembl_id, title, doc_id, year, src_id, last_page, doi, issue, doc_type, patent_id, authors, volume, abstract, pubmed_id, journal, ridx, first_page
+
+Table: EBI_CHEMBL.DATA_VALIDITY_LOOKUP_27
+Columns: data_validity_comment, description
+
+Table: EBI_CHEMBL.COMPONENT_DOMAINS_28
+Columns: compd_id, end_position, start_position, domain_id, component_id
+
+Table: EBI_CHEMBL.COMPONENT_SEQUENCES_33
+Columns: accession, organism, component_type, db_source, sequence_md5sum, description, component_id, tax_id, db_version, sequence
+
+Table: EBI_CHEMBL.MOLECULE_SYNONYMS_25
+Columns: res_stem_id, molregno, syn_type, molsyn_id, synonyms
+
+Table: EBI_CHEMBL.PATENT_USE_CODES_27
+Columns: definition, patent_use_code
+
+Table: EBI_CHEMBL.COMPONENT_CLASS
+Columns: component_id, protein_class_id, comp_class_id
+
+Table: EBI_CHEMBL.PROTEIN_FAMILY_CLASSIFICATION_30
+Columns: l6, protein_class_id, protein_class_desc, l5, l1, l8, l2, l3, l7, l4
+
+Table: EBI_CHEMBL.INDICATION_REFS_33
+Columns: ref_url, ref_id, indref_id, ref_type, drugind_id
+
+Table: EBI_CHEMBL.ASSAYS_30
+Columns: assay_organism, bao_format, assay_strain, assay_cell_type, src_assay_id, curated_by, cell_id, aidx, variant_id, assay_type, assay_category, doc_id, description, confidence_score, assay_tax_id, assay_id, assay_test_type, tid, assay_tissue, tissue_id, relationship_type, chembl_id, assay_subcellular_fraction, src_id
+
+Table: EBI_CHEMBL.CHEMBL_RELEASE_33
+Columns: chembl_release_id, chembl_release, creation_date
+
+Table: EBI_CHEMBL.ACTION_TYPE_25
+Columns: parent_type, description, action_type
+
+Table: EBI_CHEMBL.PROTEIN_CLASSIFICATION_28
+Columns: protein_class_id, parent_id, protein_class_desc, class_level, short_name, pref_name, definition
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERTS_28
+Columns: alert_set_id, alert_id, smarts, alert_name
+
+Table: EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION_28
+Columns: mol_irac_id, molregno, irac_class_id
+
+Table: EBI_CHEMBL.USAN_STEMS_24
+Columns: subgroup, stem, annotation, usan_stem_id, who_extra, stem_class, major_class
+
+Table: EBI_CHEMBL.ACTIVITIES_30
+Columns: potential_duplicate, type, bao_endpoint, toid, relation, standard_relation, activity_comment, value, doc_id, standard_value, data_validity_comment, standard_flag, standard_units, standard_text_value, record_id, text_value, src_id, molregno, pchembl_value, uo_units, activity_id, assay_id, standard_upper_value, units, standard_type, upper_value, qudt_units
+
+Table: EBI_CHEMBL.ACTIVITY_SUPP_MAP_26
+Columns: activity_id, actsm_id, smid
+
+Table: EBI_CHEMBL.RELATIONSHIP_TYPE_26
+Columns: relationship_type, relationship_desc
+
+Table: EBI_CHEMBL.PRODUCT_PATENTS_25
+Columns: drug_substance_flag, patent_use_code, delist_flag, drug_product_flag, prod_pat_id, patent_no, product_id, submission_date, patent_expire_date
+
+Table: EBI_CHEMBL.ACTIVITY_SMID_29
+Columns: smid
+
+Table: EBI_CHEMBL.ACTIVITIES_24
+Columns: standard_relation, standard_upper_value, standard_units, activity_comment, relation, standard_value, toid, standard_text_value, value, record_id, doc_id, type, src_id, assay_id, published_relation, data_validity_comment, published_units, activity_id, units, bao_endpoint, text_value, uo_units, standard_flag, qudt_units, potential_duplicate, molregno, published_value, upper_value, pchembl_value, standard_type, published_type
+
+Table: EBI_CHEMBL.COMPONENT_DOMAINS_23
+Columns: domain_id, component_id, compd_id, start_position, end_position
+
+Table: EBI_CHEMBL.COMPOUND_PROPERTIES_33
+Columns: hba, qed_weighted, full_molformula, aromatic_rings, mw_freebase, cx_most_apka, cx_most_bpka, num_lipinski_ro5_violations, ro3_pass, molregno, mw_monoisotopic, hbd_lipinski, cx_logp, full_mwt, hbd, hba_lipinski, alogp, psa, np_likeness_score, cx_logd, heavy_atoms, molecular_species, num_ro5_violations, rtb
+
+Table: EBI_CHEMBL.ASSAY_CLASSIFICATION_25
+Columns: source, assay_class_id, l1, l2, l3, class_type
+
+Table: EBI_CHEMBL.LIGAND_EFF_28
+Columns: lle, bei, le, sei, activity_id
+
+Table: EBI_CHEMBL.SOURCE_33
+Columns: src_id, src_description, src_short_name
+
+Table: EBI_CHEMBL.ASSAY_TYPE_26
+Columns: assay_type, assay_desc
+
+Table: EBI_CHEMBL.DRUG_INDICATION_24
+Columns: efo_id, molregno, efo_term, mesh_id, drugind_id, max_phase_for_ind, record_id, mesh_heading
+
+Table: EBI_CHEMBL.ASSAYS_29
+Columns: assay_test_type, src_id, assay_id, description, variant_id, confidence_score, src_assay_id, bao_format, assay_tax_id, cell_id, assay_subcellular_fraction, relationship_type, tid, assay_category, aidx, assay_organism, curated_by, tissue_id, assay_strain, assay_cell_type, assay_type, doc_id, assay_tissue, chembl_id
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS_24
+Columns: cpd_str_alert_id, alert_id, molregno
+
+Table: EBI_CHEMBL.SOURCE_23
+Columns: src_description, src_short_name, src_id
+
+Table: EBI_CHEMBL.ASSAY_CLASS_MAP
+Columns: ass_cls_map_id, assay_id, assay_class_id
+
+Table: EBI_CHEMBL.RESEARCH_COMPANIES_30
+Columns: company, co_stem_id, country, res_stem_id, previous_company
+
+Table: EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION_30
+Columns: irac_class_id, molregno, mol_irac_id
+
+Table: EBI_CHEMBL.PREDICTED_BINDING_DOMAINS_25
+Columns: site_id, activity_id, prediction_method, predbind_id, confidence
+
+Table: EBI_CHEMBL.BINDING_SITES_25
+Columns: site_name, site_id, tid
+
+Table: EBI_CHEMBL.DOCS_30
+Columns: year, chembl_id, first_page, volume, authors, pubmed_id, abstract, last_page, title, ridx, patent_id, doc_id, doi, doc_type, issue, src_id, journal
+
+Table: EBI_CHEMBL.ATC_CLASSIFICATION_25
+Columns: level4, level1, level2_description, who_name, level2, level1_description, level4_description, level3, level3_description, level5
+
+Table: EBI_CHEMBL.BIOASSAY_ONTOLOGY_24
+Columns: bao_id, label
+
+Table: EBI_CHEMBL.RESEARCH_STEM_30
+Columns: res_stem_id, research_stem
+
+Table: EBI_CHEMBL.COMPONENT_SYNONYMS_24
+Columns: compsyn_id, component_synonym, component_id, syn_type
+
+Table: EBI_CHEMBL.COMPONENT_SEQUENCES_24
+Columns: component_id, description, db_version, organism, component_type, accession, db_source, sequence, tax_id, sequence_md5sum
+
+Table: EBI_CHEMBL.SQLITE_STAT1_27
+Columns: idx, tbl, stat
+
+Table: EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION_23
+Columns: frac_class_id, molregno, mol_frac_id
+
+Table: EBI_CHEMBL.ORGANISM_CLASS_27
+Columns: l1, tax_id, l3, oc_id, l2
+
+Table: EBI_CHEMBL.PROTEIN_FAMILY_CLASSIFICATION_25
+Columns: l6, protein_class_desc, l3, l5, protein_class_id, l7, l1, l8, l2, l4
+
+Table: EBI_CHEMBL.ACTIVITY_SUPP_33
+Columns: type, standard_text_value, relation, as_id, standard_units, text_value, smid, standard_relation, rgid, units, standard_type, value, comments, standard_value
+
+Table: EBI_CHEMBL.SITE_COMPONENTS
+Columns: sitecomp_id, domain_id, site_residues, site_id, component_id
+
+Table: EBI_CHEMBL.SITE_COMPONENTS_29
+Columns: component_id, site_residues, site_id, sitecomp_id, domain_id
+
+Table: EBI_CHEMBL.USAN_STEMS_25
+Columns: subgroup, stem_class, major_class, who_extra, usan_stem_id, annotation, stem
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERTS_27
+Columns: alert_set_id, smarts, alert_name, alert_id
+
+Table: EBI_CHEMBL.RELATIONSHIP_TYPE
+Columns: relationship_desc, relationship_type
+
+Table: EBI_CHEMBL.COMPOUND_PROPERTIES_29
+Columns: alogp, hbd, ro3_pass, full_molformula, hba, mw_freebase, aromatic_rings, molregno, hba_lipinski, molecular_species, cx_logp, cx_logd, psa, hbd_lipinski, full_mwt, cx_most_bpka, num_lipinski_ro5_violations, heavy_atoms, mw_monoisotopic, num_ro5_violations, cx_most_apka, qed_weighted, rtb
+
+Table: EBI_CHEMBL.INDICATION_REFS_28
+Columns: ref_type, ref_url, drugind_id, indref_id, ref_id
+
+Table: EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS_28
+Columns: biocomp_id, component_id, molregno
+
+Table: EBI_CHEMBL.METABOLISM_REFS_25
+Columns: ref_url, met_id, ref_type, metref_id, ref_id
+
+Table: EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION_28
+Columns: frac_class_id, mol_frac_id, molregno
+
+Table: EBI_CHEMBL.ACTIVITY_SUPP_MAP_29
+Columns: smid, activity_id, actsm_id
+
+Table: EBI_CHEMBL.PATENT_USE_CODES_26
+Columns: definition, patent_use_code
+
+Table: EBI_CHEMBL.COMPOUND_RECORDS_29
+Columns: compound_key, src_id, cidx, compound_name, record_id, molregno, doc_id, src_compound_id
+
+Table: EBI_CHEMBL.VARIANT_SEQUENCES_30
+Columns: mutation, organism, version, isoform, tax_id, variant_id, sequence, accession
+
+Table: EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION_29
+Columns: hrac_class_id, mol_hrac_id, molregno
+
+Table: EBI_CHEMBL.DOCS
+Columns: volume, pubmed_id, ridx, chembl_id, issue, chembl_release_id, title, doc_id, abstract, doi, last_page, authors, src_id, year, journal, patent_id, doc_type, first_page
+
+Table: EBI_CHEMBL.ACTION_TYPE_23
+Columns: description, parent_type, action_type
+
+Table: EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS_33
+Columns: protein_class_synonym, protclasssyn_id, syn_type, protein_class_id
+
+Table: EBI_CHEMBL.PATENT_USE_CODES_23
+Columns: patent_use_code, definition
+
+Table: EBI_CHEMBL.RESEARCH_STEM_25
+Columns: res_stem_id, research_stem
+
+Table: EBI_CHEMBL.COMPONENT_SYNONYMS
+Columns: syn_type, component_id, component_synonym, compsyn_id
+
+Table: EBI_CHEMBL.SITE_COMPONENTS_25
+Columns: site_residues, component_id, sitecomp_id, site_id, domain_id
+
+Table: EBI_CHEMBL.MOLECULE_HIERARCHY
+Columns: molregno, parent_molregno, active_molregno
+
+Table: EBI_CHEMBL.ACTIVITY_STDS_LOOKUP_28
+Columns: normal_range_min, standard_type, standard_units, definition, normal_range_max, std_act_id
+
+Table: EBI_CHEMBL.DRUG_INDICATION_27
+Columns: efo_term, record_id, max_phase_for_ind, molregno, mesh_id, drugind_id, efo_id, mesh_heading
+
+Table: EBI_CHEMBL.MOLECULE_HIERARCHY_24
+Columns: active_molregno, parent_molregno, molregno
+
+Table: EBI_CHEMBL.COMPONENT_SEQUENCES
+Columns: sequence, db_version, db_source, component_type, accession, organism, component_id, sequence_md5sum, tax_id, description
+
+Table: EBI_CHEMBL.COMPONENT_CLASS_26
+Columns: component_id, protein_class_id, comp_class_id
+
+Table: EBI_CHEMBL.PROTEIN_FAMILY_CLASSIFICATION
+Columns: l2, protein_class_desc, l8, l7, l3, l5, l1, l4, protein_class_id, l6
+
+Table: EBI_CHEMBL.GO_CLASSIFICATION
+Columns: go_id, parent_go_id, aspect, path, pref_name, class_level
+
+Table: EBI_CHEMBL.COMPONENT_SYNONYMS_30
+Columns: component_id, compsyn_id, component_synonym, syn_type
+
+Table: EBI_CHEMBL.CURATION_LOOKUP_28
+Columns: description, curated_by
+
+Table: EBI_CHEMBL.MOLECULE_HIERARCHY_25
+Columns: parent_molregno, molregno, active_molregno
+
+Table: EBI_CHEMBL.DRUG_WARNING
+Columns: warning_type, efo_id_for_warning_class, efo_term, record_id, warning_year, warning_class, warning_id, efo_id, warning_description, warning_country, molregno
+
+Table: EBI_CHEMBL.ATC_CLASSIFICATION_30
+Columns: level4, level2_description, who_name, level4_description, level3_description, level1, level5, level2, level3, level1_description
+
+Table: EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION_26
+Columns: mol_irac_id, molregno, irac_class_id
+
+Table: EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION_26
+Columns: mol_atc_id, molregno, level5
+
+Table: EBI_CHEMBL.ACTIVITY_SMID_25
+Columns: smid
+
+Table: EBI_CHEMBL.MOLECULE_DICTIONARY_30
+Columns: structure_type, usan_substem, indication_class, pref_name, availability_type, chembl_id, prodrug, withdrawn_reason, chirality, withdrawn_year, black_box_warning, withdrawn_flag, molregno, withdrawn_country, first_approval, parenteral, first_in_class, oral, usan_stem, dosed_ingredient, topical, natural_product, usan_stem_definition, therapeutic_flag, chebi_par_id, inorganic_flag, withdrawn_class, molecule_type, polymer_flag, usan_year, max_phase
+
+Table: EBI_CHEMBL.ACTIVITY_SUPP_MAP_33
+Columns: activity_id, actsm_id, smid
+
+Table: EBI_CHEMBL.DRUG_WARNING_30
+Columns: warning_country, record_id, warning_description, warning_class, molregno, warning_year, warning_id, warning_type
+
+Table: EBI_CHEMBL.CONFIDENCE_SCORE_LOOKUP
+Columns: target_mapping, confidence_score, description
+
+Table: EBI_CHEMBL.CURATION_LOOKUP_23
+Columns: description, curated_by
+
+Table: EBI_CHEMBL.PROTEIN_CLASSIFICATION_23
+Columns: class_level, protein_class_id, parent_id, protein_class_desc, pref_name, short_name, definition
+
+Table: EBI_CHEMBL.TARGET_DICTIONARY_24
+Columns: tax_id, organism, tid, chembl_id, species_group_flag, target_type, pref_name
+
+Table: EBI_CHEMBL.CELL_DICTIONARY_29
+Columns: clo_id, cell_ontology_id, cell_name, cellosaurus_id, efo_id, cell_id, cl_lincs_id, cell_source_organism, chembl_id, cell_description, cell_source_tissue, cell_source_tax_id
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERTS_25
+Columns: alert_id, alert_set_id, alert_name, smarts
+
+Table: EBI_CHEMBL.FORMULATIONS_24
+Columns: ingredient, molregno, strength, product_id, record_id, formulation_id
+
+Table: EBI_CHEMBL.TISSUE_DICTIONARY_23
+Columns: uberon_id, bto_id, chembl_id, tissue_id, caloha_id, pref_name, efo_id
+
+Table: EBI_CHEMBL.ACTIVITY_STDS_LOOKUP_24
+Columns: normal_range_max, standard_units, normal_range_min, std_act_id, definition, standard_type
+
+Table: EBI_CHEMBL.MECHANISM_REFS_26
+Columns: mecref_id, ref_url, mec_id, ref_type, ref_id
+
+Table: EBI_CHEMBL.TARGET_DICTIONARY_33
+Columns: tax_id, species_group_flag, chembl_id, target_type, tid, pref_name, organism
+
+Table: EBI_CHEMBL.METABOLISM_REFS_29
+Columns: met_id, ref_id, metref_id, ref_url, ref_type
+
+Table: EBI_CHEMBL.COMPOUND_RECORDS_24
+Columns: compound_name, cidx, src_compound_id, record_id, compound_key, doc_id, src_id, molregno
+
+Table: EBI_CHEMBL.TARGET_DICTIONARY_28
+Columns: target_type, chembl_id, tid, species_group_flag, organism, tax_id, pref_name
+
+Table: EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION_28
+Columns: mol_hrac_id, hrac_class_id, molregno
+
+Table: EBI_CHEMBL.PATENT_USE_CODES_33
+Columns: patent_use_code, definition
+
+Table: EBI_CHEMBL.HRAC_CLASSIFICATION_26
+Columns: level2, hrac_class_id, level1, level1_description, active_ingredient, level3, level2_description, hrac_code
+
+Table: EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION_28
+Columns: mol_atc_id, level5, molregno
+
+Table: EBI_CHEMBL.COMPONENT_DOMAINS_25
+Columns: end_position, domain_id, start_position, compd_id, component_id
+
+Table: EBI_CHEMBL.FRAC_CLASSIFICATION
+Columns: level4_description, level3, level5, frac_class_id, active_ingredient, level1, level2_description, frac_code, level4, level3_description, level2, level1_description
+
+Table: EBI_CHEMBL.MOLECULE_DICTIONARY_23
+Columns: pref_name, prodrug, withdrawn_year, therapeutic_flag, indication_class, withdrawn_flag, parenteral, max_phase, inorganic_flag, natural_product, usan_year, availability_type, first_approval, chebi_par_id, chirality, withdrawn_reason, dosed_ingredient, molecule_type, withdrawn_country, usan_stem_definition, structure_type, oral, chembl_id, polymer_flag, usan_stem, topical, black_box_warning, first_in_class, usan_substem, molregno
+
+Table: EBI_CHEMBL.METABOLISM_23
+Columns: met_id, metabolite_record_id, met_comment, organism, substrate_record_id, drug_record_id, enzyme_name, pathway_key, tax_id, met_conversion, pathway_id, enzyme_tid
+
+Table: EBI_CHEMBL.RESEARCH_COMPANIES_29
+Columns: country, company, res_stem_id, previous_company, co_stem_id
+
+Table: EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION_27
+Columns: mol_atc_id, level5, molregno
+
+Table: EBI_CHEMBL.ACTIVITY_PROPERTIES_30
+Columns: standard_value, standard_units, ap_id, relation, standard_text_value, activity_id, value, standard_relation, result_flag, text_value, standard_type, type, units, comments
+
+Table: EBI_CHEMBL.CELL_DICTIONARY_28
+Columns: cell_name, cell_id, cell_source_tax_id, cellosaurus_id, efo_id, cell_description, cell_source_organism, chembl_id, cell_ontology_id, cl_lincs_id, clo_id, cell_source_tissue
+
+Table: EBI_CHEMBL.DRUG_MECHANISM_30
+Columns: molregno, mechanism_of_action, direct_interaction, site_id, mechanism_comment, disease_efficacy, variant_id, action_type, tid, record_id, selectivity_comment, binding_site_comment, molecular_mechanism, mec_id
+
+Table: EBI_CHEMBL.ASSAY_CLASS_MAP_33
+Columns: assay_id, assay_class_id, ass_cls_map_id
+
+Table: EBI_CHEMBL.PATENT_USE_CODES_25
+Columns: patent_use_code, definition
+
+Table: EBI_CHEMBL.DOMAINS_29
+Columns: domain_id, domain_description, domain_type, source_domain_id, domain_name
+
+Table: EBI_CHEMBL.ASSAY_CLASSIFICATION
+Columns: l1, l2, source, assay_class_id, class_type, l3
+
+Table: EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS_27
+Columns: protclasssyn_id, protein_class_synonym, protein_class_id, syn_type
+
+Table: EBI_CHEMBL.MATCH_23
+Columns: patent_no, publication_number
+
+Table: EBI_CHEMBL.SOURCE_29
+Columns: src_short_name, src_id, src_description
+
+Table: EBI_CHEMBL.COMPONENT_GO_24
+Columns: comp_go_id, go_id, component_id
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERTS_23
+Columns: smarts, alert_set_id, alert_name, alert_id
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERT_SETS_25
+Columns: priority, alert_set_id, set_name
+
+Table: EBI_CHEMBL.DEFINED_DAILY_DOSE_25
+Columns: ddd_comment, ddd_id, ddd_admr, atc_code, ddd_value, ddd_units
+
+Table: EBI_CHEMBL.RESEARCH_COMPANIES
+Columns: res_stem_id, previous_company, company, co_stem_id, country
+
+Table: EBI_CHEMBL.FORMULATIONS_27
+Columns: formulation_id, ingredient, record_id, strength, molregno, product_id
+
+Table: EBI_CHEMBL.VERSION_26
+Columns: creation_date, comments, name
+
+Table: EBI_CHEMBL.COMPONENT_SEQUENCES_27
+Columns: description, organism, db_source, accession, component_id, db_version, component_type, sequence, tax_id, sequence_md5sum
+
+Table: EBI_CHEMBL.METABOLISM_REFS_28
+Columns: ref_url, ref_id, met_id, metref_id, ref_type
+
+Table: EBI_CHEMBL.GO_CLASSIFICATION_24
+Columns: path, class_level, parent_go_id, aspect, pref_name, go_id
+
+Table: EBI_CHEMBL.PROTEIN_CLASSIFICATION_25
+Columns: definition, protein_class_id, parent_id, pref_name, short_name, protein_class_desc, class_level
+
+Table: EBI_CHEMBL.TISSUE_DICTIONARY_26
+Columns: bto_id, efo_id, caloha_id, uberon_id, chembl_id, tissue_id, pref_name
+
+Table: EBI_CHEMBL.METABOLISM_26
+Columns: metabolite_record_id, met_comment, enzyme_name, tax_id, substrate_record_id, enzyme_tid, organism, pathway_key, met_id, met_conversion, pathway_id, drug_record_id
+
+Table: EBI_CHEMBL.METABOLISM_REFS_26
+Columns: ref_type, ref_url, metref_id, ref_id, met_id
+
+Table: EBI_CHEMBL.BINDING_SITES_30
+Columns: tid, site_id, site_name
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS
+Columns: cpd_str_alert_id, alert_id, molregno
+
+Table: EBI_CHEMBL.VERSION_25
+Columns: name, creation_date, comments
+
+Table: EBI_CHEMBL.PRODUCTS_24
+Columns: parenteral, dosage_form, topical, trade_name, approval_date, ad_type, black_box_warning, applicant_full_name, route, oral, nda_type, product_id, innovator_company
+
+Table: EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION_29
+Columns: molregno, mol_atc_id, level5
+
+Table: EBI_CHEMBL.COMPONENT_SEQUENCES_29
+Columns: component_id, accession, db_version, description, component_type, db_source, sequence, sequence_md5sum, organism, tax_id
+
+Table: EBI_CHEMBL.DEFINED_DAILY_DOSE_28
+Columns: ddd_admr, ddd_comment, ddd_value, ddd_id, ddd_units, atc_code
+
+Table: EBI_CHEMBL.METABOLISM_29
+Columns: organism, pathway_key, substrate_record_id, drug_record_id, enzyme_tid, met_comment, met_id, enzyme_name, pathway_id, met_conversion, tax_id, metabolite_record_id
+
+Table: EBI_CHEMBL.VERSION_30
+Columns: comments, name, creation_date
+
+Table: EBI_CHEMBL.CELL_DICTIONARY_33
+Columns: cell_id, cell_source_organism, cell_source_tax_id, clo_id, cell_source_tissue, efo_id, cell_name, cell_description, chembl_id, cell_ontology_id, cellosaurus_id, cl_lincs_id
+
+Table: EBI_CHEMBL.PRODUCT_PATENTS_24
+Columns: drug_product_flag, patent_no, submission_date, drug_substance_flag, prod_pat_id, patent_use_code, patent_expire_date, delist_flag, product_id
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURES_30
+Columns: canonical_smiles, standard_inchi_key, standard_inchi, molfile, molregno
+
+Table: EBI_CHEMBL.HRAC_CLASSIFICATION_23
+Columns: active_ingredient, hrac_code, level1, hrac_class_id, level2, level3, level1_description, level2_description
+
+Table: EBI_CHEMBL.MOLECULE_SYNONYMS_33
+Columns: synonyms, molregno, syn_type, res_stem_id, molsyn_id
+
+Table: EBI_CHEMBL.ASSAY_CLASS_MAP_25
+Columns: assay_id, ass_cls_map_id, assay_class_id
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERT_SETS_23
+Columns: set_name, alert_set_id, priority
+
+Table: EBI_CHEMBL.MOLECULE_SYNONYMS_24
+Columns: res_stem_id, syn_type, synonyms, molsyn_id, molregno
+
+Table: EBI_CHEMBL.GO_CLASSIFICATION_23
+Columns: go_id, aspect, path, pref_name, class_level, parent_go_id
+
+Table: EBI_CHEMBL.ATC_CLASSIFICATION
+Columns: level2_description, level4_description, level3, level2, level3_description, level5, level1_description, who_name, level4, level1
+
+Table: EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS_29
+Columns: biocomp_id, component_id, molregno
+
+Table: EBI_CHEMBL.ACTIVITY_STDS_LOOKUP_33
+Columns: standard_type, definition, standard_units, normal_range_max, std_act_id, normal_range_min
+
+Table: EBI_CHEMBL.TARGET_TYPE_33
+Columns: target_desc, parent_type, target_type
+
+Table: EBI_CHEMBL.LIGAND_EFF_26
+Columns: activity_id, bei, lle, le, sei
+
+Table: EBI_CHEMBL.RESEARCH_COMPANIES_26
+Columns: res_stem_id, co_stem_id, previous_company, company, country
+
+Table: EBI_CHEMBL.ORGANISM_CLASS
+Columns: tax_id, l3, l1, oc_id, l2
+
+Table: EBI_CHEMBL.GO_CLASSIFICATION_27
+Columns: aspect, path, class_level, pref_name, go_id, parent_go_id
+
+Table: EBI_CHEMBL.COMPONENT_GO_28
+Columns: component_id, comp_go_id, go_id
+
+Table: EBI_CHEMBL.BIOTHERAPEUTIC_COMPONENTS_23
+Columns: biocomp_id, component_id, molregno
+
+Table: EBI_CHEMBL.ATC_CLASSIFICATION_28
+Columns: level3, level1_description, level2, level5, level4_description, level3_description, level2_description, level4, who_name, level1
+
+Table: EBI_CHEMBL.IRAC_CLASSIFICATION_24
+Columns: irac_class_id, active_ingredient, level1, irac_code, level1_description, level4, level2, level3, level2_description, level3_description
+
+Table: EBI_CHEMBL.ATC_CLASSIFICATION_33
+Columns: who_name, level5, level4, level3, level4_description, level1_description, level1, level2_description, level3_description, level2
+
+Table: EBI_CHEMBL.HRAC_CLASSIFICATION_28
+Columns: level2_description, hrac_code, level1_description, level3, active_ingredient, level2, hrac_class_id, level1
+
+Table: EBI_CHEMBL.DATA_VALIDITY_LOOKUP_24
+Columns: description, data_validity_comment
+
+Table: EBI_CHEMBL.HRAC_CLASSIFICATION
+Columns: level1_description, level2_description, active_ingredient, level1, level2, hrac_code, hrac_class_id, level3
+
+Table: EBI_CHEMBL.SITE_COMPONENTS_26
+Columns: component_id, sitecomp_id, domain_id, site_residues, site_id
+
+Table: EBI_CHEMBL.ASSAY_PARAMETERS_24
+Columns: standard_value, standard_relation, units, value, assay_id, type, relation, standard_text_value, text_value, standard_units, standard_type, assay_param_id, comments
+
+Table: EBI_CHEMBL.ASSAY_CLASS_MAP_28
+Columns: assay_class_id, assay_id, ass_cls_map_id
+
+Table: EBI_CHEMBL.INDICATION_REFS_25
+Columns: drugind_id, ref_url, ref_type, indref_id, ref_id
+
+Table: EBI_CHEMBL.TARGET_DICTIONARY_23
+Columns: tax_id, organism, pref_name, target_type, tid, species_group_flag, chembl_id
+
+Table: EBI_CHEMBL.SOURCE_24
+Columns: src_id, src_short_name, src_description
+
+Table: EBI_CHEMBL.ASSAY_TYPE_28
+Columns: assay_desc, assay_type
+
+Table: EBI_CHEMBL.FRAC_CLASSIFICATION_28
+Columns: level1_description, level2_description, level4, level2, level3_description, active_ingredient, level4_description, frac_class_id, level3, level5, level1, frac_code
+
+Table: EBI_CHEMBL.TARGET_TYPE_29
+Columns: target_desc, parent_type, target_type
+
+Table: EBI_CHEMBL.MOLECULE_HRAC_CLASSIFICATION_33
+Columns: mol_hrac_id, hrac_class_id, molregno
+
+Table: EBI_CHEMBL.ORGANISM_CLASS_28
+Columns: tax_id, oc_id, l2, l3, l1
+
+Table: EBI_CHEMBL.DATA_VALIDITY_LOOKUP
+Columns: description, data_validity_comment
+
+Table: EBI_CHEMBL.SITE_COMPONENTS_30
+Columns: component_id, site_id, site_residues, sitecomp_id, domain_id
+
+Table: EBI_CHEMBL.METABOLISM_REFS_33
+Columns: met_id, ref_type, ref_url, ref_id, metref_id
+
+Table: EBI_CHEMBL.ACTIVITY_SUPP_MAP
+Columns: activity_id, actsm_id, smid
+
+Table: EBI_CHEMBL.MOLECULE_HIERARCHY_29
+Columns: active_molregno, molregno, parent_molregno
+
+Table: EBI_CHEMBL.DOMAINS_27
+Columns: source_domain_id, domain_description, domain_type, domain_name, domain_id
+
+Table: EBI_CHEMBL.ATC_CLASSIFICATION_27
+Columns: level3, level1_description, level5, level2, level1, level3_description, level4_description, level2_description, level4, who_name
+
+Table: EBI_CHEMBL.CURATION_LOOKUP_26
+Columns: curated_by, description
+
+Table: EBI_CHEMBL.ACTIVITY_SUPP_28
+Columns: units, text_value, relation, standard_relation, value, standard_value, as_id, smid, standard_units, standard_type, comments, type, rgid, standard_text_value
+
+Table: EBI_CHEMBL.PROTEIN_FAMILY_CLASSIFICATION_26
+Columns: l2, l6, protein_class_desc, l1, l3, protein_class_id, l7, l4, l8, l5
+
+Table: EBI_CHEMBL.ACTIVITY_SMID_30
+Columns: smid
+
+Table: EBI_CHEMBL.CELL_DICTIONARY_23
+Columns: cell_source_tissue, cell_source_tax_id, efo_id, cell_name, cell_id, cell_description, cellosaurus_id, cl_lincs_id, chembl_id, cell_source_organism, clo_id
+
+Table: EBI_CHEMBL.BIOTHERAPEUTICS_27
+Columns: helm_notation, molregno, description
+
+Table: EBI_CHEMBL.LIGAND_EFF_27
+Columns: activity_id, sei, lle, le, bei
+
+Table: EBI_CHEMBL.VARIANT_SEQUENCES_24
+Columns: mutation, accession, organism, variant_id, isoform, sequence, version
+
+Table: EBI_CHEMBL.DRUG_MECHANISM_23
+Columns: mechanism_comment, selectivity_comment, molecular_mechanism, binding_site_comment, mechanism_of_action, tid, action_type, mec_id, direct_interaction, molregno, disease_efficacy, record_id, site_id
+
+Table: EBI_CHEMBL.ATC_CLASSIFICATION_23
+Columns: level1, level2, level4_description, level5, level2_description, level3, level3_description, who_name, level4, level1_description
+
+Table: EBI_CHEMBL.MECHANISM_REFS_25
+Columns: mecref_id, ref_type, ref_id, ref_url, mec_id
+
+Table: EBI_CHEMBL.PROTEIN_CLASS_SYNONYMS_29
+Columns: protein_class_synonym, protclasssyn_id, syn_type, protein_class_id
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS_27
+Columns: molregno, alert_id, cpd_str_alert_id
+
+Table: EBI_CHEMBL.GO_CLASSIFICATION_33
+Columns: aspect, class_level, parent_go_id, path, go_id, pref_name
+
+Table: EBI_CHEMBL.PRODUCTS_33
+Columns: ad_type, trade_name, topical, dosage_form, black_box_warning, nda_type, innovator_company, product_id, route, applicant_full_name, parenteral, approval_date, oral
+
+Table: EBI_CHEMBL.CELL_DICTIONARY
+Columns: cell_ontology_id, cell_name, cell_source_tax_id, cell_source_organism, clo_id, cellosaurus_id, cl_lincs_id, cell_source_tissue, cell_id, efo_id, cell_description, chembl_id
+
+Table: EBI_CHEMBL.TARGET_RELATIONS_29
+Columns: relationship, related_tid, tid, targrel_id
+
+Table: EBI_CHEMBL.DRUG_INDICATION
+Columns: drugind_id, molregno, efo_term, max_phase_for_ind, record_id, mesh_heading, mesh_id, efo_id
+
+Table: EBI_CHEMBL.TISSUE_DICTIONARY_24
+Columns: efo_id, caloha_id, chembl_id, uberon_id, pref_name, bto_id, tissue_id
+
+Table: EBI_CHEMBL.MOLECULE_IRAC_CLASSIFICATION_25
+Columns: irac_class_id, mol_irac_id, molregno
+
+Table: EBI_CHEMBL.GO_CLASSIFICATION_25
+Columns: go_id, path, aspect, pref_name, class_level, parent_go_id
+
+Table: EBI_CHEMBL.INDICATION_REFS_29
+Columns: indref_id, ref_url, ref_id, ref_type, drugind_id
+
+Table: EBI_CHEMBL.TISSUE_DICTIONARY
+Columns: caloha_id, bto_id, pref_name, uberon_id, tissue_id, efo_id, chembl_id
+
+Table: EBI_CHEMBL.BIO_COMPONENT_SEQUENCES_30
+Columns: tax_id, component_type, organism, sequence_md5sum, description, component_id, sequence
+
+Table: EBI_CHEMBL.COMPOUND_PROPERTIES_25
+Columns: mw_freebase, hba, aromatic_rings, num_ro5_violations, qed_weighted, hbd_lipinski, acd_most_bpka, hbd, heavy_atoms, molecular_species, psa, full_mwt, acd_logp, molregno, mw_monoisotopic, ro3_pass, rtb, num_lipinski_ro5_violations, hba_lipinski, alogp, acd_most_apka, full_molformula, acd_logd
+
+Table: EBI_CHEMBL.ACTIVITIES_33
+Columns: toid, molregno, bao_endpoint, units, standard_text_value, standard_upper_value, standard_units, upper_value, standard_value, uo_units, activity_comment, pchembl_value, standard_type, src_id, action_type, activity_id, qudt_units, relation, standard_flag, value, standard_relation, record_id, doc_id, text_value, type, data_validity_comment, assay_id, potential_duplicate
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERT_SETS_27
+Columns: set_name, alert_set_id, priority
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERT_SETS_28
+Columns: set_name, priority, alert_set_id
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERT_SETS_29
+Columns: alert_set_id, set_name, priority
+
+Table: EBI_CHEMBL.INDICATION_REFS_23
+Columns: ref_id, drugind_id, indref_id, ref_url, ref_type
+
+Table: EBI_CHEMBL.ACTIVITY_STDS_LOOKUP_27
+Columns: normal_range_max, standard_type, std_act_id, normal_range_min, standard_units, definition
+
+Table: EBI_CHEMBL.FRAC_CLASSIFICATION_30
+Columns: level2_description, level4_description, level1, level3, level1_description, active_ingredient, level5, frac_code, frac_class_id, level3_description, level4, level2
+
+Table: EBI_CHEMBL.TARGET_RELATIONS_23
+Columns: tid, relationship, related_tid, targrel_id
+
+Table: EBI_CHEMBL.TARGET_TYPE_30
+Columns: target_type, parent_type, target_desc
+
+Table: EBI_CHEMBL.DRUG_INDICATION_26
+Columns: efo_id, drugind_id, efo_term, mesh_id, molregno, max_phase_for_ind, mesh_heading, record_id
+
+Table: EBI_CHEMBL.LIGAND_EFF_25
+Columns: sei, bei, le, lle, activity_id
+
+Table: EBI_CHEMBL.COMPONENT_SYNONYMS_29
+Columns: component_synonym, compsyn_id, component_id, syn_type
+
+Table: EBI_CHEMBL.ASSAY_CLASS_MAP_30
+Columns: assay_id, ass_cls_map_id, assay_class_id
+
+Table: EBI_CHEMBL.RESEARCH_STEM
+Columns: res_stem_id, research_stem
+
+Table: EBI_CHEMBL.ATC_CLASSIFICATION_26
+Columns: level2, level1, level1_description, who_name, level3_description, level3, level2_description, level4_description, level4, level5
+
+Table: EBI_CHEMBL.DOMAINS_23
+Columns: domain_description, domain_id, domain_name, domain_type, source_domain_id
+
+Table: EBI_CHEMBL.PREDICTED_BINDING_DOMAINS_26
+Columns: predbind_id, site_id, prediction_method, confidence, activity_id
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURES_29
+Columns: standard_inchi, molfile, standard_inchi_key, canonical_smiles, molregno
+
+Table: EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION_26
+Columns: frac_class_id, molregno, mol_frac_id
+
+Table: EBI_CHEMBL.SQLITE_STAT1_24
+Columns: idx, tbl, stat
+
+Table: EBI_CHEMBL.METABOLISM_REFS_27
+Columns: ref_type, ref_id, metref_id, met_id, ref_url
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS_26
+Columns: molregno, alert_id, cpd_str_alert_id
+
+Table: EBI_CHEMBL.ASSAYS_24
+Columns: variant_id, src_assay_id, tissue_id, curated_by, assay_tax_id, assay_test_type, bao_format, doc_id, relationship_type, confidence_score, cell_id, assay_id, assay_category, assay_tissue, assay_cell_type, assay_subcellular_fraction, assay_strain, assay_type, tid, description, aidx, assay_organism, chembl_id, src_id
+
+Table: EBI_CHEMBL.TARGET_TYPE_23
+Columns: target_desc, target_type, parent_type
+
+Table: EBI_CHEMBL.SOURCE_28
+Columns: src_short_name, src_id, src_description
+
+Table: EBI_CHEMBL.MOLECULE_ATC_CLASSIFICATION_23
+Columns: mol_atc_id, level5, molregno
+
+Table: EBI_CHEMBL.TISSUE_DICTIONARY_27
+Columns: chembl_id, efo_id, pref_name, tissue_id, uberon_id, caloha_id, bto_id
+
+Table: EBI_CHEMBL.ACTIVITY_SUPP_MAP_27
+Columns: actsm_id, smid, activity_id
+
+Table: EBI_CHEMBL.TARGET_COMPONENTS_27
+Columns: component_id, targcomp_id, homologue, tid
+
+Table: EBI_CHEMBL.ASSAY_TYPE_30
+Columns: assay_desc, assay_type
+
+Table: EBI_CHEMBL.PRODUCTS_23
+Columns: route, ad_type, nda_type, trade_name, topical, innovator_company, oral, dosage_form, product_id, parenteral, applicant_full_name, approval_date, black_box_warning
+
+Table: EBI_CHEMBL.HRAC_CLASSIFICATION_29
+Columns: level2, level2_description, hrac_class_id, level1_description, level1, active_ingredient, level3, hrac_code
+
+Table: EBI_CHEMBL.DOCS_29
+Columns: doc_type, title, first_page, src_id, last_page, journal, volume, chembl_id, patent_id, doc_id, ridx, abstract, issue, authors, year, doi, pubmed_id
+
+Table: EBI_CHEMBL.STRUCTURAL_ALERT_SETS_33
+Columns: priority, set_name, alert_set_id
+
+Table: EBI_CHEMBL.COMPONENT_SYNONYMS_28
+Columns: component_id, syn_type, component_synonym, compsyn_id
+
+Table: EBI_CHEMBL.ORGANISM_CLASS_25
+Columns: l2, l1, oc_id, tax_id, l3
+
+Table: EBI_CHEMBL.DEFINED_DAILY_DOSE_33
+Columns: ddd_id, atc_code, ddd_value, ddd_comment, ddd_admr, ddd_units
+
+Table: EBI_CHEMBL.COMPONENT_CLASS_23
+Columns: comp_class_id, component_id, protein_class_id
+
+Table: EBI_CHEMBL.COMPONENT_CLASS_29
+Columns: protein_class_id, component_id, comp_class_id
+
+Table: EBI_CHEMBL.ASSAY_TYPE_23
+Columns: assay_type, assay_desc
+
+Table: EBI_CHEMBL.RESEARCH_STEM_33
+Columns: research_stem, res_stem_id
+
+Table: EBI_CHEMBL.MOLECULE_HIERARCHY_30
+Columns: active_molregno, parent_molregno, molregno
+
+Table: EBI_CHEMBL.IRAC_CLASSIFICATION_26
+Columns: level1, level1_description, level3, level2_description, level3_description, level2, irac_code, active_ingredient, level4, irac_class_id
+
+Table: EBI_CHEMBL.VARIANT_SEQUENCES
+Columns: accession, version, variant_id, mutation, sequence, tax_id, organism, isoform
+
+Table: EBI_CHEMBL.RELATIONSHIP_TYPE_25
+Columns: relationship_type, relationship_desc
+
+Table: EBI_CHEMBL.ACTIVITY_PROPERTIES
+Columns: units, text_value, activity_id, value, comments, standard_relation, type, result_flag, relation, standard_value, ap_id, standard_text_value, standard_units, standard_type
+
+Table: EBI_CHEMBL.MECHANISM_REFS_27
+Columns: ref_type, mecref_id, mec_id, ref_id, ref_url
+
+Table: EBI_CHEMBL.ASSAYS_23
+Columns: assay_test_type, assay_strain, confidence_score, relationship_type, assay_cell_type, assay_tax_id, assay_tissue, assay_type, curated_by, assay_subcellular_fraction, chembl_id, assay_category, tissue_id, doc_id, bao_format, variant_id, src_assay_id, assay_organism, description, src_id, cell_id, assay_id, tid
+
+Table: EBI_CHEMBL.BIOASSAY_ONTOLOGY_25
+Columns: bao_id, label
+
+Table: EBI_CHEMBL.PROTEIN_CLASSIFICATION_29
+Columns: protein_class_desc, class_level, parent_id, protein_class_id, short_name, definition, pref_name
+
+Table: EBI_CHEMBL.PRODUCTS_27
+Columns: topical, applicant_full_name, trade_name, product_id, approval_date, parenteral, route, ad_type, oral, nda_type, dosage_form, black_box_warning, innovator_company
+
+Table: EBI_CHEMBL.ACTIVITY_SMID_28
+Columns: smid
+
+Table: EBI_CHEMBL.COMPOUND_RECORDS_23
+Columns: molregno, src_id, doc_id, compound_key, record_id, compound_name, src_compound_id
+
+Table: EBI_CHEMBL.TARGET_COMPONENTS_24
+Columns: homologue, targcomp_id, tid, component_id
+
+Table: EBI_CHEMBL.MOLECULE_FRAC_CLASSIFICATION_29
+Columns: molregno, mol_frac_id, frac_class_id
+
+Table: EBI_CHEMBL.PROTEIN_FAMILY_CLASSIFICATION_27
+Columns: l3, l4, protein_class_id, l5, protein_class_desc, l2, l7, l1, l8, l6
+
+Table: EBI_CHEMBL.COMPONENT_GO_27
+Columns: component_id, go_id, comp_go_id
+
+Table: EBI_CHEMBL.COMPOUND_STRUCTURAL_ALERTS_30
+Columns: alert_id, molregno, cpd_str_alert_id
+
+Table: EBI_CHEMBL.ORGANISM_CLASS_24
+Columns: l1, tax_id, oc_id, l2, l3
+
+Table: EBI_CHEMBL.DRUG_MECHANISM_27
+Columns: mechanism_comment, mec_id, mechanism_of_action, site_id, record_id, selectivity_comment, action_type, tid, disease_efficacy, binding_site_comment, molecular_mechanism, molregno, direct_interaction
+
+Table: EBI_CHEMBL.MECHANISM_REFS_33
+Columns: ref_id, ref_url, ref_type, mecref_id, mec_id

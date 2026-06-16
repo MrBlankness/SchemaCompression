@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_ga030",
+  "question": "Can you group users by the week of their first session start, starting from July 2, 2018? For each group, calculate the retention rate in the fourth week (i.e., the percentage of users from the original group who returned in the fourth week after their first session). Please identify the cohort with the highest retention rate in the fourth week, and name the group by the Monday date of the cohort's first session week. Return the result in the format \"YYYY-MM-DD\".",
+  "db_id": "FIREBASE",
+  "source_document": "retention_rate.md",
+  "evidence": "Table: `firebase-public-project.analytics_153293282.events_*`. Retention measures how often users return. N-Day retention: users returning over successive periods (e.g., week 1 = days 1–7, week 4 = days 22–28). For fourth week retention: calculate percentage of users from original cohort who returned in week 4 (days 22–28 after first session). Group users by week of first session start. Name group by Monday date of cohort's first session week. Start from July 2, 2018."
+}

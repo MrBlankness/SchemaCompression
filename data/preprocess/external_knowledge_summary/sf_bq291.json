@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq291",
+  "question": "Can you provide a daily weather summary for July 2019 within a 5 km radius of latitude 26.75 and longitude 51.5? I need the maximum, minimum, and average temperatures; total precipitation; average cloud cover between 10 AM and 5 PM; total snowfall (when average temperature is below 32°F); and total rainfall (when average temperature is 32°F or above) for each forecast date. The data should correspond to forecasts created in July 2019 for the following day.",
+  "db_id": "NOAA_GLOBAL_FORECAST_SYSTEM",
+  "source_document": "functions_st_within.md",
+  "evidence": "ST_WITHIN function checks if first geospatial object is fully contained by second. Syntax: ST_WITHIN(<geography_expression_1>, <geography_expression_2>). Returns BOOLEAN. Example shows usage with GEOGRAPHY columns g1 and g2 in SELECT ST_WITHIN(g1, g2)."
+}

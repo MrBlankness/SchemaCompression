@@ -1,0 +1,86 @@
+[COMPONENTS]
+[TABLES]
+## PATENTS.DISCLOSURES_13
+serial_cleaned: TEXT | NULL
+sso: TEXT | NULL
+disclosure_event: TEXT | NULL
+reciprocity: TEXT | NULL
+patent_owner_harmonized: TEXT | NULL
+record_id: TEXT | NULL
+family_id: TEXT | NULL
+blanket_scope: TEXT | NULL
+copyright: TEXT | NULL
+standard: TEXT | NULL
+licensing_commitment: TEXT | NULL
+committee_project: TEXT | NULL
+sc_name: TEXT | NULL
+blanket_type: TEXT | NULL
+pub_cleaned: TEXT | NULL
+third_party: TEXT | NULL
+wg_name: TEXT | NULL
+patent_owner_unharmonized: TEXT | NULL
+tc_name: TEXT | NULL
+date: NUMBER | NULL
+
+## PATENTS.CPC_DEFINITION
+status: TEXT | NULL
+precedenceLimitingReferences: VARIANT | NULL
+rules: VARIANT | NULL
+childGroups: VARIANT | NULL
+scopeLimitingReferences: VARIANT | NULL
+level: FLOAT | NULL
+titlePart: VARIANT | NULL
+residualReferences: VARIANT | NULL
+definition: VARIANT | NULL
+breakdownCode: BOOLEAN | NULL
+limitingReferences: VARIANT | NULL
+glossary: VARIANT | NULL
+applicationReferences: VARIANT | NULL
+notAllocatable: BOOLEAN | NULL
+titleFull: TEXT | NULL
+dateRevised: FLOAT | NULL
+informativeReferences: VARIANT | NULL
+symbol: TEXT | NULL
+synonyms: VARIANT | NULL
+children: VARIANT | NULL
+parents: VARIANT | NULL
+ipcConcordant: TEXT | NULL
+
+## PATENTS.PUBLICATIONS
+examiner: VARIANT | Is this text truncated?
+fterm: VARIANT | For US publications only, the description in HTML, limited to the first 9 megabytes
+application_number_formatted: TEXT | Application number, formatted to the patent office format where possible.
+application_number: TEXT | Patent application number (DOCDB compatible), eg: 'US-87124404-A'. This may not always be set.
+grant_date: NUMBER | For US publications only, the claims in plain text
+cpc: VARIANT | Two-letter language code for this text
+locarno: VARIANT | Localized text
+description_localized_html: VARIANT | Localized text
+publication_date: NUMBER | Two-letter language code for this text
+kind_code: TEXT | Kind code, indicating application, grant, search report, correction, etc. These are different for each country.
+spif_publication_number: TEXT | SPIF standard (spif.group) publication number, after 2000
+ipc: VARIANT | Localized text
+pct_number: TEXT | PCT number for this application if it was part of a PCT filing, eg: 'PCT/EP2008/062623'.
+entity_status: TEXT | The filing date.
+filing_date: NUMBER | Is this text truncated?
+abstract_localized: VARIANT | Localized text
+description_localized: VARIANT | The publication abstracts in different languages
+assignee: VARIANT | Localized text
+citation: VARIANT | Two-letter language code for this text
+fi: VARIANT | Is this text truncated?
+claims_localized_html: VARIANT | Is this text truncated?
+inventor_harmonized: VARIANT | For US publications only, the claims in HTML
+inventor: VARIANT | Is this text truncated?
+claims_localized: VARIANT | Two-letter language code for this text
+priority_date: NUMBER | Localized text
+application_kind: TEXT | High-level kind of the application: A=patent; U=utility; P=provision; W= PCT; F=design; T=translation.
+priority_claim: VARIANT | Two-letter language code for this text
+assignee_harmonized: VARIANT | Two-letter language code for this text
+title_localized: VARIANT | The publication titles in different languages
+art_unit: TEXT | The grant date, or 0 if not granted.
+child: VARIANT | The publication date.
+family_id: TEXT | Family ID (simple family). Grouping on family ID will return all publications associated with a simple patent family (all publications share the same priority claims).
+spif_application_number: TEXT | SPIF standard (spif.group) application number, after 2000
+uspc: VARIANT | For US publications only, the description in plain text, limited to the first 9 megabytes
+publication_number: TEXT | Patent publication number (DOCDB compatible), eg: 'US-7650331-B1'
+country_code: TEXT | Country code, eg: 'US', 'EP', etc
+parent: VARIANT | Is this text truncated?

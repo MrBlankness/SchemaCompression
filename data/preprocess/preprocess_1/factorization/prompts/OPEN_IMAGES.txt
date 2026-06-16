@@ -1,0 +1,8 @@
+[COMPONENTS]
+
+[TABLES]
+Format: schema.table|components|columns
+OPEN_IMAGES.LABELS||image_id,confidence,label_name,source
+OPEN_IMAGES.DICT||label_display_name,label_name
+OPEN_IMAGES.IMAGES||original_size,original_landing_url,original_url,title,license,image_id,author_profile_url,author,original_md5,thumbnail_300k_url,subset
+OPEN_IMAGES.ANNOTATIONS_BBOX||is_inside,x_max,image_id,is_occluded,is_truncated,y_max,source,x_min,y_min,is_depiction,label_name,confidence,is_group_of

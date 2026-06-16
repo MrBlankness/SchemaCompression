@@ -1,0 +1,41 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: OPEN_TARGETS_GENETICS.SA_MOLECULAR_TRAIT
+Columns: se, pos, n_total, alt, mac_cases, type_id, chrom, beta, n_cases, is_cc, phenotype_id, mac, gene_id, bio_feature, study_id, ref, info, num_tests, pval, eaf
+
+Table: OPEN_TARGETS_GENETICS.VARIANTS
+Columns: gene_id_any, gene_id_prot_coding, chr_id_b37, af, position_b37, most_severe_consequence, chr_id, gene_id_prot_coding_distance, ref_allele, gene_id_any_distance, alt_allele, rs_id, position, cadd
+
+Table: OPEN_TARGETS_GENETICS.VARIANT_DISEASE
+Columns: oddsr_ci_lower, tag_pos, pub_journal, beta, posterior_prob, lead_ref, overall_r2, lead_chrom, SAS_1000G_prop, pval_exponent, AMR_1000G_prop, ancestry_replication, n_initial, study_id, EUR_1000G_prop, trait_category, pub_title, tag_chrom, n_replication, source, tag_alt, trait_reported, ancestry_initial, pub_author, log10_ABF, odds_ratio, pval_mantissa, direction, pics_95perc_credset, pmid, EAS_1000G_prop, pval, lead_pos, n_cases, trait_efos, oddsr_ci_upper, pub_date, beta_ci_lower, lead_alt, num_assoc_loci, AFR_1000G_prop, has_sumstats, tag_ref, beta_ci_upper
+
+Table: OPEN_TARGETS_GENETICS.STUDIES
+Columns: pmid, study_id, trait_category, num_assoc_loci, n_initial, pub_title, pub_journal, pub_date, source, trait_reported, n_cases, ancestry_replication, n_replication, has_sumstats, ancestry_initial, pub_author, trait_efos
+
+Table: OPEN_TARGETS_GENETICS.GENES
+Columns: exons, biotype, description, chr, gene_id, start, end, fwdstrand, gene_name, tss
+
+Table: OPEN_TARGETS_GENETICS.STUDIES_OVERLAP
+Columns: B_ref, A_study_id, B_study_id, B_alt, B_distinct, A_chrom, AB_overlap, A_distinct, A_alt, B_chrom, B_pos, A_ref, A_pos
+
+Table: OPEN_TARGETS_GENETICS.SA_GWAS
+Columns: alt, chrom, mac_cases, study_id, info, mac, pos, type_id, n_total, ref, is_cc, beta, eaf, pval, se, n_cases
+
+Table: OPEN_TARGETS_GENETICS.OT_RELEASE
+Columns: release
+
+Table: OPEN_TARGETS_GENETICS.VARIANT_DISEASE_COLOC
+Columns: left_type, coloc_n_vars, right_chrom, right_alt, left_pos, right_bio_feature, coloc_h2, coloc_h0, right_ref, is_flipped, left_var_right_study_beta, coloc_h3, left_ref, left_var_right_study_se, left_var_right_isCC, coloc_log2_h4_h3, left_var_right_study_pval, right_phenotype, left_chrom, right_study, right_gene_id, right_type, right_pos, coloc_h4_h3, coloc_h4, coloc_h1, left_alt, left_study
+
+Table: OPEN_TARGETS_GENETICS.VARIANT_DISEASE_CREDSET
+Columns: lead_variant_id, study_id, multisignal_method, tag_se, tag_pval_cond, bio_feature, is95_credset, lead_ref, tag_variant_id, tag_pval, tag_se_cond, tag_chrom, lead_pos, lead_alt, tag_beta, tag_beta_cond, postprob_cumsum, is99_credset, phenotype_id, tag_pos, type, tag_alt, tag_ref, lead_chrom, gene_id, logABF, postprob
+
+Table: OPEN_TARGETS_GENETICS.VARIANT_GENE
+Columns: gene_id, alt_allele, ref_allele, feature, source_id, position, qtl_score, chr_id, distance_score, qtl_pval, qtl_score_q, qtl_se, fpred_max_label, fpred_labels, fpred_max_score, interval_score_q, d, type_id, interval_score, fpred_scores, qtl_beta, distance_score_q
+
+Table: OPEN_TARGETS_GENETICS.LOCUS2GENE
+Columns: y_proba_logi_pathogenicity, alt, chrom, y_proba_logi_molecularQTL, pos, y_proba_dist_foot, y_proba_logo_molecularQTL, training_gs, training_clf, ref, y_proba_logo_interaction, gene_id, y_proba_logi_interaction, y_proba_logo_pathogenicity, training_fold, study_id, y_proba_logi_distance, y_proba_logo_distance, y_proba_full_model, y_proba_dist_tss
+
+Table: OPEN_TARGETS_GENETICS.DISEASE_VARIANT_GENE
+Columns: has_sumstats, d, AFR_1000G_prop, direction, distance_score_q, qtl_pval, qtl_se, trait_efos, pub_date, qtl_score, posterior_prob, pub_author, n_initial, odds_ratio, pval, beta_ci_lower, n_cases, source, study_id, type_id, interval_score, beta, EAS_1000G_prop, beta_ci_upper, fpred_labels, tag_chrom, qtl_score_q, EUR_1000G_prop, fpred_max_score, n_replication, trait_reported, feature, oddsr_ci_upper, ancestry_replication, AMR_1000G_prop, num_assoc_loci, pmid, pval_exponent, trait_category, qtl_beta, ancestry_initial, tag_pos, lead_alt, lead_ref, tag_ref, fpred_scores, interval_score_q, pub_journal, SAS_1000G_prop, pub_title, tag_alt, pval_mantissa, source_id, oddsr_ci_lower, overall_r2, lead_pos, fpred_max_label, log10_ABF, lead_chrom, gene_id, distance_score

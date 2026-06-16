@@ -1,0 +1,56 @@
+[COMPONENTS]
+[TABLES]
+## WWE.WRESTLERS
+id: NUMBER | NULL | eg=[2, 5]
+name: TEXT | NULL | eg=["Peter Maivia", "Steve Travis"]
+
+## WWE.TABLES
+html: TEXT | NULL | eg=["<table cellpadding=\"0\" cellspacing=\"1\">\n <tr class=\"head\">\n  <th>\n   <a href=\"?order=date&amp;ppv=no&amp;type=asc\" rel=\"nofollow\">\n    date\n   </a>\n  </th>\n  <th>\n   <a href=\"?order=promotion&amp;ppv=no&amp;type=asc\" rel=\"nofollow\">\n    promotion\n   </a>\n  </th>\n  <th>\n   <a href=\"?order=card&amp;ppv=no&amp;type=asc\" rel=\"nofollow\">\n    card name\n   </a>\n  </th>\n  <th>\n   location\n  </th>\n </tr>\n <tr class=\"gray\">\n  <td>\n   <a href=\"/this-day-in-history/05-22-1978.html\">\n    May 22nd 1978\n   </a>\n  </td>\n  <td>\n   <a class=\"black\" href=\"/cards/wwwf-cards-pg1-no-20.html\">\n    <strong>\n     WWWF\n    </strong>\n   </a>\n  </td>\n  <td>\n   <a href=\"/cards/wwwf/msg-show-may-3978-4966.html\">\n    MSG Show (May '78)\n   </a>\n  </td>\n  <td class=\"gray\">\n   <img alt=\"\" src=\"/img/flags/us.gif\">\n    <a href=\"/locations/united-states/new-york/new-york-69.html\">\n     New York\n    </a>\n    ,\n    <a href=\"/locations/united-states/new-york-34.html\">\n     New York\n    </a>\n   </img>\n  </td>\n </tr>\n <tr c...", "<table cellpadding=\"0\" cellspacing=\"1\">\n <tr class=\"head\">\n  <th>\n   <a href=\"?order=date&amp;ppv=no&amp;type=asc\" rel=\"nofollow\">\n    date\n   </a>\n  </th>\n  <th>\n   <a href=\"?order=promotion&amp;ppv=no&amp;type=asc\" rel=\"nofollow\">\n    promotion\n   </a>\n  </th>\n  <th>\n   <a href=\"?order=card&amp;ppv=no&amp;type=asc\" rel=\"nofollow\">\n    card name\n   </a>\n  </th>\n  <th>\n   location\n  </th>\n </tr>\n <tr class=\"gray\">\n  <td>\n   <a href=\"/this-day-in-history/08-01-1977.html\">\n    Aug 1st 1977\n   </a>\n  </td>\n  <td>\n   <a class=\"black\" href=\"/cards/wwwf-cards-pg1-no-20.html\">\n    <strong>\n     WWWF\n    </strong>\n   </a>\n  </td>\n  <td>\n   <a href=\"/cards/wwwf/msg-show-aug-3977-1-4954.html\">\n    MSG Show (Aug '77 #1)\n   </a>\n  </td>\n  <td class=\"gray\">\n   <img alt=\"\" src=\"/img/flags/us.gif\">\n    <a href=\"/locations/united-states/new-york/new-york-69.html\">\n     New York\n    </a>\n    ,\n    <a href=\"/locations/united-states/new-york-34.html\">\n     New York\n    </a>\n   </img>\n  </td>\n </tr>\n <..."]
+url: TEXT | NULL | eg=["http://www.profightdb.com/cards/wwwf-cards-pg2-no-20.html?order=&type=", "http://www.profightdb.com/cards/wwwf-cards-pg3-no-20.html?order=&type="]
+id: NUMBER | NULL | eg=[11, 21]
+
+## WWE.EVENTS
+name: TEXT | NULL | eg=["MSG Show (Feb '79)", "MSG Show (Dec '78)"]
+id: NUMBER | NULL | eg=[2, 4]
+
+## WWE.MATCHES
+card_id: NUMBER | NULL | eg=[1, 2]
+match_type_id: TEXT | NULL | eg=["1"]
+id: NUMBER | NULL | eg=[1, 3]
+win_type: TEXT | NULL | eg=["def.", "vs."]
+title_id: TEXT | NULL | eg=["1"]
+loser_id: TEXT | NULL | eg=["2", "6"]
+winner_id: TEXT | NULL | eg=["1", "5"]
+duration: TEXT | NULL | eg=["", "04:35"]
+title_change: NUMBER | NULL | eg=[0]
+
+## WWE.PROMOTIONS
+name: TEXT | NULL | eg=["ECW"]
+id: NUMBER | NULL | eg=[12682]
+
+## WWE.CARDS
+event_id: NUMBER | NULL | eg=[1, 2]
+info_html: TEXT | NULL | eg=["<table border=\"0\" width=\"100%\">\n <tr>\n  <td align=\"left\" height=\"23\" width=\"40%\">\n   <strong>\n    Date:\n   </strong>\n   <a href=\"/this-day-in-history/03-26-1979.html\">\n    Mon, Mar 26th 1979\n   </a>\n  </td>\n  <td align=\"left\" width=\"52%\">\n   <strong>\n    Pay Per View:\n   </strong>\n   no\n  </td>\n </tr>\n <tr>\n  <td align=\"left\">\n   <strong>\n    Venue:\n   </strong>\n   <img alt=\"United States\" height=\"11\" src=\"/img/flags/us.gif\" width=\"16\"/>\n   <a href=\"/locations/united-states/new-york/new-york/madison-square-garden-1.html\">\n    Madison Square Garden\n   </a>\n   ,\n   <a href=\"/locations/united-states/new-york/new-york-69.html\">\n    New York\n   </a>\n   ,\n   <a href=\"/locations/united-states/new-york-34.html\">\n    New York\n   </a>\n  </td>\n  <td align=\"left\">\n   <strong>\n    Promotion:\n   </strong>\n   WWWF\n  </td>\n </tr>\n <tr>\n  <td align=\"left\">\n   <strong>\n    Attendance:\n   </strong>\n   unknown\n  </td>\n  <td align=\"left\">\n   &nbsp;\n  </td>\n </tr>\n</table>\n", "<table border=\"0\" width=\"100%\">\n <tr>\n  <td align=\"left\" height=\"23\" width=\"40%\">\n   <strong>\n    Date:\n   </strong>\n   <a href=\"/this-day-in-history/02-19-1979.html\">\n    Mon, Feb 19th 1979\n   </a>\n  </td>\n  <td align=\"left\" width=\"52%\">\n   <strong>\n    Pay Per View:\n   </strong>\n   no\n  </td>\n </tr>\n <tr>\n  <td align=\"left\">\n   <strong>\n    Venue:\n   </strong>\n   <img alt=\"United States\" height=\"11\" src=\"/img/flags/us.gif\" width=\"16\"/>\n   <a href=\"/locations/united-states/new-york/new-york/madison-square-garden-1.html\">\n    Madison Square Garden\n   </a>\n   ,\n   <a href=\"/locations/united-states/new-york/new-york-69.html\">\n    New York\n   </a>\n   ,\n   <a href=\"/locations/united-states/new-york-34.html\">\n    New York\n   </a>\n  </td>\n  <td align=\"left\">\n   <strong>\n    Promotion:\n   </strong>\n   WWWF\n  </td>\n </tr>\n <tr>\n  <td align=\"left\">\n   <strong>\n    Attendance:\n   </strong>\n   unknown\n  </td>\n  <td align=\"left\">\n   &nbsp;\n  </td>\n </tr>\n</table>\n"]
+location_id: NUMBER | NULL | eg=[1]
+match_html: TEXT | NULL | eg=["<table cellpadding=\"0\" cellspacing=\"1\" width=\"100%\">\n <tr class=\"head\">\n  <th width=\"3%\">\n   no.\n  </th>\n  <th colspan=\"3\" width=\"50%\">\n   match\n  </th>\n  <th width=\"5%\">\n   duration\n  </th>\n  <th width=\"19%\">\n   match type\n  </th>\n  <th width=\"18%\">\n   title(s)\n  </th>\n  <th width=\"5%\">\n   rating\n  </th>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   1\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/ivan-putski-28.html\">\n    Ivan Putski\n   </a>\n  </td>\n  <td width=\"6%\">\n   def.\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/peter-maivia-3225.html\">\n    Peter Maivia\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr>\n  <td>\n   2\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/bad-news-brown-74.html\">\n    Allen Coage\n   </a>\n  </td>\n  <td width=\"6%\">\n   def.\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/special-delivery-jones-4.html\">\n    Special Delivery Jones\n   </a>\n  </td>\n  <td>\n   04:02\n  </td>\n  <td>\n   &nbsp;\n...", "<table cellpadding=\"0\" cellspacing=\"1\" width=\"100%\">\n <tr class=\"head\">\n  <th width=\"3%\">\n   no.\n  </th>\n  <th colspan=\"3\" width=\"50%\">\n   match\n  </th>\n  <th width=\"5%\">\n   duration\n  </th>\n  <th width=\"19%\">\n   match type\n  </th>\n  <th width=\"18%\">\n   title(s)\n  </th>\n  <th width=\"5%\">\n   rating\n  </th>\n </tr>\n <tr class=\"chequered\">\n  <td>\n   1\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/larry-zbyszko-497.html\">\n    Larry Zbyszko\n   </a>\n   &nbsp;(c) &amp;\n   <a href=\"/wrestlers/tony-garea-1648.html\">\n    Tony Garea\n   </a>\n   &nbsp;(c)\n  </td>\n  <td width=\"6%\">\n   def.\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/peter-maivia-3225.html\">\n    Peter Maivia\n   </a>\n   &amp;\n   <a href=\"/wrestlers/stan-stasiak-3731.html\">\n    Stan Stasiak\n   </a>\n  </td>\n  <td>\n  </td>\n  <td>\n   &nbsp;\n  </td>\n  <td>\n   WWWF International Tag Team Titles\n   <br/>\n  </td>\n  <td class=\"center\">\n  </td>\n </tr>\n <tr>\n  <td>\n   2\n  </td>\n  <td width=\"22%\">\n   <a href=\"/wrestlers/chief-jay-stro..."]
+id: NUMBER | NULL | eg=[1, 2]
+promotion_id: NUMBER | NULL | eg=[1]
+url: TEXT | NULL | eg=["http://www.profightdb.com/cards/wwwf/msg-show-mar-3979-4980.html", "http://www.profightdb.com/cards/wwwf/msg-show-feb-3979-4979.html"]
+table_id: NUMBER | NULL | eg=[1, 11]
+event_date: TEXT | NULL | eg=["1979-03-26", "1979-02-19"]
+
+## WWE.BELTS
+name: TEXT | NULL | eg=["", "WWWF World Heavyweight Title"]
+id: NUMBER | NULL | eg=[1, 9]
+
+## WWE.SQLITE_SEQUENCE
+name: TEXT | NULL | eg=["Events", "Locations"]
+seq: NUMBER | NULL | eg=[14431, 540800]
+
+## WWE.MATCH_TYPES
+name: TEXT | NULL | eg=["6-person tag (2 out of 3 falls)", "steel cage"]
+id: NUMBER | NULL | eg=[8, 25]
+
+## WWE.LOCATIONS
+id: NUMBER | NULL | eg=[1, 68]
+name: TEXT | NULL | eg=["New York, New York", "Philadelphia, Pennsylvania"]

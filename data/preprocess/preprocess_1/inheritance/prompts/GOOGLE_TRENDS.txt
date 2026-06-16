@@ -1,0 +1,9 @@
+[TEMPLATES]
+Format: Tn|col1,col2|schema1.table1;schema2.table2
+T1|week,term,rank,score,refresh_date,dma_id,dma_name|GOOGLE_TRENDS.TOP_TERMS
+T3|week,term,rank,score,refresh_date,region_code,region_name,country_code,country_name|GOOGLE_TRENDS.INTERNATIONAL_TOP_TERMS
+
+[DERIVED]
+Format: Tm<Tp|col1,col2|schema1.table1;schema2.table2
+T2<T1|percent_gain|GOOGLE_TRENDS.TOP_RISING_TERMS
+T4<T3|percent_gain|GOOGLE_TRENDS.INTERNATIONAL_TOP_RISING_TERMS

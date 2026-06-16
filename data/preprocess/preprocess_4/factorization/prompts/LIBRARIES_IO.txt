@@ -1,0 +1,160 @@
+[COMPONENTS]
+@C1
+description: TEXT | NULL | eg=["201 project 6 and 7", "wp projects boiler"]
+homepage_url: TEXT | NULL
+keywords: TEXT | NULL
+language: TEXT | NULL | eg=["CSS"]
+last_synced_timestamp: NUMBER | NULL | eg=[1507855753000000, 1507855822000000]
+sourcerank: NUMBER | NULL | eg=[3, 2]
+status: TEXT | NULL
+
+@C2
+dependent_projects_count: NUMBER | NULL | eg=[0]
+dependent_repositories_count: NUMBER | NULL | eg=[0]
+latest_release_number: TEXT | NULL | eg=["weekly-10", "weekly.2012-03-04"]
+latest_release_publish_timestamp: NUMBER | NULL | eg=[1522208962000000, 1331492993000000]
+licenses: TEXT | NULL | eg=["AGPL-3.0", "MIT"]
+name: TEXT | NULL | eg=["github.com/xiaokangwang/AndroidLibV2ray/Process/UpDownScript", "github.com/oracleJava/captcha/capexample"]
+package_manager_id: NUMBER | NULL
+repository_url: TEXT | NULL | eg=["https://github.com/xiaokangwang/AndroidLibV2ray/Process/UpDownScript", "https://github.com/oracleJava/captcha/capexample"]
+versions_count: NUMBER | NULL | eg=[0]
+
+@C3
+created_timestamp: NUMBER | NULL | eg=[1422485681000000, 1422488467000000]
+updated_timestamp: NUMBER | NULL | eg=[1422485681000000, 1422488467000000]
+
+@C4
+dependency_kind: TEXT | NULL | eg=["runtime"]
+dependency_project_id: NUMBER | NULL | eg=[279867, 167178]
+dependency_requirements: TEXT | NULL | eg=["2.7.3", "3.0.1"]
+
+[TABLES]
+## LIBRARIES_IO.VERSIONS
+@use: [C3]
+number: TEXT | NULL | eg=["0.1.0"]
+project_name: TEXT | NULL | eg=["tap-http", "view_driver"]
+project_id: NUMBER | NULL | eg=[257990, 265540]
+id: NUMBER | NULL | eg=[1207852, 1243871]
+published_timestamp: NUMBER | NULL | eg=[1227596400000000, 1260133200000000]
+platform: TEXT | NULL | eg=["Rubygems"]
+
+## LIBRARIES_IO.REPOSITORY_DEPENDENCIES
+@use: [C4]
+optional: TEXT | NULL
+id: NUMBER | NULL | eg=[494629101, 494629274]
+git_branch: TEXT | NULL
+dependency_project_name: TEXT | NULL | eg=["esprima", "lodash._bindcallback"]
+repository_name_with_owner: TEXT | NULL | eg=["stokesbga/react-native-step-indicator"]
+manifest_filepath: TEXT | NULL | eg=["example/yarn.lock"]
+host_type: TEXT | NULL | eg=["GitHub"]
+repository_id: NUMBER | NULL | eg=[37320471]
+manifest_platform: TEXT | NULL | eg=["npm"]
+manifest_kind: TEXT | NULL | eg=["lockfile"]
+
+## LIBRARIES_IO.REPOSITORIES
+@use: [C1, C3]
+size: NUMBER | NULL | eg=[0, 92]
+security_threat_model_filename: TEXT | NULL
+contributors_count: NUMBER | NULL | eg=[1, 0]
+fork_source_name_with_owner: TEXT | NULL
+contributing_guidelines_filename: TEXT | NULL
+display_name: TEXT | NULL | eg=["GitHub"]
+security_audit_filename: TEXT | NULL
+uuid: TEXT | NULL | eg=["106760225", "106760270"]
+readme_filename: TEXT | NULL | eg=["README.md", "readme.md"]
+stars_count: NUMBER | NULL | eg=[0]
+issues_enabled: BOOLEAN | NULL | eg=[true]
+code_of_conduct_filename: TEXT | NULL
+pull_requests_enabled: TEXT | NULL | eg=["git"]
+last_pushed_timestamp: NUMBER | NULL | eg=[1507855749000000, 1507855797000000]
+name_with_owner: TEXT | NULL | eg=["rjtj2007/cookie_stand", "Joey89/Boiler"]
+license_filename: TEXT | NULL | eg=["LICENSE"]
+forks_count: NUMBER | NULL | eg=[0]
+id: NUMBER | NULL | eg=[29309536, 29309565]
+mirror_url: TEXT | NULL
+default_branch: TEXT | NULL | eg=["master"]
+logo_url: TEXT | NULL
+watchers_count: NUMBER | NULL | eg=[0, 1]
+open_issues_count: NUMBER | NULL | eg=[0, 1]
+host_type: TEXT | NULL | eg=["GitHub"]
+pages_enabled: BOOLEAN | NULL | eg=[false]
+an: TEXT | NULL
+wiki_enabled: BOOLEAN | NULL | eg=[true]
+changelog_filename: TEXT | NULL
+fork: BOOLEAN | NULL | eg=[false]
+license: TEXT | NULL | eg=["MIT"]
+scm_type: TEXT | NULL
+
+## LIBRARIES_IO.PROJECTS
+@use: [C1, C2, C3]
+repository_id: NUMBER | NULL | eg=[11889240, 4064456]
+platform: TEXT | NULL | eg=["Go"]
+id: NUMBER | NULL | eg=[2938980, 1149889]
+
+## LIBRARIES_IO.TAGS
+repository_id: NUMBER | NULL | eg=[23754342, 23754497]
+tag_name: TEXT | NULL | eg=["v0.15.27", "20150206"]
+tag_updated_timestamp: NUMBER | NULL | eg=[1494505023000000, 1493726333000000]
+repository_name_with_owner: TEXT | NULL | eg=["dmpriso/hunter", "gitGNU/gnu_gnucap"]
+id: NUMBER | NULL | eg=[52086612, 51826157]
+host_type: TEXT | NULL | eg=["GitHub"]
+tag_published_timestamp: NUMBER | NULL | eg=[1474272972000000, 1423203211000000]
+tag_git_sha: TEXT | NULL | eg=["103914cf971f3f67f48dd502378628dbc440b77c", "4b463878c19cbfcd751f7ac54d82bf9e03089ba3"]
+tag_created_timestamp: NUMBER | NULL | eg=[1494505023000000, 1493726333000000]
+
+## LIBRARIES_IO.PROJECTS_WITH_REPOSITORY_FIELDS
+@use: [C1, C2, C3]
+repository_language: TEXT | NULL | eg=[""]
+repository_readme_filename: TEXT | NULL | eg=[""]
+repository_uuid: TEXT | NULL | eg=[""]
+repository_security_threat_model_filename: TEXT | NULL | eg=[""]
+platform: TEXT | NULL | eg=["Rubygems"]
+repository_license: TEXT | NULL | eg=[""]
+repository_default_branch: TEXT | NULL | eg=[""]
+repository_sourcerank: NUMBER | NULL
+repository_pull_requests_enabled: TEXT | NULL | eg=[""]
+id: NUMBER | NULL | eg=[226392, 196455]
+repository_issues_enabled: BOOLEAN | NULL
+repository_last_pushed_timestamp: NUMBER | NULL
+repository_mirror_url: TEXT | NULL | eg=[""]
+bh: TEXT | NULL | eg=[""]
+repository_contributing_guidelines_filename: TEXT | NULL | eg=[""]
+repository_id: NUMBER | NULL
+repository_scm_type: TEXT | NULL | eg=[""]
+repository_stars_count: NUMBER | NULL
+repository_pages_enabled: BOOLEAN | NULL
+repository_host_type: TEXT | NULL | eg=[""]
+repository_keywords: TEXT | NULL | eg=[""]
+repository_fork: BOOLEAN | NULL
+repository_name_with_owner: TEXT | NULL | eg=[""]
+repository_updated_timestamp: NUMBER | NULL
+repository_created_timestamp: NUMBER | NULL
+repository_contributors_count: NUMBER | NULL
+repository_security_audit_filename: TEXT | NULL | eg=[""]
+repository_wiki_enabled: BOOLEAN | NULL
+repository_open_issues_count: NUMBER | NULL
+repository_last_synced_timestamp: TEXT | NULL | eg=[""]
+repository_description: TEXT | NULL | eg=[""]
+repository_status: TEXT | NULL | eg=[""]
+repository_forks_count: NUMBER | NULL
+repository_license_filename: TEXT | NULL | eg=[""]
+repository_watchers_count: NUMBER | NULL
+repository_size: NUMBER | NULL
+repository_changelog_filename: TEXT | NULL | eg=[""]
+repository_logo_url: TEXT | NULL | eg=[""]
+repository_display_name: TEXT | NULL | eg=[""]
+repository_homepage_url: TEXT | NULL | eg=[""]
+repository_fork_source_name_with_owner: TEXT | NULL | eg=[""]
+repository_code_of_conduct_filename: TEXT | NULL | eg=[""]
+
+## LIBRARIES_IO.DEPENDENCIES
+@use: [C4]
+id: NUMBER | NULL | eg=[85511205, 107068641]
+version_id: NUMBER | NULL | eg=[14525151, 17207680]
+platform: TEXT | NULL | eg=["Maven", "NPM"]
+version_number: TEXT | NULL | eg=["2.0.0", "1.0.8"]
+dependency_platform: TEXT | NULL | eg=["Maven", "NPM"]
+dependency_name: TEXT | NULL | eg=[" junit : junit ", "react"]
+project_name: TEXT | NULL | eg=["org.tinygroup:org.tinygroup.zTree", "shadertoy-react"]
+optional_dependency: TEXT | NULL | eg=["false"]
+project_id: NUMBER | NULL | eg=[3125810, 3409864]

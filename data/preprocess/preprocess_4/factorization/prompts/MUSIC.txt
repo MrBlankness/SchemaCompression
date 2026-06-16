@@ -1,0 +1,81 @@
+[COMPONENTS]
+@C1
+Address: TEXT | NULL | eg=["Theodor-Heuss-Straße 34", "Ullevålsveien 14"]
+City: TEXT | NULL | eg=["Stuttgart", "Oslo"]
+Country: TEXT | NULL | eg=["Germany", "Norway"]
+Email: TEXT | NULL | eg=["leonekohler@surfeu.de", "bjorn.hansen@yahoo.no"]
+Fax: TEXT | NULL | eg=[""]
+FirstName: TEXT | NULL | eg=["Leonie", "Bjørn"]
+LastName: TEXT | NULL | eg=["Köhler", "Hansen"]
+Phone: TEXT | NULL | eg=["+49 0711 2842222", "+47 22 44 22 22"]
+PostalCode: TEXT | NULL | eg=["70174", "0171"]
+State: TEXT | NULL | eg=[""]
+
+[TABLES]
+## MUSIC.TRACK
+MediaTypeId: NUMBER | NULL | eg=[1]
+GenreId: NUMBER | NULL | eg=[1]
+Composer: TEXT | NULL | eg=["Angus Young, Malcolm Young, Brian Johnson"]
+Milliseconds: NUMBER | NULL | eg=[233926, 210834]
+UnitPrice: FLOAT | NULL | eg=[0.99]
+Bytes: NUMBER | NULL | eg=[7636561, 6852860]
+Name: TEXT | NULL | eg=["Let's Get It Up", "Inject The Venom"]
+TrackId: NUMBER | NULL | eg=[7, 8]
+AlbumId: NUMBER | NULL | eg=[1]
+
+## MUSIC.GENRE
+GenreId: NUMBER | NULL | eg=[1, 3]
+Name: TEXT | NULL | eg=["Rock", "Metal"]
+
+## MUSIC.PLAYLISTTRACK
+TrackId: NUMBER | NULL | eg=[3391, 3392]
+PlaylistId: NUMBER | NULL | eg=[1]
+
+## MUSIC.INVOICE
+BillingCountry: TEXT | NULL | eg=["Germany", "Canada"]
+CustomerId: NUMBER | NULL | eg=[2, 14]
+Total: FLOAT | NULL | eg=[1.98, 8.91]
+InvoiceId: NUMBER | NULL | eg=[1, 4]
+BillingAddress: TEXT | NULL | eg=["Theodor-Heuss-Straße 34", "8210 111 ST NW"]
+InvoiceDate: TEXT | NULL | eg=["2009-01-01 00:00:00", "2009-01-06 00:00:00"]
+BillingCity: TEXT | NULL | eg=["Stuttgart", "Edmonton"]
+BillingState: TEXT | NULL | eg=["", "AB"]
+BillingPostalCode: TEXT | NULL | eg=["70174", "T6G 2C7"]
+
+## MUSIC.CUSTOMER
+@use: [C1]
+SupportRepId: NUMBER | NULL | eg=[5, 4]
+CustomerId: NUMBER | NULL | eg=[2, 4]
+Company: TEXT | NULL | eg=[""]
+
+## MUSIC.INVOICELINE
+InvoiceLineId: NUMBER | NULL | eg=[1, 2]
+TrackId: NUMBER | NULL | eg=[2, 4]
+InvoiceId: NUMBER | NULL | eg=[1, 2]
+Quantity: NUMBER | NULL | eg=[1]
+UnitPrice: FLOAT | NULL | eg=[0.99]
+
+## MUSIC.MEDIATYPE
+Name: TEXT | NULL | eg=["MPEG audio file", "Protected AAC audio file"]
+MediaTypeId: NUMBER | NULL | eg=[1, 2]
+
+## MUSIC.PLAYLIST
+Name: TEXT | NULL | eg=["Music", "TV Shows"]
+PlaylistId: NUMBER | NULL | eg=[1, 3]
+
+## MUSIC.ALBUM
+AlbumId: NUMBER | NULL | eg=[1, 2]
+Title: TEXT | NULL | eg=["For Those About To Rock We Salute You", "Balls to the Wall"]
+ArtistId: NUMBER | NULL | eg=[1, 2]
+
+## MUSIC.EMPLOYEE
+@use: [C1]
+ReportsTo: FLOAT | NULL | eg=[2.0]
+BirthDate: TEXT | NULL | eg=["1947-09-19 00:00:00"]
+HireDate: TEXT | NULL | eg=["2003-05-03 00:00:00"]
+EmployeeId: NUMBER | NULL | eg=[4]
+Title: TEXT | NULL | eg=["Sales Support Agent"]
+
+## MUSIC.ARTIST
+ArtistId: NUMBER | NULL | eg=[2, 11]
+Name: TEXT | NULL | eg=["Accept", "Black Label Society"]

@@ -1,0 +1,26 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: IPL.BALL_BY_BALL
+Columns: striker_batting_position, striker, ball_id, team_batting, innings_no, match_id, team_bowling, bowler, over_id, non_striker
+
+Table: IPL.MATCH
+Columns: man_of_the_match, outcome_type, season_id, venue, team_2, match_winner, match_date, match_id, win_margin, toss_winner, team_1, win_type, toss_decision
+
+Table: IPL.TEAM
+Columns: name, team_id
+
+Table: IPL.PLAYER_MATCH
+Columns: team_id, match_id, player_id, role
+
+Table: IPL.EXTRA_RUNS
+Columns: over_id, match_id, innings_no, ball_id, extra_type, extra_runs
+
+Table: IPL.BATSMAN_SCORED
+Columns: ball_id, runs_scored, over_id, match_id, innings_no
+
+Table: IPL.PLAYER
+Columns: dob, batting_hand, bowling_skill, player_id, player_name, country_name
+
+Table: IPL.WICKET_TAKEN
+Columns: ball_id, over_id, match_id, innings_no, kind_out, player_out

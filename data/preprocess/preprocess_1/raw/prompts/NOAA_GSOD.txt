@@ -1,0 +1,293 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: NOAA_GSOD.GSOD1955
+Columns: da, wban, snow_ice_pellets, count_wdsp, flag_prcp, count_stp, visib, count_temp, year, hail, count_slp, thunder, stp, gust, flag_max, min, wdsp, mxpsd, tornado_funnel_cloud, rain_drizzle, flag_min, fog, dewp, slp, max, stn, count_visib, mo, count_dewp, sndp, temp, prcp
+
+Table: NOAA_GSOD.GSOD1957
+Columns: flag_max, count_dewp, visib, flag_min, year, da, prcp, hail, gust, flag_prcp, count_wdsp, fog, stn, mo, snow_ice_pellets, dewp, mxpsd, count_slp, max, min, count_temp, stp, rain_drizzle, count_visib, wdsp, sndp, tornado_funnel_cloud, thunder, wban, count_stp, slp, temp
+
+Table: NOAA_GSOD.GSOD2020
+Columns: hail, prcp, stn, flag_min, tornado_funnel_cloud, count_temp, thunder, count_dewp, count_visib, count_slp, flag_prcp, da, wban, rain_drizzle, mxpsd, wdsp, count_wdsp, mo, flag_max, visib, min, slp, temp, dewp, year, max, sndp, stp, snow_ice_pellets, count_stp, gust, fog, date
+
+Table: NOAA_GSOD.GSOD1981
+Columns: count_visib, hail, year, stn, mo, wban, prcp, wdsp, count_temp, thunder, snow_ice_pellets, sndp, count_wdsp, tornado_funnel_cloud, gust, mxpsd, flag_min, min, temp, slp, rain_drizzle, flag_max, fog, count_slp, count_stp, flag_prcp, da, dewp, stp, count_dewp, max, visib
+
+Table: NOAA_GSOD.STATIONS
+Columns: elev, country, usaf, lon, call, wban, name, begin, state, end, lat
+
+Table: NOAA_GSOD.GSOD1978
+Columns: dewp, temp, fog, wdsp, count_dewp, gust, count_temp, min, wban, max, thunder, mxpsd, count_wdsp, sndp, flag_max, hail, prcp, rain_drizzle, tornado_funnel_cloud, slp, flag_min, count_stp, count_visib, stp, da, flag_prcp, year, visib, snow_ice_pellets, count_slp, stn, mo
+
+Table: NOAA_GSOD.GSOD1931
+Columns: da, fog, slp, dewp, snow_ice_pellets, wdsp, count_stp, stp, flag_prcp, tornado_funnel_cloud, min, hail, count_wdsp, wban, prcp, mxpsd, stn, count_temp, thunder, max, count_visib, rain_drizzle, count_slp, count_dewp, temp, gust, mo, visib, flag_min, flag_max, year, sndp
+
+Table: NOAA_GSOD.GSOD1961
+Columns: visib, stp, flag_min, dewp, prcp, mxpsd, snow_ice_pellets, gust, rain_drizzle, da, wdsp, flag_prcp, year, thunder, count_slp, temp, count_dewp, count_wdsp, count_stp, sndp, slp, flag_max, count_temp, min, count_visib, tornado_funnel_cloud, mo, wban, fog, hail, max, stn
+
+Table: NOAA_GSOD.GSOD2007
+Columns: stp, rain_drizzle, snow_ice_pellets, temp, da, count_temp, flag_min, fog, visib, count_slp, prcp, tornado_funnel_cloud, sndp, slp, min, hail, flag_prcp, count_stp, flag_max, wban, count_wdsp, count_visib, thunder, max, gust, dewp, mo, stn, year, mxpsd, wdsp, count_dewp
+
+Table: NOAA_GSOD.GSOD1998
+Columns: thunder, count_visib, count_temp, flag_max, flag_prcp, max, min, sndp, hail, mxpsd, dewp, count_dewp, rain_drizzle, tornado_funnel_cloud, mo, da, snow_ice_pellets, temp, count_stp, prcp, gust, visib, flag_min, year, count_wdsp, stp, wban, count_slp, slp, wdsp, stn, fog
+
+Table: NOAA_GSOD.GSOD1943
+Columns: stp, stn, temp, count_wdsp, sndp, dewp, count_slp, rain_drizzle, thunder, count_temp, max, visib, wdsp, slp, fog, year, mxpsd, flag_prcp, flag_min, prcp, count_visib, snow_ice_pellets, flag_max, gust, min, da, count_stp, count_dewp, mo, wban, hail, tornado_funnel_cloud
+
+Table: NOAA_GSOD.GSOD1963
+Columns: mo, snow_ice_pellets, da, dewp, stn, flag_max, year, tornado_funnel_cloud, max, count_slp, slp, visib, mxpsd, thunder, hail, count_visib, rain_drizzle, sndp, wdsp, min, prcp, gust, stp, fog, temp, count_temp, wban, flag_min, count_stp, flag_prcp, count_dewp, count_wdsp
+
+Table: NOAA_GSOD.GSOD1977
+Columns: min, dewp, wban, temp, count_dewp, prcp, wdsp, tornado_funnel_cloud, da, flag_prcp, rain_drizzle, hail, fog, sndp, mxpsd, stp, count_slp, thunder, count_temp, max, stn, count_stp, mo, count_visib, slp, gust, year, flag_max, count_wdsp, flag_min, snow_ice_pellets, visib
+
+Table: NOAA_GSOD.GSOD1979
+Columns: tornado_funnel_cloud, wban, year, da, flag_prcp, count_dewp, count_wdsp, flag_max, flag_min, fog, hail, rain_drizzle, stn, wdsp, count_visib, dewp, sndp, gust, temp, visib, stp, thunder, prcp, min, mo, slp, max, count_stp, count_slp, snow_ice_pellets, mxpsd, count_temp
+
+Table: NOAA_GSOD.GSOD2013
+Columns: hail, count_wdsp, max, flag_min, count_slp, stp, count_visib, wban, rain_drizzle, visib, count_temp, stn, flag_prcp, mxpsd, snow_ice_pellets, sndp, mo, min, tornado_funnel_cloud, thunder, wdsp, gust, da, dewp, temp, slp, prcp, count_dewp, year, fog, count_stp, flag_max
+
+Table: NOAA_GSOD.GSOD1990
+Columns: wban, stp, gust, max, year, mo, visib, prcp, min, count_dewp, flag_max, dewp, count_stp, stn, rain_drizzle, flag_min, tornado_funnel_cloud, count_visib, wdsp, thunder, count_temp, da, temp, count_slp, fog, count_wdsp, mxpsd, flag_prcp, hail, slp, sndp, snow_ice_pellets
+
+Table: NOAA_GSOD.GSOD1965
+Columns: stp, gust, flag_max, da, visib, rain_drizzle, count_dewp, mo, hail, stn, thunder, temp, prcp, flag_min, year, count_slp, slp, min, mxpsd, wdsp, wban, count_stp, snow_ice_pellets, tornado_funnel_cloud, sndp, flag_prcp, fog, count_visib, max, count_temp, count_wdsp, dewp
+
+Table: NOAA_GSOD.GSOD1997
+Columns: max, snow_ice_pellets, rain_drizzle, dewp, sndp, gust, mo, wdsp, prcp, temp, count_dewp, wban, visib, count_temp, count_visib, da, stn, flag_prcp, hail, count_stp, min, fog, thunder, count_wdsp, stp, tornado_funnel_cloud, count_slp, mxpsd, slp, flag_max, flag_min, year
+
+Table: NOAA_GSOD.GSOD1995
+Columns: min, max, flag_max, dewp, prcp, rain_drizzle, temp, count_visib, fog, hail, wban, count_stp, wdsp, mxpsd, visib, tornado_funnel_cloud, flag_min, mo, stp, sndp, gust, count_slp, snow_ice_pellets, thunder, count_dewp, year, count_wdsp, stn, da, count_temp, slp, flag_prcp
+
+Table: NOAA_GSOD.GSOD1982
+Columns: flag_min, count_temp, snow_ice_pellets, tornado_funnel_cloud, gust, stn, wban, flag_prcp, rain_drizzle, dewp, prcp, count_slp, count_dewp, flag_max, count_stp, visib, fog, stp, hail, year, da, temp, mo, count_wdsp, sndp, wdsp, count_visib, thunder, min, slp, max, mxpsd
+
+Table: NOAA_GSOD.GSOD1973
+Columns: count_stp, prcp, mxpsd, count_slp, count_wdsp, da, wdsp, wban, tornado_funnel_cloud, year, rain_drizzle, stp, min, mo, sndp, gust, slp, temp, stn, count_dewp, flag_prcp, snow_ice_pellets, dewp, flag_min, hail, count_visib, flag_max, visib, count_temp, max, fog, thunder
+
+Table: NOAA_GSOD.GSOD1947
+Columns: year, count_temp, dewp, temp, wban, stn, count_visib, da, fog, gust, snow_ice_pellets, flag_max, flag_prcp, flag_min, tornado_funnel_cloud, mxpsd, slp, min, wdsp, rain_drizzle, count_slp, sndp, thunder, count_dewp, mo, prcp, stp, count_wdsp, visib, hail, count_stp, max
+
+Table: NOAA_GSOD.GSOD1964
+Columns: stn, wban, min, count_slp, visib, flag_prcp, thunder, mxpsd, count_wdsp, year, max, prcp, hail, flag_min, mo, gust, rain_drizzle, temp, dewp, da, flag_max, count_dewp, sndp, count_stp, fog, stp, snow_ice_pellets, slp, tornado_funnel_cloud, count_visib, count_temp, wdsp
+
+Table: NOAA_GSOD.GSOD1994
+Columns: count_temp, wdsp, max, count_wdsp, gust, flag_min, dewp, visib, thunder, tornado_funnel_cloud, temp, count_slp, snow_ice_pellets, count_visib, sndp, rain_drizzle, count_stp, flag_max, slp, stp, mxpsd, min, da, year, mo, wban, fog, prcp, hail, flag_prcp, count_dewp, stn
+
+Table: NOAA_GSOD.GSOD1941
+Columns: snow_ice_pellets, count_visib, count_temp, min, count_stp, da, prcp, stn, count_slp, fog, rain_drizzle, thunder, tornado_funnel_cloud, gust, stp, max, flag_max, flag_min, visib, slp, sndp, wdsp, mo, hail, year, flag_prcp, count_wdsp, wban, mxpsd, dewp, count_dewp, temp
+
+Table: NOAA_GSOD.GSOD2016
+Columns: count_wdsp, count_stp, count_dewp, count_slp, wdsp, min, max, dewp, mxpsd, flag_prcp, flag_max, gust, thunder, rain_drizzle, mo, slp, sndp, wban, prcp, hail, tornado_funnel_cloud, stn, temp, visib, year, count_visib, count_temp, da, snow_ice_pellets, flag_min, fog, stp
+
+Table: NOAA_GSOD.GSOD1936
+Columns: flag_prcp, count_temp, da, mo, thunder, mxpsd, slp, max, hail, fog, tornado_funnel_cloud, temp, count_stp, min, sndp, year, stn, prcp, rain_drizzle, count_slp, flag_min, gust, count_visib, flag_max, stp, wdsp, wban, count_wdsp, count_dewp, snow_ice_pellets, dewp, visib
+
+Table: NOAA_GSOD.GSOD1987
+Columns: visib, temp, thunder, rain_drizzle, count_slp, snow_ice_pellets, min, count_dewp, flag_min, flag_prcp, count_wdsp, gust, wban, prcp, flag_max, sndp, hail, fog, count_visib, max, year, dewp, mo, tornado_funnel_cloud, wdsp, slp, stn, stp, count_stp, da, mxpsd, count_temp
+
+Table: NOAA_GSOD.GSOD1953
+Columns: mo, tornado_funnel_cloud, rain_drizzle, stp, snow_ice_pellets, count_stp, hail, slp, wban, fog, count_dewp, count_visib, stn, max, dewp, prcp, temp, da, mxpsd, min, thunder, year, flag_min, flag_max, count_wdsp, wdsp, gust, count_slp, count_temp, sndp, flag_prcp, visib
+
+Table: NOAA_GSOD.GSOD1939
+Columns: hail, gust, count_temp, year, count_visib, count_dewp, tornado_funnel_cloud, count_wdsp, min, visib, temp, slp, dewp, max, mxpsd, da, flag_min, prcp, sndp, rain_drizzle, count_stp, wdsp, snow_ice_pellets, wban, flag_max, count_slp, stn, stp, fog, mo, thunder, flag_prcp
+
+Table: NOAA_GSOD.GSOD1937
+Columns: tornado_funnel_cloud, flag_max, rain_drizzle, wdsp, flag_min, count_wdsp, mo, gust, snow_ice_pellets, flag_prcp, visib, count_stp, hail, count_dewp, dewp, sndp, stn, da, fog, count_slp, mxpsd, stp, wban, thunder, min, max, count_temp, year, slp, prcp, temp, count_visib
+
+Table: NOAA_GSOD.GSOD1945
+Columns: flag_prcp, wban, flag_min, min, gust, sndp, dewp, count_dewp, wdsp, count_slp, da, tornado_funnel_cloud, count_wdsp, slp, year, thunder, count_visib, mxpsd, mo, hail, flag_max, rain_drizzle, max, prcp, count_temp, snow_ice_pellets, stn, temp, fog, count_stp, stp, visib
+
+Table: NOAA_GSOD.GSOD1954
+Columns: stp, fog, min, snow_ice_pellets, sndp, flag_prcp, rain_drizzle, flag_max, wdsp, gust, slp, dewp, visib, da, max, hail, prcp, count_slp, temp, mo, count_stp, count_wdsp, flag_min, year, count_dewp, stn, wban, thunder, tornado_funnel_cloud, count_temp, mxpsd, count_visib
+
+Table: NOAA_GSOD.GSOD1968
+Columns: count_slp, wban, wdsp, count_stp, count_wdsp, hail, tornado_funnel_cloud, mxpsd, count_temp, slp, count_dewp, sndp, thunder, year, prcp, rain_drizzle, flag_max, stp, min, visib, fog, temp, flag_min, count_visib, flag_prcp, da, gust, snow_ice_pellets, max, stn, mo, dewp
+
+Table: NOAA_GSOD.GSOD2001
+Columns: wdsp, visib, fog, dewp, snow_ice_pellets, prcp, count_wdsp, wban, flag_prcp, stn, count_dewp, sndp, mo, hail, min, count_temp, count_stp, da, temp, max, tornado_funnel_cloud, slp, flag_max, count_visib, rain_drizzle, stp, count_slp, thunder, year, flag_min, mxpsd, gust
+
+Table: NOAA_GSOD.GSOD1967
+Columns: da, rain_drizzle, count_visib, sndp, dewp, tornado_funnel_cloud, prcp, count_dewp, thunder, hail, stp, count_wdsp, wdsp, wban, flag_max, count_temp, max, flag_min, stn, gust, flag_prcp, count_slp, mxpsd, temp, mo, fog, min, snow_ice_pellets, year, slp, count_stp, visib
+
+Table: NOAA_GSOD.GSOD1966
+Columns: gust, count_temp, dewp, mo, min, da, year, flag_min, temp, prcp, wban, count_dewp, count_stp, wdsp, snow_ice_pellets, visib, hail, max, stn, count_visib, sndp, stp, slp, count_wdsp, count_slp, tornado_funnel_cloud, thunder, mxpsd, flag_max, fog, rain_drizzle, flag_prcp
+
+Table: NOAA_GSOD.GSOD2008
+Columns: flag_min, wdsp, da, count_slp, count_dewp, rain_drizzle, temp, slp, fog, prcp, gust, tornado_funnel_cloud, hail, sndp, flag_max, snow_ice_pellets, wban, visib, count_temp, flag_prcp, count_wdsp, count_stp, thunder, stn, stp, count_visib, mxpsd, mo, max, min, dewp, year
+
+Table: NOAA_GSOD.GSOD2005
+Columns: count_visib, slp, rain_drizzle, prcp, sndp, mxpsd, temp, visib, stp, hail, mo, thunder, min, wban, count_dewp, year, tornado_funnel_cloud, count_temp, fog, count_wdsp, count_stp, snow_ice_pellets, stn, dewp, gust, count_slp, flag_min, max, flag_max, flag_prcp, wdsp, da
+
+Table: NOAA_GSOD.GSOD1958
+Columns: count_dewp, thunder, flag_prcp, stn, mo, year, count_slp, hail, sndp, min, fog, stp, slp, snow_ice_pellets, dewp, count_wdsp, count_temp, wdsp, flag_max, flag_min, gust, prcp, visib, da, count_stp, mxpsd, temp, tornado_funnel_cloud, max, rain_drizzle, wban, count_visib
+
+Table: NOAA_GSOD.GSOD1952
+Columns: count_visib, gust, count_wdsp, count_temp, dewp, count_stp, wdsp, flag_min, stp, flag_max, visib, mxpsd, thunder, mo, da, count_dewp, count_slp, tornado_funnel_cloud, flag_prcp, fog, snow_ice_pellets, temp, rain_drizzle, sndp, max, stn, year, slp, wban, prcp, min, hail
+
+Table: NOAA_GSOD.GSOD2000
+Columns: mxpsd, flag_max, tornado_funnel_cloud, dewp, da, visib, sndp, count_temp, count_wdsp, mo, stn, flag_prcp, wdsp, temp, hail, count_slp, slp, count_visib, count_stp, rain_drizzle, min, max, count_dewp, year, fog, snow_ice_pellets, flag_min, prcp, stp, wban, thunder, gust
+
+Table: NOAA_GSOD.GSOD1950
+Columns: flag_min, count_temp, rain_drizzle, year, min, count_visib, stn, fog, slp, prcp, tornado_funnel_cloud, da, dewp, hail, thunder, visib, temp, stp, count_wdsp, flag_max, count_dewp, sndp, max, wban, mo, snow_ice_pellets, mxpsd, wdsp, count_slp, flag_prcp, gust, count_stp
+
+Table: NOAA_GSOD.GSOD1984
+Columns: dewp, wban, wdsp, sndp, min, hail, stn, prcp, flag_min, max, count_temp, count_slp, count_dewp, rain_drizzle, stp, count_wdsp, gust, mxpsd, fog, da, flag_max, slp, visib, count_visib, tornado_funnel_cloud, thunder, snow_ice_pellets, flag_prcp, temp, count_stp, mo, year
+
+Table: NOAA_GSOD.GSOD1946
+Columns: fog, slp, count_stp, stp, visib, flag_prcp, stn, wdsp, min, hail, dewp, da, max, count_temp, mxpsd, mo, wban, prcp, temp, rain_drizzle, count_wdsp, snow_ice_pellets, flag_max, tornado_funnel_cloud, gust, count_dewp, count_visib, sndp, thunder, flag_min, year, count_slp
+
+Table: NOAA_GSOD.GSOD1999
+Columns: count_stp, count_visib, count_dewp, flag_max, mxpsd, min, da, rain_drizzle, gust, prcp, count_wdsp, hail, wdsp, max, sndp, mo, slp, dewp, flag_min, tornado_funnel_cloud, thunder, count_slp, stp, year, temp, snow_ice_pellets, fog, stn, wban, visib, flag_prcp, count_temp
+
+Table: NOAA_GSOD.GSOD1971
+Columns: tornado_funnel_cloud, hail, wdsp, dewp, mo, gust, count_wdsp, slp, sndp, count_visib, prcp, count_dewp, snow_ice_pellets, max, thunder, visib, fog, mxpsd, wban, temp, stp, flag_max, flag_prcp, count_stp, rain_drizzle, year, flag_min, da, min, count_temp, count_slp, stn
+
+Table: NOAA_GSOD.GSOD2022
+Columns: count_wdsp, year, da, flag_prcp, sndp, slp, wban, count_visib, count_slp, fog, mo, count_dewp, dewp, temp, prcp, max, snow_ice_pellets, wdsp, date, stn, tornado_funnel_cloud, mxpsd, thunder, hail, rain_drizzle, flag_min, stp, flag_max, visib, gust, count_stp, min, count_temp
+
+Table: NOAA_GSOD.GSOD1988
+Columns: count_visib, count_stp, temp, min, count_temp, gust, count_wdsp, year, rain_drizzle, mo, count_slp, visib, tornado_funnel_cloud, snow_ice_pellets, wdsp, stn, stp, thunder, flag_min, count_dewp, dewp, flag_prcp, wban, flag_max, prcp, hail, sndp, slp, max, fog, da, mxpsd
+
+Table: NOAA_GSOD.GSOD1993
+Columns: prcp, count_slp, snow_ice_pellets, flag_prcp, stn, flag_max, fog, dewp, max, da, hail, visib, year, slp, mxpsd, gust, stp, min, count_visib, wban, temp, thunder, count_temp, flag_min, wdsp, rain_drizzle, tornado_funnel_cloud, count_stp, sndp, count_dewp, mo, count_wdsp
+
+Table: NOAA_GSOD.GSOD2018
+Columns: count_stp, min, stn, flag_max, gust, sndp, snow_ice_pellets, thunder, year, count_temp, count_slp, wdsp, rain_drizzle, mo, slp, prcp, hail, flag_prcp, stp, da, max, count_visib, wban, tornado_funnel_cloud, mxpsd, fog, visib, temp, count_wdsp, dewp, count_dewp, flag_min
+
+Table: NOAA_GSOD.GSOD1996
+Columns: temp, wban, max, count_slp, count_visib, wdsp, stp, count_temp, count_stp, flag_prcp, year, rain_drizzle, min, visib, count_dewp, tornado_funnel_cloud, sndp, gust, flag_min, mo, stn, count_wdsp, fog, thunder, slp, dewp, snow_ice_pellets, da, mxpsd, flag_max, prcp, hail
+
+Table: NOAA_GSOD.GSOD1944
+Columns: mxpsd, visib, tornado_funnel_cloud, wdsp, count_slp, rain_drizzle, prcp, sndp, dewp, slp, mo, stn, max, year, count_temp, stp, wban, hail, temp, gust, count_stp, count_visib, flag_max, da, min, flag_min, count_dewp, flag_prcp, snow_ice_pellets, fog, count_wdsp, thunder
+
+Table: NOAA_GSOD.GSOD1975
+Columns: min, snow_ice_pellets, count_visib, tornado_funnel_cloud, wban, stp, fog, slp, stn, visib, dewp, flag_min, sndp, wdsp, count_temp, flag_max, hail, mxpsd, rain_drizzle, da, flag_prcp, count_stp, mo, max, year, gust, prcp, count_dewp, thunder, temp, count_wdsp, count_slp
+
+Table: NOAA_GSOD.GSOD1972
+Columns: count_slp, dewp, tornado_funnel_cloud, flag_min, fog, wdsp, count_stp, hail, count_wdsp, year, da, flag_prcp, sndp, count_temp, wban, snow_ice_pellets, flag_max, mo, count_dewp, prcp, rain_drizzle, min, max, gust, count_visib, thunder, mxpsd, visib, stp, slp, temp, stn
+
+Table: NOAA_GSOD.GSOD2014
+Columns: thunder, wdsp, count_stp, count_wdsp, da, flag_prcp, mo, year, gust, prcp, flag_min, slp, count_temp, stp, dewp, min, count_slp, count_visib, sndp, hail, tornado_funnel_cloud, wban, visib, flag_max, rain_drizzle, mxpsd, snow_ice_pellets, temp, count_dewp, max, fog, stn
+
+Table: NOAA_GSOD.GSOD1989
+Columns: count_temp, year, flag_prcp, stn, da, stp, count_stp, min, count_wdsp, count_dewp, slp, mxpsd, hail, prcp, count_slp, snow_ice_pellets, wban, flag_min, rain_drizzle, visib, mo, tornado_funnel_cloud, gust, thunder, flag_max, sndp, count_visib, temp, dewp, fog, max, wdsp
+
+Table: NOAA_GSOD.GSOD1986
+Columns: count_wdsp, visib, temp, snow_ice_pellets, count_dewp, count_slp, flag_prcp, mxpsd, prcp, stp, count_visib, count_temp, gust, fog, dewp, flag_max, da, thunder, hail, mo, flag_min, min, stn, count_stp, wdsp, wban, sndp, year, max, slp, rain_drizzle, tornado_funnel_cloud
+
+Table: NOAA_GSOD.GSOD1929
+Columns: year, fog, min, flag_prcp, stp, prcp, count_wdsp, da, temp, count_dewp, wban, snow_ice_pellets, count_stp, thunder, max, dewp, visib, hail, count_temp, flag_min, mo, sndp, count_slp, mxpsd, flag_max, gust, wdsp, rain_drizzle, tornado_funnel_cloud, count_visib, slp, stn
+
+Table: NOAA_GSOD.GSOD1948
+Columns: count_wdsp, prcp, visib, fog, flag_prcp, mo, wban, da, count_dewp, thunder, dewp, flag_min, slp, min, stn, gust, stp, count_temp, mxpsd, sndp, temp, rain_drizzle, wdsp, count_stp, max, hail, count_visib, snow_ice_pellets, year, count_slp, tornado_funnel_cloud, flag_max
+
+Table: NOAA_GSOD.GSOD1932
+Columns: count_slp, mo, temp, flag_max, year, count_temp, rain_drizzle, sndp, snow_ice_pellets, flag_prcp, da, stn, gust, prcp, thunder, wdsp, count_visib, mxpsd, fog, count_stp, visib, dewp, slp, stp, count_dewp, tornado_funnel_cloud, hail, wban, min, count_wdsp, max, flag_min
+
+Table: NOAA_GSOD.GSOD1956
+Columns: count_dewp, year, visib, count_temp, max, flag_min, tornado_funnel_cloud, flag_max, wban, stn, sndp, min, wdsp, stp, prcp, count_slp, rain_drizzle, thunder, count_stp, fog, mxpsd, da, slp, temp, gust, mo, flag_prcp, hail, snow_ice_pellets, count_wdsp, count_visib, dewp
+
+Table: NOAA_GSOD.GSOD1974
+Columns: count_stp, count_temp, flag_min, count_visib, mo, hail, min, wdsp, temp, count_wdsp, rain_drizzle, flag_max, prcp, year, stn, thunder, flag_prcp, fog, sndp, mxpsd, da, snow_ice_pellets, stp, max, gust, tornado_funnel_cloud, dewp, count_dewp, wban, count_slp, visib, slp
+
+Table: NOAA_GSOD.GSOD2006
+Columns: fog, thunder, snow_ice_pellets, count_stp, flag_min, count_temp, hail, visib, temp, year, rain_drizzle, slp, gust, min, mxpsd, count_wdsp, sndp, dewp, prcp, flag_max, count_slp, count_dewp, tornado_funnel_cloud, stp, da, stn, wdsp, max, wban, flag_prcp, count_visib, mo
+
+Table: NOAA_GSOD.GSOD1980
+Columns: year, sndp, rain_drizzle, count_visib, thunder, prcp, wdsp, count_temp, gust, stp, stn, tornado_funnel_cloud, wban, flag_max, max, count_stp, count_dewp, da, dewp, mxpsd, min, mo, fog, flag_prcp, slp, snow_ice_pellets, count_slp, temp, count_wdsp, flag_min, visib, hail
+
+Table: NOAA_GSOD.GSOD2010
+Columns: flag_prcp, hail, snow_ice_pellets, flag_min, count_slp, temp, da, slp, count_visib, year, fog, count_temp, dewp, wdsp, count_stp, gust, mxpsd, count_wdsp, thunder, flag_max, min, tornado_funnel_cloud, stn, mo, stp, rain_drizzle, visib, prcp, count_dewp, sndp, max, wban
+
+Table: NOAA_GSOD.GSOD1992
+Columns: temp, da, rain_drizzle, count_visib, thunder, stp, count_slp, count_temp, count_dewp, count_stp, visib, flag_prcp, mxpsd, flag_min, year, prcp, hail, snow_ice_pellets, max, flag_max, mo, dewp, min, sndp, fog, tornado_funnel_cloud, wban, wdsp, count_wdsp, slp, gust, stn
+
+Table: NOAA_GSOD.GSOD2002
+Columns: flag_max, prcp, count_slp, stn, sndp, max, count_temp, slp, rain_drizzle, snow_ice_pellets, fog, da, year, wdsp, gust, temp, count_wdsp, visib, dewp, min, stp, mxpsd, count_stp, tornado_funnel_cloud, flag_prcp, hail, flag_min, mo, count_dewp, thunder, count_visib, wban
+
+Table: NOAA_GSOD.GSOD2003
+Columns: fog, stp, mo, max, visib, prcp, flag_max, snow_ice_pellets, sndp, count_slp, slp, count_visib, mxpsd, year, dewp, min, count_wdsp, da, thunder, tornado_funnel_cloud, flag_min, rain_drizzle, gust, hail, count_dewp, wban, count_stp, count_temp, temp, flag_prcp, stn, wdsp
+
+Table: NOAA_GSOD.GSOD2009
+Columns: count_stp, count_dewp, min, count_wdsp, wban, count_slp, stn, wdsp, rain_drizzle, dewp, sndp, temp, max, flag_min, count_visib, stp, flag_max, year, gust, da, snow_ice_pellets, tornado_funnel_cloud, visib, slp, mo, flag_prcp, fog, prcp, count_temp, hail, mxpsd, thunder
+
+Table: NOAA_GSOD.GSOD1960
+Columns: flag_max, flag_min, da, mo, hail, count_visib, visib, stp, thunder, max, mxpsd, sndp, fog, year, temp, rain_drizzle, count_slp, count_wdsp, wban, prcp, slp, tornado_funnel_cloud, snow_ice_pellets, count_temp, gust, stn, dewp, wdsp, min, count_dewp, count_stp, flag_prcp
+
+Table: NOAA_GSOD.GSOD2024
+Columns: max, dewp, stp, year, min, mo, count_visib, count_wdsp, gust, wdsp, snow_ice_pellets, stn, count_temp, fog, hail, prcp, visib, mxpsd, tornado_funnel_cloud, temp, flag_min, count_dewp, wban, slp, count_slp, count_stp, rain_drizzle, flag_prcp, sndp, da, date, flag_max, thunder
+
+Table: NOAA_GSOD.GSOD1942
+Columns: year, mo, count_stp, wban, wdsp, hail, snow_ice_pellets, sndp, visib, count_visib, da, thunder, count_temp, rain_drizzle, stp, fog, slp, flag_min, max, stn, dewp, prcp, temp, mxpsd, gust, flag_max, count_slp, tornado_funnel_cloud, count_dewp, flag_prcp, min, count_wdsp
+
+Table: NOAA_GSOD.GSOD1934
+Columns: gust, flag_min, min, count_dewp, dewp, visib, hail, year, flag_max, mxpsd, max, stp, flag_prcp, count_slp, count_visib, stn, sndp, prcp, tornado_funnel_cloud, thunder, snow_ice_pellets, count_stp, slp, temp, count_temp, wban, wdsp, mo, fog, rain_drizzle, da, count_wdsp
+
+Table: NOAA_GSOD.GSOD1940
+Columns: flag_prcp, wdsp, sndp, count_visib, gust, da, stn, prcp, hail, visib, slp, temp, mo, flag_min, count_slp, wban, thunder, count_stp, count_temp, rain_drizzle, count_wdsp, year, mxpsd, max, dewp, stp, flag_max, min, snow_ice_pellets, count_dewp, fog, tornado_funnel_cloud
+
+Table: NOAA_GSOD.GSOD2012
+Columns: gust, stn, count_slp, prcp, mo, count_temp, thunder, count_visib, count_stp, dewp, wban, count_wdsp, hail, da, temp, year, slp, min, flag_max, wdsp, tornado_funnel_cloud, stp, count_dewp, snow_ice_pellets, fog, flag_prcp, sndp, rain_drizzle, mxpsd, flag_min, visib, max
+
+Table: NOAA_GSOD.GSOD1962
+Columns: count_wdsp, visib, count_dewp, wban, count_slp, snow_ice_pellets, tornado_funnel_cloud, count_temp, min, slp, count_visib, fog, dewp, flag_min, temp, hail, mxpsd, rain_drizzle, sndp, year, flag_max, wdsp, mo, da, thunder, count_stp, stp, gust, max, flag_prcp, stn, prcp
+
+Table: NOAA_GSOD.GSOD1976
+Columns: tornado_funnel_cloud, mo, prcp, wdsp, count_dewp, temp, max, da, flag_max, flag_min, wban, stp, min, hail, rain_drizzle, gust, visib, count_temp, count_slp, snow_ice_pellets, fog, sndp, slp, count_stp, dewp, year, count_wdsp, mxpsd, flag_prcp, count_visib, thunder, stn
+
+Table: NOAA_GSOD.GSOD2017
+Columns: prcp, visib, da, flag_max, hail, gust, wdsp, snow_ice_pellets, sndp, mo, count_slp, count_stp, dewp, fog, thunder, count_wdsp, flag_min, temp, slp, tornado_funnel_cloud, flag_prcp, count_temp, wban, stn, stp, count_visib, min, mxpsd, rain_drizzle, year, max, count_dewp
+
+Table: NOAA_GSOD.GSOD1970
+Columns: stp, prcp, thunder, snow_ice_pellets, temp, max, wban, count_stp, dewp, year, hail, flag_min, slp, flag_max, count_visib, gust, wdsp, fog, visib, tornado_funnel_cloud, count_wdsp, stn, count_dewp, mo, min, count_temp, rain_drizzle, da, flag_prcp, sndp, count_slp, mxpsd
+
+Table: NOAA_GSOD.GSOD1985
+Columns: flag_min, tornado_funnel_cloud, fog, gust, wdsp, min, flag_max, stn, stp, prcp, count_visib, count_stp, count_temp, count_dewp, rain_drizzle, count_wdsp, count_slp, dewp, hail, thunder, mo, mxpsd, wban, sndp, year, slp, flag_prcp, temp, visib, snow_ice_pellets, max, da
+
+Table: NOAA_GSOD.GSOD1959
+Columns: count_stp, prcp, min, visib, count_dewp, wdsp, slp, da, mxpsd, wban, temp, rain_drizzle, max, count_visib, mo, year, gust, flag_max, sndp, dewp, stn, stp, snow_ice_pellets, fog, count_temp, flag_min, flag_prcp, thunder, tornado_funnel_cloud, hail, count_slp, count_wdsp
+
+Table: NOAA_GSOD.GSOD1983
+Columns: dewp, slp, thunder, max, count_dewp, visib, count_wdsp, mo, stp, mxpsd, flag_prcp, fog, wban, snow_ice_pellets, flag_max, da, temp, stn, rain_drizzle, wdsp, flag_min, hail, count_visib, tornado_funnel_cloud, count_stp, count_temp, gust, count_slp, sndp, min, prcp, year
+
+Table: NOAA_GSOD.GSOD2019
+Columns: tornado_funnel_cloud, count_wdsp, visib, thunder, year, wban, stp, stn, mxpsd, mo, count_dewp, count_slp, count_stp, slp, count_temp, flag_prcp, da, flag_max, gust, dewp, flag_min, min, rain_drizzle, snow_ice_pellets, wdsp, sndp, count_visib, max, fog, temp, prcp, hail
+
+Table: NOAA_GSOD.GSOD1938
+Columns: da, max, flag_prcp, prcp, min, fog, flag_max, snow_ice_pellets, thunder, wban, mo, slp, count_wdsp, stn, stp, gust, sndp, mxpsd, hail, count_dewp, count_slp, count_visib, flag_min, dewp, wdsp, rain_drizzle, year, tornado_funnel_cloud, count_temp, visib, temp, count_stp
+
+Table: NOAA_GSOD.GSOD1991
+Columns: year, wdsp, mxpsd, da, snow_ice_pellets, slp, stp, count_stp, fog, thunder, flag_max, count_slp, visib, count_visib, rain_drizzle, max, hail, wban, count_temp, gust, min, prcp, stn, dewp, sndp, count_wdsp, temp, mo, count_dewp, flag_prcp, tornado_funnel_cloud, flag_min
+
+Table: NOAA_GSOD.GSOD1935
+Columns: dewp, count_slp, wban, flag_prcp, prcp, da, mo, year, count_wdsp, stp, visib, sndp, flag_min, max, stn, rain_drizzle, tornado_funnel_cloud, slp, count_temp, hail, thunder, temp, wdsp, count_stp, fog, count_dewp, snow_ice_pellets, min, mxpsd, flag_max, count_visib, gust
+
+Table: NOAA_GSOD.GSOD2004
+Columns: stn, fog, da, min, sndp, mxpsd, slp, count_wdsp, rain_drizzle, flag_min, count_dewp, tornado_funnel_cloud, year, visib, dewp, hail, snow_ice_pellets, thunder, flag_prcp, temp, prcp, count_stp, flag_max, count_temp, count_slp, stp, gust, count_visib, wdsp, max, mo, wban
+
+Table: NOAA_GSOD.GSOD2021
+Columns: sndp, count_wdsp, mo, flag_max, mxpsd, rain_drizzle, prcp, stp, visib, wdsp, wban, gust, count_stp, hail, da, slp, flag_prcp, flag_min, year, date, snow_ice_pellets, temp, count_slp, count_visib, stn, tornado_funnel_cloud, min, fog, count_dewp, dewp, count_temp, thunder, max
+
+Table: NOAA_GSOD.GSOD2015
+Columns: stp, count_wdsp, rain_drizzle, prcp, visib, tornado_funnel_cloud, stn, wban, flag_max, slp, count_temp, snow_ice_pellets, sndp, min, temp, mo, max, hail, gust, flag_prcp, flag_min, count_slp, count_visib, count_stp, da, fog, dewp, count_dewp, year, wdsp, mxpsd, thunder
+
+Table: NOAA_GSOD.GSOD2011
+Columns: mxpsd, min, prcp, flag_max, sndp, count_dewp, count_visib, mo, wdsp, dewp, max, snow_ice_pellets, flag_prcp, hail, count_wdsp, da, temp, fog, thunder, count_slp, flag_min, visib, wban, count_temp, slp, stp, stn, gust, year, count_stp, rain_drizzle, tornado_funnel_cloud
+
+Table: NOAA_GSOD.GSOD1933
+Columns: max, stp, rain_drizzle, prcp, gust, count_stp, temp, mo, hail, flag_min, wban, flag_max, count_temp, count_wdsp, da, wdsp, slp, snow_ice_pellets, count_visib, thunder, mxpsd, fog, stn, visib, count_slp, year, dewp, count_dewp, tornado_funnel_cloud, min, sndp, flag_prcp
+
+Table: NOAA_GSOD.GSOD1951
+Columns: sndp, wdsp, flag_min, visib, min, mo, count_visib, stn, stp, year, prcp, snow_ice_pellets, count_slp, count_temp, tornado_funnel_cloud, dewp, slp, count_stp, max, fog, count_wdsp, mxpsd, flag_max, hail, flag_prcp, gust, thunder, count_dewp, wban, temp, rain_drizzle, da
+
+Table: NOAA_GSOD.GSOD1969
+Columns: wdsp, count_slp, count_visib, wban, fog, stp, year, dewp, sndp, count_stp, thunder, prcp, flag_min, stn, count_temp, rain_drizzle, snow_ice_pellets, visib, max, hail, count_dewp, flag_max, count_wdsp, gust, mo, mxpsd, flag_prcp, temp, da, slp, tornado_funnel_cloud, min
+
+Table: NOAA_GSOD.GSOD1930
+Columns: count_temp, mo, da, flag_min, fog, count_visib, wban, snow_ice_pellets, count_stp, temp, hail, rain_drizzle, stn, stp, flag_max, tornado_funnel_cloud, sndp, dewp, max, count_dewp, wdsp, count_wdsp, gust, visib, count_slp, min, slp, prcp, flag_prcp, year, thunder, mxpsd
+
+Table: NOAA_GSOD.GSOD2023
+Columns: year, hail, flag_prcp, stp, sndp, rain_drizzle, count_dewp, da, temp, count_slp, wdsp, thunder, fog, count_temp, count_wdsp, gust, mo, slp, mxpsd, count_visib, prcp, flag_min, tornado_funnel_cloud, min, snow_ice_pellets, wban, visib, flag_max, count_stp, dewp, stn, date, max
+
+Table: NOAA_GSOD.GSOD1949
+Columns: count_dewp, count_stp, gust, min, tornado_funnel_cloud, rain_drizzle, flag_prcp, max, mo, flag_min, stn, count_slp, year, thunder, count_temp, visib, prcp, fog, slp, temp, flag_max, dewp, wdsp, da, count_visib, stp, snow_ice_pellets, wban, mxpsd, hail, sndp, count_wdsp

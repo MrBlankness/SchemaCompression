@@ -1,0 +1,98 @@
+[STANDALONE]
+## DEPS_DEV_V1.ADVISORIES
+ReferenceURLs: VARIANT | NULL | eg=[["https://github.com/apollographql/apollo-server","https://github.com/apollographql/apollo-server/commit/0adaf80d1ee51d8c7e5fd863c04478536d15eb8c","https://github.com/apollographql/apollo-server/security/advisories/GHSA-68jh-rf6x-836f","https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-68jh-rf6x-836f/GHSA-68jh-rf6x-836f.json"], ["https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-qvjr-x8fw-hghv/GHSA-qvjr-x8fw-hghv.json","https://github.com/jenkinsci/ecutest-plugin","https://nvd.nist.gov/vuln/detail/CVE-2021-21612","https://www.jenkins.io/security/advisory/2021-01-13/#SECURITY-2057"]]
+CVSS3Score: NUMBER | NULL | eg=["3.300000000", "3.700000000"]
+Packages: VARIANT | NULL | eg=[[{"AffectedVersions":"Introduced: 4.7.1, Fixed: 4.7.4","Name":"@apollo/server","System":"NPM","UnaffectedVersions":""}], [{"AffectedVersions":"Introduced: 0, Fixed: 2.24","Name":"de.tracetronic.jenkins.plugins:ecutest","System":"MAVEN","UnaffectedVersions":""}]]
+Aliases: VARIANT | NULL | eg=[[]]
+SnapshotAt: NUMBER | NULL | eg=[1694466085316347]
+Severity: TEXT | NULL | eg=["UNKNOWN"]
+GitHubSeverity: TEXT | NULL | eg=["LOW"]
+SourceID: TEXT | NULL | eg=["GHSA-68jh-rf6x-836f", "GHSA-qvjr-x8fw-hghv"]
+Description: TEXT | NULL | eg=["### Context\nContent Security Policies (CSP) are a defense-in-depth strategy against XSS attacks. Improper application of CSP isn't itself a vulnerability, but it does fail to prevent XSS in the event that there is a viable attack vector for an XSS attack.\n\n### Impact\nThere aren't any XSS attack vectors via the Apollo Server landing pages _known to Apollo_, so to our knowledge there is no impact. However, if there are existing XSS vectors that haven't been reported and patched, then all users of Apollo Server's landing pages have a vulnerability which won't be prevented by the current CSP implemented by the landing pages.\n\nPrior to version 4.7.1, there was no CSP implemented at all. However, the initial CSP implementation (4.7.1+) reused nonces. While this sufficiently resolved the issue w.r.t. scripts not running in Safari, it did not implement CSP in a safe or conventional way.\n\n### Patches\nThe issue is patched in the latest version of Apollo Server, v4.7.4. The changes can be revi...", "TraceTronic ECU-TEST Plugin 2.23.1 and earlier stores credentials unencrypted in its global configuration file `de.tracetronic.jenkins.plugins.ecutest.report.atx.installation.ATXInstallation.xml` on the Jenkins controller as part of its configuration.\n\nThese credentials can be viewed by users with access to the Jenkins controller file system.\n\nTraceTronic ECU-TEST Plugin 2.24 adds a new option type for sensitive options. Previously stored credentials are migrated to that option type on Jenkins startup."]
+SourceURL: TEXT | NULL | eg=["https://osv.dev/vulnerability/GHSA-68jh-rf6x-836f", "https://osv.dev/vulnerability/GHSA-qvjr-x8fw-hghv"]
+Disclosed: NUMBER | NULL | eg=[1686944453000000, 1653413953000000]
+Source: TEXT | NULL | eg=["OSV"]
+Title: TEXT | NULL | eg=["@apollo/server vulnerable to unsafe application of Content Security Policy via reused nonces", "Credentials stored in plain text by Jenkins TraceTronic ECU-TEST Plugin"]
+
+## DEPS_DEV_V1.DEPENDENCIES
+Version: TEXT | NULL | eg=["1.4.0", "1.1.1"]
+System: TEXT | NULL | eg=["NPM"]
+Name: TEXT | NULL | eg=["@tpp/um", "@sdr/cli"]
+SnapshotAt: NUMBER | NULL | eg=[1653865202672717, 1652655601333164]
+Dependency: VARIANT | NULL | eg=[{"Name":"rimraf","System":"NPM","Version":"3.0.2"}, {"Name":"is-accessor-descriptor","System":"NPM","Version":"1.0.0"}]
+MinimumDepth: NUMBER | NULL
+
+## DEPS_DEV_V1.DEPENDENCYGRAPHEDGES
+System: TEXT | NULL | eg=["MAVEN"]
+Requirement: TEXT | NULL | eg=["1.0.b2", "2.6.2"]
+SnapshotAt: NUMBER | NULL | eg=[1670878903046625]
+Name: TEXT | NULL | eg=["com.agilejava.docbkx:docbkx-maven-plugin", "com.adobe.cq.screens:com.adobe.cq.screens"]
+Version: TEXT | NULL | eg=["2.0.7", "1.5.130"]
+From: VARIANT | NULL | eg=[{"Name":"fop:fop","System":"MAVEN","Version":"0.20.5"}, {"Name":"xom:xom","System":"MAVEN","Version":"1.1"}]
+To: VARIANT | NULL | eg=[{"Name":"xml-apis:xml-apis","System":"MAVEN","Version":"1.3.03"}, {"Name":"xerces:xercesImpl","System":"MAVEN","Version":"2.8.1"}]
+
+## DEPS_DEV_V1.DEPENDENTS
+Name: TEXT | NULL | eg=["g", "i"]
+SnapshotAt: NUMBER | NULL | eg=[1726520453364153]
+MinimumDepth: NUMBER | NULL | eg=[1]
+System: TEXT | NULL | eg=["NPM"]
+DependentIsHighestReleaseWithResolution: BOOLEAN | NULL | eg=[false]
+Dependent: VARIANT | NULL | eg=[{"Name":"poyka","System":"NPM","Version":"0.3.18"}, {"Name":"asmr100-com-dist","System":"NPM","Version":"0.6.0-rc.4-788-g21bfbc7"}]
+Version: TEXT | NULL | eg=["2.0.1", "0.3.7"]
+
+## DEPS_DEV_V1.NUGETREQUIREMENTS
+DependencyGroups: VARIANT | NULL | eg=[[]]
+Version: TEXT | NULL | eg=["1.0.2.4", "1.0.1.1"]
+Name: TEXT | NULL | eg=["docs_sage", "docutainsdk.windows"]
+SnapshotAt: NUMBER | NULL | eg=[1725915643146231]
+
+## DEPS_DEV_V1.PACKAGEVERSIONHASHES
+System: TEXT | NULL | eg=["MAVEN"]
+HashType: TEXT | NULL | eg=["MD5"]
+SnapshotAt: NUMBER | NULL | eg=[1656363603995533]
+Name: TEXT | NULL | eg=["com.github.sarxos:oss-parent", "io.matthewnelson.kotlin-components:build-configuration-watchosarm32"]
+Version: TEXT | NULL | eg=["1", "2"]
+Hash: TEXT | NULL | eg=["OHVQhLoGM0h1kTqic82elg==", "OLMC46rqOMMho5pdvoFFsQ=="]
+
+## DEPS_DEV_V1.PACKAGEVERSIONS
+DependenciesProcessed: BOOLEAN | NULL
+Hashes: VARIANT | NULL | eg=[[{"Hash":"+Rrk8ZgkjA9aQ1Vsp9vL9w==","Type":"MD5"},{"Hash":"Dm1XJadxUxqBg8Zh/bd6+lm0H+c=","Type":"SHA1"},{"Hash":"Zl71JyGD0CQEoTPH2LNDcRcqvp7xYR4GXIiStTxFyTH1D7MrMbTpD+qVqf0PSYtNtSIjR+dkxXRfCAtvjN0Acg==","Type":"SHA512"}], [{"Hash":"9pSWFecxsFQzj06lMVdc2g==","Type":"MD5"},{"Hash":"iX43ZTZJTDr2DPMok8rgYS1BqTw=","Type":"SHA1"},{"Hash":"Zmxf3AmBrKmqQPVGL36C+5HD9wWm3XOtUta3UhCLXOySH/KIUc+ugaN3HENyk1P3L77Q2K2KtyS5EA0KJ2dLxg==","Type":"SHA512"}]]
+Links: VARIANT | NULL | eg=[[{"Label":"HOMEPAGE","URL":"https://cocreate.app/docs/attributes"},{"Label":"ISSUE_TRACKER","URL":"https://github.com/CoCreate-app/CoCreate-attributes/issues"},{"Label":"ORIGIN","URL":"https://registry.npmjs.org/@cocreate%2Fattributes/1.1.6"},{"Label":"SOURCE_REPO","URL":"git+https://github.com/CoCreate-app/CoCreate-attributes.git"}], [{"Label":"HOMEPAGE","URL":"https://github.com/Codecademy/gamut#readme"},{"Label":"ISSUE_TRACKER","URL":"https://github.com/Codecademy/gamut/issues"},{"Label":"ORIGIN","URL":"https://registry.npmjs.org/@codecademy%2Fgamut-kit/0.6.169-alpha.e44bdf.0"},{"Label":"SOURCE_REPO","URL":"git+ssh://git@github.com/Codecademy/gamut.git"}]]
+Purl: TEXT | NULL
+SLSAProvenance: VARIANT | NULL
+Registries: VARIANT | NULL | eg=[[]]
+Name: TEXT | NULL | eg=["@cocreate/attributes", "@codecademy/gamut-kit"]
+DependencyError: BOOLEAN | NULL
+Version: TEXT | NULL | eg=["1.1.6", "0.6.169-alpha.e44bdf.0"]
+UpstreamIdentifiers: VARIANT | NULL | eg=[[]]
+Advisories: VARIANT | NULL | eg=[[]]
+Licenses: VARIANT | NULL | eg=[["MIT"]]
+VersionInfo: VARIANT | NULL | eg=[{"IsRelease":true,"Ordinal":38}, {"IsRelease":false,"Ordinal":4486}]
+UpstreamPublishedAt: NUMBER | NULL
+System: TEXT | NULL | eg=["NPM"]
+SnapshotAt: NUMBER | NULL | eg=[1680555696257226]
+
+## DEPS_DEV_V1.PACKAGEVERSIONTOPROJECT
+SnapshotAt: NUMBER | NULL | eg=[1721768440525402]
+System: TEXT | NULL | eg=["NPM"]
+RelationType: TEXT | NULL | eg=["SOURCE_REPO_TYPE"]
+ProjectType: TEXT | NULL | eg=["GITHUB"]
+ProjectName: TEXT | NULL | eg=["steven-tey/dub"]
+Name: TEXT | NULL | eg=["@dub/ui"]
+RelationProvenance: TEXT | NULL | eg=["UNVERIFIED_METADATA"]
+Version: TEXT | NULL | eg=["0.0.57", "0.0.64"]
+
+## DEPS_DEV_V1.PROJECTS
+StarsCount: NUMBER | NULL | eg=[0]
+ForksCount: NUMBER | NULL | eg=[0]
+Type: TEXT | NULL | eg=["GITLAB"]
+Homepage: TEXT | NULL | eg=["https://gitlab.com/tkil/woodchuck", "https://gitlab.com/wiseidea/monorepo-utils"]
+OpenIssuesCount: NUMBER | NULL | eg=[0]
+SnapshotAt: NUMBER | NULL | eg=[1690837290722347]
+Licenses: VARIANT | NULL | eg=[[]]
+Description: TEXT | NULL | eg=["My Utility for Everything!!!", "Returns the vendor and device name when supplied with a PCI device ID."]
+OSSFuzz: VARIANT | NULL
+Name: TEXT | NULL | eg=["tkil/woodchuck", "wiseidea/monorepo-utils"]
+
+## DEPS_DEV_V1.SNAPSHOTS
+Time: NUMBER | NULL | eg=[1713733246839235, 1693256481433477]

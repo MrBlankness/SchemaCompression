@@ -1,0 +1,15 @@
+[COMPONENTS]
+@C1:base_fee_per_gas,difficulty,extra_data,gas_limit,gas_used,logs_bloom,miner,mix_hash,parent_hash,receipts_root,size,state_root,total_difficulty,transactions_root,uncles,uncles_sha3
+@C2:access_list,from_address,gas,gas_price,input,max_fee_per_gas,max_priority_fee_per_gas,r,s,to_address,transaction_type,v,value
+@C3:transaction_hash,transaction_index
+@C4:ADDRESS,LOG_INDEX,REMOVED
+
+[TABLES]
+Format: schema.table|components|columns
+GOOG_BLOCKCHAIN_CRONOS_MAINNET_US.BLOCKS|@C1|nonce,block_timestamp,block_number,block_hash
+GOOG_BLOCKCHAIN_CRONOS_MAINNET_US.TRANSACTIONS|@C2,@C3|block_hash,nonce,block_timestamp
+GOOG_BLOCKCHAIN_ARBITRUM_ONE_US.DECODED_EVENTS|@C3,@C4|EVENT_HASH,ARGS,TOPICS,BLOCK_NUMBER,BLOCK_HASH,BLOCK_TIMESTAMP,EVENT_SIGNATURE
+GOOG_BLOCKCHAIN_ARBITRUM_ONE_US.LOGS|@C3,@C4|topics,data,block_number,block_timestamp,block_hash
+GOOG_BLOCKCHAIN_POLYGON_MAINNET_US.TRANSACTIONS|@C2,@C3|nonce,block_timestamp,block_hash
+GOOG_BLOCKCHAIN_TRON_MAINNET_US.BLOCKS|@C1|block_number,block_hash,block_timestamp,nonce
+GOOG_BLOCKCHAIN_TRON_MAINNET_US.LOGS|@C3,@C4|data,block_number,block_hash,block_timestamp,topics

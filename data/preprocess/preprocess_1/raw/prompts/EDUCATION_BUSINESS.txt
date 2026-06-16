@@ -1,0 +1,56 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: EDUCATION_BUSINESS.HARDWARE_DIM_CUSTOMER
+Columns: region, channel, market, customer_code, sub_zone, platform, customer
+
+Table: EDUCATION_BUSINESS.HARDWARE_FACT_MANUFACTURING_COST
+Columns: product_code, manufacturing_cost, cost_year
+
+Table: EDUCATION_BUSINESS.HARDWARE_FACT_SALES_MONTHLY
+Columns: date, customer_code, sold_quantity, product_code, fiscal_year
+
+Table: EDUCATION_BUSINESS.SALARYDATASET
+Columns: Salary, CompanyName, SalariesReported, Location, index, JobTitle
+
+Table: EDUCATION_BUSINESS.WEB_ACCOUNTS
+Columns: sales_rep_id, primary_poc, website, id, lat, name, long
+
+Table: EDUCATION_BUSINESS.WEB_SALES_REPS
+Columns: id, name, region_id
+
+Table: EDUCATION_BUSINESS.WEB_REGION
+Columns: id, name
+
+Table: EDUCATION_BUSINESS.HARDWARE_FACT_PRE_INVOICE_DEDUCTIONS
+Columns: pre_invoice_discount_pct, customer_code, fiscal_year
+
+Table: EDUCATION_BUSINESS.UNIVERSITY_OFFERING
+Columns: OffYear, OfferNo, OffTerm, CourseNo, OffLocation, FacNo, OffTime, OffDays
+
+Table: EDUCATION_BUSINESS.UNIVERSITY_STUDENT
+Columns: StdClass, StdMajor, StdCity, StdFirstName, StdGPA, StdState, StdNo, StdLastName, StdZip
+
+Table: EDUCATION_BUSINESS.STAFFHOURS
+Columns: EventDate, EventType, StaffMember, EventTime
+
+Table: EDUCATION_BUSINESS.WEB_ORDERS
+Columns: poster_amt_usd, standard_qty, occurred_at, gloss_qty, poster_qty, standard_amt_usd, total, id, gloss_amt_usd, account_id, total_amt_usd
+
+Table: EDUCATION_BUSINESS.HARDWARE_FACT_GROSS_PRICE
+Columns: fiscal_year, product_code, gross_price
+
+Table: EDUCATION_BUSINESS.UNIVERSITY_COURSE
+Columns: CourseNo, CrsDesc, CrsUnits
+
+Table: EDUCATION_BUSINESS.WEB_EVENTS
+Columns: id, channel, account_id, occurred_at
+
+Table: EDUCATION_BUSINESS.UNIVERSITY_ENROLLMENT
+Columns: EnrGrade, StdNo, OfferNo
+
+Table: EDUCATION_BUSINESS.UNIVERSITY_FACULTY
+Columns: FacFirstName, FacRank, FacCity, FacSalary, FacState, FacDept, FacHireDate, FacLastName, FacSupervisor, FacNo, FacZipCode
+
+Table: EDUCATION_BUSINESS.HARDWARE_DIM_PRODUCT
+Columns: product, division, category, product_code, segment, variant

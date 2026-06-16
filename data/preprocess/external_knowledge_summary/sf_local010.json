@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_local010",
+  "question": "Distribute all the unique city pairs into the distance ranges 0, 1000, 2000, 3000, 4000, 5000, and 6000+, based on their average distance of all routes between them. Then how many pairs are there in the distance range with the fewest unique city paires?",
+  "db_id": "AIRLINES",
+  "source_document": "haversine_formula.md",
+  "evidence": "Key concepts: 1) Unique flight routes between two cities are standardized by listing lexicographically smaller city name first as city1, larger as city2. 2) Average distance for each city pair = sum of flight distances ÷ number of flights between those cities. 3) Distance calculation uses Haversine formula with Earth radius ≈ 6371 km. 4) Coordinates in degrees must be converted to radians using: radians = degrees × π/180."
+}

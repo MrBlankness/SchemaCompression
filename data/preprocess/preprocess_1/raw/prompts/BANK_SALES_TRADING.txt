@@ -1,0 +1,59 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: BANK_SALES_TRADING.CUSTOMER_REGIONS
+Columns: region_id, region_name
+
+Table: BANK_SALES_TRADING.CUSTOMER_TRANSACTIONS
+Columns: customer_id, txn_date, txn_amount, txn_type
+
+Table: BANK_SALES_TRADING.SHOPPING_CART_CAMPAIGN_IDENTIFIER
+Columns: start_date, campaign_id, campaign_name, end_date, products
+
+Table: BANK_SALES_TRADING.INTEREST_METRICS
+Columns: ranking, percentile_ranking, month_year, interest_id, composition, _month, index_value, _year
+
+Table: BANK_SALES_TRADING.VEG_WHSLE_DF
+Columns: index, whsle_px_rmb-kg, whsle_date, item_code
+
+Table: BANK_SALES_TRADING.VEG_TXN_DF
+Columns: txn_date, qty_sold(kg), sale/return, txn_time, unit_selling_px_rmb/kg, index, discount(%), item_code, day_of_week
+
+Table: BANK_SALES_TRADING.SHOPPING_CART_PAGE_HIERARCHY
+Columns: page_id, product_id, page_name, product_category
+
+Table: BANK_SALES_TRADING.VEG_LOSS_RATE_DF
+Columns: item_name, item_code, index, loss_rate_%
+
+Table: BANK_SALES_TRADING.BITCOIN_MEMBERS
+Columns: first_name, member_id, region
+
+Table: BANK_SALES_TRADING.INTEREST_MAP
+Columns: interest_summary, id, interest_name, last_modified, created_at
+
+Table: BANK_SALES_TRADING.BITCOIN_TRANSACTIONS
+Columns: quantity, member_id, txn_id, ticker, txn_type, percentage_fee, txn_time, txn_date
+
+Table: BANK_SALES_TRADING.CLEANED_WEEKLY_SALES
+Columns: platform, month_number, age_band, calendar_year, customer_type, region, demographic, week_number, transactions, avg_transaction, segment, week_date, sales, week_date_formatted
+
+Table: BANK_SALES_TRADING.SHOPPING_CART_EVENTS
+Columns: page_id, event_type, cookie_id, event_time, visit_id, sequence_number
+
+Table: BANK_SALES_TRADING.CUSTOMER_NODES
+Columns: region_id, start_date, end_date, customer_id, node_id
+
+Table: BANK_SALES_TRADING.SHOPPING_CART_USERS
+Columns: user_id, cookie_id, start_date
+
+Table: BANK_SALES_TRADING.SHOPPING_CART_EVENT_IDENTIFIER
+Columns: event_name, event_type
+
+Table: BANK_SALES_TRADING.WEEKLY_SALES
+Columns: region, week_date, segment, customer_type, sales, platform, transactions
+
+Table: BANK_SALES_TRADING.VEG_CAT
+Columns: category_code, item_code, category_name, item_name, index
+
+Table: BANK_SALES_TRADING.BITCOIN_PRICES
+Columns: low, change, price, open, volume, high, market_date, ticker

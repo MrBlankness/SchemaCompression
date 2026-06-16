@@ -1,0 +1,26 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: AIRLINES.BOARDING_PASSES
+Columns: flight_id, ticket_no, seat_no, boarding_no
+
+Table: AIRLINES.AIRPORTS_DATA
+Columns: airport_code, coordinates, airport_name, timezone, city
+
+Table: AIRLINES.TICKETS
+Columns: ticket_no, passenger_id, book_ref
+
+Table: AIRLINES.AIRCRAFTS_DATA
+Columns: range, aircraft_code, model
+
+Table: AIRLINES.FLIGHTS
+Columns: aircraft_code, actual_departure, departure_airport, scheduled_departure, flight_id, scheduled_arrival, actual_arrival, arrival_airport, status, flight_no
+
+Table: AIRLINES.BOOKINGS
+Columns: book_date, total_amount, book_ref
+
+Table: AIRLINES.SEATS
+Columns: seat_no, fare_conditions, aircraft_code
+
+Table: AIRLINES.TICKET_FLIGHTS
+Columns: amount, ticket_no, flight_id, fare_conditions

@@ -1,0 +1,86 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: DEATH.INFANTAGERECODE22
+Columns: Code, Description
+
+Table: DEATH.EDUCATION2003REVISION
+Columns: Description, Code
+
+Table: DEATH.ACTIVITYCODE
+Columns: Description, Code
+
+Table: DEATH.HISPANICORIGIN
+Columns: Description, Code
+
+Table: DEATH.METHODOFDISPOSITION
+Columns: Description, Code
+
+Table: DEATH.RACEIMPUTATIONFLAG
+Columns: Description, Code
+
+Table: DEATH.EDUCATIONREPORTINGFLAG
+Columns: Description, Code
+
+Table: DEATH.PLACEOFINJURY
+Columns: Description, Code
+
+Table: DEATH.AGERECODE52
+Columns: Description, Code
+
+Table: DEATH.TEMP_DEATHS
+Columns: Age, death_count, Icd10Code, Race
+
+Table: DEATH.AGETYPE
+Columns: Code, Description
+
+Table: DEATH.MARITALSTATUS
+Columns: Description, Code
+
+Table: DEATH.RESIDENTSTATUS
+Columns: Code, Description
+
+Table: DEATH.RECORDAXISCONDITIONS
+Columns: DeathRecordId, Icd10Code, Id
+
+Table: DEATH.MANNEROFDEATH
+Columns: Description, Code
+
+Table: DEATH.EDUCATION1989REVISION
+Columns: Code, Description
+
+Table: DEATH.DAYOFWEEKOFDEATH
+Columns: Code, Description
+
+Table: DEATH.DEATHRECORDS
+Columns: ResidentStatus, AgeRecode27, PlaceOfDeathAndDecedentsStatus, CurrentDataYear, Education2003Revision, Icd10Code, ActivityCode, Education1989Revision, EducationReportingFlag, PlaceOfInjury, NumberOfEntityAxisConditions, CauseRecode358, InjuryAtWork, CauseRecode39, AgeRecode12, AgeSubstitutionFlag, HispanicOriginRaceRecode, Id, DayOfWeekOfDeath, MonthOfDeath, RaceRecode5, MaritalStatus, AgeType, Autopsy, RaceRecode3, CauseRecode113, HispanicOrigin, Age, InfantAgeRecode22, MannerOfDeath, InfantCauseRecode130, Race, NumberOfRecordAxisConditions, AgeRecode52, Sex, RaceImputationFlag, MethodOfDisposition, BridgedRaceFlag
+
+Table: DEATH.RACERECODE5
+Columns: Description, Code
+
+Table: DEATH.HISPANICORIGINRACERECODE
+Columns: Code, Description
+
+Table: DEATH.AGERECODE12
+Columns: Code, Description
+
+Table: DEATH.ICD10CODE
+Columns: Description, Code
+
+Table: DEATH.RACERECODE3
+Columns: Description, Code
+
+Table: DEATH.AGERECODE27
+Columns: Description, Code
+
+Table: DEATH.PLACEOFDEATHANDDECEDENTSSTATUS
+Columns: Description, Code
+
+Table: DEATH.ENTITYAXISCONDITIONS
+Columns: Line, DeathRecordId, Sequence, Icd10Code, Id, Part
+
+Table: DEATH.RACE
+Columns: Code, Description
+
+Table: DEATH.BRIDGEDRACEFLAG
+Columns: Description, Code

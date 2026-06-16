@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_bq119",
+  "question": "Please show information about the hurricane with the third longest total travel distance in the North Atlantic during 2020, including its travel coordinates, the cumulative travel distance (in kilometers) at each point, and the maximum sustained wind speed at those times.",
+  "db_id": "NOAA_DATA",
+  "source_document": "functions_st_distance.md",
+  "evidence": "ST_DISTANCE returns minimum geodesic distance between GEOGRAPHY objects in meters. Syntax: ST_DISTANCE(<geography_expression_1>, <geography_expression_2>). For GEOGRAPHY input values, the distance is in meters. Example: ST_DISTANCE(ST_MAKEPOINT(0, 0), ST_MAKEPOINT(1, 0)) returns distance in meters, which can be converted to kilometers by dividing by 1000."
+}

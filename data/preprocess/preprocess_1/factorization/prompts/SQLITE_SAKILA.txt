@@ -1,0 +1,21 @@
+[COMPONENTS]
+@C1:first_name,last_name
+
+[TABLES]
+Format: schema.table|components|columns
+SQLITE_SAKILA.FILM_TEXT||description,title,film_id
+SQLITE_SAKILA.PAYMENT||last_update,staff_id,payment_date,rental_id,payment_id,customer_id,amount
+SQLITE_SAKILA.ACTOR|@C1|actor_id,last_update
+SQLITE_SAKILA.FILM_CATEGORY||last_update,film_id,category_id
+SQLITE_SAKILA.RENTAL||last_update,customer_id,inventory_id,rental_date,staff_id,rental_id,return_date
+SQLITE_SAKILA.LANGUAGE||last_update,language_id,name
+SQLITE_SAKILA.STORE||store_id,address_id,last_update,manager_staff_id
+SQLITE_SAKILA.STAFF|@C1|picture,username,email,address_id,staff_id,last_update,store_id,password,active
+SQLITE_SAKILA.FILM||replacement_cost,special_features,length,description,original_language_id,language_id,rental_rate,rental_duration,rating,title,last_update,film_id,release_year
+SQLITE_SAKILA.INVENTORY||last_update,inventory_id,film_id,store_id
+SQLITE_SAKILA.CUSTOMER|@C1|address_id,customer_id,last_update,store_id,active,create_date,email
+SQLITE_SAKILA.FILM_ACTOR||actor_id,last_update,film_id
+SQLITE_SAKILA.CATEGORY||last_update,name,category_id
+SQLITE_SAKILA.CITY||city,last_update,city_id,country_id
+SQLITE_SAKILA.ADDRESS||address_id,phone,city_id,address2,district,last_update,postal_code,address
+SQLITE_SAKILA.COUNTRY||country_id,country,last_update

@@ -1,0 +1,50 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: SQLITE_SAKILA.FILM_TEXT
+Columns: description, title, film_id
+
+Table: SQLITE_SAKILA.PAYMENT
+Columns: last_update, staff_id, payment_date, rental_id, payment_id, customer_id, amount
+
+Table: SQLITE_SAKILA.ACTOR
+Columns: last_name, first_name, actor_id, last_update
+
+Table: SQLITE_SAKILA.FILM_CATEGORY
+Columns: last_update, film_id, category_id
+
+Table: SQLITE_SAKILA.RENTAL
+Columns: last_update, customer_id, inventory_id, rental_date, staff_id, rental_id, return_date
+
+Table: SQLITE_SAKILA.LANGUAGE
+Columns: last_update, language_id, name
+
+Table: SQLITE_SAKILA.STORE
+Columns: store_id, address_id, last_update, manager_staff_id
+
+Table: SQLITE_SAKILA.STAFF
+Columns: picture, username, email, last_name, address_id, staff_id, last_update, store_id, password, first_name, active
+
+Table: SQLITE_SAKILA.FILM
+Columns: replacement_cost, special_features, length, description, original_language_id, language_id, rental_rate, rental_duration, rating, title, last_update, film_id, release_year
+
+Table: SQLITE_SAKILA.INVENTORY
+Columns: last_update, inventory_id, film_id, store_id
+
+Table: SQLITE_SAKILA.CUSTOMER
+Columns: address_id, customer_id, last_update, store_id, first_name, active, last_name, create_date, email
+
+Table: SQLITE_SAKILA.FILM_ACTOR
+Columns: actor_id, last_update, film_id
+
+Table: SQLITE_SAKILA.CATEGORY
+Columns: last_update, name, category_id
+
+Table: SQLITE_SAKILA.CITY
+Columns: city, last_update, city_id, country_id
+
+Table: SQLITE_SAKILA.ADDRESS
+Columns: address_id, phone, city_id, address2, district, last_update, postal_code, address
+
+Table: SQLITE_SAKILA.COUNTRY
+Columns: country_id, country, last_update

@@ -1,0 +1,14 @@
+[COMPONENTS]
+@C1:block_hash,block_number,block_timestamp
+@C2:from_address,to_address
+@C3:gas,input,value
+
+[TABLES]
+Format: schema.table|components|columns
+ETHEREUM_BLOCKCHAIN.BLOCKS||hash,nonce,extra_data,receipts_root,state_root,miner,transaction_count,total_difficulty,parent_hash,sha3_uncles,size,gas_limit,number,gas_used,timestamp,logs_bloom,difficulty,transactions_root
+ETHEREUM_BLOCKCHAIN.CONTRACTS|@C1|function_sighashes,is_erc20,bytecode,address,is_erc721
+ETHEREUM_BLOCKCHAIN.TRACES|@C1,@C2,@C3|trace_type,subtraces,output,error,transaction_hash,call_type,trace_address,reward_type,gas_used,transaction_index,status
+ETHEREUM_BLOCKCHAIN.TRANSACTIONS|@C1,@C2,@C3|receipt_contract_address,receipt_status,receipt_gas_used,nonce,receipt_root,transaction_index,gas_price,receipt_cumulative_gas_used,hash
+ETHEREUM_BLOCKCHAIN.TOKENS|@C1|name,address,decimals,symbol,total_supply
+ETHEREUM_BLOCKCHAIN.LOGS|@C1|data,address,log_index,transaction_index,topics,transaction_hash
+ETHEREUM_BLOCKCHAIN.TOKEN_TRANSFERS|@C1,@C2|log_index,transaction_hash,value,token_address

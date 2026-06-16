@@ -1,0 +1,7 @@
+{
+  "question_id": "sf_local009",
+  "question": "What is the distance of the longest route where Abakan is either the departure or destination city (in kilometers)?",
+  "db_id": "AIRLINES",
+  "source_document": "haversine_formula.md",
+  "evidence": "Method: Haversine formula calculates great-circle distance between two points (cities) using their latitude and longitude coordinates. Formula: d = 2r * arcsin(sqrt(sin²(Δφ/2) + cos(φ1) * cos(φ2) * sin²(Δλ/2))). Earth radius r ≈ 6371 km. Coordinates in degrees must be converted to radians: radians = degrees × π/180. For a route, 'from_city' is departure, 'to_city' is arrival. Distance result is in kilometers."
+}

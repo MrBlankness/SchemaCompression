@@ -1,0 +1,237 @@
+[COMPONENTS]
+@C1
+categories: VARIANT | NULL
+category_bra: VARIANT | NULL
+category_for: VARIANT | NULL
+category_hra: VARIANT | NULL
+category_hrcs_hc: VARIANT | NULL
+category_hrcs_rac: VARIANT | NULL
+category_icrp_cso: VARIANT | NULL
+category_icrp_ct: VARIANT | NULL
+category_rcdc: VARIANT | NULL
+category_sdg: VARIANT | NULL
+category_uoa: VARIANT | NULL
+date_imported_gbq: NUMBER | NULL
+researcher_ids: VARIANT | NULL
+
+@C2
+active_years: VARIANT | NULL
+end_date: TEXT | NULL
+end_year: NUMBER | NULL
+investigators: VARIANT | NULL
+linkout: TEXT | NULL
+organisation_details: VARIANT | NULL
+start_date: TEXT | NULL
+start_year: NUMBER | NULL
+
+@C3
+research_org_cities: VARIANT | NULL
+research_org_countries: VARIANT | NULL
+research_org_state_codes: VARIANT | NULL
+
+@C4
+funder_orgs: VARIANT | NULL
+funding_details: VARIANT | NULL
+
+@C5
+authors: VARIANT | NULL
+doi: TEXT | NULL
+year: NUMBER | NULL
+
+[TABLES]
+## DIMENSIONS_AI_COVID19.GRID
+email_address: TEXT | NULL
+external_ids: VARIANT | NULL
+name: TEXT | NULL
+redirect: TEXT | NULL
+closed: NUMBER | NULL
+links: VARIANT | NULL
+address: VARIANT | NULL
+status: TEXT | NULL
+id: TEXT | NULL
+labels: VARIANT | NULL
+types: VARIANT | NULL
+wikipedia_url: TEXT | NULL
+relationships: VARIANT | NULL
+aliases: VARIANT | NULL
+established: NUMBER | NULL
+acronyms: VARIANT | NULL
+
+## DIMENSIONS_AI_COVID19.GRANTS
+@use: [C1, C2, C3]
+language: TEXT | NULL
+funding_cad: FLOAT | NULL
+funder_org_acronyms: VARIANT | NULL
+id: TEXT | NULL
+research_orgs: VARIANT | NULL
+funding_nzd: FLOAT | NULL
+funding_cny: FLOAT | NULL
+funder_org_countries: VARIANT | NULL
+abstract: TEXT | NULL
+funding_aud: FLOAT | NULL
+funding_jpy: FLOAT | NULL
+funding_usd: FLOAT | NULL
+funding_gbp: FLOAT | NULL
+funding_eur: FLOAT | NULL
+title: TEXT | NULL
+funding_amount: FLOAT | NULL
+original_abstract: VARIANT | NULL
+funder_org_cities: VARIANT | NULL
+funder_org_state_codes: VARIANT | NULL
+original_title: VARIANT | NULL
+foa_number: TEXT | NULL
+concepts: VARIANT | NULL
+resulting_publication_ids: VARIANT | NULL
+grant_number: TEXT | NULL
+funder_org: TEXT | NULL
+date_inserted: NUMBER | NULL
+funding_currency: TEXT | NULL
+funding_chf: FLOAT | NULL
+
+## DIMENSIONS_AI_COVID19.PATENTS
+@use: [C1, C4]
+application_number: TEXT | NULL
+original_assignee: VARIANT | NULL
+filing_status: TEXT | NULL
+current_assignee: VARIANT | NULL
+legal_events: VARIANT | NULL
+cited_by_ids: VARIANT | NULL
+family_id: TEXT | NULL
+title: TEXT | NULL
+priority_year: NUMBER | NULL
+abstract: TEXT | NULL
+inventor_names: VARIANT | NULL
+ipcr: VARIANT | NULL
+jurisdiction: TEXT | NULL
+current_assignee_orgs: VARIANT | NULL
+reference_ids: VARIANT | NULL
+filing_date: TEXT | NULL
+assignee_orgs: VARIANT | NULL
+cpc: VARIANT | NULL
+federal_support: VARIANT | NULL
+associated_grant_ids: VARIANT | NULL
+orange_book: VARIANT | NULL
+family_count: NUMBER | NULL
+assignee_countries: VARIANT | NULL
+original_assignee_countries: VARIANT | NULL
+granted_date: TEXT | NULL
+kind: TEXT | NULL
+priority_date: TEXT | NULL
+expiration_year: NUMBER | NULL
+current_assignee_countries: VARIANT | NULL
+granted_year: NUMBER | NULL
+publication_year: NUMBER | NULL
+publication_ids: VARIANT | NULL
+original_assignee_orgs: VARIANT | NULL
+legal_status: TEXT | NULL
+concepts: VARIANT | NULL
+filing_year: NUMBER | NULL
+publication_date: TEXT | NULL
+expiration_date: TEXT | NULL
+id: TEXT | NULL
+family_members_ids: VARIANT | NULL
+
+## DIMENSIONS_AI_COVID19.DATASETS
+@use: [C1, C3, C5]
+associated_publication_pmid: TEXT | NULL
+id: TEXT | NULL
+associated_publication_doi: TEXT | NULL
+associated_publication_id: TEXT | NULL
+license: VARIANT | NULL
+research_orgs: VARIANT | NULL
+embargo_date: TEXT | NULL
+created_date: TEXT | NULL
+repository_id: TEXT | NULL
+associated_grant_ids: VARIANT | NULL
+associated_publication_arxiv_id: TEXT | NULL
+date_modified: NUMBER | NULL
+description: TEXT | NULL
+date: NUMBER | NULL
+repository_name: TEXT | NULL
+title: TEXT | NULL
+repository_url: TEXT | NULL
+citation_string: TEXT | NULL
+
+## DIMENSIONS_AI_COVID19.CLINICAL_TRIALS
+@use: [C1, C2, C4]
+study_outcome_measures: VARIANT | NULL
+publication_ids: VARIANT | NULL
+interventions: VARIANT | NULL
+study_type: TEXT | NULL
+acronym: TEXT | NULL
+title: TEXT | NULL
+study_maximum_age: TEXT | NULL
+study_eligibility_criteria: TEXT | NULL
+mesh_terms: VARIANT | NULL
+concepts: VARIANT | NULL
+gender: TEXT | NULL
+research_orgs: VARIANT | NULL
+associated_grant_ids: VARIANT | NULL
+brief_title: TEXT | NULL
+abstract: TEXT | NULL
+date_inserted: NUMBER | NULL
+phase: TEXT | NULL
+altmetrics: VARIANT | NULL
+registry: TEXT | NULL
+id: TEXT | NULL
+study_designs: VARIANT | NULL
+overall_status: TEXT | NULL
+study_participants: NUMBER | NULL
+study_minimum_age: TEXT | NULL
+study_arms: VARIANT | NULL
+conditions: VARIANT | NULL
+
+## DIMENSIONS_AI_COVID19.PUBLICATIONS
+@use: [C1, C3, C4, C5]
+research_orgs: VARIANT | NULL
+pages: TEXT | NULL
+eisbn: TEXT | NULL
+publisher: VARIANT | NULL
+date_online: TEXT | NULL
+clinical_trial_ids: VARIANT | NULL
+research_org_country_names: VARIANT | NULL
+book_title: VARIANT | NULL
+copyright_statement: TEXT | NULL
+date_normal: DATE | NULL
+patent_ids: VARIANT | NULL
+pmid: TEXT | NULL
+issue: TEXT | NULL
+altmetrics: VARIANT | NULL
+mesh_terms: VARIANT | NULL
+date_inserted: NUMBER | NULL
+journal_lists: VARIANT | NULL
+date: TEXT | NULL
+funder_countries: VARIANT | NULL
+parent_id: TEXT | NULL
+isbn: TEXT | NULL
+editors: VARIANT | NULL
+conference: VARIANT | NULL
+abstract: VARIANT | NULL
+supporting_grant_ids: VARIANT | NULL
+type: TEXT | NULL
+citations_count: NUMBER | NULL
+volume: TEXT | NULL
+journal: VARIANT | NULL
+date_print: TEXT | NULL
+acknowledgements: VARIANT | NULL
+title: VARIANT | NULL
+citations: VARIANT | NULL
+research_org_state_names: VARIANT | NULL
+book_series_title: VARIANT | NULL
+open_access_categories_v2: VARIANT | NULL
+proceedings_title: VARIANT | NULL
+metrics: VARIANT | NULL
+subtitles: VARIANT | NULL
+document_type: VARIANT | NULL
+id: TEXT | NULL
+pmcid: TEXT | NULL
+arxiv_id: TEXT | NULL
+open_access_categories: VARIANT | NULL
+funding_section: VARIANT | NULL
+research_org_city_names: VARIANT | NULL
+mesh_headings: VARIANT | NULL
+concepts: VARIANT | NULL
+resulting_publication_doi: TEXT | NULL
+reference_ids: VARIANT | NULL
+source_id: TEXT | NULL
+repository_dois: VARIANT | NULL

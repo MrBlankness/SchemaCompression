@@ -1,0 +1,103 @@
+[TEMPLATES]
+<T1>
+updated_at: TEXT | NULL | eg=["2016-11-03 19:00:00", "2016-11-03 21:00:00"]
+price: NUMBER | NULL | eg=[4000, 3000]
+name: TEXT | NULL | eg=["AAB", "BBD"]
+product_id: TEXT | NULL | eg=["A002", "B002"]
+@Tables: [LOG.MST_PRODUCTS_20161201,LOG.MST_PRODUCTS_20170101]
+
+<T13>
+url: TEXT | NULL | eg=["http://www.example.com/article?id=news731", "http://www.example.com/article?id=it605"]
+session: TEXT | NULL | eg=["df6eb25d", "77d477cc"]
+stamp: TEXT | NULL | eg=["2016-12-29 21:45:47", "2016-12-29 21:46:13"]
+action: TEXT | NULL | eg=["view", "read-60%"]
+@Tables: [LOG.READ_LOG]
+
+<T3>
+user_id: TEXT | NULL | eg=["U001", "U002"]
+session: TEXT | NULL | eg=["98900e", "1cf768"]
+action: TEXT | NULL | eg=["view"]
+stamp: TEXT | NULL | eg=["2016-01-02 20:00:00", "2016-01-04 23:00:00"]
+@Tables: [LOG.ACCESS_LOG]
+
+[DERIVED]
+<T14> extends <T17>
+category: TEXT | NULL | eg=["drama", "action"]
+amount: FLOAT | NULL | eg=[2000.0, NaN]
+@Tables: [LOG.ACTION_LOG,LOG.INVALID_ACTION_LOG]
+
+<T11> extends <T3>
+ip: TEXT | NULL | eg=["216.58.220.238", "98.139.183.24"]
+@Tables: [LOG.ACTION_LOG_WITH_IP]
+
+<T17> extends <T3>
+products: TEXT | NULL | eg=["D002", "D001"]
+@Tables: [LOG.DUP_ACTION_LOG]
+
+<T9> extends <T13>
+user_agent: TEXT | NULL
+ip: TEXT | NULL
+products: TEXT | NULL
+@Tables: [LOG.ACTION_LOG_WITH_NOISE]
+
+[STANDALONE]
+## LOG.ACTIVITY_LOG
+action: TEXT | NULL | eg=["view"]
+session: TEXT | NULL | eg=["989004ea", "47db0370"]
+option: TEXT | NULL | eg=["search", "detail"]
+search_type: TEXT | NULL | eg=["Area-L-with-Job", "Area-S"]
+path: TEXT | NULL | eg=["/search_list/", "/detail/"]
+stamp: TEXT | NULL | eg=["2017-01-09 12:18:43"]
+
+## LOG.APP1_MST_USERS
+email: TEXT | NULL
+name: TEXT | NULL
+user_id: TEXT | NULL
+
+## LOG.APP2_MST_USERS
+user_id: TEXT | NULL | eg=["U001"]
+phone: TEXT | NULL | eg=["080-xxxx-xxxx"]
+name: TEXT | NULL | eg=["Ito"]
+
+## LOG.FORM_ERROR_LOG
+session: TEXT | NULL | eg=["00700be4", "01061716"]
+form: TEXT | NULL | eg=["cart", "regist"]
+stamp: TEXT | NULL | eg=["2016-12-30 00:56:08", "2016-12-30 00:56:09"]
+field: TEXT | NULL | eg=["email", "kana"]
+value: TEXT | NULL | eg=["xxx---.co.jp", "xxx@---cojp"]
+error_type: TEXT | NULL | eg=["format_error", "not_kana"]
+
+## LOG.FORM_LOG
+status: TEXT | NULL | eg=["", "error"]
+action: TEXT | NULL | eg=["view"]
+session: TEXT | NULL | eg=["647219c7", "9b5f320f"]
+path: TEXT | NULL | eg=["/regist/input", "/cart/input"]
+stamp: TEXT | NULL | eg=["2016-12-30 00:56:08", "2016-12-30 00:57:56"]
+
+## LOG.MST_CATEGORIES
+id: NUMBER | NULL | eg=[2, 4]
+stamp: TEXT | NULL | eg=["2016-01-01 10:00:00"]
+name: TEXT | NULL | eg=["mens_fashion", "game"]
+
+## LOG.MST_USERS
+register_date: TEXT | NULL | eg=["2016-10-01", "2016-10-05"]
+withdraw_date: TEXT | NULL | eg=["2016-10-10", ""]
+register_device: TEXT | NULL | eg=["sp", "pc"]
+birth_date: TEXT | NULL | eg=["1953-06-12", "1965-01-06"]
+user_id: TEXT | NULL | eg=["U002", "U003"]
+sex: TEXT | NULL | eg=["F", "M"]
+
+## LOG.MST_USERS_WITH_CARD_NUMBER
+card_number: TEXT | NULL | eg=["1234-xxxx-xxxx-xxxx", ""]
+user_id: TEXT | NULL | eg=["U001", "U002"]
+
+## LOG.PRODUCT_SALES
+category_name: TEXT | NULL | eg=["dvd", "cd"]
+product_id: TEXT | NULL | eg=["D001", "D002"]
+sales: NUMBER | NULL | eg=[50000, 20000]
+
+## LOG.PURCHASE_LOG
+stamp: TEXT | NULL | eg=["2017-02-10 10:00:00", "2017-02-12 10:00:00"]
+amount: NUMBER | NULL | eg=[500, 200]
+purchase_id: NUMBER | NULL | eg=[10002, 10003]
+user_id: TEXT | NULL | eg=["U001"]

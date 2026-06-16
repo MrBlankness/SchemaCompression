@@ -1,0 +1,32 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: AUSTIN_311._311_SERVICE_REQUESTS
+Columns: status, latitude, close_date, status_change_date, unique_key, city, location, map_tile, county, incident_address, state_plane_y_coordinate, state_plane_x_coordinate, street_name, map_page, last_update_date, created_date, source, incident_zip, longitude, street_number, council_district_code, complaint_description
+
+Table: AUSTIN_INCIDENTS.INCIDENTS_2016
+Columns: unique_key, address, descript, location, longitude, time, latitude, timestamp, date
+
+Table: AUSTIN_INCIDENTS.INCIDENTS_2009
+Columns: longitude, date, descript, unique_key, timestamp, location, address, time, latitude
+
+Table: AUSTIN_INCIDENTS.INCIDENTS_2011
+Columns: location, address, unique_key, time, latitude, timestamp, date, descript, longitude
+
+Table: AUSTIN_INCIDENTS.INCIDENTS_2008
+Columns: timestamp, longitude, unique_key, descript, latitude, location, time, address, date
+
+Table: AUSTIN_INCIDENTS.INCIDENTS_2010
+Columns: address, descript, longitude, timestamp, date, location, latitude, unique_key, time
+
+Table: AUSTIN_BIKESHARE.BIKESHARE_STATIONS
+Columns: power_type, modified_date, status, city_asset_number, location, number_of_docks, footprint_length, image, alternate_name, station_id, address, name, council_district, notes, property_type, footprint_width
+
+Table: AUSTIN_BIKESHARE.BIKESHARE_TRIPS
+Columns: subscriber_type, start_time, end_station_id, bike_type, start_station_id, end_station_name, trip_id, start_station_name, bike_id, duration_minutes
+
+Table: AUSTIN_CRIME.CRIME
+Columns: zipcode, address, timestamp, longitude, location, council_district_code, location_description, year, clearance_status, latitude, description, district, unique_key, x_coordinate, primary_type, clearance_date, y_coordinate, census_tract
+
+Table: AUSTIN_WASTE.WASTE_AND_DIVERSION
+Columns: dropoff_site, load_weight, report_date, route_number, load_id, load_time, load_type, route_type

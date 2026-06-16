@@ -1,0 +1,101 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: EPA_HISTORICAL_AIR_QUALITY.CO_DAILY_SUMMARY
+Columns: first_max_value, sample_duration, city_name, units_of_measure, datum, latitude, event_type, longitude, local_site_name, observation_count, site_num, county_code, method_code, state_code, observation_percent, first_max_hour, parameter_name, arithmetic_mean, address, county_name, state_name, poc, parameter_code, pollutant_standard, cbsa_name, date_local, method_name, aqi, date_of_last_change
+
+Table: EPA_HISTORICAL_AIR_QUALITY.PM25_NONFRM_DAILY_SUMMARY
+Columns: county_name, sample_duration, observation_percent, site_num, aqi, parameter_name, state_name, method_name, latitude, units_of_measure, longitude, parameter_code, arithmetic_mean, state_code, city_name, local_site_name, datum, pollutant_standard, method_code, first_max_hour, observation_count, first_max_value, date_local, date_of_last_change, address, poc, county_code, event_type, cbsa_name
+
+Table: EPA_HISTORICAL_AIR_QUALITY.TEMPERATURE_DAILY_SUMMARY
+Columns: date_local, county_code, method_name, county_name, site_num, method_code, city_name, arithmetic_mean, cbsa_name, parameter_code, longitude, datum, state_code, observation_percent, address, sample_duration, first_max_hour, aqi, first_max_value, parameter_name, pollutant_standard, state_name, observation_count, poc, latitude, units_of_measure, event_type, local_site_name, date_of_last_change
+
+Table: EPA_HISTORICAL_AIR_QUALITY.NO2_HOURLY_SUMMARY
+Columns: time_local, site_num, state_code, latitude, uncertainty, method_type, longitude, sample_measurement, date_gmt, county_name, poc, qualifier, county_code, method_code, date_local, mdl, datum, date_of_last_change, time_gmt, state_name, units_of_measure, method_name, parameter_code, parameter_name
+
+Table: EPA_HISTORICAL_AIR_QUALITY.HAP_DAILY_SUMMARY
+Columns: datum, aqi, county_name, state_code, event_type, parameter_name, date_local, cbsa_name, arithmetic_mean, latitude, first_max_hour, city_name, date_of_last_change, local_site_name, site_num, units_of_measure, county_code, observation_percent, first_max_value, address, observation_count, method_code, sample_duration, pollutant_standard, poc, method_name, parameter_code, longitude, state_name
+
+Table: EPA_HISTORICAL_AIR_QUALITY.PM25_NONFRM_HOURLY_SUMMARY
+Columns: state_code, date_local, datum, poc, county_name, time_gmt, state_name, sample_measurement, site_num, parameter_name, units_of_measure, method_name, method_type, time_local, latitude, qualifier, county_code, uncertainty, longitude, date_of_last_change, mdl, method_code, date_gmt, parameter_code
+
+Table: EPA_HISTORICAL_AIR_QUALITY.PRESSURE_DAILY_SUMMARY
+Columns: state_code, latitude, units_of_measure, county_name, date_local, poc, site_num, pollutant_standard, first_max_hour, county_code, longitude, aqi, local_site_name, city_name, event_type, method_name, datum, method_code, sample_duration, cbsa_name, state_name, observation_count, observation_percent, first_max_value, arithmetic_mean, address, date_of_last_change, parameter_code, parameter_name
+
+Table: EPA_HISTORICAL_AIR_QUALITY.NONOXNOY_DAILY_SUMMARY
+Columns: state_code, date_local, units_of_measure, city_name, state_name, county_name, address, parameter_code, pollutant_standard, method_code, arithmetic_mean, poc, aqi, observation_percent, first_max_hour, local_site_name, datum, first_max_value, county_code, parameter_name, event_type, date_of_last_change, longitude, sample_duration, cbsa_name, latitude, method_name, site_num, observation_count
+
+Table: EPA_HISTORICAL_AIR_QUALITY.O3_DAILY_SUMMARY
+Columns: site_num, county_name, parameter_code, poc, method_code, datum, local_site_name, observation_count, parameter_name, sample_duration, state_name, first_max_value, arithmetic_mean, event_type, county_code, method_name, longitude, units_of_measure, date_of_last_change, state_code, latitude, aqi, address, observation_percent, cbsa_name, city_name, pollutant_standard, date_local, first_max_hour
+
+Table: EPA_HISTORICAL_AIR_QUALITY.PM25_SPECIATION_HOURLY_SUMMARY
+Columns: mdl, date_local, state_name, time_gmt, qualifier, method_code, parameter_code, county_name, poc, method_type, parameter_name, sample_measurement, datum, site_num, latitude, units_of_measure, time_local, longitude, date_of_last_change, state_code, county_code, uncertainty, date_gmt, method_name
+
+Table: EPA_HISTORICAL_AIR_QUALITY.RH_AND_DP_HOURLY_SUMMARY
+Columns: date_gmt, time_local, state_code, longitude, county_code, date_of_last_change, units_of_measure, uncertainty, datum, parameter_code, method_type, date_local, poc, method_code, sample_measurement, parameter_name, site_num, mdl, county_name, state_name, qualifier, latitude, time_gmt, method_name
+
+Table: EPA_HISTORICAL_AIR_QUALITY.NO2_DAILY_SUMMARY
+Columns: site_num, observation_percent, state_name, observation_count, aqi, datum, sample_duration, pollutant_standard, event_type, city_name, parameter_code, local_site_name, first_max_value, poc, parameter_name, latitude, cbsa_name, first_max_hour, method_name, date_local, units_of_measure, address, state_code, arithmetic_mean, date_of_last_change, longitude, county_name, method_code, county_code
+
+Table: EPA_HISTORICAL_AIR_QUALITY.VOC_DAILY_SUMMARY
+Columns: city_name, aqi, units_of_measure, first_max_value, poc, county_code, cbsa_name, observation_percent, datum, first_max_hour, longitude, site_num, observation_count, method_name, local_site_name, address, method_code, latitude, state_code, event_type, state_name, date_local, date_of_last_change, parameter_name, sample_duration, arithmetic_mean, parameter_code, pollutant_standard, county_name
+
+Table: EPA_HISTORICAL_AIR_QUALITY.TEMPERATURE_HOURLY_SUMMARY
+Columns: county_name, longitude, parameter_code, state_code, date_of_last_change, poc, datum, sample_measurement, site_num, method_type, units_of_measure, time_local, uncertainty, time_gmt, county_code, method_name, mdl, date_local, state_name, latitude, method_code, qualifier, date_gmt, parameter_name
+
+Table: EPA_HISTORICAL_AIR_QUALITY.RH_AND_DP_DAILY_SUMMARY
+Columns: state_name, units_of_measure, event_type, county_name, site_num, first_max_hour, pollutant_standard, date_local, observation_count, parameter_name, address, latitude, datum, county_code, local_site_name, method_name, state_code, longitude, first_max_value, city_name, arithmetic_mean, aqi, observation_percent, method_code, poc, cbsa_name, date_of_last_change, sample_duration, parameter_code
+
+Table: EPA_HISTORICAL_AIR_QUALITY.HAP_HOURLY_SUMMARY
+Columns: county_code, datum, qualifier, method_code, parameter_name, county_name, time_local, date_of_last_change, site_num, uncertainty, method_type, longitude, state_code, state_name, method_name, date_gmt, date_local, poc, sample_measurement, latitude, units_of_measure, mdl, time_gmt, parameter_code
+
+Table: EPA_HISTORICAL_AIR_QUALITY.VOC_HOURLY_SUMMARY
+Columns: poc, site_num, sample_measurement, time_local, county_code, uncertainty, method_name, date_gmt, longitude, qualifier, state_code, date_of_last_change, date_local, units_of_measure, parameter_code, state_name, method_type, county_name, mdl, datum, parameter_name, time_gmt, method_code, latitude
+
+Table: EPA_HISTORICAL_AIR_QUALITY.WIND_DAILY_SUMMARY
+Columns: method_name, county_code, date_of_last_change, parameter_name, observation_count, poc, county_name, pollutant_standard, site_num, cbsa_name, date_local, longitude, datum, sample_duration, method_code, city_name, arithmetic_mean, event_type, address, local_site_name, aqi, state_code, observation_percent, units_of_measure, state_name, parameter_code, latitude, first_max_hour, first_max_value
+
+Table: EPA_HISTORICAL_AIR_QUALITY.SO2_DAILY_SUMMARY
+Columns: site_num, state_code, first_max_hour, city_name, poc, aqi, county_name, latitude, observation_count, parameter_name, units_of_measure, address, county_code, state_name, first_max_value, arithmetic_mean, date_of_last_change, sample_duration, datum, local_site_name, parameter_code, method_code, date_local, method_name, observation_percent, cbsa_name, pollutant_standard, longitude, event_type
+
+Table: EPA_HISTORICAL_AIR_QUALITY.SO2_HOURLY_SUMMARY
+Columns: longitude, sample_measurement, parameter_name, county_name, method_type, date_gmt, uncertainty, time_gmt, site_num, units_of_measure, time_local, county_code, date_of_last_change, date_local, latitude, poc, state_code, datum, state_name, method_name, method_code, parameter_code, mdl, qualifier
+
+Table: EPA_HISTORICAL_AIR_QUALITY.PM25_FRM_HOURLY_SUMMARY
+Columns: qualifier, time_gmt, latitude, parameter_code, datum, county_code, date_local, method_name, method_type, poc, method_code, date_of_last_change, state_code, parameter_name, site_num, uncertainty, units_of_measure, time_local, date_gmt, sample_measurement, county_name, mdl, state_name, longitude
+
+Table: EPA_HISTORICAL_AIR_QUALITY.PM10_DAILY_SUMMARY
+Columns: city_name, state_code, local_site_name, event_type, first_max_value, site_num, county_code, method_name, address, latitude, method_code, longitude, poc, cbsa_name, county_name, observation_count, parameter_code, parameter_name, aqi, state_name, date_local, arithmetic_mean, pollutant_standard, sample_duration, first_max_hour, date_of_last_change, observation_percent, units_of_measure, datum
+
+Table: EPA_HISTORICAL_AIR_QUALITY.WIND_HOURLY_SUMMARY
+Columns: date_of_last_change, date_gmt, state_code, datum, qualifier, longitude, method_name, units_of_measure, mdl, time_gmt, latitude, county_name, method_type, site_num, sample_measurement, state_name, county_code, parameter_name, date_local, method_code, poc, time_local, parameter_code, uncertainty
+
+Table: EPA_HISTORICAL_AIR_QUALITY.PM25_SPECIATION_DAILY_SUMMARY
+Columns: method_code, state_name, date_of_last_change, sample_duration, arithmetic_mean, site_num, method_name, first_max_hour, city_name, parameter_code, local_site_name, cbsa_name, pollutant_standard, address, state_code, event_type, date_local, county_code, first_max_value, poc, aqi, observation_count, datum, longitude, county_name, parameter_name, observation_percent, units_of_measure, latitude
+
+Table: EPA_HISTORICAL_AIR_QUALITY.O3_HOURLY_SUMMARY
+Columns: datum, date_local, method_name, method_code, method_type, sample_measurement, uncertainty, parameter_code, county_name, site_num, state_code, qualifier, mdl, time_local, county_code, state_name, units_of_measure, date_gmt, parameter_name, date_of_last_change, longitude, poc, time_gmt, latitude
+
+Table: EPA_HISTORICAL_AIR_QUALITY.CO_HOURLY_SUMMARY
+Columns: units_of_measure, qualifier, site_num, method_type, datum, county_name, county_code, uncertainty, date_local, parameter_code, date_of_last_change, time_local, latitude, parameter_name, date_gmt, poc, time_gmt, longitude, sample_measurement, state_code, state_name, mdl, method_code, method_name
+
+Table: EPA_HISTORICAL_AIR_QUALITY.PM10_HOURLY_SUMMARY
+Columns: site_num, date_gmt, method_type, state_code, date_local, datum, sample_measurement, poc, county_name, county_code, mdl, method_name, state_name, parameter_code, longitude, time_local, parameter_name, date_of_last_change, latitude, method_code, uncertainty, qualifier, time_gmt, units_of_measure
+
+Table: EPA_HISTORICAL_AIR_QUALITY.PM25_FRM_DAILY_SUMMARY
+Columns: state_name, cbsa_name, first_max_value, parameter_code, parameter_name, observation_percent, local_site_name, date_local, site_num, method_code, date_of_last_change, datum, aqi, method_name, address, observation_count, event_type, poc, pollutant_standard, county_name, county_code, latitude, first_max_hour, units_of_measure, city_name, arithmetic_mean, longitude, sample_duration, state_code
+
+Table: EPA_HISTORICAL_AIR_QUALITY.PRESSURE_HOURLY_SUMMARY
+Columns: mdl, parameter_code, uncertainty, parameter_name, longitude, qualifier, time_gmt, site_num, county_name, method_name, sample_measurement, state_code, latitude, method_code, datum, date_gmt, date_of_last_change, units_of_measure, date_local, method_type, county_code, poc, state_name, time_local
+
+Table: EPA_HISTORICAL_AIR_QUALITY.AIR_QUALITY_ANNUAL_SUMMARY
+Columns: observation_count, num_obs_below_mdl, fifty_percentile, first_no_max_datetime, first_max_non_overlapping_value, state_name, parameter_name, valid_day_count, address, ten_percentile, first_max_value, null_data_count, longitude, latitude, ninety_five_percentile, date_of_last_change, arithmetic_standard_dev, fourth_max_value, second_max_non_overlapping_value, first_max_datetime, datum, poc, second_max_datetime, units_of_measure, site_num, seventy_five_percentile, event_type, certification_indicator, method_name, local_site_name, sample_duration, second_max_value, city_name, primary_exceedance_count, cbsa_name, observation_percent, state_code, third_max_datetime, pollutant_standard, fourth_max_datetime, arithmetic_mean, completeness_indicator, metric_used, required_day_count, ninety_eight_percentile, third_max_value, ninety_nine_percentile, year, ninety_percentile, county_name, parameter_code, county_code, second_no_max_datetime, secondary_exceedance_count, exceptional_data_count
+
+Table: EPA_HISTORICAL_AIR_QUALITY.LEAD_DAILY_SUMMARY
+Columns: local_site_name, longitude, aqi, address, date_of_last_change, method_code, poc, method_name, observation_count, state_code, pollutant_standard, datum, first_max_hour, city_name, county_code, units_of_measure, sample_duration, site_num, arithmetic_mean, cbsa_name, event_type, parameter_code, state_name, first_max_value, date_local, county_name, observation_percent, latitude, parameter_name
+
+Table: EPA_HISTORICAL_AIR_QUALITY.NONOXNOY_HOURLY_SUMMARY
+Columns: mdl, county_name, sample_measurement, date_gmt, county_code, parameter_name, date_of_last_change, state_name, parameter_code, method_name, method_type, time_gmt, longitude, latitude, time_local, units_of_measure, method_code, date_local, uncertainty, poc, qualifier, state_code, site_num, datum
+
+Table: OPENAQ.GLOBAL_AIR_QUALITY
+Columns: longitude, value, timestamp, country, unit, location, city, latitude, source_name, averaged_over_in_hours, pollutant, location_geom

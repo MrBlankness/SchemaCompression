@@ -1,0 +1,344 @@
+[DATABASE SCHEMA]
+Here is the full schema of the database:
+
+Table: ANALYTICS_153293282.EVENTS_20180720
+Columns: traffic_source, event_value_in_usd, stream_id, event_timestamp, event_name, user_properties, platform, event_bundle_sequence_id, user_pseudo_id, geo, app_info, device, event_previous_timestamp, user_ltv, user_id, event_date, user_first_touch_timestamp, event_params, event_server_timestamp_offset
+
+Table: ANALYTICS_153293282.EVENTS_20180823
+Columns: user_pseudo_id, user_id, user_properties, event_bundle_sequence_id, device, event_date, event_server_timestamp_offset, app_info, stream_id, platform, event_previous_timestamp, user_ltv, event_timestamp, event_name, geo, user_first_touch_timestamp, event_value_in_usd, event_params, traffic_source
+
+Table: ANALYTICS_153293282.EVENTS_20180627
+Columns: event_timestamp, device, event_value_in_usd, stream_id, user_first_touch_timestamp, traffic_source, event_params, event_date, platform, user_ltv, app_info, event_name, event_previous_timestamp, user_properties, geo, user_pseudo_id, user_id
+
+Table: ANALYTICS_153293282.EVENTS_20180707
+Columns: geo, event_params, event_date, user_pseudo_id, event_server_timestamp_offset, traffic_source, user_properties, platform, event_previous_timestamp, event_name, event_value_in_usd, device, event_bundle_sequence_id, user_id, app_info, event_timestamp, stream_id, user_first_touch_timestamp, user_ltv
+
+Table: ANALYTICS_153293282.EVENTS_20180831
+Columns: event_server_timestamp_offset, app_info, geo, event_date, event_previous_timestamp, device, user_ltv, event_value_in_usd, event_params, user_id, event_dimensions, stream_id, platform, traffic_source, user_pseudo_id, user_first_touch_timestamp, event_bundle_sequence_id, user_properties, event_timestamp, event_name
+
+Table: ANALYTICS_153293282.EVENTS_20180922
+Columns: event_timestamp, user_pseudo_id, event_date, app_info, traffic_source, geo, platform, device, user_first_touch_timestamp, event_server_timestamp_offset, event_bundle_sequence_id, event_name, event_previous_timestamp, event_params, user_ltv, user_properties, stream_id, event_dimensions, user_id, event_value_in_usd
+
+Table: ANALYTICS_153293282.EVENTS_20180921
+Columns: app_info, event_previous_timestamp, event_bundle_sequence_id, user_first_touch_timestamp, geo, event_name, event_value_in_usd, traffic_source, event_dimensions, platform, stream_id, user_properties, event_date, device, event_timestamp, user_pseudo_id, event_server_timestamp_offset, user_ltv, user_id, event_params
+
+Table: ANALYTICS_153293282.EVENTS_20180705
+Columns: traffic_source, platform, app_info, event_bundle_sequence_id, user_id, event_date, user_first_touch_timestamp, event_value_in_usd, stream_id, device, event_timestamp, event_server_timestamp_offset, user_pseudo_id, geo, user_ltv, user_properties, event_name, event_params, event_previous_timestamp
+
+Table: ANALYTICS_153293282.EVENTS_20180807
+Columns: device, event_server_timestamp_offset, user_first_touch_timestamp, event_name, event_date, event_value_in_usd, traffic_source, user_pseudo_id, user_ltv, user_properties, event_params, app_info, event_timestamp, platform, event_bundle_sequence_id, stream_id, user_id, event_previous_timestamp, geo
+
+Table: ANALYTICS_153293282.EVENTS_20180813
+Columns: event_bundle_sequence_id, event_date, event_server_timestamp_offset, event_name, device, event_previous_timestamp, stream_id, user_ltv, traffic_source, app_info, event_timestamp, geo, event_value_in_usd, user_first_touch_timestamp, user_pseudo_id, user_id, platform, event_params, user_properties
+
+Table: ANALYTICS_153293282.EVENTS_20180623
+Columns: event_timestamp, stream_id, traffic_source, app_info, user_first_touch_timestamp, geo, user_pseudo_id, event_previous_timestamp, event_name, event_date, device, platform, user_properties, event_params, user_id, user_ltv
+
+Table: ANALYTICS_153293282.EVENTS_20180615
+Columns: user_ltv, event_previous_timestamp, platform, geo, stream_id, user_first_touch_timestamp, user_properties, user_id, app_info, event_date, event_params, event_timestamp, user_pseudo_id, traffic_source, device, event_name
+
+Table: ANALYTICS_153293282.EVENTS_20180721
+Columns: user_first_touch_timestamp, user_id, event_server_timestamp_offset, event_name, geo, user_properties, stream_id, device, app_info, user_ltv, event_date, event_params, platform, event_timestamp, event_bundle_sequence_id, event_value_in_usd, event_previous_timestamp, traffic_source, user_pseudo_id
+
+Table: ANALYTICS_153293282.EVENTS_20180726
+Columns: device, event_timestamp, stream_id, event_value_in_usd, geo, event_date, user_properties, event_server_timestamp_offset, event_previous_timestamp, user_ltv, app_info, event_name, user_pseudo_id, event_params, platform, user_id, traffic_source, event_bundle_sequence_id, user_first_touch_timestamp
+
+Table: ANALYTICS_153293282.EVENTS_20180917
+Columns: user_pseudo_id, event_dimensions, event_name, event_date, device, user_first_touch_timestamp, event_params, user_properties, user_id, stream_id, geo, event_timestamp, event_value_in_usd, event_server_timestamp_offset, app_info, event_bundle_sequence_id, traffic_source, platform, user_ltv, event_previous_timestamp
+
+Table: ANALYTICS_153293282.EVENTS_20180714
+Columns: event_previous_timestamp, platform, user_ltv, event_bundle_sequence_id, event_value_in_usd, app_info, user_id, event_params, user_pseudo_id, geo, event_date, event_server_timestamp_offset, event_timestamp, user_first_touch_timestamp, stream_id, user_properties, traffic_source, device, event_name
+
+Table: ANALYTICS_153293282.EVENTS_20180919
+Columns: user_pseudo_id, user_id, event_previous_timestamp, device, traffic_source, user_first_touch_timestamp, event_dimensions, app_info, event_date, event_server_timestamp_offset, event_bundle_sequence_id, event_timestamp, user_properties, user_ltv, event_name, event_value_in_usd, geo, stream_id, event_params, platform
+
+Table: ANALYTICS_153293282.EVENTS_20180711
+Columns: event_previous_timestamp, event_value_in_usd, user_pseudo_id, event_timestamp, event_name, user_ltv, stream_id, event_params, user_properties, event_server_timestamp_offset, user_id, event_bundle_sequence_id, event_date, traffic_source, user_first_touch_timestamp, geo, device, app_info, platform
+
+Table: ANALYTICS_153293282.EVENTS_20181001
+Columns: event_timestamp, platform, event_server_timestamp_offset, event_date, event_previous_timestamp, device, event_bundle_sequence_id, user_first_touch_timestamp, geo, user_id, event_params, traffic_source, stream_id, user_properties, event_value_in_usd, user_ltv, user_pseudo_id, event_name, event_dimensions, app_info
+
+Table: ANALYTICS_153293282.EVENTS_20180908
+Columns: user_id, device, geo, event_timestamp, event_name, event_bundle_sequence_id, app_info, stream_id, user_ltv, user_pseudo_id, platform, event_server_timestamp_offset, event_previous_timestamp, traffic_source, user_first_touch_timestamp, event_date, event_value_in_usd, event_params, user_properties, event_dimensions
+
+Table: ANALYTICS_153293282.EVENTS_20180911
+Columns: device, user_first_touch_timestamp, event_timestamp, user_properties, geo, user_pseudo_id, event_name, event_params, event_previous_timestamp, event_dimensions, traffic_source, event_date, event_value_in_usd, app_info, event_server_timestamp_offset, user_ltv, user_id, event_bundle_sequence_id, stream_id, platform
+
+Table: ANALYTICS_153293282.EVENTS_20180727
+Columns: event_params, platform, device, geo, user_first_touch_timestamp, user_id, event_timestamp, app_info, event_previous_timestamp, event_name, event_date, stream_id, user_ltv, event_value_in_usd, user_properties, traffic_source, event_server_timestamp_offset, event_bundle_sequence_id, user_pseudo_id
+
+Table: ANALYTICS_153293282.EVENTS_20180703
+Columns: event_params, user_first_touch_timestamp, user_ltv, device, user_id, geo, user_pseudo_id, traffic_source, event_value_in_usd, event_date, stream_id, app_info, event_previous_timestamp, platform, user_properties, event_timestamp, event_bundle_sequence_id, event_server_timestamp_offset, event_name
+
+Table: ANALYTICS_153293282.EVENTS_20180920
+Columns: event_previous_timestamp, event_dimensions, user_ltv, stream_id, user_first_touch_timestamp, traffic_source, platform, user_pseudo_id, event_server_timestamp_offset, geo, event_date, event_params, user_id, event_bundle_sequence_id, device, event_timestamp, user_properties, app_info, event_value_in_usd, event_name
+
+Table: ANALYTICS_153293282.EVENTS_20180620
+Columns: user_id, device, user_pseudo_id, traffic_source, event_params, event_date, event_previous_timestamp, geo, stream_id, event_timestamp, platform, user_properties, user_ltv, user_first_touch_timestamp, event_name, app_info
+
+Table: ANALYTICS_153293282.EVENTS_20180625
+Columns: event_previous_timestamp, event_date, geo, platform, user_ltv, app_info, traffic_source, event_name, user_first_touch_timestamp, device, user_id, user_pseudo_id, stream_id, event_timestamp, event_params, user_properties
+
+Table: ANALYTICS_153293282.EVENTS_20180801
+Columns: traffic_source, event_previous_timestamp, event_bundle_sequence_id, user_id, event_timestamp, event_date, user_properties, platform, event_value_in_usd, user_ltv, geo, stream_id, event_name, event_params, user_pseudo_id, event_server_timestamp_offset, app_info, user_first_touch_timestamp, device
+
+Table: ANALYTICS_153293282.EVENTS_20180913
+Columns: stream_id, event_bundle_sequence_id, user_pseudo_id, platform, user_ltv, traffic_source, app_info, event_name, event_value_in_usd, event_date, event_previous_timestamp, geo, user_properties, event_timestamp, device, user_id, event_params, event_server_timestamp_offset, user_first_touch_timestamp, event_dimensions
+
+Table: ANALYTICS_153293282.EVENTS_20180909
+Columns: event_dimensions, device, event_value_in_usd, user_pseudo_id, event_name, traffic_source, user_ltv, user_first_touch_timestamp, event_server_timestamp_offset, user_properties, event_previous_timestamp, event_timestamp, geo, platform, app_info, stream_id, user_id, event_date, event_bundle_sequence_id, event_params
+
+Table: ANALYTICS_153293282.EVENTS_20180715
+Columns: geo, user_ltv, user_first_touch_timestamp, event_timestamp, event_bundle_sequence_id, event_params, stream_id, event_name, traffic_source, device, event_date, event_previous_timestamp, platform, event_value_in_usd, app_info, event_server_timestamp_offset, user_properties, user_pseudo_id, user_id
+
+Table: ANALYTICS_153293282.EVENTS_20180618
+Columns: user_properties, traffic_source, user_id, platform, user_pseudo_id, geo, user_ltv, event_params, event_name, device, stream_id, event_date, app_info, user_first_touch_timestamp, event_timestamp, event_previous_timestamp
+
+Table: ANALYTICS_153293282.EVENTS_20180728
+Columns: event_bundle_sequence_id, app_info, user_first_touch_timestamp, user_pseudo_id, event_date, event_previous_timestamp, geo, event_params, event_timestamp, platform, device, user_ltv, user_id, user_properties, event_server_timestamp_offset, stream_id, traffic_source, event_name, event_value_in_usd
+
+Table: ANALYTICS_153293282.EVENTS_20180802
+Columns: user_first_touch_timestamp, traffic_source, event_name, device, event_bundle_sequence_id, app_info, event_params, event_previous_timestamp, user_id, event_server_timestamp_offset, platform, event_date, event_value_in_usd, stream_id, event_timestamp, user_properties, user_pseudo_id, geo, user_ltv
+
+Table: ANALYTICS_153293282.EVENTS_20180819
+Columns: event_value_in_usd, platform, user_properties, app_info, event_params, event_date, stream_id, event_server_timestamp_offset, event_name, device, user_ltv, event_previous_timestamp, traffic_source, event_timestamp, event_bundle_sequence_id, user_id, geo, user_pseudo_id, user_first_touch_timestamp
+
+Table: ANALYTICS_153293282.EVENTS_20180724
+Columns: geo, device, event_previous_timestamp, platform, traffic_source, stream_id, event_timestamp, user_id, user_first_touch_timestamp, app_info, event_name, user_pseudo_id, user_ltv, event_bundle_sequence_id, event_params, user_properties, event_date, event_server_timestamp_offset, event_value_in_usd
+
+Table: ANALYTICS_153293282.EVENTS_20180904
+Columns: event_date, event_timestamp, app_info, device, platform, user_id, event_server_timestamp_offset, stream_id, event_value_in_usd, user_first_touch_timestamp, event_dimensions, geo, event_bundle_sequence_id, user_ltv, event_params, event_previous_timestamp, user_properties, user_pseudo_id, traffic_source, event_name
+
+Table: ANALYTICS_153293282.EVENTS_20180616
+Columns: user_ltv, platform, device, user_first_touch_timestamp, stream_id, event_name, event_params, user_id, user_pseudo_id, event_timestamp, event_date, traffic_source, user_properties, event_previous_timestamp, app_info, geo
+
+Table: ANALYTICS_153293282.EVENTS_20180901
+Columns: device, traffic_source, event_bundle_sequence_id, event_server_timestamp_offset, event_name, event_date, user_id, event_params, event_value_in_usd, event_timestamp, event_previous_timestamp, event_dimensions, platform, app_info, user_ltv, user_pseudo_id, geo, stream_id, user_properties, user_first_touch_timestamp
+
+Table: ANALYTICS_153293282.EVENTS_20180812
+Columns: event_name, user_pseudo_id, event_previous_timestamp, geo, event_server_timestamp_offset, user_id, app_info, user_first_touch_timestamp, event_timestamp, platform, event_params, event_date, device, event_bundle_sequence_id, user_properties, user_ltv, stream_id, traffic_source, event_value_in_usd
+
+Table: ANALYTICS_153293282.EVENTS_20180804
+Columns: event_previous_timestamp, stream_id, event_timestamp, event_name, event_server_timestamp_offset, user_ltv, user_pseudo_id, platform, geo, user_properties, event_value_in_usd, event_date, event_bundle_sequence_id, device, traffic_source, event_params, user_first_touch_timestamp, app_info, user_id
+
+Table: ANALYTICS_153293282.EVENTS_20181003
+Columns: traffic_source, user_ltv, user_properties, app_info, event_name, event_bundle_sequence_id, event_params, user_first_touch_timestamp, device, platform, event_previous_timestamp, stream_id, event_dimensions, event_timestamp, event_date, geo, event_server_timestamp_offset, user_pseudo_id, user_id, event_value_in_usd
+
+Table: ANALYTICS_153293282.EVENTS_20180905
+Columns: device, user_pseudo_id, event_value_in_usd, user_id, user_first_touch_timestamp, event_dimensions, app_info, event_server_timestamp_offset, stream_id, platform, user_ltv, event_name, event_timestamp, geo, traffic_source, user_properties, event_bundle_sequence_id, event_params, event_previous_timestamp, event_date
+
+Table: ANALYTICS_153293282.EVENTS_20180912
+Columns: user_ltv, event_date, event_dimensions, traffic_source, user_properties, geo, event_value_in_usd, user_first_touch_timestamp, device, stream_id, event_name, user_id, user_pseudo_id, app_info, event_timestamp, event_previous_timestamp, platform, event_bundle_sequence_id, event_params, event_server_timestamp_offset
+
+Table: ANALYTICS_153293282.EVENTS_20181002
+Columns: event_date, event_dimensions, user_properties, event_timestamp, event_previous_timestamp, event_value_in_usd, event_server_timestamp_offset, stream_id, event_params, user_pseudo_id, event_bundle_sequence_id, traffic_source, platform, app_info, user_first_touch_timestamp, user_ltv, user_id, device, geo, event_name
+
+Table: ANALYTICS_153293282.EVENTS_20180713
+Columns: app_info, event_date, event_bundle_sequence_id, user_id, traffic_source, user_pseudo_id, event_timestamp, platform, event_value_in_usd, device, event_previous_timestamp, event_params, event_name, user_first_touch_timestamp, user_ltv, geo, stream_id, event_server_timestamp_offset, user_properties
+
+Table: ANALYTICS_153293282.EVENTS_20180827
+Columns: user_pseudo_id, geo, user_first_touch_timestamp, event_previous_timestamp, stream_id, event_date, user_ltv, event_name, platform, event_timestamp, event_value_in_usd, device, user_properties, event_server_timestamp_offset, traffic_source, app_info, event_bundle_sequence_id, event_params, user_id
+
+Table: ANALYTICS_153293282.EVENTS_20180621
+Columns: event_name, event_timestamp, device, event_params, user_pseudo_id, geo, traffic_source, event_previous_timestamp, user_id, user_first_touch_timestamp, stream_id, user_properties, user_ltv, platform, event_date, app_info
+
+Table: ANALYTICS_153293282.EVENTS_20180906
+Columns: stream_id, platform, event_date, user_ltv, traffic_source, user_id, event_bundle_sequence_id, event_server_timestamp_offset, user_pseudo_id, event_dimensions, event_timestamp, event_name, geo, app_info, user_first_touch_timestamp, user_properties, device, event_previous_timestamp, event_params, event_value_in_usd
+
+Table: ANALYTICS_153293282.EVENTS_20180821
+Columns: app_info, event_previous_timestamp, user_properties, geo, event_bundle_sequence_id, traffic_source, user_ltv, device, user_id, user_pseudo_id, platform, user_first_touch_timestamp, event_date, event_value_in_usd, event_name, event_server_timestamp_offset, event_params, event_timestamp, stream_id
+
+Table: ANALYTICS_153293282.EVENTS_20180808
+Columns: user_ltv, event_value_in_usd, stream_id, event_previous_timestamp, traffic_source, user_pseudo_id, event_timestamp, user_properties, platform, user_id, user_first_touch_timestamp, app_info, event_params, geo, event_date, device, event_bundle_sequence_id, event_name, event_server_timestamp_offset
+
+Table: ANALYTICS_153293282.EVENTS_20180805
+Columns: event_params, stream_id, event_timestamp, user_pseudo_id, event_value_in_usd, app_info, user_properties, user_first_touch_timestamp, event_name, event_date, user_id, event_previous_timestamp, platform, event_bundle_sequence_id, event_server_timestamp_offset, traffic_source, device, user_ltv, geo
+
+Table: ANALYTICS_153293282.EVENTS_20180915
+Columns: user_pseudo_id, user_ltv, event_date, user_id, user_first_touch_timestamp, app_info, traffic_source, event_timestamp, event_server_timestamp_offset, event_name, geo, event_params, user_properties, event_dimensions, event_value_in_usd, platform, device, stream_id, event_previous_timestamp, event_bundle_sequence_id
+
+Table: ANALYTICS_153293282.EVENTS_20180924
+Columns: device, app_info, traffic_source, user_properties, event_bundle_sequence_id, user_first_touch_timestamp, event_value_in_usd, platform, event_dimensions, event_name, event_server_timestamp_offset, user_id, event_date, event_params, user_ltv, geo, stream_id, event_timestamp, user_pseudo_id, event_previous_timestamp
+
+Table: ANALYTICS_153293282.EVENTS_20180613
+Columns: user_pseudo_id, platform, user_first_touch_timestamp, event_name, user_properties, event_date, stream_id, geo, event_params, device, app_info, traffic_source, event_previous_timestamp, user_ltv, user_id, event_timestamp
+
+Table: ANALYTICS_153293282.EVENTS_20180902
+Columns: user_first_touch_timestamp, stream_id, app_info, user_id, geo, user_properties, user_pseudo_id, device, user_ltv, event_timestamp, event_value_in_usd, event_previous_timestamp, platform, event_bundle_sequence_id, event_params, event_date, traffic_source, event_name, event_server_timestamp_offset, event_dimensions
+
+Table: ANALYTICS_153293282.EVENTS_20180914
+Columns: event_dimensions, event_bundle_sequence_id, app_info, event_value_in_usd, platform, user_first_touch_timestamp, stream_id, device, event_name, event_params, event_server_timestamp_offset, event_date, user_properties, user_ltv, event_previous_timestamp, user_pseudo_id, event_timestamp, geo, user_id, traffic_source
+
+Table: ANALYTICS_153293282.EVENTS_20180709
+Columns: platform, event_params, event_date, event_server_timestamp_offset, user_properties, user_ltv, app_info, event_name, event_previous_timestamp, user_pseudo_id, event_timestamp, stream_id, user_first_touch_timestamp, user_id, event_bundle_sequence_id, device, geo, event_value_in_usd, traffic_source
+
+Table: ANALYTICS_153293282.EVENTS_20180617
+Columns: event_date, geo, event_timestamp, user_ltv, device, user_properties, traffic_source, platform, event_previous_timestamp, user_first_touch_timestamp, event_name, event_params, stream_id, user_pseudo_id, app_info, user_id
+
+Table: ANALYTICS_153293282.EVENTS_20180930
+Columns: event_bundle_sequence_id, event_dimensions, user_ltv, user_properties, event_server_timestamp_offset, device, event_timestamp, event_date, event_value_in_usd, event_params, user_pseudo_id, traffic_source, user_id, stream_id, user_first_touch_timestamp, event_name, event_previous_timestamp, geo, platform, app_info
+
+Table: ANALYTICS_153293282.EVENTS_20180630
+Columns: event_value_in_usd, app_info, device, traffic_source, user_ltv, event_name, geo, event_date, event_params, platform, user_id, user_properties, event_previous_timestamp, stream_id, event_timestamp, user_first_touch_timestamp, user_pseudo_id
+
+Table: ANALYTICS_153293282.EVENTS_20180731
+Columns: event_value_in_usd, event_previous_timestamp, stream_id, user_properties, event_params, user_ltv, platform, event_name, app_info, user_pseudo_id, geo, traffic_source, user_id, device, user_first_touch_timestamp, event_bundle_sequence_id, event_date, event_server_timestamp_offset, event_timestamp
+
+Table: ANALYTICS_153293282.EVENTS_20180717
+Columns: event_bundle_sequence_id, device, event_previous_timestamp, user_ltv, stream_id, event_value_in_usd, user_id, event_name, user_properties, event_params, geo, user_first_touch_timestamp, event_date, event_server_timestamp_offset, event_timestamp, app_info, traffic_source, platform, user_pseudo_id
+
+Table: ANALYTICS_153293282.EVENTS_20180710
+Columns: user_id, device, user_properties, stream_id, event_name, user_pseudo_id, event_timestamp, traffic_source, event_value_in_usd, user_first_touch_timestamp, event_params, event_previous_timestamp, platform, app_info, geo, user_ltv, event_date, event_server_timestamp_offset, event_bundle_sequence_id
+
+Table: ANALYTICS_153293282.EVENTS_20180704
+Columns: stream_id, event_previous_timestamp, device, user_id, event_params, traffic_source, geo, app_info, event_bundle_sequence_id, user_first_touch_timestamp, event_name, user_properties, user_pseudo_id, event_date, user_ltv, event_timestamp, event_value_in_usd, platform, event_server_timestamp_offset
+
+Table: ANALYTICS_153293282.EVENTS_20180730
+Columns: event_bundle_sequence_id, app_info, event_params, event_date, event_value_in_usd, user_id, user_pseudo_id, event_name, event_timestamp, stream_id, event_previous_timestamp, device, traffic_source, geo, user_ltv, platform, user_first_touch_timestamp, user_properties, event_server_timestamp_offset
+
+Table: ANALYTICS_153293282.EVENTS_20180925
+Columns: event_value_in_usd, event_params, user_first_touch_timestamp, platform, traffic_source, event_timestamp, event_date, event_bundle_sequence_id, user_ltv, stream_id, user_pseudo_id, event_server_timestamp_offset, device, app_info, event_name, event_dimensions, event_previous_timestamp, geo, user_id, user_properties
+
+Table: ANALYTICS_153293282.EVENTS_20180622
+Columns: event_name, event_timestamp, event_params, user_properties, platform, device, geo, event_date, traffic_source, event_previous_timestamp, user_pseudo_id, user_id, app_info, stream_id, user_first_touch_timestamp, user_ltv
+
+Table: ANALYTICS_153293282.EVENTS_20180910
+Columns: event_date, event_bundle_sequence_id, user_first_touch_timestamp, user_id, event_previous_timestamp, event_server_timestamp_offset, device, user_pseudo_id, app_info, platform, event_value_in_usd, stream_id, event_dimensions, event_params, user_ltv, user_properties, traffic_source, event_name, event_timestamp, geo
+
+Table: ANALYTICS_153293282.EVENTS_20180719
+Columns: user_ltv, stream_id, user_pseudo_id, user_properties, user_first_touch_timestamp, event_previous_timestamp, event_server_timestamp_offset, device, platform, event_name, geo, event_bundle_sequence_id, user_id, event_date, event_params, app_info, event_timestamp, traffic_source, event_value_in_usd
+
+Table: ANALYTICS_153293282.EVENTS_20180619
+Columns: traffic_source, stream_id, event_name, platform, geo, user_pseudo_id, app_info, event_date, user_first_touch_timestamp, user_id, event_params, user_properties, user_ltv, event_previous_timestamp, event_timestamp, device
+
+Table: ANALYTICS_153293282.EVENTS_20180818
+Columns: event_params, platform, stream_id, event_server_timestamp_offset, user_first_touch_timestamp, app_info, event_name, user_properties, event_date, event_bundle_sequence_id, user_pseudo_id, event_timestamp, traffic_source, user_id, event_value_in_usd, user_ltv, geo, event_previous_timestamp, device
+
+Table: ANALYTICS_153293282.EVENTS_20180825
+Columns: event_value_in_usd, event_previous_timestamp, user_id, platform, user_first_touch_timestamp, event_name, traffic_source, stream_id, event_params, user_ltv, event_server_timestamp_offset, app_info, user_properties, user_pseudo_id, geo, event_date, event_bundle_sequence_id, device, event_timestamp
+
+Table: ANALYTICS_153293282.EVENTS_20180926
+Columns: event_value_in_usd, event_timestamp, event_bundle_sequence_id, event_previous_timestamp, geo, device, event_name, traffic_source, user_properties, user_ltv, event_dimensions, event_server_timestamp_offset, user_pseudo_id, event_params, stream_id, user_id, platform, app_info, event_date, user_first_touch_timestamp
+
+Table: ANALYTICS_153293282.EVENTS_20180923
+Columns: geo, platform, event_date, event_server_timestamp_offset, event_dimensions, event_bundle_sequence_id, stream_id, event_previous_timestamp, event_value_in_usd, user_first_touch_timestamp, app_info, event_name, user_properties, user_ltv, traffic_source, user_pseudo_id, event_params, user_id, event_timestamp, device
+
+Table: ANALYTICS_153293282.EVENTS_20180722
+Columns: user_first_touch_timestamp, event_params, user_id, app_info, event_value_in_usd, event_bundle_sequence_id, traffic_source, event_date, user_pseudo_id, event_name, user_properties, stream_id, geo, event_timestamp, device, event_server_timestamp_offset, platform, event_previous_timestamp, user_ltv
+
+Table: ANALYTICS_153293282.EVENTS_20180830
+Columns: event_previous_timestamp, event_date, geo, user_id, user_properties, event_dimensions, event_server_timestamp_offset, device, traffic_source, user_ltv, user_pseudo_id, platform, stream_id, event_timestamp, app_info, user_first_touch_timestamp, event_params, event_name, event_bundle_sequence_id, event_value_in_usd
+
+Table: ANALYTICS_153293282.EVENTS_20180816
+Columns: device, event_date, user_pseudo_id, user_ltv, event_timestamp, user_properties, traffic_source, geo, platform, event_bundle_sequence_id, app_info, stream_id, event_value_in_usd, user_id, user_first_touch_timestamp, event_previous_timestamp, event_params, event_name, event_server_timestamp_offset
+
+Table: ANALYTICS_153293282.EVENTS_20180706
+Columns: event_timestamp, event_name, user_properties, app_info, user_id, event_bundle_sequence_id, event_params, event_server_timestamp_offset, device, event_value_in_usd, user_pseudo_id, traffic_source, platform, event_date, stream_id, event_previous_timestamp, user_first_touch_timestamp, geo, user_ltv
+
+Table: ANALYTICS_153293282.EVENTS_20180712
+Columns: event_value_in_usd, event_bundle_sequence_id, event_date, event_previous_timestamp, geo, stream_id, event_timestamp, event_params, event_name, device, user_id, event_server_timestamp_offset, traffic_source, user_properties, user_ltv, user_pseudo_id, app_info, user_first_touch_timestamp, platform
+
+Table: ANALYTICS_153293282.EVENTS_20180614
+Columns: device, user_properties, event_timestamp, geo, traffic_source, event_name, app_info, user_id, event_previous_timestamp, user_pseudo_id, event_params, platform, stream_id, event_date, user_ltv, user_first_touch_timestamp
+
+Table: ANALYTICS_153293282.EVENTS_20180626
+Columns: event_previous_timestamp, user_id, app_info, device, event_timestamp, geo, event_name, user_pseudo_id, event_date, user_properties, user_first_touch_timestamp, stream_id, traffic_source, platform, user_ltv, event_params
+
+Table: ANALYTICS_153293282.EVENTS_20180811
+Columns: event_bundle_sequence_id, user_properties, event_previous_timestamp, user_pseudo_id, app_info, traffic_source, platform, geo, event_name, user_ltv, event_timestamp, event_server_timestamp_offset, user_id, device, event_params, event_value_in_usd, event_date, stream_id, user_first_touch_timestamp
+
+Table: ANALYTICS_153293282.EVENTS_20180927
+Columns: event_previous_timestamp, event_server_timestamp_offset, event_bundle_sequence_id, stream_id, event_name, platform, event_value_in_usd, device, traffic_source, geo, event_date, user_first_touch_timestamp, event_params, event_timestamp, user_id, user_ltv, event_dimensions, user_pseudo_id, app_info, user_properties
+
+Table: ANALYTICS_153293282.EVENTS_20180708
+Columns: user_first_touch_timestamp, platform, user_properties, traffic_source, event_server_timestamp_offset, device, user_ltv, event_previous_timestamp, app_info, event_bundle_sequence_id, event_date, event_params, user_pseudo_id, event_name, stream_id, event_value_in_usd, event_timestamp, geo, user_id
+
+Table: ANALYTICS_153293282.EVENTS_20180725
+Columns: geo, app_info, user_properties, platform, event_name, event_params, user_ltv, event_previous_timestamp, event_value_in_usd, stream_id, device, user_pseudo_id, event_server_timestamp_offset, traffic_source, event_timestamp, event_bundle_sequence_id, user_first_touch_timestamp, user_id, event_date
+
+Table: ANALYTICS_153293282.EVENTS_20180916
+Columns: event_bundle_sequence_id, geo, app_info, event_timestamp, traffic_source, event_params, user_id, user_pseudo_id, device, user_ltv, event_dimensions, user_properties, event_previous_timestamp, stream_id, user_first_touch_timestamp, event_value_in_usd, event_name, platform, event_server_timestamp_offset, event_date
+
+Table: ANALYTICS_153293282.EVENTS_20180820
+Columns: user_first_touch_timestamp, geo, stream_id, user_properties, event_date, event_server_timestamp_offset, event_params, event_timestamp, platform, event_bundle_sequence_id, app_info, user_pseudo_id, device, traffic_source, user_ltv, event_previous_timestamp, user_id, event_value_in_usd, event_name
+
+Table: ANALYTICS_153293282.EVENTS_20180829
+Columns: platform, user_ltv, event_date, event_name, geo, stream_id, traffic_source, event_server_timestamp_offset, event_value_in_usd, user_first_touch_timestamp, event_bundle_sequence_id, event_timestamp, event_previous_timestamp, app_info, user_properties, user_id, event_dimensions, device, event_params, user_pseudo_id
+
+Table: ANALYTICS_153293282.EVENTS_20180803
+Columns: geo, event_date, event_value_in_usd, device, event_bundle_sequence_id, platform, event_params, user_properties, stream_id, user_id, event_name, user_pseudo_id, app_info, user_ltv, event_previous_timestamp, event_timestamp, traffic_source, user_first_touch_timestamp, event_server_timestamp_offset
+
+Table: ANALYTICS_153293282.EVENTS_20180806
+Columns: event_value_in_usd, user_id, event_bundle_sequence_id, event_name, event_params, user_first_touch_timestamp, event_timestamp, user_properties, traffic_source, user_ltv, event_server_timestamp_offset, app_info, platform, user_pseudo_id, event_date, event_previous_timestamp, device, geo, stream_id
+
+Table: ANALYTICS_153293282.EVENTS_20180824
+Columns: user_pseudo_id, stream_id, event_bundle_sequence_id, event_params, user_id, device, user_properties, user_first_touch_timestamp, event_previous_timestamp, app_info, traffic_source, event_timestamp, user_ltv, event_name, event_date, geo, event_server_timestamp_offset, event_value_in_usd, platform
+
+Table: ANALYTICS_153293282.EVENTS_20180624
+Columns: traffic_source, event_previous_timestamp, stream_id, user_id, event_name, user_pseudo_id, app_info, event_date, user_properties, user_first_touch_timestamp, event_params, geo, event_timestamp, user_ltv, platform, device
+
+Table: ANALYTICS_153293282.EVENTS_20180628
+Columns: user_pseudo_id, stream_id, geo, user_first_touch_timestamp, user_properties, app_info, user_ltv, user_id, device, event_value_in_usd, event_date, event_previous_timestamp, platform, event_timestamp, traffic_source, event_name, event_params
+
+Table: ANALYTICS_153293282.EVENTS_20180928
+Columns: event_server_timestamp_offset, stream_id, traffic_source, event_date, user_id, app_info, event_timestamp, event_params, device, event_dimensions, user_ltv, event_name, user_pseudo_id, event_previous_timestamp, event_value_in_usd, event_bundle_sequence_id, user_properties, platform, user_first_touch_timestamp, geo
+
+Table: ANALYTICS_153293282.EVENTS_20180612
+Columns: stream_id, event_timestamp, event_params, geo, event_date, app_info, user_id, device, user_first_touch_timestamp, user_pseudo_id, user_properties, event_name, traffic_source, platform, event_previous_timestamp, user_ltv
+
+Table: ANALYTICS_153293282.EVENTS_20180629
+Columns: event_params, event_date, user_ltv, user_properties, platform, geo, user_id, event_value_in_usd, app_info, device, traffic_source, stream_id, event_name, event_timestamp, user_first_touch_timestamp, user_pseudo_id, event_previous_timestamp
+
+Table: ANALYTICS_153293282.EVENTS_20180701
+Columns: user_id, platform, event_name, geo, user_pseudo_id, event_date, user_properties, stream_id, event_timestamp, traffic_source, device, event_params, user_ltv, app_info, event_previous_timestamp, user_first_touch_timestamp, event_value_in_usd
+
+Table: ANALYTICS_153293282.EVENTS_20180907
+Columns: device, event_server_timestamp_offset, event_previous_timestamp, event_name, user_properties, app_info, event_params, traffic_source, geo, event_date, platform, user_pseudo_id, event_timestamp, user_ltv, event_bundle_sequence_id, user_first_touch_timestamp, stream_id, user_id, event_value_in_usd, event_dimensions
+
+Table: ANALYTICS_153293282.EVENTS_20180918
+Columns: user_ltv, event_timestamp, platform, geo, event_dimensions, event_params, event_bundle_sequence_id, device, stream_id, user_pseudo_id, traffic_source, event_value_in_usd, event_previous_timestamp, event_date, user_first_touch_timestamp, user_id, event_name, event_server_timestamp_offset, app_info, user_properties
+
+Table: ANALYTICS_153293282.EVENTS_20180903
+Columns: event_timestamp, event_name, device, event_previous_timestamp, app_info, geo, stream_id, platform, event_params, user_id, user_properties, event_bundle_sequence_id, traffic_source, event_date, event_value_in_usd, user_pseudo_id, event_server_timestamp_offset, event_dimensions, user_first_touch_timestamp, user_ltv
+
+Table: ANALYTICS_153293282.EVENTS_20180810
+Columns: event_server_timestamp_offset, user_ltv, user_properties, stream_id, event_value_in_usd, app_info, platform, user_pseudo_id, user_id, user_first_touch_timestamp, event_previous_timestamp, event_bundle_sequence_id, event_name, event_date, geo, device, traffic_source, event_timestamp, event_params
+
+Table: ANALYTICS_153293282.EVENTS_20180822
+Columns: stream_id, event_bundle_sequence_id, event_name, event_timestamp, app_info, geo, platform, user_pseudo_id, event_date, event_value_in_usd, traffic_source, event_server_timestamp_offset, user_first_touch_timestamp, user_id, user_properties, user_ltv, device, event_params, event_previous_timestamp
+
+Table: ANALYTICS_153293282.EVENTS_20180817
+Columns: event_server_timestamp_offset, user_properties, device, user_ltv, user_id, geo, event_previous_timestamp, event_date, user_pseudo_id, app_info, traffic_source, event_bundle_sequence_id, event_timestamp, event_value_in_usd, platform, user_first_touch_timestamp, event_params, stream_id, event_name
+
+Table: ANALYTICS_153293282.EVENTS_20180718
+Columns: device, user_id, event_name, platform, event_params, user_pseudo_id, user_first_touch_timestamp, stream_id, event_previous_timestamp, app_info, user_ltv, event_date, event_bundle_sequence_id, event_value_in_usd, traffic_source, event_timestamp, user_properties, event_server_timestamp_offset, geo
+
+Table: ANALYTICS_153293282.EVENTS_20180723
+Columns: platform, event_timestamp, event_name, user_properties, stream_id, event_value_in_usd, app_info, event_params, user_ltv, event_bundle_sequence_id, device, event_previous_timestamp, geo, user_pseudo_id, event_date, traffic_source, event_server_timestamp_offset, user_first_touch_timestamp, user_id
+
+Table: ANALYTICS_153293282.EVENTS_20180702
+Columns: user_first_touch_timestamp, user_properties, event_bundle_sequence_id, geo, event_date, stream_id, user_id, user_pseudo_id, platform, event_params, device, traffic_source, app_info, user_ltv, event_value_in_usd, event_server_timestamp_offset, event_timestamp, event_name, event_previous_timestamp
+
+Table: ANALYTICS_153293282.EVENTS_20180929
+Columns: traffic_source, event_dimensions, user_id, user_ltv, event_params, event_timestamp, user_first_touch_timestamp, user_properties, device, event_name, platform, event_value_in_usd, stream_id, event_server_timestamp_offset, geo, event_date, app_info, event_bundle_sequence_id, user_pseudo_id, event_previous_timestamp
+
+Table: ANALYTICS_153293282.EVENTS_20180814
+Columns: user_properties, user_id, event_timestamp, user_first_touch_timestamp, user_pseudo_id, event_value_in_usd, traffic_source, event_date, event_params, event_name, user_ltv, stream_id, event_server_timestamp_offset, event_bundle_sequence_id, device, platform, event_previous_timestamp, geo, app_info
+
+Table: ANALYTICS_153293282.EVENTS_20180729
+Columns: user_properties, geo, event_bundle_sequence_id, user_id, stream_id, event_params, event_value_in_usd, platform, user_pseudo_id, event_name, event_previous_timestamp, event_timestamp, app_info, traffic_source, user_first_touch_timestamp, device, event_date, event_server_timestamp_offset, user_ltv
+
+Table: ANALYTICS_153293282.EVENTS_20180828
+Columns: user_properties, device, event_params, event_dimensions, event_value_in_usd, stream_id, event_bundle_sequence_id, event_date, user_pseudo_id, platform, event_timestamp, event_name, user_id, app_info, event_server_timestamp_offset, event_previous_timestamp, user_ltv, user_first_touch_timestamp, traffic_source, geo
+
+Table: ANALYTICS_153293282.EVENTS_20180826
+Columns: event_name, user_id, user_ltv, event_date, event_params, device, geo, user_properties, platform, event_timestamp, traffic_source, event_server_timestamp_offset, event_previous_timestamp, user_pseudo_id, stream_id, app_info, event_bundle_sequence_id, event_value_in_usd, user_first_touch_timestamp
+
+Table: ANALYTICS_153293282.EVENTS_20180815
+Columns: app_info, user_ltv, event_value_in_usd, stream_id, event_server_timestamp_offset, user_properties, user_id, event_name, event_date, user_first_touch_timestamp, geo, event_bundle_sequence_id, event_timestamp, device, user_pseudo_id, platform, event_previous_timestamp, traffic_source, event_params
+
+Table: ANALYTICS_153293282.EVENTS_20180809
+Columns: app_info, geo, user_first_touch_timestamp, event_server_timestamp_offset, traffic_source, user_pseudo_id, user_properties, platform, event_params, event_previous_timestamp, event_name, event_timestamp, device, user_id, event_value_in_usd, event_bundle_sequence_id, stream_id, event_date, user_ltv
+
+Table: ANALYTICS_153293282.EVENTS_20180716
+Columns: event_params, event_value_in_usd, event_server_timestamp_offset, device, event_name, traffic_source, app_info, user_id, platform, event_timestamp, event_bundle_sequence_id, user_first_touch_timestamp, event_previous_timestamp, event_date, stream_id, user_properties, geo, user_ltv, user_pseudo_id

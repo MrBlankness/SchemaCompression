@@ -1,0 +1,74 @@
+[COMPONENTS]
+[TABLES]
+## PUBLIC.Fact_StateBenchmark_ACS2021
+TotalStatePopulation: NUMBER | Total State or territory population using MetricID = “B01003_001E”, known as “Total Population” in each Census hierarchy. This is to be used as a GroupBy or Aggregate column. | eg=[20114745]
+MetricID: TEXT | A unique identifier for a specific metric or measurement within the American Community Survey or census data. | eg=["B25075_011E", "B25063_023E"]
+StateBenchmarkValue: FLOAT | The Int value for the MetricID and StateAbbrev relationship. This could be aggregates or estimates of people, pets, household, etc. Refer to the Dim_CensusMetrics table for the meaning of each value. All values have been rolled up correctly according to the Census hierarchy in the Dim_CensusGeography table. | eg=[61829.0, 366764.0]
+TotalUSPopulation: NUMBER | Total United States population using MetricID = “B01003_001E”, known as “Total Population” in each Census hierarchy. This is to be used as a GroupBy or Aggregate column. | eg=[333036755]
+StateFIPS: TEXT | The Federal Information Processing Standard (FIPS) code that represents the state where the block group is located. | eg=["36"]
+StateAbbrev: TEXT | The two-letter state abbreviation for each U.S. State and territory. | eg=["NY"]
+
+## PUBLIC.Dim_CensusGeography
+StateAbbrev: TEXT | The abbreviated form or code representing the state where the block group is located. | eg=["NY"]
+BlockGroupPolygon: TEXT | The geometric representation of the block group as a polygon, defined by its boundary coordinates. | eg=[{"type":"Polygon","coordinates":[[[-77.684773,42.856123],[-77.684288,42.856982],[-77.683363,42.858626],[-77.681689,42.861553],[-77.681493,42.861898],[-77.680845,42.863089],[-77.679962,42.864729],[-77.679836,42.864963],[-77.679704,42.865211],[-77.677996,42.868248],[-77.677233,42.869604],[-77.676748,42.870467],[-77.67632,42.871228],[-77.675698,42.872294],[-77.675564,42.872529],[-77.674162,42.875],[-77.673332,42.876453],[-77.672809,42.877371],[-77.672726,42.877534],[-77.672667,42.877661],[-77.672631,42.877781],[-77.672477,42.878042],[-77.672019,42.878826],[-77.671867,42.879088],[-77.670896,42.88069],[-77.67088,42.880717],[-77.668764,42.884363],[-77.668096,42.885564],[-77.667379,42.886854],[-77.667202,42.887192],[-77.667028,42.887523],[-77.666181,42.888977],[-77.663934,42.892837],[-77.657818,42.903425],[-77.655171,42.908177],[-77.650382,42.916779],[-77.647182,42.922408],[-77.644495,42.927138],[-77.644469,42.927184],[-77.644394,42.927322],[-77.644369,42.927369],[-77.643825,42.928352],[-7..., {"type":"Polygon","coordinates":[[[-77.622746,42.903203],[-77.622725,42.90467],[-77.622719,42.905159],[-77.622715,42.905482],[-77.622705,42.906451],[-77.622703,42.906775],[-77.622695,42.907055],[-77.622673,42.907898],[-77.622666,42.908179],[-77.622651,42.908179],[-77.622607,42.908179],[-77.622593,42.908179],[-77.622393,42.915894],[-77.622338,42.915897],[-77.62233,42.916265],[-77.616965,42.916218],[-77.614501,42.916175],[-77.613907,42.916172],[-77.612126,42.916166],[-77.611533,42.916164],[-77.611532,42.916131],[-77.610332,42.916123],[-77.610321,42.916028],[-77.603683,42.917026],[-77.603675,42.917012],[-77.603617,42.916911],[-77.60351,42.916723],[-77.603314,42.91645],[-77.603063,42.916125],[-77.603006,42.916051],[-77.602901,42.915551],[-77.602887,42.915432],[-77.602831,42.915305],[-77.602761,42.915146],[-77.602614,42.915118],[-77.602537,42.915055],[-77.602536,42.914994],[-77.602551,42.914929],[-77.602642,42.914796],[-77.602789,42.914614],[-77.60284,42.914506],[-77.602871,42.914412],[-...]
+BlockGroupCode: TEXT | A code that uniquely identifies the block group within a census tract. | eg=["1", "2"]
+StateCountyTractID: TEXT | A unique identifier combining the state, county, and tract codes to represent the block group's location. | eg=["36051030600", "36051031200"]
+TractCode: TEXT | A code that identifies the census tract to which the block group belongs. | eg=["030600", "031200"]
+AmtLand: NUMBER | The amount of land area covered by the block group. | eg=[79113792, 3482885]
+BlockGroupCentroidLon: TEXT | The longitude coordinate of the block group's centroid. | eg=["-077.6086725", "-077.6123032"]
+StateName: TEXT | The name of the state where the block group is located. | eg=["New York"]
+BlockGroupName: TEXT | The name or label assigned to the block group. | eg=["Block Group 1", "Block Group 2"]
+MTFCC: TEXT | The MAF/TIGER Feature Class Code, which categorizes the geographic feature represented by the block group. | eg=["G5030"]
+CountyName: TEXT | The name of the county where the block group is situated. | eg=["Livingston"]
+GeographyYear: TEXT | The year associated with the geographical data of the block group. | eg=["2020"]
+AmtWater: NUMBER | The amount of water area (such as lakes, rivers, or oceans) within the boundaries of the block group. | eg=[137228, 0]
+BlockGroupCentroidLat: TEXT | The latitude coordinate of the block group's centroid, which represents the central point of the block group. | eg=["+42.8958887", "+42.9069388"]
+BlockGroupID: TEXT | A unique identifier for a specific block group within a geographic area. | eg=["360510306001", "360510306002"]
+BlockGroupCentroidPoints: TEXT | The precise point location (latitude and longitude) of the block group's centroid. | eg=[{"type":"Point","coordinates":[-77.6086725,42.8958887]}, {"type":"Point","coordinates":[-77.6123032,42.9069388]}]
+FuncStat: TEXT | The functional status of the block group, indicating its statistical purpose. | eg=["S"]
+StateFIPS: TEXT | The Federal Information Processing Standard (FIPS) code that represents the state where the block group is located. | eg=["36"]
+CountyFIPS: TEXT | The FIPS code that identifies the county where the block group is situated. | eg=["051"]
+
+## PUBLIC.Xref_ZipToTract_Residential
+FromZipCode: TEXT | The U.S. Postal Service Zip Code that relates to the StateCountyTractID based on the ratio of residents in that geographical region. Many Tracts can overlap parts of Zip Codes, and many Zip Codes can overlap parts of Tracts. | eg=["13666", "12160"]
+ToStateCountyTractID: TEXT | A unique identifier compound key that uses StateFIPS, CountyFIPS, and Tract for a specific within a geographic area. This field (and table) is for rolling metrics and values from the Zip Code to the Census block group or Tract level. | eg=["36089492501", "36095740400"]
+ResidentialMappingRatioZT: NUMBER | The ratios of residents in each Zip Code that are made up by that connected Tract. “ZT” as the suffix designates the direction of the data , Zip Code to Tract (usually larger polygons into smaller ones). | eg=["1.000000000000000", "0.500000000000000"]
+
+## PUBLIC.Fact_CensusValues_ACS2021_ByZip
+CensusValueByZip: NUMBER | The Int value for the MetricID and ZipCode relationship. This could be aggregates or estimates of people, pets, household, etc. Refer to the Dim_CensusMetrics table for the meaning of each value. All values have been rolled up correctly according to the ratios in the Xref_TractToZip_Residential table. | eg=["53.59", "51.04"]
+MetricID: TEXT | A unique identifier for a specific metric or measurement within the American Community Survey or census data. | eg=["B25075_020E", "B25063_019E"]
+ZipCode: TEXT | A unique Zip Code for a geographic area. | eg=["14525", "12220"]
+
+## PUBLIC.LU_GeographyExpanded
+ZipCodeCentroidPoint: TEXT | The precise point location (latitude and longitude) of the Zip Code's centroid. | eg=[{"type":"Point","coordinates":[-73.97766113,40.75791931]}, {"type":"Point","coordinates":[-73.3116462,43.1174512]}]
+ZipCode: TEXT | The U.S. Postal Service Zip Code | eg=["10185", "12873"]
+ZipCodePolygon: TEXT | The geometric representation of the Zip Code as a polygon, defined by its boundary coordinates. This may be null for “Unique” and “PO Box” Zip Codes, as they may just have a single point. Those types can be referenced in ZipCodeType field. | eg=[{"type":"Polygon","coordinates":[[[-73.363946,43.104451],[-73.363804,43.105547],[-73.363425,43.10809],[-73.363378,43.108695],[-73.363316,43.109135],[-73.363283,43.109288],[-73.362977,43.110188],[-73.362805,43.110571],[-73.362751,43.110782],[-73.362734,43.111002],[-73.362743,43.111518],[-73.362724,43.111738],[-73.360947,43.111484],[-73.362235,43.108725],[-73.358224,43.109064],[-73.358611,43.11147],[-73.354599,43.111702],[-73.354136,43.109273],[-73.347581,43.109758],[-73.347939,43.109049],[-73.347805,43.10904],[-73.34771,43.109051],[-73.347509,43.109121],[-73.347378,43.109135],[-73.346653,43.109179],[-73.346499,43.109201],[-73.34639,43.109241],[-73.346295,43.109295],[-73.346233,43.109357],[-73.346193,43.109419],[-73.346164,43.109496],[-73.346149,43.109576],[-73.346171,43.109769],[-73.346372,43.110388],[-73.346405,43.110556],[-73.346434,43.110964],[-73.346423,43.11111],[-73.346397,43.111244],[-73.34627,43.111609],[-73.346055,43.112093],[-73.346015,43.112254],[-73.345881,43.112952],[-73..., {"type":"Polygon","coordinates":[[[-73.682836,41.208429],[-73.682538,41.208295],[-73.681486,41.207788],[-73.681042,41.20759],[-73.680138,41.207166],[-73.679809,41.207012],[-73.679717,41.206995],[-73.679525,41.206982],[-73.679002,41.207012],[-73.677632,41.207157],[-73.677412,41.207167],[-73.676748,41.207154],[-73.675945,41.207092],[-73.675705,41.207076],[-73.675461,41.207046],[-73.673688,41.20683],[-73.673629,41.206818],[-73.672336,41.206611],[-73.672189,41.206577],[-73.671439,41.206304],[-73.670474,41.205984],[-73.670136,41.205903],[-73.669748,41.205832],[-73.669184,41.205761],[-73.668955,41.205707],[-73.668867,41.205667],[-73.668509,41.205306],[-73.668347,41.205154],[-73.668081,41.204864],[-73.667922,41.204719],[-73.667443,41.204425],[-73.667126,41.204347],[-73.666855,41.204323],[-73.666342,41.204212],[-73.666191,41.204226],[-73.666099,41.204249],[-73.666025,41.204283],[-73.665954,41.204344],[-73.665799,41.204583],[-73.665646,41.204851],[-73.665499,41.205022],[-73.665414,41.205089]...]
+ZipCodeCentroidLon: TEXT | The longitude coordinate of the Zip Code's centroid. | eg=["-73.97766113", "-73.3116462"]
+PreferredStateAbbrev: TEXT | The abbreviated form or code representing the state where the Zip/City is located. | eg=["NY"]
+ZipCodeType: TEXT | The category of Zip Code, according to the U.S. Postal Service | eg=["PO Box", "Standard"]
+PreferredCity: TEXT | The city name most commonly used by the U.S. Census and Postal Service for each zip code. Different agencies and organizations will use different iterations of the same city based on their use and source of data. | eg=["New York", "Shushan"]
+PreferredCityStateAbbrev: TEXT | The concatenated form of PreferredCity and PreferredStateAbbrev with a comma. | eg=["New York, NY", "Shushan, NY"]
+PreferredStateName: TEXT | The state name associated with the PreferredCity. While there is almost never a case where a city could have a different “preferred state”, we kept the naming convention to differentiate Zip/City associated states from BlockGroup associated states, as they have different sources. | eg=["New York"]
+ZipCodeCentroidLat: TEXT | The latitude coordinate of the Zip Code's centroid, which represents the central point of the Zip Code. | eg=["+40.75791931", "+43.1174512"]
+
+## PUBLIC.Dim_CensusMetrics
+Type: TEXT | The type or nature of the metric, indicating the kind of data it represents, such as population, housing, education, employment, etc. | eg=["Estimate"]
+Descriptor2: TEXT | Additional descriptive attribute or feature associated with the metric, providing more specific details. | eg=["", "With no children of the householder under 18 years"]
+MetricCategory: TEXT | The category or classification to which the metric belongs, grouping related metrics together. | eg=["Demographics", "Income"]
+MetricTableDesc: TEXT | A description or label for the table or dataset in the American Community Survey or census data where the metric is stored. | eg=["Median age of the population categorized by sex", "Earnings of households in the past 12 months"]
+MetricTableID: TEXT | A unique identifier for the table or dataset in the American Community Survey or census data where the metric is stored. | eg=["B01002", "B19051"]
+MetricID: TEXT | A unique identifier for a specific metric or measurement within the American Community Survey or census data. | eg=["B01002_002E", "B19051_001E"]
+Descriptor1: TEXT | A descriptive attribute or feature associated with the metric, providing additional information or context. | eg=["Male", ""]
+UnitMeasureType: TEXT | The type of data stored in the CensusValue for each MetricID. It’s important to look at this field when grouping and summing values up or down geographic levels, as some are raw counts and others are averages or medians. | eg=["Aggregate", "People"]
+MetricGroup: TEXT | The product grouping decided by No Fret Data, connected to the rollout and roadmap of Census Galaxy. | eg=["Essential"]
+Descriptor3: TEXT | Another descriptive attribute or feature associated with the metric, providing further insights or details. | eg=[""]
+
+## PUBLIC.Xref_TractToZip_Residential
+FromStateCountyTractID: TEXT | A unique identifier compound key that uses StateFIPS, CountyFIPS, and Tract for a specific within a geographic area. This field (and table) is for rolling metrics and values from the Census block group or Tract level to Zip Code. | eg=["36047055400", "36061007100"]
+ToZipCode: TEXT | The U.S. Postal Service Zip Code that relates to the StateCountyTractID based on the ratio of residents in that geographical region. Many Tracts can overlap parts of Zip Codes, and many Zip Codes can overlap parts of Tracts. | eg=["11229", "10119"]
+ResidentialMappingRatioTZ: NUMBER | The ratios of residents in each Tract that are made up by that connected Zip Code. “TZ” as the suffix designates the direction of the data , Tract to Zip Code (usually smaller polygons into larger ones). | eg=["0.949859154929578", "0E-15"]
+
+## PUBLIC.Fact_CensusValues_ACS2021
+CensusValue: FLOAT | The Int value for the MetricID and BlockGroupID relationship. This could be aggregates or estimates of people, pets, household, etc. Refer to the Dim_CensusMetrics table for the meaning of each value. | eg=[9.0, 0.0]
+MetricID: TEXT | A unique identifier for a specific metric or measurement within the American Community Survey or census data. | eg=["B11012_009E", "B11012_010E"]
+BlockGroupID: TEXT | A unique identifier for a specific block group within a geographic area. | eg=["361031471003"]

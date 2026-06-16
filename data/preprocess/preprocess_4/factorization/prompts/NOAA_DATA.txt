@@ -1,0 +1,1502 @@
+[COMPONENTS]
+@C1
+count_dewp: NUMBER | Number of observations used in calculating mean dew point | eg=[4, 0]
+count_slp: NUMBER | Number of observations used in calculating mean sea level pressure | eg=[4, 0]
+count_stp: NUMBER | Number of observations used in calculating mean station pressure | eg=[0, 4]
+count_temp: NUMBER | Number of observations used in calculating mean temperature | eg=[4]
+count_visib: NUMBER | Number of observations used in calculating mean visibility | eg=[4, 0]
+count_wdsp: TEXT | Number of observations used in calculating mean wind speed | eg=["4"]
+da: TEXT | The day | eg=["14", "05"]
+dewp: FLOAT | Mean dew point for the day in degreesm Fahrenheit to tenths.  Missing = 9999.9 | eg=[43.5, 42.8]
+flag_max: TEXT | Blank indicates max temp was taken from the explicit max temp report and not from the 'hourly' data.
+* indicates max temp was  derived from the hourly data (i.e., highest hourly or synoptic-reported temperature)
+flag_min: TEXT | Blank indicates min temp was taken from the explicit min temp report and not from the 'hourly' data.
+* indicates min temp was derived from the hourly data (i.e., lowest hourly or synoptic-reported temperature) | eg=["*"]
+flag_prcp: TEXT | A = 1 report of 6-hour precipitation amount
+B = Summation of 2 reports of 6-hour precipitation amount
+C = Summation of 3 reports of 6-hour precipitation amount
+D = Summation of 4 reports of 6-hour precipitation amount
+E = 1 report of 12-hour precipitation amount
+F = Summation of 2 reports of 12-hour precipitation amount
+G = 1 report of 24-hour precipitation amount
+H = Station reported '0' as the amount for the day (eg, from 6-hour reports), but also reported at least one occurrence of precipitation in hourly observations--this could indicate a trace occurred, but should be considered as incomplete data for the day.
+I = Station did not report any precip data for the day and did not report any occurrences of precipitation in its hourly observations--it's still possible that precip occurred but was not reported | eg=["H", "A"]
+fog: TEXT | Indicators (1 = yes, 0 = no/not reported) for the occurrence during the day | eg=["0", "1"]
+gust: FLOAT | Maximum wind gust reported for the day in knots to tenths. Missing = 999.9 | eg=[999.9]
+hail: TEXT | Indicators (1 = yes, 0 = no/not reported) for the occurrence during the day | eg=["0"]
+max: FLOAT | Maximum temperature reported during the day in Fahrenheit to tenths--time of max temp report varies by country and region, so this will sometimes not be the max for the calendar day. Missing = 9999.9 | eg=[63.0, 46.9]
+min: FLOAT | Minimum temperature reported during the day in Fahrenheit to tenths--time of min temp report varies by country and region, so this will sometimes not be the min for the calendar day. Missing = 9999.9 | eg=[44.1, 33.1]
+mo: TEXT | The month | eg=["03", "12"]
+mxpsd: TEXT | Maximum sustained wind speed reported for the day in knots to tenths. Missing = 999.9 | eg=["18.1", "5.1"]
+prcp: FLOAT | Total precipitation (rain and/or melted snow) reported during the day in inches and hundredths; will usually not end with the midnight observation--i.e., may include latter part of previous day. 
+.00 indicates no measurable precipitation (includes a trace).
+Missing = 99.99
+Note: Many stations do not report '0' on days with no precipitation--therefore, '99.99' will often appear on these days. Also, for example, a station may only report a 6-hour amount for the period during which rain fell. See Flag field for source of data | eg=[0.0, 0.02]
+rain_drizzle: TEXT | Indicators (1 = yes, 0 = no/not reported) for the occurrence during the day | eg=["1", "0"]
+slp: FLOAT | Mean sea level pressure for the day in millibars to tenths. Missing = 9999.9 | eg=[1009.0, 1016.2]
+sndp: FLOAT | Snow depth in inches to tenths--last report for the day if reported more thanonce. Missing = 999.9
+Note: Most stations do not report '0' ondays with no snow on the ground--therefore, '999.9' will often appear on these days | eg=[999.9]
+snow_ice_pellets: TEXT | Indicators (1 = yes, 0 = no/not reported) for the occurrence during the day | eg=["0"]
+stn: TEXT | Station number (WMO/DATSAV3 number) for the location | eg=["176060", "478120"]
+stp: FLOAT | Mean station pressure for the day in millibars to tenths. Missing = 9999.9 | eg=[9999.9, 1023.3]
+temp: FLOAT | Mean temperature for the day in degrees Fahrenheit to tenths. Missing = 9999.9 | eg=[53.5, 52.7]
+thunder: TEXT | Indicators (1 = yes, 0 = no/not reported) for the occurrence during the day | eg=["0"]
+tornado_funnel_cloud: TEXT | Indicators (1 = yes, 0 = no/not reported) for the occurrence during the day | eg=["0"]
+visib: FLOAT | Mean visibility for the day in miles to tenths.  Missing = 999.9 | eg=[19.7, 26.4]
+wdsp: TEXT | Mean wind speed for the day in knots to tenths. Missing = 999.9 | eg=["9.2", "3.0"]
+year: TEXT | The year | eg=["1955"]
+
+@C2
+cz_fips_code: TEXT | Unique FIPS code identifier assigned to each county.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.counties_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_counties | eg=["123", "61"]
+cz_name: TEXT | (County/Parish, Zone or Marine Name assigned to the county FIPS number or NWS Forecast Zone  NWS Forecast Zones are available as a BigQuery Public Dataset: bigquery-public-data.noaa_historic_severe_storms.nws_forecast_zones | eg=["WELD", "KIOWA"]
+cz_type: TEXT | Indicates whether the event happened in   - C: County/Parish  - Z: NWS zone  - M: Marine | eg=["C"]
+damage_crops: NUMBER | The estimated amount of damage to crops incurred by the weather event, in USD at the time of the storm. Values are not adjusted for inflation  Note: Values listed as 0 do not necessarily mean that no property damage occurred as a result of the event | eg=[0]
+damage_property: NUMBER | The estimated amount of damage to property incurred by the weather event, in USD at the time of the event. Values are not adjusted for inflation  Note: Values listed as 0 do not necessarily mean that no property damage occurred as a result of the event | eg=[0]
+deaths_direct: NUMBER | The number of deathes directly related to the weather event | eg=[0]
+deaths_indirect: NUMBER | The number of deathes indirectly related to the weather event | eg=[0]
+episode_id: TEXT | ID assigned by NWS to denote the storm episode; links the event details file with the information within location file
+event_azimuth: TEXT | 16-point compass direction from a particular village/city, airport, or inland lake, providing that the reference point is documented in the Storm Data software location database of > 130,000 locations.
+event_begin_time: NUMBER | The date and time that the event began. Note that episodes and events may have different start and end times if multiple events occured in the same episode | eg=[202231800000000, 202234800000000]
+event_end_time: NUMBER | The date and time that the event ended. Note that episodes and events may have different start and end times if multiple events occured in the same episode | eg=[202231800000000, 202234800000000]
+event_id: TEXT | ID assigned by NWS to note a single, small part that goes into a specific storm episode; links the storm episode between the three files downloaded from SPC’s website | eg=["9986350", "9986355"]
+event_latitude: FLOAT | The latitude where the event occurred (rounded to the hundredths in decimal degrees; includes an ‘-‘ if it’s S of the Equator)
+event_longitude: FLOAT | The longitude where the event occurred (rounded to the hundredths in decimal degrees; includes an ‘-‘ if it’s W of the Prime Meridian)
+event_point: BINARY | Geographic representation of the event_longitude and latitude
+event_range: FLOAT | A hydro-meteorological event will be referenced, minimally, to the nearest tenth of a mile, to the geographical center (not from the village/city boundaries or limits) of a particular village/city, airport, or inland lake, providing that the reference point is documented in the Storm Data software location database.
+event_timezone: TEXT | The time zone in which the event_begin_time and the event_end_time is recorded. | eg=["CST"]
+event_type: TEXT | The only events permitted in Storm Data are listed in Table 1 of Section 2.1.1 of NWS Directive 10-1605 at http://www.nws.noaa.gov/directives/sym/pd01016005curr.pdf. The chosen event type is the one that most accurately describes the meteorological event leading to fatalities, injuries, damage, etc. However, significant events, such as tornadoes, having no impact or causing no damage, are also included in Storm Data. | eg=["tornado"]
+flood_cause: TEXT | Reported or estimated cause of the flood
+injuries_direct: NUMBER | The number of injuries directly related to the weather event | eg=[0]
+injuries_indirect: NUMBER | The number of injuries indirectly related to the weather event | eg=[0]
+location_index: TEXT | Number assigned by NWS to specific locations within the same Storm event. Each event’s sequentially increasing location index number will have a corresponding lat/lon point
+magnitude: FLOAT | Measured extent of the magnitude type. This is only used for wind speeds and hail size.   Wind speeds are in MPH; Hail sizes are in inches | eg=[0.0]
+magnitude_type: TEXT | Differentiates between the type of mangitude measured.    - EG = Wind Estimated Gust  - ES = Estimated Sustained Wind  - MS = Measured Sustained Wind  - MG = Measured Wind Gust  No magnitude type is included for hail
+reference_location: TEXT | Reference location of the center from which the range is calculated and the azimuth is determined
+source: TEXT | Source reporting the weather event  Note: This can be any entry. Values are not restricted to specific categories
+tor_f_scale: TEXT | Enhanced Fujita Scale describes the strength of the tornado based on the amount and type of damage caused by the tornado. The F-scale of damage will vary in the destruction area; therefore, the highest value of the F-scale is recorded for each event.    - EF0 – Light Damage (40 – 72 mph)   - EF1 – Moderate Damage (73 – 112 mph)   - EF2 – Significant damage (113 – 157 mph)   - EF3 – Severe Damage (158 – 206 mph)   - EF4 – Devastating Damage (207 – 260 mph)   - EF5 – Incredible Damage (261 – 318 mph) | eg=["F0", "F1"]
+tor_length: TEXT | Length of the tornado or tornado segment while on the ground (minimal of tenths of miles) | eg=["0.0", "0.5"]
+tor_other_wfo: TEXT | Indicates the continuation of a tornado segment as it crossed from one National Weather Service Forecast Office to another. The subsequent WFO identifier is provided within this field.
+tor_width: TEXT | Width of the tornado or tornado segment while on the ground (in feet) | eg=["33", "150"]
+wfo: TEXT | National Weather Service Forecast Office’s area of responsibility (County Warning Area) in which the event occurred
+
+@C3
+adaptive_qc_flags: TEXT | SQZ indicates the relationship of SST to “adaptive” QC limits in 0.5σ (standard deviation) increments, and SQZ provides a measure of the reliability of the QC | eg=[""]
+air_temperature: FLOAT | Air temperature, Celsius
+amt_pressure_tend: FLOAT | Amount of pressure tendency at station level during the three hours preceding the time of observation in tenths of hPa (i.e., millibars)
+attm_count: NUMBER | The attm count: 0 – abbreviated record (no attm) 1 – one attm 2 – two attms etc. | eg=[4]
+box_system_indicator: TEXT | The box system indicator is currently unused. | eg=[""]
+callsign: TEXT | Identification/Callsign | eg=["OHBC1"]
+characteristic_of_ppp: NUMBER | WMO Code 0200 for characteristic of pressure tendency during the three hours preceding the time of observation (A) (after WMO 2015).
+cloud_height: TEXT | Codes 0 to 9 and “A” (following WMO Code 1600) show the height above surface of the base of the lowest cloud seen (such that a height exactly equal to one of the values at  60 the ends of the ranges shall be coded in the higher range, e.g., a height of 600 m shall be reported by code 5): 0 – 0 to 50 m 1 – 50 to 100 m 2 – 100 to 200 m 3 – 200 to 300 m 4 – 300 to 600 m 5 – 600 to 1000 m 6 – 1000 to 1500 m 7 – 1500 to 2000 m 8 – 2000 to 2500 m 9 – 2500 m or more, or no clouds 10 [A in base36 encoding] – height of base of cloud not known or base of clouds at a level lower and tops at a level higher than that of the station | eg=["A"]
+cloud_height_indicator: NUMBER | Shows if cloud height H was: 0 – estimated 1 – measured
+country_code: TEXT | The country that recruited a ship, which may differ from the country of immediate receipt (C2, field 15) and may also differ from the ship’s registry | eg=[""]
+deck: NUMBER | Number of the deck from which the report came (Table D6a), with Tables D6b and D6c providing additional information about selected DCK ranges. “Deck” originally referred to a punched card deck, but is now used as the primary field to track ICOADS data collections. | eg=[995]
+dewpoint_temperature: FLOAT | Dew-point temperature, Celsius
+dpt_indicator: NUMBER | WBTI and DPTI indicate which of WBT or DPT was measured or computed, and ice bulb conditions: 0 – measured 1 – computed 2 – iced measured 3 – iced computed
+dup_check: NUMBER | The presence of a duplicate match between a Global Telecommunication System (GTS) and logbook (or other delayed-mode) report may provide some location verification, with greater credibility if SLP and SST match under “allowances.” DUPC indicates whether such matches were detected during duplicate elimination processing (either the GTS or delayed-mode report is retained in the output data mixture), in case users might wish to make use of this information for independent quality control purposes: 0 – GTS and logbook match with SLP and SST match 1 – GTS and logbook match without SLP and SST match 2 – no GTS and logbook match was encountered | eg=[NaN, 2.0]
+dup_status: NUMBER | Indicates duplicate status. 0 unique 1 best duplicate 2 best duplicate with substitution | eg=[0, 1]
+external: NUMBER | The single extant value of the external flags is defined as 1 = erroneous (based on external OSD buoy quality control) They range from 0-63
+high_cloud_type: TEXT | Codes 0 to 10 [A in base36 encoding] show characteristics observed of clouds of the genera Cirrus, Cirrocumulus and Cirrostratus (WMO Code 0509). | eg=[""]
+hour: FLOAT | Hour of the actual time of observation at which the barometer is read. Hours 0.00 to 23.99 | eg=[19.7, 17.5]
+id_indicator: NUMBER | ID Indicator indicates whether a callsign or some other sort of identification is contained in the ID field (and in R3.0 data, II should always be extant when ID information exists; whereas II should always be missing if ID is missing): 0 – ID present, but unknown type 1 – ship, Ocean Station Vessel (OSV), or ice station callsign 2 – generic ID (e.g., SHIP, BUOY, RIGG, PLAT) 3 – WMO 5-digit buoy number 4 – other buoy number (e.g., Argos or national buoy number) 5 – Coastal-Marine Automated Network (C-MAN) ID (assigned by US NDBC or other organizations) 6 – station name or number 7 – oceanographic platform/cruise number 8 – fishing vessel psuedo-ID 9 – national ship number 10 – composite information from early ship data 11 – 7-digit buoy ID (proposed) | eg=[5]
+imma_version: NUMBER | IMMA Version: 0=2010, 1=2016 | eg=[1]
+indicator_for_temp: NUMBER | Indicator provides information about the precision and/or units that the Core temperature elements were translated from: 0 – tenths °C 1 – half °C 2 – whole °C 3 – whole or tenths °C (mixed precision among temperature fields) 4 – tenths °F 5 – half °F 6 – whole °F 7 – whole or tenths °F (mixed precision among temperature fields) 8 – high resolution data (e.g., hundredths °C) 9 – other | eg=[0]
+intermediate_reject_flag: NUMBER | 0=Retain in Intermediate, Reject from Final dataset;  1=Retain in both Intermediate and Final datasets;  2=Reject from both Intermediate and Final datasets | eg=[1]
+landlocked_flag: NUMBER | The single extant value of the landlocked flag (LZ) is defined as 1 = report over land If LZ is missing, this indicates that the report falls over an ocean or coastal region as defined by a “landlocked” file at 2°×2° resolution
+latlong_indicator: NUMBER | Latlong indicator preserves the precision at which LAT and LON were recorded or translated from, or if they were derived later by interpolation between known positions: 0 – degrees and tenths 1 – whole degrees 2 – mixed precision 3 – interpolated 4 – degrees and minutes 5 – high resolution data (e.g., degrees to seconds) 6 – other | eg=[5]
+low_cloud_type: TEXT | Codes 0 to 10 [A in base36 encoding] show characteristics observed of clouds of the genera Stratocumulus, Stratus, Cumulus, and Cumulonimbus (WMO Code 0513 | eg=[""]
+lower_cloud_amount: NUMBER | 0 – clear 1 – 1 okta or less, but not zero 2-6 – 2-6 oktas 7 – 7 oktas or more, but not 8 oktas 8 – 8 oktas 9 – sky obscured by fog and/or other meteorological phenomena
+middle_cloud_type: TEXT | Codes 0 to 10 [A in base36 encoding] show characteristics observed of clouds of the genera Altocumulus, Altostratus, and Nimbostratus (WMO Code 0515). | eg=[""]
+national_source_indicator: NUMBER | A field available for national use in identifying data subsets.
+ncdc_qc_flags: TEXT | Possible NCDC-QC flag values, where “–” indicates an undefined flag value, or letters included in the table indicate a defined flag value. For the letters, lower-case “x” indicates a flag value not utilized, whereas upper-case flag values were utilized, in preparing enhanced or standard trimmed data | eg=["1AAAA1AAA18AAA"]
+nightday_flag: NUMBER | The night/day report flag was set to indicate whether the report fell in local nighttime or daytime, as determined according to Slutz et al. 1 = report time is local nighttime 2 = report time is local daytime | eg=[2, 1]
+one_degree_box_number: NUMBER | 1° box numbers (see Release 1, supp. G; http://icoads.noaa.gov/Release_1/suppG.html) are available e.g., for use in sorting operations | eg=[38]
+past_weather: NUMBER | WMO Codes 4677 (Table D3) for WW, and 4561 for W1: 0 – Cloud covering 1/2 or less of the sky throughout the appropriate period 1 – Cloud covering more than 1/2 of the sky during part of the appropriate period and covering 1/2 or less during part of the period 2 – Cloud covering more than 1/2 of the sky throughout the appropriate period 54 3 – Sandstorm, duststorm or blowing snow 4 – Fog or ice fog or thick haze 5 – Drizzle 6 – Rain 7 – Snow, or rain and snow mixed 8 – Shower(s) 9 – Thunderstorm(s) with or without precipitation
+platform_type: NUMBER | The type of observing platform: 0 – US Navy or “deck” log, or unknown 1 – merchant ship or foreign military 2 – ocean station vessel—off station or station proximity unknown 3 – ocean station vessel—on station 4 – lightship 5 – ship 6 – moored buoy 7 – drifting buoy 8 – ice buoy [note: currently unused] 9 – ice station (manned, including ships overwintering in ice) 10 – oceanographic station data (bottle and low-resolution CTD/XCTD data) 11 – mechanical/digital/micro bathythermograph (MBT) 12 – expendable bathythermograph (XBT) 13 – Coastal-Marine Automated Network (C-MAN) (NDBC operated) 14 – other coastal/island station 15 – fixed (or mobile) ocean platform (plat, rig) 16 – tide gauge 17 – high-resolution Conductivity-Temp.-Depth (CTD)/Expendable CTD (XCTD) 74 18 – profiling float 19 – undulating oceanographic recorder 20 – autonomous pinneped bathythermograph 21 – glider | eg=[16]
+present_weather: NUMBER | WMO Codes 4677 (Table D3) for WW, and 4561 for W1: 0 – Cloud covering 1/2 or less of the sky throughout the appropriate period 1 – Cloud covering more than 1/2 of the sky during part of the appropriate period and covering 1/2 or less during part of the period 2 – Cloud covering more than 1/2 of the sky throughout the appropriate period 54 3 – Sandstorm, duststorm or blowing snow 4 – Fog or ice fog or thick haze 5 – Drizzle 6 – Rain 7 – Snow, or rain and snow mixed 8 – Shower(s) 9 – Thunderstorm(s) with or without precipitation
+pressure_bias: NUMBER | Indicates questionable sea level pressure data: 0 – questionable SLP: level 0: individual platform (unused) 1 – questionable SLP: level 1: deck 2 – questionable SLP: level 2: deck
+release_no_primary: NUMBER | First of the three elements that make up the full release number associated with the record. For example, Release 3.0.1 is represented with RN1=3, RN2=0, and RN3=1 | eg=[3]
+release_no_secondary: NUMBER | Second of the three elements that make up the full release number associated with the record. For example, Release 3.0.1 is represented with RN1=3, RN2=0, and RN3=1 | eg=[0]
+release_no_tertiary: NUMBER | Third of the three elements that make up the full release number associated with the record. For example, Release 3.0.1 is represented with RN1=3, RN2=0, and RN3=1 | eg=[1]
+release_status_indicator: NUMBER | An indicator that specifies whether the record is: 0 – Preliminary (Not yet included in an official ICOADS Release) 1 – Auxiliary (Records provided in separate data files in addition to ICOADS official Releases and Preliminary data. This also includes new data sources received, but awaiting blending into an official ICOADS Release) 2 – Full (A record included in an official ICOADS Release) | eg=[0]
+sea_level_pressure: FLOAT | Amount of pressure tendency at station level during the three hours preceding the time of observation in tenths of hPa (i.e., millibars) | eg=[1011.8, 1013.1]
+sea_surface_temp: FLOAT | Temperatures are stored in tenths of a degree Celsius. | eg=[21.3, 18.5]
+second_country_code: NUMBER | The country of immediate receipt (C2), which may differ from the recruiting country (C1) and may also differ from the ship’s registry.
+ship_course: NUMBER | True direction of resultant displacement of the ship during the three hours preceding the time of observation (i.e., ship’s course (true) made good): 0 – stationary (ship hove to) 5 – SW 1 – NE 6 – W 2 – E 7 – NW 3 – SE 8 – N 4 – S 9 – unknown
+ship_speed: NUMBER | Ship’s average speed made good during the three hours preceding the time of observation (beginning 1 January 1968): 0 – 0 knots  1 – 1-5 knots 2 – 6-10 knots 3 – 11-15 knots 4 – 16-20 knots  5 – 21-25 knots 6 – 26-30 knots 7 – 31-35 knots 8 – 36-40 knots 9 – over 40 knots.    Prior to 1 January 1968 a different code for VS, also with range 0-9, applied (Met Office 1948): 0 – 0 knots 1 – 1-3 knots 2 – 4-6 knots 3 – 7-9 knots 4 – 10-12 knots 5 – 13-15 knots  6 – 16-18 knots 7 – 19-21 knots 8 – 22-24 knots 9 – over 24 knots
+source_exclusion_flags: NUMBER | The single extant value of the source exclusion flags is defined as 1 = data automatically disqualified from statistics They range from 0-31 | eg=[31]
+source_id: NUMBER | Number of the source ID from which the report came (Table D7). Each SID may contain a single deck or a mixture of decks, but each SID is generally constrained to a single input format. | eg=[114]
+sst_measurement_method: NUMBER | Shows the method by which SST was taken: 0 – bucket 1 – condenser inlet (intake) 2 – trailing thermistor 3 – hull contact sensor 4 – through hull sensor 5 – radiation thermometer 6 – bait tanks thermometer 7 – others 9 – unknown or non-bucket 10 – “implied” bucket [note: applicable to early ICOADS data] 11 – reversing thermometer or mechanical sensor 12 – electronic sensor | eg=[1]
+swell_direction: NUMBER | Starting in 1968, SD was no longer reported in the SHIP code. Codes 00 to 36 (note: leading zero is omitted in IMMA) show the direction (if any) from which (wind) waves come, in tens of degrees (following WMO Code 0877; ref. Code and Range columns in Table D2). Codes 37 and 38 show: 37 – waves confused, direction indeterminate (SH ≤ 4.75 m) 38 – waves confused, direction indeterminate (SH > 4.75 m; or irrespective of wave height, corresponding to 99 in WMO Code 0877)
+swell_height: FLOAT | Height of wind waves, in metres.
+swell_period: NUMBER | Period of wind waves, in seconds. Starting in 1968, SP was reported in seconds; prior to 1968 the period was reported as a code, which was converted into whole seconds following Table D5a, with WX (C1, field 13) set accordingly.
+swell_period_indicator: NUMBER | Indicates that the wave and swell periods were converted from code into whole seconds: 1 – period converted from code into whole seconds
+ten_degree_box_number: NUMBER | 10° box numbers (see Release 1, supp. G; http://icoads.noaa.gov/Release_1/suppG.html) are available e.g., for use in sorting operations | eg=[202]
+time_indicator: NUMBER | Time indicator preserves the incoming precision of time fields: 0 – nearest whole hour 1 – hour to tenths 2 – hour plus minutes 3 – high resolution (e.g., hour to hundredths) | eg=[2]
+total_cloud_amount: NUMBER | Codes 0 to 9 (WMO Code 2700) show the total fraction of the celestial dome covered by clouds (irrespective of their genus). 0 – clear 1 – 1 okta or less, but not zero 2-6 – 2-6 oktas 7 – 7 oktas or more, but not 8 oktas 8 – 8 oktas 9 – sky obscured by fog and/or other meteorological phenomena
+track_check: NUMBER | Indicates if a report was: 0 – not track checked 1 – track checked
+trimming_flags: TEXT | These flags indicate the relationship of a given observational data value to the legacy trimming limits, or to indicate if those limits, which were calculated separately for three historical periods are unavailable, or other conditions. | eg=["1FFF1F"]
+unique_report_id: TEXT | A unique ID for each record in ICOADS represented as a base36 number of length 6. | eg=["MHZBZW", "MKPK61"]
+visibility: NUMBER | Visibility (horizontal visibility at the surface in kilometers) according to WMO Code 4377 from which, in reporting visibility at sea, WMO (2009a; Reg. 12.2.1.3.2) states that the decile 90-99 shall be used (moreover Reg. 12.2.1.3.1: when the horizontal visibility is not the same in different directions, the shortest distance shall be given for VV): 90 – less than 0.05 kilometer 91 – 0.05 92 – 0.2 93 – 0.5 94 – 1 95 – 2 96 – 4 97 – 10 98 – 20 99 – 50 or more
+visibility_indicator: NUMBER | shows whether visibility was: 0 – estimated (or unknown method of observation) 1 – measured 2 – fog present (obsolete)
+wave_direction: NUMBER | Starting in 1968, WD was no longer reported in the SHIP code. Codes 00 to 36 (note: leading zero is omitted in IMMA) show the direction (if any) from which (wind) waves come, in tens of degrees (following WMO Code 0877; ref. Code and Range columns in Table D2). Codes 37 and 38 show: 37 – waves confused, direction indeterminate (WH ≤ 4.75 m) 38 – waves confused, direction indeterminate (WH > 4.75 m; or irrespective of wave height, corresponding to 99 in WMO Code 0877)
+wave_height: FLOAT | Height of wind waves, in metres.
+wave_period: NUMBER | Period of wind waves, in seconds. Starting in 1968, WP was reported in seconds; prior to 1968 the period was reported as a code, which was converted into whole seconds following Table D5a, with WX (C1, field 13) set accordingly.
+wave_period_indicator: NUMBER | Indicates that the wave and swell periods were converted from code into whole seconds: 1 – period converted from code into whole seconds
+wbt_indicator: NUMBER | WBTI and DPTI indicate which of WBT or DPT was measured or computed, and ice bulb conditions: 0 – measured 1 – computed 2 – iced measured 3 – iced computed
+wetbulb_temperature: FLOAT | Wet-bulb temperature, Celsius
+wind_direction_indicator: NUMBER | Gives the compass (and approximate precision) used for reporting the wind direction: 0 – 36-point compass 1 – 32-point compass 2 – 16 of 36-point compass 3 – 16 of 32-point compass 4 – 8-point compass 5 – 360-point compass 6 – high resolution data (e.g., tenths of degrees)
+wind_direction_true: NUMBER | The direction (true) from which wind is blowing (or will blow), stored in whole degrees (i.e., 360-point compass; range: 1-360°), or special codes: 361 – calm 362 – variable, or all directions
+wind_speed: FLOAT | Wind speed which is stored in tenths of a meter per second (to retain adequate precision for winds converted from knots, or high-resolution data)
+wind_speed_indicator: NUMBER | Wind speed is stored in tenths of a meter per second (to retain adequate precision for winds converted from knots, or high-resolution data). WI shows the units in which and/or the method by which W was originally recorded (0, 1, 3, 4 follow WMO Code 1855): 0 – meter per second, estimated 53 1 – meter per second, obtained from anemometer (measured) 2 – estimated (original units unknown) 3 – knot, estimated 4 – knot, obtained from anemometer (measured) 5 – Beaufort force (based on documentation) 6 – estimated (original units unknown)/unknown method 7 – measured (original units unknown) 8 – high-resolution measurement (e.g., hundredths of a meter per second)
+
+@C4
+day: NUMBER | Day of the actual time of observation at which the barometer is read. Days 1-31 | eg=[26, 15]
+month: NUMBER | Month of the actual time of observation at which the barometer is read. (1=January, 2=February, …, 12=December) | eg=[7, 8]
+year: NUMBER | Year of the actual time of observation at which the barometer is read. It is 4-digit | eg=[2016]
+
+@C5
+latitude: FLOAT | NULL | eg=[21.79686167, 21.04848167]
+longitude: FLOAT | NULL | eg=[-161.2750067, -152.62861]
+
+@C6
+damage_description: NUMBER | Description of Damage from the earthquake. For those events not offering a monetary evaluation of damage, the following five-level scale was used to classify damage and was listed in the  Damage column.  If the actual dollar amount of damage was listed, a descriptor was also added for search purposes. 0 = NONE 1 = LIMITED (roughly corresponding to less than $1 million) 2 = MODERATE (~$1 to $5 million)  3 = SEVERE (~>$5 to $24 million) 4 = EXTREME (~$25 million or more) When possible, a rough estimate was made of the dollar amount of damage based upon the description provided, in order to choose the damage category. In many cases, only a single  descriptive term was available. These terms were converted to the damage categories based upon the author’s apparent use of the term elsewhere. In the absence of other information,  LIMITED is considered synonymous with slight, minor, and light, SEVERE as synonymous with major, extensive, and heavy, and EXTREME as synonymous with catastrophic. | eg=[2.0, NaN]
+damage_millions_dollars: FLOAT | Damage in Millions of Dollars from the earthquake. The damage amount may also include damage caused by a secondary effect such as a tsunami, volcanic eruption, or landslide that was triggered by the earthquake. The value in the Damage column should be multipled by 1,000,000 to obtain the actual dollar amount in U.S. dollars. The dollar value listed is the value at the time of the event.
+deaths: NUMBER | Number of deaths from the earthquake, it may also include deaths caused by the secondary effects such as the tsunami, volcanic eruption or landslide that was triggered by the earthquake.
+deaths_description: NUMBER | Description of Deaths from the earthquake. Valid values: 0 to 4. When a description was found in the historical literature instead of an actual number of deaths, this value was coded and listed in the Deaths_amount_order column. If the actual number of deaths was listed, a descriptor was also added for search purposes according to the following definition. 0 = None 1 = Few (~1 to 50 deaths)  2 = Some (~51 to 100 deaths)  3 = Many (~101 to 1000 deaths) 4 = Very Many (~1001 or more deaths) | eg=[2.0, NaN]
+houses_damaged: NUMBER | Number of Houses Damaged. Whenever possible, number of houses damaged by the earthquake are listed; it may also include houses damaged caused by a secondary effect such as the tsunami, volcanic eruption, or landslide that was triggered by the earthquake.
+houses_damaged_description: NUMBER | Description of Houses Damaged by the Earthquake. For those earthquakes not offering an exact number of houses damaged, the following four-level scale was used to classify the damage and was listed in the Houses_damaged_amount_order column.  If the actual number of houses destroyed was listed, a descriptor was also added for search purposes.   0 = None 1 = Few (~1 to 50 houses)  2 = Some (~51 to 100 houses)  3 = Many (~101 to 1000 houses) 4 = Very Many (~1001 or more houses)
+houses_destroyed: NUMBER | Number of Houses Destroyed. Whenever possible, number of houses destroyed by the earthquake are listed; it may also include houses destroyed caused by a secondary effect such as the tsunami, volcanic eruption, or landslide that was triggered by the earthquake.
+houses_destroyed_description: NUMBER | Description of Houses Destroyed by the Earthquake. For those earthquakes not offering an exact number of houses destroyed, the following four-level scale was used to classify the destruction and was listed in the Houses_amount_order column.  If the actual number of houses destroyed was listed, a descriptor was also added for search purposes.   0 = None 1 = Few (~1 to 50 houses)  2 = Some (~51 to 100 houses)  3 = Many (~101 to 1000 houses) 4 = Very Many (~1001 or more houses)
+id: NUMBER | NULL | eg=[771, 7889]
+injuries: NUMBER | Number of injuries from the earthquake, it may also include deaths caused by a secondary effect such as the tsunami, volcanic eruption or landslide that was triggered by the earthquake.
+injuries_description: NUMBER | Description of injuries from the earthquake. Valid values: 0 to 4. When a description was found in the historical literature instead of an actual number of injuries, this value was coded and listed in the Injuries_amount_order column. If the actual number of injuries was listed, a descriptor was also added for search purposes according to the following definition. 0 = None 1 = Few (~1 to 50 injuries)  2 = Some (~51 to 100 injuries)  3 = Many (~101 to 1000 injuries) 4 = Very Many (~1001 or more injuries)
+location_name: TEXT | Earthquake Location Name. The location (city, state or island) where the earthquake was located. | eg=["UNITED KINGDOM:  DOVER STRAITS", "UNITED KINGDOM:  ENGLAND: ST. MARY, SCILLY ISLANDS"]
+region_code: NUMBER | Region Name (Code). Regional boundaries were assigned based on the frequency of occurrence of earthquakes, geophysical relations, risk in distant areas and political justification. The codes are defined as: 10 = Central, Western and S. Africa 15 = Northern Africa 20 = Antarctica 30 = East Asia 40 = Central Asia and Caucasus 50 = Kamchatka and Kuril Islands 60 = S. and SE. Asia and Indian Ocean 70 = Atlantic Ocean 80 = Bering Sea 90 = Caribbean 100 = Central America 110 = Eastern Europe 120 = Northern and Western Europe 130 = Southern Europe 140 = Middle East 150 = North America and Hawaii 160 = South America 170 = Central and South Pacific | eg=[120, 150]
+
+@C7
+comments: TEXT | NULL | eg=["*** 2 INJ *** CORRECTS PREVIOUS TORNADO REPORT TO INCLUDE 2 INJURIES. A NWS STORM SURVEY TEAM CONFIRMED A TORNADO OF EF-1 INTENSITY... WHICH OCCURRED JUST NORTHWEST OF (BMX)", "A NWS STORM SURVEY TEAM CONFIRMED A TORNADO OF EF-1 INTENSITY... AFFECTING AREAS JUST SOUTHEAST OF ROCKFORD IN COOSA COUNTY ALONG COUNTY ROAD 101. (BMX)"]
+county: TEXT | NULL | eg=["AUTAUGA", "COOSA"]
+location: TEXT | Location of report | eg=["3 ENE MULBERRY", "2 W COTTAGE GROVE"]
+report_point: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x1f\\x85\\xebQ\\xb8\\xaeU\\xc0\\x1f\\x85\\xebQ\\xb8>@@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x9a\\x99\\x99\\x99\\x99\\x89U\\xc0\\xcd\\xcc\\xcc\\xcc\\xccl@@')"]
+time: TEXT | Hour in UTC | eg=["2004", "2058"]
+
+@C8
+file_name: TEXT | NULL | eg=["CI01_02_RBRsT_101578.mat", "CI01_02_RBRsT_101578.png"]
+funding_organization: TEXT | NULL | eg=["NOAA ONMS,US Navy LMR"]
+platform_name: TEXT | NULL | eg=["Mooring"]
+project_name: TEXT | NULL | eg=["SanctSound"]
+source_organization: TEXT | NULL | eg=["NOAA ONMS,US Navy LMR"]
+
+@C9
+focal_depth: NUMBER | The depth of the earthquake is given in kilometers. Valid values 0 to 700 km. | eg=[33.0, NaN]
+missing: NUMBER | Number of missing from the earthquake, it may also include missing caused by the secondary effects such as the tsunami, volcanic eruption or landslide that was triggered by the earthquake.
+missing_description: NUMBER | Description of Deaths from the earthquake. Valid values: 0 to 4. When a description was found in the historical literature instead of an actual number of missing, this value was coded and listed in the Missing_amount_order column. If the actual number of missing was listed, a descriptor was also added for search purposes according to the following definition. 0 = None 1 = Few (~1 to 50 missing)  2 = Some (~51 to 100 missing)  3 = Many (~101 to 1000 missing) 4 = Very Many (~1001 or more missing)
+total_damage_description: NUMBER | For those events not offering a monetary evaluation of damage, the following five-level scale was used to classify damage and was listed in the Damage column.  If the actual dollar amount of damage was listed, a descriptor was also added for search purposes. 0 = NONE 1 = LIMITED (roughly corresponding to less than $1 million) 2 = MODERATE (~$1 to $5 million)  3 = SEVERE (~>$5 to $24 million) 4 = EXTREME (~$25 million or more) When possible, a rough estimate was made of the dollar amount of damage based upon the description provided, in order to choose the damage category. In many cases, only a single descriptive term was available. These terms were converted to the damage categories based upon the author’s apparent use of the term elsewhere. In the absence of other information, LIMITED is considered synonymous with slight, minor, and light, SEVERE as synonymous with major, extensive, and heavy, and EXTREME as synonymous with catastrophic.
+total_deaths: NUMBER | Number of deaths from the earthquake and secondary effects such as the tsunami, volcanic eruption or landslide.
+total_deaths_description: NUMBER | Description of Deaths from the earthquake and the secondary effects such as the tsunami, volcanic eruption or landslide. Valid values: 0 to 4. When a description was found in the historical literature instead of an actual number of deaths, this value was coded and listed in the Deaths_amount_order_total column. If the actual number of deaths was listed, a descriptor was also added for search purposes according to the following definition. 0 = None 1 = Few (~1 to 50 deaths)  2 = Some (~51 to 100 deaths)  3 = Many (~101 to 1000 deaths) 4 = Very Many (~1001 or more deaths) | eg=[NaN, 3.0]
+total_houses_damaged: NUMBER | Number of Houses Damaged by the earthquake and secondary effects such as the tsunami, volcanic eruption or landslide.
+total_houses_damaged_description: NUMBER | Description of Houses Damaged by the earthquake and secondary effects such as the tsunami, volcanic eruption or landslide. For those earthquakes not offering an exact number of houses damaged, the following four-level scale was used to classify the damage and was listed in the Houses_dam_amount_order_total column.  If the actual number of houses destroyed was listed, a descriptor was also added for search purposes.   0 = None 1 = Few (~1 to 50 houses)  2 = Some (~51 to 100 houses)  3 = Many (~101 to 1000 houses) 4 = Very Many (~1001 or more houses)
+total_houses_destroyed: NUMBER | Number of Houses Destroyed by the earthquake and secondary effects such as the tsunami, volcanic eruption or landslide.
+total_houses_destroyed_description: NUMBER | Description of Houses Destroyed by the earthquake and secondary effects such as the tsunami, volcanic eruption or landslide. For those earthquakes not offering an exact number of houses destroyed, the following four-level scale was used to classify the destruction and was listed in the Houses_amount_order_total column.  If the actual number of houses destroyed was listed, a descriptor was also added for search purposes.   0 = None 1 = Few (~1 to 50 houses)  2 = Some (~51 to 100 houses)  3 = Many (~101 to 1000 houses) 4 = Very Many (~1001 or more houses)
+total_injuries: NUMBER | Number of injuries from the earthquake and secondary effects such as the tsunami, volcanic eruption or landslide.
+total_injuries_description: NUMBER | Description of injuries from the earthquake and secondary effects such as the tsunami, volcanic eruption or landslide. Valid values: 0 to 4. When a description was found in the historical literature instead of an actual number of injuries, this value was coded and listed in the Injuries_amount_order_total column. If the actual number of injuries was listed, a descriptor was also added for search purposes according to the following definition. 0 = None 1 = Few (~1 to 50 injuries)  2 = Some (~51 to 100 injuries)  3 = Many (~101 to 1000 injuries) 4 = Very Many (~1001 or more injuries)
+total_missing: NUMBER | Number of missing from the earthquake and secondary effects such as the tsunami, volcanic eruption or landslide.
+total_missing_description: NUMBER | Description of Deaths from the earthquake and secondary effects such as the tsunami, volcanic eruption or landslide. Valid values: 0 to 4. When a description was found in the historical literature instead of an actual number of missing, this value was coded and listed in the Missing_amount_order_total column. If the actual number of missing was listed, a descriptor was also added for search purposes according to the following definition. 0 = None 1 = Few (~1 to 50 missing)  2 = Some (~51 to 100 missing)  3 = Many (~101 to 1000 missing) 4 = Very Many (~1001 or more missing)
+
+@C10
+array1: TEXT | NULL | eg=["Iiwi      "]
+array2: TEXT | NULL | eg=["Pueo      "]
+array_end_local: NUMBER | NULL | eg=[1503857459000000]
+array_end_utc: NUMBER | NULL | eg=[1503893459000000]
+array_start_local: NUMBER | NULL | eg=[1503824417000000]
+array_start_utc: NUMBER | NULL | eg=[1503860417000000]
+hp1_ad: NUMBER | NULL | eg=[6]
+hp1_dist: FLOAT | NULL | eg=[-348.07]
+hp2_ad: NUMBER | NULL | eg=[6]
+hp2_dist: FLOAT | NULL | eg=[-349.05]
+hp3_ad: NUMBER | NULL | eg=[6]
+hp3_dist: FLOAT | NULL | eg=[-350.05]
+
+@C11
+bearing: NUMBER | NULL | eg=[50, 29]
+distance: FLOAT | NULL | eg=[4018.8, 1592.7]
+effort: TEXT | NULL | eg=["ON"]
+effort_type: TEXT | NULL | eg=["N"]
+local_ship_date: DATE | NULL | eg=["2017-08-31", "2017-10-09"]
+sighting_local_time: TIME | NULL | eg=["15:52:00", "09:03:00"]
+species_id: TEXT | NULL | eg=["177", "2"]
+total_best: FLOAT | NULL | eg=[13.4, 4.0]
+total_high: NUMBER | NULL | eg=[19, 6]
+total_low: NUMBER | NULL | eg=[10, 3]
+
+@C12
+acoustic_detection_number: TEXT | NULL | eg=["18", "253"]
+beam_distance: NUMBER | NULL | eg=[NaN, 250.0]
+beam_time_utc: NUMBER | NULL | eg=[NaN, 1504543582000000.0]
+detection_distance: NUMBER | NULL | eg=[NaN, 3798.0]
+first_angle: NUMBER | NULL | eg=[44, 42]
+first_distance: NUMBER | NULL | eg=[NaN, 3460.0]
+species1_id: TEXT | NULL | eg=["2", "13"]
+species2_id: TEXT | NULL
+species3_id: TEXT | NULL
+
+@C13
+sensor_depth: TEXT | NULL | eg=["17.5"]
+start_date: TEXT | NULL | eg=["31-Oct-18", "1-Nov-18"]
+start_time: TEXT | NULL | eg=["22:00:00", "23:59:54"]
+
+@C14
+detection_time_end_utc: NUMBER | NULL | eg=[1510100124000000, 1510100133000000]
+detection_time_start_local: NUMBER | NULL | eg=[1510064108000000, 1510064113000000]
+detection_time_start_utc: NUMBER | NULL | eg=[1510100108000000, 1510100113000000]
+
+@C15
+local_time: NUMBER | NULL | eg=[1502446759000000, 1502446685000000]
+utc_time: NUMBER | NULL | eg=[1502482759000000, 1502482685000000]
+
+@C16
+file_link: TEXT | NULL | eg=["gs://noaa-passive-bioacoustic/sanctsound/ci01/02/audio/SanctSound_CI01_02_671883305_190326135927.wav", "gs://noaa-passive-bioacoustic/sanctsound/ci01/02/audio/SanctSound_CI01_02_671883305_190327015920.wav"]
+sample_rate: NUMBER | NULL | eg=[48000]
+start_date: DATE | NULL | eg=["2019-03-25", "2019-03-26"]
+start_time: TIME | NULL | eg=["21:00:00", "13:59:27"]
+
+@C17
+lat: TEXT | NULL | eg=["34.0438"]
+lon: TEXT | NULL | eg=["-120.0811"]
+recording: TEXT | NULL | eg=["100"]
+sample_rate_hz: TEXT | NULL | eg=["96000"]
+
+@C18
+lat: FLOAT | NULL | eg=[47.6104, 46.6644]
+lon: FLOAT | NULL | eg=[-88.4287, -89.315]
+
+@C19
+cloud_path: TEXT | NULL | eg=["gs://noaa-passive-bioacoustic/nefsc/sbnms/200712/audio/SBNMS_20071218_133000.aif", "gs://noaa-passive-bioacoustic/nefsc/sbnms/200712/audio/SBNMS_20071218_134500.aif"]
+duration: TEXT | NULL | eg=["60"]
+sample_rate: TEXT | NULL | eg=["2"]
+
+[TABLES]
+## NOAA_PIFSC_METADATA.DCLDE_2020_1705_MINKE_DETECTIONS
+@use: [C14, C5]
+point: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xca\\xd5\\xd9\\xda\\xcc(d\\xc0\\x00\\x16\\\\ \\xff\\xcb5@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\t\\xfe\\xb7\\x92\\x1d\\x14c\\xc0\\x00\\x1bsKi\\x0c5@')"]
+
+## NOAA_PIFSC_METADATA.DCLDE_2020_SPECIES_LOOKUP
+common_name: TEXT | NULL | eg=["Unidentified whale", "Unidentified small whale"]
+species_name: TEXT | NULL | eg=["Orcinus orca", "Mesoplodon sp."]
+code: TEXT | NULL | eg=["98", "78"]
+
+## NOAA_PIFSC_METADATA.DCLDE_2020_1706_ODONTOCETE_DETECTIONS
+@use: [C12, C14, C5]
+sighting_number: NUMBER | NULL | eg=[9, 113]
+point: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00rm\\xa8\\x18g\\x84c\\xc0D\\x15a7*f3@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x0e\\xb3\\xe1\\xfa\\x01\\xbac\\xc0S\\x96!\\x8eu\\xa94@')"]
+
+## NOAA_PIFSC_METADATA.DCLDE_2020_1705_VISUAL_SIGHTINGS
+@use: [C11, C5]
+sighting_number: TEXT | NULL | eg=["33", "81"]
+point: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xc7K7\\x89A\\x88c\\xc0^\\xbaI\\x0c\\x02+3@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x10X9\\xb4\\xc8\\x96c\\xc0Zd;\\xdfO\\xcd4@')"]
+
+## NOAA_PIFSC_METADATA.DCLDE_SETTE_GPS
+@use: [C15, C5]
+speed: FLOAT | NULL | eg=[10.26, 10.37]
+point: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xd7\\xa3p=\\n\\xd7c\\xc0\\x01\\x00\\x00\\x00\\x00\\x008@')"]
+effort: NUMBER | NULL | eg=[0]
+
+## NOAA_PIFSC_METADATA.DCLDE_LASKER_GPS
+@use: [C15, C5]
+effort: NUMBER | NULL | eg=[0]
+speed: FLOAT | NULL | eg=[11.06, 10.2]
+
+## NOAA_PIFSC_METADATA.DCLDE_2020_1706_ARRAY
+@use: [C10]
+hp6_ad: TEXT | NULL | eg=["12"]
+hp6_dist: TEXT | NULL | eg=["-388.33"]
+hp4_dist: TEXT | NULL | eg=["-386.37"]
+hp4_ad: TEXT | NULL | eg=["12"]
+hp5_dist: TEXT | NULL | eg=["-387.33"]
+hp5_ad: TEXT | NULL | eg=["12"]
+
+## NOAA_PIFSC_METADATA.DCLDE_2020_DETECTION_README
+field: TEXT | NULL | eg=["Array2", "ArrayEnd_UTC"]
+description: TEXT | NULL | eg=["Name of array attached directly to the separator.", "End time for the provided array parameters in UTC time. "]
+table: TEXT | NULL | eg=["x_Array"]
+
+## NOAA_PIFSC_METADATA.DCLDE_2020_1705_ODONTOCETE_DETECTIONS
+@use: [C12, C14, C5]
+point: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xa1\\\\dLK\\xc1c\\xc0\\xbeh\\xf2A\\x8d\\xdd3@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xfc\\x0b\\xf3\\xd4\\x19\\xa9c\\xc0\\xd4\\x7fs\\xd2=$6@')"]
+sighting_number: TEXT | NULL | eg=["47", "143"]
+
+## NOAA_PIFSC_METADATA.DCLDE_LASKER_ARRAY_DEPTH
+@use: [C15]
+end_depth: FLOAT | NULL | eg=[4.9, 8.74]
+inline_depth: FLOAT | NULL | eg=[3.5, 4.0]
+
+## NOAA_PIFSC_METADATA.DCLDE_2020_1706_VISUAL_SIGHTINGS
+@use: [C11, C5]
+point: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00b\\x10X9\\xb4xc\\xc0\\xf7(\\\\\\x8f\\xc2u4@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xa0\\x1a/\\xdd$\\x9ec\\xc0`\\xe5\\xd0\"\\xdb\\xf93@')"]
+sighting_number: TEXT | NULL | eg=["43", "42"]
+
+## NOAA_PIFSC_METADATA.DCLDE_2020_1705_ARRAY
+@use: [C10]
+hp6_ad: NUMBER | NULL | eg=[12]
+hp5_ad: NUMBER | NULL | eg=[12]
+hp6_dist: FLOAT | NULL | eg=[-366.92]
+hp4_dist: FLOAT | NULL | eg=[-364.97]
+hp5_dist: FLOAT | NULL | eg=[-365.93]
+hp4_ad: NUMBER | NULL | eg=[12]
+
+## NOAA_PIFSC_METADATA.DCLDE_SETTE_ARRAY_DEPTH
+@use: [C15]
+inline_depth: FLOAT | NULL | eg=[6.0]
+end_depth: FLOAT | NULL | eg=[7.51, 7.76]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1976
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Co"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["8"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1981
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["8", "31"]
+state: TEXT | The full text state name where the event occurred | eg=["Co", "Ne"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2004
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["2", "16"]
+state: TEXT | The full text state name where the event occurred | eg=["Al", "Id"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1966
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["27", "29"]
+state: TEXT | The full text state name where the event occurred | eg=["Mi", "Ne"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1985
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Al"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["1"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1989
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["5", "9"]
+state: TEXT | The full text state name where the event occurred | eg=["Ar", "Co"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1991
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Co"]
+state_fips_code: TEXT | "Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states " | eg=["8"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1972
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Ar", "Ne"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["5", "31"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2006
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["8", "2"]
+state: TEXT | The full text state name where the event occurred | eg=["Co", "Al"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2005
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["8"]
+state: TEXT | The full text state name where the event occurred | eg=["Co"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2014
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["34", "42"]
+state: TEXT | The full text state name where the event occurred | eg=["Ne", "Pe"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1960
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Ne", "Io"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["31", "19"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1998
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Mo", "Id"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["30", "16"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1950
+@use: [C2]
+state_fips_code: TEXT | "Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states " | eg=["40", "42"]
+state: TEXT | The full text state name where the event occurred | eg=["Ok", "Pe"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1977
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["8"]
+state: TEXT | The full text state name where the event occurred | eg=["Co"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1999
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Ut", "Al"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["49", "2"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.TORNADO_REPORTS
+@use: [C5, C7]
+timestamp: NUMBER | Timestamp in UTC | eg=[1547928240000000, 1547931480000000]
+state: TEXT | NULL | eg=["AL"]
+f_scale: TEXT | The F-Scale classifies F0-F5 damage as calibrated by engineers and meteorologists across 28 different types of damage indicators (mainly various kinds of buildings, but also a few other structures as well as trees). | eg=["UNK"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2020
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["12", "23"]
+state: TEXT | The full text state name where the event occurred | eg=["Fl", "Ma"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1970
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Ar", "Mi"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["5", "29"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1953
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Ok"]
+state_fips_code: TEXT | "Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states " | eg=["40"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1967
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["8", "1"]
+state: TEXT | The full text state name where the event occurred | eg=["Co", "Al"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1979
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["8"]
+state: TEXT | The full text state name where the event occurred | eg=["Co"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1958
+@use: [C2]
+state_fips_code: TEXT | "Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states " | eg=["31", "29"]
+state: TEXT | The full text state name where the event occurred | eg=["Ne", "Mi"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1974
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Co", "Wi"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["9", "55"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2010
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["De", "Ne"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["10", "34"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1959
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Mi", "Ka"]
+state_fips_code: TEXT | "Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states " | eg=["26", "20"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1968
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Al"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["1"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1954
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Ok", "Oh"]
+state_fips_code: TEXT | "Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states " | eg=["40", "39"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2016
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["34", "42"]
+state: TEXT | The full text state name where the event occurred | eg=["Ne", "Pe"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2001
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Al", "Co"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["2", "8"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2000
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Wa", "Co"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["53", "8"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1986
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["8", "29"]
+state: TEXT | The full text state name where the event occurred | eg=["Co", "Mi"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1987
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["8", "4"]
+state: TEXT | The full text state name where the event occurred | eg=["Co", "Ar"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2008
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["De", "Ne"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["10", "34"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1995
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["1"]
+state: TEXT | The full text state name where the event occurred | eg=["Al"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1969
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["5", "29"]
+state: TEXT | The full text state name where the event occurred | eg=["Ar", "Mi"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1996
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Wa", "Ca"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["53", "6"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1961
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["12", "26"]
+state: TEXT | The full text state name where the event occurred | eg=["Fl", "Mi"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1993
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["1"]
+state: TEXT | The full text state name where the event occurred | eg=["Al"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2012
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["10", "24"]
+state: TEXT | The full text state name where the event occurred | eg=["De", "Ma"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.HAIL_REPORTS
+@use: [C5, C7]
+size: NUMBER | Size in 1/100 of an Inch (175 = 1.75in) | eg=[400, 200]
+state: TEXT | NULL | eg=["AL"]
+timestamp: NUMBER | Timestamp in UTC | eg=[1618042800000000, 1618044000000000]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2017
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["De", "Lo"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["10", "22"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1990
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Ar", "Mi"]
+state_fips_code: TEXT | "Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states " | eg=["4", "28"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1964
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["5", "34"]
+state: TEXT | The full text state name where the event occurred | eg=["Ar", "Ne"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1952
+@use: [C2]
+state_fips_code: TEXT | "Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states " | eg=["29", "42"]
+state: TEXT | The full text state name where the event occurred | eg=["Mi", "Pe"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2022
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Te", "Lo"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["48", "22"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1978
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Mo", "Mi"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["30", "29"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1951
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Mi", "Ok"]
+state_fips_code: TEXT | "Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states " | eg=["28", "40"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2024
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["1", "48"]
+state: TEXT | The full text state name where the event occurred | eg=["Al", "Te"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2013
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Lo", "Te"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["22", "48"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2011
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["34", "10"]
+state: TEXT | The full text state name where the event occurred | eg=["Ne", "De"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2009
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["De", "Ne"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["10", "34"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.NWS_FORECAST_REGIONS
+@use: [C18]
+state_zone: TEXT | NULL | eg=["MI001", "MI002"]
+fe_area: TEXT | NULL | eg=["wu", "nr"]
+shortname: TEXT | NULL | eg=["Keweenaw", "Ontonagon"]
+cwa: TEXT | NULL | eg=["MQT"]
+time_zone: TEXT | NULL | eg=["E"]
+shape_geometry: BINARY | NULL | eg=["bytearray(b'\\x01\\x06\\x00\\x00\\x00;\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x0c\\x00\\x00\\x00\\x008\\x81\\xdf\\xa2&V\\xc0\\xb1 \\xff\\xffQ\\x12H@\\xc4Q\\x81\\xdf\\xdb&V\\xc0\\xc8\\x87\\xff\\xff5\\x12H@\\xf4b\\x81\\xdf\\x01\\'V\\xc0\\xa8\\x9a\\x00\\x00\\x16\\x12H@,I\\x81\\xdf\\x08\\'V\\xc0Ix\\x00\\x00\\n\\x12H@,I\\x81\\xdf\\x08\\'V\\xc0a\\xdf\\x00\\x00\\xee\\x11H@(\\xafb\\xdf\\x18\\'V\\xc0\\xf0T2\\x00\\xd4\\x11H@\\xb8\\'\\x00\\xe0\\xe7&V\\xc0P\\xbb\\xff\\xff\\xe7\\x11H@4\\x86\\x00\\xe0X&V\\xc0Gx\\x00\\x00J\\x12H@\\x08\\xc0\\xc7\\xdfd&V\\xc0\\xd9\\x9e\\xda\\xffQ\\x12H@\\x14J\\x00\\xe0s&V\\xc0Hx\\x00\\x00J\\x12H@\\xacR\\x00\\xe0\\x86&V\\xc0\\xc0D\\x00\\x00X\\x12H@\\x008\\x81\\xdf\\xa2&V\\xc0\\xb1 \\xff\\xffQ\\x12H@\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x0c\\x00\\x00\\x00i\\xda\\xff\\xdf<#V\\xc0_\\xdf\\x00\\x00\\xee\\x14H@ \\x1f\\x00\\xe04#V\\xc0\\xb8\\x01\\x01\\x00\\xfa\\x14H@\\xf0f\\x11\\xe0-#V\\xc0\\xe0\\x8d\\xd0\\xff\\r\\x15H@\\xf8\\xa5\\x80\\xdf?#V\\xc00\\xce\\x00\\x00\\x08\\x15H@\\x80\\xd9\\x80\\xdfQ#V\\xc0\\xa8\\xdd\\xff\\xff\\xf3\\x14H@,\\xfa\\x7f\\xdfc#V\\xc0P\\xbb\\xff\\xff\\xe7\\x14H@\\xd0&\\x81\\xdf|#V\\xc0\\xe8\\x12\\x01\\x00\\xe0\\x14H@T\\xc8\\x80\\xdf\\x...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00n\\x01\\x00\\x00H\\x9e\\xff\\xdf\\xb7;V\\xc0\\xa0\\x85\\xff?\\xd1\\x82G@\\xdcF\\x00\\xc0\\xbc;V\\xc0@c\\xff?\\x05\\x84G@0=\\x00`\\xd7;V\\xc0\\x89\\xbe\\xff\\x1f\\xbf\\x83G@\\xb3\\x96\\x02\\xd2\\xfe;V\\xc0\\x85\\x07\\xcd\\xae{\\x83G@<\\xc6\\x15\\x17G<V\\xc0\\xb4Y\\xf5\\xb9\\xda\\x82G@`\\xcb\\xff\\x9f\\xbb<V\\xc0\\xb8\\x12\\xff\\x1f\\x03\\x82G@\\x90\\xe4\\xf2\\x1f\\xd2<V\\xc0t\\t\\x87\\xde\\xe2\\x81G@\\x9c\\x17\\x00@\\xd4<V\\xc0X\\xad\\xff\\x1f\\xd9\\x81G@\\x0c\\x02\\xe1\\xf9\\xdb<V\\xc0\\xe8G\\x8c\\xa3\\xd4\\x81G@\\x0eg~5\\x07=V\\xc0~\\x84a\\xc0\\x92\\x81G@D\\xbb\\xff\\xff\\'=V\\xc0h\\xe8\\xff\\xbfk\\x81G@2\\xae\\xb88*=V\\xc070\\xb9Qd\\x81G@\\xc4\\xd5\\x95\\xbd/=V\\xc0o\\x07g\\x80c\\x81G@<\\x9f\\x01\\xf5f=V\\xc0\\xcb\\x12\\x9de\\x16\\x81G@\\xc0\\x11\\x19`\\x83=V\\xc0 \\x8d_\\xbf\\xfa\\x80G@\\x87\\xa6\\xec\\xf4\\x83=V\\xc0\\xd6\\x01\\x10w\\xf5\\x80G@\\x84\\xf0h\\xe3\\x88=V\\xc0\\xd6\\x01\\x10w\\xf5\\x80G@\\xa0w\\xff_\\xc2=V\\xc0\\xe01\\xff\\xff\\xb7\\x80G@\\x00\\xa9M\\x9c\\xdc=V\\xc0\\x00\\xfe)U\\xa2\\x80G@\\xd8\\x83I\\xf1\\xf1=V\\xc0t\\xd3f\\x9c\\x86\\x80G@&\\xa6\\x0b\\xb1\\xfa=V\\xc0\\x03\\x94\\x86\\x1a\\x85\\x80G@\\xc1\\xe3\\xdb\\xbb..."]
+name: TEXT | NULL | eg=["Keweenaw", "Ontonagon"]
+zone: TEXT | NULL | eg=["001", "002"]
+state: TEXT | NULL | eg=["MI"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1983
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["8", "28"]
+state: TEXT | The full text state name where the event occurred | eg=["Co", "Mi"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1988
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["26", "10"]
+state: TEXT | The full text state name where the event occurred | eg=["Mi", "De"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1984
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["1", "29"]
+state: TEXT | The full text state name where the event occurred | eg=["Al", "Mi"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2007
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Pe", "De"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["42", "10"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1957
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Ne", "Al"]
+state_fips_code: TEXT | "Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states " | eg=["31", "33"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1973
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["29", "1"]
+state: TEXT | The full text state name where the event occurred | eg=["Mi", "Al"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1994
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["1"]
+state: TEXT | The full text state name where the event occurred | eg=["Al"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1982
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Co"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["8"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2023
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["48", "22"]
+state: TEXT | The full text state name where the event occurred | eg=["Te", "Lo"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1975
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["8", "24"]
+state: TEXT | The full text state name where the event occurred | eg=["Co", "Ma"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1955
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Al", "Mi"]
+state_fips_code: TEXT | "Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states " | eg=["1", "27"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1963
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["27", "34"]
+state: TEXT | The full text state name where the event occurred | eg=["Mi", "Ne"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2018
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["22"]
+state: TEXT | The full text state name where the event occurred | eg=["Lo"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1956
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Al"]
+state_fips_code: TEXT | "Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states " | eg=["1"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2019
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["42", "22"]
+state: TEXT | The full text state name where the event occurred | eg=["Pe", "Lo"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1965
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Al"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["1"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2003
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Al", "Id"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["2.0", "16.0"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1997
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["34", "53"]
+state: TEXT | The full text state name where the event occurred | eg=["Ne", "Wa"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1971
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Co", "Ar"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["8", "5"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2002
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Co", "Al"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["8", "2"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.WIND_REPORTS
+@use: [C5, C7]
+timestamp: NUMBER | Timestamp in UTC | eg=[1547929020000000, 1549989360000000]
+state: TEXT | NULL | eg=["AL"]
+speed: NUMBER | Speed in Miles per hour | eg=[NaN, 61.0]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2015
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["22", "10"]
+state: TEXT | The full text state name where the event occurred | eg=["Lo", "De"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.TORNADO_PATHS
+magnitude: TEXT | EF-Scale rating for the tornado. Possible values are 0, 1, 2, 3, 4 , 5 and unknown | eg=["0", "1"]
+storm_date: DATE | Date of the tornado | eg=["2017-03-06", "2008-04-10"]
+time_zone_offset: TEXT | Timezone offset of where the the tornado occurred. Possible values are -06:00 (CST), -00:00 (GMT/UTC), and unknown | eg=["-06:00"]
+end_lat: FLOAT | Tornado's end latitude in decimal degrees | eg=[41.4976, 40.7]
+injured_count: NUMBER | Number of people injured as a result of the storm | eg=[0]
+yearly_tornado_count: TEXT | Count of tornadoes that year after the given tornado is reported to the NWS database. This does not necessarily indicate sequential order because of reporting potential delays. | eg=["614739", "434"]
+end_long: FLOAT | Tornado's end longitude in decimal degrees | eg=[-92.9041, -93.07]
+storm_time: TIME | Time of the tornado | eg=["19:47:00", "15:57:00"]
+length: FLOAT | Length of the tornado, in miles | eg=[5.45, 2.01]
+crop_loss: TEXT | Estimated crop value loss in millions of USD. Note that zero does not indicate $0. This data was is available starting in 2007 | eg=["0", "5000"]
+width: FLOAT | Width of the tornado in feet | eg=[195.0, 90.0]
+start_lon: FLOAT | Tornado's starting longitude in decimal degrees | eg=[-92.9974, -93.08]
+tornado_path_geom: BINARY | Geographic representation of the storm's path | eg=["bytearray(b'\\x01\\x02\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\xf1A\\xcff\\xd5?W\\xc0\\xc2\\x17&S\\x05\\xbbD@\\x12\\x14?\\xc6\\xdc9W\\xc0\\xaa>W[\\xb1\\xbfD@')", "bytearray(b'\\x01\\x02\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x84\\xebQ\\xb8\\x1eEW\\xc0\\xf7(\\\\\\x8f\\xc2UD@\\x14\\xaeG\\xe1zDW\\xc0\\x9b\\x99\\x99\\x99\\x99YD@')"]
+state_fips_code: TEXT | 2-digit state FIPS code. This maps to all state_fips_code columns in the BigQuery Public Datasets Program | eg=["19"]
+state_abbreviation: TEXT | 2 letter postal abbreviation of the state's name | eg=["IA"]
+fatality_count: NUMBER | Number of fatalities that resulted from the storm | eg=[0]
+state_name: TEXT | Full text name of the state in which the tornado occurred | eg=["Iowa"]
+start_lat: FLOAT | Tornado's starting latitude in decimal degrees | eg=[41.4611, 40.67]
+property_loss: TEXT | Estimated property loss in USD. Note that zero does not indicate $0. Possible values are: 0 - unknown or not provided; 1 - <50; 2 - 50 - <500; 3 - 500 - <5,000; 4 - 5,000 - <50,000; 5 - 50,000 - <500,000; 6 - 500,000 - <5,000,000; 7 - 5,000,000 - <50,000,000; 8 - 50,000,000 - <500,000,000; 9 - 500,000,000 or greater. | eg=["25000", "0.075"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1962
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Mi", "Al"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["26", "1"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1980
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state.   State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["22", "31"]
+state: TEXT | The full text state name where the event occurred | eg=["Lo", "Ne"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_2021
+@use: [C2]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["54", "22"]
+state: TEXT | The full text state name where the event occurred | eg=["We", "Lo"]
+
+## NOAA_HISTORIC_SEVERE_STORMS.STORMS_1992
+@use: [C2]
+state: TEXT | The full text state name where the event occurred | eg=["Co"]
+state_fips_code: TEXT | Unique FIPS code identifier assigned to each state. State names and their corresponding FIPS codes are available as a BigQuery Public Dataset: bigquery-public-data.census_fips_codes.states_2016  The geographic polygons that define the perimeter of each state are available as a BigQuery Public Dataset: bigquery-public-data.geo_us_boundaries.us_states | eg=["8"]
+
+## NOAA_ICOADS.ICOADS_CORE_2016
+@use: [C3, C4, C5]
+timestamp: NUMBER | Converted UTC timestamp for the actual time of observation at which the barometer is read | eg=[1469562120000000, 1471282200000000]
+
+## NOAA_ICOADS.ICOADS_CORE_2015
+@use: [C3, C4, C5]
+timestamp: NUMBER | Converted UTC timestamp for the actual time of observation at which the barometer is read | eg=[1420987740000000, 1438457400000000]
+
+## NOAA_ICOADS.ICOADS_CORE_2012
+@use: [C3, C4, C5]
+timestamp: NUMBER | Converted UTC timestamp for the actual time of observation at which the barometer is read | eg=[1328594400000000, 1329026400000000]
+
+## NOAA_ICOADS.ICOADS_CORE_2001_2004
+@use: [C3, C4, C5]
+timestamp: NUMBER | Converted UTC timestamp for the actual time of observation at which the barometer is read | eg=[1060189200000000, 1028844000000000]
+
+## NOAA_ICOADS.ICOADS_CORE_2007
+@use: [C3, C4, C5]
+timestamp: NUMBER | Converted UTC timestamp for the actual time of observation at which the barometer is read | eg=[1174183800000000, 1176671400000000]
+
+## NOAA_ICOADS.ICOADS_CORE_2014
+@use: [C3, C4, C5]
+timestamp: NUMBER | Converted UTC timestamp for the actual time of observation at which the barometer is read | eg=[1409259600000000, 1411131600000000]
+
+## NOAA_ICOADS.ICOADS_CORE_2005
+@use: [C3, C4, C5]
+timestamp: NUMBER | Converted UTC timestamp for the actual time of observation at which the barometer is read | eg=[1122818400000000, 1133794800000000]
+
+## NOAA_ICOADS.ICOADS_CORE_2017
+@use: [C3, C4, C5]
+timestamp: NUMBER | Converted UTC timestamp for the actual time of observation at which the barometer is read | eg=[1490932800000000, 1487358000000000]
+
+## NOAA_ICOADS.ICOADS_CORE_2009
+@use: [C3, C4, C5]
+timestamp: NUMBER | Converted UTC timestamp for the actual time of observation at which the barometer is read | eg=[1241840880000000, 1244862600000000]
+
+## NOAA_ICOADS.ICOADS_CORE_2006
+@use: [C3, C4, C5]
+timestamp: NUMBER | Converted UTC timestamp for the actual time of observation at which the barometer is read | eg=[1142621340000000, 1152781200000000]
+
+## NOAA_ICOADS.ICOADS_CORE_2011
+@use: [C3, C4, C5]
+timestamp: NUMBER | Converted UTC timestamp for the actual time of observation at which the barometer is read | eg=[1321293600000000, 1322427600000000]
+
+## NOAA_ICOADS.ICOADS_CORE_2008
+@use: [C3, C4, C5]
+timestamp: NUMBER | Converted UTC timestamp for the actual time of observation at which the barometer is read | eg=[1226733540000000, 1222877940000000]
+
+## NOAA_ICOADS.ICOADS_CORE_2010
+@use: [C3, C4, C5]
+timestamp: NUMBER | Converted UTC timestamp for the actual time of observation at which the barometer is read | eg=[1289029200000000, 1283175600000000]
+
+## NOAA_ICOADS.ICOADS_CORE_1662_2000
+@use: [C3, C4, C5]
+timestamp: NUMBER | Converted UTC timestamp for the actual time of observation at which the barometer is read | eg=[874249200000000, 862610400000000]
+
+## NOAA_ICOADS.ICOADS_CORE_2013
+@use: [C3, C4, C5]
+timestamp: NUMBER | Converted UTC timestamp for the actual time of observation at which the barometer is read | eg=[1382328000000000, 1365768000000000]
+
+## NOAA_PASSIVE_ACOUSTIC_INDEX.SANCTSOUND_METADATA
+@use: [C16, C5, C8]
+sensor_depth: FLOAT | NULL | eg=[17.0]
+recording_percent: NUMBER | NULL | eg=[100]
+data_collection_name: TEXT | NULL | eg=["SanctSound_CI01_02"]
+
+## NOAA_PASSIVE_ACOUSTIC_INDEX.NRS_METADATA
+@use: [C16, C18, C8]
+point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00(~\\x8c\\xb9ka_\\xc0\\xb6\\x15\\xfb\\xcb\\xee\\xe1G@')"]
+sensor_depth: NUMBER | NULL | eg=[488]
+deployment_name: TEXT | NULL | eg=["NRS-2014-2015-03"]
+duration: NUMBER | NULL | eg=[60]
+
+## NOAA_SIGNIFICANT_EARTHQUAKES.EARTHQUAKES
+@use: [C4, C5, C6, C9]
+eq_mag_mfa: FLOAT | Earthquake magnitude Mfa (based on felt area). Valid values 0 to 9.9 The Mfa magnitudes are computed from the felt area, for earthquakes that occurred before seismic instruments were in general use.
+total_damage_millions_dollars: FLOAT | Damage in Millions of Dollars from the earthquake and secondary effects such as the tsunami, volcanic eruption or landslide. The value in the Damage column should be multipled by 1,000,000 to obtain the actual dollar amount in U.S. dollars. The dollar value listed is the value at the time of the event.
+second: FLOAT | Second of the significant earthquake. Valid values: 0-59. The Date and Time are given in Universal Coordinated Time. The local date may be one day different. | eg=[NaN, 35.0]
+eq_mag_mw: FLOAT | Earthquake magnitude Mw. Valid values 0 to 9.9 The Mw magnitude is based on the moment magnitude scale
+state: TEXT | The State, Province or Prefecture of the earthquake was located. | eg=["MA", "AK"]
+eq_primary: FLOAT | The primary earthquake magnitude is chosen from the available magnitude scales in this order: Mw Magnitude  Ms Magnitude  Mb Magnitude  Ml Magnitude  Mfa Magnitude  Unknown Magnitude | eg=[6.2, NaN]
+flag_tsunami: TEXT | If a tsunami was recorded. | eg=["Tsu"]
+intensity: NUMBER | The effect of an earthquake on the Earth's surface is called the intensity. The Modified Mercalli Intensity (MMI) is given in Roman Numerals (converted to numbers in the digital database) | eg=[NaN, 4.0]
+eq_mag_mb: FLOAT | Earthquake magnitude mb. Valid values 0 to 9.9 The Mb magnitude is the compressional body wave (P-wave) magnitude.
+hour: NUMBER | Hour of the significant earthquake. Valid values: 0-23. The Date and Time are given in Universal Coordinated Time. The local date may be one day different. | eg=[NaN, 9.0]
+eq_mag_unk: FLOAT | Earthquake magnitude type is Unknown. Valid values 0 to 9.9 The computational method for the earthquake magnitude was unknown and could not be determined from the published sources.
+country: TEXT | Country. The name of the country where earthquake was located. | eg=["UK", "USA"]
+minute: NUMBER | Minute of the significant earthquake. Valid values: 0-59. The Date and Time are given in Universal Coordinated Time. The local date may be one day different. | eg=[NaN, 11.0]
+eq_mag_ml: FLOAT | Earthquake magnitude ML. Valid values 0 to 9.9 The ML magnitude was the original magnitude relationship defined by Richter and Gutenberg for local earthquakes in 1935. | eg=[6.2, NaN]
+eq_mag_ms: FLOAT | Earthquake magnitude MS. Valid values 0 to 9.9 The Ms magnitude is the surface-wave magnitude of the earthquake. | eg=[NaN, 8.0]
+
+## NOAA_PASSIVE_BIOACOUSTIC.NCEI_SANCTSOUND_PAD_METADATA
+@use: [C13, C17, C8]
+data_collection_name: TEXT | NULL | eg=["SanctSound_CI01_01"]
+
+## NOAA_PASSIVE_BIOACOUSTIC.NCEI_NEFSC_PAD_METADATA
+@use: [C13, C19, C8]
+shape4: TEXT | NULL | eg=[" (-70.19792 42.73578)"]
+shape1: TEXT | NULL | eg=["MULTIPOINT ((-70.27428 42.7875)"]
+shape5: TEXT | NULL | eg=[" (-70.33297 42.68407)"]
+shape9: TEXT | NULL | eg=[" (-70.26493 42.63525)"]
+shape2: TEXT | NULL | eg=[" (-70.33462 42.73447)"]
+data_collection_name: TEXT | NULL | eg=["NEFSC_SBNMS_200712"]
+shape3: TEXT | NULL | eg=[" (-70.26623 42.7347)"]
+shape8: TEXT | NULL | eg=[" (-70.33237 42.63483)"]
+shape7: TEXT | NULL | eg=[" (-70.1974 42.68575)"]
+shape6: TEXT | NULL | eg=[" (-70.26503 42.68523)"]
+shape10: TEXT | NULL | eg=[" (-70.19643 42.63537))"]
+
+## NOAA_PASSIVE_BIOACOUSTIC.NCEI_AFSC_PAD_METADATA
+@use: [C13, C19, C8]
+shape: TEXT | NULL | eg=["MULTIPOINT ((-141.65303 56.27553), (-141.41328 57.1617), (-141.40645 57.18967), (-141.33573 57.45018), (-141.81237 57.1095), (-142.31723 56.7726), (-142.78573 56.44445), (-142.67345 56.84307), (-142.51652 57.34742), (-142.4038 57.74137), (-142.76773 57.5522), (-143.11543 57.28628), (-143.49038 56.98753), (-143.98955 56.50813), (-143.99147 56.47988), (-144.02788 56.0533), (-143.90235 55.82608), (-143.36507 56.16217), (-142.88243 56.41365), (-142.9464 55.82705), (-142.95333 55.50222), (-142.3724 55.8573), (-141.90112 56.15357), (-141.82248 55.9378), (-141.82028 55.51825), (-141.86537 55.30927), (-141.62497 55.85348), (-142.19313 55.51542), (-142.41642 55.63317), (-142.3777 56.01183), (-142.45883 56.26232), (-142.99073 55.93187), (-143.44103 55.6443), (-143.46107 56.1882), (-143.49173 56.55035), (-144.12188 56.14238), (-144.54967 56.26115), (-144.16405 56.58498), (-143.76373 57.10638), (-143.59732 57.6854), (-143.4846 58.0324), (-143.74493 57.94323), (-144.1787 57.58823), (-144.64825 5..."]
+data_collection_name: TEXT | NULL | eg=["GA13_SB_GL01"]
+
+## NOAA_PASSIVE_BIOACOUSTIC.NCEI_NRS_PAD_METADATA
+@use: [C13, C17, C8]
+deployment_name: TEXT | NULL | eg=["NRS_01_2014-2015"]
+
+## NOAA_PRELIMINARY_SEVERE_STORMS.TORNADO_REPORTS
+@use: [C5, C7]
+timestamp: NUMBER | Timestamp in UTC | eg=[1546598400000000, 1547928240000000]
+f_scale: TEXT | The F-Scale classifies F0-F5 damage as calibrated by engineers and meteorologists across 28 different types of damage indicators (mainly various kinds of buildings, but also a few other structures as well as trees). | eg=["UNK"]
+state: TEXT | NULL | eg=["AL"]
+
+## NOAA_PRELIMINARY_SEVERE_STORMS.HAIL_REPORTS
+@use: [C5, C7]
+state: TEXT | NULL | eg=["AL"]
+timestamp: NUMBER | Timestamp in UTC | eg=[1619299320000000, 1640894700000000]
+size: NUMBER | Size in 1/100 of an Inch (175 = 1.75in) | eg=[125, 100]
+
+## NOAA_PRELIMINARY_SEVERE_STORMS.WIND_REPORTS
+@use: [C5, C7]
+speed: NUMBER | Speed in Miles per hour
+state: TEXT | NULL | eg=["AL"]
+timestamp: NUMBER | Timestamp in UTC | eg=[1549995060000000, 1551644520000000]
+
+## NOAA_GSOD.GSOD1955
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1957
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["93727", "03840"]
+
+## NOAA_GSOD.GSOD2020
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["04847"]
+date: DATE | Date of the weather observations | eg=["2020-12-30", "2020-05-31"]
+
+## NOAA_GSOD.GSOD1981
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.STATIONS
+@use: [C18]
+elev: TEXT | NULL | eg=["+7026.0", "+7070.0"]
+country: TEXT | NULL | eg=["AF", "NO"]
+usaf: TEXT | NULL | eg=["007026", "007070"]
+call: TEXT | NULL
+wban: TEXT | NULL | eg=["99999"]
+name: TEXT | NULL | eg=["WXPOD 7026                   ", "WXPOD 7070                   "]
+begin: TEXT | NULL | eg=["20120713", "20140923"]
+state: TEXT | NULL
+end: TEXT | NULL | eg=["20170822", "20150926"]
+
+## NOAA_GSOD.GSOD1978
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1931
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1961
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2007
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1998
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "11630"]
+
+## NOAA_GSOD.GSOD1943
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["93034", "23047"]
+
+## NOAA_GSOD.GSOD1963
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1977
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1979
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2013
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["90001", "99999"]
+
+## NOAA_GSOD.GSOD1990
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["26442", "14852"]
+
+## NOAA_GSOD.GSOD1965
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1997
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1995
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["94728", "11641"]
+
+## NOAA_GSOD.GSOD1982
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "25237"]
+
+## NOAA_GSOD.GSOD1973
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1947
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "14743"]
+
+## NOAA_GSOD.GSOD1964
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1994
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["25501", "25339"]
+
+## NOAA_GSOD.GSOD1941
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["00029", "24155"]
+
+## NOAA_GSOD.GSOD2016
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1936
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["13702"]
+
+## NOAA_GSOD.GSOD1987
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1953
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1939
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["93035"]
+
+## NOAA_GSOD.GSOD1937
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["13921"]
+
+## NOAA_GSOD.GSOD1945
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "14780"]
+
+## NOAA_GSOD.GSOD1954
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1968
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2001
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1967
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1966
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2008
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "13874"]
+
+## NOAA_GSOD.GSOD2005
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["93069", "03166"]
+
+## NOAA_GSOD.GSOD1958
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["13771", "99999"]
+
+## NOAA_GSOD.GSOD1952
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "93906"]
+
+## NOAA_GSOD.GSOD2000
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1950
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1984
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1946
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1999
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["24162", "24114"]
+
+## NOAA_GSOD.GSOD1971
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2022
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+date: DATE | Date of the weather observations | eg=["2022-02-15", "2022-03-03"]
+
+## NOAA_GSOD.GSOD1988
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "12854"]
+
+## NOAA_GSOD.GSOD1993
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "23112"]
+
+## NOAA_GSOD.GSOD2018
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1996
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1944
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["00142"]
+
+## NOAA_GSOD.GSOD1975
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "27508"]
+
+## NOAA_GSOD.GSOD1972
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2014
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1989
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "43321"]
+
+## NOAA_GSOD.GSOD1986
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1929
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1948
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["14799", "99999"]
+
+## NOAA_GSOD.GSOD1932
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["24106"]
+
+## NOAA_GSOD.GSOD1956
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "00091"]
+
+## NOAA_GSOD.GSOD1974
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2006
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1980
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2010
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1992
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["13702", "13705"]
+
+## NOAA_GSOD.GSOD2002
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2003
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2009
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1960
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2024
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+date: DATE | Date of the weather observations | eg=["2024-05-16", "2024-08-26"]
+
+## NOAA_GSOD.GSOD1942
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1934
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1940
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["14936"]
+
+## NOAA_GSOD.GSOD2012
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "24126"]
+
+## NOAA_GSOD.GSOD1962
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1976
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2017
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1970
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1985
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1959
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1983
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2019
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1938
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1991
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999", "25507"]
+
+## NOAA_GSOD.GSOD1935
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["13821"]
+
+## NOAA_GSOD.GSOD2004
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2021
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["93104", "23112"]
+date: DATE | Date of the weather observations | eg=["2021-02-10", "2021-02-17"]
+
+## NOAA_GSOD.GSOD2015
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2011
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1933
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1951
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1969
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD1930
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_GSOD.GSOD2023
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["93065"]
+date: DATE | Date of the weather observations | eg=["2023-05-21", "2023-09-16"]
+
+## NOAA_GSOD.GSOD1949
+@use: [C1]
+wban: TEXT | WBAN number where applicable--this is the historical "Weather Bureau Air Force Navy" number - with WBAN being the acronym | eg=["99999"]
+
+## NOAA_TSUNAMI.HISTORICAL_RUNUPS
+@use: [C4, C5, C6]
+distance_from_source: NUMBER | The distance from the tsunami event source to the runup location. | eg=[49, 5]
+water_ht: FLOAT | The maximum water height above sea level in meters. See image and text below for more information. If the type of measurement is:  Type 1: Water height - Eyewitness observation - the maximum elevation the wave. Type 2: Tide Gauge - half of the maximum height (minus the normal tide)of a tsunami wave recorded at the coast by a tide gauge. Type 3: Deep Ocean Gauge - half of the maximum height (minus the normal tide) of a tsunami wave recorded in the open ocean by a seafloor bottom pressure recording system. Type 4: Water height (Post-tsunami survey measurement)  Type 5: Runup Height (Post-tsunami survey measurement)  Type 8: Runup Height in Harbor (Post-tsunami survey measurement)  Type 10: Flow Depth (Post-tsunami survey measurement) depth of the water. Type 9: Splash mark (Post-tsunami survey measurement) Type 6: Atmospheric Wave  Type 7: Seiche | eg=[7.6, NaN]
+tsevent_id: NUMBER | The unique numeric identifier of the tsunami source event record that links the runup with the event. | eg=[966, 2792]
+timestamp: NUMBER | Timestamp in UTC. | eg=[-3222566100000000, -1643194560000000]
+period: FLOAT | The period is in minutes and, when available, is the period of the first cycle.
+travel_time_hours: NUMBER | NULL | eg=[0]
+horizontal_inundation: FLOAT | The maximum horizontal distance of inland flooding (in meters) | eg=[76.0, NaN]
+arr_day: NUMBER | NULL | eg=[18, 6]
+doubtful: TEXT | A "?" in the Doubtful column indicates a doubtful runup entry.  An "M" indicates the waves likely had a meteorologic source, and thus were not true tsunami waves.
+country: TEXT | The country where the tsunami effects were observed. | eg=["USA TERRITORY", "CANADA"]
+arr_min: NUMBER | NULL | eg=[57, 6]
+arr_hour: NUMBER | NULL | eg=[18, 13]
+first_motion: TEXT | The first motion of the wave whether rise or fall.  R = Rise F = Fall | eg=["F"]
+travel_time_minutes: NUMBER | NULL | eg=[12, 2]
+state: TEXT | The State, Province or Prefecture where the tsunami effects were observed. | eg=["VI", "NS"]
+type_measurement_id: NUMBER | Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10  See text below for more information. 1 = Eyewitness measurement 5 = Runup Height, Post-tsunami survey measurement 4 = Water height, Post-tsunami survey measurement 8 = Water height in harbor, Post-tsunami survey measurement 10 = Flow Depth, Post-tsunami survey measurement 9 = Splash mark, Post-tsunami survey measurement 2 = Tide-gauge measurement 3 = Deep ocean gauge 6 = Atmospheric Wave 7 = Seiche | eg=[1]
+
+## NOAA_TSUNAMI.HISTORICAL_SOURCE_EVENT
+@use: [C4, C5, C6, C9]
+state: TEXT | The two-letter State or Province abbreviation where the Earthquake occurred.
+warning_status: NUMBER | Valid values: -1 to 4 Warning Status of the Tsunami:  -1=Status unknown 0=no warning issued 1=PTW - Pacific-wide Tsunami Warning issued by PTWC 2=RTW - Regional Tsunami Warning issued by PTWC for areas having no TWS 3=LTW - Local Tsunami Warning issued by regional or national TWC 4=TIB - Tsunami Information or Attention Bulletin issued by any agency
+iida: FLOAT | Valid values: -5 to 10 Tsunami magnitude (M) is defined by Iida and others (1967) as  M = log2h, where "h" is the maximum runup height of the wave. | eg=[NaN, 0.8]
+timestamp: NUMBER | Timestamp in UTC. | eg=[-6162134400000000.0, NaN]
+abe: FLOAT | Valid values: -5 to 10 Abe defined two different tsunami magnitude amplitudes. His first tsunami magnitude (1979) is:  Mt = logH + B  where H is the maximum single crest or trough amplitude of the tsunami waves (in meters) and B a constant. The second definition (1981) is:  Mt = logH + alogR + D  where R is the distance in km from the earthquake epicenter to the tide station along the shortest oceanic path, and a and D are constants.
+soloviev: FLOAT | Valid values: -5 to 10 Tsunami intensity is defined by Soloviev and Go (1974) as  I = log2(21/2 * h), where "h" is the maximum runup height of the wave.
+cause_code: NUMBER | Valid values: 0 to 11 The source of the tsunami:  0 = Unknown 1 = Earthquake 2 = Questionable Earthquake 3 = Earthquake and Landslide 4 = Volcano and Earthquake 5 = Volcano, Earthquake, and Landslide 6 = Volcano 7 = Volcano and Landslide 8 = Landslide 9 = Meteorological 10 = Explosion 11 = Astronomical Tide | eg=[0.0, NaN]
+maximum_water_height: FLOAT | The maximum water height above sea level in meters for this event. If the type of measurement of the runup was a:  Tide Gauge - half of the maximum height (minus the normal tide)of a tsunami wave recorded at the coast by a tide gauge. Runup Height - the maximum elevation the wave reaches at the maximum inundation. | eg=[NaN, 0.9]
+event_validity: NUMBER | Valid values: -1 to 4 Validity of the actual tsunami occurrence is indicated by a numerical rating of the reports of that event:  4 = definite tsunami 3 = probable tsunami 2 = questionable tsunami 1 = very doubtful tsunami 0 = event that only caused a seiche or disturbance in an inland river -1 = erroneous entry | eg=[1.0, NaN]
+total_damage_in_millions_dollars: FLOAT | The value in the Damage column should be multipled by 1,000,000 to obtain the actual dollar amount.  When a dollar amount for damage was found in the literature, it was listed in the Damage column in millions of U.S. dollars. The dollar value listed is the value at the time of the event. To convert the damage to current dollar values, please use the Consumer Price Index Calculator. Monetary conversion tables for the time of the event were used to convert foreign currency to U.S. dollars.
+country: TEXT | The Country where the tsunami source occurred (For example enter: Japan or Russia) | eg=["UK"]
+primary_magnitude: FLOAT | Valid values: 0.0 to 9.9 The value in this column contains the primary earthquake magnitude. Magnitude measures the energy released at the source of the earthquake. Magnitude is determined from measurements on seismographs. For pre-instrumental events, the magnitudes are derived from intensities. There are several different scales for measuring earthquake magnitudes. The primary magnitude is chosen from the available magnitude scales in this order:  Mw Magnitude  Ms Magnitude  Mb Magnitude  Ml Magnitude  Mfa Magnitude  Unknown Magnitude
+
+## NOAA_HURRICANES.HURRICANES
+@use: [C5]
+reunion_latitude: FLOAT | NULL | eg=[NaN, -12.7867]
+season: TEXT | NULL | eg=["1903"]
+iflag: TEXT | Interpolation Flag A 14 character flag string which denotes the source of each agency's report: Interpolation Flags include: _ == missing reports. No information provided. O == original report as provided by the agency. P == position was interpolated (all variables were interpolated/filled/nincluding intensity) I == Position was provided/nbut Intensity variables (and likely other variables) were interpolated/filled V = Position and intensity variables are original but some variables were interpolated/filled. The order of the 14 characters refers to the following 14 datasets: 1 - USA Agency (see column 18) 2 - Tokyo 3 - CMA 4 - HKO 5 - NewDelhi 6 - Reunion 7 - BoM 8 - Nadi 9 - Wellington 10 - ds824 11 - TD9636 12 - TD9635 13 - Neumann Southern Hemisphere data set 14 - M.L. Chenoweth N Atlantic Historic dataset | eg=["_________O____", "_________P____"]
+bom_r50_ne: NUMBER | These are the mean radius (from the system centre) of the extent of winds; storm-force (25m/s) or above. Northeast quadrant.
+ds824_pressure: NUMBER | NULL
+bom_tnum: FLOAT | NULL
+nature: TEXT | Combined storm type. This is assigned based on all available storm types. They include: DS - Disturbance TS - Tropical ET - Extratropical SS - Subtropical NR - Not reported MX - Mixture (contradicting nature reports from different agencies) | eg=["TS", "NR"]
+hko_pressure: NUMBER | NULL
+usa_r50_sw: NUMBER | – 50 kt wind radii maximum extent in southwestern quadrant
+reunion_longitude: FLOAT | NULL | eg=[NaN, 56.2618]
+bom_eye: NUMBER | Mean radius of the cyclone eye.
+newdelhi_dp: NUMBER | NULL
+newdelhi_ci: FLOAT | NULL
+bom_r64_nw: NUMBER | These are the mean radius (from the system centre) of the extent of winds; hurricane-force (33m/s) or above. Northwest quadrant
+nadi_pressure: NUMBER | NULL
+reunion_wind: NUMBER | Maximum average wind speed
+bom_r50_sw: NUMBER | These are the mean radius (from the system centre) of the extent of winds; storm-force (25m/s) or above. Southwest quadrant.
+bom_type: NUMBER | This indicates the type of system that this cyclone was at the time of the observation. Note that cyclones can evolve during their lifetimes and hence change type mid-stream (e.g. Extratropical transition (ETT))
+mlc_class: TEXT | Storm classification EX - Extratropical HU - Hurricane LO - Low MH SD - Subtropical depression SS - Subtropical storm TD - Tropical Depression TS - Tropical Storm TW WV - Open Wave | eg=[" "]
+usa_r50_ne: NUMBER | 50 kt wind radii maximum extent in northeastern quadrant
+reunion_r34_nw: NUMBER | 34 kt wind radii maximum extent in northwestern quadrant
+reunion_r34_ne: NUMBER | 34 kt wind radii maximum extent in northeastern quadrant
+td9635_latitude: FLOAT | Latitude from Dataset of a collection of western Pacific Storms (~1945-1976)
+reunion_r50_sw: NUMBER | 50 kt wind radii maximum extent in southwestern quadrant
+bom_r64_se: NUMBER | These are the mean radius (from the system centre) of the extent of winds; hurricane-force (33m/s) or above. Southeast quadrant
+mlc_wind: NUMBER | NULL
+usa_r34_nw: NUMBER | – 34 kt wind radii maximum extent in northwestern quadrant
+bom_poci: NUMBER | Environmental pressure in which the cyclone is embedded
+usa_r34_se: NUMBER | 34 kt wind radii maximum extent in southeastern quadrant
+usa_r64_ne: NUMBER | – 64 kt wind radii maximum extent in northeastern quadrant
+neumann_pressure: NUMBER | NULL
+hko_cat: TEXT | After 2009/nwe further classified two more storm types above typhoon/nso there are in total 7 storm types LW (Low) <22 kt TD (Tropical Depression) 22 – 33 kt TS (Tropical Storm) 34 – 47 kt STS (Severe Tropical Storm) 48 – 63 kt T (Typhoon) 64 – 80 kt ST (Severe Typhoon) 81 – 99 kt SuperT (Super Typhoon) >= 100 kt | eg=[" "]
+ds824_wind: NUMBER | NULL
+hko_wind: NUMBER | NULL
+reunion_r50_ne: NUMBER | 50 kt wind radii maximum extent in northeastern quadrant
+basin: TEXT | Basins include: NA - North Atlantic EP - Eastern North Pacific WP - Western North Pacific NI - North Indian SI - South Indian SP - Southern Pacific SA - South Atlantic MM - Missing - should not appear in final IBTrACS product | eg=["SI", "WP"]
+bom_latitude: FLOAT | Latitude from Australian Bureau of Meterology
+bom_pos_method: NUMBER | This indicates the tools that were used to derive the centre location of the system. ADAM Code Method to derive position NULL Default - unknown 1 no sat/nno rad/nno obs 2 no sat/nno rad/nobs only 3 Sat IR/Vis; no clear eye 4 Sat IR/Vis; clearly defined eye 5 aircraft radar report 6 land-based radar report 7 Sat IR/Vis & rad & obs 8 report inside eye 10 Sat- Scatterometer 11 Sat- Microwave 12 Manned Aircraft Reconnaissance 13 UAV Aircraft Reconnaissance
+cma_cat: NUMBER | Intensity category according to the Chinese National Standard for Grade of Tropical Cyclones (which has been used since 15 June 2006): 0 –– Weaker than Tropical Depression or unknown intensity; 1 –– Tropical Depression (TD: 10.8–17.1 m/s); 2 –– Tropical Storm (TS:17.2–24.4 m/s); 3 –– Severe Tropical Storm (STS: 24.5–32.6 m/s); 4 –– Typhoon (TY: 32.7–41.4 m/s); 5 –– Severe Typhoon (STY: 41.5–50.9 m/s); 6 –– Super Typhoon (SuperTY: ≥51.0 m/s); 9 –– Extratropical Cyclone (ET) stage.
+ds824_longitude: FLOAT | Longitude from DataSet 824 - A historic dataset with data from the 1800s through 1980(ish) | eg=[64.5, 55.8575]
+usa_r64_se: NUMBER | 64 kt wind radii maximum extent in southeastern quadrant
+usa_eye: TEXT | eye diameter/n0 - 120 n mi. NOT BEST TRACKED (not reanalyzed) | eg=[" "]
+iso_time: NUMBER | ISO Time provided in Universal Time Coordinates (UTC). Format is YYYY-MM-DD HH:mm:ss Most points are provided at 6 hour intervals. Some agencies provided 3 hour points (e.g./nNew Delhi) or times at important observations (e.g./nlandfall times in the North Atlantic/netc.). | eg=[-2110903200000000, -2108235600000000]
+tokyo_longitude: FLOAT | NULL
+newdelhi_pressure: NUMBER | NULL
+reunion_tnum: FLOAT | Dvorak T-number
+tokyo_r30_long: NUMBER | The longest radius of 30kt winds or greater
+bom_r34_sw: NUMBER | This is the mean radius (from the system centre) of the extent of winds; gale-force (17m/s) or above. The four sectors show the mean extent in the respective quadrant centred on the cardinal point. Southwest quadrant
+usa_r64_nw: NUMBER | 64 kt wind radii maximum extent in northwestern quadrant
+cma_pressure: NUMBER | Minimum pressure (hPa) near the TC center.
+cma_latitude: FLOAT | Latitude from Chinese Meteorological Administration data from Shanghai Typhoon Institute
+subbasin: TEXT | Subbasins include: MM - missing - no sub basin for this basin (no subbasins provided for WP/nSI) CS - Caribbean Sea GM - Gulf of Mexico CP - Central Pacific BB - Bay of Bengal AS - Arabian Sea WA - Western Australia EA - Eastern Australia | eg=["MM"]
+wmo_agency: TEXT | This is the reporting agency responsible for the basin as currently listed. It should be noted that many of the agencies did not accept official WMO responsibility until relatively recently/ne.g./nLa Reunion in 1993 or IMD in 1990. Therefore the WMO agency is used loosely todescribe the currently reponsible agency. | eg=[" "]
+bom_r34_nw: NUMBER | This is the mean radius (from the system centre) of the extent of winds; gale-force (17m/s) or above. The four sectors show the mean extent in the respective quadrant centred on the cardinal point. Northwest quadrant
+bom_r64_ne: NUMBER | These are the mean radius (from the system centre) of the extent of winds; hurricane-force (33m/s) or above. Northeast quadrant
+usa_r50_nw: NUMBER | 50 kt wind radii maximum extent in northwestern quadrant
+tokyo_latitude: FLOAT | NULL
+bom_r34_se: NUMBER | This is the mean radius (from the system centre) of the extent of winds; gale-force (17m/s) or above. The four sectors show the mean extent in the respective quadrant centred on the cardinal point. Southeast quadrant
+wellington_latitude: FLOAT | NULL
+td9635_wind: FLOAT | NULL
+usa_agency: TEXT | The agency file providing the information: The representative US agency data is derived from a hierarchical selection: the first dataset in the following list to provide information at the given time is used as the USA_agency: - HURDAT_ATL - HURSAT_EPA - ATCF (for NA and EP basins only) - JTWC_WP - JTWC_IO - JTWC_EP - JTWC_CP - JTWC_SH - CPHC [separate file provided by CPHC for years TBD] - tcvitals - THIS INDICATES THAT THE DATA ARE PRELIMINARY While these agencies are generally orthogonal/nthere are cases where a system is provided in more than one source. In this case/nthe report from the highest source is used. ATCF format info from: https://www.nrlmry.navy.mil/atcf_web/docs/database/new/abdeck.txt HURDAT2 info from: http://www.nhc.noaa.gov/data/hurdat/hurdat2-format-atlantic.pdf | eg=[" "]
+usa_roci: NUMBER | radius of the last closed isobar/n0 - 999 n mi. NOT BEST TRACKED (not reanalyzed)
+usa_r50_se: NUMBER | – 50 kt wind radii maximum extent in southeastern quadrant
+td9635_longitude: FLOAT | Longitude from Dataset of a collection of western Pacific Storms (~1945-1976)
+landfall: NUMBER | Nearest location to land within next 6 hours. This can be thought of a landfall flag: =0 -- Landfall within 6 hours. >0 -- No landfall within next 6 hours. Calculations are based on storm center (columns 9,10). Values less than 60 nmile likely are impacted by the system even though the center of the system is not over land. The uses the same land mask as DIST2LAND. | eg=[663, 622]
+usa_longitude: FLOAT | NULL
+wmo_pressure: NUMBER | NULL
+wmo_wind: NUMBER | Maximum sustained wind speed from the WMO agency for the current location. NO adjustment is made for differences in wind speed averaging periods. hurdat/atcf = North Atlantic - U.S. Miami (NOAA NHC) - 1-minute winds tokyo = RSMC Tokyo (JMA) - 10-minute newdelhi = RSMC New Delhi (IMD) - 3-minute reunion = RSMC La Reunion (MFLR) - 10 minute bom = Australian TCWCs (TCWC Perth/nDarwin/nBrisbane) - 10-minute nadi = RSMC Nadi (FMS) - 10 minute wellington = TCWC Wellington (NZMS) - 10-minute
+usa_r34_sw: NUMBER | – 34 kt wind radii maximum extent in southwestern quadrant
+sid: TEXT | Storm Identifier. | eg=["1903041S18066", "1903070S13057"]
+nadi_wind: NUMBER | NULL
+usa_status: TEXT | Status of system. Options are:  DB - disturbance/n TD - tropical depression/n TS - tropical storm/n TY - typhoon/n ST - super typhoon/n TC - tropical cyclone/n HU,HR - hurricane/n SD - subtropical depression/n SS - subtropical storm/n EX - extratropical systems/n PT - post tropical/n IN - inland/n DS - dissipating/n LO - low/n WV - tropical wave/n ET - extrapolated/n MD - monsoon depression/n XX - unknown. | eg=[" "]
+usa_pressure: NUMBER | Minimum central pressure (mb)
+tokyo_r30_short: NUMBER | The shortest radius of 30kt winds or greater
+nadi_longitude: FLOAT | Longitude from Fiji Meteorological Service data from RSMC Hadi
+reunion_r34_sw: NUMBER | 34 kt wind radii maximum extent in southwestern quadrant
+tokyo_r50_short: NUMBER | The shortest radius of 50kt winds or greater
+usa_r34_ne: NUMBER | – 34 kt wind radii maximum extent in northeastern quadrant
+usa_rmw: NUMBER | radius of max winds/n0 - 999 n mi. NOT BEST TRACKED (not reanalyzed)
+bom_pressure_method: NUMBER | This code may need to be expanded to handle new systems in the future/nand also to differentiate between pressure-wind relationships used to derive the central pressure. ADAM code Method WMO Code NULL Unknown or N/A 1 Aircraft or Dropsonde  observation 1 2 Over water observation (e.g.  buoy) 2 3 Over land observation 3 4 Instrument – unknown type 5 5 Derived Directly from DVORAK 4 6 Derived from wind via a P-W  equation 5 7 Estimate from surrounding obs 5 8 Extrapolation from radar 5 9 Other 5
+track_type: TEXT | Track type Tropical storms can interact. This identifies : PROVISIONAL - Real time data used to populate the position and other parameters of this system. This is a provisional track that will be replaced when reanalysis of the storm is performed. (Usually within 2 years of the storm's occurence) main - primary track associated with a storm system. spur - usually short lived tracks associated with a main track and either represent alternate positions at the beginning of a system. Can also represent actual system interactions (e.g./nFujiwhara interactions). | eg=["main"]
+mlc_pressure: NUMBER | NULL
+newdelhi_latitude: FLOAT | NULL
+usa_record: TEXT | Record identifier (see notes below) C – Closest approach to a coast/nnot followed by a landfall G – Genesis I – An intensity peak in terms of both pressure and wind L – Landfall (center of system crossing a coastline) P – Minimum in central pressure R – Provides additional detail on the intensity of the cyclone when rapid changes are underway S – Change of status of the system T – Provides additional detail on the track (position) of the cyclone W – Maximum sustained wind speed | eg=[" "]
+reunion_r64_nw: NUMBER | 64 kt wind radii maximum extent in northwestern quadrant
+tokyo_grade: NUMBER | <Grade> 1 : Not used  2 : Tropical Depression (TD)  3 : Tropical Storm (TS)  4 : Severe Tropical Storm (STS)  5 : Typhoon (TY)  6 : Extratropical Cyclone (L)  7 : Just entering into the responsible area of  Japan Meteorological Agency (JMA)  8 : Not used  9 : Tropical Cyclone of TS intensity or higher
+usa_r64_sw: NUMBER | – 64 kt wind radii maximum extent in southwestern quadrant
+ds824_latitude: FLOAT | Latitude from DataSet 824 - A historic dataset with data from the 1800s through 1980(ish) | eg=[-18.9, -12.9925]
+etl_timestamp: NUMBER | Load time for this data row | eg=[1729218710034723]
+cma_wind: NUMBER | Two-minute mean maximum sustained wind (MSW; m/s) near the TC center. WND = 9 indicates MSW < 10 m/s/nWND = 0 indicates unknown intensity
+hko_latitude: TEXT | Latitude from Hong Kong Observatory | eg=[" "]
+tokyo_r50_longitude: NUMBER | The longest radius of 50kt winds or greater
+cma_longitude: FLOAT | Longitude from Chinese Meteorological Administration data from Shanghai Typhoon Institute
+usa_atcf_id: TEXT | The ATCF ID is assigned by US agencies and can be used to comparethe storm with other US cyclone-related datasets. If two (or more) ATCF tracks make up one storm/nthen the IDs are separated by a colon. The format of the ATCF ID is B<bb><nn><yyyy> where bb is the basin ID/nnn is the number of the storm in that basin and yyyy is the year. Possible basin values are: AL: North Atlantic/nSL: South Atlantic/nEP: East Pacific/nWP: West Pacific/nSH: Southern Hemisphere/nIO: North Indian For the provisional data/nother basin identifiers were provided that include: CP: Central Pacific/nSP: South Pacific/nSI: South Indian/nAS: Arabian Sea (North Indian) and BB: Bay of Bengal (North Indian) | eg=[" "]
+reunion_r64_sw: NUMBER | 64 kt wind radii maximum extent in southwestern quadrant
+ds824_stage: TEXT | TC - Tropical cyclone | eg=["TC", " "]
+tokyo_wind: NUMBER | Maximum sustained wind speed [10-min averaging period]
+reunion_r50_se: NUMBER | 50 kt wind radii maximum extent in southeastern quadrant
+wellington_longitude: FLOAT | NULL
+reunion_r64_ne: NUMBER | 64 kt wind radii maximum extent in northeastern quadrant
+reunion_r34_se: NUMBER | 34 kt wind radii maximum extent in southeastern quadrant
+newdelhi_poci: NUMBER | NULL
+nadi_latitude: FLOAT | Latitude from Fiji Meteorological Service data from RSMC Hadi
+source_url: TEXT | Source | eg=["https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r00/access/csv/ibtracs.ALL.list.v04r00.csv"]
+neumann_latitude: FLOAT | NULL
+bom_r50_se: NUMBER | These are the mean radius (from the system centre) of the extent of winds; storm-force (25m/s) or above. Southeast quadrant.
+newdelhi_longitude: FLOAT | NULL
+reunion_pressure: NUMBER | Central pressure
+usa_latitude: FLOAT | NULL
+td9636_pressure: NUMBER | NULL
+td9636_wind: NUMBER | Estimated highest wind speed at the time indicated. These estimates are subjective and must be interpreted with caution.
+td9636_longitude: FLOAT | Longitude from Dataset of a collection of global storms (1842-1980) | eg=[NaN, 55.9572]
+bom_ci: FLOAT | NULL
+wellington_wind: NUMBER | NULL
+bom_r34_ne: NUMBER | This is the mean radius (from the system centre) of the extent of winds; gale-force (17m/s) or above. The four sectors show the mean extent in the respective quadrant centred on the cardinal point. Northeast quadrant
+bom_roci: NUMBER | The estimated mean radius of the outermost closed isobar (1-hPa spacing).
+mlc_longitude: FLOAT | Longitude from Mike Chenoweth data with updated data for the North Atlantic for the 1800s.
+name: TEXT | Name provided by the agency. IBTrACS ignores most names that include digits or abbreviations. | eg=["NOT_NAMED"]
+tokyo_r50_dir: NUMBER | 1 : Northeast (NE)  2 : East (E)  3 : Southeast (SE)  4 : South (S)  5 : Southwest (SW)  6 : West (W)  7 : Northwest (NW)  8 : North (N)  9 : (symmetric circle)
+reunion_r64_se: NUMBER | 64 kt wind radii maximum extent in southeastern quadrant
+neumann_class: TEXT | EX - Extratropical TC - Tropical MM - Missing | eg=[" "]
+usa_wind: NUMBER | Maximum sustained wind speed in knots: 0 - 300 kts.
+reunion_rmw: NUMBER | Radius of maximum winds
+hko_longitude: FLOAT | Longitude from Hong Kong Observatory
+newdelhi_grade: TEXT | Types of disturbances: Low pressure area W<17 knots D - Depression 17<=W<28 DD - Deep Depression 28<=W<34 CS - Cyclonic Storm 34<=W<48 SCS - Severe Cyclonic Storm 48<=W<64 VSCS - Very Severe Cyclonic Storm 64<=W<120 SCS - Super Cyclonic Storm W>=120 knots | eg=[" "]
+reunion_type: NUMBER | 01= tropics; disturbance ( no closed isobars)  02= <34 knot winds/n<17m/s winds and at least one closed isobar  03= 34-63 knots/n17-32m/s  04= >63 knots/n>32m/s  05= extratropical  06= dissipating  07= subtropical cyclone (nonfrontal/nlow pressure system that comprises  initially baroclinic circulation developing over subtropical water)  08= overland  09= unknown | eg=[NaN, 99.0]
+reunion_ci: FLOAT | Dvorak CI-number
+bom_wind: NUMBER | This is the estimated maximum mean wind around the cyclone – that is in the vicinity of the centre.
+td9635_roci: NUMBER | Size. (Radius of system)
+mlc_latitude: FLOAT | Latitude from Mike Chenoweth data with updated data for the North Atlantic for the 1800s.
+bom_rmw: NUMBER | This is the mean radius (from the system centre) of the maximum mean wind.
+tokyo_land: NUMBER | <Indicator of landfall or passage>  Landfall or passage over the Japanese islands occurred within  one hour after the time of the analysis with this indicator.
+usa_sshs: NUMBER | Saffir-Simpson Hurricane Scale information based on the wind speed provided by the US agency wind speed (US agencies provide 1-minute wind speeds) -5 = Unknown [XX] -4 = Post-tropical [EX/nET/nPT] -3 = Miscellaneous disturbances [WV/nLO/nDB/nDS/nIN/nMD] -2 = Subtropical [SS/nSD] Tropical systems classified based on wind speeds [TD/nTS/nHU/nTY,/nTC/nST/nHR]  -1 = Tropical depression (W<34)  0 = Tropical storm [34<W<64]  1 = Category 1 [64<=W<83]  2 = Category 2 [83<=W<96]  3 = Category 3 [96<=W<113]  4 = Category 4 [113<=W<137]  5 = Category 5 [W >= 137] | eg=[-5]
+wellington_pressure: NUMBER | NULL
+reunion_r50_nw: NUMBER | 50 kt wind radii maximum extent in northwestern quadrant
+tokyo_pressure: NUMBER | Central pressure
+td9635_pressure: NUMBER | NULL
+nadi_cat: NUMBER | Nadi assigned category
+td9636_stage: NUMBER | This field gives an estimate of the highest winds occurring in the storm at the time and location indicated. The entire storm was coded as to the highest stage reached for some of the earlier years. 0 - Tropical disturbance (1969 onward) 1 - depression < 34 [some variation in definition for S Indian] 2 - Storm 34-63 [with some variation in definition for S Indian] 3 - point where wind reached 64 knots [except N Indian where it is wind 43-47 knots] 4 - Hurricane > 64 [except in N Indian/nWind > 48] 5 - Extratropical 6 - Dissipating 7 - Unknown Intensity or doubtful track | eg=[NaN, 7.0]
+bom_pressure: NUMBER | Central pressure of the cyclone
+usa_poci: NUMBER | pressure in millibars of the last closed isobar/n900 - 1050 mb NOT BEST-TRACKED (not reanalyzed)
+newdelhi_wind: NUMBER | NULL
+tokyo_r30_dir: NUMBER | 1 : Northeast (NE)  2 : East (E)  3 : Southeast (SE)  4 : South (S)  5 : Southwest (SW)  6 : West (W)  7 : Northwest (NW)  8 : North (N)  9 : (symmetric circle)
+bom_longitude: FLOAT | Longitude from Australian Bureau of Meterology
+bom_r50_nw: NUMBER | These are the mean radius (from the system centre) of the extent of winds; storm-force (25m/s) or above. Northwest quadrant.
+number: NUMBER | The cardinal number of the system for that season. The count includes all basins/nso this will not be continuous for basin files. | eg=[16, 22]
+bom_r64_sw: NUMBER | These are the mean radius (from the system centre) of the extent of winds; hurricane-force (33m/s) or above. Southwest quadrant
+td9636_latitude: FLOAT | Latitude from Dataset of a collection of global storms (1842-1980) | eg=[NaN, -12.9791]
+neumann_wind: NUMBER | NULL
+dist2land: NUMBER | Distance to land from the current position. The land dataset includes all continents and any islands larger than XX. The distance is the nearest at the present time in any direction. | eg=[719, 632]
+neumann_longitude: FLOAT | NULL

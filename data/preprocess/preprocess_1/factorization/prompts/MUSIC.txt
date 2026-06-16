@@ -1,0 +1,16 @@
+[COMPONENTS]
+@C1:Address,City,Country,Email,Fax,FirstName,LastName,Phone,PostalCode,State
+
+[TABLES]
+Format: schema.table|components|columns
+MUSIC.TRACK||MediaTypeId,GenreId,Composer,Milliseconds,UnitPrice,Bytes,Name,TrackId,AlbumId
+MUSIC.GENRE||GenreId,Name
+MUSIC.PLAYLISTTRACK||TrackId,PlaylistId
+MUSIC.INVOICE||BillingCountry,CustomerId,Total,InvoiceId,BillingAddress,InvoiceDate,BillingCity,BillingState,BillingPostalCode
+MUSIC.CUSTOMER|@C1|SupportRepId,CustomerId,Company
+MUSIC.INVOICELINE||InvoiceLineId,TrackId,InvoiceId,Quantity,UnitPrice
+MUSIC.MEDIATYPE||Name,MediaTypeId
+MUSIC.PLAYLIST||Name,PlaylistId
+MUSIC.ALBUM||AlbumId,Title,ArtistId
+MUSIC.EMPLOYEE|@C1|ReportsTo,BirthDate,HireDate,EmployeeId,Title
+MUSIC.ARTIST||ArtistId,Name

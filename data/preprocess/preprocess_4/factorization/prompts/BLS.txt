@@ -1,0 +1,858 @@
+[COMPONENTS]
+@C1
+area_fips: TEXT | US FIPS County Code | eg=["28011", "48203"]
+avg_wkly_wage_1011_natural_resources_and_mining: FLOAT | Average weekly wage for Natural resources and mining establishments | eg=[302.0, 739.0]
+avg_wkly_wage_1012_construction: FLOAT | Average weekly wage for Construction establishments | eg=[383.0, 417.0]
+avg_wkly_wage_1013_manufacturing: FLOAT | Average weekly wage for Manufacturing establishments | eg=[418.0, 551.0]
+avg_wkly_wage_1021_trade_transportation_and_utilities: FLOAT | Average weekly wage for Trade, transportation, and utilities establishments | eg=[402.0, 638.0]
+avg_wkly_wage_1022_information: FLOAT | Average weekly wage for Information establishments | eg=[465.0, 529.0]
+avg_wkly_wage_1023_financial_activities: FLOAT | Average weekly wage for Financial activities establishments | eg=[375.0, 449.0]
+avg_wkly_wage_1024_professional_and_business_services: FLOAT | Average weekly wage for Professional and business services establishments | eg=[320.0, 1433.0]
+avg_wkly_wage_1025_education_and_health_services: FLOAT | Average weekly wage for Education and health services establishments | eg=[423.0, 315.0]
+avg_wkly_wage_1026_leisure_and_hospitality: FLOAT | Average weekly wage for Leisure and hospitality establishments | eg=[136.0, 147.0]
+avg_wkly_wage_1027_other_services: FLOAT | Average weekly wage for Other services establishments | eg=[227.0, 295.0]
+avg_wkly_wage_1029_unclassified: FLOAT | Average weekly wage for Unclassified establishments
+avg_wkly_wage_10_total_all_industries: FLOAT | Average weekly wage for Total, all industries establishments | eg=[376.0, 553.0]
+avg_wkly_wage_11_agriculture_forestry_fishing_and_hunting: FLOAT | Average weekly wage for Agriculture, forestry, fishing and hunting establishments | eg=[302.0, 451.0]
+avg_wkly_wage_21_mining_quarrying_and_oil_and_gas_extraction: FLOAT | Average weekly wage for Mining, quarrying, and oil and gas extraction establishments | eg=[NaN, 766.0]
+avg_wkly_wage_22_utilities: FLOAT | Average weekly wage for Utilities establishments | eg=[383.0, 705.0]
+avg_wkly_wage_23_construction: FLOAT | Average weekly wage for Construction establishments | eg=[383.0, 417.0]
+avg_wkly_wage_31_33_manufacturing: FLOAT | Average weekly wage for Manufacturing establishments | eg=[418.0, 551.0]
+avg_wkly_wage_42_wholesale_trade: FLOAT | Average weekly wage for Wholesale trade establishments | eg=[548.0, 829.0]
+avg_wkly_wage_44_45_retail_trade: FLOAT | Average weekly wage for Retail trade establishments | eg=[333.0, 277.0]
+avg_wkly_wage_48_49_transportation_and_warehousing: FLOAT | Average weekly wage for Transportation and warehousing establishments | eg=[460.0, 554.0]
+avg_wkly_wage_51_information: FLOAT | Average weekly wage for Information establishments | eg=[465.0, 529.0]
+avg_wkly_wage_52_finance_and_insurance: FLOAT | Average weekly wage for Finance and insurance establishments | eg=[408.0, 472.0]
+avg_wkly_wage_53_real_estate_and_rental_and_leasing: FLOAT | Average weekly wage for Real estate and rental and leasing establishments | eg=[181.0, 281.0]
+avg_wkly_wage_54_professional_and_technical_services: FLOAT | Average weekly wage for Professional and technical services establishments | eg=[451.0, 2455.0]
+avg_wkly_wage_55_management_of_companies_and_enterprises: FLOAT | Average weekly wage for Management of companies and enterprises establishments | eg=[NaN, 1304.0]
+avg_wkly_wage_56_administrative_and_waste_services: FLOAT | Average weekly wage for Administrative and waste services establishments | eg=[223.0, 233.0]
+avg_wkly_wage_61_educational_services: FLOAT | Average weekly wage for Educational services establishments | eg=[NaN, 0.0]
+avg_wkly_wage_62_health_care_and_social_assistance: FLOAT | Average weekly wage for Health care and social assistance establishments | eg=[NaN, 403.0]
+avg_wkly_wage_71_arts_entertainment_and_recreation: FLOAT | Average weekly wage for Arts, entertainment, and recreation establishments | eg=[133.0, 157.0]
+avg_wkly_wage_72_accommodation_and_food_services: FLOAT | Average weekly wage for Accommodation and food services establishments | eg=[136.0, 146.0]
+avg_wkly_wage_81_other_services_except_public_administration: FLOAT | Average weekly wage for Other services, except public administration establishments | eg=[227.0, 295.0]
+avg_wkly_wage_99_unclassified: FLOAT | Average weekly wage for Unclassified establishments
+geoid: TEXT | US FIPS County Code | eg=["28011", "48203"]
+lq_avg_wkly_wage_1011_natural_resources_and_mining: FLOAT | Average weekly wage location quotient for Natural resources and mining establishments | eg=[0.88, 1.49]
+lq_avg_wkly_wage_1012_construction: FLOAT | Average weekly wage location quotient for Construction establishments | eg=[0.98, 0.73]
+lq_avg_wkly_wage_1013_manufacturing: FLOAT | Average weekly wage location quotient for Manufacturing establishments | eg=[0.96, 0.87]
+lq_avg_wkly_wage_1021_trade_transportation_and_utilities: FLOAT | Average weekly wage location quotient for Trade, transportation, and utilities establishments | eg=[1.24, 1.35]
+lq_avg_wkly_wage_1022_information: FLOAT | Average weekly wage location quotient for Information establishments | eg=[0.92, 0.72]
+lq_avg_wkly_wage_1023_financial_activities: FLOAT | Average weekly wage location quotient for Financial activities establishments | eg=[0.72, 0.6]
+lq_avg_wkly_wage_1024_professional_and_business_services: FLOAT | Average weekly wage location quotient for Professional and business services establishments | eg=[0.73, 2.24]
+lq_avg_wkly_wage_1025_education_and_health_services: FLOAT | Average weekly wage location quotient for Education and health services establishments | eg=[1.17, 0.6]
+lq_avg_wkly_wage_1026_leisure_and_hospitality: FLOAT | Average weekly wage location quotient for Leisure and hospitality establishments | eg=[0.87, 0.65]
+lq_avg_wkly_wage_1027_other_services: FLOAT | Average weekly wage location quotient for Other services establishments | eg=[0.97, 0.86]
+lq_avg_wkly_wage_1029_unclassified: FLOAT | Average weekly wage location quotient for Unclassified establishments
+lq_avg_wkly_wage_10_total_all_industries: FLOAT | Average weekly wage location quotient for Total, all industries establishments | eg=[1.03, 1.04]
+lq_avg_wkly_wage_11_agriculture_forestry_fishing_and_hunting: FLOAT | Average weekly wage location quotient for Agriculture, forestry, fishing and hunting establishments | eg=[1.43, 1.47]
+lq_avg_wkly_wage_21_mining_quarrying_and_oil_and_gas_extraction: FLOAT | Average weekly wage location quotient for Mining, quarrying, and oil and gas extraction establishments | eg=[NaN, 0.9]
+lq_avg_wkly_wage_22_utilities: FLOAT | Average weekly wage location quotient for Utilities establishments | eg=[0.62, 0.79]
+lq_avg_wkly_wage_23_construction: FLOAT | Average weekly wage location quotient for Construction establishments | eg=[0.98, 0.73]
+lq_avg_wkly_wage_31_33_manufacturing: FLOAT | Average weekly wage location quotient for Manufacturing establishments | eg=[0.96, 0.87]
+lq_avg_wkly_wage_42_wholesale_trade: FLOAT | Average weekly wage location quotient for Wholesale trade establishments | eg=[1.1, 1.15]
+lq_avg_wkly_wage_44_45_retail_trade: FLOAT | Average weekly wage location quotient for Retail trade establishments | eg=[1.43, 0.82]
+lq_avg_wkly_wage_48_49_transportation_and_warehousing: FLOAT | Average weekly wage location quotient for Transportation and warehousing establishments | eg=[1.2, 1.0]
+lq_avg_wkly_wage_51_information: FLOAT | Average weekly wage location quotient for Information establishments | eg=[0.92, 0.72]
+lq_avg_wkly_wage_52_finance_and_insurance: FLOAT | Average weekly wage location quotient for Finance and insurance establishments | eg=[0.7, 0.55]
+lq_avg_wkly_wage_53_real_estate_and_rental_and_leasing: FLOAT | Average weekly wage location quotient for Real estate and rental and leasing establishments | eg=[0.56, 0.59]
+lq_avg_wkly_wage_54_professional_and_technical_services: FLOAT | Average weekly wage location quotient for Professional and technical services establishments | eg=[0.76, 2.86]
+lq_avg_wkly_wage_55_management_of_companies_and_enterprises: FLOAT | Average weekly wage location quotient for Management of companies and enterprises establishments | eg=[NaN, 1.84]
+lq_avg_wkly_wage_56_administrative_and_waste_services: FLOAT | Average weekly wage location quotient for Administrative and waste services establishments | eg=[0.92, 0.66]
+lq_avg_wkly_wage_61_educational_services: FLOAT | Average weekly wage location quotient for Educational services establishments | eg=[NaN, 0.0]
+lq_avg_wkly_wage_62_health_care_and_social_assistance: FLOAT | Average weekly wage location quotient for Health care and social assistance establishments | eg=[NaN, 0.96]
+lq_avg_wkly_wage_71_arts_entertainment_and_recreation: FLOAT | Average weekly wage location quotient for Arts, entertainment, and recreation establishments | eg=[0.46, 0.37]
+lq_avg_wkly_wage_72_accommodation_and_food_services: FLOAT | Average weekly wage location quotient for Accommodation and food services establishments | eg=[1.01, 0.75]
+lq_avg_wkly_wage_81_other_services_except_public_administration: FLOAT | Average weekly wage location quotient for Other services, except public administration establishments | eg=[0.97, 0.86]
+lq_avg_wkly_wage_99_unclassified: FLOAT | Average weekly wage location quotient for Unclassified establishments
+lq_month3_emplvl_1011_natural_resources_and_mining: FLOAT | Employment level location quotient in Natural resources and mining establishments | eg=[3.09, 2.39]
+lq_month3_emplvl_1012_construction: FLOAT | Employment level location quotient in Construction establishments | eg=[0.45, 0.71]
+lq_month3_emplvl_1013_manufacturing: FLOAT | Employment level location quotient in Manufacturing establishments | eg=[1.7, 1.47]
+lq_month3_emplvl_1021_trade_transportation_and_utilities: FLOAT | Employment level location quotient in Trade, transportation, and utilities establishments | eg=[0.94, 1.49]
+lq_month3_emplvl_1022_information: FLOAT | Employment level location quotient in Information establishments | eg=[0.28, 0.37]
+lq_month3_emplvl_1023_financial_activities: FLOAT | Employment level location quotient in Financial activities establishments | eg=[0.59, 0.61]
+lq_month3_emplvl_1024_professional_and_business_services: FLOAT | Employment level location quotient in Professional and business services establishments | eg=[0.24, 0.31]
+lq_month3_emplvl_1025_education_and_health_services: FLOAT | Employment level location quotient in Education and health services establishments | eg=[0.87, 0.89]
+lq_month3_emplvl_1026_leisure_and_hospitality: FLOAT | Employment level location quotient in Leisure and hospitality establishments | eg=[0.57, 0.76]
+lq_month3_emplvl_1027_other_services: FLOAT | Employment level location quotient in Other services establishments | eg=[0.65, 0.61]
+lq_month3_emplvl_1029_unclassified: FLOAT | Employment level location quotient in Unclassified establishments
+lq_month3_emplvl_10_total_all_industries: FLOAT | Employment level location quotient in Total, all industries establishments | eg=[0.9, 1.03]
+lq_month3_emplvl_11_agriculture_forestry_fishing_and_hunting: FLOAT | Employment level location quotient in Agriculture, forestry, fishing and hunting establishments | eg=[4.85, 0.31]
+lq_month3_emplvl_21_mining_quarrying_and_oil_and_gas_extraction: FLOAT | Employment level location quotient in Mining, quarrying, and oil and gas extraction establishments | eg=[NaN, 6.03]
+lq_month3_emplvl_22_utilities: FLOAT | Employment level location quotient in Utilities establishments | eg=[0.45, 2.08]
+lq_month3_emplvl_23_construction: FLOAT | Employment level location quotient in Construction establishments | eg=[0.45, 0.71]
+lq_month3_emplvl_31_33_manufacturing: FLOAT | Employment level location quotient in Manufacturing establishments | eg=[1.7, 1.47]
+lq_month3_emplvl_42_wholesale_trade: FLOAT | Employment level location quotient in Wholesale trade establishments | eg=[1.13, 4.07]
+lq_month3_emplvl_44_45_retail_trade: FLOAT | Employment level location quotient in Retail trade establishments | eg=[0.97, 0.77]
+lq_month3_emplvl_48_49_transportation_and_warehousing: FLOAT | Employment level location quotient in Transportation and warehousing establishments | eg=[0.63, 0.57]
+lq_month3_emplvl_51_information: FLOAT | Employment level location quotient in Information establishments | eg=[0.28, 0.37]
+lq_month3_emplvl_52_finance_and_insurance: FLOAT | Employment level location quotient in Finance and insurance establishments | eg=[0.68, 0.72]
+lq_month3_emplvl_53_real_estate_and_rental_and_leasing: FLOAT | Employment level location quotient in Real estate and rental and leasing establishments | eg=[0.32, 0.29]
+lq_month3_emplvl_54_professional_and_technical_services: FLOAT | Employment level location quotient in Professional and technical services establishments | eg=[0.24, 0.39]
+lq_month3_emplvl_55_management_of_companies_and_enterprises: FLOAT | Employment level location quotient in Management of companies and enterprises establishments | eg=[NaN, 0.22]
+lq_month3_emplvl_56_administrative_and_waste_services: FLOAT | Employment level location quotient in Administrative and waste services establishments | eg=[0.3, 0.31]
+lq_month3_emplvl_61_educational_services: FLOAT | Employment level location quotient in Educational services establishments | eg=[NaN, 0.0]
+lq_month3_emplvl_62_health_care_and_social_assistance: FLOAT | Employment level location quotient in Health care and social assistance establishments | eg=[NaN, 0.58]
+lq_month3_emplvl_71_arts_entertainment_and_recreation: FLOAT | Employment level location quotient in Arts, entertainment, and recreation establishments | eg=[0.22, 0.42]
+lq_month3_emplvl_72_accommodation_and_food_services: FLOAT | Employment level location quotient in Accommodation and food services establishments | eg=[0.62, 0.82]
+lq_month3_emplvl_81_other_services_except_public_administration: FLOAT | Employment level location quotient in Other services, except public administration establishments | eg=[0.65, 0.61]
+lq_month3_emplvl_99_unclassified: FLOAT | Employment level location quotient in Unclassified establishments
+lq_qtrly_estabs_1011_natural_resources_and_mining: FLOAT | Location quotient of establishments in Natural resources and mining | eg=[5.58, 1.87]
+lq_qtrly_estabs_1012_construction: FLOAT | Location quotient of establishments in Construction | eg=[0.61, 0.79]
+lq_qtrly_estabs_1013_manufacturing: FLOAT | Location quotient of establishments in Manufacturing | eg=[0.61, 1.44]
+lq_qtrly_estabs_1021_trade_transportation_and_utilities: FLOAT | Location quotient of establishments in Trade, transportation, and utilities | eg=[1.07, 1.13]
+lq_qtrly_estabs_1022_information: FLOAT | Location quotient of establishments in Information | eg=[0.84, 0.85]
+lq_qtrly_estabs_1023_financial_activities: FLOAT | Location quotient of establishments in Financial activities | eg=[1.17, 0.93]
+lq_qtrly_estabs_1024_professional_and_business_services: FLOAT | Location quotient of establishments in Professional and business services | eg=[0.47, 0.71]
+lq_qtrly_estabs_1025_education_and_health_services: FLOAT | Location quotient of establishments in Education and health services | eg=[0.59, 0.92]
+lq_qtrly_estabs_1026_leisure_and_hospitality: FLOAT | Location quotient of establishments in Leisure and hospitality | eg=[0.8, 0.92]
+lq_qtrly_estabs_1027_other_services: FLOAT | Location quotient of establishments in Other services | eg=[1.12, 0.89]
+lq_qtrly_estabs_1029_unclassified: FLOAT | Location quotient of establishments in Unclassified
+lq_qtrly_estabs_10_total_all_industries: FLOAT | Location quotient of establishments in Total, all industries | eg=[0.94, 0.98]
+lq_qtrly_estabs_11_agriculture_forestry_fishing_and_hunting: FLOAT | Location quotient of establishments in Agriculture, forestry, fishing and hunting | eg=[7.14, 0.69]
+lq_qtrly_estabs_21_mining_quarrying_and_oil_and_gas_extraction: FLOAT | Location quotient of establishments in Mining, quarrying, and oil and gas extraction | eg=[NaN, 6.06]
+lq_qtrly_estabs_22_utilities: FLOAT | Location quotient of establishments in Utilities | eg=[3.33, 6.6]
+lq_qtrly_estabs_23_construction: FLOAT | Location quotient of establishments in Construction | eg=[0.61, 0.79]
+lq_qtrly_estabs_31_33_manufacturing: FLOAT | Location quotient of establishments in Manufacturing | eg=[0.61, 1.44]
+lq_qtrly_estabs_42_wholesale_trade: FLOAT | Location quotient of establishments in Wholesale trade | eg=[0.5, 0.78]
+lq_qtrly_estabs_44_45_retail_trade: FLOAT | Location quotient of establishments in Retail trade | eg=[1.29, 1.28]
+lq_qtrly_estabs_48_49_transportation_and_warehousing: FLOAT | Location quotient of establishments in Transportation and warehousing | eg=[1.28, 0.8]
+lq_qtrly_estabs_51_information: FLOAT | Location quotient of establishments in Information | eg=[0.84, 0.85]
+lq_qtrly_estabs_52_finance_and_insurance: FLOAT | Location quotient of establishments in Finance and insurance | eg=[1.31, 1.26]
+lq_qtrly_estabs_53_real_estate_and_rental_and_leasing: FLOAT | Location quotient of establishments in Real estate and rental and leasing | eg=[1.01, 0.55]
+lq_qtrly_estabs_54_professional_and_technical_services: FLOAT | Location quotient of establishments in Professional and technical services | eg=[0.53, 0.71]
+lq_qtrly_estabs_55_management_of_companies_and_enterprises: FLOAT | Location quotient of establishments in Management of companies and enterprises | eg=[NaN, 1.56]
+lq_qtrly_estabs_56_administrative_and_waste_services: FLOAT | Location quotient of establishments in Administrative and waste services | eg=[0.37, 0.75]
+lq_qtrly_estabs_61_educational_services: FLOAT | Location quotient of establishments in Educational services | eg=[NaN, 0.0]
+lq_qtrly_estabs_62_health_care_and_social_assistance: FLOAT | Location quotient of establishments in Health care and social assistance | eg=[NaN, 0.92]
+lq_qtrly_estabs_71_arts_entertainment_and_recreation: FLOAT | Location quotient of establishments in Arts, entertainment, and recreation | eg=[1.17, 0.78]
+lq_qtrly_estabs_72_accommodation_and_food_services: FLOAT | Location quotient of establishments in Accommodation and food services | eg=[0.73, 0.94]
+lq_qtrly_estabs_81_other_services_except_public_administration: FLOAT | Location quotient of establishments in Other services, except public administration | eg=[1.12, 0.89]
+lq_qtrly_estabs_99_unclassified: FLOAT | Location quotient of establishments in Unclassified
+month3_emplvl_1011_natural_resources_and_mining: FLOAT | Employees in Natural resources and mining establishments | eg=[587.0, 655.0]
+month3_emplvl_1012_construction: FLOAT | Employees in Construction establishments | eg=[257.0, 578.0]
+month3_emplvl_1013_manufacturing: FLOAT | Employees in Manufacturing establishments | eg=[3397.0, 4240.0]
+month3_emplvl_1021_trade_transportation_and_utilities: FLOAT | Employees in Trade, transportation, and utilities establishments | eg=[2565.0, 5904.0]
+month3_emplvl_1022_information: FLOAT | Employees in Information establishments | eg=[91.0, 174.0]
+month3_emplvl_1023_financial_activities: FLOAT | Employees in Financial activities establishments | eg=[471.0, 704.0]
+month3_emplvl_1024_professional_and_business_services: FLOAT | Employees in Professional and business services establishments | eg=[335.0, 624.0]
+month3_emplvl_1025_education_and_health_services: FLOAT | Employees in Education and health services establishments | eg=[1259.0, 1851.0]
+month3_emplvl_1026_leisure_and_hospitality: FLOAT | Employees in Leisure and hospitality establishments | eg=[656.0, 1267.0]
+month3_emplvl_1027_other_services: FLOAT | Employees in Other services establishments | eg=[277.0, 374.0]
+month3_emplvl_1029_unclassified: FLOAT | Employees in Unclassified establishments
+month3_emplvl_10_total_all_industries: FLOAT | Employees in Total, all industries establishments | eg=[9895.0, 16372.0]
+month3_emplvl_11_agriculture_forestry_fishing_and_hunting: FLOAT | Employees in Agriculture, forestry, fishing and hunting establishments | eg=[587.0, 54.0]
+month3_emplvl_21_mining_quarrying_and_oil_and_gas_extraction: FLOAT | Employees in Mining, quarrying, and oil and gas extraction establishments | eg=[NaN, 601.0]
+month3_emplvl_22_utilities: FLOAT | Employees in Utilities establishments | eg=[38.0, 252.0]
+month3_emplvl_23_construction: FLOAT | Employees in Construction establishments | eg=[257.0, 578.0]
+month3_emplvl_31_33_manufacturing: FLOAT | Employees in Manufacturing establishments | eg=[3397.0, 4240.0]
+month3_emplvl_42_wholesale_trade: FLOAT | Employees in Wholesale trade establishments | eg=[670.0, 3479.0]
+month3_emplvl_44_45_retail_trade: FLOAT | Employees in Retail trade establishments | eg=[1600.0, 1833.0]
+month3_emplvl_48_49_transportation_and_warehousing: FLOAT | Employees in Transportation and warehousing establishments | eg=[257.0, 340.0]
+month3_emplvl_51_information: FLOAT | Employees in Information establishments | eg=[91.0, 174.0]
+month3_emplvl_52_finance_and_insurance: FLOAT | Employees in Finance and insurance establishments | eg=[404.0, 618.0]
+month3_emplvl_53_real_estate_and_rental_and_leasing: FLOAT | Employees in Real estate and rental and leasing establishments | eg=[67.0, 86.0]
+month3_emplvl_54_professional_and_technical_services: FLOAT | Employees in Professional and technical services establishments | eg=[146.0, 337.0]
+month3_emplvl_55_management_of_companies_and_enterprises: FLOAT | Employees in Management of companies and enterprises establishments | eg=[NaN, 61.0]
+month3_emplvl_56_administrative_and_waste_services: FLOAT | Employees in Administrative and waste services establishments | eg=[187.0, 279.0]
+month3_emplvl_61_educational_services: FLOAT | Employees in Educational services establishments | eg=[NaN, 0.0]
+month3_emplvl_62_health_care_and_social_assistance: FLOAT | Employees in Health care and social assistance establishments | eg=[NaN, 1174.0]
+month3_emplvl_71_arts_entertainment_and_recreation: FLOAT | Employees in Arts, entertainment, and recreation establishments | eg=[36.0, 97.0]
+month3_emplvl_72_accommodation_and_food_services: FLOAT | Employees in Accommodation and food services establishments | eg=[620.0, 1170.0]
+month3_emplvl_81_other_services_except_public_administration: FLOAT | Employees in Other services, except public administration establishments | eg=[277.0, 374.0]
+month3_emplvl_99_unclassified: FLOAT | Employees in Unclassified establishments
+qtrly_estabs_1011_natural_resources_and_mining: FLOAT | Establishments in Natural resources and mining | eg=[90.0, 38.0]
+qtrly_estabs_1012_construction: FLOAT | Establishments in Construction | eg=[50.0, 82.0]
+qtrly_estabs_1013_manufacturing: FLOAT | Establishments in Manufacturing | eg=[30.0, 90.0]
+qtrly_estabs_1021_trade_transportation_and_utilities: FLOAT | Establishments in Trade, transportation, and utilities | eg=[234.0, 311.0]
+qtrly_estabs_1022_information: FLOAT | Establishments in Information | eg=[11.0, 14.0]
+qtrly_estabs_1023_financial_activities: FLOAT | Establishments in Financial activities | eg=[88.0, 109.0]
+qtrly_estabs_1024_professional_and_business_services: FLOAT | Establishments in Professional and business services | eg=[54.0, 103.0]
+qtrly_estabs_1025_education_and_health_services: FLOAT | Establishments in Education and health services | eg=[44.0, 86.0]
+qtrly_estabs_1026_leisure_and_hospitality: FLOAT | Establishments in Leisure and hospitality | eg=[56.0, 81.0]
+qtrly_estabs_1027_other_services: FLOAT | Establishments in Other services | eg=[113.0, 133.0]
+qtrly_estabs_1029_unclassified: FLOAT | Establishments in Unclassified
+qtrly_estabs_10_total_all_industries: FLOAT | Establishments in Total, all industries | eg=[770.0, 1007.0]
+qtrly_estabs_11_agriculture_forestry_fishing_and_hunting: FLOAT | Establishments in Agriculture, forestry, fishing and hunting | eg=[90.0, 11.0]
+qtrly_estabs_21_mining_quarrying_and_oil_and_gas_extraction: FLOAT | Establishments in Mining, quarrying, and oil and gas extraction | eg=[NaN, 27.0]
+qtrly_estabs_22_utilities: FLOAT | Establishments in Utilities | eg=[6.0, 15.0]
+qtrly_estabs_23_construction: FLOAT | Establishments in Construction | eg=[50.0, 82.0]
+qtrly_estabs_31_33_manufacturing: FLOAT | Establishments in Manufacturing | eg=[30.0, 90.0]
+qtrly_estabs_42_wholesale_trade: FLOAT | Establishments in Wholesale trade | eg=[32.0, 63.0]
+qtrly_estabs_44_45_retail_trade: FLOAT | Establishments in Retail trade | eg=[168.0, 211.0]
+qtrly_estabs_48_49_transportation_and_warehousing: FLOAT | Establishments in Transportation and warehousing | eg=[28.0, 22.0]
+qtrly_estabs_51_information: FLOAT | Establishments in Information | eg=[11.0, 14.0]
+qtrly_estabs_52_finance_and_insurance: FLOAT | Establishments in Finance and insurance | eg=[53.0, 64.0]
+qtrly_estabs_53_real_estate_and_rental_and_leasing: FLOAT | Establishments in Real estate and rental and leasing | eg=[35.0, 24.0]
+qtrly_estabs_54_professional_and_technical_services: FLOAT | Establishments in Professional and technical services | eg=[39.0, 65.0]
+qtrly_estabs_55_management_of_companies_and_enterprises: FLOAT | Establishments in Management of companies and enterprises | eg=[NaN, 8.0]
+qtrly_estabs_56_administrative_and_waste_services: FLOAT | Establishments in Administrative and waste services | eg=[14.0, 36.0]
+qtrly_estabs_61_educational_services: FLOAT | Establishments in Educational services | eg=[NaN, 0.0]
+qtrly_estabs_62_health_care_and_social_assistance: FLOAT | Establishments in Health care and social assistance | eg=[NaN, 92.0]
+qtrly_estabs_71_arts_entertainment_and_recreation: FLOAT | Establishments in Arts, entertainment, and recreation | eg=[13.0, 11.0]
+qtrly_estabs_72_accommodation_and_food_services: FLOAT | Establishments in Accommodation and food services | eg=[43.0, 70.0]
+qtrly_estabs_81_other_services_except_public_administration: FLOAT | Establishments in Other services, except public administration | eg=[113.0, 133.0]
+qtrly_estabs_99_unclassified: FLOAT | Establishments in Unclassified
+
+@C2
+area_land_meters: NUMBER | NULL | eg=[1321083917, 4378881284]
+area_water_meters: NUMBER | NULL | eg=[1832005880, 30761909]
+int_point_lat: FLOAT | NULL | eg=[43.3233952, 34.588062]
+int_point_lon: FLOAT | NULL | eg=[-77.715489, -118.2802639]
+
+@C3
+date: DATE | NULL | eg=["2008-12-31", "2009-02-01"]
+period: TEXT | NULL | eg=["M13", "M02"]
+value: FLOAT | NULL | eg=[214.318, 211.786]
+
+@C4
+area_land_meters: FLOAT | NULL | eg=[2752787746.0, 1853770821.0]
+area_water_meters: FLOAT | NULL | eg=[297798686.0, 3643100055.0]
+internal_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00^\\xdf\\xe2<w\\xc4Q\\xc0\\xf4I\\x93\\xf7\\x16\\x8bE@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xd1u\\xe1\\x07\\xe7\\xdbU\\xc0j\\x89\\x95\\xd1\\xc8)E@')"]
+
+@C5
+begin_period: TEXT | NULL | eg=["M01", "M03"]
+begin_year: NUMBER | NULL | eg=[1939, 1964]
+end_period: TEXT | NULL | eg=["M12"]
+end_year: NUMBER | NULL | eg=[2021]
+seasonal: TEXT | NULL | eg=["S"]
+
+@C6
+footnote_codes: TEXT | NULL | eg=["nan"]
+series_id: TEXT | NULL | eg=["CES0000000001", "CES0000000010"]
+
+@C7
+area_code: TEXT | NULL | eg=["S35C"]
+area_name: TEXT | NULL | eg=["Atlanta-Sandy Springs-Roswell, GA"]
+item_code: TEXT | NULL | eg=["SEHC"]
+item_name: TEXT | NULL | eg=["Owners' equivalent rent of residences"]
+seasonal_code: TEXT | NULL | eg=["U"]
+survey_abbreviation: TEXT | NULL | eg=["CU"]
+
+@C8
+congress_session: TEXT | NULL | eg=["116"]
+district_fips_code: TEXT | NULL | eg=["25", "26"]
+district_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\t\\x03\\x00\\x00\\x16\\x80F\\xe9\\xd2\\x7fS\\xc0-$`ty\\x91E@.\\xa8o\\x99\\xd3\\x7fS\\xc0\\xa3\\xfez\\x85\\x05\\x91E@\\x8d\\xd2\\xa5\\x7fI\\x7fS\\xc00\\xefq\\xa6\\t\\x91E@9\\x92\\xcb\\x7fH\\x7fS\\xc00\\xefq\\xa6\\t\\x91E@\\x94\\xa3\\x00Q0\\x7fS\\xc0B\\xd5\\xe8\\xd5\\x00\\x91E@@I\\x81\\x050\\x7fS\\xc0A\\xd5\\xe8\\xd5\\x00\\x91E@\\xa3\\x90dV\\xef~S\\xc0\\xd2\\x82\\x17}\\x05\\x91E@\\xfc\\xa1\\x99\\'\\xd7~S\\xc0\\x01\\xd3i\\xdd\\x06\\x91E@\\xdc\\xf3\\xfci\\xa3~S\\xc0\\x1b\\xfb\\x92\\x8d\\x07\\x91E@MG\\x007\\x8b~S\\xc0\\x1a\\xfb\\x92\\x8d\\x07\\x91E@u\\x1b\\xd4~k~S\\xc0\\xefgx\\xb3\\x06\\x91E@\\xddy\\xe29[~S\\xc0\\xb5il\\xaf\\x05\\x91E@<\\xc0\\x93\\x16.~S\\xc0o\\xf1\\xf0\\x9e\\x03\\x91E@\\x17\\xba\\x12\\x81\\xea}S\\xc0\\xe7\\x89\\xe7l\\x01\\x91E@/\\xdf\\xfa\\xb0\\xde}S\\xc0\\xf17\\xa1\\x10\\x01\\x91E@\\x95^\\x9b\\x8d\\x95}S\\xc0\\xe7\\x89\\xe7l\\x01\\x91E@k`\\xab\\x04\\x8b}S\\xc0\\x87\\x81\\xae}\\x01\\x91E@&\\xff\\x93\\xbf{}S\\xc0\\xf8\\xf4\\xd8\\x96\\x01\\x91E@\\xdfO\\x8d\\x97n}S\\xc0ih\\x03\\xb0\\x01\\x91E@<\\xf3r\\xd8}|S\\xc0\\x9fu\\x8d\\x96\\x03\\x91E@\\xd2\\x88\\x99}\\x1e|S\\xc0&\\x11\\xe1_\\x04\\x91E@%\\xfd\\xbd\\x14\\x1e|S\\xc0&\\x...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x1b\\x15\\x00\\x00\\xd5G\\xe0\\x0f?\\xb9]\\xc0\\x97\\x85vN\\xb3hA@\\xea\\xf8\\xf6\\xaeA\\xb9]\\xc0\\x98\\x85vN\\xb3hA@\\xc8_Z\\xd4\\'\\xb9]\\xc0d?\\x8b\\xa5HhA@\\xf0\\xea\\xe3\\xa1\\xef\\xb8]\\xc0\\x05Wy\\x02agA@^\\x8b\\xa4\\xdd\\xe8\\xb8]\\xc06=((EgA@\\xf8\\xc53h\\xe8\\xb8]\\xc0\\x000\\x9eACgA@\\x13\\x7f\\x14u\\xe6\\xb8]\\xc0\\x9a\\xb1h:;gA@\\xa1\\x8b\\x14\\xca\\xc2\\xb8]\\xc0O\\x88\\x80C\\xa8fA@\\xb4Ss\\xb9\\xc1\\xb8]\\xc0@\\xb9m\\xdf\\xa3fA@\\x9d\\xa0M\\x0e\\x9f\\xb8]\\xc0\\xf4\\xf3\\xa6\"\\x15fA@F\\xfcQ\\xd4\\x99\\xb8]\\xc0\\x0b\\xae\\xb9\\xa3\\xffeA@\\x1b\\r\\xe0-\\x90\\xb8]\\xc0,\\x0c\\x91\\xd3\\xd7eA@\\x1e\\xc3c?\\x8b\\xb8]\\xc0\\x90/\\xa1\\x82\\xc3eA@7\\xce\\xa6#\\x80\\xb8]\\xc0\\xbd\\x0b[\\xb3\\x95eA@\\x9c\\x90\\xd6\\x18t\\xb8]\\xc0TId\\x1fdeA@\\x97\\x94I\\rm\\xb8]\\xc0iJ\\xb2\\x0eGeA@\\xc4\\xf7\\x8cDh\\xb8]\\xc0r\"\\xc1T3eA@\\xb0\\x91$\\x08W\\xb8]\\xc0\\x93\\x8d\\x07[\\xecdA@E\\xd8\\xf0\\xf4J\\xb8]\\xc0whX\\x8c\\xbadA@D6\\x90.6\\xb8]\\xc0$\\xab\"\\xdcddA@K}\\xe7\\x17%\\xb8]\\xc0xW=`\\x1edA@?\\xa7 ?\\x1b\\xb8]\\xc0\\x11\\x1a\\xc1\\xc6\\xf5cA@\\x90\\xdd\\x05J\\n\\xb8]\\xc0;\\xffv\\xd9\\xafcA@qY\\x85\\xcd\\x00\\xb8]\\x..."]
+functional_status: BOOLEAN | NULL | eg=[false]
+
+@C9
+internal_point_lat: FLOAT | NULL | eg=[35.3963177, 33.5274555]
+internal_point_lon: FLOAT | NULL | eg=[-101.5947616, -86.7482873]
+
+[TABLES]
+## BLS_QCEW._1993_Q4
+@use: [C1]
+
+## BLS_QCEW._1998_Q3
+@use: [C1]
+
+## BLS_QCEW._1997_Q2
+@use: [C1]
+
+## BLS_QCEW._2016_Q3
+@use: [C1]
+
+## BLS_QCEW._2015_Q2
+@use: [C1]
+
+## BLS_QCEW._2010_Q2
+@use: [C1]
+
+## BLS_QCEW._2004_Q2
+@use: [C1]
+
+## BLS_QCEW._2010_Q1
+@use: [C1]
+
+## BLS_QCEW._2008_Q1
+@use: [C1]
+
+## BLS_QCEW._1992_Q2
+@use: [C1]
+
+## BLS_QCEW._1995_Q2
+@use: [C1]
+
+## BLS_QCEW._1993_Q2
+@use: [C1]
+
+## BLS_QCEW._2005_Q2
+@use: [C1]
+
+## BLS_QCEW._2000_Q1
+@use: [C1]
+
+## BLS_QCEW._2001_Q1
+@use: [C1]
+
+## BLS_QCEW._1997_Q1
+@use: [C1]
+
+## BLS_QCEW._1996_Q4
+@use: [C1]
+
+## BLS_QCEW._2012_Q3
+@use: [C1]
+
+## BLS_QCEW._2000_Q3
+@use: [C1]
+
+## BLS_QCEW._1990_Q1
+@use: [C1]
+
+## BLS_QCEW._2003_Q2
+@use: [C1]
+
+## BLS_QCEW._2017_Q3
+@use: [C1]
+
+## BLS_QCEW._1994_Q1
+@use: [C1]
+
+## BLS_QCEW._2018_Q2
+@use: [C1]
+
+## BLS_QCEW._2019_Q1
+@use: [C1]
+
+## BLS_QCEW._2009_Q3
+@use: [C1]
+
+## BLS_QCEW._2006_Q3
+@use: [C1]
+
+## BLS_QCEW._1991_Q3
+@use: [C1]
+
+## BLS_QCEW._2002_Q2
+@use: [C1]
+
+## BLS_QCEW._2006_Q1
+@use: [C1]
+
+## BLS_QCEW._1990_Q3
+@use: [C1]
+
+## BLS_QCEW._1990_Q2
+@use: [C1]
+
+## BLS_QCEW._1994_Q2
+@use: [C1]
+
+## BLS_QCEW._2012_Q2
+@use: [C1]
+
+## BLS_QCEW._1992_Q4
+@use: [C1]
+
+## BLS_QCEW._2005_Q4
+@use: [C1]
+
+## BLS_QCEW._2009_Q2
+@use: [C1]
+
+## BLS_QCEW._2009_Q1
+@use: [C1]
+
+## BLS_QCEW._1999_Q2
+@use: [C1]
+
+## BLS_QCEW._2011_Q1
+@use: [C1]
+
+## BLS_QCEW._1995_Q1
+@use: [C1]
+
+## BLS_QCEW._2012_Q4
+@use: [C1]
+
+## BLS_QCEW._1998_Q1
+@use: [C1]
+
+## BLS_QCEW._2004_Q3
+@use: [C1]
+
+## BLS_QCEW._2004_Q4
+@use: [C1]
+
+## BLS_QCEW._1991_Q4
+@use: [C1]
+
+## BLS_QCEW._1992_Q3
+@use: [C1]
+
+## BLS_QCEW._2001_Q2
+@use: [C1]
+
+## BLS_QCEW._1997_Q3
+@use: [C1]
+
+## BLS_QCEW._2015_Q3
+@use: [C1]
+
+## BLS_QCEW._2014_Q4
+@use: [C1]
+
+## BLS_QCEW._2015_Q1
+@use: [C1]
+
+## BLS_QCEW._2018_Q3
+@use: [C1]
+
+## BLS_QCEW._2017_Q1
+@use: [C1]
+
+## BLS_QCEW._2008_Q4
+@use: [C1]
+
+## BLS_QCEW._1995_Q4
+@use: [C1]
+
+## BLS_QCEW._2010_Q4
+@use: [C1]
+
+## BLS_QCEW._2016_Q4
+@use: [C1]
+
+## BLS_QCEW._2000_Q2
+@use: [C1]
+
+## BLS_QCEW._1991_Q1
+@use: [C1]
+
+## BLS_QCEW._2007_Q4
+@use: [C1]
+
+## BLS_QCEW._2002_Q4
+@use: [C1]
+
+## BLS_QCEW._1997_Q4
+@use: [C1]
+
+## BLS_QCEW._2013_Q1
+@use: [C1]
+
+## BLS_QCEW._1994_Q3
+@use: [C1]
+
+## BLS_QCEW._2003_Q1
+@use: [C1]
+
+## BLS_QCEW._2003_Q3
+@use: [C1]
+
+## BLS_QCEW._2005_Q1
+@use: [C1]
+
+## BLS_QCEW._1999_Q3
+@use: [C1]
+
+## BLS_QCEW._1993_Q3
+@use: [C1]
+
+## BLS_QCEW._2002_Q1
+@use: [C1]
+
+## BLS_QCEW._1996_Q2
+@use: [C1]
+
+## BLS_QCEW._2016_Q2
+@use: [C1]
+
+## BLS_QCEW._1992_Q1
+@use: [C1]
+
+## BLS_QCEW._2018_Q4
+@use: [C1]
+
+## BLS_QCEW._2007_Q1
+@use: [C1]
+
+## BLS_QCEW._2006_Q4
+@use: [C1]
+
+## BLS_QCEW._2009_Q4
+@use: [C1]
+
+## BLS_QCEW._2019_Q2
+@use: [C1]
+
+## BLS_QCEW._2001_Q4
+@use: [C1]
+
+## BLS_QCEW._2006_Q2
+@use: [C1]
+
+## BLS_QCEW._2003_Q4
+@use: [C1]
+
+## BLS_QCEW._1995_Q3
+@use: [C1]
+
+## BLS_QCEW._2011_Q2
+@use: [C1]
+
+## BLS_QCEW._1994_Q4
+@use: [C1]
+
+## BLS_QCEW._2004_Q1
+@use: [C1]
+
+## BLS_QCEW._1998_Q2
+@use: [C1]
+
+## BLS_QCEW._2013_Q4
+@use: [C1]
+
+## BLS_QCEW._2017_Q2
+@use: [C1]
+
+## BLS_QCEW._2011_Q3
+@use: [C1]
+
+## BLS_QCEW._2012_Q1
+@use: [C1]
+
+## BLS_QCEW._2010_Q3
+@use: [C1]
+
+## BLS_QCEW._2001_Q3
+@use: [C1]
+
+## BLS_QCEW._2008_Q3
+@use: [C1]
+
+## BLS_QCEW._1999_Q4
+@use: [C1]
+
+## BLS_QCEW._1996_Q3
+@use: [C1]
+
+## BLS_QCEW._1996_Q1
+@use: [C1]
+
+## BLS_QCEW._2007_Q3
+@use: [C1]
+
+## BLS_QCEW._2014_Q2
+@use: [C1]
+
+## BLS_QCEW._2002_Q3
+@use: [C1]
+
+## BLS_QCEW._2016_Q1
+@use: [C1]
+
+## BLS_QCEW._2017_Q4
+@use: [C1]
+
+## BLS_QCEW._2007_Q2
+@use: [C1]
+
+## BLS_QCEW._2014_Q3
+@use: [C1]
+
+## BLS_QCEW._2018_Q1
+@use: [C1]
+
+## BLS_QCEW._2015_Q4
+@use: [C1]
+
+## BLS_QCEW._2014_Q1
+@use: [C1]
+
+## BLS_QCEW._1999_Q1
+@use: [C1]
+
+## BLS_QCEW._2011_Q4
+@use: [C1]
+
+## BLS_QCEW._1990_Q4
+@use: [C1]
+
+## BLS_QCEW._1991_Q2
+@use: [C1]
+
+## BLS_QCEW._2013_Q2
+@use: [C1]
+
+## BLS_QCEW._2013_Q3
+@use: [C1]
+
+## BLS_QCEW._1998_Q4
+@use: [C1]
+
+## BLS_QCEW._2008_Q2
+@use: [C1]
+
+## BLS_QCEW._2005_Q3
+@use: [C1]
+
+## BLS_QCEW._2000_Q4
+@use: [C1]
+
+## BLS_QCEW._1993_Q1
+@use: [C1]
+
+## BLS.EMPLOYMENT_HOURS_EARNINGS_SERIES
+@use: [C5, C6]
+industry_code: NUMBER | NULL | eg=[0, 5000000]
+series_title: TEXT | NULL | eg=["All employees, thousands, total nonfarm, seasonally adjusted", "Women employees, thousands, total nonfarm, seasonally adjusted"]
+supersector_code: NUMBER | NULL | eg=[0, 5]
+data_type_code: NUMBER | NULL | eg=[1, 10]
+
+## BLS.CPI_U
+@use: [C3, C6, C7]
+periodicity_code: TEXT | NULL | eg=["R"]
+year: NUMBER | NULL | eg=[2008, 2009]
+
+## BLS.UNEMPLOYMENT_CPS
+@use: [C3, C6]
+year: NUMBER | NULL | eg=[1948]
+series_title: TEXT | NULL | eg=["(Unadj) Population Level - 45-54 yrs.", "(Unadj) Unemployment Level - 16-19 yrs., Men"]
+
+## BLS.CPSAAT18
+year: NUMBER | NULL | eg=[2020]
+percent_black_or_african_american: FLOAT | NULL | eg=[0.03, 0.02]
+percent_asian: FLOAT | NULL | eg=[0.01, 0.02]
+total_employed_in_thousands: NUMBER | NULL | eg=[2349, 1186]
+sector: TEXT | NULL | eg=["Agriculture, forestry, fishing, and hunting"]
+percent_hispanic_or_latino: FLOAT | NULL | eg=[0.24, 0.3]
+percent_white: FLOAT | NULL | eg=[0.92, 0.93]
+subsector: TEXT | NULL | eg=["Crop production", "Animal production and aquaculture"]
+percent_women: FLOAT | NULL | eg=[0.28, 0.29]
+industry_group: TEXT | NULL
+industry: TEXT | NULL
+
+## BLS.WM
+@use: [C3, C6]
+series_title: TEXT | NULL | eg=["Average hourly wage for waiters and waitresses, in Tennessee, Level 01", "Average hourly wage for waiters and waitresses, part-time, in Northeastern Wisconsin nonmetropolitan area, Level 01"]
+year: NUMBER | NULL | eg=[2020]
+
+## BLS.WM_SERIES
+@use: [C5, C6]
+industry_code: NUMBER | NULL | eg=[0]
+area_code: NUMBER | NULL | eg=[3000006, 3100000]
+series_title: TEXT | NULL | eg=["Average hourly wage for union secretaries and administrative assistants, except legal, medical, and executive in East-Central Montana nonmetropolitan area", "Average hourly wage for union installation, maintenance, and repair occupations in East-Central Montana nonmetropolitan area"]
+subcell_code: NUMBER | NULL | eg=[23]
+datatype_code: NUMBER | NULL | eg=[30]
+level_code: NUMBER | NULL | eg=[0]
+ownership_code: NUMBER | NULL | eg=[1]
+estimate_code: NUMBER | NULL | eg=[2]
+occupation_code: NUMBER | NULL | eg=[436014, 490000]
+
+## BLS.UNEMPLOYMENT_CPS_SERIES
+@use: [C5, C6]
+disa_code: NUMBER | NULL | eg=[0]
+expr_code: NUMBER | NULL | eg=[0]
+entr_code: NUMBER | NULL | eg=[0]
+cert_code: NUMBER | NULL | eg=[0]
+education_code: NUMBER | NULL | eg=[0]
+vets_code: NUMBER | NULL | eg=[0]
+activity_code: NUMBER | NULL | eg=[0]
+duration_code: NUMBER | NULL | eg=[0]
+wkst_code: NUMBER | NULL | eg=[0]
+absn_code: NUMBER | NULL | eg=[0]
+rnlf_code: NUMBER | NULL | eg=[0]
+occupation_code: NUMBER | NULL | eg=[0]
+seek_code: NUMBER | NULL | eg=[0]
+indy_code: NUMBER | NULL | eg=[0]
+series_title: TEXT | NULL | eg=["(unadj) Unemployment rate - Other Central American (excludes Salvadoran)", "(unadj) Unemployment rate - Other Central American (excludes Salvadoran), men"]
+lfst_code: NUMBER | NULL | eg=[40]
+pcts_code: NUMBER | NULL | eg=[0]
+born_code: NUMBER | NULL | eg=[0]
+hheader_code: NUMBER | NULL | eg=[0]
+chld_code: NUMBER | NULL | eg=[0]
+ages_code: NUMBER | NULL | eg=[0]
+periodicity_code: TEXT | NULL | eg=["A"]
+tdat_code: NUMBER | NULL | eg=[1]
+class_code: NUMBER | NULL | eg=[0]
+sexs_code: NUMBER | NULL | eg=[0, 1]
+rwns_code: NUMBER | NULL | eg=[0]
+look_code: NUMBER | NULL | eg=[0]
+race_code: NUMBER | NULL | eg=[0]
+hour_code: NUMBER | NULL | eg=[0]
+mari_code: NUMBER | NULL | eg=[0]
+rjnw_code: NUMBER | NULL | eg=[0]
+jdes_code: NUMBER | NULL | eg=[0]
+mjhs_code: NUMBER | NULL | eg=[0]
+orig_code: NUMBER | NULL | eg=[25, 30]
+
+## BLS.EMPLOYMENT_HOURS_EARNINGS
+@use: [C3, C6]
+year: NUMBER | NULL | eg=[1939, 1940]
+series_title: TEXT | NULL | eg=["Indexes of aggregate weekly payrolls of production and nonsupervisory employees, 2002=100, nondurable goods, not seasonally adjusted", "All employees, thousands, financial activities, not seasonally adjusted"]
+
+## BLS.C_CPI_U
+@use: [C3, C6, C7]
+periodicity_code: TEXT | NULL | eg=["R"]
+year: NUMBER | NULL | eg=[2000]
+
+## GEO_US_BOUNDARIES.ADJACENT_STATES
+state: TEXT | NULL | eg=["AL", "AR"]
+neighbors_fips_code: VARIANT | NULL | eg=[["12","13","28","47"], ["47","48","29","28","22","40"]]
+state_fips_code: TEXT | NULL | eg=["01", "05"]
+state_name: TEXT | NULL | eg=["Alabama", "Arkansas"]
+neighbors_state: VARIANT | NULL | eg=[["Florida","Georgia","Mississippi","Tennessee"], ["Tennessee","Texas","Missouri","Mississippi","Louisiana","Oklahoma"]]
+
+## GEO_US_BOUNDARIES.METROPOLITAN_DIVISIONS
+@use: [C4]
+name: TEXT | NULL | eg=["Rockingham County-Strafford County, NH", "Lake County-Kenosha County, IL-WI"]
+csa_code: TEXT | NULL | eg=["148", "176"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G3120"]
+internal_point_latitude: FLOAT | NULL | eg=[43.0866384, 42.326441]
+geo_id: TEXT | NULL | eg=["1446040484", "1698029404"]
+metdiv_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xe8\\x12\\x00\\x00\\xe6\\xc7_Z\\xd4\\xcfQ\\xc0\\x04h[\\xcd:\\xa3E@\\xc9\\xae\\xb4\\x8c\\xd4\\xcfQ\\xc0X\\xf6$\\xb09\\xa3E@\\xc1oC\\x8c\\xd7\\xcfQ\\xc0\\x90\\xb6\\xf1\\'*\\xa3E@\\x9d\\xd0\\xebO\\xe2\\xcfQ\\xc0\\xee\\xc5\\x17\\xed\\xf1\\xa2E@g\\r\\xdeW\\xe5\\xcfQ\\xc0\\xb6\\x12\\xbaK\\xe2\\xa2E@\\xc0$\\x95)\\xe6\\xcfQ\\xc0\\xe625\\t\\xde\\xa2E@\\xcb\\xd5\\x8fM\\xf2\\xcfQ\\xc0\\xdd\\x8f\\xdb/\\x9f\\xa2E@\\n\\xf5\\xf4\\x11\\xf8\\xcfQ\\xc0Pe\\x18w\\x83\\xa2E@l8,\\r\\xfc\\xcfQ\\xc0\\x8f\\xc56\\xa9h\\xa2E@\\xc3\\x99_\\xcd\\x01\\xd0Q\\xc0\\xf8\\xbc\\xe2\\xa9G\\xa2E@{\\xb9O\\x8e\\x02\\xd0Q\\xc0\\xb3x\\xb10D\\xa2E@Q\\xd8E\\xd1\\x03\\xd0Q\\xc0,y<-?\\xa2E@\\t\\xf85\\x92\\x04\\xd0Q\\xc0cV\\xefp;\\xa2E@\\xdczM\\x0f\\n\\xd0Q\\xc0\\xb1Q\\xd6o&\\xa2E@\\xc2\\x9f\\xe1\\xcd\\x1a\\xd0Q\\xc0q\\xa1\\xf2\\xaf\\xe5\\xa1E@+\\xa0PO\\x1f\\xd0Q\\xc0\\x1b=~o\\xd3\\xa1E@\\x89@\\xf5\\x0f\"\\xd0Q\\xc0\\x14\\xfb\\xcb\\xee\\xc9\\xa1E@\\x13\\xdcH\\xd9\"\\xd0Q\\xc0{(\\xd1\\x92\\xc7\\xa1E@\\xc9\\xe1\\x93N$\\xd0Q\\xc0kY\\xbe.\\xc3\\xa1E@\\x1fF\\x08\\x8f6\\xd0Q\\xc0\\xa4*mq\\x8d\\xa1E@\\xa0\\x88E\\x0c;\\xd0Q\\xc0Y\\xa4\\x89w\\x80\\xa1E@\\x10\\xcbf\\x0eI\\xd0Q\\xc0\\x91^\\xd4...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xb6\\x07\\x00\\x00\\xa8\\x8b\\x14\\xca\\xc2\\x0cV\\xc0\\xce\\x15\\xa5\\x84`?E@\\xa8\\x8b\\x14\\xca\\xc2\\x0cV\\xc0\\xd5\\x06\\'\\xa2_?E@\\xa8\\x8b\\x14\\xca\\xc2\\x0cV\\xc0@\\xf1c\\xcc]?E@\\x90IF\\xce\\xc2\\x0cV\\xc0\\xd1\\xfc1\\xadM?E@_\\xc5\\xa9\\xd6\\xc2\\x0cV\\xc0\\x02\\xc6\\xfa\\x06&?E@0A\\r\\xdf\\xc2\\x0cV\\xc0\\x0f\\xd2S\\xe4\\x10?E@0A\\r\\xdf\\xc2\\x0cV\\xc0\\xd8\\x05\\x83k\\xee>E@0A\\r\\xdf\\xc2\\x0cV\\xc0L\\xc4[\\xe7\\xdf>E@\\x8ari\\xfc\\xc2\\x0cV\\xc0b\\xb3#\\xd5w>E@\\x13B\\x07]\\xc2\\x0cV\\xc0\\xcc\\x8d\\xe9\\tK>E@a\\xf9\\xf3m\\xc1\\x0cV\\xc0\\xd4\\x04Q\\xf7\\x01>E@!>\\xb0\\xe3\\xbf\\x0cV\\xc0K\\xdfk\\x08\\x8e=E@\\xeb\\xfc\\xdbe\\xbf\\x0cV\\xc0\\x99\\xf2!\\xa8\\x1a=E@3\\xc3FY\\xbf\\x0cV\\xc0\\xcd\\x16\\x10Z\\x0f=E@\\x9ey9\\xec\\xbe\\x0cV\\xc0\\\\\\x02\\xf0O\\xa9<E@\\xce\\xfd\\xd5\\xe3\\xbe\\x0cV\\xc0\\x9f<,\\xd4\\x9a<E@\\x94\\xff\\xc9\\xdf\\xbd\\x0cV\\xc0X\\xe4\\xd7\\x0f\\xb1;E@\\x88\\x9f\\xff\\x1e\\xbc\\x0cV\\xc0\\xf7\\x98Hi6;E@\\xee\\xb2_w\\xba\\x0cV\\xc0\\x89\\x8c\\x0eH\\xc2:E@\\x06\\xf5-s\\xba\\x0cV\\xc0\\x81#\\x81\\x06\\x9b:E@6y\\xcaj\\xba\\x0cV\\xc0\\xb0\\x84\\xb51v:E@}?5^\\xba\\x0cV\\xc0\\xd1\\x16\\xd7\\xf8L:E@\\x..."]
+internal_point_longitude: FLOAT | NULL | eg=[-71.0697777, -87.435976]
+lsad_code: TEXT | NULL | eg=["M3"]
+cbsa_code: TEXT | NULL | eg=["14460", "16980"]
+metdiv_code: TEXT | NULL | eg=["40484", "29404"]
+lsad_name: TEXT | NULL | eg=["Rockingham County-Strafford County, NH Metro Division", "Lake County-Kenosha County, IL-WI Metro Division"]
+
+## GEO_US_BOUNDARIES.CBSA
+@use: [C4]
+name: TEXT | NULL | eg=["Macon-Bibb County, GA", "Lincoln, NE"]
+cbsa_fips_code: TEXT | NULL | eg=["31420", "30700"]
+cbsa_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xb1\\x15\\x00\\x00v-!\\x1f\\xf4\\x07U\\xc0P\\xf6\\x96r\\xbel@@SW>\\xcb\\xf3\\x07U\\xc0A\\xb9m\\xdf\\xa3l@@\\x89\\xb2\\xb7\\x94\\xf3\\x07U\\xc0\\tn\\xa4l\\x91l@@\\xb96T\\x8c\\xf3\\x07U\\xc0\\xaa\\x94\\x9e\\xe9%l@@\\x8f\\x89\\x94f\\xf3\\x07U\\xc0v\\xa3\\x8f\\xf9\\x80j@@\\xa6\\xcbbb\\xf3\\x07U\\xc0\\x11\\x8d\\xee vj@@\\x18?\\x8d{\\xf3\\x07U\\xc0\\xf5\\xc9Q\\x80(j@@\\x18?\\x8d{\\xf3\\x07U\\xc0\\x00#h\\xcc$j@@\\xb96T\\x8c\\xf3\\x07U\\xc0\\xc1r\\x84\\x0c\\xe4i@@SW>\\xcb\\xf3\\x07U\\xc0\\xc52\\xfd\\x12\\xf1h@@SW>\\xcb\\xf3\\x07U\\xc0\\xd4\\x14\\x01N\\xefh@@\\xf4N\\x05\\xdc\\xf3\\x07U\\xc0\\x80\\x06\\x9b:\\x8fh@@\\x18%\\xe8/\\xf4\\x07U\\xc0.\\x01\\xf8\\xa7Tg@@\\xf9\\x0b=b\\xf4\\x07U\\xc0\"\\xa0\\xc2\\x11\\xa4f@@)v4\\x0e\\xf5\\x07U\\xc0a\\x9c\\xbf\\t\\x85f@@\\x18v\\x18\\x93\\xfe\\x07U\\xc06m\\xc6i\\x88f@@\\xe81\\xca3/\\x08U\\xc0+\\xbf\\x0c\\xc6\\x88f@@\\xbdP\\xc0v0\\x08U\\xc0+\\xbf\\x0c\\xc6\\x88f@@\\xeb\\x17\\xec\\x86m\\x08U\\xc0\\xd0s\\x0b]\\x89f@@\\xe1t\\x92\\xad.\\tU\\xc0S\\xea\\x92q\\x8cf@@\"\\x18\\x07\\x97\\x8e\\tU\\xc0\\xf3\\xad\\x0f\\xeb\\x8df@@\\xf8\\xf5Cl\\xb0\\tU\\xc0\\xd2\\xe3\\xf76\\xfde@@\\xf7\\xe4a\\xa1\\xd6\\tU\\xc0\\xf6\\x...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00X\\t\\x00\\x00\\x00\\x08X\\xabv:X\\xc0\\x7f\\'-\\\\VYD@.\\x8c\\xf4\\xa2v:X\\xc0>\\x8a:s\\x0fYD@\\x00\\x08X\\xabv:X\\xc0\\xc9\\x88\\x0b@\\xa3XD@\\x00\\x08X\\xabv:X\\xc0\\x84>X\\xc6\\x86XD@\\xce\\x83\\xbb\\xb3v:X\\xc0\\xb9\\xf5\\x9a\\x1e\\x14XD@\\xb7A\\xed\\xb7v:X\\xc0\\xb5\\xc4\\xcah\\xe4WD@\\x87\\xbdP\\xc0v:X\\xc0\\xea\\x17\\xec\\x86mWD@\\x87\\xbdP\\xc0v:X\\xc0c\\xb0\\xe2TkWD@\\x87\\xbdP\\xc0v:X\\xc0\\x05\\x10>\\x94hWD@\\xbc\\xca\\xda\\xa6x:X\\xc0je\\xc2/\\xf5UD@!\\x90K\\x1cy:X\\xc0\\xf2\\xe4\\x9a\\x02\\x99UD@\\tN} y:X\\xc0\\xd63\\x84c\\x96UD@\\xf1\\x0b\\xaf$y:X\\xc0g\\x90\\x82\\xa7\\x90UD@2\\xe1\\x97\\xfay:X\\xc0\\x8e\\xa7\\xe5\\x07\\xaeTD@\\x1b\\x9f\\xc9\\xfey:X\\xc0\\xf4\\xd4\\xea\\xab\\xabTD@\\x1b\\x9f\\xc9\\xfey:X\\xc0a\\xf3qm\\xa8TD@,\\n\\xbb(z:X\\xc0\\x05\\xdf4}vTD@\\xb5\\xbf\\xb3=z:X\\xc0\\x941>\\xcc^TD@m\\xf9HJz:X\\xc0\\x12j\\x86TQTD@V\\xb7zNz:X\\xc0\\xac\\xd8_vOTD@\\xc7*\\xa5gz:X\\xc0\\xe5\\x17%\\xe8/TD@\\xaf\\xe8\\xd6kz:X\\xc0*\\xa3\\x91\\xcf+TD@\\xaf\\xe8\\xd6kz:X\\xc0\\x12{h\\x1f+TD@z\\x8d]\\xa2z:X\\xc0N\\x1c@\\xbf\\xefSD@\\x1a\\x85$\\xb3z:X\\xc0\\xa1\\xa0\\x14\\xad\\xdcSD@\\xbb|\\xeb\\xc3z:X\\xc0\\x04..."]
+csa_geo_id: TEXT | NULL | eg=["356", "339"]
+lsad_code: TEXT | NULL | eg=["M1"]
+msa_indicator: TEXT | NULL | eg=["1"]
+lsad_name: TEXT | NULL | eg=["Macon-Bibb County, GA Metro Area", "Lincoln, NE Metro Area"]
+internal_point_longitude: FLOAT | NULL | eg=[-83.714305, -96.8687434]
+internal_point_latitude: FLOAT | NULL | eg=[32.8562163, 40.8174581]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G3110"]
+geo_id: TEXT | NULL | eg=["31420", "30700"]
+
+## GEO_US_BOUNDARIES.CONGRESS_DISTRICT_116
+@use: [C2, C8]
+lsad_name: TEXT | NULL | eg=["Congressional District 25", "Congressional District 26"]
+lsad_code: TEXT | NULL | eg=["C2"]
+state_fips_code: TEXT | NULL | eg=["36", "06"]
+geo_id: TEXT | NULL | eg=["3625", "0625"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G5200"]
+int_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00v\\xe9_\\x92\\xcamS\\xc0y\\xd7\\x8f\\x03e\\xa9E@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xf6/\\xff\\xd7\\xef\\x91]\\xc0\\x9b\\x02\\x99\\x9dEKA@')"]
+
+## GEO_US_BOUNDARIES.CSA
+@use: [C4, C9]
+geo_id: TEXT | NULL | eg=["108", "142"]
+lsad_name: TEXT | NULL | eg=["Amarillo-Pampa-Borger, TX CSA", "Birmingham-Hoover-Talladega, AL CSA"]
+msa_lsad_code: TEXT | NULL | eg=["M0"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G3100"]
+name: TEXT | NULL | eg=["Amarillo-Pampa-Borger, TX", "Birmingham-Hoover-Talladega, AL"]
+csa_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xfa\\x07\\x00\\x00\\xd8\\xfb\\x8dv\\xdcgY\\xc0\\x82\\xeb\\x8a\\x19\\xe1\\xcfA@6\\x04\\xc7e\\xdcgY\\xc0\\xdc\\xe9\\xce\\x13\\xcf\\xcfA@f\\x88c]\\xdcgY\\xc0\\x9e\\xfe\\xb3\\xe6\\xc7\\xcfA@v\\xca1Y\\xdcgY\\xc0\\x9b\\xa9\\x10\\x8f\\xc4\\xcfA@\\x8f\\x0c\\x00U\\xdcgY\\xc0\\xde4}v\\xc0\\xcfA@\\xb2\\xfc\\x87\\xf4\\xdbgY\\xc0\\x15\\x8e \\x95b\\xcfA@\\x03\\xbb(z\\xe0gY\\xc0C\\x12\\xbd\\x8cb\\xcfA@7\\xae\\r\\x15\\xe3gY\\xc0C\\x12\\xbd\\x8cb\\xcfA@\\xc1X\\xdf\\xc0\\xe4gY\\xc0C\\x12\\xbd\\x8cb\\xcfA@\\xfb\"\\xa1-\\xe7gY\\xc0C\\x12\\xbd\\x8cb\\xcfA@\\xe3<*\\xfe\\xefgY\\xc0\\x15\\x8e \\x95b\\xcfA@\\x01\\x90\\xa1c\\x07hY\\xc0\\xb8!\\xc6k^\\xcfA@\\x8bq\\xfe&\\x14hY\\xc0\\xb8!\\xc6k^\\xcfA@\\'\\x1eP6\\xe5hY\\xc0\\x88\\x9d)t^\\xcfA@t\\xbb%9`iY\\xc0(\\x95\\xf0\\x84^\\xcfA@q\\xd1W\\x90fiY\\xc0(\\x95\\xf0\\x84^\\xcfA@Q6sHjiY\\xc0)\\x95\\xf0\\x84^\\xcfA@\\xe7\\xc5\\x89\\xafviY\\xc0\\xf8\\x10T\\x8d^\\xcfA@(F\\x96\\xcc\\xb1iY\\xc0\\xb8!\\xc6k^\\xcfA@Ve\\xdf\\x15\\xc1iY\\xc0\\xb8!\\xc6k^\\xcfA@\\xff\\x94*Q\\xf6iY\\xc0\\x16*\\xffZ^\\xcfA@\\xcb2\\xc4\\xb1.jY\\xc0u28J^\\xcfA@\\xbb\\x0c\\xff\\xe9\\x06kY\\xc0\\xf2S\\x1c\\x07^\\xcfA@\\xc5\\x90\\x9cL\\xdc...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xc4\\x18\\x00\\x006\\xe34D\\x15\\xd1U\\xc0\\xc2\\x15P\\xa8\\xa7\\xc1@@\\xb2\\x7f\\x9e\\x06\\x0c\\xd1U\\xc0\\xf4\\x18\\xe5\\x99\\x97\\xc1@@\\xf5\\x9f5?\\xfe\\xd0U\\xc0a\\xfd\\x9f\\xc3|\\xc1@@\\x94\\xaa\\xed&\\xf8\\xd0U\\xc0\\x99\\x89\"\\xa4n\\xc1@@\\xf4h\\xaa\\'\\xf3\\xd0U\\xc0zS\\x91\\nc\\xc1@@\\x95C\\x8bl\\xe7\\xd0U\\xc0\\x93\\xa9\\x82QI\\xc1@@f\\xd9\\x93\\xc0\\xe6\\xd0U\\xc0\\xce\\x0f#\\x84G\\xc1@@3NCT\\xe1\\xd0U\\xc0\\xff\\xdem\\xde8\\xc1@@\\xf82Q\\x84\\xd4\\xd0U\\xc0\\xb2\\x82\\xdf\\x86\\x18\\xc1@@ A\\xf1c\\xcc\\xd0U\\xc0\\xb4il\\xaf\\x05\\xc1@@\\xcfh\\xab\\x92\\xc8\\xd0U\\xc0s\\xf5c\\x93\\xfc\\xc0@@2uWv\\xc1\\xd0U\\xc0M\\xe1A\\xb3\\xeb\\xc0@@Y\\x83\\xf7U\\xb9\\xd0U\\xc0\\xda\\xff\\x00k\\xd5\\xc0@@h\\xe74\\x0b\\xb4\\xd0U\\xc0\\xbdx?n\\xbf\\xc0@@\\x10\\x1em\\x1c\\xb1\\xd0U\\xc07\\xc4x\\xcd\\xab\\xc0@@|\\xd4_\\xaf\\xb0\\xd0U\\xc0\\x7f\\x0c\\x1d;\\xa8\\xc0@@X\\xfe|[\\xb0\\xd0U\\xc0R\\xf0\\x14r\\xa5\\xc0@@\\xb3I~\\xc4\\xaf\\xd0U\\xc0\\xc9\\xf0\\x9fn\\xa0\\xc0@@k\\x9d\\xb8\\x1c\\xaf\\xd0U\\xc0n\\xb8\\x8f\\xdc\\x9a\\xc0@@\\xe8\\xbe\\x9c\\xd9\\xae\\xd0U\\xc0\\x16\\xd5\"\\xa2\\x98\\xc0@@\\xc5\\x1c\\x04\\x1d\\xad\\xd0U\\xc0\\xa6\\xac\\xa6\\xe..."]
+csa_code: TEXT | NULL | eg=["108", "142"]
+
+## GEO_US_BOUNDARIES.NATIONAL_OUTLINE
+aff_geo_id: TEXT | NULL
+us_outline_geom: BINARY | NULL
+name: TEXT | NULL
+geo_id: TEXT | NULL
+
+## GEO_US_BOUNDARIES.RAILWAYS
+railway_geom: TEXT | NULL | eg=[{"type":"LineString","coordinates":[[-86.88663299999997,41.08432899999999],[-86.886527,41.08253899999999],[-86.886476,41.08166599999999],[-86.88644599999999,41.08072599999999],[-86.886437,41.07983],[-86.88639599999999,41.07893699999999],[-86.88622399999998,41.07485499999998],[-86.88606099999998,41.07129199999998],[-86.88602699999998,41.06489099999999],[-86.88579099999998,41.056159],[-86.88535499999999,41.04620599999999],[-86.885333,41.04552899999999],[-86.88475499999998,41.02705999999999],[-86.884726,41.026021],[-86.884312,41.01562399999999],[-86.884151,41.01248199999999],[-86.88374499999999,41.00551399999999],[-86.883698,41.00463699999999],[-86.883664,41.00250899999999],[-86.88362899999998,41.000039],[-86.883253,40.99828799999999],[-86.88332599999998,40.99808499999999],[-86.88297,40.988005],[-86.882913,40.98750499999999]]}, {"type":"LineString","coordinates":[[-87.27955399999999,35.46913399999999],[-87.280034,35.469079],[-87.28016799999997,35.46906399999999],[-87.281064,35.46858399999998],[-87.28134899999999,35.46848999999999],[-87.28180899999998,35.46833999999999],[-87.282268,35.468195],[-87.28260499999999,35.468128],[-87.28322199999998,35.46800799999999],[-87.28442799999999,35.467959],[-87.28505499999999,35.46808399999999],[-87.285865,35.46824699999999],[-87.28641399999997,35.46843799999999],[-87.28870899999998,35.469321],[-87.28963299999998,35.46967699999999],[-87.292079,35.47007099999999],[-87.293339,35.469957],[-87.293936,35.46975199999998],[-87.29646799999999,35.468882],[-87.297437,35.46850099999999],[-87.297471,35.46847899999999],[-87.299993,35.46694399999999],[-87.30008099999999,35.46693499999998],[-87.30120499999998,35.46684899999999],[-87.30292899999999,35.46671899999999],[-87.30458199999998,35.46663199999999],[-87.304693,35.46662699999999],[-87.30566999999999,35.46634199999999],[-87.30630299...]
+mtfcc_feature_class_code: TEXT | NULL | eg=["R1011"]
+geo_id: NUMBER | NULL | eg=[110168314233, 110268494694]
+full_name: TEXT | NULL | eg=["Louisville and Nashville RR"]
+
+## GEO_US_BOUNDARIES.COUNTIES
+@use: [C2]
+cbsa_fips_code: TEXT | NULL
+county_gnis_code: TEXT | NULL | eg=["01581062", "01581110"]
+lsad_code: TEXT | NULL | eg=["06"]
+fips_class_code: TEXT | NULL | eg=["H1"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G4020"]
+geo_id: TEXT | NULL | eg=["55005", "55099"]
+county_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xa6\\x04\\x00\\x000\\xd2\\x8b\\xda\\xfd\\tW\\xc0\\xd3($\\x99\\xd5\\xbbF@\\x1eM\\xf5d\\xfe\\tW\\xc0\\x8269|\\xd2\\xbbF@\\x8a\\x1d\\x8dC\\xfd\\tW\\xc0\\x02(F\\x96\\xcc\\xbbF@\\x19\\xaab*\\xfd\\tW\\xc0uk\\x99\\x0c\\xc7\\xbbF@\\xc0x\\x06\\r\\xfd\\tW\\xc0\\xf6\\x90\\xf0\\xbd\\xbf\\xbbF@%>w\\x82\\xfd\\tW\\xc0\\xb9H\\xa1,|\\xbbF@\\xb9m\\xdf\\xa3\\xfe\\tW\\xc0\\xfd\\xbe\\x7f\\xf3\\xe2\\xbaF@*\\x15TT\\xfd\\tW\\xc0\\x93\\xbb\\xcf\\xf1\\xd1\\xbaF@\\x01h\\x94.\\xfd\\tW\\xc0\\xa39\\xb2\\xf2\\xcb\\xbaF@z\\x1a0H\\xfa\\tW\\xc0Z\\xb2*\\xc2M\\xbaF@ \\x03yv\\xf9\\tW\\xc0U\\x0cW\\x07@\\xbaF@\\xeas\\xb5\\x15\\xfb\\tW\\xc0\\xeb,z\\xa7\\x02\\xbaF@\\xa3\\xadJ\"\\xfb\\tW\\xc0\\x98l<\\xd8b\\xb9F@\\xcdZ\\nH\\xfb\\tW\\xc0G\\x160\\x81[\\xb9F@Z\\x7fK\\x00\\xfe\\tW\\xc0\\x8a\\xdd>\\xab\\xcc\\xb8F@\\x17()\\xb0\\x00\\nW\\xc0\\xa8\\xfeA$C\\xb8F@\\xe8\\xa3\\x8c\\xb8\\x00\\nW\\xc0\\x9f \\xb1\\xdd=\\xb8F@wd\\xac6\\xff\\tW\\xc0\\x00:\\xcc\\x97\\x17\\xb8F@\\x89\\xcf\\x9d`\\xff\\tW\\xc0\\xa6\\x92\\x01\\xa0\\x8a\\xb7F@\\xca\\xbe+\\x82\\xff\\tW\\xc0I\\xec\\xda\\xden\\xb7F@\\x89\\xcf\\x9d`\\xff\\tW\\xc0w\\x8aU\\x830\\xb7F@\\xb3|]\\x86\\xff\\tW\\xc0,,\\xb8\\x1f\\xf0\\xb6F@\\xca\\xbe+\\x...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xaa\\x05\\x00\\x00\\x04q\\x1eN`\\xabV\\xc0\\r |(\\xd1\\xdcF@\\x04q\\x1eN`\\xabV\\xc0\\xe3\\x8caN\\xd0\\xdcF@\\x04q\\x1eN`\\xabV\\xc0\\x083m\\xff\\xca\\xdcF@\\x04q\\x1eN`\\xabV\\xc0\\x16\\x15q:\\xc9\\xdcF@\\x04q\\x1eN`\\xabV\\xc0\\x16}\\x05i\\xc6\\xdcF@\\x04q\\x1eN`\\xabV\\xc0\\xcf\\xd0?\\xc1\\xc5\\xdcF@\\x04q\\x1eN`\\xabV\\xc0\\x1c\\xb5\\xc2\\xf4\\xbd\\xdcF@\\x04q\\x1eN`\\xabV\\xc0\\x1c\\x1dW#\\xbb\\xdcF@\\x1b\\xb3\\xecI`\\xabV\\xc0\\xe3#)\\xe9a\\xdcF@\\x1b\\xb3\\xecI`\\xabV\\xc0\\xba\\xe4\\x7f\\xf2w\\xdbF@\\x1b\\xb3\\xecI`\\xabV\\xc0?8\\x9f:V\\xdbF@\\x1b\\xb3\\xecI`\\xabV\\xc0\\xd8\\xba\\xd4\\x08\\xfd\\xdaF@\\x1b\\xb3\\xecI`\\xabV\\xc0*I\\x9e\\xeb\\xfb\\xdaF@5\\xf5\\xbaE`\\xabV\\xc0\\x01\\xb2\\xd7\\xbb?\\xdaF@5\\xf5\\xbaE`\\xabV\\xc0\\x9b\\xdb\\x84{e\\xd8F@5\\xf5\\xbaE`\\xabV\\xc0\\x85\\x97\\xe0\\xd4\\x07\\xd8F@5\\xf5\\xbaE`\\xabV\\xc0\\xff\\xc53h\\xe8\\xd7F@5\\xf5\\xbaE`\\xabV\\xc0\\x7f\\nG\\x90J\\xd7F@W\\xcb\\x9d\\x99`\\xabV\\xc0\\x96\\xc4Y\\x115\\xd7F@\\xc1MF\\x95a\\xabV\\xc0\\xee]\\x83\\xbe\\xf4\\xd6F@u\\xb0\\xfe\\xcfa\\xabV\\xc05U\\xf7\\xc8\\xe6\\xd6F@\\xe5#)\\xe9a\\xabV\\xc0\\xa4\\x0f]P\\xdf\\xd6F@\\x0f\\xd1\\xe8\\x0eb\\..."]
+lsad_name: TEXT | NULL | eg=["Barron County", "Price County"]
+int_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x13!\\xbf\\xc8\\x95\\xf6V\\xc0\\x94\\xca\\xca\\xe5\\xf5\\xb7F@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\n\\xe1,\\x80\\x04\\x97V\\xc0v\\x8e\\x01\\xd9\\xeb\\xd6F@')"]
+county_fips_code: TEXT | NULL | eg=["55005", "55099"]
+functional_status: TEXT | NULL | eg=["A"]
+state_fips_code: TEXT | NULL | eg=["55"]
+csa_fips_code: TEXT | NULL
+county_name: TEXT | NULL | eg=["Barron", "Price"]
+met_div_fips_code: TEXT | NULL
+
+## GEO_US_BOUNDARIES.NWS_FORECAST_REGIONS
+fe_area: TEXT | NULL | eg=["nr", "eu"]
+name: TEXT | NULL | eg=["Baraga", "Marquette"]
+cwa: TEXT | NULL | eg=["MQT"]
+shape_geometry: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xa5\\x02\\x00\\x00Cq\\xc7\\x9b\\xfc\\x08V\\xc0\\xb0\\x02|\\xb7y{G@\\xc8S\\nE\\x10\\tV\\xc0\\xd8\\xd0&$\\xa5{G@\\xb8\\xa4\\xff\\x1f&\\tV\\xc0`\\xf0\\xfe\\x1f\\xb7{G@\\x84m\\x00@2\\tV\\xc0H\\xde\\x00\\xa0\\xbb{G@\\x88\\xcd\\xff_@\\tV\\xc0`y\\x00`\\xbc{G@\\xa6\\x99\\xeeuR\\tV\\xc0\\n\\x13F\\xb3\\xb2{G@H\\x81\\xff\\xbfg\\tV\\xc0\\x00\\xb7\\xff\\x7f\\x9e{G@\\xbcS\\x00@y\\tV\\xc0\\xd8\\xee\\xff\\xff\\x99{G@\\x00I\\x00\\x80\\x81\\tV\\xc0\\xa9\\x94\\xff\\x7f\\x92{G@\\x94\\x08\\x00\\x00\\x93\\tV\\xc0)\\x9c\\xff\\x1fs{G@\\xe8\\xbb[Y\\xa2\\tV\\xc0\\xc6\\x88D\\xa1e{G@\\xcc_\\xc8\\xba\\xbd\\tV\\xc0\\x98MM\\xddp{G@\\xd0q\\x00\\xc0\\xdb\\tV\\xc0\\xe0\\x9d\\x00 m{G@\\xd0T\\x00\\xa0\\xeb\\tV\\xc0\\xc8\\xb3\\xff_\\x87{G@,w\\x00\\xa0\\xf7\\tV\\xc0\\xb0\\x86\\xff\\x9f\\x83{G@\\xa7\\\\\\xe1].\\nV\\xc0\\x9fn\\xa0\\xc0;{G@\\x9c\\xb1\\xff\\x9fB\\nV\\xc0\\xa9`\\x00\\xc05{G@\\x03\\xe9b\\xd3J\\nV\\xc0d\\x02~\\x8d${G@\\xfc\\x82\\x00\\xc0a\\nV\\xc0\\x01\\x0e\\x00\\xe0\\x0e{G@\\xb2\\x9eZ}u\\nV\\xc0\\xa8V\\xd3 \\x05{G@bhur\\x86\\nV\\xc0\\x8ch;\\xa6\\xeezG@\\xb0v\\x14\\xe7\\xa8\\nV\\xc0\\x08\\x1c\\t4\\xd8zG@\\x9b;\\xfa_\\xae\\nV\\xc0v\\xd6n\\xbb\\xd0zG@\\x86\\x00\\xe0\\x...", "bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x14\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x0c\\x00\\x00\\x00\\xc0\\xd0\\xff\\x7f\\x97\\xd9U\\xc0\\x8fm\\x00@\\x12LG@1\\xcdt\\xaf\\x93\\xd9U\\xc0^\\x0e\\xbb\\xef\\x18LG@\\x0c;\\x00\\xa0\\x92\\xd9U\\xc0\\xd1\\x02\\x01`,LG@8\\x087\\xa2\\xa6\\xd9U\\xc0\\x18\\xfd\\x9a\\xdfBLG@\\\\\\x05\\x00\\xe0\\xbb\\xd9U\\xc0\\x88\\xbe\\xff\\x1f?LG@\\x0f\\x88\\x10W\\xce\\xd9U\\xc0\\xbb\\xb4\\xe1\\xb04LG@\\xb6\\xf5\\xd3\\x7f\\xd6\\xd9U\\xc0\\x9f\\xc9\\xfey\\x1aLG@\\xb1\\xfb\\xff\\x7f\\xd6\\xd9U\\xc0\\x98*\\xef\\x82\\xffKG@\\x8cU\\xba#\\xd2\\xd9U\\xc00.\\x07G\\xf7KG@Q\\xdf2\\xa7\\xcb\\xd9U\\xc0Y\\xfa\\xd0\\x05\\xf5KG@PzCm\\xbd\\xd9U\\xc0X\\x1e\\x95\\xe9\\xf7KG@\\xc0\\xd0\\xff\\x7f\\x97\\xd9U\\xc0\\x8fm\\x00@\\x12LG@\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x06\\x00\\x00\\x00\\xd8z\\xff\\x7f\\xd9\\xfcU\\xc0\\x18\\x9b\\xff\\xbf@yG@\\x8d\\xb3\\xe9\\x08\\xe0\\xfcU\\xc0\\x0f\\x97\\x1cwJyG@\\xcb\\xa1E\\xb6\\xf3\\xfcU\\xc0Gt\\xcf\\xbaFyG@\\xb4x\\xff\\xbf\\xf4\\xfcU\\xc0\\xe8\\xc9\\x00\\x80>yG@\\xf07\\x11e\\xde\\xfcU\\xc0\\xa0\\xd4\\x00@6yG@\\xd8z\\xff\\x7f\\xd9\\xfcU\\xc0\\x18\\x9b\\xff\\xbf@yG@\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x07\\x00\\x00\\x00..."]
+shortname: TEXT | NULL | eg=["Baraga", "Marquette"]
+lon: FLOAT | NULL | eg=[-88.3652, -87.6415]
+state_zone: TEXT | NULL | eg=["MI004", "MI005"]
+state: TEXT | NULL | eg=["MI"]
+zone: TEXT | NULL | eg=["004", "005"]
+time_zone: TEXT | NULL | eg=["E", "C"]
+lat: FLOAT | NULL | eg=[46.6626, 46.4314]
+
+## GEO_US_BOUNDARIES.ZIP_CODES
+@use: [C4, C9]
+zip_code: TEXT | NULL | eg=["17535", "96727"]
+fips_class_code: TEXT | NULL | eg=["B5"]
+zip_code_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x1c\\x00\\x00\\x00\\xdc*\\x88\\x81\\xae\\x03S\\xc0k\\xf2\\x94\\xd5t\\x07D@e\\xc6\\xdbJ\\xaf\\x03S\\xc0B+0du\\x07D@\\xa1,|}\\xad\\x03S\\xc0#)\\xe9ah\\x07D@\\xf90{\\xd9v\\x03S\\xc0\\xe5R\\\\U\\xf6\\x05D@\\xd6\\xc2,\\xb4s\\x03S\\xc0\\x15\\xa3\\xae\\xb5\\xf7\\x05D@\\xbb\\xda\\x8a\\xfde\\x03S\\xc0\\xa8\\x1c\\x93\\xc5\\xfd\\x05D@n\\xa5\\xd7fc\\x03S\\xc0\\xa7\\xe8H.\\xff\\x05D@&\\x13\\xb7\\nb\\x03S\\xc05A\\xd4}\\x00\\x06D@\\xda\\x8f\\x14\\x91a\\x03S\\xc0\\xacq6\\x1d\\x01\\x06D@\\x0f\\x053\\xa6`\\x03S\\xc0\\x1b\\xb1\\x16\\x9f\\x02\\x06D@\\xb1\\x91$\\x08W\\x03S\\xc0v\\xfc\\x17\\x08\\x02\\x06D@\\xbc\\xe5\\xea\\xc7&\\x03S\\xc0\\xef\\xe5>9\\n\\x06D@F{\\xbc\\x90\\x0e\\x03S\\xc0D\\x9ax\\x07x\\x06D@s)\\xae*\\xfb\\x02S\\xc0T\\x00\\x8cg\\xd0\\x06D@\\x8a\\x1d\\x8dC\\xfd\\x02S\\xc0\\x8f\\xfe\\x97k\\xd1\\x06D@\\xb2\\x82\\xdf\\x86\\x18\\x03S\\xc0\\xffZ^\\xb9\\xde\\x06D@\\x04\\xacU\\xbb&\\x03S\\xc0\\x12K\\xca\\xdd\\xe7\\x06D@3j\\xbeJ>\\x03S\\xc0UDM\\xf4\\xf9\\x06D@KD\\xf8\\x17A\\x03S\\xc01\\x06\\xd6q\\xfc\\x06D@Q\\x86\\xaa\\x98J\\x03S\\xc0\\t\\xc4\\xeb\\xfa\\x05\\x07D@y\\x1c\\x06\\xf3W\\x03S\\xc0\\xdc\\xb1\\xd8&...", "bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x009\\x0c\\x00\\x00\\xf6b(\\'\\xdavc\\xc0\\xb9\\xce\\x86\\xfc3\\x1f4@#5\\xb4\\x01\\xd8vc\\xc0\\xc3\\xcah\\xe4\\xf3\\x1e4@\\x1f\\xfa\\xb5\\xf5\\xd3vc\\xc0\\xb7\\xf9Ft\\xcf\\x1e4@3t\\xb3?\\xd0vc\\xc0\\x88\\xea\\xad\\x81\\xad\\x1e4@k\\x12\\x83\\xc0\\xcavc\\xc0\\xb2\\x8e\\xaa&\\x88\\x1e4@\\xa8W\\xca2\\xc4vc\\xc0\\xf2\\xb4\\xfc\\xc0U\\x1e4@\\xa0T\\xfbt\\xbcvc\\xc0g\\x03\\xb0\\x01\\x11\\x1e4@\\xfd\\xdem\\xde\\xb8vc\\xc0\\xbe\\xed\\t\\x12\\xdb\\x1d4@$\\x85y\\x8f\\xb3vc\\xc0\\xc9\\x929\\x96w\\x1d4@\\x90N]\\xf9\\xacvc\\xc07^\\x81\\xe8I\\x1d4@\\x99\\x16\\xbc\\xe8\\xabvc\\xc0\\xea\\x07u\\x91B\\x1d4@\\x07*\\xaa~\\xa5vc\\xc0\\xdb\\xb1\\xd8&\\x15\\x1d4@Y\\xdeU\\x0f\\x98vc\\xc0\\x1cL\\x8a\\x8fO\\x1c4@\\xeb\\xcb\\x99\\xed\\x8avc\\xc0\\xd2\\xa8\\xc0\\xc96\\x1c4@\\x8c1\\xb0\\x8ecvc\\xc0\\xe9\\xbecx\\xec\\x1b4@\\x12\\xfe\\x0coVvc\\xc0@\\x13a\\xc3\\xd3\\x1b4@\\xe5\\x12\\x0e\\xbdEvc\\xc0\\xe3\\x08\\x19\\xc8\\xb3\\x1b4@F\\x0fC\\xab\\x13vc\\xc0\\x14\\xd9\\xce\\xf7S\\x1b4@\\r\\x03]\\xfb\\x02vc\\xc0[\\xc6M\\r4\\x1b4@o\\xdb\\xbeG\\xfduc\\xc0\\x10-y<-\\x1b4@\\x96d\\xe4,\\xecuc\\xc0\\xd3X\\xc2\\xda\\x18\\x1b4@\\xf8<Fy\\xe6uc\\xc0+\\xb7\\xb4\\x1a\\x12\\x1b4@as\\x..."]
+state_code: TEXT | NULL | eg=["PA", "HI"]
+state_fips_code: TEXT | NULL | eg=["42", "15"]
+county: TEXT | NULL | eg=["Lancaster County", "Hawaii County"]
+functional_status: TEXT | NULL | eg=["S"]
+state_name: TEXT | NULL | eg=["Pennsylvania", "Hawaii"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G6350"]
+city: TEXT | NULL | eg=["Gap CDP", "Kukuihaele CDP, Honokaa CDP"]
+
+## GEO_US_BOUNDARIES.COASTLINE
+coastline_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x02\\x00\\x00\\x00\\x0e\\x00\\x00\\x00\\xea\\xe1\\xcbD\\x11\\xf9R\\xc0\\xc7\\x83-v\\xfb\\xeeB@\\xea\\xe1\\xcbD\\x11\\xf9R\\xc0\\x0c\\xdf\\xc2\\xba\\xf1\\xeeB@ \\xefU+\\x13\\xf9R\\xc0\\x02\\x012t\\xec\\xeeB@\\xd5$xC\\x1a\\xf9R\\xc0\\x10\\x7f\\x14u\\xe6\\xeeB@\\xa6v\\x86\\xa9-\\xf9R\\xc0*\\xdb\\x87\\xbc\\xe5\\xeeB@t\"\\xc1T3\\xf9R\\xc0\\xc1y8\\x81\\xe9\\xeeB@\\x90\\x85\\xe8\\x108\\xf9R\\xc0\\xdcZ&\\xc3\\xf1\\xeeB@\\xa8\\xc7\\xb6\\x0c8\\xf9R\\xc0\\xbd^a\\xc1\\xfd\\xeeB@\\x8e\\x1dT\\xe2:\\xf9R\\xc0\\x92\\x8c\\x9c\\x85=\\xefB@\\xf1\\xe2\\xc4W;\\xf9R\\xc0\\xf2M\\x9a\\x06E\\xefB@\\xd9\\xb3\\xe725\\xf9R\\xc0\\x84\\x934\\x7fL\\xefB@\"J{\\x83/\\xf9R\\xc0\\x05Q\\xf7\\x01H\\xefB@\\xbb\\xcbE|\\'\\xf9R\\xc0\\xb1\\r\\xdc\\x81:\\xefB@\\xea\\xe1\\xcbD\\x11\\xf9R\\xc0\\xc7\\x83-v\\xfb\\xeeB@')", "bytearray(b'\\x01\\x02\\x00\\x00\\x00\\x0c\\x00\\x00\\x00\\xfcO\\xfe\\xee\\x1d&Q\\xc0\\xd7\\x9eY\\x12\\xa0\\x14F@\\x8e\\xaf=\\xb3$&Q\\xc0\\xc9 w\\x11\\xa6\\x14F@\\x99CR\\x0b%&Q\\xc0u\\x92\\xad.\\xa7\\x14F@\\xbc\\xe5\\xea\\xc7&&Q\\xc0r\\xc2\\x84\\xd1\\xac\\x14F@\\xb0k{\\xbb%&Q\\xc0\\xab$\\xb2\\x0f\\xb2\\x14F@S\\xff \\x92!&Q\\xc0\\xb9\\'\\x0f\\x0b\\xb5\\x14F@\\xc7\\\\\\x19T\\x1b&Q\\xc0\\xab$\\xb2\\x0f\\xb2\\x14F@\\x9a&l?\\x19&Q\\xc0\\xc9\\xa5\\xf1\\x0b\\xaf\\x14F@:R}\\xe7\\x17&Q\\xc0h\\x18>\"\\xa6\\x14F@\\x89\\xef\\xc4\\xac\\x17&Q\\xc0W\\xe1\\x96\\x8f\\xa4\\x14F@\\xb6%r\\xc1\\x19&Q\\xc0\\xd5\\x9eY\\x12\\xa0\\x14F@\\xfcO\\xfe\\xee\\x1d&Q\\xc0\\xd7\\x9eY\\x12\\xa0\\x14F@')"]
+name: TEXT | NULL | eg=["Atlantic"]
+
+## GEO_US_BOUNDARIES.CONGRESS_DISTRICT_115
+@use: [C2, C8]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G5200"]
+geo_id: TEXT | NULL | eg=["4824", "0624"]
+lsad_code: TEXT | NULL | eg=["C2"]
+int_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00`8|w\\xd0@X\\xc0L\\x08\\x0cH\\xb1u@@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00\\x18!<\\xda8\\x07^\\xc0,g\\xef\\x8c\\xb6uA@')"]
+state_fips_code: TEXT | NULL | eg=["48", "06"]
+lsad_name: TEXT | NULL | eg=["Congressional District 24", "Congressional District 25"]
+
+## GEO_US_BOUNDARIES.STATES
+@use: [C2]
+state_fips_code: TEXT | NULL | eg=["66", "60"]
+division_code: TEXT | NULL | eg=["0", "1"]
+functional_status: TEXT | NULL | eg=["A"]
+int_point_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x01\\x00\\x00\\x00\\xd7f\\x08l\\xb3\\x18b@%V\\xebi,\\xe2*@')", "bytearray(b'\\x01\\x01\\x00\\x00\\x00t\\x7fPrbUe\\xc0\\x05\\xaa\\x7f\\x10\\xc9\\x88,\\xc0')"]
+geo_id: TEXT | NULL | eg=["66", "60"]
+state_gnis_code: TEXT | NULL | eg=["01802705", "01802701"]
+state: TEXT | NULL | eg=["GU", "AS"]
+region_code: TEXT | NULL | eg=["9", "1"]
+state_name: TEXT | NULL | eg=["Guam", "American Samoa"]
+state_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00`\\x02\\x00\\x00\\xe7v\\xf6\\x95\\x07\\x12b@\\xe8\\xf6\\x92\\xc6h\\xe5*@\"u\\x02\\x9a\\x08\\x12b@\\x008\\xbd\\x8b\\xf7\\xe3*@K\\x95\\xef\\x19\\t\\x12b@F\\xf2\\\\\\xdf\\x87\\xe3*@~\\xe5Az\\n\\x12b@Y\\x07\\xce\\x19Q\\xe2*@k\\xb93\\x13\\x0c\\x12b@\\xc7*l\\x06\\xb8\\xe0*@$.\\xc7+\\x10\\x12b@\\xf9%\\xa9L1\\xdf*@M4\\x0f`\\x11\\x12b@\\xbba\\xdb\\xa2\\xcc\\xde*@\\xba\\xdb\\xf5\\xd2\\x14\\x12b@\\x1e\\xd7M)\\xaf\\xdd*@\\nL\\xa7u\\x1b\\x12b@\\xa4gA(\\xef\\xdb*@\\x08^\\xf4\\x15$\\x12b@\\x9a!\\x1c\\xb3\\xec\\xd9*@\\xb3}\\xc8[.\\x12b@\\x9f\\x03\\xcb\\x112\\xd8*@Qm7\\xc17\\x12b@\\x8aIF\\xce\\xc2\\xd6*@\"\\xad\\xf8\\x86B\\x12b@2j\\x85\\xe9{\\xd5*@\\x13+\\xa3\\x91O\\x12b@-\\x16\\x86\\xc8\\xe9\\xd3*@b\\xe1\\xebk]\\x12b@\\x88c${\\x84\\xd2*@o\\xac\\x8b\\xdbh\\x12b@6m\\x8d\\x08\\xc6\\xd1*@\\x04{\\x13Cr\\x12b@Vu\\x1d\\xaa)\\xd1*@\\x87\\x19\\x1aO\\x84\\x12b@\\x8b\\x975\\xb1\\xc0\\xcf*@\\xeay7\\x16\\x94\\x12b@\\xb3\\x1d\\x1a\\x16\\xa3\\xce*@(\\xf2$\\xe9\\x9a\\x12b@\\x89C6\\x90.\\xce*@\\x1f\\xdf\\xa5\\xd4\\xa5\\x12b@\\xddVA\\x0ct\\xcd*@\\x10\\xee\\x95y\\xab\\x12b@\\xf4\\xc2\\x9d\\x0b#\\xcd*@\\x10\\x0b|E\\xb7\\x12b@\\xc8\\x01\\x829z\\xcc*@#\\xfe(\\xea\\x...", "bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xf0\\x00\\x00\\x00\\xed\\xb9LM\\x82Ye\\xc0\\x94\\xf7q4G~,\\xc0\\xf9\\xa1\\xd2\\x88\\x99Ye\\xc0\\xf0\\x01\\xba/g~,\\xc0{0)>\\xbeYe\\xc0\\n\\x18]\\xde\\x1c~,\\xc0\\xf1\\xc2\\x9d\\x0b#Ze\\xc0trM\\x81\\xcc~,\\xc0tE)!XZe\\xc0\\x01\\x00\\x00\\x00\\x00\\x80,\\xc0T`\\xc8\\xeaVZe\\xc0L9&\\x8b\\xfb\\x7f,\\xc0\\xda\\xcb\\xb6\\xd3VZe\\xc0Q\\xf6]\\x11\\xfc\\x7f,\\xc0\\xa7\\xee\\x91\\xcdUZe\\xc0\\x01\\x00\\x00\\x00\\x00\\x80,\\xc0\\x8b\\x8e\\xab\\x91]Ze\\xc0Dd\\x1fdY\\x80,\\xc0\\x91\\x12\\x82UuZe\\xc0\\xd5\\\\n0\\xd4\\x81,\\xc0\\xbf\\xeet\\xe7\\x89Ze\\xc0\\x7f\\x15\\xe0\\xbb\\xcd\\x83,\\xc0\\xeb>\\xc7G\\x8bZe\\xc0i5\\xeb\\x8c\\xef\\x83,\\xc0iu9%\\xa0Ze\\xc0\\x02\\x9dI\\x9b\\xaa\\x83,\\xc0\\xdf\\x18\\x02\\x80\\xe3Ze\\xc0\\x03\\x8fo\\xef\\x1a\\x84,\\xc0\\x14\\x98N\\xeb6[e\\xc0\\xa9\\xb7\\xcdT\\x88\\x87,\\xc0\\x9d\\xf9\\x9c\\xbb][e\\xc0\\'\\xaf\\\\o\\x9b\\x89,\\xc0\\rW\\xce\\xde\\x99[e\\xc0\\x07\\xec1\\x91\\xd2\\x8c,\\xc0\\x8dDh\\x04\\x9b[e\\xc0\\\\\\x1c\\\\:\\xe6\\x8c,\\xc0\\x9d\\x85\\x04\\x8c\\xae[e\\xc0P\\xbb&\\xa45\\x8e,\\xc0\\x04YO\\xad\\xbe[e\\xc0Q\\x86\\xaa\\x98J\\x8f,\\xc0\\xddD\\xf4k\\xeb[e\\xc0r0b\\x9f..."]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G4000"]
+lsad_code: TEXT | NULL | eg=["00"]
+
+## GEO_US_BOUNDARIES.ADJACENT_COUNTIES
+neighbors_fips_code: VARIANT | NULL | eg=[["19165","19001","19077","19047","19029","19027"], ["19069","19083","19023","19127","19013","19171"]]
+county_fips_code: TEXT | NULL | eg=["19009", "19075"]
+neighbors: VARIANT | NULL | eg=[["Shelby","Adair","Guthrie","Crawford","Cass","Carroll"], ["Franklin","Hardin","Butler","Marshall","Black Hawk","Tama"]]
+neighbors_state: VARIANT | NULL | eg=[["Iowa","Iowa","Iowa","Iowa","Iowa","Iowa"]]
+state: TEXT | NULL | eg=["Iowa"]
+county: TEXT | NULL | eg=["Audubon County", "Grundy County"]
+
+## GEO_US_BOUNDARIES.URBAN_AREAS
+@use: [C4, C9]
+urban_area_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xde\\x03\\x00\\x00\\xfaMa\\xa5\\x82\\x86\\\\\\xc0!\\x88\\xf3p\\x02gB@\\x94\\x1b\\xd3\\x13\\x96\\x86\\\\\\xc0\\x993\\xdb\\x15\\xfafB@Tc\\xd0\\t\\xa1\\x86\\\\\\xc05\\nIf\\xf5fB@874e\\xa7\\x86\\\\\\xc0\\xca\\xbb\\xea\\x01\\xf3fB@l\\xd1\\x02\\xb4\\xad\\x86\\\\\\xc0\\xad\\n\\xd4b\\xf0fB@\\xc8\\xefm\\xfa\\xb3\\x86\\\\\\xc0\\xe0\\xf6\\x04\\x89\\xedfB@l\\xee\\xe8\\x7f\\xb9\\x86\\\\\\xc0Q\\xd2\\xc3\\xd0\\xeafB@@q\\x00\\xfd\\xbe\\x86\\\\\\xc0\\xe1\\xc6-\\xe6\\xe7fB@i\\x94\\xbc:\\xc7\\x86\\\\\\xc0\\xae!8.\\xe3fB@+mq\\x8d\\xcf\\x86\\\\\\xc0\\xa5C\\xa7\\xe7\\xddfB@\\xef:\\x1b\\xf2\\xcf\\x86\\\\\\xc0R\\xe9\\'\\x9c\\xddfB@\\xdf\\xad\\xba\\x0e\\xd5\\x86\\\\\\xc0\\xde Z+\\xdafB@\\xea\\xb4n\\x83\\xda\\x86\\\\\\xc02\\x17\\xb8<\\xd6fB@\\xe4S\\x8e\\xc9\\xe2\\x86\\\\\\xc0X\\xbd\\xc3\\xed\\xd0fB@\\xfe\\xf2\\xc9\\x8a\\xe1\\x86\\\\\\xc0)mq\\x8d\\xcffB@\\x06L\\xe0\\xd6\\xdd\\x86\\\\\\xc0\\x0f\\xf0\\xa4\\x85\\xcbfB@\\xfa\\xa8M\\x9c\\xdc\\x86\\\\\\xc0\\xaf\\x1b\\xb6-\\xcafB@Qr\\x15\\x8b\\xdf\\x86\\\\\\xc0#\\xf7tu\\xc7fB@\\x82\\x95\\xd1\\xc8\\xe7\\x86\\\\\\xc0C\\x14\\x937\\xc0fB@\\xd0\\rM\\xd9\\xe9\\x86\\\\\\xc0>\\x8b\\xa5H\\xbefB@\\xcd|\\x95|\\xec\\x86\\\\\\xc05E\\x80\\xd3\\xbbfB@g*\\xc4#\\xf1\\x...", "bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00#\\x00\\x00\\x00\\xda\\x1f(\\xb7\\xed\\xfbT\\xc0\\x83/L\\xa6\\n\\x82C@6\\xc3\\r\\xf8\\xfc\\xfbT\\xc0\\xefM\\xd3g\\x07\\x82C@\\x08\\xe7S\\xc7*\\xfcT\\xc0\\xa8\\x1c\\x93\\xc5\\xfd\\x81C@MHk\\x0c:\\xfcT\\xc0\\xe5\\xb6}\\x8f\\xfa\\x81C@\\xc98F\\xb2G\\xfcT\\xc0\\xb7\\x9au\\xc6\\xf7\\x81C@=\\n\\xd7\\xa3p\\xfcT\\xc0\\xcd=$|\\xef\\x81C@\\xa1\\xb8\\xe3M~\\xfcT\\xc0p\\x9d\\x7f\\xbb\\xec\\x81C@\\x08\\x00\\x8e={\\xfcT\\xc0o\\x05\\x14\\xea\\xe9\\x81C@W\\x05j1x\\xfcT\\xc0rm\\xa8\\x18\\xe7\\x81C@\\xa6\\nF%u\\xfcT\\xc0\\x14\\xcd\\x03X\\xe4\\x81C@\\xe2p\\xe6Ws\\xfcT\\xc01\\x1a\\xf9\\xbc\\xe2\\x81C@m\\xdcb~n\\xfcT\\xc0\"K\\xe6X\\xde\\x81C@\\xc5\\x88D\\xa1e\\xfcT\\xc0\\xebPMI\\xd6\\x81C@\\xb9\\xbd\\xa41Z\\xfcT\\xc0ad\\xc9\\x1c\\xcb\\x81C@\\xc5k^\\xd5Y\\xfcT\\xc0o\\x12\\x83\\xc0\\xca\\x81C@!\\x05O!W\\xfcT\\xc0!\\xdd\\xcf)\\xc8\\x81C@\\xc5\\xe6\\xe3\\xdaP\\xfcT\\xc0\\x9d\\x11\\xa5\\xbd\\xc1\\x81C@\\x19\\xddA\\xecL\\xfcT\\xc0\\xe0\\x9c\\x11\\xa5\\xbd\\x81C@\\xb7H\\xda\\x8d>\\xfcT\\xc0fb\\xba\\x10\\xab\\x81C@_\\xca\\xc0\\x01-\\xfcT\\xc0\\xe3I\\xd25\\x93\\x81C@\\xb4\\xda\\xc3^(\\xfcT\\xc0\\xd5\\xe2S\\x00\\x8c\\x81C..."]
+geo_id: TEXT | NULL | eg=["56413", "60058"]
+name: TEXT | NULL | eg=["Mesquite, NV--AZ", "Mount Orab, OH"]
+functional_status: TEXT | NULL | eg=["S"]
+urban_area_code: TEXT | NULL | eg=["56413", "60058"]
+area_lsad_code: TEXT | NULL | eg=["76"]
+lsad_name: TEXT | NULL | eg=["Mesquite, NV--AZ Urban Cluster", "Mount Orab, OH Urban Cluster"]
+type: TEXT | NULL | eg=["C"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G3500"]
+
+## GEO_US_BOUNDARIES.CNECTA
+@use: [C2]
+lsad: TEXT | NULL | eg=["M4"]
+geo_id: TEXT | NULL | eg=["770", "715"]
+mtfcc_feature_class_code: TEXT | NULL | eg=["G3200"]
+cnecta_geom: BINARY | NULL | eg=["bytearray(b'\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xdb\\x04\\x00\\x00L\\x198\\xa0\\xa5SR\\xc0\\xfc\\xf8K\\x8b\\xfaPE@\\xc3\\xd1U\\xba\\xbbSR\\xc0\\xa3\\x8bM+\\x85PE@\\xa5\\xd8\\xd18\\xd4SR\\xc0\\xed,z\\xa7\\x02PE@\\xd8}\\xc7\\xf0\\xd8SR\\xc0\\x83\\xa4O\\xab\\xe8OE@\\xfa(#.\\x00TR\\xc0\\xd2\\x9f\\xfdH\\x11OE@\\xd0 \\x05O!TR\\xc0p\\x8f\\xa5\\x0f]NE@\\x8e\\xfd,\\x96\"TR\\xc0\\xe6\\x06C\\x1dVNE@\\x8e\\xc9\\xe2\\xfe#TR\\xc0DV\\xb7zNNE@\\x8e\\xaf=\\xb3$TR\\xc0\\x08\\xc0?\\xa5JNE@\\x88\\xd8`\\xe1$TR\\xc0\\x9f=\\x97\\xa9INE@\\xe6\\xacO9&TR\\xc0\\x7fk\\'JBNE@\\x0e\\xf2z0)TR\\xc0\\x10w\\xf5*2NE@\\xec\\xf1B:<TR\\xc0]\\xa7\\x91\\x96\\xcaME@j\\xf9\\x81\\xab<TR\\xc0\\x93P\\xfaB\\xc8ME@\\xbcS\\x01\\xf7<TR\\xc0\\xf2\\x8c}\\xc9\\xc6ME@\\x98\\x80_#ITR\\xc0\\xc5\\x13A\\x9c\\x87ME@ \\x1f\\xf4lVTR\\xc0\\xc0\\xa8\\xa4N@ME@\\xe8ME*\\x8cTR\\xc0\\x8a\\xc2.\\x8a\\x1eLE@\\x1baQ\\x11\\xa7TR\\xc0\\xec\\n}\\xb0\\x8cKE@u\\x92\\xad.\\xa7TR\\xc0\\x07g\\xf0\\xf7\\x8bKE@\\xa3\\x05h[\\xcdTR\\xc0z\\x89\\xb1L\\xbfJE@\\xc4?l\\xe9\\xd1TR\\xc0P\\xbc\\xca\\xda\\xa6JE@\\x9ax\\x07x\\xd2TR\\xc0o=\\n\\xd7\\xa3JE@\\xb0\\xa9\\xf3\\xa8\\xf8TR\\xc0\\xdfnI\\x0e\\xd8IE@_\"\\xde:\\xffTR\\xc0\\x02\\xeey\\xfe\\xb4IE@\\x...", "bytearray(b'\\x01\\x06\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x01\\x03\\x00\\x00\\x00\\x01\\x00\\x00\\x00O\\x04\\x00\\x00`\\xe4eM,\\xdeQ\\xc0\\x80t\\xb1i\\xa5\\xb4E@\\x1a0H\\xfa\\xb4\\xddQ\\xc0\\x12\\x04\\x8fo\\xef\\xb4E@Q\\xd6o&\\xa6\\xddQ\\xc0\\xd3\\xd3G\\xe0\\x0f\\xb5E@`Q\\x11\\xa7\\x93\\xddQ\\xc0\\x97\\\\\\xc5\\xe27\\xb5E@\\n\\xed\\x9cf\\x81\\xddQ\\xc0\\xd5\\x06\\'\\xa2_\\xb5E@\\x1ah>\\xe7n\\xddQ\\xc0\\xc4\\x13A\\x9c\\x87\\xb5E@\\xc4\\x03\\xca\\xa6\\\\\\xddQ\\xc0\\x03\\xbe\\xa2[\\xaf\\xb5E@\\xd7\\x9f\\xc4\\xe7N\\xddQ\\xc0T\\x82\\xc5\\xe1\\xcc\\xb5E@\\x85\\\\\\xa9gA\\xddQ\\xc0Q\\xech\\x1c\\xea\\xb5E@\\xcd9x&4\\xddQ\\xc0\\xe9\\x90\\x9b\\xe1\\x06\\xb6E@z\\xf9\\x9d&3\\xddQ\\xc0\\xa3\\xb0\\x8b\\xa2\\x07\\xb6E@\\x89t?\\xa7 \\xddQ\\xc0(;\\xfd\\xa0.\\xb6E@2\\xa868\\x11\\xddQ\\xc0\\r\\xe1\\x98eO\\xb6E@3\\x10\\xcbf\\x0e\\xddQ\\xc0,\\xe7R\\\\U\\xb6E@\\xa9\\x87ht\\x07\\xddQ\\xc0Z A\\xf1c\\xb6E@\\xd3N\\xcd\\xe5\\x06\\xddQ\\xc0\\xa7\\x89>\\x1fe\\xb6E@C\\x8bl\\xe7\\xfb\\xdcQ\\xc0\\xb3q\\xc4Z|\\xb6E@\\xe9\\x05\\x9f\\xe6\\xe4\\xdcQ\\xc0\\xf7<\\x7f\\xda\\xa8\\xb6E@\\x90\\x80\\xd1\\xe5\\xcd\\xdcQ\\xc0\\x03\\xc7e\\xdc\\xd4\\xb6E@E\\x7fh\\xe6\\xc9\\xdcQ\\xc0/G\\x8f\\xdf\\xdb\\xb6E@\\x1e \\x98\\xa3\\xc7\\xdcQ\\xc0-\\xa..."]
+name_lsad: TEXT | NULL | eg=["Pittsfield-North Adams, MA-VT Combined NECTA", "Boston-Worcester-Providence, MA-RI-NH-CT-ME Combined NECTA"]
+name: TEXT | NULL | eg=["Pittsfield-North Adams, MA-VT", "Boston-Worcester-Providence, MA-RI-NH-CT-ME"]
+cnecta_fips_code: TEXT | NULL | eg=["770", "715"]
